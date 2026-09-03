@@ -1,0 +1,9009 @@
+{
+ "pages": [
+  {
+   "id": "0:1",
+   "name": "Cover",
+   "topLevelCount": 1,
+   "frames": [
+    {
+     "name": "Cover",
+     "id": "10:4",
+     "type": "FRAME",
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 960,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    }
+   ],
+   "nameHits": [],
+   "dupes": [],
+   "text": [
+    [
+     "2026 // Charts",
+     1,
+     0,
+     [
+      "10:4"
+     ],
+     [
+      "10:9"
+     ]
+    ]
+   ],
+   "screenshot": "page-01-Cover.png"
+  },
+  {
+   "id": "10:15",
+   "name": "-----DESIGNS-----",
+   "topLevelCount": 0,
+   "frames": [],
+   "nameHits": [],
+   "dupes": [],
+   "screenshot": null
+  },
+  {
+   "id": "105:1426",
+   "name": "Workflows",
+   "topLevelCount": 26,
+   "frames": [
+    {
+     "name": "Frame 758532141",
+     "id": "3943:12393",
+     "type": "FRAME",
+     "x": -1873,
+     "y": -254,
+     "w": 2922,
+     "h": 2008,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 351,
+     "local": 7,
+     "remote": 344,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 164,
+     "other": 180,
+     "otherKeys": [
+      "1f2b05dc",
+      "93b1fa86",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "470e5de6"
+     ]
+    },
+    {
+     "name": "Frame 758532154",
+     "id": "4317:11594",
+     "type": "FRAME",
+     "x": -1873,
+     "y": -2414,
+     "w": 2922,
+     "h": 2008,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 347,
+     "local": 7,
+     "remote": 340,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 164,
+     "other": 176,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "470e5de6"
+     ]
+    },
+    {
+     "name": "Frame 758532155",
+     "id": "4715:26647",
+     "type": "FRAME",
+     "x": -1873,
+     "y": -4666,
+     "w": 1584,
+     "h": 1364,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 217,
+     "local": 21,
+     "remote": 196,
+     "missingMain": 0,
+     "rebuild": 6,
+     "kit": 116,
+     "other": 74,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "3dd0110a"
+     ]
+    },
+    {
+     "name": "Frame 758532140",
+     "id": "5093:18693",
+     "type": "FRAME",
+     "x": -1853,
+     "y": -5857,
+     "w": 1429,
+     "h": 815,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 134,
+     "local": 16,
+     "remote": 118,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 66,
+     "other": 52,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Frame 758532143",
+     "id": "3943:12395",
+     "type": "FRAME",
+     "x": -1873,
+     "y": 2072,
+     "w": 15951,
+     "h": 1314,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 2278,
+     "local": 237,
+     "remote": 2041,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 1107,
+     "other": 934,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "6fe87042",
+      "81944271",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "126a1a80",
+      "bd966706"
+     ]
+    },
+    {
+     "name": "Frame 758532144",
+     "id": "3943:12402",
+     "type": "FRAME",
+     "x": -1873,
+     "y": 3626,
+     "w": 2906,
+     "h": 1360,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 388,
+     "local": 30,
+     "remote": 358,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 195,
+     "other": 163,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "b788b843"
+     ]
+    },
+    {
+     "name": "Frame 758532149",
+     "id": "3943:13025",
+     "type": "FRAME",
+     "x": -2100,
+     "y": 9462,
+     "w": 4367,
+     "h": 2839,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 542,
+     "local": 78,
+     "remote": 464,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 253,
+     "other": 211,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "6fe87042",
+      "81944271"
+     ]
+    },
+    {
+     "name": "arrow_drop_down_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24(1) 1",
+     "id": "3534:17621",
+     "type": "FRAME",
+     "x": 4125,
+     "y": 9299,
+     "w": 24,
+     "h": 24,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Module Dropdown",
+     "id": "899:7657",
+     "type": "INSTANCE",
+     "x": 3190,
+     "y": 7120,
+     "w": 376,
+     "h": 504,
+     "parentSection": null,
+     "depth": 0,
+     "visible": false,
+     "instances": 25,
+     "local": 12,
+     "remote": 13,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 8,
+     "other": 5,
+     "otherKeys": [
+      "b6486f43",
+      "6fe87042",
+      "81944271"
+     ]
+    },
+    {
+     "name": "Frame 758532101",
+     "id": "3456:11503",
+     "type": "FRAME",
+     "x": -2127,
+     "y": 19000,
+     "w": 1517,
+     "h": 280,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 758532100",
+     "id": "2939:11510",
+     "type": "FRAME",
+     "x": -2018,
+     "y": 21748,
+     "w": 1762,
+     "h": 280,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 758532151",
+     "id": "3943:13027",
+     "type": "FRAME",
+     "x": -2100,
+     "y": 13193,
+     "w": 5039,
+     "h": 1249,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 76,
+     "local": 0,
+     "remote": 76,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 49,
+     "other": 27,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "Mark As Error_Ready",
+     "id": "3456:11505",
+     "type": "FRAME",
+     "x": -2127,
+     "y": 19404,
+     "w": 1429,
+     "h": 810,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 239,
+     "local": 26,
+     "remote": 213,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 109,
+     "other": 104,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "470e5de6",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "6fe87042",
+      "81944271",
+      "6434f671"
+     ]
+    },
+    {
+     "name": "Rec_Ready",
+     "id": "3124:12369",
+     "type": "FRAME",
+     "x": -2018,
+     "y": 22258,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 249,
+     "local": 26,
+     "remote": 223,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 114,
+     "other": 109,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "6fe87042",
+      "81944271",
+      "6434f671"
+     ]
+    },
+    {
+     "name": "Rec_Ready",
+     "id": "4841:17077",
+     "type": "FRAME",
+     "x": -550,
+     "y": 23349,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 267,
+     "local": 28,
+     "remote": 239,
+     "missingMain": 0,
+     "rebuild": 6,
+     "kit": 123,
+     "other": 110,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "6fe87042",
+      "81944271"
+     ]
+    },
+    {
+     "name": "Sidesheetv3",
+     "id": "4841:21245",
+     "type": "INSTANCE",
+     "x": 900,
+     "y": 23414,
+     "w": 550,
+     "h": 948,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 84,
+     "local": 4,
+     "remote": 80,
+     "missingMain": 0,
+     "rebuild": 3,
+     "kit": 41,
+     "other": 36,
+     "otherKeys": [
+      "b45ccb08",
+      "e7c73628",
+      "b6486f43",
+      "6fe87042",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "e8c0d3dd",
+      "ffe42fca",
+      "07e9545b",
+      "7eee6145"
+     ]
+    },
+    {
+     "name": "Rec_Ready",
+     "id": "4841:18039",
+     "type": "FRAME",
+     "x": -550,
+     "y": 24387,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 350,
+     "local": 31,
+     "remote": 319,
+     "missingMain": 0,
+     "rebuild": 9,
+     "kit": 164,
+     "other": 146,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "6fe87042",
+      "81944271",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "e8c0d3dd",
+      "ffe42fca",
+      "07e9545b",
+      "7eee6145"
+     ]
+    },
+    {
+     "name": "Rec_Started",
+     "id": "3159:20067",
+     "type": "FRAME",
+     "x": -299,
+     "y": 22258,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 224,
+     "local": 14,
+     "remote": 210,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 106,
+     "other": 104,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48"
+     ]
+    },
+    {
+     "name": "Rec_Paused",
+     "id": "4296:17197",
+     "type": "FRAME",
+     "x": 1240,
+     "y": 22258,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 224,
+     "local": 14,
+     "remote": 210,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 106,
+     "other": 104,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48"
+     ]
+    },
+    {
+     "name": "Rec_Processing",
+     "id": "4275:15285",
+     "type": "FRAME",
+     "x": 3439,
+     "y": 22258,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 224,
+     "local": 14,
+     "remote": 210,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 106,
+     "other": 104,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48"
+     ]
+    },
+    {
+     "name": "Rec_Closed",
+     "id": "4294:15013",
+     "type": "FRAME",
+     "x": 8127,
+     "y": 22236,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 221,
+     "local": 14,
+     "remote": 207,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 104,
+     "other": 103,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48"
+     ]
+    },
+    {
+     "name": "Rec_Open",
+     "id": "3159:21282",
+     "type": "FRAME",
+     "x": 4993,
+     "y": 22258,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 228,
+     "local": 14,
+     "remote": 214,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 109,
+     "other": 105,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48"
+     ]
+    },
+    {
+     "name": "Replace_Section_Modal",
+     "id": "4439:16310",
+     "type": "FRAME",
+     "x": 6571,
+     "y": 22258,
+     "w": 1429,
+     "h": 1013,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 266,
+     "local": 14,
+     "remote": 252,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 134,
+     "other": 118,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "126a1a80",
+      "bd966706"
+     ]
+    },
+    {
+     "name": "Frame 758532153",
+     "id": "3943:13029",
+     "type": "FRAME",
+     "x": -2100,
+     "y": 14790,
+     "w": 5039,
+     "h": 3547,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 902,
+     "local": 104,
+     "remote": 798,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 461,
+     "other": 337,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "e7c73628",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "470e5de6",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "6fe87042",
+      "81944271",
+      "126a1a80",
+      "bd966706",
+      "29497b6c",
+      "e0557b5a"
+     ]
+    },
+    {
+     "name": "Screenshot 2026-05-05 at 9.44.35 AM 1",
+     "id": "3806:13143",
+     "type": "RECTANGLE",
+     "x": 8430,
+     "y": 3487,
+     "w": 1458,
+     "h": 106,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 758532132",
+     "id": "3810:13146",
+     "type": "FRAME",
+     "x": 8509,
+     "y": 3216,
+     "w": 758,
+     "h": 116,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 9,
+     "local": 0,
+     "remote": 9,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 7,
+     "other": 2,
+     "otherKeys": [
+      "b45ccb08",
+      "b6486f43"
+     ]
+    }
+   ],
+   "nameHits": [
+    {
+     "kind": "RECTANGLE",
+     "id": "3806:13143",
+     "name": "Screenshot 2026-05-05 at 9.44.35 AM 1",
+     "term": "2026"
+    }
+   ],
+   "dupes": [
+    {
+     "by": "name",
+     "name": "Rec_Ready",
+     "ids": [
+      "3124:12369",
+      "4841:17077",
+      "4841:18039"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "2922x2008",
+     "nodes": [
+      "3943:12393 Frame 758532141",
+      "4317:11594 Frame 758532154"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1429x1013",
+     "nodes": [
+      "3124:12369 Rec_Ready",
+      "4841:17077 Rec_Ready",
+      "4841:18039 Rec_Ready",
+      "3159:20067 Rec_Started",
+      "4296:17197 Rec_Paused",
+      "4275:15285 Rec_Processing",
+      "4294:15013 Rec_Closed",
+      "3159:21282 Rec_Open",
+      "4439:16310 Replace_Section_Modal"
+     ]
+    }
+   ],
+   "text": [
+    [
+     "DOB: 08/01/1994 (29 y/o)",
+     39,
+     0,
+     [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     [
+      "112:5666",
+      "112:6140",
+      "4317:11614"
+     ]
+    ],
+    [
+     "04/18/2022",
+     21,
+     0,
+     [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     [
+      "112:5677",
+      "112:6151",
+      "4317:11625"
+     ]
+    ],
+    [
+     "Current Situation\n32-year-old male presenting for sick visit",
+     4,
+     4,
+     [
+      "3943:12393",
+      "4317:11594"
+     ],
+     []
+    ],
+    [
+     "Save as Draft",
+     36,
+     36,
+     [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     []
+    ],
+    [
+     "Created by Steven Strange on 1/23/24",
+     96,
+     96,
+     [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     []
+    ],
+    [
+     "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     50,
+     49,
+     [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     [
+      "3456:13226"
+     ]
+    ],
+    [
+     "5/25/25",
+     100,
+     98,
+     [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     [
+      "3456:13263",
+      "3456:13415"
+     ]
+    ],
+    [
+     "6/20/25",
+     100,
+     98,
+     [],
+     []
+    ],
+    [
+     "6/29/25",
+     100,
+     98,
+     [],
+     []
+    ],
+    [
+     "7/18/25",
+     100,
+     98,
+     [],
+     []
+    ],
+    [
+     "Created by Tebra on 1/23/24",
+     2,
+     2,
+     [
+      "3943:12393",
+      "4317:11594"
+     ],
+     []
+    ],
+    [
+     "11/21/24",
+     2,
+     2,
+     [
+      "4715:26647"
+     ],
+     []
+    ],
+    [
+     "Status: Signed Final Author: John Doe, MD Signed: 03/03/2026",
+     4,
+     0,
+     [
+      "3943:13025",
+      "3943:13029"
+     ],
+     [
+      "2175:9406",
+      "3534:17566",
+      "3534:17167"
+     ]
+    ],
+    [
+     "HPI:\n36-year-old male presents with 3-month history of worse",
+     4,
+     0,
+     [
+      "3943:13025",
+      "3943:13029"
+     ],
+     [
+      "2175:9432",
+      "2175:10202",
+      "3534:17176"
+     ]
+    ],
+    [
+     "04/24/26 11:46 AM",
+     2,
+     0,
+     [
+      "3943:13025",
+      "3943:13029"
+     ],
+     [
+      "3534:17614",
+      "3541:14298"
+     ]
+    ],
+    [
+     "4/27/26",
+     1,
+     0,
+     [
+      "3456:11505"
+     ],
+     [
+      "3456:13210"
+     ]
+    ],
+    [
+     "5/1/26",
+     1,
+     0,
+     [
+      "3456:11505"
+     ],
+     [
+      "3456:13212"
+     ]
+    ],
+    [
+     "4/21/26",
+     1,
+     0,
+     [
+      "3456:11505"
+     ],
+     [
+      "3456:13215"
+     ]
+    ],
+    [
+     "4/12/26",
+     1,
+     0,
+     [
+      "3456:11505"
+     ],
+     [
+      "3456:13218"
+     ]
+    ],
+    [
+     "DoS: 3/26/26 (last update 3/28/26)",
+     1,
+     0,
+     [
+      "3810:13146"
+     ],
+     [
+      "3810:13240"
+     ]
+    ]
+   ],
+   "screenshot": "page-03-Workflows.png"
+  },
+  {
+   "id": "1050:8411",
+   "name": "Error States",
+   "topLevelCount": 20,
+   "frames": [
+    {
+     "name": "Module Errors",
+     "id": "2117:8381",
+     "type": "FRAME",
+     "x": 0,
+     "y": 0,
+     "w": 2846,
+     "h": 675,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 16,
+     "local": 0,
+     "remote": 16,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 8,
+     "other": 8,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "a072b098",
+      "b45ccb08"
+     ]
+    },
+    {
+     "name": "Cost Disclosure",
+     "id": "4494:15947",
+     "type": "FRAME",
+     "x": 16,
+     "y": 1017,
+     "w": 1429,
+     "h": 790,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 202,
+     "local": 27,
+     "remote": 175,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 97,
+     "other": 78,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "6fe87042",
+      "81944271",
+      "12e03558",
+      "f6608628",
+      "b62b0ab5"
+     ]
+    },
+    {
+     "name": "E-06",
+     "id": "4505:18288",
+     "type": "FRAME",
+     "x": 16,
+     "y": 2199,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 172,
+     "local": 14,
+     "remote": 158,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 89,
+     "other": 69,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "a072b098",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "17d740de"
+     ]
+    },
+    {
+     "name": "Transcription service disconnected",
+     "id": "4508:23664",
+     "type": "FRAME",
+     "x": 16,
+     "y": 3244,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 166,
+     "local": 14,
+     "remote": 152,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 85,
+     "other": 67,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Transcription service disconnected",
+     "id": "4508:24088",
+     "type": "FRAME",
+     "x": 16,
+     "y": 3244,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 165,
+     "local": 14,
+     "remote": 151,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 85,
+     "other": 66,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Transcription service disconnected",
+     "id": "4549:28463",
+     "type": "FRAME",
+     "x": 16,
+     "y": 4162,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 171,
+     "local": 14,
+     "remote": 157,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 89,
+     "other": 68,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "a072b098",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Transcription service disconnected",
+     "id": "4597:30566",
+     "type": "FRAME",
+     "x": 1668,
+     "y": 4162,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 225,
+     "local": 14,
+     "remote": 211,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 109,
+     "other": 102,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "a072b098",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Transcription service disconnected",
+     "id": "4508:26782",
+     "type": "FRAME",
+     "x": 6257,
+     "y": 2223,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 166,
+     "local": 14,
+     "remote": 152,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 85,
+     "other": 67,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Transcription service disconnected",
+     "id": "4508:24483",
+     "type": "FRAME",
+     "x": 1511,
+     "y": 3244,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 187,
+     "local": 14,
+     "remote": 173,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 95,
+     "other": 78,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "12e03558",
+      "f6608628",
+      "b62b0ab5"
+     ]
+    },
+    {
+     "name": "E-07",
+     "id": "4505:19685",
+     "type": "FRAME",
+     "x": 1511,
+     "y": 2199,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 167,
+     "local": 14,
+     "remote": 153,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 85,
+     "other": 68,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "a072b098",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "No mics detected",
+     "id": "4507:22374",
+     "type": "FRAME",
+     "x": 3355,
+     "y": 4289,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 167,
+     "local": 14,
+     "remote": 153,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 85,
+     "other": 68,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "a072b098",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "E-09",
+     "id": "4507:21046",
+     "type": "FRAME",
+     "x": 3093,
+     "y": 2199,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 212,
+     "local": 14,
+     "remote": 198,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 100,
+     "other": 98,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "a072b098",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "470e5de6"
+     ]
+    },
+    {
+     "name": "Session Timeout",
+     "id": "4505:16648",
+     "type": "FRAME",
+     "x": 1691,
+     "y": 1017,
+     "w": 1429,
+     "h": 790,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 205,
+     "local": 27,
+     "remote": 178,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 97,
+     "other": 81,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "6fe87042",
+      "81944271",
+      "12e03558",
+      "f6608628",
+      "b62b0ab5"
+     ]
+    },
+    {
+     "name": "E-11 Mic Disconnected",
+     "id": "4507:22770",
+     "type": "FRAME",
+     "x": 4675,
+     "y": 2199,
+     "w": 1429,
+     "h": 790,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 208,
+     "local": 27,
+     "remote": 181,
+     "missingMain": 0,
+     "rebuild": 9,
+     "kit": 97,
+     "other": 75,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "6fe87042",
+      "81944271"
+     ]
+    },
+    {
+     "name": "Session ID Failures",
+     "id": "4508:23234",
+     "type": "FRAME",
+     "x": 6729,
+     "y": 4354,
+     "w": 1429,
+     "h": 790,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 202,
+     "local": 27,
+     "remote": 175,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 97,
+     "other": 78,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "6fe87042",
+      "81944271",
+      "12e03558",
+      "f6608628",
+      "b62b0ab5"
+     ]
+    },
+    {
+     "name": "Internal Service Error - Failed Call for Recording",
+     "id": "4505:17114",
+     "type": "FRAME",
+     "x": 3355,
+     "y": 1017,
+     "w": 1429,
+     "h": 790,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 202,
+     "local": 27,
+     "remote": 175,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 97,
+     "other": 78,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "6fe87042",
+      "81944271",
+      "12e03558",
+      "f6608628",
+      "b62b0ab5"
+     ]
+    },
+    {
+     "name": "Permission Validation Error",
+     "id": "4505:17721",
+     "type": "FRAME",
+     "x": 4899,
+     "y": 1017,
+     "w": 1429,
+     "h": 790,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 202,
+     "local": 27,
+     "remote": 175,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 97,
+     "other": 78,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "6fe87042",
+      "81944271",
+      "12e03558",
+      "f6608628",
+      "b62b0ab5"
+     ]
+    },
+    {
+     "name": "TemplateMgmt",
+     "id": "4565:29308",
+     "type": "FRAME",
+     "x": -1463,
+     "y": 2420,
+     "w": 376,
+     "h": 490,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 51,
+     "local": 0,
+     "remote": 51,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 19,
+     "other": 32,
+     "otherKeys": [
+      "b6486f43",
+      "a072b098",
+      "b45ccb08",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "470e5de6"
+     ]
+    },
+    {
+     "name": "Failed to get appointment",
+     "id": "4567:30083",
+     "type": "FRAME",
+     "x": 16,
+     "y": 5209,
+     "w": 1429,
+     "h": 766,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 167,
+     "local": 14,
+     "remote": 153,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 85,
+     "other": 68,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "a072b098",
+      "b45ccb08",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Stage — app content behind the scrim",
+     "id": "5039:28223",
+     "type": "FRAME",
+     "x": 1789,
+     "y": 5382,
+     "w": 800,
+     "h": 420,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 7,
+     "local": 0,
+     "remote": 7,
+     "missingMain": 0,
+     "rebuild": 7,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    }
+   ],
+   "nameHits": [],
+   "dupes": [
+    {
+     "by": "name",
+     "name": "Transcription service disconnected",
+     "ids": [
+      "4508:23664",
+      "4508:24088",
+      "4549:28463",
+      "4597:30566",
+      "4508:26782",
+      "4508:24483"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1429x790",
+     "nodes": [
+      "4494:15947 Cost Disclosure",
+      "4505:16648 Session Timeout",
+      "4507:22770 E-11 Mic Disconnected",
+      "4508:23234 Session ID Failures",
+      "4505:17114 Internal Service Error - Failed Call for Recording",
+      "4505:17721 Permission Validation Error"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1429x766",
+     "nodes": [
+      "4505:18288 E-06",
+      "4508:23664 Transcription service disconnected",
+      "4508:24088 Transcription service disconnected",
+      "4549:28463 Transcription service disconnected",
+      "4597:30566 Transcription service disconnected",
+      "4508:26782 Transcription service disconnected",
+      "4508:24483 Transcription service disconnected",
+      "4505:19685 E-07",
+      "4507:22374 No mics detected",
+      "4507:21046 E-09",
+      "4567:30083 Failed to get appointment"
+     ]
+    }
+   ],
+   "text": [
+    [
+     "DOB: 08/01/1994 (29 y/o)",
+     17,
+     0,
+     [
+      "4494:15947",
+      "4505:18288",
+      "4508:23664",
+      "4508:24088",
+      "4549:28463",
+      "4597:30566"
+     ],
+     [
+      "4494:15962",
+      "4505:18303",
+      "4508:23679"
+     ]
+    ],
+    [
+     "Save as Draft",
+     17,
+     17,
+     [],
+     []
+    ],
+    [
+     "Created by Steven Strange on 1/23/24",
+     38,
+     36,
+     [],
+     [
+      "4507:21217",
+      "4565:29332"
+     ]
+    ],
+    [
+     "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     20,
+     18,
+     [],
+     [
+      "4507:21220",
+      "4565:29335"
+     ]
+    ],
+    [
+     "5/25/25",
+     40,
+     36,
+     [],
+     [
+      "4507:21257",
+      "4507:21409",
+      "4565:29372"
+     ]
+    ],
+    [
+     "6/20/25",
+     40,
+     36,
+     [],
+     []
+    ],
+    [
+     "6/29/25",
+     40,
+     36,
+     [],
+     []
+    ],
+    [
+     "7/18/25",
+     40,
+     36,
+     [],
+     []
+    ],
+    [
+     "February 2021",
+     1,
+     0,
+     [
+      "4505:18288"
+     ],
+     [
+      "4565:29949"
+     ]
+    ],
+    [
+     "March 2021",
+     1,
+     0,
+     [
+      "4505:18288"
+     ],
+     [
+      "4565:29994"
+     ]
+    ],
+    [
+     "Created by Tebra on 1/23/24",
+     2,
+     0,
+     [
+      "4507:21046",
+      "4565:29308"
+     ],
+     [
+      "4507:21214",
+      "4565:29329"
+     ]
+    ]
+   ],
+   "screenshot": "page-04-Error-States.png"
+  },
+  {
+   "id": "3813:14586",
+   "name": "V2:AI Patient Summary",
+   "topLevelCount": 1,
+   "frames": [
+    {
+     "name": "AI Note - Vew Patient Details (All Cards)",
+     "id": "3813:15084",
+     "type": "FRAME",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 109,
+     "local": 0,
+     "remote": 109,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 43,
+     "other": 66,
+     "otherKeys": [
+      "2d8a5498",
+      "30199061",
+      "e001a2e8",
+      "2d785331",
+      "28826109",
+      "0501951a",
+      "61f92268",
+      "12e03558",
+      "f6608628",
+      "3ba0f6eb",
+      "71018625",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "bdbdfd6d",
+      "b6486f43",
+      "5157e793",
+      "5fc2b104",
+      "51b70416",
+      "33223ba6",
+      "6fd89adb",
+      "e7c73628",
+      "01989749",
+      "53ce637c",
+      "491fcdd4",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "bc6d1f6f",
+      "ceaf8f8d",
+      "53bcd12e"
+     ]
+    }
+   ],
+   "nameHits": [
+    {
+     "kind": "page",
+     "id": "3813:14586",
+     "name": "V2:AI Patient Summary",
+     "term": "V2"
+    }
+   ],
+   "dupes": [],
+   "text": [
+    [
+     "06/19/24",
+     1,
+     1,
+     [
+      "3813:15084"
+     ],
+     []
+    ],
+    [
+     "09/22/2024",
+     1,
+     0,
+     [
+      "3813:15084"
+     ],
+     [
+      "3813:15167"
+     ]
+    ],
+    [
+     "Current Situation\n32-year-old male presenting for sick visit: sore throat, nasal",
+     1,
+     0,
+     [
+      "3813:15084"
+     ],
+     [
+      "3813:15585"
+     ]
+    ],
+    [
+     "Key Background\nPrevious Buspirone trial discontinued due to dizziness (2023).",
+     1,
+     0,
+     [
+      "3813:15084"
+     ],
+     [
+      "3813:15586"
+     ]
+    ],
+    [
+     "DOB: 08/01/1992 (32 y/o)",
+     1,
+     0,
+     [
+      "3813:15084"
+     ],
+     [
+      "3813:15285"
+     ]
+    ]
+   ],
+   "screenshot": "page-05-V2-AI-Patient-Summary.png"
+  },
+  {
+   "id": "21:320",
+   "name": "-----COMPONENTS-----",
+   "topLevelCount": 0,
+   "frames": [],
+   "nameHits": [],
+   "dupes": [],
+   "screenshot": null
+  },
+  {
+   "id": "21:321",
+   "name": "⚙️ Components",
+   "topLevelCount": 34,
+   "frames": [
+    {
+     "name": "SectionMgmt",
+     "id": "21:585",
+     "type": "COMPONENT_SET",
+     "x": 10,
+     "y": -336,
+     "w": 530,
+     "h": 790,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 31,
+     "local": 0,
+     "remote": 31,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 7,
+     "other": 24,
+     "otherKeys": [
+      "61219e97",
+      "bbc2b01e",
+      "29ce87fe",
+      "e7c73628"
+     ]
+    },
+    {
+     "name": "Social",
+     "id": "26:10376",
+     "type": "COMPONENT_SET",
+     "x": 10,
+     "y": 616,
+     "w": 582,
+     "h": 1632,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 215,
+     "local": 0,
+     "remote": 215,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 133,
+     "other": 82,
+     "otherKeys": [
+      "e7c73628",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "PatientSummary",
+     "id": "127:3348",
+     "type": "COMPONENT",
+     "x": 1056,
+     "y": 44,
+     "w": 634,
+     "h": 883,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 8,
+     "local": 0,
+     "remote": 8,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 4,
+     "other": 4,
+     "otherKeys": [
+      "e7c73628",
+      "b45ccb08",
+      "01989749",
+      "53ce637c"
+     ]
+    },
+    {
+     "name": "Frame 758532088",
+     "id": "1663:20062",
+     "type": "FRAME",
+     "x": 1075,
+     "y": 1228,
+     "w": 1381,
+     "h": 148,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 24,
+     "local": 14,
+     "remote": 10,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 3,
+     "other": 7,
+     "otherKeys": [
+      "b45ccb08",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752"
+     ]
+    },
+    {
+     "name": "Sidesheetv3",
+     "id": "129:6647",
+     "type": "COMPONENT_SET",
+     "x": -1888,
+     "y": -3940,
+     "w": 18040,
+     "h": 2415,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 4722,
+     "local": 25,
+     "remote": 4697,
+     "missingMain": 0,
+     "rebuild": 15,
+     "kit": 2892,
+     "other": 1790,
+     "otherKeys": [
+      "e7c73628",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "b6486f43",
+      "01989749",
+      "53ce637c",
+      "dacaf752",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "939dca4d",
+      "0542b2da",
+      "8b17ea69",
+      "7df75688",
+      "2af84c86",
+      "e882f01f",
+      "456e4da1",
+      "b00f0a39",
+      "69a96756",
+      "4e7c94a3",
+      "4311ad0c",
+      "20476510",
+      "69498838",
+      "e373e4fe",
+      "f516aa57",
+      "5def2b07",
+      "6951f03c",
+      "8991f97f",
+      "e7d99a8b",
+      "b728dc7c",
+      "8281931c",
+      "31aea108",
+      "d62d8420",
+      "a072b098",
+      "ef490cb4",
+      "2f9fb1c4",
+      "3dd0110a",
+      "f3830ee1",
+      "f67f4104",
+      "53bcd12e",
+      "6484842c",
+      "30730e02",
+      "f8ec8129",
+      "089e9e2b",
+      "2d3f8e48",
+      "43692051",
+      "22fc400f",
+      "df1ba2ca",
+      "68fa7f5c",
+      "8c6bb13c",
+      "126a1a80",
+      "bd966706",
+      "7b78051e",
+      "e8c0d3dd",
+      "77172f40",
+      "00401576",
+      "ba71f6e1",
+      "ffe42fca",
+      "6fe87042",
+      "07e9545b",
+      "7eee6145",
+      "f81c4ab0",
+      "fe7d0711",
+      "b36c40ec",
+      "6fd89adb",
+      "66ddad91"
+     ]
+    },
+    {
+     "name": "sidebar",
+     "id": "4667:5031",
+     "type": "TEXT",
+     "x": 11410,
+     "y": -3233,
+     "w": 56,
+     "h": 20,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "sidebar",
+     "id": "4667:13076",
+     "type": "TEXT",
+     "x": 12038,
+     "y": -3213,
+     "w": 56,
+     "h": 20,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "sidebar",
+     "id": "4667:13077",
+     "type": "TEXT",
+     "x": 12632,
+     "y": -3203,
+     "w": 56,
+     "h": 20,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "sidebar",
+     "id": "4667:13075",
+     "type": "TEXT",
+     "x": 10941,
+     "y": -3296,
+     "w": 56,
+     "h": 20,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 758532122",
+     "id": "3496:15087",
+     "type": "FRAME",
+     "x": 11702,
+     "y": -4177,
+     "w": 26,
+     "h": 24,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Slice 1",
+     "id": "917:15599",
+     "type": "SLICE",
+     "x": -2539,
+     "y": -1433,
+     "w": 100,
+     "h": 100,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Modules_HFlex",
+     "id": "625:4598",
+     "type": "COMPONENT_SET",
+     "x": -4917,
+     "y": -2749,
+     "w": 1397,
+     "h": 80,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 32,
+     "local": 22,
+     "remote": 10,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 10,
+     "otherKeys": [
+      "e7c73628",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752"
+     ]
+    },
+    {
+     "name": "Frame 758532106",
+     "id": "2198:9863",
+     "type": "FRAME",
+     "x": -5356,
+     "y": -2531,
+     "w": 1975,
+     "h": 406,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 44,
+     "local": 0,
+     "remote": 44,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 44,
+     "otherKeys": [
+      "e7c73628",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752"
+     ]
+    },
+    {
+     "name": "BlinkingTextCursor",
+     "id": "745:6722",
+     "type": "COMPONENT_SET",
+     "x": -1956,
+     "y": -328,
+     "w": 37,
+     "h": 121,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "EditIcon",
+     "id": "749:7554",
+     "type": "COMPONENT_SET",
+     "x": -2408,
+     "y": -1552,
+     "w": 72,
+     "h": 128,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 2,
+     "local": 0,
+     "remote": 2,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 2,
+     "otherKeys": [
+      "2f9fb1c4"
+     ]
+    },
+    {
+     "name": "Module Dropdown",
+     "id": "776:5769",
+     "type": "COMPONENT_SET",
+     "x": -980,
+     "y": -360,
+     "w": 408,
+     "h": 932,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 44,
+     "local": 20,
+     "remote": 24,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 15,
+     "other": 9,
+     "otherKeys": [
+      "b6486f43",
+      "6fe87042",
+      "81944271"
+     ]
+    },
+    {
+     "name": "8",
+     "id": "968:14874",
+     "type": "FRAME",
+     "x": 2841,
+     "y": -266,
+     "w": 1429,
+     "h": 891,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 55,
+     "local": 22,
+     "remote": 33,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 15,
+     "other": 18,
+     "otherKeys": [
+      "e7c73628",
+      "b45ccb08",
+      "b6486f43",
+      "c24d297a",
+      "7991f4fd",
+      "2371fcb8",
+      "e70fe42e",
+      "b5d541bf",
+      "dacaf752",
+      "6fe87042",
+      "b36c40ec",
+      "81944271",
+      "f3e52ae6",
+      "db494c59",
+      "e82e4706"
+     ]
+    },
+    {
+     "name": "Ready",
+     "id": "968:14897",
+     "type": "FRAME",
+     "x": 3888,
+     "y": 1906,
+     "w": 755,
+     "h": 659,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 104,
+     "local": 4,
+     "remote": 100,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 52,
+     "other": 48,
+     "otherKeys": [
+      "e7c73628",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "b6486f43",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Recording",
+     "id": "4032:14352",
+     "type": "FRAME",
+     "x": 4702,
+     "y": 1906,
+     "w": 755,
+     "h": 659,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 104,
+     "local": 4,
+     "remote": 100,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 52,
+     "other": 48,
+     "otherKeys": [
+      "e7c73628",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "b6486f43",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Paused",
+     "id": "4032:14534",
+     "type": "FRAME",
+     "x": 5542,
+     "y": 1906,
+     "w": 755,
+     "h": 659,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 104,
+     "local": 4,
+     "remote": 100,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 52,
+     "other": 48,
+     "otherKeys": [
+      "e7c73628",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "b6486f43",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Paused",
+     "id": "4113:18278",
+     "type": "FRAME",
+     "x": 6317,
+     "y": 1906,
+     "w": 755,
+     "h": 659,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 104,
+     "local": 4,
+     "remote": 100,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 52,
+     "other": 48,
+     "otherKeys": [
+      "e7c73628",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "b6486f43",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "5838bd8d",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Frame 758532082",
+     "id": "874:2359",
+     "type": "FRAME",
+     "x": -3283,
+     "y": -1792,
+     "w": 331,
+     "h": 213,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 2,
+     "local": 0,
+     "remote": 2,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 1,
+     "other": 1,
+     "otherKeys": [
+      "425bbfb1"
+     ]
+    },
+    {
+     "name": "Footer",
+     "id": "883:6147",
+     "type": "FRAME",
+     "x": -4118,
+     "y": 1078,
+     "w": 1397,
+     "h": 70,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 35,
+     "local": 0,
+     "remote": 35,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 29,
+     "other": 6,
+     "otherKeys": [
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "Check-Circle",
+     "id": "980:15872",
+     "type": "COMPONENT_SET",
+     "x": -1200,
+     "y": -100,
+     "w": 142,
+     "h": 96,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 1,
+     "local": 0,
+     "remote": 1,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 1,
+     "otherKeys": [
+      "e7c73628"
+     ]
+    },
+    {
+     "name": "PatientHeader",
+     "id": "2133:8680",
+     "type": "COMPONENT_SET",
+     "x": 1716,
+     "y": 2345,
+     "w": 1200,
+     "h": 688,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 95,
+     "local": 2,
+     "remote": 93,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 93,
+     "otherKeys": [
+      "939dca4d",
+      "7df75688",
+      "2af84c86",
+      "210dfac0",
+      "ca15e00e",
+      "d985a791",
+      "1f7d613c",
+      "9188373e",
+      "1dc52650",
+      "29adc7cd",
+      "6208a4f2",
+      "cc603378",
+      "0c6a5eb6",
+      "ca2595f3",
+      "13e09eef",
+      "bb2161a5",
+      "5253871f",
+      "47277d26"
+     ]
+    },
+    {
+     "name": "Actions",
+     "id": "2133:9096",
+     "type": "COMPONENT_SET",
+     "x": 2171,
+     "y": 1824,
+     "w": 577,
+     "h": 132,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 20,
+     "local": 0,
+     "remote": 20,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 20,
+     "otherKeys": [
+      "939dca4d",
+      "2af84c86",
+      "d985a791",
+      "1f7d613c",
+      "9188373e",
+      "1dc52650",
+      "29adc7cd",
+      "6208a4f2",
+      "cc603378",
+      "0c6a5eb6",
+      "5253871f",
+      "85d5ace9",
+      "ee7b3a87",
+      "2b698e23"
+     ]
+    },
+    {
+     "name": "Primary Nav",
+     "id": "2189:10117",
+     "type": "FRAME",
+     "x": -332,
+     "y": 4795,
+     "w": 1429,
+     "h": 65,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 8,
+     "local": 1,
+     "remote": 7,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 3,
+     "other": 4,
+     "otherKeys": [
+      "b36c40ec",
+      "ec7a3fe5",
+      "3a49272f",
+      "b46e0319"
+     ]
+    },
+    {
+     "name": "Practice",
+     "id": "2189:10133",
+     "type": "FRAME",
+     "x": -216,
+     "y": 4564,
+     "w": 65,
+     "h": 65,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 1,
+     "local": 0,
+     "remote": 1,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 1,
+     "otherKeys": [
+      "ec7a3fe5"
+     ]
+    },
+    {
+     "name": "Dashboard",
+     "id": "2189:10294",
+     "type": "FRAME",
+     "x": -113,
+     "y": 4564,
+     "w": 65,
+     "h": 65,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 1,
+     "local": 0,
+     "remote": 1,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 1,
+     "otherKeys": [
+      "3a49272f"
+     ]
+    },
+    {
+     "name": "TemplateMgmt",
+     "id": "2811:11430",
+     "type": "COMPONENT_SET",
+     "x": 779,
+     "y": -508,
+     "w": 1502,
+     "h": 501,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 191,
+     "local": 0,
+     "remote": 191,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 69,
+     "other": 122,
+     "otherKeys": [
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "b6486f43",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "470e5de6"
+     ]
+    },
+    {
+     "name": "ShieldSet",
+     "id": "3513:14193",
+     "type": "COMPONENT_SET",
+     "x": 794,
+     "y": -1109,
+     "w": 72,
+     "h": 184,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Contextual Alert",
+     "id": "3551:14780",
+     "type": "INSTANCE",
+     "x": 11055,
+     "y": -4097,
+     "w": 754,
+     "h": 40,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 6,
+     "local": 0,
+     "remote": 6,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 4,
+     "other": 2,
+     "otherKeys": [
+      "b45ccb08",
+      "6fd89adb"
+     ]
+    },
+    {
+     "name": "NoteHeader",
+     "id": "4275:15830",
+     "type": "COMPONENT_SET",
+     "x": 758,
+     "y": -881,
+     "w": 800,
+     "h": 182,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 15,
+     "local": 2,
+     "remote": 13,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 9,
+     "other": 4,
+     "otherKeys": [
+      "e7c73628",
+      "13966ef5",
+      "d0f2695b"
+     ]
+    },
+    {
+     "name": "Frame 758532164",
+     "id": "4296:15558",
+     "type": "FRAME",
+     "x": -1743,
+     "y": -6993,
+     "w": 2673,
+     "h": 1681,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 129,
+     "local": 3,
+     "remote": 126,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 81,
+     "other": 45,
+     "otherKeys": [
+      "e7c73628",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "b45ccb08",
+      "b6486f43",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "2f9fb1c4",
+      "6fd89adb"
+     ]
+    }
+   ],
+   "nameHits": [],
+   "dupes": [
+    {
+     "by": "name",
+     "name": "sidebar",
+     "ids": [
+      "4667:5031",
+      "4667:13076",
+      "4667:13077",
+      "4667:13075"
+     ]
+    },
+    {
+     "by": "name",
+     "name": "Paused",
+     "ids": [
+      "4032:14534",
+      "4113:18278"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "56x20",
+     "nodes": [
+      "4667:5031 sidebar",
+      "4667:13076 sidebar",
+      "4667:13077 sidebar",
+      "4667:13075 sidebar"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "755x659",
+     "nodes": [
+      "968:14897 Ready",
+      "4032:14352 Recording",
+      "4032:14534 Paused",
+      "4113:18278 Paused"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "65x65",
+     "nodes": [
+      "2189:10133 Practice",
+      "2189:10294 Dashboard"
+     ]
+    }
+   ],
+   "text": [
+    [
+     "Current Situation\n32-year-old male presenting for sick visit",
+     4,
+     0,
+     [
+      "127:3348",
+      "129:6647"
+     ],
+     [
+      "127:3154",
+      "3028:16365",
+      "3028:16381"
+     ]
+    ],
+    [
+     "DOB: 08/01/1994 (29 y/o)",
+     2,
+     0,
+     [
+      "1663:20062",
+      "968:14874"
+     ],
+     [
+      "1663:20074",
+      "968:14889"
+     ]
+    ],
+    [
+     "04/18/2022",
+     1,
+     0,
+     [
+      "1663:20062"
+     ],
+     [
+      "1663:20085"
+     ]
+    ],
+    [
+     "6/3/26\n32-year-old male presenting for sick visit: sore thro",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "4079:15504"
+     ]
+    ],
+    [
+     "6/1/26\n32-year-old male presenting for sick visit: sore thro",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "4079:15578"
+     ]
+    ],
+    [
+     "2/1/26",
+     3,
+     0,
+     [
+      "129:6647",
+      "4296:15558"
+     ],
+     [
+      "939:9256",
+      "917:15551",
+      "4305:21717"
+     ]
+    ],
+    [
+     "3/4/26",
+     2,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "893:3615",
+      "909:12698"
+     ]
+    ],
+    [
+     "Draft",
+     3,
+     1,
+     [
+      "129:6647"
+     ],
+     [
+      "129:7490",
+      "129:7542"
+     ]
+    ],
+    [
+     "10/30/25",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:7482"
+     ]
+    ],
+    [
+     "10/20/25",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:7487"
+     ]
+    ],
+    [
+     "10/25/25",
+     7,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:7563",
+      "129:7570",
+      "129:7577"
+     ]
+    ],
+    [
+     "10/25/25\nClient reports ongoing stress related to work deadl",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:7724"
+     ]
+    ],
+    [
+     "11/3/25\nLorem ipsum dolor sit amet consectetur. Aliquam veli",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:7725"
+     ]
+    ],
+    [
+     "10/25/25 - 10/26/25",
+     3,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:7803",
+      "129:8389",
+      "648:1858"
+     ]
+    ],
+    [
+     "11/21/24-11/31/24",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "648:3644"
+     ]
+    ],
+    [
+     "10/25/16",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:8824"
+     ]
+    ],
+    [
+     "2014-08-23",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:9117"
+     ]
+    ],
+    [
+     "11/21/24",
+     2,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "4598:31377",
+      "4695:13240"
+     ]
+    ],
+    [
+     "10/27/23",
+     4,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:10409",
+      "129:10422",
+      "129:10445"
+     ]
+    ],
+    [
+     "4/11/26",
+     10,
+     2,
+     [
+      "129:6647",
+      "4296:15558"
+     ],
+     [
+      "3496:14067",
+      "3496:14274",
+      "3569:22407"
+     ]
+    ],
+    [
+     "4/14/26",
+     12,
+     3,
+     [
+      "129:6647",
+      "4296:15558"
+     ],
+     [
+      "3496:14295",
+      "3496:14314",
+      "3496:14333"
+     ]
+    ],
+    [
+     "01/14/26",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "3501:15730"
+     ]
+    ],
+    [
+     "11/02/25",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "3501:15731"
+     ]
+    ],
+    [
+     "10/22/25",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "3501:15732"
+     ]
+    ],
+    [
+     "09/14/25",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "3501:15733"
+     ]
+    ],
+    [
+     "09/01/25",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "3501:15734"
+     ]
+    ],
+    [
+     "4/22/26",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "3496:15079"
+     ]
+    ],
+    [
+     "4/21/26",
+     6,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "3496:13917",
+      "3496:13934",
+      "3496:13950"
+     ]
+    ],
+    [
+     "11/2/25",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "2116:9033"
+     ]
+    ],
+    [
+     "10/14/25",
+     1,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "2116:9077"
+     ]
+    ],
+    [
+     "11/3/25",
+     2,
+     0,
+     [
+      "129:6647"
+     ],
+     [
+      "129:11274",
+      "129:11292"
+     ]
+    ],
+    [
+     "DRAFT • 08/09/2025",
+     1,
+     0,
+     [
+      "968:14874"
+     ],
+     [
+      "968:15022"
+     ]
+    ],
+    [
+     "Dates: 08/09/2025",
+     2,
+     0,
+     [
+      "968:14874"
+     ],
+     [
+      "968:15049",
+      "968:15076"
+     ]
+    ],
+    [
+     "Created by Steven Strange on 1/23/24",
+     11,
+     8,
+     [
+      "968:14897",
+      "4032:14352",
+      "4032:14534",
+      "4113:18278",
+      "2811:11430"
+     ],
+     [
+      "2811:11453",
+      "2811:12001",
+      "2811:12261"
+     ]
+    ],
+    [
+     "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     8,
+     4,
+     [
+      "968:14897",
+      "4032:14352",
+      "4032:14534",
+      "4113:18278",
+      "2811:11430"
+     ],
+     [
+      "2811:11456",
+      "2811:12009",
+      "2811:12269"
+     ]
+    ],
+    [
+     "5/25/25",
+     16,
+     8,
+     [],
+     []
+    ],
+    [
+     "6/20/25",
+     16,
+     8,
+     [],
+     []
+    ],
+    [
+     "6/29/25",
+     16,
+     8,
+     [],
+     []
+    ],
+    [
+     "7/18/25",
+     16,
+     8,
+     [],
+     []
+    ],
+    [
+     "04/22/26",
+     3,
+     0,
+     [
+      "4032:14352",
+      "4032:14534",
+      "4113:18278"
+     ],
+     [
+      "4032:14386",
+      "4032:14568",
+      "4113:18312"
+     ]
+    ],
+    [
+     "Save as Draft",
+     1,
+     1,
+     [
+      "883:6147"
+     ],
+     []
+    ],
+    [
+     "DOB: 04/21/1982",
+     3,
+     0,
+     [
+      "2133:8680"
+     ],
+     [
+      "2133:8691",
+      "2133:8822",
+      "2133:8955"
+     ]
+    ],
+    [
+     "04/21/1982",
+     3,
+     0,
+     [
+      "2133:8680"
+     ],
+     [
+      "2133:8773",
+      "2133:8906",
+      "2133:8987"
+     ]
+    ],
+    [
+     "10/23/25",
+     3,
+     0,
+     [
+      "2133:8680"
+     ],
+     [
+      "2133:8783",
+      "2133:8916",
+      "2133:9007"
+     ]
+    ],
+    [
+     "1/21/26",
+     3,
+     0,
+     [
+      "2133:8680"
+     ],
+     [
+      "2133:8788",
+      "2133:8921",
+      "2133:9012"
+     ]
+    ],
+    [
+     "Created by Tebra on 1/23/24",
+     4,
+     0,
+     [
+      "2811:11430"
+     ],
+     [
+      "2811:11450",
+      "2811:11997",
+      "2811:12257"
+     ]
+    ]
+   ],
+   "screenshot": "page-07-Components.png"
+  },
+  {
+   "id": "3569:14562",
+   "name": "Demos/Protos",
+   "topLevelCount": 1,
+   "frames": [
+    {
+     "name": "Frame 1",
+     "id": "3569:14563",
+     "type": "FRAME",
+     "x": 0,
+     "y": 0,
+     "w": 638,
+     "h": 700,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 73,
+     "local": 1,
+     "remote": 72,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 50,
+     "other": 22,
+     "otherKeys": [
+      "e7c73628",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "6fd89adb",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    }
+   ],
+   "nameHits": [],
+   "dupes": [],
+   "text": [
+    [
+     "4/11/26",
+     2,
+     2,
+     [
+      "3569:14563"
+     ],
+     []
+    ],
+    [
+     "4/14/26",
+     3,
+     3,
+     [
+      "3569:14563"
+     ],
+     []
+    ]
+   ],
+   "screenshot": "page-08-Demos-Protos.png"
+  },
+  {
+   "id": "105:1425",
+   "name": "-----ARCHIVE-----",
+   "topLevelCount": 0,
+   "frames": [],
+   "nameHits": [
+    {
+     "kind": "page",
+     "id": "105:1425",
+     "name": "-----ARCHIVE-----",
+     "term": "ARCHIVE"
+    }
+   ],
+   "dupes": [],
+   "screenshot": null
+  },
+  {
+   "id": "4740:14057",
+   "name": "NeuNeu",
+   "topLevelCount": 26,
+   "frames": [
+    {
+     "name": "MacBook Air - 10",
+     "id": "4803:1007",
+     "type": "FRAME",
+     "x": 2111,
+     "y": -910,
+     "w": 1146,
+     "h": 832,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 86,
+     "local": 4,
+     "remote": 82,
+     "missingMain": 0,
+     "rebuild": 42,
+     "kit": 0,
+     "other": 40,
+     "otherKeys": [
+      "1b825a74",
+      "b3e3761e",
+      "cc1a0359",
+      "bd72d255",
+      "1fa75e2c",
+      "4883e57e",
+      "4b1aa283",
+      "bbc2b01e",
+      "b46e0319",
+      "bf22561e"
+     ]
+    },
+    {
+     "name": "MacBook Air - 12",
+     "id": "4879:1932",
+     "type": "FRAME",
+     "x": 2111,
+     "y": 1061,
+     "w": 1146,
+     "h": 832,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 189,
+     "local": 7,
+     "remote": 182,
+     "missingMain": 0,
+     "rebuild": 43,
+     "kit": 66,
+     "other": 73,
+     "otherKeys": [
+      "1b825a74",
+      "b3e3761e",
+      "cc1a0359",
+      "bd72d255",
+      "1fa75e2c",
+      "4883e57e",
+      "4b1aa283",
+      "bbc2b01e",
+      "b46e0319",
+      "bf22561e",
+      "e7c73628",
+      "b6486f43",
+      "2f9fb1c4",
+      "089e9e2b",
+      "2d3f8e48",
+      "b45ccb08",
+      "623fc84d",
+      "470e5de6",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "0f3d2654",
+      "2160e4be"
+     ]
+    },
+    {
+     "name": "PatientHeader",
+     "id": "4807:12563",
+     "type": "COMPONENT",
+     "x": 784,
+     "y": -1651,
+     "w": 1090,
+     "h": 48,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 10,
+     "local": 0,
+     "remote": 10,
+     "missingMain": 0,
+     "rebuild": 10,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "MacBook Air - 11",
+     "id": "4809:12930",
+     "type": "FRAME",
+     "x": 2111,
+     "y": 58,
+     "w": 1280,
+     "h": 832,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 89,
+     "local": 4,
+     "remote": 85,
+     "missingMain": 0,
+     "rebuild": 54,
+     "kit": 0,
+     "other": 31,
+     "otherKeys": [
+      "1b825a74",
+      "b3e3761e",
+      "cc1a0359",
+      "bd72d255",
+      "1fa75e2c",
+      "4883e57e",
+      "4b1aa283",
+      "bbc2b01e",
+      "b46e0319",
+      "bf22561e",
+      "0c6a5eb6",
+      "1b006c5a"
+     ]
+    },
+    {
+     "name": "Frame 758532125",
+     "id": "4800:20783",
+     "type": "FRAME",
+     "x": 3566,
+     "y": 221,
+     "w": 363,
+     "h": 242,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 7,
+     "local": 0,
+     "remote": 7,
+     "missingMain": 0,
+     "rebuild": 7,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Patient Card",
+     "id": "4803:23538",
+     "type": "FRAME",
+     "x": 4004,
+     "y": 173,
+     "w": 361,
+     "h": 373,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 6,
+     "local": 0,
+     "remote": 6,
+     "missingMain": 0,
+     "rebuild": 6,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "MacBook Air - 5",
+     "id": "4775:10790",
+     "type": "FRAME",
+     "x": 3331,
+     "y": -910,
+     "w": 1280,
+     "h": 832,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 64,
+     "local": 1,
+     "remote": 63,
+     "missingMain": 0,
+     "rebuild": 26,
+     "kit": 2,
+     "other": 35,
+     "otherKeys": [
+      "1b825a74",
+      "b3e3761e",
+      "cc1a0359",
+      "bd72d255",
+      "1fa75e2c",
+      "4883e57e",
+      "4b1aa283",
+      "bbc2b01e",
+      "bf22561e",
+      "2f378ce9",
+      "0c6a5eb6",
+      "1b006c5a",
+      "bc20541a",
+      "3395ed7b",
+      "43562dd4",
+      "d7043d71"
+     ]
+    },
+    {
+     "name": "MacBook Air - 6",
+     "id": "4792:14540",
+     "type": "FRAME",
+     "x": 4711,
+     "y": -910,
+     "w": 1146,
+     "h": 832,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 189,
+     "local": 17,
+     "remote": 172,
+     "missingMain": 0,
+     "rebuild": 11,
+     "kit": 88,
+     "other": 73,
+     "otherKeys": [
+      "1b825a74",
+      "b3e3761e",
+      "cc1a0359",
+      "bd72d255",
+      "1fa75e2c",
+      "4883e57e",
+      "4b1aa283",
+      "bbc2b01e",
+      "e7c73628",
+      "b6486f43",
+      "2f9fb1c4",
+      "b45ccb08",
+      "470e5de6",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "0c6a5eb6",
+      "bc20541a",
+      "3395ed7b",
+      "e70fe42e",
+      "b5d541bf"
+     ]
+    },
+    {
+     "name": "With Legacy Nav",
+     "id": "4745:17168",
+     "type": "FRAME",
+     "x": -175,
+     "y": -948,
+     "w": 1280,
+     "h": 832,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 22,
+     "local": 0,
+     "remote": 22,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 4,
+     "other": 18,
+     "otherKeys": [
+      "b3e3761e",
+      "cc1a0359",
+      "bd72d255",
+      "1fa75e2c",
+      "4883e57e",
+      "4b1aa283",
+      "bbc2b01e",
+      "0c6a5eb6",
+      "1b006c5a",
+      "bc20541a",
+      "3395ed7b",
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706"
+     ]
+    },
+    {
+     "name": "SideRail",
+     "id": "4762:2160",
+     "type": "COMPONENT_SET",
+     "x": 1394,
+     "y": -3094,
+     "w": 526,
+     "h": 864,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 37,
+     "local": 0,
+     "remote": 37,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 37,
+     "otherKeys": [
+      "1b825a74",
+      "b3e3761e",
+      "cc1a0359",
+      "bd72d255",
+      "1fa75e2c",
+      "4883e57e",
+      "4b1aa283",
+      "bbc2b01e",
+      "0c6a5eb6",
+      "1b006c5a"
+     ]
+    },
+    {
+     "name": "Frame 758532158",
+     "id": "4797:19845",
+     "type": "FRAME",
+     "x": 1976,
+     "y": -3723,
+     "w": 1182,
+     "h": 2312,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 210,
+     "local": 20,
+     "remote": 190,
+     "missingMain": 0,
+     "rebuild": 183,
+     "kit": 0,
+     "other": 7,
+     "otherKeys": [
+      "b46e0319"
+     ]
+    },
+    {
+     "name": "Sidesheetv3",
+     "id": "4863:23145",
+     "type": "FRAME",
+     "x": 3818,
+     "y": -3068,
+     "w": 441,
+     "h": 600,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 37,
+     "local": 0,
+     "remote": 37,
+     "missingMain": 0,
+     "rebuild": 2,
+     "kit": 22,
+     "other": 13,
+     "otherKeys": [
+      "e7c73628",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "64e2edd5",
+      "9d3c6353"
+     ]
+    },
+    {
+     "name": "Sidesheetv3",
+     "id": "4884:2634",
+     "type": "FRAME",
+     "x": 4357,
+     "y": -3068,
+     "w": 441,
+     "h": 503,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 48,
+     "local": 0,
+     "remote": 48,
+     "missingMain": 0,
+     "rebuild": 8,
+     "kit": 20,
+     "other": 20,
+     "otherKeys": [
+      "e7c73628",
+      "089e9e2b",
+      "2d3f8e48",
+      "0c6a5eb6",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "64e2edd5",
+      "48dc5788"
+     ]
+    },
+    {
+     "name": "Autocomplete",
+     "id": "4797:20462",
+     "type": "FRAME",
+     "x": 3292,
+     "y": -3094,
+     "w": 370,
+     "h": 1500,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 38,
+     "local": 0,
+     "remote": 38,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 38,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 758532125",
+     "id": "4801:21353",
+     "type": "FRAME",
+     "x": 3559,
+     "y": 560,
+     "w": 415,
+     "h": 114,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 4,
+     "local": 0,
+     "remote": 4,
+     "missingMain": 0,
+     "rebuild": 4,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 758532197",
+     "id": "4803:23808",
+     "type": "FRAME",
+     "x": 3559,
+     "y": 743,
+     "w": 675,
+     "h": 104,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 11,
+     "local": 0,
+     "remote": 11,
+     "missingMain": 0,
+     "rebuild": 11,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "PracticeHeader",
+     "id": "4796:19669",
+     "type": "COMPONENT",
+     "x": 784,
+     "y": -1775,
+     "w": 1090,
+     "h": 55,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 4,
+     "local": 0,
+     "remote": 4,
+     "missingMain": 0,
+     "rebuild": 3,
+     "kit": 0,
+     "other": 1,
+     "otherKeys": [
+      "b46e0319"
+     ]
+    },
+    {
+     "name": "PatientNav",
+     "id": "4796:19668",
+     "type": "COMPONENT",
+     "x": 784,
+     "y": -1855,
+     "w": 1090,
+     "h": 25,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "NavStack",
+     "id": "4845:22161",
+     "type": "COMPONENT_SET",
+     "x": 768,
+     "y": -1550,
+     "w": 1122,
+     "h": 352,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 51,
+     "local": 9,
+     "remote": 42,
+     "missingMain": 0,
+     "rebuild": 39,
+     "kit": 0,
+     "other": 3,
+     "otherKeys": [
+      "b46e0319"
+     ]
+    },
+    {
+     "name": "check_filled",
+     "id": "4868:23823",
+     "type": "INSTANCE",
+     "x": 3851,
+     "y": -3165,
+     "w": 20,
+     "h": 20,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 2,
+     "local": 0,
+     "remote": 2,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 1,
+     "other": 1,
+     "otherKeys": [
+      "53bcd12e"
+     ]
+    },
+    {
+     "name": "add_circle_outline",
+     "id": "4868:23838",
+     "type": "INSTANCE",
+     "x": 3938,
+     "y": -3180,
+     "w": 20,
+     "h": 20,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 1,
+     "local": 0,
+     "remote": 1,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 1,
+     "otherKeys": [
+      "64e2edd5"
+     ]
+    },
+    {
+     "name": "Canvas Tools",
+     "id": "4907:2529",
+     "type": "INSTANCE",
+     "x": 1934,
+     "y": 2090,
+     "w": 1392,
+     "h": 64,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 40,
+     "local": 0,
+     "remote": 40,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 40,
+     "otherKeys": [
+      "e70fe42e",
+      "b5d541bf",
+      "8f46e327",
+      "136c3745",
+      "13e076ad",
+      "2cfdd4d9",
+      "18f2e1d2",
+      "384385f9",
+      "c15da6bf",
+      "b9bdfe66",
+      "de7e2810",
+      "1f204945",
+      "2371fcb8",
+      "435f0eed",
+      "560878c2",
+      "a177fabc",
+      "4e7c94a3",
+      "7803e609",
+      "4311ad0c",
+      "426596ac",
+      "b728dc7c",
+      "cbc718ba",
+      "dacaf752",
+      "45372dae",
+      "e373e4fe",
+      "1b25bc41",
+      "e882f01f",
+      "2f8ecf9d",
+      "456e4da1",
+      "5b143363",
+      "5def2b07",
+      "037564f3",
+      "b00f0a39",
+      "998b9cd2",
+      "62c6818b",
+      "e2e67198",
+      "20476510",
+      "9b351485",
+      "6951f03c"
+     ]
+    },
+    {
+     "name": "Sidesheetv3",
+     "id": "4946:17224",
+     "type": "FRAME",
+     "x": 3570,
+     "y": 909,
+     "w": 550,
+     "h": 948,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 94,
+     "local": 0,
+     "remote": 94,
+     "missingMain": 0,
+     "rebuild": 39,
+     "kit": 37,
+     "other": 18,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a"
+     ]
+    },
+    {
+     "name": "Sidesheetv3",
+     "id": "4946:17710",
+     "type": "FRAME",
+     "x": 4749,
+     "y": 909,
+     "w": 550,
+     "h": 948,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 79,
+     "local": 0,
+     "remote": 79,
+     "missingMain": 0,
+     "rebuild": 24,
+     "kit": 37,
+     "other": 18,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a"
+     ]
+    },
+    {
+     "name": "Sidesheetv3",
+     "id": "4946:17965",
+     "type": "FRAME",
+     "x": 4157,
+     "y": 909,
+     "w": 550,
+     "h": 948,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 77,
+     "local": 0,
+     "remote": 77,
+     "missingMain": 0,
+     "rebuild": 19,
+     "kit": 37,
+     "other": 21,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a",
+      "48dc5788",
+      "56904c87",
+      "8dadecd8"
+     ]
+    },
+    {
+     "name": "Sidesheetv3",
+     "id": "5034:19820",
+     "type": "FRAME",
+     "x": 5369,
+     "y": 909,
+     "w": 550,
+     "h": 948,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 67,
+     "local": 0,
+     "remote": 67,
+     "missingMain": 0,
+     "rebuild": 12,
+     "kit": 37,
+     "other": 18,
+     "otherKeys": [
+      "e7c73628",
+      "b6486f43",
+      "b45ccb08",
+      "a32e27b6",
+      "8a079993",
+      "9031c773",
+      "b235f36b",
+      "4438f192",
+      "2f75179a"
+     ]
+    }
+   ],
+   "nameHits": [
+    {
+     "kind": "FRAME",
+     "id": "4745:17168",
+     "name": "With Legacy Nav",
+     "term": "Legacy"
+    }
+   ],
+   "dupes": [
+    {
+     "by": "name",
+     "name": "Frame 758532125",
+     "ids": [
+      "4800:20783",
+      "4801:21353"
+     ]
+    },
+    {
+     "by": "name",
+     "name": "Sidesheetv3",
+     "ids": [
+      "4863:23145",
+      "4884:2634",
+      "4946:17224",
+      "4946:17710",
+      "4946:17965",
+      "5034:19820"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1146x832",
+     "nodes": [
+      "4803:1007 MacBook Air - 10",
+      "4879:1932 MacBook Air - 12",
+      "4792:14540 MacBook Air - 6"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1280x832",
+     "nodes": [
+      "4809:12930 MacBook Air - 11",
+      "4775:10790 MacBook Air - 5",
+      "4745:17168 With Legacy Nav"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "20x20",
+     "nodes": [
+      "4868:23823 check_filled",
+      "4868:23838 add_circle_outline"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "550x948",
+     "nodes": [
+      "4946:17224 Sidesheetv3",
+      "4946:17710 Sidesheetv3",
+      "4946:17965 Sidesheetv3",
+      "5034:19820 Sidesheetv3"
+     ]
+    }
+   ],
+   "text": [
+    [
+     "DOB: 04/21/1982",
+     11,
+     11,
+     [
+      "4803:1007",
+      "4879:1932",
+      "4807:12563",
+      "4809:12930",
+      "4745:17168",
+      "4797:19845"
+     ],
+     [
+      "4775:10830",
+      "4792:14580",
+      "4745:17263"
+     ]
+    ],
+    [
+     "Encounter - Aug 21 2026",
+     16,
+     0,
+     [
+      "4803:1007",
+      "4879:1932",
+      "4809:12930",
+      "4775:10790",
+      "4792:14540",
+      "4797:19845"
+     ],
+     [
+      "4803:1397",
+      "4803:1409",
+      "4881:3008"
+     ]
+    ],
+    [
+     "8/21/26",
+     6,
+     0,
+     [
+      "4803:1007",
+      "4879:1932",
+      "4809:12930",
+      "4775:10790"
+     ],
+     [
+      "4803:1045",
+      "4881:18753",
+      "4809:12981"
+     ]
+    ],
+    [
+     "10/21/26 @ 11:30 AM",
+     2,
+     0,
+     [
+      "4803:1007",
+      "4809:12930"
+     ],
+     [
+      "4803:1063",
+      "4809:12999"
+     ]
+    ],
+    [
+     "Save as Draft",
+     2,
+     2,
+     [
+      "4879:1932",
+      "4792:14540"
+     ],
+     []
+    ],
+    [
+     "Created by Steven Strange on 1/23/24",
+     4,
+     4,
+     [
+      "4879:1932",
+      "4792:14540"
+     ],
+     []
+    ],
+    [
+     "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     2,
+     2,
+     [
+      "4879:1932",
+      "4792:14540"
+     ],
+     []
+    ],
+    [
+     "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     16,
+     16,
+     [
+      "4879:1932",
+      "4792:14540"
+     ],
+     []
+    ],
+    [
+     "4/26/1988 (38)",
+     2,
+     0,
+     [
+      "4803:23538",
+      "4801:21353"
+     ],
+     [
+      "4803:23548",
+      "4801:21363"
+     ]
+    ],
+    [
+     "8/18/26",
+     2,
+     0,
+     [
+      "4803:23538",
+      "4801:21353"
+     ],
+     [
+      "4803:23551",
+      "4801:21361"
+     ]
+    ],
+    [
+     "8/12/26",
+     2,
+     0,
+     [
+      "4803:23538"
+     ],
+     [
+      "4803:23561",
+      "4803:23572"
+     ]
+    ],
+    [
+     "08/21/26",
+     1,
+     0,
+     [
+      "4775:10790"
+     ],
+     [
+      "4788:14475"
+     ]
+    ],
+    [
+     "Last appointment: 6/12/26",
+     1,
+     0,
+     [
+      "4775:10790"
+     ],
+     [
+      "4778:11742"
+     ]
+    ],
+    [
+     "Appointment date: 6/12/26",
+     1,
+     0,
+     [
+      "4775:10790"
+     ],
+     [
+      "4778:11755"
+     ]
+    ],
+    [
+     "02/12/2023 02/11/2023 02/07/2023 01/03/2023 10/15/2022 02/08/2023 10/01/2022",
+     7,
+     0,
+     [
+      "4775:10790"
+     ],
+     [
+      "4779:13237",
+      "4779:13243",
+      "4779:13247"
+     ]
+    ],
+    [
+     "Archive",
+     1,
+     1,
+     [
+      "4797:19845"
+     ],
+     []
+    ],
+    [
+     "Reviewed by Dr. Lee on 08/21/26",
+     2,
+     0,
+     [
+      "4863:23145"
+     ],
+     [
+      "4863:23458",
+      "4863:23473"
+     ]
+    ],
+    [
+     "Ordered  by Dr. Lee on 08/21/26",
+     1,
+     0,
+     [
+      "4863:23145"
+     ],
+     [
+      "4867:23787"
+     ]
+    ],
+    [
+     "11/21/24-11/31/24",
+     1,
+     0,
+     [
+      "4884:2634"
+     ],
+     [
+      "4885:6143"
+     ]
+    ],
+    [
+     "Archived",
+     1,
+     0,
+     [
+      "4797:20462"
+     ],
+     [
+      "4797:20527"
+     ]
+    ],
+    [
+     "4/22/28",
+     1,
+     1,
+     [
+      "4803:23808"
+     ],
+     []
+    ],
+    [
+     "09/12/25",
+     1,
+     1,
+     [
+      "4803:23808"
+     ],
+     []
+    ],
+    [
+     "4/21/87",
+     1,
+     1,
+     [
+      "4946:17224"
+     ],
+     []
+    ]
+   ],
+   "screenshot": "page-10-NeuNeu.png"
+  },
+  {
+   "id": "1424:8259",
+   "name": "Neu",
+   "topLevelCount": 26,
+   "frames": [
+    {
+     "name": "CONTAINER",
+     "id": "2154:9260",
+     "type": "FRAME",
+     "x": -3,
+     "y": -906,
+     "w": 1280,
+     "h": 768,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 179,
+     "local": 15,
+     "remote": 164,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 68,
+     "other": 96,
+     "otherKeys": [
+      "ee80c62e",
+      "4b1aa283",
+      "bbc2b01e",
+      "e754776a",
+      "73f90a7c",
+      "1ba8afaa",
+      "e21181eb",
+      "b46e0319",
+      "b45ccb08",
+      "e7c73628",
+      "e70fe42e",
+      "b5d541bf",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "CONTAINER",
+     "id": "2162:7367",
+     "type": "FRAME",
+     "x": -3,
+     "y": -1837,
+     "w": 1280,
+     "h": 768,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 180,
+     "local": 11,
+     "remote": 169,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 70,
+     "other": 99,
+     "otherKeys": [
+      "4b1aa283",
+      "bbc2b01e",
+      "73f90a7c",
+      "1ba8afaa",
+      "e21181eb",
+      "b46e0319",
+      "b45ccb08",
+      "e7c73628",
+      "e70fe42e",
+      "b5d541bf",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "ec7a3fe5",
+      "3a49272f",
+      "3e0895ba"
+     ]
+    },
+    {
+     "name": "SidePanelExpand1",
+     "id": "2196:8153",
+     "type": "FRAME",
+     "x": -60,
+     "y": -2861,
+     "w": 1156,
+     "h": 768,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 182,
+     "local": 16,
+     "remote": 166,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 66,
+     "other": 100,
+     "otherKeys": [
+      "4b1aa283",
+      "bbc2b01e",
+      "b46e0319",
+      "b45ccb08",
+      "e7c73628",
+      "e70fe42e",
+      "b5d541bf",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "SidePanelExpand1",
+     "id": "4113:19513",
+     "type": "FRAME",
+     "x": 2595,
+     "y": -392,
+     "w": 1156,
+     "h": 768,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 182,
+     "local": 16,
+     "remote": 166,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 66,
+     "other": 100,
+     "otherKeys": [
+      "4b1aa283",
+      "bbc2b01e",
+      "b46e0319",
+      "b45ccb08",
+      "e7c73628",
+      "e70fe42e",
+      "b5d541bf",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Practice Header",
+     "id": "4113:20227",
+     "type": "FRAME",
+     "x": 2643,
+     "y": -656,
+     "w": 1098,
+     "h": 72,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "SidePanelDpand2",
+     "id": "2233:10042",
+     "type": "FRAME",
+     "x": 1477,
+     "y": -2876,
+     "w": 1308,
+     "h": 768,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 182,
+     "local": 16,
+     "remote": 166,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 66,
+     "other": 100,
+     "otherKeys": [
+      "4b1aa283",
+      "bbc2b01e",
+      "b46e0319",
+      "b45ccb08",
+      "e7c73628",
+      "e70fe42e",
+      "b5d541bf",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "SidePanelDpand2",
+     "id": "2454:841",
+     "type": "FRAME",
+     "x": 1420,
+     "y": -4039,
+     "w": 1308,
+     "h": 768,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 181,
+     "local": 15,
+     "remote": 166,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 66,
+     "other": 100,
+     "otherKeys": [
+      "4b1aa283",
+      "bbc2b01e",
+      "b46e0319",
+      "b45ccb08",
+      "e7c73628",
+      "e70fe42e",
+      "b5d541bf",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Rectangle 1",
+     "id": "1424:8742",
+     "type": "RECTANGLE",
+     "x": -753,
+     "y": 129,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 2",
+     "id": "1424:8743",
+     "type": "RECTANGLE",
+     "x": -701,
+     "y": 129,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 3",
+     "id": "1424:8745",
+     "type": "RECTANGLE",
+     "x": -649,
+     "y": 129,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 4",
+     "id": "1424:8746",
+     "type": "RECTANGLE",
+     "x": -597,
+     "y": 129,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 9",
+     "id": "1631:18223",
+     "type": "RECTANGLE",
+     "x": -597,
+     "y": 55,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 10",
+     "id": "1631:18225",
+     "type": "RECTANGLE",
+     "x": -597,
+     "y": -19,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 6",
+     "id": "1631:18220",
+     "type": "RECTANGLE",
+     "x": -597,
+     "y": 213,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 7",
+     "id": "1631:18221",
+     "type": "RECTANGLE",
+     "x": -597,
+     "y": 277,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 8",
+     "id": "1631:18222",
+     "type": "RECTANGLE",
+     "x": -597,
+     "y": 356,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Rectangle 5",
+     "id": "1424:8747",
+     "type": "RECTANGLE",
+     "x": -545,
+     "y": 129,
+     "w": 39,
+     "h": 43,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 758532075",
+     "id": "1586:17262",
+     "type": "FRAME",
+     "x": -387,
+     "y": -338,
+     "w": 43,
+     "h": 729,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "CONTAINER",
+     "id": "2162:7723",
+     "type": "FRAME",
+     "x": 1462,
+     "y": -1837,
+     "w": 1280,
+     "h": 768,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 150,
+     "local": 28,
+     "remote": 122,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 51,
+     "other": 71,
+     "otherKeys": [
+      "ee80c62e",
+      "4b1aa283",
+      "bbc2b01e",
+      "e754776a",
+      "73f90a7c",
+      "1ba8afaa",
+      "e21181eb",
+      "b46e0319",
+      "b45ccb08",
+      "e7c73628",
+      "e70fe42e",
+      "b5d541bf",
+      "01989749",
+      "53ce637c",
+      "b6486f43",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "a32e27b6",
+      "8a079993",
+      "2371fcb8",
+      "dacaf752"
+     ]
+    },
+    {
+     "name": "Healthcare EHR Module Design",
+     "id": "2147:7288",
+     "type": "FRAME",
+     "x": 659,
+     "y": 1418,
+     "w": 1359,
+     "h": 907,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Icon_Home",
+     "id": "2196:8670",
+     "type": "COMPONENT_SET",
+     "x": 1,
+     "y": -3030,
+     "w": 88,
+     "h": 56,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Icon_Workspace",
+     "id": "2196:8673",
+     "type": "COMPONENT_SET",
+     "x": 211,
+     "y": -3038,
+     "w": 87,
+     "h": 56,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Icon_Pinned",
+     "id": "2196:8927",
+     "type": "COMPONENT_SET",
+     "x": 545,
+     "y": -3017,
+     "w": 93,
+     "h": 56,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "keyboard_arrow_left_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1",
+     "id": "2196:11185",
+     "type": "FRAME",
+     "x": 901,
+     "y": -3025,
+     "w": 24,
+     "h": 24,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "App Icons",
+     "id": "2196:11421",
+     "type": "FRAME",
+     "x": -1316,
+     "y": -2618,
+     "w": 96,
+     "h": 65,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "SIDENAV-FUTURE",
+     "id": "2230:8575",
+     "type": "COMPONENT_SET",
+     "x": -1017,
+     "y": -2881,
+     "w": 561,
+     "h": 800,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 40,
+     "local": 8,
+     "remote": 32,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 32,
+     "otherKeys": [
+      "4b1aa283",
+      "bbc2b01e",
+      "b46e0319"
+     ]
+    }
+   ],
+   "nameHits": [
+    {
+     "kind": "page",
+     "id": "1424:8259",
+     "name": "Neu",
+     "term": "Neu",
+     "extraTerm": true
+    },
+    {
+     "kind": "COMPONENT_SET",
+     "id": "2230:8575",
+     "name": "SIDENAV-FUTURE",
+     "term": "FUTURE",
+     "extraTerm": true
+    }
+   ],
+   "dupes": [
+    {
+     "by": "name",
+     "name": "CONTAINER",
+     "ids": [
+      "2154:9260",
+      "2162:7367",
+      "2162:7723"
+     ]
+    },
+    {
+     "by": "name",
+     "name": "SidePanelExpand1",
+     "ids": [
+      "2196:8153",
+      "4113:19513"
+     ]
+    },
+    {
+     "by": "name",
+     "name": "SidePanelDpand2",
+     "ids": [
+      "2233:10042",
+      "2454:841"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1280x768",
+     "nodes": [
+      "2154:9260 CONTAINER",
+      "2162:7367 CONTAINER",
+      "2162:7723 CONTAINER"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1156x768",
+     "nodes": [
+      "2196:8153 SidePanelExpand1",
+      "4113:19513 SidePanelExpand1"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1308x768",
+     "nodes": [
+      "2233:10042 SidePanelDpand2",
+      "2454:841 SidePanelDpand2"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "39x43",
+     "nodes": [
+      "1424:8742 Rectangle 1",
+      "1424:8743 Rectangle 2",
+      "1424:8745 Rectangle 3",
+      "1424:8746 Rectangle 4",
+      "1631:18223 Rectangle 9",
+      "1631:18225 Rectangle 10",
+      "1631:18220 Rectangle 6",
+      "1631:18221 Rectangle 7",
+      "1631:18222 Rectangle 8",
+      "1424:8747 Rectangle 5"
+     ]
+    }
+   ],
+   "text": [
+    [
+     "4:00 PM | 2/25/26",
+     5,
+     0,
+     [
+      "2154:9260"
+     ],
+     [
+      "2154:9346",
+      "2154:9349",
+      "2154:9352"
+     ]
+    ],
+    [
+     "DOB: 08/01/1994 (29 y/o)",
+     1,
+     0,
+     [
+      "2154:9260"
+     ],
+     [
+      "2154:9379"
+     ]
+    ],
+    [
+     "04/18/2022",
+     1,
+     0,
+     [
+      "2154:9260"
+     ],
+     [
+      "2154:9390"
+     ]
+    ],
+    [
+     "Current Situation\n32-year-old male presenting for sick visit",
+     7,
+     7,
+     [
+      "2154:9260",
+      "2162:7367",
+      "2196:8153",
+      "4113:19513",
+      "2233:10042",
+      "2454:841"
+     ],
+     []
+    ],
+    [
+     "3/3/26",
+     3,
+     0,
+     [
+      "2154:9260",
+      "2454:841",
+      "2162:7723"
+     ],
+     [
+      "2185:8235",
+      "2454:1394",
+      "2454:1377"
+     ]
+    ],
+    [
+     "Save as Draft",
+     7,
+     7,
+     [],
+     []
+    ],
+    [
+     "Created by Steven Strange on 1/23/24",
+     26,
+     26,
+     [],
+     []
+    ],
+    [
+     "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     13,
+     13,
+     [],
+     []
+    ],
+    [
+     "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     104,
+     104,
+     [],
+     []
+    ],
+    [
+     "Last: 4/15/25",
+     7,
+     3,
+     [
+      "2162:7367",
+      "2196:8153",
+      "4113:19513",
+      "2233:10042",
+      "2454:841",
+      "2230:8575"
+     ],
+     [
+      "2189:10953",
+      "2454:1534",
+      "2196:11233"
+     ]
+    ],
+    [
+     "04/21/1982",
+     3,
+     0,
+     [
+      "2162:7367",
+      "4113:20227"
+     ],
+     [
+      "2189:11248",
+      "4120:20633",
+      "4113:20331"
+     ]
+    ],
+    [
+     "DOB: 04/21/1982",
+     11,
+     0,
+     [
+      "2162:7367",
+      "2196:8153",
+      "4113:19513",
+      "2233:10042",
+      "2454:841",
+      "2162:7723"
+     ],
+     [
+      "2162:8256",
+      "2196:8965",
+      "2196:8354"
+     ]
+    ],
+    [
+     "03/25/26",
+     24,
+     12,
+     [
+      "2196:8153",
+      "4113:19513",
+      "2233:10042",
+      "2454:841",
+      "2230:8575"
+     ],
+     [
+      "2454:1599",
+      "2454:1613",
+      "2454:1622"
+     ]
+    ],
+    [
+     "Patient is a 58-year-old with multiple chronic conditions pr",
+     1,
+     0,
+     [
+      "2147:7288"
+     ],
+     [
+      "2147:7334"
+     ]
+    ],
+    [
+     "Draft",
+     1,
+     0,
+     [
+      "2147:7288"
+     ],
+     [
+      "2147:7397"
+     ]
+    ]
+   ],
+   "screenshot": "page-11-Neu.png"
+  },
+  {
+   "id": "112:4335",
+   "name": "Sandbox",
+   "topLevelCount": 19,
+   "frames": [
+    {
+     "name": "Main",
+     "id": "112:4336",
+     "type": "FRAME",
+     "x": 0,
+     "y": 0,
+     "w": 1413,
+     "h": 1555,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 130,
+     "local": 0,
+     "remote": 130,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 65,
+     "other": 65,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "83e2b059",
+      "b6486f43",
+      "e7c73628",
+      "80b28133",
+      "1e8dc86c",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Main",
+     "id": "112:4605",
+     "type": "FRAME",
+     "x": 1620,
+     "y": 0,
+     "w": 1413,
+     "h": 1555,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 130,
+     "local": 0,
+     "remote": 130,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 65,
+     "other": 65,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "83e2b059",
+      "b6486f43",
+      "e7c73628",
+      "80b28133",
+      "1e8dc86c",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Active AI Note",
+     "id": "112:4880",
+     "type": "FRAME",
+     "x": 0,
+     "y": 1894,
+     "w": 1413,
+     "h": 1525,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 147,
+     "local": 0,
+     "remote": 147,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 79,
+     "other": 68,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "83e2b059",
+      "b6486f43",
+      "e7c73628",
+      "80b28133",
+      "1e8dc86c",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Active AI Note",
+     "id": "654:5587",
+     "type": "FRAME",
+     "x": 0,
+     "y": 3592,
+     "w": 1413,
+     "h": 804,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 8,
+     "local": 0,
+     "remote": 8,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 4,
+     "other": 4,
+     "otherKeys": [
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "Primary Nav",
+     "id": "654:5588",
+     "type": "INSTANCE",
+     "x": 0,
+     "y": 3592,
+     "w": 1413,
+     "h": 65,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 8,
+     "local": 0,
+     "remote": 8,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 4,
+     "other": 4,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706"
+     ]
+    },
+    {
+     "name": "MegaMenu1",
+     "id": "656:3881",
+     "type": "FRAME",
+     "x": 0,
+     "y": 4634,
+     "w": 1413,
+     "h": 869,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 16,
+     "local": 0,
+     "remote": 16,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 8,
+     "other": 8,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "MegaMenu2",
+     "id": "656:4110",
+     "type": "FRAME",
+     "x": 1480,
+     "y": 4634,
+     "w": 1413,
+     "h": 869,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 16,
+     "local": 0,
+     "remote": 16,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 8,
+     "other": 8,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "MegaMenu2",
+     "id": "660:4621",
+     "type": "FRAME",
+     "x": 0,
+     "y": 5698,
+     "w": 1413,
+     "h": 869,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 21,
+     "local": 0,
+     "remote": 21,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 12,
+     "other": 9,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "MegaMenu2",
+     "id": "664:5316",
+     "type": "FRAME",
+     "x": 1518,
+     "y": 5698,
+     "w": 1413,
+     "h": 869,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 21,
+     "local": 0,
+     "remote": 21,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 12,
+     "other": 9,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "MegaMenu2",
+     "id": "664:5529",
+     "type": "FRAME",
+     "x": 2966,
+     "y": 5698,
+     "w": 1413,
+     "h": 869,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 23,
+     "local": 0,
+     "remote": 23,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 14,
+     "other": 9,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "MegaMenu3",
+     "id": "656:4322",
+     "type": "FRAME",
+     "x": 3024,
+     "y": 4634,
+     "w": 1413,
+     "h": 869,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 21,
+     "local": 0,
+     "remote": 21,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 12,
+     "other": 9,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43"
+     ]
+    },
+    {
+     "name": "MegaMenu3",
+     "id": "4136:4409",
+     "type": "FRAME",
+     "x": 4734,
+     "y": 3722,
+     "w": 1413,
+     "h": 662,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 241,
+     "local": 0,
+     "remote": 241,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 165,
+     "other": 76,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "b6486f43",
+      "e7449fad",
+      "29497b6c",
+      "e0557b5a"
+     ]
+    },
+    {
+     "name": "Frame 758532053",
+     "id": "681:2827",
+     "type": "FRAME",
+     "x": -1010,
+     "y": 4634,
+     "w": 879,
+     "h": 1933,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "SPA",
+     "id": "2443:9419",
+     "type": "FRAME",
+     "x": 1372,
+     "y": 13048,
+     "w": 1359,
+     "h": 918,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Container",
+     "id": "2443:9988",
+     "type": "FRAME",
+     "x": 2881,
+     "y": 13525,
+     "w": 439,
+     "h": 135,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Container",
+     "id": "2443:10008",
+     "type": "FRAME",
+     "x": 2881,
+     "y": 13728,
+     "w": 406,
+     "h": 113,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Container",
+     "id": "2443:10050",
+     "type": "FRAME",
+     "x": 2881,
+     "y": 13960,
+     "w": 406,
+     "h": 109,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 758532068",
+     "id": "4155:4495",
+     "type": "FRAME",
+     "x": 6828,
+     "y": 3722,
+     "w": 549,
+     "h": 917,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 156,
+     "local": 0,
+     "remote": 156,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 110,
+     "other": 46,
+     "otherKeys": [
+      "b6486f43",
+      "e7449fad",
+      "29497b6c",
+      "e0557b5a"
+     ]
+    },
+    {
+     "name": "Frame 758532069",
+     "id": "4207:15079",
+     "type": "FRAME",
+     "x": 8121,
+     "y": 3722,
+     "w": 959,
+     "h": 148,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 12,
+     "local": 0,
+     "remote": 12,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 8,
+     "other": 4,
+     "otherKeys": [
+      "b45ccb08",
+      "b6486f43"
+     ]
+    }
+   ],
+   "nameHits": [],
+   "dupes": [
+    {
+     "by": "name",
+     "name": "Main",
+     "ids": [
+      "112:4336",
+      "112:4605"
+     ]
+    },
+    {
+     "by": "name",
+     "name": "Active AI Note",
+     "ids": [
+      "112:4880",
+      "654:5587"
+     ]
+    },
+    {
+     "by": "name",
+     "name": "MegaMenu2",
+     "ids": [
+      "656:4110",
+      "660:4621",
+      "664:5316",
+      "664:5529"
+     ]
+    },
+    {
+     "by": "name",
+     "name": "MegaMenu3",
+     "ids": [
+      "656:4322",
+      "4136:4409"
+     ]
+    },
+    {
+     "by": "name",
+     "name": "Container",
+     "ids": [
+      "2443:9988",
+      "2443:10008",
+      "2443:10050"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1413x1555",
+     "nodes": [
+      "112:4336 Main",
+      "112:4605 Main"
+     ]
+    },
+    {
+     "by": "dimensions",
+     "dims": "1413x869",
+     "nodes": [
+      "656:3881 MegaMenu1",
+      "656:4110 MegaMenu2",
+      "660:4621 MegaMenu2",
+      "664:5316 MegaMenu2",
+      "664:5529 MegaMenu2",
+      "656:4322 MegaMenu3"
+     ]
+    }
+   ],
+   "text": [
+    [
+     "DOB: 08/01/1994 (29 y/o)",
+     13,
+     0,
+     [
+      "112:4336",
+      "112:4605",
+      "112:4880",
+      "654:5587",
+      "656:3881",
+      "656:4110"
+     ],
+     [
+      "112:4350",
+      "112:4619",
+      "112:4894"
+     ]
+    ],
+    [
+     "04/18/2022",
+     13,
+     0,
+     [
+      "112:4336",
+      "112:4605",
+      "112:4880",
+      "654:5587",
+      "656:3881",
+      "656:4110"
+     ],
+     [
+      "112:4361",
+      "112:4630",
+      "112:4905"
+     ]
+    ],
+    [
+     "last updated 1/6/26 at 1:29 PM",
+     3,
+     0,
+     [
+      "112:4336",
+      "112:4605",
+      "112:4880"
+     ],
+     [
+      "112:4414",
+      "112:4683",
+      "112:4958"
+     ]
+    ],
+    [
+     "36 y/o (4/21/1988)",
+     3,
+     3,
+     [
+      "112:4336",
+      "112:4605",
+      "112:4880"
+     ],
+     []
+    ],
+    [
+     "12/2/25",
+     3,
+     0,
+     [
+      "112:4336",
+      "112:4605",
+      "112:4880"
+     ],
+     [
+      "112:4465",
+      "112:4734",
+      "112:5009"
+     ]
+    ],
+    [
+     "Save as Draft",
+     3,
+     3,
+     [],
+     []
+    ],
+    [
+     "Created by Steven Strange on 1/23/24",
+     6,
+     6,
+     [],
+     []
+    ],
+    [
+     "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     3,
+     3,
+     [],
+     []
+    ],
+    [
+     "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     24,
+     24,
+     [],
+     []
+    ]
+   ],
+   "screenshot": "page-12-Sandbox.png"
+  },
+  {
+   "id": "4250:14678",
+   "name": "Misc",
+   "topLevelCount": 2,
+   "frames": [
+    {
+     "name": "Appointment Selection",
+     "id": "4250:15022",
+     "type": "FRAME",
+     "x": -196,
+     "y": -169,
+     "w": 457,
+     "h": 315,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 9,
+     "local": 0,
+     "remote": 9,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 6,
+     "other": 3,
+     "otherKeys": [
+      "3dd0110a",
+      "b6486f43",
+      "b45ccb08"
+     ]
+    },
+    {
+     "name": "Frame 758531120",
+     "id": "4348:12604",
+     "type": "FRAME",
+     "x": -149,
+     "y": 355,
+     "w": 1123,
+     "h": 175,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 72,
+     "local": 0,
+     "remote": 72,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 44,
+     "other": 28,
+     "otherKeys": [
+      "b45ccb08",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad"
+     ]
+    }
+   ],
+   "nameHits": [],
+   "dupes": [],
+   "text": [
+    [
+     "February 26, 2026",
+     1,
+     0,
+     [
+      "4250:15022"
+     ],
+     [
+      "4250:15019"
+     ]
+    ],
+    [
+     "February 31, 2026",
+     1,
+     0,
+     [
+      "4250:15022"
+     ],
+     [
+      "4250:15000"
+     ]
+    ],
+    [
+     "March 15, 2026",
+     1,
+     0,
+     [
+      "4250:15022"
+     ],
+     [
+      "4250:15002"
+     ]
+    ]
+   ],
+   "screenshot": "page-13-Misc.png"
+  },
+  {
+   "id": "12:866",
+   "name": "NoFolder Navigation",
+   "topLevelCount": 7,
+   "frames": [
+    {
+     "name": "Main",
+     "id": "26:10816",
+     "type": "FRAME",
+     "x": 1876,
+     "y": -8,
+     "w": 1413,
+     "h": 2643,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 187,
+     "local": 2,
+     "remote": 185,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 94,
+     "other": 91,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "83e2b059",
+      "b6486f43",
+      "e7c73628",
+      "01989749",
+      "53ce637c",
+      "80b28133",
+      "1e8dc86c",
+      "61219e97",
+      "bbc2b01e",
+      "29ce87fe",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155"
+     ]
+    },
+    {
+     "name": "Main",
+     "id": "74:647",
+     "type": "FRAME",
+     "x": 5101,
+     "y": -8,
+     "w": 1413,
+     "h": 2345,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 779,
+     "local": 0,
+     "remote": 779,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 157,
+     "other": 622,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "83e2b059",
+      "b6486f43",
+      "e7c73628",
+      "01989749",
+      "53ce637c",
+      "80b28133",
+      "1e8dc86c",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "fbba9fec",
+      "ae5e4b8b",
+      "3dd0110a",
+      "b9d3ab4f",
+      "a7a3c01d",
+      "6e25d979",
+      "54891f9e",
+      "6fd89adb"
+     ]
+    },
+    {
+     "name": "Frame 758532023",
+     "id": "77:4715",
+     "type": "FRAME",
+     "x": 6898,
+     "y": 393,
+     "w": 843,
+     "h": 38,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Note",
+     "id": "26:11726",
+     "type": "INSTANCE",
+     "x": 1415,
+     "y": -8,
+     "w": 449,
+     "h": 200,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 2,
+     "local": 0,
+     "remote": 2,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 2,
+     "otherKeys": [
+      "1f2b05dc",
+      "93b1fa86"
+     ]
+    },
+    {
+     "name": "📝 Annotation · SectionMgmt",
+     "id": "26:11864",
+     "type": "GROUP",
+     "x": 3233,
+     "y": 944,
+     "w": 710,
+     "h": 156,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "📝 Annotation · Button",
+     "id": "26:11883",
+     "type": "GROUP",
+     "x": 3249,
+     "y": 1590,
+     "w": 440,
+     "h": 96,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Module Dropdown",
+     "id": "63:463",
+     "type": "FRAME",
+     "x": 1438,
+     "y": 266,
+     "w": 404,
+     "h": 412,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 21,
+     "local": 0,
+     "remote": 21,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 12,
+     "other": 9,
+     "otherKeys": [
+      "6fe87042",
+      "81944271"
+     ]
+    }
+   ],
+   "nameHits": [],
+   "dupes": [
+    {
+     "by": "name",
+     "name": "Main",
+     "ids": [
+      "26:10816",
+      "74:647"
+     ]
+    }
+   ],
+   "text": [
+    [
+     "DOB: 08/01/1994 (29 y/o)",
+     2,
+     0,
+     [
+      "26:10816",
+      "74:647"
+     ],
+     [
+      "26:10830",
+      "74:661"
+     ]
+    ],
+    [
+     "04/18/2022",
+     2,
+     0,
+     [
+      "26:10816",
+      "74:647"
+     ],
+     [
+      "26:10841",
+      "74:672"
+     ]
+    ],
+    [
+     "last updated 1/6/26 at 1:29 PM",
+     2,
+     0,
+     [
+      "26:10816",
+      "74:647"
+     ],
+     [
+      "26:11867",
+      "74:725"
+     ]
+    ],
+    [
+     "36 y/o (4/21/1988)",
+     2,
+     2,
+     [
+      "26:10816",
+      "74:647"
+     ],
+     []
+    ],
+    [
+     "10/25/25",
+     4,
+     0,
+     [
+      "26:10816"
+     ],
+     [
+      "26:10943",
+      "26:10949",
+      "26:10956"
+     ]
+    ],
+    [
+     "12/2/25",
+     2,
+     0,
+     [
+      "26:10816",
+      "74:647"
+     ],
+     [
+      "26:10975",
+      "74:846"
+     ]
+    ],
+    [
+     "Save as Draft",
+     2,
+     2,
+     [],
+     []
+    ],
+    [
+     "Created by Steven Strange on 1/23/24",
+     4,
+     4,
+     [],
+     []
+    ],
+    [
+     "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     2,
+     2,
+     [],
+     []
+    ],
+    [
+     "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     16,
+     16,
+     [],
+     []
+    ],
+    [
+     "DataGrid patient DOB/visit dates (1/12/1951 ... 10/6/2018), ~60 cells",
+     60,
+     60,
+     [
+      "74:647"
+     ],
+     []
+    ]
+   ],
+   "screenshot": "page-14-NoFolder-Navigation.png"
+  },
+  {
+   "id": "10:14",
+   "name": "Folder Navigation",
+   "topLevelCount": 1,
+   "frames": [
+    {
+     "name": "CurrentHeader",
+     "id": "10:2208",
+     "type": "FRAME",
+     "x": 0,
+     "y": 0,
+     "w": 1413,
+     "h": 2824,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 195,
+     "local": 0,
+     "remote": 195,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 72,
+     "other": 123,
+     "otherKeys": [
+      "f3e52ae6",
+      "b36c40ec",
+      "db494c59",
+      "e82e4706",
+      "c24d297a",
+      "7991f4fd",
+      "b45ccb08",
+      "2371fcb8",
+      "b728dc7c",
+      "e70fe42e",
+      "e373e4fe",
+      "b5d541bf",
+      "dacaf752",
+      "83e2b059",
+      "b6486f43",
+      "e7c73628",
+      "01989749",
+      "53ce637c",
+      "80b28133",
+      "1e8dc86c",
+      "5838bd8d",
+      "2f378ce9",
+      "c0af9356",
+      "e7449fad",
+      "dbf75d5b",
+      "3b9176d5",
+      "53b8984c",
+      "712c450a",
+      "09134155",
+      "c9b9d64c",
+      "61219e97",
+      "bbc2b01e",
+      "29ce87fe",
+      "6476258c",
+      "9540c143",
+      "2e113048",
+      "4b1aa283",
+      "ec7a3fe5",
+      "3a49272f",
+      "ee80c62e",
+      "e754776a",
+      "2e7f2c3b"
+     ]
+    }
+   ],
+   "nameHits": [],
+   "dupes": [],
+   "text": [
+    [
+     "DOB: 08/01/1994 (29 y/o)",
+     1,
+     0,
+     [
+      "10:2208"
+     ],
+     [
+      "10:2223"
+     ]
+    ],
+    [
+     "04/18/2022",
+     1,
+     0,
+     [
+      "10:2208"
+     ],
+     [
+      "10:2234"
+     ]
+    ],
+    [
+     "36 y/o (4/21/1988)",
+     1,
+     1,
+     [
+      "10:2208"
+     ],
+     []
+    ],
+    [
+     "10/25/25",
+     4,
+     0,
+     [
+      "10:2208"
+     ],
+     [
+      "10:2332",
+      "10:2338",
+      "10:2345"
+     ]
+    ],
+    [
+     "12/2/25",
+     1,
+     0,
+     [
+      "10:2208"
+     ],
+     [
+      "10:2436"
+     ]
+    ],
+    [
+     "Save as Draft",
+     1,
+     1,
+     [],
+     []
+    ],
+    [
+     "Created by Steven Strange on 1/23/24",
+     2,
+     2,
+     [],
+     []
+    ],
+    [
+     "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     2,
+     2,
+     [],
+     []
+    ],
+    [
+     "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     16,
+     16,
+     [],
+     []
+    ]
+   ],
+   "screenshot": "page-15-Folder-Navigation.png"
+  },
+  {
+   "id": "4211:15272",
+   "name": "-----RESEARCH------",
+   "topLevelCount": 0,
+   "frames": [],
+   "nameHits": [],
+   "dupes": [],
+   "screenshot": null
+  },
+  {
+   "id": "4211:15273",
+   "name": "Maps",
+   "topLevelCount": 13,
+   "frames": [
+    {
+     "name": "Frame 4",
+     "id": "4211:15346",
+     "type": "FRAME",
+     "x": -313,
+     "y": -477,
+     "w": 1293,
+     "h": 1072,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 10",
+     "id": "4211:15390",
+     "type": "FRAME",
+     "x": -519,
+     "y": 979,
+     "w": 443,
+     "h": 1068,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 16",
+     "id": "4211:15493",
+     "type": "FRAME",
+     "x": 159,
+     "y": 3395,
+     "w": 443,
+     "h": 352,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 18",
+     "id": "4211:15501",
+     "type": "FRAME",
+     "x": 743,
+     "y": 3395,
+     "w": 443,
+     "h": 352,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 20",
+     "id": "4211:15509",
+     "type": "FRAME",
+     "x": 1283,
+     "y": 3383,
+     "w": 443,
+     "h": 376,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 31",
+     "id": "4216:52",
+     "type": "FRAME",
+     "x": 159,
+     "y": 825,
+     "w": 1499,
+     "h": 496,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 30",
+     "id": "4216:51",
+     "type": "FRAME",
+     "x": 159,
+     "y": 1466,
+     "w": 1576,
+     "h": 1648,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 14",
+     "id": "4211:15485",
+     "type": "FRAME",
+     "x": 1932,
+     "y": 1039,
+     "w": 443,
+     "h": 952,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 22",
+     "id": "4215:2",
+     "type": "FRAME",
+     "x": 3521,
+     "y": -299,
+     "w": 443,
+     "h": 1000,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 23",
+     "id": "4215:6",
+     "type": "FRAME",
+     "x": 4135,
+     "y": -299,
+     "w": 443,
+     "h": 616,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 29",
+     "id": "4215:31",
+     "type": "FRAME",
+     "x": 4645,
+     "y": -307,
+     "w": 459,
+     "h": 2148,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 26",
+     "id": "4215:18",
+     "type": "FRAME",
+     "x": 5139,
+     "y": -307,
+     "w": 459,
+     "h": 1316,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    },
+    {
+     "name": "Frame 21",
+     "id": "4211:15513",
+     "type": "FRAME",
+     "x": 1797,
+     "y": -357,
+     "w": 443,
+     "h": 640,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    }
+   ],
+   "nameHits": [],
+   "dupes": [
+    {
+     "by": "dimensions",
+     "dims": "443x352",
+     "nodes": [
+      "4211:15493 Frame 16",
+      "4211:15501 Frame 18"
+     ]
+    }
+   ],
+   "text": [],
+   "screenshot": "page-17-Maps.png"
+  },
+  {
+   "id": "1236:3155",
+   "name": "Research Framework",
+   "topLevelCount": 1,
+   "frames": [
+    {
+     "name": "Frame 1",
+     "id": "1236:3156",
+     "type": "FRAME",
+     "x": -409,
+     "y": 0,
+     "w": 1231,
+     "h": 369,
+     "parentSection": null,
+     "depth": 0,
+     "visible": true,
+     "instances": 0,
+     "local": 0,
+     "remote": 0,
+     "missingMain": 0,
+     "rebuild": 0,
+     "kit": 0,
+     "other": 0,
+     "otherKeys": []
+    }
+   ],
+   "nameHits": [],
+   "dupes": [],
+   "text": [],
+   "screenshot": "page-18-Research-Framework.png"
+  }
+ ],
+ "otherPrefixes": {
+  "20476510": 3,
+  "28826109": 1,
+  "30199061": 1,
+  "43692051": 2,
+  "69498838": 2,
+  "71018625": 4,
+  "81944271": 36,
+  "1f2b05dc": 3,
+  "93b1fa86": 3,
+  "f3e52ae6": 73,
+  "b36c40ec": 81,
+  "db494c59": 73,
+  "e82e4706": 73,
+  "c24d297a": 72,
+  "7991f4fd": 72,
+  "b45ccb08": 624,
+  "2371fcb8": 70,
+  "b728dc7c": 14,
+  "e70fe42e": 91,
+  "e373e4fe": 14,
+  "b5d541bf": 79,
+  "dacaf752": 73,
+  "e7c73628": 632,
+  "01989749": 25,
+  "53ce637c": 26,
+  "b6486f43": 1572,
+  "5838bd8d": 90,
+  "2f378ce9": 341,
+  "c0af9356": 397,
+  "e7449fad": 480,
+  "dbf75d5b": 500,
+  "3b9176d5": 500,
+  "53b8984c": 500,
+  "712c450a": 500,
+  "09134155": 100,
+  "470e5de6": 12,
+  "2f9fb1c4": 92,
+  "3dd0110a": 31,
+  "089e9e2b": 70,
+  "2d3f8e48": 79,
+  "6fe87042": 60,
+  "a32e27b6": 63,
+  "8a079993": 63,
+  "9031c773": 106,
+  "b235f36b": 53,
+  "4438f192": 53,
+  "2f75179a": 90,
+  "126a1a80": 21,
+  "bd966706": 21,
+  "b788b843": 1,
+  "6434f671": 2,
+  "e8c0d3dd": 11,
+  "ffe42fca": 25,
+  "07e9545b": 16,
+  "7eee6145": 3,
+  "29497b6c": 49,
+  "e0557b5a": 49,
+  "a072b098": 12,
+  "12e03558": 13,
+  "f6608628": 13,
+  "b62b0ab5": 8,
+  "17d740de": 1,
+  "2d8a5498": 1,
+  "e001a2e8": 1,
+  "2d785331": 1,
+  "0501951a": 1,
+  "61f92268": 1,
+  "3ba0f6eb": 1,
+  "bdbdfd6d": 2,
+  "5157e793": 1,
+  "5fc2b104": 4,
+  "51b70416": 4,
+  "33223ba6": 4,
+  "6fd89adb": 12,
+  "491fcdd4": 1,
+  "bc6d1f6f": 1,
+  "ceaf8f8d": 1,
+  "53bcd12e": 60,
+  "61219e97": 9,
+  "bbc2b01e": 87,
+  "29ce87fe": 9,
+  "939dca4d": 7,
+  "0542b2da": 54,
+  "8b17ea69": 4,
+  "7df75688": 4,
+  "2af84c86": 7,
+  "e882f01f": 3,
+  "456e4da1": 3,
+  "b00f0a39": 3,
+  "69a96756": 4,
+  "4e7c94a3": 3,
+  "4311ad0c": 4,
+  "f516aa57": 2,
+  "5def2b07": 3,
+  "6951f03c": 4,
+  "8991f97f": 2,
+  "e7d99a8b": 2,
+  "8281931c": 2,
+  "31aea108": 2,
+  "d62d8420": 2,
+  "ef490cb4": 1,
+  "f3830ee1": 3,
+  "f67f4104": 60,
+  "6484842c": 6,
+  "30730e02": 3,
+  "f8ec8129": 1,
+  "22fc400f": 1,
+  "df1ba2ca": 1,
+  "68fa7f5c": 1,
+  "8c6bb13c": 1,
+  "7b78051e": 1,
+  "77172f40": 16,
+  "00401576": 16,
+  "ba71f6e1": 2,
+  "f81c4ab0": 4,
+  "fe7d0711": 2,
+  "66ddad91": 8,
+  "425bbfb1": 1,
+  "210dfac0": 1,
+  "ca15e00e": 1,
+  "d985a791": 3,
+  "1f7d613c": 5,
+  "9188373e": 4,
+  "1dc52650": 4,
+  "29adc7cd": 5,
+  "6208a4f2": 4,
+  "cc603378": 5,
+  "0c6a5eb6": 15,
+  "ca2595f3": 35,
+  "13e09eef": 15,
+  "bb2161a5": 9,
+  "5253871f": 2,
+  "47277d26": 1,
+  "85d5ace9": 1,
+  "ee7b3a87": 1,
+  "2b698e23": 1,
+  "ec7a3fe5": 4,
+  "3a49272f": 4,
+  "b46e0319": 33,
+  "13966ef5": 1,
+  "d0f2695b": 1,
+  "1b825a74": 8,
+  "b3e3761e": 9,
+  "cc1a0359": 9,
+  "bd72d255": 9,
+  "1fa75e2c": 9,
+  "4883e57e": 9,
+  "4b1aa283": 122,
+  "bf22561e": 62,
+  "623fc84d": 5,
+  "0f3d2654": 1,
+  "2160e4be": 1,
+  "1b006c5a": 5,
+  "bc20541a": 3,
+  "3395ed7b": 3,
+  "43562dd4": 1,
+  "d7043d71": 2,
+  "64e2edd5": 5,
+  "9d3c6353": 1,
+  "48dc5788": 2,
+  "8f46e327": 1,
+  "136c3745": 1,
+  "13e076ad": 1,
+  "2cfdd4d9": 1,
+  "18f2e1d2": 1,
+  "384385f9": 1,
+  "c15da6bf": 1,
+  "b9bdfe66": 1,
+  "de7e2810": 1,
+  "1f204945": 1,
+  "435f0eed": 1,
+  "560878c2": 1,
+  "a177fabc": 1,
+  "7803e609": 1,
+  "426596ac": 1,
+  "cbc718ba": 1,
+  "45372dae": 1,
+  "1b25bc41": 1,
+  "2f8ecf9d": 1,
+  "5b143363": 1,
+  "037564f3": 1,
+  "998b9cd2": 1,
+  "62c6818b": 1,
+  "e2e67198": 1,
+  "9b351485": 1,
+  "56904c87": 1,
+  "8dadecd8": 1,
+  "ee80c62e": 3,
+  "e754776a": 3,
+  "73f90a7c": 3,
+  "1ba8afaa": 3,
+  "e21181eb": 3,
+  "3e0895ba": 1,
+  "83e2b059": 6,
+  "80b28133": 18,
+  "1e8dc86c": 6,
+  "fbba9fec": 1,
+  "ae5e4b8b": 1,
+  "b9d3ab4f": 25,
+  "a7a3c01d": 250,
+  "6e25d979": 250,
+  "54891f9e": 13,
+  "c9b9d64c": 1,
+  "6476258c": 1,
+  "9540c143": 1,
+  "2e113048": 3,
+  "2e7f2c3b": 1
+ },
+ "otherNames": {
+  "20476510": [
+   "Health, Medicine/Syringe",
+   null
+  ],
+  "28826109": [
+   "rcm-overview",
+   null
+  ],
+  "30199061": [
+   "tutorial",
+   null
+  ],
+  "43692051": [
+   "Arrows, Diagrams/Arrow",
+   null
+  ],
+  "69498838": [
+   "Interface, Essential/bulb-light-gloss",
+   null
+  ],
+  "71018625": [
+   "Caption",
+   null
+  ],
+  "81944271": [
+   "Mode=NotSelected",
+   "Check-Circle"
+  ],
+  "1f2b05dc": [
+   "Color=1. Yellow, Dark=True",
+   "Note"
+  ],
+  "93b1fa86": [
+   "Color=1. Yellow, Dark=True",
+   "Bullet"
+  ],
+  "f3e52ae6": [
+   "State=inactive",
+   "nav / payments"
+  ],
+  "b36c40ec": [
+   "menu",
+   null
+  ],
+  "db494c59": [
+   "Message_light",
+   null
+  ],
+  "e82e4706": [
+   "Type=Basic",
+   "Badge"
+  ],
+  "c24d297a": [
+   "security_outline",
+   null
+  ],
+  "7991f4fd": [
+   "security",
+   null
+  ],
+  "b45ccb08": [
+   "close",
+   null
+  ],
+  "2371fcb8": [
+   "Health, Medicine/shield-virus-protection",
+   null
+  ],
+  "b728dc7c": [
+   "Health, Medicine/medical-cross-refreash-reload-arrow",
+   null
+  ],
+  "e70fe42e": [
+   "Health, Medicine/Drugs, Pill",
+   null
+  ],
+  "e373e4fe": [
+   "Health, Medicine/prescription-square",
+   null
+  ],
+  "b5d541bf": [
+   "School, Learning/Lab, Tube",
+   null
+  ],
+  "dacaf752": [
+   "Science/lab-tube",
+   null
+  ],
+  "e7c73628": [
+   "Interface, Essential/Delete, Disabled",
+   null
+  ],
+  "01989749": [
+   "State=Default",
+   "ThumbsUp"
+  ],
+  "53ce637c": [
+   "State=Default",
+   "ThumbsDown"
+  ],
+  "b6486f43": [
+   "plus",
+   null
+  ],
+  "5838bd8d": [
+   "TemplateMgmt",
+   null
+  ],
+  "2f378ce9": [
+   "close-alt",
+   null
+  ],
+  "c0af9356": [
+   "Icon Button/Default/Small/False/False",
+   null
+  ],
+  "e7449fad": [
+   "_icon button template",
+   null
+  ],
+  "dbf75d5b": [
+   "Health, Medicine/Scales,Weight, Diet Scale",
+   null
+  ],
+  "3b9176d5": [
+   "Weather, Climate/Temperature",
+   null
+  ],
+  "53b8984c": [
+   "Health, Medicine/lungs",
+   null
+  ],
+  "712c450a": [
+   "Health, Medicine/blood-drop-square",
+   null
+  ],
+  "09134155": [
+   "ConfigAndData-Line-Don't remove!",
+   null
+  ],
+  "470e5de6": [
+   "Cursor/Pointer",
+   null
+  ],
+  "2f9fb1c4": [
+   "Edit_light",
+   null
+  ],
+  "3dd0110a": [
+   "calendar",
+   null
+  ],
+  "089e9e2b": [
+   "Content, Edit/Pen, Edit",
+   null
+  ],
+  "2d3f8e48": [
+   "Interface, Essential/Trash, Delete, Bin",
+   null
+  ],
+  "6fe87042": [
+   "Mode=Selected",
+   "Check-Circle"
+  ],
+  "a32e27b6": [
+   "Type=Back Button, State=Default",
+   "Breadcrumb Buttons"
+  ],
+  "8a079993": [
+   "Icon=backward",
+   "Icons / Interface / 16px"
+  ],
+  "9031c773": [
+   "Icon=forward",
+   "Icons / Interface / 12px"
+  ],
+  "b235f36b": [
+   "Stste=Default",
+   "Breadcrumbs"
+  ],
+  "4438f192": [
+   "Stste=Link",
+   "Breadcrumbs"
+  ],
+  "2f75179a": [
+   "Interface, Essential/Lock",
+   null
+  ],
+  "126a1a80": [
+   "_radio structure",
+   null
+  ],
+  "bd966706": [
+   "2. Radio/1. Selected/1. Enabled",
+   null
+  ],
+  "b788b843": [
+   "info",
+   null
+  ],
+  "6434f671": [
+   "Style=Outlined",
+   "print"
+  ],
+  "e8c0d3dd": [
+   "Interface, Essential/Search",
+   null
+  ],
+  "ffe42fca": [
+   "Arrows, Diagrams/Arrow",
+   null
+  ],
+  "07e9545b": [
+   "Style=Outlined",
+   "star_border"
+  ],
+  "7eee6145": [
+   "Style=Filled",
+   "check_circle"
+  ],
+  "29497b6c": [
+   "star_outline",
+   null
+  ],
+  "e0557b5a": [
+   "trash",
+   null
+  ],
+  "a072b098": [
+   "attention-alt",
+   null
+  ],
+  "12e03558": [
+   "plus_outline",
+   null
+  ],
+  "f6608628": [
+   "plus",
+   null
+  ],
+  "b62b0ab5": [
+   "caret_down",
+   null
+  ],
+  "17d740de": [
+   "Color=Light",
+   "Divider"
+  ],
+  "2d8a5498": [
+   "Apple Watch Data",
+   null
+  ],
+  "e001a2e8": [
+   "tutorial",
+   null
+  ],
+  "2d785331": [
+   "rcm-overview",
+   null
+  ],
+  "0501951a": [
+   "doctors",
+   null
+  ],
+  "61f92268": [
+   "doctors",
+   null
+  ],
+  "3ba0f6eb": [
+   "expand",
+   null
+  ],
+  "bdbdfd6d": [
+   "caret",
+   null
+  ],
+  "5157e793": [
+   "Type=Single Digit",
+   "Badge"
+  ],
+  "5fc2b104": [
+   "trash_outline",
+   null
+  ],
+  "51b70416": [
+   "trash",
+   null
+  ],
+  "33223ba6": [
+   "copy_outline",
+   null
+  ],
+  "6fd89adb": [
+   "info-alt",
+   null
+  ],
+  "491fcdd4": [
+   "Primary Nav/None/Desktop",
+   null
+  ],
+  "bc6d1f6f": [
+   "Avatar/S/True/Provider",
+   null
+  ],
+  "ceaf8f8d": [
+   "Ty",
+   null
+  ],
+  "53bcd12e": [
+   "check-alt",
+   null
+  ],
+  "61219e97": [
+   "Interface, Essential/Arrow, Down",
+   null
+  ],
+  "bbc2b01e": [
+   "Interface, Essential/command-cmd",
+   null
+  ],
+  "29ce87fe": [
+   "Interface, Essential/Arrow",
+   null
+  ],
+  "939dca4d": [
+   "Interface, Essential/Flag",
+   null
+  ],
+  "0542b2da": [
+   "Interface, Essential/Arrow",
+   null
+  ],
+  "8b17ea69": [
+   "Interface, Essential/Send message, Send, Share",
+   null
+  ],
+  "7df75688": [
+   "brain_02",
+   null
+  ],
+  "2af84c86": [
+   "Health, Medicine/virus",
+   null
+  ],
+  "e882f01f": [
+   "Interface, Essential/Emails, Letter, Mail",
+   null
+  ],
+  "456e4da1": [
+   "User/User,Profile",
+   null
+  ],
+  "b00f0a39": [
+   "Health, Medicine/checklist-heart-square",
+   null
+  ],
+  "69a96756": [
+   "Health, Medicine/hospital-center-2",
+   null
+  ],
+  "4e7c94a3": [
+   "Interface, Essential/Note, Document, Clip, Attachment",
+   null
+  ],
+  "4311ad0c": [
+   "Interface, Essential/Chart, Square",
+   null
+  ],
+  "f516aa57": [
+   "Content, Edit/Notes,Planner",
+   null
+  ],
+  "5def2b07": [
+   "Health, Medicine/bandage-shoulder",
+   null
+  ],
+  "6951f03c": [
+   "Health, Medicine/Heartbeat, Heart",
+   null
+  ],
+  "8991f97f": [
+   "User/Group, User",
+   null
+  ],
+  "e7d99a8b": [
+   "Interface, Essential/Status, Menu",
+   null
+  ],
+  "8281931c": [
+   "Interface, Essential/Ticket, Group, Circle",
+   null
+  ],
+  "31aea108": [
+   "Health, Medicine/crutches",
+   null
+  ],
+  "d62d8420": [
+   "Travel/Airplane, Plane, Trip, Travel",
+   null
+  ],
+  "ef490cb4": [
+   "State=Selected",
+   "ThumbsUp"
+  ],
+  "f3830ee1": [
+   "caret",
+   null
+  ],
+  "f67f4104": [
+   "_table row template",
+   null
+  ],
+  "6484842c": [
+   "_table header template",
+   null
+  ],
+  "30730e02": [
+   "Icon Button/Default/Small/False/True",
+   null
+  ],
+  "f8ec8129": [
+   "ellipsis-alt",
+   null
+  ],
+  "22fc400f": [
+   "Interface, Essential/Strike",
+   null
+  ],
+  "df1ba2ca": [
+   "Interface, Essential/Underline",
+   null
+  ],
+  "68fa7f5c": [
+   "Interface, Essential/Clip, Attachment",
+   null
+  ],
+  "8c6bb13c": [
+   "Interface, Essential/Photo, Image, Square",
+   null
+  ],
+  "7b78051e": [
+   "Sidesheetv3/Page=Page=Interface, Essential, Property 2=Calendar, Sched",
+   null
+  ],
+  "77172f40": [
+   "Checked=Yes",
+   "Checkbox"
+  ],
+  "00401576": [
+   "outline/chat-bubble-left",
+   null
+  ],
+  "ba71f6e1": [
+   "solid/chat-bubble-left",
+   null
+  ],
+  "f81c4ab0": [
+   "Style=Outlined",
+   "star"
+  ],
+  "fe7d0711": [
+   "State=Inactive, Disabled=False, Error=False, Assistive Text=False, Act",
+   "Autocomplete Select Field"
+  ],
+  "66ddad91": [
+   "Interface, Essential/dots",
+   null
+  ],
+  "425bbfb1": [
+   "check",
+   null
+  ],
+  "210dfac0": [
+   "Health, Medicine/document-medical-cross",
+   null
+  ],
+  "ca15e00e": [
+   "Interface, Essential/stars-light-sparkle-2",
+   null
+  ],
+  "d985a791": [
+   "Small=True",
+   "Balance"
+  ],
+  "1f7d613c": [
+   "Payments, Finance/Credit card",
+   null
+  ],
+  "9188373e": [
+   "Small=True",
+   "Alerts"
+  ],
+  "1dc52650": [
+   "Small=True",
+   "Allergies"
+  ],
+  "29adc7cd": [
+   "Interface, Essential/Warning",
+   null
+  ],
+  "6208a4f2": [
+   "Small=True",
+   "Restricted"
+  ],
+  "cc603378": [
+   "Interface, Essential/Lock, Unlock",
+   null
+  ],
+  "0c6a5eb6": [
+   "Style=Outlined",
+   "expand_more"
+  ],
+  "ca2595f3": [
+   "Phones/Phone, Call",
+   null
+  ],
+  "13e09eef": [
+   "Navigation, Maps/Pin, Location",
+   null
+  ],
+  "bb2161a5": [
+   "User/user-profile.14",
+   null
+  ],
+  "5253871f": [
+   "Small=False",
+   "Balance"
+  ],
+  "47277d26": [
+   "Interface, Essential/browser-sidebar-right-text",
+   null
+  ],
+  "85d5ace9": [
+   "Small=False",
+   "Alerts"
+  ],
+  "ee7b3a87": [
+   "Small=False",
+   "Allergies"
+  ],
+  "2b698e23": [
+   "Small=False",
+   "Restricted"
+  ],
+  "ec7a3fe5": [
+   "Health, Medicine/hospital-center",
+   null
+  ],
+  "3a49272f": [
+   "Interface, Essential/dashboard-13-circle",
+   null
+  ],
+  "b46e0319": [
+   "Interface, Essential/magnifying-glass-gloss",
+   null
+  ],
+  "13966ef5": [
+   "Text Button/Left/Primary/False/Default",
+   null
+  ],
+  "d0f2695b": [
+   "print-alt",
+   null
+  ],
+  "1b825a74": [
+   "Style=Outlined",
+   "dashboard"
+  ],
+  "b3e3761e": [
+   "Style=Outlined",
+   "calendar_today"
+  ],
+  "cc1a0359": [
+   "Style=Outlined",
+   "work_outline"
+  ],
+  "bd72d255": [
+   "Style=Outlined",
+   "person"
+  ],
+  "1fa75e2c": [
+   "Style=Outlined",
+   "business"
+  ],
+  "4883e57e": [
+   "Style=Outlined",
+   "attach_money"
+  ],
+  "4b1aa283": [
+   "Interface, Essential/Arrow",
+   null
+  ],
+  "bf22561e": [
+   "Style=Outlined",
+   "close"
+  ],
+  "623fc84d": [
+   "Style=Outlined",
+   "arrow_drop_down"
+  ],
+  "0f3d2654": [
+   "Style=Outlined",
+   "arrow_back"
+  ],
+  "2160e4be": [
+   "Style=Outlined",
+   "chevron_right"
+  ],
+  "1b006c5a": [
+   "Style=Outlined",
+   "mail"
+  ],
+  "bc20541a": [
+   "Style=Outlined",
+   "search"
+  ],
+  "3395ed7b": [
+   "Style=Outlined",
+   "add"
+  ],
+  "43562dd4": [
+   "Desk_light",
+   null
+  ],
+  "d7043d71": [
+   "Desk_light",
+   null
+  ],
+  "64e2edd5": [
+   "Style=Outlined",
+   "add_circle_outline"
+  ],
+  "9d3c6353": [
+   "Style=Outlined",
+   "arrow_right"
+  ],
+  "48dc5788": [
+   "Style=Outlined",
+   "edit"
+  ],
+  "8f46e327": [
+   "Canvas Tools",
+   null
+  ],
+  "136c3745": [
+   "Modules/CarePlan/True/No",
+   null
+  ],
+  "13e076ad": [
+   "Health, Medicine/Notes",
+   null
+  ],
+  "2cfdd4d9": [
+   "Module=Ordering, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "18f2e1d2": [
+   "Shopping, Ecommerce/Shopping Cart",
+   null
+  ],
+  "384385f9": [
+   "Module=Overview, Added=Yes, Style=Vertical",
+   "Modules"
+  ],
+  "c15da6bf": [
+   "State=Filled,Active=True",
+   "Checkmark"
+  ],
+  "b9bdfe66": [
+   "Module=Encounters, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "de7e2810": [
+   "Health, Medicine/user-heart-health",
+   null
+  ],
+  "1f204945": [
+   "Module=Allergies, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "435f0eed": [
+   "Module=Appointments, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "560878c2": [
+   "Interface, Essential/Calendar,Schedule",
+   null
+  ],
+  "a177fabc": [
+   "Module=Documents, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "7803e609": [
+   "Module=Flowsheets, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "426596ac": [
+   "Module=History, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "cbc718ba": [
+   "Module=Labs, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "45372dae": [
+   "Module=MedList, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "1b25bc41": [
+   "Module=Messages, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "2f8ecf9d": [
+   "Module=PatientInfo, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "5b143363": [
+   "Module=Problems, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "037564f3": [
+   "Module=PROs, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "998b9cd2": [
+   "Module=Timeline, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "62c6818b": [
+   "Interface, Essential/Clock, Time, Arrow",
+   null
+  ],
+  "e2e67198": [
+   "Module=Vaccinations, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "9b351485": [
+   "Module=Vitals, Added=No, Style=Vertical",
+   "Modules"
+  ],
+  "56904c87": [
+   "Style=Outlined",
+   "delete"
+  ],
+  "8dadecd8": [
+   "Style=Outlined",
+   "favorite"
+  ],
+  "ee80c62e": [
+   "Health, Medicine/Medical cross",
+   null
+  ],
+  "e754776a": [
+   "Payments, Finance/Dollar, Payments, Сonversion",
+   null
+  ],
+  "73f90a7c": [
+   "Interface, Essential/Bell, Notification",
+   null
+  ],
+  "1ba8afaa": [
+   "Interface, Essential/setting-gear",
+   null
+  ],
+  "e21181eb": [
+   "Interface, Essential/login-logout-arrow",
+   null
+  ],
+  "3e0895ba": [
+   "Support, Help, Question/message-question-checkmark",
+   null
+  ],
+  "83e2b059": [
+   "Property 1=Default",
+   "PatientCard"
+  ],
+  "80b28133": [
+   "Health, Medicine/doctor-favorite-heart",
+   null
+  ],
+  "1e8dc86c": [
+   "print",
+   null
+  ],
+  "fbba9fec": [
+   "Report Drawer - ALL-DIR1",
+   null
+  ],
+  "ae5e4b8b": [
+   "FilterBar-Demo-DIR2",
+   null
+  ],
+  "b9d3ab4f": [
+   "Type=TH, Size=Compact, Alignment=Left, Color=Core 3",
+   "TD"
+  ],
+  "a7a3c01d": [
+   "Type=TD, Size=Compact, Alignment=Left, Color=Synapse 6",
+   "TD"
+  ],
+  "6e25d979": [
+   "Type=TD, Size=Compact, Alignment=Left, Color=Backbone 2",
+   "TD"
+  ],
+  "54891f9e": [
+   "Type=TD, Size=Default, Alignment=Left, Color=Backbone 2",
+   "TD"
+  ],
+  "c9b9d64c": [
+   "Property 1=Variant2",
+   "SectionMgmt"
+  ],
+  "6476258c": [
+   "State=Add",
+   "GreyscaleCheck"
+  ],
+  "9540c143": [
+   "State=Checked",
+   "GreyscaleCheck"
+  ],
+  "2e113048": [
+   "State=Unchecked",
+   "GreyscaleCheck"
+  ],
+  "2e7f2c3b": [
+   "Science/lab-test",
+   null
+  ]
+ },
+ "libraryKeyPrefixes": {
+  "rebuild": "cfb726c7,820871c5,8fc8f57f,f213ef3a,c819995d,faffcb1f,92e30a60,0acabf8e,3e2da438,21e7ddf2,779c8020,7b8d6152,8e0f6915,10411b4a,8f7e74a7,e433d4ca,2a21f3ac,70734b1b,f1319f95,50a09002,03956ea1,b75c4b02,5a02e301,9bef17f3,772fc430,a8b6674e,e41b3baa,876edaa0,c2d3c143,136308bc,32c86daa,84c8d392,df73beb7,787beb77,c11e9c33,005a4c1b,c0ca34f8,69a355f1,2454ff67,82fc9c49,131b381f,8df3048f,3c3f0d50,75b940cb,8630e975,cc902404,880c4ce9,3ba4dc19,e9d67629,0c874597,3fd2003e,2117b448,1bfd2e54,55e4ad6f,a832cdf6,e0aeb1cd,44ec9eb9,d74d5cb3,86b12f16,c0ca5cdb,c6d36918,2130cd4f,711cd111,9adb30d3,7e3d896d,8c15aac3,81d5927b,2266ba5c,9cbe6a28,8f497675,3882673b,da6a2dd7,2f4aff22,bc219c96,b26875c3,4a4a34fb,86c0eca3,ae661a61,86cbf828,6e0417d3,5f2ea592,fff79510,6af8950e,833f1e73,8c468f36,c9cbb89e,6d4840f6,6b401911,b5764c81,1b62e939,ba71c40d,5cab1f08,7fdbb48b,f8ecd77f,9e4ab6a4,ed211237,c7641572,3c7c98a7,1fb77ce3,8cf714a0,d17c822c,66ec81a9,ee7c62be,eb5d28fc,a5018d78,62df6d14,2cd3d18f,fef6c7c9,bc4feb1e,58c68116,09eb2622,ad774bc2,f8e982f7,6369270f,bdbefcf1,c564ac9f,22165cfe,f8bf8f40,9bed5bd8,d439af89,0b00c17e,21a9ac1c,15896f4f,a712cdb8,f55aa640,f2026a97,03670935,b586752c,7ebea5d7,c417c9bd,fb0eb309,ce81b07f,06bc6cc6,e073fb6f,f65d207d,07ef4d8d,04ec92ec,8a04b23e,8d80aca0,a26de19e,499dc9d9,2a7ab5d1,668a6e55,f5c19387,b2490b49,d1161cbc,3729eb3a,0bfa8829,62bca5ad,439b10eb,6852f12d,9fc48359,03284d6c,31c89512,6a6948b1,5cf229aa,e8309f59,ed907cf4,0aa75ee8,ba25a86e,cede552c,083fc3d9,33f6b20a,aa30b93a,cad7bc41,70767b65,556e9c6a,efda38a7,7c3c99bb,ee985b01,62b7839e,2e8a137f,e2c0ed2d,cb30f7c0,ede4bdb6,077db975,2d3258d6,14a8abeb,1ac944cd,542540ea,679a3842,175aa360,77639663,63fe66c7,238005f4,9ca7f26f,5e2179b7,212beca0,76490e6b,df21c69f,243efa24,555ed3e0,4e144afd,10377424,5f283caa,81afae61,69ff18bd,bcda60fa,7bfd54b6,f6787289,c96bc78d,cc3f96b1,83b61027,4c466cbc,24efe6a7,8fb1abaf,cf9b99b4,5349d82d,e4b88172,fdae9f2a,7e3c775c,91e7b8af,37e99785,3c8ca9d6,32c00a53,369b8196,197fad80,18b48249,7b3f4b51,2435aadf,3b41da68,8d6da6b9,619a6e29,4c2dd82a,61d00ee6,830cad47,df648751,ebaafd95,f953298b,8b563205,1a83b3d7,d26982a0,45071770,9b33c14e,86d806d1,d0cf8441,d6c975a0,ad226223,8b9cb459,e828f03c,77cfa2d6,9821b1c5,791cd4c1,4155d9e1,6c8ce67a,696f44c0,6f7bf1a8,529e8ea8,747d4103,868e2679,15a73c17,c0c31aaa,71092697,befd3038,5da60caf,3984b5b9,32975261,982d28cc,8071c2fe,7aafdd3d,0f2922e4,137357f9,de0c14e9,d76d47fd,a27741a6,1823bf93,475becf3,f24e6865,d623dcff,61b3a700,cb9b69ac,ee31b19f,a1dff508,a9b9a2f9,11b88ae7,8880aaed,a4d233fb,ea19dc12,15d60495,eaaa2c1e,589cfa8a,b21982a1,cbc2011d,4a464a05,9bc0a44c,ea85af04,d147a391,f56b5372,a5d35a74,fdfd37d3,e1f40bd0,f42a1d2a,0efdb740,e7d6fa26,525bd157,62e8bedd,b1c76873,325592a8,ef2f5974,54031311,6ef82032,30e9fe2c,1c8149de,ff06b532,a19cf7d3,974cd54b,60dce99d,36c6aa89,bbddf819,14f988d2,483227c6,d32a7955,0ea90331,d19bd80e,2a479683,3969a5d7,55495d88,f898d266,978ea39c,bbb1e41e,28453bee,5f6761cc,81d7bbbf,1c5bdadb,8b9b447c,484673b0,bc0da075,cf14186d,d5ac315c,61ea82ef,d4689bf0,930842c7,8b3efc2a,5f49e950,2935b558,229009a4,16028800,57a66592,e53d2864,e36cee31,efa6f709,cf9ffee6,3a38536f,6e71723d,a8d59675,52c559c3,5f809bc8,2d5f4841,52c96b31,e44d6193,67c4562d,d360709c,ff03035e,7e84af50,d8a2dc6c,78ca8cf1,15fc2dff,28ba50b1,c63bdfa2,4d2452cb,6dc48245,708d6b58,438f9242,13f89802,7d68596f,b791e280,e5db0e4b,aede60e5,6a87805a,65d1732d,c2db67e2,86cc9161,1ae655dd,5959b9ea,3975dd38,d69fa3ee,bc7d1474,2b149037,dab2a6e2,f49f3408,dbad5dc8,41f04de4,c68781ba,a7786b48,a5243be8,cc4695ad,e3954ef6,1884b41b,4cae5503,0ab72add,bf6f2bf9,648b022e,8df056e9,90b79094,74f373d4,b8942ef2,bdc00125,b5c365fe,d02d216b,26da3689,88f11305,85f6a1f1,2b1681d7,ab473660,29760746,147f7d8e,02d8c825,59c1fa7e,a1f53893,e33f1741,b6c0f168,2039b33c,18711221,59147fd3,7c9acf75,8c03a31d,33edddeb,87c4980c,a9c005fa,5e7d46c9,83e6e26a,812e9006,3fd2ac0e,efae0aa9,5bd48ce1,7e1a87a4,677890f6,7f01d9a1,6e021f13,42b46351,33281c97,5abef69e,02cdab0b,3204ba00,b28b2d5d,353eaa8e,65620b4e,dca7e302,c7924ce9,2d5ab087,208995d0,22e354d7,e4c9d847,c0722250,8d9d3566,a33a2f7d,d92c5da2,e1a369ce,0143de7b,e82782c0,d97e1257,ea8b1b1e,2b4938d2,3b085100,6ed94069,dc5ac2aa,b0ca975f,1984672a,985d684b,5c8cb59f,bb7cf8fa,cd2a3bac,eee22c96,5772d4ae,629aa609,becdfb2a,fed5b8b3,b5748f2c,46774237,c2d3e249,54840105,db11c2e8,695284fd,d79db352,ab39a315,d0535107,aba1719e,6fbc786a,f96391c1,4a23acef,a2f77e9f,32f5b3a6,909036e2,86fe2313,7781337b,9ad8729c,b0c846cf,58415195,c1ed60e6,f61e183c,0e9419a2,2b5b0d11,254c880c,9a3f3417,dfc9b7d6,08ca48c4,ec71c568,3e26e884,3169c8d9,78d09784,e4c5bfee,f0a5917f,82cc06bf,7ebbfa95,94668f17,1ce2ed1f,fb8c8d2a,de10ab1e,8d61114e,b2ec1d58,bfbd809c,b6b654fd,b5fadfbc,902012e6,eea2fd71,b47012ae,a320b575,0abcc62c,c6e0f0c8,cc6e80e7,26fa51fe,22d07165,8fc58aa0,01da3289,ce6350ce,ee2653af,419c84fe,11bda5a5,d9f98e9b,3d9b75e4,ea7eeab8,be323015,56b7d3c5,500e65b3,68eec5d0,9f1d7049,38a089f2,ea49e5ee,82d4a32c,d38775eb,d39b8afa,5aacb642,4816ec55,39efaa1f,ee31b725,8fdc8a84,b5b0d6b9,3dc37234,891b54ad,7f0990b9,4828cd3d,57230114,096b8da3,9014d342,925d1c32,1fe139d4,44218ece,63080d8b,e53ac58a,a9304f86,cd53dbda,4b36995e,24066524,3b77b458,9b7c50f7,84e24a99,0022f330,6764d262,8cbed779,864a2f2e,0c091842,1c2c521b,70c16405,2103b1d6,b3601ff8,56a78a89,c32e6594,8a67e9c9,89b71d34,4b107655,42105eed,e987aa25,63efc309,7f9ca127,0450907c,6c4a7b4d,9b523070,87eb2a79,db42927d,fed89f20,28c3bcd8,e9313408,cb435d94,67478695,9fe47d27,411b9cc5,533b5b23,d6feeb40,6bc407c2,4725c580,1d4c541e,b38b1041,fd45b9c8,170ac46a,0482d5b4,ae295bfd,71e0144d,8895271f,8552ff62,5cd6020c,cb7a990b,ec914411,91c80427,aefbc231,1851210c,955ce606,7a38a781,ef178d11,7f789aff,24f04706,8ba9ed8f,085012fa,9638e608,47a5689c,640415c0,558820ba,2b3c0625,3db59478,94f6bff8,ef07e741,e3b5b95d,b118a453,65818196,b145c3ad,8bcbd111,bd955c46,45b7a053,4e51869d,fbe14df5,a310ae2d,ac01feec,4b430b97,a2788dbf,a0ddf46b,4cfb2cff,1bc40082,894f043d,dfe0ce51,d1f6dfd8,4701ec2c,391ce3ee,e6b5160f,35cb2378,0c8f0fe4,99ad789a,0878407f,e4547cf3",
+  "kitA": "212dda2b,53b000e1,c507316d,9d795cc5,cf839a5c,783cde79,42319507,4570a7af,c7884934,8ec7989e,c31e7e0e,b7582f5f,41fb42e4,a86107e1,cfc31094,670b999d,b0ea4723,ba90725d,43c40ed3,8c676b51,4078278c,3509f3a0,cf912abb,f923bc38,c6358d71,6b28b2f2,6c8c3610,708e1f36,f5bd6a5d,e4fb92c9,54697461,88a33306,7f6a1fa3,2f4a4844,8c5cf9a5,738e162a,08e85f64,1145cb83,ab2361cd,81e75f71,a8d593d9,4afbe916,9fb7f623,f614df8a,0789a6c0,536fd2c6,28f7dc05,362c89e4,4cebcd8d,d22e857f,f62bda76,05e2f179,f332be41,9c024b54,65be8be0,6f988d42,762ffc58,e4738595,2a5d718b,bf2767d5,fe306db1,e9afcfe8,282c4482,478003c5,d1e7b4f9,7b6c21a3,e43a4305,771901a6,d42a3fea,9920f3e0,ee565422,e646c1ec,44079207,c0774dd9,237df680,5826bb08,779dd209,6c2a0973,d5f6d463,c5e0d08c,af7709e6,e7aa8db7,4a45b152,144a7b50,f1d1902b,97006a26,bd004ded,83aa291e,b81bff99,53c80053,3b4d676d,dc352de5,e86bd68c,b9b2d378,fd344aee,b4264ae7,3a2a94b1,5eb8e627,d46dcfff,36085fdf,9f8da0e8,34d71176,27ef7526,4eff8b0f,9da77084,d509cb84,d7ed8c7d,04a2b017,b7e7e54f,fddc061c,69657040,be8a397b,bf86f8b0,1c3eaa28,be9bc904,69c44b54,27376514,c2914e66,752321a7,59ec2767,e27a317d,826f04bb,5a86453f,cc3898f8,58a61bb6,c63609d8,b74a585b,2143814b,e86b7286,cf9b6661,d3aec26a,40fa922f,64edc48c,b3d32272,2776ed1e,b232094f,79461e49,ca01de02,be57238d,6661af90,09ab9ff0,72a50069,ad67cba4,b39bd9e4,d11b5082,ad50c87d,5e7259bb,8533444e,a58b335b,007b309f,37296568,756e3ecf,a7270044,d5ff6efe,e352eca5,d806c376,e6538c6a,b6c5b01b,9362ce74,6ed4b93a,543e0520,136c7541,68212d9e,48f1c117,9defd8a1,e377d559,34f64a8d,35c1471e,092a29ab,c39a57c7,b471252d,77dca393,c6c91a56,b9fda177,31145de3,b54a660e,5e18f707,9a949722,ffa1d436,e6526dfd,02760246,70f7978a,22ba3c74,dae8a92a,c7c46254,b736e95d,e1e679fd,4a4b1dd7,1b3e6a80,400c7a99,19b45ea2,abdc0f08,b16c037f,054aa4d1,79c17b47,cfc07624,4f1b5cfb,2f4ec758,fb5ab7f0,3b08d134,3cb7ea8a,f18f6d18,b2108675,41bf60ee,656c9601,27bc84ec,7e56e24b,7e457ef3,80f35a58,c5f73bd3,a83ba1a6,9a86fdfc,ab64c7e2,39202b27,2b07b6aa,57336d39,51927ebd,63eea862,545afebc,6f912816,eae43bd9,fbe33bbc,df181edc,983494fb,b78a75ff,60a7b0b8,6c13dc22,f46883f2,72a183d8,4bd37ebc,ce5272b1,c75c352b,b6cc31eb,d9cd9808,8793af51,c89a5cc7,d76ac8ad,5d55a5ff,3a8198f5,4724c6a6,7e21d6f7,d2f37c74,830aed47,6cbb2c52,dd844eb9,e3879c5f,04f9499f,79f58803,27e8fff2,a760a3ea,109fbcd9,9e323e7f,8d35e687,ced9aafb,3b17055d,31a49e33,13dd818a,fc1d77af,8a968432,da0896a6,b9828682,9d50076d,ac0d3b00,033a552a,332660ff,6bbdb208,fb0c4e77,c7db18c3,bdc42bac,2af7178e,70d5e870,94fb8dea,d324feab,26aac8de,cbd4dedb,1f31949f,b5b2adea,aa864e3e,ca48a543,dd861cb5,3db86997,2227ae78,81ff6c2f,744b1385,7acbb7a7,e379a902,204952bc,904433b6,0d987227,13633526,cbd4ca09,d9b1d9d2,547a0a8d,a297ae13,88a86066,96d39f68,cb3830df,971983a1,3deeb440,670e8111,733bc585,cf275f5e,59346ebf,79a613c6,3b86c482,574ba82d,92673430,5f288d40,a6e24ca8,a56d1ee5,e19b7a0b,9e34f5e8,13665079,535f5d88,813cac99,05ba56a0,72c20290,2d3c37d8,d5cb5bff,965b198f,b770f4cc,4f3bd5aa,ef7cb0a0,72fdb76e,6d383124,575fea27,3fe5da70,779a3d5f,81794898,d561da6f,73875594,2ca8ef5c,e06553f7,e60a8694,89de10aa,be306068,82475c51,262d1d9d,bed6d48c,0e608120,f5f2df56,8fe7eb79,8bdfa684,e0219f54,df618e8f,3a186cbf,2f41b6cd,93b0cffc,521fca84,3a664177,9768a402,af371802,0ac04d3e,8359bd59,a238d6c6,5cdcecb5,9f1e37e5,764352f4,2032cfe7,b8b1ecc1,841083ab,8018827d,b7ca721f,a92d561b,02e81203,929625a1,c2aa5d9f,4a166927,6a13a7ab,3d43c3f5,db185628,86ecce54,2ff844d2,08b2ced2,220656a6,039321b1,da6e5d47,d490bea1,25d2a64f,b3c0c48b,2976995d,fbd7c64f,e5798245,eb6919e6,24c80c84,0c33dea4,7c246169,d6bd3a45,eacf26ac,5ce627c5,62bfb221,409f1f10,51b9fdef,60f91fd7,5ee10043,38c5682e,51985952,b4770805,bb0fd3b2,d4ef1ef0,5defa615,4802c6c0,862fb281,7c42b255,f3479fc7,656590a8,b1b44fe2,4ac74086,94032934,91b246e9,2855f3a8,eae18f37,ab9c7013,590bc1a1,ce9f41a5,4a148bbc,67868917,9e86f61f,be402e8a,60cc43b3,dd8c4bcc,302420d2,557e3428,7567bd82,a4acc195,f37dfc59,358ed927,e747a513,348e4ff7,58448dee,8970c23c,52a15c3a,41a70eb4,db2235e0,81a650b9,8c379abd,3ce6fd50,88f2604e,cc9ece74,056fdc64,e9db549f,7c583820,6ac2ff41,fed841a0,b408b8cc,a60d26fa,5531c7d3,064d13a1,25e7ad8c,89c564e4,c50074b2,163d3643,b3929316,ab96e6d4,6bb24050,be23ce49,49c7e5ca,ecc31bdd,40f0e11d,acee0adf,c54b14c3,fb6d02ee,3359c84e,22843bd1,ad14e5e7,bd0131a0,183d9cd1,30cbf362,f82ee30c,7ebfa2ea,bdce4c22,7168e332,7b2309f5,cd6b2831,267ec922,29105800,a9a880ee,7d0663f8,55ed8fb2,bfc0462f,afaff24c,dc917131,4f0d5391,fe15ac21,fbfdbe87,74a6a869,c9e30e6b,f231db77,32cd013f,de53f850,a616806b,6497d6cf,657d4770,54c4731f,29e6b797,e225e6d4,700ef5d7,d8d41e92,97e90f55,61afdb47,cb931d49,f614011b,c7ced80e,1d7fdfd4,95987abf,ddf45ba2,e3176ce9,0e2ffc61,cbe02535,bf19e550,e7be7c4b,ad3c97cd,afff58af,8ecad8e2,f954291b,4d20626e,f92349a7,b6bb0d71,14b15a01,8b8dfe37,b2ede536,150e34bb,173430c6,b9976488,7d9736a5,2bdfc724,33d54c02,a20a116c,4e28997b,3de7b0b4,79fcba8f,06d63764,00282225,ddde0f18,5060af15,89cd3613,16969cfe,f2410c09,93c65585,9355d414,39f49da0,034a11b5,86f4a4ff,4a8d96f2,02f552fa,2cab3392,d1b83834,28bed98b,6440029a,a834bbc1,93ab9a8f,be2d5328,8cddf496,d90ad0a5,e277c62e,047e5832,0c22e742,48d88a0e,6ecaa31b,a65c3131,f611c28f,1685554a,838b07e2,e0037aef,d56a2658,874f5dd7,b36224f5,52659eac,d3766a58,f9937568,0eac58b0,4bfa9928,998b28b6,52a125f5,bcdd3549,f0a1b273,6d53ac7f,58fab0db,b7f383da,c772092b,be705678,e42ea47c,efe86dd4,7ab49336,c3bda952,f2946b8f,8afa7278,7d4c71a3,e171bab8,2f6ac4ec,51dd5945,60328399,b8e7cf0c,b34b72de,b5646dca,b6b0d817,10bb2919,36e40ab4,36bc6b74,877b3dec,e4db7d1e,05e491b8,77d88ef4,4ad34944,a1cbdd2a,fefb7c1c,b3df4c84,487203df,04841dcd,45bb8032,aff48601,6c2c8ebd,91f51eee,92b36361,e6e1139d,ca610bfe,5026e9be,52f0d6e8,00036f4a,fbd3effe,09d1f2d6,3822d41f,822abd23,81849ed2,cb340482,63a099db,082b0d9c,7fbe87e2,7eeac0ad,10926f3c,8eadc09a,40a87a7c,ca2413f5,2e8c591c,71342109,b9a9e22b,727ed044,af70b9e8,350272d9,e2672a00,da34d203,6927a8ee,960f679d,071ec5ae,058b8349,5773ebfd,7568f952,064f436c,d56da71a,b82488e7,77c32a7d,1d89c8c6,3779161c,cd839790,3049e9cb,2fdfb6e9,89280b65,0deddab6,6d391509,97468490,f4e6536e,dcfe1fc8,928ea69f,5660da61,0c41c744,ced255e7,ecca286d,e4bcbd02,15ad551a,af971cc8,75d43eb3,19c0d28c,39059aae,a91fe16f,19141bc3,abb555d3,ccdca379,0fc182bc,f46011e6,f6b694d0,ddc581e7,6d60a872,94e3d550,7d51c350,d63a74b9,78289343,0ef14950,e4518df5,379c2753,3df73e67,c5c120b8,845fa744,bacc8b9a,60a6423d,d19e171d,e5c86549,036208fb,2400a62b,1d9d5f76,a772b665,d444da0e,45797c1c,ebb83c99,8f9271ae,2ac64c0d,7f09a2b8,208985cd,579ce255,960bb6d5,7475db4a,44260825,74bb6082,b130ee68,a5835d1a,f3c4794a,97a45784,22a22e38,f58d3f3c,b0e72d27,e2ce18ce,576c7adb,f0531b21,9cf1b240,88f8d26c,c43bfc10,a69526dd,642681a0,f0adfdb6,90d07f3a,a218593d,e37c65b1,5f0c3789,ba7117ee,ff609940,bda68b96,efc3b906,5756b359,a8fdab87,4d5ebd04,404037cc,72be6185,86e96581,f129ae5f,c083eb86,b4be33f1,2b816de8,cff01271,3f900326,463aa19e,78613c43,eac98862,a0d15314,4310aef3,c24303ad,161d0a2a,5bd895c2,20bb3ab3,01d1e4a4,eada6197,6ef36741,a225f7b0,b8dbaf4d,12004e67,f7a9f2a5,e4d02857,da2d0e34,0616ee11,893933e7,93080244,fa375b51,7036d290,e2e496ee,506f711e,13a4015b,1d67cdc0,03110e16,8a5914c0,966e1819,dedcdf2b,8f013d93,0004c8f0,9f7b1189,af745020,dea2491c,7668d413,24950d9f,61415ec0,7d11f7eb,e13d97a4,2e5a57fc,3ec18221,c9039479,277a0c72,86a4a4c8,9ec9ae85,91c67823,9b56bf6e,2489fda5,8e26f13c,90312c02,d58c23bf,acd41ebe,5e26cc30,db2b8add,d9594cbc,47d2b2a4,09ec1ec5,d0cf4a5f,7aa31dc3,460fdf7c,28083aac,cdc986a2,d3a9fe21,a1e6c1b0,54a390e0,725df84c,a3db59b9,d91aff59,7ee5d4e4,00cea693,be7db86e,7321786b,21af59d6,83ef76a5,29274a80,6b8f024e,5b3686c6,273fb3cd,fc72a8b8,32e11e67,72bf73fc,5be9b6d6,34f40c47,adf168ea,d0552d3a,0e883f3c,7b7a1e20,66248a88,bb520106,174b9a54,64f19a23,701f5d95,679d16a7,0ca04968,1921149e,d2aea141,ed061cb5,1aec7dea,8546a073,67955ccc,af896e1a,aaa0325d,9ad3093d,8d8f38c9,f4c06585,bb6fa8ff,1bae2b53,e8903dcc,fffcb4ba,2bcc2d08,f3303ca1,963fdb6c,028023d3,8cf502e1,cb4af506,0a7124f7,142a6e82,dd3fd818,7ae36487,95092bb0,c49faf2b,f5ec59d2,beb661a7,8fb73036,3e746e30,2f8362ad,36e3c96b,a74c4e60,de0cf091,cc1ed7b2,46a3dc4b,21ebe427,eacf66b3,26660934,2b6fa940,be19fc4f,87c5ce9c,315840f0,21151b9f,304974a6,5e148184,d3abaca0,fbe8a4bc,70544e6f,6ab6beb8,9e84a837,d7c23e0f,4da72a54,ace2e8e9,bd3ca12d,eb66d3d9,c8ad63ed,7b189636,75b142c2,20432e13,6f8bca41,862e3d3f,e6e0e613,dba19d4b,c862f60b,f4895d3b,a9d5cd34,ebb6a967,e48f347f,52278a89,582887b2,72c99652,8c4ee7f2,33a233fa,83c540c7,cc826064,36d49339,9b271bff,f2723df6,8cc44ba5,2db32236,057bd63f,01de534a,ef866df8,b80a6ac6,7371ddfe,bf9b9781,0ffa6679,435411cd,057a3594,14a0249d,c873ef42,2a2e6e96,519213b8,e9972c26,51b1630c,9b925572,416648a9,9dc58903,96e50e74,e81a2bec,7bcac1cf,1b6a3329,e91fc80a,5d2f76a6,c91cbf50,85f5d629,e3ad69ce,bc762bef,03dcccfd,da590d9f,d87f4b12,af2602a0,818aa46d,c447725a,ea97c498,10fc669a,307b317c,f56591fb,180661f9,522a83df,6f2df703,2796e2c5,79c076bd,014d10d5,e67a6e64,54d0c407,f4dd69c0,68f0ce62,ff31f377,b71f7c49,f1e87a88,b6ff2692,240c38d8,7e1efc56,cec0faeb,f7e394d1,334420ae,61894546,8eb1c076,44f85959,515b1d2c,7cdf58af,9cd07a78,05b0be6e,459c728a,ea78a4d5,743068b3,e58f0025,7fe51798,3143d043,7a3209f9,2b8b9c88,8f2e7d6a,72f1145a,291d6fd5,9ba26185,3331b853,580e7074,d48c417f,4965caa8,bf504d17,4296a689,40de02f5,984b5717,e9a12e7b,381d8204,5c329d61,3fb07e69,ef19b927,ff2cdf3b,284e5278,388bd497,dbb16bbc,8c0f253b,849501f0,635111dc,693373c8,6407a4bd,4ae10f74,23bac58c,bfa4df6d,e640e5cd,21c276a8,771cf08f,406e9925,94781042,4c0fe321,94489922,d1bef505,fae008dc,301479d7,7348eb4d,4de9eaa2,4fc00cc0,5f051f21,aaaf28ff,76fcd367,231d2ffd,d774f919,105f643c,b9cdca28,1c3c574f,8f9d23d6,ee0d4cec,dd8fed0d,91584fba,2e1e8688,4a86ee4a,46443074,0c8947db,086a787e,07c21e0a,61c70110,297131ba,9da7dd83,50bc74cb,84f7721d,7c920264,65477a0d,b9fd5f00,46b6310e,8e5328cc,51ab34fb,9e68c15f,814cb5e1,b4c47812,91a4787c,4ee18ec1,1105772b,8a995e0f,4ecaf571,1173950b,dc10654a,3f828261,1cb22b29,7603e54d,282bde0a,a5a0e3c0,a2f88efc,1fa11944,b4c74c67,2a344f19,12b7b0a8,85639d89,4b159f42,c67cbf51,68dbf7ec,79d9d23e,ca89f6fd,dc9b66a3,3249a1cf,3fe1a2ee,34af14eb,1ad49874,4e476e9b,6474bb81,2b547719,ca78c62e,cd24000e,25cb59d2,114f5748,2a0e56cf,9bf84f7e,e4a76fc8,d7670d86,0d0b09e7,7cc2750c,18039838,64366f08,ad624b04,9e25f02c,7edda06f,26382aae,e19e6552,51a363bf,4f2ce0c1,c12a3d0c,bde79a28,02a9747e,6b6908b8,154229e3,c5784dd2,e2ad1738,81a41460,e6029741,60cf5586,917eba61,7ffcfeaa,5a18521b,68c8a5c6,1549a0ca,ab01cf82,33abb444,3037ea78,ef80bbba,9d7016bf,d608f767,55b17bc4,9fbd2640,d17e4ccd,5c0b81d3,1cd78674,34fd19ef,9bf6fa27,9bc3f196,1f9b610b,24459eb6,c2ad6538,9f75115d,bcaee4cf,64656313,fbe8a55f,2236f62e,f104ea32,ed8773e3,7eabac94,8555f6ce,dd714015,d5f6654f,93a37d06,3dae7c18,3f28cf87,0346dd17,9547ebaa,f877cd88,82853908,4295d4ac,bb84d09b,0c39d263,95078d87,8a7ec15e,e10722b7,1e660659,946edc12,b16f4624,c19d7e3e,c825de6f,3c6abcb7,d2547c94,d4f838a9,f3a480e2,4443d0e3,e1296571,d4f5eb51,532bac92,8b5a1550,3c6f0d42,cc7a78ca,018cab92,ca452a64,32b5cc99,7713a099,5289a5f6,7971b44f,773876b9,cffe60cf,117c3143,8ef1c14e,83210a66,2f48a7b4,3357fa81,d94f4b1d,bf66b288,a905b4a3,6b125cdb,b79a77de,7e7b3e62,7d3b6a03,4b9e733d,a8ab022d,e2986a3a,eed6e629,78e99566,573dedaf,84cbacb1,5ffcad70,a116f847,dc10873b,c4823c46,8b48eb1d,5f4c015c,4168b7c3,4ef4fe4b,87b83165,7a6a6e09,7acef920,4d193e11,8154cc7a,b1f031e8,3c81545b,8902b90b,fcdc7255,03d1685d,c34a7091,96fb5dde,5097b932,41e53e4b,e9348f16,5e431866,0ea84819,bf338064,f5ae449b,5a2352af,b366e782,bf135a2a,4c2b6ecb,cdfcda74,0bfbbead,5dc642db,7813822e,3f6ea293,e4d2e77e,95de6d4c,9660392e,bebb2393,87d58b78,0722c310,8be7b0f0,f0ea51fa,aafee2e3,5e16e461,ea8c67ab,0abeb7b6,5e172ddc,d69dd8e4,6c06ccb2,22365df6,a363a90c,4e19b7ab,45932580,eed09c12,26880329,2fe8abce,58590b75,61cf4284,2508c91b,d11d0bc4,06f3f891,08996bf5,16daf160,c7e198e6,5b8b1e89,842712fb,fc0bfe10,0028bc4b,fc4ea59a,a77140ba,7ab6e991,d6f2c02b,5585c755,ee3b9d47,d36e7737,492e9a05,c767e0eb,545c47cc,5eb9e6c0,f382a40a,4e4dd3aa,fd6ca5ef,56910db9,8d5f4cc4,346bd871,8cc2746f,8e1f083d,9a7ba23c",
+  "kitB": "4424cc85,9f6274fe,bb21fa52,ba69bd37,7b2779ac,96630b11,64eaba58,430b1874,6393e795,c571e1b4,6ed94d32,1dda08e8,8c50ac33,09ea4b85,6a6d9527,777ab81b,78bd48b9,ee1b8a4f,79c328e3,93585983,68b7a824,fc4601e7,47e7883d,bbd80d44,acdbfe1a,16568962,ffdd5a67,a6b62549,3767415a,63c63618,15993415,117ef366,9b44d417,e30c2407,f901d053,4c0391e7,faae8325,bd440384,294a2d96,e99f2f78,8450360c,cd21a83d,44451b3b,abc91f3b,2e328429,3aac9232,60990606,17336c16,be39100c,744a4810,1bb7a79f,03d67360,d6b12153,bc3de2ee,8aa85de3,35303eb3,9a3a8913,d7d3e211,8c4f8384,ec4e80d9,ea5d9c46,25088032,c27a2491,03cce561,08e2e465,6f7c4bc0,cdb9b22c,4d965966,5e5cf30d,806ea613,1e6b98e1,509fc053,f5a24df9,17f7a3fe,bffa0c45,e9142c8b,dc462d2f,064741af,2f9223bf,a35dbda9,6dedbaa5,b777d88d,e4f57bf5,466a0914,c232657d,08b9f650,88f6ea1e,74c738a9,6084815b,50d3f5b3,4c982a27,28dbbbe3,cf54bcbf,dbd70d19,7e3e916a,05c03f29,b34d580f,b8ad99b9,53d4bfdf,3a3fd083,55478f5a,69bfe57f,6c5a2dc9,049cd2cf,8aac5f41,81241b7c,4819b623,85595864,2a2602e4,c07a37c3,f8286e86,a6a10fd0,1825916c,7a30226b,ece749ad,e89bac8b,f50c9b4d,6357f6bf,b23b3f56,0190fce3,c3bbec12,2b45e89c,b9010ec1,5c203d30,c3d78bda,f3b55863,e8897993,951413d3,29e1e86e,dfa9416f,2dd25196,c70e0bfc,d337c7d1,d9a3fef7,b2a9b177,4957b884,da641774,fae4ca53,ec6aeaa8,dc7e2fbe,89236478,8147442c,f2d75457,0363d314,cf8a839a,2f8cb58a,092e0c5b,b95e68fc,e1f7784c,8bb0999e,69495c41,de784a98,5ea8a11e,47fb73f3,9bfbd640,343d13e6,f9854861,e02e33f1,76972d38,ac1704f7,7045ce6f,208fabf5,5dca8637,285731d0,538be73b,2405f208,f053b696,80bd33e6,009a038b,dbb0fe4e,d2e0666f,19559b5a,148d3c7c,02b1bf1f,f24abf0b,f9df8a4c,49acf1f1,45ee62d6,689d1c54,2ada51d2,56d407bd,607a7939,a246e426,bdae7525,bacebf6a,6511e17a,a3b589fc,9477aa2d,cad62406,78d12798,2bbdf36c,0d97d53c,65541da5,61b5bdef,673cb3ca,0f0b2a2e,59651607,1b3f2136,9b4b9997,fe796ad4,718ff70c,57f570a4,189fed81,bf9a369f,b8c2f350,db457b44,42fe1bfd,4a3b3942,ee91e62e,b0ec249a,ad2037da,33197280,1508b495,14141878,7affadc6,62d8f8d9,fbd16943,b63ecf3d,bdc5ef59,93ce33a3,495eed5b,662ce0d9,9fd6fdae,245cf265,bd1d0dbb,df4e023a,9e3d98b0,2e7d50b7,0e8676a7,12754314,8709cb63,ec32d079,8ba11d5c,52c7ff85,cdd07650,1fbd2633,ee5077df,f3210114,feb6b6bb,b2064288,6fcce05c,f7b99deb,b192231a,337c4330,f948d004,fe6c9104,3f88b886,879b300d,f4ce3d2a,cc3bfc34,d62cf7f3,70ad39a9,89605c31,7452d66c,20c76c44,39f9f2df,f1ff3d59,5d86bd4f,c8144d1b,d311e90b,667297fc,857ff8bd,a84c5527,902b9382,b9c51e0d,8cf0624f,3b95b9cb,c80a3c76,0ca6f04a,5d838fee,8e2e56bb,f1696dfe,095750f5,c1b4984e,eeefdf7a,1e0d7d0a,a7bb7b2d,498340ea,276a5076,597e4076,9126f46f,65957354,8871f5a7,bb96d904,39cefdd4,cda33621,ff6f5fd1,67dd0b81,4301400c,cd9f5503,14c68c0e,4b2a9dc5,b386039b,3f2571b5,5c07f463,5a041c5b,a984290a,6bfcc4b3,fa14ada6,2c65f24c,06a7f60b,8325dd4a,a3242b84,d17e28a7,92813431,c0564a60,80c2959f,cbb7a49d,d08d1ef0,9a0db4ca,f5c00bfb,3e18e36e,aea68cf1,ab5c1313,5a502aae,25b9aa6f,6e037e4d,ab3d5348,84b8848b,2f162375,f97150b6,35357ea1,7001f08d,d34e038a,34df582b,cf5b004a,966c0a06,5412da3e,a06c1899,1c951b57,45482aec,9e9d7bcd,60d39020,a87641e0,6c98873a,5d41618e,11cd35e8,286388b4,a2346237,e2bd9c9d,4913f164,1492997e,b0dd2a9a,bf3a4039,6cb9f20d,853a95e8,68c9bd9f,04e7beb7,e5e134b1,8aef6df5,eb434712,1ff76c6b,6046c6a9,80db39bf,0a866c1a,d83b8a47,5a46d3ba,954e35c1,933cb314,2636c757,7443b696,9825eeb0,760a2906"
+ }
+}

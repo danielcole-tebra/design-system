@@ -1,0 +1,902 @@
+[
+ {
+  "path": "Accordion.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Alert.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Avatar.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Badge.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Button.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Card.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Checkbox.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Chip.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Circular progress.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Dialog.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Divider.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Drawer.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Feedback message.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Form control label.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Icon button.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Link.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "List.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Menu.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Mobile stepper.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Paper.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "REFERENCE \u2014 Autocomplete open state (not a component).png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "REFERENCE \u2014 Card header band (not a component).png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "REFERENCE \u2014 Dialog over scrim (not a component).png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "REFERENCE \u2014 Primary nav with open submenu (not a component).png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "REFERENCE \u2014 Select + Menu composition (not a component).png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "REFERENCE \u2014 assembled Pagination (not a component).png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "REFERENCE \u2014 composed table (not a component).png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "REFERENCE \u2014 stacked adjacency (not a component).png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Radio.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Read more.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Snackbar content.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Stepper.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Switch.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Table pagination.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Tabs.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Text field.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Toggle button.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Tooltip.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Autocomplete/Field.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Autocomplete/Option.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Autocomplete/Tag.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Button group/Segment.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Icon/AddPaymentNote.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/ArrowLeft.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/AttentionFilled.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/AttentionOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Billing.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Calendar.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Cancel (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/ChatFilled.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/ChatOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/CheckCircle (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/CheckboxChecked.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/CheckboxIndeterminate.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/CheckboxUnchecked.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/CheckmarkFilled.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/CheckmarkOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Clinical.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Close (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/CloseOutlined.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/CustomOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Delete.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Document.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/DownCaret.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/DragAndDrop.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/EditOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/EllipsisFilled.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Engage.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Error.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/EyeIconClosed.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/EyeIconOpen.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/FavoritesFilled.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/FavoritesOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/FormatBold.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/FormatItalic.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/FormatUnderline.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/HelpOutline (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Idea.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "OVERRIDE: entered the kit from IdeaIcon.tsx, not from exportAsync. Its markup carries a Figma exporter signature because the .tsx itself holds SVG pasted out of Figma, so the automatic signature detects origin rather than route."
+ },
+ {
+  "path": "Icon/InfoFilled.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/InfoOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/LeftCaret.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Lightbulb.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/LinearEllipsis.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/List.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/ListNestedCenter.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/ListNestedLeft.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/ListNestedRight.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Lock.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/MailOutline (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Menu.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/NavigateBefore (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/NavigateNext (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Payments.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Person (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Phone.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Platform.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/PlusOutlined.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/PracticeGrowth.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/PrintFilled.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/PrintOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/QuestionOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/RadioChecked (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/RadioUnchecked (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Refresh.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Reports.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/RightCaret.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Search.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/SearchOutlined (MUI).svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Survey.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Telehealth.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Terminal.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/TrashFilled.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/TrashOutlined.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/Unlock.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/Unsorted.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/UpCaret.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/UserFilled.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/UserGroupFilled.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/UserOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Icon/WarningFilled.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Icon/WarningOutlined.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Illustration/Access restricted.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Illustration/Almost there.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Illustration/Browser incompatibility.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Illustration/Error.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Illustration/Not found.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Illustration/Nothing to see here.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "Illustration/Waiting.svg",
+  "ext": "svg",
+  "provenance": "figma-export",
+  "basis": "Figma exporter root signature: width/height/viewBox/fill=\"none\""
+ },
+ {
+  "path": "List/Item.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Marketing/Automation.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Marketing/Community.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Marketing/Ecosystem.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Marketing/ExceptionalCare.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Marketing/OnlineScheduling.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Marketing/OperatingSystem.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Marketing/PatientExperience.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Marketing/QualityVideo.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Marketing/Specialties.svg",
+  "ext": "svg",
+  "provenance": "code-source",
+  "basis": "icon-extract.py root signature: xmlns first, no width/height"
+ },
+ {
+  "path": "Menu/Item.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Nav/Bar.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Nav/Dropdown.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Nav/Icon button.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Nav/Logo.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Nav/Menu item.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Nav/Search.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Pagination/Item.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Stepper/Step.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Table/Cell.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Table/Row.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ },
+ {
+  "path": "Tabs/Tab.png",
+  "ext": "png",
+  "provenance": "figma-export",
+  "basis": "PNG render, only Figma produces these"
+ }
+]

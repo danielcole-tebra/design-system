@@ -1,0 +1,3978 @@
+[
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/A2PRegistration/Form/Verify/A2PRegistrationFormVerify.tsx",
+  "line": 282,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2, borderTop: `1px solid ${theme.palette.grey[400]}"
+  },
+  "sx_full": "{{ padding: 2, borderTop: `1px solid ${theme.palette.grey[400]}` }}",
+  "open_tag": "<DialogActions sx={{ padding: 2, borderTop: `1px solid ${theme.palette.grey[400]}` }} >",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": "{{ textTransform: \"none\" }}",
+    "label": "Return to Form"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": "{{ textTransform: \"none\" }}",
+    "label": "{confirmButtonText()}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/A2PRegistration/FormSubmissionList/A2PRegistrationFormSubmissionList.tsx",
+  "line": 93,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "primary",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/A2PRegistration/OTPVerification/A2PRegistrationOTPVerification.tsx",
+  "line": 399,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{\n                flexDirection: { xs: \"column\", sm: \"row\" }"
+  },
+  "sx_full": "{{ flexDirection: { xs: \"column\", sm: \"row\" }, gap: { xs: 1, sm: 0 }, p: { xs: 2, sm: 2 }, pt: 0, }}",
+  "open_tag": "<DialogActions sx={{ flexDirection: { xs: \"column\", sm: \"row\" }, gap: { xs: 1, sm: 0 }, p: { xs: 2, sm: 2 }, pt: 0, }} >",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "{isLoading ? \"Updating...\" : \"Update and Resend Text\"}"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/ClinicalSettings/MessagesPage/MessagesPage.tsx",
+  "line": 158,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2, borderTop: \"1px solid #ddd\" }"
+  },
+  "sx_full": "{{ padding: 2, borderTop: \"1px solid #ddd\" }}",
+  "open_tag": "<DialogActions sx={{ padding: 2, borderTop: \"1px solid #ddd\" }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{isSubmitting}",
+    "sx": null,
+    "label": "Nevermind"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{isSubmitting}",
+    "sx": "{{ marginRight: 1 }}",
+    "label": "{isToggled ? \"Activate\" : \"Disable\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/MessageRouting/StaffGroupsTab/EditGroupDialog/EditGroupDialog.tsx",
+  "line": 451,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: 2 }"
+  },
+  "sx_full": "{{ p: 2 }}",
+  "open_tag": "<DialogActions sx={{ p: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": "{isBusy}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "(default: primary)",
+    "disabled": "{!canSave}",
+    "sx": null,
+    "label": "Save Group"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/MessageRouting/StaffGroupsTab/ViewGroupDialog/ViewGroupDialog.tsx",
+  "line": 101,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: 2 }"
+  },
+  "sx_full": "{{ p: 2 }}",
+  "open_tag": "<DialogActions sx={{ p: 2 }}>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/PatientIntake/CustomIntakeFormEditor/IntakeFormDisclaimerDialog/IntakeFormDisclaimerDialog.tsx",
+  "line": 58,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: \"1rem\" }"
+  },
+  "sx_full": "{{ p: \"1rem\" }}",
+  "open_tag": "<DialogActions sx={{ p: \"1rem\" }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Save form"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/PatientIntake/IntakeFormNameDialog/IntakeFormNameDialog.tsx",
+  "line": 79,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: \"1rem\" }"
+  },
+  "sx_full": "{{ p: \"1rem\" }}",
+  "open_tag": "<DialogActions sx={{ p: \"1rem\" }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{!intakeFormName?.trim()}",
+    "sx": null,
+    "label": "Save form"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/PatientIntake/IntakeFormNavConfirmDialog/IntakeFormNavConfirmDialog.tsx",
+  "line": 32,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ px: \"1.5rem\", pb: \"1rem\" }"
+  },
+  "sx_full": "{{ px: \"1.5rem\", pb: \"1rem\" }}",
+  "open_tag": "<DialogActions sx={{ px: \"1.5rem\", pb: \"1rem\" }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": "{{ marginRight: \"auto\", }}",
+    "label": "Close without saving"
+   },
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Save and close"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/TerminalSettings/DeleteTerminal/DeleteTerminalModal.tsx",
+  "line": 65,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2, borderTop: \"1px solid #ddd\" }"
+  },
+  "sx_full": "{{ padding: 2, borderTop: \"1px solid #ddd\" }}",
+  "open_tag": "<DialogActions sx={{ padding: 2, borderTop: \"1px solid #ddd\" }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": "{{ marginRight: 1 }}",
+    "label": "Remove Device"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/TerminalSettings/NewTerminal/ActivationCodeSection.tsx",
+  "line": 113,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{isLoading || !active}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{isLoading || !active || !isValidCode(activationCode)}",
+    "sx": "{{ marginRight: 1 }}",
+    "label": "Pair Device"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/TerminalSettings/NewTerminal/ConfirmationSection.tsx",
+  "line": 59,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!active}",
+    "sx": null,
+    "label": "Close"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/TerminalSettings/NewTerminal/DeviceNameSection.tsx",
+  "line": 75,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{!active}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!active || !isValid()}",
+    "sx": null,
+    "label": "Next"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/UserSettings/UserList/ProviderUnsyncedDialog.tsx",
+  "line": 29,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Create Support Case"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/UserSettings/UserList/UnlockUserDialog.tsx",
+  "line": 40,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{isUnlocking}",
+    "sx": null,
+    "label": "Unlock User"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/UserSettings/UserPage/Modals/AddPracticeDialog.tsx",
+  "line": 73,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Submit"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/UserSettings/UserPage/Modals/AddProductDialog.tsx",
+  "line": 92,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!confirmed}",
+    "sx": null,
+    "label": "Submit"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/UserSettings/UserPage/Modals/LockUserDialog.tsx",
+  "line": 104,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "error",
+    "disabled": "{!confirmed || isLocking}",
+    "sx": null,
+    "label": "Submit"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/UserSettings/UserPage/Modals/ReactivateProviderDialog.tsx",
+  "line": 36,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Submit"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/UserSettings/UserPage/Modals/UnassignUserDialog.tsx",
+  "line": 40,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "error",
+    "disabled": "{isDeleting}",
+    "sx": null,
+    "label": "Unassign"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/VisitReasons/VisitReasonDeleteDialog.tsx",
+  "line": 38,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: 2 }"
+  },
+  "sx_full": "{{ p: 2 }}",
+  "open_tag": "<DialogActions sx={{ p: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": "{isDeleting}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{isDeleting}",
+    "sx": null,
+    "label": "Delete"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "admin-ui/src/components/VisitReasons/VisitReasonsToggle.tsx",
+  "line": 90,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: 2 }"
+  },
+  "sx_full": "{{ p: 2 }}",
+  "open_tag": "<DialogActions sx={{ p: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "{isEnabled ? \"error\" : \"secondary\"}",
+    "disabled": null,
+    "sx": null,
+    "label": "{isEnabled ? \"Turn Off\" : \"Turn On\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/DeclineDialog.tsx",
+  "line": 101,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{isDeclining}",
+    "sx": null,
+    "label": "Decline"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/DeleteDialog.tsx",
+  "line": 262,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{isDeleting}",
+    "sx": null,
+    "label": "Delete"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/AppointmentEdit/AppointmentRecurrenceUpdateDialog.tsx",
+  "line": 90,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{isSaving}",
+    "sx": null,
+    "label": "Confirm Changes"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/AppointmentEdit/Recurrence/CustomRecurrenceDialog.tsx",
+  "line": 272,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Done"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarEventDrawer/DiscardChangesDialog.tsx",
+  "line": 37,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Keep editing"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": null,
+    "sx": null,
+    "label": "Discard"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/CalendarIncrementSettings.tsx",
+  "line": 231,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{isNotDirty}",
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/VisibleHoursAndDaysSettings.tsx",
+  "line": 319,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!isDirty || Object.keys(errors).length > 0}",
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/Holidays/AddCustomHolidayDialog.tsx",
+  "line": 167,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "inherit",
+    "disabled": "{isSaveDisabled}",
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/Holidays/DeleteHolidayDialog.tsx",
+  "line": 113,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "error",
+    "disabled": "{deleteMutation.isPending}",
+    "sx": null,
+    "label": "{deleteMutation.isPending ? : \"Delete\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/Holidays/ObservedHolidaysDialog.tsx",
+  "line": 237,
+  "test": false,
+  "story": false,
+  "props": {
+   "testid": "observed-holidays-dialog-actions"
+  },
+  "sx_full": null,
+  "open_tag": "<DialogActions data-testid=\"observed-holidays-dialog-actions\">",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Box",
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "{isAllChecked ? \"Uncheck All\" : \"Check All\"}"
+   },
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "inherit",
+    "disabled": "{saveMutation.isPending || !hasChanges || !!queryError}",
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/OfficeHours/OfficeHoursSetup.tsx",
+  "line": 601,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "error",
+    "disabled": null,
+    "sx": null,
+    "label": "Continue Without Saving"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/Schedules/Dialogs/BreakDialog.tsx",
+  "line": 447,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Tooltip",
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{isPending}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "true",
+    "sx": null,
+    "label": "Save"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{isPending || isSubmitting || recurrenceHasError}",
+    "sx": null,
+    "label": "{isPending ? : \"Save\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/Schedules/Dialogs/DeleteScheduleDialog.tsx",
+  "line": 100,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{deleteMutation.isPending}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{deleteMutation.isPending}",
+    "sx": null,
+    "label": "{deleteMutation.isPending ? : \"Delete\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/Schedules/Dialogs/TimeSlotDialog.tsx",
+  "line": 528,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Tooltip",
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{isPending}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "true",
+    "sx": null,
+    "label": "Save"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{isPending || isSubmitting || recurrenceHasError}",
+    "sx": null,
+    "label": "{isPending ? : \"Save\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/Schedules/Recurrence/ScheduleCustomRecurrenceDialog.tsx",
+  "line": 291,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{hasFormErrors}",
+    "sx": null,
+    "label": "Done"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/SchedulingResources/ResourceDeleteDialog.tsx",
+  "line": 107,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "error",
+    "disabled": "{deleteMutation.isPending}",
+    "sx": null,
+    "label": "{deleteMutation.isPending ? ( ) : ( \"Delete\" )}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/SchedulingResources/ResourceEditDialog.tsx",
+  "line": 244,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!isDirty || isSubmitting}",
+    "sx": null,
+    "label": "{isSubmitting ? ( ) : isEditing ? ( \"Save\" ) : ( \"Add\" )}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/TimeOff/AddEditTimeOffDialog.tsx",
+  "line": 449,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ px: 3, pb: 2 }"
+  },
+  "sx_full": "{{ px: 3, pb: 2 }}",
+  "open_tag": "<DialogActions sx={{ px: 3, pb: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{\n              isEdit\n                ? updateMutation.isPending || !isDirty\n                : createMutation.isPending ||\n                  (!selectedProviderId && !selectedResourceId)\n            }",
+    "sx": null,
+    "label": "{createMutation.isPending ? ( ) : ( \"Save\" )}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/CalendarSettings/TimeOff/DeleteTimeOffDialog.tsx",
+  "line": 118,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "inherit",
+    "disabled": "{deleteMutation.isPending}",
+    "sx": null,
+    "label": "Delete"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "appointment-workflow-ui/src/components/MobiScrollScheduler/AppointmentUpdateDialog.tsx",
+  "line": 234,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{isUpdatingAppointment}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{isUpdatingAppointment}",
+    "sx": null,
+    "label": "Confirm Changes"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "billing-system/src/components/Dialogs/ConfirmationDialog.tsx",
+  "line": 41,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [],
+  "buttons": []
+ },
+ {
+  "kind": "DialogActions",
+  "file": "billing-system/src/components/PatientAlert/PatientAlert.tsx",
+  "line": 135,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "vitality",
+    "disabled": null,
+    "sx": null,
+    "label": "Got it!"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "billing-system/src/components/PrintCharge/PrintChargeDialog.tsx",
+  "line": 104,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Box",
+   "Button",
+   "MarginButton",
+   "MarginButton"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   },
+   {
+    "tag": "MarginButton",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Download"
+   },
+   {
+    "tag": "MarginButton",
+    "variant": "(default: contained)",
+    "color": "{rightDialogActions ? \"primary\" : \"secondary\"}",
+    "disabled": null,
+    "sx": null,
+    "label": "Print"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "billing-system/src/components/PrintCharge/SendPaymentReceiptDialog.tsx",
+  "line": 109,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Typography",
+   "Button",
+   "Typography",
+   "Box"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "vitality",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "vitality",
+    "disabled": null,
+    "sx": null,
+    "label": "Email Receipt"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "claim-denial-predictor-ui/src/components/DisplayPrediction/Feedback/FeedbackDialog.tsx",
+  "line": 59,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2.5 }"
+  },
+  "sx_full": "{{ padding: 2.5 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2.5 }}>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{isSaving}",
+    "sx": null,
+    "label": "{isSaving ? \"Saving...\" : \"Submit\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "clinical-system/src/components/ClinicalPageHeader/HeaderRightLinks/MoreMenu/ExportModalCard.tsx",
+  "line": 64,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Grid",
+   "Grid",
+   "Button",
+   "Grid",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Export"
+   },
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "clinical-system/src/components/ClinicalPageHeader/HeaderRightLinks/MoreMenu/ImportSummaryOfCare.tsx",
+  "line": 153,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Grid",
+   "Grid",
+   "CircularProgress",
+   "Button",
+   "Typography"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!documentName || !file}",
+    "sx": null,
+    "label": "Upload"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "clinical-system/src/components/ClinicalPageHeader/PatientOverview/ChartAccess/AssignModal.tsx",
+  "line": 305,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Grid",
+   "Grid",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{\n                    isReadOnly || updateRestrictedUsersMutation.isPending\n                  }",
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "clinical-system/src/components/ClinicalPageHeader/PatientOverview/ChartAccess/NoAssignModal.tsx",
+  "line": 88,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Grid",
+   "Grid",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "clinical-system/src/components/ClinicalPageHeader/PatientOverview/ChartAccess/UnrestrictedModal.tsx",
+  "line": 60,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Grid",
+   "Grid",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "clinical-system/src/components/ClinicalPageHeader/PatientOverview/PhotoUpload/PatientPhotoUpload.tsx",
+  "line": 214,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "PhotoUploadFooter"
+  ],
+  "buttons": []
+ },
+ {
+  "kind": "DialogActions",
+  "file": "clinical-system/src/modules/components/SocialHistory/ItemCommentDialog.tsx",
+  "line": 52,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ px: 3, pb: 2 }"
+  },
+  "sx_full": "{{ px: 3, pb: 2 }}",
+  "open_tag": "<DialogActions sx={{ px: 3, pb: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "composition-ui/src/components/Composition/CompositionFooter/MarkAsErrorDialog.tsx",
+  "line": 47,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{disabled}",
+    "sx": null,
+    "label": "Mark As Error"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "composition-ui/src/components/CompositionsList/PsychNote.tsx",
+  "line": 174,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "primary",
+    "disabled": null,
+    "sx": null,
+    "label": "No, cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{deletePsychotherapyNoteMutation.isPending}",
+    "sx": null,
+    "label": "{deletePsychotherapyNoteMutation.isPending ? \"Deleting...\" :"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "design-system/src/stories/Dialog/stories/AlertDialog.example.tsx",
+  "line": 54,
+  "test": false,
+  "story": true,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Restart Later"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": "{{ marginRight: 8 }}",
+    "label": "Remind Me in 1 Hour"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Restart Now"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "design-system/src/stories/Dialog/stories/AlertDialog.example.tsx",
+  "line": 91,
+  "test": false,
+  "story": true,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "No, Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "error",
+    "disabled": null,
+    "sx": null,
+    "label": "Yes, Override"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "design-system/src/stories/Dialog/stories/AlertDialog.example.tsx",
+  "line": 124,
+  "test": false,
+  "story": true,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "OK"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "design-system/src/stories/Dialog/stories/ConfirmationDialog.example.tsx",
+  "line": 72,
+  "test": false,
+  "story": true,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Update"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "design-system/src/stories/Dialog/stories/DraggableDialog.example.tsx",
+  "line": 61,
+  "test": false,
+  "story": true,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "SubmitForm"
+  ],
+  "buttons": []
+ },
+ {
+  "kind": "DialogActions",
+  "file": "design-system/src/stories/Dialog/stories/FormDialog.example.tsx",
+  "line": 142,
+  "test": false,
+  "story": true,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "SubmitForm"
+  ],
+  "buttons": []
+ },
+ {
+  "kind": "DialogActions",
+  "file": "design-system/src/stories/Dialog/stories/ScrollDialog.example.tsx",
+  "line": 68,
+  "test": false,
+  "story": true,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "OK"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "documents-ui/src/components/DeleteDocumentDialog.tsx",
+  "line": 41,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "error",
+    "disabled": null,
+    "sx": null,
+    "label": "Delete"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "documents-ui/src/components/EditDocumentDialog.tsx",
+  "line": 978,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Discard"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "documents-ui/src/components/EditDocumentDialog.tsx",
+  "line": 1012,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Keep Editing"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Discard Changes"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "documents-ui/src/components/MergeIssues.tsx",
+  "line": 181,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Back"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "documents-ui/src/components/MergeToChartGuide.tsx",
+  "line": 63,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Get Started"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "documents-ui/src/components/MergeToChartTool.tsx",
+  "line": 180,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ display: \"flex\", justifyContent: \"space-between\" }"
+  },
+  "sx_full": "{{ display: \"flex\", justifyContent: \"space-between\" }}",
+  "open_tag": "<DialogActions sx={{ display: \"flex\", justifyContent: \"space-between\" }}>",
+  "wrappers": [
+   "Button",
+   "InfoOutlined",
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Guide"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{isChartDataError || isLoading || isSaving}",
+    "sx": null,
+    "label": "Merge Selected"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "documents-ui/src/components/OutboundFaxDrawer.tsx",
+  "line": 325,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Acknowledge"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "electronic-case-reporting-ui/src/components/comments/ViewComments.tsx",
+  "line": 142,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ pb: 2, pr: 2 }"
+  },
+  "sx_full": "{{ pb: 2, pr: 2 }}",
+  "open_tag": "<DialogActions sx={{ pb: 2, pr: 2 }}>",
+  "wrappers": [
+   "Button",
+   "LoadingButton"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   },
+   {
+    "tag": "LoadingButton",
+    "variant": "contained",
+    "color": "vitality",
+    "disabled": null,
+    "sx": null,
+    "label": "Save {/* Span is needed as a workaround for an issue when Ch"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "electronic-case-reporting-ui/src/components/report/ViewReport.tsx",
+  "line": 98,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Print"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "facesheet-ui/src/components/CardContent/ClinicalRecommendations/RecommendationsModal.tsx",
+  "line": 556,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2, justifyContent: \"space-between\" }"
+  },
+  "sx_full": "{{ padding: 2, justifyContent: \"space-between\" }}",
+  "open_tag": "<DialogActions sx={{ padding: 2, justifyContent: \"space-between\" }}>",
+  "wrappers": [
+   "Box",
+   "Box",
+   "Box",
+   "IconButton",
+   "LeftCaretIcon",
+   "Typography"
+  ],
+  "buttons": [
+   {
+    "tag": "IconButton",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": "{index === 0}",
+    "sx": null,
+    "label": ""
+   },
+   {
+    "tag": "IconButton",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": "{index + 1 === recommendations.length}",
+    "sx": null,
+    "label": ""
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Done"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "facesheet-ui/src/components/FacesheetCustomization/FacesheetCustomizationModal.tsx",
+  "line": 83,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "medications-ui/src/components/ErxRequests/PendingOrdersDataGrid.tsx",
+  "line": 300,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "error",
+    "disabled": null,
+    "sx": null,
+    "label": "Remove"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/AttachDocument/Actions/AttachDocumentActions.tsx",
+  "line": 20,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "outlined",
+    "color": "(default: primary)",
+    "disabled": "{isSubmitting}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{isSubmitting}",
+    "sx": null,
+    "label": "{isSubmitting ? \"Attaching...\" : \"Upload and Attach\"}"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/AttachPatient/AttachPatient.tsx",
+  "line": 59,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!selectedPatient || isPatientAlreadyAttached}",
+    "sx": null,
+    "label": "Attach"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/Conversation/ProviderSelect/Upgrade/ProviderSelectUpgradeDialog.tsx",
+  "line": 34,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ display: \"flex\", gap: 1, p: 1 }"
+  },
+  "sx_full": "{{ display: \"flex\", gap: 1, p: 1 }}",
+  "open_tag": "<DialogActions sx={{ display: \"flex\", gap: 1, p: 1 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Learn More about Tebra Engage"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/Conversation/Tags/Confirm/ConfirmDialog.tsx",
+  "line": 53,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ px: 3, py: 1, display: \"flex\", justifyContent: \"space-between\" }"
+  },
+  "sx_full": "{{ px: 3, py: 1, display: \"flex\", justifyContent: \"space-between\" }}",
+  "open_tag": "<DialogActions sx={{ px: 3, py: 1, display: \"flex\", justifyContent: \"space-between\" }} >",
+  "wrappers": [
+   "FormControlLabel",
+   "Checkbox",
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Confirm"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/NewMessageDialog/Actions/NewMessageDialogActions.tsx",
+  "line": 38,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "Button",
+   "CircularProgress",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "outlined",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "(default: primary)",
+    "disabled": "{\n            !recipientType ||\n            (recipientType === \"patient\" && !deliveryMethod) ||\n            (deliveryMethod === \"secure\" && !isSecureOptionEnabled)\n          }",
+    "sx": null,
+    "label": "Next"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "inherit",
+    "disabled": "{isLoading}",
+    "sx": null,
+    "label": "Send"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "{deliveryMethod === \"email\" ? \"primary\" : \"secondary\"}",
+    "disabled": "{isLoading || isSendDisabledByRateLimit}",
+    "sx": null,
+    "label": "{deliveryMethod === \"email\" ? \"Preview Email\" : \"Send\"}"
+   },
+   {
+    "tag": "Button",
+    "variant": "outlined",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Edit"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "inherit",
+    "disabled": "{isLoading || isSendDisabledByRateLimit}",
+    "sx": null,
+    "label": "Send Email"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/NewSurveyDialog/Actions/NewSurveyDialogActions.tsx",
+  "line": 30,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 1 }"
+  },
+  "sx_full": "{{ padding: 1 }}",
+  "open_tag": "<DialogActions sx={{ padding: 1 }}>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Done"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/NewSurveyDialog/Actions/NewSurveyDialogActions.tsx",
+  "line": 39,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 1 }"
+  },
+  "sx_full": "{{ padding: 1 }}",
+  "open_tag": "<DialogActions sx={{ padding: 1 }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress",
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{isPreviewDisabled}",
+    "sx": null,
+    "label": "{isLoadingPreview && } Preview"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": "{isSubmitting}",
+    "sx": null,
+    "label": "Edit"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{isSubmitting}",
+    "sx": null,
+    "label": "{isSubmitting && } Send"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/PatientGroups/DeleteConfirmation/PatientGroupsDeleteConfirmation.tsx",
+  "line": 48,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: 2 }"
+  },
+  "sx_full": "{{ p: 2 }}",
+  "open_tag": "<DialogActions sx={{ p: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "inherit",
+    "disabled": "{isDeleting}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{isDeleting}",
+    "sx": null,
+    "label": "{isDeleting ? \"Deleting...\" : \"Delete\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/SettingsDialog/SettingsDialog.tsx",
+  "line": 256,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: 2 }"
+  },
+  "sx_full": "{{ p: 2 }}",
+  "open_tag": "<DialogActions sx={{ p: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": "{loading || saving}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{loading || !settings}",
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "messages-ui/src/components/Template/TemplateEdit/TemplateEdit.tsx",
+  "line": 150,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ p: 2 }"
+  },
+  "sx_full": "{{ p: 2 }}",
+  "open_tag": "<DialogActions sx={{ p: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": "{Boolean(deleteTemplateMutation.isPending)}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{Boolean(deleteTemplateMutation.isPending)}",
+    "sx": null,
+    "label": "{deleteTemplateMutation.isPending ? \"Deleting...\" : \"Delete "
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "notes-ui/src/components/NoteRetryScheduledDialog.tsx",
+  "line": 41,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Return to Notes List"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "notes-ui/src/components/PremiumServiceDialog.tsx",
+  "line": 66,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Continue"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "notes-ui/src/components/AINote/NoteMainPanel/RecordingDisruptedDialog.tsx",
+  "line": 90,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "MicIcon",
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Test Microphone"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Start Over"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Resume Listening"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Finalize Note"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "notes-ui/src/components/AINote/NoteMainPanel/NoteFooter/ReviewDialog.tsx",
+  "line": 63,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{redirecting}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{redirecting}",
+    "sx": null,
+    "label": "{redirecting ? : \"Confirm\"}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "notes-ui/src/components/Warning/LeavePageDialog.tsx",
+  "line": 37,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Leave"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Stay on Page"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "notes-ui/src/components/Warning/RestartWarningDialog.tsx",
+  "line": 33,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Restart Listening"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "notes-ui/src/components/Warning/WarningDialog.tsx",
+  "line": 46,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: \"1rem\" }"
+  },
+  "sx_full": "{{ padding: \"1rem\" }}",
+  "open_tag": "<DialogActions sx={{ padding: \"1rem\" }}>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "{primaryButtonText}"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "{secondaryButtonText}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "ordering-system/src/components/DrugInfo/DrugInteractions/DualTherapyWarning.tsx",
+  "line": 149,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Confirm"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "ordering-system/src/components/DrugInfo/DrugInteractions/InteractionWarningDialog/InteractionWarningDialog.tsx",
+  "line": 105,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Tooltip",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": "{{ marginRight: 1 }}",
+    "label": "Cancel Rx"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!isValid}",
+    "sx": null,
+    "label": "Submit"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "ordering-system/src/components/DrugInfo/DrugSearch/DrugSearch.tsx",
+  "line": 375,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Confirm"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "ordering-system/src/components/DrugInfo/ReasonForRx/IcdBrowserDialog/IcdBrowserDialog.tsx",
+  "line": 158,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!selection}",
+    "sx": null,
+    "label": "Confirm"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "ordering-system/src/components/PatientCost/AlternativeMedications.tsx",
+  "line": 131,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Confirm"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "ordering-system/src/components/PharmacyInfo/PharmacySearchDialog.tsx",
+  "line": 79,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{!selection}",
+    "sx": null,
+    "label": "Select Pharmacy"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "ordering-system/src/components/PrescriptionActions/PrescriptionPreviewDialog/PrescriptionPreviewDialog.tsx",
+  "line": 114,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "LoadingButton",
+   "LoadingButton",
+   "Dialog",
+   "DialogTitle",
+   "IconButton"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "LoadingButton",
+    "variant": "contained",
+    "color": "(default: primary)",
+    "disabled": "{submitting}",
+    "sx": "{{ minWidth: 90 }}",
+    "label": "Print"
+   },
+   {
+    "tag": "LoadingButton",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{submitting}",
+    "sx": "{{ minWidth: 130 }}",
+    "label": "{epcsCheck && epcsCheck.controlledSubstance ? \"Validate\" : \""
+   },
+   {
+    "tag": "IconButton",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": "{{ position: \"absolute\", top: 10, right: 10 }}",
+    "label": ""
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-engagement-ui/src/components/ChangeServiceLocationDialog/ChangeServiceLocationDialog.tsx",
+  "line": 133,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "LoadingButton"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "LoadingButton",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": null,
+    "sx": "{{ marginRight: 1 }}",
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-engagement-ui/src/components/SurveysReviews/AiSentimentAnalysisDialog.tsx",
+  "line": 238,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{\n            justifyContent: \"flex-start\",\n            borderTop: `1px solid ${theme.palette.action.disabledBackground}"
+  },
+  "sx_full": "{{ justifyContent: \"flex-start\", borderTop: `1px solid ${theme.palette.action.disabledBackground}`, }}",
+  "open_tag": "<DialogActions sx={{ justifyContent: \"flex-start\", borderTop: `1px solid ${theme.palette.action.disabledBackground}`, }} >",
+  "wrappers": [
+   "Pagination"
+  ],
+  "buttons": []
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-engagement-ui/src/components/SurveysReviews/Reviews/AiTermsConsentDialog.tsx",
+  "line": 45,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Got it"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-engagement-ui/src/components/SurveysReviews/Reviews/ReviewRemovalAcknowledgement.tsx",
+  "line": 49,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{\n          display: \"flex\",\n          justifyContent: \"space-between\",\n          marginX: 2,\n          marginY: 1,\n        }"
+  },
+  "sx_full": "{{ display: \"flex\", justifyContent: \"space-between\", marginX: 2, marginY: 1, }}",
+  "open_tag": "<DialogActions sx={{ display: \"flex\", justifyContent: \"space-between\", marginX: 2, marginY: 1, }} >",
+  "wrappers": [
+   "Button",
+   "Button",
+   "CircularProgress"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "{cancelButtonColor}",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "{confirmButtonColor}",
+    "disabled": "{loading}",
+    "sx": null,
+    "label": "{confirmLabel}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-history-ui/src/components/CareTeam/CareTeamMemberForm.tsx",
+  "line": 555,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{isSubmitting}",
+    "sx": null,
+    "label": "Yes, delete member"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-history-ui/src/components/CareTeam/CareTeamMemberForm.tsx",
+  "line": 579,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ justifyContent: \"center\", py: 1.5 }"
+  },
+  "sx_full": "{{ justifyContent: \"center\", py: 1.5 }}",
+  "open_tag": "<DialogActions sx={{ justifyContent: \"center\", py: 1.5 }}>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Okay"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-history-ui/src/components/SocialHistory/CustomItemsDialog.tsx",
+  "line": 240,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ justifyContent: \"space-between\" }"
+  },
+  "sx_full": "{{ justifyContent: \"space-between\" }}",
+  "open_tag": "<DialogActions sx={{ justifyContent: \"space-between\" }}>",
+  "wrappers": [
+   "Button",
+   "Box",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "error",
+    "disabled": null,
+    "sx": null,
+    "label": "Delete Unused items"
+   },
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{selectedItems.length === 0}",
+    "sx": null,
+    "label": "Delete"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-history-ui/src/components/SocialHistory/CustomItemsDialog.tsx",
+  "line": 281,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ justifyContent: \"flex-end\" }"
+  },
+  "sx_full": "{{ justifyContent: \"flex-end\" }}",
+  "open_tag": "<DialogActions sx={{ justifyContent: \"flex-end\" }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": "{newCustomItemName.length > 0 && !!newCustomItemError}",
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-history-ui/src/components/SocialHistory/CustomItemsDialog.tsx",
+  "line": 304,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ justifyContent: \"flex-end\" }"
+  },
+  "sx_full": "{{ justifyContent: \"flex-end\" }}",
+  "open_tag": "<DialogActions sx={{ justifyContent: \"flex-end\" }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Delete"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-history-ui/src/components/SocialHistory/HistoryItem.tsx",
+  "line": 112,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ justifyContent: \"flex-end\" }"
+  },
+  "sx_full": "{{ justifyContent: \"flex-end\" }}",
+  "open_tag": "<DialogActions sx={{ justifyContent: \"flex-end\" }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-history-ui/src/components/TravelHistory/TravelComments.tsx",
+  "line": 65,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ justifyContent: \"flex-end\" }"
+  },
+  "sx_full": "{{ justifyContent: \"flex-end\" }}",
+  "open_tag": "<DialogActions sx={{ justifyContent: \"flex-end\" }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Save"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-intake-admin-ui/src/components/EngageUpsellDialog.tsx",
+  "line": 51,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Learn More About Tebra Engage"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-intake-ui/src/components/PatientIntake/Payment/components/StripePayments/StripeDeleteCardDialog.tsx",
+  "line": 38,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ justifyContent: \"flex-start\", p: 2 }"
+  },
+  "sx_full": "{{ justifyContent: \"flex-start\", p: 2 }}",
+  "open_tag": "<DialogActions sx={{ justifyContent: \"flex-start\", p: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "error",
+    "disabled": "{processing}",
+    "sx": null,
+    "label": "Confirm"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-statements-ui/src/components/SettingsPage/components/ConfirmDialogs/SettingsDialog.tsx",
+  "line": 35,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "inherit",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "{confirmColor}",
+    "disabled": null,
+    "sx": null,
+    "label": "{confirmLabel}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "patient-statements-ui/src/components/UnsavedChangesGuard/UnsavedChangesDialog.tsx",
+  "line": 61,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": "{isSaving}",
+    "sx": null,
+    "label": "{cancelLabel}"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "(default: primary)",
+    "disabled": "{isSaving}",
+    "sx": null,
+    "label": "{discardLabel}"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{isSaving}",
+    "sx": null,
+    "label": "{isSaving ? savingLabel : saveLabel}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "payment-subscription-ui/src/components/PlanFormDialog/PlanFormDialog.tsx",
+  "line": 620,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "outlined",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{isSubmitting || hasVisibleFieldErrors}",
+    "sx": null,
+    "label": "Create Plan"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "payment-subscription-ui/src/components/PlanFormDialog/PlanFormDialog.tsx",
+  "line": 683,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "outlined",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Close"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "payment-subscription-ui/src/pages/SubscriptionManagement/views/RetryPaymentDialog.tsx",
+  "line": 59,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "outlined",
+    "color": "primary",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Retry Payment"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "payment-subscription-ui/src/pages/SubscriptionManagement/views/SubscriberActionDialog.tsx",
+  "line": 665,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "outlined",
+    "color": "primary",
+    "disabled": null,
+    "sx": null,
+    "label": "{activeAction.type === \"cancel\" ? \"Keep Active\" : \"Cancel\"}"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "{activeAction.type === \"cancel\" ? \"error\" : \"secondary\"}",
+    "disabled": "{!canSubmitAction}",
+    "sx": null,
+    "label": "{getSubmitActionLabel(activeAction.type)}"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "treatment-plan-ui/src/components/wiley/DocumentOptionsDialog.tsx",
+  "line": 84,
+  "test": false,
+  "story": false,
+  "props": {
+   "sx": "{{ padding: 2 }"
+  },
+  "sx_full": "{{ padding: 2 }}",
+  "open_tag": "<DialogActions sx={{ padding: 2 }}>",
+  "wrappers": [
+   "Button",
+   "Button"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "inherit",
+    "disabled": "{loading}",
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "contained",
+    "color": "secondary",
+    "disabled": "{loading}",
+    "sx": null,
+    "label": "Confirm"
+   }
+  ]
+ },
+ {
+  "kind": "DialogActions",
+  "file": "worklist-ui/src/components/Worklist/Header/TableActionsButton.tsx",
+  "line": 280,
+  "test": false,
+  "story": false,
+  "props": {},
+  "sx_full": null,
+  "open_tag": "<DialogActions>",
+  "wrappers": [
+   "Box",
+   "Button",
+   "Typography",
+   "Button",
+   "Typography"
+  ],
+  "buttons": [
+   {
+    "tag": "Button",
+    "variant": "text",
+    "color": "(default: primary)",
+    "disabled": null,
+    "sx": null,
+    "label": "Cancel"
+   },
+   {
+    "tag": "Button",
+    "variant": "(default: contained)",
+    "color": "secondary",
+    "disabled": null,
+    "sx": null,
+    "label": "Ok, export"
+   }
+  ]
+ }
+]

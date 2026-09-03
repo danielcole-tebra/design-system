@@ -1,0 +1,82 @@
+const fs = require('fs');
+const P = './design-system-schema.json';
+const s = JSON.parse(fs.readFileSync(P, 'utf8'));
+
+s.patientChartConsolidation2026_09_01 = {
+  _status: 'PARTIAL BY INSTRUCTION. Items 2 and 3 done. Item 1 stopped at its own stop condition and reported instead.',
+  _file: 'Proposals file zKT34LQogNjz3Z07fY4VQB, page "Patient chart v2 — ledger in the shell" (168:248).',
+
+  item1_beigeSurface: {
+    _status: 'NOT CHANGED — REPORTED. The prompt carried an explicit stop condition and it was met.',
+    instructionStopCondition: '"Report before changing if code shows beige is the genuine default, since that would be a different finding." It also said to reuse the library session answer rather than re-derive.',
+    reusedAnswer: 'beigeSurfaceInvestigation2026_08_31, which is CLOSED — NO CHANGE MADE, premise tested and rejected. Not re-derived.',
+    theEvidence: {
+      token: 'paletteValues.ts:70 background.default = #E8E5DF; background.paper = #fff (line 69).',
+      cssBaseline: 'ThemeProvider renders <CssBaseline/>, which paints body with background.default. CssBaselineOverrides touches only focus-visible outlines. 35 packages reference a ThemeProvider.',
+      pageShells: '20 of 38 root.component.css files set body to #E8E5DF, including navigation-ui — the always-mounted shell — so beige is the canvas under every screen.',
+      corroboration: 'TableOverrides.ts:14 sets MuiTableRow to background.paper explicitly. A table only declares itself white when the surface beneath it is not.'
+    },
+    countingFilesAsAsked: 'Of 38 root.component.css files: 20 use #E8E5DF, 10 use #edeef1, 2 use #fbf9f8, 5 set no background rule, 1 uses var(--active-color). Beige is the plurality and the only tokenised value of the three.',
+    whyTheProposalsFileIsRightToUseIt: 'The five frames on this page depict the product page canvas. They carry background.default bound, which is what navigation-ui paints on body. Changing them to a lighter surface would make the proposal depict a screen the product does not render.',
+    theRealOpenQuestion: 'Unchanged from the library session: 10 to 12 micro-frontends paint #edeef1 or #fbf9f8, neither tokenised, neither in paletteValues.ts. Which colour wins on those screens is a CSS load-order accident. That is a product decision and still needs an intent call.'
+  },
+
+  item1b_whatTheBeigeWasHiding: {
+    _note: 'The prompt asked what a lighter surface would expose. No change was made, so nothing was exposed. Measured anyway, because the answer inverts the expectation in the prompt and bears on any future call.',
+    measured: {
+      insightCard: 'surface #FFFFFF, border #D6D6D6 bound, strokeWeight 1.',
+      ledgerHeadBand: '#D4E0DD bound (core.light).'
+    },
+    contrastRatios: {
+      cardSurfaceVsBeige: 1.26,
+      cardSurfaceVsWhite: 1.0,
+      cardSurfaceVsEdeef1: 1.16,
+      cardBorderVsBeige: 1.16,
+      cardBorderVsWhite: 1.45,
+      headBandVsBeige: 1.08,
+      headBandVsWhite: 1.35
+    },
+    finding: 'The prompt expected the outlined card and the core.light head band to stop reading on a lighter surface. Both do the OPPOSITE — each GAINS contrast against white. The card border goes 1.16 to 1.45 and the head band 1.08 to 1.35.',
+    whatWouldActuallyBreak: 'The card SURFACE, not its border and not the head band. White card on white canvas is 1.0 — the card stops being a surface at all and survives only as a 1px hairline rectangle. Every insight card on this page depends on the beige for its figure-to-ground relationship. That is the thing the beige is doing, and it is the one thing a white canvas would remove.',
+    ifEdeef1WereEverAdopted: 'Cards would still read, at 1.16 — weaker than beige at 1.26 but not zero. Recorded so the untokenised-grey decision has a number attached.'
+  },
+
+  item2_singlePage: {
+    _status: 'DONE.',
+    moved: [
+      '148:2 "Patient chart v1 — standalone (SUPERSEDED…)" 1440x1196 — from the v1 page to (0, 2900)',
+      '153:168 "Reader’s notes — v1 (SUPERSEDED…)" 640x2760 — from the v1 page to (1520, 2900)'
+    ],
+    method: 'v2Page.appendChild after v1Page.loadAsync. Relative x offset between the two frames preserved (0 and 1520, as on the source page).',
+    placement: 'Below State 3, which ends at y=2726, with a 174px gap. Reading order on the page is now State 1, State 2, State 3, then the superseded v1 pair.',
+    labelling: 'Both frames already carried SUPERSEDED in their own names; that was left alone. Two frame labels were added at y=2754 in the established pattern (16px Akkurat LL Bold title over 12px Akkurat LL Regular description, 146px above the frame): "SUPERSEDED — Patient chart v1 (standalone)" and "SUPERSEDED — Reader’s notes, v1".',
+    incidentalFix: 'The State 3 frame label sat 136px above its frame while every other label uses 146px. Normalised to 146px (y=1720).',
+    nothingDeleted: 'The v1 page 144:905 still exists and now has zero children. Left in place for manual removal, as instructed.',
+    verification: {
+      overlaps: 'ZERO. Pairwise absoluteBoundingBox intersection test across all 11 top-level nodes on the page returns no overlapping pair.',
+      contrast: 'Unchanged. Both moved frames carry their own bound #E8E5DF fill and never depended on the page canvas, so they render identically after the move. Screenshot of 148:2 confirms it — the v1 chart still shows its original Not Useful / Why This? text buttons, which is correct for a superseded reference.',
+      nothingLost: 'Both frames arrived with their full child counts and their own fills intact.'
+    }
+  },
+
+  item3_iconAlignment: {
+    _status: 'DONE.',
+    symptomConfirmed: 'Real, and identical on every card: the info icon centre sat exactly 20px above the thumb centre line. Info centre 376, thumbs 396, on all three cards in both resting states.',
+    causeDiagnosed: {
+      hypothesisInThePrompt: 'That the info icon might be a bare glyph while the thumbs are icon buttons with their own padding and hit area — which would argue for making all three the same kind of control.',
+      hypothesisIsWrong: 'Measured and disproved. All three are INSTANCEs of the SAME published component — Icon button 170:77, variant color=default, size=small, State=Default — all 34x34, each wrapping an 18x18 glyph instance. There is no bare glyph and no control-type mismatch. Nothing about the components needs changing.',
+      actualCause: 'Pure placement, and it was deliberate. The info icon is absolutely positioned in the Insight band frame at card-relative y=106, inside the card CONTENT zone. The thumbs live inside the Card instance Actions auto-layout frame, which lands them at card-relative y=126. The 20px is the gap between those two zones.',
+      whyItWasThatWay: 'insightCardAffordances2026_09_01 placed info in the content zone and the thumbs in the action zone on purpose, because the previous brief said the two must be "separated by position" and warned that three icons in a row would read as one group of three ratings. The vertical offset was part of that separation.',
+      whatChanged: 'This instruction supersedes that: separation is now horizontal only. Info stays far-left, thumbs far-right, roughly 370px apart on a 459px card, and all three share a centre line.'
+    },
+    fix: 'Each info icon Y set so its absolute bounding box top matches its own card first thumb. Computed per card from measured absoluteBoundingBox rather than from assumed offsets, as instructed. Applied to all nine icons across State 1, State 2 and State 3.',
+    tooltipFollowed: 'The State 3 open reasoning tooltip is anchored to card 1 info icon, so it was shifted by the same 20px. It now sits 6px below the icon and left-aligned with it, unchanged from its designed relationship.',
+    verification: 'Re-measured after the change: all nine triplets return infoCentre === upCentre === downCentre exactly — 396 in the two resting states, 2069 in State 3. Confirmed visually at 2x.',
+    noComponentChange: 'No component was swapped, no variant altered, no padding overridden. Only three Y values per state.'
+  },
+
+  publishStep: 'None. Nothing in the library was touched. The proposals file consumes the published library only.'
+};
+
+fs.writeFileSync(P, JSON.stringify(s, null, 1));
+console.log('written. top-level keys:', Object.keys(s).length);
