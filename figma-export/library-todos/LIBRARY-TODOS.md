@@ -146,6 +146,18 @@ Standing rules apply to the library work too: additive only, published names loc
 - Found 2026-09-03 by the target audit while searching fdCQVFdvOByaOYIJYag0d6 for the phrase: hits only inside Text field instances (npveRebuild_audit_2026_09_03 step 4; flag `npveAudit_textFieldHiddenPlaceholderCopy`).
 - Nodes: library 121:350 › 130:149, 130:168 ("Multiline rows", visible false, parent "Text").
 
+## 14. Icon/ArrowDropDown is missing
+
+**Wrong.** MUI's default Select caret is ArrowDropDown, a filled triangle (`@mui/material/Select` `IconComponent` default; `SvgIcon` ArrowDropDown). The library ships only chevron carets (Icon/DownCaret 76:5, Up, Left, Right), so every consumer dropdown stands in with DownCaret and renders a chevron where the product renders a triangle.
+
+**Fix.** Add Icon/ArrowDropDown (24 box, filled triangle 10×5 centred) beside the caret set, named after the MUI glyph with the (MUI) suffix per the icon convention, then swap the stand-ins.
+
+**Evidence.**
+- MUI Select API: `IconComponent` defaults to ArrowDropDown.
+- Source 545:5239 status word caret: filled triangle vector 8.81 × 4.4 (`npveRebuild_mgmtFidelity_2026-09-04` step 2).
+- GAP marker "Dropdown caret" beside the Problems management screens in fdCQVFdvOByaOYIJYag0d6 (npveRebuild_mgmtFidelityBuild_2026-09-04); decision 2026-09-04 (Daniel): keep the chevron until the icon ships.
+- Flag `npveMgmt_statusCaretGlyphGap`.
+
 ## Checked and left out
 
 These NPVE flags are open but the library is not the fix: `npveProblemsRecent_filterTabsCompact` (source hand-drew 28-tall tabs; the library Tabs was accepted), `npveSidesheet_closeIsBareIconInSource` and `npveProblemsRecent_bareIconControls` (source has no hit areas; the library already does), `npveProblemsBuild_coverPageUnboundFill` and `npveProblemsBuild_strayChangelogRow` (target file), `npveComparison_imageFillUnbindable` (by design), `npveBuild_importedNodesDroppedBetweenCalls` and `npveChangelog_placedLogIsDetached` (plugin API behaviour), `npveCloseout_storybookUnreachable` (reference checkout), and the nine `npveSource_*` findings about the NDE-2026 file.

@@ -101,7 +101,7 @@ Item 13 added before "Checked and left out": Text field masters ship hidden plac
 ## Counts
 
 - Markers: 2 GAP, 3 DEFECT (one new: Ringed icon buttons), all on Screens beside the screens they mark. Archive 01 empty.
-- Flags: 208 → 210 (two new); nine audit flags annotated.
+- Flags: 209 → 211 (two new; the schema had gained one flag from `docsOperatorsGuide_2026-09-04` while this batch ran); nine audit flags annotated.
 
 ## Decisions left open
 
