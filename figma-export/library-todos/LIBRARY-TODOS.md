@@ -136,6 +136,16 @@ Standing rules apply to the library work too: additive only, published names loc
 - Recorded in `npveRebuild_tabUnderlineFix_2026_09_03.step5_diff.rules.8_roundWithRecord` and the cleanup batch's rule 8 line.
 - Nodes: library Icon button 170:77 › 573:3583; seen on target rows 26:261, 26:272, 26:282, 26:292.
 
+## 13. Text field masters ship hidden placeholder text
+
+**Wrong.** Every Text field master (set 121:350, 20 occurrences, e.g. 130:149 in size=small Empty and 130:168 in size=small Filled) carries a hidden TEXT layer "Multiline rows" reading "Second line of the comment / Third line of the comment". It rides into every consumer instance as hidden copy, so any search of a consumer file for stray placeholder text hits the library, not the file.
+
+**Fix.** Decide whether the multiline slot is a real affordance (then name and expose it as a property with empty default copy) or scaffolding (then label it SCAFFOLDING per rule 6 and empty the characters). Either way the placeholder sentence should not ship inside a published master.
+
+**Evidence.**
+- Found 2026-09-03 by the target audit while searching fdCQVFdvOByaOYIJYag0d6 for the phrase: hits only inside Text field instances (npveRebuild_audit_2026_09_03 step 4; flag `npveAudit_textFieldHiddenPlaceholderCopy`).
+- Nodes: library 121:350 › 130:149, 130:168 ("Multiline rows", visible false, parent "Text").
+
 ## Checked and left out
 
 These NPVE flags are open but the library is not the fix: `npveProblemsRecent_filterTabsCompact` (source hand-drew 28-tall tabs; the library Tabs was accepted), `npveSidesheet_closeIsBareIconInSource` and `npveProblemsRecent_bareIconControls` (source has no hit areas; the library already does), `npveProblemsBuild_coverPageUnboundFill` and `npveProblemsBuild_strayChangelogRow` (target file), `npveComparison_imageFillUnbindable` (by design), `npveBuild_importedNodesDroppedBetweenCalls` and `npveChangelog_placedLogIsDetached` (plugin API behaviour), `npveCloseout_storybookUnreachable` (reference checkout), and the nine `npveSource_*` findings about the NDE-2026 file.

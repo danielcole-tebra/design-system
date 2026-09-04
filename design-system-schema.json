@@ -1195,7 +1195,8 @@
        "WEB": "var(--tebra-line-height-h1)"
       }
      }
-    ]
+    ],
+    "annotation_2026_09_03": "font/lineHeight/h2 and font/lineHeight/h3 (added to the library after this plan; no plan entry) carry codeSyntax var(--tebra-line-height-h2) / -h3, missing the \"font-\" segment every other line height uses. Correct pattern: var(--tebra-font-line-height-h2) / -h3. The six variables added in libraryTodos_write2_2026_09_03 use the correct pattern. The two library values were not changed in that batch."
    },
    {
     "name": "Tebra/Dimension",
@@ -1552,7 +1553,8 @@
        "WEB": "var(--tebra-size-input-small)"
       }
      }
-    ]
+    ],
+    "annotation_2026_09_03": "space/* codeSyntax WEB values listed on these plan entries were removed from the library variables in libraryTodos_write2_2026_09_03 (the CSS variable exists nowhere in the repo). Plan entries left as written. space/32 added; non-scale values described as component size tokens (decision: scale is multiples of 8 with 4 as the half step)."
    }
   ]
  },
@@ -4745,7 +4747,9 @@
    "where": "Button 79:2 Label text; observed on 6:179 Tertiary action",
    "detail": "ButtonOverrides.ts does not set textTransform, and MUI's default is uppercase; Title case in the Figma master matches neither. Verify against Storybook before treating as a library defect. 2026-09-03 read-only library batch (libraryTodos_readOnly_2026_09_03): TITLE on 72/72 variants; instance renders \"Save & Add To Note\". Code renders the same under typography.button textTransform capitalize (typography.ts:65, Button.js:69); the earlier detail that MUI uppercase applies was wrong. Agree by CSS semantics; Storybook unreachable. 2026-09-03 render (libraryTodos_write1_2026_09_03): Confirmed in browser: contained primary renders \"Save & Add To Note\". Library TITLE matches code.",
    "webAppV2BugListCandidate": false,
-   "handling": "Reported for a library batch."
+   "handling": "Resolved; kept for the record.",
+   "detailAnnotation_2026_09_03": "The sentence \"MUI's default is uppercase; Title case in the Figma master matches neither\" is wrong: typography.ts:65 sets button.textTransform capitalize, and Storybook renders \"Save & Add To Note\" (libraryTodos_write1_2026_09_03.step0_renderFindings). Original detail left as written.",
+   "superseded": "RESOLVED 2026-09-03 by libraryTodos_write2_2026_09_03: library TITLE matches code capitalize, render-confirmed in Storybook 2026-09-03. No write needed."
   },
   {
    "id": "npveBuild_arrowLeftGlyphIsReturnArrow",
@@ -4774,9 +4778,9 @@
    "discoveredDuring": "npveRebuild_sidesheet_build_2026-09-02 (first target write batch)",
    "summary": "Slot label letterSpacing 0.5px is unbound; Tebra/Typography has no letter-spacing variable.",
    "where": "Slot 4:13 label 4:14",
-   "detail": "Every other text and paint value on Sidesheet and Slot is bound. 2026-09-03 read-only library batch (libraryTodos_readOnly_2026_09_03): typography.ts defines no letterSpacing; MUI defaults survive the deepmerge (button 0.02857em, caption 0.03333em; inferred from createTypography.js:78). Library has no letter-spacing variable. 2026-09-03 render (libraryTodos_write1_2026_09_03): Button and Tab render letter-spacing normal in Storybook; the MUI-default inference from the read batch does not hold at render for them.",
+   "detail": "Every other text and paint value on Sidesheet and Slot is bound. 2026-09-03 read-only library batch (libraryTodos_readOnly_2026_09_03): typography.ts defines no letterSpacing; MUI defaults survive the deepmerge (button 0.02857em, caption 0.03333em; inferred from createTypography.js:78). Library has no letter-spacing variable. 2026-09-03 render (libraryTodos_write1_2026_09_03): Button and Tab render letter-spacing normal in Storybook; the MUI-default inference from the read batch does not hold at render for them. 2026-09-03 (libraryTodos_write2_2026_09_03): Render evidence — Button and Tab render letter-spacing normal in Storybook (write 1 step 0, figma-export/library-todos-write1-2026-09-03/storybook-button-contained-primary-2026-09-03.png and storybook-tabs-2026-09-03.png). Chip unchecked. Decision: no letter-spacing variable; the 0.5px is a source-file value until Chip is render-checked.",
    "webAppV2BugListCandidate": false,
-   "handling": "Reported."
+   "handling": "Reported. Open pending a Chip render check."
   },
   {
    "id": "npveCloseout_storybookUnreachable",
@@ -4805,9 +4809,9 @@
    "discoveredDuring": "npveRebuild_changelog_2026-09-02",
    "summary": "No h4 typography token in the library; the Change log title binds font/size/body1 (16) and font/lineHeight/body1 (24) with font/weight/bold as the nearest heading tokens.",
    "where": "YX2n4YLrEpBXNbcc73T6dw Typography collection; target 18:110",
-   "detail": "Sizes available: caption 12, chip 13, body2 14, buttonLarge 15, body1 16, h3 20, h2 24, h1 32. Code typography.ts defines h4; the library has no variable for it. 2026-09-03 read-only library batch (libraryTodos_readOnly_2026_09_03): Confirmed: no h4/h5/subtitle2 size or line height; code h4 16/24 700, h5 14/20 700, subtitle2 12/16 700.",
+   "detail": "Sizes available: caption 12, chip 13, body2 14, buttonLarge 15, body1 16, h3 20, h2 24, h1 32. Code typography.ts defines h4; the library has no variable for it. 2026-09-03 read-only library batch (libraryTodos_readOnly_2026_09_03): Confirmed: no h4/h5/subtitle2 size or line height; code h4 16/24 700, h5 14/20 700, subtitle2 12/16 700. 2026-09-03 (libraryTodos_write2_2026_09_03): token added, target rebind pending — font/size/h4 VariableID:996:2 (16) and font/lineHeight/h4 VariableID:996:3 (24), with h5 and subtitle2 pairs; the Change log title 18:110 stays on body1 + bold until the target rebinds.",
    "webAppV2BugListCandidate": false,
-   "handling": "Reported. Title stays on body1 + bold until an h4 token exists."
+   "handling": "Reported. Title stays on body1 + bold until an h4 token exists. Token added 2026-09-03; target rebind pending."
   },
   {
    "id": "npveProblemsRecent_textFieldNoStartAdornment",
@@ -4972,9 +4976,9 @@
    "discoveredDuring": "npveRebuild_comparisonLayout_2026-09-02",
    "summary": "No space/32 variable exists in Tebra/Dimension, so the Rebuild comparison root padding and gap of 32 are literal values.",
    "where": "target 35:332; library Dimension collection",
-   "detail": "space/0, 4, 8, 12, 16 exist. Either add space/32 to the library or accept literal 32 on Figma-only chrome. 2026-09-03 read-only library batch (libraryTodos_readOnly_2026_09_03): Confirmed: 20 space/* variables, no 32. Code has no spacing override and 0 uses of the tebra-space CSS variable the code syntax names.",
+   "detail": "space/0, 4, 8, 12, 16 exist. Either add space/32 to the library or accept literal 32 on Figma-only chrome. 2026-09-03 read-only library batch (libraryTodos_readOnly_2026_09_03): Confirmed: 20 space/* variables, no 32. Code has no spacing override and 0 uses of the tebra-space CSS variable the code syntax names. 2026-09-03 (libraryTodos_write2_2026_09_03): token added, target rebind pending — space/32 VariableID:997:2 in Tebra/Dimension; 35:332 still carries literal 32 until the library is published and the target rebinds.",
    "webAppV2BugListCandidate": false,
-   "handling": "Reported."
+   "handling": "Reported. Token added 2026-09-03; target rebind pending."
   },
   {
    "id": "npveComparison_imageFillUnbindable",
@@ -5108,23 +5112,23 @@
    "kind": "DECISION",
    "summary": "The 19.125-tall Group 573:3583 the rule 8 walks report lives in Icon/FavoritesOutlined 575:17, not Icon button 170:77, and rule 8 exempts GROUP/VECTOR bounds as intrinsic geometry.",
    "where": "YX2n4YLrEpBXNbcc73T6dw 575:17 › 573:3583 › 573:3584; Icon button Icon#170:0 swap",
-   "detail": "Either the walks stop reporting exempt geometry or the icon gets an integer wrapper frame; LIBRARY-TODOS item 12 names the wrong component and a fix the rule text says is out of scope. Icon/DownCaret 76:4 (20 x 11.026) is the same case."
+   "detail": "Either the walks stop reporting exempt geometry or the icon gets an integer wrapper frame; LIBRARY-TODOS item 12 names the wrong component and a fix the rule text says is out of scope. Icon/DownCaret 76:4 (20 x 11.026) is the same case. 2026-09-03 (libraryTodos_write2_2026_09_03): rule8-audit.figma.js now honours the exemption; target Screens re-run 0 hits, 39 exempt including the four 573:3583 groups. The walk side is settled; whether the icon gets an integer wrapper stays a decision."
   },
   {
    "discoveredDuring": "libraryTodos_readOnly_2026_09_03",
    "webAppV2BugListCandidate": false,
-   "handling": "Reported. Read-only batch; decision needed.",
+   "handling": "Reported. Read-only batch; decision needed. Space half fixed 2026-09-03.",
    "id": "libraryRead_spaceCodeSyntaxNamesMissingCssVar",
    "severity": "low",
    "kind": "DEFECT",
    "summary": "19 of 20 space/* variables carry codeSyntax var(--tebra-space-N); the repo has 0 occurrences of tebra-space and theme.ts has no spacing override.",
    "where": "YX2n4YLrEpBXNbcc73T6dw Tebra/Dimension; C:/Code/web-app-v2/packages",
-   "detail": "space/40 has no code syntax. font/lineHeight/h2 and h3 code syntax also drops the font- segment the other line heights use."
+   "detail": "space/40 has no code syntax. font/lineHeight/h2 and h3 code syntax also drops the font- segment the other line heights use. 2026-09-03 (libraryTodos_write2_2026_09_03): space/* codeSyntax removed on all 19 that had it. The h2/h3 line-height codeSyntax half is still open (not in the write list)."
   },
   {
    "discoveredDuring": "libraryTodos_readOnly_2026_09_03",
    "webAppV2BugListCandidate": false,
-   "handling": "Reported. Read-only batch; decision needed.",
+   "handling": "Reported. Read-only batch; decision needed. Decision 2026-09-03: no letter-spacing variable (libraryTodos_write2_2026_09_03.step3).",
    "id": "libraryRead_letterSpacingInheritsMuiDefaults",
    "severity": "info",
    "kind": "DECISION",
@@ -5146,13 +5150,212 @@
   {
    "discoveredDuring": "libraryTodos_readOnly_2026_09_03",
    "webAppV2BugListCandidate": false,
-   "handling": "Reported. Read-only batch; decision needed.",
+   "handling": "Annotated 2026-09-03; original _order left as written.",
    "id": "libraryRead_pagesOrderStale",
    "severity": "info",
    "kind": "DEFECT",
    "summary": "figmaBuild.pages._order lists Tokens and omits Compositions and Layouts; the file has Foundations, Compositions and Layouts.",
    "where": "design-system-schema.json figmaBuild.pages._order",
-   "detail": "Rule 7 identity check passed on the component pages. Not changed."
+   "detail": "Rule 7 identity check passed on the component pages. Not changed. 2026-09-03 (libraryTodos_write2_2026_09_03): _order_2026_09_03 added beside _order."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Needs a retroactive record from whoever did the work. Process gap addressed 2026-09-04 by npveRebuild_agentRules_2026-09-04 (see addressedBy); the record itself is still owed. 2026-09-04: retroactive record npveRebuild_externalRestructure_2026-09-03_retro written by npveRebuild_repair1_2026-09-04.",
+   "id": "npveAudit_unrecordedRestructure",
+   "severity": "high",
+   "kind": "DEFECT",
+   "summary": "All target work after the pause record (page restructure, Archive, sets 94:812 and 107:485, Problem summary row 153:1186, Problems list body 156:2426, comparison shell 35:332 + 12 sub-components, four comparison instances, two Sidesheet instances, marker moves, Recovery checks) has no schema record, apply script, report, flag or commit.",
+   "where": "fdCQVFdvOByaOYIJYag0d6, all pages; repo",
+   "detail": "libraryTodos_write2 read 27:6 still on Screens; own node sessions 74–78 and 88–172 are the unrecorded work. Report: figma-export/npve-audit-2026-09-03/report.md.",
+   "addressedBy": "npveRebuild_agentRules_2026-09-04: the process failure (an external session building with no record) is now covered by CLAUDE.md \"Rules for any agent working in these files\" and AGENTS.md; rules 1, 2 and 7 there are the binding answer. The retroactive record for sessions 74–78 and 88–172 remains owed."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Decision: wait for next Button publish or re-point now. 2026-09-04: RESOLVED by npveRebuild_repair1_2026-09-04 step 1 — all 66 Button instances on 155:1191; 3:105 gone.",
+   "id": "npveAudit_buttonImportSplit",
+   "severity": "high",
+   "kind": "DEFECT",
+   "summary": "Two subscription copies of library Button (same key cfb726c7…): 3:105 with 74-series space refs holds 58 instances (every Sidesheet footer), 155:1191 with 997 refs holds 8 (Create New Problem). New Problems management screens carry both at once.",
+   "where": "target Templates/Screens/Archive; Button 3:105, 155:1191",
+   "detail": "Same key, same 72 variants, same geometry; only the internal variable refs differ. Old refs: space/8 74:297, space/6 74:289, space/7 74:293, space/17 74:321. No render divergence today. importComponentByKeyAsync returns 155:1191."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. 2026-09-04: rename impossible from the Plugin API (npveRebuild_repair1_2026-09-04); left for Figma to collect.",
+   "id": "npveAudit_iconButtonOrphanImport",
+   "severity": "info",
+   "kind": "DEFECT",
+   "summary": "Icon button 6:7 (old subscription copy, 74-series refs) has 0 instances; all 182 Icon button instances use 77:1104.",
+   "where": "target; Icon button 6:7",
+   "detail": "Same key 7ebea5d7… as 77:1104 (library 170:77). Leftover of the accept-updates pass in session 77. Additive rule: leave, do not delete."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Resolves with the Button split. 2026-09-04: RESOLVED with the Button split (npveRebuild_repair1_2026-09-04); no 74-series space ref remains outside orphan 6:7.",
+   "id": "npveAudit_spaceRefsTwoVersions",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "summary": "space/8, space/6, space/7, space/17 are bound under two ids each (74-series inside Button 3:105 and Icon button 6:7; 997-series everywhere else). All other space/* bind 997 only; colour/typography bind 74 only.",
+   "where": "target bindings, all pages",
+   "detail": "Suffix 997 matches the library session of write2 (space/32 = VariableID:997:2), so the 997 ids are the post-write2 published versions. The prompt's ids 10:104, 75:689, 18:101, 75:690 do not resolve through the Plugin API."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Decision needed on rings. 2026-09-04: RESOLVED by npveRebuild_repair2_2026-09-04 step 2 — library Icon buttons and Icon/DownCaret; drawn nodes moved to Archive 03 with paints bound; DEFECT marker 189:615 placed.",
+   "id": "npveAudit_problemSummaryRowDrawnControls",
+   "severity": "high",
+   "kind": "DEFECT",
+   "summary": "Problem summary row 153:1186 has no nested instance: the circled edit and add-to-note controls are hand-drawn VECTOR rings (39 × 39, stroke #8CA7A2) with drawn pencil (#004852) and note (#417E86) glyphs; 9 unbound paints; Status text #3FA266 with no typography bindings.",
+   "where": "target Templates 03 › 153:1186; nodes 170:1591, 170:1592, 153:1190, 170:1608–1614",
+   "detail": "Project convention is plain Icon button + DEFECT marker (Add button ring). The Problems list change-log row \"Hand-drawn controls → published library instances\" is false for these controls. Renders in step4-problem-summary-row-153-1186-1x.png."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. 2026-09-04: RESOLVED by npveRebuild_repair2_2026-09-04 step 3 — 16 frames and Actions bound to color/background/paper.",
+   "id": "npveAudit_problemsListBodyUnboundWhite",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "summary": "Problems list body 156:2426: 16 inner frames fill #FFFFFF unbound across both variants; Problem summary row Actions 153:1190 likewise.",
+   "where": "target Templates 03 › 155:1560, 155:1591, 155:1605, 155:2546, 155:2563, 155:2580, 156:1254, 156:1261, 156:1295, 156:1298, 156:1299, 156:1302, 156:1305, 156:1306, 156:1311, 156:1316, 153:1190",
+   "detail": "Variant roots bind color/background/paper; inner frames should bind paper or carry no fill."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. 2026-09-04: RESOLVED by npveRebuild_repair2_2026-09-04 step 6 — three references re-exported at 2x, captions re-dated.",
+   "id": "npveAudit_referenceExportsNot2x",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "summary": "Three of four source exports in the comparison shell are 1x images: Favorites 114:898 (550 × 600 px), Main 160:1324 (550 × 517), Status menu 160:1326 (550 × 510, cursor visible). Recent 114:778 is 2x (1100 × 1200).",
+   "where": "target Templates 05 › _Rebuild comparison/Reference/*",
+   "detail": "Rule 15 requires 2x. Favorites caption reads \"refreshed 2026-09-03\" and its hash differs from the legacy export, against rule 15's \"does not update\"."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Decision needed. 2026-09-04: DECISION — kept; CLAUDE.md rules 14/15 rewritten (npveRebuild_repair2_2026-09-04 step 7).",
+   "id": "npveAudit_comparisonNowInstanceSwap",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "Rebuild comparison 35:332 is now an instance-swap shell (three INSTANCE_SWAP slots, three captions) with per-screen sub-components; comparisons and change logs on Screens are instances, not the detached frames rules 14/15 describe. Hidden __Legacy placeholder frames remain in every column.",
+   "where": "target Templates 05; Screens 116:498, 116:1338, 160:3169, 160:3680",
+   "detail": "Workable answer to rule 6 but an unrecorded convention change; screen content now lives in Templates sub-component masters. Master fixed at 1708 × 1290 leaves blank space under shorter change logs."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Decision needed. 2026-09-04: RESOLVED — all four markers back on Screens beside the picker comparisons (npveRebuild_repair2_2026-09-04 step 5).",
+   "id": "npveAudit_markersInArchive",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "The four GAP/DEFECT markers (27:295, 27:306, 33:236, 52:428) now sit in Archive 126:2025 and are beside no screen.",
+   "where": "target Archive 01",
+   "detail": "Rule 9: GAP \"stays marked in the frame\". Marker content unchanged."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported.",
+   "id": "npveAudit_recoveryCheckUnexplained",
+   "severity": "info",
+   "kind": "DEFECT",
+   "summary": "Archive 04 · Recovery checks 142:996 holds one un-swapped instance of the comparison master (130:1185) and nothing explains what it recovered from; nothing on disk mentions it.",
+   "where": "target Archive 142:996 › 130:1185",
+   "detail": "Identical props and captions to 116:498. Section stroke white 10% vs black elsewhere."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. 2026-09-04: rename stopped on the pixel check (npveRebuild_repair1_2026-09-04 step 2); README on Archive states the pending state. 2026-09-04: RESOLVED — Archive screens renamed _Superseded — see Screens (npveRebuild_repair2_2026-09-04).",
+   "id": "npveAudit_screensTriplicated",
+   "severity": "low",
+   "kind": "DECISION",
+   "summary": "Clin_Problems-Recent content exists at 27:6 (Archive), 114:780 (Templates master) and through instancing at 116:498 and 130:1185; Favorites at 40:252 and 114:900. Overrides are identical today; the Archive copies will not follow future edits.",
+   "where": "target Archive 02, Templates 05",
+   "detail": "Read: componentProperties, 31 texts and hidden lists equal on every pair. Additive rule keeps the copies; they need a superseded label or README on the frames."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. 2026-09-04: six hidden Tabs instances renamed _Legacy hidden — … (npveRebuild_repair2_2026-09-04 step 3); kept.",
+   "id": "npveAudit_pickerBodyDeadTabs",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "Problems picker body set 94:812 keeps three Tabs instances per variant with two hidden (6 dead Tabs across the set) now that the variant axis selects the active tab.",
+   "where": "target Templates 02 › 94:812; 39:355, 39:369, 94:643, 94:644, 94:655, 94:656",
+   "detail": "Carried over from the boolean-visibility design recorded in npveRebuild_goldStarsAndCorrections_2026_09_03."
+  },
+  {
+   "discoveredDuring": "npveRebuild_audit_2026_09_03",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported to the library list. 2026-09-04: LIBRARY-TODOS item 13 written (npveRebuild_repair2_2026-09-04 step 8).",
+   "id": "npveAudit_textFieldHiddenPlaceholderCopy",
+   "severity": "info",
+   "kind": "DEFECT",
+   "summary": "Library Text field masters carry a hidden \"Multiline rows\" text \"Second line of the comment / Third line of the comment\" (20 in set 121:350, e.g. 130:149, 130:168); it rides into every target Text field instance.",
+   "where": "library 121:350",
+   "detail": "Library-inherited, not target-authored. Found while searching the target for the phrase."
+  },
+  {
+   "discoveredDuring": "npveRebuild_repair1_2026-09-04",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Leave for Figma to collect.",
+   "id": "npveRepair1_orphanImportCannotBeRenamed",
+   "severity": "info",
+   "kind": "GAP",
+   "summary": "Remote subscription nodes cannot be renamed from the Plugin API (\"Cannot write to internal and read-only node\"), so the \"_Orphaned import\" label cannot be applied to Icon button 6:7; the Plugin API also cannot enumerate the file's subscription list.",
+   "where": "target; 6:7",
+   "detail": "Button 3:105 vanished on its own once its instance count reached zero (getNodeByIdAsync null). 6:7 has had zero instances since the audit and is still present."
+  },
+  {
+   "discoveredDuring": "npveRebuild_repair1_2026-09-04",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Decision: accept and rename in batch 2, or investigate. 2026-09-04: DECISION accepted as rendering noise; renames done in npveRebuild_repair2_2026-09-04 step 1.",
+   "id": "npveRepair1_screenPairEdgePixels",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "Archived screens 27:6 / 40:252 and the comparison copies differ by 5 and 6 anti-aliased edge pixels at 1x (max channel delta 16) at identical coordinates in both pairs; same-node control diff is 0. Step-2 renames stopped on the stated condition.",
+   "where": "target Archive 02 vs Screens 01",
+   "detail": "Both members of each pair sit at integer absolute positions with identical child offsets; properties, texts and hidden lists were already identical (audit). Diff masks in figma-export/npve-repair1-2026-09-04/."
+  },
+  {
+   "discoveredDuring": "docsOperatorsGuide_2026-09-04",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Decision needed: mirror rule 10 into AGENTS.md or reword its verbatim claim.",
+   "id": "docsAgentsMdVerbatimClaimStale",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "AGENTS.md says it repeats the CLAUDE.md agent-rules section verbatim; CLAUDE.md now has item 10 (record gate) and AGENTS.md has items 1–9.",
+   "where": "repo root: AGENTS.md context paragraph; CLAUDE.md \"Rules for any agent working in these files\"",
+   "detail": "Introduced by docsOperatorsGuide_2026-09-04, which was scoped to add item 10 to CLAUDE.md only. Codex and other tools reading AGENTS.md will not see the record gate until it is mirrored."
+  },
+  {
+   "discoveredDuring": "npveRebuild_repair2_2026-09-04",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Decision for a later batch.",
+   "id": "npveRepair2_statusColourByOverride",
+   "severity": "low",
+   "kind": "DECISION",
+   "summary": "Problem summary row switches status colour by a per-instance fill override on the Status text and caret (success/main vs grey/500), not by a variant axis.",
+   "where": "target 153:1186 and its six placements in 156:2426",
+   "detail": "Overrides are bound now. A Status variant (Active / Resolved / Marked as error) would make the colour part of the component API."
+  },
+  {
+   "discoveredDuring": "npveRebuild_repair2_2026-09-04",
+   "webAppV2BugListCandidate": false,
+   "handling": "Reported. Swap is a one-property change.",
+   "id": "npveRepair2_addToNoteGlyphChoice",
+   "severity": "info",
+   "kind": "DECISION",
+   "summary": "Add to note uses Icon/AddPaymentNote (clipboard with plus); the only other candidate is Icon/Document (plain sheet). The source glyph is a document with an add badge, which the library does not have exactly.",
+   "where": "target 190:12; library 575:2, 575:11",
+   "detail": "Screenshots of both candidates in figma-export/npve-repair2-2026-09-04/."
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -6935,7 +7138,21 @@
     "Storybook rebuild — working (superseded Button + flattened ButtonGroup)",
     "Scratch — initial import (verified byte-identical subset of Canonical components)",
     "2026-08-03 consolidation removed 35 now-empty single-component pages: Button, Button group, Icon button, Text field, Checkbox, Radio, Switch, Form control label, Chip, List, Menu, Autocomplete, Alert, Snackbar, Tooltip, Dialog, Drawer, Card, Accordion, Table, Table pagination, Pagination, Tabs, Toggle button, Stepper, Avatar, Badge, Circular progress, Read more, Feedback messages, Paper, Divider, Link, Illustrations, Icons. Each was confirmed to have 0 children first; all content was moved, none deleted."
-   ]
+   ],
+   "_order_2026_09_03": [
+    "Cover",
+    "Foundations",
+    "Reference",
+    "Actions",
+    "Inputs",
+    "Data display",
+    "Feedback",
+    "Surfaces & navigation",
+    "Icons & illustrations",
+    "Compositions",
+    "Layouts"
+   ],
+   "_orderAnnotation_2026_09_03": "Read from the file in libraryTodos_readOnly_2026_09_03 (ids: Cover 118:250, Foundations 145:2, Reference 259:2879, Actions 259:2873, Inputs 259:2874, Data display 259:2875, Feedback 259:2876, Surfaces & navigation 259:2877, Icons & illustrations 259:2878, Compositions 446:2, Layouts 489:2). _order above is the pre-rename record and is left as written; rule 7 identity checks should use _order_2026_09_03."
   },
   "reportedDiscrepancies": {
    "canonicalPageNotEmpty": {
@@ -21086,5 +21303,869 @@
    "figma-export/library-todos-write1-2026-09-03/rule1-transient-tab-lowercase-label-1x.png",
    "figma-export/library-todos-write1-2026-09-03/rule1-transient-tab-lowercase-label-3x.png"
   ]
+ },
+ "libraryTodos_write2_2026_09_03": {
+  "_status": "DONE. Variables: space/32 added, 14 non-scale space/* described, WEB codeSyntax removed from all 19 that had it; six typography variables added (h4, h5, subtitle2 size + lineHeight); font/weight/bold already existed. Repo: standalone rule 8 walk with the GROUP/VECTOR exemption, re-run on the target Screens page with 0 hits. Schema: three dated annotations, one flag resolved, three annotated. No deletion, no rename.",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw, write batch 2 of 2. Variables only; no component master touched (write 1 masters re-read unchanged).",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 Screens 27:2, read only (rule 8 re-run).",
+  "date": "2026-09-03",
+  "report": "figma-export/library-todos-write2-2026-09-03/report.md",
+  "step1_dimension": {
+   "decision": "Daniel, 2026-09-03: the space scale is multiples of 8 with 4 as the half step (0, 4, 8, 16, 24, 32, 40 are scale; everything else is a component size token).",
+   "added": {
+    "name": "space/32",
+    "id": "VariableID:997:2",
+    "key": "0d62cb72fb8788eabda4d5fbada6804ed95063f6",
+    "value": 32,
+    "scopes": [
+     "WIDTH_HEIGHT",
+     "GAP"
+    ],
+    "description": "Scale step. Decision 2026-09-03 (Daniel): the space scale is multiples of 8 with 4 as the half step."
+   },
+   "described": {
+    "space/12": "Component size token, not scale: needed by Autocomplete (Value=Multiple vertical padding: MUI root padding 9 + chip margin 3)  [from figmaVariablePlan addedDuringBuild]",
+    "space/18": "Component size token, not scale: needed by Checkbox Flush=Left (derived 42 MUI SwitchBase target minus 24 SvgIcon medium; …)  [from the variable's own earlier description]",
+    "unrecorded": [
+     "space/2 → \"Component size token, not scale: origin unrecorded\"",
+     "space/3 → \"Component size token, not scale: origin unrecorded\"",
+     "space/5 → \"Component size token, not scale: origin unrecorded\"",
+     "space/6 → \"Component size token, not scale: origin unrecorded\"",
+     "space/7 → \"Component size token, not scale: origin unrecorded\"",
+     "space/9 → \"Component size token, not scale: origin unrecorded\"",
+     "space/11 → \"Component size token, not scale: origin unrecorded\"",
+     "space/13 → \"Component size token, not scale: origin unrecorded\"",
+     "space/14 → \"Component size token, not scale: origin unrecorded\"",
+     "space/17 → \"Component size token, not scale: origin unrecorded\"",
+     "space/19 → \"Component size token, not scale: origin unrecorded\"",
+     "space/23 → \"Component size token, not scale: origin unrecorded\""
+    ]
+   },
+   "untouchedDescriptions": "space/0 (Checkbox Flush=Left note), space/40 (theme.spacing(5) note), space/4, 8, 16, 24 (empty) — all scale values, not in the write.",
+   "codeSyntaxRemoved": [
+    "space/0",
+    "space/2",
+    "space/3",
+    "space/4",
+    "space/5",
+    "space/6",
+    "space/7",
+    "space/8",
+    "space/9",
+    "space/11",
+    "space/12",
+    "space/13",
+    "space/14",
+    "space/16",
+    "space/17",
+    "space/18",
+    "space/19",
+    "space/23",
+    "space/24"
+   ],
+   "codeSyntaxNote": "space/40 had none; space/32 created without one. var(--tebra-space-N) exists nowhere in C:/Code/web-app-v2/packages (read batch A4, 0 matches).",
+   "readBack": "21 space/* variables, values 0,2,3,4,5,6,7,8,9,11,12,13,14,16,17,18,19,23,24,32,40; codeSyntax {} on all 21; scopes WIDTH_HEIGHT+GAP on all 21. Dimension collection 34 → 35.",
+   "planNote": "figmaVariablePlan.collections[2] still lists the pre-batch codeSyntax on the plan entries; annotated below, not edited."
+  },
+  "step2_typography": {
+   "added": [
+    {
+     "name": "font/size/h4",
+     "id": "VariableID:996:2",
+     "value": 16
+    },
+    {
+     "name": "font/lineHeight/h4",
+     "id": "VariableID:996:3",
+     "value": 24
+    },
+    {
+     "name": "font/size/h5",
+     "id": "VariableID:996:4",
+     "value": 14
+    },
+    {
+     "name": "font/lineHeight/h5",
+     "id": "VariableID:996:5",
+     "value": 20
+    },
+    {
+     "name": "font/size/subtitle2",
+     "id": "VariableID:996:6",
+     "value": 12
+    },
+    {
+     "name": "font/lineHeight/subtitle2",
+     "id": "VariableID:996:7",
+     "value": 16
+    }
+   ],
+   "pattern": "scopes copied from font/size/body1 (FONT_SIZE) and font/lineHeight/body1 (LINE_HEIGHT); codeSyntax WEB var(--tebra-font-size-<v>) and var(--tebra-font-line-height-<v>) — the corrected line-height pattern, not the --tebra-line-height-* that h2 and h3 carry; description \"typography.ts <v> (weight 700 in code)\".",
+   "source": "ds/typography/typography.ts:31-45 (h4 1rem/1.5rem, h5 0.875rem/1.25rem, subtitle2 0.75rem/1rem, all fontWeight 700).",
+   "bold": "font/weight/bold VariableID:74:52 = 700 already existed; not added.",
+   "readBack": "Typography collection 17 → 23; all six read back with the values, scopes and codeSyntax above.",
+   "h2h3CodeSyntax": "font/lineHeight/h2 and h3 in the library still read var(--tebra-line-height-h2) / -h3 (missing \"font-\"). Not changed: the write list names only the schema annotation (5b). One-line fix if wanted."
+  },
+  "step3_letterSpacingDecision": "DECISION 2026-09-03: no letter-spacing variable. Code authors none (typography.ts) and Button and Tab render letter-spacing normal in Storybook (libraryTodos_write1_2026_09_03.step0_renderFindings). The 0.5px on chip and slot labels is a source-file value until Chip is render-checked.",
+  "step4_rule8Script": {
+   "finding": "No standing rule 8 audit script existed in the repo; every previous rule 8 walk was written inline in that batch's use_figma script (records: npveRebuild_cleanup, tabUnderlineFix, labelDriftAndUnderline, goldStarsAndCorrections). The inline walks listed GROUP/VECTOR bounds as hits although standingBatchRules.8 exempts them.",
+   "file": "rule8-audit.figma.js (new, repo root): the walk as a use_figma body; header notes the 2026-09-03 change; VECTOR and GROUP are exempt and counted separately; INCLUDE_EXEMPT toggles listing them for comparison.",
+   "rerun": {
+    "file": "fdCQVFdvOByaOYIJYag0d6",
+    "page": "Screens 27:2",
+    "topLevel": 6,
+    "walked": 485,
+    "hits": 0,
+    "exempt": 39,
+    "group573_3583": "four instances (rows 26:261, 26:272, 26:282, 26:292 under 27:6) now in the exempt bucket, not in hits",
+    "otherExempt": "Icon/DownCaret 76:4 16.67x9.19, Icon 76:7 20x19.994, 200:34 11.026x20, 76:10 19.99998x20 and their siblings — all VECTOR"
+   }
+  },
+  "step5_schemaCorrections": {
+   "a_pagesOrder": "figmaBuild.pages._order_2026_09_03 added beside _order (untouched).",
+   "b_h2h3CodeSyntax": "figmaVariablePlan.collections[1].annotation_2026_09_03 added; the plan has no h2/h3 lineHeight entries (added to the library after the plan), so the defect is recorded there and in the read record's B4 line.",
+   "c_buttonUppercaseClaim": "flag npveBuild_buttonLabelTitleCase: correction appended; original detail untouched."
+  },
+  "step6_flags": {
+   "resolved": [
+    "npveBuild_buttonLabelTitleCase"
+   ],
+   "annotatedOpen": [
+    "npveBuild_slotLetterSpacingUnbound",
+    "npveComparison_noSpace32Token",
+    "npveChangelog_noH4Token"
+   ],
+   "alsoAnnotated": [
+    "libraryRead_spaceCodeSyntaxNamesMissingCssVar",
+    "libraryRead_letterSpacingInheritsMuiDefaults",
+    "libraryRead_iconGlyphGroupIsIntrinsicGeometry",
+    "libraryRead_pagesOrderStale"
+   ]
+  },
+  "verify": {
+   "write1Masters": "130:140 and 130:159: variant 300x60, Input 300x40, Label / resting y 9 h 24, Label slot 95x40 (hidden / visible). 201:3: 90x48, Label 37x20 at y 14, 16/20 TITLE, five bindings. Unchanged by this batch.",
+   "screenshots": "None: variable-only writes; rule 1/3 instantiation applies to component edits only."
+  },
+  "rules": {
+   "1_instancePaintVerification": "n/a (variables only)",
+   "2_unboundPaintAudit": "n/a",
+   "3_referenceCounts": "n/a",
+   "4_skipInvisibleFalse": "set on the rule 8 walk and the master re-read",
+   "5_opacityLast": "n/a",
+   "6_enumerateDontRecall": "space/* and typography variables enumerated from the collections before and after",
+   "7_fileIdentityFirst": "library pages read earlier the same day (read batch); target walk addressed Screens 27:2 by name and id",
+   "8_roundWithRecord": "target Screens 0 hits with the exemption; library variables are integers",
+   "9_boundPaintAlpha": "n/a",
+   "10_cloneDropsPropertyRefs": "n/a",
+   "14_15": "n/a (no rebuilt frame)"
+  },
+  "publishing": "Manual: publish the library so the new variables reach consumers; then the NPVE target can rebind its literal 32s (35:332) and the Change log title to h4. Not done here."
+ },
+ "npveRebuild_audit_2026_09_03": {
+  "_status": "DONE. Read-only audit of every target change since npveRebuild_pause_2026_09_03. No Figma node created, moved or edited in any file; pages loaded with loadAsync only. Writes: this record, 13 flags, figma-export/npve-audit-2026-09-03/report.md, eight screenshots.",
+  "date": "2026-09-03",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 read only",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (variable ids, Text field 130:140/130:159, Icon button 170:77, Icon/FavoritesOutlined 575:17, component keys)",
+  "_sourceFile": "not opened",
+  "report": "figma-export/npve-audit-2026-09-03/report.md",
+  "fileIdentity": {
+   "pages": [
+    "Cover 0:1",
+    "Templates 3:2",
+    "Screens 27:2",
+    "Archive 126:2"
+   ],
+   "localVariables": 0,
+   "nodesWalked": {
+    "Cover": 8,
+    "Templates": 2284,
+    "Screens": 1163,
+    "Archive": 872
+   },
+   "ownNodeSessions": "1 → 172; sessions 74–78 and 88+ post-date the pause; no own node in session 997"
+  },
+  "step1_records": {
+   "recordsSincePause": [
+    "libraryTodos_readOnly_2026_09_03",
+    "libraryTodos_write1_2026_09_03",
+    "libraryTodos_write2_2026_09_03"
+   ],
+   "flagsSincePause": "6, all discoveredDuring libraryTodos_readOnly_2026_09_03",
+   "finding": "No record, apply script, report folder, flag or commit exists for: page restructure into sections and the Archive page; Problems picker body → variant set 94:812; Problem row → variant set 107:485; Problem summary row 153:1186; Problems list body 156:2426; Rebuild comparison 35:332 → instance-swap shell with twelve _Rebuild comparison/* sub-components; comparison instances 116:498, 116:1338, 160:3169, 160:3680; Sidesheet instances 156:2428, 156:2707; markers moved to Archive; legacy comparisons detached into Archive; _Legacy renames of 4:13 and 26:208; Recovery checks 142:996.",
+   "write2Evidence": "libraryTodos_write2 rule 8 re-run read Screens 27:2 with 6 top-level nodes and rows under 27:6, so 27:6 was still on Screens after the last record.",
+   "recoveryChecks": "142:996 holds one node, 130:1185, an instance of 35:332 at master defaults (Problems · Recent content, caption \"4618:4930, exported 2026-09-02\"). No note or differing text. Nothing on disk mentions Recovery (grep 0 hits). What it recovered from is unrecorded. Section stroke white 10% vs black 10% elsewhere."
+  },
+  "step2_splitBrain": {
+   "promptIds": "VariableID 10:104, 75:689, 18:101, 75:690 do not resolve with or without the key prefix; the Plugin API cannot enumerate a consumer file's subscription table, only bound ids.",
+   "boundIdForm": "VariableID:<library key>/<suffix>; suffix is not the library variable id (library space/8 = 74:78; consumer binds …/74:297 and …/997:15).",
+   "suffixSessions": {
+    "74": "all colour, typography, radius, border, size/button refs, plus four old space refs",
+    "116": "font/lineHeight/h3 only",
+    "997": "every current space/* ref; matches the library session that edited all space/* and created space/32 (VariableID:997:2) in write2"
+   },
+   "doubleBoundKeys": {
+    "space/8": [
+     "74:297",
+     "997:15"
+    ],
+    "space/6": [
+     "74:289",
+     "997:12"
+    ],
+    "space/7": [
+     "74:293",
+     "997:14"
+    ],
+    "space/17": [
+     "74:321",
+     "997:26"
+    ]
+   },
+   "singleBoundSpace": "space/0, 3, 4, 5, 9, 12, 14, 16, 18 bind under 997 only; the prompt's space/16 and space/12 duplicates are not visible in bindings.",
+   "whereOldRefsLive": "Only inside instances of Button 3:105 (padding space/17, space/7; gap space/8; per-variant space/6) and in the master of orphaned Icon button 6:7 (space/8 × 4). In Sidesheet 6:65 the 15 old refs are the footer Buttons 6:85, 6:93, 6:101.",
+   "components": {
+    "button": {
+     "key": "cfb726c79b456d52901243b7c33839efd0780a93",
+     "library": "79:2",
+     "copies": {
+      "3:105": "old, 74-series refs, 72 variants",
+      "155:1191": "new, 997 refs, 72 variants"
+     }
+    },
+    "iconButton": {
+     "key": "7ebea5d7ce6ecfdaef84d177efa64196f654717d",
+     "library": "170:77",
+     "copies": {
+      "6:7": "old, 74-series refs, 0 instances",
+      "77:1104": "new, 997 refs"
+     }
+    }
+   },
+   "why": "Same key on both copies: not a republish under new ids and not a rename. The consumer holds two subscription versions of one component. Session-77 nodes (Text field 77:697, Tabs 77:650, Tabs/Tab 77:639, Icon button 77:1104) are instanced by session-26 nodes, the signature of an accept-updates pass that re-created reference nodes; Button was not in write1 so 3:105 stayed stale, and the session-155 Problems management build pulled a fresh Button that Figma could not dedupe against it. Inference from ids; no log confirms it.",
+   "instanceCounts": {
+    "Button 3:105": {
+     "Templates": 30,
+     "Screens": 18,
+     "Archive": 10,
+     "total": 58,
+     "who": "every Sidesheet footer (Cancel, Save & Add to Note, Save): master, 4 template instances, 6 Rebuild sub-components, 5 comparison instances, 2 Screens Sidesheets, 2 legacy screens, Coral check 3:397"
+    },
+    "Button 155:1191": {
+     "Templates": 4,
+     "Screens": 4,
+     "Archive": 0,
+     "total": 8,
+     "who": "Create New Problem in Problems list body and its placements"
+    },
+    "Icon button 6:7": {
+     "total": 0
+    },
+    "Icon button 77:1104": {
+     "Templates": 120,
+     "Screens": 28,
+     "Archive": 34,
+     "total": 182
+    }
+   },
+   "legacyVsNew": "NO clean split: the new Problems management screens carry both Button copies at once (3 × 3:105 in the footer, 1 × 155:1191 in the toolbar). Legacy screens carry 3:105 only.",
+   "nextUpdate": "A Button republish + accept updates should re-point all 58 on key; until then importComponentByKeyAsync returns 155:1191 and swaps between copies read as different components. No render divergence today."
+  },
+  "step3_publishState": {
+   "textFieldSmall": "Resting label y 9, hidden Label slot 40 on 27:6 (I27:6;6:80;26:222), 40:252 (I40:252;6:80;94:653) and on all six Screens frames; library masters 130:140/130:159 read the same. Write1 fix landed on old and new screens alike.",
+   "tabLabel": "TITLE on the archived screens (step3-legacy-screen-27-6-1x.png).",
+   "iconButtonGlyph": "No fixed value exists: the library was not changed (read batch ruled 573:3583 exempt). Library 575:17 still 20.000025 × 19.125002; every target swap reads the same. Icon child 24 × 24 at (8,8) in 40 × 40 everywhere.",
+   "ordering": "Accepted components are session-77 nodes; sets 94:812, 107:485, shell 114–116, Problems management 152–172 all instance them. Updates were accepted before the new screens and before the Button duplication (session 155)."
+  },
+  "step4_newComponents": {
+   "problemSummaryRow_153_1186": {
+    "props": [
+     "Name#153:0",
+     "Code#153:1",
+     "Status#170:0"
+    ],
+    "refs": 3,
+    "nodes": 16,
+    "nestedInstances": 0,
+    "drawn": "Edit problem 170:1607 and Add to note 170:1611 are 40 × 40 frames holding VECTOR \"Touch target\" rings (39 × 39 at 0.5,0.5, stroke #8CA7A2 1px), pencil vectors (#004852) and note vector (#417E86). Not Icon button instances; the ring convention (plain button + DEFECT marker) is not followed.",
+    "unboundPaints": 9,
+    "rawHex": [
+     "#8CA7A2",
+     "#3FA266",
+     "#417E86",
+     "#004852",
+     "#000000",
+     "#FFFFFF"
+    ],
+    "statusText": "170:1591 Akkurat LL Bold 14, lineHeight AUTO, fill #3FA266 unbound, no typography bindings — the only text in the target with none.",
+    "changeLogClaim": "Problems list change log row \"Hand-drawn controls → published library instances\" is not true for these two controls.",
+    "rule8": "0 non-exempt hits"
+   },
+   "problemsListBody_156_2426": {
+    "variants": [
+     "155:1559 State=Closed",
+     "156:1294 State=Open"
+    ],
+    "refs": [
+     24,
+     35
+    ],
+    "nested": "Button 155:1191, Text field 77:697 (Status filter 154 × 40), Checkbox 155:1491 × 2, Problem summary row 153:1186 × 3, Divider 6:62 × 3, Menu 156:1283 + Menu/Item 156:1268 × 4 on State=Open (keys match library Menu 749:323 and Menu/Item 152:15).",
+    "statusMenu": "Uses the imported library Menu and Menu/Item.",
+    "unboundPaints": "16 inner frames fill #FFFFFF unbound (Toolbar, Filters, No known problems, Only show active problems, Status groups, Problem — Active/Resolved/Marked as error, both variants); variant roots bind paper.",
+    "hiddenCommentText": "Only inside Text field instances at library nodes 130:149/130:168 (\"Multiline rows\", hidden). Library-inherited; 20 such texts in library set 121:350."
+   },
+   "problemRow_107_485": {
+    "variants": 6,
+    "refs": "4 on each",
+    "nested": "Icon button 77:1104 × 2 per variant (Trailing action hidden on Action=None)",
+    "unbound": 0,
+    "fractional": 0,
+    "verdict": "clean"
+   },
+   "problemsPickerBody_94_812": {
+    "variants": [
+     "26:221 Recent",
+     "94:639 All",
+     "94:652 Favorites"
+    ],
+    "refs": "36 on each",
+    "unbound": 0,
+    "fractional": 0,
+    "note": "Each variant still carries three Tabs instances with two hidden (6 dead Tabs across the set), redundant with the variant axis."
+   },
+   "rebuildComparison_35_332": {
+    "shape": "COMPONENT 1708 × 1290, gap/padding 32 literal, fill color/grey/300 bound; props: three TEXT captions + three INSTANCE_SWAP slots; refs 104; each column keeps a hidden __Legacy placeholder frame.",
+    "subComponents": 12,
+    "referenceImages": {
+     "114:777 Recent": "1100 × 1200 px in 550 × 600 (2x), hash = legacy 36:261",
+     "114:897 Favorites": "550 × 600 px (1x), caption \"4618:5137, refreshed 2026-09-03\"",
+     "160:1323 Main": "550 × 517 px (1x) FILL, 83 px blank",
+     "160:1325 Status menu": "550 × 510 px (1x) FILL, 90 px blank, cursor in export"
+    },
+    "ruleTension": "Rules 14/15 say placed change log and comparison are detached frames; the restructure makes them instances with per-screen content sub-components. Unrecorded convention change."
+   }
+  },
+  "step5_duplication": {
+   "finding": "Screens inside 116:498 and 116:1338 are separate instance trees, not references. componentProperties, 31 text characters and hidden-node lists are identical to 27:6 / 40:252. Recent content now exists at 27:6 (Archive), 114:780 (Templates master) and via instancing at 116:498 and 130:1185; Favorites at 40:252 and 114:900. Corrections must go to the Templates sub-component masters; Archive copies will not follow."
+  },
+  "standingRules": {
+   "1": "not run (no placement); rendered paints read on existing placements instead",
+   "2": "all pages: target-authored unbound = 27, all on Problems management components; section chrome and the pre-existing cover fill excluded",
+   "3": "Problem row 4×6, picker 36×3, list body 24/35 (Menu internals), summary row 3, comparison 104 — none dropped",
+   "4": "set on every walk",
+   "5": "no writes",
+   "6": "enumerated from the file",
+   "7": "keys explicit on all 14 calls",
+   "8": "all pages 0 hits; exempt 277/117/68/0",
+   "9": "no writes",
+   "10": "see 3"
+  },
+  "markers": "Unchanged: 2 GAP (27:295, 27:306), 2 DEFECT (33:236, 52:428), all in Archive 126:2025, none beside a screen.",
+  "decisionsNeeded": [
+   "Keep the instance-swap comparison shell or return to detached frames (rules 14/15); record either way.",
+   "Problem summary row rings: keep drawn + DEFECT marker, or plain Icon buttons + marker.",
+   "May GAP/DEFECT markers live in Archive, or must they sit beside the frames they mark (rule 9).",
+   "Re-export Favorites, Main and Status menu references at 2x, or amend rule 15.",
+   "Leave the Button split until the next Button publish, or re-point now."
+  ],
+  "screenshots": [
+   "figma-export/npve-audit-2026-09-03/page-templates-3-2.png",
+   "figma-export/npve-audit-2026-09-03/page-screens-27-2.png",
+   "figma-export/npve-audit-2026-09-03/page-archive-126-2.png",
+   "figma-export/npve-audit-2026-09-03/step3-legacy-screen-27-6-1x.png",
+   "figma-export/npve-audit-2026-09-03/step4-problem-summary-row-153-1186-1x.png",
+   "figma-export/npve-audit-2026-09-03/step4-problems-list-body-156-2426-1x.png",
+   "figma-export/npve-audit-2026-09-03/step5-comparison-recent-116-498-1x.png",
+   "figma-export/npve-audit-2026-09-03/step5-comparison-status-menu-160-3680-1x.png"
+  ],
+  "flagsAdded": [
+   "npveAudit_unrecordedRestructure",
+   "npveAudit_buttonImportSplit",
+   "npveAudit_iconButtonOrphanImport",
+   "npveAudit_spaceRefsTwoVersions",
+   "npveAudit_problemSummaryRowDrawnControls",
+   "npveAudit_problemsListBodyUnboundWhite",
+   "npveAudit_referenceExportsNot2x",
+   "npveAudit_comparisonNowInstanceSwap",
+   "npveAudit_markersInArchive",
+   "npveAudit_recoveryCheckUnexplained",
+   "npveAudit_screensTriplicated",
+   "npveAudit_pickerBodyDeadTabs",
+   "npveAudit_textFieldHiddenPlaceholderCopy"
+  ],
+  "flagsBefore": 193,
+  "flagsAfter": 206
+ },
+ "npveRebuild_agentRules_2026-09-04": {
+  "_status": "DONE. Documentation batch. Repo writes only: CLAUDE.md gained the section \"Rules for any agent working in these files\" after Known plugin API traps; AGENTS.md created in the repo root with the same section verbatim plus one context paragraph. No Figma file opened or written.",
+  "date": "2026-09-04",
+  "_targetFile": "none (no Figma writes)",
+  "_libraryFile": "none",
+  "_sourceFile": "not opened",
+  "report": "figma-export/npve-agent-rules-2026-09-04/report.md",
+  "readFirst": {
+   "claudeMd": "read",
+   "auditRecord": "npveRebuild_audit_2026_09_03 read",
+   "repair1Retro": "not present: no npveRebuild_repair1 record in the schema and figma-export/npve-repair1-2026-09-04/ holds eight screenshots and no report.md. Treated as not yet run."
+  },
+  "stopCondition": "Two repo files edited/created and one schema record written; stop. No Figma writes, no other docs touched.",
+  "filesWritten": {
+   "CLAUDE.md": "New H2 \"Rules for any agent working in these files\" inserted between \"Known plugin API traps\" and \"Recording\". Nine numbered rules plus a lead sentence, text as given in the batch prompt. CRLF preserved.",
+   "AGENTS.md": "New file, repo root. One context paragraph (project, five Figma file keys, location of CLAUDE.md and the schema, CLAUDE.md is canonical and wins on conflict) followed by the same section verbatim. Written for tools that read AGENTS.md by convention (Codex and others)."
+  },
+  "sectionText": "## Rules for any agent working in these files\n\nAny agent — Claude, Codex, or other — editing the Figma files or this repo follows the same loop. Work that skips it gets audited and may be superseded.\n\n1. Read before touching: this file, then design-system-schema.json for current state. The schema is the record; chat history and your own memory are not.\n2. Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.\n3. One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.\n4. Additive only. Nothing is deleted, and nothing is moved, renamed, or superseded without a record saying so. Archives get a README.\n5. No invention. If the library and code lack a pattern, mark it (GAP/DEFECT per the convention) and build with what exists. Recreating a source drawing by hand and calling it a component is a false record, which is worse than the gap.\n6. Verify in pixels. Screenshot what you built and look at it. Property readbacks are claims; renders are evidence. After editing a component, re-screenshot its live instances and diff.\n7. Record every batch: a dated schema record via an apply-*.js script, backup first, findings to flags[]. A batch without a record did not happen and will be treated as suspect.\n8. Report per rule 13: full report to disk, short reply, no tables in chat. Change logs in the file are written in plain graphic-design language, not system jargon.\n9. When sources disagree or a decision is needed, stop and report. Precedence (code > Storybook render > library > source) resolves facts, not design decisions.",
+  "verification": "Section body diffed between CLAUDE.md, AGENTS.md and the prompt text after CRLF normalisation: identical. Heading order in CLAUDE.md: What this folder is, Where truth lives, Superseded, Figma files, Standing rules, Known plugin API traps, Rules for any agent working in these files, Recording, Publishing.",
+  "flagUpdated": {
+   "id": "npveAudit_unrecordedRestructure",
+   "change": "Added addressedBy cross-reference and one line to handling. Flag otherwise unchanged; the retroactive record it asks for is still owed."
+  },
+  "flagsAdded": [],
+  "standingRules": "Not applicable: no Figma node read or written, so the ten standingBatchRules and rules 14/15 have nothing to walk. Rule 13 followed (report on disk, short reply).",
+  "decisionsNeeded": [],
+  "screenshots": [],
+  "flagsBefore": 206,
+  "flagsAfter": 206
+ },
+ "npveRebuild_externalRestructure_2026-09-03_retro": {
+  "_status": "RETROACTIVE. Written 2026-09-04 by the repair batch to record target work that an external session did on 2026-09-03 without a record, script, report, flag or commit. Evidence is the read-only audit npveRebuild_audit_2026_09_03 and figma-export/npve-audit-2026-09-03/report.md; nothing here is asserted beyond what that audit enumerated from the file.",
+  "date": "2026-09-03",
+  "recordedOn": "2026-09-04",
+  "attribution": "External session (not this assistant, not recorded). Consumer node sessions 74–78 and 88–172 in fdCQVFdvOByaOYIJYag0d6; the last recorded batch (libraryTodos_write2_2026_09_03) still read 27:6 on Screens.",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "evidence": {
+   "audit": "npveRebuild_audit_2026_09_03",
+   "report": "figma-export/npve-audit-2026-09-03/report.md",
+   "screenshots": "figma-export/npve-audit-2026-09-03/*.png"
+  },
+  "changes": [
+   {
+    "what": "Pages reorganised into numbered sections",
+    "where": "Templates 3:2 (126:2020 01 · Sidesheet shell, 126:2021 02 · Problems picker, 153:1185 03 · Problems management, 126:2022 04 · Change log utilities, 126:2023 05 · Rebuild comparison); Screens 27:2 (126:2024 01 · Current comparisons, 156:2427 02 · Problems management, 160:3168 03 · Problems management comparisons)"
+   },
+   {
+    "what": "Archive page created with four sections",
+    "where": "Archive 126:2 (126:2025 01 · Gap and defect markers, 126:2026 02 · Detached comparison history, 126:2027 03 · Template checks and legacy, 142:996 04 · Recovery checks)"
+   },
+   {
+    "what": "Problems picker body promoted to a variant set",
+    "where": "94:812, Active tab = Recent 26:221 / All 94:639 / Favorites 94:652; three Tabs instances per variant with two hidden carried over from the boolean design"
+   },
+   {
+    "what": "Problem row promoted to a variant set",
+    "where": "107:485, Favorite × Action, variants 107:414, 107:425, 107:437, 107:448, 107:460, 107:473; former 26:208 renamed _Legacy/Problem row — pre-variant API"
+   },
+   {
+    "what": "Problem summary row created",
+    "where": "153:1186, props Name/Code/Status; no nested instance, controls drawn as vectors (audit flag npveAudit_problemSummaryRowDrawnControls)"
+   },
+   {
+    "what": "Problems list body created",
+    "where": "156:2426, State = Closed 155:1559 / Open 156:1294; uses Button 155:1191 (a second subscription copy), Text field, Checkbox, Problem summary row, Divider, Menu + Menu/Item"
+   },
+   {
+    "what": "Rebuild comparison master rebuilt as an instance-swap shell",
+    "where": "35:332 with INSTANCE_SWAP slots Reference/Rebuild/Change log content and twelve _Rebuild comparison/<Reference|Rebuild|Change log>/Problems · <Recent|Favorites|Main|Status menu> sub-components 114:777, 114:779, 114:880, 114:897, 114:899, 114:994, 160:1323, 160:1325, 160:1327, 160:1607, 160:1847, 160:1924; hidden __Legacy placeholder frames kept in each column"
+   },
+   {
+    "what": "Comparison instances placed on Screens",
+    "where": "116:498 Recent, 116:1338 Favorites, 160:3169 Main, 160:3680 Status menu; Sidesheet instances 156:2428 Closed, 156:2707 Open"
+   },
+   {
+    "what": "Source exports",
+    "where": "Recent 2x (same hash as legacy); Favorites re-exported at 1x and captioned \"refreshed 2026-09-03\"; Main and Status menu 1x"
+   },
+   {
+    "what": "Markers moved from Screens to Archive 01",
+    "where": "27:295, 27:306, 33:236, 52:428"
+   },
+   {
+    "what": "Legacy comparisons detached into Archive 02",
+    "where": "36:258 and 40:534, holding the verified screens 27:6 and 40:252 inside Rebuilt screen frames 36:264 / 40:540"
+   },
+   {
+    "what": "_Legacy renames",
+    "where": "4:13 _Legacy/Sidesheet body placeholder, 26:208 _Legacy/Problem row — pre-variant API; check instances and a stray change-log row parked in Archive 03"
+   },
+   {
+    "what": "Recovery checks section",
+    "where": "142:996 holding 130:1185, an un-swapped instance of 35:332; purpose unrecorded"
+   },
+   {
+    "what": "Library updates accepted",
+    "where": "Session-77 subscription nodes Text field 77:697, Tabs 77:650, Tabs/Tab 77:639, Icon button 77:1104; space/* bindings moved to the 997-series ids; Button 3:105 left stale and duplicated by 155:1191"
+   }
+  ],
+  "auditFlagsAddressed": {
+   "npveAudit_unrecordedRestructure": "this record",
+   "npveAudit_buttonImportSplit": "resolved in npveRebuild_repair1_2026-09-04 step 1",
+   "npveAudit_iconButtonOrphanImport": "noted; rename impossible (npveRebuild_repair1_2026-09-04)",
+   "npveAudit_spaceRefsTwoVersions": "resolved with the Button split (npveRebuild_repair1_2026-09-04)",
+   "npveAudit_problemSummaryRowDrawnControls": "open, repair batch 2",
+   "npveAudit_problemsListBodyUnboundWhite": "open, repair batch 2",
+   "npveAudit_referenceExportsNot2x": "open, decision",
+   "npveAudit_comparisonNowInstanceSwap": "open, decision",
+   "npveAudit_markersInArchive": "open, decision",
+   "npveAudit_recoveryCheckUnexplained": "open, README states it",
+   "npveAudit_screensTriplicated": "renames stopped on the pixel check (npveRebuild_repair1_2026-09-04 step 2)",
+   "npveAudit_pickerBodyDeadTabs": "open",
+   "npveAudit_textFieldHiddenPlaceholderCopy": "open, library"
+  }
+ },
+ "npveRebuild_repair1_2026-09-04": {
+  "_status": "DONE except step 2, which stopped on its stated condition: the archived screens and the comparison copies differ by 5 and 6 anti-aliased edge pixels at 1x (max channel delta 16, same-node control 0), so no \"_Superseded\" rename was made. Button split healed (66 instances on the current subscription, old node gone), README written, retro record written, rules re-run.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 (writes: Sidesheet master footer swaps 6:85/6:93/6:101, Coral check 3:397, Primary action property on 160:1328/160:1608/156:2428/156:2707, README 185:3/185:4/185:5, transient 184:3947 created and removed)",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (import-by-key to confirm the current subscription; variable imports for the README)",
+  "_sourceFile": "not opened",
+  "report": "figma-export/npve-repair1-2026-09-04/report.md",
+  "step1_buttonSplit": {
+   "direction": "importComponentSetByKeyAsync(Button key) → 155:1191; (Icon button key) → 77:1104. The current subscription is the newer copy; the 58 instances on 3:105 moved (the prompt's \"8 instances\" was the other copy).",
+   "swaps": {
+    "6:85": "3:136 → 155:1222",
+    "6:93": "3:106 → 155:1192",
+    "6:101": "3:118 → 155:1204",
+    "3:397": "3:118 → 155:1204"
+   },
+   "propertyFixes": {
+    "160:1328": "Primary action#6:6 3:120 → 155:1206",
+    "160:1608": "same",
+    "156:2428": "same",
+    "156:2707": "same"
+   },
+   "swapDefaultsAfter": {
+    "Primary action#6:6": "155:1204",
+    "Secondary action#6:7": "155:1222",
+    "Tertiary action#6:8": "155:1192"
+   },
+   "referencesAfter": {
+    "6:85": {
+     "visible": "Show secondary action#6:3",
+     "mainComponent": "Secondary action#6:7"
+    },
+    "6:93": {
+     "visible": "Show tertiary action#6:4",
+     "mainComponent": "Tertiary action#6:8"
+    },
+    "6:101": {
+     "mainComponent": "Primary action#6:6"
+    },
+    "sidesheetTotal": "62 before, 62 after"
+   },
+   "countsBefore": {
+    "Button 3:105": 58,
+    "Button 155:1191": 8,
+    "Icon button 6:7": 0,
+    "Icon button 77:1104": 182
+   },
+   "countsAfter": {
+    "Button 3:105": "0, node gone (getNodeByIdAsync null; Figma dropped the unused subscription, nothing deleted by this batch)",
+    "Button 155:1191": 66,
+    "Icon button 6:7": 0,
+    "Icon button 77:1104": 182
+   },
+   "orphanRename": "6:7.name throws \"Cannot write to internal and read-only node\"; remote subscription nodes cannot be renamed. No other orphan can be enumerated from inside the file.",
+   "pixels": "27:6 before vs after swap: diff bbox None. Rule 1 transient 184:3947 of 155:1191 contained primary: 86x38, pad 7/17/7/17, white fill / core/main stroke / core/contrastText label, all bound, opacity 1, space refs 997-series, label TITLE (known)."
+  },
+  "step2_duplicates": {
+   "method": "get_screenshot 1x of 27:6, 40:252, 116:498, 116:1338 before any write; Rebuild column cropped at (614,60) 550x600; ImageChops.difference.",
+   "results": {
+    "27:6 vs 116:498": "5 px, max delta 16, at (143,155) (379,371) (409,373) (140,380) (203,380)",
+    "40:252 vs 116:1338": "6 px, max delta 16, same five plus (53,253) delta 13 on the star edge",
+    "control": "27:6 captured twice: 0 px"
+   },
+   "positions": "27:6 abs (1934,180), comparison copy abs (694,180); 40:252 (1934,1393), copy (694,1590); search field at (16,73) and row 1 at (16,234) in all four.",
+   "outcome": "STOPPED. Renames not made. Decision: accept as rasterisation and rename in batch 2, or investigate."
+  },
+  "step3_retro": "npveRebuild_externalRestructure_2026-09-03_retro",
+  "step4_readme": {
+   "id": "185:3",
+   "size": "1040x360 at (0,-320) on Archive",
+   "bindings": "padding space/24 (997:33), gap space/8 (997:15), fill color/background/paper, stroke color/divider @ border/hairline; title body1 bold, body body2 regular, fills color/text/primary; font/family/base bound on both",
+   "screenshot": "figma-export/npve-repair1-2026-09-04/step4-archive-readme-185-3-1x.png",
+   "note": "States the step-2 renames as pending."
+  },
+  "step5_rules": {
+   "1": "transient instance read and removed (step 1)",
+   "2": "unbound outside instances: Cover 1 (pre-existing), Templates 25 (Problem summary row 9 + Problems list body 16, known-open for batch 2), Screens 0, Archive 0; section chrome excluded 10/6/8",
+   "3": "Sidesheet 62; Problem row 4x6; picker 36x3; list body 24/35; summary row 3; comparison 104; Change log 4",
+   "5": "no opacity touched",
+   "8": "0 hits, exempt 0/277/117/68",
+   "9": "no alpha touched"
+  },
+  "screenshots": [
+   "figma-export/npve-repair1-2026-09-04/step2-archive-27-6-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-archive-40-252-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-comparison-116-498-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-comparison-116-1338-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-crop-116-498-rebuild-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-crop-116-1338-rebuild-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-crop-116-498-rebuild-1x-diff.png",
+   "figma-export/npve-repair1-2026-09-04/step2-crop-116-1338-rebuild-1x-diff.png",
+   "figma-export/npve-repair1-2026-09-04/step2-control-27-6-second-capture-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step1-after-swap-archive-27-6-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step1-after-swap-sidesheet-master-6-65-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step1-after-swap-sidesheet-open-156-2707-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step4-archive-readme-185-3-1x.png"
+  ],
+  "decisionsNeeded": [
+   "Accept the 5-pixel edge difference and rename the Archive screens in batch 2, or investigate first.",
+   "Icon button 6:7 cannot be renamed; leave for Figma to collect."
+  ],
+  "flagsAdded": [
+   "npveRepair1_orphanImportCannotBeRenamed",
+   "npveRepair1_screenPairEdgePixels"
+  ],
+  "flagsAnnotated": [
+   "npveAudit_unrecordedRestructure",
+   "npveAudit_buttonImportSplit",
+   "npveAudit_spaceRefsTwoVersions",
+   "npveAudit_iconButtonOrphanImport",
+   "npveAudit_screensTriplicated"
+  ],
+  "flagsBefore": 206,
+  "flagsAfter": 208
+ },
+ "docsOperatorsGuide_2026-09-04": {
+  "_status": "DONE. Documentation batch. Repo writes only: OPERATORS.md created; CLAUDE.md gained agent rule 10 (record gate) and one cross-reference line in its opening section; AGENTS.md gained one cross-reference sentence. Committed. No Figma file opened or written.",
+  "date": "2026-09-04",
+  "_targetFile": "none (no Figma writes)",
+  "_libraryFile": "none",
+  "_sourceFile": "not opened",
+  "report": "figma-export/docs-operators-guide-2026-09-04/report.md",
+  "readFirst": {
+   "claudeMd": "read, including Rules for any agent working in these files (items 1–9)",
+   "record": "npveRebuild_agentRules_2026-09-04 read"
+  },
+  "recordGate": "Previous batch in this workstream (npveRebuild_agentRules_2026-09-04) has a record. Gate passed.",
+  "stopCondition": "One new file, two edited files, one record, one commit; stop.",
+  "filesWritten": {
+   "OPERATORS.md": "New, repo root. Operator's guide text as supplied in the batch prompt. Markdown structure restored from the pasted plain text: H1 title, five H2 sections (Why this guide exists; The standing structure; The loop, from your seat; Which decisions are whose; What good looks like), bulleted lists with bold lead phrases under The standing structure (4) and The loop (6). Words unchanged. Ownership line left with its bracket for Daniel to fill. CRLF like the other root docs.",
+   "CLAUDE.md": "Item 10 appended to Rules for any agent working in these files (record gate). One line added to the opening section after the folder description: the OPERATORS.md cross-reference.",
+   "AGENTS.md": "One sentence appended to the context paragraph: the OPERATORS.md cross-reference. The rules section itself was not touched."
+  },
+  "additions": {
+   "claudeRule10": "10. Record gate. Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one.",
+   "claudeOpening": "OPERATORS.md describes the person's side of this loop; agents should assume an operator is holding it.",
+   "agentsContext": "OPERATORS.md in this root describes the operator seat."
+  },
+  "verification": "Apply script re-reads all three files and asserts each addition is present, the guide starts and ends on the prescribed lines, and the ownership bracket is intact. Section verbatim check CLAUDE.md vs AGENTS.md: AGENTS.md section equals CLAUDE.md items 1–9; CLAUDE.md additionally has item 10.",
+  "finding": "AGENTS.md still states that it repeats the CLAUDE.md section verbatim, but after this batch CLAUDE.md has item 10 and AGENTS.md has items 1–9 only. The batch prompt scoped item 10 to CLAUDE.md and scoped the AGENTS.md change to one sentence, so AGENTS.md was left as instructed. Reported, not reconciled (rule 11). Decision: add item 10 to AGENTS.md, or reword its verbatim claim.",
+  "decisionsNeeded": [
+   "AGENTS.md verbatim claim vs CLAUDE.md item 10: mirror the rule into AGENTS.md or reword the claim."
+  ],
+  "flagsAdded": [
+   "docsAgentsMdVerbatimClaimStale"
+  ],
+  "standingRules": "Not applicable: no Figma node read or written. Rule 13 followed.",
+  "screenshots": [],
+  "commit": "Whole working tree committed as \"Operator's guide, record gate, cross-references\"; the hash is in git log and the batch reply, and cannot be stored inside the commit it names.",
+  "flagsBefore": 208,
+  "flagsAfter": 209,
+  "alsoInCommit": "Uncommitted work from earlier batches rode along: records npveRebuild_audit_2026_09_03, npveRebuild_agentRules_2026-09-04, npveRebuild_externalRestructure_2026-09-03_retro, npveRebuild_repair1_2026-09-04, libraryTodos_write2_2026_09_03, their apply scripts, backups and report folders, and LIBRARY-TODOS.md edits."
+ },
+ "npveRebuild_repair2_2026-09-04": {
+  "_status": "DONE. All eight steps complete; no stop condition triggered. Problem summary row rebuilt on library Icon buttons and Icon/DownCaret with zero raw hex; Problems list body whites bound; change logs rewritten; markers back on Screens plus one new DEFECT marker; three references re-exported at 2x; Archive screens renamed _Superseded; CLAUDE.md rules 14/15 rewritten; LIBRARY-TODOS item 13 added.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 (writes listed per step)",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (imports by key; two icon screenshots)",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (download_assets at 2x for 4618:5137, 545:5239, 4494:3240; loadAsync name read)",
+  "report": "figma-export/npve-repair2-2026-09-04/report.md",
+  "stopCondition": "Live-instance diff showing change outside the edited controls, or a reference failing to land at 2x. Neither triggered.",
+  "step1_supersededRenames": {
+   "decision": "DECISION 2026-09-04 (Daniel): the 5/6 anti-aliased edge pixels between the archived screens and the comparison copies (npveRepair1_screenPairEdgePixels) are rendering noise.",
+   "renamed": {
+    "27:6": "_Superseded — see Screens — Clin_Problems-Recent",
+    "40:252": "_Superseded — see Screens — Clin_Problems-Favorites"
+   },
+   "readme": "185:5 section 02 line rewritten: renames done, reason stated; pending clause removed."
+  },
+  "step2_problemSummaryRow": {
+   "master": "153:1186",
+   "glyphs": {
+    "edit": "Icon/EditOutlined 575:13 key ae295bfd…",
+    "note": "Icon/AddPaymentNote 575:2 key 9fe47d27… (clipboard with plus; alternative Icon/Document 575:11 is a plain sheet)",
+    "caret": "Icon/DownCaret 76:5 key 9014d342…, instance rescaled 0.5 → 12x12, vector 10x5.5"
+   },
+   "created": {
+    "190:11": "Edit problem — Icon button 77:1104 color=default size=medium State=Default, Icon → EditOutlined",
+    "190:12": "Add to note — same, Icon → AddPaymentNote",
+    "190:18": "Status caret — Icon/DownCaret instance, vector fill color/success/main",
+    "190:23": "Archive 03 › _Legacy hand-drawn — Problem summary row controls (moved out of 153:1186 on 2026-09-04)"
+   },
+   "moved": {
+    "170:1607": "Edit problem (drawn) → 190:23",
+    "170:1611": "Add to note (drawn) → 190:23",
+    "170:1592": "Status dropdown (drawn caret) → 190:23"
+   },
+   "legacyPaintsBound": "ring strokes → color/core/dark; pencil stroke and cap → color/primary/main; note vector → color/primary/light; caret fill → color/success/main; caret stroke → color/common/black; hidden frame fills → color/background/paper. 0 unbound on the legacy frame.",
+   "statusText": "170:1591 bound font/family/base, font/size/body2 14, font/lineHeight/body2 20, font/weight/bold; fill color/success/main. Box 17 → 20 tall, y 23 → 20 in the 40-tall control.",
+   "actionsFill": "153:1190 → color/background/paper",
+   "rawHex": "All nine unbound paints removed from the master (walk 0). Every hex was an exact token: #3FA266 success/main, #8CA7A2 core/dark, #417E86 primary/light, #004852 primary/main, #9A9A9A grey/500. No nearest match needed; GAP marker 27:306 Difference text gained the mapping paragraph.",
+   "statusColourSwitch": "No Status variant axis. Per-instance fill override on the Status text and the caret vector: master success/main; placed rows 172:3134, 3185 (ACTIVE) keep success/main; 172:3151, 3168, 3202, 3219 (RESOLVED, MARKED AS ERROR) carry color/grey/500. Overrides were raw hex before, bound now on all six, word and caret.",
+   "references": {
+    "master": "5 on findAll (3 own Name/Code/Status + 2 nested Icon-slot refs)",
+    "problemsListBody": "30 / 41 (was 24 / 35; +6 = 3 rows × 2 Icon buttons per variant)"
+   },
+   "marker": {
+    "id": "189:615",
+    "name": "DEFECT marker — Ringed icon buttons",
+    "where": "Screens 02 · Problems management at (1300,120); section widened 1300 → 1800",
+    "clonedFrom": "33:236",
+    "example": "Icon button + Icon/EditOutlined",
+    "unbound": 0
+   },
+   "pixels": {
+    "156:2428": "bbox (24,203)-(526,389); columns 24–169 (status word + caret) and 438–525 (action buttons) only",
+    "156:2707": "bbox (24,203)-(526,389); columns 24–87, 160–166 and 438–525 only (menu overlay covers the rest)",
+    "verdict": "only the controls changed"
+   },
+   "rule1": "transient instance (created/removed in-script) reads paper, success/main ×2, text/primary, text/secondary, paper, grey/600 ×2 — all bound; live RESOLVED row reads grey/500 on word and caret."
+  },
+  "step3_listBodyAndPicker": {
+   "boundToPaper": [
+    "155:1560",
+    "155:1591",
+    "155:1605",
+    "155:2546",
+    "155:2563",
+    "155:2580",
+    "156:1254",
+    "156:1261",
+    "156:1295",
+    "156:1298",
+    "156:1299",
+    "156:1302",
+    "156:1305",
+    "156:1306",
+    "156:1311",
+    "156:1316"
+   ],
+   "renamed": [
+    "39:355 → _Legacy hidden — <previous name>",
+    "39:369 → _Legacy hidden — <previous name>",
+    "94:643 → _Legacy hidden — <previous name>",
+    "94:644 → _Legacy hidden — <previous name>",
+    "94:655 → _Legacy hidden — <previous name>",
+    "94:656 → _Legacy hidden — <previous name>"
+   ],
+   "refs": "picker 36×3 unchanged"
+  },
+  "step4_changeLogs": {
+   "method": "setProperties on Change log/Row instances (TEXT props What#18:0, From to#18:1, Why#18:2) in sub-components 160:1847 (Main) and 160:1924 (Status menu); Screens instances follow.",
+   "rows": {
+    "Controls": [
+     "160:1853",
+     "160:1930",
+     "Controls | Drawn circles and glyphs → library buttons | Library. The circled style has no library button yet. Marked"
+    ],
+    "Density": [
+     "160:1855",
+     "160:1932",
+     "why: Library. Rows, tabs and buttons are all taller"
+    ],
+    "Shell": [
+     "160:1852",
+     "160:1929",
+     "why: One shared panel shell for every screen"
+    ],
+    "StatusMenu": [
+     "160:1933",
+     "why: The open menu is now a state of the screen, not a loose layer"
+    ],
+    "Rows": [
+     "160:1854",
+     "160:1931",
+     "why: Same row everywhere. Name, code and actions stay consistent"
+    ]
+   }
+  },
+  "step5_markers": {
+   "moved": {
+    "27:295": "Screens 01 (1868,120)",
+    "27:306": "Screens 01 (1868,592), 552 tall after the appended paragraph",
+    "33:236": "Screens 01 (1868,1184)",
+    "52:428": "Screens 01 (1868,1512)"
+   },
+   "section01": "widened 1868 → 2400; first placement overlapped after 27:306 grew, re-stacked with 40px gaps in the same batch",
+   "archive01": "empty, kept; README line rewritten"
+  },
+  "step6_references": {
+   "exports": {
+    "4618:5137": "1100x1200 → 114:898 FIT",
+    "545:5239": "1100x1034 → 160:1324 FILL",
+    "4494:3240": "1100x1020 → 160:1326 FILL"
+   },
+   "readBack": "getImageByHash().getSizeAsync() ratio 2.000 on all three; one fill each; hashes e2becad1, 00903244, 08c01b8e",
+   "captions": {
+    "116:1338": "Source: zVsuhYehoSLLq880qRBFkq 4618:5137, exported 2026-09-04",
+    "160:3169": "Source: zVsuhYehoSLLq880qRBFkq 545:5239, exported 2026-09-04",
+    "160:3680": "Source: zVsuhYehoSLLq880qRBFkq 4494:3240, exported 2026-09-04",
+    "116:498": "unchanged, exported 2026-09-02"
+   },
+   "files": [
+    "figma-export/npve-repair2-2026-09-04/step6-source-4618-5137-favorites-2x.png",
+    "figma-export/npve-repair2-2026-09-04/step6-source-545-5239-main-2x.png",
+    "figma-export/npve-repair2-2026-09-04/step6-source-4494-3240-statusmenu-2x.png"
+   ]
+  },
+  "step7_claudeMd": {
+   "backup": "figma-export/npve-repair2-2026-09-04/CLAUDE.md.before-2026-09-04",
+   "rules": "14 and 15 rewritten for the instance-swap comparison shell; text in the report."
+  },
+  "step8_libraryTodos": "figma-export/library-todos/LIBRARY-TODOS.md item 13: Text field masters ship hidden placeholder text (130:149, 130:168, 20 in set 121:350).",
+  "rules": {
+   "1": "transient + live read",
+   "2": "Cover 1 (pre-existing), Templates 0, Screens 0, Archive 0",
+   "3": "Sidesheet 62; Problem row 4×6; picker 36×3; list body 30/41; summary row 5; comparison 104; Change log 4",
+   "5": "none",
+   "8": "0 hits, exempt 0/303/145/69",
+   "9": "none"
+  },
+  "markers": "2 GAP, 3 DEFECT, all on Screens beside the screens they mark.",
+  "screenshots": [
+   "figma-export/npve-repair2-2026-09-04/library-icon-addpaymentnote-575-2-8x.png",
+   "figma-export/npve-repair2-2026-09-04/library-icon-addpaymentnote-575-2.png",
+   "figma-export/npve-repair2-2026-09-04/library-icon-document-575-11-8x.png",
+   "figma-export/npve-repair2-2026-09-04/library-icon-document-575-11.png",
+   "figma-export/npve-repair2-2026-09-04/page-archive-126-2.png",
+   "figma-export/npve-repair2-2026-09-04/page-screens-27-2-before-relay.png",
+   "figma-export/npve-repair2-2026-09-04/page-screens-27-2.png",
+   "figma-export/npve-repair2-2026-09-04/step2-after-closed-156-2428-1x.png",
+   "figma-export/npve-repair2-2026-09-04/step2-after-open-156-2707-1x.png",
+   "figma-export/npve-repair2-2026-09-04/step2-after-problem-summary-row-153-1186-1x.png",
+   "figma-export/npve-repair2-2026-09-04/step2-after-problem-summary-row-153-1186-2x-view.png",
+   "figma-export/npve-repair2-2026-09-04/step2-before-closed-156-2428-1x.png",
+   "figma-export/npve-repair2-2026-09-04/step2-before-open-156-2707-1x.png",
+   "figma-export/npve-repair2-2026-09-04/step2-defect-marker-ringed-189-615-1x.png",
+   "figma-export/npve-repair2-2026-09-04/step2-diff-closed-156-2428.png",
+   "figma-export/npve-repair2-2026-09-04/step2-diff-open-156-2707.png",
+   "figma-export/npve-repair2-2026-09-04/step6-comparison-status-menu-160-3680-1x.png",
+   "figma-export/npve-repair2-2026-09-04/step6-source-4494-3240-statusmenu-2x.png",
+   "figma-export/npve-repair2-2026-09-04/step6-source-4618-5137-favorites-2x.png",
+   "figma-export/npve-repair2-2026-09-04/step6-source-545-5239-main-2x.png"
+  ],
+  "decisionsOpen": [
+   "Status variant axis on Problem summary row vs per-instance overrides",
+   "Icon/AddPaymentNote vs Icon/Document as the add-to-note glyph",
+   "Icon button 6:7 rename impossible; leave for Figma",
+   "LIBRARY-TODOS items 2 and 13"
+  ],
+  "flagsAdded": [
+   "npveRepair2_statusColourByOverride",
+   "npveRepair2_addToNoteGlyphChoice"
+  ],
+  "flagsAnnotated": [
+   "npveRepair1_screenPairEdgePixels",
+   "npveAudit_screensTriplicated",
+   "npveAudit_problemSummaryRowDrawnControls",
+   "npveAudit_problemsListBodyUnboundWhite",
+   "npveAudit_referenceExportsNot2x",
+   "npveAudit_comparisonNowInstanceSwap",
+   "npveAudit_markersInArchive",
+   "npveAudit_pickerBodyDeadTabs",
+   "npveAudit_textFieldHiddenPlaceholderCopy"
+  ],
+  "flagsBefore": 209,
+  "flagsAfter": 211
  }
 }

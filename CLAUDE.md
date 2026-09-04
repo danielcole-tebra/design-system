@@ -6,6 +6,8 @@ Auto-loaded. Read this, then the files it names. Nothing else in this folder is 
 
 Docs, schema, scripts, and exports for the Tebra design system Figma rebuild. Source lives in `C:\Code\web-app-v2\packages\design-system`. This folder holds no source.
 
+OPERATORS.md describes the person's side of this loop; agents should assume an operator is holding it.
+
 ## Where truth lives
 
 Precedence, when sources disagree:
@@ -46,14 +48,29 @@ Pass the file key explicitly on every call. Never rely on the last-used file.
 11. Report, don't resolve. A disagreement between sources is a finding. Never reconcile silently in either direction.
 12. Run all ten `standingBatchRules` from the schema every batch. Set `figma.skipInvisibleInstanceChildren = false` before any audit walk.
 13. Reporting. Every batch writes its full report to `figma-export/<batch>/report.md`, with all tables, mappings, screenshots referenced by filename, and the schema record summary. The chat reply is under 40 lines: outcome, findings needing a decision, GAP and DEFECT counts, and the absolute path to `report.md` and the screenshot folder. No tables in chat. Screenshots are saved as PNG in the batch folder, never only shown inline.
-14. Every rebuilt frame in the target has a Change log beside it, on its right, listing what changed from the source, from → to, and why in one line. Rows come from the batch prompt. Because an instance cannot host children (rule 6), the placed change log is a detached frame containing Change log/Row instances; Row stays a component so styling propagates. The schema remains the record; the change log is its plain-language view.
-15. Every rebuilt frame sits in a Rebuild comparison on Screens: source export, rebuild, change log, left to right on a grey backdrop. The source export is a flat image at 2x captioned with its node id and export date, and does not update when the source changes. Like the change log, the placed comparison is a detached frame because an instance cannot host children. The grey backdrop is a deliberate exception to rule 10.
+14. Every rebuilt frame has a Change log beside it, on its right, listing what changed from the source, from → to, and why in one line, in plain graphic-design language. Rows come from the batch prompt. The change log lives once, as a `_Rebuild comparison/Change log/<screen>` sub-component on Templates holding Change log/Row instances; Row stays a component so styling propagates. The schema remains the record; the change log is its plain-language view.
+15. Every rebuilt frame sits in a Rebuild comparison on Screens: an instance of the Rebuild comparison master whose three content slots are swapped per screen to `_Rebuild comparison/Reference|Rebuild|Change log/<screen>` sub-components, left to right on a grey backdrop. Each screen and its change log exist exactly once, inside those sub-components; the comparison instance is the only placement, and a fix goes to the sub-component, never to a copy. The reference is a flat export at 2x captioned with its source node id and export date, and does not update when the source changes. The grey backdrop is a deliberate exception to rule 10.
 
 ## Known plugin API traps
 
 - `importComponentByKeyAsync` and `importVariableByKeyAsync` results do not persist between `use_figma` calls. Import and use in the same script.
 - `setBoundVariableForPaint` with a null variable returns an unbound paint without throwing. Read the paint back after binding.
 - Assigning `componentPropertyReferences` replaces the whole object. Set every key in one assignment.
+
+## Rules for any agent working in these files
+
+Any agent — Claude, Codex, or other — editing the Figma files or this repo follows the same loop. Work that skips it gets audited and may be superseded.
+
+1. Read before touching: this file, then design-system-schema.json for current state. The schema is the record; chat history and your own memory are not.
+2. Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.
+3. One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.
+4. Additive only. Nothing is deleted, and nothing is moved, renamed, or superseded without a record saying so. Archives get a README.
+5. No invention. If the library and code lack a pattern, mark it (GAP/DEFECT per the convention) and build with what exists. Recreating a source drawing by hand and calling it a component is a false record, which is worse than the gap.
+6. Verify in pixels. Screenshot what you built and look at it. Property readbacks are claims; renders are evidence. After editing a component, re-screenshot its live instances and diff.
+7. Record every batch: a dated schema record via an apply-*.js script, backup first, findings to flags[]. A batch without a record did not happen and will be treated as suspect.
+8. Report per rule 13: full report to disk, short reply, no tables in chat. Change logs in the file are written in plain graphic-design language, not system jargon.
+9. When sources disagree or a decision is needed, stop and report. Precedence (code > Storybook render > library > source) resolves facts, not design decisions.
+10. Record gate. Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one.
 
 ## Recording
 
