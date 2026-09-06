@@ -6056,7 +6056,8 @@
    "where": "target Module strip 426:4214 chips 465:5473–5517; marker 429:6878",
    "handling": "LIBRARY-TODOS candidate 31.",
    "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
-   "webAppV2BugListCandidate": false
+   "webAppV2BugListCandidate": false,
+   "note_2026_09_06_moduleChipFix": "The unselected Module chip variant is now label-only, so its stand-in glyphs do not render. Problems remains selected with the closest library glyph; candidate 31 remains open."
   },
   {
    "id": "npveEncounter_navIconsShipWhiteGlyphs",
@@ -6066,7 +6067,8 @@
    "where": "library Icon/Clinical 6c4a7b4d…, Icon/Reports db42927d…; target chips 426:4239, 465:5473, 465:5492",
    "handling": "LIBRARY-TODOS candidate 32: decide whether nav icons should carry a neutral fill like the rest of the set.",
    "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
-   "webAppV2BugListCandidate": false
+   "webAppV2BugListCandidate": false,
+   "note_2026_09_06_moduleChipFix": "Selected Module chip icon overrides now bind color/primary/main; unselected chip icons are hidden. The underlying library white-glyph defect remains open as candidate 32."
   },
   {
    "id": "npveEncounter_toolbarPillHeightDelta",
@@ -6106,7 +6108,9 @@
    "where": "schema figmaBuild.pages._order; library YX2n4YLrEpBXNbcc73T6dw",
    "handling": "Update _order with a record, or decide the check keys on page ids.",
    "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
-   "webAppV2BugListCandidate": false
+   "webAppV2BugListCandidate": false,
+   "note_2026_09_06_moduleChipFix": "Resolved in npveRebuild_moduleChipFix_2026-09-06: figmaBuild.pages._order refreshed to the verified live library order.",
+   "resolution": "Resolved 2026-09-06 in npveRebuild_moduleChipFix_2026-09-06: figmaBuild.pages._order refreshed to the verified live eleven-page library order."
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -7816,14 +7820,16 @@
   "pages": {
    "_order": [
     "Cover",
-    "Tokens",
+    "Foundations",
+    "Reference",
     "Actions",
     "Inputs",
     "Data display",
     "Feedback",
     "Surfaces & navigation",
     "Icons & illustrations",
-    "Reference"
+    "Compositions",
+    "Layouts"
    ],
    "_structure": "Consolidated 2026-08-03 from 37 pages (one per component) to 9 family pages. Order is Cover · Tokens · five component families · Icons & illustrations · Reference. Within each family page, nodes are laid out in a single row at y=0 (Icons & illustrations uses two rows: illustrations at y=0, icons at y=700), ordered as listed in each entry below.",
    "Cover": "File title, source-of-truth statement, schema reference, component inventory, a 'not yet rebuilt' note, and the restored Known drift and decisions record. Plain text on background.default. 2 frames.",
@@ -26665,5 +26671,119 @@
   ],
   "flagsBefore": 272,
   "flagsAfter": 280
+ },
+ "npveRebuild_moduleChipFix_2026-09-06": {
+  "_status": "DONE. Module chip masters corrected from Daniel's crop review: selected chips use icon + label + compact close in one color/primary/main ink family with space/16 gaps; unselected chips are label-only grey pills at 40px. The Module strip is reconciled to the nine-item order with Note and Problems selected. The placed encounter comparison inherits the master. Two change-log rows added, page-order snapshot refreshed, screenshots and 1x pixel diff recorded. No new GAP or DEFECT marker. No stop condition triggered.",
+  "date": "2026-09-06",
+  "workstream": "NPVE Rebuild / Encounter page",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (Module strip 4841:17077)",
+  "report": "figma-export/npve-module-chip-fix-2026-09-06/report.md",
+  "recordGate": "npveRebuild_encounterToolbar_2026-09-06 recorded — passed",
+  "stopCondition": "Stop if the placed encounter comparison does not inherit the master correction cleanly, if a required token or source glyph cannot be verified, or if any new drawn stand-in is required.",
+  "supersedes": "Daniel crop review supersedes the earlier unrecorded moduleChipFix draft.",
+  "step1_sourceMeasurement": {
+   "selectedNote": "120x40, radius 8, padding 12 horizontal / 8 vertical, 24px icon slot, 14/18 bold label, 24px close control; 8px edge gaps.",
+   "icon": "Source Note icon vector 15x19 inside 24px slot; fill #004852, matching color/primary/main.",
+   "label": "Source Note label #000000; Problems label #004852. Rebuild standardizes the selected label/icon/close to one source teal family per Daniel review.",
+   "close": "Source close ink #000000, two 8x8 stroked paths inside a 24px control, 1.5px stroke.",
+   "deliberateImprovement": "Internal element gaps become bound space/16 despite the measured 8px source gaps; small elements in one control need room."
+  },
+  "schemaPageOrderRefresh": {
+   "before": [
+    "Cover",
+    "Tokens",
+    "Actions",
+    "Inputs",
+    "Data display",
+    "Feedback",
+    "Surfaces & navigation",
+    "Icons & illustrations",
+    "Reference"
+   ],
+   "after": [
+    "Cover",
+    "Foundations",
+    "Reference",
+    "Actions",
+    "Inputs",
+    "Data display",
+    "Feedback",
+    "Surfaces & navigation",
+    "Icons & illustrations",
+    "Compositions",
+    "Layouts"
+   ],
+   "reason": "Refresh the library page-order snapshot so standing rule 7 can pass against the live library."
+  },
+  "flagsBefore": 280,
+  "step2_masterCorrection": {
+   "componentSet": "426:4213 Module chip; 2 variants; Label TEXT, Icon INSTANCE_SWAP, Show close BOOLEAN default true, selected VARIANT.",
+   "selected": "426:4199 selected=yes, 128x40. Icon 24 + label + Icon/Close (MUI) instance 16; two 16px gaps bound space/16. Icon, label and close fills bound color/primary/main #004852.",
+   "close": "Library Icon/Close (MUI) key cd53dbdaaf9f53529296291884eb0905ec98ee38, resized 24→16; glyph 14→9.33, near the measured source 8x8 mark. No drawn glyph.",
+   "unselected": "426:4206 selected=no, label only; icon hidden, close hidden and unlinked; minHeight 40; sample 56x40; gap token retained.",
+   "apiRepair": "Shared Show close default first collapsed to false when the unselected close was hidden; final API links the Boolean only to the selected close and sets the component-set default true. Existing selected strip instances explicitly true; unselected explicitly false."
+  },
+  "step3_strip": {
+   "id": "426:4214",
+   "size": "1397x40",
+   "order": "Modules · Note · Problems · AI Summary · Vitals · Care Team · Labs/Studies · Allergies · Timeline",
+   "selected": "Chip 1 Note 128x40; Chip 2 Problems 158x40; icon/label/close visible; Show close true.",
+   "unselected": "AI Summary 103, Vitals 61, Care Team 93, Labs/Studies 112, Allergies 81, Timeline 80; all 40 high; label only; Show close false.",
+   "glyphHandling": "Problems keeps the closest existing library glyph and the standing GAP marker/candidates 31–32; hidden unselected glyph swaps remain editable but do not render."
+  },
+  "step4_comparison": {
+   "comparison": "434:7474 sole Rebuild comparison/Page placement on Screens section 15.",
+   "placedStrip": "I434:7474;434:4866;434:4394;429:4199; live structure and component properties equal the Module strip master.",
+   "changeLog": "434:4749 Rows now 17 instances, 448x1869; helper 434:4745 480x1926; comparison master 434:4858 remains 2005x2154.",
+   "rows": [
+    "Chip spacing | Tight 8px gaps → 16px | Small elements in one control need room",
+    "Chip inks | Black icon, black close → one teal family | Matches the source's single ink"
+   ],
+   "rowIds": [
+    "481:10192",
+    "481:10198"
+   ]
+  },
+  "step5_verification": {
+   "templates": "Section 424:4085: 1,549 nodes, 0 unbound local solid paints, 0 fractional authored geometry on edited roots.",
+   "screens": "Section 429:6859: 517 nodes, 0 unbound local solid paints, one comparison instance.",
+   "instancePaints": "Placed Note and Problems: fill color/primary/100, stroke color/primary/200; icon, label and close color/primary/main; all opacity 1.",
+   "pixelDiff": "Direct live 1x Module strip master versus the strip inside the placed comparison: 1 differing anti-aliased edge pixel, max channel delta 13.",
+   "references": "Templates section 15 contains 8 selected-variant and 24 unselected-variant references across masters/instances, 3 Module strip instances, 32 Module chip instances. The scoped Screens section has one comparison placement.",
+   "screenshots": [
+    "figma-export/npve-module-chip-fix-2026-09-06/comparison-module-strip-reference-vs-rebuild.png",
+    "figma-export/npve-module-chip-fix-2026-09-06/master-module-chip-set-426-4213-1x.png",
+    "figma-export/npve-module-chip-fix-2026-09-06/rebuild-module-strip-426-4214-1x.png",
+    "figma-export/npve-module-chip-fix-2026-09-06/placed-module-strip-from-comparison-1x.png",
+    "figma-export/npve-module-chip-fix-2026-09-06/placed-module-strip-from-comparison-1x-white.png",
+    "figma-export/npve-module-chip-fix-2026-09-06/pixel-diff-master-vs-placed-strip-1x.png",
+    "figma-export/npve-module-chip-fix-2026-09-06/source-module-strip-4841-17097-1x.png"
+   ]
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — selected fills and teal icon/label/close bindings rendered through the placed comparison.",
+   "2_unboundPaintAudit": "PASS — Templates section 15 and Screens section 15 have 0 unbound local solid paints.",
+   "3_referenceCounts": "PASS — counts enumerated live; no clone.",
+   "4_skipInvisibleFalse": "PASS — set on every walk.",
+   "5_opacityLast": "PASS — no paint opacity authored.",
+   "6_enumerateDontRecall": "PASS — nodes, properties, tokens, rows and source order read live.",
+   "7_fileIdentityFirst": "PASS — keys explicit; target pages Cover 0:1 / Templates 3:2 / Screens 27:2 / Archive 126:2; schema library page order refreshed.",
+   "8_roundWithRecord": "PASS — 0 fractional authored geometry; minHeight 40 is a deliberate base-8 literal.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no component clone; live component properties and rendered text agree."
+  },
+  "counts": {
+   "GAP": 5,
+   "DEFECT": 0,
+   "changeLogRows": 17,
+   "variants": 2,
+   "stripChips": 8,
+   "newMarkers": 0
+  },
+  "flagsAdded": [],
+  "flagsAfter": 280,
+  "screenshots": "figma-export/npve-module-chip-fix-2026-09-06/"
  }
 }
