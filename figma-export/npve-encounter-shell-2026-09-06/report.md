@@ -74,11 +74,11 @@ Standing rules: 1 PASS (masters rendered through placed instances); 2 PASS with 
 
 ## Findings
 
-- Unrecorded external work: "14 · Health Status/Observations" on Templates (412:3888) and Screens (415:7207), helpers named outside the `_Rebuild comparison/…` pattern, no schema record. Not touched; flagged.
+- External work in flight: "14 · Health Status/Observations" (Templates 412:3888, Screens 415:7207) is recorded (`npveRebuild_healthStatusObservations_2026-09-05`, written before the audit record, which a key-order slice missed at first; two findings raised on that mistake were withdrawn). Its helpers are named outside the `_Rebuild comparison/…` pattern (flag). The external agent's optical-spacing and Social History batches ran during this batch and commit 1d3ae56 swept their uncommitted files in.
 - Split button has no Label property; the label and leading plus are fixed nested content (flag).
 - Badge dot cannot sit inline before text (flag); Icon button default glyph stands in for expand (info); Modules pill glyph delta (info); padding 10 has no token (flag).
 
-Counts: GAP markers 4, DEFECT 0, change-log rows 12, new masters 8 (Note card, placeholder, Patient header, Module chip set, Module strip, Page/Encounter, Rebuild comparison/Page, three helpers counted as one group). Flags +6.
+Counts: GAP markers 4, DEFECT 0, change-log rows 12, new masters 8 (Note card, placeholder, Patient header, Module chip set, Module strip, Page/Encounter, Rebuild comparison/Page, three helpers counted as one group). Flags +7 net (two withdrawn, one naming finding added).
 
 LIBRARY-TODOS.md gained item 18 (Module chip, marker 429:6878) and item 19 (Settle the Nav family home).
 

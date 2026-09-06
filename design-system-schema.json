@@ -5946,13 +5946,14 @@
   },
   {
    "id": "npveEncounter_unrecordedHealthStatusBatch",
-   "severity": "medium",
-   "kind": "DECISION",
+   "severity": "info",
+   "kind": "WITHDRAWN",
    "summary": "A \"14 · Health Status/Observations\" section exists on Templates (412:3888) and Screens (415:7207); at this batch's first read no schema record was visible. The external agent's records arrived during the batch (optical spacing and Social History on 2026-09-06), and the base record npveRebuild_healthStatusObservations_2026-09-05 was then dropped from the live schema by a concurrent write and restored from backup. Its helpers are named \"Rebuild helper · …\" / \"Reference helper · …\" instead of the _Rebuild comparison pattern.",
    "where": "target 412:3889, 413:7010, 415:4050, 415:7108, 415:7208",
    "handling": "Record restored (see npveEncounter_schemaRecordDroppedByConcurrentWrite). Helper naming to be aligned by the sidesheet workstream.",
    "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
-   "webAppV2BugListCandidate": false
+   "webAppV2BugListCandidate": false,
+   "withdrawn_2026_09_06": "Wrong: the record exists (written 2026-09-05 22:15, earlier in key order than the audit record). Naming drift of the Health Status helpers is re-raised as npveEncounter_healthStatusHelperNaming."
   },
   {
    "id": "npveEncounter_patientHeaderPadding10NoToken",
@@ -6006,14 +6007,25 @@
   },
   {
    "id": "npveEncounter_schemaRecordDroppedByConcurrentWrite",
-   "severity": "high",
-   "kind": "DEFECT",
+   "severity": "info",
+   "kind": "WITHDRAWN",
    "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
    "webAppV2BugListCandidate": false,
    "summary": "Two agents wrote design-system-schema.json in the same hour (external sidesheet batches 06:57–07:12, encounter shell 07:20). The record npveRebuild_healthStatusObservations_2026-09-05 was present in every backup up to pre-npve-encounter-shell and absent from the live file afterwards; two later records cite it as their gate. Restored from backup.",
    "where": "design-system-schema.json; backups 2026-09-06-pre-health-status-optical-spacing, pre-npve-social-history, pre-npve-encounter-shell",
    "detail": "Each apply script reads, mutates and rewrites the whole file; a script that loaded before another's write and wrote after it discards that write. The encounter-shell commit 1d3ae56 captured the dropped state and also swept in the external agent's uncommitted files.",
-   "handling": "Decision for Daniel: one writer at a time on the schema (serialize batches), or make apply scripts re-read immediately before writing and refuse when the key count went down. Verify the external agent's next run does not re-drop the restored key."
+   "handling": "Decision for Daniel: one writer at a time on the schema (serialize batches), or make apply scripts re-read immediately before writing and refuse when the key count went down. Verify the external agent's next run does not re-drop the restored key.",
+   "withdrawn_2026_09_06": "Wrong: no record was dropped; every backup and the live file hold the key. The restore script ran, found the key, and changed nothing. The concurrent-writer hazard itself is real but not evidenced here."
+  },
+  {
+   "id": "npveEncounter_healthStatusHelperNaming",
+   "severity": "low",
+   "kind": "DECISION",
+   "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+   "webAppV2BugListCandidate": false,
+   "summary": "The Health Status/Observations helpers are named \"Rebuild helper · Health Status/Observations\" and \"Reference helper · Health Status/Observations\" instead of the _Rebuild comparison/<Reference|Rebuild>/<screen> pattern that every other comparison uses.",
+   "where": "target 413:7010, 415:4050 (Templates section 412:3888)",
+   "handling": "Rename in the sidesheet workstream with a record; the change log helper 415:7108 already follows the pattern."
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -26169,7 +26181,7 @@
    },
    "screens": "15 Sidesheet occurrences and 15 comparisons on Screens; no detached instance; Sidesheet Body content preferred values 11 (unchanged by this batch)"
   },
-  "unrecordedWorkFound": "Templates 412:3888 and Screens 415:7207 \"14 · Health Status/Observations\" (external batch, ids 412–415, helpers named \"Rebuild helper · …\" / \"Reference helper · …\") exist with no schema record. Not touched; this workstream's gate is the Workflows audit, which is recorded. Flagged.",
+  "unrecordedWorkFound": "CORRECTED 2026-09-06: \"14 · Health Status/Observations\" (Templates 412:3888, Screens 415:7207) IS recorded — npveRebuild_healthStatusObservations_2026-09-05 was written at 22:15 on 2026-09-05, before the Workflows audit record, and a key-order slice starting at the audit key missed it. Only the helper naming (\"Rebuild helper · …\" / \"Reference helper · …\" instead of the _Rebuild comparison pattern) stands as a finding. The external agent's optical-spacing and Social History batches ran during this batch; commit 1d3ae56 swept their uncommitted files in.",
   "standingBatchRules": {
    "1_instancePaintVerification": "PASS — every new master rendered through its placed instance (shell → comparison → Screens); paints bound at master and instance.",
    "2_unboundPaintAudit": "PASS with the known cover exception — Templates section 15 and Screens section 15 walked node by node; Archive and Cover walked; 0 new unbound; section chrome #E4E4E4 by recorded direction.",
@@ -26217,6 +26229,7 @@
    "npveEncounter_modulesPillGlyphDelta"
   ],
   "flagsBefore": 264,
-  "flagsAfter": 270
+  "flagsAfter": 270,
+  "correction_2026_09_06": "Flags npveEncounter_unrecordedHealthStatusBatch and npveEncounter_schemaRecordDroppedByConcurrentWrite withdrawn (kind WITHDRAWN, kept for the record). Commit 8cdd4b3's message claims a restore that did not run; this amendment is the correction."
  }
 }
