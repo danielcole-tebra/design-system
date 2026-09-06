@@ -1,0 +1,60 @@
+{
+  "runId": "npve-sidesheet-radius-placement-2026-09-04",
+  "phase": "phase4",
+  "step": "P4.e",
+  "status": "complete",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "entities": {
+    "collections": {
+      "NPVE/Dimension": "VariableCollectionId:274:2"
+    },
+    "variables": {
+      "radius/md": "VariableID:274:3"
+    },
+    "pages": {
+      "Templates": "3:2",
+      "Screens": "27:2"
+    },
+    "components": {
+      "Sidesheet": "279:2446",
+      "Sidesheet/Floating": "6:65",
+      "Sidesheet/Docked right": "279:2416",
+      "Sidesheet/Docked left": "279:2431"
+    },
+    "instances": {
+      "Sidesheet — Docked right": "279:2613",
+      "Sidesheet — Docked left": "279:2711"
+    }
+  },
+  "pendingValidations": [],
+  "completedSteps": [
+    "P0.a",
+    "P0.b",
+    "P0.c",
+    "P0.d",
+    "P0.e",
+    "P0.f",
+    "P1.a",
+    "P1.b",
+    "P1.c",
+    "P1.d",
+    "P1.e",
+    "P3.a",
+    "P3.b",
+    "P3.c",
+    "P3.d",
+    "P3.e",
+    "P4.a",
+    "P4.b",
+    "P4.c",
+    "P4.d",
+    "P4.e"
+  ],
+  "verification": {
+    "propertyDefinitions": "12 existing plus Placement; existing defaults unchanged",
+    "referenceCounts": "58 nodes / 70 entries on each variant with skipInvisibleInstanceChildren=false",
+    "radii": "Floating 8/8/8/8; Docked right 8/0/0/8; Docked left 0/8/8/0",
+    "existingInstances": "14 actual live instances preserved on Floating; one earlier extra count was virtual comparison content",
+    "visual": "component set and source-versus-rebuild comparison inspected"
+  }
+}

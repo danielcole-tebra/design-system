@@ -51,6 +51,17 @@ Pass the file key explicitly on every call. Never rely on the last-used file.
 14. Every rebuilt frame has a Change log beside it, on its right, listing what changed from the source, from → to, and why in one line, in plain graphic-design language. Rows come from the batch prompt. The change log lives once, as a `_Rebuild comparison/Change log/<screen>` sub-component on Templates holding Change log/Row instances; Row stays a component so styling propagates. The schema remains the record; the change log is its plain-language view.
 15. Every rebuilt frame sits in a Rebuild comparison on Screens: an instance of the Rebuild comparison master whose three content slots are swapped per screen to `_Rebuild comparison/Reference|Rebuild|Change log/<screen>` sub-components, left to right on a grey backdrop. Each screen and its change log exist exactly once, inside those sub-components; the comparison instance is the only placement, and a fix goes to the sub-component, never to a copy. The reference is a flat export at 2x captioned with its source node id and export date, and does not update when the source changes. The grey backdrop is a deliberate exception to rule 10.
 
+### Sheet and comparison techniques
+
+Adopted 2026-09-05 from the external sidesheet batches (record npveRebuild_extReviewRepairs_2026-09-05).
+
+- **Sheets are as tall as their content.** The Sidesheet master stays 550 by 600. A placed sheet grows or shrinks to fit its body, and the footer sits right under the last row. Never pad a short sheet to 600 or pin its footer to the bottom.
+- **Helpers under a short sheet are transparent.** When a rebuilt sheet is shorter than the comparison slot, the Rebuild sub-component carries no fill, so only the sheet shows white. Nothing false extends below it.
+- **Tall content overflows the slot; the slot does not shrink it.** When a reference or a rebuilt sheet is taller than the 600 slot, keep it at 1:1 and switch clipping off on that column of the placed comparison instance. Never scale a reference to fit.
+- **New bodies join the shell through its Body content list.** Append the new body component to the Sidesheet's Body content preferred values and leave the default alone. Do not fork the shell.
+- **A new state is a new variant of the body it belongs to.** Add State=Empty to the existing body set rather than creating a second set or a loose frame.
+- **Values the library lacks may live in a local NPVE collection.** Name the collection NPVE/<kind>, record the operator's decision in the schema, claim no code syntax, and add the value to the library to-do list. Never write it into the library from a consuming file.
+
 ## Known plugin API traps
 
 - `importComponentByKeyAsync` and `importVariableByKeyAsync` results do not persist between `use_figma` calls. Import and use in the same script.

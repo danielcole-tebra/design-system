@@ -1,0 +1,51 @@
+{
+  "batch": "npve-sidesheet-outline-footer-global-2026-09-04",
+  "status": "complete",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "sourceFile": "zVsuhYehoSLLq880qRBFkq",
+  "mutatedNodeIds": [
+    "6:65",
+    "6:84",
+    "250:3519",
+    "253:1840",
+    "253:1841",
+    "I254:1900;18:106",
+    "I254:1900;18:107",
+    "I254:1924;18:106",
+    "I254:1924;18:107"
+  ],
+  "preservedNodeIds": [
+    "6:79",
+    "6:82",
+    "156:2428",
+    "156:2707",
+    "236:1758",
+    "254:3707"
+  ],
+  "geometry": {
+    "master": "550x600",
+    "outline": "1px INSIDE on top/right/bottom/left",
+    "fixedBody": "y57 h472",
+    "fixedFooter": "y529 h71",
+    "actions": "550x70; padding top/right/bottom/left 16/8/16/8",
+    "medication": "550x366; Body y57 h238; Footer y295 h71"
+  },
+  "bindings": {
+    "outlineWeights": "border/hairline",
+    "outlinePaint": "color/divider",
+    "actionsTopBottom": "space/16"
+  },
+  "affectedInstances": {
+    "total": 21,
+    "Templates": 10,
+    "Screens": 8,
+    "Archive": 3
+  },
+  "flags": {
+    "GAP": 0,
+    "DEFECT": 2,
+    "resolved": 2
+  },
+  "pendingValidations": [],
+  "nextBatch": "content-height architecture and migration — not started"
+}

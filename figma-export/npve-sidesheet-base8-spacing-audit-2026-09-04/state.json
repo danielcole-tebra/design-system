@@ -1,0 +1,26 @@
+{
+  "runId": "npve-sidesheet-base8-spacing-audit-2026-09-04",
+  "phase": "phase0",
+  "step": "P0.f",
+  "status": "complete_read_only",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "entities": {
+    "componentSets": {
+      "Sidesheet": "279:2446",
+      "Problems list body": "156:2426",
+      "Problems picker body": "94:812"
+    },
+    "components": {
+      "Problem summary row": "153:1186",
+      "Medication summary row": "219:2068",
+      "Medication list body": "236:1758"
+    },
+    "nodes": {
+      "Problem Status control": "170:1590",
+      "Medication Status control": "219:2070"
+    }
+  },
+  "decisionRequired": "Choose whether strict base-8 composition should replace the two rows' recorded source-fidelity spacing: 19/3 and 12/4 -> 16/8.",
+  "figmaMutations": [],
+  "completedSteps": ["P0.a", "P0.b", "P0.c", "P0.d", "P0.e", "P0.f"]
+}

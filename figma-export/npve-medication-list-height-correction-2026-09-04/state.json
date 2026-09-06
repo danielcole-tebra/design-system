@@ -1,0 +1,32 @@
+{
+  "batch": "npve-medication-list-height-correction-2026-09-04",
+  "status": "complete",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "sourceFile": "zVsuhYehoSLLq880qRBFkq",
+  "sourceNode": "545:5557",
+  "mutatedNodeIds": [
+    "250:3519",
+    "253:1838",
+    "253:1840",
+    "253:1841",
+    "I254:1900;18:106",
+    "I254:1900;18:107",
+    "I254:1924;18:106",
+    "I254:1924;18:107"
+  ],
+  "preservedNodeIds": [
+    "6:65",
+    "236:1758",
+    "156:2428",
+    "156:2707"
+  ],
+  "geometry": {
+    "standalone": "550x351",
+    "body": "y57 h238",
+    "activeContent": "206",
+    "footer": "y295 h56",
+    "referenceHelper": "550x380",
+    "rebuildHelper": "550x351"
+  },
+  "pendingValidations": []
+}

@@ -5466,6 +5466,325 @@
    "summary": "With the status line at the bound 20px body2 line-height (source 17 auto), the text-ink block of a row sits 2.5px below the row centre in the rebuild against 1.5px in the source; the box centres are exact (44/44/44).",
    "where": "target 153:1186; source 545:5518",
    "detail": "A 19/20 split of the padding would move the ink 0.5px; a 17px line-height would match the source but unbind body2. Left as built."
+  },
+  {
+   "id": "npveMedicationList_footerFixedGap",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "discoveredDuring": "npveRebuild_medicationListHeightCorrection_2026-09-04",
+   "summary": "The Medication List rebuild pinned its footer to the bottom of a 600px instance, leaving a large inactive gap below the final medication row.",
+   "where": "fdCQVFdvOByaOYIJYag0d6 Screens 250:3519 and comparison helper 253:1840",
+   "detail": "The shared Sidesheet master remains 550x600, but this content-driven instance now resolves to 550x351: Header 56 + divider 1 + body padding 16 + Medication list body 206 + body padding 16 + Footer 56.",
+   "handling": "Resolved in the same batch. The footer now begins at y295 and directly encloses the active region; existing Problems instances remain unchanged at 550x600.",
+   "footerPaddingAnnotation_2026_09_04": "Superseded in part by npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04: canonical Footer changed 56px → 71px. Medication content-driven placements therefore changed 550x351 → 550x366 while Body y57 h238 and Footer start y295 remained unchanged."
+  },
+  {
+   "id": "npveSidesheet_outlineOnlyLeft",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "discoveredDuring": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+   "summary": "The shared Sidesheet authored only its left outline edge, so every live instance omitted the top, right, and bottom sheet boundary.",
+   "where": "NPVE Rebuild Sidesheet master 6:65 and 21 live instances across Templates, Screens, and Archive",
+   "detail": "Before: top/right/bottom/left weights 0/0/0/1. Both source sidesheets 545:5239 and 545:5557 use 1/1/1/1. After: all four weights are 1px INSIDE, bound to border/hairline; the stroke paint remains bound to color/divider.",
+   "handling": "Resolved in the same batch at the shared master. All 21 live instances inherit the four-sided outline."
+  },
+  {
+   "id": "npveSidesheet_footerActionHalfPixel",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "discoveredDuring": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+   "summary": "A 38px footer action was vertically centered in a fixed 55px Actions frame with 8px padding, placing it at a non-canonical y=8.5.",
+   "where": "NPVE Rebuild Sidesheet Footer Actions 6:84 and all footer-visible instances",
+   "detail": "DrawerFooter in web-app-v2 uses padding={2}, which resolves to 16px. Actions now hugs to 70px with 16px top/bottom and 8px left/right; Footer is 71px including its 1px divider.",
+   "handling": "Resolved in the same batch. Top and bottom padding are bound to space/16, and footer action containers use whole-pixel geometry."
+  },
+  {
+   "id": "npveSidesheet_radiusMdMissingFromLibrary",
+   "severity": "medium",
+   "kind": "GAP",
+   "discoveredDuring": "npveRebuild_sidesheetRadiusPlacement_2026-09-04",
+   "summary": "The current shared design-system library has no canonical 8px radius token for the NPVE Sidesheet treatment.",
+   "where": "Design System Rebuild radius variables and NPVE Rebuild Sidesheet",
+   "detail": "Published radius variables are radius/sm=4, radius/chipSmall=12, radius/chip=16, and radius/pill=24. The source Sidesheet family consistently uses 8px, while the code Drawer remains square and has no radius/md token.",
+   "handling": "Tracked as an intentional NPVE-local exception. NPVE/Dimension radius/md=8 is scoped to CORNER_RADIUS and has no WEB code syntax. Promote only after the shared library registry is reconciled."
+  },
+  {
+   "id": "npveSidesheet_squareAgainstSource",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "discoveredDuring": "npveRebuild_sidesheetRadiusPlacement_2026-09-04",
+   "summary": "The rebuilt floating Sidesheet was square although every source Sidesheetv3 variant uses an 8px radius.",
+   "where": "NPVE Rebuild Sidesheet 6:65 and its live instances",
+   "detail": "Before: 0/0/0/0. After: Floating uses 8/8/8/8; Docked right uses 8/0/0/8; Docked left uses 0/8/8/0. Every nonzero corner is bound to the NPVE-local radius/md variable.",
+   "handling": "Resolved in this batch. Existing instances remain attached to 6:65 as Placement=Floating; edge-docked treatments are explicit variants."
+  },
+  {
+   "id": "npveSidesheet_headerTitleInsetConflict",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "discoveredDuring": "npveRebuild_sidesheetHeaderInsetAudit_2026-09-04",
+   "summary": "The rebuilt Sidesheet title has 12px top/bottom clearance while the source Problems header has 16px.",
+   "where": "NPVE Rebuild Sidesheet Header 6:66 and source Problems Header 545:5503",
+   "detail": "Rebuild: 56px header, 32px title line at y=12, 8px container padding around a 40px Icon button. Source: 64px header, 32px title line at y=16, 16px padding around a bare 24px close icon. The current design-system library Drawer Header 749:231 matches the 56px rebuild, and Drawer.example.tsx uses Box m={1}; source and library/code therefore disagree.",
+   "handling": "Resolved by user decision in npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04. NPVE prioritizes genuine canonical 16px vertical padding; the resulting 72px Header is intentionally taller than the 64px source and the 56px library Drawer Header.",
+   "resolution": "All three Sidesheet Headers now bind paddingTop and paddingBottom to space/16 and render at 72px with the published 40px Icon button touch targets."
+  },
+  {
+   "id": "npveSidesheet_problemSummaryRowNonBase8Spacing",
+   "severity": "medium",
+   "kind": "DECISION",
+   "discoveredDuring": "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04",
+   "summary": "Problem summary row uses 19px vertical padding and a 3px status-label-to-caret gap, outside a strict base-8 spacing rule.",
+   "where": "NPVE Rebuild Problem summary row 153:1186; Status control 170:1590",
+   "detail": "Both values were deliberate fidelity choices in npveRebuild_rowStructure_2026-09-04: 19px produces an 88px divider pitch around a 50px content block, and 3px produces a 4px visual caret gap because the chevron vector is inset by 1px.",
+   "handling": "For decision. Strict base-8 recommendation: bind vertical padding to space/16 and Status control itemSpacing to space/8, accepting row height 88px -> 82px and a wider caret gap."
+  },
+  {
+   "id": "npveSidesheet_medicationSummaryRowNonBase8Spacing",
+   "severity": "medium",
+   "kind": "DECISION",
+   "discoveredDuring": "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04",
+   "summary": "Medication summary row uses 12px vertical padding and a 4px status-label-to-caret gap, outside a strict base-8 spacing rule.",
+   "where": "NPVE Rebuild Medication summary row 219:2068; Status control 219:2070",
+   "detail": "The original medication row batch called 12px a base-8 target because it produced a 76px row, but 12 is not divisible by 8. The status-control gap is bound to space/4. These values also differ from the Problem summary row values, producing the visible inconsistency noted in this audit.",
+   "handling": "For decision. Strict base-8 recommendation: bind vertical padding to space/16 and Status control itemSpacing to space/8, accepting row height 76px -> 84px and a wider caret gap."
+  },
+  {
+   "id": "npveProblemEdit_textFieldNoEndAdornment",
+   "severity": "medium",
+   "kind": "GAP",
+   "discoveredDuring": "npveRebuild_problemEdit_2026-09-04",
+   "webAppV2BugListCandidate": false,
+   "summary": "The published Text field component has no end-adornment instance-swap slot, so the Edit Problem date fields cannot place Icon/Calendar inside the field through the component API.",
+   "where": "Design System Rebuild Text field; NPVE Problem edit body 316:3412; GAP marker 324:4934",
+   "detail": "Source 4536:27605 places a 24px calendar glyph inside each 40px date field. The target preserves attachment by composing each date as an explicitly named GAP wrapper around a live small Text field and live Icon/Calendar instance. No generic Date picker or drawn stand-in was introduced.",
+   "handling": "Reported, not resolved. Library follow-up is item 15 in figma-export/library-todos/LIBRARY-TODOS.md: add an optional end-adornment instance-swap slot to Text field, default hidden, with Icon/Calendar curated."
+  },
+  {
+   "id": "npveAllergiesComparison_fixedRebuildWrapperHeight",
+   "severity": "low",
+   "kind": "DEFECT",
+   "discoveredDuring": "npveRebuild_allergiesComparisonHeightCorrection_2026-09-05",
+   "summary": "The Allergies comparison kept its Rebuild content wrapper at the canonical 600px slot height after swapping in a 447px content-driven Sidesheet, leaving 153px of false white sheet below the live component.",
+   "where": "NPVE Rebuild comparison 356:6236; nested Rebuild content I356:6236;114:1139; live Allergies Sidesheet I356:6236;114:1139;356:3249",
+   "detail": "The live Sidesheet and its helper component were both 550x447. Only the nested helper instance retained a 550x600 size override and white fill.",
+   "handling": "Resolve locally by making the unique rebuild helper surface transparent so the shorter live Sidesheet owns the visible white surface. Preserve the shared Rebuild comparison master and all source/reference geometry."
+  },
+  {
+   "id": "npveExternalCareFacilityStay_sourceClipsForm",
+   "severity": "high",
+   "kind": "DEFECT",
+   "discoveredDuring": "npveRebuild_externalCareFacilityStay_2026-09-05",
+   "summary": "The Facility Stay source fixes its body at 468px while the form card is 556px, so the footer clips the lower form content.",
+   "where": "NPVE source zVsuhYehoSLLq880qRBFkq 648:1603; Summary_Wrap 648:1639; form card 648:1658; footer 648:1728",
+   "detail": "The card begins at source y=124 and is clipped at the footer boundary y=532. The visible source render cuts off the Discharge to group and completely hides the Comments control even though both exist in the card structure.",
+   "handling": "Do not reproduce the clipping. The established shared Sidesheet rule makes the body content-driven and places the footer after the complete active form.",
+   "resolution": "RESOLVED IN REBUILD 2026-09-05 — the shared Sidesheet body is content-driven, so Discharge to, Comments, and the footer all remain visible."
+  },
+  {
+   "id": "npveExternalCareFacilityStay_formSurfaceToken",
+   "severity": "medium",
+   "kind": "DECISION",
+   "discoveredDuring": "npveRebuild_externalCareFacilityStay_2026-09-05",
+   "summary": "The repeated NPVE edit-form surface uses #EEF7F9, but the published design-system library has no matching token.",
+   "where": "Source form card 648:1658 and five other edit Sidesheets; NPVE Rebuild target before Facility Stay mutation",
+   "detail": "The nearest existing palette value is color/core/100 #E9EFEE, while Card/Paper uses color/background/paper #FFFFFF. Neither is the source value, and selecting either silently would be a design decision.",
+   "handling": "Operator approved the recommended local exception. Create an NPVE-local COLOR variable named Form surface at #EEF7F9, scoped to FRAME_FILL and SHAPE_FILL, and bind the Facility Stay edit card to it. Do not add the colour to the shared library.",
+   "resolution": "APPROVED 2026-09-05 — exact source colour retained as an NPVE-local token. Build may proceed."
+  },
+  {
+   "id": "npveExtReview_familyHistoryRingOverride",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "summary": "Family history add-to-note action draws the source ring through a stroke override on a library Icon button instance, contradicting DEFECT marker 189:615 and the bare-glyph handling used on Medication and Problems rows.",
+   "where": "target 346:3083 (master) and its placements in 346:3089, 346:3113, 346:3148, 346:5993; source rings 648:3265, 648:3272",
+   "detail": "Stroke SOLID bound, weight 1, radius 20 from the master. The library Icon button 170:77 has no ringed variant (flag npveProblemsCorrections_iconButtonNoRingedVariant). One screen now renders a ring the library cannot ship while the others render the bare glyph.",
+   "handling": "Decision for Daniel: remove the override so all screens agree with the marker, or reverse the earlier decision for every screen and record it.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Resolved 2026-09-05: stroke override removed on 346:3083; DEFECT marker 189:615 extended."
+  },
+  {
+   "id": "npveExtReview_allergySeveritySelectorUnmarked",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "The Allergies rebuild draws a local dropdown pill (Allergy severity selector 352:3206) for the source \"Mild\" control; the library has no dropdown chip and no GAP marker was placed.",
+   "where": "target 352:3206; placements 354:3209, 355:5934, I356:3249;6:80;355:5934;354:3209; source I129:7816",
+   "detail": "Fill bound color/hardcoded (no palette)/chipSuccessBackground, radius bound radius/chip, live DownCaret. Library Chip 156:171 offers color=success but only a Delete icon boolean, no caret. Source label is Akkurat LL Bold 14; rebuild Regular 16.",
+   "handling": "Decision for Daniel: add a GAP marker beside 356:6236 and label the stand-in SCAFFOLDING, or use Chip color=success and log the missing caret. Library to-do: dropdown chip.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Marked 2026-09-05: GAP marker 404:7061 beside 356:6236; stand-in kept; LIBRARY-TODOS item 16."
+  },
+  {
+   "id": "npveExtReview_procedureMetadataBadgeUnmarked",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "Procedure history metadata 337:3881 is a locally drawn outlined pill imitating a small Chip so that a bold prefix can precede the value; the plan said published Chips and no GAP marker was placed.",
+   "where": "target 337:3881 and 337:3887/3890/3893/3896 inside 337:3884; source 648:3473 pills",
+   "detail": "Fills, strokes and radius are bound; the shape is a Chip lookalike. Library Chip has a single Label and cannot mix weights.",
+   "handling": "Decision for Daniel: GAP marker (\"Chip cannot carry a bold prefix\") beside 339:6481, or swap to Chip size=small variant=outlined at one weight and log the lost emphasis.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Marked 2026-09-05: GAP marker 404:7070 beside 339:6481; stand-in kept; LIBRARY-TODOS item 17."
+  },
+  {
+   "id": "npveExtReview_referenceScaledToSlot",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "summary": "The Family history and Allergies references are 550x656 source frames fitted into the 550x600 reference slot, so both comparisons show the source at 91.5% against a 1:1 rebuild.",
+   "where": "target 346:3147 (FIT), 356:6191 (FIT); comparisons 346:5993, 356:6236",
+   "detail": "Rule 15 asks for a flat 2x export at 1x dimensions. The Facility Stay batch already disabled clipping on the comparison instance to show an 853px rebuild; the same override on the Reference column allows a 656px reference.",
+   "handling": "Fix in master: resize the two reference helpers to 550x656, image FILL, and set clipsContent false on the Reference column of the two instances. Later: give the comparison master HUG slots.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Resolved 2026-09-05: helpers 550x656 FILL; Reference column clip off on 346:5993 and 356:6236."
+  },
+  {
+   "id": "npveExtReview_changeLogPatternDrift",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "summary": "The change-log sub-components use three different presentations: Content wrapper with title (Medication, Empty, Browse, Procedures), padded rows without a title (Edit), and bare 480px rows without title or padding (Family history with a white helper fill, Allergies, Hospitalizations, Facility Stay).",
+   "where": "target 318:3928, 339:6405 (title without \"Changes:\" prefix), 346:3365, 356:6192, 378:3403, 392:4093; pattern 18:109 and 114:880",
+   "detail": "Rows are live Change log/Row instances everywhere, so the register is intact; the card, title and divider drifted.",
+   "handling": "Fix in master: rebuild the six helpers on the Change log pattern (Content 480 padded 16, Title \"Changes: <screen>\", Title divider, Rows 448). Additive: wrap, do not delete rows.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Resolved 2026-09-05: five helpers conformed to the Content card pattern; Procedures title prefixed."
+  },
+  {
+   "id": "npveExtReview_changeLogJargon",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "Many change-log rows are written in system jargon (node coordinates, token names, hex values, \"content-driven\", \"API\", \"frozen 2× PNG\") rather than plain graphic-design language.",
+   "where": "rows in 254:1895, 309:5243, 309:5586, 318:3928, 392:4093, 378:3403 (examples in the report)",
+   "detail": "Rule 14 and agent rule 8. Two rows per log on Hospitalizations and Facility Stay describe the comparison mechanism, not a change to the screen.",
+   "handling": "Log rows: rewrite in place (same instances, new text). Drop the mechanism rows or move their content to the helper description.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Resolved 2026-09-05: 61 rows rewritten; verbatim list in the repairs report."
+  },
+  {
+   "id": "npveExtReview_silentTextCorrections",
+   "severity": "low",
+   "kind": "DECISION",
+   "summary": "Two source strings were corrected in the rebuild without a change-log row or record: Edit Problem \"Low back pain M540.50\" → \"M54.50\" and Facility Stay \"Discahrge to\" → \"Discharge to\".",
+   "where": "target I318:3655 body text, 389:3691; source I4537:28000;3408:8553;289:80, 648:1686",
+   "detail": "Rule 11: a disagreement with the source is a finding, not a silent reconciliation. Both corrections are probably right.",
+   "handling": "Decision for Daniel: keep the corrections and add a log row to each, or restore verbatim and mark the source typo.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Resolved 2026-09-05: corrections kept, two log rows added, source frames flagged (npveSource_*)."
+  },
+  {
+   "id": "npveExtReview_unloggedTypeStyleDrift",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "Two text styles changed against the source without a log row: Edit Problem \"Type\" label Regular 14 → Bold 14; Allergies \"Mild\" Bold 14 → Regular 16.",
+   "where": "target 316:3457, 352:3207; source 4695:13230, I129:7816;16727:71253;3036:6096",
+   "detail": "Neither is a library binding; both are authored choices.",
+   "handling": "Log rows, or restore the source weight and size.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveExtReview_standaloneScreenDuplicates",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "Medication list, Problems · Empty and Problems · Browse exist twice on Screens: as standalone Sidesheet instances (sections 04, 06) and inside their comparison sub-components. Rule 15 as rewritten says each screen exists exactly once inside the sub-component.",
+   "where": "target 250:3519, 309:4531, 309:4772; also pre-existing 156:2428, 156:2707 (section 02, built before the rewrite)",
+   "detail": "The external agent followed the standalone pattern our own Problems management section already had, then moved to sole placement from Problem Edit onward.",
+   "handling": "Decision for Daniel: archive sections 02, 04 and 06 with a README (additive, mark superseded), or record the standalone screens as the deliberate exception.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Resolved 2026-09-05: five screens pixel-diffed and moved to Archive 05, renamed _Superseded — see comparison."
+  },
+  {
+   "id": "npveExtReview_severitySelectorFractional",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "Allergy severity selector centres 57px of content in a fixed 70px frame, placing its label at x 6.5 and caret at x 47.5 in the master and every placement; the batch record claims whole-pixel geometry.",
+   "where": "target 352:3207, 352:3208 and the same nodes under 354:3209, 355:5934, I356:3249",
+   "detail": "Rule 4 / batch rule 8.",
+   "handling": "Fix in master: width 72, or HUG with padding 8/8.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+   "resolution": "Resolved 2026-09-05: selector hugs at 73 wide; label x 8, caret x 49."
+  },
+  {
+   "id": "npveExtReview_problemEditUnboundSpacing",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "Problem edit body carries literal (unbound) spacing: paddingTop 8 and gap 16 on 316:3412, gaps on 316:3434, 316:3456, 316:3458 and 316:3475; every other new body binds its padding and gaps.",
+   "where": "target 316:3412 and children",
+   "detail": "Values are correct; only the bindings are missing.",
+   "handling": "Fix in master: bind to space/8 and space/16.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveExtReview_fullWidthSlotDefaultName",
+   "severity": "low",
+   "kind": "DECISION",
+   "summary": "The Sidesheet shell's Full-width action slot defaults to the screen-named \"Medication list footer action\" 248:1827, which rides hidden into every Sidesheet placement (22 on Templates, 17 on Screens).",
+   "where": "target 279:2446 property Full-width action#279:11; 248:1827",
+   "detail": "The wrapper is generic (a 534x38 frame around a published Button); only its name is screen-specific.",
+   "handling": "Decision for Daniel: rename to a shell-level name (Figma-only affordance, Sentence case, e.g. \"Sidesheet/Full-width action\") with a record; local component, no published-name lock.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveExtReview_parallelSummaryRows",
+   "severity": "info",
+   "kind": "DECISION",
+   "summary": "Medication summary row 219:2068 is a second master with the same anatomy as Problem summary row 153:1186 (status control, text line, trailing action, row-owned absolute Divider with Show divider). LIBRARY-TODOS item 10 anticipates one generic pick-from-a-list row serving Problems, Medications and Allergies.",
+   "where": "target 219:2068, 153:1186",
+   "detail": "Not wrong now; both rows also carry the open non-base-8 decisions (flags npveSidesheet_problemSummaryRowNonBase8Spacing, npveSidesheet_medicationSummaryRowNonBase8Spacing).",
+   "handling": "Reported. Fold into the library row generalisation batch.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveExtReview_unrecordedAuditFolders",
+   "severity": "low",
+   "kind": "DECISION",
+   "summary": "Two read-only audit folders hold screenshots with no report.md and no schema record: npve-flowsheets-list-2026-09-05 and npve-next-candidate-audit-2026-09-05.",
+   "where": "figma-export/npve-flowsheets-list-2026-09-05, figma-export/npve-next-candidate-audit-2026-09-05",
+   "detail": "Their outcome (Flowsheets deferred, Hospitalizations chosen) is mentioned only inside npveRebuild_externalCareHospitalizations_2026-09-05.discoveries.",
+   "handling": "Write one read-only record naming both folders and the deferral reason; rule 7.",
+   "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveSource_problemsEditIcdTypo",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "NDE-2026 Clin_Problems-Edit shows \"Low back pain M540.50\"; the ICD-10 code is M54.50. The rebuild carries the corrected code and logs the correction.",
+   "where": "source zVsuhYehoSLLq880qRBFkq I4537:28000;3408:8553;289:80; target Problem edit body text; change log row 405:4078",
+   "detail": "Kept as a logged correction per the 2026-09-05 decision.",
+   "handling": "Reported to the source owner; no target action.",
+   "discoveredDuring": "npveRebuild_extReviewRepairs_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveSource_externalCareFacilityStayDischargeTypo",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "NDE-2026 Clin_ExternalCareFS labels a radio group \"Discahrge to\". The rebuild carries \"Discharge to\" and logs the correction.",
+   "where": "source zVsuhYehoSLLq880qRBFkq 648:1686; target 389:3691; change log row 405:4084",
+   "detail": "Kept as a logged correction per the 2026-09-05 decision.",
+   "handling": "Reported to the source owner; no target action.",
+   "discoveredDuring": "npveRebuild_extReviewRepairs_2026-09-05",
+   "webAppV2BugListCandidate": false
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -19734,7 +20053,9 @@
    "figma-export/npve-sidesheet-build-2026-09-02/step6-source-4618-4930-Clin_Problems-Recent.png",
    "figma-export/npve-sidesheet-build-2026-09-02/step6-comparison-source-4618-4930-vs-target-6-179.png"
   ],
-  "publishStep": "None. The target is a consumer file; Sidesheet is a local component there. No library publish is involved."
+  "publishStep": "None. The target is a consumer file; Sidesheet is a local component there. No library publish is involved.",
+  "outlineAnnotation_2026_09_04": "The earlier Drawer-derived left-edge-only outline decision is superseded by npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04. The shared Sidesheet now uses the user-approved source-faithful four-sided 1px outline.",
+  "headerPaddingAnnotation_2026_09_04": "The earlier 56px Header specification is superseded by npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04. NPVE now uses genuine 16px top/bottom padding around the published medium Icon buttons, producing a 72px Header."
  },
  "npveRebuild_sidesheet_closeout_2026_09_02": {
   "_status": "BASE COMPLETE. Steps 1 and 4 pass. Step 2 (Storybook check) is open: Storybook unreachable this session; flag npveBuild_buttonLabelTitleCase left open with the code path recorded. Stopped after step 4; no sub-header, no screens.",
@@ -22739,5 +23060,2199 @@
   ],
   "flagsBefore": 220,
   "flagsAfter": 221
+ },
+ "npveRebuild_medicationSummaryRow_2026-09-04": {
+  "_status": "DONE. Medication summary row 219:2068 created in Templates 06 with Active and Discontinued live preview instances; source and library read only; screenshots and audits complete; no stop condition triggered.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Clin_MedList 545:5557",
+  "report": "figma-export/npve-medication-summary-row-2026-09-04/report.md",
+  "recordGate": "npveRebuild_rowStructure_2026-09-04 recorded — passed",
+  "scope": "Create one local Medication summary row component and two preview instances on Templates; no sidesheet assembly in this batch.",
+  "plannedProperties": [
+   "Status",
+   "Name",
+   "Dose",
+   "Indication",
+   "Show divider"
+  ],
+  "approvedGeometry": {
+   "width": 518,
+   "gridHeight": 76,
+   "padding": "12px vertical / 8px horizontal",
+   "internalGaps": "8px status-to-details; 8px within the medication line",
+   "note": "76px is the base-8 target derived from the source 71px item; source and computed deltas are recorded in the final batch closeout."
+  },
+  "dependencies": [
+   "published Icon/DownCaret",
+   "published Chip small outlined/default",
+   "published Icon button primary/medium",
+   "published Icon/AddPaymentNote",
+   "published Divider",
+   "published variables"
+  ],
+  "stopCondition": "Stop on file-identity mismatch, unexpected existing Medication summary row, missing library dependency, dropped reference count, or unrelated placed-instance diff.",
+  "screenshotsPlanned": [
+   "source active row",
+   "source discontinued row",
+   "rebuilt Active and Discontinued preview frame"
+  ],
+  "section": {
+   "id": "219:2067",
+   "name": "06 · Medications",
+   "x": 0,
+   "y": 12560,
+   "width": 1842,
+   "height": 900,
+   "chrome": "#E4E4E4 exact per user direction; no exact published variable exists"
+  },
+  "master": {
+   "id": "219:2068",
+   "size": "518x76",
+   "padding": "12 / 8 / 12 / 8",
+   "structure": "Details 462x52 (Status control 61x20 g4; Medication line 229x24 g8) + Actions 40x40 + absolute Divider 518x1 at y75",
+   "ownProperties": [
+    "Status#223:0",
+    "Name#223:1",
+    "Dose#223:2",
+    "Show divider#223:3"
+   ],
+   "indication": "Published Chip instance 222:1999 exposed; Label#156:0 carries the indication text.",
+   "propertyReferences": 7,
+   "paints": "10 visible solid paints; 0 unbound"
+  },
+  "previews": {
+   "frame": "224:1730 Medication summary row — states 582x296",
+   "active": "224:1733 Losartan / 50mg / Hypertension; action and divider visible",
+   "discontinued": "224:1754 Sertraline / 100mg / Depression; action and divider hidden; status/caret grey/500 overrides"
+  },
+  "sourceMeasures": {
+   "active": "545:5573 510x71",
+   "discontinued": "545:5589 510x71",
+   "padding": "12px vertical / 4px horizontal",
+   "statusGap": 4,
+   "statusToLineGap": 8,
+   "action": "40px drawn outlined circle",
+   "indicationBadgeHeight": 22
+  },
+  "decisions": [
+   "Row uses 518px established sheet-body width and 76px base-8 height instead of source 510x71.",
+   "Status-to-caret corrected to canonical half-step space/4 after visual QA.",
+   "Source #F3F3F3 row fill maps to bound color/grey/300 #F6F6F6.",
+   "Source 22px badge maps to the published 24px small outlined/default Chip.",
+   "Published Icon button and DownCaret are used without inventing the source ring or filled triangle."
+  ],
+  "existingFlagsApplied": [
+   "npveAudit_problemSummaryRowDrawnControls",
+   "npveProblemsCorrections_iconButtonNoRingedVariant",
+   "npveMgmt_statusCaretGlyphGap",
+   "npveRepair2_statusColourByOverride"
+  ],
+  "verification": {
+   "identity": "PASS Cover 0:1 / Templates 3:2 / Screens 27:2 / Archive 126:2",
+   "instancePaints": "PASS master vs Active: 10/10 paint signatures match by path, RGB, opacity, and variable key",
+   "renderedContent": "PASS Active and Discontinued render Status, Name, Dose, and nested Chip Label values; divider/action visibility matches the preview intent",
+   "trustedBaseline": "Problem summary row 153:1186 stayed 518x88 with 6 references before and after",
+   "rule2": "Cover 1 pre-existing unbound; Templates 0; Screens 0; Archive 0; section chrome excluded",
+   "rule8": "0 authored fractional hits on all pages; VECTOR/GROUP exempt counts 0 / 315 / 146 / 69"
+  },
+  "rules": {
+   "1": "PASS. Master vs Active placed instance 10/10 paints match; all bound.",
+   "2": "PASS with known cover exception. Cover 1 pre-existing; Templates 0; Screens 0; Archive 0; section chrome excluded.",
+   "3": "PASS. Medication master/Active/Discontinued 7 refs each; Problem summary row 6 unchanged.",
+   "4": "set on every audit",
+   "5": "none authored",
+   "6": "enumerated",
+   "7": "explicit keys and verified identity",
+   "8": "0 hits; exempt 0/315/146/69",
+   "9": "none touched",
+   "10": "no clone"
+  },
+  "recovery": "Two atomic tool rejections left no changes: componentPropertyReferences on a non-symbol sublayer; FLOAT fontWeight variable sent to fontStyle. Corrected before successful calls.",
+  "screenshots": [
+   "figma-export/npve-medication-summary-row-2026-09-04/rebuilt-states-224-1730.png",
+   "figma-export/npve-medication-summary-row-2026-09-04/reference-vs-rebuilt.png",
+   "figma-export/npve-medication-summary-row-2026-09-04/source-active-545-5573.png",
+   "figma-export/npve-medication-summary-row-2026-09-04/source-discontinued-545-5589.png",
+   "figma-export/npve-medication-summary-row-2026-09-04/trusted-problem-summary-row.png"
+  ],
+  "flagsAdded": [],
+  "flagsBefore": 221,
+  "flagsAfter": 221
+ },
+ "npveRebuild_medicationListBody_2026-09-04": {
+  "_status": "DONE. Medication list body 236:1758 created in Templates 06 with one live preview instance; source and library read only; screenshots and audits complete; no stop condition triggered.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Clin_MedList MainWrap 545:5572",
+  "report": "figma-export/npve-medication-list-body-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationSummaryRow_2026-09-04 recorded DONE — passed",
+  "scope": "Create one local Medication list body component and one preview instance on Templates; compose the published add-action Button with two instances of the approved Medication summary row. No sidesheet shell or footer assembly in this batch.",
+  "approvedGeometry": {
+   "width": 518,
+   "height": 206,
+   "gap": 8,
+   "structure": "Published 38px add-action Button + Active row 76px + Discontinued row 76px; 8px between each item.",
+   "note": "The enclosing Sidesheet owns outer padding. Source MainWrap 545:5572 is 550x240 with 16/20 padding; the local body follows the established 518px inner width and canonical base-8 spacing."
+  },
+  "dependencies": [
+   "local Medication summary row 219:2068",
+   "published Button variant=contained, color=primary, size=medium, State=Default key 820871c5281ccd91813587a508771cc439f38b93",
+   "published Icon/PlusOutlined through the Button end-icon slot",
+   "published spacing and component-surface variables already used by the approved row"
+  ],
+  "plannedApi": [
+   "Expose the Add New Medication Button instance",
+   "Expose the Active row instance",
+   "Expose the Discontinued row instance"
+  ],
+  "stopCondition": "Stop on file-identity mismatch, duplicate Medication list body, missing trusted dependency, approved row mutation, dropped reference count, or unrelated placed-instance diff.",
+  "screenshotsPlanned": [
+   "source MainWrap 545:5572",
+   "rebuilt Medication list body preview",
+   "reference-vs-rebuilt comparison"
+  ],
+  "section": {
+   "id": "219:2067",
+   "name": "06 · Medications",
+   "x": 0,
+   "y": 12560,
+   "width": 1842,
+   "height": 900,
+   "chrome": "#E4E4E4 exact per user direction"
+  },
+  "master": {
+   "id": "236:1758",
+   "size": "518x206",
+   "gap": "8px bound to space/8",
+   "structure": "Published Button 211x38 at y0 + Active medication row 518x76 at y46 + Discontinued medication row 518x76 at y130",
+   "ownProperties": [],
+   "exposedNestedInstances": [
+    "237:1764 Add New Medication",
+    "238:1760 Active medication",
+    "238:1778 Discontinued medication"
+   ],
+   "propertyReferences": 19,
+   "paints": "20 visible solid paints; 0 unbound"
+  },
+  "preview": {
+   "frame": "238:1806 Medication list body — preview 582x298",
+   "instance": "238:1809 Medication list body / Default 518x206"
+  },
+  "sourceMeasures": {
+   "body": "545:5572 550x240",
+   "padding": "16px vertical / 20px horizontal",
+   "addAction": "4580:30529 185x42",
+   "active": "545:5573 510x71",
+   "discontinued": "545:5589 510x71",
+   "gap": 8
+  },
+  "decisions": [
+   "The body component owns inner content only; the established fixed-width Sidesheet owns the canonical 16px inset.",
+   "The exact published medium contained-primary Button pattern from Problems is reused with PlusOutlined instead of redrawing the 185x42 legacy action.",
+   "Active and Discontinued are instances of approved Medication summary row 219:2068; the approved row was not edited.",
+   "The 8px gap between Button, Active row, and Discontinued row is bound to space/8.",
+   "No parent-level duplicate API was invented; all three meaningful nested instances are exposed."
+  ],
+  "verification": {
+   "identity": "PASS Cover 0:1 / Templates 3:2 / Screens 27:2 / Archive 126:2",
+   "instancePaints": "PASS master vs preview instance: 20/20 paint signatures exact; 0 unbound",
+   "references": "PASS master 19 / preview 19; nested Active 7 / Discontinued 7; approved row 7 unchanged",
+   "font": "PASS all body text Akkurat LL; 0 offenders",
+   "rule2": "Cover 1 pre-existing unbound; Templates 0; Screens 0; Archive 0; section chrome excluded",
+   "rule8": "0 non-exempt fractional width/height hits; VECTOR/GROUP exempt counts 0 / 335 / 146 / 69"
+  },
+  "rules": {
+   "1": "PASS. Master vs placed instance 20/20 visible solid paints exact; all bound.",
+   "2": "PASS with known cover exception. Cover 1 pre-existing; Templates 0; Screens 0; Archive 0; section chrome excluded.",
+   "3": "PASS. Body master and preview 19 refs; nested rows 7 each; approved row 7 unchanged.",
+   "4": "skipInvisibleInstanceChildren=false on every reference and global audit.",
+   "5": "No new paint-level opacity authored.",
+   "6": "Names, dependencies, pages, and source measures enumerated from the files.",
+   "7": "Every Figma call passed explicit file keys; identity verified before writes.",
+   "8": "0 non-exempt hits; exempt 0 / 335 / 146 / 69.",
+   "9": "No bound paint alpha changed.",
+   "10": "No component or variant clone."
+  },
+  "recovery": "Two atomic Figma rejections changed nothing: guarded remote-main parent read; append-before-expose ordering. One false reference hold was resolved by the required hidden-child traversal. The local gate key was corrected before the schema start record was written.",
+  "screenshots": [
+   "figma-export/npve-medication-list-body-2026-09-04/rebuilt-body-236-1758.png",
+   "figma-export/npve-medication-list-body-2026-09-04/rebuilt-instance-238-1809.png",
+   "figma-export/npve-medication-list-body-2026-09-04/rebuilt-preview-238-1806.png",
+   "figma-export/npve-medication-list-body-2026-09-04/reference-vs-rebuilt.png",
+   "figma-export/npve-medication-list-body-2026-09-04/source-body-545-5572.png"
+  ],
+  "flagsAdded": [],
+  "flagsBefore": 221,
+  "flagsAfter": 221
+ },
+ "npveRebuild_medicationSurfaceCorrection_2026-09-04": {
+  "_status": "DONE. Medication summary row 219:2068 rebound to color/background/paper; all six existing instances inherited white; geometry, API, references, and unrelated content remained unchanged.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Clin_MedList rows 545:5573 and 545:5589",
+  "report": "figma-export/npve-medication-surface-correction-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationListBody_2026-09-04 recorded DONE — passed",
+  "scope": "Change only Medication summary row 219:2068 from color/grey/300 to color/background/paper so all existing instances inherit the white source surface. Preserve geometry, component API, nested instances, and all unrelated nodes.",
+  "before": "color/grey/300 key 4dbef7c8fc453422675312ab6708eeda7e45476b",
+  "after": "color/background/paper key f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+  "expectedInstances": [
+   "224:1733",
+   "224:1754",
+   "238:1760",
+   "238:1778",
+   "I238:1809;238:1760",
+   "I238:1809;238:1778"
+  ],
+  "stopCondition": "Stop on file-identity mismatch, missing master, unexpected instance count, dimension or component-property change, dropped references, or unrelated diff.",
+  "screenshotsPlanned": [
+   "source MainWrap 545:5572",
+   "corrected row states 224:1730",
+   "corrected body preview 238:1806",
+   "reference-vs-rebuilt comparison"
+  ],
+  "mutation": {
+   "master": "219:2068 Medication summary row",
+   "property": "fills",
+   "before": "color/grey/300 key 4dbef7c8fc453422675312ab6708eeda7e45476b",
+   "after": "color/background/paper key f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0"
+  },
+  "verification": {
+   "propagation": "PASS master plus six existing instances use paper at RGB 1/1/1",
+   "geometry": "PASS all row nodes remain 518x76; body and body preview remain 518x206",
+   "api": "PASS Status, Name, Dose, and Show divider definitions unchanged",
+   "references": "PASS each row retains 7 references; body master and preview retain 19",
+   "font": "PASS Akkurat LL only",
+   "rule2": "Templates unbound non-instance paints are the six known #E4E4E4 section chrome nodes only",
+   "rule8": "PASS zero non-exempt fractional authored dimensions on Templates"
+  },
+  "decisions": [
+   "User visual review overrides the earlier grey-row interpretation: medication rows are paper-white.",
+   "The correction is applied at the row master so every current and future instance inherits the same token.",
+   "No source, published library object, spacing, icon, or component property was changed."
+  ],
+  "screenshots": [
+   "figma-export/npve-medication-surface-correction-2026-09-04/corrected-body-instance-238-1809.png",
+   "figma-export/npve-medication-surface-correction-2026-09-04/corrected-body-preview-238-1806.png",
+   "figma-export/npve-medication-surface-correction-2026-09-04/corrected-row-states-224-1730.png",
+   "figma-export/npve-medication-surface-correction-2026-09-04/reference-vs-rebuilt.png",
+   "figma-export/npve-medication-surface-correction-2026-09-04/source-body-545-5572.png"
+  ],
+  "flagsAdded": [],
+  "flagsBefore": 221,
+  "flagsAfter": 221
+ },
+ "npveRebuild_medicationListSidesheet_2026-09-04": {
+  "_status": "DONE. Canonical 550x600 Medication List Sidesheet and comparison screen created; full-width footer action added through a backward-compatible shell API; existing Problems Sidesheets validated unchanged.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Page=Clin_MedList 545:5557",
+  "report": "figma-export/npve-medication-list-sidesheet-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationSurfaceCorrection_2026-09-04 recorded DONE — passed",
+  "scope": "Compose a canonical 550x600 Medication List Sidesheet from the existing Sidesheet master and Medication list body; add one narrow full-width footer-action wrapper; curate the two existing swap APIs; create standalone and comparison screens. Preserve existing Problems instances and all source/library content.",
+  "sourceGeometry": "545:5557 is 550x380 with Header 64, MainWrap 240, Footer 76",
+  "targetGeometry": "Canonical Sidesheet 6:65 remains 550x600 with Header 56 and Footer 56; body inset remains 16px",
+  "dependencies": [
+   "Sidesheet 6:65",
+   "Medication list body 236:1758",
+   "published Button variant=contained, color=primary, size=medium, State=Default 155:1192",
+   "Rebuild comparison 35:332",
+   "Change log/Row 18:103",
+   "published variables and Divider"
+  ],
+  "plannedApiChanges": [
+   "Body content#6:5 now offers Medication list body 236:1758.",
+   "Show primary action#252:0 defaults true.",
+   "Show full-width action#252:1 defaults false.",
+   "Full-width action#252:2 defaults to and curates Medication list footer action 248:1827.",
+   "Ordinary Primary and Tertiary action preferred lists remain free of the full-width wrapper; all prior defaults are unchanged."
+  ],
+  "plannedScreens": [
+   "04 · Medication list with one live Sidesheet instance",
+   "05 · Medication list comparisons with one live Rebuild comparison instance"
+  ],
+  "stopCondition": "Stop on identity mismatch, duplicate names, unexpected existing-screen mutation, dropped references, non-canonical shell geometry, unresolved library dependency, or unrelated diff.",
+  "created": {
+   "footerActionComponent": "248:1827 Medication list footer action 534x38; published Button 248:1828 fills 518x38 inside bound 8px wrapper padding",
+   "sidesheetApiNode": "252:2211 Full-width action nested instance in Sidesheet 6:65",
+   "standaloneScreen": "250:3518 04 · Medication list; 250:3519 Sidesheet — Medication list",
+   "comparisonReference": "253:1838 with source image 253:1839",
+   "comparisonRebuild": "253:1840 with live Sidesheet 253:1841",
+   "comparisonChangeLog": "254:1895 with six Change log/Row instances",
+   "comparisonScreen": "254:3706 05 · Medication list comparisons; 254:3707 Rebuild comparison — Medication list"
+  },
+  "geometry": {
+   "source": "550x380; Header 64 / MainWrap 240 / Footer 76",
+   "target": "550x600 canonical Sidesheet; Header 56 / Body 487 / Footer 56",
+   "body": "Medication list body 518x206 fills the existing 518px content slot at a 16px inset",
+   "footer": "Full-width action 534x38 at x8 in Actions; nested Button 518x38 at x8, for a total 16px sheet inset",
+   "comparison": "1708x1290 inside a 1868x1536 section"
+  },
+  "decisions": [
+   "Canonical target size wins over the shorter legacy 550x380 source because Sidesheets must remain fixed at 550x600.",
+   "The legacy 64px header and 76px footer map to the established 56px / 56px shell.",
+   "The full-width action is a dedicated optional Sidesheet slot because Figma preserves the geometry of ordinary instance-swap slots.",
+   "New footer properties are backward-compatible: primary visible by default, full-width hidden by default.",
+   "Medication rows remain bound to background/paper following user visual review."
+  ],
+  "verification": {
+   "medicationSheet": "PASS 250:3519 is 550x600 and instances Sidesheet 6:65; body main is 236:1758; full-width action is visible at 534x38; ordinary primary is hidden",
+   "comparison": "PASS 254:3707 is a live 35:332 instance with reference 253:1838, rebuild 253:1840, and change log 254:1895",
+   "references": "PASS row master 7; body master 19; Medication Sidesheet 53; comparison 77",
+   "backwardCompatibility": "PASS Problems Closed 156:2428 and Open 156:2707 remain 550x600 with original body swaps, primary visible, full-width hidden",
+   "typography": "PASS Akkurat LL across new screen and comparison content",
+   "bindings": "PASS zero unbound non-instance solid paints on changed Templates and Screens content; section chrome intentionally #E4E4E4",
+   "rule8": "PASS zero non-exempt fractional authored dimensions on Templates and Screens"
+  },
+  "recovery": "Two atomic Figma rejections changed nothing: nested instance-swap geometry could not be resized inside a Sidesheet instance, which led to the dedicated full-width slot; one immediate post-set descendant selector ran before the nested tree resolved, so property application and validation were split into separate calls.",
+  "screenshots": [
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/comparison-screen-254-3707.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/draft-sidesheet-250-3519.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/medication-list-section-250-3518.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/rebuilt-sidesheet-250-3519.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/reference-vs-rebuilt.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/source-sidesheet-545-5557.png"
+  ],
+  "flagsAdded": [],
+  "flagsBefore": 221,
+  "flagsAfter": 221,
+  "supersededGeometryBy": "npveRebuild_medicationListHeightCorrection_2026-09-04: the 550x600 Medication List presentation height was incorrect; the shared master stays 550x600, while the Medication List instance and rebuild helper are content-driven at 550x351.",
+  "footerPaddingAnnotation_2026_09_04": "Superseded in part by npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04: canonical Footer changed 56px → 71px. Medication content-driven placements therefore changed 550x351 → 550x366 while Body y57 h238 and Footer start y295 remained unchanged.",
+  "headerPaddingAnnotation_2026_09_04": "Superseded for total height by npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04: content-driven Medication placements are now 550×382 so the approved Body remains 238px under the new 72px Header; Footer is y311 h71."
+ },
+ "npveRebuild_medicationListHeightCorrection_2026-09-04": {
+  "_status": "DONE. Medication List footer now follows the active body at y295; the corrected instance is 550x351 and the comparison has been updated.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Page=Clin_MedList 545:5557",
+  "report": "figma-export/npve-medication-list-height-correction-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationListSidesheet_2026-09-04 recorded DONE — passed",
+  "scope": "Correct only the Medication List standalone screen, its rebuild comparison helper, its reference helper, and its plain-language change log. Do not change the shared Sidesheet master or existing Problems screens.",
+  "userDecision": "The footer encloses the active content; it is not pinned a fixed distance below its nearest content.",
+  "evidenceBefore": {
+   "medicationListBody": "236:1758 is 518x206.",
+   "sidesheetInstance": "250:3519 is 550x600; Body 487; swapped Body content is incorrectly stretched to 385; Footer begins at y544.",
+   "rebuildHelper": "253:1840 and nested Sidesheet 253:1841 are both 550x600.",
+   "sourceHelper": "253:1838 is 550x600 although its source export is 550x380."
+  },
+  "intendedGeometry": "Header 56 + 1px divider + body padding 16 + 206px active content + body padding 16 + footer 56 = 351px total.",
+  "stopCondition": "Stop on inability to restore the swapped body to its intrinsic 206px height, any shared-master mutation, any existing Problems-screen mutation, or unrelated diff.",
+  "flagsAdded": [
+   "npveMedicationList_footerFixedGap"
+  ],
+  "changed": {
+   "standalone": "250:3519 resized from 550x600 to 550x351; Body is 238px and Footer is 56px at y295.",
+   "referenceHelper": "253:1838 resized from 550x600 to the source export height 550x380 and its artificial white extension was removed.",
+   "rebuildHelper": "253:1840 and nested Sidesheet 253:1841 resized from 550x600 to 550x351; artificial white extension removed from the helper.",
+   "changeLog": "Shell and Footer rows now describe content-driven height and the footer following active content."
+  },
+  "verification": {
+   "pixels": "PASS — comparison-after.png visually confirms the footer immediately follows the medication rows with canonical 16px body padding.",
+   "geometry": "PASS — standalone 250:3519 is 550x351; Body y57 h238; Footer y295 h56.",
+   "identity": "PASS — standalone and comparison content remain live instances of Sidesheet 6:65; Medication list body remains 236:1758.",
+   "sharedMaster": "PASS — Sidesheet 6:65 remains unchanged at 550x600.",
+   "backwardCompatibility": "PASS — Problems Closed 156:2428 and Open 156:2707 remain unchanged at 550x600 with Footer y544 h56.",
+   "integerGeometry": "PASS — all changed dimensions are whole pixels."
+  },
+  "screenshots": [
+   "figma-export/npve-medication-list-height-correction-2026-09-04/comparison-before.png",
+   "figma-export/npve-medication-list-height-correction-2026-09-04/standalone-after.png",
+   "figma-export/npve-medication-list-height-correction-2026-09-04/comparison-after.png"
+  ],
+  "flagsAfter": 222,
+  "footerPaddingAnnotation_2026_09_04": "Superseded in part by npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04: canonical Footer changed 56px → 71px. Medication content-driven placements therefore changed 550x351 → 550x366 while Body y57 h238 and Footer start y295 remained unchanged.",
+  "headerPaddingAnnotation_2026_09_04": "Superseded for total height by npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04: content-driven Medication placements are now 550×382 so the approved Body remains 238px under the new 72px Header; Footer is y311 h71."
+ },
+ "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04": {
+  "_status": "DONE. Shared Sidesheet outline is four-sided and token-bound; Footer Actions use canonical 16px vertical padding. All 21 live instances were validated.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only; existing imported variables only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; 545:5239 and 545:5557 used as outline evidence",
+  "report": "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationListHeightCorrection_2026-09-04 recorded DONE — passed",
+  "scope": "Edit shared Sidesheet 6:65 only for its four-sided outline and Footer Actions vertical padding. Preserve all component properties, width, root fixed-height behavior, body padding, horizontal footer padding, source/library content, and unrelated nodes. Increase the tight Medication List placements by 15px only to preserve their existing 238px body region after the footer grows.",
+  "evidenceBefore": {
+   "outline": "Sidesheet 6:65 and all 21 live instances render top/right/bottom/left weights 0/0/0/1, despite both source sidesheets using 1/1/1/1.",
+   "footer": "Footer Actions 6:84 is fixed 550x55 with 8px vertical padding; a 38px primary button is centered at y8.5.",
+   "code": "Drawer.example.tsx:124-139 uses padding={2}; default MUI spacing resolves that to 16px.",
+   "variables": "space/16 key 6016592c19254dd61e9de9e006459546eaece0bb; border/hairline key e437afaf91519b9a70c82751deb7099cf1576369; color/divider key ba1923abf373a9062e989ce3ac2068f54712d80b."
+  },
+  "intendedGeometry": {
+   "outline": "1px INSIDE on all four edges, all weights bound to border/hairline; color remains bound to color/divider.",
+   "actions": "550x70 with 16px top/bottom and existing 8px left/right; a 38px action sits at y16.",
+   "footer": "71px total = 1px divider + 70px Actions.",
+   "master": "550x600 remains fixed; Body changes from 487 to 472 and Footer moves from y544 to y529.",
+   "medicationCompatibility": "Standalone 250:3519 and rebuild content 253:1841 change 550x351 to 550x366 so Body remains 238 and Footer remains at y295."
+  },
+  "affectedPopulation": {
+   "total": 21,
+   "Templates": 10,
+   "Screens": 8,
+   "Archive": 3,
+   "propagation": "Every live instance inherits the master outline and footer-action padding; no instance was detached or replaced."
+  },
+  "stopCondition": "Stop on component identity mismatch, lost component-property definitions or references, non-integer geometry, unbound outline/padding values, body-region shrink on Medication, unrelated diff, or a render that does not show all four edges and 16px footer padding.",
+  "flagsAdded": [
+   "npveSidesheet_outlineOnlyLeft",
+   "npveSidesheet_footerActionHalfPixel"
+  ],
+  "changed": {
+   "masterOutline": "6:65 top/right/bottom/left changed 0/0/0/1 → 1/1/1/1. All four weights are bound to border/hairline; INSIDE alignment and color/divider paint binding are preserved.",
+   "footerActions": "6:84 changed from fixed 550x55 with 8px vertical padding to HUG 550x70 with 16px top/bottom and 8px left/right. Top and bottom padding are bound to space/16.",
+   "footer": "6:82 now resolves to 550x71: 1px Divider + 70px Actions.",
+   "fixedMaster": "6:65 remains 550x600. Body is y57 h472 and Footer is y529 h71.",
+   "medicationCompatibility": "250:3519, 253:1840, and 253:1841 changed 550x351 → 550x366 so the existing Body y57 h238 and Footer start y295 remain unchanged.",
+   "medicationChangeLog": "I254:1900;18:106 and I254:1924;18:106 now say 550x366 content-driven rebuild; corresponding Footer rows now say 71px footer with 16px vertical padding."
+  },
+  "verification": {
+   "pageIdentity": "PASS — Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "componentIdentity": "PASS — Sidesheet master remains 6:65; all 21 placements remain instances of 6:65.",
+   "api": "PASS — all 12 component-property keys and defaults are unchanged; master reference count remains 70.",
+   "outline": "PASS — master and all 21 instances read 1/1/1/1, INSIDE, with four border/hairline weight bindings and color/divider paint binding.",
+   "footer": "PASS — Actions is 70px high with 16px top/bottom and 8px left/right; Footer is 71px including Divider.",
+   "fixedSheets": "PASS — fixed Sidesheets remain 550x600; Body y57 h472; Footer y529 h71.",
+   "medication": "PASS — standalone and comparison rebuild are 550x366; Body y57 h238; Footer y295 h71.",
+   "problems": "PASS — 156:2428 and 156:2707 remain 550x600 and inherit the corrected shell.",
+   "paints": "PASS — full-page audits found only intentional unbound section/cover chrome; no changed component content gained an unbound visible solid paint.",
+   "integerGeometry": "PASS — no non-exempt fractional authored container dimension remains. Intrinsic centered text at x=183.5 is exempt.",
+   "visual": "PASS — after renders show all four sheet edges and canonical footer breathing room on the master, Problems screens, Medication standalone, and Medication comparison."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — master and live instances agree; changed outline paint remains color/divider.",
+   "2_unboundPaintAudit": "PASS — Cover, Templates, Screens, and Archive audited. Only intentional section/cover chrome is unbound.",
+   "3_referenceCounts": "PASS — master reference count remains 70; instances remain live.",
+   "4_skipInvisibleFalse": "PASS — used for structural and paint audits.",
+   "5_opacityLast": "PASS — no paint opacity was changed.",
+   "6_enumerateDontRecall": "PASS — all four pages and 21 instances were enumerated.",
+   "7_fileIdentityFirst": "PASS — target key and exact page identities verified before mutation.",
+   "8_roundWithRecord": "PASS — changed authored geometry is whole-pixel; intrinsic centered text is exempt.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was touched.",
+   "10_cloneDropsPropertyRefs": "N/A — no component or instance clone was made."
+  },
+  "screenshots": [
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/before-master-6-65.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/before-problems-section-156-2427.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/before-medication-250-3519.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/after-master-6-65.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/after-problems-section-156-2427.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/after-medication-250-3519.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/after-medication-comparison-254-3707.png"
+  ],
+  "flagsBefore": 222,
+  "flagsAfter": 224,
+  "nextBatch": "Not started — content-height architecture and migration remains a separate, higher-risk global batch.",
+  "radiusPlacementAnnotation_2026_09_04": "Sidesheet 6:65 is now Placement=Floating inside component set 279:2446. Its four-sided outline, 71px footer, and 16px vertical footer-action padding are unchanged; Docked right and Docked left variants add only corner treatment.",
+  "headerPaddingAnnotation_2026_09_04": "Superseded for Header geometry by npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04: Header is now 72px with 16px top/bottom padding. Fixed Footer remains y529 h71; flexible Body is now y73 h456."
+ },
+ "npveRebuild_sidesheetRadiusPlacement_2026-09-04": {
+  "_status": "DONE. NPVE-local radius/md=8 is applied to a three-value Sidesheet Placement axis; all existing instances and component-property references are preserved.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only; library page inventory does not match the canonical schema and is not touched in this batch",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Sidesheetv3 129:6647 and all 54 variants used as radius evidence",
+  "report": "figma-export/npve-sidesheet-radius-placement-2026-09-04/report.md",
+  "recordGate": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04 recorded DONE — passed",
+  "userDecision": "Create the missing token locally in NPVE Rebuild rather than changing the currently out-of-sync design-system library.",
+  "scope": "Create local NPVE/Dimension radius/md=8 with CORNER_RADIUS scope; convert Sidesheet 6:65 into a three-value Figma-only Placement axis while preserving 6:65 as Floating; use 8/8/8/8 floating, 8/0/0/8 docked right, and 0/8/8/0 docked left. Preserve all existing properties/defaults, live links, geometry, content, outline, footer, source/library files, Cards, Paper, Dialog, and generic Drawer.",
+  "evidenceBefore": {
+   "source": "All 54 Sidesheetv3 variants use 8px on all four corners; Problems 545:5239 and Medication 545:5557 match.",
+   "target": "Sidesheet 6:65 and its authored instances use 0px on all four corners.",
+   "library": "Published radius variables are radius/sm=4, radius/chipSmall=12, radius/chip=16, and radius/pill=24; radius/md=8 is absent.",
+   "code": "MUI Drawer remains square and no production radius/md token exists. The new token is an NPVE-only design decision, not a code claim.",
+   "baseline": "6:65 is a non-variant component with 12 component-property definitions, 58 reference nodes / 70 reference entries, and 14 authored instances. Prior full-page enumeration found 21 rendered occurrences including nested comparison content."
+  },
+  "intendedApi": {
+   "set": "Sidesheet component set with Placement=Floating, Docked right, Docked left.",
+   "default": "Existing 6:65 becomes Placement=Floating, preserving every existing instance link.",
+   "existingProperties": "All 12 existing properties and defaults remain unchanged on the set.",
+   "token": "NPVE/Dimension radius/md = 8, Default mode, CORNER_RADIUS scope, no WEB syntax because no code token exists."
+  },
+  "stopCondition": "Stop on file identity mismatch, duplicate local token, lost or detached instance, changed existing property/default, fewer than 70 reference entries per variant, unbound nonzero corner, fractional authored geometry, unrelated node change, or a render that does not show the correct floating/docked corners.",
+  "flagsAdded": [
+   "npveSidesheet_radiusMdMissingFromLibrary",
+   "npveSidesheet_squareAgainstSource"
+  ],
+  "changed": {
+   "token": "Created NPVE/Dimension radius/md=8 in Default mode with CORNER_RADIUS scope. The variable key is 90d6487ce9be2aa9a84f2adb82c1d5bd90f3ae24; codeSyntax remains empty because no production token exists.",
+   "componentSet": "Converted Sidesheet 6:65 into Placement=Floating inside Sidesheet component set 279:2446. Added Docked right 279:2416 and Docked left 279:2431.",
+   "radii": "Floating 8/8/8/8; Docked right 8/0/0/8; Docked left 0/8/8/0, ordered top-left/top-right/bottom-right/bottom-left.",
+   "validationInstances": "Added Sidesheet — Docked right 279:2613 and Sidesheet — Docked left 279:2711.",
+   "documentationLayout": "Expanded section 126:2020 from 2730×1500 to 3230×1500 to fit the component set and two docked examples with 80px gaps. Existing examples remain in place."
+  },
+  "preserved": {
+   "existingDefault": "6:65 remains the default Floating component, so existing instances do not detach or retarget.",
+   "componentApi": "All 12 pre-existing properties and defaults are unchanged; Placement is the only new property.",
+   "geometry": "Every variant remains 550×600. Existing content, header, body, footer, outline, and padding are unchanged.",
+   "population": "14 actual live instances remain on Floating. A fifteenth preflight result was a virtual rendered occurrence inside another comparison instance, not a separate authored placement.",
+   "files": "Source and shared-library files remained read-only. Cards, Paper, Dialog, and generic Drawer were not changed."
+  },
+  "verification": {
+   "pageIdentity": "PASS — Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "structure": "PASS — set 279:2446 is 1810×600 at 80,120 with three 550×600 variants spaced 80px apart; docked examples are at 1970,120 and 2600,120.",
+   "token": "PASS — local radius/md exists in NPVE/Dimension, resolves to 8, is scoped to CORNER_RADIUS, and has no code syntax.",
+   "radiusBindings": "PASS — every nonzero authored corner is bound to radius/md; dock-edge corners are explicitly 0.",
+   "api": "PASS — 12 existing properties/defaults are preserved and Placement defaults to Floating.",
+   "cloneSafety": "PASS — skipInvisibleInstanceChildren=false yields 58 reference nodes and 70 reference entries on each variant: 20 visible, 23 mainComponent, and 27 characters.",
+   "instances": "PASS — existing instances remain attached to 6:65 and render their Body/Footer visibility overrides; each docked variant has one authored validation instance.",
+   "geometry": "PASS — all new or changed authored geometry is whole-pixel.",
+   "paints": "PASS — no paint or alpha changed; inherited fill, outline, and existing variable bindings remain intact.",
+   "visual": "PASS — the component-set render and a source-versus-rebuild Problems comparison were inspected. Floating corners are visibly rounded and docked edge corners are square."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — no paint changed; master and authored instances retain their existing bound fills and strokes.",
+   "2_unboundPaintAudit": "PASS by invariance — no paint, opacity, or paint binding was added or edited; the immediately preceding global batch completed the full-page audit.",
+   "3_referenceCounts": "PASS — all three variants have 58 reference nodes / 70 reference entries with hidden instance children included.",
+   "4_skipInvisibleFalse": "PASS — final deep reference audit set figma.skipInvisibleInstanceChildren=false.",
+   "5_opacityLast": "PASS — opacity was not touched.",
+   "6_enumerateDontRecall": "PASS — pages, variants, properties, variables, and instances were enumerated from the file.",
+   "7_fileIdentityFirst": "PASS — target key and exact page identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — component set, variants, examples, and section use whole-pixel authored geometry.",
+   "9_boundPaintAlpha": "PASS — no paint alpha was touched.",
+   "10_cloneDropsPropertyRefs": "PASS — property references were reapplied after cloning and verified at 70 entries per variant plus rendered child-state reads."
+  },
+  "screenshots": [
+   "figma-export/npve-sidesheet-radius-placement-2026-09-04/before-master-6-65.png",
+   "figma-export/npve-sidesheet-radius-placement-2026-09-04/after-sidesheet-placement-variants.png",
+   "figma-export/npve-sidesheet-radius-placement-2026-09-04/reference-problems-sidesheet.png",
+   "figma-export/npve-sidesheet-radius-placement-2026-09-04/rebuild-problems-sidesheet.png",
+   "figma-export/npve-sidesheet-radius-placement-2026-09-04/comparison-reference-rebuild.png"
+  ],
+  "recoveryNotes": [
+   "A cross-session runtime variable ID lookup rejected atomically; the successful script resolved the variable by stable key/name.",
+   "The authored-instance preflight changed from 14 to 15 because getInstancesAsync included one virtual rendered instance inside a comparison component. The batch preserves all actual placements and records 14 actual Floating instances after conversion.",
+   "An assertion initially counted 8 nodes carrying 12 Sidesheet-owned links; it was corrected to protect the 12 links.",
+   "A default traversal reported only 12 references. The repository-standard deep traversal with skipInvisibleInstanceChildren=false reproduced 58 nodes / 70 entries on every variant."
+  ],
+  "flagsBefore": 224,
+  "flagsAfter": 226,
+  "nextBatch": "Not started — radius/md remains local until the shared design-system library registry is reconciled.",
+  "headerPaddingAnnotation_2026_09_04": "All three Placement variants now use a 72px Header with token-bound 16px vertical padding. Radius and Placement behavior are unchanged."
+ },
+ "npveRebuild_sidesheetHeaderInsetAudit_2026-09-04": {
+  "_status": "READ-ONLY AUDIT COMPLETE. Measured 12px rebuild title clearance versus 16px source clearance; global correction is proposed but not applied.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 read only in this batch",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only; Drawer Header 749:231 measured",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Problems Header 545:5503 measured",
+  "_codeSource": "C:/Code/web-app-v2/packages/design-system/src/stories/Drawer/Drawer.example.tsx lines 263-276",
+  "report": "figma-export/npve-sidesheet-header-inset-audit-2026-09-04/report.md",
+  "recordGate": "npveRebuild_sidesheetRadiusPlacement_2026-09-04 recorded DONE — passed",
+  "userObservation": "Problems appears to have 12px rather than the intended 16px space above and below the title.",
+  "stopCondition": "Stop before mutation because the source 64px/16px title inset conflicts with the code/library 56px/12px title inset, and because setting paddingTop/paddingBottom to 16 would create a 72px header with the existing 40px Icon buttons.",
+  "measurements": {
+   "target": "Header 6:66 is 550×56, HORIZONTAL/HUG, padding 8/8/8/16, title 6:73 is 32px high at y=12, giving 12px top and bottom; Back and Close are 40×40 at y=8.",
+   "renderedProblems": "156:2428 and 156:2707 reproduce Header 56 and Problems title y=12 / h32.",
+   "sourceProblems": "Header 545:5503 is 550×64, padding 16 on all sides, title 545:5504 is 32px high at y=16, giving 16px top and bottom; close icon is a bare 24×24 glyph at y=20.",
+   "libraryDrawer": "Header 749:231 is 320×56, padding 8/8/8/16; title is 32px high at y=12 and published medium Icon button is 40×40 at y=8.",
+   "codeDrawer": "Drawer.example.tsx uses Box m={1} (8px) and IconButton size=\"small\". It supports the 8px Drawer spacing intent but does not reproduce the source Problems geometry exactly."
+  },
+  "proposedGlobalChange": {
+   "header": "Set every Sidesheet variant Header to fixed 64px with centered cross-axis alignment. Keep horizontal padding 16/8, vertical padding tokens at 8, and the current 40px Back/Close touch targets. Result: title y=16, icon buttons y=12.",
+   "fixedSheets": "Keep root at 550×600. Divider moves y56→64; Body moves y57→65 and shrinks 472→464; Footer remains y529 h71. Footer-hidden Body shrinks 543→535.",
+   "medication": "Grow 250:3519, 253:1840, and 253:1841 from 550×366 to 550×374 so Body remains 238px; Footer moves y295→303. The comparison frame remains governed by its taller change log.",
+   "api": "No component property, variant, text, icon, paint, radius, outline, or footer change.",
+   "rationale": "This reaches the user-observed 16px title clearance without creating a 72px header or reducing the 40px interaction targets."
+  },
+  "affectedPopulation": {
+   "variants": 3,
+   "actualInstances": 16,
+   "Floating": 14,
+   "Docked right": 1,
+   "Docked left": 1
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "N/A — read-only audit; no variant or paint created.",
+   "2_unboundPaintAudit": "N/A — no paint or binding changed.",
+   "3_referenceCounts": "N/A — no clone or component edit; previous batch remains the verified 70-reference baseline.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every audit walk.",
+   "5_opacityLast": "PASS — opacity was not touched.",
+   "6_enumerateDontRecall": "PASS — all three variants and 16 actual instances were enumerated from the current artifact.",
+   "7_fileIdentityFirst": "PASS — target pages and master IDs were verified before inspection.",
+   "8_roundWithRecord": "PASS — no geometry changed; all proposed values are whole-pixel.",
+   "9_boundPaintAlpha": "PASS — no paint alpha was touched.",
+   "10_cloneDropsPropertyRefs": "N/A — no clone was made."
+  },
+  "screenshots": [
+   "figma-export/npve-sidesheet-header-inset-audit-2026-09-04/source-header-545-5503.png",
+   "figma-export/npve-sidesheet-header-inset-audit-2026-09-04/rebuild-problems-156-2428.png",
+   "figma-export/npve-sidesheet-header-inset-audit-2026-09-04/rebuild-header-156-2428.png",
+   "figma-export/npve-sidesheet-header-inset-audit-2026-09-04/reference-vs-rebuild-header.png"
+  ],
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 1,
+   "resolved": 0,
+   "forDecision": 1
+  },
+  "flagsAdded": [
+   "npveSidesheet_headerTitleInsetConflict"
+  ],
+  "flagsBefore": 226,
+  "flagsAfter": 227,
+  "figmaMutations": [],
+  "resolution_2026_09_04": "Approved and applied as a genuine 16px padding treatment. Header resolves to 72px, intentionally taller than both source and library Drawer."
+ },
+ "npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04": {
+  "_status": "DONE. All NPVE Sidesheet Headers use token-bound 16px vertical padding and resolve to 72px; fixed sheets remain 600px and Medication bodies are preserved at 382px total height.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only",
+  "report": "figma-export/npve-sidesheet-header-padding-global-2026-09-04/report.md",
+  "recordGate": "npveRebuild_sidesheetHeaderInsetAudit_2026-09-04 recorded complete — passed",
+  "userDecision": "Use genuine 16px top/bottom Header padding even though the resulting 72px Header is taller than the 64px source; canonical base-8 spacing takes precedence.",
+  "scope": "Bind paddingTop and paddingBottom to published space/16 on all three Sidesheet Headers; preserve the 40px Icon button touch targets, producing a 72px Header and 20px visual title clearance. Keep fixed sheets 550×600 by shrinking their flexible Body 16px. Grow Medication content-driven placements 550×366→550×382 to preserve Body 238px. Update the five affected Change log/Row instances.",
+  "intendedGeometry": {
+   "header": "550×72, padding 16/8/16/16, 40px controls at y16, 32px title at y20",
+   "fixedSheet": "550×600; divider y72 h1; Body y73 h456; Footer y529 h71",
+   "footerHidden": "Body y73 h527",
+   "medication": "550×382; Header72 + Divider1 + Body238 + Footer71; Footer y311"
+  },
+  "preserve": "All component IDs, Placement values, 12 existing properties/defaults, 70 reference entries per variant, radii, four-sided outline, body padding, footer padding, content, icon swaps, text styles, paints, and every live instance link.",
+  "stopCondition": "Stop on file/page/component identity mismatch, missing space/16, any non-16 Header vertical padding, Header other than 72px, changed API/default, fewer than 70 property-reference entries per variant, detached instance, changed paint/alpha, Medication Body other than 238px, fractional authored geometry, or unexpected placed-instance diff.",
+  "flagsAdded": [],
+  "changed": {
+   "headers": "6:66, 279:2417, and 279:2432 changed from 550×56 with 8/8/8/16 padding to 550×72 with 16/8/16/16 padding. Top and bottom bind to published space/16.",
+   "fixedFlow": "Divider y56→72; Body y57→73 and h472→456; Footer remains y529 h71. Footer-hidden Body h543→527.",
+   "medication": "250:3519, 253:1840, and 253:1841 changed 550×366→550×382. Body remains y73 h238; Footer moves y295→311 and remains h71.",
+   "changeLogs": "Rows 160:1852, 160:1929, 254:1900, 254:1906, and 254:1924 now describe the 72px Header, 382px Medication shell, and Footer y311."
+  },
+  "affectedPopulation": {
+   "variants": 3,
+   "actualInstances": 16,
+   "Floating": 14,
+   "Docked right": 1,
+   "Docked left": 1,
+   "propagation": "Every actual instance remains attached to its original Placement variant and inherits the 72px Header."
+  },
+  "preserved": {
+   "api": "All 12 existing component properties/defaults plus the Placement axis are unchanged.",
+   "references": "Each variant remains at 58 reference nodes / 70 reference entries.",
+   "interaction": "Back and Close remain published medium 40×40 Icon button instances; no icon was swapped or redrawn.",
+   "style": "Typography, text position within the 40px content row, paints, opacity, radius, four-sided outline, Body padding, and Footer padding remain token-bound and otherwise unchanged.",
+   "fixedSize": "All fixed Sidesheets remain 550×600; only flexible Body height absorbs the 16px Header increase.",
+   "bodyContent": "Medication active Body remains 238px; no row or action content changed.",
+   "externalFiles": "Source and shared-library files remained read-only."
+  },
+  "verification": {
+   "fileIdentity": "PASS — Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "token": "PASS — paddingTop and paddingBottom on all three Headers resolve to published space/16 key 6016592c19254dd61e9de9e006459546eaece0bb.",
+   "masters": "PASS — every Header is 72px with 16/8/16/16 padding; Title y20 h32; visible Close y16 h40; Divider y72; Body y73 h456; Footer y529 h71.",
+   "visibleBack": "PASS — Show back example 6:144 renders its 40px Back control at y16. Hidden Back master coordinates are ignored because Figma does not reflow invisible auto-layout children.",
+   "api": "PASS — all existing property types/defaults and Placement=Floating default are unchanged.",
+   "references": "PASS — all three variants retain 70 reference entries with skipInvisibleInstanceChildren=false.",
+   "instances": "PASS — 16 actual instances enumerated: 14 Floating, one Docked right, one Docked left; none detached or retargeted.",
+   "medication": "PASS — screen and comparison content are 550×382 with Body y73 h238 and Footer y311 h71.",
+   "changeLogs": "PASS — all five row property values read back with the new geometry.",
+   "paints": "PASS — before/after visible solid-paint signatures match on all variants and the resized Medication screen; no alpha or binding changed.",
+   "integerGeometry": "PASS — no fractional authored x, y, width, or height on the changed masters, instances, or rows.",
+   "visual": "PASS — Problems closed, Problems status menu open, Medication, and source-versus-rebuild header renders were inspected."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — master and live-instance paint signatures remain unchanged; resized Medication screen matches before.",
+   "2_unboundPaintAudit": "PASS by invariance — no paint, opacity, or paint binding was added or edited.",
+   "3_referenceCounts": "PASS — each variant remains 58 reference nodes / 70 reference entries.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every audit walk.",
+   "5_opacityLast": "PASS — opacity was not touched.",
+   "6_enumerateDontRecall": "PASS — pages, variants, 16 actual instances, affected Medication nodes, and Change log rows were enumerated from the file.",
+   "7_fileIdentityFirst": "PASS — target key and exact page identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — all changed authored geometry is whole-pixel.",
+   "9_boundPaintAlpha": "PASS — no paint alpha was touched.",
+   "10_cloneDropsPropertyRefs": "N/A — no component or instance clone was made."
+  },
+  "screenshots": [
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/before-reference-vs-rebuild-header.png",
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/before-problems-156-2428.png",
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/before-medication-250-3519.png",
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/reference-header-545-5503.png",
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/after-header-156-2428.png",
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/reference-vs-rebuild-header-after.png",
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/after-problems-closed-156-2428.png",
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/after-problems-open-156-2707.png",
+   "figma-export/npve-sidesheet-header-padding-global-2026-09-04/after-medication-250-3519.png"
+  ],
+  "recoveryNotes": [
+   "One atomic write rejected because its assertion expected the hidden Back layer to reflow. Figma preserves coordinates for invisible auto-layout children. No change was made by the rejected call; the corrected batch verified the visible Back state on instance 6:144."
+  ],
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 1,
+   "resolved": 1
+  },
+  "flagsBefore": 227,
+  "flagsAfter": 227,
+  "nextBatch": "Not started."
+ },
+ "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04": {
+  "_status": "READ-ONLY AUDIT COMPLETE. Sidesheet shell and body stacks are base-8 compliant; four NPVE-owned row values require a policy decision. No Figma mutation.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 read only in this batch",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw not opened; ownership resolved from published component metadata in the target",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq not opened; prior recorded source measurements used only to explain why the exceptions exist",
+  "report": "figma-export/npve-sidesheet-base8-spacing-audit-2026-09-04/report.md",
+  "recordGate": "npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04 recorded DONE — passed",
+  "auditRule": "Every non-zero authored padding and auto-layout itemSpacing value must be divisible by 8. Strokes, radii, typography metrics, node dimensions, and imported library internals are classified separately.",
+  "stopCondition": "Stop before mutation because the four local exceptions were deliberate source-fidelity decisions and normalizing them changes rendered row heights and caret spacing.",
+  "scope": {
+   "sidesheetComponentSet": "279:2446",
+   "variants": [
+    "6:65",
+    "279:2416",
+    "279:2431"
+   ],
+   "liveInstances": 16,
+   "localDependencyRoots": 10,
+   "renderedLayoutNodesChecked": 788,
+   "localCompliantLayoutNodes": 58
+  },
+  "localFindings": [
+   {
+    "node": "153:1186",
+    "name": "Problem summary row",
+    "property": "paddingTop/paddingBottom",
+    "value": 19,
+    "proposed": 16
+   },
+   {
+    "node": "170:1590",
+    "name": "Problem summary row / Status control",
+    "property": "itemSpacing",
+    "value": 3,
+    "proposed": 8
+   },
+   {
+    "node": "219:2068",
+    "name": "Medication summary row",
+    "property": "paddingTop/paddingBottom",
+    "value": 12,
+    "proposed": 16
+   },
+   {
+    "node": "219:2070",
+    "name": "Medication summary row / Status control",
+    "property": "itemSpacing",
+    "value": 4,
+    "proposed": 8
+   }
+  ],
+  "cleanLocalRegions": [
+   "Sidesheet shell: Header, Body, Footer, and Actions across Floating, Docked right, and Docked left",
+   "Problems picker body and Problem row",
+   "Problems list body containers and status groups",
+   "Medication list body and Medication list footer action"
+  ],
+  "libraryOwnedExceptions": {
+   "handling": "Reported, not treated as NPVE defects. These values live inside published library components and must not be overridden in the Sidesheet consumer.",
+   "families": [
+    "Button: 6px or 7px vertical and 17px horizontal padding",
+    "Text field: 4px gap, 5px label padding, 14px input/helper padding",
+    "Menu/Item: 6px vertical padding",
+    "Checkbox/Form control: 9px control padding",
+    "Tabs/Tab: 12px vertical padding",
+    "Chip: 3px gap and 7px horizontal padding"
+   ]
+  },
+  "recommendation": {
+   "localBatch": "Normalize both local row masters to 16px vertical padding and 8px status-control gaps; let row height hug intrinsic content rather than preserving 88px and 76px targets.",
+   "expectedGeometry": "Problem row 88px -> 82px; Medication row 76px -> 84px; Medication Sidesheet 382px -> 398px if its content-driven footer continues enclosing active content.",
+   "library": "Do not change published Button, Text field, Menu, Checkbox, Tab, or Chip internals from the NPVE file. A strict all-components base-8 rule would require a separate library audit and product decision."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "N/A — read-only geometry audit; no component or paint created.",
+   "2_unboundPaintAudit": "N/A — no paint or binding changed.",
+   "3_referenceCounts": "N/A — no clone or component edit.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every audit walk.",
+   "5_opacityLast": "PASS — opacity was not touched.",
+   "6_enumerateDontRecall": "PASS — 3 variants, 16 live instances, 10 local dependency roots, and 788 rendered layout nodes were enumerated from the current artifact.",
+   "7_fileIdentityFirst": "PASS — target file, Templates page, Sidesheet set, and master IDs were verified before inspection.",
+   "8_roundWithRecord": "PASS — no geometry changed; all observed values were recorded exactly.",
+   "9_boundPaintAlpha": "PASS — no paint alpha was touched.",
+   "10_cloneDropsPropertyRefs": "N/A — no clone was made."
+  },
+  "screenshots": [
+   "figma-export/npve-sidesheet-base8-spacing-audit-2026-09-04/problems-list-closed.png",
+   "figma-export/npve-sidesheet-base8-spacing-audit-2026-09-04/problems-picker-default.png",
+   "figma-export/npve-sidesheet-base8-spacing-audit-2026-09-04/medication-list.png"
+  ],
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 2,
+   "localExceptionNodes": 4,
+   "localExceptionValues": 6
+  },
+  "flagsAdded": [
+   "npveSidesheet_problemSummaryRowNonBase8Spacing",
+   "npveSidesheet_medicationSummaryRowNonBase8Spacing"
+  ],
+  "flagsBefore": 227,
+  "flagsAfter": 229,
+  "figmaMutations": []
+ },
+ "npveRebuild_problemsLowOversightBatch_2026-09-04": {
+  "_status": "DONE. Problems Empty and Browse/Search Sidesheets are built, compared, and verified; all new screens remain live Sidesheet instances.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Page54 4704:17095 and Clin_Problems2-Edit 129:10016",
+  "report": "figma-export/npve-problems-low-oversight-batch-2026-09-04/report.md",
+  "recordGate": "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04 recorded READ-ONLY AUDIT COMPLETE — passed",
+  "approvedScope": "Build the next low-oversight Problems batch: empty state and browse/search. Use the locked Sidesheet shell, existing Problems list body, Problems picker body, Problem row, Rebuild comparison, and Change log patterns.",
+  "sourceFacts": {
+   "empty": "4704:17095, 550x517. Problems; Create New Problem; Status; checked No known problems; no visible rows; Add Active Problems to Note plus disabled Save.",
+   "browse": "129:10016, 550x600 at root opacity 0.4. Add Problem to Chart; empty search placeholder; All active; Common Problems; four existing problem rows; Save & Add to Note plus Save."
+  },
+  "plannedChanges": [
+   "Add State=Empty to Problems list body 156:2426 without changing Closed/Open or the default.",
+   "Create a standalone Problems browse body composed from a live Active tab=All picker instance with only search-value and section-title overrides.",
+   "Add the browse body to the existing Sidesheet Body content preferred values without changing its default.",
+   "Create standalone screens and reference/rebuild/change-log helpers using the established comparison system.",
+   "Create fresh 2x source exports and final reference/rebuild screenshots for the report."
+  ],
+  "preserve": "Source and shared-library files, Sidesheet shell geometry, published defaults, existing screens, existing picker variants, row spacing decisions, tokens, icon swaps, and component links.",
+  "stopCondition": "Stop on file/page/component identity mismatch, duplicate semantic component or screen names, a required shell/global change, a new visual decision, changed existing default, dropped property references, detached content, paint/alpha drift, or unexpected existing-instance diff.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — live standalone and comparison Sidesheet renders match their component compositions; no unexpected local paint override.",
+   "2_unboundPaintAudit": "PASS with documented canvas exception — body components add no solid paints; copied section backdrop/outline remains intentionally unbound.",
+   "3_referenceCounts": "PASS — Empty retains 35 reference nodes / 37 entries; Browse remains attached to Active tab=All; every comparison link resolves.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every inventory and audit traversal.",
+   "5_opacityLast": "PASS — Browse opacity was applied after composition and verified at 0.4000000059604645 on only the two screen-level instances.",
+   "6_enumerateDontRecall": "PASS — source frames, live components, checkbox variant, sections, instances, properties, and screenshots were enumerated from current files.",
+   "7_fileIdentityFirst": "PASS — source and target file/page/node identities checked before every mutation.",
+   "8_roundWithRecord": "PASS — all authored geometry is whole-pixel and recorded; inherited glyph geometry remains untouched.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was edited.",
+   "10_cloneDropsPropertyRefs": "PASS — Empty clone retained 37 reference entries; wrapper/helper clones have no exposed property references and preserve their live nested instances."
+  },
+  "screenshots": [
+   "figma-export/npve-problems-low-oversight-batch-2026-09-04/source-empty-4704-17095-2x.png",
+   "figma-export/npve-problems-low-oversight-batch-2026-09-04/source-browse-129-10016-2x.png",
+   "figma-export/npve-problems-low-oversight-batch-2026-09-04/component-empty-304-2883.png",
+   "figma-export/npve-problems-low-oversight-batch-2026-09-04/component-browse-304-2910.png",
+   "figma-export/npve-problems-low-oversight-batch-2026-09-04/standalone-empty-309-4531.png",
+   "figma-export/npve-problems-low-oversight-batch-2026-09-04/standalone-browse-309-4772.png",
+   "figma-export/npve-problems-low-oversight-batch-2026-09-04/comparison-empty-309-5711.png",
+   "figma-export/npve-problems-low-oversight-batch-2026-09-04/comparison-browse-309-6116.png"
+  ],
+  "figmaMutations": [
+   "Problems list body 156:2426: added State=Empty 304:2883; default remains Closed.",
+   "Problems browse body 304:2910: standalone wrapper around live Active tab=All 94:639 with empty-search and Common Problems overrides.",
+   "Sidesheet 279:2446: appended Problems browse body to Body content preferred values; default remains 26:221.",
+   "Rebuild comparison 35:332: appended two reference, rebuild, and change-log helpers to preferred values; defaults unchanged.",
+   "Templates: added section 309:4528 and six comparison helper components.",
+   "Screens: added sections 309:4529 and 309:4530, standalone Sidesheets 309:4531 / 309:4772, and comparisons 309:5711 / 309:6116.",
+   "Uploaded fresh 2x source exports to reference rectangles 309:5000 and 309:5357.",
+   "Removed the inherited Cancel action from only the new Browse standalone and comparison Sidesheet instances."
+  ],
+  "createdNodes": {
+   "components": {
+    "emptyVariant": "304:2883",
+    "browseBody": "304:2910",
+    "referenceEmpty": "309:4999",
+    "rebuildEmpty": "309:5001",
+    "changeLogEmpty": "309:5243",
+    "referenceBrowse": "309:5356",
+    "rebuildBrowse": "309:5358",
+    "changeLogBrowse": "309:5586"
+   },
+   "screens": {
+    "empty": "309:4531",
+    "browse": "309:4772",
+    "comparisonEmpty": "309:5711",
+    "comparisonBrowse": "309:6116"
+   },
+   "sections": {
+    "helpers": "309:4528",
+    "screens": "309:4529",
+    "comparisons": "309:4530"
+   }
+  },
+  "verification": {
+   "fileIdentity": "PASS — target pages Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2; source nodes 4704:17095 and 129:10016 read live.",
+   "components": "PASS — Empty is inside Problems list body with 35 reference nodes / 37 entries; Browse contains a live Active tab=All instance.",
+   "defaults": "PASS — Problems list default Closed, Sidesheet Body content default 26:221, and all Rebuild comparison defaults unchanged.",
+   "sourceImages": "PASS — 2x exports placed with image hashes 48fe4f1ece8cc7cc050a36aa77618acda168a8b2 and 9ae7d408cc5b7934a8f630b1e39737f9c21975b6.",
+   "screens": "PASS — four new Sidesheet occurrences are live Placement=Floating instances; all are 550x600; Browse opacity is 0.4 only at screen level.",
+   "comparisons": "PASS — each comparison resolves to its new reference, rebuild, and change-log helper.",
+   "footer": "PASS — Browse secondary action is false on both new instances; Empty retains the disabled Save state.",
+   "existingUnchanged": "PASS — 156:2428, 156:2707, 116:498, 116:1338, 160:3169, 160:3680, 250:3519, and 254:3707 retain actual property values and geometry.",
+   "detachment": "PASS — no detached instance on Screens.",
+   "geometry": "PASS — no fractional authored geometry in new Screens sections; 200px separation around each new section.",
+   "paints": "PASS — no new local body paints; only the intentional copied #E4E4E4 section backdrop/outline is unbound.",
+   "visual": "PASS — standalone and comparison renders inspected; Browse rerendered after Cancel removal."
+  },
+  "flagsAdded": [],
+  "flagsBefore": 229,
+  "flagsAfter": 229,
+  "knownExistingGaps": [
+   "Text field has no leading-search adornment slot.",
+   "Library Icon button has no ringed-plus style.",
+   "Problem and Medication summary-row base-8 decisions remain open and unchanged."
+  ],
+  "recoveryNotes": [
+   "Read-only Page.visible query corrected with node-type narrowing; no mutation.",
+   "Atomic wrapper reference-count assertion corrected to composition-specific live-instance validation; no mutation.",
+   "State=Empty clone initially landed on the page; validation caught it and the intact component was inserted into 156:2426 before screen work.",
+   "Atomic section-paint helper, float-equality, and inherited-preferred-values assertions were corrected before the successful screen composition."
+  ],
+  "nextBatch": "Not started."
+ },
+ "npveRebuild_problemEdit_2026-09-04": {
+  "_status": "DONE. Edit Problem Sidesheet, comparison, change log, and GAP marker are built and verified; the sole screen remains a live Sidesheet instance.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only; subscribed Design System Rebuild assets only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Clin_Problems-Edit 4536:27605",
+  "report": "figma-export/npve-problem-edit-2026-09-04/report.md",
+  "recordGate": "npveRebuild_problemsLowOversightBatch_2026-09-04 recorded DONE — passed",
+  "approvedScope": "Build the remaining Problems Edit reference as one component-based Sidesheet comparison using the locked shell and subscribed Text field, Chip, Button, Calendar icon, Rebuild comparison, and Change log patterns.",
+  "sourceFacts": {
+   "root": "4536:27605, 550x458. Header 64, body 318 with 16px vertical and 20px horizontal insets, footer 76.",
+   "body": "Problem/ICD select; Status select plus Acute/Chronic type choices; Start and End date fields with calendar icons; multiline Comments.",
+   "footer": "Mark as error on the left; Cancel and Save on the right."
+  },
+  "plannedChanges": [
+   "Create one local Problem edit body component from live subscribed component instances; no source drawing is promoted as a component.",
+   "Represent both date controls as documented local wrappers around live Text field and Calendar instances because the Text field API has no adornment slot.",
+   "Append Problem edit body to the Sidesheet Body content preferred values without changing its default.",
+   "Create one reference helper, one rebuild helper containing the sole live Sidesheet screen, one change-log helper, and one comparison instance.",
+   "Export fresh source and final comparison PNGs and validate all standing batch rules."
+  ],
+  "preserve": "Source and shared-library files, Sidesheet shell geometry and defaults, existing body defaults, existing Screens and comparison instances, tokens, component links, and all open row-spacing decisions.",
+  "stopCondition": "Stop on file/page/component identity mismatch, duplicate semantic names, a required global shell change, a control that would require a hand-drawn fake, a new product decision, changed existing default, detached content, paint/alpha drift, or unexpected existing-instance diff.",
+  "knownGapAtStart": "The subscribed Text field has no start or end adornment slot. Date fields may use only a clearly documented wrapper composed from live Text field and Calendar instances; no new generic Date picker is authorized.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — 35 visible master paint entries equal 35 live-instance entries exactly.",
+   "2_unboundPaintAudit": "PASS with documented canvas exception — no local component surface paint; only copied E4E4E4 section fills and 10% section outlines are unbound.",
+   "3_referenceCounts": "PASS — every new component and comparison link resolves; all new nested controls remain live instances.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every audit walk.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — source, target, library subscription, component APIs, footer structure, and final instances were enumerated live.",
+   "7_fileIdentityFirst": "PASS — exact file, page, source node, and target master identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — half-pixel footer spacer was caught and corrected; final authored geometry is integer.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was changed.",
+   "10_cloneDropsPropertyRefs": "PASS — only the established GAP frame was cloned; no component clone was used. All new component links were created and read back."
+  },
+  "screenshots": [
+   "figma-export/npve-problem-edit-2026-09-04/source-problem-edit-4536-27605-2x.png",
+   "figma-export/npve-problem-edit-2026-09-04/component-problem-edit-body-316-3412-2x.png",
+   "figma-export/npve-problem-edit-2026-09-04/rebuild-problem-edit-318-3655-2x.png",
+   "figma-export/npve-problem-edit-2026-09-04/comparison-problem-edit-318-6740.png"
+  ],
+  "figmaMutations": [
+   "Created Problem edit body 316:3412 from five live Text field, two Chip, and two Icon/Calendar instances.",
+   "Created Problem edit / Mark as error action 318:3643 and Problem edit footer actions 320:3849 from live Button instances.",
+   "Appended Problem edit body and footer actions to existing Sidesheet preferred values; defaults remain 26:221 and 248:1827.",
+   "Created reference 318:3652, rebuild 318:3654, and change log 318:3928 helpers and appended them to Rebuild comparison preferred values; defaults unchanged.",
+   "Uploaded the fresh 2x source export to 318:3653 with image hash a62362f2274f16a7c8e302871915a5fbf4acc71d.",
+   "Created comparison section 318:6739, live comparison instance 318:6740, and GAP marker 324:4934.",
+   "Copied the established E4E4E4 section treatment and normalized the footer spacer to whole-pixel geometry."
+  ],
+  "createdNodes": {
+   "templatesSection": "316:3411",
+   "body": "316:3412",
+   "markErrorAction": "318:3643",
+   "footerActions": "320:3849",
+   "reference": "318:3652",
+   "referenceImage": "318:3653",
+   "rebuild": "318:3654",
+   "sidesheet": "318:3655",
+   "changeLog": "318:3928",
+   "screensSection": "318:6739",
+   "comparison": "318:6740",
+   "gapMarker": "324:4934"
+  },
+  "verification": {
+   "fileIdentity": "PASS — target pages Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2; source 4536:27605 read live.",
+   "sourceImage": "PASS — fresh 1100x916 export placed at 0.5 scaling factor; hash a62362f2274f16a7c8e302871915a5fbf4acc71d.",
+   "components": "PASS — body and footer use live subscribed components; no detached instance on Templates or Screens.",
+   "comments": "PASS — nested live Comments field is medium multiline, 518x104 with a 104px outline; fixed sample rows are empty.",
+   "paints": "PASS — body master and live nested instance each expose 35 visible paint entries with identical normalized signatures.",
+   "defaults": "PASS — Sidesheet Body content 26:221 and Full-width action 248:1827; comparison 114:777 / 114:779 / 114:880.",
+   "geometry": "PASS — no fractional authored geometry in either new section; section separation is 200px.",
+   "organization": "PASS — both new work areas use the established E4E4E4 section fill.",
+   "existingUnchanged": "PASS — prior Sidesheet values and geometry remained unchanged; existing instances inherited only additive preferred-value lists.",
+   "visual": "PASS — body, live 2x Sidesheet, and full comparison rendered and inspected after every correction."
+  },
+  "findings": {
+   "GAP": 1,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "existingDefectEncountered": "npveAudit_textFieldHiddenPlaceholderCopy"
+  },
+  "flagsAdded": [
+   "npveProblemEdit_textFieldNoEndAdornment"
+  ],
+  "flagsBefore": 229,
+  "flagsAfter": 230,
+  "recoveryNotes": [
+   "Visual QA corrected inherited status styling on Type, clipped date labels, collapsed Comments outline, default Button labels, right-packed footer actions, a half-pixel spacer, and default-white work areas before completion.",
+   "No Figma call failed or partially committed. All corrections stayed inside nodes created by this batch or additive preferred-value lists."
+  ],
+  "nextBatch": "Not started — select the next remaining sidesheet reference only after operator review of this comparison."
+ },
+ "npveRebuild_problemEditSpacingCorrection_2026-09-04": {
+  "_status": "DONE. Edit Problem vertical rhythm is normalized and the clipped Type Chips are corrected and verified in the live Sidesheet.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only; no library mutation",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Clin_Problems-Edit 4536:27605 remains frozen evidence",
+  "report": "figma-export/npve-problem-edit-spacing-correction-2026-09-04/report.md",
+  "recordGate": "npveRebuild_problemEdit_2026-09-04 recorded DONE — passed",
+  "approvedScope": "Correct the clipped Type Chips and normalize the Edit Problem body to the agreed 16px major-row rhythm while preserving the frozen reference.",
+  "sourceFacts": {
+   "bodyTop": "The source places the first outlined field 16px below the header divider, but its floating label protrudes 8px upward, leaving only 8px of visible clearance.",
+   "statusType": "The source uses an irregular 54px Status/Type construction and 29px pills; the first rebuild copied the compact relationship into a 56px clipping frame.",
+   "rowRhythm": "Major form rows otherwise follow a 16px vertical rhythm."
+  },
+  "plannedChanges": [
+   "Add an 8px internal top inset to Problem edit body so the floating label has 16px visible clearance inside the Sidesheet body, whose shell padding remains 16px.",
+   "Resize Status and type to a fixed 64px base-8 row and vertically center its 40px Status field.",
+   "Resize Type to 64px and center the 60px label-plus-gap-plus-Chips stack so both 32px Chips render fully.",
+   "Update the existing Type choices change-log row to document the source-to-canonical spacing correction.",
+   "Export and inspect the corrected body and comparison."
+  ],
+  "preserve": "Source image, shared library, Sidesheet shell geometry and global padding, component links and properties, all other Problem edit controls, footer actions, comparison structure, defaults, tokens, paints, and opacity.",
+  "stopCondition": "Stop on file/page/node identity mismatch, changed component link, unexpected instance override, detached content, paint or alpha drift, shell mutation, non-integer authored geometry, or any change outside the four approved target nodes.",
+  "targetNodes": [
+   "316:3412",
+   "316:3434",
+   "316:3456",
+   "318:3953"
+  ],
+  "findingsAtStart": {
+   "DEFECT": "The 56px Type parent clips the last 4px of its 60px content stack.",
+   "SOURCE_DEVIATION": "The reference uses a 54px mixed row and leaves only 8px visible clearance above the first floating label."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — 64 normalized body-master entries equal 64 live-instance entries exactly.",
+   "2_unboundPaintAudit": "PASS — no paint mutation occurred.",
+   "3_referenceCounts": "PASS — all existing component links resolve.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every audit traversal.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — exact current geometry, links, shell padding, and comparison properties were enumerated live.",
+   "7_fileIdentityFirst": "PASS — file, page, and node identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — all authored correction geometry is whole-pixel and recorded.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no clone or detach occurred."
+  },
+  "screenshots": [
+   "figma-export/npve-problem-edit-spacing-correction-2026-09-04/before-comparison.png",
+   "figma-export/npve-problem-edit-spacing-correction-2026-09-04/after-body.png",
+   "figma-export/npve-problem-edit-spacing-correction-2026-09-04/after-comparison.png"
+  ],
+  "figmaMutations": [
+   "Added 8px top inset to Problem edit body 316:3412, producing 16px visible clearance above the first floating label without changing the global Sidesheet body padding.",
+   "Resized Status and type 316:3434 from 56px to 64px and centered the 40px Status field.",
+   "Resized Type 316:3456 from 56px to 64px and centered its 60px content stack so both 32px Chips render fully.",
+   "Updated Change log row 318:3953 to document the source spacing deviation and the canonical correction."
+  ],
+  "verification": {
+   "fileIdentity": "PASS — target file fdCQVFdvOByaOYIJYag0d6, Templates page 3:2, and all four approved node identities matched.",
+   "shell": "PASS — live Sidesheet remains 550x600, linked to 6:65, with its body shell still at 16px top and side padding.",
+   "verticalRhythm": "PASS — visible top clearance is 16px; every major row gap is 16px.",
+   "clipping": "PASS — Type choices occupy y=30..62 inside a 64px frame; Acute and Chronic are complete.",
+   "propagation": "PASS — live Body content inherited 518x304, 8px top inset, 16px gaps, and the 64px Status/Type row.",
+   "components": "PASS — all nested Text field, Chip, and Calendar controls retain main-component links.",
+   "paints": "PASS — body master and live body each expose 64 normalized visible paint entries with exact parity.",
+   "geometry": "PASS — all authored correction geometry is integer; fractional values are limited to inherited vector paths.",
+   "preserve": "PASS — source, library, global shell, footer, defaults, tokens, paints, and opacity were not mutated.",
+   "visual": "PASS — corrected body and full comparison screenshots were rendered and inspected."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "resolved": 1
+  },
+  "flagsAdded": [],
+  "flagsBefore": 230,
+  "flagsAfter": 230,
+  "recoveryNotes": [
+   "The original defect came from a 60px content stack being placed inside a fixed 56px clipping frame.",
+   "The correction remained limited to the body master and one comparison annotation; the inherited screen updated through its existing component link."
+  ],
+  "nextBatch": "Not started — await operator review of the corrected comparison."
+ },
+ "npveRebuild_procedureHistory_2026-09-04": {
+  "_status": "DONE. Procedures/Surgical History metadata, event row, body, live Sidesheet, comparison, and evidence are built and verified.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only; published Button, Chip, Divider, and variables only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Page=Clin_ProSH 648:3473 remains frozen evidence",
+  "report": "figma-export/npve-procedure-history-2026-09-04/report.md",
+  "recordGate": "npveRebuild_problemEditSpacingCorrection_2026-09-04 recorded DONE — passed",
+  "scope": "Build one reusable Procedures/Surgical History event row and body, compose one live Sidesheet placement, and create one reference-versus-rebuild comparison. Add only the new body/helper keys to existing swap preferred-value lists; preserve shared defaults and geometry, source, library, prior screens, and global tokens.",
+  "sourceFacts": {
+   "root": "Clin_ProSH 648:3473 is 550x302 with Header 64, body 178, and Footer 60.",
+   "body": "The body uses 16px side padding, 8px top/bottom padding, a 42px Create New Event action, a 16px major gap, and one 518x104 event card.",
+   "event": "The event card uses 12px padding, 8px title-to-metadata gap, 8px wrapped metadata gaps, 8px radius, white fill, and a divider-colour outline.",
+   "footer": "Cancel, Save & Add to Note, and Save are right aligned in the source footer."
+  },
+  "plannedChanges": [
+   "Create a local reusable Procedure history event row with base-8 16px interior padding and an 8px title-to-metadata relationship.",
+   "Use published small outlined default Chips for the four metadata values and the existing published outlined Button with trailing Plus for Create New Event.",
+   "Create a reusable Procedure history body at the canonical 518px body-content width with 16px between major elements.",
+   "Append the new body to the Sidesheet Body content preferred values without changing the default or shell geometry, then compose one content-driven live placement as established for short Medication content.",
+   "Create a Rebuild comparison with frozen source imagery, live rebuilt content, and a plain-language change log.",
+   "Export and inspect the source, rebuild, and full comparison PNGs."
+  ],
+  "preserve": "Shared Sidesheet geometry and defaults, all prior Sidesheet placements, source and library files, published component masters, tokens, paints, opacity, and unrelated target nodes. Preferred-value lists may receive only the new recorded body and comparison helpers.",
+  "stopCondition": "Stop on file/page/node identity mismatch, duplicate helper names, missing published dependencies, detached instances, unexpected shared-master mutation, paint or alpha drift, non-integer authored geometry, or any unrelated diff.",
+  "dependencies": [
+   "Sidesheet Placement=Floating 6:65",
+   "published Button variant=outlined, color=primary, size=medium, State=Default with trailing Plus",
+   "published Chip size=small, variant=outlined, color=default, State=Default 222:1805",
+   "Rebuild comparison 35:332",
+   "Change log/Row 18:103",
+   "published paper, divider, text, spacing, radius, and border variables"
+  ],
+  "flagsBefore": 230,
+  "flagsAdded": [],
+  "nextBatch": "Not started — await operator review of the completed Procedures/Surgical History comparison before continuing the low-oversight sequence.",
+  "figmaMutations": [
+   "Created Procedure history metadata 337:3881 with editable mixed-weight prefix/value text and bound surface, outline, radius, typography, and spacing tokens.",
+   "Created Procedure history event row 337:3884 at 518x120 with 16px padding, 8px related-element gaps, and four live metadata instances.",
+   "Created Procedure history body 337:3899 at 518x174 with a live approved Button and live event-row instance separated by 16px.",
+   "Appended Procedure history body to the Sidesheet Body content preferred values; the default remains 26:221 and shell geometry is unchanged.",
+   "Created reference 339:6233, rebuild 339:6235, and change-log 339:6405 helpers; appended them to Rebuild comparison preferred values without changing defaults.",
+   "Uploaded the fresh 2x source export to 339:6234 with image hash 75a2f8fdc6d934555e1089ab7604999647e30a03.",
+   "Created Screens section 339:6480 and sole comparison instance 339:6481."
+  ],
+  "createdNodes": {
+   "templatesSection": "337:3880",
+   "metadata": "337:3881",
+   "eventRow": "337:3884",
+   "body": "337:3899",
+   "reference": "339:6233",
+   "referenceImage": "339:6234",
+   "rebuild": "339:6235",
+   "sidesheet": "339:6236",
+   "changeLog": "339:6405",
+   "screensSection": "339:6480",
+   "comparison": "339:6481"
+  },
+  "verification": {
+   "fileIdentity": "PASS — target Templates 3:2 and Screens 27:2; source 648:3473 read live and remained unchanged.",
+   "sourceImage": "PASS — fresh 1100x604 export placed at 0.5 scaling with hash 75a2f8fdc6d934555e1089ab7604999647e30a03.",
+   "geometry": "PASS — live Sidesheet 550x350; Header 72, Body 206, Body content 174, Footer 71.",
+   "spacing": "PASS — card padding 16; related metadata gaps 8; major body gap 16; Sidesheet body padding 16.",
+   "footer": "PASS — Cancel, Save & Add to Note, and Save are visible live Button instances inside the 71px shared Footer.",
+   "components": "PASS — every instance in the new Templates and Screens sections resolves to a main component; no detach occurred.",
+   "defaults": "PASS — Sidesheet Body content default 26:221; Rebuild comparison defaults 114:777 / 114:779 / 114:880.",
+   "paints": "PASS — zero unbound visible solid paints in new component, rebuild, or change-log content; source image and E4E4E4 section chrome are documented exceptions.",
+   "geometryAudit": "PASS — zero fractional authored FRAME, COMPONENT, RECTANGLE, or SECTION dimensions.",
+   "visual": "PASS — final component, rebuilt Sidesheet, and full comparison renders were inspected."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — live body and row instances inherit their component surfaces and tokens.",
+   "2_unboundPaintAudit": "PASS — no unbound solid paint in authored content; only recorded canvas chrome and source image exceptions.",
+   "3_referenceCounts": "PASS — all new nested controls, body, sheet, helper, and comparison links resolve.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every audit traversal.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — source geometry, footer controls, target APIs, tokens, and helper structures were enumerated live.",
+   "7_fileIdentityFirst": "PASS — exact file, page, source, and target identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — all authored containers have whole-pixel dimensions.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no component or helper clone was used; every new link was created and read back."
+  },
+  "screenshots": [
+   "figma-export/npve-procedure-history-2026-09-04/source-procedure-history-648-3473-2x.png",
+   "figma-export/npve-procedure-history-2026-09-04/component-metadata-337-3881.png",
+   "figma-export/npve-procedure-history-2026-09-04/component-event-row-337-3884.png",
+   "figma-export/npve-procedure-history-2026-09-04/component-body-337-3899.png",
+   "figma-export/npve-procedure-history-2026-09-04/rebuild-procedure-history-339-6235.png",
+   "figma-export/npve-procedure-history-2026-09-04/comparison-procedure-history-339-6481.png"
+  ],
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "resolvedDuringBuild": 1
+  },
+  "flagsAfter": 230,
+  "recoveryNotes": [
+   "Two read-only discovery calls were rejected because of invalid convenience assumptions; both were atomic and changed nothing.",
+   "The first event-row render exposed a fixed-height metadata wrapper clipping the wrapped date. It was changed to vertical hug before composition and final validation."
+  ],
+  "reviewAnnotation_2026_09_05": "Corrected by npveRebuild_extReviewRepairs_2026-09-05 after npveRebuild_externalReview_2026-09-05: findings.GAP 0 omitted the Procedure history metadata stand-in built in place of the planned published Chips (now GAP marker 404:7070)."
+ },
+ "npveRebuild_familyHistory_2026-09-05": {
+  "_status": "DONE. Family History condition row, member card, body, live Sidesheet, comparison, and evidence are built and verified.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-family-history-2026-09-05/report.md",
+  "recordGate": "npveRebuild_procedureHistory_2026_09_04 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:7950 Page=Clin_FHx",
+   "policy": "read only; frozen 2x export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65"
+  },
+  "scope": "Create one reusable Family History condition row, one reusable family-member card, and one Family History body; compose one live Sidesheet placement; create one reference-versus-rebuild comparison and plain-language change log. Append only the new body/helper keys to existing preferred-value lists. Preserve shared defaults and geometry, source, library, prior screens, and global tokens.",
+  "buildPlan": [
+   "Create condition row with editable label and a live library Icon button using the AddPaymentNote icon.",
+   "Create family-member card with editable relationship and age, a live EditOutlined icon, and two live condition-row instances.",
+   "Create body with a live contained-primary medium Button and one live family-member card instance.",
+   "Compose a content-driven live Sidesheet with the footer following active content.",
+   "Create frozen reference, rebuild, and Change log helpers; place the sole comparison instance on Screens."
+  ],
+  "spacingPolicy": "Canonical base 8: 16px outer/body/card padding and major vertical gaps; 8px only between closely related text/control elements. Source 12px card padding is normalized to 16px and recorded in the Change log.",
+  "reuseBaseline": {
+   "library": "Design System Rebuild is the sole subscribed library",
+   "button": "cfb726c79b456d52901243b7c33839efd0780a93",
+   "iconButton": "7ebea5d7ce6ecfdaef84d177efa64196f654717d",
+   "editIcon": "ae295bfd62904c894356ffb63fa20fe2ef03b060",
+   "addPaymentNoteIcon": "9fe47d27ed040f1d0e988074b7ea7ba27afcebef",
+   "sidesheet": "279:2446",
+   "rebuildComparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "stopCondition": "Stop before target mutation if a required library dependency is absent or the source introduces an unresolved design decision. Otherwise stop after structural, paint, whole-pixel, live-instance, and screenshot verification plus report and schema closeout.",
+  "discoveries": [
+   "Clin_THx was inspected but rejected as the next low-oversight candidate because it is hidden and contains placeholder-heavy field internals.",
+   "Family History is visible, compact, and has a stable reference export. No unresolved design fork was found.",
+   "The source contains an overlapping toggle layer under the Create button; the rendered reference shows only the Create button, so the rebuild follows the rendered evidence."
+  ],
+  "figmaMutations": [
+   "Created Family history condition row 346:3080 at 486x40 with editable condition text, optional token-bound highlight, and live AddPaymentNote Icon button.",
+   "Created Family history member card 346:3089 at 518x184 with 16px token-bound padding, editable Relationship and Age, live EditOutlined Icon button, and two live condition-row instances.",
+   "Created Family history body 346:3113 at 518x238 with a live approved Button and member-card instance separated by 16px.",
+   "Added the Family history body key to Sidesheet Body content preferred values; default 26:221 and all shared geometry remain unchanged.",
+   "Created reference 346:3146, rebuild 346:3148, and Change log 346:3365 helpers; appended their keys to Rebuild comparison preferred values without changing defaults.",
+   "Uploaded the fresh 2x source export to 346:3147 with image hash 379f8398952ac7885297a25099807aee5563476d and fitted it into the canonical 550x600 reference slot.",
+   "Created Screens section 346:5992 and sole comparison instance 346:5993.",
+   "Added a token-bound outline to reusable add-to-note action 346:3083 after the first pixel check exposed the missing source ring."
+  ],
+  "createdNodes": {
+   "templatesSection": "346:3079",
+   "conditionRow": "346:3080",
+   "conditionHighlight": "346:3081",
+   "conditionLabel": "346:3082",
+   "conditionAction": "346:3083",
+   "memberCard": "346:3089",
+   "memberHeader": "346:3090",
+   "relationshipText": "346:3092",
+   "ageText": "346:3093",
+   "editAction": "346:3094",
+   "condition1": "346:3099",
+   "condition2": "346:3106",
+   "body": "346:3113",
+   "createButton": "346:3114",
+   "memberCardInstance": "346:3123",
+   "reference": "346:3146",
+   "referenceImage": "346:3147",
+   "rebuild": "346:3148",
+   "sidesheet": "346:3149",
+   "footerAction": "I346:3149;6:93",
+   "changeLog": "346:3365",
+   "changeLogRows": [
+    "346:3366",
+    "346:3372",
+    "346:3378",
+    "346:3384",
+    "346:3390",
+    "348:3237",
+    "348:3243"
+   ],
+   "screensSection": "346:5992",
+   "comparison": "346:5993"
+  },
+  "verification": {
+   "fileIdentity": "PASS — target Templates 3:2 and Screens 27:2; source 129:7950 read live and remained unchanged.",
+   "sourceImage": "PASS — fresh 1100x1312 export retained at 2x and fitted proportionally in a 550x600 helper so the source footer remains visible.",
+   "geometry": "PASS — row 486x40; card 518x184; body 518x238; live Sidesheet 550x414; Header 72, Body 270, Footer 71.",
+   "spacing": "PASS — card padding 16; major body/card gaps 16; related label/control gaps 8; Sidesheet body padding 16.",
+   "footer": "PASS — Add All As New Section is visible as a live Button and begins at y343 immediately after active body content.",
+   "components": "PASS — every instance in the new Templates and Screens sections resolves to a main component; no detach occurred.",
+   "defaults": "PASS — Sidesheet Body content default 26:221; Rebuild comparison defaults 114:777 / 114:779 / 114:880.",
+   "paints": "PASS — zero unbound product-content solid paints; #E4E4E4 Section chrome, Section outline, and frozen image are documented exceptions.",
+   "geometryAudit": "PASS — zero fractional authored FRAME, COMPONENT, RECTANGLE, or SECTION dimensions or positions.",
+   "typography": "PASS — all authored text uses Akkurat LL with family, size, and line-height bindings.",
+   "visual": "PASS — component, rebuilt Sidesheet, full source, and final comparison renders were inspected."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "resolvedDuringBuild": 2
+  },
+  "flagsAdded": [],
+  "nextBatch": "Not started — await operator review of the Family History comparison before continuing the low-oversight sequence.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — live row, card, body, Sidesheet, and comparison instances were rendered and inspected.",
+   "2_unboundPaintAudit": "PASS — no unbound product-content solid paint; only recorded Section chrome and source-image exceptions.",
+   "3_referenceCounts": "PASS — all new nested controls, local components, helper slots, and comparison links resolve.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every audit traversal.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — source geometry, target APIs, dependencies, tokens, and final structure were enumerated live.",
+   "7_fileIdentityFirst": "PASS — exact file, page, source, and target identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — all authored containers have whole-pixel geometry.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no component or helper clone was used; every link was created and read back."
+  },
+  "screenshots": [
+   "figma-export/npve-family-history-2026-09-05/source-family-history-129-7950-2x.png",
+   "figma-export/npve-family-history-2026-09-05/component-condition-row-346-3080.png",
+   "figma-export/npve-family-history-2026-09-05/component-member-card-346-3089.png",
+   "figma-export/npve-family-history-2026-09-05/component-family-history-body-346-3113.png",
+   "figma-export/npve-family-history-2026-09-05/rebuild-family-history-346-3148.png",
+   "figma-export/npve-family-history-2026-09-05/comparison-family-history-346-5993-final.png"
+  ],
+  "flagsAfter": 230,
+  "recoveryNotes": [
+   "Four rejected calls were atomic and changed no canvas state: missing connector description, component.loadAsync misuse, absolute positioning before append, and an invalid numeric fontStyle binding.",
+   "The first comparison render exposed a missing add-to-note ring; action 346:3083 received the source-faithful token-bound outline.",
+   "The first Screens audit exposed the 656px source helper being clipped by the canonical 600px comparison slot; the frozen export was fitted proportionally without changing product geometry."
+  ],
+  "reviewAnnotation_2026_09_05": "Amended by npveRebuild_extReviewRepairs_2026-09-05: the token-bound outline added to 346:3083 contradicted DEFECT marker 189:615 and was removed; the bare-glyph ruling applies to every screen."
+ },
+ "npveRebuild_allergiesList_2026-09-05": {
+  "_status": "DONE. Allergies severity selector, card, body, live Sidesheet, comparison, and evidence are built and verified.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-allergies-list-2026-09-05/report.md",
+  "recordGate": "npveRebuild_familyHistory_2026-09-05 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:7726 Page=Clin_Allergies",
+   "policy": "read only; frozen 2x export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65"
+  },
+  "scope": "Create one reusable allergy severity selector, one reusable allergy card, and one Allergies list body; compose one live Sidesheet placement; create one reference-versus-rebuild comparison and plain-language change log. Append only the new body/helper keys to existing preferred-value lists. Preserve shared defaults and geometry, source, library, prior screens, and global tokens.",
+  "buildPlan": [
+   "Create a local severity selector matching the rendered Mild dropdown.",
+   "Create an allergy card with editable allergy, onset, reaction, and comments content using live Chip instances where compatible.",
+   "Create a body with live Tabs/Tab instances, a live contained-primary Button, and one live allergy-card instance.",
+   "Compose a content-driven live Sidesheet with the footer following active content.",
+   "Create frozen reference, rebuild, and Change log helpers; place the sole comparison instance on Screens."
+  ],
+  "spacingPolicy": "Canonical base 8: 16px outer/body/card padding and major vertical gaps; 8px between related metadata rows and label/value pairs. Source 12px card inset and irregular 10px row gaps are normalized and recorded.",
+  "reuseBaseline": {
+   "library": "Design System Rebuild is the sole subscribed library",
+   "button": "cfb726c79b456d52901243b7c33839efd0780a93",
+   "tabs": "a320b57564d4296861667f677b5c807ebf1cfc1e",
+   "tab": "b6b654fda71111add23a2637c0e3588004abb661",
+   "chip": "1c8149de35a3b84dbc41a7e5d726020dfb865db4",
+   "sidesheet": "279:2446",
+   "rebuildComparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "stopCondition": "Stop before target mutation if a required dependency is absent or the source introduces an unresolved design decision. Otherwise stop after structural, paint, whole-pixel, live-instance, and screenshot verification plus report and schema closeout.",
+  "discoveries": [
+   "Allergies 129:7726 is visible, compact, and has a stable 550x656 render with Active and Inactive tabs.",
+   "The rendered card shows the Mild selector but not the source tree's overlapping edit and delete instances, so the rebuild follows rendered evidence.",
+   "The source uses a 64px header, 12px card inset, and irregular 10px metadata gaps; the rebuild follows the approved canonical Sidesheet and base-8 rules."
+  ],
+  "figmaMutations": [
+   "Created Allergy severity selector 352:3206 at 70x32 with editable label, token-bound success surface, and live DownCaret.",
+   "Created Allergy card 354:3206 at 518x152 with 16px token-bound padding, 8px metadata rhythm, live Chip instances, and live severity selector.",
+   "Created Allergies list body 355:3217 at 518x271 with live Tabs/Tab, Button, Divider, and Allergy card instances.",
+   "Added the Allergies list body key to Sidesheet Body content preferred values; default 26:221 and shared geometry remain unchanged.",
+   "Created reference 356:6190, rebuild 356:3248, and Change log 356:6192 helpers; appended their keys to Rebuild comparison preferred values without changing defaults.",
+   "Uploaded the fresh 2x source export to 356:6191 with image hash 24478b58ffa700bbefa25d1e8ab265648e4bf8cc and fitted it into the canonical 550x600 reference slot.",
+   "Created Screens section 356:6235 and sole comparison instance 356:6236.",
+   "Cleared six default white fills from authored structural wrappers after the final paint audit."
+  ],
+  "createdNodes": {
+   "templatesSection": "352:3205",
+   "severitySelector": "352:3206",
+   "severityLabel": "352:3207",
+   "severityCaret": "352:3208",
+   "allergyCard": "354:3206",
+   "allergyDetails": "354:3207",
+   "allergyTitle": "354:3208",
+   "severityInstance": "354:3209",
+   "onsetRow": "354:5912",
+   "reactionRow": "354:5919",
+   "commentsRow": "354:5929",
+   "body": "355:3217",
+   "tabsStrip": "355:3218",
+   "activeTab": "355:3220",
+   "inactiveTab": "355:3223",
+   "createButton": "355:5925",
+   "cardInstance": "355:5934",
+   "reference": "356:6190",
+   "referenceImage": "356:6191",
+   "rebuild": "356:3248",
+   "sidesheet": "356:3249",
+   "footerAction": "I356:3249;6:93",
+   "changeLog": "356:6192",
+   "changeLogRows": [
+    "356:6193",
+    "356:6199",
+    "356:6205",
+    "356:6211",
+    "356:6217",
+    "356:6223",
+    "356:6229"
+   ],
+   "screensSection": "356:6235",
+   "comparison": "356:6236"
+  },
+  "verification": {
+   "fileIdentity": "PASS — target Templates 3:2 and Screens 27:2; source 129:7726 read live and remained unchanged.",
+   "sourceImage": "PASS — fresh 1100x1312 export retained at 2x and fitted proportionally in a 550x600 helper.",
+   "geometry": "PASS — selector 70x32; card 518x152; body 518x271; live Sidesheet 550x447; all authored geometry whole-pixel.",
+   "spacing": "PASS — card padding 16; major body/card gaps 16; related metadata gaps 8; Sidesheet body padding 16.",
+   "footer": "PASS — Add Section to Note is visible as a live Button and follows the active body content.",
+   "components": "PASS — 80 live instances in the Templates section and zero broken main-component references; no detach occurred.",
+   "defaults": "PASS — Sidesheet Body content default 26:221; Rebuild comparison defaults 114:777 / 114:779 / 114:880.",
+   "paints": "PASS — zero unbound authored product-content solid paints; #E4E4E4 Section chrome and frozen image are documented exceptions.",
+   "typography": "PASS — all authored text uses Akkurat LL with token-bound family, size, line height, and color.",
+   "placeholders": "PASS — zero active placeholders.",
+   "visual": "PASS — component, rebuilt Sidesheet, full source, and final comparison renders were inspected."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "resolvedDuringBuild": 5
+  },
+  "flagsAdded": [],
+  "nextBatch": "Not started — continue the approved low-oversight Sidesheet sequence after operator review.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — live card, body, Sidesheet, and comparison instances were rendered and inspected.",
+   "2_unboundPaintAudit": "PASS — no unbound authored product-content solid paint remains.",
+   "3_referenceCounts": "PASS — all nested controls, local components, helper slots, and comparison links resolve.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on final audit traversals.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — source geometry, target APIs, dependencies, tokens, and final structure were enumerated live.",
+   "7_fileIdentityFirst": "PASS — exact file, page, source, and target identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — all authored containers have whole-pixel geometry.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no component or helper clone was used; every link was created and read back."
+  },
+  "screenshots": [
+   "figma-export/npve-allergies-list-2026-09-05/source-allergies-129-7726-2x.png",
+   "figma-export/npve-allergies-list-2026-09-05/component-severity-352-3206.png",
+   "figma-export/npve-allergies-list-2026-09-05/component-allergy-card-354-3206.png",
+   "figma-export/npve-allergies-list-2026-09-05/component-allergies-body-355-3217.png",
+   "figma-export/npve-allergies-list-2026-09-05/rebuild-allergies-356-3248.png",
+   "figma-export/npve-allergies-list-2026-09-05/comparison-allergies-356-6236-final.png"
+  ],
+  "flagsAfter": 230,
+  "recoveryNotes": [
+   "Three rejected calls were atomic and changed no canvas state: non-async audit helper, unsupported nested property promotion, and one mistyped token ID caught by a dependency guard.",
+   "The first live Sidesheet render exposed an overly broad Button lookup; the body action was restored and the footer was resolved through the Footer to Actions hierarchy.",
+   "The final paint audit found six default white fills on structural auto-layout wrappers; they were cleared and the audit passed on rerun."
+  ],
+  "reviewAnnotation_2026_09_05": "Corrected by npveRebuild_extReviewRepairs_2026-09-05 after npveRebuild_externalReview_2026-09-05: the rule 8 claim \"all authored geometry whole-pixel\" was inaccurate (severity selector label x 6.5, caret x 47.5; now 8 / 49), and findings.GAP 0 omitted the Allergy severity selector stand-in (now GAP marker 404:7061)."
+ },
+ "npveRebuild_allergiesComparisonHeightCorrection_2026-09-05": {
+  "_status": "DONE. The Allergies comparison now shows no false white extension below the live 447px Sidesheet, and the corrected render is verified.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-allergies-comparison-height-correction-2026-09-05/report.md",
+  "recordGate": "npveRebuild_allergiesList_2026-09-05 recorded DONE — passed",
+  "scope": "Correct only the unique Allergies rebuild helper surface so the visible white sheet ends with the 447px live Sidesheet even though the shared comparison swap slot retains its canonical 600px geometry. Preserve the shared comparison master, frozen reference, change log, Sidesheet component, body, tokens, and all other comparisons.",
+  "stopCondition": "Stop after the unique helper surface, component links, whole-pixel geometry, paints, and final comparison render are verified. Stop immediately if the fix requires a shared master change or changes the Sidesheet itself.",
+  "audit": {
+   "comparison": "356:6236 at 1708x1290",
+   "rebuildColumn": "I356:6236;35:336 at 550x628",
+   "rebuildContentWrapper": "I356:6236;114:1139 at 550x600 with white fill",
+   "liveSidesheet": "I356:6236;114:1139;356:3249 at 550x447",
+   "rootCause": "Figma preserves the canonical 600px swap-slot geometry after inserting the 447px helper; the helper's white surface therefore extended 153px beyond the child Sidesheet."
+  },
+  "figmaMutations": [
+   "Cleared the paper fill from unique rebuild helper component 356:3248 so its preserved 600px swap-slot instance is visually transparent below the child Sidesheet.",
+   "Left live Allergies Sidesheet I356:6236;114:1139;356:3249 unchanged at 550x447.",
+   "Preserved shared Rebuild comparison master 35:332, frozen reference, change log, component links, paints, and all other comparison instances."
+  ],
+  "verification": {
+   "geometry": "PASS — unique helper and live Sidesheet remain 550x447; the canonical nested swap-slot instance remains 550x600 without a visible surface below the child.",
+   "scope": "PASS — only the unique Allergies rebuild helper fill changed.",
+   "components": "PASS — comparison, helper, and Sidesheet remain linked instances.",
+   "wholePixels": "PASS — all affected widths and heights are integer pixels.",
+   "visual": "PASS — final comparison render was saved and inspected; the false white extension is gone."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 1,
+   "DECISION": 0,
+   "resolvedDuringBatch": 1
+  },
+  "flagsAdded": [
+   "npveAllergiesComparison_fixedRebuildWrapperHeight"
+  ],
+  "nextBatch": "Not started — resume the approved low-oversight Sidesheet sequence after operator review.",
+  "strategyAmendment": "A direct nested-instance resize did not persist because the shared comparison component owns that slot geometry. Use the unique helper surface as the correction point: remove its paper fill and let the unchanged Sidesheet own the visible white surface.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — no paint changed; the live linked Sidesheet was re-rendered in the comparison.",
+   "2_unboundPaintAudit": "PASS — the redundant token-bound paper fill was removed from the unique helper; the live Sidesheet retains its token-bound paper surface.",
+   "3_referenceCounts": "PASS — every affected instance still resolves to its main component.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on audit and verification walks.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — wrapper and child dimensions were read live before and after mutation.",
+   "7_fileIdentityFirst": "PASS — NPVE Rebuild fdCQVFdvOByaOYIJYag0d6, Screens 27:2, comparison 356:6236.",
+   "8_roundWithRecord": "PASS — no geometry changed; all affected dimensions remain whole pixels.",
+   "9_boundPaintAlpha": "PASS — bound paint alpha was not changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no clone or component-property mutation occurred."
+  },
+  "screenshots": [
+   "figma-export/npve-allergies-comparison-height-correction-2026-09-05/comparison-allergies-356-6236-height-corrected.png"
+  ],
+  "flagsAfter": 231,
+  "recoveryNotes": [
+   "A direct nested-instance resize was rejected by the comparison component constraints and left no persisted mutation.",
+   "The defect was presentation-only in the helper surface; product component geometry was already correct.",
+   "Future comparison helpers must be surface-transparent when their content is shorter than the canonical 600px slot."
+  ]
+ },
+ "npveRebuild_externalCareHospitalizations_2026-09-05": {
+  "_status": "DONE. External Care History — Hospitalizations component, body, shared Sidesheet composition, frozen reference, change log, and sole comparison instance built and verified.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-external-care-hospitalizations-2026-09-05/report.md",
+  "recordGate": "npveRebuild_allergiesComparisonHeightCorrection_2026-09-05 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:8316 Page=Clin_ExternalCare-Hospitalizations",
+   "policy": "read only; frozen source export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65",
+   "rebuildComparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "scope": "Create one reusable External care event card and one Hospitalizations body; compose one live shared Sidesheet with the existing two-action footer; create one frozen reference, one transparent rebuild helper, one Change log helper, and one sole comparison instance. Preserve source, library, global tokens, shared masters/defaults, and every prior screen.",
+  "buildPlan": [
+   "Create an External care event card with editable facility name and two live small outlined Chip instances.",
+   "Create a Hospitalizations body with live Tabs/Tab, Divider, contained-primary Button with PlusOutlined, and event-card instances.",
+   "Compose a content-driven Floating Sidesheet titled External Care History, showing Save & Add to Note and Save.",
+   "Create transparent rebuild helper plus frozen reference and Change log helpers, then place the sole comparison on Screens.",
+   "Export and inspect component, body, Sidesheet, and comparison renders; run all standing batch rules."
+  ],
+  "spacingPolicy": "Canonical base 8: 16px body and card padding and 16px major vertical gaps; 8px between related card title and metadata and between Chips. Source 12px card padding, 12px body gap, and compact 28px tabs are normalized and recorded.",
+  "reuseBaseline": {
+   "codeConnect": "No *.figma.* mappings exist for the required controls.",
+   "library": "Design System Rebuild is the sole subscribed library.",
+   "button": "820871c5281ccd91813587a508771cc439f38b93",
+   "selectedTab": "eea2fd71083e80e919a40226f98850fac8090508",
+   "unselectedTab": "b5fadfbc89f4a8ab6a18606ab7228d0dd2b42d2e",
+   "divider": "0143de7b0529ee6fed9d0c163eeab7571480bc67",
+   "chip": "e5db0e4b69da285f4e36a3278a38d84208cf2617",
+   "cardFinding": "Published Card dfc9b7d6ef4ab82cce27c1aa11cc1ba31f0825a5 has no arbitrary-content or content-swap property; use a source-specific local component, matching the established Allergies and Family History pattern."
+  },
+  "discoveries": [
+   "Source 129:8316 is a visible 550x600 screen with a 64px header, compact two-tab strip, Create New Event action, one 518x74 event card, and a 60px two-action footer.",
+   "The source card is 12px padded with a 16/20 title and two 12/16 metadata pills. The rebuild uses 16px padding, canonical 16/24 body typography, and live 24px small Chip instances.",
+   "Flowsheets 939:9228 was audited but deferred because its four-action row introduces an unresolved chart/action-icon mapping. External Care Hospitalizations has no such unresolved dependency.",
+   "The product font is Akkurat LL, matching both source and existing target components."
+  ],
+  "stopCondition": "Stop before target mutation if a required dependency is absent or if exact source evidence introduces a new design decision. Otherwise stop after one component/body/Sidesheet/comparison set passes structural, paint, whole-pixel, font, live-instance, and screenshot verification and is recorded.",
+  "figmaMutations": [
+   "Added the Hospitalizations body component as a preferred value of Sidesheet Body content#279:5 without changing the default.",
+   "Added the External Care reference, rebuild, and change-log helpers as preferred values of the three Rebuild comparison swaps without changing defaults.",
+   "Created one new Templates section and one new Screens comparison section; all source and library files remained read only."
+  ],
+  "createdNodes": {
+   "templatesSection": "370:3340",
+   "eventCard": "370:3341",
+   "hospitalizationsBody": "370:3353",
+   "rebuildHelper": "371:3359",
+   "sidesheetInstance": "371:3360",
+   "referenceHelper": "373:3403",
+   "referenceImage": "373:3404",
+   "changeLogHelper": "378:3403",
+   "screensSection": "378:5612",
+   "comparisonInstance": "378:5613"
+  },
+  "verification": {
+   "visual": "PASS — source, body, rebuilt Sidesheet, and full comparison inspected at native resolution.",
+   "shell": "PASS — 550x383 content-driven Sidesheet; 72px header, 207px body content, 16px body inset, and 71px footer with Save & Add to Note plus Save.",
+   "reuse": "PASS — live Tabs/Tab, Divider, Button, PlusOutlined, Chip, footer Button, Sidesheet, body, and event-card instances retained.",
+   "singlePlacement": "PASS — reference, rebuild, and change-log helpers each have exactly one instance on Screens; the rebuild helper contains exactly one shared Sidesheet instance.",
+   "tokens": "PASS — body gap 16; card padding 16; card title/metadata gap 8; chip gap 8; paper, divider, text, radius/md, hairline, spacing, and typography bindings present.",
+   "geometry": "PASS — owned frames and components use whole-pixel geometry. Fractional coordinates occur only inside the approved PlusOutlined vector geometry.",
+   "fonts": "PASS — Akkurat LL; no mixed-font text nodes in the created scope.",
+   "reference": "PASS — frozen 1100x1200 source PNG placed at 550x600 with image hash 30d541347994461247c7c32129c4842be7429995.",
+   "sourceAndLibrary": "PASS — no writes to zVsuhYehoSLLq880qRBFkq or YX2n4YLrEpBXNbcc73T6dw.",
+   "screenshots": [
+    "figma-export/npve-external-care-hospitalizations-2026-09-05/source-129-8316-2x.png",
+    "figma-export/npve-external-care-hospitalizations-2026-09-05/body-370-3353.png",
+    "figma-export/npve-external-care-hospitalizations-2026-09-05/rebuild-371-3359.png",
+    "figma-export/npve-external-care-hospitalizations-2026-09-05/comparison-378-5613.png"
+   ]
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsAdded": [],
+  "flagsBefore": 231,
+  "flagsAfter": 231,
+  "nextBatch": "External Care History · Facility Stay is the natural adjacent candidate, pending its own source audit and pre-write plan."
+ },
+ "npveRebuild_externalCareFacilityStay_2026-09-05": {
+  "_status": "DONE. External Care History — Facility Stay form, body, shared Sidesheet composition, local form-surface token, frozen reference, change log, GAP marker, and sole comparison instance built and verified.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-external-care-facility-stay-2026-09-05/report.md",
+  "recordGate": "npveRebuild_externalCareHospitalizations_2026-09-05 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321 ⚙️ Components",
+   "node": "648:1603 Page=Clin_ExternalCareFS",
+   "policy": "read only"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "externalCareSection": "370:3340",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65"
+  },
+  "scope": "Build the complete Facility Stay edit form additively in NPVE Rebuild using live library controls, the approved local form-surface token, the shared content-driven Sidesheet, a frozen 2x reference, a change log, and one comparison instance.",
+  "sourceFacts": [
+   "The 550x592 source is an Edit Event form, not a simple list-state sibling of Hospitalizations.",
+   "It contains Facility Type radios, Facility Name, Admission and Discharge dates, Related to problem select, Prior Event radios, Discharge to radios, Comments, a Trash action, and Cancel / Save & Add to Note / Save.",
+   "The 556px card overflows the 468px fixed body; the footer clips the lower form by 88px.",
+   "The form card uses #EEF7F9 with a 1px #D6D6D6 outline and 8px radius."
+  ],
+  "reuseBaseline": {
+   "textField": "7c3c99bb9a9392d6571c0557b41d142b8987b566",
+   "radio": "32c00a5301fd57fa3619ec850941d3ad37bf2e8d",
+   "formControlLabel": "77cfa2d6c7b4601fc5a311028da35f42fc8f3ebb",
+   "iconButton": "7ebea5d7ce6ecfdaef84d177efa64196f654717d",
+   "trashIcon": "44218ece645a8de41f00e4eef1edadfb429ad38b",
+   "calendarIcon": "4b107655a1c634462518b1d88aec458f78e8d9b4",
+   "dateFieldGap": "Existing npveProblemEdit_textFieldNoEndAdornment applies. Use the established named GAP wrapper around live Text field and Icon/Calendar instances; do not draw a field or icon."
+  },
+  "proposedBuild": [
+   "Create one local Facility Stay edit-form component using live library controls and canonical 16px major spacing.",
+   "Reuse the existing Hospitalizations/Facility Stay tabs with Facility Stay selected.",
+   "Compose the full unclipped form into the shared content-driven Sidesheet with all three footer actions.",
+   "Create a frozen 2x reference, transparent rebuild helper, plain-language change log, and sole comparison instance.",
+   "Verify all standing batch rules and save native-resolution evidence."
+  ],
+  "stopCondition": "CLEARED — operator approved the exact NPVE-local form-surface token. Continue with the bounded Facility Stay build.",
+  "findings": {
+   "GAP": 1,
+   "DEFECT": 1,
+   "DECISION": 1
+  },
+  "existingGapReused": [
+   "npveProblemEdit_textFieldNoEndAdornment"
+  ],
+  "flagsAdded": [
+   "npveExternalCareFacilityStay_sourceClipsForm",
+   "npveExternalCareFacilityStay_formSurfaceToken"
+  ],
+  "flagsBefore": 231,
+  "flagsAfter": 233,
+  "figmaMutations": [
+   "Created NPVE/Color and the local Form surface COLOR variable at #EEF7F9 with FRAME_FILL and SHAPE_FILL scopes; no platform code syntax and no shared-library mutation.",
+   "Created one reusable Facility Stay form and one Facility Stay-selected body using live library controls.",
+   "Added the Facility Stay body as a preferred value of Sidesheet Body content#279:5 without changing the default.",
+   "Created one content-driven shared Sidesheet instance, frozen reference, transparent rebuild helper, change-log helper, and reused GAP marker.",
+   "Added the three Facility Stay helpers to the existing Rebuild comparison swaps without changing their defaults.",
+   "Created one Templates section and one Screens comparison section. The comparison instance alone disables clipping on its Rebuild preview so the 853px sheet remains visible; the comparison master was not changed.",
+   "Source zVsuhYehoSLLq880qRBFkq and library YX2n4YLrEpBXNbcc73T6dw remained read only."
+  ],
+  "createdNodes": {
+   "templatesSection": "388:3433",
+   "formSurfaceCollection": "VariableCollectionId:387:3433",
+   "formSurfaceVariable": "VariableID:387:3434",
+   "facilityStayForm": "389:3469",
+   "facilityStayBody": "391:3567",
+   "rebuildHelper": "392:3672",
+   "sidesheetInstance": "392:3673",
+   "referenceHelper": "392:4091",
+   "referenceImage": "392:4092",
+   "changeLogHelper": "392:4093",
+   "screensSection": "393:7688",
+   "comparisonInstance": "393:7689",
+   "reusedGapMarker": "394:5611"
+  },
+  "verification": {
+   "visual": "PASS — form, rebuilt Sidesheet, and full reference-versus-rebuild comparison inspected at native resolution.",
+   "shell": "PASS — 550x853 content-driven Sidesheet; 72px header, 677px body content inside a 709px body region, and 71px footer immediately after the active body.",
+   "completeForm": "PASS — Facility Type, Facility Name, Admission Date, Discharge Date, Related to problem, Prior Event, Discharge to, and Comments are all visible; the source clipping defect is not reproduced.",
+   "spacing": "PASS — form padding 16; all major row gaps 16; radio label-to-options gaps 8; date-pair gap 8.",
+   "reuse": "PASS — 5 live Text field instances, 7 live Form control label instances backed by Radio, 2 Calendar instances, 2 Tab instances, 1 Icon button with TrashOutlined, shared Sidesheet, and shared footer Buttons retained.",
+   "tokens": "PASS — Form surface resolves to #EEF7F9 from local VariableID:387:3434; every input surface resolves to bound paper white; Sidesheet body picker includes the new body key.",
+   "renderedPaints": "PASS — #EEF7F9 and paper-white bindings survive from masters through the body and the sole comparison instance; opacity is 1.",
+   "geometry": "PASS — owned frames, components, instances, sections, and reference rectangle use whole-pixel geometry; no owned fractional layout values.",
+   "fonts": "PASS — Akkurat LL throughout the created scope; no free-standing or design-system-governed font mismatches.",
+   "reference": "PASS — frozen 1100x1184 source PNG placed at 550x592 with image hash 3948121be91cee111b12e1b5c353431d40466701.",
+   "singlePlacement": "PASS — reference, rebuild, and change-log helpers each have exactly one instance on Screens; exactly one Facility Stay comparison exists.",
+   "propertyReferences": "N/A — no component variant was cloned or combined; tab state changed by swapping live Tab variants.",
+   "unboundPaintAudit": "PASS WITH EXPECTED DOCUMENTATION EXCEPTIONS — all four pages and every top-level node were walked. In the new scope, owned unbound paints are only the two Figma Section canvas fills/strokes and the frozen reference IMAGE fill. New product components have no owned unbound paint.",
+   "sourceAndLibrary": "PASS — no writes to zVsuhYehoSLLq880qRBFkq or YX2n4YLrEpBXNbcc73T6dw.",
+   "screenshots": [
+    "figma-export/npve-external-care-facility-stay-2026-09-05/source-reference-2x-648-1603.png",
+    "figma-export/npve-external-care-facility-stay-2026-09-05/rebuild-form-final-389-3469.png",
+    "figma-export/npve-external-care-facility-stay-2026-09-05/rebuild-sidesheet-392-3672.png",
+    "figma-export/npve-external-care-facility-stay-2026-09-05/comparison-393-7689.png"
+   ]
+  },
+  "decisionNeeded": null,
+  "operatorDecision": {
+   "date": "2026-09-05",
+   "decision": "Create an NPVE-local form-surface token at #EEF7F9.",
+   "rationale": "Preserves the repeated NPVE edit-form surface exactly without silently approximating it or adding an app-specific colour to the shared design-system library.",
+   "implementation": "Local collection NPVE/Color; variable Form surface; COLOR; value #EEF7F9; scopes FRAME_FILL and SHAPE_FILL; no platform code syntax."
+  },
+  "spacingPolicy": "Canonical base 8: 16px card padding and major vertical gaps; 8px within radio groups and between the paired date controls. The 72/71px shared shell regions retain 16px action/header padding plus 1px dividers.",
+  "nextBatch": "Return to the bounded candidate queue and select the next source only after its own audit and pre-write plan."
+ },
+ "npveRebuild_externalReview_2026-09-05": {
+  "_status": "READ-ONLY REVIEW COMPLETE. Peer review of the external (Codex) sidesheet work since cd092d9. All 20 batches recorded and gated; two review-only folders unrecorded; two record claims inaccurate. No subscription split, no duplicate masters, no detached instances, zero unbound authored paints. Nine screens meet the standard with numbered repairs; no rebuild. Three rule-5 findings (two unmarked stand-ins, one contradicted DEFECT). No Figma mutation.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 read only",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (Chip 156:171 axes, Inputs sets, icon names)",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (fresh 1x renders; verbatim text of 4536:27605, 648:1603, 129:7726, 129:7950)",
+  "report": "figma-export/npve-external-review-2026-09-05/report.md",
+  "recordGate": "npveRebuild_externalCareFacilityStay_2026-09-05 recorded DONE — passed",
+  "scopeReviewed": "Everything added or changed after commit cd092d9: Sidesheet set 279:2446 and its global edits; Templates sections 06–13 plus Medication helpers in 05, browse body 304:2910, Problems list body State=Empty 304:2883; Screens sections 04–13; local collections NPVE/Dimension and NPVE/Color.",
+  "step1_records": {
+   "batches": 20,
+   "recorded": 20,
+   "gateChain": "unbroken; each record names the previous as passed",
+   "unrecordedFolders": [
+    "figma-export/npve-flowsheets-list-2026-09-05 (1 png, no report.md)",
+    "figma-export/npve-next-candidate-audit-2026-09-05 (9 png, no report.md)"
+   ],
+   "inaccurateClaims": [
+    "npveRebuild_allergiesList_2026-09-05 rule 8 \"all authored geometry whole-pixel\": severity selector 352:3206 Label x 6.5, DownCaret x 47.5 (master + 3 placements)",
+    "npveRebuild_allergiesList_2026-09-05 and npveRebuild_procedureHistory_2026-09-04 report GAP 0 while each built a local stand-in for something the library cannot express"
+   ],
+   "libraryTodos": "item 15 added (Text field end adornment), matches flag npveProblemEdit_textFieldNoEndAdornment"
+  },
+  "step2_reuse": {
+   "sidesheet": "all 18 Screens and 20 Templates occurrences resolve to set 279:2446; Body content preferred values 10, default 26:221 unchanged",
+   "problemSummaryRow": "153:1186 unchanged (518x88, Show divider); not consumed; Medication summary row 219:2068 is a parallel master with the same anatomy (decision, see flag)",
+   "changeLogRow": "every row is a live 18:103 instance (Screens 111, Templates 124)",
+   "comparison": "every comparison is a live 35:332 instance; helpers have exactly one instance each; preferred values 13 per swap",
+   "duplicateMasters": 0,
+   "subscriptionSplit": 0,
+   "detached": 0,
+   "remoteComponentNames": 27,
+   "note": "Hospitalizations/Facility Stay tab strip built twice (370:3354, 391:3568); Allergies strip a third copy of the tabs-on-divider pattern"
+  },
+  "step3_standards": {
+   "unboundAuthoredPaints": 0,
+   "fractional": "8 hits, all the Allergy severity selector label/caret (352:3207 x 6.5, 352:3208 x 47.5) in master and placements",
+   "hiddenDeadLayers": 0,
+   "looseStacks": "only the two named GAP wrappers in 389:3469 (layoutMode NONE around Text field + absolute Calendar)",
+   "unboundSpacing": "Problem edit body 316:3412 paddingTop 8 and gap 16; 316:3434, 316:3456, 316:3458, 316:3475 gaps literal",
+   "inventionVsGap": {
+    "familyHistoryRing": "346:3083 Icon button with a bound 1px stroke override reproduces the ring the library lacks; contradicts DEFECT marker 189:615 and the bare-glyph handling used on Medication and Problems",
+    "allergySeveritySelector": "352:3206 local pill (chipSuccessBackground, radius/chip, DownCaret) for the source dropdown; library Chip has color=success but no caret slot; no GAP marker",
+    "procedureMetadataBadge": "337:3881 local outlined pill imitating a small Chip to carry a bold prefix; plan said published Chips; no GAP marker",
+    "markedCorrectly": [
+     "324:4934 GAP Text field end adornment",
+     "394:5611 GAP (clone) beside Facility Stay",
+     "NPVE/Color Form surface and NPVE/Dimension radius/md with operator decisions"
+    ]
+   },
+   "text": "Akkurat LL throughout; family bound; status labels SMALL_CAPS_FORCED as in 153:1186; Title Case button labels are the existing npveBuild_buttonLabelTitleCase"
+  },
+  "step4_fidelity": {
+   "verbatimMisses": [
+    "Problems · Edit: source \"Low back pain M540.50\" → rebuild \"M54.50\" (silent correction, unlogged)",
+    "Facility Stay: source \"Discahrge to\" → rebuild \"Discharge to\" (silent correction, unlogged)"
+   ],
+   "unloggedStyleDrift": [
+    "Problems · Edit \"Type\" label Regular 14 → Bold 14",
+    "Allergies \"Mild\" Bold 14 → Regular 16"
+   ],
+   "libraryWins": [
+    "caret chevron vs triangle (marker 197:3416)",
+    "bare add-to-note glyph vs ring (marker 189:615)",
+    "search field without magnifier (27:295)",
+    "48px tabs",
+    "Chronic chip primary main",
+    "EditOutlined for the source pencil (library has no plain pencil)",
+    "small Icon button for the 24px trash glyph"
+   ],
+   "decisions": [
+    "72/71 header and footer",
+    "16px body inset",
+    "content-driven height",
+    "Facility Stay clipped content restored (flag high)"
+   ]
+  },
+  "step5_comparisons": {
+   "captions": "all nine carry \"Source: <key> <node>, exported <date>\" with dates matching the batch records",
+   "referenceScale": {
+    "oneToOne": [
+     "254:3707",
+     "309:5711",
+     "309:6116",
+     "318:6740",
+     "339:6481",
+     "378:5613",
+     "393:7689"
+    ],
+    "scaled": {
+     "346:5993": "346:3147 FIT of 550x656 into 550x600 = 0.915",
+     "356:6236": "356:6191 FIT of 550x656 into 550x600 = 0.915"
+    }
+   },
+   "exactlyOnce": {
+    "sole": [
+     "318:6740",
+     "339:6481",
+     "346:5993",
+     "356:6236",
+     "378:5613",
+     "393:7689"
+    ],
+    "duplicated": [
+     "250:3519 standalone + 254:3707",
+     "309:4531 standalone + 309:5711",
+     "309:4772 standalone + 309:6116",
+     "(pre-existing, ours) 156:2428/156:2707 standalone + 160:3169/160:3680"
+    ]
+   },
+   "changeLogPatterns": {
+    "withTitle": [
+     "254:1895",
+     "309:5243",
+     "309:5586",
+     "339:6405 (title lacks \"Changes:\" prefix)"
+    ],
+    "noTitlePadded": [
+     "318:3928"
+    ],
+    "bareRows480": [
+     "346:3365 (white fill on helper)",
+     "356:6192",
+     "378:3403",
+     "392:4093"
+    ]
+   },
+   "jargonExamples": [
+    "550×600 fixed rebuild → 550×382 content-driven rebuild",
+    "Footer pinned at y544 → footer follows body at y311",
+    "Grey interpretation → background/paper",
+    "One state in the existing body API",
+    "Raw #EEF7F9 → NPVE/Form surface",
+    "Source date field → Text Field + Calendar GAP",
+    "Live frame → frozen 2× PNG"
+   ],
+   "namingDrift": "comparison instances \"Rebuild comparison — X\" → \"X · Reference vs rebuild\" from Family history on; reference rectangles named three ways; five masters with empty descriptions (304:2910, 346:3080, 346:3113, 389:3469, 391:3567)"
+  },
+  "step6_verdicts": {
+   "shellGlobals": "meets standard as built",
+   "medicationList": "meets; D standalone duplicate; L jargon rows; D Full-width slot default named for a screen (248:1827)",
+   "problemsEmpty": "meets; D standalone duplicate; L jargon rows",
+   "problemsBrowse": "meets; D standalone duplicate; L jargon rows",
+   "problemsEdit": "meets; M change log to pattern; D/L ICD correction; L Type label; M bind spacing",
+   "procedures": "meets; D metadata badge GAP marker or Chip; M change log title prefix",
+   "familyHistory": "meets; D/M ring override; M reference at 550x656 clip off; M change log to pattern",
+   "allergies": "meets; D severity selector GAP marker; M integer geometry; L Mild weight; M reference clip off; M change log to pattern",
+   "hospitalizations": "meets; M change log to pattern; L mechanism rows",
+   "facilityStay": "meets; L Discharge correction row; M change log to pattern; L mechanism row",
+   "rebuilds": 0,
+   "adopt": [
+    "content-driven sheet height with the master fixed",
+    "transparent rebuild helper below a short sheet",
+    "clip-off override on the comparison instance for tall content (apply to tall references)",
+    "bodies appended to Body content preferred values, default untouched",
+    "variant added to an existing body set instead of a new master",
+    "local NPVE collections for consumer-only tokens with the decision recorded and no code syntax",
+    "global shell corrections with population counts and before/after renders",
+    "restore clipped source content and flag the source at high severity"
+   ]
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "N/A read-only; live comparison instances rendered and inspected",
+   "2_unboundPaintAudit": "PASS — all new Templates sections and every Sidesheet occurrence on Screens walked; 0 unbound authored; section chrome excluded by recorded direction",
+   "3_referenceCounts": "N/A no clone; all links resolve",
+   "4_skipInvisibleFalse": "PASS — set on every walk",
+   "5_opacityLast": "PASS — untouched",
+   "6_enumerateDontRecall": "PASS — page walks, records checked afterwards",
+   "7_fileIdentityFirst": "PASS — keys explicit; Cover 0:1 / Templates 3:2 / Screens 27:2 / Archive 126:2",
+   "8_roundWithRecord": "FOUND 8 — Allergy severity selector; recorded as flag",
+   "9_boundPaintAlpha": "PASS — untouched",
+   "10_cloneDropsPropertyRefs": "N/A"
+  },
+  "counts": {
+   "newGapMarkersByExternal": 2,
+   "newDefectMarkersByExternal": 0,
+   "unmarkedStandIns": 2,
+   "contradictedDefect": 1,
+   "rebuilds": 0
+  },
+  "figmaMutations": [],
+  "screenshots": [
+   "figma-export/npve-external-review-2026-09-05/comparison-allergies-356-6236-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-facility-stay-393-7689-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-family-history-346-5993-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-hospitalizations-378-5613-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-medication-list-254-3707-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-problems-browse-309-6116-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-problems-edit-318-6740-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-problems-empty-309-5711-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-procedures-339-6481-1x.png",
+   "figma-export/npve-external-review-2026-09-05/master-allergy-card-354-3206-1x.png",
+   "figma-export/npve-external-review-2026-09-05/master-family-member-card-346-3089-1x.png",
+   "figma-export/npve-external-review-2026-09-05/master-procedure-event-row-337-3884-1x.png",
+   "figma-export/npve-external-review-2026-09-05/preview-medication-row-states-224-1730-1x.png",
+   "figma-export/npve-external-review-2026-09-05/sidesheet-set-279-2446-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-allergies-129-7726-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-facility-stay-648-1603-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-family-history-129-7950-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-hospitalizations-129-8316-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-medication-list-545-5557-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-problem-edit-4536-27605-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-problems-browse-129-10016-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-problems-empty-4704-17095-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-procedures-648-3473-1x.png",
+   "figma-export/npve-external-review-2026-09-05/standalone-medication-list-250-3519-1x.png"
+  ],
+  "flagsAdded": [
+   "npveExtReview_familyHistoryRingOverride",
+   "npveExtReview_allergySeveritySelectorUnmarked",
+   "npveExtReview_procedureMetadataBadgeUnmarked",
+   "npveExtReview_referenceScaledToSlot",
+   "npveExtReview_changeLogPatternDrift",
+   "npveExtReview_changeLogJargon",
+   "npveExtReview_silentTextCorrections",
+   "npveExtReview_unloggedTypeStyleDrift",
+   "npveExtReview_standaloneScreenDuplicates",
+   "npveExtReview_severitySelectorFractional",
+   "npveExtReview_problemEditUnboundSpacing",
+   "npveExtReview_fullWidthSlotDefaultName",
+   "npveExtReview_parallelSummaryRows",
+   "npveExtReview_unrecordedAuditFolders"
+  ],
+  "flagsBefore": 233,
+  "flagsAfter": 247
+ },
+ "npveRebuild_extReviewRepairs_2026-09-05": {
+  "_status": "DONE. All seven review decisions applied: ring override removed and the ringed-buttons DEFECT marker extended; two GAP markers placed for the kept stand-ins; Family history and Allergies references at 1:1 with the Reference column unclipped; six change-log helpers on the Change log pattern and all 61 rows rewritten in plain language plus two typo rows; five standalone screens pixel-diffed (corner pixels only) and moved to Archive 05; Allergy severity selector at integer positions; two records annotated; CLAUDE.md gained \"Sheet and comparison techniques\"; LIBRARY-TODOS items 16 and 17. Ten standing rules run on all four pages. Tree committed.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (not opened)",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (not opened; verbatim strings from npveRebuild_externalReview_2026-09-05)",
+  "report": "figma-export/npve-ext-review-repairs-2026-09-05/report.md",
+  "recordGate": "npveRebuild_externalReview_2026-09-05 recorded — passed",
+  "stopCondition": "Stop if any standalone screen differs from its comparison twin beyond corner anti-aliasing, if a Sidesheet variant loses reference entries, or if a master edit changes a placed instance outside the intended region. None triggered.",
+  "operatorDecisions_2026_09_05": {
+   "ringOverride": "Removed; the bare-glyph ruling (DEFECT marker 189:615) stands for every screen.",
+   "standIns": "Allergy severity selector and Procedure history metadata are kept and marked with GAP markers per the convention.",
+   "scaledReferences": "Family history and Allergies references re-clipped: 1:1 at 550x656 with the Reference column clip off, not fitted at 91.5%.",
+   "changeLogs": "Unified on the Change log pattern and rewritten without jargon.",
+   "typoFixes": "The two source-typo corrections are kept and logged as rows; the source frames are flagged.",
+   "standaloneScreens": "The three external and the two pre-rule-15 standalone screens are archived, renamed _Superseded — see comparison.",
+   "records": "The Allergies and Procedures records are annotated; their geometry and GAP claims are corrected by this batch."
+  },
+  "step1_ring": {
+   "node": "346:3083 Add condition to note (library Icon button instance inside Family history condition row 346:3080)",
+   "change": "strokes [] — the master carries none; the override that drew the ring is gone",
+   "placementsChecked": [
+    "I346:3099;346:3083",
+    "I346:3106;346:3083",
+    "I346:3123;346:3099;346:3083",
+    "I346:3123;346:3106;346:3083",
+    "I346:3149;6:80;346:3123;346:3099;346:3083",
+    "I346:3149;6:80;346:3123;346:3106;346:3083"
+   ],
+   "marker": "189:615 DEFECT marker — Ringed icon buttons: Difference text extended to name the Family history condition rows and the 2026-09-05 removal",
+   "pixels": "figma-export/npve-ext-review-repairs-2026-09-05/step1-family-member-card-346-3089-after.png, figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-family-history-346-5993.png"
+  },
+  "step2_gapMarkers": {
+   "dropdownChip": {
+    "id": "404:7061",
+    "name": "GAP marker — Dropdown chip",
+    "section": "356:6235 (widened 1868 → 2268)",
+    "at": "(1868, 120)",
+    "covers": "Allergy severity selector 352:3206"
+   },
+   "chipBoldPrefix": {
+    "id": "404:7070",
+    "name": "GAP marker — Chip with bold prefix",
+    "section": "339:6480 (widened 1868 → 2268)",
+    "at": "(1868, 120)",
+    "covers": "Procedure history metadata 337:3881"
+   },
+   "method": "clone of GAP marker 394:5611 (convention treatment intact: grey/300 fill, grey/500 dashed border, GAP chip), texts replaced",
+   "descriptions": "stand-in note appended to the descriptions of 352:3206 and 337:3881",
+   "libraryTodos": "LIBRARY-TODOS.md items 16 (Chip has no dropdown style) and 17 (Chip cannot carry a bold prefix); item 15 already existed (Text field end adornment), so the new items took the next numbers"
+  },
+  "step3_references": {
+   "helpers": {
+    "346:3146": "550x600 → 550x656; rectangle 346:3147 550x656 FILL (image 1100x1312 at 1:1)",
+    "356:6190": "550x600 → 550x656; rectangle 356:6191 550x656 FILL"
+   },
+   "instances": {
+    "346:5993": "Reference column I346:5993;35:333 clipsContent false; name suffixed \"(reference 656 tall at 1:1, Reference column clip off)\"",
+    "356:6236": "Reference column I356:6236;35:333 clipsContent false; same suffix"
+   },
+   "captions": "unchanged (single-line pattern; the note went to the comparison name)",
+   "pixels": "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-family-history-346-5993.png, figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-allergies-356-6236.png — source footer now visible, title sizes match the rebuild"
+  },
+  "step4_changeLogs": {
+   "conformed": {
+    "346:3365": "Content 405:3878",
+    "356:6192": "Content 405:3918",
+    "378:3403": "Content 405:3958",
+    "392:4093": "Content 405:3998",
+    "318:3928": "Content 405:4038"
+   },
+   "method": "clone of the conforming Content card 254:1896 (paper fill, divider stroke, padding 16 bound space/16, Title bound h4-equivalent, Title divider, Rows 448); the clone's placeholder rows (30) were removed before the helper's own Row instances were moved in and set to FILL; helper fills cleared and padding zeroed",
+   "proceduresTitle": "339:6407 \"Procedures/Surgical History\" → \"Changes: Procedures/Surgical History\"",
+   "rowsRewritten": 61,
+   "rowsAdded": {
+    "405:4078": "Problem code | M540.50 → M54.50 | Source typo, corrected (in 318:3928)",
+    "405:4084": "Discharge label | \"Discahrge to\" → \"Discharge to\" | Source typo, corrected (in 392:4093)"
+   },
+   "rowsVerbatim": "listed in the report",
+   "pixels": "after-comparison-*.png for all nine comparisons"
+  },
+  "step6_archive": {
+   "pixelDiff": {
+    "method": "PIL difference of the standalone 1x render against the (614,60) crop of its comparison render",
+    "results": {
+     "medication": "40 px > 16 of 210100, all at the four corners",
+     "empty": "40 of 330000, corners",
+     "browse": "48 of 330000, corners",
+     "closed": "40 of 330000, corners",
+     "open": "40 of 330000, corners"
+    },
+    "verdict": "identical apart from corner anti-aliasing against the grey backdrop; no stop"
+   },
+   "section": "407:5492 \"05 · Superseded standalone screens (moved from Screens 2026-09-05)\" on Archive at (1240, 4513) 3200x900",
+   "moved": {
+    "250:3519": "_Superseded — see comparison · Sidesheet — Medication list (comparison 254:3707)",
+    "309:4531": "_Superseded — see comparison · Sidesheet — Problems list · Empty (comparison 309:5711)",
+    "309:4772": "_Superseded — see comparison · Sidesheet — Problems picker · Browse (comparison 309:6116)",
+    "156:2428": "_Superseded — see comparison · Sidesheet — Problems list · Closed (comparison 160:3169)",
+    "156:2707": "_Superseded — see comparison · Sidesheet — Problems list · Open (comparison 160:3680)"
+   },
+   "screensSectionsRenamed": {
+    "156:2427": "02 · Problems management markers — standalone screens moved to Archive 05 on 2026-09-05; see 03 · Problems management comparisons (markers 189:615, 197:3416 stay)",
+    "250:3518": "04 · Medication list — standalone screen moved to Archive 05 on 2026-09-05; see 05 · Medication list comparisons (empty)",
+    "309:4529": "06 · Problems states — standalone screens moved to Archive 05 on 2026-09-05; see 07 · Problems states comparisons (empty)"
+   },
+   "readme": "185:5 Body gained a paragraph for Archive 05",
+   "links": "all five remain live instances of 6:65"
+  },
+  "step7_selector": {
+   "node": "352:3206 Allergy severity selector",
+   "change": "primaryAxisSizingMode FIXED 70 → AUTO (hug) 73; padding 8/8 bound unchanged; Label x 6.5 → 8, DownCaret x 47.5 → 49",
+   "placements": {
+    "354:3209": "73 wide, x 8 / 49",
+    "I355:5934;354:3209": "73 wide, x 8 / 49"
+   },
+   "recordAnnotations": [
+    "npveRebuild_allergiesList_2026-09-05.reviewAnnotation_2026_09_05",
+    "npveRebuild_procedureHistory_2026-09-04.reviewAnnotation_2026_09_05"
+   ]
+  },
+  "step8_claudeMd": {
+   "subsection": "### Sheet and comparison techniques, inserted after rule 15 under Standing rules (CRLF preserved)",
+   "text": [
+    "Adopted 2026-09-05 from the external sidesheet batches (record npveRebuild_extReviewRepairs_2026-09-05).",
+    "Sheets are as tall as their content. The Sidesheet master stays 550 by 600. A placed sheet grows or shrinks to fit its body, and the footer sits right under the last row. Never pad a short sheet to 600 or pin its footer to the bottom.",
+    "Helpers under a short sheet are transparent. When a rebuilt sheet is shorter than the comparison slot, the Rebuild sub-component carries no fill, so only the sheet shows white. Nothing false extends below it.",
+    "Tall content overflows the slot; the slot does not shrink it. When a reference or a rebuilt sheet is taller than the 600 slot, keep it at 1:1 and switch clipping off on that column of the placed comparison instance. Never scale a reference to fit.",
+    "New bodies join the shell through its Body content list. Append the new body component to the Sidesheet's Body content preferred values and leave the default alone. Do not fork the shell.",
+    "A new state is a new variant of the body it belongs to. Add State=Empty to the existing body set rather than creating a second set or a loose frame.",
+    "Values the library lacks may live in a local NPVE collection. Name the collection NPVE/<kind>, record the operator's decision in the schema, claim no code syntax, and add the value to the library to-do list. Never write it into the library from a consuming file."
+   ]
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — no new paint authored; edited masters (346:3080 row, 352:3206 selector, five change-log helpers, two reference helpers) re-rendered through their placed instances on Screens and inspected.",
+   "2_unboundPaintAudit": "PASS with the known cover exception — Templates 5567 nodes 0 unbound; Screens 2616 nodes 0; Archive 1528 nodes 0; Cover 8 nodes 1 (1:5 cover frame #010000, pre-existing flag npveProblemsBuild_coverPageUnboundFill). Section chrome excluded by recorded direction.",
+   "3_referenceCounts": "PASS — Sidesheet variants 58 nodes / 70 entries each; Problem summary row 6; Medication summary row 7; Change log/Row 3; Rebuild comparison 112 entries. No clone of a component.",
+   "4_skipInvisibleFalse": "PASS — set on every walk.",
+   "5_opacityLast": "PASS — opacity untouched.",
+   "6_enumerateDontRecall": "PASS — rows, placements, sections and instances enumerated from the file before each edit.",
+   "7_fileIdentityFirst": "PASS — keys explicit; Cover 0:1 / Templates 3:2 / Screens 27:2 / Archive 126:2.",
+   "8_roundWithRecord": "PASS — 0 fractional authored FRAME/COMPONENT/RECTANGLE/INSTANCE/TEXT geometry on Templates and Screens after the selector fix.",
+   "9_boundPaintAlpha": "PASS — untouched.",
+   "10_cloneDropsPropertyRefs": "PASS — the only clones were a GAP marker frame (no property references) and the Content card frame (no property references); the moved Row instances keep their three text properties."
+  },
+  "counts": {
+   "GAP": 2,
+   "DEFECT": 0,
+   "decisions": 7,
+   "rowsRewritten": 61,
+   "rowsAdded": 2,
+   "screensArchived": 5
+  },
+  "screenshots": [
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-allergies-356-6236.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-facility-stay-393-7689.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-family-history-346-5993.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-hospitalizations-378-5613.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-medication-list-254-3707.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-problems-browse-309-6116.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-problems-edit-318-6740.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-problems-empty-309-5711.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/after-comparison-procedures-339-6481.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step1-defect-marker-ringed-189-615-after.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step1-family-member-card-346-3089-after.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step2-gap-marker-chip-bold-prefix-404-7070.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step2-gap-marker-dropdown-chip-404-7061.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-archive-readme-185-3-after.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-archive-section-407-5492.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-comparison-browse-309-6116.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-comparison-closed-160-3169.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-comparison-empty-309-5711.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-comparison-medication-254-3707.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-comparison-open-160-3680.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-diff-browse.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-diff-closed.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-diff-empty.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-diff-medication.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-diff-open.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-standalone-browse-309-4772.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-standalone-closed-156-2428.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-standalone-empty-309-4531.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-standalone-medication-250-3519.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step6-standalone-open-156-2707.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step7-allergy-card-354-3206-after.png",
+   "figma-export/npve-ext-review-repairs-2026-09-05/step7-severity-selector-352-3206-after.png"
+  ],
+  "flagsAdded": [
+   "npveSource_problemsEditIcdTypo",
+   "npveSource_externalCareFacilityStayDischargeTypo"
+  ],
+  "flagsResolved": [
+   "npveExtReview_familyHistoryRingOverride",
+   "npveExtReview_allergySeveritySelectorUnmarked",
+   "npveExtReview_procedureMetadataBadgeUnmarked",
+   "npveExtReview_referenceScaledToSlot",
+   "npveExtReview_changeLogPatternDrift",
+   "npveExtReview_changeLogJargon",
+   "npveExtReview_silentTextCorrections",
+   "npveExtReview_standaloneScreenDuplicates",
+   "npveExtReview_severitySelectorFractional"
+  ],
+  "flagsBefore": 247,
+  "flagsAfter": 249
  }
 }

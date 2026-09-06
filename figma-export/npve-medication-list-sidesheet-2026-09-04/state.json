@@ -1,0 +1,58 @@
+{
+  "batch": "npve-medication-list-sidesheet-2026-09-04",
+  "status": "complete",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "sourceFile": "zVsuhYehoSLLq880qRBFkq",
+  "sourceNode": "545:5557",
+  "existingNodeIds": {
+    "templatesPage": "3:2",
+    "screensPage": "27:2",
+    "medicationsSection": "219:2067",
+    "sidesheetMaster": "6:65",
+    "medicationBody": "236:1758",
+    "primaryButtonVariant": "155:1192",
+    "comparisonMaster": "35:332",
+    "comparisonSection": "126:2023",
+    "changeLogRow": "18:103"
+  },
+  "createdNodeIds": {
+    "footerActionComponent": "248:1827",
+    "footerActionButton": "248:1828",
+    "sidesheetFullWidthActionSlot": "252:2211",
+    "screenSection": "250:3518",
+    "screenSidesheet": "250:3519",
+    "comparisonReferenceComponent": "253:1838",
+    "comparisonReferenceImage": "253:1839",
+    "comparisonRebuildComponent": "253:1840",
+    "comparisonRebuildSidesheet": "253:1841",
+    "comparisonChangeLogComponent": "254:1895",
+    "comparisonChangeLogContent": "254:1896",
+    "comparisonChangeLogRows": "254:1899",
+    "comparisonScreenSection": "254:3706",
+    "comparisonScreenInstance": "254:3707"
+  },
+  "api": {
+    "sidesheetMaster": "6:65",
+    "bodyPreferredKey": "970af653563a2d05132165b3c761f1d7314503b9",
+    "footerPreferredProperty": "Full-width action#252:2",
+    "footerPreferredKey": "0cb38a1b31e83e87e11b1f388398cade29febebf",
+    "tertiaryPreferredValuesRestored": true,
+    "primaryPreferredValuesRestored": true,
+    "defaultsPreserved": true,
+    "showPrimaryProperty": "Show primary action#252:0",
+    "showFullWidthProperty": "Show full-width action#252:1",
+    "fullWidthSwapProperty": "Full-width action#252:2",
+    "comparisonPreferredValuesAdded": true
+  },
+  "validation": {
+    "medicationSheet": "550x600 live Sidesheet 6:65",
+    "body": "236:1758",
+    "fullWidthAction": "534x38 visible; nested Button 518x38",
+    "comparison": "254:3707 with all three swaps resolved",
+    "legacyProblems": "unchanged geometry and visibility defaults",
+    "fontFamilies": ["Akkurat LL"],
+    "unboundNonInstancePaints": 0,
+    "fractionalNonExempt": 0
+  },
+  "pendingValidations": []
+}

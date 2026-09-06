@@ -158,6 +158,41 @@ Standing rules apply to the library work too: additive only, published names loc
 - GAP marker "Dropdown caret" beside the Problems management screens in fdCQVFdvOByaOYIJYag0d6 (npveRebuild_mgmtFidelityBuild_2026-09-04); decision 2026-09-04 (Daniel): keep the chevron until the icon ships.
 - Flag `npveMgmt_statusCaretGlyphGap`.
 
+## 15. Text field has no end-adornment slot
+
+**Wrong.** Text field exposes label, value, helper, required, select and multiline controls, but no start- or end-adornment slot. The Edit Problem reference places a Calendar icon inside each date field, so a consumer cannot reproduce that control through the published component API.
+
+**Fix.** Add an optional end-adornment instance-swap slot to Text field, with the same absolute positioning and text clearance used by MUI InputAdornment. Keep the default hidden and curate Icon/Calendar as a preferred value. The existing search-field task still covers the separate leading-adornment and placeholder needs.
+
+**Evidence.**
+- Source: NPVE NDE-2026 `Clin_Problems-Edit` 4536:27605, date fields at 4598:31375 and 4695:13238.
+- Target: `Problem edit body` 316:3412 uses explicit GAP wrappers around live Text field and Icon/Calendar instances; marker 324:4934.
+- Flag: `npveProblemEdit_textFieldNoEndAdornment` (GAP, medium).
+
+## 16. Chip has no dropdown style
+
+**Wrong.** The Allergies source shows the severity as a green pill reading "Mild" with a caret, a chip that opens a menu. Chip (156:171) has color=success but only a Delete icon boolean; there is no caret or trailing-icon slot, so a consumer cannot express a dropdown chip.
+
+**Fix.** Add a trailing-icon slot or a Dropdown boolean to Chip (Figma-only affordance, Sentence case), defaulting to the DownCaret glyph, or publish a documented Chip + caret pattern. Then swap the NPVE stand-in.
+
+**Evidence.**
+- Source: NPVE NDE-2026 `Clin_Allergies` 129:7726, severity control I129:7816 (Akkurat LL Bold 14 label).
+- Target: `Allergy severity selector` 352:3206 (local stand-in; fill bound chipSuccessBackground, radius bound radius/chip, live DownCaret); GAP marker 404:7061 "Dropdown chip" beside the Allergies comparison 356:6236 on Screens.
+- Flags: `npveExtReview_allergySeveritySelectorUnmarked` (GAP, medium); marked 2026-09-05 by `npveRebuild_extReviewRepairs_2026-09-05`.
+- Screens: `figma-export/npve-external-review-2026-09-05/comparison-allergies-356-6236-1x.png`.
+
+## 17. Chip cannot carry a bold prefix
+
+**Wrong.** The Procedures/Surgical History source shows metadata pills that lead with a bold prefix ("CPT: 27427", "For: MCL Tear, Left Knee"). Chip has one Label at one weight, so the prefix cannot be emphasised inside a published Chip.
+
+**Fix.** Decide whether a two-part label (Prefix + Label, prefix bold) belongs on Chip as a Figma-only affordance, or whether the product should render the prefix at one weight. If the former, add a Prefix text property with an empty default; then swap the NPVE stand-in.
+
+**Evidence.**
+- Source: NPVE NDE-2026 `Clin_ProSH` 648:3473, event card pills.
+- Target: `Procedure history metadata` 337:3881 (local outlined badge with separate Prefix and Value text, all paints bound); GAP marker 404:7070 "Chip with bold prefix" beside the Procedures comparison 339:6481 on Screens.
+- Flags: `npveExtReview_procedureMetadataBadgeUnmarked` (GAP, medium); marked 2026-09-05 by `npveRebuild_extReviewRepairs_2026-09-05`.
+- Screens: `figma-export/npve-external-review-2026-09-05/comparison-procedures-339-6481-1x.png`.
+
 ## Checked and left out
 
 These NPVE flags are open but the library is not the fix: `npveProblemsRecent_filterTabsCompact` (source hand-drew 28-tall tabs; the library Tabs was accepted), `npveSidesheet_closeIsBareIconInSource` and `npveProblemsRecent_bareIconControls` (source has no hit areas; the library already does), `npveProblemsBuild_coverPageUnboundFill` and `npveProblemsBuild_strayChangelogRow` (target file), `npveComparison_imageFillUnbindable` (by design), `npveBuild_importedNodesDroppedBetweenCalls` and `npveChangelog_placedLogIsDetached` (plugin API behaviour), `npveCloseout_storybookUnreachable` (reference checkout), and the nine `npveSource_*` findings about the NDE-2026 file.

@@ -1,0 +1,32 @@
+{
+  "batch": "npve-medication-surface-correction-2026-09-04",
+  "status": "complete",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "sourceFile": "zVsuhYehoSLLq880qRBFkq",
+  "targetPage": { "id": "3:2", "name": "Templates" },
+  "nodeIds": {
+    "master": "219:2068",
+    "rowPreview": "224:1730",
+    "bodyMaster": "236:1758",
+    "bodyPreview": "238:1806",
+    "bodyPreviewInstance": "238:1809"
+  },
+  "beforeVariableKey": "4dbef7c8fc453422675312ab6708eeda7e45476b",
+  "afterVariableKey": "f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+  "expectedInstanceCount": 6,
+  "mutation": {
+    "mutatedNodeIds": ["219:2068"],
+    "propagatedNodeIds": ["224:1733", "224:1754", "238:1760", "238:1778", "I238:1809;238:1760", "I238:1809;238:1778"],
+    "paperVariableId": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+  },
+  "validation": {
+    "masterAndSixInstancesUsePaper": true,
+    "rowGeometry": "518x76",
+    "rowReferenceCounts": "7 each",
+    "bodyGeometry": "518x206",
+    "bodyReferenceCounts": "19 master / 19 preview",
+    "fontFamilies": ["Akkurat LL"],
+    "fractionalNonExempt": 0
+  },
+  "pendingValidations": []
+}

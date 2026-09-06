@@ -1,0 +1,60 @@
+{
+  "batch": "npve-medication-summary-row-2026-09-04",
+  "status": "complete",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "sourceFile": "zVsuhYehoSLLq880qRBFkq",
+  "libraryFile": "YX2n4YLrEpBXNbcc73T6dw",
+  "targetPage": { "id": "3:2", "name": "Templates" },
+  "sourceNodes": { "sidesheet": "545:5557", "activeRow": "545:5573", "discontinuedRow": "545:5589" },
+  "plannedSection": "06 · Medications",
+  "plannedComponent": "Medication summary row",
+  "preflight": {
+    "fileIdentity": ["Cover", "Templates", "Screens", "Archive"],
+    "nameConflicts": 0,
+    "problemSummaryRowReferenceBaseline": 6
+  },
+  "nodeIds": {
+    "section": "219:2067",
+    "component": "219:2068",
+    "details": "219:2069",
+    "statusControl": "219:2070",
+    "medicationLine": "219:2071",
+    "actions": "219:2072",
+    "statusText": "222:1994",
+    "statusCaret": "222:1995",
+    "name": "222:1997",
+    "dose": "222:1998",
+    "indicationChip": "222:1999",
+    "addToNoteButton": "223:1725",
+    "divider": "223:1731",
+    "previewFrame": "224:1730",
+    "activePreview": "224:1733",
+    "discontinuedPreview": "224:1754"
+  },
+  "componentProperties": {
+    "Status": "Status#223:0",
+    "Name": "Name#223:1",
+    "Dose": "Dose#223:2",
+    "Show divider": "Show divider#223:3",
+    "Indication": "exposed nested Chip Label#156:0"
+  },
+  "validation": {
+    "componentGeometry": "518x76",
+    "statusGap": 4,
+    "statusToMedicationLineGap": 8,
+    "medicationLineGap": 8,
+    "componentPropertyReferenceCount": 7,
+    "activeMasterPaintSignatureMatch": true,
+    "unboundPaintsInComponent": 0,
+    "unboundPaintsInActivePreview": 0,
+    "unboundPaintsInDiscontinuedPreview": 0,
+    "trustedProblemSummaryRowReferenceCountBeforeAndAfter": "6 → 6",
+    "fractionalAuthoredDimensionsAllPages": 0
+  },
+  "screenshots": [
+    "source-active-545-5573.png",
+    "source-discontinued-545-5589.png",
+    "rebuilt-states-224-1730.png",
+    "reference-vs-rebuilt.png"
+  ]
+}

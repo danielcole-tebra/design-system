@@ -1,0 +1,62 @@
+{
+  "batch": "npve-medication-list-body-2026-09-04",
+  "status": "complete",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "sourceFile": "zVsuhYehoSLLq880qRBFkq",
+  "libraryFile": "YX2n4YLrEpBXNbcc73T6dw",
+  "targetPage": { "id": "3:2", "name": "Templates" },
+  "sourceNodes": { "sidesheet": "545:5557", "body": "545:5572" },
+  "nodeIds": {
+    "section": "219:2067",
+    "approvedMedicationRow": "219:2068",
+    "component": "236:1758",
+    "addButton": "237:1764",
+    "activeRow": "238:1760",
+    "discontinuedRow": "238:1778",
+    "previewFrame": "238:1806",
+    "previewExample": "238:1807",
+    "previewLabel": "238:1808",
+    "previewInstance": "238:1809"
+  },
+  "preflight": {
+    "fileIdentity": ["Cover", "Templates", "Screens", "Archive"],
+    "nameConflicts": 0,
+    "medicationRowReferenceBaseline": 7
+  },
+  "plannedGeometry": {
+    "width": 518,
+    "height": 206,
+    "gap": 8,
+    "spacingVariableKey": "183d5d946d268e8bd37735b8b0dc95111c46eddd"
+  },
+  "resolvedDependencies": {
+    "buttonVariantKey": "820871c5281ccd91813587a508771cc439f38b93",
+    "buttonEndIcon": "3:75 Icon/PlusOutlined"
+  },
+  "composition": {
+    "geometry": "518x206; Button y0 h38; Active y46 h76; Discontinued y130 h76",
+    "exposedInstances": ["237:1764", "238:1760", "238:1778"],
+    "auditHold": "Resolved: the initial counter omitted hidden instance children. With skipInvisibleInstanceChildren=false, Active and Discontinued both retain 7 references."
+  },
+  "validation": {
+    "componentGeometry": "518x206",
+    "childGeometry": "Button 211x38 y0; Active 518x76 y46; Discontinued 518x76 y130",
+    "componentPropertyReferenceCount": 19,
+    "previewPropertyReferenceCount": 19,
+    "nestedMedicationRowReferenceCounts": "7 / 7",
+    "approvedMedicationRowReferenceCountBeforeAndAfter": "7 → 7",
+    "masterPreviewPaintSignatureMatch": "20 / 20 exact",
+    "unboundPaintsInComponent": 0,
+    "fontOffenders": 0,
+    "globalUnboundOutsideInstances": "Cover 1 pre-existing; Templates 0; Screens 0; Archive 0",
+    "fractionalAuthoredDimensionsAllPages": 0
+  },
+  "screenshots": [
+    "source-body-545-5572.png",
+    "rebuilt-body-236-1758.png",
+    "rebuilt-instance-238-1809.png",
+    "rebuilt-preview-238-1806.png",
+    "reference-vs-rebuilt.png"
+  ],
+  "pendingValidations": []
+}

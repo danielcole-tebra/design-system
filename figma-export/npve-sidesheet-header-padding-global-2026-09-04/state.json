@@ -1,0 +1,33 @@
+{
+  "runId": "npve-sidesheet-header-padding-global-2026-09-04",
+  "phase": "phase4",
+  "step": "P4.e",
+  "status": "complete",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "entities": {
+    "componentSets": { "Sidesheet": "279:2446" },
+    "headers": {
+      "Floating": "6:66",
+      "Docked right": "279:2417",
+      "Docked left": "279:2432"
+    },
+    "medication": {
+      "Screen": "250:3519",
+      "Comparison component": "253:1840",
+      "Comparison content": "253:1841"
+    },
+    "changeLogRows": ["160:1852", "160:1929", "254:1900", "254:1906", "254:1924"]
+    ,
+    "variables": { "space/16": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24" }
+  },
+  "pendingValidations": [],
+  "completedSteps": ["P0.a", "P0.b", "P0.c", "P0.d", "P0.e", "P0.f", "P3.a", "P3.b", "P4.a", "P4.b", "P4.c", "P4.d", "P4.e"],
+  "verification": {
+    "headers": "3/3 at 72px with padding 16/8/16/16 bound to space/16",
+    "references": "70 per variant",
+    "instances": "16 actual instances attached and propagated",
+    "fixedSheets": "550x600; Body y73 h456; Footer y529 h71",
+    "medication": "550x382; Body y73 h238; Footer y311 h71",
+    "visual": "Problems closed/open, Medication, and reference-vs-rebuild Header inspected"
+  }
+}

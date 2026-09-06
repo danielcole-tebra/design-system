@@ -1,0 +1,27 @@
+{
+  "runId": "npve-sidesheet-header-inset-audit-2026-09-04",
+  "phase": "phase0",
+  "step": "P0.f",
+  "status": "complete_read_only",
+  "targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "entities": {
+    "componentSets": {
+      "Sidesheet": "279:2446"
+    },
+    "components": {
+      "Sidesheet/Floating": "6:65",
+      "Sidesheet/Docked right": "279:2416",
+      "Sidesheet/Docked left": "279:2431"
+    },
+    "nodes": {
+      "Target Header": "6:66",
+      "Target Title": "6:73",
+      "Source Problems Header": "545:5503",
+      "Source Problems Title": "545:5504",
+      "Library Drawer Header": "749:231"
+    }
+  },
+  "decisionRequired": "Approve or reject the NPVE-local fixed 64px Header proposal.",
+  "figmaMutations": [],
+  "completedSteps": ["P0.a", "P0.b", "P0.c", "P0.d", "P0.e", "P0.f"]
+}
