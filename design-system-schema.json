@@ -5973,7 +5973,8 @@
    "where": "library 627:161; target 424:4417",
    "handling": "Library to-do: Label text property and a Start icon boolean on Split button.",
    "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
-   "webAppV2BugListCandidate": false
+   "webAppV2BugListCandidate": false,
+   "note_2026_09_06": "Still OPEN as a library finding. The Note card no longer uses the Split button (npveRebuild_encounterToolbar_2026-09-06); the source Sign control is a single button with a caret."
   },
   {
    "id": "npveEncounter_badgeDotCannotSitInline",
@@ -6026,6 +6027,86 @@
    "summary": "The Health Status/Observations helpers are named \"Rebuild helper · Health Status/Observations\" and \"Reference helper · Health Status/Observations\" instead of the _Rebuild comparison/<Reference|Rebuild>/<screen> pattern that every other comparison uses.",
    "where": "target 413:7010, 415:4050 (Templates section 412:3888)",
    "handling": "Rename in the sidesheet workstream with a record; the change log helper 415:7108 already follows the pattern."
+  },
+  {
+   "id": "npveEncounter_toolbarGlyphsMissing",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "The toolbar needs mic, transcribe, person-heart and template-list glyphs the library lacks; Icon/Telehealth, Icon/UserOutlined and Icon/List stand in, the transcribe pill state is unbuilt.",
+   "where": "target Note toolbar 468:5582; GAP marker 473:9782",
+   "handling": "LIBRARY-TODOS candidates 27–30.",
+   "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_transcriptionStatusInvention",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "Nothing in the library expresses an inline status toggle (radio dot + bold teal label); built minimal as a local Transcription status/Start piece from Icon/RadioChecked (MUI) and an h5 text, per audit invention row 15.",
+   "where": "target 469:5827; toolbar slot 468:5612",
+   "handling": "Product/design decision whether this becomes a library pattern; further states join as swap variants.",
+   "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_moduleChipGlyphsMissing",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "No vitals, lab, allergy or timeline glyph in the library; the five new module chips use Icon/Clinical, Icon/UserGroupFilled, Icon/Reports, Icon/AttentionOutlined and Icon/Calendar.",
+   "where": "target Module strip 426:4214 chips 465:5473–5517; marker 429:6878",
+   "handling": "LIBRARY-TODOS candidate 31.",
+   "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_navIconsShipWhiteGlyphs",
+   "severity": "medium",
+   "kind": "DEFECT",
+   "summary": "Icon/Clinical and Icon/Reports carry a vector fill bound color/common/white, so they vanish on light surfaces; the shell batch's Problems chip had shown a white glyph on pale teal. Chips 2, 4 and 6 now bind the glyph fill to color/text/primary as an instance override.",
+   "where": "library Icon/Clinical 6c4a7b4d…, Icon/Reports db42927d…; target chips 426:4239, 465:5473, 465:5492",
+   "handling": "LIBRARY-TODOS candidate 32: decide whether nav icons should carry a neutral fill like the rest of the set.",
+   "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_toolbarPillHeightDelta",
+   "severity": "low",
+   "kind": "INFO",
+   "summary": "Toolbar pills are the library Button medium (38 tall, primary stroke, Akkurat 14) where the mockup draws 42-tall pills with a #8CA7A2 stroke; library wins, logged in the change log.",
+   "where": "target 468:5582",
+   "handling": "None; recorded.",
+   "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_footerSpacerWasFixed",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "The shell batch's footer Spacer was FIXED 10 wide, so the buttons sat beside Confidential instead of at the right edge as in the source; corrected to FILL. The header Spacer 424:4370 has the same defect and is left for the next batch.",
+   "where": "target Note card 424:4402 (fixed), 424:4370 (open)",
+   "handling": "Fix the header spacer with the note body batch.",
+   "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_splitButtonSuperseded",
+   "severity": "low",
+   "kind": "DECISION",
+   "summary": "The Split button instance 424:4417 in the Note card footer is hidden and renamed SUPERSEDED rather than deleted (rule 1); its nested segments cannot be un-exposed by the API.",
+   "where": "target 424:4417",
+   "handling": "Manual removal pass.",
+   "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_libraryPageOrderStale",
+   "severity": "low",
+   "kind": "DECISION",
+   "summary": "figmaBuild.pages._order lists Cover, Tokens, …, Reference; the library now has Cover, Foundations, Reference, Actions, Inputs, Data display, Feedback, Surfaces & navigation, Icons & illustrations, Compositions, Layouts. Rule 7's identity check cannot pass as written.",
+   "where": "schema figmaBuild.pages._order; library YX2n4YLrEpBXNbcc73T6dw",
+   "handling": "Update _order with a record, or decide the check keys on page ids.",
+   "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+   "webAppV2BugListCandidate": false
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -25976,7 +26057,7 @@
   ]
  },
  "npveRebuild_socialHistory_2026-09-06": {
-  "_status": "IN PROGRESS — source, library, and target audited; bounded pre-write plan recorded before target mutation.",
+  "_status": "DONE — reusable Social History body, shared Sidesheet, frozen reference, conforming change log, sole comparison, screenshots, and ten standing rules complete.",
   "date": "2026-09-06",
   "workstream": "NPVE Rebuild / Sidesheets",
   "report": "figma-export/npve-social-history-2026-09-06/report.md",
@@ -25998,8 +26079,8 @@
   },
   "sourceFacts": [
    "The source is 550x778 with a 64px header, 654px body, and 60px footer.",
-   "The body contains five uppercase section headings, nine small fields, two inline unit labels, one New Entry button, and one multiline Comments field.",
-   "Source body inset is 16px horizontally and 8px vertically; its section stack uses 24px between groups.",
+   "The body contains five uppercase section headings, thirteen small single-line fields, three inline unit-label placements, one New Entry button, and one multiline Comments field.",
+   "Source body inset is 16px horizontally and 8px vertically; its section stack uses 24px between groups and 12px within field rows.",
    "The source footer contains Save & Add to Note and Save; no Cancel action."
   ],
   "reuseBaseline": {
@@ -26028,10 +26109,94 @@
   },
   "flagsAdded": [],
   "flagsBefore": 264,
-  "flagsAfter": 264,
-  "figmaMutations": [],
-  "createdNodes": {},
-  "verification": {}
+  "flagsAfter": 272,
+  "figmaMutations": [
+   "Appended Social history body 441:4994 to Body content#279:5 preferred values on Sidesheet 279:2446; default 26:221 and shared master geometry were unchanged.",
+   "Appended reference helper 446:5473, rebuild helper 444:5269, and change-log helper 446:5475 to the three preferred-value lists on Rebuild comparison 35:332; all defaults were unchanged.",
+   "Added Templates section 441:4993 and Screens section 446:9236 after existing work; no prior node was moved, renamed, deleted, or overwritten."
+  ],
+  "createdNodes": {
+   "templatesSection": "441:4993 16 · Social History",
+   "body": "441:4994 Social history body (component key 80cd7a1fddb1725e47368d5a6e961d1fe4567c8e)",
+   "bodyGroups": [
+    "441:5060 Alcohol",
+    "441:5062 Substance/drug use",
+    "441:5205 Tobacco",
+    "441:5250 Living environment",
+    "441:5295 Employment status",
+    "441:5297 Comments"
+   ],
+   "rebuildHelper": "444:5269 Rebuild helper · Social History (component key ba97863d57239b2a36f88984dd69ebb27fa3bc84)",
+   "sidesheet": "444:5270 Social History",
+   "referenceHelper": "446:5473 Reference helper · Social History (component key 603cd3e65b830a0cfaf3f33124232243db0a9ef4)",
+   "sourceImage": "446:5474 Source capture · 129:10181 · 2026-09-06",
+   "changeLog": "446:5475 _Rebuild comparison/Change log/Social History (component key 46f85ccf8690e497d402d3d7244449796c5634d0)",
+   "screensSection": "446:9236 15 · Social History",
+   "comparison": "446:9237 Social History · Reference / Rebuild / Changes"
+  },
+  "verification": {
+   "identity": "PASS — fdCQVFdvOByaOYIJYag0d6; Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "sourcePolicy": "PASS — zVsuhYehoSLLq880qRBFkq was read/exported only; Design System Rebuild library was searched/read only.",
+   "screenshots": "PASS — source 1100x1556 (2x), body 519x614 render, rebuild 550x790, comparison 1708x882.",
+   "spacing": "PASS — body group gaps bind space/24; heading/control and row gaps bind space/8 and space/16; shell supplies 16px body inset.",
+   "instances": "PASS — fourteen Text field instances and one Button instance are backed by published library masters; sheet main is 6:65; comparison main is 35:332.",
+   "preferredValues": "PASS — Sidesheet Body content now has 12 entries; each comparison helper list has 15; every default is unchanged.",
+   "placement": "PASS — each of the three helpers has exactly one instance, inside sole comparison 446:9237.",
+   "paints": "PASS — Templates 7721 nodes / 0 unbound solid paints; Screens 3649 / 0; Archive 1529 / 0; Cover retains its one pre-existing flagged unbound fill on 1:5.",
+   "geometry": "PASS — all batch-authored visible geometry is on whole pixels; no fractional authored node found.",
+   "fonts": "PASS — all free-standing batch text uses Akkurat LL with bound family, size, line-height, weight, and text-colour variables.",
+   "propertyReferences": "PASS — the body and helper components expose no accidental properties; live Text field, Button, and Change log/Row instance properties remain intact."
+  },
+  "outcome": "Built Social History as one reusable 518x614 body and one live 550x790 instance of the shared Sidesheet. The rebuild preserves the source form structure and copy, uses the published Text field and Button components throughout, normalizes 12px row gaps to 16px, uses the source h5 section typography with the published primary colour token, and keeps the footer directly below the completed content.",
+  "geometry": {
+   "source": "550x778: header 64, body 654, footer 60.",
+   "body": "518x614: Alcohol 68, Substance/drug use 134, Tobacco 68, Living environment 68, Employment status 68, Comments 88, with five 24px group gaps.",
+   "rebuild": "550x790: header 72, header divider 1, body region 646, footer 71.",
+   "comparison": "1708x882; source remains 550x778 at 1:1, rebuild remains 550x790 at 1:1, and both tall columns have clipping disabled."
+  },
+  "reuse": {
+   "fields": "Fourteen live published Text field instances: thirteen small single-line fields and one filled small multiline Comments field. Choice fields use select=true; quantity fields do not.",
+   "newEntry": "One live published Button instance, variant=contained / color=primary / size=small / State=Default, labelled New Entry.",
+   "shell": "One live instance of shared Sidesheet Floating 6:65; Body content swaps to 441:4994; footer shows tertiary and primary actions only.",
+   "comparison": "One live instance of Rebuild comparison 35:332; each new helper has exactly one placement inside 446:9237.",
+   "changeLog": "Clone of the conforming Content/Title/Divider/Rows pattern. Six visible live Change log/Row instances; unused cloned rows are hidden, not deleted."
+  },
+  "visualReview": {
+   "result": "PASS — source and rebuild inspected side by side at 1708x882.",
+   "observed": [
+    "All five headings, fourteen fields, three inline unit labels, New Entry action, close control, and both footer actions are visible and uncut.",
+    "The rebuild keeps the same 550px sheet width; field groups align consistently and remain within the 518px body.",
+    "The section headings match the source 14/20 bold treatment and use the published primary teal token.",
+    "The footer follows the completed 646px body region; the full 8px sheet radius and grey outline are visible on every edge.",
+    "The comparison backdrop encloses the complete 790px rebuild, and the frozen source remains at 1:1."
+   ]
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — body, live sheet, and placed comparison rendered and were inspected after the final typography correction.",
+   "2_unboundPaintAudit": "PASS with known Cover exception — Templates, Screens, and Archive have zero; Cover 1:5 remains the pre-existing flagged exception.",
+   "3_referenceCounts": "PASS — Body content preferred values 12; comparison preferred values 15 each; each helper placed once.",
+   "4_skipInvisibleFalse": "PASS — set before every audit walk.",
+   "5_opacityLast": "PASS — no opacity was changed.",
+   "6_enumerateDontRecall": "PASS — source geometry, library field/button APIs, target shell/comparison APIs, and current page placement were enumerated before writes.",
+   "7_fileIdentityFirst": "PASS — target key and four exact page IDs were verified before mutation.",
+   "8_roundWithRecord": "PASS — no fractional authored or visible geometry remains.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was altered.",
+   "10_cloneDropsPropertyRefs": "PASS — cloned change-log helper exposes no accidental properties; six live Row instances retain their three text properties."
+  },
+  "screenshots": [
+   "figma-export/npve-social-history-2026-09-06/source-social-history-129-10181-2x.png",
+   "figma-export/npve-social-history-2026-09-06/body-social-history.png",
+   "figma-export/npve-social-history-2026-09-06/rebuild-social-history.png",
+   "figma-export/npve-social-history-2026-09-06/comparison-social-history.png"
+  ],
+  "flagAccounting": {
+   "beforeThisBatch": 264,
+   "afterBothConcurrentBatches": 272,
+   "addedByThisBatch": 0,
+   "concurrentAdditions": 8,
+   "concurrentOwner": "npveRebuild_encounterShell_2026-09-06",
+   "note": "The encounter-shell batch added flags[264..271] while Social History was in progress. They are preserved but are not Social History findings."
+  }
  },
  "npveRebuild_encounterShell_2026-09-06": {
   "_status": "DONE. Encounter page shell skeleton built on Templates section 15 from library parts (Page/Encounter with SCAFFOLDING nav, grey/300 body band, Patient header at the Proposals v1 design, Module strip with GAP-marked chips, MainWrap with the Sidesheet Problems list in the 550 left slot and the Note card shell in the right slot); Rebuild comparison/Page stacked master created; sole comparison placed on Screens section 15 against 4841:17077 with a 2x reference; four GAP markers; twelve-row change log. Toolbar and note body deliberately empty. No stop condition triggered.",
@@ -26231,5 +26396,274 @@
   "flagsBefore": 264,
   "flagsAfter": 270,
   "correction_2026_09_06": "Flags npveEncounter_unrecordedHealthStatusBatch and npveEncounter_schemaRecordDroppedByConcurrentWrite withdrawn (kind WITHDRAWN, kept for the record). Commit 8cdd4b3's message claims a restore that did not run; this amendment is the correction."
+ },
+ "npveRebuild_socialHistoryNewEntryPlacement_2026-09-06": {
+  "_status": "DONE — intentional New Entry hierarchy change, live change-log row, fresh screenshots, and ten standing rules complete.",
+  "date": "2026-09-06",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-social-history-new-entry-placement-2026-09-06/report.md",
+  "recordGate": "npveRebuild_socialHistory_2026-09-06 recorded DONE — passed",
+  "decision": "Keep the frozen source unchanged. In the rebuild, place New Entry immediately after the SUBSTANCE/DRUG USE heading with a 16px gap so the action reads as belonging to that section.",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "node": "129:10181 Page=Clin_SHx",
+   "policy": "read only; existing frozen 2x reference remains unchanged"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "body": "441:4994 Social history body",
+   "substanceHeader": "441:5063 Substance/drug use header",
+   "heading": "441:5064 SUBSTANCE/DRUG USE",
+   "newEntry": "441:5065 New Entry",
+   "changeLog": "446:5475 _Rebuild comparison/Change log/Social History",
+   "comparison": "446:9237 Social History · Reference / Rebuild / Changes"
+  },
+  "preWriteAudit": [
+   "The Social History batch is recorded DONE with GAP 0 and DEFECT 0.",
+   "The 518px Substance/drug use header is horizontal auto-layout with 16px item spacing but uses SPACE_BETWEEN, placing the 89px New Entry button at x=429.",
+   "The heading is 159px wide, so MIN alignment will place the button at x=175 and preserve the existing 16px base-8 gap.",
+   "New Entry remains a live instance of the published small contained-primary Button; no component, token, shell, or source capture needs replacement."
+  ],
+  "plan": [
+   "Change only 441:5063 primary-axis alignment from SPACE_BETWEEN to MIN; preserve its 16px item spacing and all child instances.",
+   "Add one live Change log/Row instance describing Far right → 16px after heading and the hierarchy rationale.",
+   "Verify body geometry, the live Sidesheet instance, the sole comparison, fonts, paint bindings, preferred-value counts, helper placement, whole-pixel authored geometry, and all ten standing batch rules.",
+   "Save fresh body, rebuild, and comparison PNGs and finish this record and report."
+  ],
+  "preserve": "Frozen source reference, shared Sidesheet and Rebuild comparison masters/defaults, all published component instances, existing Social History fields and spacing, every unrelated node, and all existing repo changes.",
+  "stopCondition": "Stop if changing the existing header alignment alters sheet height, breaks component identity, clips content, creates fractional authored geometry, or exposes a new design decision. Otherwise stop after the targeted placement, change-log row, fresh screenshots, report, and DONE record.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsAdded": [],
+  "flagsBefore": 272,
+  "flagsAfter": 272,
+  "figmaMutations": [
+   "Changed 441:5063 primary-axis alignment from SPACE_BETWEEN to MIN; the existing 16px item spacing now places 441:5065 at x=175, immediately after the 159px heading.",
+   "Added one live Change log/Row instance 454:5522 to 446:5475 describing Far right → 16px after heading; no prior change-log row was removed or overwritten.",
+   "No shared master, preferred-value list, default, source capture, token, field, footer, or unrelated node changed."
+  ],
+  "createdNodes": {
+   "changeLogRow": "454:5522 Change log/Row — New Entry placement"
+  },
+  "verification": {
+   "identity": "PASS — fdCQVFdvOByaOYIJYag0d6; Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "placement": "PASS — heading x=0 width=159; New Entry x=175 width=89; measured gap 16px.",
+   "geometry": "PASS — body remains 518x614; rebuild helper and live Sidesheet remain 550x790; comparison remains 1708x882.",
+   "componentIdentity": "PASS — New Entry remains one live instance of published Button 155:1193 / key 8fc8f57f80196e40aff7b3b1116226ea0a925120.",
+   "changeLog": "PASS — seven visible live Change log/Row instances and three pre-existing hidden spare rows; new row retains all three text properties.",
+   "preferredValues": "PASS — Sidesheet Body content remains 12 preferred values with default 26:221; comparison helper lists remain 15 each with defaults 114:777, 114:779, and 114:880.",
+   "paints": "PASS — batch body, live sheet, change log, and comparison contain zero unbound solid paints. Whole-page design-node audit remains zero on Templates, Screens, and Archive; Cover retains known exception 1:5. Figma Section organizer fills/strokes are excluded under the existing audit convention.",
+   "wholePixels": "PASS — the changed header, heading, button, and new row use whole-pixel authored geometry. One 183.5px rendered label position inside the unchanged published full-width footer Button is intrinsic centering, not batch-authored geometry.",
+   "fonts": "PASS — the free-standing body text remains Akkurat LL with font family, size, line-height, weight, and color variable bindings.",
+   "visual": "PASS — body, live Sidesheet, and 1708x882 comparison screenshots inspected; no clipping, overlap, or unexpected height change."
+  },
+  "decisionApplied": "New Entry now follows the SUBSTANCE/DRUG USE heading at the existing 16px auto-layout gap; the frozen source remains unchanged.",
+  "outcome": "Moved New Entry from the far edge of the 518px section header to 16px after SUBSTANCE/DRUG USE. The action now reads as part of the section while remaining a published Button instance; the source reference and all sheet geometry are unchanged.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — body, live Sidesheet instance, and placed comparison rendered after the edit; no paint or effective alpha changed.",
+   "2_unboundPaintAudit": "PASS with known Cover exception — zero unbound solid paints on design nodes in Templates, Screens, and Archive; Cover 1:5 remains known. Figma Section organizer chrome is excluded under the established audit convention.",
+   "3_referenceCounts": "PASS — Body content preferred values remain 12; comparison preferred values remain 15 each; helper placements remain one each.",
+   "4_skipInvisibleFalse": "PASS — set before every audit walk; three hidden spare change-log rows were included.",
+   "5_opacityLast": "PASS — no opacity changed.",
+   "6_enumerateDontRecall": "PASS — target nodes, alignment, gap, button identity, shared defaults, helper counts, and current renders were read from the live file before and after the write.",
+   "7_fileIdentityFirst": "PASS — explicit target key and exact four-page inventory verified before mutation.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry introduced; unchanged intrinsic centering inside a published footer Button remains outside authored geometry.",
+   "9_boundPaintAlpha": "PASS — no fill, stroke, binding, or alpha changed.",
+   "10_cloneDropsPropertyRefs": "PASS — new live Change log/Row instance 454:5522 retains What, From to, and Why text properties and renders their new values."
+  },
+  "screenshots": [
+   "figma-export/npve-social-history-new-entry-placement-2026-09-06/body-social-history.png",
+   "figma-export/npve-social-history-new-entry-placement-2026-09-06/rebuild-social-history.png",
+   "figma-export/npve-social-history-new-entry-placement-2026-09-06/comparison-social-history.png"
+  ]
+ },
+ "npveRebuild_encounterToolbar_2026-09-06": {
+  "_status": "DONE. Two shell corrections (Note card footer Sign control now a Button contained/secondary with an End icon DownCaret, the Split button hidden and marked superseded; Module strip now carries all nine source modules with five new selected=no chips exposed as swaps) and the toolbar row built as a local Note toolbar component in the Note card's Toolbar slot, per source 3456:11505 with the 4841:17077 state placed. Transcription status built minimal as a local piece and marked as the audit's invention row 15. One shared GAP marker for the toolbar glyph gaps. Change log at fifteen rows. No stop condition triggered.",
+  "date": "2026-09-06",
+  "workstream": "NPVE Rebuild / Encounter page",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (components, variables and the h5 text style imported by key inside the script that used them)",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (3456:11505 toolbar row and 4841:17077 toolbar state and module strip read)",
+  "report": "figma-export/npve-encounter-toolbar-2026-09-06/report.md",
+  "recordGate": "npveRebuild_encounterShell_2026-09-06 recorded — passed",
+  "stopCondition": "Stop if any region needs a drawn stand-in beyond the module chips. Nothing was drawn: the Transcription status piece is a library radio glyph and a styled text in an auto-layout frame.",
+  "readFirst": "CLAUDE.md; npveRebuild_encounterShell_2026-09-06; Workflows audit conventions rows 12–17 (pill dropdown buttons, mic pill, Start Transcribing pill, transcription status states, Print pill, Sign split button).",
+  "step1_corrections": {
+   "footer": {
+    "noteCard": "424:4362",
+    "newSign": "464:5852 Button variant=contained color=secondary size=medium, Label \"Sign\", Start icon off, End icon on, End icon swap Icon/DownCaret (import key 9014d342…); 91x38; fill and stroke bound color/secondary/main #FF8D6E (rendered on the placed instance)",
+    "supersededSplitButton": "424:4417 hidden and renamed \"SUPERSEDED 2026-09-06 — Sign (Split button); replaced by the Button beside it; listed for manual removal\". Not deleted (rule 1). Its nested segments could not be un-exposed (Figma: only primary instances expose); they are hidden with the parent.",
+    "spacer": "424:4402 Spacer changed FIXED 10 → FILL so Charge Capture / Save & Close / Sign / More sit at the right edge as in the source (the shell batch had left them beside Confidential). Header spacer 424:4370 has the same FIXED 10 and is left for the next batch (flag).",
+    "changeLogRow": "Footer row amended honestly: single salmon button with a caret, not a split button.",
+    "libraryFlagKept": "npveEncounter_splitButtonLabelNotAProperty stays OPEN as a library finding."
+   },
+   "moduleStrip": {
+    "id": "426:4214",
+    "chipsAdded": [
+     "Chip 4 465:5473 Vitals — Icon/Clinical (vitals glyph gap; the library glyph ships white, fill bound color/text/primary on the chip)",
+     "Chip 5 465:5481 Care Team — Icon/UserGroupFilled (covers)",
+     "Chip 6 465:5492 Labs/Studies — Icon/Reports (lab glyph gap; ships white, fill bound color/text/primary on the chip)",
+     "Chip 7 465:5505 Allergies — Icon/AttentionOutlined (allergy glyph gap)",
+     "Chip 8 465:5517 Timeline — Icon/Calendar (timeline glyph gap)"
+    ],
+    "sourceOrder": "Modules · Note · Problems · AI Summary · Vitals · Care Team · Labs/Studies · Allergies · Timeline (4841:17077 Modules_HFlex; the six unselected chips carry no close glyph in the source)",
+    "showClose": "Chip 3 AI Summary Show close true → false to match the source; chips 4–8 built with Show close false",
+    "chip2GlyphFix": "Chip 2 Problems (Icon/Clinical) rendered a white glyph on the pale teal chip since the shell batch; its vector fill is now bound color/text/primary like chips 4 and 6",
+    "exposure": "All five new chips exposed (isExposedInstance true) and given INSTANCE_SWAP properties Chip 4#465:0 … Chip 8#465:4; eight of eight chips exposable, no property limit reached",
+    "widths": "Modules 122, chips 120/150/135/93/125/144/113/112; strip 1397x40 (source chips 127/85/117/136/105/104)",
+    "referenceEntries": 35
+   }
+  },
+  "step2_toolbar": {
+   "noteToolbar": {
+    "id": "468:5582",
+    "name": "Note toolbar",
+    "size": "799x42 fixed width, hug height",
+    "layout": "HORIZONTAL gap bound space/8, centre aligned; Left group 468:5583 FILL gap space/16; Right group 468:5584 HUG gap space/8 MAX aligned (source: two 352 FILL halves; HUG on the right avoids the 395.5 half-pixel split of 791)",
+    "pills": [
+     "Template pill 468:5585 Button contained/primary medium, Label \"Template: SOAP\", Start icon Icon/List (source list_alt), End icon Icon/DownCaret; 200x38 (source 193x42)",
+     "Assigned To pill 468:5595 Label \"Assigned To\", Start icon Icon/UserOutlined (source person_heart), End icon DownCaret; 171x38 (source 168x42)",
+     "Date pill 468:5604 Label \"Date\", Start icon Icon/Calendar (covers), End icon DownCaret; 118x38; boolean Show date#468:0 default false (off in the 4841 state)",
+     "Mic device pill 468:5613 Label \"\", Start icon Icon/Telehealth (GAP: no mic glyph), End icon DownCaret; 82x38 (source 78x40)",
+     "Print pill 468:5622 Label \"Print\", Start icon Icon/PrintOutlined (covers), no caret; 95x38 (source 90x42); boolean Show print#468:1 default false"
+    ],
+    "statusSlot": "Transcription status slot 468:5612 (auto-layout, hug) holding instance 469:5832 of Transcription status/Start; INSTANCE_SWAP property Transcription status#469:1 default 469:5827, exposed",
+    "properties": [
+     "Show date#468:0",
+     "Show print#468:1",
+     "Transcription status#469:1",
+     "five exposed pill instances (Label, icons editable through the Button properties)"
+    ],
+    "referenceEntries": 19,
+    "deltas": "Library wins: 38 tall vs 42 (40 on the mic pill); stroke color/primary/main vs the mockup #8CA7A2; Akkurat 14 label per the Button medium size vs the mockup Regular 14; the 3456 filled states (SOAP:Modified, Dr. Steven Strange, Appointment) are Label edits on the exposed pills, not variants"
+   },
+   "transcriptionStatus": {
+    "id": "469:5827",
+    "name": "Transcription status/Start (INVENTION: audit row 15, no library inline status toggle)",
+    "size": "167x42 (source 167x42)",
+    "layout": "HORIZONTAL gap space/8, padding left/right space/8, centre aligned, no fill",
+    "parts": "Radio dot = Icon/RadioChecked (MUI) 24 with its vector fill bound color/primary/light #417E86 (source radio_button_checked #417E86); Label \"Start Transcribing\" h5 (Akkurat LL Bold 14/20, imported style key 2ede1d5b…) fill bound color/primary/light; TEXT property Label",
+    "otherStates": "Not built this batch: italic \"Transcription in Progress\" with Pause / Finish pills, hidden \"Ready to Record\" salmon strip, and the 3456 \"Start Transcribing\" pill state (record_voice_over glyph — transcribe glyph gap, candidate 28). They join as further Transcription status/<state> components swapped into the slot.",
+    "referenceEntries": 1
+   },
+   "noteCardWiring": "Toolbar slot 424:4388 renamed \"Toolbar\"; holds Toolbar content instance 469:9852 (FILL, 799x42, centred in the 58 slot); Note card property Toolbar content#469:2 INSTANCE_SWAP default 468:5582, exposed; Show toolbar#424:4 reference on the slot verified unchanged before and after. Note card reference entries 32 → 47.",
+   "glyphGaps": "One shared GAP marker 473:9782 \"GAP marker — Toolbar glyphs\" on Screens at (2120, 2230), cloned from 429:6887 with the example swapped to the Transcription status piece; cites candidates 27 (mic), 28 (transcribe), 29 (person-heart), 30 (template-list). Module chips marker 429:6878 Difference text extended with the five chips, candidate 31 (vitals, lab, allergy, timeline glyphs) and candidate 32 (Icon/Clinical and Icon/Reports ship white glyphs)."
+  },
+  "step3_comparison": {
+   "instance": "434:7474 sole placement, 2005x2154 unchanged (the Screens column is the taller one); toolbar shows through the Page/Encounter → Note card → Toolbar content chain (I434:7474;434:4866;434:4394;429:4542;469:9852)",
+   "section": "429:6859 grown 2600x2500 → 2600x3200 to hold the fifth marker (bottom 2712)",
+   "changeLogHelper": "434:4745: Content card 434:4746 set to hug height (was fixed 1198; the rows overflowed after the additions); now 480x1772 with 15 Change log/Row instances, reference entries 45",
+   "changeLogRows": {
+    "amended": [
+     "Module chips | Drawn chips → local chips, marked; all nine modules present in the mockup order | The library chip cannot be 40 tall with a close; marked as a gap. Vitals, Labs/Studies, Allergies and Timeline wear stand-in glyphs",
+     "Toolbar | Template, Assigned To and recording pills → library pills for Template and Assigned To, a Start Transcribing status, and a mic pill | Shared button; 38 tall instead of 42 and a teal outline instead of the mockup grey-green; Date and Print pills built but switched off in this state",
+     "Footer | Drawn buttons and a checkbox → library buttons and checkbox; Sign is a single salmon button with a caret | The mockup Sign control is one button with a caret, not a split button; the more button shows a horizontal ellipsis"
+    ],
+    "added": [
+     "Toolbar glyphs | Material list, person-heart and mic glyphs → library list, outlined user and telehealth glyphs | The library has no template-list, person-heart or mic glyph; marked as one gap",
+     "Start Transcribing | Drawn radio dot with bold teal text → library radio glyph with bold teal text, kept as a small local piece | Nothing in the library expresses an inline status toggle; marked as an invention",
+     "Mic pill | Mic glyph with a caret, 78 wide → library pill with a stand-in glyph and a caret, 82 wide | Shared button; the glyph is a gap"
+    ],
+    "rowIds": {
+     "toolbarGlyphs": "470:5718",
+     "startTranscribing": "470:5724",
+     "micPill": "470:5730"
+    }
+   },
+   "regionCompares": {
+    "moduleStrip": "source (16,193) 1397x40 vs rebuild (16,169): same nine modules and order; chip widths differ by the glyph and label widths; fills primary/100 vs #DFEAEC as recorded",
+    "noteToolbar": "source (582,314) 831x58 vs rebuild (582,290): same composition left to right — Template, Assigned To, status, mic pill; pills 38 tall vs 42, teal outline vs grey-green, glyph stand-ins",
+    "noteFooter": "source (582,927) 831x70 vs rebuild 831x74: Confidential left, buttons right in both; Sign single button with caret in both; bold label in the mockup vs the library Button label; kebab vertical vs horizontal",
+    "files": [
+     "region-module-strip-source-over-rebuild.png",
+     "region-note-toolbar-source-over-rebuild.png",
+     "region-note-footer-source-over-rebuild.png"
+    ]
+   },
+   "pixelDiffs": "Placed comparison (rebuild page origin 32,1133) vs master renders composited on white: Note card 0 of 621 588 px differ; Module strip 0 of 55 880. The standalone Note toolbar render carries the Templates section backdrop behind its transparent frame, so it was diffed through the Note card crop (which contains it) rather than alone."
+  },
+  "step5_verification": {
+   "renders": [
+    "master-note-card-424-4362-1x.png",
+    "master-module-strip-426-4214.png",
+    "master-note-toolbar-468-5582.png",
+    "master-transcription-status-469-5827.png",
+    "comparison-encounter-shell-434-7474-1x.png",
+    "screens-section-15-429-6859.png",
+    "templates-section-15-424-4085-at3150.png",
+    "gap-marker-toolbar-glyphs-473-9782.png",
+    "gap-marker-module-chips-429-6878.png",
+    "crop-comparison-note-header-toolbar.png",
+    "crop-comparison-change-log-column.png"
+   ],
+   "fixesAfterFirstLook": [
+    "Module chips: Icon/Clinical and Icon/Reports rendered invisible (white glyph) on the unselected chips → fills bound text/primary; Labs/Studies swapped from Icon/Survey (a chat bubble) to Icon/Reports; Timeline from Icon/Reports to Icon/Calendar",
+    "Note toolbar: two FILL groups split 791 into 395.5 halves → right group HUG (534 / 257)",
+    "Transcription status label: created at the default 12 → h5 style imported and applied (14/20 bold)",
+    "Change log Content card fixed 1198 tall with 1715 of rows → hug",
+    "Footer Spacer FIXED 10 → FILL (source buttons are right-aligned)"
+   ],
+   "audits": {
+    "templatesSection15": "1 524 nodes walked, 0 unbound paints, 0 fractional dimensions on the edited masters (vector path bounds excluded per rule 8)",
+    "screensSection15": "504 nodes walked, 0 unbound paints, 0 detached comparisons, 16 Sidesheet occurrences and 16 comparisons on Screens (Social History added one concurrently)"
+   },
+   "referenceCounts": {
+    "Note card": 47,
+    "Module strip": 35,
+    "Module chip": 6,
+    "Note toolbar": 19,
+    "Transcription status/Start": 1,
+    "Page/Encounter": 157,
+    "Rebuild comparison/Page": 208,
+    "Change log helper": 45
+   },
+   "rule10Check": "Placed Template pill: property value \"Template: SOAP\" and rendered characters \"Template: SOAP\" agree; exposed"
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — rendered on the placed page: Sign fill/stroke #FF8D6E op1 bound color/secondary/main; Chip 6 stroke #D6D6D6 bound color/divider, no fill; status text #417E86 bound color/primary/light, styled h5 14; radio glyph #417E86 bound color/primary/light",
+   "2_unboundPaintAudit": "PASS — 0 unbound in Templates 15 (1 524 nodes) and Screens 15 (504 nodes)",
+   "3_referenceCounts": "PASS — counts above; Note card 32 → 47, Module strip 17 → 35, toolbar 19, status 1, comparison master 208, change log helper 45",
+   "4_skipInvisibleFalse": "PASS — set on every walk",
+   "5_opacityLast": "PASS — no paint-level opacity set",
+   "6_enumerateDontRecall": "PASS — chips, toolbar and rows enumerated from the file",
+   "7_fileIdentityFirst": "PASS with a finding — target identity confirmed against the shell record's node ids; library reads used YX2n4YLrEpBXNbcc73T6dw explicitly. The library page list (Cover, Foundations, Reference, Actions, Inputs, Data display, Feedback, Surfaces & navigation, Icons & illustrations, Compositions, Layouts) no longer matches figmaBuild.pages._order (Cover, Tokens, …, Reference) — flag",
+   "8_roundWithRecord": "PASS — half-pixel group split removed; hidden Date/Print pills re-laid so no stale fractional x remains",
+   "9_boundPaintAlpha": "PASS — no bound paint opacity touched",
+   "10_cloneDropsPropertyRefs": "PASS — the only clone is the GAP marker frame (no property refs); the change-log rows are createInstance, not clones; rendered-vs-property check on the placed Template pill agrees"
+  },
+  "libraryTodoCandidates": {
+   "27": "Icon: mic glyph (toolbar mic device pill; Icon/Telehealth stands in)",
+   "28": "Icon: transcribe / record_voice_over glyph (Start Transcribing pill state; not placed this batch)",
+   "29": "Icon: person-heart glyph (Assigned To pill; Icon/UserOutlined stands in)",
+   "30": "Icon: template-list / list_alt glyph (Template pill; Icon/List stands in — may be judged close enough)",
+   "31": "Icons: vitals, lab tube, allergy shield and timeline glyphs for the module chips (Icon/Clinical, Icon/Reports, Icon/AttentionOutlined, Icon/Calendar stand in)",
+   "32": "Icon/Clinical and Icon/Reports ship with white glyphs bound color/common/white (nav icons); unusable on light surfaces without a fill override"
+  },
+  "counts": {
+   "GAP": 5,
+   "DEFECT": 0,
+   "rows": 15,
+   "newMasters": 2,
+   "chipsAdded": 5,
+   "chipsExposed": "8 of 8"
+  },
+  "screenshots": "figma-export/npve-encounter-toolbar-2026-09-06/",
+  "flagsAdded": [
+   "npveEncounter_toolbarGlyphsMissing",
+   "npveEncounter_transcriptionStatusInvention",
+   "npveEncounter_moduleChipGlyphsMissing",
+   "npveEncounter_navIconsShipWhiteGlyphs",
+   "npveEncounter_toolbarPillHeightDelta",
+   "npveEncounter_footerSpacerWasFixed",
+   "npveEncounter_splitButtonSuperseded",
+   "npveEncounter_libraryPageOrderStale"
+  ],
+  "flagsBefore": 272,
+  "flagsAfter": 280
  }
 }
