@@ -26784,6 +26784,72 @@
   },
   "flagsAdded": [],
   "flagsAfter": 280,
-  "screenshots": "figma-export/npve-module-chip-fix-2026-09-06/"
+  "screenshots": "figma-export/npve-module-chip-fix-2026-09-06/",
+  "amendment_2026_09_06": "The uniform space/16 internal-gap decision is superseded by npveRebuild_moduleChipRelationshipSpacing_2026-09-06. Icon and label form one identity group at space/8; that group remains space/16 from the close action."
+ },
+ "npveRebuild_moduleChipRelationshipSpacing_2026-09-06": {
+  "_status": "DONE. Selected Module chips now group icon and label as one Module identity at space/8, with the identity group separated from Close by space/16. Note and Problems overrides survived, all strip/comparison instances remain linked, the existing change-log row was amended, evidence and pixel diff were exported, and no new GAP or DEFECT marker was required.",
+  "date": "2026-09-06",
+  "workstream": "NPVE Rebuild / Encounter page",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (Module strip 4841:17097)",
+  "report": "figma-export/npve-module-chip-relationship-spacing-2026-09-06/report.md",
+  "recordGate": "npveRebuild_moduleChipFix_2026-09-06 recorded — passed",
+  "stopCondition": "Stop if reparenting breaks Label, Icon, or Show close component properties; if Note or Problems overrides do not survive; if the placed encounter comparison detaches or diverges; or if space/8 cannot be verified live.",
+  "supersedes": "Only the uniform internal-gap detail in npveRebuild_moduleChipFix_2026-09-06; all other decisions from that batch remain active.",
+  "plannedChange": {
+   "selectedMaster": "Wrap the existing Icon and Label children in a horizontal auto-layout identity group bound to space/8. Keep the selected master gap from identity group to Close bound to space/16.",
+   "instances": "Preserve all existing chip and strip instances; do not detach or rebuild them.",
+   "changeLog": "Amend the existing Chip spacing row rather than adding a duplicate row."
+  },
+  "implemented": {
+   "selectedMaster": "426:4199 is 120x40. New auto-layout frame 489:5759 Module identity contains existing Icon 426:4200 and Label 426:4203 at space/8. Existing Close 426:4204 remains the selected master's second child at space/16.",
+   "tokens": "Module identity itemSpacing binds space/8 (VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15). Selected master itemSpacing remains bound space/16 (VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24).",
+   "api": "Component set 426:4213 still exposes Label TEXT, Icon INSTANCE_SWAP, Show close BOOLEAN default true, and selected VARIANT yes/no.",
+   "instances": "Note 426:4230 is 120x40 and Problems 426:4239 is 150x40. Both retain text, icon and Show close overrides. Module strip 426:4214 and its sole placed encounter instance remain 1397x40 and linked.",
+   "changeLog": "Row 481:10192 now reads: Chip spacing | Uniform 16px gaps → icon + label 8px; close 16px | Groups module identity; separates the close action. Row height 97 and its auto-layout chain expanded without clipping."
+  },
+  "verification": {
+   "templates": "Section 424:4085 contains 1,566 nodes after the inherited identity groups are represented. Reference counts remain 8 selected variants, 24 unselected variants, 3 Module strip instances, and 32 Module chip instances.",
+   "authoredRoots": "Selected master 426:4199 and Module strip 426:4214: 15 authored nodes, 0 unbound solid paints, 0 fractional authored geometry; traversal stops at nested instances.",
+   "screens": "Section 429:6859 contains 519 nodes, one comparison placement, one placed Module strip, and two selected placed chips. Comparison 434:7474 remains an instance of master 434:4858.",
+   "typography": "Selected Label remains Akkurat LL Regular.",
+   "pixelDiff": "Direct live 1x Module strip master versus the strip inside the placed comparison: 1 differing anti-aliased edge pixel, max channel delta 13.",
+   "sourceDifference": "The source uses a tighter close relationship. The rebuild intentionally separates the close action by 16px while grouping icon and label at 8px."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — no paints changed; selected chips retain their bound fill, stroke and ink properties through the placed comparison.",
+   "2_unboundPaintAudit": "PASS — 0 unbound solid paints on the edited authored roots.",
+   "3_referenceCounts": "PASS — 8 selected, 24 unselected, 3 strip, and 32 chip references enumerated live; no clone or detach.",
+   "4_skipInvisibleFalse": "PASS — set on every walk.",
+   "5_opacityLast": "PASS — no paint opacity authored.",
+   "6_enumerateDontRecall": "PASS — spacing variables, hierarchy, properties, instances and change-log values read live.",
+   "7_fileIdentityFirst": "PASS — source, library and target keys explicit; source/library remained read only.",
+   "8_roundWithRecord": "PASS — record and backup preceded mutation; 0 fractional authored geometry.",
+   "9_boundPaintAlpha": "PASS — no paint or alpha change.",
+   "10_cloneDropsPropertyRefs": "PASS — existing nodes were reparented, not cloned; property references and overrides verified live."
+  },
+  "counts": {
+   "GAP": 5,
+   "DEFECT": 0,
+   "changeLogRows": 17,
+   "variants": 2,
+   "stripChips": 8,
+   "newMarkers": 0
+  },
+  "flagsBefore": 280,
+  "flagsAdded": [],
+  "flagsAfter": 280,
+  "screenshots": [
+   "figma-export/npve-module-chip-relationship-spacing-2026-09-06/comparison-module-chip-spacing-detail.png",
+   "figma-export/npve-module-chip-relationship-spacing-2026-09-06/comparison-module-strip-reference-vs-rebuild.png",
+   "figma-export/npve-module-chip-relationship-spacing-2026-09-06/master-module-chip-set-426-4213-1x.png",
+   "figma-export/npve-module-chip-relationship-spacing-2026-09-06/rebuild-module-strip-426-4214-1x.png",
+   "figma-export/npve-module-chip-relationship-spacing-2026-09-06/placed-module-strip-from-comparison-1x.png",
+   "figma-export/npve-module-chip-relationship-spacing-2026-09-06/placed-module-strip-from-comparison-1x-white.png",
+   "figma-export/npve-module-chip-relationship-spacing-2026-09-06/pixel-diff-master-vs-placed-strip-1x.png",
+   "figma-export/npve-module-chip-relationship-spacing-2026-09-06/source-module-strip-4841-17097-1x.png"
+  ]
  }
 }
