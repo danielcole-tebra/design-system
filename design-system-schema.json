@@ -5785,6 +5785,224 @@
    "handling": "Reported to the source owner; no target action.",
    "discoveredDuring": "npveRebuild_extReviewRepairs_2026-09-05",
    "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveWorkflows_moduleChipNoLibraryPattern",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "The encounter page module strip uses 40-tall r8 closable chips (icon + label + close, #DFEAEC / #8CB2B6 when selected) and r24 grey pills when not; the library Chip is 32 tall r16 and Toggle button is 48 r4, so neither expresses a module chip.",
+   "where": "source Modules_HFlex local instance 4841:18059 and its chips; three generations across the page",
+   "handling": "LIBRARY-TODOS candidate 18. Rebuild with a GAP-marked local strip until the library decides.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "decision_2026_09_06": "See npveRebuild_encounterShell_2026-09-06.operatorDecisions_2026_09_06; marked or applied in that batch."
+  },
+  {
+   "id": "npveWorkflows_noteCardShellNoLibraryPattern",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "The note card (831x748, white, #D6D6D6, r8) has header, toolbar, body and footer bands; library Card (r4, header/media/actions) and Paper have no toolbar or footer slots.",
+   "where": "source NoteWrapper 4841:18065 and Note_Module in every encounter frame",
+   "handling": "LIBRARY-TODOS candidate 20. Build as a local shell with slots, the sidesheet way.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveWorkflows_editorToolbarNoPattern",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "The rich-text toolbar (undo, redo, H1, bold, italic, underline, align left, numbered list with hairline separators) is drawn from raw Material Symbol vectors; the library has FormatBold/Italic/Underline and list glyphs but no undo, redo, H1, align or numbered-list glyph and no toolbar composition.",
+   "where": "source TollbarWrap 4841:18131 in every note",
+   "handling": "LIBRARY-TODOS candidate 23 (icons + Toggle button / Button group composition).",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveWorkflows_shieldLockGlyphMissing",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "The note title carries a 40px shield-lock badge (Material shield_lock, #417E86); the library has Icon/Lock and Icon/Unlock but no shield glyph.",
+   "where": "source ShieldSet local component inside NoteHeader 4841:18067",
+   "handling": "LIBRARY-TODOS candidate 21 Icon/ShieldLock.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "decision_2026_09_06": "See npveRebuild_encounterShell_2026-09-06.operatorDecisions_2026_09_06; marked or applied in that batch."
+  },
+  {
+   "id": "npveWorkflows_expandGlyphMissing",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "The note header expand control uses Material expand_content; the library has no expand glyph (the Kit has one).",
+   "where": "source I4841:18067;1742:8444",
+   "handling": "LIBRARY-TODOS candidate 22 Icon/Expand.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "decision_2026_09_06": "See npveRebuild_encounterShell_2026-09-06.operatorDecisions_2026_09_06; marked or applied in that batch."
+  },
+  {
+   "id": "npveWorkflows_groupedMenuNoSubheader",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "The Module Dropdown (Clinical / Billing headers, 392x480) and the appointment date menu (SELECT APPOINTMENT DATE caption) need menu subheaders; library Menu has four item slots and no subheader.",
+   "where": "source 899:7657 (hidden), 4841:18351 at x-437; date menu in 3456:11505",
+   "handling": "LIBRARY-TODOS candidate 19.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveWorkflows_linkChipColourNoToken",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "Editor link chips \"(FHx) Diabetes (Father)\" use #F0EBF5 fill and #8657AC stroke at r4; Chip has no purple colour or r4 outlined form and neither value has a token.",
+   "where": "source 4841:18217, 4841:18233 and every section",
+   "handling": "LIBRARY-TODOS candidate 24; extends TODO 6 colours without a token.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveWorkflows_segmentedChipNoPattern",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "Medication and order chips on the Med List board are multi-segment (\"Start · Sertraline · 50mg · PO · QD · Approve ×\"); Chip has a single label.",
+   "where": "source board 3943:12402 screens 558:4260 and 3943:12404",
+   "handling": "LIBRARY-TODOS candidate 25.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveWorkflows_templateMenuInlineField",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "The Template dropdown panel combines a Save-as text field with a two-line item list; library Menu/Item is one line and Menu has no field slot.",
+   "where": "source TemplateMgmt (other remote) hidden in every note; visible on boards 3943:12393 and 4317:11594",
+   "handling": "LIBRARY-TODOS candidate 26.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveWorkflows_patientHeaderNotInLibrary",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "The patient header band (1397x96, two rows, Restricted text button) repeats identically on all 27 encounter frames; the library has none, the Proposals file holds a v1 composition at 900x72 (built 2026-08-19).",
+   "where": "source 4841:18042; proposals zKT34LQogNjz3Z07fY4VQB page Patient header; PROPOSAL-PATIENT-HEADER-V1.md",
+   "handling": "Decision for Daniel: rebuild at source geometry or adopt the proposal geometry.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "decision_2026_09_06": "See npveRebuild_encounterShell_2026-09-06.operatorDecisions_2026_09_06; marked or applied in that batch."
+  },
+  {
+   "id": "npveWorkflows_navFamilyHomeBlocksShell",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "The top nav on every encounter frame is a Kit Primary Nav; the library Nav/Bar family exists but its home is unresolved (navComponentsOnCompositionsPage OPEN), so a library-consuming page shell cannot start with it.",
+   "where": "library Nav/Bar 279:92 on Compositions; source 4841:18040",
+   "handling": "Decision for Daniel: settle the Nav family home or accept a GAP-marked placeholder in the first shell batch.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "decision_2026_09_06": "See npveRebuild_encounterShell_2026-09-06.operatorDecisions_2026_09_06; marked or applied in that batch."
+  },
+  {
+   "id": "npveWorkflows_rightDockedPanelConvention",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "Sheets sit on the page two ways: inline as the 450/550-wide left column, and as right-docked full-height overlays (550 and 483 wide, square corners, no scrim). Our Sidesheet Placement=Docked right has 8/0/0/8 corners and one width.",
+   "where": "source 4841:21482 (550x948 at x878), 4291:14915 (483x948), 4715:28696",
+   "handling": "Decision for Daniel: corner treatment and the 483 width before the overlay states are rebuilt.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "decision_2026_09_06": "See npveRebuild_encounterShell_2026-09-06.operatorDecisions_2026_09_06; marked or applied in that batch."
+  },
+  {
+   "id": "npveWorkflows_comparisonLayoutFor1429",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "The Rebuild comparison master (1708 wide, 550 slots) cannot hold a 1429-wide reference beside a 1429-wide rebuild with a change log.",
+   "where": "target 35:332",
+   "handling": "Decision for Daniel: stacked page master, 0.5x references (breaks the 1:1 rule of 2026-09-05), or widened slots.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "decision_2026_09_06": "See npveRebuild_encounterShell_2026-09-06.operatorDecisions_2026_09_06; marked or applied in that batch."
+  },
+  {
+   "id": "npveWorkflows_pageCanvasColourNoToken",
+   "severity": "low",
+   "kind": "DECISION",
+   "summary": "The encounter page body is #FBF9F8 on every frame; the library has no such token and the coded default canvas is beige #E8E5DF (beigeSurfaceInvestigation2026_08_31).",
+   "where": "source Body 4841:18041",
+   "handling": "Decision for Daniel: bind to paper, to the beige default, or add an NPVE-local token per the 2026-09-05 rule.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false,
+   "decision_2026_09_06": "See npveRebuild_encounterShell_2026-09-06.operatorDecisions_2026_09_06; marked or applied in that batch."
+  },
+  {
+   "id": "npveWorkflows_moduleDropdownOffCanvas",
+   "severity": "info",
+   "kind": "DECISION",
+   "summary": "Module Dropdown instances are parked at x -437 outside four encounter frames and one hidden loose instance sits at page level; mockup artefacts, not a page convention.",
+   "where": "source 4841:18351, 3124:12669, 4841:17389, 3456:11655, 899:7657",
+   "handling": "Reported. Exclude from scope.",
+   "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_unrecordedHealthStatusBatch",
+   "severity": "medium",
+   "kind": "DECISION",
+   "summary": "A \"14 · Health Status/Observations\" section exists on Templates (412:3888) and Screens (415:7207) with a body, helpers and a comparison, and no schema record; its helpers are named \"Rebuild helper · …\" / \"Reference helper · …\" instead of the _Rebuild comparison pattern.",
+   "where": "target 412:3889, 413:7010, 415:4050, 415:7108, 415:7208",
+   "handling": "Rule 7/10: the next sidesheet batch must refuse until this one is recorded; naming to be aligned in that record.",
+   "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_patientHeaderPadding10NoToken",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "The Patient header (proposal geometry) needs 10px vertical padding; Tebra/Dimension has no space/10, so the value is a literal.",
+   "where": "target 426:4165",
+   "handling": "Library to-do: add space/10 or restate the proposal at 8/12; recorded as a literal until then.",
+   "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_splitButtonLabelNotAProperty",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "Library Split button exposes only Size and State; its label (\"New Note\") and leading plus are fixed nested content, so consumers override nested text and hide the plus by instance override.",
+   "where": "library 627:161; target 424:4417",
+   "handling": "Library to-do: Label text property and a Start icon boolean on Split button.",
+   "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_badgeDotCannotSitInline",
+   "severity": "low",
+   "kind": "GAP",
+   "summary": "Badge variant=dot anchors an 8px dot to the top-right of a 24px child; an inline status dot before text is not expressible, so the note header carries a drawn 8px ellipse bound to color/success/main.",
+   "where": "target Note card 424:4362 › Auto-saved; marker 429:6887",
+   "handling": "Library to-do: a standalone status dot (Badge without child) or a status-text pattern.",
+   "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_iconButtonDefaultGlyphAsExpand",
+   "severity": "info",
+   "kind": "GAP",
+   "summary": "With no expand glyph, the note header expand control is an Icon button showing its default glyph (a caret).",
+   "where": "target 424:4362 › Expand; marker 429:6887",
+   "handling": "Resolved by LIBRARY-TODOS candidate 22 (Icon/Expand).",
+   "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+   "webAppV2BugListCandidate": false
+  },
+  {
+   "id": "npveEncounter_modulesPillGlyphDelta",
+   "severity": "info",
+   "kind": "DECISION",
+   "summary": "The Modules pill uses Icon/Menu and Icon/PlusOutlined on a library Button (pill, 122x38); the source is a white r8 144x40 pill with a Material widgets glyph.",
+   "where": "target 426:4214 › Modules",
+   "handling": "Reported; no library action unless a grid/widgets glyph is wanted.",
+   "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+   "webAppV2BugListCandidate": false
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -25254,5 +25472,740 @@
   ],
   "flagsBefore": 247,
   "flagsAfter": 249
+ },
+ "npveRebuild_healthStatusObservations_2026-09-05": {
+  "_status": "DONE — reusable body, shared Sidesheet, frozen reference, conforming change log, sole comparison, screenshots, and ten standing rules complete.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-health-status-observations-2026-09-05/report.md",
+  "recordGate": "npveRebuild_extReviewRepairs_2026-09-05 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321 ⚙️ Components",
+   "node": "129:8130 Page=Clin_HealthStatus",
+   "policy": "read only; frozen 2x export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65",
+   "rebuildComparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "scope": "Create one reusable Health Status/Observations body from live library Text field instances; compose one content-driven shared Sidesheet with the source two-action footer; create one frozen 2x reference, one transparent rebuild helper, one conforming plain-language change log, and one sole comparison instance.",
+  "sourceFacts": [
+   "The source is 550x600 with a 64px header, a fixed 476px body, and a 60px footer.",
+   "Health Status contains three 518x40 populated selects: Disability Status / Not disabled; Cognitive/Mental Status / Normal cognitive functioning; Functional Status / Independent in activities.",
+   "Functional Observations contains one 518x40 empty select labelled Add observation.",
+   "The source uses 12px between Health Status fields, 24px between the two content sections, and leaves 229px of unused body height before the footer.",
+   "The footer contains Save & Add to Note and Save; no Cancel action."
+  ],
+  "buildPlan": [
+   "Create one 518px-wide Health Status/Observations body with bound Akkurat LL headings and four live small select Text field instances.",
+   "Use 16px within sections, preserve the source 24px section separation, and let the body hug its complete content.",
+   "Append the body to Sidesheet Body content preferred values without changing its default; compose a two-action 550px floating sheet whose footer follows the content.",
+   "Create a frozen 2x source reference, transparent rebuild helper, conforming Change log helper, and sole comparison instance on Screens.",
+   "Export and inspect the body, rebuilt Sidesheet, and comparison; run all ten standing batch rules."
+  ],
+  "spacingPolicy": "Canonical base 8: 16px Sidesheet body inset and within-section vertical gaps; 24px between the two source content sections; no fixed empty body space.",
+  "reuseBaseline": {
+   "textField": "Existing live small select instance 316:3413, backed by the published Text field component set.",
+   "sidesheet": "279:2446 with 6:65 Placement=Floating",
+   "comparison": "35:332",
+   "changeLogPattern": "Clone the conforming Facility Stay helper structure 392:4093; retain its Content/Rows pattern and hide unused cloned rows rather than deleting nodes."
+  },
+  "preserve": "Source and library files, shared Sidesheet and comparison geometry/defaults, all prior screens and helpers, existing tokens, and every unrelated target node.",
+  "stopCondition": "Stop before target mutation on identity mismatch, missing live Text field/Sidesheet/comparison dependencies, a new unexpressible source pattern, or an unresolved design decision. Otherwise stop after one body/Sidesheet/reference/change-log/comparison set passes structural, paint, font, whole-pixel, single-placement, and screenshot verification and is recorded.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsAdded": [],
+  "flagsBefore": 249,
+  "flagsAfter": 249,
+  "figmaMutations": [
+   "Appended Health status/observations body 412:3889 to Body content#279:5 preferred values on Sidesheet 279:2446; default and shared geometry unchanged.",
+   "Appended reference helper 415:4050, rebuild helper 413:7010, and change-log helper 415:7108 to the three preferred-value lists on Rebuild comparison 35:332; defaults and shared geometry unchanged.",
+   "Added Templates section 412:3888 and Screens section 415:7207; no prior content moved, renamed, deleted, or overwritten."
+  ],
+  "createdNodes": {
+   "templatesSection": "412:3888 14 · Health Status/Observations",
+   "body": "412:3889 Health status/observations body (component key 7369c5ea35b04599ba8710b383c205a0fe432b61)",
+   "bodySections": [
+    "412:3890 Health Status",
+    "412:3955 Functional Observations"
+   ],
+   "textFields": [
+    "412:3892 Disability Status",
+    "412:3913 Cognitive/Mental Status",
+    "412:3934 Functional Status",
+    "412:3957 Add observation"
+   ],
+   "rebuildHelper": "413:7010 Rebuild helper · Health Status/Observations (component key d8aa077578a50fe3feaf3ff8db9ff62c41ee8815)",
+   "sidesheet": "413:7011 Health Status/Observations",
+   "referenceHelper": "415:4050 Reference helper · Health Status/Observations (component key 08edd3685d8db7d09199eb748a24ca86a64841a1)",
+   "sourceImage": "415:4051 Source capture · 129:8130 · 2026-09-05",
+   "changeLog": "415:7108 _Rebuild comparison/Change log/Health Status/Observations (component key e824475988fdddffb6b6314af0e36e86844dd4b5)",
+   "screensSection": "415:7207 14 · Health Status/Observations",
+   "comparison": "415:7208 Health Status/Observations · Reference / Rebuild / Changes"
+  },
+  "verification": {
+   "identity": "PASS — fdCQVFdvOByaOYIJYag0d6; Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "sourcePolicy": "PASS — zVsuhYehoSLLq880qRBFkq was read and exported only; no source or library write occurred.",
+   "spacing": "PASS — body and both groups bind space/24 and space/16 respectively; shell body supplies 16px top/bottom/side inset.",
+   "instances": "PASS — four field masters are remote published Text field variants; sheet main component is 6:65; comparison main component is 35:332.",
+   "preferredValues": "PASS — Sidesheet Body content now has 11 entries; each comparison helper list has 14; all defaults unchanged.",
+   "placement": "PASS — each of the three helpers has exactly one instance and it is inside sole comparison 415:7208.",
+   "paints": "PASS — Templates 5847 nodes / 0 unbound solid paints; Screens 2817 / 0; Archive 1528 / 0; Cover retains its one pre-existing flagged unbound fill on 1:5.",
+   "geometry": "PASS — all batch-authored and visible geometry is on whole pixels. The only fractional result is x=183.5 on the pre-existing hidden full-width-action label inside the shared shell; it was not authored, exposed, or changed by this batch.",
+   "fonts": "PASS — new headings use loaded Akkurat LL Bold with bound family, size, line-height, weight, and text colour.",
+   "propertyReferences": "PASS — new body and helper components expose no accidental properties; live field and Change log/Row instance properties remain intact."
+  },
+  "outcome": "Built Health Status/Observations as a reusable Sidesheet body and one live shared-shell screen. The rebuild preserves all source labels and values, changes the source 12px field gaps to the agreed 16px base-8 rhythm, keeps 24px between content sections, and removes 128px of unused sheet height so the footer follows the final field.",
+  "geometry": {
+   "source": "550x600: header 64, body 476, footer 60.",
+   "body": "518x296: Health Status 192, 24px section gap, Functional Observations 80.",
+   "rebuild": "550x472: header 72, header divider 1, body region 328, footer 71.",
+   "comparison": "1708x711; source remains 550x600 at 1:1, rebuild remains 550x472, change log 480x619."
+  },
+  "reuse": {
+   "fields": "Four live remote Text field variants: three size=small / State=Default / Value=Filled and one size=small / State=Default / Value=Empty; all select=true.",
+   "shell": "One live instance of shared Sidesheet Floating 6:65; Body content swaps to 412:3889; footer shows tertiary and primary actions only.",
+   "comparison": "One live instance of Rebuild comparison 35:332; each new helper has exactly one placement, inside 415:7208.",
+   "changeLog": "Clone of the conforming Content/Title/Divider/Rows pattern. Six visible live Change log/Row instances; unused cloned rows hidden, not deleted."
+  },
+  "visualReview": {
+   "result": "PASS — source and rebuild inspected side by side at 1708x711.",
+   "observed": [
+    "All four labels, all three populated values, the empty Add observation field, both headings, close control, and both footer actions are visible and uncut.",
+    "The footer sits immediately below the content region; the source-only blank area is not reproduced.",
+    "Source remains a frozen 2x raster displayed at its native 550x600 canvas dimensions; it is not scaled to fit the rebuild.",
+    "Rebuild and reference helpers are transparent, so no false white panel continues below the shorter rebuild."
+   ]
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — body, live sheet, and placed comparison all rendered and were inspected.",
+   "2_unboundPaintAudit": "PASS with known Cover exception — Templates, Screens, and Archive have zero; Cover 1:5 remains the pre-existing flagged exception.",
+   "3_referenceCounts": "PASS — Body content preferred values 11; comparison preferred values 14 each; each helper placed once.",
+   "4_skipInvisibleFalse": "PASS — set for the full verification walk.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — source geometry, live field properties, shell API, comparison API, and change-log structure were enumerated before writes.",
+   "7_fileIdentityFirst": "PASS — target key and four exact page IDs were verified before mutation.",
+   "8_roundWithRecord": "PASS — batch-authored and visible geometry is integral; the one fractional hidden descendant is pre-existing shared-shell content and is recorded above.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was altered.",
+   "10_cloneDropsPropertyRefs": "PASS — cloned change-log helper has no exposed component properties; six live Row instances retain their three text properties."
+  },
+  "screenshots": [
+   "figma-export/npve-health-status-observations-2026-09-05/source-health-status-129-8130-2x.png",
+   "figma-export/npve-health-status-observations-2026-09-05/body-health-status-observations.png",
+   "figma-export/npve-health-status-observations-2026-09-05/rebuild-health-status-observations.png",
+   "figma-export/npve-health-status-observations-2026-09-05/comparison-health-status-observations.png"
+  ],
+  "followup_2026_09_06": {
+   "record": "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06",
+   "note": "Functional Observations empty-field optical gap corrected 16 → 8. Current body is 518x288 and current sheet is 550x464; see the follow-up report and screenshots."
+  }
+ },
+ "npveRebuild_workflowsAudit_2026-09-05": {
+  "_status": "READ-ONLY AUDIT COMPLETE. Stopped after step 5 as instructed. 26 top-level nodes mapped with refreshed provenance, dated text and cluster evidence; page anatomy decomposed from 4841:18039; 36-row conventions catalog (18 covers, 12 gaps, 5 inventions, 1 decision); sidesheet linkage (45 placements, two page conventions); rebuild-shape proposal with six decisions. No Figma writes; target not opened.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Encounter page",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq page Workflows 105:1426 read only (loadAsync, page never switched)",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (key inventory 145 sets; nearest-component geometry); Kit ZPf0sJy83aPyrHjCVHomya read only (key inventory 327 sets)",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 not opened",
+  "report": "figma-export/npve-workflows-audit-2026-09-05/report.md",
+  "recordGate": "npveRebuild_extReviewRepairs_2026-09-05 recorded — passed",
+  "readFirst": [
+   "CLAUDE.md incl. Sheet and comparison techniques",
+   "npveRebuild_enum_2026-09-02 (Workflows section)",
+   "LIBRARY-TODOS.md items 1–17",
+   "PATIENT-HEADER-DISCOVERY.md, PROPOSAL-PATIENT-HEADER-V1.md, PAGE-TEMPLATES.md",
+   "schema navComponentsOnCompositionsPage, beigeSurfaceInvestigation2026_08_31, insightCardAffordances2026_09_01"
+  ],
+  "stopCondition": "Stop after step 5. No build. Triggered as planned.",
+  "step1_map": {
+   "topLevel": 26,
+   "provenance": {
+    "instances": 7843,
+    "kit": 3806,
+    "otherRemote": 3304,
+    "local": 709,
+    "designSystemRebuild": 24,
+    "kitPct": 48.5,
+    "otherPct": 42.1,
+    "localPct": 9,
+    "dsrPct": 0.31
+   },
+   "otherRemoteIs": "an icon pack (plus 689, Interface, Essential/Delete, Disabled 270, Health, Medicine/* 250 each, close 213) plus an older Tebra library (_icon button template, Icon Button/Default/Small, TemplateMgmt, Edit_light)",
+   "dsrUseOnlyIn": [
+    "4715:26647 (6)",
+    "4841:17077 (6)",
+    "4841:18039 (9)",
+    "4841:21245 (3)"
+   ],
+   "clusters": {
+    "pair2922": {
+     "members": [
+      "3943:12393",
+      "4317:11594"
+     ],
+     "evidence": "same content, same max authored id 4730; 3943:12393 adds annotation components (Note sticky ×2, Bullet ×2) and a 1496-tall inner frame vs 1348; pixel diff 21.5% confined to rows 497–1996 (shift). Neither newer."
+    },
+    "nine1429x1013": {
+     "members": [
+      "3124:12369",
+      "4841:17077",
+      "4841:18039",
+      "3159:20067",
+      "4296:17197",
+      "4275:15285",
+      "4294:15013",
+      "3159:21282",
+      "4439:16310"
+     ],
+     "evidence": "vs 4841:17077: 5.5–5.6% differ (left column + toolbar) for the old-shell members; 4841:18039 11.6% (overlay); Replace_Section_Modal 91.9% (scrim). Recording family members differ from each other by 0.46% (toolbar strip only)."
+    },
+    "recReadyTrio": {
+     "members": [
+      "3124:12369",
+      "4841:17077",
+      "4841:18039"
+     ],
+     "evidence": "4841:18039 = 4841:17077 + Add Problem overlay 550x948 at x878 + Module Dropdown at x-437; both on the 550-wide Problems-Main shell. 3124:12369 is the 450-wide FHx shell but carries the latest toolbar edits (id prefix 4907: \"SOAP\", \"Otto Octavius\", Print)."
+    },
+    "latestEdited": "3456:11505 Mark As Error_Ready (id prefix 5090): Print, Date pill, SOAP:Modified, Dr. Steven Strange; twin 2745:10131 inside board 3943:13029"
+   },
+   "datedText": "mock patient DOB 08/01/1994 everywhere; Kit placeholders 1/23/24, 1/27/25; mockup dates to 04/24/26 (addendum) and 5/1/26 (appointment menu); screenshot rectangle named 2026-05-05; DoS 3/26/26 row",
+   "artefacts": [
+    "899:7657 Module Dropdown hidden loose instance",
+    "3534:17621 loose 24px glyph",
+    "3806:13143 pasted screenshot",
+    "3810:13146 document row",
+    "two 280-tall board labels",
+    "4841:21245 loose sheet"
+   ]
+  },
+  "step2_anatomy": {
+   "bestEvidence": "4841:18039 (clean twin 4841:17077)",
+   "regions": {
+    "nav": "Kit Primary Nav 1429x65 #004852; repeats in all 27 encounter frames (1413 wide on two older board screens)",
+    "body": "1429x948 VERTICAL padding 16 fill #FBF9F8 (no token)",
+    "patientHeader": "1397x96 white #D6D6D6 r8 padding 20; identical size and text set in all 27",
+    "moduleStrip": "Modules_HFlex local instance 1397x40; three generations (Modules_Left 48, Modules_HFlex frame 64 icon-only, instance 40)",
+    "mainWrap": "1397x748 H gap 16; LeftCol 450/550/691 (sheet), RightCol 931/831/1397/691",
+    "noteCard": "NoteWrapper 831x748 white #D6D6D6 r8: NoteHeader 65 / toolbar 58 / NoteBody 555 / Footer 70",
+    "pageFooter": "none on any frame",
+    "overlays": "right-docked 550x948 at x878 (square corners, no scrim); AI Note Results 483x948; Edit Problem 550x789; Kit Dialog + scrim"
+   },
+   "candidateShells": [
+    "page frame + backdrop",
+    "nav bar",
+    "patient header",
+    "module strip",
+    "note card shell with slots",
+    "two-column MainWrap with left sheet slot"
+   ]
+  },
+  "step3_catalog": {
+   "rows": 36,
+   "libraryCovers": 18,
+   "coversWithDelta": 9,
+   "libraryGap": 12,
+   "inventionInSource": 5,
+   "decision": 1,
+   "newTodoCandidates": {
+    "18": "Module chip (40 tall, r8, icon+label+close; unselected pill r24)",
+    "19": "Grouped menu with subheaders (Module Dropdown, appointment date menu)",
+    "20": "Module card shell with header/toolbar/body/footer slots (Note card)",
+    "21": "Icon/ShieldLock",
+    "22": "Icon/Expand",
+    "23": "Editor toolbar pattern + undo/redo/H1/align/numbered-list glyphs",
+    "24": "Link chip colour #8657AC / #F0EBF5 (extends TODO 6)",
+    "25": "Segmented chip (medication/order chips)",
+    "26": "Menu with inline field and two-line items (TemplateMgmt)"
+   },
+   "existingTodosCrossReferenced": [
+    2,
+    3,
+    6,
+    9,
+    14,
+    16,
+    17
+   ],
+   "buttonAxisNote": "Library Button 79:2 has 72 variants, variant = contained | text only; the source white teal-outlined pills map to variant=contained, color=primary (Tebra override renders white with teal outline). Records saying \"variant=outlined\" describe that variant loosely.",
+   "inventions": [
+    "auto-saved dot + text",
+    "transcription status states (radio-dot text, italic in-progress, salmon Ready to Record strip)",
+    "editor section chrome (grey card, drag handle, Link to Section triangle dropdown)",
+    "signed-note status block, ORIGINAL label, addendum line",
+    "• separators"
+   ]
+  },
+  "step4_linkage": {
+   "placements": 45,
+   "byVariant": {
+    "Page=Clin_FHx": 30,
+    "Page=Clin_Problems-Main": 3,
+    "Clin_Problems-Edit": 1,
+    "Page=Clin_MedList": 2,
+    "Page=Clin_FHX-Editing": 1,
+    "summaryLoose": 1,
+    "detachedOverlayFrame": 1
+   },
+   "hiddenDuplicates": "10 Clin_FHx instances hidden at y672 inside board 3943:12395 and 3943:12402 LeftCols",
+   "conventions": {
+    "inlineLeftColumn": "sheet is MainWrap LeftCol 450 (older) or 550 (4841 pair); hidden in the recording family so the note spans 1397; white r8 #D6D6D6 card = our Placement=Floating",
+    "rightDockedOverlay": "flush right, full body height, white, square corners, no scrim, no push; widths 550 and 483; our Docked right has 8/0/0/8 corners"
+   },
+   "noDimBackdrop": true
+  },
+  "step5_proposal": {
+   "shellOrder": [
+    "Page/Encounter frame + backdrop",
+    "Nav/Bar (after the nav home decision; GAP placeholder until then)",
+    "Patient header (source 1397x96 vs Proposals v1 900x72 — decision)",
+    "Module strip (GAP-marked chips)",
+    "Note card shell with Header/Toolbar/Body/Footer slots",
+    "MainWrap with left sheet slot taking existing Sidesheet bodies"
+   ],
+   "inScope": [
+    "4841:17077",
+    "4841:18039",
+    "3456:11505",
+    "3943:12404 (Med List board screen)"
+   ],
+   "history": [
+    "2922 pair",
+    "General Workflow strip 3943:12395",
+    "Rec_* family until transcription states are wanted"
+   ],
+   "comparisonSizing": "DECISION — 1708-wide master with 550 slots cannot hold two 1429 frames; options: stacked page master, 0.5x references (breaks the 1:1 rule), widened slots",
+   "firstBatch": "Encounter page shell skeleton on a new Templates section: page frame, backdrop, nav (per decision), patient header (per decision), module strip + GAP marker, MainWrap with Sidesheet Problems Main in the left slot, note card shell with empty body and footer row, one comparison vs 4841:17077. No toolbar, sections or transcription states."
+  },
+  "decisionsNeeded": [
+   "Nav family home",
+   "Patient header source vs proposal",
+   "Right-docked panel corners and 483 width",
+   "Comparison layout for 1429 references",
+   "Page canvas colour #FBF9F8",
+   "Scope: 4841 pair vs later-edited 3124:12369 / 3456:11505; recording family in or out"
+  ],
+  "standingBatchRules": {
+   "1": "N/A",
+   "2": "N/A (source not audited for bindings)",
+   "3": "N/A",
+   "4": "PASS — false on every walk; hidden duplicates found because of it",
+   "5": "PASS untouched",
+   "6": "PASS — enumerated from the page",
+   "7": "PASS — keys explicit; page identity by 26-child count and ids",
+   "8": "N/A",
+   "9": "PASS untouched",
+   "10": "N/A"
+  },
+  "figmaMutations": [],
+  "screenshots": [
+   "figma-export/npve-workflows-audit-2026-09-05/crop-left-sheet.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-modules-strip.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-nav-1429x65.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-note-footer.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-note-header-toolbar.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-patient-header.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-2922-pair-f00-vs-f01.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f13.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f16.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f17.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f18.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f19.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f20.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f22.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f00-3943-12393-board-2922x2008.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f01-4317-11594-board-2922x2008.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f02-4715-26647-board-1584x1364.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f03-5093-18693-print-example-1429x815.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f04-3943-12395-board-15951x1314-at4000.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f04a-129-4347-general-workflow-screen-1-1429x774.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f04b-745-6735-general-workflow-screen-18-1429x776.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f05-3943-12402-board-2906x1360.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f06-3943-13025-board-4367x2839-at3000.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f07-3534-17621-arrow-icon-24.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f08-899-7657-module-dropdown-hidden-1x1.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f09-3456-11503-label-select-appointment-date.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f10-2939-11510-label-recording-transcription-live.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f11-3943-13027-board-5039x1249-at3000.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f12-3456-11505-mark-as-error-ready-1429x810.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f13-3124-12369-rec-ready-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f14-4841-17077-rec-ready-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f15-4841-21245-sidesheetv3-550x948.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f16-4841-18039-rec-ready-1429x1013-overflow.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f16-4841-18039-rec-ready-contentsonly.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f17-3159-20067-rec-started-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f18-4296-17197-rec-paused-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f19-4275-15285-rec-processing-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f20-4294-15013-rec-closed-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f21-3159-21282-rec-open-1429x1013-overflow.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f21-3159-21282-rec-open-contentsonly.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f22-4439-16310-replace-section-modal-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f23-3943-13029-board-5039x3547-at3000.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f24-3806-13143-screenshot-rect-1458x106.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f25-3810-13146-frame-758x116.png"
+  ],
+  "flagsAdded": [
+   "npveWorkflows_moduleChipNoLibraryPattern",
+   "npveWorkflows_noteCardShellNoLibraryPattern",
+   "npveWorkflows_editorToolbarNoPattern",
+   "npveWorkflows_shieldLockGlyphMissing",
+   "npveWorkflows_expandGlyphMissing",
+   "npveWorkflows_groupedMenuNoSubheader",
+   "npveWorkflows_linkChipColourNoToken",
+   "npveWorkflows_segmentedChipNoPattern",
+   "npveWorkflows_templateMenuInlineField",
+   "npveWorkflows_patientHeaderNotInLibrary",
+   "npveWorkflows_navFamilyHomeBlocksShell",
+   "npveWorkflows_rightDockedPanelConvention",
+   "npveWorkflows_comparisonLayoutFor1429",
+   "npveWorkflows_pageCanvasColourNoToken",
+   "npveWorkflows_moduleDropdownOffCanvas"
+  ],
+  "flagsBefore": 249,
+  "flagsAfter": 264
+ },
+ "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06": {
+  "_status": "DONE — Functional Observations optical gap corrected to bound space/8; dependent heights, change log, comparison, screenshots, and ten standing rules verified.",
+  "date": "2026-09-06",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-health-status-optical-spacing-2026-09-06/report.md",
+  "recordGate": "npveRebuild_healthStatusObservations_2026-09-05 recorded DONE — passed",
+  "trigger": "Operator observed that Functional Observations reads farther from its dropdown than Health Status reads from its labeled dropdowns.",
+  "measuredCause": {
+   "health": "Health heading render ends at y=30054.225; the first filled field floating label begins at y=30071.313. The field render extends 8px above its 40px instance box.",
+   "observations": "Functional Observations heading render ends at y=30270.225; the empty field border begins at y=30292 and its placeholder begins at y=30307.416. The empty field has no floating label above the border.",
+   "conclusion": "The shared 16px frame gap is geometrically equal but not optically equal. The empty field needs the next smaller base-8 step."
+  },
+  "scope": "Change only Functional Observations heading-to-empty-field spacing from 16px to bound space/8; reduce the dependent section, body, sheet, and rebuild-helper heights by 8px; update the existing change log, comparison, screenshots, report, and record.",
+  "preserve": "Health Status 16px field rhythm; 24px section separation; 16px Sidesheet body padding; all labels, values, fields, shell defaults, source reference, prior screens, and all unrelated nodes.",
+  "plannedGeometry": {
+   "functionalObservations": "518x80 → 518x72; itemSpacing 16 → 8, bound to space/8.",
+   "body": "518x296 → 518x288.",
+   "sheetAndHelper": "550x472 → 550x464.",
+   "shellStack": "72 header + 1 divider + 320 body region + 71 footer = 464."
+  },
+  "stopCondition": "Stop after one targeted base-8 spacing correction, dependent height updates, plain-language change-log update, live comparison screenshots, pixel verification, all ten standing rules, and final record. Stop immediately on any unexpected dependency, clipping, or unrelated instance change.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsAdded": [],
+  "flagsBefore": 264,
+  "flagsAfter": 264,
+  "figmaMutations": [
+   "412:3955 Functional Observations: itemSpacing 16 → 8, rebound from space/16 to space/8; height 80 → 72.",
+   "412:3889 Health status/observations body: height 296 → 288.",
+   "413:7010 Rebuild helper and 413:7011 live Sidesheet: height 472 → 464.",
+   "415:7108 Change log: overall height row updated; Health field spacing clarified; hidden Row 415:7119 reused, made visible, and placed after that row as Empty-field spacing 16 → 8.",
+   "No Sidesheet or comparison defaults, preferred values, source reference, field instances, labels, values, or unrelated screens changed."
+  ],
+  "verification": {
+   "identity": "PASS — target fdCQVFdvOByaOYIJYag0d6; Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "token": "PASS — 412:3955 itemSpacing resolves through space/8 key 183d5d946d268e8bd37735b8b0dc95111c46eddd.",
+   "content": "PASS — all four remote Text field instances retain their source labels, values, select state, and small variants.",
+   "shell": "PASS — 413:7011 remains a live instance of 6:65; footer begins at y=393 immediately after the 320px body region and ends at y=464.",
+   "comparison": "PASS — 415:7208 remains a live instance of 35:332; reference, rebuild, and change helpers each have exactly one placement.",
+   "preferredValues": "PASS — Body content remains 11 entries; comparison helper lists remain 14 each; no default changed.",
+   "paints": "PASS — Templates 5847 nodes / 0 unbound solid paints; Screens 2817 / 0; Archive 1393 / 0; Cover retains its one pre-existing flagged exception on 1:5.",
+   "geometry": "PASS for all authored and visible correction geometry. The two x=183.5 results are the same pre-existing hidden full-width-action label inherited by the shared shell and its comparison placement; untouched and invisible.",
+   "sourceAndLibrary": "PASS — source and library were not written."
+  },
+  "outcome": "Changed only the Functional Observations heading-to-empty-field gap from 16px to 8px. The Health Status labeled-field rhythm remains 16px and the section separation remains 24px. The body and live sheet are 8px shorter, with the footer still directly following content.",
+  "finalGeometry": {
+   "healthStatus": "518x192, itemSpacing 16 bound space/16.",
+   "functionalObservations": "518x72, itemSpacing 8 bound space/8.",
+   "body": "518x288: Health Status 192 + section gap 24 + Functional Observations 72.",
+   "sheet": "550x464: header 72 + divider 1 + body region 320 + footer 71.",
+   "changeLog": "480x716 with seven visible live Change log/Row instances.",
+   "comparison": "1708x808."
+  },
+  "visualReview": {
+   "result": "PASS — rebuilt sheet and full comparison inspected at native resolution.",
+   "finding": "The empty dropdown no longer reads looser than the labeled group. It remains separated from the heading, with no collision or clipping.",
+   "measuredAfter": "Functional Observations heading frame to field border = 8px; Health heading render to first floating-label render = 17.088px; the different measurements reflect the different label anatomy."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — live rebuild helper and sole placed comparison were re-rendered and inspected.",
+   "2_unboundPaintAudit": "PASS with known Cover exception — Templates, Screens, and Archive zero; Cover 1:5 remains the recorded exception.",
+   "3_referenceCounts": "PASS — all three helpers remain single-placement; preferred-value counts unchanged.",
+   "4_skipInvisibleFalse": "PASS — set before the final audit walk.",
+   "5_opacityLast": "PASS — opacity untouched.",
+   "6_enumerateDontRecall": "PASS — current node geometry, render bounds, bindings, properties, and placements were read before and after the edit.",
+   "7_fileIdentityFirst": "PASS — explicit target key and exact page IDs verified.",
+   "8_roundWithRecord": "PASS — all authored and visible corrected geometry is integral; inherited hidden half-pixel text recorded above.",
+   "9_boundPaintAlpha": "PASS — no paint or alpha changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no component was cloned; an existing hidden Change log/Row instance was reused and retains all three text properties."
+  },
+  "screenshots": [
+   "figma-export/npve-health-status-optical-spacing-2026-09-06/body-after.png",
+   "figma-export/npve-health-status-optical-spacing-2026-09-06/rebuild-after.png",
+   "figma-export/npve-health-status-optical-spacing-2026-09-06/comparison-after.png"
+  ]
+ },
+ "npveRebuild_socialHistory_2026-09-06": {
+  "_status": "IN PROGRESS — source, library, and target audited; bounded pre-write plan recorded before target mutation.",
+  "date": "2026-09-06",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-social-history-2026-09-06/report.md",
+  "recordGate": "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "node": "129:10181 Page=Clin_SHx",
+   "geometry": "550x778",
+   "policy": "read only; frozen 2x export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65",
+   "rebuildComparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "sourceFacts": [
+   "The source is 550x778 with a 64px header, 654px body, and 60px footer.",
+   "The body contains five uppercase section headings, nine small fields, two inline unit labels, one New Entry button, and one multiline Comments field.",
+   "Source body inset is 16px horizontally and 8px vertically; its section stack uses 24px between groups.",
+   "The source footer contains Save & Add to Note and Save; no Cancel action."
+  ],
+  "reuseBaseline": {
+   "textField": "Published Text field set 7c3c99bb9a9392d6571c0557b41d142b8987b566; small empty variant 77:708 / key 542540ea8fa199c81ea0128aea9c78a5cc8e8abf.",
+   "newEntryButton": "Published Button set cfb726c79b456d52901243b7c33839efd0780a93; contained primary small default variant 155:1193 / key 8fc8f57f80196e40aff7b3b1116226ea0a925120.",
+   "sidesheet": "Shared Sidesheet 279:2446, Floating variant 6:65.",
+   "comparison": "Shared Rebuild comparison 35:332.",
+   "changeLogPattern": "Clone current conforming Health Status/Observations helper 415:7108 and keep live Change log/Row instances."
+  },
+  "buildPlan": [
+   "Create one 518px-wide Social history body component with five section groups and base-8 auto-layout.",
+   "Use live published small Text field instances for all fields; enable select on choice fields and multiline on Comments.",
+   "Use one live published small contained-primary Button instance for New Entry; use bound Akkurat LL text only for section headings and inline unit labels.",
+   "Append the body to Sidesheet Body content preferred values without changing defaults; compose one content-driven 550px floating sheet with the source two-action footer.",
+   "Create one frozen 2x source reference, one transparent rebuild helper, one conforming change log, and one sole comparison instance.",
+   "Export and inspect the body, rebuilt sheet, and comparison; run all ten standing batch rules."
+  ],
+  "spacingPolicy": "Canonical base 8: 16px shell inset and vertical element rhythm, 24px between semantic groups, 8px only for heading-to-control optical pairing where the heading has its own line box.",
+  "codeConnect": "No .figma.ts/.figma.js mappings found under packages/design-system; reused the published Design System Rebuild assets discovered from the target subscription.",
+  "preserve": "Source and library files, the shared Sidesheet and comparison defaults/geometry, all prior screens/helpers, section 15 Encounter page shell, existing variables, and every unrelated node.",
+  "stopCondition": "Stop before or during target mutation if a published field/button cannot express the source in render, identity changes, a source pattern requires a hand-drawn control, or a design decision appears. Otherwise stop after one reusable body, one live shared-shell sheet, three helpers, one sole comparison, screenshots, ten standing-rule checks, report, and final record.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsAdded": [],
+  "flagsBefore": 264,
+  "flagsAfter": 264,
+  "figmaMutations": [],
+  "createdNodes": {},
+  "verification": {}
+ },
+ "npveRebuild_encounterShell_2026-09-06": {
+  "_status": "DONE. Encounter page shell skeleton built on Templates section 15 from library parts (Page/Encounter with SCAFFOLDING nav, grey/300 body band, Patient header at the Proposals v1 design, Module strip with GAP-marked chips, MainWrap with the Sidesheet Problems list in the 550 left slot and the Note card shell in the right slot); Rebuild comparison/Page stacked master created; sole comparison placed on Screens section 15 against 4841:17077 with a 2x reference; four GAP markers; twelve-row change log. Toolbar and note body deliberately empty. No stop condition triggered.",
+  "date": "2026-09-06",
+  "workstream": "NPVE Rebuild / Encounter page",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (variables and components imported by key in-script)",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (2x export of 4841:17077 through download_assets)",
+  "_proposalsFile": "zKT34LQogNjz3Z07fY4VQB read only (Patient header set 12:773 read for geometry and bindings; nothing instanced across files)",
+  "report": "figma-export/npve-encounter-shell-2026-09-06/report.md",
+  "recordGate": "npveRebuild_workflowsAudit_2026-09-05 recorded — passed",
+  "stopCondition": "Stop if any region needs a drawn stand-in beyond the module chips. One 8px status dot was drawn (recorded, marked); judged inside the rule, not a stop.",
+  "operatorDecisions_2026_09_06": {
+   "scope": "4841 pair is the structural reference; toolbar content comes from 3456:11505; recording family = future toolbar variants; boards = history.",
+   "patientHeader": "The Proposals v1 design; the divergence from the source two-row card is deliberate and logged.",
+   "dockedPanels": "Square corners; 483 logged as a second width.",
+   "pageComparisons": "Stacked master (Rebuild comparison/Page).",
+   "pageBackground": "Nearest token with a GAP marker.",
+   "nav": "GAP placeholder pending the nav family home; LIBRARY-TODOS item 19 added."
+  },
+  "step1_pageComparisonMaster": {
+   "id": "434:4858",
+   "name": "Rebuild comparison/Page",
+   "size": "2005x2154 hug",
+   "layout": "HORIZONTAL padding/gap bound space/32, fill color/grey/300, clip off; Screens column (Reference above Rebuild, gap 32) + Change log column",
+   "properties": [
+    "Source caption#434:0",
+    "Rebuild caption#434:1",
+    "Change log caption#434:2",
+    "Reference content#434:3",
+    "Rebuild content#434:4",
+    "Change log content#434:5"
+   ],
+   "helpers": {
+    "reference": "434:4391 _Rebuild comparison/Page/Reference/Encounter shell (rect 434:4392 1429x1013, image hash 339dd57a8977a7029c9e7cb2ab8d389b614d8592, FILL, 2x export placed at 1x)",
+    "rebuild": "434:4393 _Rebuild comparison/Page/Rebuild/Encounter shell (sole Page/Encounter instance 434:4394, transparent)",
+    "changeLog": "434:4745 _Rebuild comparison/Page/Change log/Encounter shell (Content card 434:4746 cloned from 254:1896; 12 Change log/Row instances)"
+   },
+   "referenceEntries": 181
+  },
+  "step2_shell": {
+   "section": "424:4085 15 · Encounter page shell (Templates, y 31916, 6300x2600)",
+   "pageEncounter": {
+    "id": "429:4161",
+    "size": "1429x989 (source 1013; the designed header is 24 shorter)",
+    "properties": [
+     "Left slot#429:0 (default Sidesheet 6:65)",
+     "Right slot#429:1 (default Note card)",
+     "Patient header#429:2",
+     "Module strip#429:3"
+    ],
+    "exposedInstances": [
+     "Patient header",
+     "Module strip",
+     "Left slot — Sidesheet",
+     "Right slot — Note card"
+    ],
+    "referenceEntries": 139
+   },
+   "nav": "SCAFFOLDING — Nav placeholder 1429x65, fill bound color/primary/main (#004852, exact match to the source bar and to Nav/Bar's own fill), dashed hairline bound color/primary/200, label in contrastText. GAP marker 429:6869.",
+   "bodyBand": "fill bound color/grey/300 #F6F6F6 as the nearest token for the mockup #FBF9F8 (delta +5/+3/+2 R/G/B); alternatives paper #FFFFFF (+4/+6/+7) and background/default #E8E5DF (far). GAP marker 429:6860.",
+   "patientHeader": {
+    "id": "426:4165",
+    "size": "900x72 master (minWidth 900), FILL in the page (1397)",
+    "parts": "Avatar Content=Letter \"SS\" with the PH-11 letter fill override (grey/900); Identity: Preferred name h3 bold grey/900, Pronouns body2 text/secondary, Restriction wrap (h5 bold error/dark, boolean), Line 2 legal name group (boolean) • Sex • DOB (Age) • Phone • MRN in body2 text/secondary with • in text/disabled; Safety: Icon/AttentionFilled 16 + Severe label/allergens h5 error/dark + Link \"View all (13)\"; Balance row body2",
+    "properties": 13,
+    "referenceEntries": 15,
+    "content": "name, pronouns, Restricted, legal name, DOB, age and phone from the source; Sex \"Male\", MRN, allergens and balance are proposal sample content (the source has no such fields); the source insurer line has no slot",
+    "literals": "paddingTop/paddingBottom 10 (proposal value; Tebra/Dimension has no space/10)",
+    "libraryLacks": "nothing the proposal uses; every part imported (Avatar, Icon/AttentionFilled, Link) and every colour and type value bound"
+   },
+   "moduleStrip": {
+    "id": "426:4214",
+    "size": "1397x40",
+    "modulesPill": "library Button contained/primary, Label \"Modules\", Start icon Icon/Menu, End icon Icon/PlusOutlined (delta: source is a white r8 pill with a widgets glyph, 144x40; ours 122x38 pill)",
+    "chipSet": "426:4213 Module chip selected=yes (426:4199, primary/100 fill, primary/200 stroke, radius/md) / selected=no (426:4206, no fill, divider stroke, radius/pill); properties Label, Icon (swap), Show close",
+    "chips": "Chip 1 Note (Icon/Document), Chip 2 Problems (Icon/Clinical), Chip 3 AI Summary unselected (Icon/Lightbulb); exposed as swaps Chip 1/2/3#426:22–24",
+    "marker": "429:6878"
+   },
+   "mainWrap": "HORIZONTAL gap space/16: LeftCol 550 fixed holding Sidesheet Placement=Floating with Body content = Problems list body State=Closed 155:1559, Title Problems, primary disabled secondary, tertiary \"Add Active Problems to Note\" (nested label override as on 160:3169); RightCol FILL (831) holding the Note card",
+   "noteCard": {
+    "id": "424:4362",
+    "size": "831x748 fixed, paper fill, divider hairline, radius/md",
+    "header": "64: Icon button primary + Icon/Lock (shield stand-in, GAP), Title h3 bold text/secondary, spacer, Auto-saved (drawn 8px dot bound success/main + body2 text), Icon button default glyph (expand stand-in, GAP), Icon button + Icon/CloseOutlined",
+    "toolbar": "58, empty this batch (Show toolbar boolean)",
+    "body": "FILL, padding space/16, Body content swap defaulting to SCAFFOLDING — Note body placeholder 424:4360 (799x120 dashed grey/500, radius/md)",
+    "footer": "74: Form control label + Checkbox checked \"Confidential\"; Button contained/primary \"Charge Capture\", \"Save & Close\"; Split button Size=Medium (color/secondary/main, nested label overridden to \"Sign\", leading plus hidden); Icon button + Icon/EllipsisFilled (glyph delta: horizontal for the source vertical kebab)",
+    "properties": [
+     "Title#424:0",
+     "Status text#424:1",
+     "Body content#424:2",
+     "Show footer#424:3",
+     "Show toolbar#424:4"
+    ],
+    "referenceEntries": 32,
+    "marker": "429:6887 (shield, expand, drawn status dot)"
+   }
+  },
+  "step3_comparison": {
+   "section": "429:6859 15 · Encounter page shell comparison (Screens, y 26738, 2600x2500)",
+   "instance": "434:7474 Page comparison — Encounter page shell, 2005x2154, sole placement",
+   "caption": "Source: zVsuhYehoSLLq880qRBFkq 4841:17077, exported 2026-09-06",
+   "markers": [
+    "429:6860 Page background colour",
+    "429:6869 Nav placeholder",
+    "429:6878 Module chips",
+    "429:6887 Note header glyphs"
+   ]
+  },
+  "step4_changeLogRows": [
+   "Patient header | Big two-row card with the insurer line → the newer designed header band (name, restriction, details, allergies, balance) | Deliberate: the proposal design replaces the mockup band",
+   "Nav bar | Teal bar with app icons and search → teal placeholder bar, dashed | The library nav parts have no settled home yet; marked as a gap",
+   "Module chips | Drawn chips → local chips, marked | The library chip cannot be 40 tall with a close; marked as a gap",
+   "Modules button | White square-cornered pill with a grid glyph → library pill with menu and plus glyphs | Shared button; the glyph differs",
+   "Page background | Warm off-white typed in by hand → nearest library grey | No token matches; marked as a gap and flagged to product",
+   "Left column | Problems panel drawn in the mockup → our rebuilt Problems sheet | Same panel, already rebuilt; 600 tall instead of 517",
+   "Note title badge | Shield with a lock → lock in a round button | The library has no shield glyph; marked as a gap",
+   "Expand button | Expand arrows → plain round button | The library has no expand glyph; marked as a gap",
+   "Toolbar | Template, Assigned To and recording pills → empty strip | Next batch",
+   "Note body | Grey editor card with sections → empty placeholder | Next batch",
+   "Footer | Drawn buttons and a checkbox → library buttons, split button and checkbox | Shared parts; the more button shows a horizontal ellipsis",
+   "Page height | 1013 tall → 989 tall | The designed header is 24 shorter than the mockup band"
+  ],
+  "step5_verification": {
+   "regionCompare": "source-over-rebuild crops for nav, patient header, module strip, left column, note header, note footer (region-*.png); deltas listed in the report",
+   "pixelFixes": [
+    "Badge variant=dot anchors to a child corner and sat 4px off the text line → replaced by a drawn 8px dot (recorded, marked)",
+    "Split button carried a leading plus glyph → hidden; caret kept; nested label \"New Note\" → \"Sign\"",
+    "two centred labels at x 164.5 / y 22.5 → 164 / 22 by fixing the text box"
+   ],
+   "audits": {
+    "templatesSection15": "1126 nodes, 0 unbound solid paints outside remote instances, 0 fractional after the label fix, 0 hidden non-boolean layers, 0 loose stacks",
+    "screensSection15": "396 nodes, 0 unbound, 0 fractional after the fix",
+    "archive": "1528 nodes, 0 unbound",
+    "cover": "8 nodes, 1 unbound (1:5, pre-existing flag)",
+    "literals": "Patient header padding 10 (no token); Module chip set container chrome 24"
+   },
+   "referenceCounts": {
+    "Note card 424:4362": 32,
+    "Patient header 426:4165": 15,
+    "Module chip 426:4213": 6,
+    "Module strip 426:4214": 17,
+    "Page/Encounter 429:4161": 139,
+    "Rebuild comparison/Page 434:4858": 181,
+    "Sidesheet variants": "70 each, unchanged",
+    "Problem summary row": "6, unchanged"
+   },
+   "screens": "15 Sidesheet occurrences and 15 comparisons on Screens; no detached instance; Sidesheet Body content preferred values 11 (unchanged by this batch)"
+  },
+  "unrecordedWorkFound": "Templates 412:3888 and Screens 415:7207 \"14 · Health Status/Observations\" (external batch, ids 412–415, helpers named \"Rebuild helper · …\" / \"Reference helper · …\") exist with no schema record. Not touched; this workstream's gate is the Workflows audit, which is recorded. Flagged.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — every new master rendered through its placed instance (shell → comparison → Screens); paints bound at master and instance.",
+   "2_unboundPaintAudit": "PASS with the known cover exception — Templates section 15 and Screens section 15 walked node by node; Archive and Cover walked; 0 new unbound; section chrome #E4E4E4 by recorded direction.",
+   "3_referenceCounts": "PASS — counts above; Module chip variants built fresh, no clone; Sidesheet 70 per variant unchanged.",
+   "4_skipInvisibleFalse": "PASS — set on every walk.",
+   "5_opacityLast": "PASS — no paint opacity authored.",
+   "6_enumerateDontRecall": "PASS — section extents, keys, and property names read from the files before each write.",
+   "7_fileIdentityFirst": "PASS — keys explicit; pages Cover 0:1 / Templates 3:2 / Screens 27:2 / Archive 126:2.",
+   "8_roundWithRecord": "PASS — 0 fractional authored geometry after the label fix; patient header padding 10 recorded as a literal.",
+   "9_boundPaintAlpha": "PASS — untouched.",
+   "10_cloneDropsPropertyRefs": "PASS — clones limited to the GAP marker frame and the Content card frame (no property references); moved nothing."
+  },
+  "counts": {
+   "GAP": 4,
+   "DEFECT": 0,
+   "rows": 12,
+   "newMasters": 8
+  },
+  "screenshots": [
+   "figma-export/npve-encounter-shell-2026-09-06/comparison-encounter-shell-434-7474-1x.png",
+   "figma-export/npve-encounter-shell-2026-09-06/master-module-chip-set-426-4213.png",
+   "figma-export/npve-encounter-shell-2026-09-06/master-module-strip-426-4214.png",
+   "figma-export/npve-encounter-shell-2026-09-06/master-note-card-424-4362-1x.png",
+   "figma-export/npve-encounter-shell-2026-09-06/master-note-card-424-4362-before-fix.png",
+   "figma-export/npve-encounter-shell-2026-09-06/master-patient-header-426-4165.png",
+   "figma-export/npve-encounter-shell-2026-09-06/region-left-column-source-over-rebuild.png",
+   "figma-export/npve-encounter-shell-2026-09-06/region-module-strip-source-over-rebuild.png",
+   "figma-export/npve-encounter-shell-2026-09-06/region-nav-source-over-rebuild.png",
+   "figma-export/npve-encounter-shell-2026-09-06/region-note-footer-source-over-rebuild.png",
+   "figma-export/npve-encounter-shell-2026-09-06/region-note-header-source-over-rebuild.png",
+   "figma-export/npve-encounter-shell-2026-09-06/region-patient-header-source-over-rebuild.png",
+   "figma-export/npve-encounter-shell-2026-09-06/screens-section-15-429-6859.png",
+   "figma-export/npve-encounter-shell-2026-09-06/shell-master-429-4161-1x.png",
+   "figma-export/npve-encounter-shell-2026-09-06/shell-master-429-4161-before-fix.png",
+   "figma-export/npve-encounter-shell-2026-09-06/source-4841-17077-1x-from-2x.png",
+   "figma-export/npve-encounter-shell-2026-09-06/source-4841-17077-2x.png",
+   "figma-export/npve-encounter-shell-2026-09-06/templates-section-15-424-4085-at3150.png"
+  ],
+  "flagsAdded": [
+   "npveEncounter_unrecordedHealthStatusBatch",
+   "npveEncounter_patientHeaderPadding10NoToken",
+   "npveEncounter_splitButtonLabelNotAProperty",
+   "npveEncounter_badgeDotCannotSitInline",
+   "npveEncounter_iconButtonDefaultGlyphAsExpand",
+   "npveEncounter_modulesPillGlyphDelta"
+  ],
+  "flagsBefore": 264,
+  "flagsAfter": 270
  }
 }
