@@ -4,7 +4,9 @@ const {
   ROOT, changedFiles, jsonDigest, manifestRiskPayload, matchesAny, readJson, withoutKey, writeJson
 } = require('./lib');
 const { validateContract } = require('./validate-contract');
+const { validateEvidence } = require('./validate-evidence');
 const { validateManifest } = require('./validate-manifest');
+const { validateRecord } = require('./validate-record');
 
 const [itemId] = process.argv.slice(2);
 if (!itemId) throw new Error('Usage: node scripts/workflow/finish-batch.js <item-id>');
@@ -16,6 +18,9 @@ const runPath = `.workflow-runs/${itemId}.json`;
 if (!fs.existsSync(path.resolve(ROOT, runPath))) throw new Error(`No active run: ${itemId}`);
 const run = readJson(runPath);
 const errors = [];
+
+try { validateEvidence(itemId); } catch (error) { errors.push(error.message); }
+try { validateRecord(itemId); } catch (error) { errors.push(error.message); }
 
 if (jsonDigest(manifestRiskPayload(item)) !== run.plannerRiskSha256) errors.push('planner-owned risk/scope fields changed after start');
 const schema = readJson('design-system-schema.json');

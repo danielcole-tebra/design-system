@@ -1,0 +1,32 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "replace-with-manifest-item-id",
+  "capturedAt": "ISO-8601",
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": ["0:1 Cover", "3:2 Templates", "27:2 Screens", "126:2 Archive"]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false
+  },
+  "checks": {
+    "unboundPaints": { "pass": false, "exceptions": [] },
+    "fractionalAuthoredGeometry": { "pass": false, "exceptions": [] },
+    "referenceCounts": { "pass": false, "details": "" },
+    "componentIdentity": { "pass": false, "details": "" },
+    "propertyReferences": { "pass": false, "details": "" }
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/<batch>/comparison.png",
+    "inspectedByExecutor": false,
+    "observations": []
+  },
+  "figmaNodes": {},
+  "toolCalls": {
+    "figmaRead": 0,
+    "figmaWrite": 0,
+    "screenshot": 0,
+    "correctionCycles": 0
+  }
+}

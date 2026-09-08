@@ -1,0 +1,24 @@
+{
+  "format": "tebra.design-check-catalog",
+  "version": 1,
+  "deterministic": {
+    "fileIdentity": "Exact target file key and page inventory match the contract.",
+    "skipInvisible": "Audit explicitly ran with skipInvisibleInstanceChildren=false.",
+    "unboundPaints": "Audit reports no unapproved unbound solid paints in scope.",
+    "fractionalGeometry": "Audit reports no batch-authored fractional geometry.",
+    "referenceCounts": "Expected preferred-value and placement counts match live reads.",
+    "componentIdentity": "Required component instances remain attached to expected masters.",
+    "propertyReferences": "Cloned variants or rows retain required property references.",
+    "recordCompleteness": "Owned schema record is DONE and contains all ten standing-rule results.",
+    "artifactPresence": "Report, audit JSON, and comparison PNG exist at manifest paths.",
+    "freshness": "Compact contract matches current schema and instruction digests.",
+    "concurrency": "Nothing outside the owned schema record changed during execution.",
+    "allowlist": "Working-tree changes are within the planner-approved file list."
+  },
+  "visual": {
+    "comparisonRender": "Executor inspects a dedicated reference/rebuild/change comparison for every component.",
+    "operatorReview": "The comparison is shown to the operator at the manifest oversight checkpoint.",
+    "unknownUnknowns": "Look for clipping, optical imbalance, icon mismatch, sagging labels, false hierarchy, and anything not represented by deterministic rules."
+  },
+  "policy": "Scripts may compress deterministic successes. They may never waive, infer, or replace the visual checks."
+}
