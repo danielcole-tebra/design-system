@@ -7,7 +7,7 @@
     {
       "id": "pilot-pmhx-condition-row",
       "title": "Past Medical History condition row",
-      "status": "queued",
+      "status": "complete",
       "dependsOn": [],
       "source": {
         "fileKey": "zVsuhYehoSLLq880qRBFkq",
@@ -52,7 +52,8 @@
         "audit": "figma-export/npve-past-medical-history-row-2026-09-08/audit.json",
         "report": "figma-export/npve-past-medical-history-row-2026-09-08/report.md",
         "comparisonRender": "figma-export/npve-past-medical-history-row-2026-09-08/comparison.png"
-      }
+      },
+      "completedAt": "2026-09-08T17:59:03.449Z"
     },
     {
       "id": "pilot-pmhx-section",

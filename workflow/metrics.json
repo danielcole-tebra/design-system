@@ -7,5 +7,16 @@
     "reductionPercent": 95.9,
     "measuredAt": "2026-09-08"
   },
-  "pilot": []
+  "pilot": [
+    {
+      "itemId": "pilot-pmhx-condition-row",
+      "risk": "low",
+      "startupBytes": 54805,
+      "figmaRead": 14,
+      "figmaWrite": 15,
+      "screenshots": 6,
+      "correctionCycles": 9,
+      "result": "passed deterministic and executor visual review; awaiting operator review"
+    }
+  ]
 }

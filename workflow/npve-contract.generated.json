@@ -1,11 +1,11 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 1,
-  "generatedAt": "2026-09-08T14:21:26.445Z",
+  "generatedAt": "2026-09-08T17:58:38.949Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "402c2a9c378f3e3adb87146caafeb71bcdf361b12170f5fbcd70b66c507793e8"
+      "sha256": "d7d3cbe49b920721f50e5faf1bb8ac17bcbf1ee84cc38e6ff2f199362f78b860"
     },
     "instructions": [
       {
@@ -202,16 +202,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_externalReview_2026-09-05",
-        "status": "READ-ONLY REVIEW COMPLETE. Peer review of the external (Codex) sidesheet work since cd092d9. All 20 batches recorded and gated; two review-only folders unrecorded; two record claims inaccurate. No subscription split, no duplicate masters, no detached instances, zero unbound authored paints. Nine screens meet the standard with numbered repairs; no rebuild. Three rule-5 findings (two unmarked stand-ins, one contradicted DEFECT). No Figma mutation.",
-        "date": "2026-09-05",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-external-review-2026-09-05/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_extReviewRepairs_2026-09-05",
         "status": "DONE. All seven review decisions applied: ring override removed and the ringed-buttons DEFECT marker extended; two GAP markers placed for the kept stand-ins; Family history and Allergies references at 1:1 with the Reference column unclipped; six change-log helpers on the Change log pattern and all 61 rows rewritten in plain language plus two typo rows; five standalone screens pixel-diffed (corner pixels only) and moved to Archive 05; Allergy severity selector at integer positions; two records annotated; CLAUDE.md gained \"Sheet and comparison techniques\"; LIBRARY-TODOS items 16 and 17. Ten standing rules run on all four pages. Tree committed.",
         "date": "2026-09-05",
@@ -356,6 +346,25 @@
         "decision": null,
         "report": "figma-export/npve-note-header-layout-2026-09-08/report.md",
         "target": null
+      },
+      {
+        "id": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
+        "status": "DONE. Low-risk pilot item built and validated; stopped before the section item for operator review.",
+        "date": "2026-09-08",
+        "outcome": [
+          "Created a two-variant Past medical history condition row component set at 518px content width.",
+          "Used a 42px row to preserve the published Checkbox and Icon button touch targets; the source 32px height is recorded as an intentional difference.",
+          "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
+          "Shared component APIs and the shared comparison master were not modified."
+        ],
+        "geometry": null,
+        "decision": "Source row 32px → rebuild row 42px so the published 42px Checkbox touch target is not shrunk. Visible glyph size and relationship remain source-faithful.",
+        "report": "figma-export/npve-past-medical-history-row-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2"
+        }
       }
     ],
     "openFlags": [
@@ -483,6 +492,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "7d9fe8813cd6ccfc6113aeb02cc2b565a6f26e2329742c874f781b2746f0b89f"
+    "contractSha256": "b63f483c093ea42f251d0c5e9246764c4ef61995357ba142c2b03fa91a5e0684"
   }
 }

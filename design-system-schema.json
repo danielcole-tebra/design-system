@@ -26925,5 +26925,108 @@
    "figma-export/npve-note-header-layout-2026-09-08/rebuild-encounter-429-4161.png",
    "figma-export/npve-note-header-layout-2026-09-08/comparison-encounter-434-7474.png"
   ]
+ },
+ "npveRebuild_pastMedicalHistoryRow_2026-09-08": {
+  "_status": "DONE. Low-risk pilot item built and validated; stopped before the section item for operator review.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "manifestItem": "pilot-pmhx-condition-row",
+  "risk": {
+   "tier": "low",
+   "assignedBy": "Cole (operator)",
+   "oversight": "Dedicated comparison and operator review before the section item."
+  },
+  "report": "figma-export/npve-past-medical-history-row-2026-09-08/report.md",
+  "recordGate": "npveRebuild_noteHeaderLayout_2026-09-08 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:9306 Trauma row",
+   "policy": "read only; frozen export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "scope": "Build one reusable Past Medical History condition row from published Checkbox, Icon button, ChatOutlined, and ChatFilled assets; create one dedicated comparison and change log. No section or body work in this batch.",
+  "sourceFacts": [
+   "The source row is 518x32 with a 24px unchecked Checkbox, 404px label, and 24px comment glyph.",
+   "The source visually shows outlined and filled comment states; the filled state appears on Cataracts.",
+   "The source uses legacy components; the target must use only the subscribed Design System Rebuild library."
+  ],
+  "dependencies": {
+   "checkbox": "df21c69feaab79790f6c571a45a4d2b7eaf976c7",
+   "iconButton": "7ebea5d7ce6ecfdaef84d177efa64196f654717d",
+   "chatOutlined": "6bc407c23e71eb80b9334cde47be426cba738941",
+   "chatFilled": "d6feeb4017e9bebc5e3bf526f88c8b2e376be6c5",
+   "comparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "plan": [
+   "Create one 518px local component with a live Checkbox, editable label, and live Icon button whose icon can swap between ChatOutlined and ChatFilled.",
+   "Preserve published touch-target geometry; record the resulting row-height difference from the 32px source rather than shrinking controls.",
+   "Create frozen reference, live rebuild, and plain-language change-log helpers and one sole comparison on Screens.",
+   "Run all ten standing rules, save audit/report/comparison evidence, and stop for operator review."
+  ],
+  "stopCondition": "Stop before mutation on source or target identity mismatch, missing published dependency, ambiguous comment state, or inability to preserve published touch targets without a clear recorded difference. Stop after any failed structural or visual validation before the next pilot item.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 1
+  },
+  "flagsBefore": 280,
+  "flagsAfter": 280,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Templates: created organizer section 518:5771.",
+   "Templates: created Past medical history condition row set 518:5797 with Empty 518:5772 and Filled 518:5785 variants.",
+   "Templates: created state proof 518:5798 and helpers 518:5825, 518:5827, 518:5837.",
+   "Screens: created organizer section 521:7834 and sole comparison instance 521:7835 from shared master 35:332.",
+   "Applied an instance-level clipsContent override to the compact row comparison; no shared-master mutation."
+  ],
+  "createdNodes": {
+   "templatesSection": "518:5771",
+   "rowComponentSet": "518:5797",
+   "emptyVariant": "518:5772",
+   "filledVariant": "518:5785",
+   "statesProof": "518:5798",
+   "referenceHelper": "518:5825",
+   "rebuildHelper": "518:5827",
+   "changeHelper": "518:5837",
+   "screensSection": "521:7834",
+   "comparison": "521:7835"
+  },
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "componentApi": "PASS — Condition text plus Comment Empty/Filled variant axis.",
+   "renderedStates": "PASS — Trauma/Empty and Cataracts/Filled render their stored values.",
+   "instancePaints": "PASS — zero solid-paint mismatches for both master/proof pairs.",
+   "comparison": "PASS — inspected comparison.png; source and rebuild visible relationships align."
+  },
+  "outcome": [
+   "Created a two-variant Past medical history condition row component set at 518px content width.",
+   "Used a 42px row to preserve the published Checkbox and Icon button touch targets; the source 32px height is recorded as an intentional difference.",
+   "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
+   "Shared component APIs and the shared comparison master were not modified."
+  ],
+  "decision": "Source row 32px → rebuild row 42px so the published 42px Checkbox touch target is not shrunk. Visible glyph size and relationship remain source-faithful.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — both variants were placed and compared against their rendered proof instances; zero paint mismatches.",
+   "2_unboundPaintAudit": "PASS — every node on all four pages was walked; only established organizer paints are unbound in the new subtrees.",
+   "3_referenceCounts": "PASS — Empty and Filled each contain two componentPropertyReferences.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren was false for all-page and targeted audit walks.",
+   "5_opacityLast": "PASS — no paint-level opacity was authored or remediated.",
+   "6_enumerateDontRecall": "PASS — audits enumerated current live page trees and current variant descendants.",
+   "7_fileIdentityFirst": "PASS — target file key and exact four-page inventory were verified before final evidence was accepted.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; source 32px and rebuild 42px are recorded integers.",
+   "9_boundPaintAlpha": "PASS — bound paints were preserved from live approved nodes; no bound alpha was overwritten.",
+   "10_cloneDropsPropertyRefs": "PASS — variants were built independently; reference counts and rendered text/icon state were verified on instances."
+  },
+  "screenshots": [
+   "figma-export/npve-past-medical-history-row-2026-09-08/source-row-129-9306.png",
+   "figma-export/npve-past-medical-history-row-2026-09-08/states.png",
+   "figma-export/npve-past-medical-history-row-2026-09-08/comparison.png"
+  ]
  }
 }
