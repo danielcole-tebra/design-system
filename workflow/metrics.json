@@ -1,0 +1,11 @@
+{
+  "format": "tebra.design-workflow-metrics",
+  "version": 1,
+  "baseline": {
+    "legacyStartupBytes": 1340696,
+    "leanStartupBytes": 54805,
+    "reductionPercent": 95.9,
+    "measuredAt": "2026-09-08"
+  },
+  "pilot": []
+}
