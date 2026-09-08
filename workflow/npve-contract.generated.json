@@ -1,16 +1,16 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 2,
-  "generatedAt": "2026-09-08T21:10:44.353Z",
+  "generatedAt": "2026-09-08T21:15:54.144Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "b3b8c8d1785f29a18bdbaabee1df91e88866bad814185dcf32cb33b883084592"
+      "sha256": "2e8d37ff568b19c8710f7def4070b75a585d2b6997490956ae0bae98a1929e88"
     },
     "instructions": [
       {
         "path": "workflow/rules.json",
-        "sha256": "8d9aff97c0a7de9cb9764301cc0a055b71fca91917918cefe5aa987959172714"
+        "sha256": "3455892d00b9deefb7840ee9a425f6d72e5a8479da44eb6368e8a855bd7e5c80"
       },
       {
         "path": "CLAUDE.md",
@@ -27,7 +27,7 @@
     ],
     "generator": "scripts/workflow/generate-contract.js",
     "generatorVersion": 2,
-    "citedRecordsPresent": 24
+    "citedRecordsPresent": 25
   },
   "authority": {
     "order": [
@@ -162,9 +162,10 @@
       {
         "n": 11,
         "title": "Risk is planner/operator-owned",
-        "text": "Risk is planner/operator-owned, never executor-owned. A manifest tier counts as approved only when the operator's approval is quoted verbatim in the manifest and the record; an unapproved tier lets an item proceed only with per-item operator confirmation, also quoted. Deterministic gates may compress checks, but every component still gets a comparison render inspected by the executor and shown to the operator.",
+        "text": "Risk is planner/operator-owned, never executor-owned. Classes are low, medium, high and human-decision as defined in workflow/protocol.json. A manifest tier counts as approved only when the operator's approval is quoted verbatim in the manifest and the record; an unapproved tier lets an item proceed only with per-item operator confirmation, also quoted; a human-decision item does not start until the operator decides. Deterministic gates may compress checks, but every component still gets a comparison render inspected by the executor and shown to the operator.",
         "sourceRecord": [
-          "workflowRefactor_closeout_2026-09-08"
+          "workflowRefactor_closeout_2026-09-08",
+          "workflowRefactor_tierApproval_2026-09-08"
         ],
         "note": "Adopted from amendment 2 of the 2026-09-08 plan review; first written into AGENTS.md by commit c88ce6c as its rule 10, which made AGENTS.md diverge from CLAUDE.md. Numbered 11 in both files from this record on."
       }
@@ -631,29 +632,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_socialHistory_2026-09-06",
-        "status": "DONE — reusable Social History body, shared Sidesheet, frozen reference, conforming change log, sole comparison, screenshots, and ten standing rules complete.",
-        "date": "2026-09-06",
-        "outcome": "Built Social History as one reusable 518x614 body and one live 550x790 instance of the shared Sidesheet. The rebuild preserves the source form structure and copy, uses the published Text field and Button components throughout, normalizes 12px row gaps to 16px, uses the source h5 section typography with the published primary colour token, and keeps the footer directly below the completed content.",
-        "geometry": {
-          "source": "550x778: header 64, body 654, footer 60.",
-          "body": "518x614: Alcohol 68, Substance/drug use 134, Tobacco 68, Living environment 68, Employment status 68, Comments 88, with five 24px group gaps.",
-          "rebuild": "550x790: header 72, header divider 1, body region 646, footer 71.",
-          "comparison": "1708x882; source remains 550x778 at 1:1, rebuild remains 550x790 at 1:1, and both tall columns have clipping disabled."
-        },
-        "decision": null,
-        "report": "figma-export/npve-social-history-2026-09-06/report.md",
-        "target": {
-          "file": "fdCQVFdvOByaOYIJYag0d6",
-          "templatesPage": "3:2",
-          "screensPage": "27:2",
-          "sharedSidesheet": "279:2446",
-          "floatingVariant": "6:65",
-          "rebuildComparison": "35:332",
-          "changeLogRow": "18:103"
-        }
-      },
-      {
         "id": "npveRebuild_encounterShell_2026-09-06",
         "status": "DONE. Encounter page shell skeleton built on Templates section 15 from library parts (Page/Encounter with SCAFFOLDING nav, grey/300 body band, Patient header at the Proposals v1 design, Module strip with GAP-marked chips, MainWrap with the Sidesheet Problems list in the 550 left slot and the Note card shell in the right slot); Rebuild comparison/Page stacked master created; sole comparison placed on Screens section 15 against 4841:17077 with a 2x reference; four GAP markers; twelve-row change log. Toolbar and note body deliberately empty. No stop condition triggered.",
         "date": "2026-09-06",
@@ -812,6 +790,16 @@
           "screensPage": "27:2",
           "archivePage": "126:2"
         }
+      },
+      {
+        "id": "workflowRefactor_tierApproval_2026-09-08",
+        "status": "DONE. Documentation batch. Operator approval of the four risk classes and of the three PMHx tiers recorded verbatim; human-decision added to protocol.json; retroactive locks written for the three complete items. No Figma file opened or written.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-tier-approval-2026-09-08/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -939,6 +927,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "fbad326ba9f53923c75a3987d759d7552b8f70a45aa63c2dba45b6ddd98d6dff"
+    "contractSha256": "f924bc8c423d291c4f3b61bc07028f262817b73bbf1739fca4d09d650cf70f57"
   }
 }

@@ -26991,7 +26991,7 @@
    "oversight": "Dedicated comparison and operator review before the section item.",
    "proposedBy": "Codex (executor), manifest commit 146e867",
    "approval": {
-    "status": "unapproved at lock; operator confirmed each item in chat before it ran (\"ok whats next?\" 17:26Z, \"That's a pretty small item, seems good so far\" 18:12Z, \"this looks good proceed\" 19:18Z)",
+    "status": "approved retroactively 2026-09-08 by Daniel (operator): \"I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.\" — record workflowRefactor_tierApproval_2026-09-08",
     "history": {
      "recordedAs": "Cole (operator)",
      "recordedAt": "2026-09-08T17:26:50Z",
@@ -27105,7 +27105,7 @@
    "oversight": "Dedicated comparison and operator review before the body item.",
    "proposedBy": "Codex (executor), manifest commit 146e867",
    "approval": {
-    "status": "unapproved at lock; operator confirmed each item in chat before it ran (\"ok whats next?\" 17:26Z, \"That's a pretty small item, seems good so far\" 18:12Z, \"this looks good proceed\" 19:18Z)",
+    "status": "approved retroactively 2026-09-08 by Daniel (operator): \"I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.\" — record workflowRefactor_tierApproval_2026-09-08",
     "history": {
      "recordedAs": "Cole (operator)",
      "recordedAt": "2026-09-08T17:26:50Z",
@@ -27222,7 +27222,7 @@
    "oversight": "Dedicated full-sheet comparison and operator review before later work.",
    "proposedBy": "Codex (executor), manifest commit 146e867",
    "approval": {
-    "status": "unapproved at lock; operator confirmed each item in chat before it ran (\"ok whats next?\" 17:26Z, \"That's a pretty small item, seems good so far\" 18:12Z, \"this looks good proceed\" 19:18Z)",
+    "status": "approved retroactively 2026-09-08 by Daniel (operator): \"I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.\" — record workflowRefactor_tierApproval_2026-09-08",
     "history": {
      "recordedAs": "Cole (operator)",
      "recordedAt": "2026-09-08T17:26:50Z",
@@ -27475,7 +27475,7 @@
    "workflow/rules.json (new), scripts/workflow/generate-contract.js (v2, folds rules.json, verifies citations), validate-contract.js (accepts v2), validate-manifest.js (approval object), lock-risk.js (quote required), start-batch.js (--confirm for unapproved tiers), self-test.js, workflow/README.md, workflow/check-catalog.json (+3 deterministic checks), workflow/manifest.json (risk attribution), workflow/metrics.json (v2), CLAUDE.md, AGENTS.md, OPERATORS.md (pointers)."
   ],
   "tierApproval": {
-   "status": "unapproved — no verbatim approval of the low/low/medium tiers arrived with this batch; the closeout prompt approves the PMHx decisions and verifies the comparison but does not approve the tiers.",
+   "status": "approved 2026-09-08 — see workflowRefactor_tierApproval_2026-09-08",
    "toApprove": "node scripts/workflow/lock-risk.js <item-id> \"Daniel (operator)\" \"<his exact words>\" for each item, or leave unapproved and confirm future items one at a time with start-batch.js --confirm."
   },
   "standingBatchRules": {
@@ -27530,5 +27530,36 @@
    "reading": "Context loaded fell 94.7%. Tool calls and turns rose because one sheet became three gated items with three comparisons, three records, three commits and a hand-over. The lean startup set itself grew from 55,219 to 83,412 bytes in this batch because the contract now carries the rule text; still a 94% reduction."
   },
   "commit": "see git log: NPVE/Workflow: close out the lean-workflow refactor and correct the PMHx pilot"
+ },
+ "workflowRefactor_tierApproval_2026-09-08": {
+  "_status": "DONE. Documentation batch. Operator approval of the four risk classes and of the three PMHx tiers recorded verbatim; human-decision added to protocol.json; retroactive locks written for the three complete items. No Figma file opened or written.",
+  "date": "2026-09-08",
+  "workstream": "Workflow refactor (lean provider-neutral runtime)",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "recordGate": "workflowRefactor_closeout_2026-09-08 recorded DONE — passed",
+  "report": "figma-export/workflow-tier-approval-2026-09-08/report.md",
+  "operatorApproval": {
+   "by": "Daniel (operator)",
+   "at": "2026-09-08",
+   "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
+   "channel": "chat reply to the closeout report"
+  },
+  "interpretation": "The quote approves the four risk classes and the tiers as proposed for the three PMHx items (low, low, medium). It says \"definitions in the manifest\"; the definitions live in workflow/protocol.json and the manifest now points there. The fourth class, human-decision, was in the 2026-09-08 plan but absent from protocol.json until this record.",
+  "scope": [
+   "workflow/protocol.json: human-decision class and oversight added; approval quoted.",
+   "workflow/manifest.json: riskClasses pointer; the three items locked with the quote through lock-risk.js --retroactive.",
+   "validate-manifest.js accepts human-decision and refuses to let such an item be queued, active, or complete; start-batch.js refuses to start one; lock-risk.js gains --retroactive for complete items.",
+   "workflow/rules.json rule 11 names the four classes; contract regenerated."
+  ],
+  "stopCondition": "Repo writes only; stop if any validator fails after the locks.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsBefore": 285,
+  "flagsAfter": 285,
+  "flagsAdded": [],
+  "figmaMutations": []
  }
 }

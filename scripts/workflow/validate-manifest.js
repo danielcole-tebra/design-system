@@ -10,7 +10,8 @@ function validateManifest() {
     ids.add(item.id);
     if (!['proposed', 'queued', 'active', 'complete', 'stopped'].includes(item.status)) errors.push(`${item.id}: invalid status`);
     const risk = item.risk || {};
-    if (!['low', 'medium', 'high'].includes(risk.tier)) errors.push(`${item.id}: invalid risk tier`);
+    if (!['low', 'medium', 'high', 'human-decision'].includes(risk.tier)) errors.push(`${item.id}: invalid risk tier`);
+    if (risk.tier === 'human-decision' && !['proposed', 'stopped'].includes(item.status)) errors.push(`${item.id}: a human-decision item cannot be queued, active, or complete; the operator decides first`);
     if (item.status !== 'proposed') {
       if (!risk.lock || !risk.lockedAt) errors.push(`${item.id}: risk is not locked`);
       if (!risk.proposedBy) errors.push(`${item.id}: risk has no proposer`);

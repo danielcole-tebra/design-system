@@ -31,10 +31,10 @@
         ],
         "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
         "approval": {
-          "status": "unapproved",
-          "approvedBy": null,
-          "approvedAt": null,
-          "quote": null,
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-08T21:15:53.933Z",
+          "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
           "history": [
             {
               "at": "2026-09-08T17:26:50.231Z",
@@ -43,13 +43,14 @@
               "correctedBy": "workflowRefactor_closeout_2026-09-08",
               "correctedAt": "2026-09-08T21:00:01.586Z"
             }
-          ]
+          ],
+          "retroactive": true
         },
         "perItemConfirmationsAtRunTime": [
           "\"ok whats next?\" 2026-09-08T17:26:26Z (does not approve a tier)"
         ],
-        "lockedAt": "2026-09-08T21:00:01.586Z",
-        "lock": "16339892e151fd93509aa47a9e4b495b1b4964c724f28bb320a0f612efe5b209"
+        "lockedAt": "2026-09-08T21:15:53.933Z",
+        "lock": "c7562bc77a7f4670de979ed0d97441f7566fdb77760bf8775f79c2f4da31df8e"
       },
       "oversight": [
         "Dedicated row reference/rebuild/change comparison",
@@ -102,10 +103,10 @@
         ],
         "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
         "approval": {
-          "status": "unapproved",
-          "approvedBy": null,
-          "approvedAt": null,
-          "quote": null,
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-08T21:15:53.974Z",
+          "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
           "history": [
             {
               "at": "2026-09-08T17:26:50.269Z",
@@ -114,13 +115,14 @@
               "correctedBy": "workflowRefactor_closeout_2026-09-08",
               "correctedAt": "2026-09-08T21:00:01.587Z"
             }
-          ]
+          ],
+          "retroactive": true
         },
         "perItemConfirmationsAtRunTime": [
           "\"That's a pretty small item, seems good so far\" 2026-09-08T18:12:39Z"
         ],
-        "lockedAt": "2026-09-08T21:00:01.587Z",
-        "lock": "926b66256d067b9a2705dd750d78802e88bd83fbab5ad250b6877059fdc1482c"
+        "lockedAt": "2026-09-08T21:15:53.974Z",
+        "lock": "0f8751fda12900b5e8f773182083fdaa87872afc18162095c507d6f97b967bbe"
       },
       "oversight": [
         "Dedicated section reference/rebuild/change comparison",
@@ -174,10 +176,10 @@
         ],
         "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
         "approval": {
-          "status": "unapproved",
-          "approvedBy": null,
-          "approvedAt": null,
-          "quote": null,
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-08T21:15:54.014Z",
+          "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
           "history": [
             {
               "at": "2026-09-08T17:26:50.307Z",
@@ -186,13 +188,14 @@
               "correctedBy": "workflowRefactor_closeout_2026-09-08",
               "correctedAt": "2026-09-08T21:00:01.587Z"
             }
-          ]
+          ],
+          "retroactive": true
         },
         "perItemConfirmationsAtRunTime": [
           "\"this looks good proceed\" 2026-09-08T19:18:45Z"
         ],
-        "lockedAt": "2026-09-08T21:00:01.587Z",
-        "lock": "10841a1ae7f9606e507817c9410c4eb967c39a9ac24f8ad82009a75bfc6ac718"
+        "lockedAt": "2026-09-08T21:15:54.014Z",
+        "lock": "7d1510df9069ec5be20cb352088ff19726f3527f3a2b7caa05814e7ba2dd9380"
       },
       "oversight": [
         "Dedicated full-sheet reference/rebuild/change comparison",
@@ -216,5 +219,6 @@
       },
       "completedAt": "2026-09-08T20:04:11.015Z"
     }
-  ]
+  ],
+  "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"
 }

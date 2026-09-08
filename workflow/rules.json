@@ -20,93 +20,131 @@
         "n": 1,
         "title": "Read before touching",
         "text": "Read before touching: CLAUDE.md, then use the validated compact workflow for NPVE work (run node scripts/workflow/validate-workflow.js, read workflow/npve-contract.generated.json, the selected manifest item, and its last record). For other workstreams, or when the compact workflow routes you there, read design-system-schema.json. The schema remains the authoritative record; the generated contract is a freshness-checked projection; chat history and your own memory are not the record.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04", "workflowRefactor_closeout_2026-09-08"],
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04",
+          "workflowRefactor_closeout_2026-09-08"
+        ],
         "note": "Amended 2026-09-08 (commit c88ce6c) to route NPVE work through the compact workflow; that amendment had no record until workflowRefactor_closeout_2026-09-08."
       },
       {
         "n": 2,
         "title": "Audit before building",
         "text": "Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04"]
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
       },
       {
         "n": 3,
         "title": "One batch at a time",
         "text": "One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04"]
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
       },
       {
         "n": 4,
         "title": "Additive only",
         "text": "Additive only. Nothing is deleted, and nothing is moved, renamed, or superseded without a record saying so. Archives get a README.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04"]
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
       },
       {
         "n": 5,
         "title": "No invention",
         "text": "No invention. If the library and code lack a pattern, mark it (GAP/DEFECT per the convention) and build with what exists. Recreating a source drawing by hand and calling it a component is a false record, which is worse than the gap.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04", "defectMarkerConvention2026_08_28"]
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04",
+          "defectMarkerConvention2026_08_28"
+        ]
       },
       {
         "n": 6,
         "title": "Verify in pixels",
         "text": "Verify in pixels. Screenshot what you built and look at it. Property readbacks are claims; renders are evidence. After editing a component, re-screenshot its live instances and diff.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04"]
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
       },
       {
         "n": 7,
         "title": "Record every batch",
         "text": "Record every batch: a dated schema record via an apply-*.js script, backup first, findings to flags[]. A batch without a record did not happen and will be treated as suspect.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04"]
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
       },
       {
         "n": 8,
         "title": "Report per rule 13",
         "text": "Report per rule 13: full report to disk, short reply, no tables in chat. Change logs in the file are written in plain graphic-design language, not system jargon.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04"]
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
       },
       {
         "n": 9,
         "title": "Stop on disagreement",
         "text": "When sources disagree or a decision is needed, stop and report. Precedence (code > Storybook render > library > source) resolves facts, not design decisions.",
-        "sourceRecord": ["npveRebuild_agentRules_2026-09-04"]
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
       },
       {
         "n": 10,
         "title": "Record gate",
         "text": "Record gate. Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one.",
-        "sourceRecord": ["docsOperatorsGuide_2026-09-04"]
+        "sourceRecord": [
+          "docsOperatorsGuide_2026-09-04"
+        ]
       },
       {
         "n": 11,
         "title": "Risk is planner/operator-owned",
-        "text": "Risk is planner/operator-owned, never executor-owned. A manifest tier counts as approved only when the operator's approval is quoted verbatim in the manifest and the record; an unapproved tier lets an item proceed only with per-item operator confirmation, also quoted. Deterministic gates may compress checks, but every component still gets a comparison render inspected by the executor and shown to the operator.",
-        "sourceRecord": ["workflowRefactor_closeout_2026-09-08"],
+        "text": "Risk is planner/operator-owned, never executor-owned. Classes are low, medium, high and human-decision as defined in workflow/protocol.json. A manifest tier counts as approved only when the operator's approval is quoted verbatim in the manifest and the record; an unapproved tier lets an item proceed only with per-item operator confirmation, also quoted; a human-decision item does not start until the operator decides. Deterministic gates may compress checks, but every component still gets a comparison render inspected by the executor and shown to the operator.",
+        "sourceRecord": [
+          "workflowRefactor_closeout_2026-09-08",
+          "workflowRefactor_tierApproval_2026-09-08"
+        ],
         "note": "Adopted from amendment 2 of the 2026-09-08 plan review; first written into AGENTS.md by commit c88ce6c as its rule 10, which made AGENTS.md diverge from CLAUDE.md. Numbered 11 in both files from this record on."
       }
     ]
   },
   "recordGate": {
     "text": "Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one. In the compact workflow the gate is enforced twice: the apply-*.js script refuses to create the IN PROGRESS record while the previous record is not DONE, and start-batch.js refuses to start while the item's own record is not IN PROGRESS or a dependency is not complete.",
-    "sourceRecord": ["docsOperatorsGuide_2026-09-04", "workflowRefactor_closeout_2026-09-08"]
+    "sourceRecord": [
+      "docsOperatorsGuide_2026-09-04",
+      "workflowRefactor_closeout_2026-09-08"
+    ]
   },
   "standingRules": {
     "14": {
       "title": "Change log beside every rebuilt frame",
       "text": "Every rebuilt frame has a Change log beside it, on its right, listing what changed from the source, from → to, and why in one line, in plain graphic-design language. Rows come from the batch prompt. The change log lives once, as a `_Rebuild comparison/Change log/<screen>` sub-component on Templates holding Change log/Row instances; Row stays a component so styling propagates. The schema remains the record; the change log is its plain-language view.",
-      "sourceRecord": ["npveRebuild_changelog_2026_09_02", "npveRebuild_repair2_2026-09-04"],
+      "sourceRecord": [
+        "npveRebuild_changelog_2026_09_02",
+        "npveRebuild_repair2_2026-09-04"
+      ],
       "note": "Added 2026-09-02; amended the same day to the detached-frame convention (flag npveChangelog_placedLogIsDetached); rewritten 2026-09-04 in repair batch 2 to the instance-swap sub-component convention that stands today."
     },
     "15": {
       "title": "Rebuild comparison is the only placement",
       "text": "Every rebuilt frame sits in a Rebuild comparison on Screens: an instance of the Rebuild comparison master whose three content slots are swapped per screen to `_Rebuild comparison/Reference|Rebuild|Change log/<screen>` sub-components, left to right on a grey backdrop. Each screen and its change log exist exactly once, inside those sub-components; the comparison instance is the only placement, and a fix goes to the sub-component, never to a copy. The reference is a flat export at 2x captioned with its source node id and export date, and does not update when the source changes. The grey backdrop is a deliberate exception to rule 10.",
-      "sourceRecord": ["npveRebuild_comparisonLayout_2026_09_02", "npveRebuild_repair2_2026-09-04", "npveRebuild_extReviewRepairs_2026-09-05"],
+      "sourceRecord": [
+        "npveRebuild_comparisonLayout_2026_09_02",
+        "npveRebuild_repair2_2026-09-04",
+        "npveRebuild_extReviewRepairs_2026-09-05"
+      ],
       "note": "The 2x reference is produced with the Figma MCP download_assets (source node, png, scale 2) and placed with upload_assets targeting the reference rectangle (method recorded in npveRebuild_comparisonLayout_2026_09_02.transport). Verification proofs are not placements; see proofConvention."
     }
   },
   "sheetAndComparisonTechniques": {
     "adopted": "2026-09-05 from the external sidesheet batches",
-    "sourceRecord": ["npveRebuild_extReviewRepairs_2026-09-05", "npveRebuild_medicationListHeightCorrection_2026-09-04"],
+    "sourceRecord": [
+      "npveRebuild_extReviewRepairs_2026-09-05",
+      "npveRebuild_medicationListHeightCorrection_2026-09-04"
+    ],
     "items": [
       "Sheets are as tall as their content. The Sidesheet master stays 550 by 600. A placed sheet grows or shrinks to fit its body, and the footer sits right under the last row. Never pad a short sheet to 600 or pin its footer to the bottom.",
       "Helpers under a short sheet are transparent. When a rebuilt sheet is shorter than the comparison slot, the Rebuild sub-component carries no fill, so only the sheet shows white. Nothing false extends below it.",
@@ -118,36 +156,235 @@
   },
   "proofConvention": {
     "text": "Verification proofs — instances or frames placed only so a batch can read rendered paint and property state — are named `PROOF — <batch folder> · <what>`, live only through their batch, and are archived under additive-only at batch close: moved unchanged to the Archive page section `06 · Pilot proofs`, listed in the Archive README, never deleted. A proof is not a placement under rule 15 and is never fixed in place; fixes go to the master or sub-component.",
-    "sourceRecord": ["workflowRefactor_closeout_2026-09-08"],
-    "appliedRetroactivelyTo": ["npve-past-medical-history-row-2026-09-08", "npve-past-medical-history-section-2026-09-08", "npve-past-medical-history-body-2026-09-08"]
+    "sourceRecord": [
+      "workflowRefactor_closeout_2026-09-08"
+    ],
+    "appliedRetroactivelyTo": [
+      "npve-past-medical-history-row-2026-09-08",
+      "npve-past-medical-history-section-2026-09-08",
+      "npve-past-medical-history-body-2026-09-08"
+    ]
   },
   "npve": {
     "note": "Active values for NPVE sidesheet work. status active means the value stands today; each value cites the record that decided it and, where one exists, the token it binds to.",
     "values": [
-      { "id": "npve.files.source", "value": "zVsuhYehoSLLq880qRBFkq read-only; never written, no persisted page or selection change", "status": "active", "sourceRecord": ["npveRebuild_enum_2026-09-02"] },
-      { "id": "npve.files.target", "value": "fdCQVFdvOByaOYIJYag0d6; pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive", "status": "active", "sourceRecord": ["npveRebuild_repair1_2026-09-04"] },
-      { "id": "npve.spacing.base", "value": 8, "status": "active", "sourceRecord": ["npveRebuild_sidesheetBase8SpacingAudit_2026-09-04"] },
-      { "id": "npve.spacing.verticalDefault", "value": 16, "token": "space/16", "status": "active", "sourceRecord": ["npveRebuild_healthStatusObservations_2026-09-05", "npveRebuild_noteHeaderLayout_2026-09-08"], "note": "Normal vertical separation and semantic-group spacing." },
-      { "id": "npve.spacing.tightRelationship", "value": 8, "token": "space/8", "status": "active", "sourceRecord": ["npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06", "npveRebuild_noteHeaderLayout_2026-09-08"], "note": "Use only for intentionally tight relationships such as a heading and its list, or related controls." },
-      { "id": "npve.spacing.semanticGroup", "value": 24, "token": "space/24", "status": "active", "sourceRecord": ["npveRebuild_healthStatusObservations_2026-09-05"], "note": "Between two content sections of one body when the source separates them." },
-      { "id": "npve.sidesheet.width", "value": 550, "status": "active", "sourceRecord": ["npveRebuild_sidesheet_build_2026_09_02"] },
-      { "id": "npve.sidesheet.masterHeight", "value": 600, "status": "active", "sourceRecord": ["npveRebuild_sidesheet_build_2026_09_02", "npveRebuild_sidesheetRadiusPlacement_2026-09-04"], "note": "The master stays 550x600; placed sheets are content-driven." },
-      { "id": "npve.sidesheet.header.height", "value": 72, "token": "space/16 top and bottom padding", "status": "active", "sourceRecord": ["npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04"] },
-      { "id": "npve.sidesheet.header.divider", "value": 1, "token": "color/divider", "status": "active", "sourceRecord": ["npveRebuild_sidesheet_build_2026_09_02"] },
-      { "id": "npve.sidesheet.body.inset", "value": 16, "token": "space/16", "status": "active", "sourceRecord": ["npveRebuild_bodyPaddingAndSearch_2026_09_02"], "note": "All four sides." },
-      { "id": "npve.sidesheet.body.contentWidth", "value": 518, "status": "active", "sourceRecord": ["npveRebuild_bodyPaddingAndSearch_2026_09_02"], "note": "550 minus two 16px insets." },
-      { "id": "npve.sidesheet.footer.height", "value": 71, "token": "space/16 top and bottom padding", "status": "active", "sourceRecord": ["npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04", "npveRebuild_healthStatusObservations_2026-09-05"] },
-      { "id": "npve.sidesheet.outline", "value": "four-sided, token-bound", "status": "active", "sourceRecord": ["npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04"] },
-      { "id": "npve.sidesheet.radius.floating", "value": 8, "token": "NPVE/Dimension radius/md (local, no code syntax)", "status": "active", "sourceRecord": ["npveRebuild_sidesheetRadiusPlacement_2026-09-04"] },
-      { "id": "npve.sidesheet.radius.dockedEdge", "value": 0, "status": "active", "sourceRecord": ["npveRebuild_sidesheetRadiusPlacement_2026-09-04"], "note": "Docked right 8/0/0/8, docked left 0/8/8/0." },
-      { "id": "npve.sidesheet.height", "value": "content-driven; footer immediately follows active content", "status": "active", "sourceRecord": ["npveRebuild_medicationListHeightCorrection_2026-09-04", "npveRebuild_extReviewRepairs_2026-09-05"] },
-      { "id": "npve.backdrop.composition", "value": "color/background/paper", "status": "active", "sourceRecord": ["compositionBackdropConvention2026_09_01"], "note": "Beige is never a backdrop." },
-      { "id": "npve.backdrop.comparison", "value": "color/grey/300", "status": "active", "sourceRecord": ["npveRebuild_comparisonLayout_2026_09_02"], "note": "Deliberate exception to standing rule 10." },
-      { "id": "npve.reference.export", "value": "flat png at 2x, displayed at 1:1, captioned with source node id and export date", "status": "active", "sourceRecord": ["npveRebuild_comparisonLayout_2026_09_02", "npveRebuild_extReviewRepairs_2026-09-05"] },
-      { "id": "npve.markers", "value": "DEFECT renders differently from what ships and goes in the register; GAP is something the component cannot express and stays marked in the frame; no red, yellow, orange, or green on markers", "status": "active", "sourceRecord": ["defectMarkerConvention2026_08_28"] },
-      { "id": "npve.touchTargets", "value": "published Checkbox, Radio, Form control label, and Icon button keep their 42px targets; rows built on them are 42px even where the source draws 32px", "status": "active", "sourceRecord": ["npveRebuild_externalCareFacilityStay_2026-09-05", "npveRebuild_pastMedicalHistoryRow_2026-09-08"] },
-      { "id": "npve.buttonLabels", "value": "button labels render in the library's title case because code sets the button typography variant to textTransform capitalize; source mockups that use sentence case are the outlier", "status": "active", "sourceRecord": ["npveRebuild_pastMedicalHistoryBody_2026-09-08", "workflowRefactor_closeout_2026-09-08"] },
-      { "id": "npve.fieldStates", "value": "rebuilt screens show default (resting) control states; a focused or hovered state in a mockup is treated as an incidental capture unless the batch prompt asks for it", "status": "active", "sourceRecord": ["workflowRefactor_closeout_2026-09-08"] }
+      {
+        "id": "npve.files.source",
+        "value": "zVsuhYehoSLLq880qRBFkq read-only; never written, no persisted page or selection change",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_enum_2026-09-02"
+        ]
+      },
+      {
+        "id": "npve.files.target",
+        "value": "fdCQVFdvOByaOYIJYag0d6; pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_repair1_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.spacing.base",
+        "value": 8,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.spacing.verticalDefault",
+        "value": 16,
+        "token": "space/16",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_healthStatusObservations_2026-09-05",
+          "npveRebuild_noteHeaderLayout_2026-09-08"
+        ],
+        "note": "Normal vertical separation and semantic-group spacing."
+      },
+      {
+        "id": "npve.spacing.tightRelationship",
+        "value": 8,
+        "token": "space/8",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06",
+          "npveRebuild_noteHeaderLayout_2026-09-08"
+        ],
+        "note": "Use only for intentionally tight relationships such as a heading and its list, or related controls."
+      },
+      {
+        "id": "npve.spacing.semanticGroup",
+        "value": 24,
+        "token": "space/24",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_healthStatusObservations_2026-09-05"
+        ],
+        "note": "Between two content sections of one body when the source separates them."
+      },
+      {
+        "id": "npve.sidesheet.width",
+        "value": 550,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheet_build_2026_09_02"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.masterHeight",
+        "value": 600,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheet_build_2026_09_02",
+          "npveRebuild_sidesheetRadiusPlacement_2026-09-04"
+        ],
+        "note": "The master stays 550x600; placed sheets are content-driven."
+      },
+      {
+        "id": "npve.sidesheet.header.height",
+        "value": 72,
+        "token": "space/16 top and bottom padding",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.header.divider",
+        "value": 1,
+        "token": "color/divider",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheet_build_2026_09_02"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.body.inset",
+        "value": 16,
+        "token": "space/16",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_bodyPaddingAndSearch_2026_09_02"
+        ],
+        "note": "All four sides."
+      },
+      {
+        "id": "npve.sidesheet.body.contentWidth",
+        "value": 518,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_bodyPaddingAndSearch_2026_09_02"
+        ],
+        "note": "550 minus two 16px insets."
+      },
+      {
+        "id": "npve.sidesheet.footer.height",
+        "value": 71,
+        "token": "space/16 top and bottom padding",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+          "npveRebuild_healthStatusObservations_2026-09-05"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.outline",
+        "value": "four-sided, token-bound",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.radius.floating",
+        "value": 8,
+        "token": "NPVE/Dimension radius/md (local, no code syntax)",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetRadiusPlacement_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.radius.dockedEdge",
+        "value": 0,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetRadiusPlacement_2026-09-04"
+        ],
+        "note": "Docked right 8/0/0/8, docked left 0/8/8/0."
+      },
+      {
+        "id": "npve.sidesheet.height",
+        "value": "content-driven; footer immediately follows active content",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_medicationListHeightCorrection_2026-09-04",
+          "npveRebuild_extReviewRepairs_2026-09-05"
+        ]
+      },
+      {
+        "id": "npve.backdrop.composition",
+        "value": "color/background/paper",
+        "status": "active",
+        "sourceRecord": [
+          "compositionBackdropConvention2026_09_01"
+        ],
+        "note": "Beige is never a backdrop."
+      },
+      {
+        "id": "npve.backdrop.comparison",
+        "value": "color/grey/300",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_comparisonLayout_2026_09_02"
+        ],
+        "note": "Deliberate exception to standing rule 10."
+      },
+      {
+        "id": "npve.reference.export",
+        "value": "flat png at 2x, displayed at 1:1, captioned with source node id and export date",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_comparisonLayout_2026_09_02",
+          "npveRebuild_extReviewRepairs_2026-09-05"
+        ]
+      },
+      {
+        "id": "npve.markers",
+        "value": "DEFECT renders differently from what ships and goes in the register; GAP is something the component cannot express and stays marked in the frame; no red, yellow, orange, or green on markers",
+        "status": "active",
+        "sourceRecord": [
+          "defectMarkerConvention2026_08_28"
+        ]
+      },
+      {
+        "id": "npve.touchTargets",
+        "value": "published Checkbox, Radio, Form control label, and Icon button keep their 42px targets; rows built on them are 42px even where the source draws 32px",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_externalCareFacilityStay_2026-09-05",
+          "npveRebuild_pastMedicalHistoryRow_2026-09-08"
+        ]
+      },
+      {
+        "id": "npve.buttonLabels",
+        "value": "button labels render in the library's title case because code sets the button typography variant to textTransform capitalize; source mockups that use sentence case are the outlier",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+          "workflowRefactor_closeout_2026-09-08"
+        ]
+      },
+      {
+        "id": "npve.fieldStates",
+        "value": "rebuilt screens show default (resting) control states; a focused or hovered state in a mockup is treated as an incidental capture unless the batch prompt asks for it",
+        "status": "active",
+        "sourceRecord": [
+          "workflowRefactor_closeout_2026-09-08"
+        ]
+      }
     ]
   }
 }

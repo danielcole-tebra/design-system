@@ -16,6 +16,7 @@ const manifest = validateManifest();
 const item = manifest.items.find((candidate) => candidate.id === itemId);
 if (!item) throw new Error(`Unknown manifest item: ${itemId}`);
 if (item.status !== 'queued') throw new Error(`${itemId} is ${item.status}, not queued`);
+if (item.risk.tier === 'human-decision') throw new Error(`${itemId} is a human-decision item: present the options to the operator and stop; it starts only after the operator re-tiers it`);
 for (const dependency of item.dependsOn || []) {
   const required = manifest.items.find((candidate) => candidate.id === dependency);
   if (!required || required.status !== 'complete') throw new Error(`Dependency gate failed: ${dependency} is not complete`);
