@@ -13,7 +13,10 @@
     "artifactPresence": "Report, audit JSON, and comparison PNG exist at manifest paths.",
     "freshness": "Compact contract matches current schema and instruction digests.",
     "concurrency": "Nothing outside the owned schema record changed during execution.",
-    "allowlist": "Working-tree changes are within the planner-approved file list."
+    "allowlist": "Working-tree changes are within the planner-approved file list.",
+    "riskApproval": "Tier is operator-approved with a verbatim quote in the manifest, or the run carries a quoted per-item confirmation.",
+    "citations": "Every sourceRecord cited by workflow/rules.json exists in the schema (generate-contract.js refuses otherwise).",
+    "proofArchive": "Batch proofs are named PROOF — <batch> · <what> and sit in Archive 06 at batch close."
   },
   "visual": {
     "comparisonRender": "Executor inspects a dedicated reference/rebuild/change comparison for every component.",

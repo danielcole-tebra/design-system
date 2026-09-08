@@ -3,7 +3,7 @@ const { fileDigest, jsonDigest, readJson } = require('./lib');
 function validateContract() {
   const contract = readJson('workflow/npve-contract.generated.json');
   const errors = [];
-  if (contract.format !== 'tebra.design-workflow-contract' || contract.version !== 1) errors.push('unsupported contract format/version');
+  if (contract.format !== 'tebra.design-workflow-contract' || ![1, 2].includes(contract.version)) errors.push('unsupported contract format/version');
   if (contract.source.schema.sha256 !== fileDigest(contract.source.schema.path)) errors.push('schema digest is stale');
   for (const source of contract.source.instructions) {
     if (source.sha256 !== fileDigest(source.path)) errors.push(`${source.path} digest is stale`);

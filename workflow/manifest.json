@@ -2,7 +2,7 @@
   "format": "tebra.design-work-manifest",
   "version": 1,
   "workstream": "NPVE Rebuild / Sidesheets",
-  "plannerPolicy": "Risk is assigned and locked by the planner or operator before execution. Executors may not edit risk, oversight, stopCondition, allowedFiles, or requiredEvidence.",
+  "plannerPolicy": "Risk is proposed by the planner and approved by the operator before execution; approval is quoted verbatim. Executors may not edit risk, approval, oversight, stopCondition, allowedFiles, or requiredEvidence. An unapproved tier runs only with a quoted per-item operator confirmation recorded by start-batch.js.",
   "items": [
     {
       "id": "pilot-pmhx-condition-row",
@@ -29,9 +29,27 @@
           "All required controls exist in the subscribed library",
           "No shared-master or token change"
         ],
-        "assignedBy": "Cole (operator)",
-        "lockedAt": "2026-09-08T17:26:50.231Z",
-        "lock": "ed1f7e6baa0cc88a385c44aee230b5f6ac85fcc24149f37784950fc93ee232e4"
+        "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": [
+            {
+              "at": "2026-09-08T17:26:50.231Z",
+              "recordedAs": "Cole (operator)",
+              "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+              "correctedBy": "workflowRefactor_closeout_2026-09-08",
+              "correctedAt": "2026-09-08T21:00:01.586Z"
+            }
+          ]
+        },
+        "perItemConfirmationsAtRunTime": [
+          "\"ok whats next?\" 2026-09-08T17:26:26Z (does not approve a tier)"
+        ],
+        "lockedAt": "2026-09-08T21:00:01.586Z",
+        "lock": "16339892e151fd93509aa47a9e4b495b1b4964c724f28bb320a0f612efe5b209"
       },
       "oversight": [
         "Dedicated row reference/rebuild/change comparison",
@@ -82,9 +100,27 @@
           "No new library dependency",
           "No shared-master or token change"
         ],
-        "assignedBy": "Cole (operator)",
-        "lockedAt": "2026-09-08T17:26:50.269Z",
-        "lock": "73f0599946db5f6991784a6e48932d1beecb0e792c307dea0c60e0f639c864b5"
+        "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": [
+            {
+              "at": "2026-09-08T17:26:50.269Z",
+              "recordedAs": "Cole (operator)",
+              "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+              "correctedBy": "workflowRefactor_closeout_2026-09-08",
+              "correctedAt": "2026-09-08T21:00:01.587Z"
+            }
+          ]
+        },
+        "perItemConfirmationsAtRunTime": [
+          "\"That's a pretty small item, seems good so far\" 2026-09-08T18:12:39Z"
+        ],
+        "lockedAt": "2026-09-08T21:00:01.587Z",
+        "lock": "926b66256d067b9a2705dd750d78802e88bd83fbab5ad250b6877059fdc1482c"
       },
       "oversight": [
         "Dedicated section reference/rebuild/change comparison",
@@ -136,9 +172,27 @@
           "Creates a live screen placement",
           "Depends on two new local components"
         ],
-        "assignedBy": "Cole (operator)",
-        "lockedAt": "2026-09-08T17:26:50.307Z",
-        "lock": "3c3ad375797382867c507916e9abd5143fc889ec790bf3feaee2d3212c317c57"
+        "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": [
+            {
+              "at": "2026-09-08T17:26:50.307Z",
+              "recordedAs": "Cole (operator)",
+              "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+              "correctedBy": "workflowRefactor_closeout_2026-09-08",
+              "correctedAt": "2026-09-08T21:00:01.587Z"
+            }
+          ]
+        },
+        "perItemConfirmationsAtRunTime": [
+          "\"this looks good proceed\" 2026-09-08T19:18:45Z"
+        ],
+        "lockedAt": "2026-09-08T21:00:01.587Z",
+        "lock": "10841a1ae7f9606e507817c9410c4eb967c39a9ac24f8ad82009a75bfc6ac718"
       },
       "oversight": [
         "Dedicated full-sheet reference/rebuild/change comparison",
