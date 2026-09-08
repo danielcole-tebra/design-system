@@ -27028,5 +27028,111 @@
    "figma-export/npve-past-medical-history-row-2026-09-08/states.png",
    "figma-export/npve-past-medical-history-row-2026-09-08/comparison.png"
   ]
+ },
+ "npveRebuild_pastMedicalHistorySection_2026-09-08": {
+  "_status": "DONE. Low-risk PMHx section pilot built and validated; stopped before the body item for operator review.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "manifestItem": "pilot-pmhx-section",
+  "risk": {
+   "tier": "low",
+   "assignedBy": "Cole (operator)",
+   "oversight": "Dedicated comparison and operator review before the body item."
+  },
+  "report": "figma-export/npve-past-medical-history-section-2026-09-08/report.md",
+  "recordGate": "npveRebuild_pastMedicalHistoryRow_2026-09-08 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:9315 Eyes section",
+   "policy": "read only; frozen export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "scope": "Build one reusable Past Medical History section from a bound heading and live instances of the approved condition row; create one dedicated comparison and change log. No body or sidesheet work in this batch.",
+  "sourceFacts": [
+   "The exact source group is 518x84: 20px EYES heading followed by two contiguous 32px legacy rows, Blindness and Cataracts.",
+   "The source heading is uppercase, bold 14/20, and teal; Cataracts shows the filled comment state.",
+   "The source has 0px between heading and rows; canonical NPVE composition applies an 8px tight relationship.",
+   "The approved target row variants are 518x42 and expose Condition plus Comment=Empty/Filled."
+  ],
+  "dependencies": {
+   "conditionRow": "518:5797",
+   "headingStyleDonor": "441:5061",
+   "comparison": "35:332",
+   "changeLogRow": "18:103",
+   "divider": "e1a369ce1b663c8e203a59c18f522108c62c8e6e"
+  },
+  "plan": [
+   "Create one 518px vertical auto-layout component with an editable uppercase heading and two live condition-row instances.",
+   "Use 8px between the heading and row list; keep list rows contiguous because each row owns its 42px touch target.",
+   "Create frozen reference, live rebuild, and plain-language change-log helpers and one sole comparison on Screens.",
+   "Run all ten standing rules, save audit/report/comparison evidence, and stop for operator review."
+  ],
+  "stopCondition": "Stop before mutation on source or target identity mismatch, missing approved row dependency, inability to preserve the 8px heading relationship and contiguous touch-target rows, or any new design decision. Stop after any failed structural or visual validation before the body item.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsBefore": 280,
+  "flagsAfter": 280,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Templates: created organizer section 534:5804 and Past medical history section component 534:5805.",
+   "Templates: created proof 534:5834 and helpers 537:5840, 537:5842, 537:5864.",
+   "Screens: created organizer section 537:9914 and sole comparison instance 537:9915 from shared master 35:332.",
+   "Applied an instance-level clipsContent override to the compact comparison; no shared-master mutation."
+  ],
+  "createdNodes": {
+   "templatesSection": "534:5804",
+   "sectionComponent": "534:5805",
+   "proofInstance": "534:5834",
+   "referenceHelper": "537:5840",
+   "rebuildHelper": "537:5842",
+   "changeHelper": "537:5864",
+   "screensSection": "537:9914",
+   "comparison": "537:9915"
+  },
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "componentApi": "PASS — Heading plus nested approved row Condition and Comment properties.",
+   "renderedState": "PASS — EYES, Blindness/Empty, and Cataracts/Filled render from stored properties.",
+   "instancePaints": "PASS — ten solid paints, zero master/proof mismatches.",
+   "comparison": "PASS — inspected comparison.png; source-backed differences are isolated and recorded."
+  },
+  "outcome": [
+   "Created a 518x112 Past medical history section component with Heading text and two live approved condition rows.",
+   "Applied the canonical 8px heading-to-list relationship and kept condition-row touch targets contiguous.",
+   "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
+   "Shared component APIs, tokens, and the approved condition-row master were not modified."
+  ],
+  "sourceBackedDifferences": [
+   "Heading gap 0px → 8px per the existing NPVE tight-relationship rule.",
+   "Legacy 32px rows → approved 42px condition-row instances with live touch targets."
+  ],
+  "corrections": [
+   "Initial render exposed organizer grey behind a transparent heading area; section fill was changed to the approved row paper binding before helpers were created."
+  ],
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — the new section was placed and ten rendered solid paints matched its master.",
+   "2_unboundPaintAudit": "PASS — every node on all four pages was walked; only established organizer paints are unbound in the new subtrees.",
+   "3_referenceCounts": "PASS — the section master contains five expected componentPropertyReferences.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren was false for the consolidated audit.",
+   "5_opacityLast": "PASS — no paint-level opacity was authored or remediated.",
+   "6_enumerateDontRecall": "PASS — the audit enumerated current live page trees and current section descendants.",
+   "7_fileIdentityFirst": "PASS — target file key and exact four-page inventory were verified before evidence was accepted.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; all new layout values are integers.",
+   "9_boundPaintAlpha": "PASS — the approved paper and text bindings were preserved; no bound alpha was overwritten.",
+   "10_cloneDropsPropertyRefs": "PASS — no component variant was cloned; nested row and heading references were counted and rendered values verified."
+  },
+  "screenshots": [
+   "figma-export/npve-past-medical-history-section-2026-09-08/source-section-129-9315.png",
+   "figma-export/npve-past-medical-history-section-2026-09-08/proof.png",
+   "figma-export/npve-past-medical-history-section-2026-09-08/comparison.png"
+  ]
  }
 }

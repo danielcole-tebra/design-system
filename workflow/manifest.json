@@ -58,7 +58,7 @@
     {
       "id": "pilot-pmhx-section",
       "title": "Past Medical History section group",
-      "status": "queued",
+      "status": "complete",
       "dependsOn": [
         "pilot-pmhx-condition-row"
       ],
@@ -105,7 +105,8 @@
         "audit": "figma-export/npve-past-medical-history-section-2026-09-08/audit.json",
         "report": "figma-export/npve-past-medical-history-section-2026-09-08/report.md",
         "comparisonRender": "figma-export/npve-past-medical-history-section-2026-09-08/comparison.png"
-      }
+      },
+      "completedAt": "2026-09-08T18:27:46.990Z"
     },
     {
       "id": "pilot-pmhx-body-sheet",

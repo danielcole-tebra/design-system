@@ -16,6 +16,16 @@
       "figmaWrite": 15,
       "screenshots": 6,
       "correctionCycles": 9,
+      "result": "passed deterministic and visual review; operator approved"
+    },
+    {
+      "itemId": "pilot-pmhx-section",
+      "risk": "low",
+      "startupBytes": 54805,
+      "figmaRead": 8,
+      "figmaWrite": 5,
+      "screenshots": 5,
+      "correctionCycles": 1,
       "result": "passed deterministic and executor visual review; awaiting operator review"
     }
   ]
