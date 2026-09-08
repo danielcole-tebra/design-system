@@ -111,7 +111,7 @@
     {
       "id": "pilot-pmhx-body-sheet",
       "title": "Past Medical History body and sidesheet",
-      "status": "queued",
+      "status": "complete",
       "dependsOn": [
         "pilot-pmhx-section"
       ],
@@ -159,7 +159,8 @@
         "audit": "figma-export/npve-past-medical-history-body-2026-09-08/audit.json",
         "report": "figma-export/npve-past-medical-history-body-2026-09-08/report.md",
         "comparisonRender": "figma-export/npve-past-medical-history-body-2026-09-08/comparison.png"
-      }
+      },
+      "completedAt": "2026-09-08T20:04:11.015Z"
     }
   ]
 }

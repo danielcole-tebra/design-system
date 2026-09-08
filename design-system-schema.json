@@ -27134,5 +27134,152 @@
    "figma-export/npve-past-medical-history-section-2026-09-08/proof.png",
    "figma-export/npve-past-medical-history-section-2026-09-08/comparison.png"
   ]
+ },
+ "npveRebuild_pastMedicalHistoryBody_2026-09-08": {
+  "_status": "DONE. Medium-risk PMHx body and sidesheet pilot built by Codex through P4.d and finished by Claude from P4.e; four operator decisions reported, none resolved. Operator review of comparison.png required before further pilot work.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "manifestItem": "pilot-pmhx-body-sheet",
+  "risk": {
+   "tier": "medium",
+   "assignedBy": "Cole (operator)",
+   "oversight": "Dedicated full-sheet comparison and operator review before later work."
+  },
+  "report": "figma-export/npve-past-medical-history-body-2026-09-08/report.md",
+  "recordGate": "npveRebuild_pastMedicalHistorySection_2026-09-08 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:9205 Page=Clin_PMHx",
+   "policy": "read only; frozen export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "scope": "Build one reusable 518px Past Medical History body from approved section instances and the published multiline Text field; append only its key to the shared Sidesheet Body content preferred values; create one content-driven live sheet and one full comparison.",
+  "sourceFacts": [
+   "The source sheet is 550x600 with a 518x354 body containing HEAD/Trauma, EYES/Blindness+Cataracts, CUSTOM ITEMS/Add custom item, and a Comments field.",
+   "Source sections are separated by 16px; source heading-to-row spacing is 0px and source rows are 32px.",
+   "The source Comments field is 518x110 inside a 118px wrapper and shows Comments go here.",
+   "The source footer labels are Save & Add to Note and Save."
+  ],
+  "systemMapping": {
+   "conditionRow": "518:5797 Past medical history condition row",
+   "section": "534:5805 Past medical history section",
+   "textField": "7c3c99bb9a9392d6571c0557b41d142b8987b566 Text field; small/default/filled with multiline=true",
+   "sidesheet": "6:65 Sidesheet Placement=Floating",
+   "comparison": "35:332 Rebuild comparison",
+   "changeLogRow": "18:103 Change log row"
+  },
+  "lockedGeometry": {
+   "body": "518x388; three live section instances + published 518x88 multiline Text field; 16px between body children",
+   "sections": "one-row groups 518x70 through a nested visibility override; Eyes remains approved 518x112",
+   "sheet": "550x564 content-driven; Header 72 + divider 1 + Body region 420 (16+388+16) + Footer 71"
+  },
+  "sourceBackedDifferences": [
+   "Legacy 32px rows become approved 42px touch-target rows.",
+   "Heading-to-row spacing becomes the approved 8px tight relationship.",
+   "Header/body/footer geometry follows the canonical NPVE Sidesheet contract (72/16/71) instead of the legacy fixed 600px scaffold (64/8/60).",
+   "Comments uses the published small multiline Text field at 88px instead of the detached 110px source field."
+  ],
+  "plan": [
+   "Create and validate one 518px body component before touching the shared Sidesheet.",
+   "Append only the new body key to Body content preferred values; preserve the default and every shared geometry value.",
+   "Create one live content-driven Sidesheet with source labels and one frozen reference/rebuild/change comparison.",
+   "Run all standing rules, save evidence, finalize the record, and stop for operator review."
+  ],
+  "stopCondition": "Stop on dependency mismatch, missing published mapping, shared default or geometry change, inability to keep the footer immediately after content, or any deterministic or visual failure.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 4
+  },
+  "flagsBefore": 280,
+  "flagsAfter": 280,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Templates: created organizer section 546:5870 and body component 546:5871 with children 547:5870 (HEAD wrapper: section instance 547:5871 + Comments column label 547:5892), 548:5882 (EYES), 550:5902 (CUSTOM ITEMS), 551:5914 (Comments Text field).",
+   "Templates: created body proof 552:5930 and sheet proof 555:10031 (Sidesheet 6:65, Body content 546:5871).",
+   "Templates: appended 546:5871 to Sidesheet set 279:2446 Body content preferred values (12 to 13).",
+   "Templates: created sub-components 558:6084 Reference (frozen image 558:6085), 559:6084 Rebuild (sheet 559:6085), 560:6172 Change log (four Change log/Row 18:103 instances).",
+   "Templates: appended the three sub-components to Rebuild comparison 35:332 slot preferred values (now 16 each).",
+   "Screens: created organizer section 561:9876 and sole comparison instance 561:9877 with slots swapped and captions set.",
+   "Templates (finish): renamed 547:5870 and 555:10031; no geometry, paint, or property change."
+  ],
+  "createdNodes": {
+   "templatesSection": "546:5870",
+   "bodyComponent": "546:5871",
+   "headWrapper": "547:5870",
+   "headSectionInstance": "547:5871",
+   "commentsColumnLabel": "547:5892",
+   "eyesSectionInstance": "548:5882",
+   "customItemsSectionInstance": "550:5902",
+   "commentsTextField": "551:5914",
+   "bodyProof": "552:5930",
+   "sheetProof": "555:10031",
+   "referenceHelper": "558:6084",
+   "frozenSourceImage": "558:6085",
+   "rebuildHelper": "559:6084",
+   "rebuildHelperSheet": "559:6085",
+   "changeHelper": "560:6172",
+   "screensSection": "561:9876",
+   "comparison": "561:9877"
+  },
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "pageWalk": "PASS — all four pages walked with skipInvisibleInstanceChildren=false: Cover 8, Templates 8788, Screens 4034, Archive 1528 nodes.",
+   "unboundPaints": "PASS — Cover 1, Templates 37, Screens 38, Archive 10; the only additions are the two organizer sections’ fill and stroke.",
+   "fractionalGeometry": "PASS — zero authored fractions outside published instances on every page.",
+   "sharedApi": "PASS — Sidesheet preferred values 13, default 26:221, three variants 550x600, 12 existing properties unchanged; comparison slots 16 preferred values each.",
+   "geometry": "PASS — body 518x388 hug with 16px gap; sheet 550x564 = 72 + 1 + 420 + 71; Rebuild helper has no fill so nothing extends below the 564px sheet.",
+   "componentIdentity": "PASS — sections resolve to 534:5805, rows to 518:5772/518:5785, field to 77:709, sheets to 6:65, comparison to 35:332, change rows to 18:103.",
+   "instancePaints": "PASS — 40 visible solid paints, zero master/proof mismatches.",
+   "comparison": "PASS — inspected comparison.png at 1x; Rebuild column matches the live sheet within 62 anti-aliasing pixels; live sheet unchanged since the Codex stop (47 px).",
+   "archiveCheck": "PASS — Archive holds no node with id >= 538; the higher node count is a counting-method difference, not a move."
+  },
+  "executors": {
+   "build": "Codex (OpenAI gpt-5.6-sol, xhigh): Phase 0 through P4.d, stopped 2026-09-08T19:46Z at the operator request.",
+   "finish": "Claude (Anthropic claude-fable-5-1): P4.e file-wide audit, P4.f comparison inspection, evidence, record, finish gate, commit."
+  },
+  "outcome": [
+   "Created Past medical history body 546:5871 (518x388): three live approved section instances plus the published multiline Text field, 16px between children, paper-bound fill.",
+   "Appended the body to the shared Sidesheet Body content preferred values (12 to 13); default, 12 existing properties, and 550x600 variant geometry unchanged.",
+   "Placed one content-driven sheet at 550x564 (header 72, divider 1, body region 420, footer 71) with source footer labels.",
+   "Created the three _Rebuild comparison sub-components and the sole comparison instance 561:9877 on Screens; comparison slots now hold 16 preferred values each.",
+   "Body proof 552:5930 and sheet proof 555:10031 remain on Templates beside the master, following the row and section pilot convention."
+  ],
+  "decisionsForOperator": [
+   "Footer label casing: source \"Save & Add to Note\" renders \"Save & Add To Note\" because the published Button applies TITLE case and code typography sets the button variant to textTransform capitalize. Library follows code. Add a change-log row or leave unlogged?",
+   "Comments field state: source shows the focused state (teal outline); rebuild shows the resting state. Only the height change is logged. Log the state change, or switch to a focused variant?",
+   "Reference resolution: frozen source is a 1x capture (582x616) where rule 15 asks for 2x; Health Status and Social History references are 2x. The row and section pilots also used 1x. Accept 1x for pilots, or schedule a 2x re-capture batch?",
+   "Two live sheets on Templates: the Rebuild sub-component holds 559:6085 and the standalone proof 555:10031 duplicates it. Keep proofs as a pilot convention, or archive them after review?"
+  ],
+  "corrections": [
+   "Codex, P3.c: the empty body wrapper stayed at its 1px scaffold height so the first 16px gap rendered transparent; corrected to true vertical hug before later sections.",
+   "Claude, P4.e: renamed wrapper frame 547:5870 to carry the SCAFFOLDING label required by standing rule 6 (it hosts the Comments column label beside a section instance).",
+   "Claude, P4.e: renamed standalone sheet 555:10031 to \"Past Medical History Sidesheet — proof\" so the Rebuild sub-component 559:6084 is the single placement per rule 15."
+  ],
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — the body proof and the live sheet were placed and their rendered solid paints compared with the master: 40 paints, zero mismatches.",
+   "2_unboundPaintAudit": "PASS — every top-level node on every page was walked; only the two organizer sections add unbound paints.",
+   "3_referenceCounts": "PASS — body master carries 26 componentPropertyReferences entries; Sidesheet preferred values 13; comparison slots 16 each; one PMHx body comparison on Screens.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren was false for every audit walk.",
+   "5_opacityLast": "PASS — no paint-level opacity was authored or remediated.",
+   "6_enumerateDontRecall": "PASS — page trees, preferred values, slot contents, and Archive top-level nodes were enumerated from the live file.",
+   "7_fileIdentityFirst": "PASS — target key passed explicitly on every call; four-page inventory verified before any read informed a decision.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; all new layout values are integers.",
+   "9_boundPaintAlpha": "PASS — bound paper, text, and icon bindings were preserved; no bound alpha was overwritten.",
+   "10_cloneDropsPropertyRefs": "PASS — no variant was cloned; nested row, heading, field, and button references were counted and rendered values verified against stored properties."
+  },
+  "screenshots": [
+   "figma-export/npve-past-medical-history-body-2026-09-08/source-sidesheet-129-9205.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/body.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/rebuild-sidesheet.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/sidesheet-555-10031.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/reference-helper.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/comparison.png"
+  ]
  }
 }

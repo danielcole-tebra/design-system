@@ -26,7 +26,18 @@
       "figmaWrite": 5,
       "screenshots": 5,
       "correctionCycles": 1,
-      "result": "passed deterministic and executor visual review; awaiting operator review"
+      "result": "passed deterministic and visual review; operator approved"
+    },
+    {
+      "itemId": "pilot-pmhx-body-sheet",
+      "risk": "medium",
+      "startupBytes": 55219,
+      "figmaRead": 16,
+      "figmaWrite": 18,
+      "screenshots": 9,
+      "correctionCycles": 3,
+      "executors": "Codex build through P4.d; Claude finish from P4.e",
+      "result": "passed deterministic and executor visual review; four operator decisions reported; awaiting operator review of comparison.png"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 1,
-  "generatedAt": "2026-09-08T18:27:31.307Z",
+  "generatedAt": "2026-09-08T20:04:10.762Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "38d6062f3a5d048acc9e804f47c0fb56ccd9a6e52727ea003e936c5d3e5fff27"
+      "sha256": "4ded5c0e9e540ac0cdf690a4596d7743bb42ac81f56b20a2943c88f68d810a0e"
     },
     "instructions": [
       {
@@ -202,29 +202,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_healthStatusObservations_2026-09-05",
-        "status": "DONE — reusable body, shared Sidesheet, frozen reference, conforming change log, sole comparison, screenshots, and ten standing rules complete.",
-        "date": "2026-09-05",
-        "outcome": "Built Health Status/Observations as a reusable Sidesheet body and one live shared-shell screen. The rebuild preserves all source labels and values, changes the source 12px field gaps to the agreed 16px base-8 rhythm, keeps 24px between content sections, and removes 128px of unused sheet height so the footer follows the final field.",
-        "geometry": {
-          "source": "550x600: header 64, body 476, footer 60.",
-          "body": "518x296: Health Status 192, 24px section gap, Functional Observations 80.",
-          "rebuild": "550x472: header 72, header divider 1, body region 328, footer 71.",
-          "comparison": "1708x711; source remains 550x600 at 1:1, rebuild remains 550x472, change log 480x619."
-        },
-        "decision": null,
-        "report": "figma-export/npve-health-status-observations-2026-09-05/report.md",
-        "target": {
-          "file": "fdCQVFdvOByaOYIJYag0d6",
-          "templatesPage": "3:2",
-          "screensPage": "27:2",
-          "sharedSidesheet": "279:2446",
-          "floatingVariant": "6:65",
-          "rebuildComparison": "35:332",
-          "changeLogRow": "18:103"
-        }
-      },
-      {
         "id": "npveRebuild_workflowsAudit_2026-09-05",
         "status": "READ-ONLY AUDIT COMPLETE. Stopped after step 5 as instructed. 26 top-level nodes mapped with refreshed provenance, dated text and cluster evidence; page anatomy decomposed from 4841:18039; 36-row conventions catalog (18 covers, 12 gaps, 5 inventions, 1 decision); sidesheet linkage (45 placements, two page conventions); rebuild-shape proposal with six decisions. No Figma writes; target not opened.",
         "date": "2026-09-05",
@@ -374,6 +351,26 @@
           "templatesPage": "3:2",
           "screensPage": "27:2"
         }
+      },
+      {
+        "id": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+        "status": "DONE. Medium-risk PMHx body and sidesheet pilot built by Codex through P4.d and finished by Claude from P4.e; four operator decisions reported, none resolved. Operator review of comparison.png required before further pilot work.",
+        "date": "2026-09-08",
+        "outcome": [
+          "Created Past medical history body 546:5871 (518x388): three live approved section instances plus the published multiline Text field, 16px between children, paper-bound fill.",
+          "Appended the body to the shared Sidesheet Body content preferred values (12 to 13); default, 12 existing properties, and 550x600 variant geometry unchanged.",
+          "Placed one content-driven sheet at 550x564 (header 72, divider 1, body region 420, footer 71) with source footer labels.",
+          "Created the three _Rebuild comparison sub-components and the sole comparison instance 561:9877 on Screens; comparison slots now hold 16 preferred values each.",
+          "Body proof 552:5930 and sheet proof 555:10031 remain on Templates beside the master, following the row and section pilot convention."
+        ],
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-past-medical-history-body-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2"
+        }
       }
     ],
     "openFlags": [
@@ -501,6 +498,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "c472ea2cafc46290623c90cbca9faa7cefac67f7e04fad7d7b751f931cc2359d"
+    "contractSha256": "4bb3d349c1b2fe47d689eef645a0b21b046af27c52c0f443a8e5a959b4e4ee34"
   }
 }
