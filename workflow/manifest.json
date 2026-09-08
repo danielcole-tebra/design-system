@@ -218,6 +218,120 @@
         "comparisonRender": "figma-export/npve-past-medical-history-body-2026-09-08/comparison.png"
       },
       "completedAt": "2026-09-08T20:04:11.015Z"
+    },
+    {
+      "id": "pilot2-hospitalizations-edit",
+      "title": "External Care History · Hospitalizations edit form",
+      "status": "proposed",
+      "dependsOn": [],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:8401",
+        "label": "Page=Clin_ExternalCare-HEdit",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "templatesPageId": "3:2",
+        "screensPageId": "27:2",
+        "name": "Hospitalizations edit"
+      },
+      "expectedRecordId": "leanPilot_run2-3_2026-09-08",
+      "scope": "Build one reusable 518px Hospitalizations edit body on the approved Facility Stay edit-form pattern (Form surface token, 16px rhythm, published Text field, Tabs, Chip, Button, Icon button/TrashOutlined, the existing date-field GAP wrapper, and the Allergy severity selector precedent for the Status chip); append it to the shared Sidesheet Body content; one content-driven sheet, one frozen 2x reference, one plain-language change log, one comparison.",
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "New content built inside the established shell",
+          "Appends a preferred value to the shared Sidesheet API",
+          "Reuses the Facility Stay form pattern and two recorded GAP patterns; no unresolved design decision found in the read-only survey"
+        ],
+        "proposedBy": "Claude (planner proposal), Step 0 of the combined lean pilot, 2026-09-08",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": []
+        }
+      },
+      "oversight": [
+        "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator",
+        "Deterministic validation immediately after the mutation; failure stops the batch before item 2"
+      ],
+      "stopCondition": "Stop before mutation on identity mismatch, a control with no published mapping and no recorded GAP pattern, any shared default or geometry change, or a new design decision. Stop the batch on any deterministic or visual failure before item 2 mutates.",
+      "allowedFiles": [
+        "design-system-schema.json",
+        "design-system-schema.backup-2026-09-08-pre-lean-pilot-run2-3.json",
+        "apply-lean-pilot-run2-3.js",
+        "finalize-lean-pilot-run2-3.js",
+        "figma-export/lean-pilot-run2-3-2026-09-08/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/lean-pilot-run2-3-2026-09-08/audit-hospitalizations-edit.json",
+        "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+        "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-hospitalizations-edit.png"
+      }
+    },
+    {
+      "id": "pilot2-procedures-edit",
+      "title": "Procedures/Surgical History · Edit Event form",
+      "status": "proposed",
+      "dependsOn": [
+        "pilot2-hospitalizations-edit"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:8651",
+        "label": "Page=ClinProSH_Edit",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "templatesPageId": "3:2",
+        "screensPageId": "27:2",
+        "name": "Procedures edit"
+      },
+      "expectedRecordId": "leanPilot_run2-3_2026-09-08",
+      "scope": "Build one reusable 518px Procedures edit body on the same edit-form pattern (Procedure Code field, Status chip via the severity-selector precedent, Related to problem, Facility Name, Comments); append it to the shared Sidesheet Body content; one content-driven sheet, one frozen 2x reference, one plain-language change log, one comparison.",
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "New content built inside the established shell",
+          "Appends a preferred value to the shared Sidesheet API",
+          "Same control set as item 1 minus tabs and dates; the Status chip needs the recorded GAP pattern, not a new decision"
+        ],
+        "proposedBy": "Claude (planner proposal), Step 0 of the combined lean pilot, 2026-09-08",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": []
+        }
+      },
+      "oversight": [
+        "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator",
+        "Runs only after item 1 passes deterministic validation"
+      ],
+      "stopCondition": "Same as item 1; additionally, do not start if item 1 failed validation.",
+      "allowedFiles": [
+        "design-system-schema.json",
+        "design-system-schema.backup-2026-09-08-pre-lean-pilot-run2-3.json",
+        "apply-lean-pilot-run2-3.js",
+        "finalize-lean-pilot-run2-3.js",
+        "figma-export/lean-pilot-run2-3-2026-09-08/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/lean-pilot-run2-3-2026-09-08/audit-procedures-edit.json",
+        "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+        "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-procedures-edit.png"
+      }
     }
   ],
   "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"

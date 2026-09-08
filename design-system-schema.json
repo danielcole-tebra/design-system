@@ -27561,5 +27561,47 @@
   "flagsAfter": 285,
   "flagsAdded": [],
   "figmaMutations": []
+ },
+ "leanPilot_run2-3_2026-09-08": {
+  "_status": "IN PROGRESS — stopped at Step 0 awaiting the operator's per-item confirmation of two proposed medium-risk items; target not yet mutated.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / Sidesheets — lean pilot runs 2 and 3 (combined, Phase 7 shape)",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "recordGate": "workflowRefactor_tierApproval_2026-09-08 recorded DONE — passed; contract freshness validated (validate-workflow PASS) before reading",
+  "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+  "step0": {
+   "authorization": "The batch prompt carried no tier approval, so the executor selected two items, proposed their classes, and stopped.",
+   "surveyed": "Source Sidesheetv3 129:6647 (55 variants) read against the thirteen rebuilt source nodes in existing npveRebuild records. Visible, unbuilt, 550-wide, sidesheet-body-shaped candidates: Hospitalizations edit 129:8401, Allergies edit 129:7826, Family History edit 129:12486, Procedures edit 129:8651, Flowsheets 939:9228 (table-shaped, rejected), Psychotherapy Note 129:7614 (rich-text toolbar, rejected), Vitals family (441 wide, chart shapes, rejected).",
+   "selected": [
+    "pilot2-hospitalizations-edit — 129:8401 Page=Clin_ExternalCare-HEdit, 550x606; proposed medium.",
+    "pilot2-procedures-edit — 129:8651 Page=ClinProSH_Edit, 550x498; proposed medium."
+   ],
+   "why": "Both are Edit Event forms on the Facility Stay pattern already approved (Form surface token, 16px rhythm, date-field GAP wrapper, 42px Form control label rows). Their controls map to published Text field, Tabs, Chip, Button, Icon button and icons; the one control without a library mapping, the Status dropdown chip, follows the recorded Allergy severity selector precedent with a GAP marker. Matched scope against the Facility Stay baseline for the measurement.",
+   "nextInQueue": "Allergies edit 129:7826 and Family History edit 129:12486 (autocomplete, radios, chips) are the next ready items after these two."
+  },
+  "manifestItems": [
+   "pilot2-hospitalizations-edit",
+   "pilot2-procedures-edit"
+  ],
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "policy": "read only; two 2x exports via download_assets when the build starts"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "library": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "stopCondition": "Stop at Step 0 until the operator confirms each item. During the build: stop before item 2 mutates on any deterministic or visual failure in item 1.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsBefore": 285,
+  "flagsAfter": 285,
+  "flagsAdded": [],
+  "figmaMutations": []
  }
 }
