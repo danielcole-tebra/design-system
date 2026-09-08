@@ -1,0 +1,40 @@
+{
+  "format": "tebra.design-workflow-protocol",
+  "version": 1,
+  "providerNeutral": true,
+  "roles": {
+    "operator": "Owns design decisions, approves scope, and performs the final human canvas review.",
+    "planner": "Creates work items, assigns risk before execution, and defines oversight and stop conditions.",
+    "executor": "Reads evidence, mutates only the approved scope, validates, and reports. It cannot lower its own risk class.",
+    "validator": "Runs deterministic gates and reports failures; it has no design authority.",
+    "adviser": "May review plans or evidence read-only; recommendations do not alter authority."
+  },
+  "capabilityTiers": {
+    "visual-write": {
+      "requires": ["Figma programmatic read/write", "pixel render inspection", "local repo read/write", "git"],
+      "mayExecute": ["low", "medium", "high"]
+    },
+    "visual-read": {
+      "requires": ["Figma read", "pixel render inspection", "local repo read"],
+      "mayExecute": []
+    },
+    "deterministic": {
+      "requires": ["local repo read", "script execution"],
+      "mayExecute": []
+    }
+  },
+  "risk": {
+    "low": "Pattern-following, local, reversible, no shared-master API change and no unresolved design decision.",
+    "medium": "Touches a reusable local master, multiple live instances, or a known convention with bounded impact.",
+    "high": "Touches shared shell/library APIs, tokens, published behavior, broad migrations, or an unresolved design decision."
+  },
+  "minimumOversight": {
+    "low": ["executor comparison render", "operator comparison review after the item"],
+    "medium": ["executor comparison render", "operator review before the next item"],
+    "high": ["explicit operator approval before mutation", "operator review before continuation"]
+  },
+  "provenance": {
+    "fields": ["provider", "model", "reasoning", "toolchain"],
+    "policy": "Optional and informational. Identity never substitutes for evidence or validation."
+  }
+}

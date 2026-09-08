@@ -8,6 +8,12 @@ Docs, schema, scripts, and exports for the Tebra design system Figma rebuild. So
 
 OPERATORS.md describes the person's side of this loop; agents should assume an operator is holding it.
 
+## Lean startup for NPVE work
+
+For an NPVE batch, do not reread the full schema by default. Run `node scripts/workflow/validate-workflow.js`, then read `workflow/npve-contract.generated.json`, the selected item in `workflow/manifest.json`, and the last record named by that item. The generated contract is a projection, not a second authority: its source digests make the validator fail whenever the schema or standing instructions change. Open the full schema only when validation fails, the selected work exposes a conflict, a convention is being changed, or historical evidence is genuinely required.
+
+Risk is assigned by the planner or operator before execution. The executor may not lower its own risk or remove oversight. Every component still requires a comparison render inspected by the executor and shown to the operator; deterministic validation never replaces the pixel look.
+
 ## Where truth lives
 
 Precedence, when sources disagree:
@@ -72,7 +78,7 @@ Adopted 2026-09-05 from the external sidesheet batches (record npveRebuild_extRe
 
 Any agent — Claude, Codex, or other — editing the Figma files or this repo follows the same loop. Work that skips it gets audited and may be superseded.
 
-1. Read before touching: this file, then design-system-schema.json for current state. The schema is the record; chat history and your own memory are not.
+1. Read before touching: this file, then use the validated compact workflow for NPVE work. For other workstreams, or when the compact workflow routes you there, read design-system-schema.json. The schema remains the authoritative record; chat history and your own memory are not.
 2. Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.
 3. One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.
 4. Additive only. Nothing is deleted, and nothing is moved, renamed, or superseded without a record saying so. Archives get a README.

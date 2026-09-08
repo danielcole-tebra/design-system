@@ -1,0 +1,7 @@
+{
+  "format": "tebra.design-work-manifest",
+  "version": 1,
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "plannerPolicy": "Risk is assigned and locked by the planner or operator before execution. Executors may not edit risk, oversight, stopCondition, allowedFiles, or requiredEvidence.",
+  "items": []
+}

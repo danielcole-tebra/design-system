@@ -25,6 +25,7 @@ Capability was never the problem. The loop was missing. This guide is the loop, 
 - **Look at the canvas yourself after every build batch.** Reports claim, renders show. The catches that matter — a flush margin, sagging text, a missing hairline, a wrong color — have come from operator eyes on the file, not from any report.
 - **No record, no next batch.** Every batch ends with a schema record and a report on disk. The builder refuses new work on top of an unrecorded batch; that stop protects the system.
 - **Commit at session end.** The schema, backups, instruction files, reports. The register is the project; protect it.
+- **Use the compact NPVE entry point when it validates.** `workflow/npve-contract.generated.json` and the planner-owned manifest replace routine full-schema rereads, not the schema itself. A stale-contract failure routes the agent back to regeneration or full evidence. Risk is set before execution, and the visual comparison remains mandatory.
 
 ## Which decisions are whose
 

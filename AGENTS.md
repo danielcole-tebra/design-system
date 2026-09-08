@@ -6,7 +6,7 @@ This repo is the docs, schema, scripts, and exports for the Tebra design system 
 
 Any agent — Claude, Codex, or other — editing the Figma files or this repo follows the same loop. Work that skips it gets audited and may be superseded.
 
-1. Read before touching: this file, then design-system-schema.json for current state. The schema is the record; chat history and your own memory are not.
+1. Read before touching: this file. For NPVE work, run `node scripts/workflow/validate-workflow.js`, then read `workflow/npve-contract.generated.json`, the selected manifest item, and its last record. Read the full schema only when routed there by the compact workflow. The schema remains the authority; the generated contract is freshness-checked projection, and chat history is not the record.
 2. Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.
 3. One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.
 4. Additive only. Nothing is deleted, and nothing is moved, renamed, or superseded without a record saying so. Archives get a README.
@@ -15,3 +15,4 @@ Any agent — Claude, Codex, or other — editing the Figma files or this repo f
 7. Record every batch: a dated schema record via an apply-*.js script, backup first, findings to flags[]. A batch without a record did not happen and will be treated as suspect.
 8. Report per rule 13: full report to disk, short reply, no tables in chat. Change logs in the file are written in plain graphic-design language, not system jargon.
 9. When sources disagree or a decision is needed, stop and report. Precedence (code > Storybook render > library > source) resolves facts, not design decisions.
+10. Risk is planner/operator-owned, never executor-owned. Deterministic gates may compress checks, but every component still gets a comparison render inspected by the executor and shown to the operator.

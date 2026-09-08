@@ -1,0 +1,22 @@
+const fs = require('fs');
+const path = require('path');
+const { ROOT, readJson, writeJson } = require('./lib');
+const { validateManifest } = require('./validate-manifest');
+
+const [itemId, reason] = process.argv.slice(2);
+if (!itemId || !reason) throw new Error('Usage: node scripts/workflow/stop-batch.js <item-id> <reason>');
+const manifest = validateManifest();
+const item = manifest.items.find((candidate) => candidate.id === itemId);
+if (!item) throw new Error(`Unknown manifest item: ${itemId}`);
+const runPath = `.workflow-runs/${itemId}.json`;
+if (!fs.existsSync(path.resolve(ROOT, runPath))) throw new Error(`No active run: ${itemId}`);
+const run = readJson(runPath);
+item.status = 'stopped';
+item.stoppedAt = new Date().toISOString();
+item.stopReason = reason;
+run.status = 'stopped';
+run.stoppedAt = item.stoppedAt;
+run.stopReason = reason;
+writeJson('workflow/manifest.json', manifest);
+writeJson(runPath, run);
+console.log(`batch stopped ${itemId}: ${reason}`);
