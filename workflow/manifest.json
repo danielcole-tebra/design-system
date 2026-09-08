@@ -7,20 +7,36 @@
     {
       "id": "pilot-pmhx-condition-row",
       "title": "Past Medical History condition row",
-      "status": "proposed",
+      "status": "queued",
       "dependsOn": [],
-      "source": { "fileKey": "zVsuhYehoSLLq880qRBFkq", "nodeId": "129:9306", "label": "Trauma row", "access": "read-only" },
-      "target": { "fileKey": "fdCQVFdvOByaOYIJYag0d6", "pageId": "3:2", "name": "Past medical history condition row" },
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:9306",
+        "label": "Trauma row",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pageId": "3:2",
+        "name": "Past medical history condition row"
+      },
       "expectedRecordId": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
       "scope": "Build one reusable 518x32 row from published Checkbox, Icon button, ChatOutlined, and ChatFilled components. Model only the states visible in the source reference.",
       "risk": {
         "tier": "low",
-        "reasons": ["One local component", "All required controls exist in the subscribed library", "No shared-master or token change"],
-        "assignedBy": null,
-        "lockedAt": null,
-        "lock": null
+        "reasons": [
+          "One local component",
+          "All required controls exist in the subscribed library",
+          "No shared-master or token change"
+        ],
+        "assignedBy": "Cole (operator)",
+        "lockedAt": "2026-09-08T17:26:50.231Z",
+        "lock": "ed1f7e6baa0cc88a385c44aee230b5f6ac85fcc24149f37784950fc93ee232e4"
       },
-      "oversight": ["Dedicated row reference/rebuild/change comparison", "Operator review before the section item begins"],
+      "oversight": [
+        "Dedicated row reference/rebuild/change comparison",
+        "Operator review before the section item begins"
+      ],
       "stopCondition": "Stop before mutation on source or target identity mismatch, missing published dependency, ambiguous comment state, or inability to preserve a 42px checkbox/icon touch target without changing the 32px visual row rhythm.",
       "allowedFiles": [
         "design-system-schema.json",
@@ -41,20 +57,38 @@
     {
       "id": "pilot-pmhx-section",
       "title": "Past Medical History section group",
-      "status": "proposed",
-      "dependsOn": ["pilot-pmhx-condition-row"],
-      "source": { "fileKey": "zVsuhYehoSLLq880qRBFkq", "nodeId": "129:9315", "label": "Eyes section", "access": "read-only" },
-      "target": { "fileKey": "fdCQVFdvOByaOYIJYag0d6", "pageId": "3:2", "name": "Past medical history section" },
+      "status": "queued",
+      "dependsOn": [
+        "pilot-pmhx-condition-row"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:9315",
+        "label": "Eyes section",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pageId": "3:2",
+        "name": "Past medical history section"
+      },
       "expectedRecordId": "npveRebuild_pastMedicalHistorySection_2026-09-08",
       "scope": "Build one reusable section component from a bound heading and live instances of the approved Past Medical History condition row; preserve the source's relationship while applying the canonical base-8 spacing policy.",
       "risk": {
         "tier": "low",
-        "reasons": ["Local composition of the preceding approved row", "No new library dependency", "No shared-master or token change"],
-        "assignedBy": null,
-        "lockedAt": null,
-        "lock": null
+        "reasons": [
+          "Local composition of the preceding approved row",
+          "No new library dependency",
+          "No shared-master or token change"
+        ],
+        "assignedBy": "Cole (operator)",
+        "lockedAt": "2026-09-08T17:26:50.269Z",
+        "lock": "73f0599946db5f6991784a6e48932d1beecb0e792c307dea0c60e0f639c864b5"
       },
-      "oversight": ["Dedicated section reference/rebuild/change comparison", "Operator review before the body item begins"],
+      "oversight": [
+        "Dedicated section reference/rebuild/change comparison",
+        "Operator review before the body item begins"
+      ],
       "stopCondition": "Stop before mutation if the row item is not complete, the source heading/row relationship cannot be represented with canonical 8px relationships and 16px section separation, or any row must be detached or redrawn.",
       "allowedFiles": [
         "design-system-schema.json",
@@ -75,20 +109,39 @@
     {
       "id": "pilot-pmhx-body-sheet",
       "title": "Past Medical History body and sidesheet",
-      "status": "proposed",
-      "dependsOn": ["pilot-pmhx-section"],
-      "source": { "fileKey": "zVsuhYehoSLLq880qRBFkq", "nodeId": "129:9205", "label": "Page=Clin_PMHx", "access": "read-only" },
-      "target": { "fileKey": "fdCQVFdvOByaOYIJYag0d6", "templatesPageId": "3:2", "screensPageId": "27:2", "name": "Past Medical History" },
+      "status": "queued",
+      "dependsOn": [
+        "pilot-pmhx-section"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:9205",
+        "label": "Page=Clin_PMHx",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "templatesPageId": "3:2",
+        "screensPageId": "27:2",
+        "name": "Past Medical History"
+      },
       "expectedRecordId": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
       "scope": "Build the reusable 518px Past Medical History body from approved section instances and a published multiline Text field; append it to the shared Sidesheet preferred values, then create the sole full comparison and plain-language change log.",
       "risk": {
         "tier": "medium",
-        "reasons": ["Appends preferred values to shared Sidesheet and comparison APIs", "Creates a live screen placement", "Depends on two new local components"],
-        "assignedBy": null,
-        "lockedAt": null,
-        "lock": null
+        "reasons": [
+          "Appends preferred values to shared Sidesheet and comparison APIs",
+          "Creates a live screen placement",
+          "Depends on two new local components"
+        ],
+        "assignedBy": "Cole (operator)",
+        "lockedAt": "2026-09-08T17:26:50.307Z",
+        "lock": "3c3ad375797382867c507916e9abd5143fc889ec790bf3feaee2d3212c317c57"
       },
-      "oversight": ["Dedicated full-sheet reference/rebuild/change comparison", "Operator review required before any subsequent pilot or schema migration"],
+      "oversight": [
+        "Dedicated full-sheet reference/rebuild/change comparison",
+        "Operator review required before any subsequent pilot or schema migration"
+      ],
       "stopCondition": "Stop before mutation if either dependency is incomplete, any body control lacks a published mapping, shared defaults or geometry would change, the footer cannot follow content, or a new design decision appears. Stop the pilot on any deterministic or visual failure.",
       "allowedFiles": [
         "design-system-schema.json",
