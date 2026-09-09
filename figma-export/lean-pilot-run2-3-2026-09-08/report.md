@@ -2,7 +2,7 @@
 
 Record `leanPilot_run2-3_2026-09-08` (backup `design-system-schema.backup-2026-09-08-pre-lean-pilot-run2-3.json`).
 
-Status: DONE for item 1, `pilot2-hospitalizations-edit` (medium, approved by Daniel: "I approve pilot2-hospitalizations-edit as medium, go ahead"). Item 2, `pilot2-procedures-edit`, was not started: its tier is unapproved and the medium-tier oversight rule asks for operator review of item 1 first. Item 2 is re-pointed at record `leanPilot_run3_2026-09-08` in the manifest so it can open its own record.
+Status: DONE for both items. Item 1, `pilot2-hospitalizations-edit` (medium, approved by Daniel: "I approve pilot2-hospitalizations-edit as medium, go ahead"), closed in record `leanPilot_run2-3_2026-09-08` and commit 900385c. Item 2, `pilot2-procedures-edit` (medium, approved: "I approve pilot2-procedures-edit as medium, go ahead"), was re-pointed at its own record `leanPilot_run3_2026-09-08` (backup `design-system-schema.backup-2026-09-08-pre-lean-pilot-run3.json`, opened by `apply-lean-pilot-run3.js`) because item 1's finish gate had closed the shared record; it is built and closed below. Both comparisons await operator review.
 
 ## Gates
 
@@ -126,7 +126,105 @@ No node outside the batch was moved, renamed, resized, deleted or restyled. No p
 - Comments renders resting (grey outline, in-field label) where the source is focused (teal outline, floating label, placeholder).
 - Footer renders "Save & Add To Note" from the stored sentence-case label.
 
+## Item 2 — Procedures/Surgical History · Edit Event
+
+Record `leanPilot_run3_2026-09-08`. Batch guard started on schema digest f1d5b2a7e7ff; `check-batch` PASS before mutation. Stop condition not triggered: identity matched, every control had a mapping from item 1, no shared default or geometry changed, no new decision.
+
+### Source facts (129:8651, read only)
+
+| Region | Source | Notes |
+|---|---|---|
+| Sheet | 550×498 | header 64, footer 60, fixed height, no tab strip |
+| Form card | 518×358 at y 72 | 8px below the header; #EEF7F9, 1px #D6D6D6, radius 8, 16px rhythm |
+| Edit Event row | 486×24 | Bold 16 + trash glyph |
+| Procedure Code + Status | 385×40 + 85×32, 16 apart | Status pill #D4E0DD, Bold 14, caret |
+| Related to problem | 486×40 | caret (select) |
+| Facility Name | 486×40 | text field |
+| Comments | 486×110 | focused state, floating label, placeholder "Comments go here" |
+| Footer | Cancel / Save & Add to Note / Save | text / outlined / primary |
+
+### System mapping
+
+| Source control | Library part | Node |
+|---|---|---|
+| Edit Event header | text + Icon button 77:1109 with Icon/TrashOutlined | 586:6415 (clone of 580:6018) |
+| Procedure Code + Status | Text field 77:708 at fill width + Hospitalization status selector 580:6013 | 586:6418 (clone of 580:6059), selector instance 586:6420 |
+| Related to problem (select), Facility Name | Text field 77:708 | 586:6421, 586:6437 |
+| Comments | Text field 77:698 medium, multiline | 586:6452 |
+| Form card surface | NPVE/Color Form surface, `color/divider` stroke, `radius/md` | 586:6414 |
+| Shell | Sidesheet 6:65 Floating, Body content = 586:6467, Title Procedures/Surgical History | 586:6560 |
+
+### Geometry
+
+| Node | Size | Composition |
+|---|---|---|
+| Form 586:6414 | 518×354 | 16 padding; 34 + 40 + 40 + 40 + 104 with four 16px gaps |
+| Body 586:6467 | 518×354 | one form instance, no fill |
+| Sheet 586:6560 | 550×530 | header 72 + divider 1 + body region 386 (16 + 354 + 16) + footer 71 |
+| Reference 586:6984 | 550×498 | 2x export 1100×996 at 1:1, FIT |
+| Change log 586:11705 | 480×870 | nine rows |
+| Comparison 586:11765 | 1708×962 | both contents shorter than the slot; clipping on; Rebuild helper transparent |
+
+### Change log rows (586:11705)
+
+| What | From → to | Why |
+|---|---|---|
+| Source capture | Live drawing → flat picture, taken 2026-09-08 at 2x | The left side is a snapshot and will not change with the source |
+| Shell regions | Header 64, footer 60 → 72 and 71 | Shared header and footer with hairlines |
+| Sheet height | Fixed at 498 → grows with the form, 530 | Sheets are as tall as their content |
+| Body inset | 8 above the form → 16 | Shared body padding on every side |
+| Form surface | Pale blue typed in by hand → the named local colour | One colour for every edit form here, kept out of the library |
+| Status chip | Bold 14 pill, 85 wide → regular 16 pill, 90 wide, in the library's core colour | The library chip has no caret; same stand-in as the allergy severity, marked as a gap |
+| Comments field | Focused in the mockup, 110 tall → resting, 104 tall | We build default states; the library's medium multiline field is 104 |
+| Footer labels | Save & Add to Note → Save & Add To Note | Code capitalises button labels |
+| Controls | Drawn → library | Fields, icon button and footer buttons are shared parts |
+
+### Figma mutations
+
+Templates section 21 (586:6413, at 0/42560, 1842×2400): form 586:6414; body 586:6467; Rebuild helper 586:6559 (sheet 586:6560); Reference helper 586:6984 (image 586:6985, hash bb92db28…); Change log helper 586:11705 (clone of the nine-row Facility Stay log). Sidesheet Body content preferred values 14 → 15. Comparison slot preferred values 17 → 18 each.
+
+Screens section 21 (586:11764, at 0/37028, 2268×1536): sole comparison 586:11765; GAP marker 586:12264 (Dropdown chip, reused, Difference text rewritten).
+
+No node outside the batch was touched. No proofs were created. Source and library read only. Zero corrections during the build.
+
+### Verification
+
+| Check | Result |
+|---|---|
+| File identity | PASS — four pages as expected |
+| Page walk (skipInvisibleInstanceChildren=false) | PASS — Cover 8, Templates 9504, Screens 4558, Archive 1782 nodes |
+| Unbound solid paints | PASS — Cover 1, Templates 41, Screens 42, Archive 12; only the two organizer sections are new |
+| Fractional authored geometry | PASS — 0 on every page |
+| Shared API | PASS — Sidesheet default, properties and variants unchanged; preferred values 15; comparison slots 18 |
+| Master vs instance paints | PASS — form 40, body 40, selector 3 paints; 0 mismatches |
+| Component identity | PASS — see mapping; Archive holds no id ≥ 586 |
+| Property references | PASS — field, selector, footer and change-log text rendered as stored |
+| Reference | PASS — 1100×996 upload, top rows clean; reference column vs 1x source: 0 thresholded pixels |
+| Comparison | PASS — inspected at 1x; rebuild column vs standalone sheet: 78 anti-aliasing pixels; backdrop visible below both contents |
+| Single placement | PASS — each helper, body and form placed once, inside 586:11765 |
+| Ten standing batch rules | PASS — see the schema record |
+
+### Visual observations (executor)
+
+- Same content in the same order in both columns, from the header to the three-button footer; neither has a tab strip.
+- The rebuild is 32px taller than the source (530 vs 498) from the 72/71 shell and the 16px body inset; nothing is clipped and nothing false shows below either content.
+- The Status pill and Comments field read as in item 1; both differences are logged.
+- Footer renders "Save & Add To Note" from the stored sentence-case label.
+
 ## Evidence
+
+Item 2:
+
+- `source-procedures-edit-129-8651.png` — 1x source capture, 550×498.
+- `source-procedures-edit-129-8651-2x.png` — 2x export placed as the frozen reference, 1100×996.
+- `body-procedures-586-6467.png` — body master, 518×354.
+- `rebuild-sidesheet-procedures-586-6559.png` — placed sheet, 550×530.
+- `changelog-procedures-586-11705.png` — change log, 480×870.
+- `comparison-procedures-edit.png` — comparison 586:11765 at 1x, 1708×962.
+- `crop-reference-column-procedures.png`, `crop-rebuild-column-procedures.png` — PIL crops used for the diffs.
+- `audit-procedures-edit.json` — deterministic evidence for `validate-evidence`.
+
+Item 1:
 
 - `source-hospitalizations-edit-129-8401.png` — 1x source capture, 550×606.
 - `source-hospitalizations-edit-129-8401-2x.png` — 2x export placed as the frozen reference, 1100×1212.
@@ -140,12 +238,12 @@ No node outside the batch was moved, renamed, resized, deleted or restyled. No p
 
 ## Findings
 
-GAP 2 (both existing patterns reused: `npveProblemEdit_textFieldNoEndAdornment`, `npveExtReview_allergySeveritySelectorUnmarked`). DEFECT 0. DECISION 0. No new flag.
+Item 1: GAP 2 (both existing patterns reused: `npveProblemEdit_textFieldNoEndAdornment`, `npveExtReview_allergySeveritySelectorUnmarked`). Item 2: GAP 1 (the dropdown-chip pattern reused). DEFECT 0. DECISION 0. No new flag in either item.
 
 ## Measurement
 
-Pilot run 2 is written to `workflow/metrics.json` against the Facility Stay baseline: context loaded 71,944 bytes versus 1,032,558 bytes; 22 Figma calls versus 35; 6 screenshots versus 7; 63 tool calls versus 92; 3 recorded correction cycles versus 6; 0 design decisions stopped for versus 1.
+Pilot runs 2 and 3 are written to `workflow/metrics.json` against the Facility Stay baseline. Run 2: context loaded 71,944 bytes versus 1,032,558; 22 Figma calls versus 35; 6 screenshots versus 7; 63 tool calls versus 92; 3 recorded correction cycles versus 6; 0 design decisions stopped for versus 1. Run 3: 13 Figma calls, 5 screenshots, 35 tool calls, 0 corrections, 0 decisions, with the run 2 pattern and status selector reused directly.
 
 ## What happens next
 
-Operator reviews `comparison-hospitalizations-edit.png` (or 581:11117 on Screens). Item 2 (`pilot2-procedures-edit`, source 129:8651) starts only after its tier is approved with a quote; it will open record `leanPilot_run3_2026-09-08` through an `apply-lean-pilot-run3.js` script, reuse the form pattern and the status selector from this batch, and follow the same five steps.
+Operator reviews `comparison-hospitalizations-edit.png` (581:11117) and `comparison-procedures-edit.png` (586:11765) on Screens. Next in the queue after both are accepted: Allergies edit (129:7826) and Family History edit (129:12486), which add autocomplete, radios and chip lists to the same form pattern.

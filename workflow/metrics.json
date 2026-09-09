@@ -173,6 +173,44 @@
         "designDecisionsStoppedFor": "1 → 0",
         "successCriterion50PercentReduction": "met for context loaded; tool calls fell 32%, Figma calls 37%"
       }
+    },
+    {
+      "run": 3,
+      "of": 3,
+      "workstream": "Procedures/Surgical History · Edit Event form (item 2 of the combined runs 2-3 batch)",
+      "contextLoadedBytes": 87208,
+      "contextLoadedNote": "Same lean set as run 2 (CLAUDE.md + generated contract + manifest item + last record); the executor continued in the run 2 session, so the contract and precedent nodes were already in context and were not re-read.",
+      "items": [
+        {
+          "itemId": "pilot2-procedures-edit",
+          "risk": "medium (approved by Daniel before start)",
+          "executor": "Claude (Anthropic claude-fable-5-1)",
+          "modelTurns": 14,
+          "toolCalls": 35,
+          "figmaCalls": 13,
+          "useFigmaReads": 6,
+          "useFigmaWrites": 5,
+          "screenshots": 5,
+          "shellCommands": 9,
+          "elapsedMinutes": 25,
+          "recordedCorrectionCycles": 0,
+          "operatorMessages": 1,
+          "operatorDecisions": 0,
+          "result": "passed deterministic and visual review by the executor; comparison pending operator review",
+          "countingNote": "Counted by the executor from its own session at finalize, from the approval message to the commit, parallel calls counted individually. Not instrumented."
+        }
+      ],
+      "againstBaseline": {
+        "note": "Smaller scope than the Facility Stay baseline (five rows, no tabs or dates) but the same deliverable set; the run 2 pattern and status selector were reused directly.",
+        "contextLoaded": "1,032,558 bytes → 87,208 bytes (−91.6%)",
+        "figmaCalls": "35 → 13",
+        "screenshots": "7 → 5",
+        "toolCallsTotal": "92 → 35",
+        "modelTurns": "14 → 14",
+        "corrections": "6 → 0 recorded cycles",
+        "designDecisionsStoppedFor": "1 → 0",
+        "successCriterion50PercentReduction": "met for context loaded, tool calls and Figma calls"
+      }
     }
   ]
 }

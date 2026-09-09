@@ -281,7 +281,7 @@
     {
       "id": "pilot2-procedures-edit",
       "title": "Procedures/Surgical History · Edit Event form",
-      "status": "proposed",
+      "status": "complete",
       "dependsOn": [
         "pilot2-hospitalizations-edit"
       ],
@@ -308,12 +308,14 @@
         ],
         "proposedBy": "Claude (planner proposal), Step 0 of the combined lean pilot, 2026-09-08",
         "approval": {
-          "status": "unapproved",
-          "approvedBy": null,
-          "approvedAt": null,
-          "quote": null,
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-09T02:29:44.873Z",
+          "quote": "I approve pilot2-procedures-edit as medium, go ahead",
           "history": []
-        }
+        },
+        "lockedAt": "2026-09-09T02:29:44.873Z",
+        "lock": "d9692bafc11fc14c145ea8a9e5a5a0caf482cd3a9bbf9f9db01fc2f1840b7a9b"
       },
       "oversight": [
         "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator",
@@ -335,7 +337,8 @@
         "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
         "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-procedures-edit.png"
       },
-      "recordNote": "Re-pointed from leanPilot_run2-3_2026-09-08 at item 1 finalize (2026-09-09): that record closed DONE with item 1 while this item was still unapproved."
+      "recordNote": "Re-pointed from leanPilot_run2-3_2026-09-08 at item 1 finalize (2026-09-09): that record closed DONE with item 1 while this item was still unapproved.",
+      "completedAt": "2026-09-09T02:36:58.645Z"
     }
   ],
   "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"
