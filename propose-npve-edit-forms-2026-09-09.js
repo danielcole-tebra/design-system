@@ -1,0 +1,176 @@
+// Planner proposal: two sidesheet edit-form items appended to workflow/manifest.json as status "proposed".
+// No risk lock, no Figma mutation. Tiers lock only through lock-risk.js with Daniel's quoted words.
+// Scoped reads behind these entries: figma-export/npve-planning-2026-09-09/proposal.md.
+const fs = require('fs');
+
+const MP = './workflow/manifest.json';
+const m = JSON.parse(fs.readFileSync(MP, 'utf8'));
+const PLAN = 'figma-export/npve-planning-2026-09-09/proposal.md';
+const PROPOSED_BY = 'Claude (planner proposal), 2026-09-09, after the scoped source read in ' + PLAN;
+
+const shared = {
+  target: { fileKey: 'fdCQVFdvOByaOYIJYag0d6', templatesPageId: '3:2', screensPageId: '27:2' },
+  referencePlan: 'Frozen 2x export of the source node via download_assets (png, scale 2), posted with upload_assets to the Reference helper rectangle, shown at 1:1, captioned with the source node id and export date; row 0 checked for the Sidesheetv3 set outline and cleaned from the capture if present (both nodes sit at y 16 inside set 129:6647).',
+  targetPattern: 'Sidesheet edit-form per lean pilot runs 2-3 (leanPilot_run2-3_2026-09-08, leanPilot_run3_2026-09-08): one reusable 518px form component on the Form surface token (NPVE/Color Form surface #EEF7F9, 1px color/divider, radius 8), 16px padding and rhythm bound space/16, one body component appended to the shared Sidesheet Body content preferred values, one content-driven placed sheet with Show back on, one frozen 2x reference, one plain-language change log, one comparison on Screens with clipping off on tall columns.',
+  approvedDifferences: [
+    'Shell regions: source header 64/65 and footer 60 become the canonical 72 and 71; the fixed source height becomes content-driven (npve.sidesheet.height).',
+    'Template padding: the form card uses the shared 16px inset on all sides (npve.sidesheet.body.inset), so rows are 486 wide even where the source draws 12px/494 (Allergies).',
+    'Base-8 rhythm: 16px between rows, 8px only for tight relationships such as a caption and its control (npve.spacing.verticalDefault, npve.spacing.tightRelationship).',
+    'Capitalized labels: button labels render in the library title case (npve.buttonLabels).',
+    'Resting field states: the focused Comments field renders resting at 104 tall (library medium multiline) instead of focused at 110 (npve.fieldStates).',
+    'Touch targets: radio rows built on Radio + Form control label are 42px tall where the source draws 24px radios in a 40px row (npve.touchTargets).',
+    'Library sizes: the 36px "Add" pill and the 36px add-entry input become the library small Button (36) and small Text field (40).'
+  ],
+  backControlDelta: 'Both sources show the back control as a 32x32 square tinted #E9EFEE with a left caret (Breadcrumb Buttons). The shell\'s Show back control (6:67) is the library Icon button color=default size=medium, 40x40, no fill, with Icon/LeftCaret. Recorded verdict: DEFECT (npveRebuild_sidesheet_inventory_2026_09_02, "Back control (edit pages)": source tinted square, library icon button has no fill). Plan: use the shell as published, add one change-log row (Back button | Tinted 32px square → library icon button, 40px, no tint | The library icon button carries no fill), and place one DEFECT marker beside the comparison (first sheet built with the back control visible).',
+  expectedGapsToRecur: {
+    dropdownChip: 'Allergies only — the Severity pill is the Allergy severity selector 352:3206 itself (npveExtReview_allergySeveritySelectorUnmarked, LIBRARY-TODOS item 16); reuse the component and the GAP marker pattern 404:7061.',
+    textFieldEndAdornment: 'Both — the reaction/condition list rows are outlined 40px rows with a trailing red X; the library Text field has no end adornment, so each row is a Text field size=small Value=Filled beside an Icon button color=error size=small in the recorded GAP wrapper (npveProblemEdit_textFieldNoEndAdornment, marker pattern 324:4934 / 394:5611).',
+    ringedButtons: 'Not expected — the trash and X glyphs are bare 24px icons in the source, mapped to Icon button size=small as in runs 2-3; no ring.',
+    searchPattern: 'Not expected — the add-entry inputs are plain text fields with a separate Add button, not the search field of GAP 27:295.'
+  },
+  newPatternWatch: [
+    'Autocomplete/Field (library set 4155d9e1…, 30 variants: size medium|small, State, Value Empty|Filled|Multiple; props Label, Value text, Clear icon) has no instance in the target yet. Placing it as size=small Value=Filled with a caret is a plain instance; no new convention needed.',
+    'Radio (library set 32c00a53…, 8 variants, 42x42) inside Form control label (77cfa2d6…, Control is an INSTANCE_SWAP slot defaulting to Checkbox; Radio is swappable though not in the slot\'s preferred list). Two Form control labels in a horizontal auto-layout row make the Status group; rows are 42 tall per npve.touchTargets. No new convention needed.',
+    'CAPTION PLACEMENT — needs a decision before the item starts. The source draws a caption text above each control (Allergen, Severity, Status, Reactions / Relationship, Status, Age, Medical Conditions: Regular 14, 18 tall, 8px above). The library Text field and Autocomplete/Field carry a floating label inside the outline instead, and runs 2-3 used the floating label. The contract has no rule for caption-above-control. Options: (A) library floating label, caption dropped, one change-log row per form (recommended: it is what the library ships and what runs 2-3 did); (B) keep the caption as a Typography text above a label-less field with an 8px tight gap (source-faithful, but the field then shows no label of its own and the radio/list groups need the same caption treatment). Proposed as a stop-and-propose point, not an invention; Daniel\'s answer in the approval message settles it for both items.'
+  ]
+};
+
+const allergies = {
+  id: 'npve-allergies-edit',
+  title: 'Allergies · Edit Allergen form (sidesheet)',
+  workstream: 'NPVE Rebuild / Sidesheets',
+  status: 'proposed',
+  dependsOn: [],
+  source: { fileKey: 'zVsuhYehoSLLq880qRBFkq', nodeId: '129:7826', label: 'Page=Clin_Allergies-Edit, 550x673, variant of Sidesheetv3 129:6647', access: 'read-only' },
+  target: { ...shared.target, name: 'Allergies edit', templatesSection: '22 · Allergies · Edit Allergen (new)', screensSection: '22 · Allergies · Edit Allergen comparison (new)' },
+  expectedRecordId: 'npveRebuild_allergiesEdit_2026-09-09',
+  scope: 'Build one reusable 518px Allergies edit form and body on the runs 2-3 edit-form pattern: Edit Allergen header with trash Icon button; Allergen Autocomplete/Field size=small Value=Filled ("Penicillin") beside the existing Allergy severity selector 352:3206 ("Mild"); Status radio group (Active checked, Inactive) on Radio + Form control label; Reactions list of two outlined rows (flushing, hives) with trailing error Icon button in the recorded end-adornment GAP wrapper, plus an add-reaction Text field with an outlined Add Button; Comments medium multiline resting; footer Cancel / Save & Add to Note / Save through the shell. Append the body to the shared Sidesheet Body content; one placed sheet with Show back on; frozen 2x reference; change log; comparison; markers for the dropdown chip, the end adornment and the back-control DEFECT.',
+  plannerNotes: {
+    scopedRead: PLAN,
+    sourceFacts: [
+      '550x673: header Breadcrumbs 64 (back 32x32 tinted at 16,16; title "Edit Allergies" Bold; close glyph 24 at right), Main Wrap 609 with the form card 518x517 at y 8 inside a 16px side inset, footer row 518x60 at y 541 (Cancel text 72, Save & Add to Note outlined 171, Save primary 66; gap 21).',
+      'Card padding 12 (rows 494 wide): "Edit Allergen" Bold 16 + trash 24 (34 tall); Allergen caption + autocomplete 384x40 with caret, Severity caption + status chip 70x32 at the right; Status caption + two Radio Option 24px in a 40px row; Reactions caption + rows 494x40 (flushing, hives) each with a red X 24, then Add reaction input 426x36 + Add outlined button 60x36; Comments 494x110 focused with placeholder "Comments go here".',
+      'Card fill pale teal (#EEF7F9 family), 1px #D6D6D6, radius 8 — the Form surface pattern.'
+    ],
+    expectedDimensions: {
+      form: '518 x ~596 with captions kept (B) or ~544 with floating labels (A): 16 + 34 + 16 + [26] + 40 + 16 + [26] + 42 + 16 + (18 + 8 + 40 + 8 + 40 + 8 + 40) + 16 + 104 + 16',
+      body: 'equals the form (no tab strip)',
+      sheet: '550 x ~720 (A) / ~772 (B), content-driven: 72 + 1 + 16 + body + 16 + 71; source is 673',
+      reference: '550x673 at 1:1 holding the 1100x1346 export',
+      changeLog: '480 x ~1000, 10-12 rows',
+      comparison: '~1708 x ~1190-1240 on Screens; Reference and Rebuild columns clip off'
+    },
+    systemMapping: {
+      header: 'Sidesheet 6:65 Placement=Floating, Show back=true (Icon button + Icon/LeftCaret), Title "Edit Allergies", Close as published',
+      trash: 'Icon button 77:1109 color=default size=small with Icon/TrashOutlined (run 2 precedent)',
+      allergen: 'Autocomplete/Field size=small State=Default Value=Filled, Value text "Penicillin", width fills to the selector',
+      severity: 'Allergy severity selector 352:3206 (73x32, label "Mild"); dropdown-chip GAP marker reused',
+      status: 'Form control label ×2 with Control swapped to Radio (checked / unchecked), horizontal row gap 16, 42 tall',
+      reactions: 'two GAP wrappers: Text field size=small Value=Filled ("flushing", "hives") + Icon button color=error size=small with Icon/Close; add row: Text field size=small Value=Empty placeholder "Add reaction" + Button variant=outlined size=small "Add"',
+      comments: 'Text field 77:698 size=medium multiline=true Value=Empty placeholder "Comments go here", 104 tall resting',
+      footer: 'shell Footer with Show tertiary action on: Cancel (text) / Save & Add to Note (outlined) / Save (primary)',
+      formSurface: 'NPVE/Color Form surface VariableID:387:3434'
+    },
+    approvedDifferences: shared.approvedDifferences,
+    backControlDelta: shared.backControlDelta,
+    expectedGapsToRecur: shared.expectedGapsToRecur,
+    newPatternWatch: shared.newPatternWatch,
+    referencePlan: shared.referencePlan,
+    targetPattern: shared.targetPattern
+  },
+  risk: {
+    tier: 'medium',
+    reasons: [
+      'New content built inside the established shell on the approved edit-form pattern; appends one preferred value to the shared Sidesheet API.',
+      'First composition of Autocomplete/Field and Radio + Form control label in an edit form: both are plain library placements, but the caption-placement question (plannerNotes.newPatternWatch) is a design decision that must be answered before the batch starts.',
+      'Reuses two recorded GAP patterns and one recorded DEFECT verdict; touches no shared master.'
+    ],
+    proposedBy: PROPOSED_BY,
+    approval: { status: 'unapproved', approvedBy: null, approvedAt: null, quote: null, history: [] }
+  },
+  oversight: [
+    'Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator before the Family History item starts',
+    'Deterministic validation immediately after the mutation; audit JSON per the evidence template'
+  ],
+  stopCondition: 'Stop before mutation if the caption-placement decision is not in the approval, on identity mismatch, on a control with no published mapping and no recorded GAP pattern, on any shared default or geometry change, or on a new design decision. Stop on any deterministic or visual failure before the Family History item mutates.',
+  allowedFiles: [
+    'records/npve/**/npveRebuild_allergiesEdit_2026-09-09.json', 'flags/active.json', 'flags/resolved.json', 'indexes/**', 'design-system-schema.json',
+    'apply-npve-allergies-edit.js', 'finalize-npve-allergies-edit.js', 'figma-export/npve-allergies-edit-2026-09-09/**',
+    'workflow/npve-contract.generated.json', 'workflow/manifest.json', 'workflow/metrics.json'
+  ],
+  requiredEvidence: { audit: 'figma-export/npve-allergies-edit-2026-09-09/audit-allergies-edit.json', report: 'figma-export/npve-allergies-edit-2026-09-09/report.md', comparisonRender: 'figma-export/npve-allergies-edit-2026-09-09/comparison-allergies-edit.png' }
+};
+
+const fhx = {
+  id: 'npve-family-history-edit',
+  title: 'Family History · Edit Family Member form (sidesheet)',
+  workstream: 'NPVE Rebuild / Sidesheets',
+  status: 'proposed',
+  dependsOn: ['npve-allergies-edit'],
+  source: { fileKey: 'zVsuhYehoSLLq880qRBFkq', nodeId: '129:12486', label: 'Page=Clin_FHX-Editing, 550x685, variant of Sidesheetv3 129:6647', access: 'read-only' },
+  target: { ...shared.target, name: 'Family History edit', templatesSection: '23 · Family history · Edit Family Member (new; the display body lives in 10 · Family history)', screensSection: '23 · Family history · Edit Family Member comparison (new)' },
+  expectedRecordId: 'npveRebuild_familyHistoryEdit_2026-09-09',
+  scope: 'Build one reusable 518px Family History edit form and body reusing the compositions the Allergies edit establishes (autocomplete placement, radio row, list-row GAP wrapper, add-entry row): Edit Family Member header with trash Icon button; Relationship Autocomplete/Field size=small Value=Filled ("Father"); Status radio group (Living checked, Deceased) beside an Age Text field 80 wide ("65"); Medical Conditions add-entry row (Text field + outlined Add) above two outlined rows (Diabetes, Hypertension) with trailing error Icon button; Comments medium multiline resting; footer Cancel / Save through the shell. Reuse from the Codex Family History batch (npveRebuild_familyHistory_2026-09-05): its Templates section 10 stays the home of the display body; the edit body is a sibling section, and nothing in 346:3080-346:3365 is edited. Append the body to the shared Sidesheet Body content; one placed sheet with Show back on; frozen 2x reference; change log; comparison; markers for the end adornment and the back-control DEFECT.',
+  plannerNotes: {
+    scopedRead: PLAN,
+    sourceFacts: [
+      '550x685: NoteHeader 65 (back 32x32 tinted at 16,16; title "Edit Family History" Bold; close glyph 24 direct child), Main Wrap 620 with the form card 518x520 at y 16 (8 + 8) inside a 16px side inset, footer row 518x60 at y 552 with only Cancel (text 72) and Save (outlined 66) — no Save & Add to Note, and Save is outlined rather than primary; gap 21.',
+      'Card padding 16 (rows 486): "Edit Family Member" Bold 16 + trash 24; Relationship caption + Autocomplete Select Field 486x40 with caret ("Father"); Status caption + two Radio Option 24px in a 40px row (Living checked, Deceased) with Age caption + 80x40 field ("65") at x 214; Medical Conditions caption + Add condition input 418x36 + Add outlined 60x36, then rows 486x40 (Diabetes, Hypertension) each with a red X 24; Comments 486x110 focused with placeholder.',
+      'Same Form surface card as Allergies edit.'
+    ],
+    expectedDimensions: {
+      form: '518 x ~530 with captions kept (B) or ~478 with floating labels (A): 16 + 34 + 16 + [26] + 40 + 16 + [26] + 42 + 16 + (18 + 8 + 40 + 8 + 40 + 8 + 40) + 16 + 104 + 16',
+      body: 'equals the form (no tab strip)',
+      sheet: '550 x ~654 (A) / ~706 (B), content-driven; source is 685',
+      reference: '550x685 at 1:1 holding the 1100x1370 export',
+      changeLog: '480 x ~1000, 10-12 rows',
+      comparison: '~1708 x ~1190 on Screens; Reference column clips off (685 > 600 slot)'
+    },
+    systemMapping: {
+      header: 'Sidesheet 6:65 Placement=Floating, Show back=true, Title "Edit Family History"',
+      trash: 'Icon button color=default size=small with Icon/TrashOutlined',
+      relationship: 'Autocomplete/Field size=small State=Default Value=Filled, Value text "Father", 486 wide',
+      status: 'the Allergies edit radio row (Form control label ×2, Control → Radio), Living checked; Age: Text field size=small Value=Filled "65", 80 wide, in the same row, gap 16',
+      conditions: 'add row (Text field size=small Value=Empty placeholder "Add condition" + Button variant=outlined size=small "Add") above two end-adornment GAP wrappers (Text field Value=Filled "Diabetes"/"Hypertension" + Icon button color=error size=small)',
+      comments: 'Text field size=medium multiline=true Value=Empty, 104 tall resting',
+      footer: 'shell Footer, Show tertiary action off, Show secondary action on: Cancel (text) / Save — the source draws Save OUTLINED; build as the source shows and log it as a finding (Allergies edit and runs 2-3 draw Save primary)',
+      formSurface: 'NPVE/Color Form surface VariableID:387:3434'
+    },
+    reuseFromFamilyHistoryBatch: 'npveRebuild_familyHistory_2026-09-05 built the display side: condition row 346:3080 (highlight + text + add-to-note Icon button), member card 346:3089, body 346:3113, comparison 346:5993 in Templates 10 / Screens 10. The edit rows are a different anatomy (outlined field + delete X), so they reuse the Allergies edit list-row wrapper rather than the display condition row; the member card\'s Relationship/Age typography (346:3092, 346:3093) is the reference for the Relationship value text. Nothing from that batch is modified.',
+    approvedDifferences: shared.approvedDifferences,
+    backControlDelta: shared.backControlDelta,
+    expectedGapsToRecur: { ...shared.expectedGapsToRecur, dropdownChip: 'Not expected — Family History edit has no status chip.' },
+    newPatternWatch: shared.newPatternWatch,
+    expectedFinding: 'Source footer inconsistency: Save is outlined here and primary on every other edit sheet. Report, do not resolve: build as drawn, one change-log row, one flag for Daniel.',
+    referencePlan: shared.referencePlan,
+    targetPattern: shared.targetPattern
+  },
+  risk: {
+    tier: 'medium',
+    reasons: [
+      'Same pattern and shell as the Allergies edit, run second so every new composition is a reuse, not a parallel; appends one preferred value to the shared Sidesheet API.',
+      'One expected source inconsistency (outlined Save) is reported, not resolved, so no design decision is taken inside the item.',
+      'Touches nothing from the Codex Family History batch; reuses two recorded GAP/DEFECT patterns.'
+    ],
+    proposedBy: PROPOSED_BY,
+    approval: { status: 'unapproved', approvedBy: null, approvedAt: null, quote: null, history: [] }
+  },
+  oversight: [
+    'Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator',
+    'Deterministic validation immediately after the mutation; audit JSON per the evidence template'
+  ],
+  stopCondition: 'Does not start until npve-allergies-edit is complete and its comparison has been shown to the operator. Stop before mutation on identity mismatch, on a control with no published mapping and no recorded GAP pattern, on any shared default or geometry change, or on a new design decision beyond the recorded outlined-Save finding.',
+  allowedFiles: [
+    'records/npve/**/npveRebuild_familyHistoryEdit_2026-09-09.json', 'flags/active.json', 'flags/resolved.json', 'indexes/**', 'design-system-schema.json',
+    'apply-npve-family-history-edit.js', 'finalize-npve-family-history-edit.js', 'figma-export/npve-family-history-edit-2026-09-09/**',
+    'workflow/npve-contract.generated.json', 'workflow/manifest.json', 'workflow/metrics.json'
+  ],
+  requiredEvidence: { audit: 'figma-export/npve-family-history-edit-2026-09-09/audit-family-history-edit.json', report: 'figma-export/npve-family-history-edit-2026-09-09/report.md', comparisonRender: 'figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png' }
+};
+
+for (const item of [allergies, fhx]) {
+  if (m.items.some((i) => i.id === item.id)) throw new Error(`manifest already has ${item.id}`);
+  m.items.push(item);
+}
+fs.writeFileSync(MP, JSON.stringify(m, null, 2) + '\n');
+console.log('proposed', allergies.id, 'and', fhx.id, '(status proposed, tiers unapproved, no lock)');
