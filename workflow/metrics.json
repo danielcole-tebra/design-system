@@ -83,8 +83,29 @@
           "itemId": "pilot-pmhx-body-sheet",
           "risk": "medium",
           "executor": "Codex build through P4.d; Claude finish from P4.e",
-          "codex": { "modelTurns": 19, "reasoningItems": 79, "toolCalls": 76, "figmaCalls": 36, "screenshots": 10, "shellCommands": 18, "peakInputTokens": 236083, "outputTokens": 36839, "elapsedMinutes": 28, "corrections": 7 },
-          "claudeFinish": { "modelTurns": 98, "toolCalls": 67, "figmaCalls": 13, "screenshots": 2, "shellCommands": 38, "peakContextTokens": 264929, "elapsedMinutes": 45, "corrections": 2, "note": "Claude turns include every tool-call step; the finish also verified refactor phases 0 to 3, which is not batch work." },
+          "codex": {
+            "modelTurns": 19,
+            "reasoningItems": 79,
+            "toolCalls": 76,
+            "figmaCalls": 36,
+            "screenshots": 10,
+            "shellCommands": 18,
+            "peakInputTokens": 236083,
+            "outputTokens": 36839,
+            "elapsedMinutes": 28,
+            "corrections": 7
+          },
+          "claudeFinish": {
+            "modelTurns": 98,
+            "toolCalls": 67,
+            "figmaCalls": 13,
+            "screenshots": 2,
+            "shellCommands": 38,
+            "peakContextTokens": 264929,
+            "elapsedMinutes": 45,
+            "corrections": 2,
+            "note": "Claude turns include every tool-call step; the finish also verified refactor phases 0 to 3, which is not batch work."
+          },
           "modelTurns": 117,
           "toolCalls": 143,
           "figmaCalls": 49,
@@ -113,6 +134,44 @@
         "correctionsTotal": "6 → 18 messages / 13 recorded cycles",
         "designDecisionsStoppedFor": "1 → 0 during build, 4 raised at finish and resolved by the operator",
         "successCriterion50PercentReduction": "met for context loaded; not met for tool calls or turns"
+      }
+    },
+    {
+      "run": 2,
+      "of": 3,
+      "workstream": "External Care History · Hospitalizations edit form (item 1 of the combined runs 2-3 batch; item 2 not started)",
+      "contextLoadedBytes": 71944,
+      "contextLoadedNote": "CLAUDE.md + generated contract + the selected manifest item + the last record named by it, per the lean startup. The executor also read, beyond the lean set, the Facility Stay record and report, the PMHx body record, the Allergies list record and two flags, the lean workflow scripts, and three memory notes; those are not counted.",
+      "items": [
+        {
+          "itemId": "pilot2-hospitalizations-edit",
+          "risk": "medium (approved by Daniel before start)",
+          "executor": "Claude (Anthropic claude-fable-5-1)",
+          "modelTurns": 30,
+          "toolCalls": 63,
+          "figmaCalls": 22,
+          "useFigmaReads": 11,
+          "useFigmaWrites": 9,
+          "screenshots": 6,
+          "shellCommands": 16,
+          "elapsedMinutes": 45,
+          "recordedCorrectionCycles": 3,
+          "operatorMessages": 1,
+          "operatorDecisions": 0,
+          "result": "passed deterministic and visual review by the executor; comparison pending operator review",
+          "countingNote": "Counted by the executor from its own session at finalize: every tool call from the approval message to the commit, including parallel calls individually; modelTurns are assistant messages. Not instrumented."
+        }
+      ],
+      "againstBaseline": {
+        "note": "Same scope class as the Facility Stay baseline (one edit-form body, sheet, reference, change log, comparison) built by one executor in one gated item with one approval message and no design decision stopped for.",
+        "contextLoaded": "1,032,558 bytes → 71,944 bytes (−93.0%)",
+        "figmaCalls": "35 → 22",
+        "screenshots": "7 → 6",
+        "toolCallsTotal": "92 → 63",
+        "modelTurns": "14 → 30 (Claude counts every tool step as a turn)",
+        "corrections": "6 → 3 recorded cycles",
+        "designDecisionsStoppedFor": "1 → 0",
+        "successCriterion50PercentReduction": "met for context loaded; tool calls fell 32%, Figma calls 37%"
       }
     }
   ]

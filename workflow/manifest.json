@@ -222,7 +222,7 @@
     {
       "id": "pilot2-hospitalizations-edit",
       "title": "External Care History · Hospitalizations edit form",
-      "status": "proposed",
+      "status": "complete",
       "dependsOn": [],
       "source": {
         "fileKey": "zVsuhYehoSLLq880qRBFkq",
@@ -247,12 +247,14 @@
         ],
         "proposedBy": "Claude (planner proposal), Step 0 of the combined lean pilot, 2026-09-08",
         "approval": {
-          "status": "unapproved",
-          "approvedBy": null,
-          "approvedAt": null,
-          "quote": null,
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-09T00:38:11.672Z",
+          "quote": "I approve pilot2-hospitalizations-edit as medium, go ahead",
           "history": []
-        }
+        },
+        "lockedAt": "2026-09-09T00:38:11.672Z",
+        "lock": "2e2d60f85c6cf1274a1ac1790eb66c1fe5635bad64d486fe7df1e3f3c4f50ac1"
       },
       "oversight": [
         "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator",
@@ -273,7 +275,8 @@
         "audit": "figma-export/lean-pilot-run2-3-2026-09-08/audit-hospitalizations-edit.json",
         "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
         "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-hospitalizations-edit.png"
-      }
+      },
+      "completedAt": "2026-09-09T00:54:04.025Z"
     },
     {
       "id": "pilot2-procedures-edit",
@@ -294,7 +297,7 @@
         "screensPageId": "27:2",
         "name": "Procedures edit"
       },
-      "expectedRecordId": "leanPilot_run2-3_2026-09-08",
+      "expectedRecordId": "leanPilot_run3_2026-09-08",
       "scope": "Build one reusable 518px Procedures edit body on the same edit-form pattern (Procedure Code field, Status chip via the severity-selector precedent, Related to problem, Facility Name, Comments); append it to the shared Sidesheet Body content; one content-driven sheet, one frozen 2x reference, one plain-language change log, one comparison.",
       "risk": {
         "tier": "medium",
@@ -319,9 +322,9 @@
       "stopCondition": "Same as item 1; additionally, do not start if item 1 failed validation.",
       "allowedFiles": [
         "design-system-schema.json",
-        "design-system-schema.backup-2026-09-08-pre-lean-pilot-run2-3.json",
-        "apply-lean-pilot-run2-3.js",
-        "finalize-lean-pilot-run2-3.js",
+        "design-system-schema.backup-2026-09-08-pre-lean-pilot-run3.json",
+        "apply-lean-pilot-run3.js",
+        "finalize-lean-pilot-run3.js",
         "figma-export/lean-pilot-run2-3-2026-09-08/**",
         "workflow/npve-contract.generated.json",
         "workflow/manifest.json",
@@ -331,7 +334,8 @@
         "audit": "figma-export/lean-pilot-run2-3-2026-09-08/audit-procedures-edit.json",
         "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
         "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-procedures-edit.png"
-      }
+      },
+      "recordNote": "Re-pointed from leanPilot_run2-3_2026-09-08 at item 1 finalize (2026-09-09): that record closed DONE with item 1 while this item was still unapproved."
     }
   ],
   "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"
