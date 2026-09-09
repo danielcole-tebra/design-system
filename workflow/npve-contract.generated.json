@@ -1,16 +1,16 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 2,
-  "generatedAt": "2026-09-09T02:36:58.380Z",
+  "generatedAt": "2026-09-09T03:20:03.759Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "0a621a3e1208efa37ff6fb9372a1068ddc204a960c80ba3cb094a0b8b1fcfbdd"
+      "sha256": "524628bdf9c98314dc938d83588b1e8402f1fd37cf0d2e98db46ac845992335e"
     },
     "instructions": [
       {
         "path": "workflow/rules.json",
-        "sha256": "3455892d00b9deefb7840ee9a425f6d72e5a8479da44eb6368e8a855bd7e5c80"
+        "sha256": "fa8373853e3111c211e066f148a0356e4428318cc88cae086927caeacf56c6f3"
       },
       {
         "path": "CLAUDE.md",
@@ -927,6 +927,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "2c81496e9c0e7c20b9a391a425bde669a978de973c67054660db2e195526d961"
+    "contractSha256": "b1ff71907a4a4d62e756bb64f19bbfb3969f3502e288fc7d5d1ee7f1129b8afd"
   }
 }
