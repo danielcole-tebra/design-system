@@ -1,0 +1,5 @@
+latest milestone milestone/2026-09-09-backup-policy-b-adopted at 5fccc84 (0 days old)
+store PASS records=93 flags=227+58 aggregate=b9c3786626a5 fresh immutable=93 milestone=milestone/2026-09-09-backup-policy-b-adopted (0d)
+workflow PASS store=93r/227+58f contract=ac6f8c369467 items=6 deterministic=17 visual=3
+self-test PASS risk lock (tier and approval), allowlist, and outside-record concurrency guard
+generated files are fresh

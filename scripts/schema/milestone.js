@@ -32,7 +32,9 @@ function createMilestone(reason) {
   if (dirty) throw new Error(`Working tree is not clean; commit first:\n${dirty}`);
   const { validateSplit } = require('./validate-split');
   validateSplit({ skipMilestone: true });
-  const date = new Date().toISOString().slice(0, 10);
+  // Local date, matching how records are dated (a UTC date can roll over an evening batch to the next day).
+  const now = new Date();
+  const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
   const slug = reason.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
   const name = `${MILESTONE_PREFIX}${date}-${slug}`;
   const existing = git('tag', '--list', name);
