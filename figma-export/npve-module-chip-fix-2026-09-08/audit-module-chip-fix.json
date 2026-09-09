@@ -1,0 +1,116 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "npve-module-chip-fix-2026-09-08",
+  "capturedAt": "2026-09-09T04:10:00Z",
+  "executors": {
+    "build": "Claude (Anthropic claude-fable-5-1) — measurement, verification, one change-log row",
+    "finish": "Claude (Anthropic claude-fable-5-1) — record, finish gate, commit"
+  },
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false,
+    "scope": "All nodes on all four pages (one read-only walk per page after the one mutation), the Module chip set API and property references, strip order, master-to-placed paint reads for every chip in the placed encounter comparison, and the change-log helper state."
+  },
+  "sourceMeasurement": {
+    "strip": "zVsuhYehoSLLq880qRBFkq 4841:17097 Modules_Left, 1397x40, horizontal, gap 12",
+    "selectedNote": "120x40, radius 8, padding 8 vertical / 12 horizontal, internal gap 8; fill #DFEAEC (no library token; nearest color/primary/100 #CBDDE0), stroke #8CB2B6 1px (= color/primary/200 exactly)",
+    "icon": "docs glyph, 24px slot, visible vector 15x19, fill #004852 (= color/primary/main)",
+    "label": "Akkurat LL Bold 14/18; Note #000000, Problems #004852",
+    "close": "Interface, Essential/Delete 24x24 control, two 8x8 stroked paths, #000000, 1.5px stroke",
+    "gaps": "icon → label 8, label → close 8 (auto-layout gap 8)",
+    "selectedProblems": "145x40, icon vector 15x18.15 #004852, label #004852",
+    "unselected": "radius 24 pills, padding 8, gap 8, fill #F6F6F6 at 10%, stroke #D6D6D6 1px, 24px icon (#545454) + Regular 14/18 label #545454 (Timeline #000000)",
+    "renderedInkExtents": "1x source Note chip ink bbox (17,11)-(99,28); rebuild Note chip ink bbox (16,10)-(103,29)"
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "exceptions": [],
+      "details": "Unbound visible solid paints on authored nodes: Cover 1, Templates 41, Screens 42, Archive 12 — unchanged from the previous batch; no node with an id at or above 593 carries an unbound paint."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "exceptions": [],
+      "details": "Zero fractional authored x/y/width/height outside instances on any page; the new row is 448x97 at an integer offset."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "Module chip set 426:4213: Label TEXT (default Note), Icon INSTANCE_SWAP (default 426:4150), Show close BOOLEAN (default true), selected VARIANT (default yes). Selected master property references: Icon mainComponent → Icon#426:20, Label characters → Label#426:19, Close visible → Show close#426:21. Unselected: Icon and Label references present, Close unlinked (hidden). Templates holds 8 selected-variant and 24 unselected-variant references and 3 Module strip instances. Change-log rows 18 → 19. One encounter page comparison on Screens (434:7474)."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Selected master 426:4199 120x40: Module identity frame (Icon/Document 24 + Label at space/8) then Icon/Close (MUI) 16x16, gap space/16, fill color/primary/100, stroke color/primary/200, radius 8. Unselected master 426:4206 56x40: label only, icon and close hidden, stroke color/divider, radius 24, min height 40. Strip 426:4214 order: Modules · Note(yes) · Problems(yes) · AI Summary · Vitals · Care Team · Labs/Studies · Allergies · Timeline (all no) — the source order. Placed strip I434:7474;434:4866;434:4394;429:4199 → 426:4214. Comparison 434:7474 → 434:4858. Archive holds no node with an id at or above 593."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "The new row renders 'Chip fill' from its What property. Placed chips render their Label properties (Note, Problems, AI Summary, Vitals, Care Team, Labs/Studies, Allergies, Timeline) with Show close true on the two selected chips and false on the six unselected."
+    },
+    "instancePaintVerification": {
+      "pass": true,
+      "details": "Rendered inks read directly on the placed strip: Note and Problems icon vectors, labels and close glyphs all #004852 bound color/primary/main; chip fill #CBDDE0 color/primary/100; unselected labels #545454 color/text/secondary. Index-aligned master-versus-instance comparison matches exactly for Note (5 paints) and AI Summary (4 paints); for chips with a swapped glyph the traversal shifts by the glyph's node count, so their listed mismatches are alignment artefacts, not paint differences (each cited node pair carries the same bound token on both sides once realigned). Hidden icon vectors inside unselected chips are not rendered."
+    },
+    "changeLog": {
+      "pass": true,
+      "details": "Helper 434:4745 grew 480x2063 → 480x2160; rows 434:4749 448x2006 → 448x2103; the new row 593:6712 renders inside the placed comparison (2005x2155 → 2005x2252). Chip rows now: 'Chip spacing | Uniform 16px gaps → icon + label 8px; close 16px | Groups module identity; separates the close action' (amended by the relationship-spacing batch), 'Chip inks | Black icon, black close → one teal family | Matches the source's single ink' (verbatim from the prompt), 'Chip fill | Pale teal typed in by hand → nearest library teal | No token matches the mockup tint; the edge colour is a token' (new)."
+    },
+    "concurrency": {
+      "pass": true,
+      "details": "check-batch.js passed against the run guard (schema digest 84dbf3fb5e66) before the mutation; no schema write between start and finalize. Source read and exported only; library read only (76 colour variables imported by key to search for the source hexes, no binding)."
+    }
+  },
+  "pageAudit": {
+    "nodeCounts": { "Cover": 8, "Templates": 9516, "Screens": 4564, "Archive": 1782 },
+    "unboundSolidPaints": { "Cover": 1, "Templates": 41, "Screens": 42, "Archive": 12 },
+    "fractionalAuthoredGeometry": { "Cover": 0, "Templates": 0, "Screens": 0, "Archive": 0 },
+    "countingNote": "page.findAll(() => true) with skipInvisibleInstanceChildren=false; page node not counted."
+  },
+  "createdNodes": {
+    "chipFillRow": "593:6712"
+  },
+  "mutatedNodes": {
+    "changeLogRows": "434:4749 (one row appended)"
+  },
+  "notMutated": {
+    "identityGap": "Selected master 426:4199 Module identity gap stays bound space/8 (npveRebuild_moduleChipRelationshipSpacing_2026-09-06, commit f1536ad by Daniel Cole). The superseding prompt's uniform space/16 step and its verbatim row 'Chip spacing | Tight 8px gaps → 16px | Small elements in one control need room' would reverse that later decision, so the step stopped for the operator per agent rule 9 and the item's stop condition."
+  },
+  "corrections": [],
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-module-chip-fix-2026-09-08/comparison-module-strip-reference-vs-rebuild.png",
+    "inspectedByExecutor": true,
+    "inspectedBy": "Claude, at 1x: source strip 4841:17097 (1397x40) stacked over the placed rebuild strip cropped from comparison 434:7474 at (48,1302); a 2x nearest-neighbour enlargement of the left 700px; the full comparison before and after the row",
+    "observations": [
+      "Selected chips carry one teal ink family in the rebuild (icon, label, close all primary/main) where the source mixes a teal icon with a black label and black close on Note; the rebuild follows the crop-review direction and the 'Chip inks' row.",
+      "The close is small in both: the source draws an 8x8 X inside a 24px control, the rebuild shows a 9.33px glyph inside a 16px Icon/Close (MUI); rendered ink extents match within 2px per side.",
+      "Icon → label sits at 8px in both source and rebuild (the source gap and the relationship-spacing decision agree); label → close is 16px in the rebuild against 8px in the source, per the recorded decision.",
+      "Unselected chips are label-only grey pills in the rebuild where the source shows an icon before each label; logged in the 'Module chips' row. Vitals, Care Team, Labs/Studies, Allergies and Timeline keep their GAP-marked glyph stand-ins hidden.",
+      "Chip fill: the source tint #DFEAEC has no token; the rebuild's primary/100 (#CBDDE0) is slightly deeper, and the edge is the exact token primary/200. Now logged as the 'Chip fill' row.",
+      "Placed strip versus the master at 1x after the row edit: 0 pixels with a channel delta above 24 (the only difference is the page background tint behind transparent pills)."
+    ]
+  },
+  "figmaNodes": {
+    "chipSet": "426:4213",
+    "selectedMaster": "426:4199",
+    "unselectedMaster": "426:4206",
+    "strip": "426:4214",
+    "comparison": "434:7474",
+    "changeLogHelper": "434:4745",
+    "changeLogRows": "434:4749",
+    "sourceStrip": "4841:17097"
+  },
+  "toolCalls": {
+    "figmaRead": 9,
+    "figmaWrite": 1,
+    "screenshot": 4,
+    "correctionCycles": 0,
+    "note": "use_figma reads: target chip set/strip, source measurement (two attempts, one script error on a TEXT node), post-merge state, placed-strip offset (two calls), library colour search, and four page audits; one write (change-log row). get_screenshot: source strip, master strip, comparison before and after."
+  }
+}

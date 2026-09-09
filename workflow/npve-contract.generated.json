@@ -1,11 +1,11 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 2,
-  "generatedAt": "2026-09-09T03:20:03.759Z",
+  "generatedAt": "2026-09-09T03:25:28.492Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "524628bdf9c98314dc938d83588b1e8402f1fd37cf0d2e98db46ac845992335e"
+      "sha256": "ec02a430f5d7ab2bacdfad66c58bfd8b9a0f2cac57b436158f8cf5a709ac4421"
     },
     "instructions": [
       {
@@ -632,16 +632,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_encounterShell_2026-09-06",
-        "status": "DONE. Encounter page shell skeleton built on Templates section 15 from library parts (Page/Encounter with SCAFFOLDING nav, grey/300 body band, Patient header at the Proposals v1 design, Module strip with GAP-marked chips, MainWrap with the Sidesheet Problems list in the 550 left slot and the Note card shell in the right slot); Rebuild comparison/Page stacked master created; sole comparison placed on Screens section 15 against 4841:17077 with a 2x reference; four GAP markers; twelve-row change log. Toolbar and note body deliberately empty. No stop condition triggered.",
-        "date": "2026-09-06",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-encounter-shell-2026-09-06/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_socialHistoryNewEntryPlacement_2026-09-06",
         "status": "DONE — intentional New Entry hierarchy change, live change-log row, fresh screenshots, and ten standing rules complete.",
         "date": "2026-09-06",
@@ -800,6 +790,16 @@
         "decision": null,
         "report": "figma-export/workflow-tier-approval-2026-09-08/report.md",
         "target": null
+      },
+      {
+        "id": "npveRebuild_moduleChipFix_2026-09-08",
+        "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scale, variant anatomy and strip order verified already in place from npveRebuild_moduleChipFix_2026-09-06; one change-log row added for the unlogged chip-fill token delta; crop-compare at 1x and ten rules pass. The prompt's uniform space/16 internal-gap step stopped as a decision because it reverses npveRebuild_moduleChipRelationshipSpacing_2026-09-06 (identity gap space/8); no master was mutated.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-module-chip-fix-2026-09-08/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -927,6 +927,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "b1ff71907a4a4d62e756bb64f19bbfb3969f3502e288fc7d5d1ee7f1129b8afd"
+    "contractSha256": "bf2e497bfd79582c09afe42fec12213b6cff406cb8098f7988e5f79da63e8be1"
   }
 }

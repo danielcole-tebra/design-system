@@ -339,6 +339,72 @@
       },
       "recordNote": "Re-pointed from leanPilot_run2-3_2026-09-08 at item 1 finalize (2026-09-09): that record closed DONE with item 1 while this item was still unapproved.",
       "completedAt": "2026-09-09T02:36:58.645Z"
+    },
+    {
+      "id": "npve-module-chip-fix-2026-09-08",
+      "title": "Encounter page · Module chip masters — re-run of the superseding crop-review prompt",
+      "workstream": "NPVE Rebuild / Encounter page",
+      "status": "complete",
+      "dependsOn": [],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "4841:17077",
+        "label": "Rec_Ready; Module strip 4841:17097",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "templatesPageId": "3:2",
+        "screensPageId": "27:2",
+        "name": "Module chip 426:4213, Module strip 426:4214, encounter comparison 434:7474"
+      },
+      "expectedRecordId": "npveRebuild_moduleChipFix_2026-09-08",
+      "scope": "Run the 2026-09-06 16:48 superseding module chip fix prompt as written: measure the source chip (icon ink, close size, gaps); one teal ink family bound to the matching token; small thin close; space/16 internal gaps recorded as the operator's deliberate improvement; variant anatomy enforced; strip re-placed in source order; crop-compare at 1x; change-log rows verbatim; all ten rules.",
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "Touches a reusable local master (Module chip set) with live strip and comparison instances",
+          "Follows a recorded convention with bounded impact",
+          "One step of the prompt (uniform space/16 internal gaps) reverses a later recorded decision (npveRebuild_moduleChipRelationshipSpacing_2026-09-06, identity gap space/8); that step is treated as a human decision inside the item and stops for the operator instead of mutating"
+        ],
+        "proposedBy": "Claude (planner proposal), post-pilot close batch, 2026-09-08",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": []
+        },
+        "lockedAt": "2026-09-09T03:21:10.953Z",
+        "lock": "eea9153a6bac5e8e08e4c8911ff85b44c62ba0263e48d8091dc922b2a283f4c2"
+      },
+      "oversight": [
+        "Executor crop-compare of the strip at 1x shown to the operator",
+        "Deterministic validation after any mutation; pixel-diff of the placed comparison after any master edit"
+      ],
+      "stopCondition": "Stop before any master mutation that reverses a recorded operator decision (the space/8 identity gap) and present it as a decision. Stop on identity mismatch, a token that cannot be verified, or any drawn stand-in.",
+      "allowedFiles": [
+        "design-system-schema.json",
+        "design-system-schema.backup-2026-09-08-pre-npve-module-chip-fix.json",
+        "apply-npve-module-chip-fix-2026-09-08.js",
+        "finalize-npve-module-chip-fix-2026-09-08.js",
+        "figma-export/npve-module-chip-fix-2026-09-08/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-module-chip-fix-2026-09-08/audit-module-chip-fix.json",
+        "report": "figma-export/npve-module-chip-fix-2026-09-08/report.md",
+        "comparisonRender": "figma-export/npve-module-chip-fix-2026-09-08/comparison-module-strip-reference-vs-rebuild.png"
+      },
+      "perItemConfirmations": [
+        {
+          "quote": "Step 3. Run the module chip fix batch exactly as written in its superseding prompt: measure the source chip first (icon ink, close size, gaps), one teal ink family bound to the matching token, small thin close, space/16 internal gaps recorded as Daniel's deliberate improvement, variant anatomy enforced (selected = icon+label+close; unselected = label only), strip re-placed in source order, crop-compare at 1x, change-log rows verbatim, all ten rules. This runs under the lean workflow — contract preflight, scoped reads, one record, one commit.",
+          "recordedAt": "2026-09-09T03:21:11.155Z",
+          "recordedBy": "Claude (Anthropic claude-fable-5-1)"
+        }
+      ],
+      "completedAt": "2026-09-09T03:25:28.793Z"
     }
   ],
   "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"
