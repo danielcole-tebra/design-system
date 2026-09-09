@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "backupPolicyB_2026-09-08",
+  "id": "npveTidy_2026-09-08",
   "date": "2026-09-08",
-  "workstream": "workflow",
-  "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
-  "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or we"
+  "workstream": "npve",
+  "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
+  "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49"
  },
  "recordGate": {
   "inProgress": [],
@@ -25,12 +25,12 @@
    }
   },
   "npve": {
-   "count": 61,
+   "count": 62,
    "latest": {
-    "id": "npveRebuild_moduleChipFix_2026-09-08",
+    "id": "npveTidy_2026-09-08",
     "date": "2026-09-08",
-    "path": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json",
-    "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scale, variant anatomy and strip order verif"
+    "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
+    "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49"
    }
   },
   "workflow": {
@@ -44,13 +44,13 @@
   }
  },
  "flags": {
-  "active": 227,
+  "active": 228,
   "resolved": 58
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "b9c3786626a579f0d1383b6a178c5a605178aee40f13bec70409deae326c8754",
-  "bytes": 1437402
+  "sha256": "975362d1b382fa700099c3c12d195f6d833035f35303a3dfc8995c3c919eeb42",
+  "bytes": 1453124
  }
 }

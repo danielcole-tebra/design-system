@@ -1,0 +1,235 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveTidy_2026-09-08",
+ "sequence": 93,
+ "date": "2026-09-08",
+ "workstream": "npve",
+ "created": {
+  "by": "Claude (Anthropic claude-fable-5-1)",
+  "at": "2026-09-09T14:28:23.067Z",
+  "script": "apply-npve-tidy-2026-09-08.js"
+ },
+ "record": {
+  "_status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49 nodes) and each empty or near-empty one explained against the records; two emptied Screens organizers and the oversize legacy dividers frame moved to new Archive sections 07 and 08 as labelled bars; Archive 01 kept and shrunk to a one-line bar; Screens 15 · Social History renamed 16 and reordered; four half-empty Screens boards trimmed; Templates 05/06 overlap and section 15 overflow cleared; Screens re-spaced at a uniform 200px rhythm; README paragraph added; one unexplained stray (Templates 488:8725) flagged and not touched. Nothing deleted; no master, instance, token or comparison content edited.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / housekeeping",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "trigger": "Daniel reports empty-looking boards/sections in the NPVE target.",
+  "recordGate": "npveRebuild_moduleChipFix_2026-09-08 recorded DONE in indexes/record-index.json — passed; validate-workflow PASS before reading",
+  "report": "figma-export/npve-tidy-2026-09-08/report.md",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq not read",
+  "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive; figma.skipInvisibleInstanceChildren = false for every walk",
+  "stopConditions": [
+   "anything whose emptiness is unexplained is flagged, not touched",
+   "no node is deleted; moves and renames are recorded",
+   "no master, instance, token or comparison content is edited"
+  ],
+  "step1_diagnosis": {
+   "inventory": "Cover 1 frame; Templates 21 sections; Screens 21 sections; Archive 6 sections + README frame — 49 top-level nodes",
+   "findings": [
+    {
+     "where": "Screens 250:3518",
+     "name": "04 · Medication list — standalone screen moved to Archive 05 on 2026-09-05; see 05 · Medication list comparisons",
+     "what": "section, 1800x900, 0 children",
+     "why": "emptied organizer: its one standalone Sidesheet moved to Archive 05",
+     "record": "npveRebuild_extReviewRepairs_2026-09-05 (screensSectionsRenamed, marked \"(empty)\")",
+     "plan": "move to Archive 07 · Emptied organizers as a slim labelled bar; README line"
+    },
+    {
+     "where": "Screens 309:4529",
+     "name": "06 · Problems states — standalone screens moved to Archive 05 on 2026-09-05; see 07 · Problems states comparisons",
+     "what": "section, 1800x900, 0 children",
+     "why": "emptied organizer: its two standalone Sidesheets moved to Archive 05",
+     "record": "npveRebuild_extReviewRepairs_2026-09-05",
+     "plan": "same as 04"
+    },
+    {
+     "where": "Screens 156:2427",
+     "name": "02 · Problems management markers — standalone screens moved to Archive 05 on 2026-09-05; see 03 · Problems management comparisons",
+     "what": "section, 1800x900, 2 markers only (189:615, 197:3416 at x 1300)",
+     "why": "near-empty by design: the markers stay beside where the screens were",
+     "record": "npveRebuild_extReviewRepairs_2026-09-05 (markers stay)",
+     "plan": "keep; not touched"
+    },
+    {
+     "where": "Archive 126:2025",
+     "name": "01 · Gap and defect markers",
+     "what": "section, 1040x1320, 0 children",
+     "why": "intentionally empty archive container: the four markers went back to Screens 01 on 2026-09-04",
+     "record": "npveRebuild_repair2_2026-09-04 (archive01: empty, kept; README line rewritten)",
+     "plan": "one-line label: rename with the reason and shrink to a 120px bar; README paragraph"
+    },
+    {
+     "where": "Screens 446:9236",
+     "name": "15 · Social History",
+     "what": "section numbered 15 while 429:6859 is also 15 · Encounter page shell comparison; Templates has 16 · Social History; Screens has no 16",
+     "why": "numbering slip when the Social History batch created its Screens section",
+     "record": "npveRebuild_socialHistory_2026-09-06 (createdNodes: templatesSection \"16 · Social History\", screensSection \"15 · Social History\")",
+     "plan": "rename to 16 · Social History and reorder on the canvas so 15 sits above 16"
+    },
+    {
+     "where": "Templates 126:2023 / 219:2067",
+     "name": "05 · Rebuild comparison overlaps 06 · Medications",
+     "what": "section 05 (y 5517, h 7344, bottom 12861) overlaps section 06 (top 12560) by 301px; the Medication list change-log helper 254:1895 reaches page y 12745",
+     "why": "the Medication list helpers were added to 05 on 2026-09-04 and 05 grew past the top of 06",
+     "record": "npveRebuild_medicationListSidesheet_2026-09-04 (helpers 253:1838, 253:1840, 254:1895 in 05)",
+     "plan": "shift sections 06-21 down by 500 so 06 starts 200 below 05"
+    },
+    {
+     "where": "Templates 424:4085",
+     "name": "15 · Encounter page shell",
+     "what": "section width 6300; the change-log helper 434:4745 reaches x 6580",
+     "why": "helper placed at x 6100 without widening the section",
+     "record": "npveRebuild_encounterShell_2026-09-06",
+     "plan": "widen the section to 6660"
+    },
+    {
+     "where": "Templates 488:8725",
+     "name": "Module chip (loose FRAME beside the Module chip set 426:4213)",
+     "what": "detached 116x40 frame with a teal fill, an inner frame and an Icon/Close instance, at (485,1524) in section 15",
+     "why": "UNKNOWN — no record or flag cites node 488:8725; its id falls between the toolbar batch (473:) and the PMHx pilot (518:), i.e. around the module chip batches of 2026-09-06",
+     "record": "none",
+     "plan": "FLAG, not touched (unexplained)"
+    },
+    {
+     "where": "Archive 202:3450",
+     "name": "_Legacy loose dividers — Problems list body (moved out of 156:2426 on 2026-09-04)",
+     "what": "3188x100 frame at (700,1180) inside Archive 03 (1200 wide): overflows the section by 2688px into the column of 02/04",
+     "why": "archived unchanged at its original width",
+     "record": "npveRebuild_rowStructure_2026-09-04 (step3_containers.movedToArchive)",
+     "plan": "move unchanged into a new Archive section 08 · Legacy oversize sized to hold it; README line"
+    },
+    {
+     "where": "Screens 415:7207, 446:9236, 581:11116, 586:11764",
+     "name": "14 · Health Status/Observations, 16 · Social History, 20, 21",
+     "what": "sections 1536 tall holding 808/882/1116/962-tall comparisons: the lower half of each board is empty",
+     "why": "section height copied from the 1290-tall comparison template",
+     "record": "creation batches; cosmetic",
+     "plan": "resize to content + 246 (120 top, 126 bottom, the same margins the 1290-tall boards use)"
+    },
+    {
+     "where": "Cover 1:5, Templates 01-04, 06-14, 16-21, Screens 01, 03, 05, 07-13, 17-19, Archive 02-06",
+     "name": "every other section and top-level frame",
+     "what": "populated; content inside bounds",
+     "why": "n/a",
+     "record": "n/a",
+     "plan": "not touched"
+    }
+   ]
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 1,
+   "PROCESS": 0,
+   "FLAGGED_UNEXPLAINED": 1
+  },
+  "flagsBefore": {
+   "active": 227,
+   "resolved": 58,
+   "total": 285
+  },
+  "flagsAfter": {
+   "active": 228,
+   "resolved": 58,
+   "total": 286
+  },
+  "flagsAdded": [
+   "npveTidy_looseModuleChipFrameUnexplained"
+  ],
+  "figmaMutations": [
+   "Templates: 16 sections moved down 500; section 424:4085 widened 6300 → 6660.",
+   "Screens: 446:9236 renamed; 429:6859 and 446:9236 swapped in order; four sections resized; 250:3518 and 309:4529 moved to Archive; 05 and 07-21 re-spaced.",
+   "Archive: 126:2025 renamed and resized; sections 597:11595 and 597:11596 created; 202:3450 moved into 597:11596; README 185:5 text appended, 185:3 moved to y -820.",
+   "No node deleted. Source and library not read or written."
+  ],
+  "step2_tidy": {
+   "screens": {
+    "movedToArchive": {
+     "250:3518": "Screens 04 · Medication list (0 children) → Archive 07 · Emptied organizers, renamed _Emptied organizer — Screens 04 · Medication list …, 1800x900 → 1800x120 at (80,80)",
+     "309:4529": "Screens 06 · Problems states (0 children) → Archive 07, renamed _Emptied organizer — Screens 06 · Problems states …, 1800x900 → 1800x120 at (80,280)"
+    },
+    "renamed": {
+     "446:9236": "15 · Social History → 16 · Social History (matches Templates 16; Screens had two 15s and no 16)"
+    },
+    "reordered": {
+     "429:6859": "15 · Encounter page shell comparison moved above 16 · Social History"
+    },
+    "heightsTrimmed": {
+     "415:7207": "14 · Health Status/Observations 1536 → 1054",
+     "446:9236": "16 · Social History 1536 → 1128",
+     "581:11116": "20 · Hospitalizations edit comparison 1536 → 1362",
+     "586:11764": "21 · Edit Event comparison 1536 → 1208",
+     "rule": "content bottom + 126, the same bottom margin the 1290-tall boards carry"
+    },
+    "respaced": "sections 05 and 07-21 moved up to close the two vacated slots; every inter-section gap is now 200 (was 200/682/982/80/80/374); page height 38236 → 34942",
+    "finalOrder": "01 02 03 05 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 (19 sections, 0 empty, 21 top-level comparison instances)",
+    "vacantNumbers": "04 and 06 are left vacant on purpose: renumbering 05-21 would break the Templates ↔ Screens parallel that holds from 09 to 21"
+   },
+   "templates": {
+    "shifted": "sections 06-21 moved down 500 (06 · Medications 12560 → 13060 … 21 · Edit Event 42560 → 43060); 05 · Rebuild comparison no longer overlaps 06 (gap 199)",
+    "widened": {
+     "424:4085": "15 · Encounter page shell 6300 → 6660 so the change-log helper 434:4745 (right edge 6580) sits inside"
+    },
+    "notTouched": "488:8725 \"Module chip\" loose frame — unexplained, flagged (see flagsAdded)"
+   },
+   "archive": {
+    "126:2025": "01 · Gap and defect markers kept empty; renamed \"01 · Gap and defect markers — empty since 2026-09-04; the four markers live on Screens 01 beside their comparisons (npveRebuild_repair2_2026-09-04)\"; 1040x1320 → 1040x120",
+    "597:11595": "NEW section 07 · Emptied organizers (moved from Screens 2026-09-08) at (0,6533) 1960x480 holding the two Screens organizers",
+    "597:11596": "NEW section 08 · Legacy oversize — loose dividers frame moved unchanged from 03 on 2026-09-08 at (0,7213) 3348x260",
+    "202:3450": "_Legacy loose dividers frame moved unchanged (3188x100) from Archive 03 (700,1180) to Archive 08 (80,80); Archive 03 content now fits its 1200 width (right edge 1148)",
+    "185:3 / 185:5": "README: dated paragraph appended (Tidy 2026-09-08 …) covering 01, 07, 08, the Screens rename and the vacant numbers; frame moved from y -320 to y -820 so it no longer sits over section 01 (it had overlapped 01 since the restructure)"
+   },
+   "notTouched": [
+    "Cover 1:5",
+    "Screens 02 (near-empty by design: two markers)",
+    "every comparison instance, master, helper, marker and token",
+    "Screens 17 board (1408 tall for a 74px row: the height belongs to the Rebuild comparison master, not the section)"
+   ]
+  },
+  "step3_verification": {
+   "screenshots": [
+    "figma-export/npve-tidy-2026-09-08/page-cover-0-1-overview.png",
+    "figma-export/npve-tidy-2026-09-08/page-templates-3-2-overview.png (880x6000 of 6660x45460)",
+    "figma-export/npve-tidy-2026-09-08/page-screens-27-2-overview.png (447x6000 of 2600x34942, after the re-spacing)",
+    "figma-export/npve-tidy-2026-09-08/page-archive-126-2-overview.png (1607x3000 of 4440x8293)",
+    "figma-export/npve-tidy-2026-09-08/inspect-*-part1..3.png crops"
+   ],
+   "lookedAt": "Yes, every page and every crop. Archive: README top-left, 01 as a slim bar under it, 03 left column, 02/04/05/06 right column, 07 two bars, 08 the dividers strip; nothing overlaps. Screens: nineteen boards in one column at an even rhythm, no empty board, 15 above 16. Templates: 05 and 06 separated, section 15 encloses its change log. Cover unchanged.",
+   "deterministic": {
+    "nodeCounts": "Cover 8 (unchanged), Templates 9516 (unchanged), Screens 4564 → 4562 (the two organizers moved out), Archive 1782 → 1786 (+2 moved in, +2 new sections); total 15870 → 15872: nothing deleted",
+    "unboundSolidPaints": "visible SOLID fills without a colour binding: Templates 21, Screens 19, Archive 10 — no fill was edited in this batch (renames, moves, resizes, one text edit only), so the counts are unchanged by construction",
+    "integerGeometry": "every section on Templates, Screens and Archive has integer x, y, width, height",
+    "overlaps": "Templates 0, Screens 0, Archive 0 (README included)",
+    "contentInBounds": "no child extends past its section on any page",
+    "gaps": "Screens: {200} only; Templates: 05→06 199, others unchanged",
+    "identity": "fdCQVFdvOByaOYIJYag0d6; pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive; skipInvisibleInstanceChildren=false"
+   }
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "N/A — no instance or master paint touched; verified by node counts and the unchanged fill audit.",
+   "2_unboundPaintAudit": "PASS — every node on every page walked; counts recorded (Templates 21, Screens 19, Archive 10 by the visible-unbound-solid method).",
+   "3_referenceCounts": "PASS — 21 top-level comparison instances on Screens; 19 sections; Archive 9 top-level nodes.",
+   "4_skipInvisibleFalse": "PASS — set false for every walk.",
+   "5_opacityLast": "PASS — no paint touched.",
+   "6_enumerateDontRecall": "PASS — every section and frame enumerated live before any change; records searched for each finding.",
+   "7_fileIdentityFirst": "PASS — file key passed explicitly on every call; page inventory verified first.",
+   "8_roundWithRecord": "PASS — all authored positions and sizes are integers.",
+   "9_boundPaintAlpha": "PASS — no paint touched.",
+   "10_cloneDropsPropertyRefs": "PASS — nothing cloned."
+  },
+  "screenshots": [
+   "figma-export/npve-tidy-2026-09-08/page-cover-0-1-overview.png",
+   "figma-export/npve-tidy-2026-09-08/page-templates-3-2-overview.png (880x6000 of 6660x45460)",
+   "figma-export/npve-tidy-2026-09-08/page-screens-27-2-overview.png (447x6000 of 2600x34942, after the re-spacing)",
+   "figma-export/npve-tidy-2026-09-08/page-archive-126-2-overview.png (1607x3000 of 4440x8293)",
+   "figma-export/npve-tidy-2026-09-08/inspect-*-part1..3.png crops"
+  ],
+  "decisionsForOperator": [
+   "Screens numbering: 04 and 06 are vacant after the move. Keep them vacant (recommended; preserves the Templates ↔ Screens parallel 09-21) or renumber 05-21 in a follow-up batch."
+  ]
+ }
+}

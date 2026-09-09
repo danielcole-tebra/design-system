@@ -3095,6 +3095,19 @@
     "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
     "webAppV2BugListCandidate": false
    }
+  },
+  {
+   "sequence": 285,
+   "flag": {
+    "id": "npveTidy_looseModuleChipFrameUnexplained",
+    "severity": "low",
+    "kind": "HOUSEKEEPING",
+    "summary": "A loose FRAME named \"Module chip\" (488:8725, 116x40, teal fill, inner frame + Icon/Close instance) sits at (485,1524) in Templates 15 · Encounter page shell beside the Module chip set 426:4213; no record or flag cites it.",
+    "where": "target Templates 424:4085, node 488:8725",
+    "detail": "Its id falls between the encounter toolbar batch (473:) and the PMHx pilot (518:), so it dates from around the module chip batches of 2026-09-06, but neither npveRebuild_moduleChipFix_2026-09-06 nor npveRebuild_moduleChipRelationshipSpacing_2026-09-06 lists it. It is not a PROOF by name and not a placement under rule 15.",
+    "handling": "Reported, not touched (npveTidy_2026-09-08: unexplained items are flagged, not moved). Decision for Daniel: archive it as a stray under Archive 03, or keep it if it was a deliberate measurement stand-in.",
+    "discoveredDuring": "npveTidy_2026-09-08"
+   }
   }
  ]
 }

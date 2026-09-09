@@ -910,14 +910,23 @@
    "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
    "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus miles",
    "recordSha256": "1e9224ec7811d1012e27c645ce568dd703259004aeaa6f47c83273f85127ab05"
+  },
+  {
+   "id": "npveTidy_2026-09-08",
+   "sequence": 93,
+   "date": "2026-09-08",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
+   "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-leve",
+   "recordSha256": "a514142a075091739e3a3313d1b0ab72b6ac54b296522aae39f1cb2902489e1a"
   }
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
-  "active": 227,
+  "active": 228,
   "resolved": 58,
-  "total": 285,
-  "nextSequence": 285,
+  "total": 286,
+  "nextSequence": 286,
   "activeIds": [
    "pxToRemInflation",
    "svgIconTwoUnitSystems",
@@ -1145,7 +1154,8 @@
    "npveEncounter_moduleChipGlyphsMissing",
    "npveEncounter_navIconsShipWhiteGlyphs",
    "npveEncounter_toolbarPillHeightDelta",
-   "npveEncounter_splitButtonSuperseded"
+   "npveEncounter_splitButtonSuperseded",
+   "npveTidy_looseModuleChipFrameUnexplained"
   ],
   "resolvedIds": [
    "paintOpacityDoesNotReachInstances",
@@ -1210,8 +1220,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 93,
-  "aggregateTopLevelKeys": 107,
-  "nextRecordSequence": 93
+  "records": 94,
+  "aggregateTopLevelKeys": 108,
+  "nextRecordSequence": 94
  }
 }

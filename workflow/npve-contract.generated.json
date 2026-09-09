@@ -1,25 +1,25 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-09T14:21:44.957Z",
+  "generatedAt": "2026-09-09T14:35:34.620Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "b9c3786626a579f0d1383b6a178c5a605178aee40f13bec70409deae326c8754",
+      "sha256": "975362d1b382fa700099c3c12d195f6d833035f35303a3dfc8995c3c919eeb42",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "583d549586eab96ba84a57e912278dab0270ed7003d640f06244de6abf5cb011"
+        "sha256": "7e4bab84f242182ae68252c3893f28eb39dc1ee70f76dd3a675e327be680417d"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "107a34659b80955be38c72440b835cfdc89e385839e1b693da96cb464d94829b"
+        "sha256": "76cc302a67c5a3485f4201ecccd4238f9de176e06e20a813023f6d7db8e6b778"
       },
       "flagsActive": {
         "path": "flags/active.json",
-        "sha256": "3e19c973e07c74d6efbbe79a788b395b38c2b4a03724755567417fb5b61cf158"
+        "sha256": "dcf6936d0e3d75ec18d7eb7fefd4a79e73d3125a7603b6cfa63e9ca103b10588"
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
@@ -29,9 +29,9 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 93,
+      "records": 94,
       "flags": {
-        "active": 227,
+        "active": 228,
         "resolved": 58
       }
     },
@@ -304,11 +304,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "backupPolicyB_2026-09-08",
+      "id": "npveTidy_2026-09-08",
       "date": "2026-09-08",
-      "workstream": "workflow",
-      "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
-      "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or we"
+      "workstream": "npve",
+      "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
+      "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49"
     },
     "recordGate": {
       "inProgress": [],
@@ -326,12 +326,12 @@
         }
       },
       "npve": {
-        "count": 61,
+        "count": 62,
         "latest": {
-          "id": "npveRebuild_moduleChipFix_2026-09-08",
+          "id": "npveTidy_2026-09-08",
           "date": "2026-09-08",
-          "path": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json",
-          "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scale, variant anatomy and strip order verif"
+          "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
+          "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49"
         }
       },
       "workflow": {
@@ -727,26 +727,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
-        "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryRow_2026-09-08.json",
-        "status": "DONE. Low-risk pilot item built and validated; stopped before the section item for operator review.",
-        "date": "2026-09-08",
-        "outcome": [
-          "Created a two-variant Past medical history condition row component set at 518px content width.",
-          "Used a 42px row to preserve the published Checkbox and Icon button touch targets; the source 32px height is recorded as an intentional difference.",
-          "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
-          "Shared component APIs and the shared comparison master were not modified."
-        ],
-        "geometry": null,
-        "decision": "Source row 32px → rebuild row 42px so the published 42px Checkbox touch target is not shrunk. Visible glyph size and relationship remain source-faithful.",
-        "report": "figma-export/npve-past-medical-history-row-2026-09-08/report.md",
-        "target": {
-          "file": "fdCQVFdvOByaOYIJYag0d6",
-          "templatesPage": "3:2",
-          "screensPage": "27:2"
-        }
-      },
-      {
         "id": "npveRebuild_pastMedicalHistorySection_2026-09-08",
         "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistorySection_2026-09-08.json",
         "status": "DONE. Low-risk PMHx section pilot built and validated; stopped before the body item for operator review.",
@@ -917,15 +897,20 @@
         "decision": null,
         "report": "figma-export/backup-policy-b-2026-09-08/report.md",
         "target": null
+      },
+      {
+        "id": "npveTidy_2026-09-08",
+        "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
+        "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49 nodes) and each empty or near-empty one explained against the records; two emptied Screens organizers and the oversize legacy dividers frame moved to new Archive sections 07 and 08 as labelled bars; Archive 01 kept and shrunk to a one-line bar; Screens 15 · Social History renamed 16 and reordered; four half-empty Screens boards trimmed; Templates 05/06 overlap and section 15 overflow cleared; Screens re-spaced at a uniform 200px rhythm; README paragraph added; one unexplained stray (Templates 488:8725) flagged and not touched. Nothing deleted; no master, instance, token or comparison content edited.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-tidy-2026-09-08/report.md",
+        "target": null
       }
     ],
     "openFlags": [
-      {
-        "id": "npveWorkflows_linkChipColourNoToken",
-        "severity": "low",
-        "summary": "Editor link chips \"(FHx) Diabetes (Father)\" use #F0EBF5 fill and #8657AC stroke at r4; Chip has no purple colour or r4 outlined form and neither value has a token.",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
       {
         "id": "npveWorkflows_segmentedChipNoPattern",
         "severity": "low",
@@ -1039,11 +1024,17 @@
         "severity": "low",
         "summary": "The Split button instance 424:4417 in the Note card footer is hidden and renamed SUPERSEDED rather than deleted (rule 1); its nested segments cannot be un-exposed by the API.",
         "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06"
+      },
+      {
+        "id": "npveTidy_looseModuleChipFrameUnexplained",
+        "severity": "low",
+        "summary": "A loose FRAME named \"Module chip\" (488:8725, 116x40, teal fill, inner frame + Icon/Close instance) sits at (485,1524) in Templates 15 · Encounter page shell beside the Module chip set 426:4213; no record or flag cites it.",
+        "discoveredDuring": "npveTidy_2026-09-08"
       }
     ],
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "ac6f8c3694677452b24e91f5a90934ab917a3d17e1087294367fc768cb26219c"
+    "contractSha256": "c3aa73b67e9d4230a4142ec2e2ee84911155bbf76d925de3b2664e226d55d07c"
   }
 }
