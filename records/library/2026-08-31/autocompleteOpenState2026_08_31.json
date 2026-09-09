@@ -1,0 +1,53 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "autocompleteOpenState2026_08_31",
+ "sequence": 7,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "d0f0ea794702f8ce05d6c1863ae1327d657a90c3fd8c113097cc83adc20af501"
+ },
+ "record": {
+  "_batch": "fourCompositions2026_08_31",
+  "method": "Production counted with a balanced-brace JSX scanner (composition-scan.js) over 5,399 source files under C:/Code/web-app-v2/packages, excluding node_modules, stories, examples, patterns and tests. Import source resolved per file so same-named non-design-system tags cannot be miscounted.",
+  "scannerFixes": "Two real scanner faults found and fixed before any count was trusted. (a) TSX generic call sites — <Autocomplete<PatientSummaryObj> — were rejected by the tag lookahead AND would have been truncated at the generic closing angle bracket, losing every prop. (b) An earlier prop reader matched against the whole raw tag, so nested props leaked into the parent: size=\"small\" read 73 for Autocomplete when the true top-level count is 52. Both are the failure mode the build prompt warned had already occurred twice.",
+  "frame": "371:780, Compositions / Inputs",
+  "production": {
+   "files": 88,
+   "elements": 106,
+   "auditSaid": 58,
+   "whyDifferent": "The audit used line-based grep, which misses <Autocomplete when its props start on the next line, and misses TSX generic call sites entirely."
+  },
+  "varies": {
+   "selectionMode": "single 70 elements / 60 files; multiple 36 / 31. 31 of the 36 multiples also set disableCloseOnSelect.",
+   "checkboxIsMultiOnly": "13 elements / 8 files put a Checkbox in renderOption; zero single-select does.",
+   "size": "DEAD SPLIT — 53 elements set size (52 to small, 1 computed), 53 set nothing and take the medium theme default. AutocompleteOverrides sets ChipProps, noOptionsText and popupIcon, and no size. No winner picked.",
+   "optionRow": "renderOption on 58 elements / 52 files. Box 19, Checkbox 13, Typography 12, ListItem 6, ListItemText 5, 8 plain-text, ~12 bespoke local components. No dominant shape.",
+   "tags": "multiple + renderTags 22, multiple with default Chip tags 14. limitTags on 8 elements / 5 files with values 1,2,3,6 — no consensus.",
+   "surface": "PaperComponent replaced in 4 files, ListboxComponent in 2, disablePortal on 8 elements / 4 files. The default surface holds nearly everywhere.",
+   "emptyText": "noOptionsText set on 25 elements / 24 files — every one overrides the theme default \"No results found\". Nine distinct literal strings: 4 Title Case, 4 sentence case, 3 ending in a full stop."
+  },
+  "gaps": [
+   "Autocomplete/Option carries a hardcoded Icon/CheckboxUnchecked in ALL FIVE State variants and no checked glyph anywhere, so Checkbox=true + State=Selected renders a selected row with an empty box. A selected multi-select option cannot be drawn. Used by 13 elements across 8 files.",
+   "Autocomplete/Option exposes one TEXT property (Label), so an option row holds exactly one string — no second line, avatar, trailing chip. 52 files customise the row.",
+   "The popup surface cannot be a Paper instance: a Figma instance cannot host the option rows. Reproduced by hand (white bound to color/common/white, radius 4, shared elevation style).",
+   "No empty-list surface and no loading state. loading is set on 27 elements / 27 files; noOptionsText on 25 / 24.",
+   "Grouped only indents the row and draws NO group heading — while AutocompleteOverrides styles a groupLabel slot and assigns it text.primary, proving the heading exists in code. 6 files group."
+  ],
+  "defects": [],
+  "instanceRatio": {
+   "allNodes": "18.9%",
+   "excludingAnnotationText": "35.1%",
+   "nodes": 143,
+   "instances": 27
+  },
+  "keptFromPriorFrame": "The long provenance note kept verbatim — it separates SOURCE-VERIFIED (option height 36, listbox 8px padding, field 56, DownCaret) from DRAWN-FOR-CONTEXT (popper offset, paper elevation) from OPEN (popup indicator rotation). Its core claim was re-verified this pass: ListOverrides sets MuiList.defaultProps.disablePadding = true globally, and the Autocomplete listbox is not a MuiList. The closed/open examples were kept and reparented under Anatomy.",
+  "replaced": "The generic header (\"Varies — Examples\"). Eight sections added.",
+  "fixed": "An unbound white fill on the original listbox frame, per standingBatchRules 2. Frame now carries 0 unbound non-text paints."
+ }
+}

@@ -1,0 +1,876 @@
+{
+ "format": "tebra.design-flags",
+ "version": 1,
+ "status": "resolved",
+ "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08"
+ },
+ "entries": [
+  {
+   "sequence": 11,
+   "flag": {
+    "id": "paintOpacityDoesNotReachInstances",
+    "severity": "high",
+    "discoveredDuring": "data-display batch",
+    "summary": "Paint-level opacity on a variable-bound paint does not propagate to INSTANCES. Masters render correctly; every instance renders at full opacity.",
+    "detail": "Known already: structural operations discard paint-level opacity, so it must be applied last. NEW and worse: even when the master reads the correct opacity, a freshly created instance reads 1. Verified on Table / Row State=Selected — master 0.08, instance 1 — and confirmed unfixable by re-creating the instance or by resetOverrides.",
+    "fix": "Put the alpha in the VARIABLE instead of the paint. A variable whose stored value carries its own alpha channel propagates to instances correctly. Demonstrated with color/computed (no palette)/rowSelected = rgba(0,72,82,0.08): master 0.08, instance 0.08, still bound, still zero unbound paints.",
+    "knownAffected": [
+     "Chip — 18 alpha paints: Default/Hover at action.selected 12%, Outlined Secondary and Warning borders at 70% and their 4% hovers. Masters correct, instances will render solid.",
+     "Checkbox, Radio — hover ripple halos at alpha(primary.main, 0.04).",
+     "Switch — ripple halos at alpha(action.active, 0.04).",
+     "Alert, Menu, Autocomplete — no paint-level alpha; these use variables that already carry their own alpha (action.disabled, substrate/inputOutline) and are NOT affected."
+    ],
+    "status": "CLOSED 2026-08-02 by the alpha-to-variable remediation pass — see remediation below.",
+    "remediation": {
+     "date": "2026-08-02",
+     "sweep": "File-wide enumeration rather than the known list: 48 paints across 12 distinct (variable, opacity) combinations. The known list was INCOMPLETE — outlined Chip borders at 70% exist for error, info and success as well as secondary and warning, and the Dialog reference frame's scrim at 50% was unlisted.",
+     "variablesCreated": 10,
+     "variableNames": [
+      "alphaPrimary04",
+      "alphaSelected12",
+      "alphaSecondary70",
+      "alphaError70",
+      "alphaInfo70",
+      "alphaSuccess70",
+      "alphaWarning70",
+      "alphaSecondary04",
+      "alphaWarning04",
+      "alphaBlack50"
+     ],
+     "namingRule": "Named for the FORMULA — which colour at what alpha — not for the consuming component. alphaPrimary04 is shared by Checkbox, Radio and Switch: Switch's rule is alpha(action.active, 0.04) and the others use alpha(primary.main, 0.04), and paletteValues.ts gives both the same literal #004852. The variable description records that if those two palette entries ever diverge, this variable must split.",
+     "paintsPromoted": 48,
+     "unmapped": 0,
+     "instanceVerification": "49 instance paints checked by instantiating every affected variant and comparing the RENDERED paint — colour, effective alpha and bound variable — against its master. 0 mismatches. Master-level reads were explicitly not accepted as evidence.",
+     "alsoFound": "The widened audit surfaced 3 unbound paints that every previous audit had missed, in the Radio DO NOT USE reference frame's orphan glyph. Prior audits walked component sets only, never reference frames. Both the paints and the audit scope are fixed."
+    },
+    "whyItWasMissed": "Every prior audit measured MASTERS. Reference frames built from instances existed for Menu, Radio, Button group and Dialog, but none of those used a paint-level alpha, so the divergence never rendered until the Table reference frame put an alpha row in an instance."
+   }
+  },
+  {
+   "sequence": 39,
+   "flag": {
+    "id": "buttonGroupSeamMechanics",
+    "severity": "medium",
+    "discoveredDuring": "ButtonGroup batch",
+    "summary": "Contained groups get NO negative margin, so the join is two full 1px borders; Tebra resolves it differently per colour.",
+    "detail": "MUI's marginLeft: -1 seam collapse is scoped to `variant === 'outlined'` only (ButtonGroup.js lastButton/middleButton block). Tebra's ButtonGroupOverrides sets defaultProps variant 'contained', so no group in this library gets the collapse — adjacent segments sit flush and the join is the left segment's right border plus the right segment's left border.",
+    "resolved": {
+     "primary": "groupedContainedPrimary sets `&:not(:last-of-type) { borderColor: core.main; borderRightColor: transparent }` — the left segment's right border disappears, leaving the next segment's core.main left border as a single 1px sage line.",
+     "secondary": "groupedContainedSecondary sets `&:not(:last-of-type) { borderColor: secondary.main; borderRightColor: primary.main }` — a teal right border against the next segment's coral left border, reading as a 1px teal divider. Drawn in Figma as a 1px Seam rectangle, because Figma cannot colour one side of a stroke independently.",
+     "disabledNonLast": "groupedContainedHorizontal's `&:not(:last-child):disabled { borderRightColor: transparent }` carries higher specificity than groupedContainedPrimary's `&:disabled { borderColor: core.main }`, so the right border stays transparent. For secondary, groupedContainedSecondary resolves last in the overridesResolver and sets borderRightColor primary[200], which wins."
+    },
+    "radii": "Button's radius 24 is kept on the outer ends only: first loses its right radii, last its left, middle all four. 24 still clamps to height/2, so end caps read as pill halves at 15 / 19 / 21. Tebra does not override the group radius; ButtonGroupRoot's own shape.borderRadius 4 is invisible because the container has no fill or border."
+   }
+  },
+  {
+   "sequence": 56,
+   "flag": {
+    "id": "canonicalComponentsPageLost",
+    "severity": "high",
+    "discoveredDuring": "selection controls batch",
+    "summary": "The retained 'Canonical components' page disappeared during this batch. I cannot attribute it to a specific script.",
+    "detail": "The page (3:266) and its Known drift and decisions frame (3:629) were present at the end of the TextField Size-axis work and absent by the page-reorder step of this batch. Nothing in the batch scripts targets it: each new control page either found an existing page by exact name or created one, and every children-clearing loop was scoped to the freshly created page. The reorder used figma.root.insertChild on nine named pages, which moves rather than deletes. Root cause unconfirmed — I am not going to guess.",
+    "impact": "Lost: static sticker sheets for roughly eight component families not yet rebuilt (Inputs, Selection controls, Surfaces and feedback, Data display, Navigation, Overlays, Hierarchy/grouped controls, Foundations). NOT lost: all five drift decisions, which were transcribed verbatim into openDecisionsFromCanonicalPage before the batch and are now also reproduced as a frame on the Cover page.",
+    "resolution": "CLOSED 2026-08-02 — Daniel deleted the page deliberately; it was not being used. No restore needed. The five decisions remain preserved in openDecisionsFromCanonicalPage and on the Cover.",
+    "handling": "Superseded by the resolution above.  Original recommendation was to restore from Figma version history if the sticker-sheet references were still wanted. The Cover's 'Not yet rebuilt' paragraph was corrected to stop pointing at a page that no longer exists."
+   }
+  },
+  {
+   "sequence": 61,
+   "flag": {
+    "id": "textFieldMultilineStoryLabelsInverted",
+    "severity": "medium",
+    "discoveredDuring": "TextField build",
+    "summary": "The TextField story's two multiline examples are labelled backwards, and rows='grow' has no implementation anywhere in the checkout.",
+    "detail": "InputBase branches: `if (rows) { inputProps = {minRows: rows, maxRows: rows, ...} }` and BOTH branches then set InputComponent = TextareaAutosize. So `multiline` alone auto-grows, and `rows={n}` pins the height. The story labels the no-rows example 'Default Fixed Height in Rows' (it actually grows) and the rows='grow' example 'Original Multiline Height Behavior' (the string is fed into minRows/maxRows height arithmetic). grep for 'grow' across packages/design-system returns only the story itself — there is no patch implementing it.",
+    "handling": "RESOLVED as a process item — logged to the web-app-v2 bug list as item five (story documentation contradicts InputBase behaviour; the implied grow implementation does not exist in the checkout). The Figma model stays a static 3-row boolean, which is correct for a component library, and the component description states the real behaviour in one line so the story labels are not read as authoritative.",
+    "webAppV2BugListItem": 5
+   }
+  },
+  {
+   "sequence": 62,
+   "flag": {
+    "id": "textFieldNoSizeAxis",
+    "severity": "low",
+    "status": "RESOLVED — Size axis added for parity",
+    "discoveredDuring": "TextField build",
+    "summary": "The TextField story never exercises `size`, while Autocomplete / Field is built with Size=Medium|Small.",
+    "detail": "MUI supports size='small' on both components and both render at 40px. The Autocomplete story passes size through to its Chips; the TextField story declares only a margin argType and no size control.",
+    "handling": "Daniel's call: build the Size axis anyway for library parity, doubling the set to 20 variants, with the provenance stated explicitly in both the component description and components.TextField.figmaProperties.sizeAxisProvenance. This is the single documented exception to scoping structure from argTypes."
+   }
+  },
+  {
+   "sequence": 116,
+   "flag": {
+    "id": "navBarHeightIsSixtyFiveNotSixtyFour",
+    "severity": "medium",
+    "discoveredDuring": "nav bar build 2026-08-03",
+    "summary": "The nav bar renders 65px, not 64px — the discovery pass recorded 64 and wrongly dismissed the legacy library's 65.",
+    "where": "navigation-ui/src/components/Navigation/Navigation.tsx Toolbar sx minHeight:64, against design-system/src/cobranding/createPartnerTheme.ts MuiIconButton.styleOverrides.sizeLarge { height: \"65px\", width: \"65px\" }.",
+    "detail": "minHeight is a floor, not a fixed height. The Toolbar is display:flex with align-items:center and no height cap, so a 65px child expands it. Every top-level nav item and every right-cluster utility is an IconButton at size='large', so the 65px always applies and the bar is always 65px. The 64px figure only describes a bar containing nothing 65px tall, which never occurs.",
+    "correctsFlag": "components.PrimaryNavBar crossReference, which claimed 65 was a legacy-library value rather than source.",
+    "whyItWasMissed": "The discovery pass read Navigation.tsx for the bar and NavIconButton.tsx for the button, but took sizeLarge from neither — it lives in createPartnerTheme.ts, a third file. Re-reading all three under standing rule 6 surfaced it.",
+    "handling": "Figma is built at 65px. Both figures are recorded on the Nav / Bar description so the 64 in source is not mistaken for a Figma error.",
+    "status": "SUPERSEDED 2026-08-03 by navBarHeightDrivenBySearchNotButtons. The 64->65 correction was right as far as it went; 65 is still wrong for the desktop bar."
+   }
+  },
+  {
+   "sequence": 119,
+   "flag": {
+    "id": "navBarHeightDrivenBySearchNotButtons",
+    "severity": "low",
+    "discoveredDuring": "nav glyph transcription 2026-08-03",
+    "summary": "The desktop nav bar is 76.8px, not 65px — the inline patient search column is taller than the 65px icon buttons and sets the Toolbar height.",
+    "where": "navigation-ui/src/components/PatientSearch/PatientSearch.tsx wrapper Box p:2 and TextField sx, against Navigation.tsx Toolbar sx minHeight:64.",
+    "detail": "Derivation, every term from source: InputBase input height 1.4375em = 23px (InputBase.js:127, boxSizing content-box) + OutlinedInput size-small padding 8.5px top and bottom (OutlinedInput.js:113) = 40px input; + the PatientSearch sx \"&& .MuiInputBase-root { padding: 0.3 }\" = 0.3 x 8 = 2.4px each side = 44.8px; + the wrapper Box p:2 = 16px each side = 76.8px. The Toolbar is align-items:center with only a minHeight floor, so its height is max(left cluster 65, right cluster 76.8) = 76.8. Below sm the inline search is not rendered (isInlineSearchVisible = isSmUp) and the bar falls back to 65px.",
+    "supersedes": "navBarHeightIsSixtyFiveNotSixtyFour",
+    "whyItWasMissed": "Two passes read the Toolbar and the icon button and stopped there. The height is actually set by a component in a different package folder that neither pass opened.",
+    "handling": "Figma is built at 76.8px. Both breakpoint heights recorded on the Nav / Bar description.",
+    "status": "RETRACTED 2026-08-03 — the conclusion was wrong.",
+    "correction": "The arithmetic was right and the conclusion was wrong. Summing the search wrapper's 32px padding onto the 44.8px field assumed the toolbar stacks its children's box heights; a flex toolbar with align-items:center centres them instead. The search column never forces the bar to 76.8 — it centres inside whatever height the bar is. Rendered product is 65px. Superseded by components.PrimaryNavBar.geometryRuling (Daniel, product-rendered authority).",
+    "lesson": "A derivation can be arithmetically sound and still describe something that never renders. For layout that depends on flex behaviour, the rendered product outranks the computation."
+   }
+  },
+  {
+   "sequence": 120,
+   "flag": {
+    "id": "navFractionalDimensionsBreakTheIntegerInvariant",
+    "severity": "low",
+    "discoveredDuring": "nav glyph transcription 2026-08-03",
+    "summary": "The nav surfaced the first authored-fractional dimensions in the build; resolved by rounding to whole numbers with the computed value recorded.",
+    "where": "Nav / Bar 1440x76.8, Nav / Search 400x76.8 with a 44.8px field, Nav / Logo 100x23.88, Icon / Payments inner glyph 24x18.24.",
+    "detail": "Three independent sources, none of them an authoring choice. (1) The 0.3 spacing multiplier in PatientSearch's TextField sx resolves to 2.4px and propagates to 44.8 and 76.8. (2) The Tebra wordmark's viewBox ratio 186.82/782.49 at the declared 100px width gives 23.88. (3) PaymentsIcon's 25x19 viewBox in a 24x24 box gives 18.24. Every previous fractional value in this build was a pxToRem inflation with an intended integer behind it, which the rule handles by binding the integer and recording computedPx. These have no intended integer — the fraction IS the value.",
+    "handling": "Resolved. No further height or geometry archaeology on the nav; the investigation is frozen. The sub-sm bar height stays 65px and is exact.",
+    "status": "RESOLVED 2026-08-03 by design decision.",
+    "resolution": "Daniel, as design authority, ruled on 2026-08-03: round each fractional value to its nearest integer and record the true computed value as computedPx, per the same convention already used for pxToRem inflation. Applied — bar 76.8 -> 77, search column 76.8 -> 77, search field 44.8 -> 45, search text inset 16.4 -> 16, wordmark 23.88 -> 24, Payments glyph 18.24 -> 18 at y 2.88 -> 3. The allDimensionsInteger invariant is restored file-wide. This is recorded as a DESIGNED DECISION (source: Daniel, this pass), not a transcription — the Figma values are deliberately not the computed values, and every departure is documented in the component description and here.",
+    "amendment": "The standing rule is amended rather than broken: authored-fractional sources get ROUNDED-WITH-RECORD, not preserved. Previously the rule only contemplated pxToRem inflation, where an intended integer existed behind the fraction. It now covers the case where no intended integer exists — the fraction is still not carried into Figma, and computedPx still carries the truth."
+   }
+  },
+  {
+   "sequence": 124,
+   "flag": {
+    "id": "sizeDefaultResolvedByCanvasPositionNotLayerOrder",
+    "severity": "medium",
+    "discoveredDuring": "Size drag verification 2026-08-03",
+    "summary": "Button's Size default was reported done but had not changed — the reorder moved child order, and Figma reads canvas position.",
+    "where": "Figma Button component set (Actions page).",
+    "detail": "Verification found children[0] = Size=Medium while defaultVariant was still Size=Small at (32,32), with Size=Medium parked at (662,32). An instance placed from the set resolved to Size='Small'. That signature is what a layers-panel drag produces: it reorders children[] and leaves x/y untouched, so nothing visibly changes on canvas and the default does not move.",
+    "resolution": "Fixed 2026-08-03 by swapping the Small and Medium column blocks horizontally: Button delta 630 (Small 32->662, Medium 662->32), 36 nodes moved; Button group / Segment delta 450 (Small 40->490, Medium 490->40), 36 nodes moved. Grid structure preserved — only the two blocks exchanged x, rows and state columns untouched. Verified by INSTANCE read, not master read: both sets now resolve Size to 'Medium'. 0 overlaps, 0 fractional positions, set bounds unchanged.",
+    "whyItWasMissed": "It was reported complete and looked complete. Only an instance-level read caught it — the same failure mode standing rule 1 exists for, applied to a variant default rather than a paint.",
+    "handling": "Resolved. The API behaviour is recorded in figmaBuild.pluginApiNotes so the next default change does not repeat it."
+   }
+  },
+  {
+   "sequence": 125,
+   "flag": {
+    "id": "buttonGroupSizeDefaultInverted",
+    "severity": "medium",
+    "discoveredDuring": "Size drag verification 2026-08-03",
+    "summary": "Button group / Segment had the same Size default inversion as Button, and had never been flagged.",
+    "where": "Figma Button group / Segment set, against packages/design-system/src/stories/ButtonGroup/ — ButtonGroupMain.args sets size: \"medium\".",
+    "detail": "The story default is medium and MUI's own ButtonGroup default is medium, but the Figma set's defaultVariant was Size=Small and an instance resolved to Small. Found only because the Button check was widened to every Size-bearing set instead of stopping at the one that was queued. The other eight Size-bearing sets — Icon button, Text field, Switch, Autocomplete / Field, Autocomplete / Tag, Toggle button, Chip, Pagination / Item — were all already correct at Medium.",
+    "resolution": "Fixed in the same pass as Button. Instance now resolves to Medium.",
+    "handling": "Resolved. Recorded because it was a second live instance of a defect the queue treated as singular — the lesson is the widening, not the fix."
+   }
+  },
+  {
+   "sequence": 145,
+   "flag": {
+    "id": "npveSidesheet_noOutlinedButton",
+    "severity": "high",
+    "discoveredDuring": "npveRebuild_sidesheet_inventory_2026-09-02 (read-only source inventory)",
+    "summary": "GAP: 26 sidesheet children use an outlined pill button (kit Button Type=Default / _button template) for the middle footer action and \"Add …\" rows; Button 79:2 has no outlined variant and ButtonOverrides.ts defines no outlined rule.",
+    "where": "Button 79:2 (variant contained|text); overrides/ButtonOverrides.ts",
+    "detail": "MUI base still accepts variant=\"outlined\", so code may render it unstyled. Kit Button renders 36 tall; the library contained button reads 38 tall on instance 787:1457.",
+    "webAppV2BugListCandidate": false,
+    "handling": "Superseded, see superseded field. Kept for the record.",
+    "superseded": "SUPERSEDED 2026-09-02 by the Button 79:2 re-read (figma-export/button-outlined-check-2026-09-02/report.md): the white pill with a 1px core.main stroke IS Button variant=contained, color=primary (78:14 medium, 78:2 small, 78:26 large), bound to color/common/white and color/core/main, matching containedPrimary in ButtonOverrides.ts. The outlined footer button therefore maps to the library; only the fullWidth axis and the 36-vs-38 height difference remain."
+   }
+  },
+  {
+   "sequence": 155,
+   "flag": {
+    "id": "npveBuild_buttonLabelTitleCase",
+    "severity": "low",
+    "discoveredDuring": "npveRebuild_sidesheet_build_2026-09-02 (first target write batch)",
+    "summary": "DEFECT: library Button Label applies textCase TITLE, so \"Save & Add to Note\" renders \"Save & Add To Note\" on instance 6:179.",
+    "where": "Button 79:2 Label text; observed on 6:179 Tertiary action",
+    "detail": "ButtonOverrides.ts does not set textTransform, and MUI's default is uppercase; Title case in the Figma master matches neither. Verify against Storybook before treating as a library defect. 2026-09-03 read-only library batch (libraryTodos_readOnly_2026_09_03): TITLE on 72/72 variants; instance renders \"Save & Add To Note\". Code renders the same under typography.button textTransform capitalize (typography.ts:65, Button.js:69); the earlier detail that MUI uppercase applies was wrong. Agree by CSS semantics; Storybook unreachable. 2026-09-03 render (libraryTodos_write1_2026_09_03): Confirmed in browser: contained primary renders \"Save & Add To Note\". Library TITLE matches code.",
+    "webAppV2BugListCandidate": false,
+    "handling": "Resolved; kept for the record.",
+    "detailAnnotation_2026_09_03": "The sentence \"MUI's default is uppercase; Title case in the Figma master matches neither\" is wrong: typography.ts:65 sets button.textTransform capitalize, and Storybook renders \"Save & Add To Note\" (libraryTodos_write1_2026_09_03.step0_renderFindings). Original detail left as written.",
+    "superseded": "RESOLVED 2026-09-03 by libraryTodos_write2_2026_09_03: library TITLE matches code capitalize, render-confirmed in Storybook 2026-09-03. No write needed."
+   }
+  },
+  {
+   "sequence": 156,
+   "flag": {
+    "id": "npveBuild_arrowLeftGlyphIsReturnArrow",
+    "severity": "low",
+    "discoveredDuring": "npveRebuild_sidesheet_build_2026-09-02 (first target write batch)",
+    "summary": "DEFECT vs source: Icon/ArrowLeft 575:3 draws a curved return arrow; the source back control is a chevron-left in a tinted circle.",
+    "where": "Sidesheet Back 6:67 on instance 6:144",
+    "detail": "Library has Icon/LeftCaret 200:35 and Icon/NavigateBefore (MUI) 190:4 as chevron alternatives. Instruction named 575:3; used as instructed.",
+    "webAppV2BugListCandidate": false,
+    "handling": "Resolved by icon swap; kept for the record.",
+    "superseded": "RESOLVED 2026-09-02 by npveRebuild_sidesheet_closeout_2026_09_02: Back now swaps Icon/LeftCaret 200:35."
+   }
+  },
+  {
+   "sequence": 160,
+   "flag": {
+    "id": "npveChangelog_placedLogIsDetached",
+    "severity": "medium",
+    "discoveredDuring": "npveRebuild_changelog_2026-09-02",
+    "summary": "The prompt says rows are added on the Change log instance by duplicating; Figma instances cannot take appended children and there is no slot API, so the placed change log 18:135 is a detached frame holding nine Change log/Row instances. Row styling propagates from Change log/Row; container changes on Change log 18:109 will not reach placed copies.",
+    "where": "fdCQVFdvOByaOYIJYag0d6 Templates 3:2, 18:135",
+    "detail": "Error text: \"in appendChild: Cannot move node. New parent is an instance or is inside of an instance\". Options for a decision: keep detached frames per rebuilt screen (current), or give Change log a fixed number of rows with Show row N booleans so instances stay instances.",
+    "webAppV2BugListCandidate": false,
+    "handling": "Resolved by rule 14 amendment (CLAUDE.md, 2026-09-02). Kept for the record.",
+    "superseded": "RESOLVED 2026-09-02 by decision: CLAUDE.md rule 14 amended. The placed change log is a detached frame containing Change log/Row instances; Row stays a component so styling propagates."
+   }
+  },
+  {
+   "sequence": 163,
+   "flag": {
+    "id": "npveProblemsRecent_searchFieldDiffersFromTextField",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "discoveredDuring": "npveRebuild_problemsRecent_inventory_2026-09-02",
+    "summary": "Source search field is 40 tall with a #004852 1px outline, radius 4 and no label; library Text field medium (instance 127:390) is 56 tall with a notched floating label and a #000000@0.23 outline bound color/substrate/inputOutline.",
+    "where": "source 4618:4971; library 121:242 / instance 127:390",
+    "detail": "Value text matches (Akkurat LL Regular 16/24 #000000). size=small exists in the library (Reference instances 300x60 with helper) but its input height was not read this batch.",
+    "webAppV2BugListCandidate": false,
+    "handling": "Resolved by the build decision; kept for the record.",
+    "superseded": "RESOLVED 2026-09-02 by npveRebuild_problemsRecent_build: size=small input height read at 40 on instance 25:564, equal to the source; the remaining difference (notch label, inputOutline colour) is logged in the change log."
+   }
+  },
+  {
+   "sequence": 169,
+   "flag": {
+    "id": "npveProblemsRecent_bodyPaddingConflict",
+    "severity": "medium",
+    "kind": "CONFLICT",
+    "discoveredDuring": "npveRebuild_problemsRecent_inventory_2026-09-02",
+    "summary": "Source body pads 16 on all sides with gap 12; the Sidesheet template Body 6:79 pads 8/16/8/16 with gap 16. Vertical padding and gap fight.",
+    "where": "source 4618:4967; target 6:79",
+    "detail": "Source body is also FIXED 476 where the template FILLs (488 with footer). Content hugs at 340, so no overflow.",
+    "webAppV2BugListCandidate": false,
+    "handling": "Resolved; kept for the record.",
+    "superseded": "RESOLVED 2026-09-02 by the build prompt: template padding governs (change log row \"Body padding\"). Amended 2026-09-03 by npveRebuild_bodyPaddingAndSearch: template padding changed to 16 all sides, so source and template now agree on padding; gap remains 16 vs source 12."
+   }
+  },
+  {
+   "sequence": 180,
+   "flag": {
+    "id": "npveFavorites_row1OverridesInBodyMaster",
+    "severity": "low",
+    "kind": "DEFECT",
+    "discoveredDuring": "npveRebuild_problemsFavorites_2026-09-02",
+    "summary": "Problems picker body master carries the selected-row overrides on row 1 (CheckCircle swap and success/dark glyph fill), so every new body instance starts with row 1 selected and needs resetOverrides plus a fill rebind to show a plain plus.",
+    "where": "target 26:221 › 26:261",
+    "detail": "Favorites needed a resetOverrides on the trailing action and a rebind of its glyph to color/grey/600. Cleaner: move the selected state onto the Recent screen instance instead of the master.",
+    "webAppV2BugListCandidate": false,
+    "handling": "Resolved; kept for the record.",
+    "superseded": "RESOLVED 2026-09-03 by npveRebuild_cleanup: master row 1 reset to PlusOutlined / color/grey/600; the selection lives on the Recent screen instance 27:6 only."
+   }
+  },
+  {
+   "sequence": 185,
+   "flag": {
+    "id": "npveTabUnderline_overlapIsDecisionNotCss",
+    "severity": "low",
+    "kind": "DECISION",
+    "discoveredDuring": "npveRebuild_tabUnderlineFix_2026-09-03",
+    "summary": "The rebuilt tab underline overlaps the indicator by 1px (divider row inside the 2px indicator) by prompt decision. In CSS, MUI's absolutely positioned indicator (bottom: 0) sits above a border-bottom, so the product renders indicator and rule touching, not overlapping.",
+    "where": "target 26:221 > Tabs strip 51:307 > Tab underline 51:308 (ABSOLUTE, y 47); @mui/material 5.14.11 Tabs.js TabsIndicator; admin-ui MessageRoutingLayout.tsx:58-63",
+    "detail": "Visible difference: under the active tab the product shows a grey row beneath the teal; the rebuild shows none. Reported, not reconciled.",
+    "webAppV2BugListCandidate": false,
+    "handling": "Resolved; kept for the record.",
+    "superseded": "RESOLVED 2026-09-03 by npveRebuild_labelDriftAndUnderline: matched CSS rendering. Divider returned to flow directly under the 48 tabs, touching the indicator, no overlap."
+   }
+  },
+  {
+   "sequence": 193,
+   "flag": {
+    "discoveredDuring": "npveRebuild_audit_2026_09_03",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Needs a retroactive record from whoever did the work. Process gap addressed 2026-09-04 by npveRebuild_agentRules_2026-09-04 (see addressedBy); the record itself is still owed. 2026-09-04: retroactive record npveRebuild_externalRestructure_2026-09-03_retro written by npveRebuild_repair1_2026-09-04.",
+    "id": "npveAudit_unrecordedRestructure",
+    "severity": "high",
+    "kind": "DEFECT",
+    "summary": "All target work after the pause record (page restructure, Archive, sets 94:812 and 107:485, Problem summary row 153:1186, Problems list body 156:2426, comparison shell 35:332 + 12 sub-components, four comparison instances, two Sidesheet instances, marker moves, Recovery checks) has no schema record, apply script, report, flag or commit.",
+    "where": "fdCQVFdvOByaOYIJYag0d6, all pages; repo",
+    "detail": "libraryTodos_write2 read 27:6 still on Screens; own node sessions 74–78 and 88–172 are the unrecorded work. Report: figma-export/npve-audit-2026-09-03/report.md.",
+    "addressedBy": "npveRebuild_agentRules_2026-09-04: the process failure (an external session building with no record) is now covered by CLAUDE.md \"Rules for any agent working in these files\" and AGENTS.md; rules 1, 2 and 7 there are the binding answer. The retroactive record for sessions 74–78 and 88–172 remains owed."
+   }
+  },
+  {
+   "sequence": 194,
+   "flag": {
+    "discoveredDuring": "npveRebuild_audit_2026_09_03",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Decision: wait for next Button publish or re-point now. 2026-09-04: RESOLVED by npveRebuild_repair1_2026-09-04 step 1 — all 66 Button instances on 155:1191; 3:105 gone.",
+    "id": "npveAudit_buttonImportSplit",
+    "severity": "high",
+    "kind": "DEFECT",
+    "summary": "Two subscription copies of library Button (same key cfb726c7…): 3:105 with 74-series space refs holds 58 instances (every Sidesheet footer), 155:1191 with 997 refs holds 8 (Create New Problem). New Problems management screens carry both at once.",
+    "where": "target Templates/Screens/Archive; Button 3:105, 155:1191",
+    "detail": "Same key, same 72 variants, same geometry; only the internal variable refs differ. Old refs: space/8 74:297, space/6 74:289, space/7 74:293, space/17 74:321. No render divergence today. importComponentByKeyAsync returns 155:1191."
+   }
+  },
+  {
+   "sequence": 196,
+   "flag": {
+    "discoveredDuring": "npveRebuild_audit_2026_09_03",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Resolves with the Button split. 2026-09-04: RESOLVED with the Button split (npveRebuild_repair1_2026-09-04); no 74-series space ref remains outside orphan 6:7.",
+    "id": "npveAudit_spaceRefsTwoVersions",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "space/8, space/6, space/7, space/17 are bound under two ids each (74-series inside Button 3:105 and Icon button 6:7; 997-series everywhere else). All other space/* bind 997 only; colour/typography bind 74 only.",
+    "where": "target bindings, all pages",
+    "detail": "Suffix 997 matches the library session of write2 (space/32 = VariableID:997:2), so the 997 ids are the post-write2 published versions. The prompt's ids 10:104, 75:689, 18:101, 75:690 do not resolve through the Plugin API."
+   }
+  },
+  {
+   "sequence": 197,
+   "flag": {
+    "discoveredDuring": "npveRebuild_audit_2026_09_03",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Decision needed on rings. 2026-09-04: RESOLVED by npveRebuild_repair2_2026-09-04 step 2 — library Icon buttons and Icon/DownCaret; drawn nodes moved to Archive 03 with paints bound; DEFECT marker 189:615 placed.",
+    "id": "npveAudit_problemSummaryRowDrawnControls",
+    "severity": "high",
+    "kind": "DEFECT",
+    "summary": "Problem summary row 153:1186 has no nested instance: the circled edit and add-to-note controls are hand-drawn VECTOR rings (39 × 39, stroke #8CA7A2) with drawn pencil (#004852) and note (#417E86) glyphs; 9 unbound paints; Status text #3FA266 with no typography bindings.",
+    "where": "target Templates 03 › 153:1186; nodes 170:1591, 170:1592, 153:1190, 170:1608–1614",
+    "detail": "Project convention is plain Icon button + DEFECT marker (Add button ring). The Problems list change-log row \"Hand-drawn controls → published library instances\" is false for these controls. Renders in step4-problem-summary-row-153-1186-1x.png."
+   }
+  },
+  {
+   "sequence": 198,
+   "flag": {
+    "discoveredDuring": "npveRebuild_audit_2026_09_03",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. 2026-09-04: RESOLVED by npveRebuild_repair2_2026-09-04 step 3 — 16 frames and Actions bound to color/background/paper.",
+    "id": "npveAudit_problemsListBodyUnboundWhite",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "Problems list body 156:2426: 16 inner frames fill #FFFFFF unbound across both variants; Problem summary row Actions 153:1190 likewise.",
+    "where": "target Templates 03 › 155:1560, 155:1591, 155:1605, 155:2546, 155:2563, 155:2580, 156:1254, 156:1261, 156:1295, 156:1298, 156:1299, 156:1302, 156:1305, 156:1306, 156:1311, 156:1316, 153:1190",
+    "detail": "Variant roots bind color/background/paper; inner frames should bind paper or carry no fill."
+   }
+  },
+  {
+   "sequence": 199,
+   "flag": {
+    "discoveredDuring": "npveRebuild_audit_2026_09_03",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. 2026-09-04: RESOLVED by npveRebuild_repair2_2026-09-04 step 6 — three references re-exported at 2x, captions re-dated.",
+    "id": "npveAudit_referenceExportsNot2x",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "Three of four source exports in the comparison shell are 1x images: Favorites 114:898 (550 × 600 px), Main 160:1324 (550 × 517), Status menu 160:1326 (550 × 510, cursor visible). Recent 114:778 is 2x (1100 × 1200).",
+    "where": "target Templates 05 › _Rebuild comparison/Reference/*",
+    "detail": "Rule 15 requires 2x. Favorites caption reads \"refreshed 2026-09-03\" and its hash differs from the legacy export, against rule 15's \"does not update\"."
+   }
+  },
+  {
+   "sequence": 201,
+   "flag": {
+    "discoveredDuring": "npveRebuild_audit_2026_09_03",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Decision needed. 2026-09-04: RESOLVED — all four markers back on Screens beside the picker comparisons (npveRebuild_repair2_2026-09-04 step 5).",
+    "id": "npveAudit_markersInArchive",
+    "severity": "medium",
+    "kind": "DECISION",
+    "summary": "The four GAP/DEFECT markers (27:295, 27:306, 33:236, 52:428) now sit in Archive 126:2025 and are beside no screen.",
+    "where": "target Archive 01",
+    "detail": "Rule 9: GAP \"stays marked in the frame\". Marker content unchanged."
+   }
+  },
+  {
+   "sequence": 203,
+   "flag": {
+    "discoveredDuring": "npveRebuild_audit_2026_09_03",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. 2026-09-04: rename stopped on the pixel check (npveRebuild_repair1_2026-09-04 step 2); README on Archive states the pending state. 2026-09-04: RESOLVED — Archive screens renamed _Superseded — see Screens (npveRebuild_repair2_2026-09-04).",
+    "id": "npveAudit_screensTriplicated",
+    "severity": "low",
+    "kind": "DECISION",
+    "summary": "Clin_Problems-Recent content exists at 27:6 (Archive), 114:780 (Templates master) and through instancing at 116:498 and 130:1185; Favorites at 40:252 and 114:900. Overrides are identical today; the Archive copies will not follow future edits.",
+    "where": "target Archive 02, Templates 05",
+    "detail": "Read: componentProperties, 31 texts and hidden lists equal on every pair. Additive rule keeps the copies; they need a superseded label or README on the frames."
+   }
+  },
+  {
+   "sequence": 211,
+   "flag": {
+    "discoveredDuring": "npveRebuild_mgmtFidelity_2026-09-04",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Proposal 1: rebuild with Form control label. 2026-09-04: RESOLVED by npveRebuild_mgmtFidelityBuild_2026-09-04 step 1.",
+    "id": "npveMgmt_checkboxRowNotFormControlLabel",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "Problems list body hand-builds the checkbox row (Checkbox Flush=Left + loose Label) although the source uses the library Form control label (140:15); glyph sits at x 0 instead of 9 and the glyph-to-label gap is 18 instead of 9.",
+    "where": "target 156:1254, 156:1261, 156:1299, 156:1302; source 4667:13134, 4809:16479",
+    "detail": "Source Control 42 p9 › glyph 24 at x9, Label at x42. Rebuild Checkbox p9/18/9/0 › glyph at x0, Label at x42."
+   }
+  },
+  {
+   "sequence": 212,
+   "flag": {
+    "discoveredDuring": "npveRebuild_mgmtFidelity_2026-09-04",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Proposal 2. 2026-09-04: RESOLVED by npveRebuild_mgmtFidelityBuild_2026-09-04 step 2 (text/secondary overrides on the four non-active placements).",
+    "id": "npveMgmt_inactiveNamesNotDimmed",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "Source dims the names of resolved and marked-as-error problems to #545454; the rebuild renders all three names in color/text/primary.",
+    "where": "source 545:5538, 4494:4955; target Problem summary row placements 172:3151, 172:3168, 172:3202, 172:3219",
+    "detail": "Row 1 name #000000 in both. Needs a Status-dependent override or a Status variant axis (npveRepair2_statusColourByOverride)."
+   }
+  },
+  {
+   "sequence": 213,
+   "flag": {
+    "discoveredDuring": "npveRebuild_mgmtFidelity_2026-09-04",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Proposal 3, decision. 2026-09-04: DECISION small caps; RESOLVED by npveRebuild_mgmtFidelityBuild_2026-09-04 step 2 via textCase.",
+    "id": "npveMgmt_statusWordSmallCaps",
+    "severity": "low",
+    "kind": "DECISION",
+    "summary": "Source status words are lowercase with textCase SMALL_CAPS_FORCED (Bold 14/auto, 17 tall); the rebuild types the words in capitals at 14/20, which renders larger glyphs.",
+    "where": "source 545:5520, 545:5536, 4494:4953; target 170:1591",
+    "detail": "Figma supports SMALL_CAPS_FORCED on the Status text with a lowercase property value."
+   }
+  },
+  {
+   "sequence": 214,
+   "flag": {
+    "discoveredDuring": "npveRebuild_mgmtFidelity_2026-09-04",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Proposal 4. 2026-09-04: RESOLVED by npveRebuild_mgmtFidelityBuild_2026-09-04 step 3 (space/0).",
+    "id": "npveMgmt_bodyTopPaddingDoubled",
+    "severity": "low",
+    "kind": "DEFECT",
+    "summary": "Problems list body variants carry paddingTop 16 inside the Sidesheet Body that already pads 16, so the toolbar sits 32 under the header rule; the source sits it at 16.",
+    "where": "target 155:1559, 156:1294 (paddingTop bound to space/16)",
+    "detail": "Source MainWrap p16/20/16/20; template Body p16."
+   }
+  },
+  {
+   "sequence": 215,
+   "flag": {
+    "discoveredDuring": "npveRebuild_mgmtFidelity_2026-09-04",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Proposal 5, decision. 2026-09-04: DECISION 104; RESOLVED by npveRebuild_mgmtFidelityBuild_2026-09-04 step 3.",
+    "id": "npveMgmt_statusFilterWidth",
+    "severity": "low",
+    "kind": "DECISION",
+    "summary": "The rebuilt Status select is 154 wide; the source field renders 107 wide. Nothing in the library forces 154.",
+    "where": "target 160:4896, 160:4918; source 4667:4954 Field 107x40",
+    "detail": "Text field small has no fixed width."
+   }
+  },
+  {
+   "sequence": 216,
+   "flag": {
+    "discoveredDuring": "npveRebuild_mgmtFidelity_2026-09-04",
+    "webAppV2BugListCandidate": false,
+    "handling": "Reported. Proposal 9. 2026-09-04: RESOLVED by npveRebuild_mgmtFidelityBuild_2026-09-04 step 3 (HUG, 108).",
+    "id": "npveMgmt_menuFixedHeightBlankStrip",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "The open status Menu is a fixed 344x144 with three 36-tall items and a hidden fourth, leaving a 36px blank strip under \"Mark as Error\"; the source menu hugs its three 44-tall items (132).",
+    "where": "target 156:1321; source 4494:4932",
+    "detail": "Menu/Item is 36 tall by library design; the box should hug (108)."
+   }
+  },
+  {
+   "sequence": 221,
+   "flag": {
+    "id": "npveMedicationList_footerFixedGap",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "discoveredDuring": "npveRebuild_medicationListHeightCorrection_2026-09-04",
+    "summary": "The Medication List rebuild pinned its footer to the bottom of a 600px instance, leaving a large inactive gap below the final medication row.",
+    "where": "fdCQVFdvOByaOYIJYag0d6 Screens 250:3519 and comparison helper 253:1840",
+    "detail": "The shared Sidesheet master remains 550x600, but this content-driven instance now resolves to 550x351: Header 56 + divider 1 + body padding 16 + Medication list body 206 + body padding 16 + Footer 56.",
+    "handling": "Resolved in the same batch. The footer now begins at y295 and directly encloses the active region; existing Problems instances remain unchanged at 550x600.",
+    "footerPaddingAnnotation_2026_09_04": "Superseded in part by npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04: canonical Footer changed 56px → 71px. Medication content-driven placements therefore changed 550x351 → 550x366 while Body y57 h238 and Footer start y295 remained unchanged."
+   }
+  },
+  {
+   "sequence": 222,
+   "flag": {
+    "id": "npveSidesheet_outlineOnlyLeft",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "discoveredDuring": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+    "summary": "The shared Sidesheet authored only its left outline edge, so every live instance omitted the top, right, and bottom sheet boundary.",
+    "where": "NPVE Rebuild Sidesheet master 6:65 and 21 live instances across Templates, Screens, and Archive",
+    "detail": "Before: top/right/bottom/left weights 0/0/0/1. Both source sidesheets 545:5239 and 545:5557 use 1/1/1/1. After: all four weights are 1px INSIDE, bound to border/hairline; the stroke paint remains bound to color/divider.",
+    "handling": "Resolved in the same batch at the shared master. All 21 live instances inherit the four-sided outline."
+   }
+  },
+  {
+   "sequence": 223,
+   "flag": {
+    "id": "npveSidesheet_footerActionHalfPixel",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "discoveredDuring": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+    "summary": "A 38px footer action was vertically centered in a fixed 55px Actions frame with 8px padding, placing it at a non-canonical y=8.5.",
+    "where": "NPVE Rebuild Sidesheet Footer Actions 6:84 and all footer-visible instances",
+    "detail": "DrawerFooter in web-app-v2 uses padding={2}, which resolves to 16px. Actions now hugs to 70px with 16px top/bottom and 8px left/right; Footer is 71px including its 1px divider.",
+    "handling": "Resolved in the same batch. Top and bottom padding are bound to space/16, and footer action containers use whole-pixel geometry."
+   }
+  },
+  {
+   "sequence": 225,
+   "flag": {
+    "id": "npveSidesheet_squareAgainstSource",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "discoveredDuring": "npveRebuild_sidesheetRadiusPlacement_2026-09-04",
+    "summary": "The rebuilt floating Sidesheet was square although every source Sidesheetv3 variant uses an 8px radius.",
+    "where": "NPVE Rebuild Sidesheet 6:65 and its live instances",
+    "detail": "Before: 0/0/0/0. After: Floating uses 8/8/8/8; Docked right uses 8/0/0/8; Docked left uses 0/8/8/0. Every nonzero corner is bound to the NPVE-local radius/md variable.",
+    "handling": "Resolved in this batch. Existing instances remain attached to 6:65 as Placement=Floating; edge-docked treatments are explicit variants."
+   }
+  },
+  {
+   "sequence": 226,
+   "flag": {
+    "id": "npveSidesheet_headerTitleInsetConflict",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "discoveredDuring": "npveRebuild_sidesheetHeaderInsetAudit_2026-09-04",
+    "summary": "The rebuilt Sidesheet title has 12px top/bottom clearance while the source Problems header has 16px.",
+    "where": "NPVE Rebuild Sidesheet Header 6:66 and source Problems Header 545:5503",
+    "detail": "Rebuild: 56px header, 32px title line at y=12, 8px container padding around a 40px Icon button. Source: 64px header, 32px title line at y=16, 16px padding around a bare 24px close icon. The current design-system library Drawer Header 749:231 matches the 56px rebuild, and Drawer.example.tsx uses Box m={1}; source and library/code therefore disagree.",
+    "handling": "Resolved by user decision in npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04. NPVE prioritizes genuine canonical 16px vertical padding; the resulting 72px Header is intentionally taller than the 64px source and the 56px library Drawer Header.",
+    "resolution": "All three Sidesheet Headers now bind paddingTop and paddingBottom to space/16 and render at 72px with the published 40px Icon button touch targets."
+   }
+  },
+  {
+   "sequence": 231,
+   "flag": {
+    "id": "npveExternalCareFacilityStay_sourceClipsForm",
+    "severity": "high",
+    "kind": "DEFECT",
+    "discoveredDuring": "npveRebuild_externalCareFacilityStay_2026-09-05",
+    "summary": "The Facility Stay source fixes its body at 468px while the form card is 556px, so the footer clips the lower form content.",
+    "where": "NPVE source zVsuhYehoSLLq880qRBFkq 648:1603; Summary_Wrap 648:1639; form card 648:1658; footer 648:1728",
+    "detail": "The card begins at source y=124 and is clipped at the footer boundary y=532. The visible source render cuts off the Discharge to group and completely hides the Comments control even though both exist in the card structure.",
+    "handling": "Do not reproduce the clipping. The established shared Sidesheet rule makes the body content-driven and places the footer after the complete active form.",
+    "resolution": "RESOLVED IN REBUILD 2026-09-05 — the shared Sidesheet body is content-driven, so Discharge to, Comments, and the footer all remain visible."
+   }
+  },
+  {
+   "sequence": 232,
+   "flag": {
+    "id": "npveExternalCareFacilityStay_formSurfaceToken",
+    "severity": "medium",
+    "kind": "DECISION",
+    "discoveredDuring": "npveRebuild_externalCareFacilityStay_2026-09-05",
+    "summary": "The repeated NPVE edit-form surface uses #EEF7F9, but the published design-system library has no matching token.",
+    "where": "Source form card 648:1658 and five other edit Sidesheets; NPVE Rebuild target before Facility Stay mutation",
+    "detail": "The nearest existing palette value is color/core/100 #E9EFEE, while Card/Paper uses color/background/paper #FFFFFF. Neither is the source value, and selecting either silently would be a design decision.",
+    "handling": "Operator approved the recommended local exception. Create an NPVE-local COLOR variable named Form surface at #EEF7F9, scoped to FRAME_FILL and SHAPE_FILL, and bind the Facility Stay edit card to it. Do not add the colour to the shared library.",
+    "resolution": "APPROVED 2026-09-05 — exact source colour retained as an NPVE-local token. Build may proceed."
+   }
+  },
+  {
+   "sequence": 233,
+   "flag": {
+    "id": "npveExtReview_familyHistoryRingOverride",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "Family history add-to-note action draws the source ring through a stroke override on a library Icon button instance, contradicting DEFECT marker 189:615 and the bare-glyph handling used on Medication and Problems rows.",
+    "where": "target 346:3083 (master) and its placements in 346:3089, 346:3113, 346:3148, 346:5993; source rings 648:3265, 648:3272",
+    "detail": "Stroke SOLID bound, weight 1, radius 20 from the master. The library Icon button 170:77 has no ringed variant (flag npveProblemsCorrections_iconButtonNoRingedVariant). One screen now renders a ring the library cannot ship while the others render the bare glyph.",
+    "handling": "Decision for Daniel: remove the override so all screens agree with the marker, or reverse the earlier decision for every screen and record it.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Resolved 2026-09-05: stroke override removed on 346:3083; DEFECT marker 189:615 extended."
+   }
+  },
+  {
+   "sequence": 234,
+   "flag": {
+    "id": "npveExtReview_allergySeveritySelectorUnmarked",
+    "severity": "medium",
+    "kind": "GAP",
+    "summary": "The Allergies rebuild draws a local dropdown pill (Allergy severity selector 352:3206) for the source \"Mild\" control; the library has no dropdown chip and no GAP marker was placed.",
+    "where": "target 352:3206; placements 354:3209, 355:5934, I356:3249;6:80;355:5934;354:3209; source I129:7816",
+    "detail": "Fill bound color/hardcoded (no palette)/chipSuccessBackground, radius bound radius/chip, live DownCaret. Library Chip 156:171 offers color=success but only a Delete icon boolean, no caret. Source label is Akkurat LL Bold 14; rebuild Regular 16.",
+    "handling": "Decision for Daniel: add a GAP marker beside 356:6236 and label the stand-in SCAFFOLDING, or use Chip color=success and log the missing caret. Library to-do: dropdown chip.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Marked 2026-09-05: GAP marker 404:7061 beside 356:6236; stand-in kept; LIBRARY-TODOS item 16."
+   }
+  },
+  {
+   "sequence": 235,
+   "flag": {
+    "id": "npveExtReview_procedureMetadataBadgeUnmarked",
+    "severity": "medium",
+    "kind": "GAP",
+    "summary": "Procedure history metadata 337:3881 is a locally drawn outlined pill imitating a small Chip so that a bold prefix can precede the value; the plan said published Chips and no GAP marker was placed.",
+    "where": "target 337:3881 and 337:3887/3890/3893/3896 inside 337:3884; source 648:3473 pills",
+    "detail": "Fills, strokes and radius are bound; the shape is a Chip lookalike. Library Chip has a single Label and cannot mix weights.",
+    "handling": "Decision for Daniel: GAP marker (\"Chip cannot carry a bold prefix\") beside 339:6481, or swap to Chip size=small variant=outlined at one weight and log the lost emphasis.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Marked 2026-09-05: GAP marker 404:7070 beside 339:6481; stand-in kept; LIBRARY-TODOS item 17."
+   }
+  },
+  {
+   "sequence": 236,
+   "flag": {
+    "id": "npveExtReview_referenceScaledToSlot",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "The Family history and Allergies references are 550x656 source frames fitted into the 550x600 reference slot, so both comparisons show the source at 91.5% against a 1:1 rebuild.",
+    "where": "target 346:3147 (FIT), 356:6191 (FIT); comparisons 346:5993, 356:6236",
+    "detail": "Rule 15 asks for a flat 2x export at 1x dimensions. The Facility Stay batch already disabled clipping on the comparison instance to show an 853px rebuild; the same override on the Reference column allows a 656px reference.",
+    "handling": "Fix in master: resize the two reference helpers to 550x656, image FILL, and set clipsContent false on the Reference column of the two instances. Later: give the comparison master HUG slots.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Resolved 2026-09-05: helpers 550x656 FILL; Reference column clip off on 346:5993 and 356:6236."
+   }
+  },
+  {
+   "sequence": 237,
+   "flag": {
+    "id": "npveExtReview_changeLogPatternDrift",
+    "severity": "medium",
+    "kind": "DEFECT",
+    "summary": "The change-log sub-components use three different presentations: Content wrapper with title (Medication, Empty, Browse, Procedures), padded rows without a title (Edit), and bare 480px rows without title or padding (Family history with a white helper fill, Allergies, Hospitalizations, Facility Stay).",
+    "where": "target 318:3928, 339:6405 (title without \"Changes:\" prefix), 346:3365, 356:6192, 378:3403, 392:4093; pattern 18:109 and 114:880",
+    "detail": "Rows are live Change log/Row instances everywhere, so the register is intact; the card, title and divider drifted.",
+    "handling": "Fix in master: rebuild the six helpers on the Change log pattern (Content 480 padded 16, Title \"Changes: <screen>\", Title divider, Rows 448). Additive: wrap, do not delete rows.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Resolved 2026-09-05: five helpers conformed to the Content card pattern; Procedures title prefixed."
+   }
+  },
+  {
+   "sequence": 238,
+   "flag": {
+    "id": "npveExtReview_changeLogJargon",
+    "severity": "low",
+    "kind": "DEFECT",
+    "summary": "Many change-log rows are written in system jargon (node coordinates, token names, hex values, \"content-driven\", \"API\", \"frozen 2× PNG\") rather than plain graphic-design language.",
+    "where": "rows in 254:1895, 309:5243, 309:5586, 318:3928, 392:4093, 378:3403 (examples in the report)",
+    "detail": "Rule 14 and agent rule 8. Two rows per log on Hospitalizations and Facility Stay describe the comparison mechanism, not a change to the screen.",
+    "handling": "Log rows: rewrite in place (same instances, new text). Drop the mechanism rows or move their content to the helper description.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Resolved 2026-09-05: 61 rows rewritten; verbatim list in the repairs report."
+   }
+  },
+  {
+   "sequence": 239,
+   "flag": {
+    "id": "npveExtReview_silentTextCorrections",
+    "severity": "low",
+    "kind": "DECISION",
+    "summary": "Two source strings were corrected in the rebuild without a change-log row or record: Edit Problem \"Low back pain M540.50\" → \"M54.50\" and Facility Stay \"Discahrge to\" → \"Discharge to\".",
+    "where": "target I318:3655 body text, 389:3691; source I4537:28000;3408:8553;289:80, 648:1686",
+    "detail": "Rule 11: a disagreement with the source is a finding, not a silent reconciliation. Both corrections are probably right.",
+    "handling": "Decision for Daniel: keep the corrections and add a log row to each, or restore verbatim and mark the source typo.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Resolved 2026-09-05: corrections kept, two log rows added, source frames flagged (npveSource_*)."
+   }
+  },
+  {
+   "sequence": 241,
+   "flag": {
+    "id": "npveExtReview_standaloneScreenDuplicates",
+    "severity": "medium",
+    "kind": "DECISION",
+    "summary": "Medication list, Problems · Empty and Problems · Browse exist twice on Screens: as standalone Sidesheet instances (sections 04, 06) and inside their comparison sub-components. Rule 15 as rewritten says each screen exists exactly once inside the sub-component.",
+    "where": "target 250:3519, 309:4531, 309:4772; also pre-existing 156:2428, 156:2707 (section 02, built before the rewrite)",
+    "detail": "The external agent followed the standalone pattern our own Problems management section already had, then moved to sole placement from Problem Edit onward.",
+    "handling": "Decision for Daniel: archive sections 02, 04 and 06 with a README (additive, mark superseded), or record the standalone screens as the deliberate exception.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Resolved 2026-09-05: five screens pixel-diffed and moved to Archive 05, renamed _Superseded — see comparison."
+   }
+  },
+  {
+   "sequence": 242,
+   "flag": {
+    "id": "npveExtReview_severitySelectorFractional",
+    "severity": "low",
+    "kind": "DEFECT",
+    "summary": "Allergy severity selector centres 57px of content in a fixed 70px frame, placing its label at x 6.5 and caret at x 47.5 in the master and every placement; the batch record claims whole-pixel geometry.",
+    "where": "target 352:3207, 352:3208 and the same nodes under 354:3209, 355:5934, I356:3249",
+    "detail": "Rule 4 / batch rule 8.",
+    "handling": "Fix in master: width 72, or HUG with padding 8/8.",
+    "discoveredDuring": "npveRebuild_externalReview_2026-09-05",
+    "webAppV2BugListCandidate": false,
+    "resolvedBy": "npveRebuild_extReviewRepairs_2026-09-05",
+    "resolution": "Resolved 2026-09-05: selector hugs at 73 wide; label x 8, caret x 49."
+   }
+  },
+  {
+   "sequence": 264,
+   "flag": {
+    "id": "npveEncounter_unrecordedHealthStatusBatch",
+    "severity": "info",
+    "kind": "WITHDRAWN",
+    "summary": "A \"14 · Health Status/Observations\" section exists on Templates (412:3888) and Screens (415:7207); at this batch's first read no schema record was visible. The external agent's records arrived during the batch (optical spacing and Social History on 2026-09-06), and the base record npveRebuild_healthStatusObservations_2026-09-05 was then dropped from the live schema by a concurrent write and restored from backup. Its helpers are named \"Rebuild helper · …\" / \"Reference helper · …\" instead of the _Rebuild comparison pattern.",
+    "where": "target 412:3889, 413:7010, 415:4050, 415:7108, 415:7208",
+    "handling": "Record restored (see npveEncounter_schemaRecordDroppedByConcurrentWrite). Helper naming to be aligned by the sidesheet workstream.",
+    "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+    "webAppV2BugListCandidate": false,
+    "withdrawn_2026_09_06": "Wrong: the record exists (written 2026-09-05 22:15, earlier in key order than the audit record). Naming drift of the Health Status helpers is re-raised as npveEncounter_healthStatusHelperNaming."
+   }
+  },
+  {
+   "sequence": 268,
+   "flag": {
+    "id": "npveEncounter_iconButtonDefaultGlyphAsExpand",
+    "severity": "info",
+    "kind": "GAP",
+    "summary": "With no expand glyph, the note header expand control is an Icon button showing its default glyph (a caret).",
+    "where": "target 424:4362 › Expand; marker 429:6887",
+    "handling": "Resolved by LIBRARY-TODOS candidate 22 (Icon/Expand).",
+    "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+    "webAppV2BugListCandidate": false
+   }
+  },
+  {
+   "sequence": 270,
+   "flag": {
+    "id": "npveEncounter_schemaRecordDroppedByConcurrentWrite",
+    "severity": "info",
+    "kind": "WITHDRAWN",
+    "discoveredDuring": "npveRebuild_encounterShell_2026-09-06",
+    "webAppV2BugListCandidate": false,
+    "summary": "Two agents wrote design-system-schema.json in the same hour (external sidesheet batches 06:57–07:12, encounter shell 07:20). The record npveRebuild_healthStatusObservations_2026-09-05 was present in every backup up to pre-npve-encounter-shell and absent from the live file afterwards; two later records cite it as their gate. Restored from backup.",
+    "where": "design-system-schema.json; backups 2026-09-06-pre-health-status-optical-spacing, pre-npve-social-history, pre-npve-encounter-shell",
+    "detail": "Each apply script reads, mutates and rewrites the whole file; a script that loaded before another's write and wrote after it discards that write. The encounter-shell commit 1d3ae56 captured the dropped state and also swept in the external agent's uncommitted files.",
+    "handling": "Decision for Daniel: one writer at a time on the schema (serialize batches), or make apply scripts re-read immediately before writing and refuse when the key count went down. Verify the external agent's next run does not re-drop the restored key.",
+    "withdrawn_2026_09_06": "Wrong: no record was dropped; every backup and the live file hold the key. The restore script ran, found the key, and changed nothing. The concurrent-writer hazard itself is real but not evidenced here."
+   }
+  },
+  {
+   "sequence": 277,
+   "flag": {
+    "id": "npveEncounter_footerSpacerWasFixed",
+    "severity": "low",
+    "kind": "DEFECT",
+    "summary": "The shell batch's footer Spacer was FIXED 10 wide, so the buttons sat beside Confidential instead of at the right edge as in the source; corrected to FILL. The header Spacer 424:4370 has the same defect and is left for the next batch.",
+    "where": "target Note card 424:4402 (fixed), 424:4370 (open)",
+    "handling": "Resolved 2026-09-08: the Note header now uses semantic left/right groups with SPACE_BETWEEN; the former fixed spacer is hidden and marked superseded.",
+    "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+    "webAppV2BugListCandidate": false,
+    "note_2026_09_08_noteHeaderLayout": "Resolved in npveRebuild_noteHeaderLayout_2026-09-08. Header identity uses space/8; status and actions use space/16; action buttons use space/8; outer padding is space/16.",
+    "resolution": "Resolved 2026-09-08 in npveRebuild_noteHeaderLayout_2026-09-08."
+   }
+  },
+  {
+   "sequence": 279,
+   "flag": {
+    "id": "npveEncounter_libraryPageOrderStale",
+    "severity": "low",
+    "kind": "DECISION",
+    "summary": "figmaBuild.pages._order lists Cover, Tokens, …, Reference; the library now has Cover, Foundations, Reference, Actions, Inputs, Data display, Feedback, Surfaces & navigation, Icons & illustrations, Compositions, Layouts. Rule 7's identity check cannot pass as written.",
+    "where": "schema figmaBuild.pages._order; library YX2n4YLrEpBXNbcc73T6dw",
+    "handling": "Update _order with a record, or decide the check keys on page ids.",
+    "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06",
+    "webAppV2BugListCandidate": false,
+    "note_2026_09_06_moduleChipFix": "Resolved in npveRebuild_moduleChipFix_2026-09-06: figmaBuild.pages._order refreshed to the verified live library order.",
+    "resolution": "Resolved 2026-09-06 in npveRebuild_moduleChipFix_2026-09-06: figmaBuild.pages._order refreshed to the verified live eleven-page library order."
+   }
+  },
+  {
+   "sequence": 280,
+   "flag": {
+    "id": "workflowRefactor_refactorBatchesUnrecorded",
+    "severity": "medium",
+    "kind": "PROCESS",
+    "summary": "Four workflow-refactor commits (c88ce6c, 5b4d119, 146e867, c27235a) changed CLAUDE.md, AGENTS.md and OPERATORS.md and added the workflow layer with no schema record; the closeout prompt cited a handoff record that was never written.",
+    "where": "repo branch codex/lean-workflow; schema",
+    "handling": "Read-only state check recorded as workflowRefactor_stateCheck_2026-09-08; it stands in for the missing record.",
+    "discoveredDuring": "workflowRefactor_closeout_2026-09-08",
+    "webAppV2BugListCandidate": false,
+    "resolution": "Resolved 2026-09-08: workflowRefactor_stateCheck_2026-09-08 written; agent rule 10 followed."
+   }
+  },
+  {
+   "sequence": 281,
+   "flag": {
+    "id": "workflowRefactor_riskLockFalseAttribution",
+    "severity": "high",
+    "kind": "PROCESS",
+    "summary": "Manifest risk tiers for the three PMHx items were locked as assignedBy \"Cole (operator)\" on the strength of the operator message \"ok whats next?\"; no tier approval was given. The three PMHx schema records repeated the attribution.",
+    "where": "workflow/manifest.json (commit c27235a); records npveRebuild_pastMedicalHistoryRow/Section/Body_2026-09-08",
+    "handling": "Replace with the true history (proposed by Codex, unapproved at lock); re-lock only on a verbatim operator quote; per-item confirmation otherwise.",
+    "discoveredDuring": "workflowRefactor_closeout_2026-09-08",
+    "webAppV2BugListCandidate": false,
+    "resolution": "Resolved 2026-09-08 in workflowRefactor_closeout_2026-09-08: manifest risk carries proposedBy and approval{status: unapproved, history}; PMHx records annotated; tiers await a quoted operator approval."
+   }
+  },
+  {
+   "sequence": 282,
+   "flag": {
+    "id": "workflowRefactor_agentsMdDivergedFromClaudeMd",
+    "severity": "medium",
+    "kind": "PROCESS",
+    "summary": "Commit c88ce6c gave AGENTS.md a rule 10 about risk ownership while CLAUDE.md rule 10 remained the record gate, so the two instruction files disagreed while AGENTS.md still claimed a verbatim copy.",
+    "where": "AGENTS.md, CLAUDE.md",
+    "handling": "Single canonical rule text in workflow/rules.json with eleven rules; both files point to it.",
+    "discoveredDuring": "workflowRefactor_closeout_2026-09-08",
+    "webAppV2BugListCandidate": false,
+    "resolution": "Resolved 2026-09-08 in workflowRefactor_closeout_2026-09-08: workflow/rules.json holds eleven rules; CLAUDE.md and AGENTS.md point to it."
+   }
+  },
+  {
+   "sequence": 283,
+   "flag": {
+    "id": "workflowRefactor_contractLackedProvenance",
+    "severity": "medium",
+    "kind": "PROCESS",
+    "summary": "The generated contract carried NPVE values without sourceRecord provenance, did not cite npveRebuild_bodyPaddingAndSearch_2026_09_02 for the 16px body inset, and omitted rules 14/15, the record gate and the agent rules that plan Phase 2 and amendment 1 required.",
+    "where": "scripts/workflow/generate-contract.js; workflow/npve-contract.generated.json",
+    "handling": "workflow/rules.json with per-rule sourceRecord; generator verifies every cited record exists.",
+    "discoveredDuring": "workflowRefactor_closeout_2026-09-08",
+    "webAppV2BugListCandidate": false,
+    "resolution": "Resolved 2026-09-08 in workflowRefactor_closeout_2026-09-08: every rule in rules.json cites its sourceRecord; the generator refuses uncited records; body inset cites npveRebuild_bodyPaddingAndSearch_2026_09_02."
+   }
+  },
+  {
+   "sequence": 284,
+   "flag": {
+    "id": "npvePmhx_referencesFrozenAt1x",
+    "severity": "low",
+    "kind": "DEFECT",
+    "summary": "The three PMHx frozen references were 1x captures (518x32, 518x84, 582x616 including shadow) where rule 15 asks for a 2x export; Health Status and Social History references are 2x.",
+    "where": "target 518:5826, 537:5841, 558:6085",
+    "handling": "Re-export at 2x via download_assets and place via upload_assets; re-date captions.",
+    "discoveredDuring": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+    "webAppV2BugListCandidate": false,
+    "resolution": "Resolved 2026-09-08 in workflowRefactor_closeout_2026-09-08: 2x exports placed on 518:5826, 537:5841, 558:6085; captions re-dated."
+   }
+  }
+ ]
+}

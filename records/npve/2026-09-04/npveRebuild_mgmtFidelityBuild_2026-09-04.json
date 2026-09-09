@@ -1,0 +1,161 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_mgmtFidelityBuild_2026-09-04",
+ "sequence": 48,
+ "date": "2026-09-04",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "8f3a0230bf63658ef554fccbb04f6679d10755b26b29a2b95c676b34c5dfbc34"
+ },
+ "record": {
+  "_status": "DONE. Both Problems management screens closed out against the fidelity read: checkbox rows on library Form control label, status words small caps via textCase, names dimmed on non-active rows, Icon buttons color=primary, caret centred with a 4px visual gap, top padding 16 restored, Status select 104, menu hugs, GAP marker for the caret, both change logs corrected and completed, LIBRARY-TODOS item 14. No stop condition triggered. Open: status-word letter-spacing (source -4%, reported not applied).",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 (writes listed per step)",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (imports by key)",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (545:5520 text read)",
+  "report": "figma-export/npve-mgmt-fidelity-build-2026-09-04/report.md",
+  "recordGate": "previous batch npveRebuild_mgmtFidelity_2026-09-04 has its record — passed",
+  "stopCondition": "placed-instance diff outside steps 1-3 regions, or a dropped reference count. Neither triggered.",
+  "addendumNote": "The prompt's \"caret-alignment addendum\" does not exist in the report, schema or repo; alignment taken from the fidelity read itemisation (source caret centre = status box centre; gap 4 with the vector flush).",
+  "decisions_2026_09_04_Daniel": {
+   "statusWords": "match the source: small caps via textCase SMALL_CAPS_FORCED with lowercase values, not typed capitals",
+   "statusSelectWidth": "104 — the source 107 snapped to the 8px grid",
+   "actionButtons": "Icon button color=primary (teal #004852), matching the source pencil",
+   "dropdownCaret": "MUI default is ArrowDropDown (filled triangle); library lacks it; keep the chevron with a GAP marker and swap when Icon/ArrowDropDown ships (LIBRARY-TODOS 14)",
+   "openStateContent": "faithful to scaffolding, not to stale source content: the Open state keeps Main's current rows with the menu open"
+  },
+  "step1_checkboxRows": {
+   "component": "Form control label set key 77cfa2d6c7b4601fc5a311028da35f42fc8f3ebb, State=Default",
+   "created": {
+    "197:3289": "No known problems (Closed)",
+    "197:3297": "Only show active problems (Closed)",
+    "197:3302": "No known problems (Open)",
+    "197:3307": "Only show active problems (Open)"
+   },
+   "readBack": "190x42 / 241x42, glyph at x9, label at x42, second at x277 under SPACE_BETWEEN in 518 (source 0/269 in 510)",
+   "movedToArchive": {
+    "container": "197:3288 _Legacy hand-built — Problems list body checkbox rows (moved out of 156:2426 on 2026-09-04), Archive 03 at (700,1020)",
+    "nodes": [
+     "156:1254",
+     "156:1261",
+     "156:1299",
+     "156:1302"
+    ]
+   }
+  },
+  "step2_problemSummaryRow": {
+   "statusText": "170:1591 textCase SMALL_CAPS_FORCED; Status#170:0 default \"active\"; placements set to active / resolved / marked as error. Rendered ink height 8.442 in both source (545:5520) and rebuild; width 40.63 vs 43.43 because the source carries letterSpacing -4% and the rebuild 0%.",
+   "letterSpacing": "REPORTED, NOT APPLIED: source -4%; code authors none; decision 2026-09-03 no letter-spacing variable. Flag npveMgmtBuild_statusWordLetterSpacing.",
+   "statusGreen": "color/success/main #3FA266 = source #3FA266",
+   "caret": "170:1590 counterAxisAlignItems CENTER, itemSpacing bound to space/3 (997:7). Text box (0,10,45,20) centre 20; caret instance 190:23 at (48,14) 12x12; vector centre 20; visual gap 4.0 (vector 1px inside its box).",
+   "iconButtons": "190:12 Edit problem and 190:18 Add to note → color=primary; glyph color/primary/main #004852",
+   "nameDim": "placements 172:3151, 172:3168, 172:3202, 172:3219 Name fill → color/text/secondary #545454 (source rows 2-3 #545454)",
+   "refs": "master 5 before and after",
+   "idCorrection": "repair2 record listed created ids in the wrong order: 190:11 = Archive legacy frame, 190:12 = Edit problem, 190:18 = Add to note, 190:23 = Status caret."
+  },
+  "step3_geometry": {
+   "paddingTop": "155:1559, 156:1294 paddingTop space/16 → space/0 (997:34); variants 333 → 317; toolbar 16 under the header rule",
+   "statusSelect": "160:4896, 160:4918 154 → 104 wide FIXED",
+   "menu": "156:1321 vertical FIXED 144 → HUG, 344x108",
+   "refs": "Problems list body 34 / 45 (was 30 / 41; +2 per Form control label)"
+  },
+  "step4_marker": {
+   "id": "197:3416",
+   "name": "GAP marker — Dropdown caret",
+   "where": "Screens 02 at (1300,472)",
+   "clonedFrom": "189:615",
+   "example": "Icon button color=primary + Icon/DownCaret",
+   "fix": "Fix lives in the library: no Icon/ArrowDropDown (MUI's default Select caret).",
+   "difference": "Dropdown caret: MUI's default is a filled triangle (ArrowDropDown); the library has no such icon, so the chevron stands in. Fix lives in the library.",
+   "unbound": 0
+  },
+  "step5_changeLogs": {
+   "density": "Density | Looser legacy spacing → library row heights | Library. Rows and buttons sit closer than in the mockup (160:1855, 160:1932)",
+   "rowsAdded": {
+    "main": [
+     "160:1856 Create button",
+     "160:1857 Status dropdown",
+     "160:1858 Status words",
+     "160:1859 Button labels",
+     "160:1860 Dropdown caret",
+     "160:1861 Menu"
+    ],
+    "statusMenu": [
+     "160:1934 Create button",
+     "160:1935 Status dropdown",
+     "160:1936 Status words",
+     "160:1937 Button labels",
+     "160:1938 Dropdown caret",
+     "160:1939 Menu",
+     "160:1940 Menu content"
+    ]
+   },
+   "method": "dead hidden picker rows reused: setProperties then visible=true, prompt order; Main log 10 visible + 2 hidden unused, Status menu log 12 visible"
+  },
+  "step6_libraryTodos": "figma-export/library-todos/LIBRARY-TODOS.md item 14 Icon/ArrowDropDown is missing",
+  "step7_pixels": {
+   "masters": "raw diff bbox (16,73)-(534,406) on both = body shifted up 16; header None; y406-600 None. Shift-corrected body diff limited to Status filter band x380-513, checkbox row y133-150, status words/carets y188-216/261-289/334-362, dimmed names y296-313/370-386, action glyphs x435-513, and the menu region on the Open screen. Toolbar left 300px max delta 0.",
+   "placedVsMaster": "156:2428 vs 160:1327 and 156:2707 vs 160:1607: bbox (519,88)-(520,89), two border edge pixels",
+   "comparisons": "captions and 2x references unchanged"
+  },
+  "rules": {
+   "1": "transient row, Closed, Open — all paints bound, removed",
+   "2": "Cover 1 pre-existing, Templates 0, Screens 0, Archive 0",
+   "3": "Sidesheet 62; Problem row 4x6; picker 36x3; list body 34/45; summary row 5; comparison 104; Change log 4",
+   "4": "set",
+   "5": "none",
+   "6": "enumerated",
+   "7": "keys explicit",
+   "8": "0 hits, exempt 0/303/146/69",
+   "9": "none",
+   "10": "no clone"
+  },
+  "markers": "3 GAP (27:295, 27:306, 197:3416), 3 DEFECT (33:236, 52:428, 189:615)",
+  "screenshots": [
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/after-comparison-main-160-3169-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/after-comparison-status-menu-160-3680-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/after-rebuild-main-160-1327-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/after-rebuild-status-menu-160-1607-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/after-screen-closed-156-2428-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/after-screen-open-156-2707-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/before-rebuild-main-160-1327-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/before-rebuild-status-menu-160-1607-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/check-checkbox-rebuild-3x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/check-checkbox-source-3x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/check-status-caret-rebuild-4x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/check-status-caret-source-4x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/check-status-word-rebuild-4x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/check-status-word-source-4x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/check-toolbar-before-over-after-3x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/diff-main-160-1327.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/diff-shifted-body-main.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/diff-shifted-body-status.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/diff-status-menu-160-1607.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/source-main-545-5239-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/step2-problem-summary-row-153-1186-1x.png",
+   "figma-export/npve-mgmt-fidelity-build-2026-09-04/step4-gap-marker-dropdown-caret-197-3416-1x.png"
+  ],
+  "flagsAdded": [
+   "npveMgmtBuild_statusWordLetterSpacing"
+  ],
+  "flagsAnnotated": [
+   "npveMgmt_checkboxRowNotFormControlLabel",
+   "npveMgmt_inactiveNamesNotDimmed",
+   "npveMgmt_statusWordSmallCaps",
+   "npveMgmt_bodyTopPaddingDoubled",
+   "npveMgmt_statusFilterWidth",
+   "npveMgmt_menuFixedHeightBlankStrip",
+   "npveMgmt_openStateContentDiffers",
+   "npveMgmt_statusCaretGlyphGap",
+   "npveRepair2_statusColourByOverride",
+   "npveRepair2_addToNoteGlyphChoice"
+  ],
+  "flagsBefore": 219,
+  "flagsAfter": 220
+ }
+}

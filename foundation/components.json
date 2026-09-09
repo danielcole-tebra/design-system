@@ -1,0 +1,1515 @@
+{
+ "Button": {
+  "storyFile": "packages/design-system/src/stories/Button/Button.stories.tsx",
+  "storyTitle": "Components/Inputs/Button",
+  "componentImport": "@mui/material Button — there is no Tebra wrapper component; the theme override IS the component",
+  "overrideFile": "packages/design-system/src/overrides/ButtonOverrides.ts",
+  "layer": "post-process (migrated at 0.7.0, 2023-10-31)",
+  "defaultProps": {
+   "_source": "ButtonOverrides.ts defaultProps",
+   "variant": "contained",
+   "disableRipple": true,
+   "disableFocusRipple": true,
+   "disableTouchRipple": true,
+   "color": {
+    "value": "primary",
+    "source": "MUI default — Tebra does not set a default color"
+   }
+  },
+  "storyDefaultArgs": {
+   "_source": "ButtonMainStory.args",
+   "color": "secondary",
+   "variant": "contained",
+   "size": "medium",
+   "disabled": false,
+   "children": "Button"
+  },
+  "argTypes": {
+   "color": {
+    "control": "radio",
+    "options": [
+     "primary",
+     "secondary",
+     "error"
+    ],
+    "storyDefault": "secondary"
+   },
+   "variant": {
+    "control": "radio",
+    "options": [
+     "contained",
+     "text"
+    ],
+    "storyDefault": "contained"
+   },
+   "size": {
+    "control": "radio",
+    "options": [
+     "small",
+     "medium",
+     "large"
+    ],
+    "storyDefault": "medium"
+   },
+   "disabled": {
+    "control": "boolean",
+    "storyDefault": false
+   }
+  },
+  "typeLevelConstraints": {
+   "_source": "theme.ts module augmentation for @mui/material/Button",
+   "colorAllowed": [
+    "primary",
+    "secondary",
+    "inherit",
+    "error"
+   ],
+   "colorDisallowed": [
+    "success",
+    "info",
+    "warning"
+   ],
+   "note": "'inherit' is type-allowed (needed by ReadMore) but is not exposed in the story argTypes, so it is not built as a Figma variant."
+  },
+  "figmaProperties": {
+   "variantAxes": {
+    "Variant": [
+     "Contained",
+     "Text"
+    ],
+    "Color": [
+     "Primary",
+     "Secondary",
+     "Error"
+    ],
+    "Size": [
+     "Small",
+     "Medium",
+     "Large"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Disabled"
+    ]
+   },
+   "variantCount": 54,
+   "booleanProperties": {
+    "Start icon": {
+     "default": false,
+     "mapsTo": "startIcon prop"
+    },
+    "End icon": {
+     "default": false,
+     "mapsTo": "endIcon prop"
+    }
+   },
+   "textProperties": {
+    "Label": {
+     "default": "Button",
+     "mapsTo": "children"
+    }
+   },
+   "instanceSwapProperties": {
+    "Start icon swap": {
+     "mapsTo": "startIcon",
+     "defaultTo": "PlusOutlinedIcon"
+    },
+    "End icon swap": {
+     "mapsTo": "endIcon",
+     "defaultTo": "DownCaretIcon"
+    }
+   },
+   "notModelledAsVariant": {
+    "focusVisible": "3px solid primary.main outline from the global CssBaseline rule. Applies to every focusable component, so it is documented once rather than doubling the variant count.",
+    "active": "ButtonOverrides styles :hover and :active identically — the Hover variant covers both."
+   }
+  },
+  "layout": {
+   "mode": "HORIZONTAL",
+   "primaryAxisSizingMode": "AUTO",
+   "counterAxisSizingMode": "AUTO",
+   "primaryAxisAlignItems": "CENTER",
+   "counterAxisAlignItems": "CENTER",
+   "itemSpacing": {
+    "value": 8,
+    "token": "space/8",
+    "source": "MUI ButtonStartIcon marginRight: 8 / ButtonEndIcon marginLeft: 8"
+   },
+   "minWidth": {
+    "value": 64,
+    "token": "size/button/minWidth",
+    "layer": "mui-substrate"
+   },
+   "cornerRadius": {
+    "value": 24,
+    "token": "radius/pill",
+    "layer": "tebra"
+   },
+   "strokeAlign": "INSIDE",
+   "effects": [],
+   "boxShadowNote": "ButtonOverrides root forces boxShadow:none on default, hover, active, focus and disabled. No Figma effects on any variant."
+  },
+  "geometry": {
+   "_paddingConvention": "Contained variants carry a 1px border that CSS adds to the auto height. Figma padding = CSS padding + 1 with an INSIDE stroke reproduces the exact outer box with integer values. Text variants have no border, so padding is the CSS padding verbatim.",
+   "contained": {
+    "small": {
+     "cssPadding": "4px 10px",
+     "cssBorder": 1,
+     "figmaPaddingV": 5,
+     "figmaPaddingH": 11,
+     "fontSizePx": 14,
+     "lineHeightPx": 20,
+     "renderedHeightPx": 30
+    },
+    "medium": {
+     "cssPadding": "6px 16px",
+     "cssBorder": 1,
+     "figmaPaddingV": 7,
+     "figmaPaddingH": 17,
+     "fontSizePx": 16,
+     "lineHeightPx": 24,
+     "renderedHeightPx": 38
+    },
+    "large": {
+     "cssPadding": "8px 22px",
+     "cssBorder": 1,
+     "figmaPaddingV": 9,
+     "figmaPaddingH": 23,
+     "fontSizePx": 15,
+     "lineHeightPx": 24,
+     "renderedHeightPx": 42,
+     "flag": "buttonLargeFontSize"
+    }
+   },
+   "text": {
+    "small": {
+     "cssPadding": "4px 5px",
+     "cssBorder": 0,
+     "figmaPaddingV": 4,
+     "figmaPaddingH": 5,
+     "fontSizePx": 14,
+     "lineHeightPx": 20,
+     "renderedHeightPx": 28
+    },
+    "medium": {
+     "cssPadding": "6px 8px",
+     "cssBorder": 0,
+     "figmaPaddingV": 6,
+     "figmaPaddingH": 8,
+     "fontSizePx": 16,
+     "lineHeightPx": 24,
+     "renderedHeightPx": 36
+    },
+    "large": {
+     "cssPadding": "8px 11px",
+     "cssBorder": 0,
+     "figmaPaddingV": 8,
+     "figmaPaddingH": 11,
+     "fontSizePx": 15,
+     "lineHeightPx": 24,
+     "renderedHeightPx": 40,
+     "flag": "buttonLargeFontSize"
+    }
+   },
+   "iconPaddingPull": {
+    "_source": "MUI ButtonStartIcon marginLeft: -4 (small: -2); ButtonEndIcon marginRight: -4 (small: -2)",
+    "_rule": "When Start icon is on, reduce paddingLeft by the pull. When End icon is on, reduce paddingRight by the pull.",
+    "pullBySize": {
+     "small": 2,
+     "medium": 4,
+     "large": 4
+    },
+    "resolvedPaddingLeftWithStartIcon": {
+     "contained": {
+      "small": 9,
+      "medium": 13,
+      "large": 19
+     },
+     "text": {
+      "small": 3,
+      "medium": 4,
+      "large": 7
+     }
+    },
+    "resolvedPaddingRightWithEndIcon": {
+     "contained": {
+      "small": 9,
+      "medium": 13,
+      "large": 19
+     },
+     "text": {
+      "small": 3,
+      "medium": 4,
+      "large": 7
+     }
+    }
+   },
+   "iconSize": {
+    "value": 16,
+    "token": "size/icon/inButton",
+    "computedPx": 18.2857142857,
+    "layer": "tebra",
+    "source": "ButtonOverrides iconSize{Small,Medium,Large} all set pxToRem(theme.typography.fontSize)",
+    "note": "Tebra deliberately flattens MUI's 18/20/22 per-size icon ramp to one size at every size. The 16 vs 18.29 gap is the pxToRemHazard."
+   }
+  },
+  "typography": {
+   "fontFamily": "Akkurat LL",
+   "fontWeight": 400,
+   "textTransform": "capitalize",
+   "letterSpacing": 0,
+   "bySize": {
+    "small": {
+     "token": "typography.body2",
+     "fontSizePx": 14,
+     "lineHeightPx": 20,
+     "layer": "tebra",
+     "source": "ButtonOverrides sizeSmall spreads theme.typography.body2"
+    },
+    "medium": {
+     "token": "typography.button",
+     "fontSizePx": 16,
+     "lineHeightPx": 24,
+     "layer": "tebra"
+    },
+    "large": {
+     "token": "typography.button lineHeight + MUI fontSize",
+     "fontSizePx": 15,
+     "lineHeightPx": 24,
+     "layer": "mixed",
+     "flag": "buttonLargeFontSize"
+    }
+   }
+  },
+  "resolvedStyles": {
+   "contained.primary": {
+    "_source": "ButtonOverrides containedPrimary",
+    "Default": {
+     "text": {
+      "value": "#004852",
+      "token": "core.contrastText"
+     },
+     "fill": {
+      "value": "#FFFFFF",
+      "token": "common.white"
+     },
+     "stroke": {
+      "value": "#B3C6C4",
+      "token": "core.main"
+     }
+    },
+    "Hover": {
+     "text": {
+      "value": "#004852",
+      "token": "core.contrastText"
+     },
+     "fill": {
+      "value": "#CBDDE0",
+      "token": "action.hover"
+     },
+     "stroke": {
+      "value": "#B3C6C4",
+      "token": "core.main"
+     }
+    },
+    "Disabled": {
+     "text": {
+      "value": "#8CB2B6",
+      "token": "primary.200"
+     },
+     "fill": {
+      "value": "#FFFFFF",
+      "token": "common.white"
+     },
+     "stroke": {
+      "value": "#CBDDE0",
+      "token": "primary.100"
+     }
+    }
+   },
+   "contained.secondary": {
+    "_source": "ButtonOverrides containedSecondary",
+    "Default": {
+     "text": {
+      "value": "#004852",
+      "token": "secondary.contrastText"
+     },
+     "fill": {
+      "value": "#FF8D6E",
+      "token": "secondary.main"
+     },
+     "stroke": {
+      "value": "#FF8D6E",
+      "token": "secondary.main"
+     }
+    },
+    "Hover": {
+     "text": {
+      "value": "#004852",
+      "token": "secondary.contrastText"
+     },
+     "fill": {
+      "value": "#FFAF95",
+      "token": "secondary.light"
+     },
+     "stroke": {
+      "value": "#FFAF95",
+      "token": "secondary.light"
+     }
+    },
+    "Disabled": {
+     "text": {
+      "value": "#8CB2B6",
+      "token": "primary.200"
+     },
+     "fill": {
+      "value": "#FFE9E3",
+      "token": "secondary.100"
+     },
+     "stroke": {
+      "value": "#FFE9E3",
+      "token": "secondary.100"
+     }
+    }
+   },
+   "contained.error": {
+    "_source": "ButtonOverrides containedError",
+    "Default": {
+     "text": {
+      "value": "#FFFFFF",
+      "token": "error.contrastText"
+     },
+     "fill": {
+      "value": "#D83B4D",
+      "token": "error.main"
+     },
+     "stroke": {
+      "value": "#D83B4D",
+      "token": "error.main"
+     }
+    },
+    "Hover": {
+     "text": {
+      "value": "#FFFFFF",
+      "token": "error.contrastText"
+     },
+     "fill": {
+      "value": "#B51A2C",
+      "token": "error.dark"
+     },
+     "stroke": {
+      "value": "#B51A2C",
+      "token": "error.dark"
+     }
+    },
+    "Disabled": {
+     "text": {
+      "value": "#FFFFFF",
+      "token": "error.contrastText"
+     },
+     "fill": {
+      "value": "#FBCBD1",
+      "token": "error.light"
+     },
+     "stroke": {
+      "value": "#FBCBD1",
+      "token": "error.light"
+     }
+    }
+   },
+   "text.primary": {
+    "_source": "ButtonOverrides text",
+    "Default": {
+     "text": {
+      "value": "#004852",
+      "token": "primary.main"
+     },
+     "fill": "TRANSPARENT",
+     "stroke": "NONE"
+    },
+    "Hover": {
+     "text": {
+      "value": "#004852",
+      "token": "primary.main"
+     },
+     "fill": {
+      "value": "#CBDDE0",
+      "token": "primary.100"
+     },
+     "stroke": "NONE"
+    },
+    "Disabled": {
+     "text": {
+      "value": "#8CB2B6",
+      "token": "primary.200"
+     },
+     "fill": "TRANSPARENT",
+     "stroke": "NONE"
+    }
+   },
+   "text.secondary": {
+    "_source": "ButtonOverrides text — there is no textSecondary override, so the generic `text` rule wins over MUI's per-color rule",
+    "flag": "textSecondaryCollapse",
+    "Default": {
+     "text": {
+      "value": "#004852",
+      "token": "primary.main"
+     },
+     "fill": "TRANSPARENT",
+     "stroke": "NONE"
+    },
+    "Hover": {
+     "text": {
+      "value": "#004852",
+      "token": "primary.main"
+     },
+     "fill": {
+      "value": "#CBDDE0",
+      "token": "primary.100"
+     },
+     "stroke": "NONE"
+    },
+    "Disabled": {
+     "text": {
+      "value": "#8CB2B6",
+      "token": "primary.200"
+     },
+     "fill": "TRANSPARENT",
+     "stroke": "NONE"
+    }
+   },
+   "text.error": {
+    "_source": "ButtonOverrides textError",
+    "Default": {
+     "text": {
+      "value": "#D83B4D",
+      "token": "error.main"
+     },
+     "fill": "TRANSPARENT",
+     "stroke": "NONE"
+    },
+    "Hover": {
+     "text": {
+      "value": "#D83B4D",
+      "token": "error.main"
+     },
+     "fill": {
+      "value": "#FBCBD1",
+      "token": "error.light"
+     },
+     "stroke": "NONE"
+    },
+    "Disabled": {
+     "text": {
+      "value": "#FBCBD1",
+      "token": "error.light"
+     },
+     "fill": "TRANSPARENT",
+     "stroke": "NONE"
+    }
+   }
+  }
+ },
+ "TextField": {
+  "storyFile": "packages/design-system/src/stories/TextField/TextField.stories.tsx",
+  "storyTitle": "Components/Inputs/TextField",
+  "overrideFile": "packages/design-system/src/overrides/TextFieldOverrides.tsx",
+  "layer": "UNTHEMED MUI SUBSTRATE — the strongest example in the library",
+  "provenanceHeadline": "TextFieldOverrides.tsx contains NO styleOverrides. Its entire content is one defaultProp swapping the Select dropdown icon for a grey DownCaret. No MuiOutlinedInput, MuiInputBase, MuiInputLabel, MuiFormControl or MuiFormHelperText override exists anywhere in the theme. Outline, padding, radius, label float, notch and helper text are MUI v5.15.12 as shipped; only the palette values flowing through them are Tebra.",
+  "argTypes": {
+   "_finding": "The story declares exactly ONE argType: margin. There is no size, variant or state argType. Axes were derived from the story args and the TextFieldVariations examples, not assumed.",
+   "margin": {
+    "control": "radio",
+    "options": [
+     "normal",
+     "dense",
+     "none"
+    ],
+    "storyDefault": "normal",
+    "builtAsAxis": false,
+    "reason": "margin sets FormControl marginTop/marginBottom only (normal 16/8, dense 8/4). That is parent layout in Figma, not component state."
+   }
+  },
+  "storyDefaultArgs": {
+   "margin": "normal",
+   "label": "TextField Label",
+   "helperText": "Text underneath the input",
+   "defaultValue": "Default Value",
+   "error": false,
+   "multiline": false,
+   "rows": ""
+  },
+  "variationsExercised": [
+   "required",
+   "required with InputLabelProps.required=false",
+   "disabled",
+   "type=password",
+   "readOnly",
+   "type=number with shrink label",
+   "type=search",
+   "helperText",
+   "helperText reserved space (zero-width space)",
+   "select with MenuItems",
+   "multiline",
+   "multiline rows='grow'"
+  ],
+  "figmaProperties": {
+   "variantAxes": {
+    "Size": [
+     "Medium",
+     "Small"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Focused",
+     "Disabled",
+     "Error"
+    ],
+    "Value": [
+     "Empty",
+     "Filled"
+    ]
+   },
+   "variantCount": 20,
+   "sizeAxisProvenance": {
+    "_status": "THE ONE DOCUMENTED EXCEPTION to the 'stories are the structure source' rule",
+    "existsInCode": true,
+    "exercisedByStory": false,
+    "detail": "MUI supports size='small' on TextField and the small route is fully specified in the substrate (OutlinedInputInput size small padding '8.5px 14px' -> 8.5 + line-height 23 + 8.5 = 40; FormHelperText size small marginTop 4 instead of 3 -> 60 total). The Tebra theme does not touch it. The TextField story declares only a margin argType and never exercises size.",
+    "whyBuilt": "Library parity with Autocomplete / Field, which has a Size axis. Built deliberately, not because the story shows it — recorded here so the structure-from-argTypes rule stays honest about its exception.",
+    "geometry": {
+     "medium": {
+      "inputPx": 56,
+      "totalWithHelperPx": 75,
+      "helperMarginTop": 3
+     },
+     "small": {
+      "inputPx": 40,
+      "totalWithHelperPx": 60,
+      "helperMarginTop": 4
+     }
+    },
+    "unchangedAcrossSizes": "Input typography stays body1 16/24 (InputBase does not vary it by size), horizontal padding stays 14, and the shrunk label transform stays translate(14px, -9px) — InputLabel only varies the RESTING transform by size (translate(14,16) medium vs translate(14,9) small). The notch geometry is therefore identical at both sizes."
+   },
+   "booleanProperties": {
+    "Show helper": {
+     "default": true,
+     "mapsTo": "helperText present"
+    },
+    "Required": {
+     "default": false,
+     "mapsTo": "required — shows the FormLabel asterisk ' *' on both label positions"
+    },
+    "Select": {
+     "default": false,
+     "mapsTo": "select — reveals the Tebra grey caret"
+    },
+    "Multiline": {
+     "default": false,
+     "mapsTo": "multiline — adds two further 24px rows"
+    }
+   },
+   "textProperties": {
+    "Label": "TextField Label",
+    "Value text": "Default Value",
+    "Helper text": "Text underneath the input"
+   },
+   "notModelled": {
+    "Size": "the story never exercises it — see flags.textFieldNoSizeAxis",
+    "margin": "parent layout, see argTypes.margin"
+   }
+  },
+  "geometry": {
+   "_reusedFrom": "Autocomplete / Field — verified to agree rather than rebuilt",
+   "inputHeightPx": 56,
+   "derivation": "OutlinedInput input padding '16.5px 14px' + InputBase line-height 1.4375em (23px) = 56. Normalised to Figma padding 16 + line-height 24 for identical totals with integer values — the same normalisation Field uses.",
+   "agreementWithField": "Field reaches the same 56 by a different route: AutocompleteRoot sets the OutlinedInput root padding to 9 and the inner input to 7.5, which sums to the same 16.5. No disagreement found.",
+   "paddingLeftRight": 14,
+   "cornerRadius": {
+    "value": 4,
+    "token": "radius/sm",
+    "layer": "mui-substrate"
+   },
+   "helperText": {
+    "marginTop": 3,
+    "marginLeftRight": 14,
+    "typography": "caption 12/16",
+    "color": {
+     "default": "text.secondary",
+     "disabled": "text.disabled",
+     "error": "error.main"
+    },
+    "totalHeightWithHelper": 75
+   },
+   "multilineHeightPx": 123,
+   "multilineDerivation": "3 rows x 24 + padding 32 = 104 input, + 3 + 16 helper"
+  },
+  "tebraAuthoredElements": {
+   "selectCaret": {
+    "source": "TextFieldOverrides.tsx — SelectProps.IconComponent = styled(DownCaretIcon)",
+    "color": {
+     "value": "#545454",
+     "token": "grey.600"
+    },
+    "iconSize": {
+     "value": 20,
+     "computedPx": 22.8571428571,
+     "note": "fontSize='small' -> SvgIconOverrides fontSizeSmall"
+    },
+    "quirks": [
+     "positioned right: '4%' — a PERCENTAGE, so the caret inset scales with field width instead of being fixed. Autocomplete's equivalent indicator uses a fixed right: 9.",
+     "top: calc(50% - 12px) assumes a 24px icon, but fontSize='small' resolves to 20px intended / 22.86px computed, so the caret sits slightly above centre in code. Centred in Figma."
+    ]
+   }
+  },
+  "stateColors": {
+   "_identicalTo": "Autocomplete / Field — same OutlinedInput + InputLabel + FormLabel substrate",
+   "Default": {
+    "stroke": "substrate/inputOutline rgba(0,0,0,0.23)",
+    "label": "text.secondary",
+    "helper": "text.secondary"
+   },
+   "Hover": {
+    "stroke": "text.primary #000000",
+    "label": "text.secondary",
+    "helper": "text.secondary"
+   },
+   "Focused": {
+    "stroke": "primary.main #004852 @2px",
+    "label": "primary.main",
+    "helper": "text.secondary"
+   },
+   "Disabled": {
+    "stroke": "action.disabled rgba(0,0,0,0.5)",
+    "label": "text.disabled",
+    "value": "text.disabled",
+    "helper": "text.disabled"
+   },
+   "Error": {
+    "stroke": "error.main #D83B4D",
+    "label": "error.main",
+    "helper": "error.main"
+   }
+  }
+ },
+ "Autocomplete": {
+  "storyFile": "packages/design-system/src/stories/Autocomplete/Autocomplete.stories.tsx",
+  "docsFile": "packages/design-system/src/stories/Autocomplete/Autocomplete.mdx",
+  "storyTitle": "Components/Inputs/Autocomplete",
+  "overrideFile": "packages/design-system/src/overrides/AutocompleteOverrides.tsx",
+  "layer": "pre-process survivor — authored 0.5.4 (2023-09-28), colors ride the palette rename, geometry never specified",
+  "sourceTodo": "// TODO: fix padding  (AutocompleteOverrides.tsx:4)",
+  "argTypesNote": "The Autocomplete story exports only an onChange action argType — there are NO variant argTypes. Its axes are therefore derived from the prop surface exercised across the seven stories, not from a control table. This is itself evidence of the pre-process authoring.",
+  "storiesExercised": [
+   {
+    "name": "Basic",
+    "props": {
+     "multiple": false
+    }
+   },
+   {
+    "name": "MultiSelect",
+    "props": {
+     "multiple": true,
+     "limitTags": 2,
+     "disableCloseOnSelect": true
+    }
+   },
+   {
+    "name": "Checkboxes",
+    "props": {
+     "multiple": true,
+     "renderOption": "with Checkbox"
+    }
+   },
+   {
+    "name": "WithCategories",
+    "props": {
+     "multiple": true,
+     "groupBy": "firstLetter",
+     "renderOption": "with Checkbox"
+    }
+   },
+   {
+    "name": "DefaultNonControlled",
+    "props": {
+     "loading": "via endAdornment CircularProgress size=20"
+    }
+   },
+   {
+    "name": "DefaultControlledAsync",
+    "props": {
+     "multiple": false,
+     "controlled": true
+    }
+   },
+   {
+    "name": "Asynchronous",
+    "props": {
+     "loading": true,
+     "open": "controlled"
+    }
+   }
+  ],
+  "defaultProps": {
+   "_source": "AutocompleteOverrides.tsx defaultProps",
+   "ChipProps": {
+    "variant": "outlined",
+    "color": "primary"
+   },
+   "noOptionsText": "No results found",
+   "popupIcon": "DownCaretIcon fontSize='small' (Tebra icon, not MUI ArrowDropDown)"
+  },
+  "figmaComponentSets": [
+   {
+    "name": "Autocomplete / Field",
+    "variantAxes": {
+     "Size": [
+      "Medium",
+      "Small"
+     ],
+     "State": [
+      "Default",
+      "Hover",
+      "Focused",
+      "Disabled",
+      "Error"
+     ],
+     "Value": [
+      "Empty",
+      "Filled",
+      "Multiple"
+     ]
+    },
+    "variantCount": 30,
+    "booleanProperties": {
+     "Clear icon": {
+      "default": false,
+      "note": "visibility:hidden until hover or focus in CSS"
+     },
+     "Popup icon": {
+      "default": true
+     }
+    },
+    "textProperties": {
+     "Label": {
+      "default": "Select Name",
+      "mapsTo": "TextField label"
+     },
+     "Value": {
+      "default": "",
+      "mapsTo": "input value"
+     }
+    }
+   },
+   {
+    "name": "Autocomplete / Option",
+    "variantAxes": {
+     "State": [
+      "Default",
+      "Focused",
+      "Selected",
+      "Selected focused",
+      "Focus visible"
+     ],
+     "Grouped": [
+      "No",
+      "Yes"
+     ]
+    },
+    "variantCount": 10,
+    "booleanProperties": {
+     "Checkbox": {
+      "default": false,
+      "mapsTo": "renderOption with Checkbox (Checkboxes / WithCategories stories)"
+     }
+    },
+    "textProperties": {
+     "Label": {
+      "default": "Option name"
+     }
+    }
+   },
+   {
+    "name": "Autocomplete / Listbox",
+    "type": "composition, not a variant set",
+    "slots": [
+     "groupLabel",
+     "option[]",
+     "noOptions",
+     "loading"
+    ]
+   }
+  ],
+  "field": {
+   "layout": {
+    "mode": "HORIZONTAL",
+    "counterAxisAlignItems": "CENTER",
+    "primaryAxisSizingMode": "FIXED_OR_FILL",
+    "widthNote": "Every story wraps the Autocomplete in Box width=300. That is story scaffolding, NOT a component token — build the Figma field to FILL its parent and expose 300 only as the default frame width on the preview instances.",
+    "cornerRadius": {
+     "value": 4,
+     "token": "radius/sm",
+     "layer": "mui-substrate"
+    },
+    "strokeAlign": "INSIDE"
+   },
+   "geometry": {
+    "_derivation": "Height = OutlinedInput root padding + input padding + input line-height, doubled vertically. The notched outline is absolutely positioned and does NOT add to height.",
+    "medium": {
+     "cssRootPadding": 9,
+     "cssInputPadding": "7.5px 4px 7.5px 5px",
+     "cssLineHeight": "1.4375em = 23px",
+     "renderedHeightPx": 56,
+     "figmaPaddingV": 16,
+     "figmaLineHeightPx": 24,
+     "figmaHeightCheck": "16 + 24 + 16 = 56 ✓",
+     "figmaPaddingLeft": 14,
+     "figmaPaddingRight": {
+      "popupOnly": 39,
+      "popupAndClear": 65
+     },
+     "normalizationNote": "CSS 7.5 + 9 = 16.5 padding against a 23px line box. Normalized to 16 padding against a 24px line box — identical 56px total, all integers."
+    },
+    "small": {
+     "cssRootPadding": "6px (top/bottom/left)",
+     "cssInputPadding": "2.5px 4px 2.5px 8px",
+     "renderedHeightPx": 40,
+     "figmaPaddingV": 8,
+     "figmaLineHeightPx": 24,
+     "figmaHeightCheck": "8 + 24 + 8 = 40 ✓",
+     "figmaPaddingLeft": 14
+    },
+    "endAdornment": {
+     "cssPosition": "absolute, right: 9, top 50%, translateY(-50%)",
+     "figmaApproach": "MUST be layoutPositioning='ABSOLUTE' with constraints {horizontal:'MAX', vertical:'CENTER'}, sized to a fixed 52x28 box with contents right-aligned, placed at x = width - 9 - 52. Text clearance comes from the root's paddingRight (39), exactly as in CSS. An earlier build kept it in flow, which let the 28px clear indicator inflate the field to 60/44 — in CSS the absolute adornment can never affect height.",
+     "textReserve": {
+      "popupOnly": 39,
+      "popupAndClear": 65,
+      "token": "size/input/endReserve",
+      "built": 39,
+      "limitation": "Figma cannot vary padding by boolean property, so the 65 reserve for popup+clear is not modelled. Same limitation class as Button's icon padding pull."
+     },
+     "popupIndicator": {
+      "iconSize": 20,
+      "iconToken": "size/icon/small",
+      "computedPx": 22.8571428571,
+      "padding": 2,
+      "boxSize": 24,
+      "icon": "Tebra DownCaretIcon (AutocompleteOverrides popupIcon)",
+      "color": {
+       "value": "#545454",
+       "token": "grey.600"
+      },
+      "rotateWhenOpen": 180,
+      "source": "AutocompletePopupIndicator padding:2 + IconButtonOverrides root color grey[600]"
+     },
+     "clearIndicator": {
+      "iconSize": 20,
+      "iconToken": "size/icon/small",
+      "padding": 4,
+      "boxSize": 28,
+      "icon": "MUI internal svg-icons/Close — NOT Tebra's CloseOutlined",
+      "iconNote": "AutocompleteOverrides overrides popupIcon only and never clearIcon, so MUI's default Close ships. Its path spans 5-19 of the 24 viewBox against CloseOutlined's 2-22, which is why substituting the Tebra glyph read visibly oversized.",
+      "color": {
+       "value": "#545454",
+       "token": "grey.600"
+      },
+      "hiddenUntilHoverOrFocus": true
+     },
+     "indicatorHoverFill": {
+      "value": "#CBDDE0",
+      "token": "action.hover",
+      "source": "IconButtonOverrides root",
+      "layer": "tebra"
+     },
+     "indicatorDisabledColor": {
+      "value": "#9A9A9A",
+      "token": "grey.500",
+      "layer": "tebra"
+     }
+    }
+   },
+   "outline": {
+    "_layer": "mui-substrate",
+    "_note": "Zero Tebra overrides exist for MuiOutlinedInput, MuiInputBase, MuiInputLabel or MuiFormControl. This entire surface is stock Material wearing Tebra colors.",
+    "Default": {
+     "strokeWidth": 1,
+     "stroke": {
+      "value": "rgba(0,0,0,0.23)",
+      "token": "substrate/inputOutline",
+      "layer": "mui-substrate"
+     }
+    },
+    "Hover": {
+     "strokeWidth": 1,
+     "stroke": {
+      "value": "#000000",
+      "token": "text.primary",
+      "layer": "tebra"
+     }
+    },
+    "Focused": {
+     "strokeWidth": 2,
+     "stroke": {
+      "value": "#004852",
+      "token": "primary.main",
+      "layer": "tebra"
+     }
+    },
+    "Error": {
+     "strokeWidth": 1,
+     "stroke": {
+      "value": "#D83B4D",
+      "token": "error.main",
+      "layer": "tebra"
+     }
+    },
+    "Disabled": {
+     "strokeWidth": 1,
+     "stroke": {
+      "value": "rgba(0,0,0,0.5)",
+      "token": "action.disabled",
+      "layer": "tebra",
+      "flag": "autocompleteDisabledOutline"
+     }
+    }
+   },
+   "label": {
+    "_layer": "mui-substrate (geometry) / tebra (color)",
+    "resting": {
+     "fontSizePx": 16,
+     "token": "typography.body1",
+     "translate": {
+      "medium": [
+       14,
+       16
+      ],
+      "small": [
+       14,
+       9
+      ]
+     }
+    },
+    "shrunk": {
+     "fontSizePx": 12,
+     "derivation": "16 × scale(0.75)",
+     "translate": [
+      14,
+      -9
+     ],
+     "note": "12px coincides exactly with typography.caption — bind font/size/caption",
+     "backgroundFill": {
+      "value": "#FFFFFF",
+      "token": "background.paper"
+     },
+     "notchPaddingX": 5
+    },
+    "colors": {
+     "Default": {
+      "value": "#545454",
+      "token": "text.secondary"
+     },
+     "Focused": {
+      "value": "#004852",
+      "token": "primary.main"
+     },
+     "Error": {
+      "value": "#D83B4D",
+      "token": "error.main"
+     },
+     "Disabled": {
+      "value": "#9A9A9A",
+      "token": "text.disabled"
+     }
+    }
+   },
+   "inputText": {
+    "fontSizePx": 16,
+    "lineHeightPx": 24,
+    "fontWeight": 400,
+    "token": "typography.body1",
+    "color": {
+     "Default": {
+      "value": "#000000",
+      "token": "text.primary"
+     },
+     "Disabled": {
+      "value": "#9A9A9A",
+      "token": "text.disabled"
+     }
+    }
+   },
+   "tag": {
+    "_note": "Rendered when multiple=true. MUI Chip receiving Tebra's ChipProps default (variant=outlined, color=primary) from AutocompleteOverrides.tsx. Autocomplete passes BOTH `size` and `disabled` into the Chip via getCustomizedTagProps — verified at Autocomplete.js:495-505.",
+    "sizeIsPropagated": {
+     "confirmed": true,
+     "source": "Autocomplete.js:502-505 renders <Chip label size={size} {...getCustomizedTagProps({index})} />",
+     "effect": "size='small' Autocomplete renders height-24 chips. ChipOverrides.defaultProps.size='medium' does NOT win — defaultProps only apply when the prop is undefined."
+    },
+    "disabledIsPropagated": {
+     "confirmed": true,
+     "source": "Autocomplete.js:495-498 getCustomizedTagProps spreads `disabled` into every Chip",
+     "effect": "Chip's '&.Mui-disabled { opacity: action.disabledOpacity }' applies. Tebra does not override action.disabledOpacity, so the whole chip dims to 0.38."
+    },
+    "margin": {
+     "medium": 3,
+     "small": 2,
+     "adjacentGap": {
+      "medium": 6,
+      "small": 4
+     }
+    },
+    "heightPx": {
+     "medium": 32,
+     "small": 24,
+     "layer": "mui-substrate"
+    },
+    "cornerRadius": {
+     "medium": {
+      "value": 16,
+      "token": "radius/chip"
+     },
+     "small": {
+      "value": 12,
+      "token": "radius/chipSmall"
+     },
+     "layer": "mui-substrate",
+     "derivation": "height/2"
+    },
+    "fontSizePx": {
+     "medium": {
+      "value": 13,
+      "computedPx": 14.8571428571
+     },
+     "small": {
+      "value": 12,
+      "computedPx": 13.7142857143
+     },
+     "layer": "mui-substrate",
+     "flag": "chipFontSize"
+    },
+    "labelPaddingX": {
+     "medium": 11,
+     "small": 7,
+     "layer": "mui-substrate",
+     "note": "OUTLINED chips get 11/7, not the filled 12/8 — ChipLabel subtracts 1px to absorb the border. Earlier build used 12/13 and was wrong."
+    },
+    "figmaGeometry": {
+     "medium": {
+      "paddingLeft": 11,
+      "itemSpacing": 5,
+      "paddingRight": 5,
+      "deleteIconPx": 22
+     },
+     "small": {
+      "paddingLeft": 7,
+      "itemSpacing": 3,
+      "paddingRight": 3,
+      "deleteIconPx": 16
+     },
+     "derivation": "MUI deleteIcon margin '0 5px 0 -6px' (small: marginLeft -4, marginRight 4) plus the outlined override marginRight 5 (small 3). Figma itemSpacing = label padding + deleteIcon marginLeft, i.e. 11-6=5 and 7-4=3."
+    },
+    "resolvedStyle": {
+     "_source": "ChipOverrides outlinedPrimary + ChipOverrides deleteIcon",
+     "fill": {
+      "value": "#FFFFFF",
+      "token": "common.white",
+      "layer": "tebra",
+      "note": "MUI outlined has a transparent background; the white fill is Tebra's."
+     },
+     "text": {
+      "value": "#004852",
+      "token": "primary.main"
+     },
+     "stroke": {
+      "value": "#004852",
+      "token": "primary.main",
+      "width": 1,
+      "layer": "tebra",
+      "note": "Tebra forces FULL strength over MUI's alpha(primary.main, 0.7) for outlined chips."
+     },
+     "hoverFill": {
+      "value": "#CBDDE0",
+      "token": "primary.100",
+      "onlyWhen": "clickable"
+     },
+     "deleteIcon": {
+      "component": "MUI internal svg-icons/Cancel — a filled disc with a knockout X",
+      "notCloseOutlined": "Tebra's CloseOutlined is NOT used here. AutocompleteOverrides passes ChipProps without a deleteIcon, so Chip falls back to its default CancelIcon (Chip.js:364).",
+      "sizePx": {
+       "medium": 22,
+       "small": 16
+      },
+      "sizeLayer": "mui-substrate",
+      "sizeNote": "raw 22/16, not pxToRem — genuinely those pixel values",
+      "color": {
+       "value": "#004852",
+       "token": "primary.main",
+       "opacity": 1,
+       "layer": "tebra",
+       "flag": "chipDeleteColorIsTebraNotMui"
+      }
+     }
+    },
+    "disabledTreatment": {
+     "wholeChipOpacity": 0.38,
+     "token": "MUI palette.action.disabledOpacity (default, not overridden by Tebra)"
+    },
+    "rootOverride": {
+     "justifyContent": "space-between",
+     "source": "ChipOverrides root",
+     "layer": "tebra"
+    }
+   }
+  },
+  "listbox": {
+   "paper": {
+    "fill": {
+     "value": "#FFFFFF",
+     "token": "background.paper"
+    },
+    "cornerRadius": {
+     "value": 4,
+     "token": "radius/sm",
+     "layer": "mui-substrate"
+    },
+    "elevation": 1,
+    "shadow": "0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)",
+    "shadowLayer": "mui-substrate",
+    "typography": "body1"
+   },
+   "container": {
+    "paddingV": 8,
+    "paddingH": 0,
+    "maxHeight": "40vh",
+    "layer": "mui-substrate"
+   },
+   "option": {
+    "paddingV": 6,
+    "paddingH": 16,
+    "fontSizePx": 16,
+    "lineHeightPx": 24,
+    "renderedHeightPx": 36,
+    "minHeightNote": "MUI sets min-height 48 then resets it to 'auto' at the sm breakpoint and above, so on desktop the real height is 6 + 24 + 6 = 36. Do NOT build a 48px option.",
+    "groupedPaddingLeft": 24,
+    "states": {
+     "Default": {
+      "fill": "TRANSPARENT"
+     },
+     "Focused": {
+      "fill": {
+       "value": "#CBDDE0",
+       "token": "action.hover"
+      },
+      "layer": "tebra",
+      "note": "MUI's own rule, but it resolves to a Tebra palette value"
+     },
+     "Selected": {
+      "fill": {
+       "value": "#F0EEE8",
+       "token": "action.selected"
+      },
+      "layer": "tebra",
+      "source": "AutocompleteOverrides listbox [aria-selected='true'] — overrides MUI's alpha(primary.main, selectedOpacity)"
+     },
+     "Selected focused": {
+      "fill": {
+       "value": "#F0EEE8",
+       "token": "action.selected"
+      },
+      "layer": "tebra",
+      "note": "Tebra flattens MUI's additive selected+hover opacity to a single flat colour"
+     },
+     "Focus visible": {
+      "fill": {
+       "value": "#FFFFFF",
+       "token": "common.white"
+      },
+      "stroke": {
+       "value": "#004852",
+       "token": "primary.main",
+       "width": 3
+      },
+      "cornerRadius": 4,
+      "layer": "tebra",
+      "source": "AutocompleteOverrides listbox .Mui-focusVisible"
+     }
+    }
+   },
+   "groupLabel": {
+    "color": {
+     "value": "#000000",
+     "token": "text.primary",
+     "layer": "tebra",
+     "source": "AutocompleteOverrides groupLabel — overrides ListSubheader's text.secondary"
+    },
+    "fill": {
+     "value": "#FFFFFF",
+     "token": "background.paper"
+    },
+    "fontSizePx": 16,
+    "fontSizeDerivation": "ListSubheader pxToRem(14) × coef 1.142857 = exactly 1rem = 16px",
+    "fontWeight": 500,
+    "fontWeightLayer": "mui-substrate",
+    "lineHeightPx": 48,
+    "paddingH": 16,
+    "stickyTop": -8
+   },
+   "noOptions": {
+    "text": "No results found",
+    "textLayer": "tebra",
+    "color": {
+     "value": "#545454",
+     "token": "text.secondary"
+    },
+    "paddingV": 14,
+    "paddingH": 16
+   },
+   "loading": {
+    "color": {
+     "value": "#545454",
+     "token": "text.secondary"
+    },
+    "paddingV": 14,
+    "paddingH": 16,
+    "spinnerSize": 20,
+    "spinnerNote": "Stories pass CircularProgress size={20} into the endAdornment, not into the listbox loading slot."
+   }
+  }
+ },
+ "CardHeaderBand": {
+  "_status": "DISCOVERY ONLY — not built. Spec below is ready to build when Daniel sequences it.",
+  "_date": "2026-08-03",
+  "_whatItIs": "The title band at the top of a facesheet card. It is MUI CardHeader with no Tebra theming whatsoever — there is no MuiCardHeader, MuiCardContent or MuiCardMedia key anywhere in the 38 override files. Every visual decision is a per-site sx prop, which is why the sites disagree.",
+  "substrate": {
+   "CardHeader root": "display:flex; align-items:center; padding:16 — @mui/material/CardHeader/CardHeader.js:37-41",
+   "CardHeader Action": "flex:0 0 auto; align-self:flex-start; margin-top:-4; margin-right:-8; margin-bottom:-4 — CardHeader.js:51-61",
+   "CardHeader Content": "flex:1 1 auto — CardHeader.js:62-68",
+   "Card root": "overflow:hidden, extends Paper — Card.js:25-33"
+  },
+  "resolved": {
+   "height": "48px fixed (sx height:'3rem') at all 8 sites that render a band",
+   "background": "none declared — inherits Card background.paper #fff",
+   "title": "Typography variant=h2 color=primary component=div. h2 = fontSize 1.5rem (24px), fontWeight 700, lineHeight 2.25rem (36px), authored as literal rem in typography/typography.ts:21-25 so NOT subject to the pxToRem inflation. color primary = primary.main #004852 (Growth 1).",
+   "horizontalPadding": "16px, substrate, honoured",
+   "verticalPadding": "declared 16px, NOT honoured — see geometryConflict",
+   "actionSlot": "optional; align-self:flex-start with margin-top:-4, so the action sits 12px from the band top, not vertically centred",
+   "divider": "1px bottom in Backbone 3 #E8E5DF — intended at 2 of 8 sites, currently dead. See flags.cardHeaderBandDividerDead."
+  },
+  "geometryConflict": "The declared padding cannot be honoured. 16px top + 36px line-height + 16px bottom = 68px of content forced into a 48px fixed height with box-sizing:border-box. Because the root is align-items:center the title still centres, so the rendered result is a 48px band with (48-36)/2 = 6px of effective breathing room, not 16px.",
+  "figmaBuildNote": "Build the band as a 48px FIXED-height frame with the title vertically centred and 16px horizontal padding. Do NOT build it as 16px vertical padding + hug — that renders 68px, 20px too tall. This is the same class of honest-build decision as Button's icon padding pull.",
+  "treatmentsFound": {
+   "_count": "3 distinct treatments across 9 facesheet card sites",
+   "1_dividerAlways": "facesheet-ui — height:3rem + a declared (dead) bottom divider, rendered unconditionally. FacesheetCard.tsx:217, CardLayout.tsx:170.",
+   "2_noDividerFullscreenOnly": "clinical-system — height:3rem, no divider, gated on layout === FacesheetLayout.FULLSCREEN so the band disappears in drawer layout. ProblemsCard.tsx:68, VitalsCard.tsx:66, LabsCard.tsx:79, MedicationsCard.tsx:69, ImmunizationsCard.tsx:79, HistoryCard.tsx:92.",
+   "3_noBandAtAll": "clinical-system AllergiesCard.tsx — renders no CardHeader in any layout, so the card never carries a title."
+  }
+ },
+ "PrimaryNavBar": {
+  "_status": "BUILT and CLOSED 2026-08-03. Tebra-default partner theme only. Geometry settled by design ruling against the rendered product; no further nav passes without a new product screenshot showing a delta. Not canonical design-system truth; publish gated.",
+  "_date": "2026-08-03",
+  "_scopeFinding": "The primary nav bar never renders under the canonical design-system theme. navigation-ui/src/root.component.tsx:37 mounts <CobrandedApp />, which wraps the whole nav in <ThemeProvider theme={createPartnerTheme(partnerId)}> — and the default is createPartnerTheme('tebra'), not the design-system theme. So the nav is governed entirely by src/cobranding, which schema.decisions.1_sourceOfTruth already declares out of scope: 'src/cobranding is partner navigation chrome only and is out of scope.' Building a nav bar in the Figma library would mean either bringing cobranding into scope or documenting a surface the canonical theme does not control. That is Daniel's call, not a build decision.",
+  "_nearMiss": "Worth knowing before re-deriving this: reading Navigation.tsx and NavIconButton.tsx alone produces a false accessibility defect. NavIconButton forces color: primary.contrastText (#fff) and swaps the background to action.hover on hover. Under the CANONICAL theme action.hover is #CBDDE0 (Growth 4, opaque), which would put white on a pale ground at about 1.4:1. That never happens, because createPartnerTheme remaps action.hover to navIconHoverBackground = #195b63, giving roughly 7.7:1. The bug only exists if you stop reading before the ThemeProvider. This is the 'the theme is the component' rule biting one level further out than usual — the nav has its OWN theme.",
+  "substrate": {
+   "AppBar": "position='static' elevation={0}, color defaults to 'primary' → backgroundColor palette.primary.main, color palette.primary.contrastText (AppBar.js:83-84). No MuiAppBar override exists anywhere.",
+   "Toolbar": "variant regular → theme.mixins.toolbar (56px xs / 48px landscape / 64px sm-up). Navigation.tsx overrides with sx minHeight:64, so the bar is 64px at EVERY breakpoint including mobile. Partner theme sets disableGutters:true then re-adds paddingLeft/Right theme.spacing(2) = 16px (createPartnerTheme.ts:83-95).",
+   "IconButton": "Partner theme sets borderRadius:0 and svg color navText, plus '&:hover svg { color: submenuText }' (createPartnerTheme.ts:99+). Nav items are icon-only IconButtons; the label lives in aria-label and in the dropdown heading, not in the bar."
+  },
+  "resolvedTebraDefault": {
+   "_source": "cobranding/baseThemes.ts tebraDefault, lines 11-27",
+   "navBackground": "#004852 (Growth 1) — matches primary.main",
+   "navText": "#ffffff",
+   "navIconHoverBackground": "#195b63",
+   "submenuBackground": "#195b63",
+   "submenuText": "#ffffff",
+   "submenuItemHoverBackground": "#417E86 (Growth 2)",
+   "searchInputBackground": "#002328",
+   "searchInputText": "#ffffff",
+   "searchResultsBackground": "#195b63",
+   "height": "65px, exact and unrounded, at every breakpoint. Rendered product is the source of truth for this surface — see geometryRuling.",
+   "elevation": "0",
+   "dropdown": "Popper + Paper, elevation 0, borderRadius 0, background action.hover (= navIconHoverBackground #195b63), placement bottom-start, disablePortal, zIndex modal — NavIconButton.tsx",
+   "badge": "Messages badge is color='secondary' max=99 → Vitality #FF8D6E on #004852, matching the built Badge set's default",
+   "navIconButtonSize": "65x65 — createPartnerTheme.ts MuiIconButton.styleOverrides.sizeLarge",
+   "glyphSize": "intended 24px, computedPx 27.43 (SvgIconOverrides.fontSizeMedium = 1.7142857142857142rem = pxToRem(24) at coef 16/14). 24 is bound in Figma per the never-put-a-fractional-value rule.",
+   "searchColumn": "Column 65px (centres in the bar). Field 45px, computedPx 44.8 — that rounding stands, since it comes from the sx padding:0.3 spacing multiplier, not from the retracted bar derivation. Text inset 16px, computedPx 16.4."
+  },
+  "figmaBuildNote": "If it is ever built: 64px fixed height, #004852 ground, icon-only 'large' IconButtons with borderRadius 0 and white glyphs, hover ground #195b63, dropdown a square-cornered elevation-0 #195b63 paper with white text and #417E86 item hover. Do NOT reuse the built Icon button set — it themes borderRadius and grey[600] glyphs from the canonical theme and would need every one of those overridden.",
+  "crossReference": "The legacy team library (ZPf0sJy83aPyrHjCVHomya, 'Tebra Working UI Kit') documents a Primary Nav Bar as 65px with Growth 1 background, Growth 2 active tab and 65x65 tap targets. ALL FOUR are corroborated by source: 65px rendered bar, #004852 Growth 1 ground, #417E86 Growth 2 submenu-item hover, and 65x65 icon buttons. An earlier note here claiming 65 was 'a legacy-library value, not source' was wrong and is retracted.",
+  "_builtComponents": {
+   "Nav / Bar": "1440x65 composite. Ground primary.main #004852 (bound). 16px gutters.",
+   "Nav / Icon button": "3 variants on one State axis — Default, Hover, Disabled. 65x65, borderRadius 0, Icon INSTANCE_SWAP with 31 preferred values.",
+   "Nav / Menu item": "2 variants on one State axis — Default, Hover. 240x48, Label TEXT property.",
+   "Nav / Dropdown": "Composite submenu paper, 240x233, square corners, elevation 0, ground #195b63 (bound), white divider, Title TEXT property.",
+   "REFERENCE — Primary nav with open submenu (not a component)": "On the Reference page. Full bar on background.default with the dropdown at the real bottom-start offset, plus the empty-Menu annotation."
+  },
+  "_correctionToDiscovery": "The 2026-08-03 discovery pass got two things wrong, both caught by re-reading source under standing rule 6 rather than trusting the extraction. (1) It recorded the bar as 64px and dismissed the legacy library's 65px as a legacy-only value. WRONG: createPartnerTheme.ts sets MuiIconButton.styleOverrides.sizeLarge to height 65px / width 65px, and Navigation.tsx's sx minHeight:64 is a FLOOR, not a fixed height — so the 65px icon buttons expand the Toolbar and the bar RENDERS at 65px. The legacy library's '65px bar' and '65x65 tap targets' were both right and describe the same 65. (2) It did not record the glyph size at all. SvgIconOverrides.fontSizeMedium is 1.7142857142857142rem = pxToRem(24) under the 16/14 coefficient, so intended 24px, computedPx 27.43.",
+  "parked": "The six-theme cobranding surface (tebra-default, blue-dark, blue-light, gray-light, green, orange) is NOT built. Modelling it would mean a variable-collection mode per base theme. Noted and parked deliberately; only tebra-default exists in Figma, and the Tebra-default build does not extend the canonical claim to the other five.",
+  "slotTable": {
+   "_source": "navigation-ui/src/config/navigation.config.ts for the six nav items (order is the array order); navigation-ui/src/components/Navigation/Navigation.tsx for the logo, search and right-cluster utilities.",
+   "_navItemsAreIconOnly": "Each nav item renders as <NavIconButton><item.icon /></NavIconButton>. The label exists only as aria-label and as the dropdown heading — there is no text in the bar itself.",
+   "slots": [
+    {
+     "n": 1,
+     "id": "platform",
+     "label": "Platform",
+     "glyph": "Icon / Platform",
+     "file": "navigation-ui/src/components/PlatformIcon.tsx",
+     "viewBox": "0 0 25 25",
+     "note": "Four stroked rects, stroke-width 2, rx 1 — the only nav glyph drawn with strokes rather than a fill."
+    },
+    {
+     "n": 2,
+     "id": "clinical",
+     "label": "Clinical",
+     "glyph": "Icon / Clinical",
+     "file": "navigation-ui/src/components/ClinicalIcon.tsx",
+     "viewBox": "0 0 23 23"
+    },
+    {
+     "n": 3,
+     "id": "billing",
+     "label": "Billing",
+     "glyph": "Icon / Billing",
+     "file": "navigation-ui/src/components/BillingIcon.tsx",
+     "viewBox": "0 0 23 23",
+     "note": "billingMenuBuilder.ts can swap this for BillingKmbIcon or BillingKmbAlertIcon depending on KMB state. Neither variant is built — see flags.navBillingGlyphHasUnbuiltKmbVariants."
+    },
+    {
+     "n": 4,
+     "id": "engage",
+     "label": "Engage",
+     "glyph": "Icon / Engage",
+     "file": "navigation-ui/src/components/EngageIcon.tsx",
+     "viewBox": "0 0 23 23"
+    },
+    {
+     "n": 5,
+     "id": "tebraPayments",
+     "label": "Tebra Payments",
+     "glyph": "Icon / Payments",
+     "file": "navigation-ui/src/components/PaymentsIcon.tsx",
+     "viewBox": "0 0 25 19",
+     "note": "The only non-square viewBox. Rendered 24 x 18.24 centred at y=2.88 inside the 24x24 master, matching SVG preserveAspectRatio xMidYMid meet."
+    },
+    {
+     "n": 6,
+     "id": "analytics",
+     "label": "Analytics",
+     "glyph": "Icon / Reports",
+     "file": "navigation-ui/src/components/ReportsIcon.tsx",
+     "viewBox": "0 0 23 23",
+     "note": "Config id and label are analytics; the glyph component is ReportsIcon. Named Icon / Reports after the source filename per convention."
+    }
+   ],
+   "nonSlotElements": [
+    {
+     "part": "Logo",
+     "built": "Nav / Logo",
+     "file": "navigation-ui/src/components/Navigation/TebraLogo.tsx via PartnerLogo.tsx",
+     "note": "viewBox 0 0 782.49 186.82 at the sx width of 100px, so 100 x 23.88. Wrapped by PartnerLogo in an IconButton at DEFAULT (medium) size, not sizeLarge — so it is not 65x65. Fill #f7f4eb is hardcoded in a <style> block, not currentColor."
+    },
+    {
+     "part": "Practice name",
+     "built": "text in Nav / Bar",
+     "file": "Navigation.tsx — <Typography sx={{whiteSpace:\"nowrap\", px:2}}>",
+     "note": "body1 in navText white. Only rendered when isSmUp."
+    },
+    {
+     "part": "Patient search",
+     "built": "Nav / Search",
+     "file": "navigation-ui/src/components/PatientSearch/PatientSearch.tsx",
+     "note": "Canonical Autocomplete + TextField (size small) restyled by the partner MuiOutlinedInput: ground #002328, text white, focused ground white with text falling back to the BASE Tebra text.primary. fieldset border none, so no outline. Only rendered when isSmUp."
+    },
+    {
+     "part": "Messages",
+     "built": "Nav / Icon button > Badge (Standard) > Icon / MailOutline (MUI)",
+     "file": "Navigation.tsx + @mui/icons-material MailOutline",
+     "note": "Badge is canonical — the partner theme does not override MuiBadge — colour secondary (#FF8D6E Vitality 1), max 99, invisible at 0."
+    },
+    {
+     "part": "Help",
+     "built": "Nav / Icon button > Icon / HelpOutline (MUI)",
+     "file": "Navigation.tsx + @mui/icons-material HelpOutline"
+    },
+    {
+     "part": "User profile",
+     "built": "canonical Avatar (Content=Letter) in a 65x65 button box",
+     "file": "Navigation.tsx",
+     "note": "Avatar is canonical — not overridden by the partner theme — 40x40 inside the 65x65 button. Clicking it opens the empty Menu; see flags.navUserMenuRendersEmpty."
+    }
+   ]
+  },
+  "roundingDecision": {
+   "date": "2026-08-03",
+   "source": "Daniel, as design authority — a designed decision, not a transcription.",
+   "rule": "standingBatchRules.8_roundWithRecord",
+   "applied": [
+    {
+     "what": "Nav / Search field height",
+     "figma": 45,
+     "computedPx": 44.8
+    },
+    {
+     "what": "Nav / Search text inset",
+     "figma": 16,
+     "computedPx": 16.4
+    },
+    {
+     "what": "Nav / Logo height",
+     "figma": 24,
+     "computedPx": 23.88
+    },
+    {
+     "what": "Icon / Payments glyph height",
+     "figma": 18,
+     "computedPx": 18.24
+    },
+    {
+     "what": "Icon / Payments glyph y offset",
+     "figma": 3,
+     "computedPx": 2.88
+    }
+   ],
+   "notRounded": "The sub-sm bar height of 65px is exact and unrounded, as are the 65x65 icon buttons and every other nav dimension.",
+   "invariant": "allDimensionsInteger restored file-wide for authored dimensions. VECTOR and GROUP bounds remain intrinsic and are excluded, per the tier 6 illustration precedent.",
+   "supersededEntries": "Nav / Bar height (77 / computedPx 76.8) and Nav / Search column height (77 / computedPx 76.8) were REMOVED on 2026-08-03. They only existed because of the retracted 76.8 derivation; the bar is 65px and the search column is 65px, both exact and unrounded. The remaining entries — search field 45, text inset 16, wordmark 24, Payments glyph 18 — are unaffected: they come from a fractional spacing multiplier and two viewBox ratios, none of which the geometry ruling touches."
+  },
+  "reviewPass": {
+   "date": "2026-08-03",
+   "source": "Daniel's side-by-side against the product.",
+   "changes": [
+    "Search field given its trailing SearchOutlined magnifier, white per the partner theme adornment rule; Icon / SearchOutlined (MUI) transcribed.",
+    "Search description now records the full partner MuiOutlinedInput resolution — ground #002328, text white, focused ground white with text and adornment falling back to the BASE Tebra text.primary, fieldset border none, radius 4.",
+    "Avatar description records illustrated persona as the typical fill and initials as the fallback.",
+    "REFERENCE frame gained a Selected-state callout on the anchor slot."
+   ],
+   "disagreementsReported": [
+    "Review said leading magnifier; source says trailing (InputAdornment position=\"end\"). Source won — flags.navSearchMagnifierIsTrailingNotLeading.",
+    "Review expected a history/clock slot; it does not exist in the bar. The Recent patients panel inside the search dropdown is the history-shaped element — flags.navHasNoHistorySlot."
+   ],
+   "notBuilt": "The focused search state (white ground, dark text and adornment) and the Recent patients dropdown panel. Only the closed field in Default and Hover is built."
+  },
+  "geometryRuling": {
+   "date": "2026-08-03",
+   "source": "Daniel, design authority — product-rendered authority for the nav surface.",
+   "ruling": "THE RENDERED PRODUCT IS THE SOURCE OF TRUTH FOR NAV GEOMETRY. The bar is 65px. The search field centres within it at its natural height (~45px).",
+   "whyTheDerivationWasWrong": "The 76.8px figure was CSS arithmetic that never renders. It summed the search wrapper's Box p:2 (32px) onto the 44.8px field as if the toolbar stacked paddings. A flex toolbar with align-items:center CENTRES its children — it does not sum their box heights into its own. The 44.8px field inside a 32px-padded wrapper centres in whatever height the toolbar actually is; it does not push the toolbar to 76.8. minHeight:64 plus the 65x65 sizeLarge icon buttons is what sets the height, and that is 65.",
+   "derivationChain": "64 -> 65 -> 76.8 -> 65. Three passes each produced a different number from the same source, and only the last matches the product. Recorded as the reason arithmetic is not trusted for this surface: every step was individually defensible and the chain still landed wrong.",
+   "supersedes": [
+    "flags.navBarHeightIsSixtyFiveNotSixtyFour (already superseded)",
+    "flags.navBarHeightDrivenBySearchNotButtons — now WRONG, marked as such"
+   ],
+   "alsoRuled": [
+    "Selected/active slot wash is BUILT even though source has no distinct selected state. Designers have to mock active navigation; the code conflating hover and active is a finding to record, not a reason to omit the state. Selected paints identically to Hover because that is what the code does.",
+    "Where source-derivation and rendered product disagree on this surface, match the product wholesale."
+   ],
+   "groundVerified": "#004852, bound to color/primary/main (VariableID:74:3). Checked against the product image.",
+   "deadZoneFix": "The Right cluster now mirrors source exactly — flexGrow 1 with justifyContent flex-end — and the practice-name text hugs its content instead of sitting in a fixed 160px box. That fixed box was the stray wide frame producing the empty gap between the practice name and the search.",
+   "STATUS": "CLOSED. No further nav passes without a new product screenshot showing a delta."
+  }
+ }
+}

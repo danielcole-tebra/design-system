@@ -1,0 +1,1136 @@
+{
+ "_note": "Step 3. Collections to create in file YX2n4YLrEpBXNbcc73T6dw before any component is built.",
+ "collections": [
+  {
+   "name": "Tebra/Color",
+   "modes": [
+    "Light"
+   ],
+   "modeNote": "palette.mode is unset and defaults to 'light'. No dark theme exists in source — do not invent one.",
+   "variables": [
+    {
+     "name": "color/primary/main",
+     "type": "COLOR",
+     "value": "#004852",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-primary-main)"
+     }
+    },
+    {
+     "name": "color/primary/light",
+     "type": "COLOR",
+     "value": "#417E86",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-primary-light)"
+     }
+    },
+    {
+     "name": "color/primary/dark",
+     "type": "COLOR",
+     "value": "#004852",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-primary-dark)"
+     }
+    },
+    {
+     "name": "color/primary/200",
+     "type": "COLOR",
+     "value": "#8CB2B6",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-primary-200)"
+     }
+    },
+    {
+     "name": "color/primary/100",
+     "type": "COLOR",
+     "value": "#CBDDE0",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-primary-100)"
+     }
+    },
+    {
+     "name": "color/primary/contrastText",
+     "type": "COLOR",
+     "value": "#FFFFFF",
+     "scopes": [
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-primary-contrast-text)"
+     }
+    },
+    {
+     "name": "color/secondary/main",
+     "type": "COLOR",
+     "value": "#FF8D6E",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-secondary-main)"
+     }
+    },
+    {
+     "name": "color/secondary/light",
+     "type": "COLOR",
+     "value": "#FFAF95",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-secondary-light)"
+     }
+    },
+    {
+     "name": "color/secondary/dark",
+     "type": "COLOR",
+     "value": "#DC785D",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-secondary-dark)"
+     }
+    },
+    {
+     "name": "color/secondary/200",
+     "type": "COLOR",
+     "value": "#FFCFBF",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-secondary-200)"
+     }
+    },
+    {
+     "name": "color/secondary/100",
+     "type": "COLOR",
+     "value": "#FFE9E3",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-secondary-100)"
+     }
+    },
+    {
+     "name": "color/secondary/contrastText",
+     "type": "COLOR",
+     "value": "#004852",
+     "scopes": [
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-secondary-contrast-text)"
+     }
+    },
+    {
+     "name": "color/core/main",
+     "type": "COLOR",
+     "value": "#B3C6C4",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-core-main)"
+     }
+    },
+    {
+     "name": "color/core/light",
+     "type": "COLOR",
+     "value": "#D4E0DD",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-core-light)"
+     }
+    },
+    {
+     "name": "color/core/dark",
+     "type": "COLOR",
+     "value": "#8CA7A2",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-core-dark)"
+     }
+    },
+    {
+     "name": "color/core/100",
+     "type": "COLOR",
+     "value": "#E9EFEE",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-core-100)"
+     }
+    },
+    {
+     "name": "color/core/contrastText",
+     "type": "COLOR",
+     "value": "#004852",
+     "scopes": [
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-core-contrast-text)"
+     }
+    },
+    {
+     "name": "color/error/main",
+     "type": "COLOR",
+     "value": "#D83B4D",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-error-main)"
+     }
+    },
+    {
+     "name": "color/error/light",
+     "type": "COLOR",
+     "value": "#FBCBD1",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-error-light)"
+     }
+    },
+    {
+     "name": "color/error/dark",
+     "type": "COLOR",
+     "value": "#B51A2C",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-error-dark)"
+     }
+    },
+    {
+     "name": "color/error/contrastText",
+     "type": "COLOR",
+     "value": "#FFFFFF",
+     "scopes": [
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-error-contrast-text)"
+     }
+    },
+    {
+     "name": "color/warning/main",
+     "type": "COLOR",
+     "value": "#FCDE73",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-warning-main)"
+     }
+    },
+    {
+     "name": "color/warning/dark",
+     "type": "COLOR",
+     "value": "#F2BA2A",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-warning-dark)"
+     }
+    },
+    {
+     "name": "color/success/main",
+     "type": "COLOR",
+     "value": "#3FA266",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-success-main)"
+     }
+    },
+    {
+     "name": "color/success/light",
+     "type": "COLOR",
+     "value": "#6FC691",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-success-light)"
+     }
+    },
+    {
+     "name": "color/success/dark",
+     "type": "COLOR",
+     "value": "#2B865A",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-success-dark)"
+     }
+    },
+    {
+     "name": "color/info/main",
+     "type": "COLOR",
+     "value": "#4678CC",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-info-main)"
+     }
+    },
+    {
+     "name": "color/info/light",
+     "type": "COLOR",
+     "value": "#067889",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-info-light)"
+     }
+    },
+    {
+     "name": "color/grey/300",
+     "type": "COLOR",
+     "value": "#F6F6F6",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-grey-300)"
+     }
+    },
+    {
+     "name": "color/grey/400",
+     "type": "COLOR",
+     "value": "#D6D6D6",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-grey-400)"
+     }
+    },
+    {
+     "name": "color/grey/500",
+     "type": "COLOR",
+     "value": "#9A9A9A",
+     "scopes": [
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-grey-500)"
+     }
+    },
+    {
+     "name": "color/grey/600",
+     "type": "COLOR",
+     "value": "#545454",
+     "scopes": [
+      "TEXT_FILL",
+      "SHAPE_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-grey-600)"
+     }
+    },
+    {
+     "name": "color/grey/900",
+     "type": "COLOR",
+     "value": "#2B2B2B",
+     "scopes": [
+      "TEXT_FILL",
+      "SHAPE_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-grey-900)"
+     }
+    },
+    {
+     "name": "color/text/primary",
+     "type": "COLOR",
+     "value": "#000000",
+     "scopes": [
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-text-primary)"
+     }
+    },
+    {
+     "name": "color/text/secondary",
+     "type": "COLOR",
+     "value": "#545454",
+     "scopes": [
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-text-secondary)"
+     }
+    },
+    {
+     "name": "color/text/disabled",
+     "type": "COLOR",
+     "value": "#9A9A9A",
+     "scopes": [
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-text-disabled)"
+     }
+    },
+    {
+     "name": "color/background/paper",
+     "type": "COLOR",
+     "value": "#FFFFFF",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-background-paper)"
+     }
+    },
+    {
+     "name": "color/background/default",
+     "type": "COLOR",
+     "value": "#E8E5DF",
+     "scopes": [
+      "FRAME_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-background-default)"
+     }
+    },
+    {
+     "name": "color/action/hover",
+     "type": "COLOR",
+     "value": "#CBDDE0",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-action-hover)"
+     }
+    },
+    {
+     "name": "color/action/selected",
+     "type": "COLOR",
+     "value": "#F0EEE8",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-action-selected)"
+     }
+    },
+    {
+     "name": "color/action/active",
+     "type": "COLOR",
+     "value": "#004852",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-action-active)"
+     }
+    },
+    {
+     "name": "color/action/disabled",
+     "type": "COLOR",
+     "value": "#000000",
+     "opacity": 0.5,
+     "scopes": [
+      "STROKE_COLOR",
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-action-disabled)"
+     }
+    },
+    {
+     "name": "color/common/white",
+     "type": "COLOR",
+     "value": "#FFFFFF",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-common-white)"
+     }
+    },
+    {
+     "name": "color/common/black",
+     "type": "COLOR",
+     "value": "#000000",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-common-black)"
+     }
+    },
+    {
+     "name": "color/divider",
+     "type": "COLOR",
+     "value": "#D6D6D6",
+     "scopes": [
+      "STROKE_COLOR"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-divider)"
+     }
+    },
+    {
+     "name": "color/substrate/inputOutline",
+     "type": "COLOR",
+     "value": "#000000",
+     "opacity": 0.23,
+     "scopes": [
+      "STROKE_COLOR"
+     ],
+     "layer": "mui-substrate",
+     "codeSyntax": {
+      "WEB": "var(--tebra-color-substrate-input-outline)"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Tebra/Typography",
+   "modes": [
+    "Default"
+   ],
+   "variables": [
+    {
+     "name": "font/family/base",
+     "type": "STRING",
+     "value": "Akkurat LL",
+     "scopes": [
+      "FONT_FAMILY"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-family-base)"
+     }
+    },
+    {
+     "name": "font/weight/regular",
+     "type": "FLOAT",
+     "value": 400,
+     "scopes": [
+      "FONT_WEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-weight-regular)"
+     }
+    },
+    {
+     "name": "font/weight/bold",
+     "type": "FLOAT",
+     "value": 700,
+     "scopes": [
+      "FONT_WEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-weight-bold)"
+     }
+    },
+    {
+     "_omitted": "font/weight/medium (500)",
+     "reason": "Akkurat LL ships Thin/Light/Regular/Bold only — there is no Medium face. MUI's fontWeightMedium 500 is used by ListSubheader (the Autocomplete group label); it is built at Regular in Figma rather than silently promoted to Bold. See flags.akkuratNoMediumWeight."
+    },
+    {
+     "name": "font/size/caption",
+     "type": "FLOAT",
+     "value": 12,
+     "scopes": [
+      "FONT_SIZE"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-size-caption)"
+     }
+    },
+    {
+     "name": "font/size/chip",
+     "type": "FLOAT",
+     "value": 13,
+     "scopes": [
+      "FONT_SIZE"
+     ],
+     "layer": "mui-substrate",
+     "computedPx": 14.8571428571,
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-size-chip)"
+     }
+    },
+    {
+     "name": "font/size/body2",
+     "type": "FLOAT",
+     "value": 14,
+     "scopes": [
+      "FONT_SIZE"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-size-body2)"
+     }
+    },
+    {
+     "name": "font/size/buttonLarge",
+     "type": "FLOAT",
+     "value": 15,
+     "scopes": [
+      "FONT_SIZE"
+     ],
+     "layer": "mui-substrate",
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-size-button-large)"
+     }
+    },
+    {
+     "name": "font/size/body1",
+     "type": "FLOAT",
+     "value": 16,
+     "scopes": [
+      "FONT_SIZE"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-size-body1)"
+     }
+    },
+    {
+     "name": "font/size/h3",
+     "type": "FLOAT",
+     "value": 20,
+     "scopes": [
+      "FONT_SIZE"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-size-h3)"
+     }
+    },
+    {
+     "name": "font/size/h2",
+     "type": "FLOAT",
+     "value": 24,
+     "scopes": [
+      "FONT_SIZE"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-size-h2)"
+     }
+    },
+    {
+     "name": "font/size/h1",
+     "type": "FLOAT",
+     "value": 32,
+     "scopes": [
+      "FONT_SIZE"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-font-size-h1)"
+     }
+    },
+    {
+     "name": "font/lineHeight/caption",
+     "type": "FLOAT",
+     "value": 16,
+     "scopes": [
+      "LINE_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-line-height-caption)"
+     }
+    },
+    {
+     "name": "font/lineHeight/body2",
+     "type": "FLOAT",
+     "value": 20,
+     "scopes": [
+      "LINE_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-line-height-body2)"
+     }
+    },
+    {
+     "name": "font/lineHeight/body1",
+     "type": "FLOAT",
+     "value": 24,
+     "scopes": [
+      "LINE_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-line-height-body1)"
+     }
+    },
+    {
+     "name": "font/lineHeight/h1",
+     "type": "FLOAT",
+     "value": 48,
+     "scopes": [
+      "LINE_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-line-height-h1)"
+     }
+    }
+   ],
+   "annotation_2026_09_03": "font/lineHeight/h2 and font/lineHeight/h3 (added to the library after this plan; no plan entry) carry codeSyntax var(--tebra-line-height-h2) / -h3, missing the \"font-\" segment every other line height uses. Correct pattern: var(--tebra-font-line-height-h2) / -h3. The six variables added in libraryTodos_write2_2026_09_03 use the correct pattern. The two library values were not changed in that batch."
+  },
+  {
+   "name": "Tebra/Dimension",
+   "modes": [
+    "Default"
+   ],
+   "variables": [
+    {
+     "name": "radius/sm",
+     "type": "FLOAT",
+     "value": 4,
+     "scopes": [
+      "CORNER_RADIUS"
+     ],
+     "layer": "mui-substrate",
+     "codeSyntax": {
+      "WEB": "var(--tebra-radius-sm)"
+     }
+    },
+    {
+     "name": "radius/chip",
+     "type": "FLOAT",
+     "value": 16,
+     "scopes": [
+      "CORNER_RADIUS"
+     ],
+     "layer": "mui-substrate",
+     "codeSyntax": {
+      "WEB": "var(--tebra-radius-chip)"
+     }
+    },
+    {
+     "name": "radius/pill",
+     "type": "FLOAT",
+     "value": 24,
+     "scopes": [
+      "CORNER_RADIUS"
+     ],
+     "layer": "tebra",
+     "codeSyntax": {
+      "WEB": "var(--tebra-radius-pill)"
+     }
+    },
+    {
+     "name": "border/hairline",
+     "type": "FLOAT",
+     "value": 1,
+     "scopes": [
+      "STROKE_FLOAT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-border-hairline)"
+     }
+    },
+    {
+     "name": "border/inputFocused",
+     "type": "FLOAT",
+     "value": 2,
+     "scopes": [
+      "STROKE_FLOAT"
+     ],
+     "layer": "mui-substrate",
+     "codeSyntax": {
+      "WEB": "var(--tebra-border-input-focused)"
+     }
+    },
+    {
+     "name": "border/focusVisible",
+     "type": "FLOAT",
+     "value": 3,
+     "scopes": [
+      "STROKE_FLOAT"
+     ],
+     "layer": "tebra",
+     "codeSyntax": {
+      "WEB": "var(--tebra-border-focus-visible)"
+     }
+    },
+    {
+     "name": "space/2",
+     "type": "FLOAT",
+     "value": 2,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-2)"
+     }
+    },
+    {
+     "name": "space/3",
+     "type": "FLOAT",
+     "value": 3,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-3)"
+     }
+    },
+    {
+     "name": "space/4",
+     "type": "FLOAT",
+     "value": 4,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-4)"
+     }
+    },
+    {
+     "name": "space/5",
+     "type": "FLOAT",
+     "value": 5,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-5)"
+     }
+    },
+    {
+     "name": "space/6",
+     "type": "FLOAT",
+     "value": 6,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-6)"
+     }
+    },
+    {
+     "name": "space/7",
+     "type": "FLOAT",
+     "value": 7,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-7)"
+     }
+    },
+    {
+     "name": "space/8",
+     "type": "FLOAT",
+     "value": 8,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-8)"
+     }
+    },
+    {
+     "name": "space/9",
+     "type": "FLOAT",
+     "value": 9,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-9)"
+     }
+    },
+    {
+     "name": "space/11",
+     "type": "FLOAT",
+     "value": 11,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-11)"
+     }
+    },
+    {
+     "name": "space/12",
+     "type": "FLOAT",
+     "value": 12,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "addedDuringBuild": "Autocomplete Value=Multiple vertical padding — MUI root padding 9 + chip margin 3",
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-12)"
+     }
+    },
+    {
+     "name": "space/13",
+     "type": "FLOAT",
+     "value": 13,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-13)"
+     }
+    },
+    {
+     "name": "space/14",
+     "type": "FLOAT",
+     "value": 14,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-14)"
+     }
+    },
+    {
+     "name": "space/16",
+     "type": "FLOAT",
+     "value": 16,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-16)"
+     }
+    },
+    {
+     "name": "space/17",
+     "type": "FLOAT",
+     "value": 17,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-17)"
+     }
+    },
+    {
+     "name": "space/19",
+     "type": "FLOAT",
+     "value": 19,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-19)"
+     }
+    },
+    {
+     "name": "space/23",
+     "type": "FLOAT",
+     "value": 23,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-23)"
+     }
+    },
+    {
+     "name": "space/24",
+     "type": "FLOAT",
+     "value": 24,
+     "scopes": [
+      "GAP",
+      "WIDTH_HEIGHT"
+     ],
+     "addedDuringBuild": "Autocomplete grouped-option indent (MUI GroupUl paddingLeft 24)",
+     "codeSyntax": {
+      "WEB": "var(--tebra-space-24)"
+     }
+    },
+    {
+     "name": "size/button/minWidth",
+     "type": "FLOAT",
+     "value": 64,
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "layer": "mui-substrate",
+     "codeSyntax": {
+      "WEB": "var(--tebra-size-button-min-width)"
+     }
+    },
+    {
+     "name": "size/icon/inButton",
+     "type": "FLOAT",
+     "value": 16,
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "computedPx": 18.2857142857,
+     "codeSyntax": {
+      "WEB": "var(--tebra-size-icon-in-button)"
+     }
+    },
+    {
+     "name": "size/icon/small",
+     "type": "FLOAT",
+     "value": 20,
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "computedPx": 22.8571428571,
+     "codeSyntax": {
+      "WEB": "var(--tebra-size-icon-small)"
+     }
+    },
+    {
+     "name": "size/icon/medium",
+     "type": "FLOAT",
+     "value": 24,
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "computedPx": 27.4285714286,
+     "codeSyntax": {
+      "WEB": "var(--tebra-size-icon-medium)"
+     }
+    },
+    {
+     "name": "size/input/medium",
+     "type": "FLOAT",
+     "value": 56,
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "layer": "mui-substrate",
+     "codeSyntax": {
+      "WEB": "var(--tebra-size-input-medium)"
+     }
+    },
+    {
+     "name": "size/input/small",
+     "type": "FLOAT",
+     "value": 40,
+     "scopes": [
+      "WIDTH_HEIGHT"
+     ],
+     "layer": "mui-substrate",
+     "codeSyntax": {
+      "WEB": "var(--tebra-size-input-small)"
+     }
+    }
+   ],
+   "annotation_2026_09_03": "space/* codeSyntax WEB values listed on these plan entries were removed from the library variables in libraryTodos_write2_2026_09_03 (the CSS variable exists nowhere in the repo). Plan entries left as written. space/32 added; non-scale values described as component size tokens (decision: scale is multiples of 8 with 4 as the half step)."
+  }
+ ]
+}

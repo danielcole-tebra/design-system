@@ -1,0 +1,34 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "codeDefectRegister2026_08_31",
+ "sequence": 14,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "1bfb3bdaeccb4ebb12fe1d31b1f88fa07a0c3eb2a89cb068891ba937591b0a77"
+ },
+ "record": {
+  "_scope": "Defects in shipping code, as distinct from Figma GAPs. Collected once across all six built compositions rather than filed individually. No tickets, by decision.",
+  "document": "C:/Code/tebra-catalog/audits/code-defects.md",
+  "rule": "A GAP is something a Figma component cannot express and stays marked in the frame. A defect is something wrong in packages/design-system or its consumers and goes in the register. Compositions keep marking gaps; they do not gain defect prose.",
+  "entries": {
+   "D1": "MuiRadioButton is not a MUI slot (MuiRadio is), so RadioButtonOverrides never applies. 38 files / 98 elements. The file carries only defaultProps, so what is lost is ripple suppression, not styling — radios are the only control in the system that ripple. One-line fix.",
+   "D2": "outlined is unstyled at the theme layer in THREE components, not two. MuiButton (101 el / 71 files), MuiButtonGroup (4 / 4), MuiAlert (1 / 1). All 37 override files swept; these are the only three. Aggravated by containedPrimary already being a white button with a core.main border, so Tebra contained-primary and MUI stock outlined occupy the same visual niche without being the same thing. Button at 71 files is the widest-reaching defect found.",
+   "D3": "AlertOverrides has no standardSuccess rule (3 el / 3 files take that path) AND no success key in iconMapping (affects all 5 success alerts). CheckmarkFilledIcon already exists and is exported. Both one-liners.",
+   "D4": "Split button is published in Figma (627:161, 8 variants) but does not exist in code — no match for *split* anywhere in design-system/src. 8 production files hand-roll it, in 7 packages, with two different caret icons. This is a library-parity defect, not a misuse defect: those files had nothing to import. appointment-workflow-ui/src/components/SplitButton.tsx is a complete reusable implementation sitting in a feature package.",
+   "D5": "The selected segment state is hand-rolled FIVE times in five packages, not twice. Three hardcode #ffffff, two use a token, a sixth copy is pasted into a .md. Four of the five have no hover rule, so ButtonOverrides.containedPrimary &:hover wins and hovering a selected segment discards its selected appearance — #004852/white flips to #CBDDE0/#004852. EventTypeSelector is the only one that pins hover.",
+   "D6": "LOWER CONFIDENCE, needs an intent decision. standardWarning borders with secondary.main (#FF8D6E brand orange) rather than warning.main (#FCDE73). Looks deliberate — the yellow is near-invisible at 1px and warning.light equals warning.main, suggesting an unfinished ramp — but it is unmarked either way. 43 warning elements."
+  },
+  "countsCorrected": {
+   "radioFiles": "52 -> 38",
+   "splitButtonFiles": "7 -> 8",
+   "selectedStateDefinitions": "2 packages -> 5 definitions in 5 packages"
+  },
+  "methodLimit": "MUI slot names and MUI v5 stock appearance were validated from knowledge, not from @mui/material — the package is not installed in this checkout and installing it was out of scope. The claim that Tebra rules are ABSENT is read directly from source and is not an inference."
+ }
+}

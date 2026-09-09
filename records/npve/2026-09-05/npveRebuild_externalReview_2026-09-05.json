@@ -1,0 +1,242 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_externalReview_2026-09-05",
+ "sequence": 69,
+ "date": "2026-09-05",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "e90a65b08988c6e6b147dd9129465851b479bf0b810b9ae6614535a8f64089fb"
+ },
+ "record": {
+  "_status": "READ-ONLY REVIEW COMPLETE. Peer review of the external (Codex) sidesheet work since cd092d9. All 20 batches recorded and gated; two review-only folders unrecorded; two record claims inaccurate. No subscription split, no duplicate masters, no detached instances, zero unbound authored paints. Nine screens meet the standard with numbered repairs; no rebuild. Three rule-5 findings (two unmarked stand-ins, one contradicted DEFECT). No Figma mutation.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 read only",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (Chip 156:171 axes, Inputs sets, icon names)",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only (fresh 1x renders; verbatim text of 4536:27605, 648:1603, 129:7726, 129:7950)",
+  "report": "figma-export/npve-external-review-2026-09-05/report.md",
+  "recordGate": "npveRebuild_externalCareFacilityStay_2026-09-05 recorded DONE — passed",
+  "scopeReviewed": "Everything added or changed after commit cd092d9: Sidesheet set 279:2446 and its global edits; Templates sections 06–13 plus Medication helpers in 05, browse body 304:2910, Problems list body State=Empty 304:2883; Screens sections 04–13; local collections NPVE/Dimension and NPVE/Color.",
+  "step1_records": {
+   "batches": 20,
+   "recorded": 20,
+   "gateChain": "unbroken; each record names the previous as passed",
+   "unrecordedFolders": [
+    "figma-export/npve-flowsheets-list-2026-09-05 (1 png, no report.md)",
+    "figma-export/npve-next-candidate-audit-2026-09-05 (9 png, no report.md)"
+   ],
+   "inaccurateClaims": [
+    "npveRebuild_allergiesList_2026-09-05 rule 8 \"all authored geometry whole-pixel\": severity selector 352:3206 Label x 6.5, DownCaret x 47.5 (master + 3 placements)",
+    "npveRebuild_allergiesList_2026-09-05 and npveRebuild_procedureHistory_2026-09-04 report GAP 0 while each built a local stand-in for something the library cannot express"
+   ],
+   "libraryTodos": "item 15 added (Text field end adornment), matches flag npveProblemEdit_textFieldNoEndAdornment"
+  },
+  "step2_reuse": {
+   "sidesheet": "all 18 Screens and 20 Templates occurrences resolve to set 279:2446; Body content preferred values 10, default 26:221 unchanged",
+   "problemSummaryRow": "153:1186 unchanged (518x88, Show divider); not consumed; Medication summary row 219:2068 is a parallel master with the same anatomy (decision, see flag)",
+   "changeLogRow": "every row is a live 18:103 instance (Screens 111, Templates 124)",
+   "comparison": "every comparison is a live 35:332 instance; helpers have exactly one instance each; preferred values 13 per swap",
+   "duplicateMasters": 0,
+   "subscriptionSplit": 0,
+   "detached": 0,
+   "remoteComponentNames": 27,
+   "note": "Hospitalizations/Facility Stay tab strip built twice (370:3354, 391:3568); Allergies strip a third copy of the tabs-on-divider pattern"
+  },
+  "step3_standards": {
+   "unboundAuthoredPaints": 0,
+   "fractional": "8 hits, all the Allergy severity selector label/caret (352:3207 x 6.5, 352:3208 x 47.5) in master and placements",
+   "hiddenDeadLayers": 0,
+   "looseStacks": "only the two named GAP wrappers in 389:3469 (layoutMode NONE around Text field + absolute Calendar)",
+   "unboundSpacing": "Problem edit body 316:3412 paddingTop 8 and gap 16; 316:3434, 316:3456, 316:3458, 316:3475 gaps literal",
+   "inventionVsGap": {
+    "familyHistoryRing": "346:3083 Icon button with a bound 1px stroke override reproduces the ring the library lacks; contradicts DEFECT marker 189:615 and the bare-glyph handling used on Medication and Problems",
+    "allergySeveritySelector": "352:3206 local pill (chipSuccessBackground, radius/chip, DownCaret) for the source dropdown; library Chip has color=success but no caret slot; no GAP marker",
+    "procedureMetadataBadge": "337:3881 local outlined pill imitating a small Chip to carry a bold prefix; plan said published Chips; no GAP marker",
+    "markedCorrectly": [
+     "324:4934 GAP Text field end adornment",
+     "394:5611 GAP (clone) beside Facility Stay",
+     "NPVE/Color Form surface and NPVE/Dimension radius/md with operator decisions"
+    ]
+   },
+   "text": "Akkurat LL throughout; family bound; status labels SMALL_CAPS_FORCED as in 153:1186; Title Case button labels are the existing npveBuild_buttonLabelTitleCase"
+  },
+  "step4_fidelity": {
+   "verbatimMisses": [
+    "Problems · Edit: source \"Low back pain M540.50\" → rebuild \"M54.50\" (silent correction, unlogged)",
+    "Facility Stay: source \"Discahrge to\" → rebuild \"Discharge to\" (silent correction, unlogged)"
+   ],
+   "unloggedStyleDrift": [
+    "Problems · Edit \"Type\" label Regular 14 → Bold 14",
+    "Allergies \"Mild\" Bold 14 → Regular 16"
+   ],
+   "libraryWins": [
+    "caret chevron vs triangle (marker 197:3416)",
+    "bare add-to-note glyph vs ring (marker 189:615)",
+    "search field without magnifier (27:295)",
+    "48px tabs",
+    "Chronic chip primary main",
+    "EditOutlined for the source pencil (library has no plain pencil)",
+    "small Icon button for the 24px trash glyph"
+   ],
+   "decisions": [
+    "72/71 header and footer",
+    "16px body inset",
+    "content-driven height",
+    "Facility Stay clipped content restored (flag high)"
+   ]
+  },
+  "step5_comparisons": {
+   "captions": "all nine carry \"Source: <key> <node>, exported <date>\" with dates matching the batch records",
+   "referenceScale": {
+    "oneToOne": [
+     "254:3707",
+     "309:5711",
+     "309:6116",
+     "318:6740",
+     "339:6481",
+     "378:5613",
+     "393:7689"
+    ],
+    "scaled": {
+     "346:5993": "346:3147 FIT of 550x656 into 550x600 = 0.915",
+     "356:6236": "356:6191 FIT of 550x656 into 550x600 = 0.915"
+    }
+   },
+   "exactlyOnce": {
+    "sole": [
+     "318:6740",
+     "339:6481",
+     "346:5993",
+     "356:6236",
+     "378:5613",
+     "393:7689"
+    ],
+    "duplicated": [
+     "250:3519 standalone + 254:3707",
+     "309:4531 standalone + 309:5711",
+     "309:4772 standalone + 309:6116",
+     "(pre-existing, ours) 156:2428/156:2707 standalone + 160:3169/160:3680"
+    ]
+   },
+   "changeLogPatterns": {
+    "withTitle": [
+     "254:1895",
+     "309:5243",
+     "309:5586",
+     "339:6405 (title lacks \"Changes:\" prefix)"
+    ],
+    "noTitlePadded": [
+     "318:3928"
+    ],
+    "bareRows480": [
+     "346:3365 (white fill on helper)",
+     "356:6192",
+     "378:3403",
+     "392:4093"
+    ]
+   },
+   "jargonExamples": [
+    "550×600 fixed rebuild → 550×382 content-driven rebuild",
+    "Footer pinned at y544 → footer follows body at y311",
+    "Grey interpretation → background/paper",
+    "One state in the existing body API",
+    "Raw #EEF7F9 → NPVE/Form surface",
+    "Source date field → Text Field + Calendar GAP",
+    "Live frame → frozen 2× PNG"
+   ],
+   "namingDrift": "comparison instances \"Rebuild comparison — X\" → \"X · Reference vs rebuild\" from Family history on; reference rectangles named three ways; five masters with empty descriptions (304:2910, 346:3080, 346:3113, 389:3469, 391:3567)"
+  },
+  "step6_verdicts": {
+   "shellGlobals": "meets standard as built",
+   "medicationList": "meets; D standalone duplicate; L jargon rows; D Full-width slot default named for a screen (248:1827)",
+   "problemsEmpty": "meets; D standalone duplicate; L jargon rows",
+   "problemsBrowse": "meets; D standalone duplicate; L jargon rows",
+   "problemsEdit": "meets; M change log to pattern; D/L ICD correction; L Type label; M bind spacing",
+   "procedures": "meets; D metadata badge GAP marker or Chip; M change log title prefix",
+   "familyHistory": "meets; D/M ring override; M reference at 550x656 clip off; M change log to pattern",
+   "allergies": "meets; D severity selector GAP marker; M integer geometry; L Mild weight; M reference clip off; M change log to pattern",
+   "hospitalizations": "meets; M change log to pattern; L mechanism rows",
+   "facilityStay": "meets; L Discharge correction row; M change log to pattern; L mechanism row",
+   "rebuilds": 0,
+   "adopt": [
+    "content-driven sheet height with the master fixed",
+    "transparent rebuild helper below a short sheet",
+    "clip-off override on the comparison instance for tall content (apply to tall references)",
+    "bodies appended to Body content preferred values, default untouched",
+    "variant added to an existing body set instead of a new master",
+    "local NPVE collections for consumer-only tokens with the decision recorded and no code syntax",
+    "global shell corrections with population counts and before/after renders",
+    "restore clipped source content and flag the source at high severity"
+   ]
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "N/A read-only; live comparison instances rendered and inspected",
+   "2_unboundPaintAudit": "PASS — all new Templates sections and every Sidesheet occurrence on Screens walked; 0 unbound authored; section chrome excluded by recorded direction",
+   "3_referenceCounts": "N/A no clone; all links resolve",
+   "4_skipInvisibleFalse": "PASS — set on every walk",
+   "5_opacityLast": "PASS — untouched",
+   "6_enumerateDontRecall": "PASS — page walks, records checked afterwards",
+   "7_fileIdentityFirst": "PASS — keys explicit; Cover 0:1 / Templates 3:2 / Screens 27:2 / Archive 126:2",
+   "8_roundWithRecord": "FOUND 8 — Allergy severity selector; recorded as flag",
+   "9_boundPaintAlpha": "PASS — untouched",
+   "10_cloneDropsPropertyRefs": "N/A"
+  },
+  "counts": {
+   "newGapMarkersByExternal": 2,
+   "newDefectMarkersByExternal": 0,
+   "unmarkedStandIns": 2,
+   "contradictedDefect": 1,
+   "rebuilds": 0
+  },
+  "figmaMutations": [],
+  "screenshots": [
+   "figma-export/npve-external-review-2026-09-05/comparison-allergies-356-6236-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-facility-stay-393-7689-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-family-history-346-5993-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-hospitalizations-378-5613-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-medication-list-254-3707-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-problems-browse-309-6116-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-problems-edit-318-6740-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-problems-empty-309-5711-1x.png",
+   "figma-export/npve-external-review-2026-09-05/comparison-procedures-339-6481-1x.png",
+   "figma-export/npve-external-review-2026-09-05/master-allergy-card-354-3206-1x.png",
+   "figma-export/npve-external-review-2026-09-05/master-family-member-card-346-3089-1x.png",
+   "figma-export/npve-external-review-2026-09-05/master-procedure-event-row-337-3884-1x.png",
+   "figma-export/npve-external-review-2026-09-05/preview-medication-row-states-224-1730-1x.png",
+   "figma-export/npve-external-review-2026-09-05/sidesheet-set-279-2446-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-allergies-129-7726-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-facility-stay-648-1603-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-family-history-129-7950-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-hospitalizations-129-8316-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-medication-list-545-5557-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-problem-edit-4536-27605-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-problems-browse-129-10016-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-problems-empty-4704-17095-1x.png",
+   "figma-export/npve-external-review-2026-09-05/source-procedures-648-3473-1x.png",
+   "figma-export/npve-external-review-2026-09-05/standalone-medication-list-250-3519-1x.png"
+  ],
+  "flagsAdded": [
+   "npveExtReview_familyHistoryRingOverride",
+   "npveExtReview_allergySeveritySelectorUnmarked",
+   "npveExtReview_procedureMetadataBadgeUnmarked",
+   "npveExtReview_referenceScaledToSlot",
+   "npveExtReview_changeLogPatternDrift",
+   "npveExtReview_changeLogJargon",
+   "npveExtReview_silentTextCorrections",
+   "npveExtReview_unloggedTypeStyleDrift",
+   "npveExtReview_standaloneScreenDuplicates",
+   "npveExtReview_severitySelectorFractional",
+   "npveExtReview_problemEditUnboundSpacing",
+   "npveExtReview_fullWidthSlotDefaultName",
+   "npveExtReview_parallelSummaryRows",
+   "npveExtReview_unrecordedAuditFolders"
+  ],
+  "flagsBefore": 233,
+  "flagsAfter": 247
+ }
+}

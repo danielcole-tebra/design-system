@@ -1,0 +1,89 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "beigeSurfaceInvestigation2026_08_31",
+ "sequence": 17,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "6bdee75099cb109c2a952a9635bd03d2f92811301ddf36b2748c011fddd91b21"
+ },
+ "record": {
+  "_status": "CLOSED — NO CHANGE MADE. Premise tested and rejected. The beige IS the product default; the library is right.",
+  "_prompt": "Build prompt asked to remove the beige default surface on the assumption it is used almost nowhere in production. Stop condition in the prompt: if code shows beige is the genuine default, report and stop. That condition was met.",
+  "whatTheBeigeIs": {
+   "token": "background.default",
+   "hex": "#E8E5DF",
+   "tebraName": "backbone 3",
+   "figmaVariable": "color/background/default — VariableID:74:40, collection Tebra/Color, scopes [FRAME_FILL] only",
+   "source": "packages/design-system/src/palette/paletteValues.ts:70",
+   "notToBeConfusedWith": "action.selected #F0EEE8 (backbone 2, VariableID:74:42) and computed/alphaSelected12 (VariableID:196:3, same #F0EEE8). 25 nodes carry that colour across the library and every one is a selected state or a Chip default filled — a different token doing a different job. It was counted separately and is not part of this finding."
+  },
+  "productionEvidence": {
+   "verdict": "Beige is the genuine default page canvas, established three independent ways.",
+   "one_themeToken": "paletteValues.ts:70 background.default = #E8E5DF. background.paper = #fff (line 69).",
+   "two_cssBaseline": "packages/hooks/src/ThemeProvider/ThemeProvider.tsx renders <CssBaseline/>, which paints body with theme.palette.background.default. CssBaselineOverrides.ts overrides only *:focus-visible outlines and never touches background, so MUI stock behaviour stands. 35 packages reference a ThemeProvider.",
+   "three_hardcodedPageShells": "20 of 38 root.component.css files set body (or the single-spa root div) to #E8E5DF. navigation-ui — the always-mounted shell — is one of them, so beige is the canvas under every screen regardless of which micro-frontend is active.",
+   "consumers": "17 non-story files read background.default directly (bgcolor/backgroundColor). A further 9 design-system stories use it as the backdrop to demo components against.",
+   "corroboration": "TableOverrides.ts:14 sets MuiTableRow root to background.paper explicitly. A table only needs to declare itself white if the surface beneath it is not white. The theme assumes a non-paper canvas."
+  },
+  "theRealInconsistency": {
+   "finding": "The drift is in the product, not the library, and it is an untokenised cool grey.",
+   "tally": "Of 38 root.component.css files: 20 use #E8E5DF (tokenised, backbone 3), 10 use #edeef1, 2 use #fbf9f8, 5 set no background rule, 1 uses var(--active-color) (composition-ui, a docs harness).",
+   "edeef1": "#edeef1 appears nowhere in the repo except those 10 root.component.css files. It is not in paletteValues.ts, has no Tebra name, and no theme entry. Packages: accounts-receivable, documents, facesheet, medications, mfa, not-found, patient-intake-admin, payments-onboarding, signin, worklist.",
+   "fbf9f8": "electronic-case-reporting-ui and patient-engagement-ui. Also untokenised.",
+   "consequence": "Ten to twelve micro-frontends paint a page canvas that no token describes. Because navigation-ui sets beige on body and these set their own, which colour wins is a CSS load-order accident, not a decision.",
+   "recommendedFix": "NOT the fix this prompt proposed. The correct move is to converge the 12 untokenised shells onto background.default, or to decide #edeef1 is the real default and retoken it. Either way it is a product change, not a library change. Needs an intent decision before anyone acts."
+  },
+  "figmaUsageAudit": {
+   "method": "Every one of the 11 pages walked node by node, fills and strokes, matching literal #E8E5DF/#F0EEE8 and bound variables 74:40, 74:42, 196:3.",
+   "pageCanvases": "ALL 11 page canvases are #F5F5F5 — Figma default grey, untouched. The prompt premise that page canvases are beige is false.",
+   "totalBeigeNodes": 34,
+   "breakdown": {
+    "surfaceFrames_23": "Cover 1; Reference 3 (Validation — Size=Small, and two Validation — notch on tinted surface frames that exist specifically to test the notch against a tinted surface); Compositions 9; Layouts 10 (5 Page frames + 5 Content region frames).",
+    "avatarForeground_10": "Data display 3, Compositions 2, Layouts 5. These are the Avatar fallback glyph, letter and icon — MUI Avatar sets color: background.default as a FOREGROUND against grey[400]. Correct substrate behaviour, not a surface.",
+    "tokenSwatch_1": "Foundations, the documentation swatch for the token itself."
+   },
+   "layoutsPageIsAFaithfulMirror": "Layouts/Page templates renders the teal Nav/Bar over a beige Page and a beige Content region labelled empty by design. That is exactly navigation-ui: a teal bar over body background #E8E5DF. Screenshot confirmed."
+  },
+  "inconsistencyFoundInsideFigma": {
+   "note": "Not a defect worth acting on alone, but recorded since it was measured.",
+   "compositionFrameFills": "SUPERSEDED 2026-09-01 — the tally was wrong and is corrected in compositionBackdropConvention2026_09_01.correctionsToThePriorRecord. Was: \"Of 15 composition frames: 9 use #E8E5DF (2 of them UNBOUND literals — Autocomplete open state 371:780, Assembled pagination 372:2232, Card header band 373:833 — so 3 unbound), 2 use grey/300 #F6F6F6 (Button group segment row 161:110, Stacked adjacency 177:6), 4 have NO FILL (Selection / bulk action bar 536:3, Chip — common configurations 317:60, Table assembly 446:3, Drawer panel 498:2).\"",
+   "implication": "Newer compositions (Table assembly 446:3, the current one) sit on no fill and therefore on the #F5F5F5 page canvas, while the superseded Table assembly 193:14 sits on beige. The backdrop convention drifted mid-build and was never settled. Worth one decision, not a rebuild.",
+   "unboundLiterals": "RESOLVED 2026-08-31 — see unboundLiteralsBound2026_08_31. Was: three composition frames carried raw #E8E5DF rather than a binding to color/background/default."
+  },
+  "chartShellDoesNotExist": "The prompt refers to a chart shell with an empty content region. No node named chart, graph, plot or visualisation exists anywhere in the file, and no chart component exists in packages/design-system. The nearest real things are Layouts/Content region (beige, empty by design) and Table assembly section 8 Empty. The premise appears to have been carried over from elsewhere.",
+  "chipInfoCollision": {
+   "confirmed": true,
+   "detail": "ChipOverrides.ts:26-27 colorInfo sets backgroundColor: theme.palette.core.light. TableOverrides.ts:16-17 MuiTableRow head sets the same core.light. Both resolve to #D4E0DD. Real collision, independently verified in source.",
+   "bearingOnThisTask": "None, because no surface changed. It was raised in the prompt as something the surface change might make more or less visible. The surface did not change, so its visibility is exactly what it was. It remains open on its own terms."
+  },
+  "whatWasChanged": "SUPERSEDED — was: Nothing. That was true of the investigation itself. A follow-up instruction then bound the three unbound literals; see unboundLiteralsBound2026_08_31 below. The investigation finding is unchanged: the beige stays, and no surface colour was altered.",
+  "publishStep": "None required. No published component was affected.",
+  "unboundLiteralsBound2026_08_31": {
+   "_status": "DONE. Binding only — no colour, geometry or component change.",
+   "instruction": "Bind the three unbound composition frames to color/background/default.",
+   "variable": "color/background/default — VariableID:74:40, Tebra/Color, scopes [FRAME_FILL]. Frames are FRAME nodes, so the scope permits the binding.",
+   "nodes": [
+    "371:780 Autocomplete open state (Inputs) — 1632x5138 at 80,80",
+    "372:2232 Assembled pagination (Data display) — 820x406 at 1060,80",
+    "373:833 Card header band (Surfaces & navigation) — 900x500 at 80,80"
+   ],
+   "method": "fills array cloned (read-only), figma.variables.setBoundVariableForPaint applied to paint 0, returned paint captured and the new array reassigned. fills[0] was verified SOLID on each node before touching it.",
+   "verification": {
+    "colourUnchanged": "All three read #E8E5DF before and after. The binding resolves to the value the literal already held, so nothing moved visually.",
+    "geometryUnchanged": "x, y, width and height byte-identical before and after on all three.",
+    "pageLayoutIntact": "Compositions section positions re-read after the change and unchanged, preserving the hand-laid-out horizontal layout. No section or frame was repositioned.",
+    "sweep": "Whole-page walk at every depth afterwards returns zero remaining unbound #E8E5DF fills on the Compositions page.",
+    "screenshot": "Card header band 373:833 rendered and inspected. Beige backdrop, white cards retain their edges, text contrast unchanged."
+   },
+   "stillNotBound": "One UNBOUND fill remains on the page: 795:1655 Section note — nothing built yet, a TEXT node filled #000000. Text fill, not a surface, and outside the scope of this instruction.",
+   "backdropConventionStillOpen": "SUPERSEDED 2026-09-01 by compositionBackdropConvention2026_09_01 — settled on background.paper. Was: \"Binding does not settle which backdrop a composition should have. Of 15 composition frames, 9 are now bound beige, 2 bound grey/300 #F6F6F6, 4 have NO FILL — including the current Table assembly 446:3, while the superseded 193:14 sits on beige. That decision is still open.\"",
+   "publishStep": "None required. No published component was affected — all three are unpublished reference frames per libraryRestructure2026_08_26c.settledDecisionsApplied.compositionsAreReferenceFrames."
+  }
+ }
+}

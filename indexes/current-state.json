@@ -1,0 +1,56 @@
+{
+ "format": "tebra.design-current-state",
+ "version": 1,
+ "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
+ "latestRecord": {
+  "id": "npveRebuild_moduleChipFix_2026-09-08",
+  "date": "2026-09-08",
+  "workstream": "npve",
+  "path": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json",
+  "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scale, variant anatomy and strip order verif"
+ },
+ "recordGate": {
+  "inProgress": [],
+  "clear": true,
+  "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
+ },
+ "byWorkstream": {
+  "library": {
+   "count": 25,
+   "latest": {
+    "id": "libraryTodos_write2_2026_09_03",
+    "date": "2026-09-03",
+    "path": "records/library/2026-09-03/libraryTodos_write2_2026_09_03.json",
+    "status": "DONE. Variables: space/32 added, 14 non-scale space/* described, WEB codeSyntax removed from all 19 that had it; six typography variables added (h4, h5, subtitl"
+   }
+  },
+  "npve": {
+   "count": 61,
+   "latest": {
+    "id": "npveRebuild_moduleChipFix_2026-09-08",
+    "date": "2026-09-08",
+    "path": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json",
+    "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scale, variant anatomy and strip order verif"
+   }
+  },
+  "workflow": {
+   "count": 5,
+   "latest": {
+    "id": "postPilot_merge_2026-09-08",
+    "date": "2026-09-08",
+    "path": "records/workflow/2026-09-08/postPilot_merge_2026-09-08.json",
+    "status": "DONE. codex/lean-workflow merged into master with a merge commit; schema, metrics and Figma state agree post-merge; item 2 tier approval verified present in its"
+   }
+  }
+ },
+ "flags": {
+  "active": 227,
+  "resolved": 58
+ },
+ "standingBatchRules": 10,
+ "aggregate": {
+  "path": "design-system-schema.json",
+  "sha256": "ec02a430f5d7ab2bacdfad66c58bfd8b9a0f2cac57b436158f8cf5a709ac4421",
+  "bytes": 1418713
+ }
+}

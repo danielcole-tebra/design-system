@@ -1,0 +1,818 @@
+{
+ "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+ "builtOn": "2026-08-01",
+ "retired": {
+  "componentSet": "69:6 (Button, 3 variants, single fabricated Variant axis incl. 'Outlined')",
+  "variableCollection": "VariableCollectionId:67:3 (Tebra tokens (test), 9 hand-transcribed variables)",
+  "reason": "Two colour values were wrong (text-disabled, border-disabled), spacing/md was scoped GAP-only and 1px short for the bordered contained button, number code syntax was raw px rather than var(), and 'Outlined' is not in the story argTypes."
+ },
+ "collections": {
+  "Tebra/Color": {
+   "id": "VariableCollectionId:74:2",
+   "mode": "Light",
+   "count": 64
+  },
+  "Tebra/Typography": {
+   "id": "VariableCollectionId:74:49",
+   "mode": "Default",
+   "count": 17
+  },
+  "Tebra/Dimension": {
+   "id": "VariableCollectionId:74:65",
+   "mode": "Default",
+   "count": 31
+  },
+  "_note": "Counts verified against the live file on 2026-08-02. Tier 5 added color/computed (no palette)/alphaBlack04 and alphaBlack12."
+ },
+ "pages": {
+  "_order": [
+   "Cover",
+   "Foundations",
+   "Reference",
+   "Actions",
+   "Inputs",
+   "Data display",
+   "Feedback",
+   "Surfaces & navigation",
+   "Icons & illustrations",
+   "Compositions",
+   "Layouts"
+  ],
+  "_structure": "Consolidated 2026-08-03 from 37 pages (one per component) to 9 family pages. Order is Cover · Tokens · five component families · Icons & illustrations · Reference. Within each family page, nodes are laid out in a single row at y=0 (Icons & illustrations uses two rows: illustrations at y=0, icons at y=700), ordered as listed in each entry below.",
+  "Cover": "File title, source-of-truth statement, schema reference, component inventory, a 'not yet rebuilt' note, and the restored Known drift and decisions record. Plain text on background.default. 2 frames.",
+  "Tokens": "GENERATED — read-only rendering of all three variable collections. See flags.tokensPageGenerated before touching it. Regenerate with tokens-page-generator.js; never hand-edit. Last regenerated 2026-08-03 after the nav build: 119 variables (70 colour / 17 typography / 32 dimension), 709 nodes, 587 paints, 0 unbound, 0 fractional, 0 missing geometry bindings. 1 frame.",
+  "Actions": "Button set (54 variants), Button group / Segment set (54), Icon button set (24), Link single component, Read more set (4). 5 nodes.",
+  "Inputs": "Text field set (20 variants), Checkbox set (12), Radio set (8), Switch set (16), Form control label set (2), Autocomplete / Field set (30), Autocomplete / Option set (5), Autocomplete / Tag set (2), Toggle button set (18). 9 nodes.",
+  "Data display": "Chip set (84 variants), List / Item set (2), List composite, Table / Cell set (6), Table / Row set (3), Table pagination composite, Pagination / Item set (32), Avatar set (3), Badge set (2), Divider set (2). 10 nodes.",
+  "Feedback": "Alert set (6 variants), Snackbar content set (2), Tooltip single component, Circular progress single component, Feedback message set (12). 5 nodes.",
+  "Surfaces & navigation": "Paper set (12 variants), Card set (2), Accordion set (4), Dialog composite, Drawer composite, Menu / Item set (6), Menu composite, Tabs / Tab set (4), Tabs composite, Stepper / Step set (3), Stepper composite, Mobile stepper set (2), plus the SECTION 'Primary nav (partner theme)' holding Nav / Bar, Nav / Icon button (3), Nav / Menu item (2), Nav / Dropdown, Nav / Logo and Nav / Search (2). 13 top-level nodes. Everything inside the section renders under createPartnerTheme, not the design-system theme.",
+  "Icons & illustrations": "39 icon masters and 7 illustration masters, 46 nodes. The 8 nav glyphs added 2026-08-03 (Platform, Clinical, Billing, Engage, Payments, Reports, MailOutline (MUI), HelpOutline (MUI)) are bound to color/common/white rather than a canonical text colour, because the nav glyph rule is navText — correct for the nav, wrong anywhere else.",
+  "Reference": "Every node deliberately excluded from publish, gathered from the component pages on 2026-08-03. Five DO NOT USE / REFERENCE frames (Radio intended-vs-shipping, Select + Menu composition, Dialog over scrim, stacked adjacency, composed table) and twelve Read me / Validation / Assembled examples frames (Button ×3, Button group ×1, Text field ×4, Autocomplete ×4). 18 nodes, the 18th being 'REFERENCE — Primary nav with open submenu (not a component)' added 2026-08-03. The publish exclusion list is now simply 'the Tokens page and the Reference page' — no per-frame list is needed.",
+  "_consolidation": {
+   "date": "2026-08-03",
+   "from": "37 pages — Cover, Tokens, one page per component, Illustrations, Icons",
+   "to": "9 family pages",
+   "method": "Moves, not recreates. Every node was relocated with page.appendChild(node), preserving node IDs, instance links, componentPropertyReferences and INSTANCE_SWAP preferredValues. Nothing was cloned, detached or rebuilt. The 35 emptied pages were each verified to have 0 children before removal.",
+   "verification": {
+    "topLevelNodes": "99 before, 99 after",
+    "paints": "4940 before, 4940 after",
+    "unboundPaints": "0 before, 0 after",
+    "componentPropertyReferences": "1778 before, 1778 after",
+    "componentMasters": "484 before, 484 after",
+    "componentSets": "31 before, 31 after",
+    "instances": "926 before, 926 after",
+    "instanceSwapProps": "10 before, 10 after",
+    "preferredValuesTotal": "50 before, 50 after",
+    "variantsPerSet": "all 31 sets identical before and after"
+   },
+   "familyAssignment": "Derived from design semantics, not from Storybook's taxonomy. Confirmed by Daniel 2026-08-03. Divergences recorded in flags.pageFamiliesDivergeFromStorybook.",
+   "pageNaming": "The brief wrote 'Icons+Illustrations'; the page is named 'Icons & illustrations' to match the file's existing sentence-case page convention (Button group, Form control label, Table pagination, Circular progress).",
+   "coverRefresh": {
+    "date": "2026-08-03",
+    "note": "Run immediately after the consolidation, since consolidating made the Cover inventory staler. Regenerated from the live file, not from any previous report (standing rule 6). Cover frame grew 1152 -> 1512px; the Known drift frame was repositioned to y=1552 to clear a 32px overlap that predated this work.",
+    "correctedWhileHere": "Six schema strings referenced pages the consolidation deleted, and one flag note contradicted another about whether the hardcoded Chip hexes were promoted to Figma variables. Both classes fixed; the Chip question was settled by enumerating the live Tebra/Color collection."
+   }
+  },
+  "_componentNotes": {
+   "_purpose": "Per-component notes that were previously keyed as page entries, retained verbatim after the 2026-08-03 consolidation. These describe components, not pages — see _order for the current page list.",
+   "Alert": "Alert set (6 variants)",
+   "Snackbar": "Snackbar content set (2 variants)",
+   "Tooltip": "Tooltip single component",
+   "Button group": "Button group / Segment set plus an Assembled examples frame that is not a component",
+   "Chip": "Chip set (84 variants)",
+   "Menu": "Menu / Item set, Menu paper composite, and a REFERENCE Select+Menu composition frame that is not a component",
+   "Cover": "File title, source-of-truth statement, schema reference, component inventory, a 'not yet rebuilt' note, and the restored Known drift and decisions record. Plain text on background.default.",
+   "Tokens": "GENERATED — read-only rendering of all three variable collections. See flags.tokensPageGenerated before touching it.",
+   "Checkbox": "Checkbox set (themed)",
+   "Radio": "Radio set (substrate) + DO NOT USE intended-vs-shipping reference frame, which is not a component",
+   "Switch": "Switch set (themed)",
+   "Form control label": "Composite with a Control instance-swap slot",
+   "Button": "Renamed from 'Button test — MCP'. Button component set, two validation frames, provenance notes. One stray test-era instance removed.",
+   "Autocomplete": "Field set, Option set, Tag set, two validation frames + provenance notes. One orphan instance removed.",
+   "Icons": "31 icon components transcribed from real source paths (17 before tier 5, 14 added with it)",
+   "Canonical components": "GONE. This entry previously read 'RETAINED, NOT DELETED'; that is stale. The page is not in the file and its decisions live on the Cover and in this schema. See flags.canonicalComponentsPageLost. Do not hunt for it.",
+   "Tabs": "Tabs / Tab set (4 variants) + Tabs composite",
+   "Toggle button": "Toggle button set (18 variants)",
+   "Stepper": "Stepper / Step set (3 variants), Stepper composite, Mobile stepper set (2 variants)",
+   "Avatar": "Avatar set (3 content variants)",
+   "Badge": "Badge set (2 variants)",
+   "Circular progress": "Circular progress single component"
+  },
+  "_deleted": [
+   "Storybook rebuild — working (superseded Button + flattened ButtonGroup)",
+   "Scratch — initial import (verified byte-identical subset of Canonical components)",
+   "2026-08-03 consolidation removed 35 now-empty single-component pages: Button, Button group, Icon button, Text field, Checkbox, Radio, Switch, Form control label, Chip, List, Menu, Autocomplete, Alert, Snackbar, Tooltip, Dialog, Drawer, Card, Accordion, Table, Table pagination, Pagination, Tabs, Toggle button, Stepper, Avatar, Badge, Circular progress, Read more, Feedback messages, Paper, Divider, Link, Illustrations, Icons. Each was confirmed to have 0 children first; all content was moved, none deleted."
+  ],
+  "_order_2026_09_03": [
+   "Cover",
+   "Foundations",
+   "Reference",
+   "Actions",
+   "Inputs",
+   "Data display",
+   "Feedback",
+   "Surfaces & navigation",
+   "Icons & illustrations",
+   "Compositions",
+   "Layouts"
+  ],
+  "_orderAnnotation_2026_09_03": "Read from the file in libraryTodos_readOnly_2026_09_03 (ids: Cover 118:250, Foundations 145:2, Reference 259:2879, Actions 259:2873, Inputs 259:2874, Data display 259:2875, Feedback 259:2876, Surfaces & navigation 259:2877, Icons & illustrations 259:2878, Compositions 446:2, Layouts 489:2). _order above is the pre-rename record and is left as written; rule 7 identity checks should use _order_2026_09_03."
+ },
+ "reportedDiscrepancies": {
+  "canonicalPageNotEmpty": {
+   "instruction": "Delete 'Scratch — initial import' and 'Canonical components' (both empty legacy).",
+   "finding": "Neither was empty. 'Scratch' held 6 frames and 'Canonical components' held 10. Scratch was verified byte-identical to a 6-frame subset of Canonical and was deleted. Canonical is a strict superset holding 4 unique frames: Navigation and utility actions, Overlays and progressive disclosure, Hierarchy and grouped controls, and Known drift and decisions.",
+   "whyRetained": "Those sticker sheets are the ONLY Figma reference for roughly eight component families not yet rebuilt (Inputs, Selection controls, Surfaces and feedback, Data display, Navigation, Overlays, Hierarchy/grouped controls, Foundations), and the drift frame carries five open decisions — one of which (the Radio override registration defect) was not caught anywhere else in this build.",
+   "action": "Page retained and moved last in the page order. Its five decisions are transcribed verbatim into openDecisionsFromCanonicalPage so they survive whatever is decided. Awaiting an explicit call on deletion."
+  }
+ },
+ "components": {
+  "Button": {
+   "id": "79:2",
+   "variants": 54,
+   "axes": [
+    "Variant",
+    "Color",
+    "Size",
+    "State"
+   ],
+   "properties": [
+    "Label (TEXT)",
+    "Start icon (BOOLEAN)",
+    "End icon (BOOLEAN)",
+    "Start icon swap (INSTANCE_SWAP)",
+    "End icon swap (INSTANCE_SWAP)"
+   ]
+  },
+  "Autocomplete / Field": {
+   "id": "86:95",
+   "variants": 30,
+   "axes": [
+    "Size",
+    "State",
+    "Value"
+   ],
+   "properties": [
+    "Label (TEXT)",
+    "Value text (TEXT)",
+    "Clear icon (BOOLEAN)"
+   ]
+  },
+  "Autocomplete / Option": {
+   "id": "88:175",
+   "variants": 10,
+   "axes": [
+    "State",
+    "Grouped"
+   ],
+   "properties": [
+    "Label (TEXT)",
+    "Checkbox (BOOLEAN)"
+   ]
+  },
+  "Autocomplete / Tag": {
+   "id": "103:100",
+   "variants": 2,
+   "axes": [
+    "Size"
+   ],
+   "note": "promoted from a single component to a Size=Medium|Small set during the correction pass; Medium is first so it is the default"
+  },
+  "icons": {
+   "DownCaret": "76:5",
+   "PlusOutlined": "76:8",
+   "CloseOutlined": "76:11",
+   "TrashOutlined": "76:14",
+   "CheckboxUnchecked": "88:4",
+   "CheckboxChecked": "88:8",
+   "Cancel (MUI)": "102:17",
+   "Close (MUI)": "106:4",
+   "LinearEllipsis": "109:4"
+  },
+  "buttonSwapPreferredValues": [
+   "Icon / DownCaret",
+   "Icon / PlusOutlined",
+   "Icon / CloseOutlined",
+   "Icon / TrashOutlined",
+   "Icon / LinearEllipsis"
+  ]
+ },
+ "validation": {
+  "buttonHeights": {
+   "contained": [
+    30,
+    38,
+    42
+   ],
+   "text": [
+    28,
+    36,
+    40
+   ],
+   "matchesSourceComputation": true
+  },
+  "fieldHeights": {
+   "medium": 56,
+   "small": 40,
+   "matchesSourceComputation": true
+  },
+  "optionHeight": {
+   "value": 36,
+   "withCheckbox": 54,
+   "note": "36 = padding 6 + line-height 24 + 6, not MUI's literal 48 min-height which is reset to auto at the sm breakpoint. 54 with a checkbox = 42px checkbox box (24 icon + 9 padding) + 12."
+  },
+  "tagHeights": {
+   "medium": 32,
+   "small": 24
+  },
+  "fieldHeightStableWithIndicators": {
+   "popupOnly": 56,
+   "popupAndClear": 56,
+   "smallWithClear": 40,
+   "note": "verified after making the adornment absolute"
+  },
+  "unboundPaintsRemaining": 0,
+  "unboundAuditRunWithHiddenChildrenVisible": true,
+  "allDimensionsInteger": true,
+  "tier5": {
+   "tabHeight": {
+    "value": 48,
+    "derivation": "minHeight 48 wins over padding 12 + lineHeight 20 + padding 12 = 44",
+    "minWidth": 90,
+    "maxWidth": 360
+   },
+   "toggleButtonBoxes": {
+    "intended": {
+     "Small": 36,
+     "Medium": 48,
+     "Large": 67
+    },
+    "computed": {
+     "Small": 38.857,
+     "Medium": 51.429,
+     "Large": 72
+    },
+    "derivation": "icon + 2 x padding + 2 x 1px border, with the border folded into the padding as the Button set does. Icons encode 20 / 24 / 35 and render 22.857 / 27.429 / 40."
+   },
+   "stepHeight": {
+    "withoutOptional": 24,
+    "withOptional": 36,
+    "derivation": "max(step icon 24, label 20) and max(24, label 20 + caption 16)"
+   },
+   "mobileStepperHeight": {
+    "value": 52,
+    "derivation": "text button 36 + padding 8 top and bottom",
+    "width": 400,
+    "widthNote": "story Box maxWidth — scaffolding"
+   },
+   "avatar": {
+    "box": 40,
+    "radius": 20,
+    "fallbackGlyph": 30,
+    "fallbackDerivation": "AvatarFallback is width 75% / height 75%",
+    "letterFontSize": {
+     "intended": 20,
+     "computed": 22.857
+    }
+   },
+   "badge": {
+    "standard": {
+     "height": 20,
+     "minWidth": 20,
+     "radius": 10,
+     "paddingX": 6
+    },
+    "dot": {
+     "size": 8,
+     "radius": 4
+    },
+    "fontSize": {
+     "intended": 12,
+     "computed": 13.714
+    },
+    "anchor": "centre on the child's top-right corner"
+   },
+   "circularProgress": {
+    "box": 40,
+    "outerRadius": 20,
+    "innerRadiusRatio": 0.8363636363636363,
+    "sweepDegrees": 226.914,
+    "thicknessRendered": 3.273
+   },
+   "instancePaintVerification": {
+    "instancesPlaced": 35,
+    "mismatchesVsMaster": 0,
+    "unboundPaints": 0
+   },
+   "unboundPaintSweep": {
+    "pagesWalked": 34,
+    "solidPaintsInspected": 3200,
+    "unbound": 0,
+    "skipInvisibleInstanceChildren": false
+   },
+   "referenceCounts": {
+    "Tabs / Tab": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "Toggle button": "all 18 variants = 1",
+    "Stepper / Step": [
+     4,
+     4,
+     3
+    ],
+    "Avatar": [
+     0,
+     1,
+     1
+    ],
+    "Badge": [
+     2,
+     1
+    ],
+    "note": "Stepper / Step Completed is 3 because it has no Step number node; Avatar Fallback is 0 because it carries neither the Letter nor the Icon property. Both expected."
+   },
+   "allDimensionsInteger": true,
+   "independentVerification": {
+    "runOn": "2026-08-02",
+    "by": "verification pass in a later session, enumerated from the file rather than from this record (standing rule 6)",
+    "pagesAudited": [
+     "Tabs",
+     "Toggle button",
+     "Stepper",
+     "Avatar",
+     "Badge",
+     "Circular progress",
+     "Icons",
+     "Tokens",
+     "Cover"
+    ],
+    "result": "All 9 tier-5 component sets and components present, in the recorded page order. 0 unbound solid paints. 0 fractional dimensions on any non-VECTOR node. 31 icon masters all 24x24 with all 35 vectors at SCALE/SCALE.",
+    "instanceVerification": "35 variants instanced, paints compared master-vs-instance (colour, effective alpha, bound variable id), instances deleted in the same script. 0 mismatches.",
+    "paintOpacityProvenance": "The 15 sub-1 paint opacities on the Toggle button masters and 15 on the Tokens swatches are Figma resolving a bound variable whose stored rgba carries the alpha (alphaBlack04 a=0.04, alphaBlack12 a=0.12, action/disabled a=0.5), not paint-level opacity. They survive to instances unchanged. Standing rules 1 and 5 pass.",
+    "referenceCountMethodNote": "The referenceCounts above count componentPropertyReferences KEYS. Counting NODES that carry a references object gives higher numbers (Tabs / Tab 1,1,2,2; Stepper / Step 7,7,6; Avatar 2,1,2; Badge 5,4) because several nodes carry an empty references object. Counted as keys, every recorded figure reproduces exactly. Future sweeps should say which they count.",
+    "sourceReDerivation": "Independently re-derived from the checkout and the MUI 5.15.12 cache: ToggleButton boxes 36/48/67 from padding 7/11/15 + 1px border with icon slots 20/24/35; the dead \"&\" JSS selector and the working \"&.Mui-selected.Mui-disabled\" one; selected-hover resolving to alpha(text.primary, 0.08+0.04) because the base rule carries the extra :hover specificity; SvgIconOverrides fontSizeSmall/Medium/Large as exact restatements of pxToRem(20|24|35); AvatarOverrides as an empty shell; ToggleButtonGroupVariations iterating an invalid \"default\" size; CircularProgress thickness 3.6 x 40/44 = 3.273 and 80/126.920 = 63.03% = 226.914 degrees. Every value matched the record.",
+    "newFindings": "One: flags.coverInventoryStale. No tier-5 defect found."
+   }
+  },
+  "tier6": {
+   "builtOn": "2026-08-02",
+   "scope": "Illustrations (7 masters), Read more (4 variants), Feedback message (12 variants), 4 new variables.",
+   "newVariables": [
+    "color/hardcoded (no palette)/illustrationTeal = #004952",
+    "color/hardcoded (no palette)/illustrationCream = #F8F3EB",
+    "color/hardcoded (no palette)/uaDefaultLinkBlue = #0000EE",
+    "space/40 = 40 (theme.spacing(5), the padding every Feedback message applies)"
+   ],
+   "chResolution": {
+    "method": "CSS defines 1ch as the advance width of the digit zero in the element own font. Measured from Akkurat LL as ten zeros divided by ten, which is a font metric, not a measurement of a rendered component.",
+    "zeroAdvance": {
+     "16px": 9.8,
+     "24px": 14.7
+    },
+    "75ch_body1": {
+     "computed": 735,
+     "built": 735
+    },
+    "45ch_h2": {
+     "computed": 661.5,
+     "built": 662
+    }
+   },
+   "readMore": {
+    "width": 700,
+    "linesCollapsed": 72,
+    "charactersCollapsed": 48,
+    "expanded": 240,
+    "toggle": 24,
+    "threeLineFitChars": 278
+   },
+   "feedbackMessage": {
+    "width": 815,
+    "heights": {
+     "No results": 431,
+     "Not found": 503,
+     "Forbidden": 484,
+     "Nothing to see here": 426,
+     "Internal server error": 540,
+     "Browser incompatibility": 556
+    },
+    "note": "Container=No matches Container=Yes exactly; the Paper contributes fill, elevation and radius but no geometry."
+   },
+   "instancePaintVerification": {
+    "instancesPlaced": 16,
+    "mismatchesVsMaster": 0,
+    "unboundPaints": 0
+   },
+   "unboundPaintSweep": {
+    "pagesWalked": [
+     "Illustrations",
+     "Read more",
+     "Feedback messages"
+    ],
+    "unbound": 0,
+    "skipInvisibleInstanceChildren": false,
+    "documentedException": "one IMAGE fill in Illustration / Browser incompatibility, which cannot carry a colour variable"
+   },
+   "allDimensionsInteger": true,
+   "integerCheckScope": "excludes VECTOR, GROUP and BOOLEAN_OPERATION, whose bounds are derived from contents rather than authored",
+   "defectsFoundAndFixed": [
+    "Set-level TEXT properties overwrote per-variant copy on both new sets. Properties removed, all copy restored, heights re-verified.",
+    "All seven illustration masters carried an unbound white root-frame fill from createNodeFromSvg. Cleared.",
+    "Illustration / Error clip-mask vector imported black; bound to common/white as the source rect declares.",
+    "The Read more toggle lost its underline to setTextStyleIdAsync. Re-applied."
+   ],
+   "outstanding": [
+    "CLOSED 2026-08-03 — the Tokens page was stale (62 colour / 31 dimension reported against 67 / 32 live) because the generator had never been carried forward. Regenerated in full from the live collections, and the generator is now on disk as tokens-page-generator.js so this cannot recur. Five swatches recovered, 0 unbound paints, 0 fractional dimensions. Two new findings came out of it: flags.tokenCodeSyntaxGaps and flags.tebraCssVarsDoNotExist.",
+    "The Cover inventory remains stale — see flags.coverInventoryStale — and tier 6 widens the gap further."
+   ]
+  },
+  "nav": {
+   "builtOn": "2026-08-03",
+   "components": [
+    "Nav / Bar",
+    "Nav / Icon button (3)",
+    "Nav / Menu item (2)",
+    "Nav / Dropdown",
+    "Nav / Logo",
+    "Nav / Search (2)"
+   ],
+   "iconsAdded": 8,
+   "instancePaintVerification": {
+    "instancesPlaced": 18,
+    "mismatchesVsMaster": 0,
+    "unboundPaints": 0
+   },
+   "unboundPaintSweep": {
+    "pagesWalked": 9,
+    "unbound": 0,
+    "skipInvisibleInstanceChildren": false
+   },
+   "referenceCounts": {
+    "Nav / Icon button": "all 3 variants = 1",
+    "Nav / Menu item": "all 2 variants = 1",
+    "Nav / Search": "both variants = 0 — expected, the component exposes no properties"
+   },
+   "allDimensionsInteger": true,
+   "allDimensionsIntegerNote": "True for authored dimensions after the 2026-08-03 rounding decision. VECTOR and GROUP bounds are intrinsic path unions and are excluded, matching tier 6.",
+   "tokensPageRegenerated": {
+    "on": "2026-08-03",
+    "variables": 120,
+    "nodes": 715,
+    "paints": 593,
+    "unbound": 0,
+    "hardcodedGroup": 9
+   }
+  },
+  "sizeDrag": {
+   "ranOn": "2026-08-03",
+   "method": "Instance-level read of the default variant for every Size-bearing component set, not a master read.",
+   "setsAudited": 10,
+   "found": [
+    "Button — resolved to Small, expected Medium",
+    "Button group / Segment — resolved to Small, expected Medium"
+   ],
+   "alreadyCorrect": [
+    "Icon button",
+    "Text field",
+    "Switch",
+    "Autocomplete / Field",
+    "Autocomplete / Tag",
+    "Toggle button",
+    "Chip",
+    "Pagination / Item"
+   ],
+   "fix": "Swapped the Small and Medium column blocks horizontally in both sets so Medium/Default is the top-left variant.",
+   "afterFix": {
+    "buttonResolvesTo": "Medium",
+    "buttonGroupResolvesTo": "Medium",
+    "overlaps": 0,
+    "fractionalPositions": 0,
+    "setBoundsChanged": false,
+    "fileUnboundPaints": 0,
+    "buttonSizeDefaultValue": "Medium",
+    "buttonSizeAxisOrder": [
+     "Medium",
+     "Small",
+     "Large"
+    ]
+   },
+   "reconfirmed": "2026-08-03, second pass. componentPropertyDefinitions.Size.defaultValue reads 'Medium' (this specific field was NOT read in the fix pass — only defaultVariant and the instance were, so it is newly confirmed here), defaultVariant is 'Variant=Contained, Color=Primary, Size=Medium, State=Default', and a placed instance resolves Size to 'Medium'."
+  },
+  "freezeAudit": {
+   "_date": "2026-08-04",
+   "_purpose": "The publish-gate freeze figures, enumerated from the live file rather than quoted from the previous batch report (standing rule 6). Run after the designer-feedback closure batch.",
+   "_method": "One read-only walk per page, nine parallel calls, figma.skipInvisibleInstanceChildren = false on every walk. Paints counted as SOLID entries in fills and strokes; a paint is unbound if it carries no boundVariables.color. Fractional check excludes VECTOR, GROUP and BOOLEAN_OPERATION per standing rule 8 (intrinsic geometry is out of scope).",
+   "perPage": {
+    "Cover": {
+     "topLevel": 2,
+     "nodes": 28,
+     "sets": 0,
+     "variants": 0,
+     "singles": 0,
+     "instances": 0,
+     "paints": 24,
+     "unbound": 0,
+     "fractional": 0
+    },
+    "Tokens": {
+     "topLevel": 1,
+     "nodes": 715,
+     "sets": 0,
+     "variants": 0,
+     "singles": 0,
+     "instances": 0,
+     "paints": 593,
+     "unbound": 0,
+     "fractional": 0
+    },
+    "Actions": {
+     "topLevel": 5,
+     "nodes": 756,
+     "sets": 4,
+     "variants": 136,
+     "singles": 1,
+     "instances": 240,
+     "paints": 558,
+     "unbound": 0,
+     "fractional": 0
+    },
+    "Inputs": {
+     "topLevel": 9,
+     "nodes": 1447,
+     "sets": 9,
+     "variants": 113,
+     "singles": 0,
+     "instances": 249,
+     "paints": 857,
+     "unbound": 0,
+     "fractional": 0
+    },
+    "Data display": {
+     "topLevel": 11,
+     "nodes": 559,
+     "sets": 8,
+     "variants": 134,
+     "singles": 2,
+     "instances": 135,
+     "paints": 423,
+     "unbound": 0,
+     "fractional": 0,
+     "note": "topLevel 11 = 10 masters + the Chip Common-configurations instance strip"
+    },
+    "Feedback": {
+     "topLevel": 5,
+     "nodes": 1261,
+     "sets": 3,
+     "variants": 20,
+     "singles": 2,
+     "instances": 36,
+     "paints": 1180,
+     "unbound": 0,
+     "fractional": 0
+    },
+    "Surfaces & navigation": {
+     "topLevel": 13,
+     "nodes": 376,
+     "sets": 10,
+     "variants": 41,
+     "singles": 8,
+     "instances": 78,
+     "paints": 234,
+     "unbound": 0,
+     "fractional": 0,
+     "note": "topLevel 13 = 12 masters + the Primary nav (partner theme) SECTION, which itself holds Nav / Bar, Nav / Icon button (4), Nav / Menu item (2), Nav / Dropdown, Nav / Logo, Nav / Search (2)"
+    },
+    "Icons & illustrations": {
+     "topLevel": 47,
+     "nodes": 653,
+     "sets": 0,
+     "variants": 0,
+     "singles": 47,
+     "instances": 0,
+     "paints": 602,
+     "unbound": 0,
+     "fractional": 0,
+     "note": "40 icon masters + 7 illustration masters"
+    },
+    "Reference": {
+     "topLevel": 19,
+     "nodes": 1067,
+     "sets": 0,
+     "variants": 0,
+     "singles": 0,
+     "instances": 250,
+     "paints": 668,
+     "unbound": 0,
+     "fractional": 0
+    }
+   },
+   "totals": {
+    "pages": 9,
+    "nodes": 6862,
+    "componentSets": 34,
+    "variantsInSets": 444,
+    "singleComponentMasters": 60,
+    "componentNodesTotal": 504,
+    "instances": 988,
+    "solidPaints": 5139,
+    "unboundPaints": 0,
+    "authoredFractionalDimensions": 0,
+    "variables": 120,
+    "variableCollections": {
+     "Tebra/Color": 71,
+     "Tebra/Typography": 17,
+     "Tebra/Dimension": 32
+    },
+    "textStyles": 10,
+    "effectStyles": 7,
+    "flags": 134
+   },
+   "cleanChecks": [
+    "0 unbound paints across all 9 pages, including the Reference and Tokens pages and every loose glyph (standing rule 2).",
+    "0 authored fractional dimensions across all 9 pages (standing rule 8); allDimensionsInteger holds.",
+    "Page list matches figmaBuild.pages._order exactly — file identity verified before any read informed a decision (standing rule 7).",
+    "Button and Button group / Segment both resolve Size=Medium by defaultVariant read."
+   ],
+   "blockers": [
+    "coverInventoryStale has REGRESSED — see the flag. The Cover misstates the file it introduces, and it is the first thing a reviewer meets."
+   ],
+   "notBlockers": [
+    "coverageSweep.pendingClarification.Tooltip is open but does not gate publish: the built Tooltip is a correct substrate transcription and ships as-is unless the clarification changes it.",
+    "coverageSweep.focusStateEnumeration lists 9 missing Focus visible variants. This is a Figma completeness gap, not a code defect — CssBaselineOverrides gives every focusable element the outline regardless. Closing it is Daniel's follow-up decision, not a publish precondition."
+   ]
+  }
+ },
+ "pluginApiNotes": [
+  "setBoundVariableForPaint attaches the binding but leaves the paint's raw colour at whatever was passed in; Figma rendered that raw colour, so a paint created as {0,0,0} rendered black despite a correct binding. Fix: write the resolved value into the paint AND bind it. 117 paints were repaired this way.",
+  "addComponentProperty with type INSTANCE_SWAP rejects a component publish key and requires the component's node id as defaultValue.",
+  "resize() after setting counterAxisSizingMode locks the axis to FIXED — it must be re-set to AUTO afterwards or cloned variants inherit a frozen height.",
+  "editComponentProperty cannot change a VARIANT property's defaultValue — the API refuses. The default is fixed by variant ordering at creation time, so order variant values with the code default FIRST when the set is created. Button's Size still defaults to Small because of this.",
+  "Instance-swap slots should carry preferredValues so designers get a curated icon list rather than every component in the file.",
+  "constraints CANNOT be overridden on an instance ('This property cannot be overridden in an instance'). Set constraints on the icon MASTER; instances inherit. Only fills are overridable per instance.",
+  "Set figma.skipInvisibleInstanceChildren = false before any findAll/walk that must reach boolean-hidden nodes. The first unbound-paint audit reported 0 while blind to the hidden checkbox and clear-icon slots; re-running with the flag false was what exposed them.",
+  "Setting an INSTANCE_SWAP property to the component that is ALREADY that slot's default resets the layer's overrides: the layer name reverts from 'Start icon' to the master's name ('Icon / PlusOutlined') and the per-variant colour override is dropped, so the icon falls back to the master's own fill. Only set a swap property when the target differs from the slot default. Mitigated by binding every master's fill to a token (below), so the degraded state is a themed colour rather than a raw hex.",
+  "REGENERATING THE TOKENS PAGE: clear the page's children, then derive everything from getLocalVariableCollectionsAsync + getLocalVariablesAsync — never from a hardcoded list, or the page drifts from the variables it documents. Group colour variables by name prefix (color/<group>/...), sort members by name, and read each value with valuesByMode[collection.modes[0].modeId]. Bind rather than paint wherever Figma allows: fills via setBoundVariableForPaint, and setBoundVariable on 'width', 'height', 'topLeftRadius'/'topRightRadius'/'bottomLeftRadius'/'bottomRightRadius' and 'strokeWeight' — all of these accept FLOAT variables and succeeded here. Typography specimens are rendered by applying the real text style with setTextStyleIdAsync, then reading style.boundVariables back to label which variables each style consumes. Keep the brand-alias map in the script (sourced from paletteValues.ts comments) since Figma has no field for it.",
+  "Absolutely-positioned children that overhang their parent — a floating notch label at y = -8, an outside focus ring — are CLIPPED by every ancestor auto-layout frame, because Figma frames default to clipsContent: true. Compositions that nest such components inside wrapper columns must clear clipsContent on the wrappers, or the overhang silently disappears. Apply effect styles with setEffectStyleIdAsync rather than assigning node.effects, so the shadow stays reviewable in one place.",
+  "setBoundVariable works on FLOAT-valued layout fields — 'width', 'height', 'strokeWeight' and the four corner-radius fields — not just padding and itemSpacing. Useful for documentation pages where a bar's size should BE the token rather than merely depict it.",
+  "Paint-level `opacity` on a variable-bound paint is DISCARDED by later structural operations — appendChild, resize, and combineAsVariants all re-resolve the paint from its variable. Apply the opacity as the very last step (Object.assign({}, boundPaint, {opacity})) after the node is in its final position, and verify by reading fills[0].opacity back. Setting opacity before binding never survives at all, because setBoundVariableForPaint returns a new paint.",
+  "An INSTANCE_SWAP property resolves to its single defaultValue across EVERY variant in the set, discarding whatever instance each variant was authored with. A variant cannot ship a different default control. Either drop the swap property to keep per-variant instances, or keep the swap and document that one variant renders the wrong default until swapped.",
+  "Cloning a variant that is ALREADY inside a COMPONENT_SET silently drops all componentPropertyReferences on the clone and every descendant. Nothing throws and setProperties still records values, so overrides just appear to do nothing. Either add properties after all variants exist, or walk source and clone in lockstep and copy references node-for-node. Always verify by counting references per variant, not by eye.",
+  "When a component property drives a hugging container's width (a notch gap sizer, a reserved slot), the sizer must mirror EVERY node that can widen the visible element — a label plus its optional asterisk, not just the label. Test the combination where the optional child is on.",
+  "Never fake a border interruption with a background-coloured mask — it only holds on the surface colour you assumed. Build a real gap: a horizontal auto-layout of slices using Figma's per-side stroke weights (strokeTopWeight / strokeBottomWeight / strokeLeftWeight / strokeRightWeight) with corner radii on the end slices. A hugging middle slice sized by a transparent text node bound to the label property makes the gap track content automatically.",
+  "Set a TEXT node's `name` AFTER assigning `characters`, and never to the literal 'Text'. 'Text' is the default name for a new TEXT node, so assigning it does not clear the autoRename flag and the content overwrites the name. Prefer type-based or index-based lookup over name-based for text inside components you did not just create.",
+  "A TEXT node created with empty characters collapses to width 0, and setting layoutSizingHorizontal='FILL' afterwards does NOT recover it — the node stays 0 wide and any text later assigned wraps one character per line (a 'Default Value' string produced a 288px-tall input). Fix: set textAutoResize='HEIGHT', resize() to a real width, THEN set FILL. Verify node.width > 0 before trusting the layout.",
+  "Every icon master's vector fill is now bound to the token that already matched its literal value (text/primary, primary/main, grey/600, text/secondary, common/white). Appearance is unchanged, but any lost override degrades to a themed colour and the masters pass the unbound-paint audit.",
+  "The variables API lives under figma.variables, NOT on the figma global: getLocalVariableCollectionsAsync and getLocalVariablesAsync are figma.variables.* and throw 'no such property' if called directly on figma.",
+  "Auto-layout frames accept minWidth / maxWidth / minHeight / maxHeight, which map onto CSS min/max sizing exactly. Tab's minWidth 90, maxWidth 360 and minHeight 48 are expressed with them rather than by faking a fixed size, so a hugging Tab still grows with its label and still bottoms out at 90.",
+  "An ELLIPSE's arcData { startingAngle, endingAngle, innerRadius } reproduces an SVG stroke-dasharray ring exactly, and innerRadius is a 0-1 RATIO rather than a dimension — so a ring whose real thickness is fractional (CircularProgress: 3.273px) can be drawn without storing any fractional value on the node. Angle 0 is 3 o'clock going clockwise, which is also where an SVG <circle> path starts, so the two systems line up with no offset.",
+  "CSS `transform: translate(50%, -50%)` on an absolutely-positioned child (Badge's anchorOrigin) keeps the child's CENTRE on the anchor point as it grows. Figma has no equivalent, and a plain absolute child grows rightward from its x. Reproduce it with a centring anchor frame: twice the offset wide, auto-layout with primaryAxisAlignItems CENTER, positioned so its own centre is the anchor point. The child then grows symmetrically. The anchor overhangs the parent, so clipsContent must be false on the component AND on every wrapper that nests it.",
+  "figma.combineAsVariants leaves the set in whatever layout you give it; for sets whose variants differ a lot in size, setting layoutMode NONE and positioning variants manually in a size-per-row grid produces a far more reviewable variant sheet than layoutWrap WRAP, which packs them raggedly.",
+  "A set-level TEXT component property forces ONE default across every variant, exactly like INSTANCE_SWAP. Adding Title/Body properties to a set whose variants carry different copy silently overwrites all of it with the property default — the variant heights collapse and the axis stops meaning anything. Caught only because the post-combine heights differed from the pre-combine ones. If variants differ by their text, do not expose that text as a property; instance text stays editable without one.",
+  "figma.createNodeFromSvg gives its wrapper frame an opaque white fill that the source SVG does not declare. Walking frame.children misses it — walk the frame itself, or clear it explicitly.",
+  "createNodeFromSvg DOES accept an embedded base64 data-URI <image>, producing a RECTANGLE with an IMAGE fill, even though createImageAsync is unavailable. Probe with a 1x1 PNG before assuming an illustration must be stripped.",
+  "Figma imports an SVG <clipPath> as a mask group and discards the clip shape fill, defaulting it to black. The shape still renders nothing (masks use alpha), but it reads as an unbound black paint in an audit. Bind it to whatever the source declares.",
+  "GROUP and BOOLEAN_OPERATION bounds are derived from their contents, so they are fractional whenever the contained geometry is. They cannot be authored to integers and must be excluded from an all-dimensions-integer check, exactly as VECTOR already is.",
+  "Set textAutoResize AFTER characters, not before: on a node whose characters are set later, an earlier textAutoResize=HEIGHT does not survive, and the block renders as one unwrapped line. Order is fontName -> characters -> setTextStyleIdAsync -> textAutoResize -> resize.",
+  "setTextStyleIdAsync resets textDecoration. Apply UNDERLINE after the text style, and re-apply it after any later characters assignment.",
+  "A COMPONENT_SET's default variant is resolved by CANVAS POSITION — the top-left-most variant wins — NOT by child array order. Reordering in the layers panel changes children[] and leaves x/y alone, so the default does not move and the canvas looks unchanged; the set will still report the old defaultValue and instances will still resolve to it. To change a variant default you must move the target variant so it is the top-left node. Confirmed 2026-08-03 on Button, where a layers-panel reorder had put Size=Medium at children[0] while Size=Small stayed at (32,32) and every new instance still came out Small. editComponentProperty cannot change a VARIANT default either — position is the only lever.",
+  "resize() on a TEXT node silently resets textAutoResize to 'NONE'. Set the mode AFTER the resize, not before, or the node stops growing with its content — and because it stops growing rather than erroring, the overflow is invisible until an ancestor with clipsContent cuts it off. Cost a clipped REFERENCE note on 2026-08-03; the same shape as the resize()-locks-the-sizing-axis trap already recorded for auto-layout frames."
+ ],
+ "iconRecipe": {
+  "_why": "Took three rounds to converge. Regressing any step visibly breaks icons. Apply to every new icon master and every icon slot.",
+  "1_viewBoxPosition": "Vectors must keep their imported viewBox position inside the 24x24 frame — do NOT reset x/y to 0. createNodeFromSvg already positions them correctly; just move them into the component. Verified positions: DownCaret (2, 6.49), Cancel (2, 2), Close-MUI (5, 5), TrashOutlined (2.52, 2), Checkbox (3, 3).",
+  "2_scaleConstraints": "Every vector gets constraints {horizontal:'SCALE', vertical:'SCALE'} so the glyph scales like an SVG viewBox. CENTER centres but does not scale, which renders oversized when the frame is set to 16px. Must be set on the master — see pluginApiNotes.",
+  "3_colorInheritance": "Figma has no currentColor. Clone the source text paint onto every icon vector per variant, carrying BOTH the resolved colour and the boundVariables together (cloning only the binding reproduces the black-paint gotcha). White knockout shapes inside a glyph must be skipped so they stay white.",
+  "layerNaming": "Vector layers must be named 'Vector' — instance-swap overrides only survive across components with matching layer names."
+ },
+ "namingConventions": {
+  "icons": "Icon / Name — e.g. Icon / DownCaret. MUI-internal glyphs carry a (MUI) suffix: Icon / Cancel (MUI), Icon / Close (MUI).",
+  "subcomponents": "Component / Part — e.g. Autocomplete / Field, Autocomplete / Option, Autocomplete / Tag.",
+  "vectorLayers": "Vector",
+  "descriptions": "Every component carries a description naming its source file path and any provenance split."
+ },
+ "deliberatelyNotHere": {
+  "_date": "2026-08-03",
+  "_where": "Reference page frame, linked from the Cover.",
+  "_purpose": "A single visible answer to \"why is X not in this library?\", so the question stops being re-asked and re-investigated. Every entry traces to a recorded flag or schema section.",
+  "entries": [
+   {
+    "item": "DataGrid",
+    "why": "MUI X licensed package (@mui/x-data-grid-pro), pinned 6.19.6 against other consumers on 6.5.0 / 6.12.1 / 6.19.11 in the same lockfile. Large surface. Deliberate defer, not exclusion.",
+    "ref": "coverageSweep.classification.DEFER"
+   },
+   {
+    "item": "DatePicker",
+    "why": "MUI X licensed package, same licensing and version-pin problem as DataGrid.",
+    "ref": "coverageSweep.classification.DEFER"
+   },
+   {
+    "item": "TreeView / TreeItem",
+    "why": "MUI X (@mui/x-tree-view 6.17.0), adopted only at 0.12.0 to replace the removed @mui/lab import.",
+    "ref": "coverageSweep.classification.DEFER"
+   },
+   {
+    "item": "Drop Chip",
+    "why": "Product pattern, not a component — Chip + Menu + MenuItem + DownCaret over local mock data. Every part is already built.",
+    "ref": "coverageSweep.classification.PATTERN"
+   },
+   {
+    "item": "RadioGroup",
+    "why": "Product pattern — Radio + FormControlLabel + FormHelperText composition. MUI RadioGroup has no override. Both parts built.",
+    "ref": "coverageSweep.classification.PATTERN"
+   },
+   {
+    "item": "Prepopulate Form Fields",
+    "why": "Product pattern — Button + Menu at elevation 1 with bottom-right anchoring. All parts built.",
+    "ref": "coverageSweep.classification.PATTERN"
+   },
+   {
+    "item": "Task Bar",
+    "why": "Product pattern, classified by story title. Not a component.",
+    "ref": "coverageSweep.classification.PATTERN"
+   },
+   {
+    "item": "The five other cobranding themes",
+    "why": "blue-dark, blue-light, gray-light, green and orange. Only tebra-default is built. Modelling the rest means a variable-collection mode per base theme, and the whole cobranding surface is already out of the canonical claim.",
+    "ref": "components.PrimaryNavBar.parked"
+   },
+   {
+    "item": "KMB billing glyph variants",
+    "why": "BillingKmbIcon and BillingKmbAlertIcon swap into the billing slot on KMB state. Third distinct viewBox (0 0 27 22) and a hardcoded #004852 circle baked into the glyph. State-driven, recorded, not built.",
+    "ref": "flags.navBillingGlyphHasUnbuiltKmbVariants"
+   },
+   {
+    "item": "Recent patients panel",
+    "why": "The dropdown that falls from the nav search when input is under two characters. Interaction state of a built component, recorded not built. This is the \"history\" element the product shows — there is no history nav slot.",
+    "ref": "flags.navHasNoHistorySlot"
+   },
+   {
+    "item": "Focused search state",
+    "why": "The nav search on focus: white ground, dark text and adornment falling back to the base Tebra text.primary. Interaction state, recorded not built.",
+    "ref": "components.PrimaryNavBar.reviewPass.notBuilt"
+   },
+   {
+    "item": "Scrollbars",
+    "why": "Legacy-library artifact. No scrollbar component or override exists in web-app-v2 — the only real trace is the MUI X internal class .MuiDataGrid-scrollbarFiller.",
+    "ref": "coverageSweep.classification.OUT_OF_SCOPE_LEGACY_ONLY"
+   },
+   {
+    "item": "Text Reveal",
+    "why": "Legacy-library artifact. Absent from web-app-v2 entirely — zero matches across every package.",
+    "ref": "coverageSweep.classification.OUT_OF_SCOPE_LEGACY_ONLY"
+   }
+  ]
+ },
+ "chipCommonConfigurations": {
+  "_date": "2026-08-03",
+  "_where": "Data display page, beside the Chip set.",
+  "_whatItIs": "A strip of INSTANCES, not masters, showing the three configurations designers reach for. Labelled as instances so nobody mistakes them for additional components or tries to publish them.",
+  "configurations": [
+   {
+    "label": "Deletable",
+    "props": "Size=Medium, Variant=Filled, Color=Default, State=Default, Delete icon = true"
+   },
+   {
+    "label": "Clickable",
+    "props": "Size=Medium, Variant=Filled, Color=Default, State=Hover — clickable is not a Chip axis; hover IS the clickable affordance, since MUI only applies the hover treatment when onClick is present"
+   },
+   {
+    "label": "Small deletable",
+    "props": "Size=Small, Variant=Filled, Color=Default, State=Default, Delete icon = true"
+   }
+  ],
+  "note": "Chip has no Clickable axis in the built set. MUI gates the clickable visual on the presence of onClick, which is a prop not a variant, so the Hover state is the only way the clickable affordance surfaces. Recorded so the strip is not read as a missing axis."
+ },
+ "usageAnnotations": {
+  "_date": "2026-08-04",
+  "_method": "Balanced-bracket scan of every <Chip> and <Switch> JSX opening tag across 4269 .ts/.tsx/.js/.jsx files in C:/Code/web-app-v2 (node_modules, .yarn, dist, build excluded), attributing each prop to its own tag rather than to a context window. Design-system stories counted separately from product sites.",
+  "_rule": "ANNOTATE, NEVER DELETE. A variant that code defines but product rarely reaches is still a real API surface; the asymmetry is the deliverable, not a reason to narrow the set.",
+  "_where": "Written into the Figma component descriptions on Data display (Chip) and Inputs (Switch), in the form 'code defines X; product usage is Y per <evidence>'.",
+  "Switch": {
+   "codeDefines": "Size = medium | small. Switch.stories.tsx:18-23 declares argTypes.size with options ['medium','small']; Switches.args pins size:'medium'. MUI substrate supplies both geometries. SwitchOverrides.ts registers styleOverrides.root only — no size-specific rule, no defaultProps.",
+   "productUsage": "MEDIUM ONLY. 13 <Switch> tags across 10 files; every one omits the size prop, so all render at MUI's medium default.",
+   "evidence": "rg '<Switch' over web-app-v2 = 13 occurrences in 10 files (VisitReasonsToggle, PatientSurveysReviewsPage, ReserveWithGoogleSection, MessagesPage, AiMessageTagging, GeneralSettings, NewWorklistBody, SettingToggle, ShowHideLabelsList, plus 4 in Switch.stories.tsx). A repo-wide search for a size prop on a Switch tag returns zero. rg 'MuiSwitch' returns only SwitchOverrides.ts, so no theme-level defaultProps sets it either.",
+   "finding": "The direction matters: MEDIUM is the size product actually ships and SMALL is the story/argType-only one. Any reading in which Medium is the unused variant is contradicted by source. Reported, not resolved.",
+   "action": "Both variants kept. Annotation added to the Switch description."
+  },
+  "Chip": {
+   "codeDefines": "Color = default | primary | secondary | error | info | success | warning (seven, from the Chip story's argTypes).",
+   "productUsage": "ALL SEVEN are reachable — none is unused — but the distribution is very uneven across 79 product <Chip> tags (85 total, 6 of them in design-system stories).",
+   "perColour": {
+    "success": "13 literal sites",
+    "info": "11 literal sites",
+    "warning": "9 literal sites",
+    "primary": "9 literal sites, plus dynamic reaches (SdohPage selected ternary, WebsocketControls, DocumentChip)",
+    "error": "1 authored site — admin-ui/src/components/UserSettings/UserList/UserItem.tsx:127. Every other reach is data-driven: ErxRequestsTab.tsx:20, ErxRequestsDataGrid.tsx:33, OutstandingTasksList.tsx:31, WebsocketControls.tsx:35, CompositionsList/ListItem.tsx:35 statusChipMap, DocumentChip.tsx:69.",
+    "secondary": "2 sites in the entire monorepo — documents-ui/src/components/MergeIssuesTabLabel.tsx:13 (literal) and messages-ui/src/components/SideMenu/NavItem/SideMenuNavItem.tsx:65 (via badgeColor, whose other branch is 'default'). Rarest by an order of magnitude.",
+    "default": "Never written literally on a Chip tag. It is what 19 product tags get by omitting color entirely, plus the ?? 'default' fallbacks in ClinicalBlockNodeView.tsx:36 and SdohPage.tsx:175."
+   },
+   "sizeUsage": "39 product tags set size='small'; 38 omit size and render Medium. Both real.",
+   "variantUsage": "14 literal outlined, 1 literal filled, 56 omit variant and render filled. Both real.",
+   "finding": "'Unused chip colours' does not hold as stated — every one of the seven is reachable in shipped product. The defensible version of the observation is narrower: secondary is rare (2 sites) and error is almost entirely data-driven rather than authored.",
+   "action": "Nothing deleted. All 84 variants kept. Annotation added to the Chip description."
+  }
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "insightCardAffordances2026_09_01",
+ "sequence": 19,
+ "date": "2026-09-01",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "22751eab94072235df9e61eda195e920dd9e30950233525b0b10a2330decd4ca"
+ },
+ "record": {
+  "_status": "BUILT in the proposals file. Nothing published — the proposals file consumes the library, it does not define it.",
+  "_file": "Proposals file zKT34LQogNjz3Z07fY4VQB, page \"Patient chart v2 — ledger in the shell\" (168:248).",
+  "_scope": "Phase 2. Replaces the two text buttons on each insight card with icon affordances, and adds reasoning tooltips.",
+  "phase1Gate": {
+   "instruction": "Phase 2 was gated: \"Only after phase 1 is published.\"",
+   "howItWasChecked": "Not assumed. Both icons were read out of the library and getPublishStatusAsync() called on each.",
+   "result": "PASSED. Icon/ThumbUpOutlined (MUI) 919:4 and Icon/ThumbDownOutlined (MUI) 919:7 both return publishStatus CURRENT — published, with no unpublished local edits.",
+   "note": "No record of Phase 1 exists in this schema or anywhere in C:/Code/design system. The Phase 1 detail below was recovered from the component descriptions in the library itself, which is where it was written."
+  },
+  "phase1AsBuilt": {
+   "naming": "Icon/ThumbUpOutlined (MUI) and Icon/ThumbDownOutlined (MUI). The \"(MUI)\" suffix follows the established convention for glyphs that come from @mui/icons-material rather than from Tebra source — the same suffix carried by Icon/Cancel (MUI), Icon/Close (MUI), Icon/NavigateBefore (MUI), Icon/RadioUnchecked (MUI) and Icon/SearchOutlined (MUI).",
+   "source": "@mui/icons-material/ThumbUpOutlined.js and ThumbDownOutlined.js at 5.15.12, wrapping the MUI Material Symbols path. 24 viewBox, SCALE constraints, single path with three subpaths (outer outline, interior counter, cuff).",
+   "windingRule": "Set explicitly to NONZERO — the SVG default the MUI path is authored against. Set deliberately because of the WarningFilled precedent, where an import lost fill-rule and the interior counter filled in solid.",
+   "variableBinding": "Both bind their vector fill to color/primary/main — VariableID:74:3, #004852, scopes [FRAME_FILL, SHAPE_FILL, TEXT_FILL, STROKE_COLOR].",
+   "publishStep": "Already done before this phase. Both report CURRENT."
+  },
+  "openDefectCarriedForward": {
+   "_severity": "medium — recorded in Phase 1, still unresolved, and Phase 2 has now placed the affected glyph into a proposal that will be reviewed.",
+   "finding": "The library built the OUTLINED family; production uses the ALT family, which is a visibly different glyph — one unified shape with no separate cuff.",
+   "evidence": "No file imports ThumbUpOutlined or ThumbDownOutlined. The three feedback surfaces that do this job import: ThumbUpAltOutlined / ThumbDownAltOutlined in facesheet-ui RecommendationsFeedback.tsx:102,113 and messages-ui SuggestReplyControls.tsx:396,408; ThumbUpAlt / ThumbUpOffAlt / ThumbDownAlt / ThumbDownOffAlt in clinical-system SummaryFeedback.tsx:1-4.",
+   "consequence": "If the library is meant to match what ships, these should be the Alt glyphs. The proposal now shows a thumb that no production surface renders.",
+   "status": "FOR DECISION. Not resolved here because it is a library question, not a proposal question, and changing it would mean rebuilding and republishing two published icons."
+  },
+  "theNewCard": {
+   "thumbs": {
+    "what": "The two existing text Buttons in each Card instance Actions region were SWAPPED (not deleted, not detached) to Icon button instances carrying ThumbUp and ThumbDown.",
+    "whySwapAndNotAdd": "A Card instance cannot host new children. Repurposing the two buttons that were already in the Actions region avoids that constraint entirely — no scaffolding was needed for the thumbs.",
+    "component": "Icon button 170:77, variant color=default, size=small, State=Default. 34x34 with the glyph at 18x18, which is MUI IconButton size small.",
+    "colourChange": "The old buttons were color=primary (teal). The thumbs are color=default, so the glyph renders #545454. This is most of why the band reads calmer.",
+    "gotcha": "swapComponent preserves the old instance width/height as a fixed override — the swapped nodes came through at 64x36 and 101x36. resize() does not clear it. Setting layoutSizingHorizontal and layoutSizingVertical to HUG collapses them to the component natural 34x34. Recorded because it will recur on any Button-to-Icon-button swap."
+   },
+   "infoIcon": {
+    "whichIcon": "Icon/InfoOutlined 575:19, key cb7a990be9ff040f6a1c753344c8819a9dba9665. Source packages/design-system/src/components/icons/InfoOutlinedIcon.tsx.",
+    "whyNotInfoFilled": "Icon/InfoFilled 164:10 is the Alert severity glyph — registered as MuiAlert defaultProps.iconMapping.info — and its path is byte-identical to AttentionFilledIcon. Using it on a card would collide with alert severity semantics. Outlined also matches the outlined thumbs.",
+    "placement": "Content zone, card-relative x=8 y=106, so the glyph sits at x=16 flush with the text column, directly beneath the synthesis statement. Same position on all three cards.",
+    "placementWasForcedByMeasurement": "Two more obvious placements were tested by measuring rendered text and both fail on card 2. Inline after the synthesis statement: card 2 last line is 422px wide in a 427px box, leaving 5px. Trailing the title: card 2 title is 412px wide in the same box, leaving 15px. Neither fits a 34px control. The measurement was done by greedy-wrapping each body string through a temporary text node at the real font and size, then removing it.",
+    "separationFromThumbs": "Info is bottom-LEFT in the content zone at y=106. Thumbs are bottom-RIGHT in the action zone at y=128. Different row and different column, ~370px apart on a 459px card. The brief warned that three icons in a row would read as one group of three ratings; they are not in a row.",
+    "scaffoldingNote": "The info icons are parented to the Insight band frame, not to the Card, because a Card instance cannot host children. They are absolutely positioned over each card. The ICON ITSELF is a published library instance — only its parentage is scaffolded."
+   }
+  },
+  "tooltips": {
+   "component": "Tooltip 167:15, key fed5b8b3a7e259df7bf4fcff6f2a9849d54ec4fd. A plain COMPONENT with one property, Label#167:9.",
+   "componentWasCorrect": "Tooltip, not Popover. Every reasoning string is read-only prose. Each was checked for whether it implies an action; none does. The actions those events imply (Review, Accept, Reply) already exist as the Action column on the ledger rows themselves, so the reasoning never needs to carry one. The brief asked to stop and report if any reasoning needed an action — none did.",
+   "howTheTwoKindsWereDistinguished": {
+    "method": "Not by inventing a second component or a new style. By content shape, using the substrate MUI already specifies.",
+    "controlLabel": "Thumb tooltips name a control: \"Helpful\" and \"Not useful\". One line, the component hugs its text, 70x24.",
+    "reasoning": "Info tooltips carry the reasoning. The Label is set long, the text node is switched to textAutoResize HEIGHT and set to FILL, and the root is fixed at 300 — which is MUI Tooltip maxWidth, documented in the component own description. They render 300x72 to 300x120, three to seven lines.",
+    "ratio": "A reasoning tooltip is roughly 4x to 5x the area of a control label at the same 11px type. The difference is unmissable at rest and does not depend on any styling the library has not settled.",
+    "whyThisIsTranscriptionNotInvention": "The Tooltip description carries a PENDING DESIGNER CLARIFICATION that explicitly warns against guessing at \"a size/multiline treatment\". Wrapping at 300 is NOT a guess — maxWidth 300 is recorded in that same description as MUI substrate. No new surface, radius, colour, arrow or placement chrome was introduced. If the designer later specifies a distinct reasoning treatment, this changes."
+   },
+   "reasoningText": {
+    "rule": "Every event named is a row in the ledger on the same screen. Nothing was invented.",
+    "deliberateOmission": "The card 1 synthesis statement says \"up from 8.1% in March\". March appears nowhere in the ledger, so the reasoning does not cite it. The reasoning names only what the reader can verify by looking down the page.",
+    "card1": "Built from two ledger events: the 18 Jul office visit — diabetes follow-up, Dr. Reyes — and the 21 Aug lab, Hemoglobin A1C 9.4%, above the 7.0% goal. No therapy change is recorded between them: the only medication entries are a 28 Jul nurse triage call on metformin tolerance and a 14 Aug metformin 1000 mg ER refill at the same dose.",
+    "card2": "An outgoing ophthalmology referral for diabetic retinopathy screening was sent 5 Aug. No appointment has been recorded against it in the 24 days since. On 29 Aug the patient messaged reporting four days of blurred vision.",
+    "card3": "An incoming referral from Dr. Alvarez, endocrinology, arrived 18 Aug and is still marked awaiting acceptance. No response has been recorded against it in the 13 days since, and the ledger holds no scheduled future visit.",
+    "whyNotARestatement": "The brief was explicit that \"why am I seeing this\" means naming the events, not rephrasing the headline. Each string names dated ledger rows and, where the insight rests on an absence, names the absence and the window it covers."
+   }
+  },
+  "frames": {
+   "built": "State 3 — insight card, reasoning tooltip open (205:773), 1440x860 at 0,1560, on the same background.default ground as State 1.",
+   "whyItExists": "A hover state cannot be shown at rest. State 3 shows card 1 with its info icon in State=Hover and the reasoning tooltip open beneath it.",
+   "alsoContains": "Two labelled reference blocks. \"Two kinds of tooltip\" puts a control label beside a reasoning tooltip so the size difference is directly comparable. \"Reasoning, per insight\" carries all three reasoning strings, each captioned with the card it belongs to, so all three are written and reviewable in one place.",
+   "labels": "Frame label — State 3 (207:783) added at 0,1414, cloned from the existing State 1 label so the pattern matches: 16px Akkurat LL Bold title over 12px Akkurat LL Regular description. State 1 and State 2 labels were already present and were not touched.",
+   "statesUpdated": "The card changes were applied to BOTH State 1 (168:249) and State 2 (181:374) — all frames, as instructed. State 2 card 3 sits behind the Medications drawer and is partly occluded, which is correct for that state."
+  },
+  "standingRecordRow": {
+   "_status": "NO CHANGE NEEDED — already in the requested state before this session.",
+   "instruction": "Carried over: change the standing record buttons to variant=text, size=small, on the grounds that eight bordered pills beneath the action row mirrored it.",
+   "found": "All eight buttons in BOTH states already read variant=text, color=primary, size=small, State=Default. Nothing was changed.",
+   "overflowResolved": "CONFIRMED FITS. The eight buttons occupy 654px total (Problems 72, Medications 91, Allergies 67, Immunizations 106, Vitals 64, History 64, Flowsheets 85, Care Checklist 105) inside a 1408px content width. Care Checklist ends at x=654 and is fully visible in the 1440 screenshot. There is 754px of spare room — the row is not close to overflowing.",
+   "mirroringBroken": "Confirmed visually at 1440. The action row carries a contained orange New Note with a split caret plus an outlined AI Note Assist pill; the standing record row is eight unbordered text links. The two bands no longer mirror each other and the action row is clearly the heavier of the two."
+  },
+  "verification": {
+   "screenshots": "All three state frames rendered at 1440 and inspected: State 1 (168:249), State 2 (181:374), State 3 (205:773).",
+   "thumbInteriorDetail": "PASS on both light and dark. A temporary swatch rendered ThumbUp, ThumbDown and InfoOutlined at 4x on white and on #2B2B2B, with the dark copies painted white. All three interior counters stay open — the ground shows through — and the thumb cuff bar stays separate from the hand. NONZERO is behaving as the authored SVG default, not filling the counter. The temp node was removed in the same script.",
+   "calmer": "YES. Two teal text buttons per card became two 18px grey glyphs. The teal that used to compete with the card title at the bottom-right of every card is gone, and the only remaining coloured text in the band is the titles.",
+   "separateJobs": "YES. Info reads as belonging to the paragraph it sits under; the thumbs read as a pair at the opposite corner. Nothing reads as a group of three.",
+   "reasoningReadsAsReasoning": "YES. At 300x120 against a 70x24 control label the reasoning tooltip is obviously a different kind of object, and its first words name dates and events rather than a control.",
+   "actionRowHeavier": "YES — see standingRecordRow.mirroringBroken.",
+   "rowFitsAt1440": "YES — see standingRecordRow.overflowResolved."
+  },
+  "handDrawnCheck": {
+   "_convention": "Per handDrawnCheck2026_08_31: binary per frame, every hand-drawn UI element assigned to SCAFFOLDING, ANNOTATION or INEXPRESSIBLE or it is a finding.",
+   "answer": "NO new hand-drawn UI element was introduced.",
+   "breakdown": {
+    "thumbsAndInfo": "Icon button instances carrying published icon instances. Not drawn.",
+    "tooltips": "Tooltip instances. The multiline wrap is a property and sizing override reproducing MUI maxWidth 300, not a drawn surface.",
+    "infoIconParentage": "SCAFFOLDING — the info icons are parented to the Insight band rather than the Card because a Card instance cannot host children. The icons themselves are published instances.",
+    "state3Chrome": "ANNOTATION — the State 3 frame, its two section headings, the per-specimen captions and the frame label all describe the proposal rather than being examples in it."
+   },
+   "preExistingDrawnElements": "Unchanged and still correctly named with their reason: Head row — drawn (Table/Row cannot take real cells); Cell — type (drawn: instance cannot host a Chip); Cell — action (drawn: instance cannot host a Button); Scrim — drawn (no Backdrop/Modal component in the library); Drawer — drawn surface (an instance cannot host Table/Cell rows). All SCAFFOLDING."
+  },
+  "instanceIntegrity": {
+   "method": "findAllWithCriteria over all three state frames, getMainComponentAsync on every INSTANCE.",
+   "result": "PASS. 280 instances total — 121 in State 1, 132 in State 2, 27 in State 3. Zero detached, zero with a missing main component.",
+   "remote": "276 resolve to remote published library components, including every node this phase added: Icon button 28, Icon/ThumbUpOutlined 9, Icon/ThumbDownOutlined 9, Icon/InfoOutlined 9, Tooltip 6, Card 9.",
+   "local": "4 resolve to local main components — Patient header x2 and Patient action row x2. These are proposal-local compositions defined on other pages of the same file, pre-existing and untouched. They are not detached."
+  },
+  "publishStep": "None. Nothing in the library was created, modified or republished by this phase. The proposals file consumes the published library only."
+ }
+}

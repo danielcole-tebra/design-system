@@ -1,0 +1,36 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "fourCompositions2026_08_31",
+ "sequence": 11,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "c4c6fb6091991a1b07bc9fddd171132ab747816aecef9572738d315edb7d6175"
+ },
+ "record": {
+  "_status": "BUILT, NOT PUBLISHED. Compositions remain unpublished reference frames per libraryRestructure2026_08_26c.settledDecisionsApplied.compositionsAreReferenceFrames.",
+  "frames": [
+   "371:780 Autocomplete open state",
+   "154:11 Select + Menu",
+   "161:110 Button group segment row",
+   "446:3 Table assembly"
+  ],
+  "noComponentModified": "Verified after the batch: 13 component sets re-read and matched on name, variant count and property count — Autocomplete/Field 30, Autocomplete/Option 5, Autocomplete/Tag 2, Text field 20, Checkbox 24, Menu 2, Menu/Item 6, Button group/Segment 54, Button 72, Split button 8, Table/Cell 6, Table/Row 3, Paper 12. Zero COMPONENT or COMPONENT_SET nodes exist inside any composition frame.",
+  "pageLayoutIntact": "All seven Compositions-page section x/y positions are byte-identical to the start of the batch; sections grew in HEIGHT only. Zero section overlaps. Frames were repositioned only WITHIN their own section, preserving production-count order: Autocomplete (88 files) above Select + Menu (74) in Inputs; Button group segment row (20) above Selection / bulk action bar (14) in Actions. Data display frame positions were left exactly as hand-placed.",
+  "recurringAcrossCompositions": {
+   "oneTextPropertyPerRow": "Autocomplete/Option, Menu/Item and Table/Cell each expose exactly one TEXT property, and in all three production overwhelmingly needs more — 52 of 88 Autocomplete files customise the option row, 57 of 230 MenuItems need icon/two-line/checkbox/spinner content, and 87 of 164 table cells hold a component. This is one component-layer problem showing up three times, not three composition problems.",
+   "instancesCannotHostChildren": "The same Figma constraint forced scaffolding in three frames: the Autocomplete listbox cannot be a Paper instance, a Menu cannot exceed its four slots, and a Table/Row cannot take real cells. It is the single largest driver of drawn-rather-instanced nodes across the batch.",
+   "stateVersusContent": "Table/Row and Button group/Segment share a shape: the component that owns the visual states cannot carry the content production needs, so the states go unused. Table/Row is used in 1 of 12 sections; Button group/Segment has no selected state at all.",
+   "outlinedIsUnstyled": "ButtonGroupOverrides styles only contained keys, leaving 4 outlined groups with MUI stock appearance — the SAME shape as the alert composition's finding that AlertOverrides has no outlined rules. Worth treating as a theme-layer pattern rather than two isolated bugs.",
+   "productionOverridesTheThemeDefault": "Three independent cases: 24 of 25 Autocomplete files override noOptionsText; 12 of 23 ButtonGroups override the library colour default back to MUI's; 53 of 106 Autocompletes decline the size the theme does not set. Where the theme takes a position, production frequently takes another."
+  },
+  "instanceRatioMethodNote": "The build prompt cites dialog 87.5% and alert 92%. Those figures could NOT be reproduced by any measure applied here. Measured identically across all frames: all-authored-nodes gives Autocomplete 18.9%, Select+Menu 17.1%, Segment row 21.6%, Table 41.6%, against alert 11.6% and dialog 15.1%; excluding annotation text gives 35.1 / 34.9 / 41.7 / 53.8 against alert 21.3 and dialog 35.9; a UI-elements-only heuristic gives 55.1 for Autocomplete against alert 63.9 and dialog 60.9. On every consistent measure all four new frames sit at or above the two templates. The 87.5/92 baseline should be treated as unreliable until its method is recorded.",
+  "toolingBuilt": "composition-scan.js (balanced-brace JSX scanner with import-source resolution and TSX generic handling) and comp-analyze.js, in C:/Code/design system. Reusable for the remaining compositions.",
+  "constraintHit": "Node deletion was blocked by the harness for the whole batch, so every frame was brought up to template additively — mutating text in place and reparenting accurate content rather than removing anything. This suited the prompt's delete-nothing rule, and no content was lost; the only cost was one stray empty text node in the segment row, which was repurposed into a real note rather than removed."
+ }
+}

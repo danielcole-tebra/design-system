@@ -1,0 +1,41 @@
+{
+ "_source": "Transcribed verbatim from the 'Known drift and decisions' frame (3:629) on the Canonical components page, which predates this build. Preserved here because that page was proposed for deletion on the premise it was empty — it is not.",
+ "_status": "OPEN — none of these are resolved by the current Figma build",
+ "items": [
+  {
+   "id": "buttonHierarchyInversion",
+   "title": "Button hierarchy",
+   "verbatim": "Contained primary is white with a core border; contained secondary is the visually filled action. Decide whether to keep this semantic inversion.",
+   "corroboratedByThisBuild": true,
+   "note": "Independently transcribed from ButtonOverrides.ts: containedPrimary is common.white with a core.main border, containedSecondary is filled secondary.main. The Figma Button reproduces the inversion faithfully. This is an open DESIGN question, not a transcription error — the build documents the fact but does not resolve the question."
+  },
+  {
+   "id": "radioOverrideRegisteredWrong",
+   "title": "Radio integration defect",
+   "verbatim": "The override is registered as MuiRadioButton, not MuiRadio. Figma should not depict custom behavior until the executable theme is corrected.",
+   "corroboratedByThisBuild": false,
+   "note": "NEW TO THIS BUILD — not previously caught. MuiRadioButton is not a valid MUI component key, so RadioButtonOverrides.ts is dead code and Radio renders unthemed. Needs verification against the checkout and a code fix. Radio is not built in Figma, so nothing here depicts it."
+  },
+  {
+   "id": "outlinedInputBorderDecision",
+   "title": "Outlined input border",
+   "verbatim": "The theme inherits MUI's light outline; the sticker sheet expects a darker Synapse 1 outline. Encode one shared decision on MuiOutlinedInput.",
+   "corroboratedByThisBuild": true,
+   "note": "Matches flags.autocompleteUnthemedGeometry. The Autocomplete / Field default outline is bound to color/substrate/inputOutline = rgba(0,0,0,0.23), MUI's own value, because no MuiOutlinedInput override exists. If the Synapse 1 outline is the intent, it is a code change and the Figma variable follows."
+  },
+  {
+   "id": "passiveCards",
+   "title": "Passive cards",
+   "verbatim": "MuiCardActionArea is disabled by default. Interactive cards need an explicit product decision and accessible affordance.",
+   "corroboratedByThisBuild": false,
+   "note": "Card is not built in Figma. Carried forward untouched."
+  },
+  {
+   "id": "chipColorGovernance",
+   "title": "Chip color governance",
+   "verbatim": "Success and error interactions contain hard-coded colors. Replace them with named semantic tokens before publishing components.",
+   "corroboratedByThisBuild": true,
+   "note": "Same finding as flags.chipRawHex — ChipOverrides.ts hardcodes #C3E7C0 (colorSuccess) and #FD919F (colorError hover), neither in paletteValues.ts. Not on the Autocomplete path, which uses outlinedPrimary, so the built Tag is unaffected. CORRECTED 2026-08-03: both hexes ARE Figma variables — color/hardcoded (no palette)/chipSuccessBackground and color/hardcoded (no palette)/chipErrorClickableHover, each carrying the literal hex as its code syntax. Verified by enumerating the live Tebra/Color collection. Neither has a home in paletteValues.ts, which is the part that remains true."
+  }
+ ]
+}

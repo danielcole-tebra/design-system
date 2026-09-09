@@ -1,0 +1,89 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_problemsRecent_corrections_2026_09_02",
+ "sequence": 29,
+ "date": "2026-09-02",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "adabfb5b517fdbe8ccdbf933e43177ffe7c7fcb4e5f3572f16638225b30f1231"
+ },
+ "record": {
+  "_status": "STEPS 1-3 DONE. Step 4 (local component \"Rebuild comparison\" on Templates) NOT BUILT: the batch prompt arrived truncated after \"fill bound to\", so the fill binding and the contents were never received. Record name chosen by the batch because the prompt was cut before naming it.",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6: writes on Screens 27:2 only (one marker, two change log rows, one row edited)",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (Icon button, Icon/PlusOutlined and 16 variables imported by key in-script)",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq not opened",
+  "date": "2026-09-02",
+  "step1_gate": {
+   "screenshots": [
+    "figma-export/npve-problems-recent-corrections-2026-09-02/step1-body-master-26-221.png",
+    "figma-export/npve-problems-recent-corrections-2026-09-02/step1-problem-row-master-26-208.png"
+   ],
+   "lookedAt": "Yes. Body master 518x392: search field, tabs, title, four rows with the code immediately after the name and the trailing glyph at the right edge. Row master 518x56: star, \"Diabetes Mellitus\", \"E10.9\" beside it, plus at the right.",
+   "read": "Problem row master 26:208, the four rows in body master 26:221 and the four rows in screen 27:6 all read identically: Name at x 72 (HUG), Code at name end + 16, Text frame 374 FILL, Trailing action at x 462, height 56. Per row: Diabetes Mellitus code x 219; Asthma 146; Chronic Obstructive Pulmonary Disease 383; Osteoarthritis 193.",
+   "verdict": "Masters and screen agree: Name and Code are adjacent. Proceeded to step 2."
+  },
+  "step2_marker": {
+   "id": "33:236",
+   "name": "DEFECT marker — Add button ring",
+   "page": "Screens",
+   "at": "(-450, 540) below the two GAP markers",
+   "size": "400x288",
+   "convention": "defectMarkerConvention2026_08_28: VERTICAL g12 p16 r4, 1px dashed [6,4], fill color/grey/300, stroke color/grey/500; chip color/grey/400 r4 p3/8 label \"DEFECT\" color/grey/900 Bold 12/16 ls 0.5 (caption tokens); fix line color/grey/600 body1 tokens; difference line color/text/primary body1 tokens; example first.",
+   "example": "Icon button 170:5 with Icon/PlusOutlined 76:8, glyph #545454 bound color/grey/600, identical to the screen rows' trailing action (rule 1 read on the Asthma row).",
+   "fix": "Fix lives in the library: Icon button 170:77 has no outlined or ringed variant.",
+   "difference": "Source draws the plus inside a 24px grey ring (white fill, 1px #D6D6D6 stroke, radius 16). The library Icon button renders the plus as a bare glyph, so the add affordance is lost. Marks the trailing action of the three unselected Problem rows.",
+   "screenshot": "figma-export/npve-problems-recent-corrections-2026-09-02/step2-defect-marker-add-button-33-236.png",
+   "unbound": "Chip label letterSpacing 0.5px (no letter-spacing variable)."
+  },
+  "step3_changeLog": {
+   "id": "27:222",
+   "size": "480x747 (was 613)",
+   "edited": {
+    "27:244": "Star and plus → \"Star icon | Bare glyph → icon button | Library. Glyph gains a tap target\""
+   },
+   "inserted": {
+    "33:247": "after 27:244: \"Add button | Plus in a grey ring → plain plus glyph | Library has no ringed icon button. Marked\""
+   },
+   "appended": {
+    "33:253": "\"Star colour | Black → library grey | Library icon default\""
+   },
+   "order": [
+    "Filter tabs",
+    "Search field",
+    "Problem rows",
+    "Star icon",
+    "Add button",
+    "Row background",
+    "Hidden layers",
+    "Body padding",
+    "Colours without a token",
+    "Star colour"
+   ],
+   "screenshot": "figma-export/npve-problems-recent-corrections-2026-09-02/step3-changelog-27-222.png"
+  },
+  "step4_rebuildComparison": "NOT BUILT. Prompt text ended at: \"Build a local component Rebuild comparison on Templates. Horizontal, gap 32, padding 32, hug both axes, fill bound to\". Needs the fill token and the contents (what sits in each column, how the source is represented) before building.",
+  "rules": {
+   "1": "PASS. Marker example glyph #545454 color/grey/600 = screen trailing glyph on the Asthma row.",
+   "2": "Screens: 108 visible solid paints, 0 unbound (five top-level nodes walked).",
+   "3": "Change log rows: new instances render their What / From to / Why text from the properties (read back).",
+   "4": "skipInvisibleInstanceChildren = false on every script.",
+   "5": "PASS. 0 unbound paints below opacity 1.",
+   "6": "Top-level nodes enumerated from the page.",
+   "7": "File key passed on every call.",
+   "8": "PASS. 0 fractional geometry on non-vector nodes.",
+   "9": "PASS. Only the Text field outline parts carry bound alpha 0.23; untouched.",
+   "10": "Not applicable."
+  },
+  "screenshots": [
+   "figma-export/npve-problems-recent-corrections-2026-09-02/step1-body-master-26-221.png",
+   "figma-export/npve-problems-recent-corrections-2026-09-02/step1-problem-row-master-26-208.png",
+   "figma-export/npve-problems-recent-corrections-2026-09-02/step2-defect-marker-add-button-33-236.png",
+   "figma-export/npve-problems-recent-corrections-2026-09-02/step3-changelog-27-222.png"
+  ]
+ }
+}

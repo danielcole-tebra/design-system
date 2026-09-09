@@ -1,0 +1,53 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "docsOperatorsGuide_2026-09-04",
+ "sequence": 45,
+ "date": "2026-09-04",
+ "workstream": "workflow",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "d92773dddf87e6627e8dd09c82d65bc5242647351913fb0c0ba16991b11fd79a"
+ },
+ "record": {
+  "_status": "DONE. Documentation batch. Repo writes only: OPERATORS.md created; CLAUDE.md gained agent rule 10 (record gate) and one cross-reference line in its opening section; AGENTS.md gained one cross-reference sentence. Committed. No Figma file opened or written.",
+  "date": "2026-09-04",
+  "_targetFile": "none (no Figma writes)",
+  "_libraryFile": "none",
+  "_sourceFile": "not opened",
+  "report": "figma-export/docs-operators-guide-2026-09-04/report.md",
+  "readFirst": {
+   "claudeMd": "read, including Rules for any agent working in these files (items 1–9)",
+   "record": "npveRebuild_agentRules_2026-09-04 read"
+  },
+  "recordGate": "Previous batch in this workstream (npveRebuild_agentRules_2026-09-04) has a record. Gate passed.",
+  "stopCondition": "One new file, two edited files, one record, one commit; stop.",
+  "filesWritten": {
+   "OPERATORS.md": "New, repo root. Operator's guide text as supplied in the batch prompt. Markdown structure restored from the pasted plain text: H1 title, five H2 sections (Why this guide exists; The standing structure; The loop, from your seat; Which decisions are whose; What good looks like), bulleted lists with bold lead phrases under The standing structure (4) and The loop (6). Words unchanged. Ownership line left with its bracket for Daniel to fill. CRLF like the other root docs.",
+   "CLAUDE.md": "Item 10 appended to Rules for any agent working in these files (record gate). One line added to the opening section after the folder description: the OPERATORS.md cross-reference.",
+   "AGENTS.md": "One sentence appended to the context paragraph: the OPERATORS.md cross-reference. The rules section itself was not touched."
+  },
+  "additions": {
+   "claudeRule10": "10. Record gate. Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one.",
+   "claudeOpening": "OPERATORS.md describes the person's side of this loop; agents should assume an operator is holding it.",
+   "agentsContext": "OPERATORS.md in this root describes the operator seat."
+  },
+  "verification": "Apply script re-reads all three files and asserts each addition is present, the guide starts and ends on the prescribed lines, and the ownership bracket is intact. Section verbatim check CLAUDE.md vs AGENTS.md: AGENTS.md section equals CLAUDE.md items 1–9; CLAUDE.md additionally has item 10.",
+  "finding": "AGENTS.md still states that it repeats the CLAUDE.md section verbatim, but after this batch CLAUDE.md has item 10 and AGENTS.md has items 1–9 only. The batch prompt scoped item 10 to CLAUDE.md and scoped the AGENTS.md change to one sentence, so AGENTS.md was left as instructed. Reported, not reconciled (rule 11). Decision: add item 10 to AGENTS.md, or reword its verbatim claim.",
+  "decisionsNeeded": [
+   "AGENTS.md verbatim claim vs CLAUDE.md item 10: mirror the rule into AGENTS.md or reword the claim."
+  ],
+  "flagsAdded": [
+   "docsAgentsMdVerbatimClaimStale"
+  ],
+  "standingRules": "Not applicable: no Figma node read or written. Rule 13 followed.",
+  "screenshots": [],
+  "commit": "Whole working tree committed as \"Operator's guide, record gate, cross-references\"; the hash is in git log and the batch reply, and cannot be stored inside the commit it names.",
+  "flagsBefore": 208,
+  "flagsAfter": 209,
+  "alsoInCommit": "Uncommitted work from earlier batches rode along: records npveRebuild_audit_2026_09_03, npveRebuild_agentRules_2026-09-04, npveRebuild_externalRestructure_2026-09-03_retro, npveRebuild_repair1_2026-09-04, libraryTodos_write2_2026_09_03, their apply scripts, backups and report folders, and LIBRARY-TODOS.md edits."
+ }
+}

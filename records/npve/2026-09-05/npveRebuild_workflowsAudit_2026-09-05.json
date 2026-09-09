@@ -1,0 +1,279 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_workflowsAudit_2026-09-05",
+ "sequence": 72,
+ "date": "2026-09-05",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "6e276e050fbe004812fcc2b9bf55aa78bee9e2d6128854e951a77564320d8899"
+ },
+ "record": {
+  "_status": "READ-ONLY AUDIT COMPLETE. Stopped after step 5 as instructed. 26 top-level nodes mapped with refreshed provenance, dated text and cluster evidence; page anatomy decomposed from 4841:18039; 36-row conventions catalog (18 covers, 12 gaps, 5 inventions, 1 decision); sidesheet linkage (45 placements, two page conventions); rebuild-shape proposal with six decisions. No Figma writes; target not opened.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Encounter page",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq page Workflows 105:1426 read only (loadAsync, page never switched)",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (key inventory 145 sets; nearest-component geometry); Kit ZPf0sJy83aPyrHjCVHomya read only (key inventory 327 sets)",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 not opened",
+  "report": "figma-export/npve-workflows-audit-2026-09-05/report.md",
+  "recordGate": "npveRebuild_extReviewRepairs_2026-09-05 recorded — passed",
+  "readFirst": [
+   "CLAUDE.md incl. Sheet and comparison techniques",
+   "npveRebuild_enum_2026-09-02 (Workflows section)",
+   "LIBRARY-TODOS.md items 1–17",
+   "PATIENT-HEADER-DISCOVERY.md, PROPOSAL-PATIENT-HEADER-V1.md, PAGE-TEMPLATES.md",
+   "schema navComponentsOnCompositionsPage, beigeSurfaceInvestigation2026_08_31, insightCardAffordances2026_09_01"
+  ],
+  "stopCondition": "Stop after step 5. No build. Triggered as planned.",
+  "step1_map": {
+   "topLevel": 26,
+   "provenance": {
+    "instances": 7843,
+    "kit": 3806,
+    "otherRemote": 3304,
+    "local": 709,
+    "designSystemRebuild": 24,
+    "kitPct": 48.5,
+    "otherPct": 42.1,
+    "localPct": 9,
+    "dsrPct": 0.31
+   },
+   "otherRemoteIs": "an icon pack (plus 689, Interface, Essential/Delete, Disabled 270, Health, Medicine/* 250 each, close 213) plus an older Tebra library (_icon button template, Icon Button/Default/Small, TemplateMgmt, Edit_light)",
+   "dsrUseOnlyIn": [
+    "4715:26647 (6)",
+    "4841:17077 (6)",
+    "4841:18039 (9)",
+    "4841:21245 (3)"
+   ],
+   "clusters": {
+    "pair2922": {
+     "members": [
+      "3943:12393",
+      "4317:11594"
+     ],
+     "evidence": "same content, same max authored id 4730; 3943:12393 adds annotation components (Note sticky ×2, Bullet ×2) and a 1496-tall inner frame vs 1348; pixel diff 21.5% confined to rows 497–1996 (shift). Neither newer."
+    },
+    "nine1429x1013": {
+     "members": [
+      "3124:12369",
+      "4841:17077",
+      "4841:18039",
+      "3159:20067",
+      "4296:17197",
+      "4275:15285",
+      "4294:15013",
+      "3159:21282",
+      "4439:16310"
+     ],
+     "evidence": "vs 4841:17077: 5.5–5.6% differ (left column + toolbar) for the old-shell members; 4841:18039 11.6% (overlay); Replace_Section_Modal 91.9% (scrim). Recording family members differ from each other by 0.46% (toolbar strip only)."
+    },
+    "recReadyTrio": {
+     "members": [
+      "3124:12369",
+      "4841:17077",
+      "4841:18039"
+     ],
+     "evidence": "4841:18039 = 4841:17077 + Add Problem overlay 550x948 at x878 + Module Dropdown at x-437; both on the 550-wide Problems-Main shell. 3124:12369 is the 450-wide FHx shell but carries the latest toolbar edits (id prefix 4907: \"SOAP\", \"Otto Octavius\", Print)."
+    },
+    "latestEdited": "3456:11505 Mark As Error_Ready (id prefix 5090): Print, Date pill, SOAP:Modified, Dr. Steven Strange; twin 2745:10131 inside board 3943:13029"
+   },
+   "datedText": "mock patient DOB 08/01/1994 everywhere; Kit placeholders 1/23/24, 1/27/25; mockup dates to 04/24/26 (addendum) and 5/1/26 (appointment menu); screenshot rectangle named 2026-05-05; DoS 3/26/26 row",
+   "artefacts": [
+    "899:7657 Module Dropdown hidden loose instance",
+    "3534:17621 loose 24px glyph",
+    "3806:13143 pasted screenshot",
+    "3810:13146 document row",
+    "two 280-tall board labels",
+    "4841:21245 loose sheet"
+   ]
+  },
+  "step2_anatomy": {
+   "bestEvidence": "4841:18039 (clean twin 4841:17077)",
+   "regions": {
+    "nav": "Kit Primary Nav 1429x65 #004852; repeats in all 27 encounter frames (1413 wide on two older board screens)",
+    "body": "1429x948 VERTICAL padding 16 fill #FBF9F8 (no token)",
+    "patientHeader": "1397x96 white #D6D6D6 r8 padding 20; identical size and text set in all 27",
+    "moduleStrip": "Modules_HFlex local instance 1397x40; three generations (Modules_Left 48, Modules_HFlex frame 64 icon-only, instance 40)",
+    "mainWrap": "1397x748 H gap 16; LeftCol 450/550/691 (sheet), RightCol 931/831/1397/691",
+    "noteCard": "NoteWrapper 831x748 white #D6D6D6 r8: NoteHeader 65 / toolbar 58 / NoteBody 555 / Footer 70",
+    "pageFooter": "none on any frame",
+    "overlays": "right-docked 550x948 at x878 (square corners, no scrim); AI Note Results 483x948; Edit Problem 550x789; Kit Dialog + scrim"
+   },
+   "candidateShells": [
+    "page frame + backdrop",
+    "nav bar",
+    "patient header",
+    "module strip",
+    "note card shell with slots",
+    "two-column MainWrap with left sheet slot"
+   ]
+  },
+  "step3_catalog": {
+   "rows": 36,
+   "libraryCovers": 18,
+   "coversWithDelta": 9,
+   "libraryGap": 12,
+   "inventionInSource": 5,
+   "decision": 1,
+   "newTodoCandidates": {
+    "18": "Module chip (40 tall, r8, icon+label+close; unselected pill r24)",
+    "19": "Grouped menu with subheaders (Module Dropdown, appointment date menu)",
+    "20": "Module card shell with header/toolbar/body/footer slots (Note card)",
+    "21": "Icon/ShieldLock",
+    "22": "Icon/Expand",
+    "23": "Editor toolbar pattern + undo/redo/H1/align/numbered-list glyphs",
+    "24": "Link chip colour #8657AC / #F0EBF5 (extends TODO 6)",
+    "25": "Segmented chip (medication/order chips)",
+    "26": "Menu with inline field and two-line items (TemplateMgmt)"
+   },
+   "existingTodosCrossReferenced": [
+    2,
+    3,
+    6,
+    9,
+    14,
+    16,
+    17
+   ],
+   "buttonAxisNote": "Library Button 79:2 has 72 variants, variant = contained | text only; the source white teal-outlined pills map to variant=contained, color=primary (Tebra override renders white with teal outline). Records saying \"variant=outlined\" describe that variant loosely.",
+   "inventions": [
+    "auto-saved dot + text",
+    "transcription status states (radio-dot text, italic in-progress, salmon Ready to Record strip)",
+    "editor section chrome (grey card, drag handle, Link to Section triangle dropdown)",
+    "signed-note status block, ORIGINAL label, addendum line",
+    "• separators"
+   ]
+  },
+  "step4_linkage": {
+   "placements": 45,
+   "byVariant": {
+    "Page=Clin_FHx": 30,
+    "Page=Clin_Problems-Main": 3,
+    "Clin_Problems-Edit": 1,
+    "Page=Clin_MedList": 2,
+    "Page=Clin_FHX-Editing": 1,
+    "summaryLoose": 1,
+    "detachedOverlayFrame": 1
+   },
+   "hiddenDuplicates": "10 Clin_FHx instances hidden at y672 inside board 3943:12395 and 3943:12402 LeftCols",
+   "conventions": {
+    "inlineLeftColumn": "sheet is MainWrap LeftCol 450 (older) or 550 (4841 pair); hidden in the recording family so the note spans 1397; white r8 #D6D6D6 card = our Placement=Floating",
+    "rightDockedOverlay": "flush right, full body height, white, square corners, no scrim, no push; widths 550 and 483; our Docked right has 8/0/0/8 corners"
+   },
+   "noDimBackdrop": true
+  },
+  "step5_proposal": {
+   "shellOrder": [
+    "Page/Encounter frame + backdrop",
+    "Nav/Bar (after the nav home decision; GAP placeholder until then)",
+    "Patient header (source 1397x96 vs Proposals v1 900x72 — decision)",
+    "Module strip (GAP-marked chips)",
+    "Note card shell with Header/Toolbar/Body/Footer slots",
+    "MainWrap with left sheet slot taking existing Sidesheet bodies"
+   ],
+   "inScope": [
+    "4841:17077",
+    "4841:18039",
+    "3456:11505",
+    "3943:12404 (Med List board screen)"
+   ],
+   "history": [
+    "2922 pair",
+    "General Workflow strip 3943:12395",
+    "Rec_* family until transcription states are wanted"
+   ],
+   "comparisonSizing": "DECISION — 1708-wide master with 550 slots cannot hold two 1429 frames; options: stacked page master, 0.5x references (breaks the 1:1 rule), widened slots",
+   "firstBatch": "Encounter page shell skeleton on a new Templates section: page frame, backdrop, nav (per decision), patient header (per decision), module strip + GAP marker, MainWrap with Sidesheet Problems Main in the left slot, note card shell with empty body and footer row, one comparison vs 4841:17077. No toolbar, sections or transcription states."
+  },
+  "decisionsNeeded": [
+   "Nav family home",
+   "Patient header source vs proposal",
+   "Right-docked panel corners and 483 width",
+   "Comparison layout for 1429 references",
+   "Page canvas colour #FBF9F8",
+   "Scope: 4841 pair vs later-edited 3124:12369 / 3456:11505; recording family in or out"
+  ],
+  "standingBatchRules": {
+   "1": "N/A",
+   "2": "N/A (source not audited for bindings)",
+   "3": "N/A",
+   "4": "PASS — false on every walk; hidden duplicates found because of it",
+   "5": "PASS untouched",
+   "6": "PASS — enumerated from the page",
+   "7": "PASS — keys explicit; page identity by 26-child count and ids",
+   "8": "N/A",
+   "9": "PASS untouched",
+   "10": "N/A"
+  },
+  "figmaMutations": [],
+  "screenshots": [
+   "figma-export/npve-workflows-audit-2026-09-05/crop-left-sheet.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-modules-strip.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-nav-1429x65.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-note-footer.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-note-header-toolbar.png",
+   "figma-export/npve-workflows-audit-2026-09-05/crop-patient-header.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-2922-pair-f00-vs-f01.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f13.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f16.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f17.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f18.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f19.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f20.png",
+   "figma-export/npve-workflows-audit-2026-09-05/diff-f14-vs-f22.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f00-3943-12393-board-2922x2008.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f01-4317-11594-board-2922x2008.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f02-4715-26647-board-1584x1364.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f03-5093-18693-print-example-1429x815.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f04-3943-12395-board-15951x1314-at4000.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f04a-129-4347-general-workflow-screen-1-1429x774.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f04b-745-6735-general-workflow-screen-18-1429x776.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f05-3943-12402-board-2906x1360.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f06-3943-13025-board-4367x2839-at3000.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f07-3534-17621-arrow-icon-24.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f08-899-7657-module-dropdown-hidden-1x1.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f09-3456-11503-label-select-appointment-date.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f10-2939-11510-label-recording-transcription-live.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f11-3943-13027-board-5039x1249-at3000.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f12-3456-11505-mark-as-error-ready-1429x810.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f13-3124-12369-rec-ready-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f14-4841-17077-rec-ready-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f15-4841-21245-sidesheetv3-550x948.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f16-4841-18039-rec-ready-1429x1013-overflow.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f16-4841-18039-rec-ready-contentsonly.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f17-3159-20067-rec-started-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f18-4296-17197-rec-paused-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f19-4275-15285-rec-processing-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f20-4294-15013-rec-closed-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f21-3159-21282-rec-open-1429x1013-overflow.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f21-3159-21282-rec-open-contentsonly.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f22-4439-16310-replace-section-modal-1429x1013.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f23-3943-13029-board-5039x3547-at3000.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f24-3806-13143-screenshot-rect-1458x106.png",
+   "figma-export/npve-workflows-audit-2026-09-05/f25-3810-13146-frame-758x116.png"
+  ],
+  "flagsAdded": [
+   "npveWorkflows_moduleChipNoLibraryPattern",
+   "npveWorkflows_noteCardShellNoLibraryPattern",
+   "npveWorkflows_editorToolbarNoPattern",
+   "npveWorkflows_shieldLockGlyphMissing",
+   "npveWorkflows_expandGlyphMissing",
+   "npveWorkflows_groupedMenuNoSubheader",
+   "npveWorkflows_linkChipColourNoToken",
+   "npveWorkflows_segmentedChipNoPattern",
+   "npveWorkflows_templateMenuInlineField",
+   "npveWorkflows_patientHeaderNotInLibrary",
+   "npveWorkflows_navFamilyHomeBlocksShell",
+   "npveWorkflows_rightDockedPanelConvention",
+   "npveWorkflows_comparisonLayoutFor1429",
+   "npveWorkflows_pageCanvasColourNoToken",
+   "npveWorkflows_moduleDropdownOffCanvas"
+  ],
+  "flagsBefore": 249,
+  "flagsAfter": 264
+ }
+}

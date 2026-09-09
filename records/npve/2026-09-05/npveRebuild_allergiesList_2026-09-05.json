@@ -1,0 +1,154 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_allergiesList_2026-09-05",
+ "sequence": 65,
+ "date": "2026-09-05",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "377f5bec472096dd6bed9e9d95e5391aaa96aee6aa2e8a691f1d132040178a75"
+ },
+ "record": {
+  "_status": "DONE. Allergies severity selector, card, body, live Sidesheet, comparison, and evidence are built and verified.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-allergies-list-2026-09-05/report.md",
+  "recordGate": "npveRebuild_familyHistory_2026-09-05 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:7726 Page=Clin_Allergies",
+   "policy": "read only; frozen 2x export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65"
+  },
+  "scope": "Create one reusable allergy severity selector, one reusable allergy card, and one Allergies list body; compose one live Sidesheet placement; create one reference-versus-rebuild comparison and plain-language change log. Append only the new body/helper keys to existing preferred-value lists. Preserve shared defaults and geometry, source, library, prior screens, and global tokens.",
+  "buildPlan": [
+   "Create a local severity selector matching the rendered Mild dropdown.",
+   "Create an allergy card with editable allergy, onset, reaction, and comments content using live Chip instances where compatible.",
+   "Create a body with live Tabs/Tab instances, a live contained-primary Button, and one live allergy-card instance.",
+   "Compose a content-driven live Sidesheet with the footer following active content.",
+   "Create frozen reference, rebuild, and Change log helpers; place the sole comparison instance on Screens."
+  ],
+  "spacingPolicy": "Canonical base 8: 16px outer/body/card padding and major vertical gaps; 8px between related metadata rows and label/value pairs. Source 12px card inset and irregular 10px row gaps are normalized and recorded.",
+  "reuseBaseline": {
+   "library": "Design System Rebuild is the sole subscribed library",
+   "button": "cfb726c79b456d52901243b7c33839efd0780a93",
+   "tabs": "a320b57564d4296861667f677b5c807ebf1cfc1e",
+   "tab": "b6b654fda71111add23a2637c0e3588004abb661",
+   "chip": "1c8149de35a3b84dbc41a7e5d726020dfb865db4",
+   "sidesheet": "279:2446",
+   "rebuildComparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "stopCondition": "Stop before target mutation if a required dependency is absent or the source introduces an unresolved design decision. Otherwise stop after structural, paint, whole-pixel, live-instance, and screenshot verification plus report and schema closeout.",
+  "discoveries": [
+   "Allergies 129:7726 is visible, compact, and has a stable 550x656 render with Active and Inactive tabs.",
+   "The rendered card shows the Mild selector but not the source tree's overlapping edit and delete instances, so the rebuild follows rendered evidence.",
+   "The source uses a 64px header, 12px card inset, and irregular 10px metadata gaps; the rebuild follows the approved canonical Sidesheet and base-8 rules."
+  ],
+  "figmaMutations": [
+   "Created Allergy severity selector 352:3206 at 70x32 with editable label, token-bound success surface, and live DownCaret.",
+   "Created Allergy card 354:3206 at 518x152 with 16px token-bound padding, 8px metadata rhythm, live Chip instances, and live severity selector.",
+   "Created Allergies list body 355:3217 at 518x271 with live Tabs/Tab, Button, Divider, and Allergy card instances.",
+   "Added the Allergies list body key to Sidesheet Body content preferred values; default 26:221 and shared geometry remain unchanged.",
+   "Created reference 356:6190, rebuild 356:3248, and Change log 356:6192 helpers; appended their keys to Rebuild comparison preferred values without changing defaults.",
+   "Uploaded the fresh 2x source export to 356:6191 with image hash 24478b58ffa700bbefa25d1e8ab265648e4bf8cc and fitted it into the canonical 550x600 reference slot.",
+   "Created Screens section 356:6235 and sole comparison instance 356:6236.",
+   "Cleared six default white fills from authored structural wrappers after the final paint audit."
+  ],
+  "createdNodes": {
+   "templatesSection": "352:3205",
+   "severitySelector": "352:3206",
+   "severityLabel": "352:3207",
+   "severityCaret": "352:3208",
+   "allergyCard": "354:3206",
+   "allergyDetails": "354:3207",
+   "allergyTitle": "354:3208",
+   "severityInstance": "354:3209",
+   "onsetRow": "354:5912",
+   "reactionRow": "354:5919",
+   "commentsRow": "354:5929",
+   "body": "355:3217",
+   "tabsStrip": "355:3218",
+   "activeTab": "355:3220",
+   "inactiveTab": "355:3223",
+   "createButton": "355:5925",
+   "cardInstance": "355:5934",
+   "reference": "356:6190",
+   "referenceImage": "356:6191",
+   "rebuild": "356:3248",
+   "sidesheet": "356:3249",
+   "footerAction": "I356:3249;6:93",
+   "changeLog": "356:6192",
+   "changeLogRows": [
+    "356:6193",
+    "356:6199",
+    "356:6205",
+    "356:6211",
+    "356:6217",
+    "356:6223",
+    "356:6229"
+   ],
+   "screensSection": "356:6235",
+   "comparison": "356:6236"
+  },
+  "verification": {
+   "fileIdentity": "PASS — target Templates 3:2 and Screens 27:2; source 129:7726 read live and remained unchanged.",
+   "sourceImage": "PASS — fresh 1100x1312 export retained at 2x and fitted proportionally in a 550x600 helper.",
+   "geometry": "PASS — selector 70x32; card 518x152; body 518x271; live Sidesheet 550x447; all authored geometry whole-pixel.",
+   "spacing": "PASS — card padding 16; major body/card gaps 16; related metadata gaps 8; Sidesheet body padding 16.",
+   "footer": "PASS — Add Section to Note is visible as a live Button and follows the active body content.",
+   "components": "PASS — 80 live instances in the Templates section and zero broken main-component references; no detach occurred.",
+   "defaults": "PASS — Sidesheet Body content default 26:221; Rebuild comparison defaults 114:777 / 114:779 / 114:880.",
+   "paints": "PASS — zero unbound authored product-content solid paints; #E4E4E4 Section chrome and frozen image are documented exceptions.",
+   "typography": "PASS — all authored text uses Akkurat LL with token-bound family, size, line height, and color.",
+   "placeholders": "PASS — zero active placeholders.",
+   "visual": "PASS — component, rebuilt Sidesheet, full source, and final comparison renders were inspected."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "resolvedDuringBuild": 5
+  },
+  "flagsAdded": [],
+  "nextBatch": "Not started — continue the approved low-oversight Sidesheet sequence after operator review.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — live card, body, Sidesheet, and comparison instances were rendered and inspected.",
+   "2_unboundPaintAudit": "PASS — no unbound authored product-content solid paint remains.",
+   "3_referenceCounts": "PASS — all nested controls, local components, helper slots, and comparison links resolve.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on final audit traversals.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — source geometry, target APIs, dependencies, tokens, and final structure were enumerated live.",
+   "7_fileIdentityFirst": "PASS — exact file, page, source, and target identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — all authored containers have whole-pixel geometry.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no component or helper clone was used; every link was created and read back."
+  },
+  "screenshots": [
+   "figma-export/npve-allergies-list-2026-09-05/source-allergies-129-7726-2x.png",
+   "figma-export/npve-allergies-list-2026-09-05/component-severity-352-3206.png",
+   "figma-export/npve-allergies-list-2026-09-05/component-allergy-card-354-3206.png",
+   "figma-export/npve-allergies-list-2026-09-05/component-allergies-body-355-3217.png",
+   "figma-export/npve-allergies-list-2026-09-05/rebuild-allergies-356-3248.png",
+   "figma-export/npve-allergies-list-2026-09-05/comparison-allergies-356-6236-final.png"
+  ],
+  "flagsAfter": 230,
+  "recoveryNotes": [
+   "Three rejected calls were atomic and changed no canvas state: non-async audit helper, unsupported nested property promotion, and one mistyped token ID caught by a dependency guard.",
+   "The first live Sidesheet render exposed an overly broad Button lookup; the body action was restored and the footer was resolved through the Footer to Actions hierarchy.",
+   "The final paint audit found six default white fills on structural auto-layout wrappers; they were cleared and the audit passed on rerun."
+  ],
+  "reviewAnnotation_2026_09_05": "Corrected by npveRebuild_extReviewRepairs_2026-09-05 after npveRebuild_externalReview_2026-09-05: the rule 8 claim \"all authored geometry whole-pixel\" was inaccurate (severity selector label x 6.5, caret x 47.5; now 8 / 49), and findings.GAP 0 omitted the Allergy severity selector stand-in (now GAP marker 404:7061)."
+ }
+}

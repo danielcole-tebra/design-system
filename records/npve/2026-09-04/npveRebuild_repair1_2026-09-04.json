@@ -1,0 +1,129 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_repair1_2026-09-04",
+ "sequence": 44,
+ "date": "2026-09-04",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "57461c657cede4750b2f4acf879f2b7b47d9dde797223c86736ff2025e6922d5"
+ },
+ "record": {
+  "_status": "DONE except step 2, which stopped on its stated condition: the archived screens and the comparison copies differ by 5 and 6 anti-aliased edge pixels at 1x (max channel delta 16, same-node control 0), so no \"_Superseded\" rename was made. Button split healed (66 instances on the current subscription, old node gone), README written, retro record written, rules re-run.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 (writes: Sidesheet master footer swaps 6:85/6:93/6:101, Coral check 3:397, Primary action property on 160:1328/160:1608/156:2428/156:2707, README 185:3/185:4/185:5, transient 184:3947 created and removed)",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only (import-by-key to confirm the current subscription; variable imports for the README)",
+  "_sourceFile": "not opened",
+  "report": "figma-export/npve-repair1-2026-09-04/report.md",
+  "step1_buttonSplit": {
+   "direction": "importComponentSetByKeyAsync(Button key) → 155:1191; (Icon button key) → 77:1104. The current subscription is the newer copy; the 58 instances on 3:105 moved (the prompt's \"8 instances\" was the other copy).",
+   "swaps": {
+    "6:85": "3:136 → 155:1222",
+    "6:93": "3:106 → 155:1192",
+    "6:101": "3:118 → 155:1204",
+    "3:397": "3:118 → 155:1204"
+   },
+   "propertyFixes": {
+    "160:1328": "Primary action#6:6 3:120 → 155:1206",
+    "160:1608": "same",
+    "156:2428": "same",
+    "156:2707": "same"
+   },
+   "swapDefaultsAfter": {
+    "Primary action#6:6": "155:1204",
+    "Secondary action#6:7": "155:1222",
+    "Tertiary action#6:8": "155:1192"
+   },
+   "referencesAfter": {
+    "6:85": {
+     "visible": "Show secondary action#6:3",
+     "mainComponent": "Secondary action#6:7"
+    },
+    "6:93": {
+     "visible": "Show tertiary action#6:4",
+     "mainComponent": "Tertiary action#6:8"
+    },
+    "6:101": {
+     "mainComponent": "Primary action#6:6"
+    },
+    "sidesheetTotal": "62 before, 62 after"
+   },
+   "countsBefore": {
+    "Button 3:105": 58,
+    "Button 155:1191": 8,
+    "Icon button 6:7": 0,
+    "Icon button 77:1104": 182
+   },
+   "countsAfter": {
+    "Button 3:105": "0, node gone (getNodeByIdAsync null; Figma dropped the unused subscription, nothing deleted by this batch)",
+    "Button 155:1191": 66,
+    "Icon button 6:7": 0,
+    "Icon button 77:1104": 182
+   },
+   "orphanRename": "6:7.name throws \"Cannot write to internal and read-only node\"; remote subscription nodes cannot be renamed. No other orphan can be enumerated from inside the file.",
+   "pixels": "27:6 before vs after swap: diff bbox None. Rule 1 transient 184:3947 of 155:1191 contained primary: 86x38, pad 7/17/7/17, white fill / core/main stroke / core/contrastText label, all bound, opacity 1, space refs 997-series, label TITLE (known)."
+  },
+  "step2_duplicates": {
+   "method": "get_screenshot 1x of 27:6, 40:252, 116:498, 116:1338 before any write; Rebuild column cropped at (614,60) 550x600; ImageChops.difference.",
+   "results": {
+    "27:6 vs 116:498": "5 px, max delta 16, at (143,155) (379,371) (409,373) (140,380) (203,380)",
+    "40:252 vs 116:1338": "6 px, max delta 16, same five plus (53,253) delta 13 on the star edge",
+    "control": "27:6 captured twice: 0 px"
+   },
+   "positions": "27:6 abs (1934,180), comparison copy abs (694,180); 40:252 (1934,1393), copy (694,1590); search field at (16,73) and row 1 at (16,234) in all four.",
+   "outcome": "STOPPED. Renames not made. Decision: accept as rasterisation and rename in batch 2, or investigate."
+  },
+  "step3_retro": "npveRebuild_externalRestructure_2026-09-03_retro",
+  "step4_readme": {
+   "id": "185:3",
+   "size": "1040x360 at (0,-320) on Archive",
+   "bindings": "padding space/24 (997:33), gap space/8 (997:15), fill color/background/paper, stroke color/divider @ border/hairline; title body1 bold, body body2 regular, fills color/text/primary; font/family/base bound on both",
+   "screenshot": "figma-export/npve-repair1-2026-09-04/step4-archive-readme-185-3-1x.png",
+   "note": "States the step-2 renames as pending."
+  },
+  "step5_rules": {
+   "1": "transient instance read and removed (step 1)",
+   "2": "unbound outside instances: Cover 1 (pre-existing), Templates 25 (Problem summary row 9 + Problems list body 16, known-open for batch 2), Screens 0, Archive 0; section chrome excluded 10/6/8",
+   "3": "Sidesheet 62; Problem row 4x6; picker 36x3; list body 24/35; summary row 3; comparison 104; Change log 4",
+   "5": "no opacity touched",
+   "8": "0 hits, exempt 0/277/117/68",
+   "9": "no alpha touched"
+  },
+  "screenshots": [
+   "figma-export/npve-repair1-2026-09-04/step2-archive-27-6-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-archive-40-252-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-comparison-116-498-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-comparison-116-1338-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-crop-116-498-rebuild-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-crop-116-1338-rebuild-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step2-crop-116-498-rebuild-1x-diff.png",
+   "figma-export/npve-repair1-2026-09-04/step2-crop-116-1338-rebuild-1x-diff.png",
+   "figma-export/npve-repair1-2026-09-04/step2-control-27-6-second-capture-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step1-after-swap-archive-27-6-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step1-after-swap-sidesheet-master-6-65-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step1-after-swap-sidesheet-open-156-2707-1x.png",
+   "figma-export/npve-repair1-2026-09-04/step4-archive-readme-185-3-1x.png"
+  ],
+  "decisionsNeeded": [
+   "Accept the 5-pixel edge difference and rename the Archive screens in batch 2, or investigate first.",
+   "Icon button 6:7 cannot be renamed; leave for Figma to collect."
+  ],
+  "flagsAdded": [
+   "npveRepair1_orphanImportCannotBeRenamed",
+   "npveRepair1_screenPairEdgePixels"
+  ],
+  "flagsAnnotated": [
+   "npveAudit_unrecordedRestructure",
+   "npveAudit_buttonImportSplit",
+   "npveAudit_spaceRefsTwoVersions",
+   "npveAudit_iconButtonOrphanImport",
+   "npveAudit_screensTriplicated"
+  ],
+  "flagsBefore": 206,
+  "flagsAfter": 208
+ }
+}

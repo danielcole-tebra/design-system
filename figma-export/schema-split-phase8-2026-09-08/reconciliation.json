@@ -1,0 +1,2692 @@
+{
+ "format": "tebra.design-schema-reconciliation",
+ "version": 1,
+ "original": {
+  "path": "design-system-schema.backup-2026-09-08-pre-schema-split.json",
+  "sha256": "ec02a430f5d7ab2bacdfad66c58bfd8b9a0f2cac57b436158f8cf5a709ac4421"
+ },
+ "generated": {
+  "sha256": "ec02a430f5d7ab2bacdfad66c58bfd8b9a0f2cac57b436158f8cf5a709ac4421"
+ },
+ "byteIdentical": true,
+ "counts": {
+  "topLevelKeys": {
+   "before": 105,
+   "after": 105
+  },
+  "records": {
+   "before": 91,
+   "after": 91
+  },
+  "flags": {
+   "before": 285,
+   "after": 285
+  },
+  "flagsActive": {
+   "before": 227,
+   "after": 227
+  },
+  "flagsResolved": {
+   "before": 58,
+   "after": 58
+  },
+  "bytes": {
+   "before": 1418713,
+   "after": 1418713
+  }
+ },
+ "deltas": {
+  "topLevelKeys": 0,
+  "records": 0,
+  "flags": 0,
+  "flagsActive": 0,
+  "flagsResolved": 0,
+  "bytes": 0
+ },
+ "result": "PASS",
+ "problems": [],
+ "records": {
+  "accounted": 91,
+  "identical": 91,
+  "entries": [
+   {
+    "id": "propertySurfaceRepair2026_08_26",
+    "sha256Before": "507bccdbbb22c984eac78c2ce21d42dde6648b639c2cf126c8508fd5e4c3d8b0",
+    "sha256After": "507bccdbbb22c984eac78c2ce21d42dde6648b639c2cf126c8508fd5e4c3d8b0",
+    "identical": true,
+    "file": "records/library/2026-08-26/propertySurfaceRepair2026_08_26.json"
+   },
+   {
+    "id": "namingConventionMigration2026_08_26b",
+    "sha256Before": "b4ca189d9cacd77aed8a95389003eb972d4866cae7774b5d7c7fc2996651b8f8",
+    "sha256After": "b4ca189d9cacd77aed8a95389003eb972d4866cae7774b5d7c7fc2996651b8f8",
+    "identical": true,
+    "file": "records/library/2026-08-26/namingConventionMigration2026_08_26b.json"
+   },
+   {
+    "id": "libraryRestructure2026_08_26c",
+    "sha256Before": "e7ac53aeebe43b867810260025327a833a0813546f0164f41da0c58c6fbb0cf0",
+    "sha256After": "e7ac53aeebe43b867810260025327a833a0813546f0164f41da0c58c6fbb0cf0",
+    "identical": true,
+    "file": "records/library/2026-08-26/libraryRestructure2026_08_26c.json"
+   },
+   {
+    "id": "checkboxFlushHaloFix2026_08_26d",
+    "sha256Before": "d62841b62357fda76968473746580303d28b65bca80b896d912b09edc6822ab4",
+    "sha256After": "d62841b62357fda76968473746580303d28b65bca80b896d912b09edc6822ab4",
+    "identical": true,
+    "file": "records/library/2026-08-26/checkboxFlushHaloFix2026_08_26d.json"
+   },
+   {
+    "id": "boundAlphaRegressionRevert2026_08_27",
+    "sha256Before": "54294600c8c9169fcc9076d44c59ecf664e406767f9160b874edc497554236a3",
+    "sha256After": "54294600c8c9169fcc9076d44c59ecf664e406767f9160b874edc497554236a3",
+    "identical": true,
+    "file": "records/library/2026-08-27/boundAlphaRegressionRevert2026_08_27.json"
+   },
+   {
+    "id": "buttonInheritColour2026_08_28",
+    "sha256Before": "9403ac737ce6d714df7e1e4f403feb79f2fd8447574815b88e642291099e9590",
+    "sha256After": "9403ac737ce6d714df7e1e4f403feb79f2fd8447574815b88e642291099e9590",
+    "identical": true,
+    "file": "records/library/2026-08-28/buttonInheritColour2026_08_28.json"
+   },
+   {
+    "id": "defectMarkerConvention2026_08_28",
+    "sha256Before": "7410afdd30b3c9ba5fedbcad685ebbf21872dae65467470444af82da5c1ce269",
+    "sha256After": "7410afdd30b3c9ba5fedbcad685ebbf21872dae65467470444af82da5c1ce269",
+    "identical": true,
+    "file": "records/library/2026-08-28/defectMarkerConvention2026_08_28.json"
+   },
+   {
+    "id": "autocompleteOpenState2026_08_31",
+    "sha256Before": "d0f0ea794702f8ce05d6c1863ae1327d657a90c3fd8c113097cc83adc20af501",
+    "sha256After": "d0f0ea794702f8ce05d6c1863ae1327d657a90c3fd8c113097cc83adc20af501",
+    "identical": true,
+    "file": "records/library/2026-08-31/autocompleteOpenState2026_08_31.json"
+   },
+   {
+    "id": "selectAndMenu2026_08_31",
+    "sha256Before": "62b6fef2241db1d9b44b12528113c6df0f1effd13c9156d446c511714da57f53",
+    "sha256After": "62b6fef2241db1d9b44b12528113c6df0f1effd13c9156d446c511714da57f53",
+    "identical": true,
+    "file": "records/library/2026-08-31/selectAndMenu2026_08_31.json"
+   },
+   {
+    "id": "buttonGroupSegmentRow2026_08_31",
+    "sha256Before": "a35432bd31fce82ec9c75e07dc34c7bb560857bc545ce9ce32f827550e7f3d5d",
+    "sha256After": "a35432bd31fce82ec9c75e07dc34c7bb560857bc545ce9ce32f827550e7f3d5d",
+    "identical": true,
+    "file": "records/library/2026-08-31/buttonGroupSegmentRow2026_08_31.json"
+   },
+   {
+    "id": "tableAssembly2026_08_31",
+    "sha256Before": "ca6e93264068abc4fed37d0fb2662b51299d6ead977aec26fae950c0cbc722fc",
+    "sha256After": "ca6e93264068abc4fed37d0fb2662b51299d6ead977aec26fae950c0cbc722fc",
+    "identical": true,
+    "file": "records/library/2026-08-31/tableAssembly2026_08_31.json"
+   },
+   {
+    "id": "fourCompositions2026_08_31",
+    "sha256Before": "c4c6fb6091991a1b07bc9fddd171132ab747816aecef9572738d315edb7d6175",
+    "sha256After": "c4c6fb6091991a1b07bc9fddd171132ab747816aecef9572738d315edb7d6175",
+    "identical": true,
+    "file": "records/library/2026-08-31/fourCompositions2026_08_31.json"
+   },
+   {
+    "id": "handDrawnCheck2026_08_31",
+    "sha256Before": "0ffc1889952337ba4bdffd5acc9c9fc082ed20634c5301c517dd9e3bff8efad1",
+    "sha256After": "0ffc1889952337ba4bdffd5acc9c9fc082ed20634c5301c517dd9e3bff8efad1",
+    "identical": true,
+    "file": "records/library/2026-08-31/handDrawnCheck2026_08_31.json"
+   },
+   {
+    "id": "auditsRetired2026_08_31",
+    "sha256Before": "344eab8534441afab9ea1113bd5b6ec8dc9f45a3811fce298b057fc04b303b01",
+    "sha256After": "344eab8534441afab9ea1113bd5b6ec8dc9f45a3811fce298b057fc04b303b01",
+    "identical": true,
+    "file": "records/library/2026-08-31/auditsRetired2026_08_31.json"
+   },
+   {
+    "id": "codeDefectRegister2026_08_31",
+    "sha256Before": "1bfb3bdaeccb4ebb12fe1d31b1f88fa07a0c3eb2a89cb068891ba937591b0a77",
+    "sha256After": "1bfb3bdaeccb4ebb12fe1d31b1f88fa07a0c3eb2a89cb068891ba937591b0a77",
+    "identical": true,
+    "file": "records/library/2026-08-31/codeDefectRegister2026_08_31.json"
+   },
+   {
+    "id": "navComponentsOnCompositionsPage",
+    "sha256Before": "9455aac03c9e4e0b62c48c4d3f3475a33aeabb1f819f59bff1e303de8800483c",
+    "sha256After": "9455aac03c9e4e0b62c48c4d3f3475a33aeabb1f819f59bff1e303de8800483c",
+    "identical": true,
+    "file": "records/library/2026-08-31/navComponentsOnCompositionsPage.json"
+   },
+   {
+    "id": "captionConvention2026_08_31",
+    "sha256Before": "9d580a6beb3771609db3aaa9247e5bb7f130487f236f4d300eb89a4fa8eebc6f",
+    "sha256After": "9d580a6beb3771609db3aaa9247e5bb7f130487f236f4d300eb89a4fa8eebc6f",
+    "identical": true,
+    "file": "records/library/2026-08-31/captionConvention2026_08_31.json"
+   },
+   {
+    "id": "beigeSurfaceInvestigation2026_08_31",
+    "sha256Before": "6bdee75099cb109c2a952a9635bd03d2f92811301ddf36b2748c011fddd91b21",
+    "sha256After": "6bdee75099cb109c2a952a9635bd03d2f92811301ddf36b2748c011fddd91b21",
+    "identical": true,
+    "file": "records/library/2026-08-31/beigeSurfaceInvestigation2026_08_31.json"
+   },
+   {
+    "id": "compositionBackdropConvention2026_09_01",
+    "sha256Before": "ec61fc9b844e7819dc43f70585aa7dfea467e0ecf3a4a998eb30c76788a1b40c",
+    "sha256After": "ec61fc9b844e7819dc43f70585aa7dfea467e0ecf3a4a998eb30c76788a1b40c",
+    "identical": true,
+    "file": "records/library/2026-09-01/compositionBackdropConvention2026_09_01.json"
+   },
+   {
+    "id": "insightCardAffordances2026_09_01",
+    "sha256Before": "22751eab94072235df9e61eda195e920dd9e30950233525b0b10a2330decd4ca",
+    "sha256After": "22751eab94072235df9e61eda195e920dd9e30950233525b0b10a2330decd4ca",
+    "identical": true,
+    "file": "records/library/2026-09-01/insightCardAffordances2026_09_01.json"
+   },
+   {
+    "id": "patientChartConsolidation2026_09_01",
+    "sha256Before": "05ad9e1b5111a93b8a8c01512b96164702df8dd5217d5d6ee7d48a6be69c3734",
+    "sha256After": "05ad9e1b5111a93b8a8c01512b96164702df8dd5217d5d6ee7d48a6be69c3734",
+    "identical": true,
+    "file": "records/library/2026-09-01/patientChartConsolidation2026_09_01.json"
+   },
+   {
+    "id": "quietPatientChipsWithoutFill2026_09_01",
+    "sha256Before": "18a56f8a4942e1a5693e6c4d0067182a075371ccbe37edebded715ba48838390",
+    "sha256After": "18a56f8a4942e1a5693e6c4d0067182a075371ccbe37edebded715ba48838390",
+    "identical": true,
+    "file": "records/library/2026-09-01/quietPatientChipsWithoutFill2026_09_01.json"
+   },
+   {
+    "id": "npveRebuild_enum_2026-09-02",
+    "sha256Before": "3ece1af5b2c781cdf6cf62cabd5db4701ba3fd5fccb68714caf657fa6430a0cd",
+    "sha256After": "3ece1af5b2c781cdf6cf62cabd5db4701ba3fd5fccb68714caf657fa6430a0cd",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_enum_2026-09-02.json"
+   },
+   {
+    "id": "npveRebuild_sidesheet_inventory_2026_09_02",
+    "sha256Before": "02b5ddad985bf45346d8cba3c762338383534e5e2803939086a990cc02d540d6",
+    "sha256After": "02b5ddad985bf45346d8cba3c762338383534e5e2803939086a990cc02d540d6",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_sidesheet_inventory_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_sidesheet_build_2026_09_02",
+    "sha256Before": "67aba4b1485eac6b92d43cdc3375d7e031ec48e810f810d1ce701f97fa1899e5",
+    "sha256After": "67aba4b1485eac6b92d43cdc3375d7e031ec48e810f810d1ce701f97fa1899e5",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_sidesheet_build_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_sidesheet_closeout_2026_09_02",
+    "sha256Before": "3bd36d4f569b5658c3ad64967afa2922ce796ed89f59b248383403edf959107a",
+    "sha256After": "3bd36d4f569b5658c3ad64967afa2922ce796ed89f59b248383403edf959107a",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_sidesheet_closeout_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_changelog_2026_09_02",
+    "sha256Before": "a0205290a6aea3db8233344bdd61930113774fe76fba5452cbf1cd29f3d4ffa0",
+    "sha256After": "a0205290a6aea3db8233344bdd61930113774fe76fba5452cbf1cd29f3d4ffa0",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_changelog_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_problemsRecent_inventory_2026_09_02",
+    "sha256Before": "8cff1842569e7055fd24fe35999bd234c388a71b3ee74ab6e65662053e4c4d42",
+    "sha256After": "8cff1842569e7055fd24fe35999bd234c388a71b3ee74ab6e65662053e4c4d42",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_problemsRecent_inventory_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_problemsRecent_build_2026_09_02",
+    "sha256Before": "6d53d2182ec1143842066dd550100fd549e57c0eeb21d2b15a479cd3212108eb",
+    "sha256After": "6d53d2182ec1143842066dd550100fd549e57c0eeb21d2b15a479cd3212108eb",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_problemsRecent_build_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_problemsRecent_corrections_2026_09_02",
+    "sha256Before": "adabfb5b517fdbe8ccdbf933e43177ffe7c7fcb4e5f3572f16638225b30f1231",
+    "sha256After": "adabfb5b517fdbe8ccdbf933e43177ffe7c7fcb4e5f3572f16638225b30f1231",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_problemsRecent_corrections_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_comparisonLayout_2026_09_02",
+    "sha256Before": "d5dde29d121665356a8af7664a25e3be3d79fa6b9c71edd94ed3034ef3c69760",
+    "sha256After": "d5dde29d121665356a8af7664a25e3be3d79fa6b9c71edd94ed3034ef3c69760",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_comparisonLayout_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_problemsFavorites_2026_09_02",
+    "sha256Before": "34b6ed9090a65104ea01eb9267ced37fd020efa5b9a5cbebd55af6fc51dce19f",
+    "sha256After": "34b6ed9090a65104ea01eb9267ced37fd020efa5b9a5cbebd55af6fc51dce19f",
+    "identical": true,
+    "file": "records/npve/2026-09-02/npveRebuild_problemsFavorites_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_bodyPaddingAndSearch_2026_09_02",
+    "sha256Before": "31f7320126554b78e9dddc8eed8b40a9ed1a7df0947db65d1a15daacd99a6309",
+    "sha256After": "31f7320126554b78e9dddc8eed8b40a9ed1a7df0947db65d1a15daacd99a6309",
+    "identical": true,
+    "file": "records/npve/2026-09-03/npveRebuild_bodyPaddingAndSearch_2026_09_02.json"
+   },
+   {
+    "id": "npveRebuild_cleanup_2026_09_03",
+    "sha256Before": "19c9042fe39ee92b6aee9a1cee5fa70a480ac74653ce6232e732c1e6cdd83a12",
+    "sha256After": "19c9042fe39ee92b6aee9a1cee5fa70a480ac74653ce6232e732c1e6cdd83a12",
+    "identical": true,
+    "file": "records/npve/2026-09-03/npveRebuild_cleanup_2026_09_03.json"
+   },
+   {
+    "id": "npveRebuild_tabUnderlineFix_2026_09_03",
+    "sha256Before": "f80d6b5d34000fb42e0289b0a1725208be8ae7167385b9d6e494bec813eea134",
+    "sha256After": "f80d6b5d34000fb42e0289b0a1725208be8ae7167385b9d6e494bec813eea134",
+    "identical": true,
+    "file": "records/npve/2026-09-03/npveRebuild_tabUnderlineFix_2026_09_03.json"
+   },
+   {
+    "id": "npveRebuild_labelDriftAndUnderline_2026_09_03",
+    "sha256Before": "044927b8a8ac62fb5ca4891322bc5f84533919e3bf9025ba68d6a640bef887e6",
+    "sha256After": "044927b8a8ac62fb5ca4891322bc5f84533919e3bf9025ba68d6a640bef887e6",
+    "identical": true,
+    "file": "records/npve/2026-09-03/npveRebuild_labelDriftAndUnderline_2026_09_03.json"
+   },
+   {
+    "id": "npveRebuild_goldStarsAndCorrections_2026_09_03",
+    "sha256Before": "f74c7d918f00beddd1d9f1f249322f05712b839c81ef905c50ad21ce2fcd6acb",
+    "sha256After": "f74c7d918f00beddd1d9f1f249322f05712b839c81ef905c50ad21ce2fcd6acb",
+    "identical": true,
+    "file": "records/npve/2026-09-03/npveRebuild_goldStarsAndCorrections_2026_09_03.json"
+   },
+   {
+    "id": "npveRebuild_pause_2026_09_03",
+    "sha256Before": "86dcf6f557a8106b73f90769bed951577e986257051b221318a445337f82b527",
+    "sha256After": "86dcf6f557a8106b73f90769bed951577e986257051b221318a445337f82b527",
+    "identical": true,
+    "file": "records/npve/2026-09-03/npveRebuild_pause_2026_09_03.json"
+   },
+   {
+    "id": "libraryTodos_readOnly_2026_09_03",
+    "sha256Before": "e9a934db77fd8840078ef62fbb96bd3b5d0d2eb1ce9be2dc661f82bb59b40bbd",
+    "sha256After": "e9a934db77fd8840078ef62fbb96bd3b5d0d2eb1ce9be2dc661f82bb59b40bbd",
+    "identical": true,
+    "file": "records/library/2026-09-03/libraryTodos_readOnly_2026_09_03.json"
+   },
+   {
+    "id": "libraryTodos_write1_2026_09_03",
+    "sha256Before": "b5e90427494c8d8ad1c248c4ee4f7d942999f46ab1d5e007e74b5e84850890e4",
+    "sha256After": "b5e90427494c8d8ad1c248c4ee4f7d942999f46ab1d5e007e74b5e84850890e4",
+    "identical": true,
+    "file": "records/library/2026-09-03/libraryTodos_write1_2026_09_03.json"
+   },
+   {
+    "id": "libraryTodos_write2_2026_09_03",
+    "sha256Before": "ce03d649a5ea4830f1cccc656c939860a56e6f1bcc763a6972bd9fa1eb875138",
+    "sha256After": "ce03d649a5ea4830f1cccc656c939860a56e6f1bcc763a6972bd9fa1eb875138",
+    "identical": true,
+    "file": "records/library/2026-09-03/libraryTodos_write2_2026_09_03.json"
+   },
+   {
+    "id": "npveRebuild_audit_2026_09_03",
+    "sha256Before": "e5fd32963e78d0d3491c0f9ac3c00044cac583762b07f2022f940c627b99f943",
+    "sha256After": "e5fd32963e78d0d3491c0f9ac3c00044cac583762b07f2022f940c627b99f943",
+    "identical": true,
+    "file": "records/npve/2026-09-03/npveRebuild_audit_2026_09_03.json"
+   },
+   {
+    "id": "npveRebuild_agentRules_2026-09-04",
+    "sha256Before": "5436396f356dcef997cf464823f1a78801c677c3ddb354fd64b60da545abdb01",
+    "sha256After": "5436396f356dcef997cf464823f1a78801c677c3ddb354fd64b60da545abdb01",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_agentRules_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_externalRestructure_2026-09-03_retro",
+    "sha256Before": "129db4e067155bd7bc58d607bd8c1a98b9b182e445a2f37021aaf4283367112f",
+    "sha256After": "129db4e067155bd7bc58d607bd8c1a98b9b182e445a2f37021aaf4283367112f",
+    "identical": true,
+    "file": "records/npve/2026-09-03/npveRebuild_externalRestructure_2026-09-03_retro.json"
+   },
+   {
+    "id": "npveRebuild_repair1_2026-09-04",
+    "sha256Before": "57461c657cede4750b2f4acf879f2b7b47d9dde797223c86736ff2025e6922d5",
+    "sha256After": "57461c657cede4750b2f4acf879f2b7b47d9dde797223c86736ff2025e6922d5",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_repair1_2026-09-04.json"
+   },
+   {
+    "id": "docsOperatorsGuide_2026-09-04",
+    "sha256Before": "d92773dddf87e6627e8dd09c82d65bc5242647351913fb0c0ba16991b11fd79a",
+    "sha256After": "d92773dddf87e6627e8dd09c82d65bc5242647351913fb0c0ba16991b11fd79a",
+    "identical": true,
+    "file": "records/workflow/2026-09-04/docsOperatorsGuide_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_repair2_2026-09-04",
+    "sha256Before": "8662d6cb189c932f0ef3586dd380df99cef1cb132e2e9321bbc415fc9c363f84",
+    "sha256After": "8662d6cb189c932f0ef3586dd380df99cef1cb132e2e9321bbc415fc9c363f84",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_repair2_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_mgmtFidelity_2026-09-04",
+    "sha256Before": "2abdb4a5d9b1e1ce09a46bff941364194398f893be8791c91322478c2c02d4ef",
+    "sha256After": "2abdb4a5d9b1e1ce09a46bff941364194398f893be8791c91322478c2c02d4ef",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_mgmtFidelity_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_mgmtFidelityBuild_2026-09-04",
+    "sha256Before": "8f3a0230bf63658ef554fccbb04f6679d10755b26b29a2b95c676b34c5dfbc34",
+    "sha256After": "8f3a0230bf63658ef554fccbb04f6679d10755b26b29a2b95c676b34c5dfbc34",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_mgmtFidelityBuild_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_rowStructure_2026-09-04",
+    "sha256Before": "cb30882ff8710ddbbe4f0fc704ec5e81cc875f955208f61f7dcd0a719d84c4c0",
+    "sha256After": "cb30882ff8710ddbbe4f0fc704ec5e81cc875f955208f61f7dcd0a719d84c4c0",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_rowStructure_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_medicationSummaryRow_2026-09-04",
+    "sha256Before": "6933b2a1dab99e03e187f338974faf41c7d95686efbff2e9de4cdce24992d3d8",
+    "sha256After": "6933b2a1dab99e03e187f338974faf41c7d95686efbff2e9de4cdce24992d3d8",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_medicationSummaryRow_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_medicationListBody_2026-09-04",
+    "sha256Before": "bbd21fe24b0167f17806692aa91e5fc121d9bbbb2a26c75e6f795369e72c9b49",
+    "sha256After": "bbd21fe24b0167f17806692aa91e5fc121d9bbbb2a26c75e6f795369e72c9b49",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_medicationListBody_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_medicationSurfaceCorrection_2026-09-04",
+    "sha256Before": "1385bb3b5839de181171847078ebbf3187ae12034db8445af37d708f9044e2ec",
+    "sha256After": "1385bb3b5839de181171847078ebbf3187ae12034db8445af37d708f9044e2ec",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_medicationSurfaceCorrection_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_medicationListSidesheet_2026-09-04",
+    "sha256Before": "6846a270231dec432ff6c8d31d08667d5e613354b0b262a505f28bad3ca72578",
+    "sha256After": "6846a270231dec432ff6c8d31d08667d5e613354b0b262a505f28bad3ca72578",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_medicationListSidesheet_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_medicationListHeightCorrection_2026-09-04",
+    "sha256Before": "c02e749a1e6f7e66f8d4569007572b2e44d3844e52fd4877e2be0643b6f3fe89",
+    "sha256After": "c02e749a1e6f7e66f8d4569007572b2e44d3844e52fd4877e2be0643b6f3fe89",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_medicationListHeightCorrection_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+    "sha256Before": "d5a1bbb54abee2d2f7152454be2135123867a6c1bc2c160813f957bf4217b2bc",
+    "sha256After": "d5a1bbb54abee2d2f7152454be2135123867a6c1bc2c160813f957bf4217b2bc",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_sidesheetRadiusPlacement_2026-09-04",
+    "sha256Before": "d6982146f491ff2247d2582211d88ae10721a5941f71ff6d297fe2cf9a0552e1",
+    "sha256After": "d6982146f491ff2247d2582211d88ae10721a5941f71ff6d297fe2cf9a0552e1",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_sidesheetRadiusPlacement_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_sidesheetHeaderInsetAudit_2026-09-04",
+    "sha256Before": "5d94432eed3eaa0ccccb83f36bc2bc9fd4f04301690f716bcd8e89d3ae2f45c7",
+    "sha256After": "5d94432eed3eaa0ccccb83f36bc2bc9fd4f04301690f716bcd8e89d3ae2f45c7",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_sidesheetHeaderInsetAudit_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04",
+    "sha256Before": "e9c295abc7d246e97ff566edd253dfd80019caa0c87c64cb4aeb05bbf1f932d2",
+    "sha256After": "e9c295abc7d246e97ff566edd253dfd80019caa0c87c64cb4aeb05bbf1f932d2",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04",
+    "sha256Before": "2df16f59a92addb1a059af069356914bd3094374579fa5456bd23d4716bf9372",
+    "sha256After": "2df16f59a92addb1a059af069356914bd3094374579fa5456bd23d4716bf9372",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_sidesheetBase8SpacingAudit_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_problemsLowOversightBatch_2026-09-04",
+    "sha256Before": "047517eefc2664d4fa1163b104f07b1f8bd720d3a4e76d694eaa8de46d8e1e77",
+    "sha256After": "047517eefc2664d4fa1163b104f07b1f8bd720d3a4e76d694eaa8de46d8e1e77",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_problemsLowOversightBatch_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_problemEdit_2026-09-04",
+    "sha256Before": "53e191253c0a59ca9f9b39a3eb94adbb22453814cc464dffce794633dc145acb",
+    "sha256After": "53e191253c0a59ca9f9b39a3eb94adbb22453814cc464dffce794633dc145acb",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_problemEdit_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_problemEditSpacingCorrection_2026-09-04",
+    "sha256Before": "952001cad0a5ffc649f06e89532157b25302fa4e2a47c1486091ebacc56a6f4f",
+    "sha256After": "952001cad0a5ffc649f06e89532157b25302fa4e2a47c1486091ebacc56a6f4f",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_problemEditSpacingCorrection_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_procedureHistory_2026-09-04",
+    "sha256Before": "827d6e1a4f5b41fefb2bef70b631e7132174dee15cbad1483f86df3f41de5e5e",
+    "sha256After": "827d6e1a4f5b41fefb2bef70b631e7132174dee15cbad1483f86df3f41de5e5e",
+    "identical": true,
+    "file": "records/npve/2026-09-04/npveRebuild_procedureHistory_2026-09-04.json"
+   },
+   {
+    "id": "npveRebuild_familyHistory_2026-09-05",
+    "sha256Before": "8cdb605e406bf785267bf4a6971e28162edb9583f1d95f4863f75706bd17368d",
+    "sha256After": "8cdb605e406bf785267bf4a6971e28162edb9583f1d95f4863f75706bd17368d",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_familyHistory_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_allergiesList_2026-09-05",
+    "sha256Before": "377f5bec472096dd6bed9e9d95e5391aaa96aee6aa2e8a691f1d132040178a75",
+    "sha256After": "377f5bec472096dd6bed9e9d95e5391aaa96aee6aa2e8a691f1d132040178a75",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_allergiesList_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_allergiesComparisonHeightCorrection_2026-09-05",
+    "sha256Before": "107deac499021f61c625bdc6b627137b40c8a32d3e5c6661f54665fc78fb4283",
+    "sha256After": "107deac499021f61c625bdc6b627137b40c8a32d3e5c6661f54665fc78fb4283",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_allergiesComparisonHeightCorrection_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_externalCareHospitalizations_2026-09-05",
+    "sha256Before": "35e4c68b4038e33f7fb0f4f7a071e92428016b4e5315c8e211e945cf1285802c",
+    "sha256After": "35e4c68b4038e33f7fb0f4f7a071e92428016b4e5315c8e211e945cf1285802c",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_externalCareHospitalizations_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_externalCareFacilityStay_2026-09-05",
+    "sha256Before": "7bf3dd66c5896dabfa8005208445bcb8a5ff8f419685ba9cddeb8fbb0bd6d2a7",
+    "sha256After": "7bf3dd66c5896dabfa8005208445bcb8a5ff8f419685ba9cddeb8fbb0bd6d2a7",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_externalCareFacilityStay_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_externalReview_2026-09-05",
+    "sha256Before": "e90a65b08988c6e6b147dd9129465851b479bf0b810b9ae6614535a8f64089fb",
+    "sha256After": "e90a65b08988c6e6b147dd9129465851b479bf0b810b9ae6614535a8f64089fb",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_externalReview_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_extReviewRepairs_2026-09-05",
+    "sha256Before": "98c188f5e4acad26bb7b44637d067a21b3f679f7f2169832527fcc7e337f94ed",
+    "sha256After": "98c188f5e4acad26bb7b44637d067a21b3f679f7f2169832527fcc7e337f94ed",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_extReviewRepairs_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_healthStatusObservations_2026-09-05",
+    "sha256Before": "1d4102860058d3866109cd0becb0d92724f0d3115b208cc0eee4a2329ef297f7",
+    "sha256After": "1d4102860058d3866109cd0becb0d92724f0d3115b208cc0eee4a2329ef297f7",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_healthStatusObservations_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_workflowsAudit_2026-09-05",
+    "sha256Before": "6e276e050fbe004812fcc2b9bf55aa78bee9e2d6128854e951a77564320d8899",
+    "sha256After": "6e276e050fbe004812fcc2b9bf55aa78bee9e2d6128854e951a77564320d8899",
+    "identical": true,
+    "file": "records/npve/2026-09-05/npveRebuild_workflowsAudit_2026-09-05.json"
+   },
+   {
+    "id": "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06",
+    "sha256Before": "9c3a156f18f4adfb7c63577c10537a5208b72f19c36e7c537eeaff2744f59817",
+    "sha256After": "9c3a156f18f4adfb7c63577c10537a5208b72f19c36e7c537eeaff2744f59817",
+    "identical": true,
+    "file": "records/npve/2026-09-06/npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06.json"
+   },
+   {
+    "id": "npveRebuild_socialHistory_2026-09-06",
+    "sha256Before": "278da4035b5dde083d1e0986130581682ecd0e857b2db6cfbb56f751ed81579f",
+    "sha256After": "278da4035b5dde083d1e0986130581682ecd0e857b2db6cfbb56f751ed81579f",
+    "identical": true,
+    "file": "records/npve/2026-09-06/npveRebuild_socialHistory_2026-09-06.json"
+   },
+   {
+    "id": "npveRebuild_encounterShell_2026-09-06",
+    "sha256Before": "6a294f565f0c3c12006b0b0e24a870feba7acabda10f6446df8c0fc5bf7b028e",
+    "sha256After": "6a294f565f0c3c12006b0b0e24a870feba7acabda10f6446df8c0fc5bf7b028e",
+    "identical": true,
+    "file": "records/npve/2026-09-06/npveRebuild_encounterShell_2026-09-06.json"
+   },
+   {
+    "id": "npveRebuild_socialHistoryNewEntryPlacement_2026-09-06",
+    "sha256Before": "460ea561e27280820c2323473b42cecb43437bd44efc7407a6eec24664b5f236",
+    "sha256After": "460ea561e27280820c2323473b42cecb43437bd44efc7407a6eec24664b5f236",
+    "identical": true,
+    "file": "records/npve/2026-09-06/npveRebuild_socialHistoryNewEntryPlacement_2026-09-06.json"
+   },
+   {
+    "id": "npveRebuild_encounterToolbar_2026-09-06",
+    "sha256Before": "dc93aa671852bd1aa2e59866ee6525c7e284484d920e22b0c8ce1099d16d556d",
+    "sha256After": "dc93aa671852bd1aa2e59866ee6525c7e284484d920e22b0c8ce1099d16d556d",
+    "identical": true,
+    "file": "records/npve/2026-09-06/npveRebuild_encounterToolbar_2026-09-06.json"
+   },
+   {
+    "id": "npveRebuild_moduleChipFix_2026-09-06",
+    "sha256Before": "91a26d71172b320be3ee857bf531abc7815caf77f582e9890c910ff3d803dc93",
+    "sha256After": "91a26d71172b320be3ee857bf531abc7815caf77f582e9890c910ff3d803dc93",
+    "identical": true,
+    "file": "records/npve/2026-09-06/npveRebuild_moduleChipFix_2026-09-06.json"
+   },
+   {
+    "id": "npveRebuild_moduleChipRelationshipSpacing_2026-09-06",
+    "sha256Before": "67b8c73f164d7951a7ba96d17d8db34ee000a07312ce1708f54309815846302c",
+    "sha256After": "67b8c73f164d7951a7ba96d17d8db34ee000a07312ce1708f54309815846302c",
+    "identical": true,
+    "file": "records/npve/2026-09-06/npveRebuild_moduleChipRelationshipSpacing_2026-09-06.json"
+   },
+   {
+    "id": "npveRebuild_noteHeaderLayout_2026-09-08",
+    "sha256Before": "0acbca3dc75f35a2be22272a5878fc5f88f4cca68bc7b8dfa8c97074bd62eddb",
+    "sha256After": "0acbca3dc75f35a2be22272a5878fc5f88f4cca68bc7b8dfa8c97074bd62eddb",
+    "identical": true,
+    "file": "records/npve/2026-09-08/npveRebuild_noteHeaderLayout_2026-09-08.json"
+   },
+   {
+    "id": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
+    "sha256Before": "226d41f427cb4f3ce3f1795a7e9ef44cadf517ab8a2bfabfa2c2a50f1e470c95",
+    "sha256After": "226d41f427cb4f3ce3f1795a7e9ef44cadf517ab8a2bfabfa2c2a50f1e470c95",
+    "identical": true,
+    "file": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryRow_2026-09-08.json"
+   },
+   {
+    "id": "npveRebuild_pastMedicalHistorySection_2026-09-08",
+    "sha256Before": "756e91b72e868eb35d3057ec61efb7668cecbbb1234d900d44277ffcf9f8e7ee",
+    "sha256After": "756e91b72e868eb35d3057ec61efb7668cecbbb1234d900d44277ffcf9f8e7ee",
+    "identical": true,
+    "file": "records/npve/2026-09-08/npveRebuild_pastMedicalHistorySection_2026-09-08.json"
+   },
+   {
+    "id": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+    "sha256Before": "a5d9bd416e6176a6e7d4d82771252c5268cef72cd1a92cd58384b5d3b85c9a71",
+    "sha256After": "a5d9bd416e6176a6e7d4d82771252c5268cef72cd1a92cd58384b5d3b85c9a71",
+    "identical": true,
+    "file": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryBody_2026-09-08.json"
+   },
+   {
+    "id": "workflowRefactor_stateCheck_2026-09-08",
+    "sha256Before": "ea62ab831fd15af20d48ed49319eae6dbc1ba527b32e293ec0540d70eec67f6c",
+    "sha256After": "ea62ab831fd15af20d48ed49319eae6dbc1ba527b32e293ec0540d70eec67f6c",
+    "identical": true,
+    "file": "records/workflow/2026-09-08/workflowRefactor_stateCheck_2026-09-08.json"
+   },
+   {
+    "id": "workflowRefactor_closeout_2026-09-08",
+    "sha256Before": "453f397a1d1adaa8020e0b022d146d57f1c457a1c62d7970c5db2ed37928383d",
+    "sha256After": "453f397a1d1adaa8020e0b022d146d57f1c457a1c62d7970c5db2ed37928383d",
+    "identical": true,
+    "file": "records/workflow/2026-09-08/workflowRefactor_closeout_2026-09-08.json"
+   },
+   {
+    "id": "workflowRefactor_tierApproval_2026-09-08",
+    "sha256Before": "819bec5f2b011cd0921fe4b23e24fbc7a3c9c9a6ab12c35fa8aadefd7da52e29",
+    "sha256After": "819bec5f2b011cd0921fe4b23e24fbc7a3c9c9a6ab12c35fa8aadefd7da52e29",
+    "identical": true,
+    "file": "records/workflow/2026-09-08/workflowRefactor_tierApproval_2026-09-08.json"
+   },
+   {
+    "id": "leanPilot_run2-3_2026-09-08",
+    "sha256Before": "02928aa8960f71b977c0b65f8aeb922a06d0dfaf83c62fd7193eced3eb538c16",
+    "sha256After": "02928aa8960f71b977c0b65f8aeb922a06d0dfaf83c62fd7193eced3eb538c16",
+    "identical": true,
+    "file": "records/npve/2026-09-08/leanPilot_run2-3_2026-09-08.json"
+   },
+   {
+    "id": "leanPilot_run3_2026-09-08",
+    "sha256Before": "90e9d827ae49ca236aefca3e3399a8649830d2d4f7a3710315a986a1697a68f1",
+    "sha256After": "90e9d827ae49ca236aefca3e3399a8649830d2d4f7a3710315a986a1697a68f1",
+    "identical": true,
+    "file": "records/npve/2026-09-09/leanPilot_run3_2026-09-08.json"
+   },
+   {
+    "id": "postPilot_merge_2026-09-08",
+    "sha256Before": "61f3f73d066d3009085a7858f2c54aada8c410f56acd6613e8d8cc540da4e7bb",
+    "sha256After": "61f3f73d066d3009085a7858f2c54aada8c410f56acd6613e8d8cc540da4e7bb",
+    "identical": true,
+    "file": "records/workflow/2026-09-08/postPilot_merge_2026-09-08.json"
+   },
+   {
+    "id": "npveRebuild_moduleChipFix_2026-09-08",
+    "sha256Before": "b30fc9493d822bd7121231d08246f3eb1be0737dc613d38d7e0c9434515d9edc",
+    "sha256After": "b30fc9493d822bd7121231d08246f3eb1be0737dc613d38d7e0c9434515d9edc",
+    "identical": true,
+    "file": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json"
+   }
+  ]
+ },
+ "flags": {
+  "accounted": 285,
+  "identical": 285,
+  "entries": [
+   {
+    "sequence": 0,
+    "id": "pxToRemInflation",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 1,
+    "id": "svgIconTwoUnitSystems",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 2,
+    "id": "buttonLargeFontSize",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 3,
+    "id": "textSecondaryCollapse",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 4,
+    "id": "containedBorderAddition",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 5,
+    "id": "autocompleteUnthemedGeometry",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 6,
+    "id": "autocompleteDisabledOutline",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 7,
+    "id": "chipFontSize",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 8,
+    "id": "optionMinHeight",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 9,
+    "id": "storyWidthIsScaffolding",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 10,
+    "id": "chipRawHex",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 11,
+    "id": "paintOpacityDoesNotReachInstances",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 12,
+    "id": "fourListRowsDisagree",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 13,
+    "id": "paginationSelectedIsTeal",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 14,
+    "id": "tablePaginationSelectIsStandardVariant",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 15,
+    "id": "chipDefaultHoverGhost",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 16,
+    "id": "chipSuccessHoverProvenance",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 17,
+    "id": "chipHandEditDiff",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 18,
+    "id": "dialogTitleUsesUndefinedH6",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 19,
+    "id": "dialogActionsAlignmentIsSubstrate",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 20,
+    "id": "drawerIsDockedNotModal",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 21,
+    "id": "threeListRowsDisagree",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 22,
+    "id": "interactiveStatesFiveWay",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 23,
+    "id": "cardActionAreaDisabledByDefault",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 24,
+    "id": "cardActionsRightAligned",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 25,
+    "id": "accordionCaretHardcodedBlack",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 26,
+    "id": "iconButtonRetrofitBlocked",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 27,
+    "id": "iconButtonSmallIsTebraNotMui",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 28,
+    "id": "threeDisabledGreysAcrossSiblings",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 29,
+    "id": "paperNoOverrideRadiusIsFour",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 30,
+    "id": "linkUnderlineTintNotRepresentable",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 31,
+    "id": "alertComputedTintsNotReachable",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 32,
+    "id": "alertFilledWarningTextComputed",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 33,
+    "id": "alertWarningHueInconsistency",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 34,
+    "id": "alertErrorInfoSameGlyph",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 35,
+    "id": "snackbarIsTealNotGrey",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 36,
+    "id": "tooltipHasNoOverride",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 37,
+    "id": "darkSurfacesDisagree",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 38,
+    "id": "buttonGroupConstructionChoice",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 39,
+    "id": "buttonGroupSeamMechanics",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 40,
+    "id": "buttonGroupDisabledBorderDivergesFromButton",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 41,
+    "id": "buttonGroupHoverTokenDiffersButValueDoesNot",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 42,
+    "id": "buttonGroupNoVariantOrOrientationAxis",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 43,
+    "id": "chipSizeAxisAdded",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 44,
+    "id": "chipHardcodedHexesPromoted",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 45,
+    "id": "chipOverridesBeatOutlinedTransparency",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 46,
+    "id": "chipPrimaryHoverIsInvisible",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 47,
+    "id": "chipNoSizeAxisUnlikeTag",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 48,
+    "id": "menuUsageClaimWasWrong",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 49,
+    "id": "noSelectOrMenuStory",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 50,
+    "id": "selectDivergesFromTextField",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 51,
+    "id": "menuListPaddingZero",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 52,
+    "id": "menuElevationIsSubstrate",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 53,
+    "id": "tokensPageGenerated",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 54,
+    "id": "tokenCodeSyntaxGaps",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 55,
+    "id": "tebraCssVarsDoNotExist",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 56,
+    "id": "canonicalComponentsPageLost",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 57,
+    "id": "radioOverrideDeadKey",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 58,
+    "id": "checkboxRadioDisabledDivergence",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 59,
+    "id": "fakeNotchReplacedWithRealGap",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 60,
+    "id": "outlinedInputHasNoBackground",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 61,
+    "id": "textFieldMultilineStoryLabelsInverted",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 62,
+    "id": "textFieldNoSizeAxis",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 63,
+    "id": "cloningVariantDropsPropertyReferences",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 64,
+    "id": "gapSizerMustMirrorEveryLabelChild",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 65,
+    "id": "selectCaretPercentagePositioning",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 66,
+    "id": "figmaTextNodeAutoRename",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 67,
+    "id": "akkuratMediumSubstitutionScope",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 68,
+    "id": "linearEllipsisIsActuallyVertical",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 69,
+    "id": "multipleTagsWrapInProduction",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 70,
+    "id": "chipDeleteColorIsTebraNotMui",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 71,
+    "id": "chipBorderFullStrength",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 72,
+    "id": "clearIconWrongGlyph",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 73,
+    "id": "adornmentMustBeAbsolute",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 74,
+    "id": "akkuratNoMediumWeight",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 75,
+    "id": "iconNegativeMarginNotModellable",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 76,
+    "id": "figmaDefaultVariantNotCodeDefault",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 77,
+    "id": "storybookNotFaithful",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 78,
+    "id": "billingSystemPinned",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 79,
+    "id": "toggleButtonDisabledRuleIsDeadJss",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 80,
+    "id": "toggleButtonSelectedBackgroundLostOnHover",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 81,
+    "id": "svgIconOverridesRestateTheInflatedValues",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 82,
+    "id": "avatarOverrideIsAnEmptyShell",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 83,
+    "id": "toggleButtonStorySizeIsNotAValidSize",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 84,
+    "id": "overridesThatRestateMuiDefaults",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 85,
+    "id": "stepperDisabledHasNoVisualState",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 86,
+    "id": "stepperConnectorIgnoresItsOwnState",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 87,
+    "id": "disabledGreysNowFive",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 88,
+    "id": "fontWeightMediumSitesAreNowThree",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 89,
+    "id": "avatarImageVariantNotBuildable",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 90,
+    "id": "circularProgressArcIsTheStaticDeclaredState",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 91,
+    "id": "coverInventoryStale",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 92,
+    "id": "illustrationTealIsOffPalette",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 93,
+    "id": "illustrationCreamHasNoPaletteEntry",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 94,
+    "id": "readMoreStoryInlinePropTypo",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 95,
+    "id": "notFoundMessageMissingJsxSpace",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 96,
+    "id": "forbiddenUsesRawAnchor",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 97,
+    "id": "internalServerLinkWithoutHref",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 98,
+    "id": "readMoreButtonColourInvertsOnHover",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 99,
+    "id": "feedbackMessageSiblingsDisagree",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 100,
+    "id": "illustrationStorySizesDistort",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 101,
+    "id": "illustrationCoverageGaps",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 102,
+    "id": "chUnitNotExpressibleInFigma",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 103,
+    "id": "internalServerRefreshDeadCode",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 104,
+    "id": "pageFamiliesDivergeFromStorybook",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 105,
+    "id": "cardHeaderBandDividerDead",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 106,
+    "id": "facesheetCardContentPaddingBottom8x",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 107,
+    "id": "immunizationsCardDrawerStyleInFullscreen",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 108,
+    "id": "facesheetCardImplementedTwice",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 109,
+    "id": "cardHeaderNeverThemed",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 110,
+    "id": "navBarOutsideCanonicalTheme",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 111,
+    "id": "navColoursNotInPalette",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 112,
+    "id": "navUserMenuRendersEmpty",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 113,
+    "id": "navDebugLoggingShipped",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 114,
+    "id": "navHardcodedBreakpointAndHeight",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 115,
+    "id": "navHoverColourRuleMostlyNoOp",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 116,
+    "id": "navBarHeightIsSixtyFiveNotSixtyFour",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 117,
+    "id": "navReplacesCanonicalComponentOverrides",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 118,
+    "id": "tokensCaptionClippedWhenLong",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 119,
+    "id": "navBarHeightDrivenBySearchNotButtons",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 120,
+    "id": "navFractionalDimensionsBreakTheIntegerInvariant",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 121,
+    "id": "navLogoIsNotCurrentColor",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 122,
+    "id": "navSlotsDisagreeWithLegacyLibrary",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 123,
+    "id": "navBillingGlyphHasUnbuiltKmbVariants",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 124,
+    "id": "sizeDefaultResolvedByCanvasPositionNotLayerOrder",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 125,
+    "id": "buttonGroupSizeDefaultInverted",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 126,
+    "id": "navSearchMagnifierIsTrailingNotLeading",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 127,
+    "id": "navHasNoHistorySlot",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 128,
+    "id": "navAvatarTypicalFillIsIllustrated",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 129,
+    "id": "navHasNoDistinctSelectedState",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 130,
+    "id": "navFocusRingSuppressed",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 131,
+    "id": "switchSmallIsStoryOnly",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 132,
+    "id": "chipColoursAllReachableButSkewed",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 133,
+    "id": "chipDescriptionSaidNoSizeAxis",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 134,
+    "id": "npveSource_pageNameV2",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 135,
+    "id": "npveSource_archiveSeparatorPage",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 136,
+    "id": "npveSource_neuNeuNeuNaming",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 137,
+    "id": "npveSource_screenshotRectangleDated",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 138,
+    "id": "npveSource_nearDuplicateFrames",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 139,
+    "id": "npveSource_draftAndArchivedLabels",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 140,
+    "id": "npveSource_impossibleDateInMock",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 141,
+    "id": "npveSource_libraryProvenanceSplit",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 142,
+    "id": "npveSource_fullyCoveredFrame",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 143,
+    "id": "npveSidesheet_noBodySlotInLibraryDrawer",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 144,
+    "id": "npveSidesheet_headerDiffersFromDrawerHeader",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 145,
+    "id": "npveSidesheet_noOutlinedButton",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 146,
+    "id": "npveSidesheet_noFooterActionsComponent",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 147,
+    "id": "npveSidesheet_noFullWidthButtonAxis",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 148,
+    "id": "npveSidesheet_closeIsBareIconInSource",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 149,
+    "id": "npveSidesheet_drawerPaintMasterOnly",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 150,
+    "id": "npveSidesheet_sourceSetHasErrors",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 151,
+    "id": "buttonSchemaEntryStale",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 152,
+    "id": "npveBuild_noLibrarySidesheet",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 153,
+    "id": "npveBuild_headerGeometryDiffersFromSource",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 154,
+    "id": "npveBuild_footerGeometryDiffersFromSource",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 155,
+    "id": "npveBuild_buttonLabelTitleCase",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 156,
+    "id": "npveBuild_arrowLeftGlyphIsReturnArrow",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 157,
+    "id": "npveBuild_importedNodesDroppedBetweenCalls",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 158,
+    "id": "npveBuild_slotLetterSpacingUnbound",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 159,
+    "id": "npveCloseout_storybookUnreachable",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 160,
+    "id": "npveChangelog_placedLogIsDetached",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 161,
+    "id": "npveChangelog_noH4Token",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 162,
+    "id": "npveProblemsRecent_textFieldNoStartAdornment",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 163,
+    "id": "npveProblemsRecent_searchFieldDiffersFromTextField",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 164,
+    "id": "npveProblemsRecent_filterTabsCompact",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 165,
+    "id": "npveProblemsRecent_listItemNoTrailingSlot",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 166,
+    "id": "npveProblemsRecent_bareIconControls",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 167,
+    "id": "npveProblemsRecent_rowStructureInconsistent",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 168,
+    "id": "npveProblemsRecent_unresolvedColours",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 169,
+    "id": "npveProblemsRecent_bodyPaddingConflict",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 170,
+    "id": "npveProblemsBuild_textFieldSmallLabelSlotHeight",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 171,
+    "id": "npveProblemsBuild_tabLabelTypeUnbound",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 172,
+    "id": "npveProblemsBuild_coverPageUnboundFill",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 173,
+    "id": "npveProblemsBuild_strayChangelogRow",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 174,
+    "id": "npveProblemsBuild_searchLabelCopy",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 175,
+    "id": "npveProblemsCorrections_iconButtonNoRingedVariant",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 176,
+    "id": "npveComparison_noSpace32Token",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 177,
+    "id": "npveComparison_imageFillUnbindable",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 178,
+    "id": "npveFavorites_activeTabNotExpressible",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 179,
+    "id": "npveFavorites_searchPropsExposedNotLifted",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 180,
+    "id": "npveFavorites_row1OverridesInBodyMaster",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 181,
+    "id": "npveSearch_emptyLabelBreaksFilledOutline",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 182,
+    "id": "npveSearch_noPlaceholderInTextField",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 183,
+    "id": "npveBody_paddingNotAuthoritative",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 184,
+    "id": "npveCleanup_tabsNoBottomRule",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 185,
+    "id": "npveTabUnderline_overlapIsDecisionNotCss",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 186,
+    "id": "npveLabelDrift_smallRestingLabelInsetIsMedium",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 187,
+    "id": "libraryRead_tabLabelLineHeightAndCase",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 188,
+    "id": "libraryRead_iconGlyphGroupIsIntrinsicGeometry",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 189,
+    "id": "libraryRead_spaceCodeSyntaxNamesMissingCssVar",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 190,
+    "id": "libraryRead_letterSpacingInheritsMuiDefaults",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 191,
+    "id": "libraryRead_smallRestingLabelCodeIs9",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 192,
+    "id": "libraryRead_pagesOrderStale",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 193,
+    "id": "npveAudit_unrecordedRestructure",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 194,
+    "id": "npveAudit_buttonImportSplit",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 195,
+    "id": "npveAudit_iconButtonOrphanImport",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 196,
+    "id": "npveAudit_spaceRefsTwoVersions",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 197,
+    "id": "npveAudit_problemSummaryRowDrawnControls",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 198,
+    "id": "npveAudit_problemsListBodyUnboundWhite",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 199,
+    "id": "npveAudit_referenceExportsNot2x",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 200,
+    "id": "npveAudit_comparisonNowInstanceSwap",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 201,
+    "id": "npveAudit_markersInArchive",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 202,
+    "id": "npveAudit_recoveryCheckUnexplained",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 203,
+    "id": "npveAudit_screensTriplicated",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 204,
+    "id": "npveAudit_pickerBodyDeadTabs",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 205,
+    "id": "npveAudit_textFieldHiddenPlaceholderCopy",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 206,
+    "id": "npveRepair1_orphanImportCannotBeRenamed",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 207,
+    "id": "npveRepair1_screenPairEdgePixels",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 208,
+    "id": "docsAgentsMdVerbatimClaimStale",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 209,
+    "id": "npveRepair2_statusColourByOverride",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 210,
+    "id": "npveRepair2_addToNoteGlyphChoice",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 211,
+    "id": "npveMgmt_checkboxRowNotFormControlLabel",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 212,
+    "id": "npveMgmt_inactiveNamesNotDimmed",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 213,
+    "id": "npveMgmt_statusWordSmallCaps",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 214,
+    "id": "npveMgmt_bodyTopPaddingDoubled",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 215,
+    "id": "npveMgmt_statusFilterWidth",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 216,
+    "id": "npveMgmt_menuFixedHeightBlankStrip",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 217,
+    "id": "npveMgmt_openStateContentDiffers",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 218,
+    "id": "npveMgmt_statusCaretGlyphGap",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 219,
+    "id": "npveMgmtBuild_statusWordLetterSpacing",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 220,
+    "id": "npveRow_inkCentreOffset",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 221,
+    "id": "npveMedicationList_footerFixedGap",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 222,
+    "id": "npveSidesheet_outlineOnlyLeft",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 223,
+    "id": "npveSidesheet_footerActionHalfPixel",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 224,
+    "id": "npveSidesheet_radiusMdMissingFromLibrary",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 225,
+    "id": "npveSidesheet_squareAgainstSource",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 226,
+    "id": "npveSidesheet_headerTitleInsetConflict",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 227,
+    "id": "npveSidesheet_problemSummaryRowNonBase8Spacing",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 228,
+    "id": "npveSidesheet_medicationSummaryRowNonBase8Spacing",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 229,
+    "id": "npveProblemEdit_textFieldNoEndAdornment",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 230,
+    "id": "npveAllergiesComparison_fixedRebuildWrapperHeight",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 231,
+    "id": "npveExternalCareFacilityStay_sourceClipsForm",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 232,
+    "id": "npveExternalCareFacilityStay_formSurfaceToken",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 233,
+    "id": "npveExtReview_familyHistoryRingOverride",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 234,
+    "id": "npveExtReview_allergySeveritySelectorUnmarked",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 235,
+    "id": "npveExtReview_procedureMetadataBadgeUnmarked",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 236,
+    "id": "npveExtReview_referenceScaledToSlot",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 237,
+    "id": "npveExtReview_changeLogPatternDrift",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 238,
+    "id": "npveExtReview_changeLogJargon",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 239,
+    "id": "npveExtReview_silentTextCorrections",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 240,
+    "id": "npveExtReview_unloggedTypeStyleDrift",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 241,
+    "id": "npveExtReview_standaloneScreenDuplicates",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 242,
+    "id": "npveExtReview_severitySelectorFractional",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 243,
+    "id": "npveExtReview_problemEditUnboundSpacing",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 244,
+    "id": "npveExtReview_fullWidthSlotDefaultName",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 245,
+    "id": "npveExtReview_parallelSummaryRows",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 246,
+    "id": "npveExtReview_unrecordedAuditFolders",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 247,
+    "id": "npveSource_problemsEditIcdTypo",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 248,
+    "id": "npveSource_externalCareFacilityStayDischargeTypo",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 249,
+    "id": "npveWorkflows_moduleChipNoLibraryPattern",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 250,
+    "id": "npveWorkflows_noteCardShellNoLibraryPattern",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 251,
+    "id": "npveWorkflows_editorToolbarNoPattern",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 252,
+    "id": "npveWorkflows_shieldLockGlyphMissing",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 253,
+    "id": "npveWorkflows_expandGlyphMissing",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 254,
+    "id": "npveWorkflows_groupedMenuNoSubheader",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 255,
+    "id": "npveWorkflows_linkChipColourNoToken",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 256,
+    "id": "npveWorkflows_segmentedChipNoPattern",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 257,
+    "id": "npveWorkflows_templateMenuInlineField",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 258,
+    "id": "npveWorkflows_patientHeaderNotInLibrary",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 259,
+    "id": "npveWorkflows_navFamilyHomeBlocksShell",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 260,
+    "id": "npveWorkflows_rightDockedPanelConvention",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 261,
+    "id": "npveWorkflows_comparisonLayoutFor1429",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 262,
+    "id": "npveWorkflows_pageCanvasColourNoToken",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 263,
+    "id": "npveWorkflows_moduleDropdownOffCanvas",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 264,
+    "id": "npveEncounter_unrecordedHealthStatusBatch",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 265,
+    "id": "npveEncounter_patientHeaderPadding10NoToken",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 266,
+    "id": "npveEncounter_splitButtonLabelNotAProperty",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 267,
+    "id": "npveEncounter_badgeDotCannotSitInline",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 268,
+    "id": "npveEncounter_iconButtonDefaultGlyphAsExpand",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 269,
+    "id": "npveEncounter_modulesPillGlyphDelta",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 270,
+    "id": "npveEncounter_schemaRecordDroppedByConcurrentWrite",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 271,
+    "id": "npveEncounter_healthStatusHelperNaming",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 272,
+    "id": "npveEncounter_toolbarGlyphsMissing",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 273,
+    "id": "npveEncounter_transcriptionStatusInvention",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 274,
+    "id": "npveEncounter_moduleChipGlyphsMissing",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 275,
+    "id": "npveEncounter_navIconsShipWhiteGlyphs",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 276,
+    "id": "npveEncounter_toolbarPillHeightDelta",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 277,
+    "id": "npveEncounter_footerSpacerWasFixed",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 278,
+    "id": "npveEncounter_splitButtonSuperseded",
+    "classification": "active",
+    "identical": true,
+    "file": "flags/active.json"
+   },
+   {
+    "sequence": 279,
+    "id": "npveEncounter_libraryPageOrderStale",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 280,
+    "id": "workflowRefactor_refactorBatchesUnrecorded",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 281,
+    "id": "workflowRefactor_riskLockFalseAttribution",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 282,
+    "id": "workflowRefactor_agentsMdDivergedFromClaudeMd",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 283,
+    "id": "workflowRefactor_contractLackedProvenance",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   },
+   {
+    "sequence": 284,
+    "id": "npvePmhx_referencesFrozenAt1x",
+    "classification": "resolved",
+    "identical": true,
+    "file": "flags/resolved.json"
+   }
+  ]
+ }
+}

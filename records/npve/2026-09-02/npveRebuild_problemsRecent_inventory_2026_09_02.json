@@ -1,0 +1,218 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_problemsRecent_inventory_2026_09_02",
+ "sequence": 27,
+ "date": "2026-09-02",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "8cff1842569e7055fd24fe35999bd234c388a71b3ee74ab6e65662053e4c4d42"
+ },
+ "record": {
+  "_status": "READ-ONLY INVENTORY COMPLETE. Stopped after step 7. Body of source 4618:4930 itemised to the leaf, instances entered. No writes to source, library or target; no library instance created (existing on-canvas instances used for paint reads).",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq (NDE-2026), page ⚙️ Components 21:321, Sidesheetv3 129:6647 child 4618:4930 Page=Clin_Problems-Recent, 550x600",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read with loadAsync only",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 not opened",
+  "date": "2026-09-02",
+  "method": "page.loadAsync() on the source page (no setCurrentPageAsync); skipInvisibleInstanceChildren=false; recursive walk of Summary_Wrap 4618:4967 entering instances; hidden subtrees summarised by node count and then itemised separately for the hidden first row and hidden affordances. Paint read from rendered nodes as hex@opacity with a bound flag; bound variable and text style names resolved by id. Provenance by 8-hex key prefix against the enum-batch inventories (rebuild / kitA / kitB / other). Library paints read from existing on-canvas instances only: Text field 127:390 (Reference), Checkbox 564:5 and List/Item 499:6 and Button group/Segment 886:2102 (Compositions). Tabs/Tab, Radio, Toggle button, Icon button and icons have no on-canvas instance in the library: master read only, rows say \"paint not compared\".",
+  "scope": "Body only = Summary_Wrap 4618:4967 (550x476, V p16/16/16/16 g12, FILL width / FIXED height, clipsContent, no fill). Header Breadcrumbs 4618:4931 and footer Frame 758531478 4618:5092 are covered by the Sidesheet template and noted only in step 5.",
+  "step1_screenshots": [
+   "figma-export/npve-problems-recent-2026-09-02/step1-frame-4618-4930.png (550x600)",
+   "figma-export/npve-problems-recent-2026-09-02/step1-body-summary-wrap-4618-4967.png (550x476)",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-search-row-4618-4970.png (518x40)",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-filter-tabs-4618-4975.png (518x28)",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-list-block-4618-4974.png (518x284)",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-recent-list-4618-4986.png (518x248)",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-row-asthma-4618-5029.png (518x48)"
+  ],
+  "lookedAt": "Yes. Frame: title \"Add Problem to Chart\", close x, teal-outlined search field with \"Diabetes\", three text tabs with Recent underlined, \"Recent Problems\" heading, four rows (outline star, name, grey code, trailing green check on row 1 and a ringed plus on rows 2 to 4), empty space below, footer Cancel / Save & Add to Note / coral Save. Body regions match the itemisation.",
+  "step2_itemisation": {
+   "counts": {
+    "rowsItemised": 116,
+    "visibleNodes": "body root + 2 visible container branches; 4 visible rows",
+    "hiddenSubtrees": "Tab Set Meta (32 nodes), row 1 Hypertension (34), 5 x Done/Check frames (4 each), 4 x Close (5 each), 4 x Delete text, 4 x bin frame (6 each), 4 x Arrow (6 each)"
+   },
+   "tree": [
+    "Summary_Wrap 4618:4967 FRAME 550x476 V p16 g12 MIN/MIN FILL/FIXED clips, fill none",
+    "  Tab Set Meta 4618:4968 INSTANCE HIDDEN 518x56 → kit Tab Set 129:5552; labels Conditions #004852 / Procedures, Observations, Social #545454 (nav scaffold)",
+    "  Frame 758531505 4618:4969 FRAME 518x340 V g16 FILL/HUG",
+    "    Frame 143727238 4618:4970 FRAME 518x40 H g8 MIN/CENTER FILL/HUG (search row)",
+    "      Field 4618:4971 FRAME 518x40 H p8/8/8/8 g10 CENTER FILL/HUG fill #FFFFFF@1 U, stroke #004852@1 U 1px INSIDE all sides, radius 4",
+    "        Interface, Essential/Search 4618:4972 INSTANCE 24x24 (Other) vectors stroke #323232 1.5 (11.94x11.94, 5.85x5.93 fractional)",
+    "        ✏️ Input text 4618:4973 TEXT 468x24 FILL/HUG Akkurat LL Regular 16/24 #000000@1 U, style Body/Body 1 (remote), \"Diabetes\"",
+    "    Frame 758531501 4618:4974 FRAME 518x284 V g8 FILL/HUG",
+    "      Frame 758531484 4618:4975 FRAME 518x28 V g6 FILL/HUG stroke #D6D6D6 bottom 1 only INSIDE (filter tab bar)",
+    "        Frame 758531500 4618:4976 FRAME 183x28 H g4 HUG/HUG",
+    "          Frame 758531497 4618:4977 34x28 H g2 → Frame 758531492 4618:4978 V p0/8/0/8 g8 CENTER → All 4618:4979 TEXT 18x28 Akkurat LL Bold 14/200% #9A9A9A@1 U",
+    "          Frame 758531498 4618:4980 63x28 H g2 → Frame 758531492 4618:4981 V p0/8/0/8 stroke #417E86 bottom 2 INSIDE → Recent 4618:4982 TEXT 47x28 Bold 14/200% #004852@1 U",
+    "          Frame 758531499 4618:4983 78x28 H g2 → Frame 758531492 4618:4984 → Favorites 4618:4985 TEXT 62x28 Bold 14/200% #9A9A9A@1 U",
+    "      Frame 758531503 4618:4986 FRAME 518x248 V g8 FILL/HUG (section)",
+    "        Recent Problems 4618:4987 TEXT 129x24 HUG Akkurat LL Bold 16/24 #000000@1 BOUND (remote variable \"Color\" 04eceeeb), style Headline/H4 (remote), align CENTER",
+    "        div 4618:4988 FRAME HIDDEN 518x48 H p12/16/12/16 g16 fill #FFFFFF r8: Hypertension Regular 16/16 #000000 bound; Close, Delete #B51A2C (style CTAs/Button), bin, Arrow all hidden; Check-Circle Mode=Selected 63:445 fill #C3E7C0 check stroke #000000 bound",
+    "        div 4618:5008 FRAME 518x48 H p12/16/12/16 g16 MIN/CENTER FILL/HUG fill none r8 (row 1, selected)",
+    "          star_border 4618:5009 INSTANCE 24x24 (Other 4618:3271) vector 20x19 #000000@1 U",
+    "          Frame 758531077 4618:5010 131x16 H g16 HUG: [Done/Check frame HIDDEN 24 #C3E7C0 r16, check stroke #1D6B45] Frame 758531448 H g8 → Diabetes Mellitus 4618:5017 TEXT Regular 16/16 #000000 BOUND (Color 04eceeeb), no style",
+    "          Frame 758531078 4618:5375 259x16 H g16 FILL: [Done/Check HIDDEN] E10.9 4618:5382 TEXT Regular 14/16 #545454@1 U",
+    "          Close 4618:5018 HIDDEN (Other 10:1245); Delete 4618:5019 TEXT HIDDEN Regular 16/24 #B51A2C style CTAs/Button; bin frame 4618:5020 HIDDEN strokes #B51A2C; Arrow 4618:5027 INSTANCE HIDDEN 235x24 fill #FFFFFF (Other 129:6507)",
+    "          check_circle 4618:5028 INSTANCE 24x24 (Other 4841:16946 Style=Filled) vector 20x20 #1D6B45@1 U",
+    "        div 4618:5029 / 4618:5050 / 4618:5071 FRAME 518x48 same layout, fill #FFFFFF@1 U r8 (rows 2 to 4)",
+    "          star_border (Other) as row 1",
+    "          Frame 758531077 406x16 H g16 FILL (nests both name and code here, unlike row 1): Frame 758531448 → Asthma / Chronic Obstructive Pulmonary Disease / Osteoarthritis TEXT Regular 16/16 #000000 BOUND; Frame 758531078 FILL → J45.909 / J45.909 / M17.11 TEXT Regular 14/16 #545454 U",
+    "          Close, Delete, bin, Arrow HIDDEN as row 1",
+    "          Check-Circle 4618:5049 / 5070 / 5091 INSTANCE 24x24 (LOCAL 980:15883 Mode=NotSelected) H p4/7/4/7 fill #FFFFFF U stroke #D6D6D6 1 r16; inner 8x8 plus vector stroke #000000 1.5"
+   ],
+   "textTokens": "No text node binds font family, size, line height or weight to a variable. Two fills are bound (title and the four problem names) to a remote variable named \"Color\" (key 04eceeeb…), not a library token. Letter spacing 0 everywhere. Line heights: search 24, tabs 200% (=28), title 24, names 16 (100%), codes 16.",
+   "fractional": "Only icon vectors (search 11.94x11.94 and 5.85x5.93, bin 15.58x17.31 and 6.19x7.92, star 20x19). All frames are integer.",
+   "rowInconsistency": "Row 1 (4618:5008) has Frame 758531077 at HUG 131 wide with the code frame as a sibling; rows 2 to 4 have Frame 758531077 at FILL 406 wide with the code frame nested inside. Row 1 has no fill; rows 2 to 4 are white with radius 8. On the paper backdrop the fills render identically."
+  },
+  "step3_provenance": {
+   "method": "mainComponent.key first 8 hex against enum-data.json libraryKeyPrefixes (rebuild 5912 keys, kitA 11798, kitB 3266); local = key absent (main component in this file).",
+   "instances": 33,
+   "totals": {
+    "DSR": 0,
+    "Kit": 13,
+    "Other": 17,
+    "Local": 3
+   },
+   "visible": {
+    "count": 9,
+    "list": "Interface, Essential/Search 4618:4972 (Other e8c0d3dd); star_border x4 4618:5009/5030/5051/5072 → 4618:3271 Style=Outlined (Other 07e9545b); check_circle 4618:5028 → 4841:16946 Style=Filled (Other 7eee6145); Check-Circle x3 4618:5049/5070/5091 → 980:15883 Mode=NotSelected (Local, key 7b4def41 not in any inventory)"
+   },
+   "hidden": {
+    "count": 24,
+    "list": "Tab Set Meta 4618:4968 → 129:5552 Tab Set (kitA 6b8f024e) with 4 Tab (kitA a3db59b9 / 7321786b), 4 _tab template (kitA a1e6c1b0), 4 _tab indicator (kitA 54a390e0) = 13 Kit; Close x5 4618:4997/5018/5039/5060/5081 → 10:1245 Interface, Essential/Delete, Disabled (Other e7c73628); Arrows, Diagrams/Arrow x5 4618:5006/5027/5048/5069/5090 → 129:6507 (Other ffe42fca); Check-Circle 4618:5007 → 63:445 Mode=Selected (Other 6fe87042)"
+   },
+   "reading": "The visible body uses no Design System Rebuild component. Every visible instance is an icon-pack glyph (Material star_border / check_circle, Streamline search) or a hand-drawn local ring. The only Kit instances are the hidden nav scaffold."
+  },
+  "step4_mapping": [
+   {
+    "item": "Body container Summary_Wrap 4618:4967 (p16 all, g12, fixed 476)",
+    "library": "Sidesheet template Body 6:79 in the target (p8/16/8/16 g16, FILL) with Body slot 6:80",
+    "verdict": "TEMPLATE, conflicts on padding and gap",
+    "note": "See step 5. Not a library component; the template body is the container."
+   },
+   {
+    "item": "Search field 4618:4971 (518x40, #004852 1px r4, no label, leading search glyph, value 16/24 #000000)",
+    "library": "Text field 121:350 size=medium, State=Default, Value=Filled 121:242; instance 127:390 read",
+    "verdict": "DEFECT + GAP",
+    "note": "Instance 127:390 renders 300x56 with a notched floating label (12/16 color/text/secondary), outline #000000@0.23 bound color/substrate/inputOutline, value Akkurat LL Regular 16/24 #000000 bound color/text/primary. Differs: height 56 vs 40, outline colour, mandatory label notch, helper row (Show helper can hide it). GAP: no start adornment property, so the search glyph cannot be placed inside the instance (Icon/Search 575:30 and Icon/SearchOutlined (MUI) 312:4 exist as glyphs). size=small variant exists (Reference instances 300x60 with helper) but its input height was not read this batch."
+   },
+   {
+    "item": "Filter tab bar 4618:4975 (All / Recent / Favorites, 28 tall, Bold 14/28, #9A9A9A / #004852, 2px #417E86 underline, 1px #D6D6D6 bottom rule)",
+    "library": "Tabs 201:14 (270x48, three Tabs/Tab) with Tabs/Tab 201:13 selected=no|yes, State=Default|Hover; masters 201:3 / 201:7",
+    "verdict": "DEFECT, paint not compared",
+    "note": "Master read: tab 90x48 p12/16/12/16, label Akkurat LL Regular 16/20, unselected #545454 bound, selected #004852 bound, Indicator 90x2, hover fill #CBDDE0 bound. Differs from source: height 48 vs 28, Regular 16 vs Bold 14, unselected #545454 vs #9A9A9A, indicator colour not read vs #417E86. No on-canvas Tabs instance exists in the library; no instance was created. Bottom rule maps to Divider 171:31 (DSR)."
+   },
+   {
+    "item": "Section title 4618:4987 \"Recent Problems\" (Bold 16/24 #000000, kit style Headline/H4)",
+    "library": "No component. Tokens font/family/base, font/size/body1, font/lineHeight/body1, font/weight/bold, color/text/primary",
+    "verdict": "DSR tokens; h4 token GAP already flagged (npveChangelog_noH4Token)",
+    "note": "Code typography.ts h4 = fontSize 1rem, fontWeight 700, lineHeight 1.5rem = Bold 16/24, which is exactly the source style and the body1+bold binding used on the Change log title. The library still has no h4 variable."
+   },
+   {
+    "item": "Problem row 4618:5008 etc. (518x48 p12/16 g16, leading 24 star, name 16/16, inline code 14/16 #545454, trailing 24 control, white r8 fill on unselected)",
+    "library": "List/Item 174:17 Lines=One, State=Default 174:3 (400x48 p8/16/8/16, Icon slot 56x24 with Icon swap, Primary 16/24, Secondary 14/20 hidden on One); instance 499:6 read",
+    "verdict": "DEFECT + GAP",
+    "note": "Instance 499:6: Primary #000000 bound color/text/primary 16/24; Secondary #545454 bound color/text/secondary 14/20 (hidden on Lines=One); glyph #004852 color/action/active. Colours match the source name and code. Differs: source line height 16 vs 24, code inline vs second line, padding 12/16 vs 8/16, gap 16 vs 0, white r8 fill vs none (Selected state in the library is #004852@0.08). GAP: List/Item has no trailing action slot and no inline secondary text; the row needs composition."
+   },
+   {
+    "item": "Favourite star 4618:5009 etc. (bare 24 glyph, #000000, Material star_border)",
+    "library": "Icon/FavoritesOutlined 575:17 (glyph, 24x24); as a control Icon button 170:77 with Icon swap (40x40) or Toggle button 202:95 (48x48 bordered, Icon/FavoritesFilled 200:4 default)",
+    "verdict": "DSR glyph; DEFECT as a control; paint not compared",
+    "note": "Source has no hit area. Library icon colour not read (no on-canvas instance)."
+   },
+   {
+    "item": "Selected indicator 4618:5028 (Material check_circle filled, #1D6B45)",
+    "library": "Icon/CheckCircle (MUI) 200:41",
+    "verdict": "DSR glyph; paint not compared",
+    "note": "#1D6B45 matched no library token this batch; token binding to decide at build."
+   },
+   {
+    "item": "Add control 4618:5049 etc. (24x24 white ring #D6D6D6 1px r16 with 8x8 plus, local component)",
+    "library": "Icon button 170:77 with Icon/PlusOutlined 76:8 (40x40, no ring)",
+    "verdict": "DEFECT",
+    "note": "No ringed circular icon button in the library. Nearest is the plain Icon button at 40."
+   },
+   {
+    "item": "Hidden nav scaffold Tab Set Meta 4618:4968 (kit Tab Set: Conditions / Procedures / Observations / Social)",
+    "library": "Tabs 201:14",
+    "verdict": "NOT CARRIED (hidden)",
+    "note": "Hidden layer; same treatment as the change log row \"Hidden layers\"."
+   },
+   {
+    "item": "Hidden per-row affordances: Close glyph, \"Delete\" #B51A2C (style CTAs/Button), bin glyph #B51A2C, Arrow 235x24 white, Done/Check ring #C3E7C0 with #1D6B45 check, Check-Circle Mode=Selected",
+    "library": "Icon/CloseOutlined 76:11, Icon/TrashOutlined 76:14, Icon/CheckCircle (MUI) 200:41 exist as glyphs",
+    "verdict": "NOT CARRIED (hidden)",
+    "note": "Recorded so a later Delete state can be built from library glyphs. #B51A2C and #C3E7C0 matched no library token this batch."
+   }
+  ],
+  "step5_templateConflicts": {
+   "bodyPadding": "CONFLICT. Source Summary_Wrap pads 16 on all sides with gap 12; the template Body 6:79 pads 8/16/8/16 with gap 16. Vertical padding 16 vs 8 and gap 12 vs 16 fight. Needs a decision: template wins (content sits 8 under the header rule) or the screen body carries its own 8px top inset inside the slot.",
+   "bodyHeight": "Source body is FIXED 476; template body FILLs to 488 with the footer on. Content is 340 tall and hugs, so no overflow either way.",
+   "secondClose": "None in the body. The five hidden \"Close\" instances are per-row delete affordances, not a sheet close.",
+   "ownFooter": "Not in the body. The variant footer Frame 758531478 (60 tall p8 g21) sits outside Summary_Wrap and is replaced by the template footer. It holds the set's only DSR Button 4841:20912 (68x36, \"Variant=Text, Color=Primary, Size=Medium, State=Default\": Sentence-case axis names, i.e. an instance from a pre-migration publish) beside two Kit buttons 171x36 and 66x36; the template already provides all three.",
+   "hiddenNavScaffold": "Tab Set Meta 4618:4968 (Kit, 518x56) hidden at the top of the body; not carried.",
+   "header": "Breadcrumbs 4618:4931 title \"Add Problem to Chart\" maps to the template Title property; hidden Breadcrumb Buttons back control maps to Show back = false. Out of scope otherwise.",
+   "stateShown": "The frame shows the search field in a filled state (\"Diabetes\", #004852 outline) and row 1 selected; the template is state-neutral."
+  },
+  "step6_siblings": {
+   "favorites_4618_5137": {
+    "structure": "IDENTICAL body structure node for node: hidden Tab Set Meta, search row, filter bar with three cells, section with title, one hidden row and four visible rows, same hidden affordances per row, same Local Check-Circle ring on rows 2 to 4, same row fills (row 1 none, rows 2 to 4 white). Footer differs structurally: 6 children vs 7 (Favorites lacks the DSR text Button 4841:20912).",
+    "contentOnly": [
+     "search text \"Search for problem or ICD-10\" (placeholder) vs \"Diabetes\"",
+     "active cell Favorites (2px #417E86 bottom stroke on the third cell) vs Recent; the inactive cells in Favorites read a 1px #417E86 bottom stroke on the cell frame that Recent does not (visibility of that paint not confirmed)",
+     "section title \"Favorites\" vs \"Recent Problems\" (same Bold 16/24 #000000)",
+     "star instance swapped: star 4618:5349 (Other f81c4ab0, filled #F2BA2A) vs star_border 4618:3271 (outline #000000)",
+     "row 1 trailing control: Check-Circle Mode=NotSelected ring vs check_circle filled green (no row selected in Favorites; hidden row 1 Hypertension carries Mode=Selected in both)",
+     "row names and codes identical: Diabetes Mellitus E10.9, Asthma J45.909, Chronic Obstructive Pulmonary Disease J45.909, Osteoarthritis M17.11"
+    ]
+   },
+   "main_545_5239": {
+    "structure": "DIFFERENT. 3 root children (Header / MainWrap / Footer), no scaffold frames, 517 tall. Header 550x64 p16 g16 (integer) with the title at FILL and the close glyph as a direct child. Body MainWrap 545:5517 550x377 V p16/20/16/20 g8 HUG (not fixed) containing: toolbar row 510x42 (kit _button template 185x42 \"Create New Problem\" + kit Autocomplete Select Field 274x40 \"Status\"), checkbox row 510x42 with two DSR Form control label instances (rebuild keys 9821b1c5, 243efa24, 63080d8b: \"No known problems\", \"Only show active problems\"), three Item rows 510x71 H p12/4/12/4 g8 (status word Bold 14 #3FA266 or #9A9A9A with a caret vector, name Regular 18 auto, code Body 2 14/18 #545454, hidden diversity icon frame, EditIcon 40x40 (Other 2f9fb1c4) and a hand-drawn Add Note 40x40) with kit Divider Color=Light (kitA 79c17b47) between rows. Footer 550x76 p20 g12 with kit Button 243x36 and a disabled kit Button 66x36.",
+    "contentOnly": "Not applicable: no search, no filter tabs, no section title, different row anatomy (status + name + code + two 40px actions, dividers between rows) and a different footer. It is the problem-list management screen, not the picker."
+   }
+  },
+  "step7_buildOrderProposal": {
+   "_marker": "PROPOSAL, not a finding. Nothing built.",
+   "order": [
+    "1. Container: Sidesheet instance from the template (Title \"Add Problem to Chart\", Show back off, Show tertiary action on with \"Save & Add To Note\"). Body content goes into a local frame that replaces the Body slot via the Body swap (a local component \"Problems picker body\" 518 wide, V, gap 16). Padding decision from step 5 first.",
+    "2. Search field: ONE library instance, Text field 121:350, once the step 4 decision is made (accept the 56-tall labelled field; or verify size=small at 40 and accept no leading glyph). BLOCKED on that decision and on the start-adornment GAP; a glyph drawn beside the instance would be SCAFFOLDING.",
+    "3. Filter tabs: ONE library instance, Tabs 201:14, with Label overrides All / Recent / Favorites and selected=yes on the second Tabs/Tab. DEFECT accepted and logged (48 tall Regular 16 instead of 28 tall Bold 14). Bottom rule: Divider 171:31 instance below, or rely on the Tabs indicator only.",
+    "4. Section title: COMPOSITION, one TEXT bound font/family/base, font/size/body1, font/lineHeight/body1, font/weight/bold, color/text/primary (the h4 pattern already used on the Change log title).",
+    "5. Problem rows: COMPOSITION. A local component \"Problem row\" 518 wide, H, p8/16 (template rhythm) g16, items centred: Icon button 170:77 with Icon/FavoritesOutlined 575:17 (or a plain glyph if the 40px hit area is refused); name TEXT body1 text/primary; code TEXT body2 text/secondary; trailing Icon button with Icon/PlusOutlined 76:8, swapped to Icon/CheckCircle (MUI) 200:41 for the selected row. List/Item cannot express the trailing control or the inline code. Four instances with text overrides; the white r8 fill is dropped (invisible on paper).",
+    "6. Row selection colour: BLOCKED on a token for the green (#1D6B45 in the source) until read against color/success or similar.",
+    "7. Not carried: hidden Tab Set Meta, hidden row 1, hidden Close / Delete / bin / Arrow / Done-Check affordances. Listed in the change log as one row.",
+    "8. Change log beside the frame per rule 14, rows from the build prompt."
+   ],
+   "blocked": [
+    "Search field height and leading glyph (decision + GAP)",
+    "Body padding 16 vs template 8 (decision)",
+    "Green token for the selected check (unread)"
+   ],
+   "oneInstance": [
+    "Text field (after decision)",
+    "Tabs",
+    "Divider",
+    "Icon button x2 per row"
+   ],
+   "composition": [
+    "Problems picker body frame",
+    "Section title text",
+    "Problem row local component x4"
+   ]
+  },
+  "screenshots": [
+   "figma-export/npve-problems-recent-2026-09-02/step1-frame-4618-4930.png",
+   "figma-export/npve-problems-recent-2026-09-02/step1-body-summary-wrap-4618-4967.png",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-search-row-4618-4970.png",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-filter-tabs-4618-4975.png",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-list-block-4618-4974.png",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-recent-list-4618-4986.png",
+   "figma-export/npve-problems-recent-2026-09-02/step1-region-row-asthma-4618-5029.png"
+  ]
+ }
+}

@@ -1,0 +1,157 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_socialHistory_2026-09-06",
+ "sequence": 74,
+ "date": "2026-09-06",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "278da4035b5dde083d1e0986130581682ecd0e857b2db6cfbb56f751ed81579f"
+ },
+ "record": {
+  "_status": "DONE — reusable Social History body, shared Sidesheet, frozen reference, conforming change log, sole comparison, screenshots, and ten standing rules complete.",
+  "date": "2026-09-06",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-social-history-2026-09-06/report.md",
+  "recordGate": "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "node": "129:10181 Page=Clin_SHx",
+   "geometry": "550x778",
+   "policy": "read only; frozen 2x export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65",
+   "rebuildComparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "sourceFacts": [
+   "The source is 550x778 with a 64px header, 654px body, and 60px footer.",
+   "The body contains five uppercase section headings, thirteen small single-line fields, three inline unit-label placements, one New Entry button, and one multiline Comments field.",
+   "Source body inset is 16px horizontally and 8px vertically; its section stack uses 24px between groups and 12px within field rows.",
+   "The source footer contains Save & Add to Note and Save; no Cancel action."
+  ],
+  "reuseBaseline": {
+   "textField": "Published Text field set 7c3c99bb9a9392d6571c0557b41d142b8987b566; small empty variant 77:708 / key 542540ea8fa199c81ea0128aea9c78a5cc8e8abf.",
+   "newEntryButton": "Published Button set cfb726c79b456d52901243b7c33839efd0780a93; contained primary small default variant 155:1193 / key 8fc8f57f80196e40aff7b3b1116226ea0a925120.",
+   "sidesheet": "Shared Sidesheet 279:2446, Floating variant 6:65.",
+   "comparison": "Shared Rebuild comparison 35:332.",
+   "changeLogPattern": "Clone current conforming Health Status/Observations helper 415:7108 and keep live Change log/Row instances."
+  },
+  "buildPlan": [
+   "Create one 518px-wide Social history body component with five section groups and base-8 auto-layout.",
+   "Use live published small Text field instances for all fields; enable select on choice fields and multiline on Comments.",
+   "Use one live published small contained-primary Button instance for New Entry; use bound Akkurat LL text only for section headings and inline unit labels.",
+   "Append the body to Sidesheet Body content preferred values without changing defaults; compose one content-driven 550px floating sheet with the source two-action footer.",
+   "Create one frozen 2x source reference, one transparent rebuild helper, one conforming change log, and one sole comparison instance.",
+   "Export and inspect the body, rebuilt sheet, and comparison; run all ten standing batch rules."
+  ],
+  "spacingPolicy": "Canonical base 8: 16px shell inset and vertical element rhythm, 24px between semantic groups, 8px only for heading-to-control optical pairing where the heading has its own line box.",
+  "codeConnect": "No .figma.ts/.figma.js mappings found under packages/design-system; reused the published Design System Rebuild assets discovered from the target subscription.",
+  "preserve": "Source and library files, the shared Sidesheet and comparison defaults/geometry, all prior screens/helpers, section 15 Encounter page shell, existing variables, and every unrelated node.",
+  "stopCondition": "Stop before or during target mutation if a published field/button cannot express the source in render, identity changes, a source pattern requires a hand-drawn control, or a design decision appears. Otherwise stop after one reusable body, one live shared-shell sheet, three helpers, one sole comparison, screenshots, ten standing-rule checks, report, and final record.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsAdded": [],
+  "flagsBefore": 264,
+  "flagsAfter": 272,
+  "figmaMutations": [
+   "Appended Social history body 441:4994 to Body content#279:5 preferred values on Sidesheet 279:2446; default 26:221 and shared master geometry were unchanged.",
+   "Appended reference helper 446:5473, rebuild helper 444:5269, and change-log helper 446:5475 to the three preferred-value lists on Rebuild comparison 35:332; all defaults were unchanged.",
+   "Added Templates section 441:4993 and Screens section 446:9236 after existing work; no prior node was moved, renamed, deleted, or overwritten."
+  ],
+  "createdNodes": {
+   "templatesSection": "441:4993 16 · Social History",
+   "body": "441:4994 Social history body (component key 80cd7a1fddb1725e47368d5a6e961d1fe4567c8e)",
+   "bodyGroups": [
+    "441:5060 Alcohol",
+    "441:5062 Substance/drug use",
+    "441:5205 Tobacco",
+    "441:5250 Living environment",
+    "441:5295 Employment status",
+    "441:5297 Comments"
+   ],
+   "rebuildHelper": "444:5269 Rebuild helper · Social History (component key ba97863d57239b2a36f88984dd69ebb27fa3bc84)",
+   "sidesheet": "444:5270 Social History",
+   "referenceHelper": "446:5473 Reference helper · Social History (component key 603cd3e65b830a0cfaf3f33124232243db0a9ef4)",
+   "sourceImage": "446:5474 Source capture · 129:10181 · 2026-09-06",
+   "changeLog": "446:5475 _Rebuild comparison/Change log/Social History (component key 46f85ccf8690e497d402d3d7244449796c5634d0)",
+   "screensSection": "446:9236 15 · Social History",
+   "comparison": "446:9237 Social History · Reference / Rebuild / Changes"
+  },
+  "verification": {
+   "identity": "PASS — fdCQVFdvOByaOYIJYag0d6; Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "sourcePolicy": "PASS — zVsuhYehoSLLq880qRBFkq was read/exported only; Design System Rebuild library was searched/read only.",
+   "screenshots": "PASS — source 1100x1556 (2x), body 519x614 render, rebuild 550x790, comparison 1708x882.",
+   "spacing": "PASS — body group gaps bind space/24; heading/control and row gaps bind space/8 and space/16; shell supplies 16px body inset.",
+   "instances": "PASS — fourteen Text field instances and one Button instance are backed by published library masters; sheet main is 6:65; comparison main is 35:332.",
+   "preferredValues": "PASS — Sidesheet Body content now has 12 entries; each comparison helper list has 15; every default is unchanged.",
+   "placement": "PASS — each of the three helpers has exactly one instance, inside sole comparison 446:9237.",
+   "paints": "PASS — Templates 7721 nodes / 0 unbound solid paints; Screens 3649 / 0; Archive 1529 / 0; Cover retains its one pre-existing flagged unbound fill on 1:5.",
+   "geometry": "PASS — all batch-authored visible geometry is on whole pixels; no fractional authored node found.",
+   "fonts": "PASS — all free-standing batch text uses Akkurat LL with bound family, size, line-height, weight, and text-colour variables.",
+   "propertyReferences": "PASS — the body and helper components expose no accidental properties; live Text field, Button, and Change log/Row instance properties remain intact."
+  },
+  "outcome": "Built Social History as one reusable 518x614 body and one live 550x790 instance of the shared Sidesheet. The rebuild preserves the source form structure and copy, uses the published Text field and Button components throughout, normalizes 12px row gaps to 16px, uses the source h5 section typography with the published primary colour token, and keeps the footer directly below the completed content.",
+  "geometry": {
+   "source": "550x778: header 64, body 654, footer 60.",
+   "body": "518x614: Alcohol 68, Substance/drug use 134, Tobacco 68, Living environment 68, Employment status 68, Comments 88, with five 24px group gaps.",
+   "rebuild": "550x790: header 72, header divider 1, body region 646, footer 71.",
+   "comparison": "1708x882; source remains 550x778 at 1:1, rebuild remains 550x790 at 1:1, and both tall columns have clipping disabled."
+  },
+  "reuse": {
+   "fields": "Fourteen live published Text field instances: thirteen small single-line fields and one filled small multiline Comments field. Choice fields use select=true; quantity fields do not.",
+   "newEntry": "One live published Button instance, variant=contained / color=primary / size=small / State=Default, labelled New Entry.",
+   "shell": "One live instance of shared Sidesheet Floating 6:65; Body content swaps to 441:4994; footer shows tertiary and primary actions only.",
+   "comparison": "One live instance of Rebuild comparison 35:332; each new helper has exactly one placement inside 446:9237.",
+   "changeLog": "Clone of the conforming Content/Title/Divider/Rows pattern. Six visible live Change log/Row instances; unused cloned rows are hidden, not deleted."
+  },
+  "visualReview": {
+   "result": "PASS — source and rebuild inspected side by side at 1708x882.",
+   "observed": [
+    "All five headings, fourteen fields, three inline unit labels, New Entry action, close control, and both footer actions are visible and uncut.",
+    "The rebuild keeps the same 550px sheet width; field groups align consistently and remain within the 518px body.",
+    "The section headings match the source 14/20 bold treatment and use the published primary teal token.",
+    "The footer follows the completed 646px body region; the full 8px sheet radius and grey outline are visible on every edge.",
+    "The comparison backdrop encloses the complete 790px rebuild, and the frozen source remains at 1:1."
+   ]
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — body, live sheet, and placed comparison rendered and were inspected after the final typography correction.",
+   "2_unboundPaintAudit": "PASS with known Cover exception — Templates, Screens, and Archive have zero; Cover 1:5 remains the pre-existing flagged exception.",
+   "3_referenceCounts": "PASS — Body content preferred values 12; comparison preferred values 15 each; each helper placed once.",
+   "4_skipInvisibleFalse": "PASS — set before every audit walk.",
+   "5_opacityLast": "PASS — no opacity was changed.",
+   "6_enumerateDontRecall": "PASS — source geometry, library field/button APIs, target shell/comparison APIs, and current page placement were enumerated before writes.",
+   "7_fileIdentityFirst": "PASS — target key and four exact page IDs were verified before mutation.",
+   "8_roundWithRecord": "PASS — no fractional authored or visible geometry remains.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was altered.",
+   "10_cloneDropsPropertyRefs": "PASS — cloned change-log helper exposes no accidental properties; six live Row instances retain their three text properties."
+  },
+  "screenshots": [
+   "figma-export/npve-social-history-2026-09-06/source-social-history-129-10181-2x.png",
+   "figma-export/npve-social-history-2026-09-06/body-social-history.png",
+   "figma-export/npve-social-history-2026-09-06/rebuild-social-history.png",
+   "figma-export/npve-social-history-2026-09-06/comparison-social-history.png"
+  ],
+  "flagAccounting": {
+   "beforeThisBatch": 264,
+   "afterBothConcurrentBatches": 272,
+   "addedByThisBatch": 0,
+   "concurrentAdditions": 8,
+   "concurrentOwner": "npveRebuild_encounterShell_2026-09-06",
+   "note": "The encounter-shell batch added flags[264..271] while Social History was in progress. They are preserved but are not Social History findings."
+  }
+ }
+}

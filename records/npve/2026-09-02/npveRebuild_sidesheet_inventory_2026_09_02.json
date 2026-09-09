@@ -1,0 +1,4318 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_sidesheet_inventory_2026_09_02",
+ "sequence": 23,
+ "date": "2026-09-02",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "02b5ddad985bf45346d8cba3c762338383534e5e2803939086a990cc02d540d6"
+ },
+ "record": {
+  "_status": "READ-ONLY INVENTORY COMPLETE. Stopped after step 7. Nothing built; no writes to source or library; target not opened.",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq (NDE-2026), page \"⚙️ Components\" 21:321, node 129:6647 \"Sidesheetv3\" COMPONENT_SET 18040x2415 at (-1888, -3940)",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read with loadAsync only",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 not touched",
+  "date": "2026-09-02",
+  "method": {
+   "walk": "page.loadAsync() then findAllWithCriteria; skipInvisibleInstanceChildren=false; no setCurrentPageAsync. Structure read to depth 3 below each variant without descending into instances; every INSTANCE at any depth resolved to its main component.",
+   "provenance": "Same 8-hex key-prefix match as npveRebuild_enum_2026-09-02 against the on-canvas inventories of Design System Rebuild and Tebra Working UI Kit.",
+   "paints": "Read from the rendered nodes under 129:6647 (hex + alpha + bound flag). Library Dialog paints read from instance 787:1457 on Compositions; library Drawer paints are master-level because no Drawer instance exists on any library page and this batch may not create one.",
+   "screenshots": "129:6647 whole at 4096px; every VISIBLE child at 1x (34 images). The 20 hidden children render as 1x1 blank PNGs through get_screenshot; Figma does not rasterise an invisible node and making one visible would be a write. Saved under figma-export/npve-sidesheet-2026-09-02/."
+  },
+  "setLevelFindings": {
+   "propertyDefinitionsUnreadable": "componentPropertyDefinitions and variantGroupProperties both throw \"Component set has existing errors\". Three children are named without the Page= property (Clin_Problems-Drop 4494:3240, Clin_Problems-Edit 4536:27605, Clin_Vitals2 2116:8944), which is the visible cause.",
+   "childCounts": {
+    "total": 54,
+    "visible": 34,
+    "hidden": 20,
+    "withPagePrefix": 51,
+    "withoutPagePrefix": [
+     "4494:3240 Clin_Problems-Drop",
+     "4536:27605 Clin_Problems-Edit",
+     "2116:8944 Clin_Vitals2"
+    ]
+   },
+   "overlaps": [
+    {
+     "at": "16,0-16",
+     "nodes": [
+      "129:6648 (hidden)",
+      "129:6995 (hidden)",
+      "129:7340"
+     ]
+    },
+    {
+     "at": "582,16",
+     "nodes": [
+      "4079:15495 (hidden)",
+      "2459:10180"
+     ]
+    },
+    {
+     "at": "1148,0-16",
+     "nodes": [
+      "129:7364 (hidden)",
+      "129:7431 (hidden)",
+      "129:7467 (hidden)",
+      "129:7494 (hidden)",
+      "129:7546 (hidden)",
+      "129:7580 (hidden)",
+      "2466:10562"
+     ]
+    },
+    {
+     "at": "3978,0-16",
+     "nodes": [
+      "129:9614 (hidden)",
+      "129:7614"
+     ]
+    },
+    {
+     "at": "6242,0-16",
+     "nodes": [
+      "129:10364 (hidden)",
+      "129:12486"
+     ]
+    },
+    {
+     "at": "6808,0-16",
+     "nodes": [
+      "129:8774 (hidden)",
+      "129:8843 (hidden)",
+      "129:8928 (hidden)",
+      "129:9040 (hidden)",
+      "129:9205 (hidden)",
+      "129:9392 (hidden)",
+      "129:8130"
+     ]
+    },
+    {
+     "at": "11902,0-16",
+     "nodes": [
+      "129:11224 (hidden)",
+      "4536:27605"
+     ]
+    },
+    {
+     "at": "14405,16",
+     "nodes": [
+      "3496:13859 (hidden)",
+      "2116:8944 (hidden)",
+      "545:5557",
+      "129:10181"
+     ]
+    }
+   ],
+   "overlapReading": "Every overlap involves at least one hidden child; no two visible children overlap. 20 hidden variants are parked on top of, or under, visible ones.",
+   "fractionalGap": "Header itemSpacing 16.022226333618164 on 30 children (every \"Breadcrumbs\" header from 129:7340 onward except the hidden Clinical ones). Fractional geometry per CLAUDE.md rule 4.",
+   "swappedVariants": "129:7546 is named Page=Labs/Studies but its title reads \"Documents\"; 129:7580 is named Page=Documents but its title reads \"Labs/Studies\". 129:9614 Page=Clin_PSHx carries the title \"Past Medical History\".",
+   "remoteSelfReference": "129:8774 contains an instance of a REMOTE Sidesheetv3 variant (key 7b78051e…, \"Sidesheetv3/Page=Page=Interface, Essential, Property 2=Calendar, Sched\"), so a copy of this set is published from another file and nested back inside it.",
+   "scaffoldWiderThanRoot": "On the six 441-wide Vitals children the hidden Frame 758531780 (550x60) and Tabs (550x52) still measure 550, wider than their 441 parent.",
+   "overflow": "Three children have body content taller than their fixed 476 body: 648:1603 (556), 3496:15197 (516), 3501:15528 (558).",
+   "rootOverlay": "4494:3240 holds an Autocomplete dropdown instance and an image rectangle at variant root level outside the auto-layout flow."
+  },
+  "children": [
+   {
+    "name": "Page=Index",
+    "id": "129:6648",
+    "x": 16,
+    "y": 0,
+    "w": 550,
+    "h": 1360,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 6,
+    "family": "IX",
+    "provenance": {
+     "instances": 89,
+     "DSR": 0,
+     "Kit": 13,
+     "Other": 76,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden Breadcrumb Buttons in Frame 758531787",
+      "icon 24 in Frame 758531486"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p0/8/8/8 g16",
+      "AF",
+      1296
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 758531776 (breadcrumb row 239x32)",
+      "Frame 758531780 (Tab Set + Selector 550x52)",
+      "Frame 758531486 (24x24)",
+      "Tabs (segmented 550x52)"
+     ],
+     "extras": [
+      "Top3 tile row 518x104 with GRADIENT_LINEAR fills and #FBCBD1/#D4E0DD strokes",
+      "Sections Clinical 712 / History 432"
+     ]
+    }
+   },
+   {
+    "name": "Page=IndexV1",
+    "id": "129:6995",
+    "x": 16,
+    "y": 0,
+    "w": 550,
+    "h": 800,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 6,
+    "family": "IX",
+    "provenance": {
+     "instances": 89,
+     "DSR": 0,
+     "Kit": 13,
+     "Other": 76,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p0/8/8/8 g16",
+      "AF",
+      736
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 758531776",
+      "Frame 758531780",
+      "Frame 758531486",
+      "Tabs"
+     ],
+     "extras": [
+      "Top3 tiles (Alerts and Care Coordination hidden)",
+      "Sections 264/320"
+     ]
+    }
+   },
+   {
+    "name": "Page=PatientSummary",
+    "id": "129:7340",
+    "x": 16,
+    "y": 16,
+    "w": 550,
+    "h": 894,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 2,
+    "family": "PS",
+    "provenance": {
+     "instances": 35,
+     "DSR": 0,
+     "Kit": 28,
+     "Other": 7,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "none",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      830
+     ],
+     "footer": null,
+     "hidden": [
+      "(inside body) Tab Set 534x56",
+      "Contextual Alert x2 534x40",
+      "Frame 758532108 170"
+     ],
+     "extras": [
+      "Summary_Wrap 534x708 four rich-text blocks 16/150%",
+      "feedback row Frame 758531795 534x90 V p8 g8 top rule, thumbs up/down"
+     ]
+    }
+   },
+   {
+    "name": "Page=Page49",
+    "id": "4079:15495",
+    "x": 582,
+    "y": 16,
+    "w": 550,
+    "h": 942,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 2,
+    "family": "PS",
+    "provenance": {
+     "instances": 29,
+     "DSR": 0,
+     "Kit": 24,
+     "Other": 5,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "none",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      878
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 758532108"
+     ],
+     "extras": [
+      "Tab Set visible",
+      "Contextual Alert visible",
+      "two Summary_Wrap cards 534x306 fill #F9F9F9 stroke #D6D6D6 p16 g12 with three hand-drawn Badges 22 tall #D0ECF1/#83CDD9",
+      "feedback row 90"
+     ]
+    }
+   },
+   {
+    "name": "Page=Page41",
+    "id": "2459:10180",
+    "x": 582,
+    "y": 16,
+    "w": 550,
+    "h": 1188,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 2,
+    "family": "PS",
+    "provenance": {
+     "instances": 22,
+     "DSR": 0,
+     "Kit": 15,
+     "Other": 7,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "none",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      1124
+     ],
+     "footer": null,
+     "hidden": [],
+     "extras": [
+      "Contextual Alert 534x40 visible",
+      "Summary_Wrap 708",
+      "feedback block Frame 758531795 534x328 V p8 g16 top rule: Contextual Alert, thumbs row, Text Field 120, Button 161"
+     ]
+    }
+   },
+   {
+    "name": "Page=Page42",
+    "id": "2466:10562",
+    "x": 1148,
+    "y": 16,
+    "w": 550,
+    "h": 932,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 2,
+    "family": "PS",
+    "provenance": {
+     "instances": 7,
+     "DSR": 0,
+     "Kit": 4,
+     "Other": 3,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "none",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      868
+     ],
+     "footer": null,
+     "hidden": [],
+     "extras": [
+      "Contextual Alert visible",
+      "Summary_Wrap 708",
+      "thank-you band Frame 758532110 534x72 H p16/8/8/8 g16 top rule with #EEF7F9 inner 518x48"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Flowsheets",
+    "id": "939:9228",
+    "x": 1714,
+    "y": 16,
+    "w": 550,
+    "h": 360,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 3,
+    "family": "FS",
+    "provenance": {
+     "instances": 39,
+     "DSR": 0,
+     "Kit": 21,
+     "Other": 17,
+     "Local": 1
+    },
+    "structure": {
+     "header": [
+      "HEADER",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "none",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "BODY",
+      "V p0/1/0/1 g0",
+      "AF",
+      236
+     ],
+     "footer": [
+      "FOOTER",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       123
+      ]
+     ],
+     "hidden": [
+      "(footer) Frame 758531555 354x36 with _button template",
+      "Text Button x2",
+      "(body) 1STMEASURE 270",
+      "Chips 99x52"
+     ],
+     "extras": [
+      "SUBHEADER 548x74 H p16/12/16/12 g16 fill #F5F5F5 bottom rule: Field 310x40 (#FFFFFF, stroke #004852) + _button template 198 outlined",
+      "column header row Frame 758532067 548x34 H p8/16 g24 fill #D4E0DD, Akkurat LL Bold 14/18 #000000",
+      "Main Wrap row 548x64 p16 g34",
+      "2NDMEASURE 548x64 p16 g24 top rule"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Flowsheets-Graph",
+    "id": "861:7047",
+    "x": 2280,
+    "y": 16,
+    "w": 550,
+    "h": 630,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 3,
+    "family": "FS",
+    "provenance": {
+     "instances": 39,
+     "DSR": 0,
+     "Kit": 21,
+     "Other": 17,
+     "Local": 1
+    },
+    "structure": {
+     "header": [
+      "HEADER",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "none",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "BODY",
+      "V p0/1/0/1 g0",
+      "AF",
+      506
+     ],
+     "footer": [
+      "FOOTER",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       123
+      ]
+     ],
+     "hidden": [
+      "Frame 758531555",
+      "Text Button x2",
+      "Chips"
+     ],
+     "extras": [
+      "as 939:9228 with 1STMEASURE 548x270 visible (#EEF7F9 band, BarLineChart 548x220)"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Flowsheets-AddNew",
+    "id": "867:7460",
+    "x": 2846,
+    "y": 16,
+    "w": 550,
+    "h": 2404,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 3,
+    "family": "FS",
+    "provenance": {
+     "instances": 43,
+     "DSR": 0,
+     "Kit": 24,
+     "Other": 18,
+     "Local": 1
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      false,
+      "none",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Frame 758532096",
+      "V p0/1/0/1 g0",
+      "AF",
+      2280
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       87
+      ]
+     ],
+     "hidden": [
+      "Frame 758531555",
+      "Text Button x2",
+      "Chips"
+     ],
+     "extras": [
+      "2NDROW 548x74 #F5F5F5",
+      "column row 34 #D4E0DD",
+      "Summary_Wrap 64",
+      "questionnaire Frame 758532074 548x2044 p16 g16 (date row, prompt 16/20, Frame 758532084 516x1900 g24)",
+      "Main Wrap 64 top rule"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Flowsheets-Edit",
+    "id": "909:12649",
+    "x": 3412,
+    "y": 16,
+    "w": 550,
+    "h": 2388,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 3,
+    "family": "FS",
+    "provenance": {
+     "instances": 43,
+     "DSR": 0,
+     "Kit": 24,
+     "Other": 18,
+     "Local": 1
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      false,
+      "none",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Frame 758532096",
+      "V p0/1/0/1 g0",
+      "AF",
+      2264
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       87
+      ]
+     ],
+     "hidden": [
+      "Frame 758531555",
+      "Text Button x2",
+      "Chips"
+     ],
+     "extras": [
+      "2NDROW 548x58 H p8/12/8/12 (16px shorter than AddNew)",
+      "otherwise as 867:7460"
+     ]
+    }
+   },
+   {
+    "name": "Page=CareCoordination",
+    "id": "129:7364",
+    "x": 1148,
+    "y": 0,
+    "w": 550,
+    "h": 1104,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 2,
+    "family": "HL",
+    "provenance": {
+     "instances": 950,
+     "DSR": 0,
+     "Kit": 602,
+     "Other": 348,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      false,
+      "hidden Frame 143725286 breadcrumb trail",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/16/8/16 g16",
+      "AF",
+      1040
+     ],
+     "footer": [
+      "Frame 758531478 (inside body, 518 wide)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       132,
+       105,
+       69
+      ]
+     ],
+     "hidden": [
+      "Frame 143725286"
+     ],
+     "extras": [
+      "tab bar Frame 758531835 518x52 fill #004852 with pill 255x44 #F6F2EC",
+      "Toggle Button hand-drawn 518x48 (#F0EEE8 / #FFFFFF, stroke #8CA7A2)",
+      "two Text Field - Tablet + Mobile 251x56",
+      "Autocomplete 518x60",
+      "Text Field 518x192",
+      "Data Grid 502x396 (kit) with 60 table rows"
+     ]
+    }
+   },
+   {
+    "name": "Page=Alerts",
+    "id": "129:7431",
+    "x": 1148,
+    "y": 0,
+    "w": 550,
+    "h": 656,
+    "visible": false,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 2,
+    "family": "HL",
+    "provenance": {
+     "instances": 16,
+     "DSR": 0,
+     "Kit": 4,
+     "Other": 12,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      false,
+      "hidden Frame 143725286",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      274
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 143725286"
+     ],
+     "extras": [
+      "Add row 534x40 #FFFFFF stroke #8CA7A2 \"Add Alert\" #417E86 16/20",
+      "Alert1 card 534x102 fill #FEF5D5 stroke #D6D6D6 p12 g8",
+      "Alert1 card 534x84 #FFFFFF",
+      "root fixed 656"
+     ]
+    }
+   },
+   {
+    "name": "Page=Notes",
+    "id": "129:7467",
+    "x": 1148,
+    "y": 0,
+    "w": 550,
+    "h": 656,
+    "visible": false,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 2,
+    "family": "HL",
+    "provenance": {
+     "instances": 28,
+     "DSR": 0,
+     "Kit": 13,
+     "Other": 15,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      false,
+      "hidden Frame 143725286",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      200
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 143725286"
+     ],
+     "extras": [
+      "Autocomplete Select Field 534x40",
+      "two Alert1 rows 534x56 H p12 g16 stroke #D6D6D6: date 16/20 + Chip - Status + open_in_new icon frame",
+      "root fixed 656"
+     ]
+    }
+   },
+   {
+    "name": "Page=TreatmentPlan",
+    "id": "129:7494",
+    "x": 1148,
+    "y": 0,
+    "w": 550,
+    "h": 656,
+    "visible": false,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 2,
+    "family": "HL",
+    "provenance": {
+     "instances": 31,
+     "DSR": 0,
+     "Kit": 15,
+     "Other": 16,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      false,
+      "hidden Frame 143725286",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      272
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 143725286",
+      "Assistive Text"
+     ],
+     "extras": [
+      "Autocomplete 534x40 (detached template frames)",
+      "three Alert1 rows 56",
+      "root fixed 656"
+     ]
+    }
+   },
+   {
+    "name": "Page=Labs/Studies",
+    "id": "129:7546",
+    "x": 1148,
+    "y": 0,
+    "w": 550,
+    "h": 656,
+    "visible": false,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 2,
+    "family": "HL",
+    "provenance": {
+     "instances": 5,
+     "DSR": 0,
+     "Kit": 0,
+     "Other": 5,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      false,
+      "hidden Frame 143725286",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      270
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 143725286"
+     ],
+     "extras": [
+      "three Alert1 rows 534x74 with hand-drawn Badge 67x22 #F7F7F7/#DEDEDE",
+      "title text reads \"Documents\" although the variant is Labs/Studies"
+     ]
+    }
+   },
+   {
+    "name": "Page=Documents",
+    "id": "129:7580",
+    "x": 1148,
+    "y": 0,
+    "w": 550,
+    "h": 656,
+    "visible": false,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 2,
+    "family": "HL",
+    "provenance": {
+     "instances": 5,
+     "DSR": 0,
+     "Kit": 0,
+     "Other": 5,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      false,
+      "hidden Frame 143725286",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      270
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 143725286"
+     ],
+     "extras": [
+      "three Alert1 rows 74",
+      "title text reads \"Labs/Studies\" although the variant is Documents"
+     ]
+    }
+   },
+   {
+    "name": "Page=PsychotherapyNote",
+    "id": "129:7614",
+    "x": 3978,
+    "y": 16,
+    "w": 550,
+    "h": 458,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 32,
+     "DSR": 0,
+     "Kit": 13,
+     "Other": 19,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/8/8/8 g16",
+      "AF",
+      344
+     ],
+     "footer": null,
+     "hidden": [
+      "Frame 758531776",
+      "Frame 758531780",
+      "Frame 758531486",
+      "Tabs",
+      "(toolbar) Headings, table, Flowsheets, Frame 758531777 attach/vitals/labs/images"
+     ],
+     "extras": [
+      "toolbar Frame 758531778 550x50 H p9/8/9/8 g8 bottom rule: UndoRedo 2x32, TextEdit 232 (bold/italic/strike/underline/lists) hand-drawn 32x32 buttons",
+      "Summary_Wrap 534x328 V p0/8/60/8 g4 rich text 16/150%"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Allergies",
+    "id": "129:7726",
+    "x": 4544,
+    "y": 16,
+    "w": 550,
+    "h": 656,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 6,
+    "family": "CL",
+    "provenance": {
+     "instances": 64,
+     "DSR": 0,
+     "Kit": 43,
+     "Other": 21,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p0/16/8/16 g8",
+      "FF",
+      592
+     ],
+     "footer": [
+      "Frame 758531478 (inside body, 518 wide)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       180
+      ]
+     ],
+     "hidden": [
+      "Frame 758531776",
+      "Frame 758531780",
+      "Frame 758531486",
+      "Tabs",
+      "(body) Toggle Button",
+      "Add Family Member row",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "Summary_Wrap V p8/0/8/0 g16 FF 516",
+      "FilterSet 518x28 V g6 bottom rule",
+      "_button template 175 outlined",
+      "Father card 518x138 H p12 g8 stroke #D6D6D6",
+      "root fixed 656"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Allergies-Edit",
+    "id": "129:7826",
+    "x": 5110,
+    "y": 16,
+    "w": 550,
+    "h": 673,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 6,
+    "family": "CL",
+    "provenance": {
+     "instances": 113,
+     "DSR": 0,
+     "Kit": 73,
+     "Other": 40,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "VISIBLE Breadcrumb Buttons 32x32 fill #E9EFEE",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p0/16/8/16 g8",
+      "AF",
+      609
+     ],
+     "footer": [
+      "Frame 758531478 (inside body, 518 wide)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "Frame 758531776",
+      "Frame 758531780",
+      "Frame 758531486",
+      "Tabs",
+      "(body) Toggle Button",
+      "Add Family Member",
+      "Frame 758531844 action row"
+     ],
+     "extras": [
+      "form card Frame 758531490 518x517 V p12 g16 fill #EEF7F9 stroke #D6D6D6 (autocomplete, chip dropdown, radio pair, reaction chips, comments)"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_FHx",
+    "id": "129:7950",
+    "x": 5676,
+    "y": 16,
+    "w": 550,
+    "h": 656,
+    "visible": true,
+    "rootLayout": "V p0 g0 AA",
+    "directChildren": 2,
+    "family": "CL",
+    "provenance": {
+     "instances": 28,
+     "DSR": 0,
+     "Kit": 14,
+     "Other": 13,
+     "Local": 1
+    },
+    "structure": {
+     "header": [
+      "NoteHeader",
+      65,
+      "16/16/16/16",
+      8,
+      true,
+      "none",
+      "icon 24 direct child"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/16/8/16 g8",
+      "FF",
+      591
+     ],
+     "footer": [
+      "Frame 758531478 (inside body, 518 wide)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       202
+      ]
+     ],
+     "hidden": [
+      "(body) Toggle Button",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "title fills 486",
+      "_button template 230 outlined",
+      "Father card 518x184"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_FHX-Editing",
+    "id": "129:12486",
+    "x": 6242,
+    "y": 16,
+    "w": 550,
+    "h": 685,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 6,
+    "family": "CL",
+    "provenance": {
+     "instances": 107,
+     "DSR": 0,
+     "Kit": 67,
+     "Other": 40,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "NoteHeader",
+      65,
+      "16/16/16/16",
+      8,
+      true,
+      "VISIBLE Breadcrumb Buttons 32x32 #E9EFEE",
+      "icon 24 direct child"
+     ],
+     "body": [
+      "Main Wrap",
+      "V p8/16/8/16 g8",
+      "AF",
+      620
+     ],
+     "footer": [
+      "Frame 758531478 (inside body, 518 wide)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       66
+      ]
+     ],
+     "hidden": [
+      "Frame 758531776",
+      "Frame 758531780",
+      "Frame 758531486",
+      "Tabs",
+      "(body) Frame 758531844"
+     ],
+     "extras": [
+      "form card Frame 758531490 518x520 #EEF7F9"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_HealthStatus",
+    "id": "129:8130",
+    "x": 6808,
+    "y": 16,
+    "w": 550,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 139,
+     "DSR": 0,
+     "Kit": 91,
+     "Other": 48,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g24",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "Frame 758531776",
+      "Frame 758531780",
+      "Frame 758531486",
+      "Tabs",
+      "(body) Breadcrumb Buttons x2, _text button template x2",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "section heading rows 518x24 Akkurat LL Bold 16/24 #545454",
+      "Card 518x171 #FFFFFF with checkbox rows",
+      "Autocomplete Select Field 518x40"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_ExternalCare-Hospitalizations",
+    "id": "129:8316",
+    "x": 7374,
+    "y": 16,
+    "w": 550,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 64,
+     "DSR": 0,
+     "Kit": 40,
+     "Other": 24,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Tabs 519x40 duplicate",
+      "Button 127 x2",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "Tabs/FilterSet 518x40 (segmented filter, bottom rule)",
+      "Button 518x42 full-width outlined (kit Type=Default Icon=Right)",
+      "MainWrap Father card 74"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_ExternalCare-HEdit",
+    "id": "129:8401",
+    "x": 7940,
+    "y": 16,
+    "w": 550,
+    "h": 606,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 116,
+     "DSR": 0,
+     "Kit": 85,
+     "Other": 31,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "AF",
+      482
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Button 127",
+      "Add Family Member",
+      "(footer) Frame 758531555 342",
+      "Text Button 56"
+     ],
+     "extras": [
+      "FilterSet 40",
+      "form card 518x414 #EEF7F9"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_ExternalCare-FSEdit",
+    "id": "129:8517",
+    "x": 8506,
+    "y": 16,
+    "w": 550,
+    "h": 592,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 63,
+     "DSR": 0,
+     "Kit": 38,
+     "Other": 25,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      468
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Button 127",
+      "(footer) Frame 758531555",
+      "Text Button 166 x2"
+     ],
+     "extras": [
+      "FilterSet 40",
+      "Button 518x42 outlined",
+      "MainWrap 74"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_ExternalCareFS",
+    "id": "648:1603",
+    "x": 9072,
+    "y": 16,
+    "w": 550,
+    "h": 592,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 147,
+     "DSR": 0,
+     "Kit": 100,
+     "Other": 47,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      468
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Button 127",
+      "Add Family Member",
+      "(footer) Frame 758531555",
+      "Text Button 166 x2"
+     ],
+     "extras": [
+      "FilterSet 40",
+      "form card 518x556 #EEF7F9 (overflows the fixed 468 body)"
+     ]
+    }
+   },
+   {
+    "name": "Page=ClinProSH_Edit",
+    "id": "129:8651",
+    "x": 9638,
+    "y": 16,
+    "w": 550,
+    "h": 498,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 103,
+     "DSR": 0,
+     "Kit": 73,
+     "Other": 30,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "AF",
+      374
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Add Family Member",
+      "(footer) Frame 758531555",
+      "Text Button 166 x2"
+     ],
+     "extras": [
+      "form card 518x358 #EEF7F9"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_ProSH",
+    "id": "648:3473",
+    "x": 10204,
+    "y": 16,
+    "w": 550,
+    "h": 302,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 58,
+     "DSR": 0,
+     "Kit": 34,
+     "Other": 24,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "AF",
+      178
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(footer) Frame 758531555",
+      "Text Button 166 x2"
+     ],
+     "extras": [
+      "Button 518x42 outlined",
+      "MainWrap 104"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Immunizations",
+    "id": "129:8774",
+    "x": 6808,
+    "y": 0,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 70,
+     "DSR": 0,
+     "Kit": 42,
+     "Other": 28,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       205,
+       80,
+       67,
+       119
+      ]
+     ],
+     "hidden": [
+      "Frame 758531776 (239x1)",
+      "Frame 758531780",
+      "Frame 758531486",
+      "Tabs",
+      "(body) Breadcrumb Buttons, _text button template",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "Button 518x42 outlined",
+      "section heading row 24",
+      "Father card 74",
+      "contains one REMOTE Sidesheetv3 variant instance (key 7b78051e…) nested inside this local set"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Immunizations-Edit",
+    "id": "129:8843",
+    "x": 6808,
+    "y": 0,
+    "w": 550,
+    "h": 720,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 132,
+     "DSR": 0,
+     "Kit": 85,
+     "Other": 47,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "AF",
+      596
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Add Family Member",
+      "Frame 758531845",
+      "(footer) Frame 758531555",
+      "Text Button 166 x2"
+     ],
+     "extras": [
+      "form card 518x580 #EEF7F9"
+     ]
+    }
+   },
+   {
+    "name": "Page=ImplantableDevices",
+    "id": "129:8928",
+    "x": 6808,
+    "y": 0,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 111,
+     "DSR": 0,
+     "Kit": 79,
+     "Other": 32,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       119,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Frame 143727238 search 58",
+      "Frame 758531534 40",
+      "Frame 758531536 divider 16",
+      "Frame 758531538 286",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "Button 518x42 outlined",
+      "Frame 758531537 74"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin-ImplantableDevices-Edit",
+    "id": "129:9040",
+    "x": 6808,
+    "y": 0,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 140,
+     "DSR": 0,
+     "Kit": 106,
+     "Other": 34,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Frame 143727238",
+      "Frame 758531534",
+      "Add Family Member 48",
+      "Frame 758531536",
+      "Frame 758531538",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "Frame 758531537 518x476 form"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_PMHx",
+    "id": "129:9205",
+    "x": 6808,
+    "y": 0,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 140,
+     "DSR": 0,
+     "Kit": 98,
+     "Other": 42,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Frame 143727238 x2",
+      "Frame 758531534",
+      "Frame 758531536",
+      "Frame 758531538",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "three checklist sections 52/84/52 (Header 20 + Items)",
+      "Comments 118"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_PMHx-Comment",
+    "id": "129:9392",
+    "x": 6808,
+    "y": 0,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 160,
+     "DSR": 0,
+     "Kit": 112,
+     "Other": 48,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Frame 143727238 x2",
+      "Frame 758531534",
+      "Frame 758531536",
+      "Frame 758531538",
+      "Autocomplete dropdown 270x276",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "sections 52/149/52",
+      "Comments 118 with Autocomplete Select Field 110"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_PSHx",
+    "id": "129:9614",
+    "x": 3978,
+    "y": 0,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 85,
+     "DSR": 0,
+     "Kit": 52,
+     "Other": 33,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "Present list 518x320 (8 checkbox rows)",
+      "title text reads \"Past Medical History\" although the variant is Clin_PSHx"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Problems-Main",
+    "id": "545:5239",
+    "x": 10770,
+    "y": 16,
+    "w": 550,
+    "h": 517,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 3,
+    "family": "PR",
+    "provenance": {
+     "instances": 48,
+     "DSR": 6,
+     "Kit": 24,
+     "Other": 15,
+     "Local": 3
+    },
+    "structure": {
+     "header": [
+      "Header",
+      64,
+      "16/16/16/16",
+      16,
+      true,
+      "none",
+      "icon 24 direct child; title fills 478"
+     ],
+     "body": [
+      "MainWrap",
+      "V p16/20/16/20 g8",
+      "AF",
+      377
+     ],
+     "footer": [
+      "Footer",
+      76,
+      "H p20/20/20/20 g12 FA",
+      [
+       243,
+       66
+      ]
+     ],
+     "hidden": [
+      "(body) diversity icon frames x3"
+     ],
+     "extras": [
+      "toolbar row 510x42: _button template 185 outlined + Autocomplete 274",
+      "checkbox row: two DSR Form control label",
+      "Item rows 510x71 H p12/4 g8 with 40x40 outlined icon buttons; Divider (kit) between"
+     ]
+    }
+   },
+   {
+    "name": "Page=Page54",
+    "id": "4704:17095",
+    "x": 10770,
+    "y": 900,
+    "w": 550,
+    "h": 517,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 3,
+    "family": "PR",
+    "provenance": {
+     "instances": 45,
+     "DSR": 3,
+     "Kit": 24,
+     "Other": 15,
+     "Local": 3
+    },
+    "structure": {
+     "header": [
+      "Header",
+      64,
+      "16/16/16/16",
+      16,
+      true,
+      "none",
+      "icon 24 direct child"
+     ],
+     "body": [
+      "MainWrap",
+      "V p16/20/16/20 g8",
+      "FF",
+      377
+     ],
+     "footer": [
+      "Footer",
+      76,
+      "H p20/20/20/20 g12 FA",
+      [
+       243,
+       66
+      ]
+     ],
+     "hidden": [
+      "(body) Item1, Item3 x2, Divider x2"
+     ],
+     "extras": [
+      "empty state: only toolbar + one Form control label (checked)"
+     ]
+    }
+   },
+   {
+    "name": "Clin_Problems-Drop",
+    "id": "4494:3240",
+    "x": 11336,
+    "y": 16,
+    "w": 550,
+    "h": 510,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 5,
+    "family": "PR",
+    "provenance": {
+     "instances": 46,
+     "DSR": 3,
+     "Kit": 25,
+     "Other": 15,
+     "Local": 3
+    },
+    "structure": {
+     "header": [
+      "Header",
+      64,
+      "16/16/16/16",
+      16,
+      true,
+      "none",
+      "icon 24 direct child"
+     ],
+     "body": [
+      "MainWrap",
+      "V p16/20/16/20 g8",
+      "AF",
+      370
+     ],
+     "footer": [
+      "Footer",
+      76,
+      "H p20/20/20/20 g12 FA",
+      [
+       243,
+       66
+      ]
+     ],
+     "hidden": [
+      "(body) diversity icon frames x3"
+     ],
+     "extras": [
+      "Item2 64 (single-line)",
+      "ROOT-LEVEL OVERLAY: Autocomplete dropdown instance 344x132 and \"image 31\" RECTANGLE 23x30 (IMAGE fill) sitting outside the auto-layout flow"
+     ]
+    }
+   },
+   {
+    "name": "Clin_Problems-Edit",
+    "id": "4536:27605",
+    "x": 11902,
+    "y": 16,
+    "w": 550,
+    "h": 458,
+    "visible": true,
+    "rootLayout": "V p0 g0 AA",
+    "directChildren": 3,
+    "family": "PR",
+    "provenance": {
+     "instances": 37,
+     "DSR": 0,
+     "Kit": 29,
+     "Other": 8,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Header",
+      64,
+      "16/16/16/16",
+      16,
+      true,
+      "none",
+      "icon 24 direct child"
+     ],
+     "body": [
+      "MainWrap",
+      "V p16/20/16/20 g16",
+      "AF",
+      318
+     ],
+     "footer": [
+      "Footer",
+      76,
+      "H p20/20/20/20 g12 FA",
+      [
+       348,
+       72,
+       66
+      ]
+     ],
+     "hidden": [],
+     "extras": [
+      "Text Field 510x40",
+      "row 54: Text Field 332 + Type toggle 162",
+      "row 40: two date fields 251 (detached templates)",
+      "Text Field 510x104 multiline (detached)",
+      "footer leading Text Button 348 \"Mark as error\" in red"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Problems2-Edit",
+    "id": "129:10016",
+    "x": 12468,
+    "y": 16,
+    "w": 550,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 80,
+     "DSR": 0,
+     "Kit": 41,
+     "Other": 35,
+     "Local": 4
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden Breadcrumb Buttons 648:1596",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p16/16/16/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Tab Set Meta 518x56",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "search row 40",
+      "result list 518x284"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Problems-Recent",
+    "id": "4618:4930",
+    "x": 13034,
+    "y": 16,
+    "w": 550,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 83,
+     "DSR": 3,
+     "Kit": 41,
+     "Other": 36,
+     "Local": 3
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden Breadcrumb Buttons",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p16/16/16/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       68,
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Tab Set Meta",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "footer leading 68x36 is a DSR Button variant=text (the only DSR button in the set)"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Problems-Favorites",
+    "id": "4618:5137",
+    "x": 13600,
+    "y": 16,
+    "w": 550,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 80,
+     "DSR": 0,
+     "Kit": 41,
+     "Other": 35,
+     "Local": 4
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden Breadcrumb Buttons",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p16/16/16/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Tab Set Meta",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "star icons instead of star_border"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_MedList",
+    "id": "545:5557",
+    "x": 14166,
+    "y": 16,
+    "w": 550,
+    "h": 380,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 3,
+    "family": "PR",
+    "provenance": {
+     "instances": 16,
+     "DSR": 0,
+     "Kit": 10,
+     "Other": 6,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Header",
+      64,
+      "16/16/16/16",
+      16,
+      true,
+      "none",
+      "icon 24 direct child; hidden Button 51x28 in header"
+     ],
+     "body": [
+      "MainWrap",
+      "V p16/20/16/20 g8",
+      "AF",
+      240
+     ],
+     "footer": [
+      "Footer",
+      76,
+      "V p20/20/20/20 g12 AF",
+      [
+       510
+      ]
+     ],
+     "hidden": [
+      "(header) Button 51x28",
+      "(body) diversity icon"
+     ],
+     "extras": [
+      "_button template 185 outlined",
+      "Item1 71 / Divider / Item3 71 (V)",
+      "footer single full-width kit Button Full Width=True"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_SHx",
+    "id": "129:10181",
+    "x": 14732,
+    "y": 16,
+    "w": 550,
+    "h": 778,
+    "visible": true,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 244,
+     "DSR": 0,
+     "Kit": 149,
+     "Other": 95,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g24",
+      "AF",
+      654
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) Autocomplete dropdown 270x276",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "five sections (Alcohol, Tobacco x2, LivingEnvironment x2): Header 28/36 + chip row 40/92 with 22 Chip - Input",
+      "Comments 118"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_THx",
+    "id": "129:10364",
+    "x": 6242,
+    "y": 0,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 150,
+     "DSR": 0,
+     "Kit": 79,
+     "Other": 71,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g24",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "Button 518x42 outlined",
+      "Frame 758531884 138: Item 1 49, divider, Item 2 49"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Vitals-Default",
+    "id": "129:10481",
+    "x": 15298,
+    "y": 16,
+    "w": 441,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "VT",
+    "provenance": {
+     "instances": 72,
+     "DSR": 0,
+     "Kit": 50,
+     "Other": 22,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs (441 wide)",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper; title in Frame 758531830"
+     ],
+     "body": [
+      "Summary_Wrap (441)",
+      "V p8/16/8/16 g16",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478 (441)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       425
+      ]
+     ],
+     "hidden": [
+      "Frame 758531776",
+      "Frame 758531780 (550 wide, wider than root)",
+      "Frame 758531486",
+      "Tabs (550 wide)",
+      "(body) Contextual Alert x2",
+      "View change log 12/18 #1B75D0 (bound)",
+      "Frame 758532125",
+      "Frame 758532144 SECONDARY",
+      "(footer) Frame 758531555",
+      "Text Button 72, 56",
+      "Button 171, 66"
+     ],
+     "extras": [
+      "Quick Entry field Frame 758532138 409x48",
+      "Or use editor row 409x24 14/150% #004852",
+      "DataRows 409x244 five rows 36 g16 with sparkline + 40x40 outlined icon button",
+      "footer single full-width Button 425 (kit Full Width=True)"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Vitals-Default-Alert",
+    "id": "3569:22346",
+    "x": 15755,
+    "y": 16,
+    "w": 441,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "VT",
+    "provenance": {
+     "instances": 72,
+     "DSR": 0,
+     "Kit": 50,
+     "Other": 22,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs (441)",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap (441)",
+      "V p8/16/8/16 g16",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478 (441)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       425
+      ]
+     ],
+     "hidden": [
+      "scaffold x4 (550 wide)",
+      "(body) View change log",
+      "Frame 758532125",
+      "Contextual Alert (second)",
+      "SECONDARY",
+      "(footer) Text Button x2, Button x2"
+     ],
+     "extras": [
+      "Contextual Alert Info 409x40 VISIBLE",
+      "DataRows 256 (Row_BP 48)"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Vitals-QuickEntried",
+    "id": "3557:15328",
+    "x": 16212,
+    "y": 16,
+    "w": 441,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "VT",
+    "provenance": {
+     "instances": 73,
+     "DSR": 0,
+     "Kit": 51,
+     "Other": 22,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs (441)",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap (441)",
+      "V p8/16/8/16 g16",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478 (441)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       425
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) View change log",
+      "Frame 758532125",
+      "Contextual Alert",
+      "Supporting Text",
+      "SECONDARY",
+      "(footer) Text Button x2, Button x2"
+     ],
+     "extras": [
+      "Quick Entry expanded: Field 409x156 stroke #000000 (detached text field template)",
+      "DataRows 256"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Vitals-Expanded-Chart",
+    "id": "3496:15197",
+    "x": 16669,
+    "y": 16,
+    "w": 441,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "VT",
+    "provenance": {
+     "instances": 59,
+     "DSR": 0,
+     "Kit": 41,
+     "Other": 18,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs (441)",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Frame 758532146 > Summary_Wrap (441)",
+      "H g8 FF > V p8/16/8/16 g16",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478 (441)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       "_button template 425 (kit template, not a Button)"
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) View change log",
+      "Frame 758532125",
+      "(footer) Text Button x2, Button x2"
+     ],
+     "extras": [
+      "DataRows 409x516 (expanded charts) overflows the fixed 476 body",
+      "\"Or use editor\" #417E86 here vs #004852 elsewhere"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Vitals-Expanded-Table",
+    "id": "3501:15528",
+    "x": 17126,
+    "y": 16,
+    "w": 441,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "VT",
+    "provenance": {
+     "instances": 59,
+     "DSR": 0,
+     "Kit": 41,
+     "Other": 18,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs (441)",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap (441)",
+      "V p8/16/8/16 g16",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478 (441)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       "_button template 425"
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) View change log",
+      "Frame 758532125",
+      "(footer) Text Button x2, Button x2"
+     ],
+     "extras": [
+      "DataRows 409x558 with Frame 758532134 338 fill #F6F2EC (expanded table) overflows 476"
+     ]
+    }
+   },
+   {
+    "name": "Page=Clin_Vitals-Editor",
+    "id": "3496:14449",
+    "x": 17583,
+    "y": 16,
+    "w": 441,
+    "h": 600,
+    "visible": true,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "VT",
+    "provenance": {
+     "instances": 59,
+     "DSR": 0,
+     "Kit": 39,
+     "Other": 20,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs (441)",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper; title \"Vitals: New\""
+     ],
+     "body": [
+      "Summary_Wrap (441)",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478 (441)",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       72,
+       66,
+       127
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) View change log",
+      "Button 409x36",
+      "SECONDARY",
+      "(footer) Frame 758531555",
+      "Text Button 166 x2"
+     ],
+     "extras": [
+      "Hide editor row",
+      "editor card Frame 758532127 409x284 stroke #D6D6D6: Heading 44 #F6F6F6 + three rows 80"
+     ]
+    }
+   },
+   {
+    "name": "Page=Page43",
+    "id": "3496:13859",
+    "x": 14405,
+    "y": 16,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 45,
+     "DSR": 0,
+     "Kit": 28,
+     "Other": 17,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g16",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "View change log VISIBLE 518x18",
+      "two Cards rows of three tiles 162x155 fill #8657AC@0.06 stroke #8657AC"
+     ]
+    }
+   },
+   {
+    "name": "Clin_Vitals2",
+    "id": "2116:8944",
+    "x": 14405,
+    "y": 16,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 FF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 55,
+     "DSR": 0,
+     "Kit": 29,
+     "Other": 26,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16.022226333618164,
+      true,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(body) column \"1\" 108x414",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "five-column table Frame 758531441 518x268",
+      "View change log visible"
+     ]
+    }
+   },
+   {
+    "name": "Page=CareChecklist",
+    "id": "129:11224",
+    "x": 11902,
+    "y": 0,
+    "w": 550,
+    "h": 600,
+    "visible": false,
+    "rootLayout": "V p0 g0 AF",
+    "directChildren": 7,
+    "family": "CL",
+    "provenance": {
+     "instances": 57,
+     "DSR": 0,
+     "Kit": 34,
+     "Other": 23,
+     "Local": 0
+    },
+    "structure": {
+     "header": [
+      "Breadcrumbs",
+      64,
+      "16/16/16/16",
+      16,
+      false,
+      "hidden",
+      "icon 24 in wrapper"
+     ],
+     "body": [
+      "Summary_Wrap",
+      "V p8/16/8/16 g12",
+      "FF",
+      476
+     ],
+     "footer": [
+      "Frame 758531478",
+      60,
+      "H p8/8/8/8 g21 FF",
+      [
+       171,
+       66
+      ]
+     ],
+     "hidden": [
+      "scaffold x4",
+      "(footer) Frame 758531555",
+      "Text Button x2"
+     ],
+     "extras": [
+      "Add row 518x48 VISIBLE #FFFFFF stroke #8CA7A2 \"Add New Care Checklist Item\" #417E86",
+      "two Father cards 74"
+     ]
+    }
+   }
+  ],
+  "provenanceTotals": {
+   "instances": 4722,
+   "DSR": 15,
+   "Kit": 2892,
+   "Other": 1790,
+   "Local": 25
+  },
+  "provenanceReading": "Of 4722 instances under 129:6647: DSR 15, Kit 2892, Other 1790, Local 25. The 15 DSR instances are all on the four Problems children (Form control label, Checkbox, Icon/CheckboxUnchecked, one Button variant=text with PlusOutlined and DownCaret). Enum batch counted 4722 for this node with the same method.",
+  "componentRollup": [
+   {
+    "component": "Kit | caret_down",
+    "instances": 277
+   },
+   {
+    "component": "Other | plus",
+    "instances": 266
+   },
+   {
+    "component": "Kit | close_outlined",
+    "instances": 205
+   },
+   {
+    "component": "Other | close",
+    "instances": 205
+   },
+   {
+    "component": "Kit | plus_outline",
+    "instances": 179
+   },
+   {
+    "component": "Kit | Checkbox/State=Unchecked",
+    "instances": 178
+   },
+   {
+    "component": "Kit | Caption",
+    "instances": 174
+   },
+   {
+    "component": "Other | _icon button template",
+    "instances": 170
+   },
+   {
+    "component": "Kit | _tab template",
+    "instances": 168
+   },
+   {
+    "component": "Kit | _tab indicator",
+    "instances": 168
+   },
+   {
+    "component": "Other | Icon Button/Default/Small/False/False",
+    "instances": 145
+   },
+   {
+    "component": "Other | Interface, Essential/Delete, Disabled (close X icon)",
+    "instances": 136
+   },
+   {
+    "component": "Kit | _button template/Size=Medium",
+    "instances": 126
+   },
+   {
+    "component": "Kit | close_filled",
+    "instances": 98
+   },
+   {
+    "component": "Other | close-alt",
+    "instances": 98
+   },
+   {
+    "component": "Kit | Chip - Input (Filter)",
+    "instances": 94
+   },
+   {
+    "component": "Kit | Tab/State=Inactive",
+    "instances": 87
+   },
+   {
+    "component": "Other | Icons / Interface / 12px/Icon=forward",
+    "instances": 84
+   },
+   {
+    "component": "Kit | Text Button/Type=Default",
+    "instances": 84
+   },
+   {
+    "component": "Kit | _chip template",
+    "instances": 71
+   },
+   {
+    "component": "Kit | menu",
+    "instances": 70
+   },
+   {
+    "component": "Other | Interface, Essential/Lock",
+    "instances": 68
+   },
+   {
+    "component": "Kit | ellipsis_linear",
+    "instances": 65
+   },
+   {
+    "component": "Other | _table row template",
+    "instances": 60
+   },
+   {
+    "component": "Kit | drag-drop",
+    "instances": 60
+   },
+   {
+    "component": "Kit | check_filled",
+    "instances": 58
+   },
+   {
+    "component": "Other | check-alt",
+    "instances": 58
+   },
+   {
+    "component": "Kit | _input field desktop template",
+    "instances": 56
+   },
+   {
+    "component": "Other | Interface, Essential/Arrow",
+    "instances": 54
+   },
+   {
+    "component": "Kit | Button/Type=Default, Size=Medium",
+    "instances": 49
+   },
+   {
+    "component": "Other | Breadcrumb Buttons/Type=Back Button",
+    "instances": 44
+   },
+   {
+    "component": "Other | Icons / Interface / 16px/Icon=backward",
+    "instances": 44
+   },
+   {
+    "component": "Other | Breadcrumbs/Stste=Default",
+    "instances": 42
+   },
+   {
+    "component": "Other | Breadcrumbs/Stste=Link",
+    "instances": 42
+   },
+   {
+    "component": "Kit | Tab Set",
+    "instances": 42
+   },
+   {
+    "component": "Kit | Tab/State=Active",
+    "instances": 42
+   },
+   {
+    "component": "Kit | Text Field - Desktop/State=Select Input",
+    "instances": 40
+   },
+   {
+    "component": "Kit | Tab/State=Disabled",
+    "instances": 39
+   },
+   {
+    "component": "Kit | Chip - Status/Type=Info",
+    "instances": 32
+   },
+   {
+    "component": "Kit | Chip - Status/Type=Success",
+    "instances": 31
+   },
+   {
+    "component": "Kit | Button/Type=Primary, Size=Medium",
+    "instances": 30
+   },
+   {
+    "component": "Kit | calendar_outline",
+    "instances": 27
+   },
+   {
+    "component": "Other | calendar",
+    "instances": 27
+   },
+   {
+    "component": "Kit | _button template/Size=Small",
+    "instances": 24
+   },
+   {
+    "component": "Kit | caret_up",
+    "instances": 22
+   },
+   {
+    "component": "Kit | Cell - Tabular Data (White)",
+    "instances": 20
+   },
+   {
+    "component": "Kit | Cell - Tabular Data (Gray)",
+    "instances": 20
+   },
+   {
+    "component": "Other | Interface, Essential/Trash, Delete, Bin",
+    "instances": 19
+   },
+   {
+    "component": "Other | Edit_light",
+    "instances": 18
+   },
+   {
+    "component": "Other | Arrows, Diagrams/Arrow",
+    "instances": 17
+   },
+   {
+    "component": "Kit | Checkbox/State=Checked",
+    "instances": 17
+   },
+   {
+    "component": "Other | Checkbox/Checked=Yes",
+    "instances": 16
+   },
+   {
+    "component": "Kit | chat1",
+    "instances": 16
+   },
+   {
+    "component": "Other | outline/chat-bubble-left",
+    "instances": 16
+   },
+   {
+    "component": "Kit | _autocomplete field template",
+    "instances": 13
+   },
+   {
+    "component": "Kit | Body/Size=Body 1",
+    "instances": 12
+   },
+   {
+    "component": "Kit | Divider/Color=Light",
+    "instances": 12
+   },
+   {
+    "component": "Kit | _alerts template",
+    "instances": 11
+   },
+   {
+    "component": "Other | Content, Edit/Pen, Edit",
+    "instances": 11
+   },
+   {
+    "component": "Kit | Radio Option/Count=Single",
+    "instances": 11
+   },
+   {
+    "component": "Other | _radio structure",
+    "instances": 11
+   },
+   {
+    "component": "Other | 2. Radio/1. Selected/1. Enabled",
+    "instances": 11
+   },
+   {
+    "component": "Local | Check-Circle/Mode=NotSelected (local)",
+    "instances": 11
+   },
+   {
+    "component": "Kit | sort",
+    "instances": 10
+   },
+   {
+    "component": "Kit | Cell - Tabular Data",
+    "instances": 10
+   },
+   {
+    "component": "Local | EditIcon/State=Default (local)",
+    "instances": 10
+   },
+   {
+    "component": "Kit | Button/Type=Default, Size=Small",
+    "instances": 10
+   },
+   {
+    "component": "Kit | Radio Button/Selected=False",
+    "instances": 9
+   },
+   {
+    "component": "Other | Interface, Essential/Search",
+    "instances": 9
+   },
+   {
+    "component": "Kit | _button template/Size=Large",
+    "instances": 8
+   },
+   {
+    "component": "Kit | Autocomplete Select Field/State=Inactive",
+    "instances": 8
+   },
+   {
+    "component": "Other | star_border/Style=Outlined",
+    "instances": 8
+   },
+   {
+    "component": "Other | Interface, Essential/dots",
+    "instances": 8
+   },
+   {
+    "component": "Kit | Column - Tabular Data",
+    "instances": 6
+   },
+   {
+    "component": "Other | _table header template",
+    "instances": 6
+   },
+   {
+    "component": "Kit | Button/Type=Default, Icon=Right",
+    "instances": 6
+   },
+   {
+    "component": "Other | menu (second library)",
+    "instances": 6
+   },
+   {
+    "component": "Kit | Button/Type=Default, Size=Large",
+    "instances": 5
+   },
+   {
+    "component": "Kit | Cell - Tabular Data (White, Checkbox)",
+    "instances": 5
+   },
+   {
+    "component": "Kit | Cell - Tabular Data (Gray, Checkbox)",
+    "instances": 5
+   },
+   {
+    "component": "Kit | Chip - Status/Type=Info, Drop Chip=True",
+    "instances": 5
+   },
+   {
+    "component": "Kit | Autocomplete/Multi-select=None",
+    "instances": 5
+   },
+   {
+    "component": "Kit | Contextual Alert/Type=Info, Dismissible=True",
+    "instances": 5
+   },
+   {
+    "component": "Kit | info_filled",
+    "instances": 5
+   },
+   {
+    "component": "Other | info-alt",
+    "instances": 5
+   },
+   {
+    "component": "Kit | Text Field - Desktop/State=Input Selected, Helper Text=True",
+    "instances": 5
+   },
+   {
+    "component": "Kit | Text Field - Desktop/State=Input Selected, Helper Text=False",
+    "instances": 5
+   },
+   {
+    "component": "Other | Interface, Essential/Send message",
+    "instances": 4
+   },
+   {
+    "component": "Other | Health, Medicine/hospital-center-2",
+    "instances": 4
+   },
+   {
+    "component": "Kit | Contextual Alert/Type=Warning, Dismissible=False",
+    "instances": 4
+   },
+   {
+    "component": "Kit | warning_filled",
+    "instances": 4
+   },
+   {
+    "component": "Local | ConfigAndData-Line-Don't remove! (local chart config)",
+    "instances": 4
+   },
+   {
+    "component": "Kit | Header - Tabular Data/Checkbox=False",
+    "instances": 4
+   },
+   {
+    "component": "DSR | Form control label/State=Default (DSR)",
+    "instances": 4
+   },
+   {
+    "component": "Other | star/Style=Outlined",
+    "instances": 4
+   },
+   {
+    "component": "Kit | Button/Type=Default, Size=Medium, Full Width=True",
+    "instances": 4
+   },
+   {
+    "component": "Other | Interface, Essential/Chart, Square",
+    "instances": 3
+   },
+   {
+    "component": "Other | Science/lab-tube",
+    "instances": 3
+   },
+   {
+    "component": "Other | Health, Medicine/Heartbeat, Heart",
+    "instances": 3
+   },
+   {
+    "component": "Kit | attention_filled",
+    "instances": 3
+   },
+   {
+    "component": "Other | attention-alt",
+    "instances": 3
+   },
+   {
+    "component": "Other | ThumbsDown/State=Default",
+    "instances": 3
+   },
+   {
+    "component": "Kit | Button/Type=Default, Icon=Right, Size=Medium",
+    "instances": 3
+   },
+   {
+    "component": "Other | caret",
+    "instances": 3
+   },
+   {
+    "component": "Other | Icon Button/Default/Small/False/True",
+    "instances": 3
+   },
+   {
+    "component": "Kit | Chip - Status/Type=Success, Drop Chip=True",
+    "instances": 3
+   },
+   {
+    "component": "Kit | _text button template",
+    "instances": 3
+   },
+   {
+    "component": "DSR | Checkbox/Checked=Unchecked, State=Default (DSR)",
+    "instances": 3
+   },
+   {
+    "component": "DSR | Icon/CheckboxUnchecked (DSR)",
+    "instances": 3
+   },
+   {
+    "component": "Kit | Button/Type=Primary, State=Disabled",
+    "instances": 3
+   },
+   {
+    "component": "Other | Check-Circle/Mode=Selected",
+    "instances": 3
+   },
+   {
+    "component": "Other | Health, Medicine/Syringe",
+    "instances": 2
+   },
+   {
+    "component": "Other | Interface, Essential/bulb-light-gloss",
+    "instances": 2
+   },
+   {
+    "component": "Other | Interface, Essential/Flag",
+    "instances": 2
+   },
+   {
+    "component": "Other | brain_02",
+    "instances": 2
+   },
+   {
+    "component": "Other | Health, Medicine/virus",
+    "instances": 2
+   },
+   {
+    "component": "Other | Interface, Essential/Emails, Letter, Mail",
+    "instances": 2
+   },
+   {
+    "component": "Other | User/User,Profile",
+    "instances": 2
+   },
+   {
+    "component": "Other | Health, Medicine/checklist-heart-square",
+    "instances": 2
+   },
+   {
+    "component": "Other | Interface, Essential/Note, Document, Clip",
+    "instances": 2
+   },
+   {
+    "component": "Other | Health, Medicine/prescription-square",
+    "instances": 2
+   },
+   {
+    "component": "Other | Content, Edit/Notes,Planner",
+    "instances": 2
+   },
+   {
+    "component": "Other | Health, Medicine/bandage-shoulder",
+    "instances": 2
+   },
+   {
+    "component": "Other | User/Group, User",
+    "instances": 2
+   },
+   {
+    "component": "Other | Interface, Essential/Status, Menu",
+    "instances": 2
+   },
+   {
+    "component": "Other | Health, Medicine/medical-cross-refresh",
+    "instances": 2
+   },
+   {
+    "component": "Other | Interface, Essential/Ticket, Group, Circle",
+    "instances": 2
+   },
+   {
+    "component": "Other | Health, Medicine/crutches",
+    "instances": 2
+   },
+   {
+    "component": "Other | Travel/Airplane",
+    "instances": 2
+   },
+   {
+    "component": "Other | ThumbsUp/State=Default",
+    "instances": 2
+   },
+   {
+    "component": "Kit | Text Field - Tablet + Mobile/State=Provide Input",
+    "instances": 2
+   },
+   {
+    "component": "Kit | _input field tablet mobile template",
+    "instances": 2
+   },
+   {
+    "component": "Kit | Radio Button/Selected=True",
+    "instances": 2
+   },
+   {
+    "component": "Other | solid/chat-bubble-left",
+    "instances": 2
+   },
+   {
+    "component": "Kit | Text Field - Desktop/State=Input Provided",
+    "instances": 2
+   },
+   {
+    "component": "Other | Autocomplete Select Field/State=Inactive (variant 2)",
+    "instances": 2
+   },
+   {
+    "component": "Kit | chat-fill",
+    "instances": 2
+   },
+   {
+    "component": "Kit | Contextual Alert/Type=Error, Dismissible=False",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Contextual Alert/Type=Error, Dismissible=True",
+    "instances": 1
+   },
+   {
+    "component": "Other | ThumbsUp/State=Selected",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Data Grid/Header Color=True, Alt Rows=True",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Header - Tabular Data/Checkbox=True",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Header - Tabular Data",
+    "instances": 1
+   },
+   {
+    "component": "Kit | ellipsis_filled",
+    "instances": 1
+   },
+   {
+    "component": "Other | ellipsis-alt",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Autocomplete Select Field/State=Multi Select",
+    "instances": 1
+   },
+   {
+    "component": "Other | Interface, Essential/Strike",
+    "instances": 1
+   },
+   {
+    "component": "Other | Interface, Essential/Underline",
+    "instances": 1
+   },
+   {
+    "component": "Other | Interface, Essential/Clip, Attachment",
+    "instances": 1
+   },
+   {
+    "component": "Other | Interface, Essential/Photo, Image, Square",
+    "instances": 1
+   },
+   {
+    "component": "Other | Sidesheetv3/Page=… (REMOTE variant of a Sidesheetv3 set in another file)",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Text Field - Desktop/State=Select Input (variant 2)",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Checkbox Item/Property 1=Single",
+    "instances": 1
+   },
+   {
+    "component": "DSR | Checkbox/Checked=Checked, State=Default (DSR)",
+    "instances": 1
+   },
+   {
+    "component": "DSR | Icon/CheckboxChecked (DSR)",
+    "instances": 1
+   },
+   {
+    "component": "Other | check_circle/Style=Filled",
+    "instances": 1
+   },
+   {
+    "component": "DSR | Button/variant=text, color=primary, size=medium (DSR)",
+    "instances": 1
+   },
+   {
+    "component": "DSR | Icon/PlusOutlined (DSR)",
+    "instances": 1
+   },
+   {
+    "component": "DSR | Icon/DownCaret (DSR)",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Dropdown - Open",
+    "instances": 1
+   },
+   {
+    "component": "Kit | Button/Type=Default, Icon=Left",
+    "instances": 1
+   }
+  ],
+  "paintSummary": {
+   "boundPaints": "One. \"View change log\" text #1B75D0 carries a bound colour variable on 9 Vitals/Page43/Vitals2 children. Every other paint read under 129:6647 is unbound (raw hex).",
+   "root": "fill #FFFFFF@1.00, stroke #D6D6D6@1.00 w1 all sides, cornerRadius not read",
+   "header": "no fill; bottom stroke #D6D6D6@1.00 (strokeWeight mixed = single edge) on 32 children, none on 20; title #545454@1.00",
+   "subheaderFlowsheets": "#F5F5F5@1.00, bottom stroke #D6D6D6; column row #D4E0DD@1.00",
+   "formCard": "#EEF7F9@1.00 fill, stroke #D6D6D6@1.00 w1 (Allergies-Edit, FHX-Editing, HEdit, ExternalCareFS, ProSH_Edit, Immunizations-Edit)",
+   "outlinedControls": "stroke #8CA7A2@1.00 w1 on kit _button template outlines, hand-drawn Add rows, 40x40 icon buttons",
+   "brand": "#004852 (tab bar fill, field focus stroke, \"Or use editor\"), #417E86 (Add-row link text), #B54E1A (flowsheet latest value)",
+   "misc": "#F0F0F0 / #ECECEC segmented-control grounds, #F6F2EC / #F0EEE8 selected pills, #FEF5D5 warning card, #F9F9F9 summary card, #8657AC@0.06 tiles, #D0ECF1/#83CDD9 and #F7F7F7/#DEDEDE hand-drawn badges, GRADIENT_LINEAR on Index tiles"
+  },
+  "typeSummary": {
+   "title": "Akkurat LL Bold 20/32 #545454 (all 54 headers)",
+   "sectionHeading": "Akkurat LL Bold 16/24 #545454 (HealthStatus, Immunizations); Bold 16/20 #004852/#FFFFFF in tab bars",
+   "body": "mixed-style rich text 16/150% #000000 (summaries, notes)",
+   "columnHeader": "Akkurat LL Bold 14/18 #000000 (flowsheet table)",
+   "tabLabel": "Akkurat LL Bold 14/20 #545454 (hidden segmented control)",
+   "link": "Akkurat LL Regular 12/18 #1B75D0 (bound) \"View change log\"; Regular 14/150% #004852 \"Or use editor\"; Regular 16/20 #417E86 \"Add …\"",
+   "rowText": "Akkurat LL Regular 16/20 #000000 / #545454; Regular 14/18 #545454 dates",
+   "metric": "Akkurat LL Bold 16/20 #B54E1A (flowsheet latest)",
+   "eyebrow": "Akkurat LL Bold 16/20 #6E6E6E \"SECONDARY\" (hidden)"
+  },
+  "library": {
+   "readMethod": "Design System Rebuild read with loadAsync only. No node was created, so no instance was placed for paint reads. Paints below come from (a) the Drawer masters, which have no on-canvas instance anywhere in the library, and (b) Dialog instance 787:1457 on Compositions. Drawer paint is therefore master-level and NOT yet instance-verified per standingBatchRules 1.",
+   "drawer": {
+    "set": "749:239",
+    "variants": {
+     "anchor=left, variant=temporary": "187:3",
+     "anchor=right, variant=temporary": "749:212",
+     "anchor=left, variant=persistent": "749:221",
+     "anchor=right, variant=persistent": "749:230"
+    },
+    "size": "320x560",
+    "root": "V p0 g0 FF, fill #FFFFFF bound, stroke #D6D6D6 bound (w0 on temporary = shadow only; single edge on persistent)",
+    "header": "Header 749:231 320x56 H p8/8/8/16 g8: Title Akkurat LL Bold 20/32 #000000 bound; Icon button 40x40 with Icon/Close (MUI)",
+    "divider": "Divider 749:234 320x1 #D6D6D6 bound",
+    "body": "four List/Item 320x72 instances; no free content slot"
+   },
+   "dialog": {
+    "set": "747:185",
+    "variantSm": "186:4",
+    "size": "600x182",
+    "root": "V p0 g0 AF #FFFFFF bound, cornerRadius 4",
+    "title": "Title 186:5 600x64 H p16/24/16/24 g8; Text Akkurat LL Regular 20/32 #000000 bound",
+    "content": "Content 186:7 H p20/24/20/24; Text Regular 16/24 #545454 bound",
+    "actions": "Actions 186:9 600x54 H p8/8/8/8 g8 right-aligned: Button text 68x36, Button contained 94x38 #FF8D6E bound",
+    "instanceRead": "787:1457 on Compositions renders identically: title #000000*, body #545454*, contained button #FF8D6E*, labels #004852*"
+   },
+   "ids": {
+    "Button": "79:2",
+    "Button group/Segment": "160:996",
+    "Icon button": "170:77",
+    "Link": "171:33",
+    "Split button": "627:161",
+    "Text field": "121:350",
+    "Checkbox": "136:47",
+    "Radio": "137:31",
+    "Switch": "139:67",
+    "Form control label": "140:15",
+    "Autocomplete/Field": "86:95",
+    "Autocomplete/Option": "88:175",
+    "Autocomplete/Tag": "103:100",
+    "Toggle button": "202:95",
+    "Chip": "156:171",
+    "List/Item": "174:17",
+    "List": "174:18",
+    "Table/Cell": "190:21",
+    "Table/Row": "190:49",
+    "Avatar": "208:11",
+    "Badge": "208:955",
+    "Divider": "171:31",
+    "Alert": "165:57",
+    "Tooltip": "167:15",
+    "Paper": "171:27",
+    "Card": "176:59",
+    "Accordion": "176:85",
+    "Menu/Item": "152:15",
+    "Tabs/Tab": "201:13",
+    "Tabs": "201:14",
+    "Dialog": "747:185",
+    "Drawer": "749:239",
+    "Menu": "749:323",
+    "Icon/DownCaret": "76:5",
+    "Icon/PlusOutlined": "76:8",
+    "Icon/CloseOutlined": "76:11",
+    "Icon/TrashOutlined": "76:14",
+    "Icon/Close (MUI)": "106:4",
+    "Icon/LinearEllipsis": "109:4",
+    "Icon/AttentionFilled": "164:7",
+    "Icon/InfoFilled": "164:10",
+    "Icon/WarningFilled": "164:13",
+    "Icon/List": "200:7",
+    "Icon/FormatBold": "200:19",
+    "Icon/FormatItalic": "200:22",
+    "Icon/FormatUnderline": "200:26",
+    "Icon/Calendar": "200:32",
+    "Icon/CheckCircle (MUI)": "200:41",
+    "Icon/SearchOutlined (MUI)": "312:4",
+    "Icon/EllipsisFilled": "368:4",
+    "Icon/ArrowLeft": "575:3",
+    "Icon/ChatOutlined": "575:6",
+    "Icon/CheckmarkFilled": "575:7",
+    "Icon/Delete": "575:10",
+    "Icon/Document": "575:11",
+    "Icon/DragAndDrop": "575:12",
+    "Icon/EditOutlined": "575:13",
+    "Icon/FavoritesOutlined": "575:17",
+    "Icon/Lock": "575:21",
+    "Icon/PrintOutlined": "575:26",
+    "Icon/Refresh": "575:29",
+    "Icon/Search": "575:30",
+    "Icon/Unsorted": "575:36",
+    "Icon/UpCaret": "575:37",
+    "Icon/ThumbUpOutlined (MUI)": "919:4",
+    "Icon/ThumbDownOutlined (MUI)": "919:7"
+   },
+   "buttonVariantAxes": "Button 79:2 has 54 variants = variant(contained|text) x color(primary|secondary|error|inherit…) x size x State. No outlined variant, no fullWidth axis. Code: overrides/ButtonOverrides.ts defines no outlined rule; MUI base still accepts variant=\"outlined\".",
+   "codeEquivalent": "No Drawer, Sidesheet or Panel component exists in packages/design-system/src/components. overrides/DialogOverrides.ts sets MuiDialog defaultProps maxWidth \"sm\" only. Product code (components/DataGridFilter/FilterGroupDrawer.tsx, FilterButton.tsx) uses MUI <Drawer anchor=\"right\"> with a Box column (p:2, gap:2, boxShadow 5) and a hand-built close row. cobranding/createPartnerTheme.ts styles MuiDrawer paper for the mobile navigation drawer only."
+  },
+  "mapping": [
+   {
+    "region": "Container (paper, 550 or 441 wide, #FFFFFF, 1px #D6D6D6 all sides, no shadow)",
+    "source": "variant root frame",
+    "dsr": "Drawer 749:239, variant anchor=right, variant=persistent 749:230",
+    "verdict": "DEFECT",
+    "note": "Library Drawer is 320 wide with a single-edge stroke (persistent) or a shadow (temporary); source is 550/441 with a full 1px border. Width is an instance override; edge treatment is not."
+   },
+   {
+    "region": "Body slot (free content under the header)",
+    "source": "Main Wrap / Summary_Wrap / MainWrap / BODY",
+    "dsr": "none",
+    "verdict": "GAP",
+    "note": "Drawer 749:239 ships four fixed List/Item children and no slot; an instance cannot host arbitrary children (CLAUDE.md rule 6). The body must be a sibling frame or SCAFFOLDING."
+   },
+   {
+    "region": "Header bar (64 tall, p16, title Akkurat LL Bold 20/32 #545454, bottom rule)",
+    "source": "Breadcrumbs / Header / HEADER / NoteHeader",
+    "dsr": "Drawer Header 749:231 + Divider 749:234 (inside 749:230)",
+    "verdict": "DEFECT",
+    "note": "Library header is 56 tall, p8/8/8/16 g8, title #000000 (bound text primary). Source is 64 tall, p16, title #545454, gap 16 (fractional 16.022 on 30 children). Dialog Title 186:5 is Regular weight and p16/24, further away."
+   },
+   {
+    "region": "Close control",
+    "source": "Interface, Essential/Delete, Disabled 24x24 icon, no hit area (all 54)",
+    "dsr": "Icon button 170:77 (color=default, size=medium) with Icon/CloseOutlined 76:11 or Icon/Close (MUI) 106:4",
+    "verdict": "DEFECT",
+    "note": "Source renders a bare 24px icon-pack glyph; library renders a 40x40 button. The Drawer header already carries this pairing."
+   },
+   {
+    "region": "Back control (edit pages)",
+    "source": "Breadcrumb Buttons 32x32 fill #E9EFEE (129:7826, 129:12486; hidden on 4 others)",
+    "dsr": "Icon button 170:77 with Icon/ArrowLeft 575:3",
+    "verdict": "DEFECT",
+    "note": "Source has a tinted 32px square; library icon button has no fill."
+   },
+   {
+    "region": "Header divider",
+    "source": "bottom stroke #D6D6D6 on the header frame (32 children)",
+    "dsr": "Divider 171:31 (Orientation=Horizontal)",
+    "verdict": "DSR",
+    "note": "Same 1px #D6D6D6; library binds it, source does not."
+   },
+   {
+    "region": "Footer action row (60 tall, p8, gap 21, top rule, right-aligned)",
+    "source": "Frame 758531478 / FOOTER (39 children); Footer 76 tall p20 g12 (5 Problems children)",
+    "dsr": "none as a component; Dialog Actions 186:9 (54 tall, p8 g8, no rule) is the nearest pattern",
+    "verdict": "GAP",
+    "note": "No footer/actions component exists outside Dialog, and Dialog Actions is not separable. Two footer heights and two paddings coexist in the source."
+   },
+   {
+    "region": "Footer buttons: Cancel / Save & Add to Note / Save",
+    "source": "kit Text Button 72, kit Button outlined 171, kit Button Primary 66 (36 tall)",
+    "dsr": "Button 79:2 variant=text; Button 79:2 variant=contained color=primary",
+    "verdict": "GAP",
+    "note": "The outlined middle button (\"Save & Add to Note\", \"Create New Flowsheet\", \"Add Active Problems to Note\", 518-wide \"Add …\" rows) has no library variant: Button 79:2 offers contained and text only, and ButtonOverrides.ts has no outlined rule. Dialog instance 787:1457 renders contained at 94x38 where the kit renders 36.",
+    "superseded": "SUPERSEDED 2026-09-02 by the Button 79:2 re-read (figma-export/button-outlined-check-2026-09-02/report.md): the white pill with a 1px core.main stroke IS Button variant=contained, color=primary (78:14 medium, 78:2 small, 78:26 large), bound to color/common/white and color/core/main, matching containedPrimary in ButtonOverrides.ts. The outlined footer button therefore maps to the library; only the fullWidth axis and the 36-vs-38 height difference remain.",
+    "verdictCorrected": "DSR: text→variant=text color=primary (78:122); outlined→variant=contained color=primary (78:14); coral→variant=contained color=secondary (78:50)."
+   },
+   {
+    "region": "Full-width footer button (Vitals 425, Med List 510)",
+    "source": "kit Button Full Width=True / _button template",
+    "dsr": "Button 79:2 resized",
+    "verdict": "GAP",
+    "note": "No fullWidth axis on the library Button; MUI has one."
+   },
+   {
+    "region": "Contextual alert",
+    "source": "kit Contextual Alert 534x40 (Warning/Error/Info)",
+    "dsr": "Alert 165:57",
+    "verdict": "DSR (paint not compared this batch)",
+    "note": "Library Alert paint was not read against the kit alert in this batch."
+   },
+   {
+    "region": "Text fields",
+    "source": "kit Text Field - Desktop / - Tablet + Mobile, plus 9 detached _input field templates",
+    "dsr": "Text field 121:350",
+    "verdict": "DSR",
+    "note": ""
+   },
+   {
+    "region": "Autocomplete / select",
+    "source": "kit Autocomplete Select Field, Autocomplete dropdown, Dropdown - Open",
+    "dsr": "Autocomplete/Field 86:95, Autocomplete/Option 88:175, Autocomplete/Tag 103:100",
+    "verdict": "DSR",
+    "note": ""
+   },
+   {
+    "region": "Chips (status, filter)",
+    "source": "kit Chip - Status, Chip - Input (Filter)",
+    "dsr": "Chip 156:171",
+    "verdict": "DSR",
+    "note": ""
+   },
+   {
+    "region": "Hand-drawn badges (22 tall pills #D0ECF1/#83CDD9, #F7F7F7/#DEDEDE)",
+    "source": "Frame \"Badge\" on Page49, Labs, Documents",
+    "dsr": "Chip 156:171 size=small",
+    "verdict": "DEFECT",
+    "note": "Library Badge 208:955 is the MUI count badge, not a label pill. Chip is the nearest and renders at a different height."
+   },
+   {
+    "region": "Checkbox / radio rows",
+    "source": "kit Checkbox, Radio Option; 15 DSR Form control label + Checkbox on the Problems children",
+    "dsr": "Checkbox 136:47, Radio 137:31, Form control label 140:15",
+    "verdict": "DSR",
+    "note": "The Problems children already use the library."
+   },
+   {
+    "region": "Segmented control / tabs (hidden scaffold)",
+    "source": "kit Tab Set; hand-drawn Selector and Tabs frames (#F0F0F0 / #ECECEC grounds)",
+    "dsr": "Tabs 201:14 with Tabs/Tab 201:13; Button group/Segment 160:996 or Toggle button 202:95 for the segmented style",
+    "verdict": "DSR",
+    "note": "Hidden in every child; not part of the visible template."
+   },
+   {
+    "region": "Flowsheet sub-header band (#F5F5F5, 74 tall, field + outlined button)",
+    "source": "SUBHEADER / 2NDROW",
+    "dsr": "none",
+    "verdict": "GAP",
+    "note": "Composition-level pattern, no component."
+   },
+   {
+    "region": "Flowsheet column header row (#D4E0DD, Bold 14/18)",
+    "source": "Frame 758532067",
+    "dsr": "Table/Row 190:49 header, Table/Cell 190:21",
+    "verdict": "DSR (paint not compared this batch)",
+    "note": ""
+   },
+   {
+    "region": "Data grid (CareCoordination)",
+    "source": "kit Data Grid 502x396",
+    "dsr": "none",
+    "verdict": "GAP",
+    "note": "The library has Table/Row and Table/Cell only; DataGrid is a separate mechanism (CLAUDE.md rule 7)."
+   },
+   {
+    "region": "Section heading (Bold 16/24 #545454)",
+    "source": "text nodes",
+    "dsr": "text style only",
+    "verdict": "GAP",
+    "note": "No heading component; typography variables exist."
+   },
+   {
+    "region": "Rich text summary (16/150%)",
+    "source": "mixed-style TEXT nodes",
+    "dsr": "text style only",
+    "verdict": "GAP",
+    "note": ""
+   },
+   {
+    "region": "Form card (#EEF7F9, stroke #D6D6D6, p12/p16)",
+    "source": "Frame 758531490 on six edit children",
+    "dsr": "Card 176:59 / Paper 171:27",
+    "verdict": "DEFECT",
+    "note": "Source fill is a tint; library Card/Paper fill was not read this batch, but the library paper is color/background/paper (white) by convention."
+   },
+   {
+    "region": "Row action icon buttons (40x40 outlined circle, stroke #8CA7A2)",
+    "source": "hand-drawn frames on Problems, Vitals, Med List",
+    "dsr": "Icon button 170:77 with Icon/EditOutlined 575:13 / Icon/AddPaymentNote 575:2",
+    "verdict": "DEFECT",
+    "note": "Library icon button has no outline ring."
+   },
+   {
+    "region": "List dividers",
+    "source": "kit Divider/Color=Light",
+    "dsr": "Divider 171:31",
+    "verdict": "DSR",
+    "note": ""
+   },
+   {
+    "region": "Thumbs feedback",
+    "source": "kit ThumbsUp / ThumbsDown",
+    "dsr": "Icon button 170:77 with Icon/ThumbUpOutlined (MUI) 919:4 / ThumbDownOutlined 919:7",
+    "verdict": "DSR",
+    "note": ""
+   },
+   {
+    "region": "Rich-text toolbar (PsychotherapyNote)",
+    "source": "hand-drawn 32x32 buttons with icon-pack glyphs",
+    "dsr": "Icon button 170:77 with Icon/FormatBold 200:19, FormatItalic 200:22, FormatUnderline 200:26, Icon/List 200:7",
+    "verdict": "GAP",
+    "note": "Strikethrough, undo and redo have no library icon."
+   },
+   {
+    "region": "Icon-pack glyphs with a library equivalent",
+    "source": "trash, pen, lock, search, calendar, caret up/down, plus, close, check, arrow-left, ellipsis, chat, star, print, drag, sort, info/warning/attention",
+    "dsr": "Icon/TrashOutlined 76:14, Icon/EditOutlined 575:13, Icon/Lock 575:21, Icon/Search 575:30, Icon/Calendar 200:32, Icon/UpCaret 575:37, Icon/DownCaret 76:5, Icon/PlusOutlined 76:8, Icon/CloseOutlined 76:11, Icon/CheckmarkFilled 575:7, Icon/ArrowLeft 575:3, Icon/LinearEllipsis 109:4, Icon/ChatOutlined 575:6, Icon/FavoritesOutlined 575:17, Icon/PrintOutlined 575:26, Icon/DragAndDrop 575:12, Icon/Unsorted 575:36, Icon/InfoFilled 164:10, Icon/WarningFilled 164:13, Icon/AttentionFilled 164:7",
+    "verdict": "DSR",
+    "note": "Glyph shapes differ between icon packs; match is by meaning."
+   },
+   {
+    "region": "Icon-pack glyphs with no library equivalent",
+    "source": "Syringe, virus, Flag, Send, Mail, Strike, Photo, Clip, Chart Square, lab-tube, prescription, bandage, heartbeat, crutches, airplane, bulb, brain_02, hospital, dots, Notes, User group, Ticket, Status menu, medical-cross-refresh, undo/redo arrows, open_in_new, diversity",
+    "dsr": "none",
+    "verdict": "GAP",
+    "note": "Mostly on the two hidden Index children and the toolbar."
+   },
+   {
+    "region": "Chart config and sparklines",
+    "source": "local ConfigAndData-Line component, BarLineChart frames",
+    "dsr": "none",
+    "verdict": "GAP",
+    "note": ""
+   }
+  ],
+  "variationMatrix": {
+   "_reading": "Rows are structural axes (a region present or absent, or a different width). Anything not listed varies by content only: title text, body content, item count, alert text, which buttons are shown.",
+   "axes": {
+    "width": {
+     "550": 48,
+     "441 (Vitals)": 6
+    },
+    "headerLayer": {
+     "Breadcrumbs (title in wrapper, close in a right-aligned frame)": 41,
+     "Header (title fills, close direct; Problems/Med List)": 5,
+     "HEADER (Flowsheets 939:9228, 861:7047)": 2,
+     "NoteHeader 65 tall gap 8 (129:7950, 129:12486)": 2,
+     "Breadcrumbs with title in Frame 758531830 (Vitals)": 6
+    },
+    "headerBottomRule": {
+     "present": 32,
+     "absent": 22
+    },
+    "backButtonVisible": {
+     "yes": [
+      "129:7826",
+      "129:12486"
+     ],
+     "hiddenInstancePresent": [
+      "129:10016",
+      "4618:4930",
+      "4618:5137",
+      "129:8130"
+     ]
+    },
+    "hiddenNavScaffold": {
+     "Frame 758531776 + Frame 758531780 + Frame 758531486 + Tabs": 38,
+     "Frame 143725286 only": 6,
+     "none": 10
+    },
+    "subHeaderBand": [
+     "939:9228",
+     "861:7047",
+     "867:7460",
+     "909:12649"
+    ],
+    "toolbar": [
+     "129:7614"
+    ],
+    "bodyPadding": {
+     "p8/8/8/8": [
+      "129:7340",
+      "4079:15495",
+      "2459:10180",
+      "2466:10562",
+      "129:7431",
+      "129:7467",
+      "129:7494",
+      "129:7546",
+      "129:7580",
+      "129:7614"
+     ],
+     "p8/16/8/16": "most Clinical and all Vitals (30)",
+     "p0/16/8/16": [
+      "129:7726",
+      "129:7826"
+     ],
+     "p16/20/16/20": [
+      "545:5239",
+      "4704:17095",
+      "4494:3240",
+      "4536:27605",
+      "545:5557"
+     ],
+     "p16/16/16/16": [
+      "129:10016",
+      "4618:4930",
+      "4618:5137"
+     ],
+     "p0/8/8/8": [
+      "129:6648",
+      "129:6995"
+     ],
+     "p0/1/0/1": [
+      "939:9228",
+      "861:7047",
+      "867:7460",
+      "909:12649"
+     ]
+    },
+    "bodyGap": {
+     "0": 4,
+     "8": 8,
+     "12": 22,
+     "16": 17,
+     "24": 3
+    },
+    "bodyHeightMode": {
+     "fixed 476 (root 600)": 27,
+     "hug": 27
+    },
+    "footer": {
+     "Frame 758531478 / FOOTER 60 tall p8 g21 top-level": 33,
+     "Frame 758531478 60 tall INSIDE the body (518 wide)": [
+      "129:7364",
+      "129:7726",
+      "129:7826",
+      "129:7950",
+      "129:12486"
+     ],
+     "Footer 76 tall p20 g12 (Problems)": [
+      "545:5239",
+      "4704:17095",
+      "4494:3240",
+      "4536:27605",
+      "545:5557"
+     ],
+     "none": [
+      "129:6648",
+      "129:6995",
+      "129:7340",
+      "4079:15495",
+      "2459:10180",
+      "2466:10562",
+      "129:7431",
+      "129:7467",
+      "129:7494",
+      "129:7546",
+      "129:7580",
+      "129:7614"
+     ]
+    },
+    "footerButtonPattern": {
+     "Cancel + Save & Add to Note + Save (72,171,66)": 9,
+     "Save & Add to Note + Save (171,66)": 17,
+     "single full-width": [
+      "129:10481",
+      "3569:22346",
+      "3557:15328",
+      "3496:15197",
+      "3501:15528",
+      "545:5557"
+     ],
+     "single outlined/primary": [
+      "939:9228",
+      "861:7047",
+      "867:7460",
+      "909:12649",
+      "129:7726",
+      "129:7950"
+     ],
+     "two (243,66)": [
+      "545:5239",
+      "4704:17095",
+      "4494:3240"
+     ],
+     "three with leading destructive text button": [
+      "4536:27605"
+     ],
+     "three (72,66,127)": [
+      "3496:14449"
+     ],
+     "four (205,80,67,119)": [
+      "129:8774"
+     ],
+     "three inside body (132,105,69)": [
+      "129:7364"
+     ],
+     "DSR text button + two (68,171,66)": [
+      "4618:4930"
+     ]
+    },
+    "rootOverlayOutsideFlow": [
+     "4494:3240 (Autocomplete dropdown 344x132 + image rectangle 23x30)"
+    ],
+    "contentOverflowsFixedBody": [
+     "648:1603",
+     "3496:15197",
+     "3501:15528"
+    ]
+   },
+   "contentOnlyPairs": [
+    [
+     "129:8517",
+     "648:1603",
+     "form card present vs empty MainWrap"
+    ],
+    [
+     "129:10016",
+     "4618:4930",
+     "4618:5137",
+     "search results vs recent vs favourites; star glyph"
+    ],
+    [
+     "545:5239",
+     "4704:17095",
+     "items shown vs hidden (empty state)"
+    ],
+    [
+     "129:10481",
+     "3569:22346",
+     "3557:15328",
+     "alert shown; quick-entry field expanded"
+    ],
+    [
+     "939:9228",
+     "861:7047",
+     "chart band hidden vs shown"
+    ],
+    [
+     "867:7460",
+     "909:12649",
+     "sub-header 74 vs 58 tall only"
+    ],
+    [
+     "129:8774",
+     "129:8843",
+     "view vs edit form"
+    ],
+    [
+     "129:9205",
+     "129:9392",
+     "comment field open"
+    ],
+    [
+     "129:8316",
+     "129:8401",
+     "129:8517",
+     "648:1603",
+     "129:8651",
+     "648:3473",
+     "External Care / Procedures view vs edit"
+    ],
+    [
+     "129:7546",
+     "129:7580",
+     "identical structure; variant names and title texts are swapped"
+    ],
+    [
+     "129:6648",
+     "129:6995",
+     "tile widths 167 vs 255"
+    ]
+   ]
+  },
+  "templateProposal": {
+   "_status": "PROPOSAL, NOT A FINDING. Nothing was built. Property names below are Figma-only affordances in Sentence case (CLAUDE.md rule 2); none mirrors a code prop because no sidesheet component exists in packages/design-system.",
+   "regions": [
+    {
+     "name": "Sheet",
+     "spec": "VERTICAL, p0, g0, width 550 (Vitals variants would use 441), fill color/background/paper, stroke 1px color/grey/400 all sides. Built as a frame, not a Drawer instance, because the Drawer instance cannot host the body (rule 6)."
+    },
+    {
+     "name": "Header",
+     "spec": "HORIZONTAL, 64 tall, p16, g16, fill none, bottom Divider 171:31. Children: optional back Icon button 170:77 with Icon/ArrowLeft 575:3; Title Akkurat LL Bold 20/32 bound to text secondary (#545454 as drawn) filling; close Icon button 170:77 with Icon/CloseOutlined 76:11."
+    },
+    {
+     "name": "Sub-header",
+     "spec": "Optional HORIZONTAL band, fill color/grey/300, bottom Divider; holds a Text field or Autocomplete/Field and one Button. Off by default."
+    },
+    {
+     "name": "Body",
+     "spec": "VERTICAL, p8/16/8/16, g16, fill none, FILL height between Header and Footer, clipsContent (scroll area). Content is placed by the consumer; the template ships it empty."
+    },
+    {
+     "name": "Footer",
+     "spec": "Optional HORIZONTAL, 60 tall, p8, g8, top Divider, right-aligned. Two Button 79:2 slots: variant=text (Cancel) and variant=contained color=primary (Save). A third outlined slot cannot be expressed until the library has an outlined Button."
+    }
+   ],
+   "properties": [
+    {
+     "name": "Show back",
+     "type": "BOOLEAN",
+     "default": false,
+     "toggles": "back Icon button in Header"
+    },
+    {
+     "name": "Show sub-header",
+     "type": "BOOLEAN",
+     "default": false,
+     "toggles": "Sub-header band"
+    },
+    {
+     "name": "Show footer",
+     "type": "BOOLEAN",
+     "default": true,
+     "toggles": "Footer"
+    },
+    {
+     "name": "Show secondary action",
+     "type": "BOOLEAN",
+     "default": true,
+     "toggles": "the text Button in Footer"
+    },
+    {
+     "name": "Full-width action",
+     "type": "BOOLEAN",
+     "default": false,
+     "toggles": "single Button stretched across Footer (Vitals, Med List pattern); mutually exclusive with Show secondary action"
+    },
+    {
+     "name": "Title",
+     "type": "TEXT",
+     "default": "Title",
+     "toggles": "header title characters"
+    },
+    {
+     "name": "Primary action",
+     "type": "INSTANCE_SWAP",
+     "default": "Button variant=contained color=primary",
+     "toggles": "trailing footer button"
+    },
+    {
+     "name": "Secondary action",
+     "type": "INSTANCE_SWAP",
+     "default": "Button variant=text color=primary",
+     "toggles": "leading footer button"
+    }
+   ],
+   "coverage": "Every one of the 54 children resolves to Sheet + Header + Body with at most Sub-header, Footer and back-button toggles; the two footer heights (60 and 76) and three body paddings collapse to one value each. What the template does not carry: the Flowsheets column header row, the PsychotherapyNote toolbar, the Patient Summary feedback row, and the hidden navigation scaffold, all of which are body content or dead layers.",
+   "decisionsForDaniel": [
+    "Width: 550 vs the library Drawer 320 vs code drawerWidth (set per use in FilterGroupDrawer).",
+    "Title colour: source #545454 vs library Drawer header #000000.",
+    "Outlined Button variant: needed for the middle footer action on 26 children; absent from library and code overrides.",
+    "Footer height: 60 (39 children) vs 76 (5 Problems children)."
+   ],
+   "correction2026_09_02": "The third footer slot does not need an outlined variant; it is contained/primary."
+  },
+  "caveats": [
+   "Structure was read to depth 3 and instances were not entered, so regions nested deeper (e.g. individual form fields inside form cards) are summarised, not itemised.",
+   "Library candidate paints other than Dialog were not compared in pixels; those rows say so.",
+   "The variant property list of 129:6647 could not be read; the Page= axis is inferred from child names."
+  ]
+ }
+}

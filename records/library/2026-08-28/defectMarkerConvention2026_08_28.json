@@ -1,0 +1,58 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "defectMarkerConvention2026_08_28",
+ "sequence": 6,
+ "date": "2026-08-28",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "7410afdd30b3c9ba5fedbcad685ebbf21872dae65467470444af82da5c1ce269"
+ },
+ "record": {
+  "_scope": "A reusable treatment for marking anything in a composition that does not match what ships. Defined once here so the remaining fourteen compositions follow it.",
+  "problem": "Compositions render known defects accurately and distinguish them only in prose. A reader scanning a frame cannot tell a defect from an intentional pattern.",
+  "colourConstraint": "The marker may not use red, yellow, orange or green. Marked content is frequently red/yellow/green alerts, chips and status indicators, so a semantic colour would collide. The marker must read as chrome, clearly outside the thing it marks.",
+  "treatment": {
+   "container": "Auto-layout VERTICAL, itemSpacing 12, padding 16, cornerRadius 4, strokeWeight 1, dashPattern [6,4]",
+   "fill": "color/grey/300 (VariableID:74:31) #F6F6F6",
+   "border": "color/grey/500 (VariableID:74:33) #9A9A9A, dashed",
+   "chipFill": "color/grey/400 (VariableID:74:32) #D6D6D6, cornerRadius 4, padding 3/8",
+   "chipText": "color/grey/900 (VariableID:74:35) #2B2B2B, Akkurat LL Bold 12/16, letterSpacing 0.5",
+   "fixText": "color/grey/600 (VariableID:74:34) #545454, body style S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb",
+   "differenceText": "black, same body style",
+   "allFromExistingVariables": true,
+   "rawValuesIntroduced": "none"
+  },
+  "structure": "Example FIRST, then a header row (chip label + one-line \"Fix lives in ...\"), then a one-line statement of the difference. The example leads so that a marked example and an unmarked one in the same row share a baseline — with the chip above, a marked cell pushed its example 80-190px below its unmarked siblings.",
+  "labels": {
+   "DEFECT": "renders differently from what ships",
+   "GAP": "the component cannot express it at all — not a rendering difference"
+  },
+  "rule": "Any example rendering something that does not match what ships sits inside a marker. Correct examples sit outside it. The distinction must be legible without reading a word.",
+  "legend": "Every composition using markers carries one line in its header block explaining the dashed panel, so the frame is self-describing.",
+  "appliedFirstIn": {
+   "frame": "Alert with actions (822:1649), Compositions / Feedback",
+   "marked": [
+    "standard/success cell — no standardSuccess rule in AlertOverrides, renders as a tinted card unlike its three siblings",
+    "outlined row (all four severities) — no outlined rules in AlertOverrides, low contrast; only one outlined Alert exists in the entire codebase, which bears on whether it is worth fixing",
+    "AlertTitle — renders Akkurat LL Bold 700 because typography.ts registers only 400 and 700 where MUI styles AlertTitle at 500",
+    "two close-icon-button examples — Icon button Small is 34px where code ships a 28px box",
+    "two-action fragment (GAP) — the action slot is a single INSTANCE_SWAP where code takes a fragment; 9 production slots hold two interactive elements"
+   ],
+   "unmarkedBecauseResolved": "The teal Button on filled alerts was a defect in the prior pass. It is resolved by buttonInheritColour2026_08_28, rebuilt with color=inherit, and now sits outside any marker.",
+   "residual": "In the severity grid, standard and filled rows render examples at 334px while the outlined row renders at 358px, because the outlined row is wrapped as ONE row-level marker rather than four per-cell markers. Per-cell insets there would nest a marker inside a marker. Left as-is."
+  },
+  "alertMessageDefault": {
+   "change": "Alert's Message default changed from \"This is an info message.\" to \"This is an alert message.\"",
+   "why": "The old default handed a designer text saying 'info' on warning, error and success alerts.",
+   "constraint": "Per-severity copy is NOT expressible. Figma variant sets share one default per TEXT property, so all 12 variants show the same placeholder unless Message is unbound from the variants. A severity-neutral default was used instead.",
+   "geometry": "0 of 12 variants changed size or position; set remains 1800x224."
+  },
+  "rowAlignment": "In any row mixing marked and unmarked examples, the unmarked ones sit in a transparent \"Inset — unmarked\" frame with padding identical to the marker (16), and each column groups its caption+note into a \"Text block\" set to the row max height. Both are required: the inset equalises the example inset, the text block equalises what sits above it. Verified by measuring absolute Y of every example in the row, not by structural assertion.",
+  "widthBehaviour": "A marker fills its column; the column is sized to the content. A single-example panel must not inherit a full section width - the Title panel spanned 1536 only because its sibling column had been deleted, leaving one column at full width."
+ }
+}

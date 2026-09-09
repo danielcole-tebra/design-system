@@ -1,0 +1,71 @@
+{
+ "_purpose": "Established on Menu. Reuse verbatim for Dialog, Tooltip, Snackbar, Popover and any other floating surface.",
+ "1_readTheElevation": "Find which elevation the component's Paper renders at — read it from source, do not assume. Menu does not set one, so it inherits Popover's `elevation = 8`. Alert uses theme.shadows[3] directly. Autocomplete's paper takes Paper's own default of 1.",
+ "2_translateTheShadow": "MUI's styles/shadows.js builds every elevation from createShadow(...12 numbers) as THREE stacked CSS layers: umbra px[0..3] at rgba(0,0,0,0.20), penumbra px[4..7] at 0.14, ambient px[8..11] at 0.12. Each group is offsetX, offsetY, blur, spread. Map each to a Figma DROP_SHADOW with offset {x,y}, radius = the CSS blur value, and spread passed through. Never eyeball a drop shadow.",
+ "3_makeItAStyle": "Create an effect style named 'Elevation / N' carrying all three layers, and apply it with setEffectStyleIdAsync rather than setting node.effects. The style is the binding — it makes the shadow reviewable and changeable in one place, the way variables do for colour.",
+ "4_recordProvenance": "The Tebra theme passes no `shadows` array, so every elevation is substrate. Say so in the style description and flag it, exactly as with TextField's outline.",
+ "5_surfaceAndClipping": "Paper gets background.paper, radius shape.borderRadius (4), and clipsContent true to mirror overflow:hidden. Check the list/content padding separately — Tebra's global MuiList disablePadding changes it for List-based surfaces but not for styled-div surfaces.",
+ "6_positioning": "Read anchorOrigin and transformOrigin from the component source and draw the composition at that offset. Menu: anchor bottom-left to transform top-left, so no gap. Put the composition on background.default, not white, so the elevation is actually legible.",
+ "elevationsCreated": {
+  "Elevation / 1": [
+   [
+    0,
+    2,
+    1,
+    -1
+   ],
+   [
+    0,
+    1,
+    1,
+    0
+   ],
+   [
+    0,
+    1,
+    3,
+    0
+   ]
+  ],
+  "Elevation / 3": [
+   [
+    0,
+    3,
+    3,
+    -2
+   ],
+   [
+    0,
+    3,
+    4,
+    0
+   ],
+   [
+    0,
+    1,
+    8,
+    0
+   ]
+  ],
+  "Elevation / 8": [
+   [
+    0,
+    5,
+    5,
+    -3
+   ],
+   [
+    0,
+    8,
+    10,
+    1
+   ],
+   [
+    0,
+    3,
+    14,
+    2
+   ]
+  ]
+ }
+}

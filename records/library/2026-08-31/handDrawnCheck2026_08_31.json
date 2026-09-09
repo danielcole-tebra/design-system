@@ -1,0 +1,28 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "handDrawnCheck2026_08_31",
+ "sequence": 12,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "0ffc1889952337ba4bdffd5acc9c9fc082ed20634c5301c517dd9e3bff8efad1"
+ },
+ "record": {
+  "_scope": "Replaces the instance-ratio metric for every composition from this point on. Defined once here so the remaining compositions follow it.",
+  "supersedes": "fourCompositions2026_08_31.instanceRatioMethodNote, and the 87.5% / 92% baselines the build prompt cited.",
+  "whyTheRatioWasDropped": "The 87.5 and 92 figures came from a method that was never written down and could not be reproduced by any measure applied across six frames. A percentage that cannot be recomputed cannot be checked, and three different denominators (all authored nodes, excluding annotation, UI elements only) each gave a different answer with no principled way to choose. Do not re-baseline it and do not carry it forward.",
+  "theCheck": "Binary, per frame: is any UI element drawn by hand where a published library component exists? Yes or no. Where yes, name the specific elements.",
+  "exemptions": [
+   "SCAFFOLDING — an element drawn because a Figma instance cannot host children (a listbox that cannot be a Paper, a Menu past its four slots, a Table/Row that cannot take real cells).",
+   "ANNOTATION — headers, legends, captions, markers, section labels, anything that describes the frame rather than being an example in it.",
+   "INEXPRESSIBLE — a state, variant or content shape no published component can express (a selected ButtonGroup segment, a small-density table cell, a two-line Menu/Item)."
+  ],
+  "reportingRule": "Every hand-drawn UI element must be assigned to exactly one of the three exemption categories, or the answer is YES and it is a finding. Say which category each falls in.",
+  "whyThisIsBetter": "It is what the ratio was a proxy for, it cannot drift, and a wrong answer is falsifiable by looking at the frame."
+ }
+}

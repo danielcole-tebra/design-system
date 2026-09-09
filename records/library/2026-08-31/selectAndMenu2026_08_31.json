@@ -1,0 +1,51 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "selectAndMenu2026_08_31",
+ "sequence": 8,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "62b6fef2241db1d9b44b12528113c6df0f1effd13c9156d446c511714da57f53"
+ },
+ "record": {
+  "_batch": "fourCompositions2026_08_31",
+  "method": "Production counted with a balanced-brace JSX scanner (composition-scan.js) over 5,399 source files under C:/Code/web-app-v2/packages, excluding node_modules, stories, examples, patterns and tests. Import source resolved per file so same-named non-design-system tags cannot be miscounted.",
+  "scannerFixes": "Two real scanner faults found and fixed before any count was trusted. (a) TSX generic call sites — <Autocomplete<PatientSummaryObj> — were rejected by the tag lookahead AND would have been truncated at the generic closing angle bracket, losing every prop. (b) An earlier prop reader matched against the whole raw tag, so nested props leaked into the parent: size=\"small\" read 73 for Autocomplete when the true top-level count is 52. Both are the failure mode the build prompt warned had already occurred twice.",
+  "frame": "154:11, Compositions / Inputs",
+  "production": {
+   "select": "76 elements / 54 files",
+   "textFieldSelect": "24 elements / 20 files",
+   "combinedFiles": 74,
+   "anchoredMenu": "27 elements / 26 files",
+   "menuItem": "230 elements / 112 files",
+   "auditSaid": 53
+  },
+  "auditCorrection": "The audit records \"Menu published with no properties — a static picture\". That is STALE. Menu (749:323) carries four INSTANCE_SWAP item slots, three visibility booleans and an elevation axis, added by propertySurfaceRepair2026_08_26.",
+  "headlineFinding": "The frame name bundles two surfaces production keeps apart. Of the 74 files carrying a select and the 26 carrying an anchored Menu, EXACTLY ONE contains both. A Select menu is a value picker; an anchored Menu holds commands. This explains the Inputs-versus-Surfaces coin flip recorded in libraryRestructure2026_08_26c — it is not one composition. Recorded, NOT resolved.",
+  "varies": {
+   "twoCodePaths": "Select and TextField-select both render one drawn control; Figma models both with Text field + select. No distinction needed.",
+   "size": "45 of 100 set size and EVERY one sets small; 55 take the medium default. Production disagrees about whether to set it, never about what to set it to.",
+   "itemProduction": "82 of the 127 select and menu elements build items with .map() over data, so the count is unknowable at authoring time. Of those written literally, 6 hold five to eight items."
+  },
+  "gaps": [
+   "Menu caps at 4 items (four slots, three Show booleans). 82 of 127 elements are mapped/unbounded and 6 literal ones already exceed four.",
+   "Menu/Item is label-only. 57 of 230 MenuItem elements need more: leading ListItemIcon 24 el / 12 files, two-line ListItemText 27 / 15, Checkbox 8 / 5, CircularProgress 5 / 2.",
+   "No group heading. ListSubheader in 8 elements / 8 files; Menu has no subheader slot and no way to interleave one between items.",
+   "Text field has no variant axis — every variant is outlined. 5 Select elements set a variant, 4 explicitly to standard, which cannot be drawn."
+  ],
+  "stateCoverageIsComplete": "Menu/Item carries all six states and production uses disabled on 31 elements / 18 files and selected on 2. Content coverage is the problem, not state coverage.",
+  "instanceRatio": {
+   "allNodes": "17.1%",
+   "excludingAnnotationText": "34.9%",
+   "nodes": 129,
+   "instances": 22
+  },
+  "verification": "Per standingBatchRules 10, all 11 menu item labels were verified by reading rendered characters, not property values. All matched.",
+  "unverifiable": "The preserved anchoring note asserts Menu.js sets anchorOrigin {bottom,left} and transformOrigin {top,left}. It could NOT be re-verified — node_modules is absent — so it stands as a prior pass claim, not one this pass confirmed."
+ }
+}

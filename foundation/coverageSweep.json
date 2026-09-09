@@ -1,0 +1,563 @@
+{
+ "_date": "2026-08-02",
+ "_method": "Every key in all 38 files of src/overrides validated against the installed @mui/material 5.15.12 component list plus @mui/x-tree-view and @mui/x-data-grid-pro; every story title enumerated; src/components and the 66-file icon directory inventoried; all crossed against the 16 built sets.",
+ "totals": {
+  "overrideFiles": 38,
+  "keysRegistered": 40,
+  "invalidKeys": 1,
+  "storyTitles": 45,
+  "componentStories": 42,
+  "patternStories": 3,
+  "icons": 66,
+  "iconsReferencedInLibrary": 38,
+  "iconsBuilt": 31,
+  "builtSets": 25
+ },
+ "deadKeys": {
+  "found": [
+   "MuiRadioButton (RadioButtonOverrides.ts) — MUI's key is MuiRadio"
+  ],
+  "conclusion": "MuiRadioButton is the ONLY invalid key across all 38 files. MuiDataGrid, MuiTreeItem and MuiTreeView are valid in @mui/x-data-grid-pro and @mui/x-tree-view respectively — verified against those packages' own name: strings. No new dead keys."
+ },
+ "classification": {
+  "BUILD": [
+   {
+    "name": "IconButton",
+    "override": "overrides/IconButtonOverrides.ts",
+    "content": "styleOverrides",
+    "story": "Components/Data Display/IconButton",
+    "expect": "themed",
+    "notes": "Already rendered inside Autocomplete indicators and Alert's close slot but never built as a component. Feeds Dialog, Drawer, TablePagination, Snackbar."
+   },
+   {
+    "name": "Paper",
+    "override": null,
+    "content": null,
+    "story": "Components/Surfaces/Paper",
+    "expect": "substrate",
+    "notes": "Foundation for Card, Dialog, Drawer, Popover, Accordion. Elevation / 1, 3, 6, 8 styles already exist — this is where they get documented."
+   },
+   {
+    "name": "Divider",
+    "override": null,
+    "content": null,
+    "story": "Components/Data Display/Divider",
+    "expect": "substrate",
+    "notes": "Cheap. Feeds List, Menu, Card."
+   },
+   {
+    "name": "Link",
+    "override": null,
+    "content": null,
+    "story": "Components/Navigation/Link",
+    "expect": "substrate",
+    "notes": "Feeds Alert actions and ReadMore."
+   },
+   {
+    "name": "List / ListItem / ListItemButton",
+    "override": "overrides/ListOverrides.ts, ListItemOverrides.ts, ListItemButtonOverrides.ts",
+    "content": "defaultProps / styleOverrides / defaultProps",
+    "story": "Components/Data Display/List",
+    "expect": "themed",
+    "notes": "MuiList disablePadding:true is already load-bearing for Menu — see flags.menuListPaddingZero."
+   },
+   {
+    "name": "Card / CardActions / CardActionArea",
+    "override": "overrides/CardOverrides.ts, CardActionsOverrides.ts, CardActionAreaOverrides.ts",
+    "content": "defaultProps / styleOverrides / defaultProps",
+    "story": "Components/Surfaces/Card",
+    "expect": "mixed",
+    "notes": "Carries open decision 4 — MuiCardActionArea is disabled by default. Needs Paper."
+   },
+   {
+    "name": "Accordion / AccordionSummary",
+    "override": "overrides/AccordionOverrides.ts, AccordionSummaryOverrides.tsx",
+    "content": "styleOverrides / defaultProps",
+    "story": "Components/Surfaces/Accordion",
+    "expect": "themed",
+    "notes": "Needs Paper."
+   },
+   {
+    "name": "Dialog",
+    "override": "overrides/DialogOverrides.ts",
+    "content": "defaultProps",
+    "story": "Components/Feedback/Dialog",
+    "expect": "substrate surface, themed contents",
+    "notes": "First true modal. Apply the overlay recipe; needs Paper, Button, IconButton."
+   },
+   {
+    "name": "Drawer",
+    "override": null,
+    "content": null,
+    "story": "Components/Navigation/Drawer",
+    "expect": "substrate",
+    "notes": "Needs Paper and List. Its example is the heaviest MenuItem consumer in the library (13)."
+   },
+   {
+    "name": "Table / TableRow / TableCell",
+    "override": "overrides/TableOverrides.ts (3 keys)",
+    "content": "styleOverrides",
+    "story": "Components/Data Display/Table",
+    "expect": "themed"
+   },
+   {
+    "name": "Pagination",
+    "override": "overrides/PaginationOverrides.ts",
+    "content": "styleOverrides",
+    "story": "Components/Data Display/Pagination",
+    "expect": "themed",
+    "notes": "Needs IconButton."
+   },
+   {
+    "name": "TablePagination",
+    "override": "overrides/TablePaginationOverrides.tsx",
+    "content": "defaultProps",
+    "story": "Components/Data Display/TablePagination",
+    "expect": "substrate + themed parts",
+    "notes": "Composite — needs Table, IconButton and the Select path (Text field's Select boolean)."
+   },
+   {
+    "name": "Tabs / Tab",
+    "override": "overrides/TabsOverrides.tsx, TabOverrides.tsx",
+    "content": "defaultProps / styleOverrides",
+    "story": "Components/Navigation (component: Tabs)",
+    "expect": "themed",
+    "notes": "Story title collides with the Navigation group heading, which is why it did not surface as a distinct title."
+   },
+   {
+    "name": "ToggleButton",
+    "override": "overrides/ToggleButtonOverrides.ts",
+    "content": "styleOverrides",
+    "story": "Components/Data Display/ToggleButton",
+    "expect": "themed"
+   },
+   {
+    "name": "Stepper (StepIcon / MobileStepper)",
+    "override": "overrides/StepIconOverrides.ts, MobileStepperOverrides.ts",
+    "content": "styleOverrides",
+    "story": "Components/Navigation/Stepper/Desktop + /Mobile",
+    "expect": "themed"
+   },
+   {
+    "name": "Avatar",
+    "override": "overrides/AvatarOverrides.ts",
+    "content": "both",
+    "story": "Components/Data Display/Avatar",
+    "expect": "themed",
+    "notes": "File carries a TODO about sizing and disabled elevation."
+   },
+   {
+    "name": "Badge",
+    "override": "overrides/BadgeOverrides.ts",
+    "content": "defaultProps",
+    "story": "Components/Data Display/Badge",
+    "expect": "substrate"
+   },
+   {
+    "name": "CircularProgress",
+    "override": null,
+    "content": null,
+    "story": "Components/Feedback/Progress",
+    "expect": "substrate"
+   },
+   {
+    "name": "ReadMore",
+    "override": null,
+    "content": null,
+    "story": "Components/Data Display/ReadMore",
+    "expect": "Tebra composition",
+    "notes": "src/components/ReadMore — Tebra-authored, exported from the package, has its own test."
+   },
+   {
+    "name": "Feedback messages",
+    "override": null,
+    "content": null,
+    "story": "Components/Feedback/Messages",
+    "expect": "Tebra composition",
+    "notes": "src/components/Feedback — six message components over src/components/illustrations (7 SVGs). Build the illustrations with them."
+   }
+  ],
+  "PATTERN": [
+   {
+    "name": "Drop Chip",
+    "path": "stories/Chip/DropChip.pattern.stories.tsx",
+    "title": "Patterns/Drop Chip",
+    "notes": "Chip + Menu + MenuItem + DownCaret over local mock data. Not exported from the package. All parts built."
+   },
+   {
+    "name": "Prepopulate Form Fields",
+    "path": "stories/Button/Prepopulate.pattern.stories.tsx",
+    "title": "Patterns/Prepopulate Form Fields",
+    "notes": "Button + Menu at elevation={1} with bottom-right anchoring — the source of the Menu elevation and anchoring corrections."
+   },
+   {
+    "name": "Task Bar",
+    "path": "stories/TaskBar/",
+    "title": "Patterns/Task Bar",
+    "notes": "Not yet read in detail; classified by title."
+   },
+   {
+    "name": "RadioGroup",
+    "path": "stories/RadioGroup/RadioGroup.stories.tsx",
+    "title": "Components/Inputs/Radio/RadioGroup",
+    "notes": "MUI RadioGroup has no override; the story is Radio + FormControlLabel + FormHelperText composition. Both parts built."
+   }
+  ],
+  "DEFER": [
+   {
+    "name": "DataGrid (+ DataGridFilter)",
+    "override": "overrides/DataGridOverrides.ts",
+    "story": "Components/Data Display/Data Grid",
+    "blocker": "@mui/x-data-grid-pro — licensed MUI X package, pinned 6.19.6 while other consumers sit on 6.5.0/6.12.1/6.19.11 in the same yarn.lock. Very large surface (src/components/DataGridFilter is 10 files). Key is valid and the override is substantial, so this is a deliberate defer, not an exclusion."
+   },
+   {
+    "name": "TreeView / TreeItem",
+    "override": "overrides/TreeViewOverrides.tsx, TreeItemOverrides.ts",
+    "story": "Components/Data Display/TreeView",
+    "blocker": "@mui/x-tree-view 6.17.0 — MUI X, and the CHANGELOG records it was only adopted at 0.12.0 to replace the removed @mui/lab import. Keys valid."
+   },
+   {
+    "name": "Typography",
+    "override": null,
+    "story": "Components/Data Display/Typography",
+    "blocker": "Already delivered as the 10 text styles; a component set would duplicate them."
+   },
+   {
+    "name": "Icon (catalogue)",
+    "override": "overrides/SvgIconOverrides.ts",
+    "story": "Components/Data Display/Icon",
+    "blocker": "A catalogue view, not a component. The SvgIcon size ramp is already recorded in flags.svgIconTwoUnitSystems."
+   },
+   {
+    "name": "Portal",
+    "override": null,
+    "story": "Components/Utils/Portal",
+    "blocker": "No visual surface."
+   },
+   {
+    "name": "Layout",
+    "override": null,
+    "story": "Components/Layout",
+    "blocker": "Box/Grid documentation, no component surface."
+   },
+   {
+    "name": "Popover",
+    "override": null,
+    "story": "Components/Utils/Popover",
+    "blocker": "Low marginal value — Menu already covers the Popover paper path via the overlay recipe. Revisit if a non-Menu popover ships."
+   },
+   {
+    "name": "marketingIcons",
+    "override": null,
+    "story": null,
+    "blocker": "9 marketing assets in src/components/marketingIcons, referenced by no override or story."
+   },
+   {
+    "name": "ListItemDelete / ListItemDeleteIcon",
+    "override": null,
+    "story": null,
+    "blocker": "src/components, exported but no story and no override — build with List if a use case appears."
+   }
+  ],
+  "DEAD": [
+   {
+    "name": "Radio override",
+    "path": "overrides/RadioButtonOverrides.ts",
+    "key": "MuiRadioButton",
+    "detail": "Invalid key; MUI's is MuiRadio. Content is defaultProps { disableRipple, disableFocusRipple } only. Already documented with an intended-vs-shipping reference frame, now on the Reference page.",
+    "bugListItem": 4
+   },
+   {
+    "name": "RadioCheckedIcon",
+    "path": "components/icons/RadioCheckedIcon.tsx",
+    "detail": "Orphan glyph referenced by nothing. Even a corrected MuiRadio key would not pull it in, because the override sets no icon props."
+   },
+   {
+    "name": "ChipOverrides colorError clickable hover",
+    "path": "overrides/ChipOverrides.ts",
+    "detail": "#FD919F is unreachable by any story — needs color='error' AND clickable together. Promoted to a variable so the token layer shows it."
+   }
+  ],
+  "OUT_OF_SCOPE_LEGACY_ONLY": [
+   {
+    "name": "Text Reveal",
+    "origin": "Legacy team library (ZPf0sJy83aPyrHjCVHomya) Components page — a frame at x=73628.",
+    "finding": "ABSENT from web-app-v2 entirely. Case-insensitive grep for TextReveal, \"Text Reveal\" and textReveal across every package returns zero files.",
+    "verdict": "Legacy-only artifact. Nothing in the shipping codebase corresponds to it, so it cannot be built from source and is out of scope rather than deferred."
+   },
+   {
+    "name": "Scrollbars",
+    "origin": "Legacy team library Components page — a frame at x=37834.",
+    "finding": "No scrollbar component, no scrollbar override, and no ::-webkit-scrollbar rule anywhere in packages/design-system — its single hit there is prose in stories/Dialog/Dialog.mdx. All five product hits are the MUI X internal class .MuiDataGrid-scrollbarFiller in admin-ui, documents-ui and worklist-ui, being recoloured to core.light. That is DataGrid internals, not a scrollbar component.",
+    "verdict": "Legacy-only artifact, doubly out of scope: the only real trace is a DataGrid internal, and DataGrid is itself deferred behind the MUI X licensing blocker."
+   }
+  ]
+ },
+ "icons": {
+  "total": 66,
+  "referencedByOverridesOrStories": 38,
+  "builtInFigma": 15,
+  "builtTebra": 11,
+  "builtMuiInternal": 4,
+  "referencedButNotBuilt": [
+   "Calendar",
+   "CheckmarkFilled",
+   "DragAndDrop",
+   "EditOutlined",
+   "EllipsisFilled",
+   "Error",
+   "FavoritesFilled",
+   "FormatBold",
+   "FormatItalic",
+   "FormatUnderline",
+   "InfoOutlined",
+   "LeftCaret",
+   "Lightbulb",
+   "List",
+   "ListNestedCenter",
+   "ListNestedLeft",
+   "ListNestedRight",
+   "Menu",
+   "PrintFilled",
+   "QuestionOutlined",
+   "Refresh",
+   "RightCaret",
+   "Search",
+   "TrashFilled",
+   "UpCaret",
+   "UserFilled",
+   "UserGroupFilled"
+  ],
+  "referencedButNotBuiltCount": 27,
+  "exportedButUnreferencedInLibrary": 28,
+  "note": "CheckmarkFilled is used by the Snackbar story and LeftCaret by the Tooltip story — both components are built but their story-side icons are not. The 28 unreferenced icons are exported from the package for product use; they are a bulk-import task, not per-component work."
+ },
+ "antiInventory": {
+  "_question": "Anything BUILT that the source does not justify.",
+  "findings": [
+   {
+    "item": "Form control label",
+    "status": "justified by usage, not by a story of its own",
+    "detail": "There is no FormControlLabel override and no FormControlLabel story. It is justified only by appearing inside the Checkbox, Switch and Radio stories. This is a third structure-from-argTypes exception that had not previously been labelled as one."
+   },
+   {
+    "item": "Menu",
+    "status": "justified by usage",
+    "detail": "No MuiMenu override exists; Menu is justified by two pattern-story usages found after the initial grep error. Already documented."
+   },
+   {
+    "item": "Text field Size axis",
+    "status": "known documented exception",
+    "detail": "Built for parity at Daniel's direction; provenance recorded."
+   },
+   {
+    "item": "Chip Size axis",
+    "status": "known documented exception",
+    "detail": "Built for parity at Daniel's direction; provenance recorded."
+   }
+  ],
+  "conclusion": "Nothing built is unjustified by source. Four items carry a provenance note rather than a story-derived justification, all of them recorded at the time."
+ },
+ "proposedBuildOrder": {
+  "_principle": "Dependency-aware: anything that feeds composites first, then containers, then overlays, then data display, then Tebra compositions.",
+  "tier1_primitives": [
+   "IconButton",
+   "Paper",
+   "Divider",
+   "Link"
+  ],
+  "tier2_containers": [
+   "List / ListItem / ListItemButton",
+   "Card / CardActions / CardActionArea",
+   "Accordion / AccordionSummary"
+  ],
+  "tier3_overlays": [
+   "Dialog",
+   "Drawer"
+  ],
+  "tier4_dataDisplay": [
+   "Table / TableRow / TableCell",
+   "Pagination",
+   "TablePagination"
+  ],
+  "tier5_remaining": "BUILT 2026-08-02 — Tabs / Tab, Toggle button, Stepper (Step + Stepper + Mobile stepper), Avatar, Badge, Circular progress.",
+  "tier6_tebraCompositions": "BUILT 2026-08-02 — ReadMore as Read more (4 variants), the six Feedback messages as Feedback message (12 variants), and all 7 illustrations as Illustration / Name masters.",
+  "iconBacklog": "27 referenced-but-unbuilt icons — batch these alongside whichever component first needs them rather than as a single sweep."
+ },
+ "_tier5Note": "Tier 5 built 2026-08-02: Tabs / Tab + Tabs, Toggle button, Stepper / Step + Stepper + Mobile stepper, Avatar, Badge, Circular progress. 14 icon masters added alongside them.",
+ "iconBacklog": "13 referenced-but-unbuilt icons remain (27 before tier 5, which built 14). Continue batching them with whichever component first needs them.",
+ "_tier6Note": "Tier 6 built 2026-08-02. Read more, Feedback message, and seven illustration masters. Four variables added. Tokens page regenerated 2026-08-03 — see flags.tokensPageGenerated; the generator now lives on disk at tokens-page-generator.js.",
+ "focusStateEnumeration": {
+  "_date": "2026-08-03",
+  "_method": "Every one of the 34 built component sets enumerated from the Figma file, then crossed against source for whether the component takes keyboard focus. CAPTURE ONLY — closing the gaps is a follow-up batch.",
+  "_globalRule": "THE KEY FINDING, and it reframes the whole list: focus is styled GLOBALLY, not per component. CssBaselineOverrides.ts:8 sets `*:focus-visible { outline: 3px solid theme.palette.primary.main }` and line 12 sets `*:focus:not(:focus-visible) { outline: none }`. So every focusable element in the system gets a 3px Growth 1 #004852 outline on keyboard focus without its own override doing anything. A component set missing a Focus visible variant is therefore missing a state the theme already gives it — the gap is in Figma, not in the code.",
+  "_componentSpecificFocusRules": {
+   "MenuItemOverrides.ts:7": "&.Mui-focusVisible — white background, 3px solid primary.main BORDER, radius 4. Replaces the ring look rather than adding to it.",
+   "AutocompleteOverrides.tsx:17": ".MuiAutocomplete-option.Mui-focusVisible — identical treatment to MenuItem: white background, 3px solid primary.main border, radius 4.",
+   "ButtonGroupOverrides.ts:47": "&:focus { zIndex: 2 } with the comment 'Increase z-index on Button focus to ensure outline is shown in case hidden under a sibling button'. Not a focus visual — it is direct evidence that the GLOBAL outline is expected on Button group segments and had to be rescued from overlap.",
+   "ButtonOverrides.ts:15": "&:focus appears only inside a grouped `boxShadow: none` rule. NOT a focus visual."
+  },
+  "hasFocusState": [
+   {
+    "set": "Icon button",
+    "value": "Focus visible"
+   },
+   {
+    "set": "Checkbox",
+    "value": "Focus visible"
+   },
+   {
+    "set": "Radio",
+    "value": "Focus visible"
+   },
+   {
+    "set": "Switch",
+    "value": "Focus visible"
+   },
+   {
+    "set": "Autocomplete / Option",
+    "value": "Focus visible (plus Focused and Selected focused)"
+   },
+   {
+    "set": "Menu / Item",
+    "value": "Focus visible"
+   }
+  ],
+  "fieldFocusNotFocusRing": [
+   {
+    "set": "Text field",
+    "value": "Focused",
+    "note": "Field-level focus (notch + outline colour), a different concept from the focus-visible ring. Not counted as a gap."
+   },
+   {
+    "set": "Autocomplete / Field",
+    "value": "Focused",
+    "note": "Same as Text field."
+   }
+  ],
+  "GAPS": [
+   {
+    "set": "Button",
+    "takesFocus": "ButtonBase",
+    "evidence": "ButtonGroupOverrides' zIndex fix names 'Button focus' and the outline explicitly.",
+    "severity": "high — the most-used interactive element in the library"
+   },
+   {
+    "set": "Button group / Segment",
+    "takesFocus": "ButtonBase",
+    "evidence": "Explicit &:focus { zIndex: 2 } to keep the global outline visible between adjacent segments.",
+    "severity": "high"
+   },
+   {
+    "set": "Toggle button",
+    "takesFocus": "ToggleButton extends ButtonBase",
+    "evidence": "Global rule applies.",
+    "severity": "medium"
+   },
+   {
+    "set": "Chip",
+    "takesFocus": "Conditional — MUI Chip becomes focusable when clickable or deletable",
+    "evidence": "The built set exposes a Delete icon boolean, so the deletable path is modelled but its focus state is not.",
+    "severity": "medium"
+   },
+   {
+    "set": "List / Item",
+    "takesFocus": "ListItemButton extends ButtonBase",
+    "evidence": "Global rule applies.",
+    "severity": "medium"
+   },
+   {
+    "set": "Pagination / Item",
+    "takesFocus": "PaginationItem extends ButtonBase",
+    "evidence": "Global rule applies.",
+    "severity": "medium"
+   },
+   {
+    "set": "Accordion",
+    "takesFocus": "AccordionSummary extends ButtonBase",
+    "evidence": "Global rule applies.",
+    "severity": "medium"
+   },
+   {
+    "set": "Tabs / Tab",
+    "takesFocus": "Tab extends ButtonBase",
+    "evidence": "Global rule applies.",
+    "severity": "medium"
+   },
+   {
+    "set": "Read more",
+    "takesFocus": "Renders a Button — theme.ts module augmentation carries the comment \"inherit must also exist for ReadMore Button\"",
+    "evidence": "Its State axis is Collapsed/Expanded, which are content states; the set models no interaction states at all.",
+    "severity": "low"
+   }
+  ],
+  "notGaps": [
+   {
+    "set": "Card",
+    "why": "CardActionArea ships disabled: true (open decision 4), so the card is not focusable as shipped. Becomes a gap only if that decision changes."
+   },
+   {
+    "set": "Table / Row",
+    "why": "TableRow is not a ButtonBase and takes no focus."
+   },
+   {
+    "set": "Table / Cell",
+    "why": "Not focusable."
+   },
+   {
+    "set": "Form control label",
+    "why": "The label is not focusable; its Control instance-swap slot carries the focus state, and Checkbox/Radio/Switch all have one."
+   },
+   {
+    "set": "Stepper / Step",
+    "why": "Built as icon plus label, not StepButton. MUI StepButton is focusable but is not what is built."
+   },
+   {
+    "set": "Alert",
+    "why": "The surface is not focusable; its Close action is an IconButton, which already has Focus visible."
+   },
+   {
+    "set": "Snackbar content",
+    "why": "The surface is not focusable; its Action slot is a Button — covered by the Button gap, not a separate one."
+   },
+   {
+    "set": "Autocomplete / Tag",
+    "why": "Chip-based delete affordance; covered by the Chip gap."
+   },
+   {
+    "set": "Avatar / Badge / Divider / Paper / Mobile stepper / Feedback message",
+    "why": "Not focusable."
+   },
+   {
+    "set": "Nav / Icon button",
+    "why": "Focusable, but NavIconButton.tsx sets `'&&&&': { outline: 'none' }` at quadrupled specificity, which DEFEATS the global focus-visible ring. Focus instead sets showActiveBackground, producing the hover ground. So a focus indicator exists, it is just not the standard one — recorded as flags.navFocusRingSuppressed rather than a Figma gap. As of 2026-08-03 the set also carries a Selected state (design ruling) which paints as Hover; focus remains without a distinct visual, so this is still not a Figma gap."
+   },
+   {
+    "set": "Nav / Menu item",
+    "why": "Focusable, but the partner theme gives &.Mui-focusVisible the same submenuItemHoverBackground as hover, so the built Hover variant already covers it."
+   },
+   {
+    "set": "Nav / Search",
+    "why": "Focusable; the focused state (white ground, dark text and adornment) exists in source and is deliberately not built. Already recorded in PrimaryNavBar.reviewPass.notBuilt."
+   }
+  ],
+  "summary": "6 sets have a Focus visible state, 2 have a different field-level Focused state, 9 are GAPS, and the rest are correctly without one."
+ },
+ "pendingClarification": {
+  "_date": "2026-08-04",
+  "_purpose": "Designer-feedback items that name a component but not a change. Recorded so they are not silently dropped and not silently guessed at. Nothing here is buildable until the specific arrives.",
+  "Tooltip": {
+   "status": "PENDING_CLARIFICATION",
+   "raisedIn": "designer-feedback closure batch, 2026-08-04",
+   "whatIsKnown": "Tooltip was raised in the feedback batch. The specific was not supplied.",
+   "whyNothingWasBuilt": "The note does not identify a property, state or value. Arrow, placement chrome, a Tebra-palette ground, and a size/multiline treatment are all consistent with an unspecified tooltip note and would each produce a different component, so building any of them would be a guess presented as a transcription.",
+   "currentTruth": "The built Tooltip is unchanged and remains the correct transcription of MUI substrate: alpha(grey[700], 0.92) ground bound to color/computed (no palette)/tooltipBackground, radius 4, padding 4/8, maxWidth 300, common.white text at pxToRem(11) bound to 11, fontWeightMedium 500 shipping Regular because Akkurat LL has no Medium. No arrow — the story never sets it. Placement is runtime: the story's only argType is placement with 12 options defaulting to 'bottom', and placement moves the popper, not the surface.",
+   "relatedFlags": [
+    "tooltipHasNoOverride",
+    "darkSurfacesDisagree"
+   ],
+   "markedInFigma": "Feedback page, Tooltip component description carries a PENDING DESIGNER CLARIFICATION paragraph pointing back at this entry.",
+   "unblockedBy": "A specific from Daniel naming the property and the intended value."
+  }
+ }
+}

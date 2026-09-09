@@ -1,0 +1,100 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_externalRestructure_2026-09-03_retro",
+ "sequence": 43,
+ "date": "2026-09-03",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "129db4e067155bd7bc58d607bd8c1a98b9b182e445a2f37021aaf4283367112f"
+ },
+ "record": {
+  "_status": "RETROACTIVE. Written 2026-09-04 by the repair batch to record target work that an external session did on 2026-09-03 without a record, script, report, flag or commit. Evidence is the read-only audit npveRebuild_audit_2026_09_03 and figma-export/npve-audit-2026-09-03/report.md; nothing here is asserted beyond what that audit enumerated from the file.",
+  "date": "2026-09-03",
+  "recordedOn": "2026-09-04",
+  "attribution": "External session (not this assistant, not recorded). Consumer node sessions 74–78 and 88–172 in fdCQVFdvOByaOYIJYag0d6; the last recorded batch (libraryTodos_write2_2026_09_03) still read 27:6 on Screens.",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "evidence": {
+   "audit": "npveRebuild_audit_2026_09_03",
+   "report": "figma-export/npve-audit-2026-09-03/report.md",
+   "screenshots": "figma-export/npve-audit-2026-09-03/*.png"
+  },
+  "changes": [
+   {
+    "what": "Pages reorganised into numbered sections",
+    "where": "Templates 3:2 (126:2020 01 · Sidesheet shell, 126:2021 02 · Problems picker, 153:1185 03 · Problems management, 126:2022 04 · Change log utilities, 126:2023 05 · Rebuild comparison); Screens 27:2 (126:2024 01 · Current comparisons, 156:2427 02 · Problems management, 160:3168 03 · Problems management comparisons)"
+   },
+   {
+    "what": "Archive page created with four sections",
+    "where": "Archive 126:2 (126:2025 01 · Gap and defect markers, 126:2026 02 · Detached comparison history, 126:2027 03 · Template checks and legacy, 142:996 04 · Recovery checks)"
+   },
+   {
+    "what": "Problems picker body promoted to a variant set",
+    "where": "94:812, Active tab = Recent 26:221 / All 94:639 / Favorites 94:652; three Tabs instances per variant with two hidden carried over from the boolean design"
+   },
+   {
+    "what": "Problem row promoted to a variant set",
+    "where": "107:485, Favorite × Action, variants 107:414, 107:425, 107:437, 107:448, 107:460, 107:473; former 26:208 renamed _Legacy/Problem row — pre-variant API"
+   },
+   {
+    "what": "Problem summary row created",
+    "where": "153:1186, props Name/Code/Status; no nested instance, controls drawn as vectors (audit flag npveAudit_problemSummaryRowDrawnControls)"
+   },
+   {
+    "what": "Problems list body created",
+    "where": "156:2426, State = Closed 155:1559 / Open 156:1294; uses Button 155:1191 (a second subscription copy), Text field, Checkbox, Problem summary row, Divider, Menu + Menu/Item"
+   },
+   {
+    "what": "Rebuild comparison master rebuilt as an instance-swap shell",
+    "where": "35:332 with INSTANCE_SWAP slots Reference/Rebuild/Change log content and twelve _Rebuild comparison/<Reference|Rebuild|Change log>/Problems · <Recent|Favorites|Main|Status menu> sub-components 114:777, 114:779, 114:880, 114:897, 114:899, 114:994, 160:1323, 160:1325, 160:1327, 160:1607, 160:1847, 160:1924; hidden __Legacy placeholder frames kept in each column"
+   },
+   {
+    "what": "Comparison instances placed on Screens",
+    "where": "116:498 Recent, 116:1338 Favorites, 160:3169 Main, 160:3680 Status menu; Sidesheet instances 156:2428 Closed, 156:2707 Open"
+   },
+   {
+    "what": "Source exports",
+    "where": "Recent 2x (same hash as legacy); Favorites re-exported at 1x and captioned \"refreshed 2026-09-03\"; Main and Status menu 1x"
+   },
+   {
+    "what": "Markers moved from Screens to Archive 01",
+    "where": "27:295, 27:306, 33:236, 52:428"
+   },
+   {
+    "what": "Legacy comparisons detached into Archive 02",
+    "where": "36:258 and 40:534, holding the verified screens 27:6 and 40:252 inside Rebuilt screen frames 36:264 / 40:540"
+   },
+   {
+    "what": "_Legacy renames",
+    "where": "4:13 _Legacy/Sidesheet body placeholder, 26:208 _Legacy/Problem row — pre-variant API; check instances and a stray change-log row parked in Archive 03"
+   },
+   {
+    "what": "Recovery checks section",
+    "where": "142:996 holding 130:1185, an un-swapped instance of 35:332; purpose unrecorded"
+   },
+   {
+    "what": "Library updates accepted",
+    "where": "Session-77 subscription nodes Text field 77:697, Tabs 77:650, Tabs/Tab 77:639, Icon button 77:1104; space/* bindings moved to the 997-series ids; Button 3:105 left stale and duplicated by 155:1191"
+   }
+  ],
+  "auditFlagsAddressed": {
+   "npveAudit_unrecordedRestructure": "this record",
+   "npveAudit_buttonImportSplit": "resolved in npveRebuild_repair1_2026-09-04 step 1",
+   "npveAudit_iconButtonOrphanImport": "noted; rename impossible (npveRebuild_repair1_2026-09-04)",
+   "npveAudit_spaceRefsTwoVersions": "resolved with the Button split (npveRebuild_repair1_2026-09-04)",
+   "npveAudit_problemSummaryRowDrawnControls": "open, repair batch 2",
+   "npveAudit_problemsListBodyUnboundWhite": "open, repair batch 2",
+   "npveAudit_referenceExportsNot2x": "open, decision",
+   "npveAudit_comparisonNowInstanceSwap": "open, decision",
+   "npveAudit_markersInArchive": "open, decision",
+   "npveAudit_recoveryCheckUnexplained": "open, README states it",
+   "npveAudit_screensTriplicated": "renames stopped on the pixel check (npveRebuild_repair1_2026-09-04 step 2)",
+   "npveAudit_pickerBodyDeadTabs": "open",
+   "npveAudit_textFieldHiddenPlaceholderCopy": "open, library"
+  }
+ }
+}

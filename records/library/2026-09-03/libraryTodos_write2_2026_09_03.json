@@ -1,0 +1,172 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "libraryTodos_write2_2026_09_03",
+ "sequence": 40,
+ "date": "2026-09-03",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "ce03d649a5ea4830f1cccc656c939860a56e6f1bcc763a6972bd9fa1eb875138"
+ },
+ "record": {
+  "_status": "DONE. Variables: space/32 added, 14 non-scale space/* described, WEB codeSyntax removed from all 19 that had it; six typography variables added (h4, h5, subtitle2 size + lineHeight); font/weight/bold already existed. Repo: standalone rule 8 walk with the GROUP/VECTOR exemption, re-run on the target Screens page with 0 hits. Schema: three dated annotations, one flag resolved, three annotated. No deletion, no rename.",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw, write batch 2 of 2. Variables only; no component master touched (write 1 masters re-read unchanged).",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 Screens 27:2, read only (rule 8 re-run).",
+  "date": "2026-09-03",
+  "report": "figma-export/library-todos-write2-2026-09-03/report.md",
+  "step1_dimension": {
+   "decision": "Daniel, 2026-09-03: the space scale is multiples of 8 with 4 as the half step (0, 4, 8, 16, 24, 32, 40 are scale; everything else is a component size token).",
+   "added": {
+    "name": "space/32",
+    "id": "VariableID:997:2",
+    "key": "0d62cb72fb8788eabda4d5fbada6804ed95063f6",
+    "value": 32,
+    "scopes": [
+     "WIDTH_HEIGHT",
+     "GAP"
+    ],
+    "description": "Scale step. Decision 2026-09-03 (Daniel): the space scale is multiples of 8 with 4 as the half step."
+   },
+   "described": {
+    "space/12": "Component size token, not scale: needed by Autocomplete (Value=Multiple vertical padding: MUI root padding 9 + chip margin 3)  [from figmaVariablePlan addedDuringBuild]",
+    "space/18": "Component size token, not scale: needed by Checkbox Flush=Left (derived 42 MUI SwitchBase target minus 24 SvgIcon medium; …)  [from the variable's own earlier description]",
+    "unrecorded": [
+     "space/2 → \"Component size token, not scale: origin unrecorded\"",
+     "space/3 → \"Component size token, not scale: origin unrecorded\"",
+     "space/5 → \"Component size token, not scale: origin unrecorded\"",
+     "space/6 → \"Component size token, not scale: origin unrecorded\"",
+     "space/7 → \"Component size token, not scale: origin unrecorded\"",
+     "space/9 → \"Component size token, not scale: origin unrecorded\"",
+     "space/11 → \"Component size token, not scale: origin unrecorded\"",
+     "space/13 → \"Component size token, not scale: origin unrecorded\"",
+     "space/14 → \"Component size token, not scale: origin unrecorded\"",
+     "space/17 → \"Component size token, not scale: origin unrecorded\"",
+     "space/19 → \"Component size token, not scale: origin unrecorded\"",
+     "space/23 → \"Component size token, not scale: origin unrecorded\""
+    ]
+   },
+   "untouchedDescriptions": "space/0 (Checkbox Flush=Left note), space/40 (theme.spacing(5) note), space/4, 8, 16, 24 (empty) — all scale values, not in the write.",
+   "codeSyntaxRemoved": [
+    "space/0",
+    "space/2",
+    "space/3",
+    "space/4",
+    "space/5",
+    "space/6",
+    "space/7",
+    "space/8",
+    "space/9",
+    "space/11",
+    "space/12",
+    "space/13",
+    "space/14",
+    "space/16",
+    "space/17",
+    "space/18",
+    "space/19",
+    "space/23",
+    "space/24"
+   ],
+   "codeSyntaxNote": "space/40 had none; space/32 created without one. var(--tebra-space-N) exists nowhere in C:/Code/web-app-v2/packages (read batch A4, 0 matches).",
+   "readBack": "21 space/* variables, values 0,2,3,4,5,6,7,8,9,11,12,13,14,16,17,18,19,23,24,32,40; codeSyntax {} on all 21; scopes WIDTH_HEIGHT+GAP on all 21. Dimension collection 34 → 35.",
+   "planNote": "figmaVariablePlan.collections[2] still lists the pre-batch codeSyntax on the plan entries; annotated below, not edited."
+  },
+  "step2_typography": {
+   "added": [
+    {
+     "name": "font/size/h4",
+     "id": "VariableID:996:2",
+     "value": 16
+    },
+    {
+     "name": "font/lineHeight/h4",
+     "id": "VariableID:996:3",
+     "value": 24
+    },
+    {
+     "name": "font/size/h5",
+     "id": "VariableID:996:4",
+     "value": 14
+    },
+    {
+     "name": "font/lineHeight/h5",
+     "id": "VariableID:996:5",
+     "value": 20
+    },
+    {
+     "name": "font/size/subtitle2",
+     "id": "VariableID:996:6",
+     "value": 12
+    },
+    {
+     "name": "font/lineHeight/subtitle2",
+     "id": "VariableID:996:7",
+     "value": 16
+    }
+   ],
+   "pattern": "scopes copied from font/size/body1 (FONT_SIZE) and font/lineHeight/body1 (LINE_HEIGHT); codeSyntax WEB var(--tebra-font-size-<v>) and var(--tebra-font-line-height-<v>) — the corrected line-height pattern, not the --tebra-line-height-* that h2 and h3 carry; description \"typography.ts <v> (weight 700 in code)\".",
+   "source": "ds/typography/typography.ts:31-45 (h4 1rem/1.5rem, h5 0.875rem/1.25rem, subtitle2 0.75rem/1rem, all fontWeight 700).",
+   "bold": "font/weight/bold VariableID:74:52 = 700 already existed; not added.",
+   "readBack": "Typography collection 17 → 23; all six read back with the values, scopes and codeSyntax above.",
+   "h2h3CodeSyntax": "font/lineHeight/h2 and h3 in the library still read var(--tebra-line-height-h2) / -h3 (missing \"font-\"). Not changed: the write list names only the schema annotation (5b). One-line fix if wanted."
+  },
+  "step3_letterSpacingDecision": "DECISION 2026-09-03: no letter-spacing variable. Code authors none (typography.ts) and Button and Tab render letter-spacing normal in Storybook (libraryTodos_write1_2026_09_03.step0_renderFindings). The 0.5px on chip and slot labels is a source-file value until Chip is render-checked.",
+  "step4_rule8Script": {
+   "finding": "No standing rule 8 audit script existed in the repo; every previous rule 8 walk was written inline in that batch's use_figma script (records: npveRebuild_cleanup, tabUnderlineFix, labelDriftAndUnderline, goldStarsAndCorrections). The inline walks listed GROUP/VECTOR bounds as hits although standingBatchRules.8 exempts them.",
+   "file": "rule8-audit.figma.js (new, repo root): the walk as a use_figma body; header notes the 2026-09-03 change; VECTOR and GROUP are exempt and counted separately; INCLUDE_EXEMPT toggles listing them for comparison.",
+   "rerun": {
+    "file": "fdCQVFdvOByaOYIJYag0d6",
+    "page": "Screens 27:2",
+    "topLevel": 6,
+    "walked": 485,
+    "hits": 0,
+    "exempt": 39,
+    "group573_3583": "four instances (rows 26:261, 26:272, 26:282, 26:292 under 27:6) now in the exempt bucket, not in hits",
+    "otherExempt": "Icon/DownCaret 76:4 16.67x9.19, Icon 76:7 20x19.994, 200:34 11.026x20, 76:10 19.99998x20 and their siblings — all VECTOR"
+   }
+  },
+  "step5_schemaCorrections": {
+   "a_pagesOrder": "figmaBuild.pages._order_2026_09_03 added beside _order (untouched).",
+   "b_h2h3CodeSyntax": "figmaVariablePlan.collections[1].annotation_2026_09_03 added; the plan has no h2/h3 lineHeight entries (added to the library after the plan), so the defect is recorded there and in the read record's B4 line.",
+   "c_buttonUppercaseClaim": "flag npveBuild_buttonLabelTitleCase: correction appended; original detail untouched."
+  },
+  "step6_flags": {
+   "resolved": [
+    "npveBuild_buttonLabelTitleCase"
+   ],
+   "annotatedOpen": [
+    "npveBuild_slotLetterSpacingUnbound",
+    "npveComparison_noSpace32Token",
+    "npveChangelog_noH4Token"
+   ],
+   "alsoAnnotated": [
+    "libraryRead_spaceCodeSyntaxNamesMissingCssVar",
+    "libraryRead_letterSpacingInheritsMuiDefaults",
+    "libraryRead_iconGlyphGroupIsIntrinsicGeometry",
+    "libraryRead_pagesOrderStale"
+   ]
+  },
+  "verify": {
+   "write1Masters": "130:140 and 130:159: variant 300x60, Input 300x40, Label / resting y 9 h 24, Label slot 95x40 (hidden / visible). 201:3: 90x48, Label 37x20 at y 14, 16/20 TITLE, five bindings. Unchanged by this batch.",
+   "screenshots": "None: variable-only writes; rule 1/3 instantiation applies to component edits only."
+  },
+  "rules": {
+   "1_instancePaintVerification": "n/a (variables only)",
+   "2_unboundPaintAudit": "n/a",
+   "3_referenceCounts": "n/a",
+   "4_skipInvisibleFalse": "set on the rule 8 walk and the master re-read",
+   "5_opacityLast": "n/a",
+   "6_enumerateDontRecall": "space/* and typography variables enumerated from the collections before and after",
+   "7_fileIdentityFirst": "library pages read earlier the same day (read batch); target walk addressed Screens 27:2 by name and id",
+   "8_roundWithRecord": "target Screens 0 hits with the exemption; library variables are integers",
+   "9_boundPaintAlpha": "n/a",
+   "10_cloneDropsPropertyRefs": "n/a",
+   "14_15": "n/a (no rebuilt frame)"
+  },
+  "publishing": "Manual: publish the library so the new variables reach consumers; then the NPVE target can rebind its literal 32s (35:332) and the Change log title to h4. Not done here."
+ }
+}

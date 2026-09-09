@@ -1,0 +1,109 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_problemEdit_2026-09-04",
+ "sequence": 61,
+ "date": "2026-09-04",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "53e191253c0a59ca9f9b39a3eb94adbb22453814cc464dffce794633dc145acb"
+ },
+ "record": {
+  "_status": "DONE. Edit Problem Sidesheet, comparison, change log, and GAP marker are built and verified; the sole screen remains a live Sidesheet instance.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only; subscribed Design System Rebuild assets only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Clin_Problems-Edit 4536:27605",
+  "report": "figma-export/npve-problem-edit-2026-09-04/report.md",
+  "recordGate": "npveRebuild_problemsLowOversightBatch_2026-09-04 recorded DONE — passed",
+  "approvedScope": "Build the remaining Problems Edit reference as one component-based Sidesheet comparison using the locked shell and subscribed Text field, Chip, Button, Calendar icon, Rebuild comparison, and Change log patterns.",
+  "sourceFacts": {
+   "root": "4536:27605, 550x458. Header 64, body 318 with 16px vertical and 20px horizontal insets, footer 76.",
+   "body": "Problem/ICD select; Status select plus Acute/Chronic type choices; Start and End date fields with calendar icons; multiline Comments.",
+   "footer": "Mark as error on the left; Cancel and Save on the right."
+  },
+  "plannedChanges": [
+   "Create one local Problem edit body component from live subscribed component instances; no source drawing is promoted as a component.",
+   "Represent both date controls as documented local wrappers around live Text field and Calendar instances because the Text field API has no adornment slot.",
+   "Append Problem edit body to the Sidesheet Body content preferred values without changing its default.",
+   "Create one reference helper, one rebuild helper containing the sole live Sidesheet screen, one change-log helper, and one comparison instance.",
+   "Export fresh source and final comparison PNGs and validate all standing batch rules."
+  ],
+  "preserve": "Source and shared-library files, Sidesheet shell geometry and defaults, existing body defaults, existing Screens and comparison instances, tokens, component links, and all open row-spacing decisions.",
+  "stopCondition": "Stop on file/page/component identity mismatch, duplicate semantic names, a required global shell change, a control that would require a hand-drawn fake, a new product decision, changed existing default, detached content, paint/alpha drift, or unexpected existing-instance diff.",
+  "knownGapAtStart": "The subscribed Text field has no start or end adornment slot. Date fields may use only a clearly documented wrapper composed from live Text field and Calendar instances; no new generic Date picker is authorized.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — 35 visible master paint entries equal 35 live-instance entries exactly.",
+   "2_unboundPaintAudit": "PASS with documented canvas exception — no local component surface paint; only copied E4E4E4 section fills and 10% section outlines are unbound.",
+   "3_referenceCounts": "PASS — every new component and comparison link resolves; all new nested controls remain live instances.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on every audit walk.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — source, target, library subscription, component APIs, footer structure, and final instances were enumerated live.",
+   "7_fileIdentityFirst": "PASS — exact file, page, source node, and target master identities were verified before mutation.",
+   "8_roundWithRecord": "PASS — half-pixel footer spacer was caught and corrected; final authored geometry is integer.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was changed.",
+   "10_cloneDropsPropertyRefs": "PASS — only the established GAP frame was cloned; no component clone was used. All new component links were created and read back."
+  },
+  "screenshots": [
+   "figma-export/npve-problem-edit-2026-09-04/source-problem-edit-4536-27605-2x.png",
+   "figma-export/npve-problem-edit-2026-09-04/component-problem-edit-body-316-3412-2x.png",
+   "figma-export/npve-problem-edit-2026-09-04/rebuild-problem-edit-318-3655-2x.png",
+   "figma-export/npve-problem-edit-2026-09-04/comparison-problem-edit-318-6740.png"
+  ],
+  "figmaMutations": [
+   "Created Problem edit body 316:3412 from five live Text field, two Chip, and two Icon/Calendar instances.",
+   "Created Problem edit / Mark as error action 318:3643 and Problem edit footer actions 320:3849 from live Button instances.",
+   "Appended Problem edit body and footer actions to existing Sidesheet preferred values; defaults remain 26:221 and 248:1827.",
+   "Created reference 318:3652, rebuild 318:3654, and change log 318:3928 helpers and appended them to Rebuild comparison preferred values; defaults unchanged.",
+   "Uploaded the fresh 2x source export to 318:3653 with image hash a62362f2274f16a7c8e302871915a5fbf4acc71d.",
+   "Created comparison section 318:6739, live comparison instance 318:6740, and GAP marker 324:4934.",
+   "Copied the established E4E4E4 section treatment and normalized the footer spacer to whole-pixel geometry."
+  ],
+  "createdNodes": {
+   "templatesSection": "316:3411",
+   "body": "316:3412",
+   "markErrorAction": "318:3643",
+   "footerActions": "320:3849",
+   "reference": "318:3652",
+   "referenceImage": "318:3653",
+   "rebuild": "318:3654",
+   "sidesheet": "318:3655",
+   "changeLog": "318:3928",
+   "screensSection": "318:6739",
+   "comparison": "318:6740",
+   "gapMarker": "324:4934"
+  },
+  "verification": {
+   "fileIdentity": "PASS — target pages Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2; source 4536:27605 read live.",
+   "sourceImage": "PASS — fresh 1100x916 export placed at 0.5 scaling factor; hash a62362f2274f16a7c8e302871915a5fbf4acc71d.",
+   "components": "PASS — body and footer use live subscribed components; no detached instance on Templates or Screens.",
+   "comments": "PASS — nested live Comments field is medium multiline, 518x104 with a 104px outline; fixed sample rows are empty.",
+   "paints": "PASS — body master and live nested instance each expose 35 visible paint entries with identical normalized signatures.",
+   "defaults": "PASS — Sidesheet Body content 26:221 and Full-width action 248:1827; comparison 114:777 / 114:779 / 114:880.",
+   "geometry": "PASS — no fractional authored geometry in either new section; section separation is 200px.",
+   "organization": "PASS — both new work areas use the established E4E4E4 section fill.",
+   "existingUnchanged": "PASS — prior Sidesheet values and geometry remained unchanged; existing instances inherited only additive preferred-value lists.",
+   "visual": "PASS — body, live 2x Sidesheet, and full comparison rendered and inspected after every correction."
+  },
+  "findings": {
+   "GAP": 1,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "existingDefectEncountered": "npveAudit_textFieldHiddenPlaceholderCopy"
+  },
+  "flagsAdded": [
+   "npveProblemEdit_textFieldNoEndAdornment"
+  ],
+  "flagsBefore": 229,
+  "flagsAfter": 230,
+  "recoveryNotes": [
+   "Visual QA corrected inherited status styling on Type, clipped date labels, collapsed Comments outline, default Button labels, right-packed footer actions, a half-pixel spacer, and default-white work areas before completion.",
+   "No Figma call failed or partially committed. All corrections stayed inside nodes created by this batch or additive preferred-value lists."
+  ],
+  "nextBatch": "Not started — select the next remaining sidesheet reference only after operator review of this comparison."
+ }
+}

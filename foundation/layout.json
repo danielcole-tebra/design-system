@@ -1,0 +1,21 @@
+{
+ "format": "tebra.design-foundation-layout",
+ "version": 1,
+ "note": "Ordered top-level keys of the aggregate that are not batch records. flags is served from flags/active.json + flags/resolved.json. Hand-maintained; changes only when a foundation section is added, with a record.",
+ "order": [
+  "meta",
+  "provenance",
+  "decisions",
+  "pxToRemHazard",
+  "tokens",
+  "figmaVariablePlan",
+  "components",
+  "flags",
+  "openDecisionsFromCanonicalPage",
+  "namingFreeze",
+  "standingBatchRules",
+  "coverageSweep",
+  "overlayRecipe",
+  "figmaBuild"
+ ]
+}

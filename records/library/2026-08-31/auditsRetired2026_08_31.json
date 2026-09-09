@@ -1,0 +1,30 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "auditsRetired2026_08_31",
+ "sequence": 13,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "344eab8534441afab9ea1113bd5b6ec8dc9f45a3811fce298b057fc04b303b01"
+ },
+ "record": {
+  "decision": "library-parity-audit.html, compositions-to-build.md and old-kit-deprecation-audit.html are retired. design-system-schema.json is the only register. Do not consult the audits for counts; scan for the number with composition-scan.js.",
+  "movedTo": "C:/Code/tebra-catalog/audits/archive/, with a README.md stating the reason and listing the known errors.",
+  "whyRetired": "Wrong three times, each time with something downstream inheriting the error: Menu recorded as having no properties when it has 8; <Table> recorded as 15 files when 15 is the TableContainer count and <Table> is 21; Autocomplete recorded as 58 files when it is 88. A fourth figure from the same generation — MuiRadioButton affecting 52 files — is also wrong; verified 38.",
+  "rootCause": "Line-based grep. It misses a call site whose props begin on the next line, and misses TSX generic call sites entirely. composition-scan.js reads balanced braces and resolves import source per file, which is why its counts and the audits diverge.",
+  "notMoved": {
+   "file": "library-parity-gaps.md",
+   "status": "Superseded by gap-list-sorted.md by that document own opening statement, but NOT named in the retirement decision, so left in place. Flagged in the archive README as a candidate.",
+   "forDecision": true
+  },
+  "stillLive": [
+   "audits/code-defects.md",
+   "audits/gap-list-sorted.md"
+  ]
+ }
+}

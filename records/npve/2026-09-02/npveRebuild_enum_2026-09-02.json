@@ -1,0 +1,6201 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_enum_2026-09-02",
+ "sequence": 22,
+ "date": "2026-09-02",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "3ece1af5b2c781cdf6cf62cabd5db4701ba3fd5fccb68714caf657fa6430a0cd"
+ },
+ "record": {
+  "_status": "READ-ONLY ENUMERATION COMPLETE. Stopped after step 5 as instructed. No writes of any kind to the source file; the target file was not opened.",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq (NDE-2026) — read only",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6 (NPVE Rebuild) — not touched in this batch",
+  "date": "2026-09-02",
+  "fileIdentityCheck": "Source page list (18 pages, first page \"Cover\", second \"-----DESIGNS-----\") does not match figmaBuild.pages._order, so this is confirmed NOT the library. The two library files were opened read-only for key inventories only.",
+  "method": {
+   "walk": "Per page, PageNode.loadAsync() then page.children. setCurrentPageAsync was deliberately NOT used so the user's current-page view state was never changed. figma.skipInvisibleInstanceChildren=false set at the top of every script (runtime flag, not file data).",
+   "instanceProvenance": "Every INSTANCE under each top-level node (nested instances included) resolved to its main component. remote=false counted as local. remote=true keys matched by their first 8 hex chars against key inventories of Design System Rebuild (657 components/sets across 11 pages) and Tebra Working UI Kit ZPf0sJy83aPyrHjCVHomya (1674 across 12 pages). Zero prefix overlap between the two inventories.",
+   "inventoryCaveat": "Both inventories are of components ON CANVAS today. A published component that has since been deleted from a library canvas would classify here as \"other remote\", not as that library.",
+   "textScan": "TEXT nodes under each top-level node tested against /old|v\\d+|archived?|deprecated|wip|draft|do not use|legacy|obsolete|19xx|20xx|d/d/yy/. Hits inside remote instances (node ids starting \"I\") are library placeholder copy, not text authored in this file, and are marked insideRemoteInstances.",
+   "screenshots": "get_screenshot on each page id, 1600px long edge, saved under figma-export/npve-enum-2026-09-02/. Every image was opened and looked at."
+  },
+  "screenshotsLookedAt": "Yes. Notable in pixels: Workflows is a tall column of black-backdrop section boards (Sidesheet View, General Workflow x2, Prototype, Med List, Signed Note, New Create Flow, Mark As Error, Select Appointment Date, Recording/Transcription Live); Error States is a grid of 1429px encounter screens each with a modal; NeuNeu holds a \"Menus / IA\" board plus new-shell screens with a dark left rail; Neu holds older shell screens with a light rail and a colour swatch column; Sandbox has a \"Megamenu\" board; Maps is an all-text \"Object Map\"; Research Framework is a timeline table.",
+  "enabledTeamLibrariesWithVariables": [
+   "Design System Rebuild :: Tebra/Color",
+   "Design System Rebuild :: Tebra/Dimension",
+   "Design System Rebuild :: Tebra/Typography"
+  ],
+  "pageCount": 18,
+  "emptySeparatorPages": [
+   "-----DESIGNS----- (10:15)",
+   "-----COMPONENTS----- (21:320)",
+   "-----ARCHIVE----- (105:1425)",
+   "-----RESEARCH------ (4211:15272)"
+  ],
+  "sectionsFound": 0,
+  "pages": [
+   {
+    "id": "0:1",
+    "name": "Cover",
+    "topLevelCount": 1,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-01-Cover.png",
+    "frames": [
+     {
+      "name": "Cover",
+      "id": "10:4",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 960,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "10:15",
+    "name": "-----DESIGNS-----",
+    "topLevelCount": 0,
+    "screenshot": null,
+    "frames": []
+   },
+   {
+    "id": "105:1426",
+    "name": "Workflows",
+    "topLevelCount": 26,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-03-Workflows.png",
+    "frames": [
+     {
+      "name": "Frame 758532141",
+      "id": "3943:12393",
+      "type": "FRAME",
+      "x": -1873,
+      "y": -254,
+      "w": 2922,
+      "h": 2008,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 351,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 164,
+       "otherRemote": 180,
+       "local": 7,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532154",
+      "id": "4317:11594",
+      "type": "FRAME",
+      "x": -1873,
+      "y": -2414,
+      "w": 2922,
+      "h": 2008,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 347,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 164,
+       "otherRemote": 176,
+       "local": 7,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532155",
+      "id": "4715:26647",
+      "type": "FRAME",
+      "x": -1873,
+      "y": -4666,
+      "w": 1584,
+      "h": 1364,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 217,
+       "designSystemRebuild": 6,
+       "tebraWorkingUiKit": 116,
+       "otherRemote": 74,
+       "local": 21,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532140",
+      "id": "5093:18693",
+      "type": "FRAME",
+      "x": -1853,
+      "y": -5857,
+      "w": 1429,
+      "h": 815,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 134,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 66,
+       "otherRemote": 52,
+       "local": 16,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532143",
+      "id": "3943:12395",
+      "type": "FRAME",
+      "x": -1873,
+      "y": 2072,
+      "w": 15951,
+      "h": 1314,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 2278,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 1107,
+       "otherRemote": 934,
+       "local": 237,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532144",
+      "id": "3943:12402",
+      "type": "FRAME",
+      "x": -1873,
+      "y": 3626,
+      "w": 2906,
+      "h": 1360,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 388,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 195,
+       "otherRemote": 163,
+       "local": 30,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532149",
+      "id": "3943:13025",
+      "type": "FRAME",
+      "x": -2100,
+      "y": 9462,
+      "w": 4367,
+      "h": 2839,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 542,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 253,
+       "otherRemote": 211,
+       "local": 78,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "arrow_drop_down_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24(1) 1",
+      "id": "3534:17621",
+      "type": "FRAME",
+      "x": 4125,
+      "y": 9299,
+      "w": 24,
+      "h": 24,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Module Dropdown",
+      "id": "899:7657",
+      "type": "INSTANCE",
+      "x": 3190,
+      "y": 7120,
+      "w": 376,
+      "h": 504,
+      "isSection": false,
+      "parentSection": null,
+      "visible": false,
+      "instances": {
+       "total": 25,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 8,
+       "otherRemote": 5,
+       "local": 12,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532101",
+      "id": "3456:11503",
+      "type": "FRAME",
+      "x": -2127,
+      "y": 19000,
+      "w": 1517,
+      "h": 280,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532100",
+      "id": "2939:11510",
+      "type": "FRAME",
+      "x": -2018,
+      "y": 21748,
+      "w": 1762,
+      "h": 280,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532151",
+      "id": "3943:13027",
+      "type": "FRAME",
+      "x": -2100,
+      "y": 13193,
+      "w": 5039,
+      "h": 1249,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 76,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 49,
+       "otherRemote": 27,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Mark As Error_Ready",
+      "id": "3456:11505",
+      "type": "FRAME",
+      "x": -2127,
+      "y": 19404,
+      "w": 1429,
+      "h": 810,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 239,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 109,
+       "otherRemote": 104,
+       "local": 26,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rec_Ready",
+      "id": "3124:12369",
+      "type": "FRAME",
+      "x": -2018,
+      "y": 22258,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 249,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 114,
+       "otherRemote": 109,
+       "local": 26,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rec_Ready",
+      "id": "4841:17077",
+      "type": "FRAME",
+      "x": -550,
+      "y": 23349,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 267,
+       "designSystemRebuild": 6,
+       "tebraWorkingUiKit": 123,
+       "otherRemote": 110,
+       "local": 28,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Sidesheetv3",
+      "id": "4841:21245",
+      "type": "INSTANCE",
+      "x": 900,
+      "y": 23414,
+      "w": 550,
+      "h": 948,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 84,
+       "designSystemRebuild": 3,
+       "tebraWorkingUiKit": 41,
+       "otherRemote": 36,
+       "local": 4,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rec_Ready",
+      "id": "4841:18039",
+      "type": "FRAME",
+      "x": -550,
+      "y": 24387,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 350,
+       "designSystemRebuild": 9,
+       "tebraWorkingUiKit": 164,
+       "otherRemote": 146,
+       "local": 31,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rec_Started",
+      "id": "3159:20067",
+      "type": "FRAME",
+      "x": -299,
+      "y": 22258,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 224,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 106,
+       "otherRemote": 104,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rec_Paused",
+      "id": "4296:17197",
+      "type": "FRAME",
+      "x": 1240,
+      "y": 22258,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 224,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 106,
+       "otherRemote": 104,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rec_Processing",
+      "id": "4275:15285",
+      "type": "FRAME",
+      "x": 3439,
+      "y": 22258,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 224,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 106,
+       "otherRemote": 104,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rec_Closed",
+      "id": "4294:15013",
+      "type": "FRAME",
+      "x": 8127,
+      "y": 22236,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 221,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 104,
+       "otherRemote": 103,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rec_Open",
+      "id": "3159:21282",
+      "type": "FRAME",
+      "x": 4993,
+      "y": 22258,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 228,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 109,
+       "otherRemote": 105,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Replace_Section_Modal",
+      "id": "4439:16310",
+      "type": "FRAME",
+      "x": 6571,
+      "y": 22258,
+      "w": 1429,
+      "h": 1013,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 266,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 134,
+       "otherRemote": 118,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532153",
+      "id": "3943:13029",
+      "type": "FRAME",
+      "x": -2100,
+      "y": 14790,
+      "w": 5039,
+      "h": 3547,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 902,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 461,
+       "otherRemote": 337,
+       "local": 104,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Screenshot 2026-05-05 at 9.44.35 AM 1",
+      "id": "3806:13143",
+      "type": "RECTANGLE",
+      "x": 8430,
+      "y": 3487,
+      "w": 1458,
+      "h": 106,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532132",
+      "id": "3810:13146",
+      "type": "FRAME",
+      "x": 8509,
+      "y": 3216,
+      "w": 758,
+      "h": 116,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 9,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 7,
+       "otherRemote": 2,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "1050:8411",
+    "name": "Error States",
+    "topLevelCount": 20,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-04-Error-States.png",
+    "frames": [
+     {
+      "name": "Module Errors",
+      "id": "2117:8381",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 2846,
+      "h": 675,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 16,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 8,
+       "otherRemote": 8,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Cost Disclosure",
+      "id": "4494:15947",
+      "type": "FRAME",
+      "x": 16,
+      "y": 1017,
+      "w": 1429,
+      "h": 790,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 202,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 97,
+       "otherRemote": 78,
+       "local": 27,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "E-06",
+      "id": "4505:18288",
+      "type": "FRAME",
+      "x": 16,
+      "y": 2199,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 172,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 89,
+       "otherRemote": 69,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Transcription service disconnected",
+      "id": "4508:23664",
+      "type": "FRAME",
+      "x": 16,
+      "y": 3244,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 166,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 85,
+       "otherRemote": 67,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Transcription service disconnected",
+      "id": "4508:24088",
+      "type": "FRAME",
+      "x": 16,
+      "y": 3244,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 165,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 85,
+       "otherRemote": 66,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Transcription service disconnected",
+      "id": "4549:28463",
+      "type": "FRAME",
+      "x": 16,
+      "y": 4162,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 171,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 89,
+       "otherRemote": 68,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Transcription service disconnected",
+      "id": "4597:30566",
+      "type": "FRAME",
+      "x": 1668,
+      "y": 4162,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 225,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 109,
+       "otherRemote": 102,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Transcription service disconnected",
+      "id": "4508:26782",
+      "type": "FRAME",
+      "x": 6257,
+      "y": 2223,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 166,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 85,
+       "otherRemote": 67,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Transcription service disconnected",
+      "id": "4508:24483",
+      "type": "FRAME",
+      "x": 1511,
+      "y": 3244,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 187,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 95,
+       "otherRemote": 78,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "E-07",
+      "id": "4505:19685",
+      "type": "FRAME",
+      "x": 1511,
+      "y": 2199,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 167,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 85,
+       "otherRemote": 68,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "No mics detected",
+      "id": "4507:22374",
+      "type": "FRAME",
+      "x": 3355,
+      "y": 4289,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 167,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 85,
+       "otherRemote": 68,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "E-09",
+      "id": "4507:21046",
+      "type": "FRAME",
+      "x": 3093,
+      "y": 2199,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 212,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 100,
+       "otherRemote": 98,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Session Timeout",
+      "id": "4505:16648",
+      "type": "FRAME",
+      "x": 1691,
+      "y": 1017,
+      "w": 1429,
+      "h": 790,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 205,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 97,
+       "otherRemote": 81,
+       "local": 27,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "E-11 Mic Disconnected",
+      "id": "4507:22770",
+      "type": "FRAME",
+      "x": 4675,
+      "y": 2199,
+      "w": 1429,
+      "h": 790,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 208,
+       "designSystemRebuild": 9,
+       "tebraWorkingUiKit": 97,
+       "otherRemote": 75,
+       "local": 27,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Session ID Failures",
+      "id": "4508:23234",
+      "type": "FRAME",
+      "x": 6729,
+      "y": 4354,
+      "w": 1429,
+      "h": 790,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 202,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 97,
+       "otherRemote": 78,
+       "local": 27,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Internal Service Error - Failed Call for Recording",
+      "id": "4505:17114",
+      "type": "FRAME",
+      "x": 3355,
+      "y": 1017,
+      "w": 1429,
+      "h": 790,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 202,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 97,
+       "otherRemote": 78,
+       "local": 27,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Permission Validation Error",
+      "id": "4505:17721",
+      "type": "FRAME",
+      "x": 4899,
+      "y": 1017,
+      "w": 1429,
+      "h": 790,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 202,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 97,
+       "otherRemote": 78,
+       "local": 27,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "TemplateMgmt",
+      "id": "4565:29308",
+      "type": "FRAME",
+      "x": -1463,
+      "y": 2420,
+      "w": 376,
+      "h": 490,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 51,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 19,
+       "otherRemote": 32,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Failed to get appointment",
+      "id": "4567:30083",
+      "type": "FRAME",
+      "x": 16,
+      "y": 5209,
+      "w": 1429,
+      "h": 766,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 167,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 85,
+       "otherRemote": 68,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Stage — app content behind the scrim",
+      "id": "5039:28223",
+      "type": "FRAME",
+      "x": 1789,
+      "y": 5382,
+      "w": 800,
+      "h": 420,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 7,
+       "designSystemRebuild": 7,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "3813:14586",
+    "name": "V2:AI Patient Summary",
+    "topLevelCount": 1,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-05-V2-AI-Patient-Summary.png",
+    "frames": [
+     {
+      "name": "AI Note - Vew Patient Details (All Cards)",
+      "id": "3813:15084",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 109,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 43,
+       "otherRemote": 66,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "21:320",
+    "name": "-----COMPONENTS-----",
+    "topLevelCount": 0,
+    "screenshot": null,
+    "frames": []
+   },
+   {
+    "id": "21:321",
+    "name": "⚙️ Components",
+    "topLevelCount": 34,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-07-Components.png",
+    "frames": [
+     {
+      "name": "SectionMgmt",
+      "id": "21:585",
+      "type": "COMPONENT_SET",
+      "x": 10,
+      "y": -336,
+      "w": 530,
+      "h": 790,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 31,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 7,
+       "otherRemote": 24,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Social",
+      "id": "26:10376",
+      "type": "COMPONENT_SET",
+      "x": 10,
+      "y": 616,
+      "w": 582,
+      "h": 1632,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 215,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 133,
+       "otherRemote": 82,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "PatientSummary",
+      "id": "127:3348",
+      "type": "COMPONENT",
+      "x": 1056,
+      "y": 44,
+      "w": 634,
+      "h": 883,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 8,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 4,
+       "otherRemote": 4,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532088",
+      "id": "1663:20062",
+      "type": "FRAME",
+      "x": 1075,
+      "y": 1228,
+      "w": 1381,
+      "h": 148,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 24,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 3,
+       "otherRemote": 7,
+       "local": 14,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Sidesheetv3",
+      "id": "129:6647",
+      "type": "COMPONENT_SET",
+      "x": -1888,
+      "y": -3940,
+      "w": 18040,
+      "h": 2415,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 4722,
+       "designSystemRebuild": 15,
+       "tebraWorkingUiKit": 2892,
+       "otherRemote": 1790,
+       "local": 25,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "sidebar",
+      "id": "4667:5031",
+      "type": "TEXT",
+      "x": 11410,
+      "y": -3233,
+      "w": 56,
+      "h": 20,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "sidebar",
+      "id": "4667:13076",
+      "type": "TEXT",
+      "x": 12038,
+      "y": -3213,
+      "w": 56,
+      "h": 20,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "sidebar",
+      "id": "4667:13077",
+      "type": "TEXT",
+      "x": 12632,
+      "y": -3203,
+      "w": 56,
+      "h": 20,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "sidebar",
+      "id": "4667:13075",
+      "type": "TEXT",
+      "x": 10941,
+      "y": -3296,
+      "w": 56,
+      "h": 20,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532122",
+      "id": "3496:15087",
+      "type": "FRAME",
+      "x": 11702,
+      "y": -4177,
+      "w": 26,
+      "h": 24,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Slice 1",
+      "id": "917:15599",
+      "type": "SLICE",
+      "x": -2539,
+      "y": -1433,
+      "w": 100,
+      "h": 100,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Modules_HFlex",
+      "id": "625:4598",
+      "type": "COMPONENT_SET",
+      "x": -4917,
+      "y": -2749,
+      "w": 1397,
+      "h": 80,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 32,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 10,
+       "local": 22,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532106",
+      "id": "2198:9863",
+      "type": "FRAME",
+      "x": -5356,
+      "y": -2531,
+      "w": 1975,
+      "h": 406,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 44,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 44,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "BlinkingTextCursor",
+      "id": "745:6722",
+      "type": "COMPONENT_SET",
+      "x": -1956,
+      "y": -328,
+      "w": 37,
+      "h": 121,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "EditIcon",
+      "id": "749:7554",
+      "type": "COMPONENT_SET",
+      "x": -2408,
+      "y": -1552,
+      "w": 72,
+      "h": 128,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 2,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 2,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Module Dropdown",
+      "id": "776:5769",
+      "type": "COMPONENT_SET",
+      "x": -980,
+      "y": -360,
+      "w": 408,
+      "h": 932,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 44,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 15,
+       "otherRemote": 9,
+       "local": 20,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "8",
+      "id": "968:14874",
+      "type": "FRAME",
+      "x": 2841,
+      "y": -266,
+      "w": 1429,
+      "h": 891,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 55,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 15,
+       "otherRemote": 18,
+       "local": 22,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Ready",
+      "id": "968:14897",
+      "type": "FRAME",
+      "x": 3888,
+      "y": 1906,
+      "w": 755,
+      "h": 659,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 104,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 52,
+       "otherRemote": 48,
+       "local": 4,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Recording",
+      "id": "4032:14352",
+      "type": "FRAME",
+      "x": 4702,
+      "y": 1906,
+      "w": 755,
+      "h": 659,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 104,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 52,
+       "otherRemote": 48,
+       "local": 4,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Paused",
+      "id": "4032:14534",
+      "type": "FRAME",
+      "x": 5542,
+      "y": 1906,
+      "w": 755,
+      "h": 659,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 104,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 52,
+       "otherRemote": 48,
+       "local": 4,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Paused",
+      "id": "4113:18278",
+      "type": "FRAME",
+      "x": 6317,
+      "y": 1906,
+      "w": 755,
+      "h": 659,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 104,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 52,
+       "otherRemote": 48,
+       "local": 4,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532082",
+      "id": "874:2359",
+      "type": "FRAME",
+      "x": -3283,
+      "y": -1792,
+      "w": 331,
+      "h": 213,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 2,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 1,
+       "otherRemote": 1,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Footer",
+      "id": "883:6147",
+      "type": "FRAME",
+      "x": -4118,
+      "y": 1078,
+      "w": 1397,
+      "h": 70,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 35,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 29,
+       "otherRemote": 6,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Check-Circle",
+      "id": "980:15872",
+      "type": "COMPONENT_SET",
+      "x": -1200,
+      "y": -100,
+      "w": 142,
+      "h": 96,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 1,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 1,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "PatientHeader",
+      "id": "2133:8680",
+      "type": "COMPONENT_SET",
+      "x": 1716,
+      "y": 2345,
+      "w": 1200,
+      "h": 688,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 95,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 93,
+       "local": 2,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Actions",
+      "id": "2133:9096",
+      "type": "COMPONENT_SET",
+      "x": 2171,
+      "y": 1824,
+      "w": 577,
+      "h": 132,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 20,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 20,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Primary Nav",
+      "id": "2189:10117",
+      "type": "FRAME",
+      "x": -332,
+      "y": 4795,
+      "w": 1429,
+      "h": 65,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 8,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 3,
+       "otherRemote": 4,
+       "local": 1,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Practice",
+      "id": "2189:10133",
+      "type": "FRAME",
+      "x": -216,
+      "y": 4564,
+      "w": 65,
+      "h": 65,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 1,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 1,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Dashboard",
+      "id": "2189:10294",
+      "type": "FRAME",
+      "x": -113,
+      "y": 4564,
+      "w": 65,
+      "h": 65,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 1,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 1,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "TemplateMgmt",
+      "id": "2811:11430",
+      "type": "COMPONENT_SET",
+      "x": 779,
+      "y": -508,
+      "w": 1502,
+      "h": 501,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 191,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 69,
+       "otherRemote": 122,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "ShieldSet",
+      "id": "3513:14193",
+      "type": "COMPONENT_SET",
+      "x": 794,
+      "y": -1109,
+      "w": 72,
+      "h": 184,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Contextual Alert",
+      "id": "3551:14780",
+      "type": "INSTANCE",
+      "x": 11055,
+      "y": -4097,
+      "w": 754,
+      "h": 40,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 6,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 4,
+       "otherRemote": 2,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "NoteHeader",
+      "id": "4275:15830",
+      "type": "COMPONENT_SET",
+      "x": 758,
+      "y": -881,
+      "w": 800,
+      "h": 182,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 15,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 9,
+       "otherRemote": 4,
+       "local": 2,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532164",
+      "id": "4296:15558",
+      "type": "FRAME",
+      "x": -1743,
+      "y": -6993,
+      "w": 2673,
+      "h": 1681,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 129,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 81,
+       "otherRemote": 45,
+       "local": 3,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "3569:14562",
+    "name": "Demos/Protos",
+    "topLevelCount": 1,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-08-Demos-Protos.png",
+    "frames": [
+     {
+      "name": "Frame 1",
+      "id": "3569:14563",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 638,
+      "h": 700,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 73,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 50,
+       "otherRemote": 22,
+       "local": 1,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "105:1425",
+    "name": "-----ARCHIVE-----",
+    "topLevelCount": 0,
+    "screenshot": null,
+    "frames": []
+   },
+   {
+    "id": "4740:14057",
+    "name": "NeuNeu",
+    "topLevelCount": 26,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-10-NeuNeu.png",
+    "frames": [
+     {
+      "name": "MacBook Air - 10",
+      "id": "4803:1007",
+      "type": "FRAME",
+      "x": 2111,
+      "y": -910,
+      "w": 1146,
+      "h": 832,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 86,
+       "designSystemRebuild": 42,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 40,
+       "local": 4,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MacBook Air - 12",
+      "id": "4879:1932",
+      "type": "FRAME",
+      "x": 2111,
+      "y": 1061,
+      "w": 1146,
+      "h": 832,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 189,
+       "designSystemRebuild": 43,
+       "tebraWorkingUiKit": 66,
+       "otherRemote": 73,
+       "local": 7,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "PatientHeader",
+      "id": "4807:12563",
+      "type": "COMPONENT",
+      "x": 784,
+      "y": -1651,
+      "w": 1090,
+      "h": 48,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 10,
+       "designSystemRebuild": 10,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MacBook Air - 11",
+      "id": "4809:12930",
+      "type": "FRAME",
+      "x": 2111,
+      "y": 58,
+      "w": 1280,
+      "h": 832,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 89,
+       "designSystemRebuild": 54,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 31,
+       "local": 4,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532125",
+      "id": "4800:20783",
+      "type": "FRAME",
+      "x": 3566,
+      "y": 221,
+      "w": 363,
+      "h": 242,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 7,
+       "designSystemRebuild": 7,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Patient Card",
+      "id": "4803:23538",
+      "type": "FRAME",
+      "x": 4004,
+      "y": 173,
+      "w": 361,
+      "h": 373,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 6,
+       "designSystemRebuild": 6,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MacBook Air - 5",
+      "id": "4775:10790",
+      "type": "FRAME",
+      "x": 3331,
+      "y": -910,
+      "w": 1280,
+      "h": 832,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 64,
+       "designSystemRebuild": 26,
+       "tebraWorkingUiKit": 2,
+       "otherRemote": 35,
+       "local": 1,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MacBook Air - 6",
+      "id": "4792:14540",
+      "type": "FRAME",
+      "x": 4711,
+      "y": -910,
+      "w": 1146,
+      "h": 832,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 189,
+       "designSystemRebuild": 11,
+       "tebraWorkingUiKit": 88,
+       "otherRemote": 73,
+       "local": 17,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "With Legacy Nav",
+      "id": "4745:17168",
+      "type": "FRAME",
+      "x": -175,
+      "y": -948,
+      "w": 1280,
+      "h": 832,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 22,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 4,
+       "otherRemote": 18,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "SideRail",
+      "id": "4762:2160",
+      "type": "COMPONENT_SET",
+      "x": 1394,
+      "y": -3094,
+      "w": 526,
+      "h": 864,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 37,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 37,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532158",
+      "id": "4797:19845",
+      "type": "FRAME",
+      "x": 1976,
+      "y": -3723,
+      "w": 1182,
+      "h": 2312,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 210,
+       "designSystemRebuild": 183,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 7,
+       "local": 20,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Sidesheetv3",
+      "id": "4863:23145",
+      "type": "FRAME",
+      "x": 3818,
+      "y": -3068,
+      "w": 441,
+      "h": 600,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 37,
+       "designSystemRebuild": 2,
+       "tebraWorkingUiKit": 22,
+       "otherRemote": 13,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Sidesheetv3",
+      "id": "4884:2634",
+      "type": "FRAME",
+      "x": 4357,
+      "y": -3068,
+      "w": 441,
+      "h": 503,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 48,
+       "designSystemRebuild": 8,
+       "tebraWorkingUiKit": 20,
+       "otherRemote": 20,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Autocomplete",
+      "id": "4797:20462",
+      "type": "FRAME",
+      "x": 3292,
+      "y": -3094,
+      "w": 370,
+      "h": 1500,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 38,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 38,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532125",
+      "id": "4801:21353",
+      "type": "FRAME",
+      "x": 3559,
+      "y": 560,
+      "w": 415,
+      "h": 114,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 4,
+       "designSystemRebuild": 4,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532197",
+      "id": "4803:23808",
+      "type": "FRAME",
+      "x": 3559,
+      "y": 743,
+      "w": 675,
+      "h": 104,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 11,
+       "designSystemRebuild": 11,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "PracticeHeader",
+      "id": "4796:19669",
+      "type": "COMPONENT",
+      "x": 784,
+      "y": -1775,
+      "w": 1090,
+      "h": 55,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 4,
+       "designSystemRebuild": 3,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 1,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "PatientNav",
+      "id": "4796:19668",
+      "type": "COMPONENT",
+      "x": 784,
+      "y": -1855,
+      "w": 1090,
+      "h": 25,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "NavStack",
+      "id": "4845:22161",
+      "type": "COMPONENT_SET",
+      "x": 768,
+      "y": -1550,
+      "w": 1122,
+      "h": 352,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 51,
+       "designSystemRebuild": 39,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 3,
+       "local": 9,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "check_filled",
+      "id": "4868:23823",
+      "type": "INSTANCE",
+      "x": 3851,
+      "y": -3165,
+      "w": 20,
+      "h": 20,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 2,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 1,
+       "otherRemote": 1,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "add_circle_outline",
+      "id": "4868:23838",
+      "type": "INSTANCE",
+      "x": 3938,
+      "y": -3180,
+      "w": 20,
+      "h": 20,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 1,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 1,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Canvas Tools",
+      "id": "4907:2529",
+      "type": "INSTANCE",
+      "x": 1934,
+      "y": 2090,
+      "w": 1392,
+      "h": 64,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 40,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 40,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Sidesheetv3",
+      "id": "4946:17224",
+      "type": "FRAME",
+      "x": 3570,
+      "y": 909,
+      "w": 550,
+      "h": 948,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 94,
+       "designSystemRebuild": 39,
+       "tebraWorkingUiKit": 37,
+       "otherRemote": 18,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Sidesheetv3",
+      "id": "4946:17710",
+      "type": "FRAME",
+      "x": 4749,
+      "y": 909,
+      "w": 550,
+      "h": 948,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 79,
+       "designSystemRebuild": 24,
+       "tebraWorkingUiKit": 37,
+       "otherRemote": 18,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Sidesheetv3",
+      "id": "4946:17965",
+      "type": "FRAME",
+      "x": 4157,
+      "y": 909,
+      "w": 550,
+      "h": 948,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 77,
+       "designSystemRebuild": 19,
+       "tebraWorkingUiKit": 37,
+       "otherRemote": 21,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Sidesheetv3",
+      "id": "5034:19820",
+      "type": "FRAME",
+      "x": 5369,
+      "y": 909,
+      "w": 550,
+      "h": 948,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 67,
+       "designSystemRebuild": 12,
+       "tebraWorkingUiKit": 37,
+       "otherRemote": 18,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "1424:8259",
+    "name": "Neu",
+    "topLevelCount": 26,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-11-Neu.png",
+    "frames": [
+     {
+      "name": "CONTAINER",
+      "id": "2154:9260",
+      "type": "FRAME",
+      "x": -3,
+      "y": -906,
+      "w": 1280,
+      "h": 768,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 179,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 68,
+       "otherRemote": 96,
+       "local": 15,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "CONTAINER",
+      "id": "2162:7367",
+      "type": "FRAME",
+      "x": -3,
+      "y": -1837,
+      "w": 1280,
+      "h": 768,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 180,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 70,
+       "otherRemote": 99,
+       "local": 11,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "SidePanelExpand1",
+      "id": "2196:8153",
+      "type": "FRAME",
+      "x": -60,
+      "y": -2861,
+      "w": 1156,
+      "h": 768,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 182,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 66,
+       "otherRemote": 100,
+       "local": 16,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "SidePanelExpand1",
+      "id": "4113:19513",
+      "type": "FRAME",
+      "x": 2595,
+      "y": -392,
+      "w": 1156,
+      "h": 768,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 182,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 66,
+       "otherRemote": 100,
+       "local": 16,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Practice Header",
+      "id": "4113:20227",
+      "type": "FRAME",
+      "x": 2643,
+      "y": -656,
+      "w": 1098,
+      "h": 72,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "SidePanelDpand2",
+      "id": "2233:10042",
+      "type": "FRAME",
+      "x": 1477,
+      "y": -2876,
+      "w": 1308,
+      "h": 768,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 182,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 66,
+       "otherRemote": 100,
+       "local": 16,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "SidePanelDpand2",
+      "id": "2454:841",
+      "type": "FRAME",
+      "x": 1420,
+      "y": -4039,
+      "w": 1308,
+      "h": 768,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 181,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 66,
+       "otherRemote": 100,
+       "local": 15,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 1",
+      "id": "1424:8742",
+      "type": "RECTANGLE",
+      "x": -753,
+      "y": 129,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 2",
+      "id": "1424:8743",
+      "type": "RECTANGLE",
+      "x": -701,
+      "y": 129,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 3",
+      "id": "1424:8745",
+      "type": "RECTANGLE",
+      "x": -649,
+      "y": 129,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 4",
+      "id": "1424:8746",
+      "type": "RECTANGLE",
+      "x": -597,
+      "y": 129,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 9",
+      "id": "1631:18223",
+      "type": "RECTANGLE",
+      "x": -597,
+      "y": 55,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 10",
+      "id": "1631:18225",
+      "type": "RECTANGLE",
+      "x": -597,
+      "y": -19,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 6",
+      "id": "1631:18220",
+      "type": "RECTANGLE",
+      "x": -597,
+      "y": 213,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 7",
+      "id": "1631:18221",
+      "type": "RECTANGLE",
+      "x": -597,
+      "y": 277,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 8",
+      "id": "1631:18222",
+      "type": "RECTANGLE",
+      "x": -597,
+      "y": 356,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Rectangle 5",
+      "id": "1424:8747",
+      "type": "RECTANGLE",
+      "x": -545,
+      "y": 129,
+      "w": 39,
+      "h": 43,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532075",
+      "id": "1586:17262",
+      "type": "FRAME",
+      "x": -387,
+      "y": -338,
+      "w": 43,
+      "h": 729,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "CONTAINER",
+      "id": "2162:7723",
+      "type": "FRAME",
+      "x": 1462,
+      "y": -1837,
+      "w": 1280,
+      "h": 768,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 150,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 51,
+       "otherRemote": 71,
+       "local": 28,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Healthcare EHR Module Design",
+      "id": "2147:7288",
+      "type": "FRAME",
+      "x": 659,
+      "y": 1418,
+      "w": 1359,
+      "h": 907,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Icon_Home",
+      "id": "2196:8670",
+      "type": "COMPONENT_SET",
+      "x": 1,
+      "y": -3030,
+      "w": 88,
+      "h": 56,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Icon_Workspace",
+      "id": "2196:8673",
+      "type": "COMPONENT_SET",
+      "x": 211,
+      "y": -3038,
+      "w": 87,
+      "h": 56,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Icon_Pinned",
+      "id": "2196:8927",
+      "type": "COMPONENT_SET",
+      "x": 545,
+      "y": -3017,
+      "w": 93,
+      "h": 56,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "keyboard_arrow_left_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1",
+      "id": "2196:11185",
+      "type": "FRAME",
+      "x": 901,
+      "y": -3025,
+      "w": 24,
+      "h": 24,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "App Icons",
+      "id": "2196:11421",
+      "type": "FRAME",
+      "x": -1316,
+      "y": -2618,
+      "w": 96,
+      "h": 65,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "SIDENAV-FUTURE",
+      "id": "2230:8575",
+      "type": "COMPONENT_SET",
+      "x": -1017,
+      "y": -2881,
+      "w": 561,
+      "h": 800,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 40,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 32,
+       "local": 8,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "112:4335",
+    "name": "Sandbox",
+    "topLevelCount": 19,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-12-Sandbox.png",
+    "frames": [
+     {
+      "name": "Main",
+      "id": "112:4336",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1413,
+      "h": 1555,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 130,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 65,
+       "otherRemote": 65,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Main",
+      "id": "112:4605",
+      "type": "FRAME",
+      "x": 1620,
+      "y": 0,
+      "w": 1413,
+      "h": 1555,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 130,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 65,
+       "otherRemote": 65,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Active AI Note",
+      "id": "112:4880",
+      "type": "FRAME",
+      "x": 0,
+      "y": 1894,
+      "w": 1413,
+      "h": 1525,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 147,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 79,
+       "otherRemote": 68,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Active AI Note",
+      "id": "654:5587",
+      "type": "FRAME",
+      "x": 0,
+      "y": 3592,
+      "w": 1413,
+      "h": 804,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 8,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 4,
+       "otherRemote": 4,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Primary Nav",
+      "id": "654:5588",
+      "type": "INSTANCE",
+      "x": 0,
+      "y": 3592,
+      "w": 1413,
+      "h": 65,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 8,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 4,
+       "otherRemote": 4,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MegaMenu1",
+      "id": "656:3881",
+      "type": "FRAME",
+      "x": 0,
+      "y": 4634,
+      "w": 1413,
+      "h": 869,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 16,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 8,
+       "otherRemote": 8,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MegaMenu2",
+      "id": "656:4110",
+      "type": "FRAME",
+      "x": 1480,
+      "y": 4634,
+      "w": 1413,
+      "h": 869,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 16,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 8,
+       "otherRemote": 8,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MegaMenu2",
+      "id": "660:4621",
+      "type": "FRAME",
+      "x": 0,
+      "y": 5698,
+      "w": 1413,
+      "h": 869,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 21,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 12,
+       "otherRemote": 9,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MegaMenu2",
+      "id": "664:5316",
+      "type": "FRAME",
+      "x": 1518,
+      "y": 5698,
+      "w": 1413,
+      "h": 869,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 21,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 12,
+       "otherRemote": 9,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MegaMenu2",
+      "id": "664:5529",
+      "type": "FRAME",
+      "x": 2966,
+      "y": 5698,
+      "w": 1413,
+      "h": 869,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 23,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 14,
+       "otherRemote": 9,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MegaMenu3",
+      "id": "656:4322",
+      "type": "FRAME",
+      "x": 3024,
+      "y": 4634,
+      "w": 1413,
+      "h": 869,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 21,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 12,
+       "otherRemote": 9,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "MegaMenu3",
+      "id": "4136:4409",
+      "type": "FRAME",
+      "x": 4734,
+      "y": 3722,
+      "w": 1413,
+      "h": 662,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 241,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 165,
+       "otherRemote": 76,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532053",
+      "id": "681:2827",
+      "type": "FRAME",
+      "x": -1010,
+      "y": 4634,
+      "w": 879,
+      "h": 1933,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "SPA",
+      "id": "2443:9419",
+      "type": "FRAME",
+      "x": 1372,
+      "y": 13048,
+      "w": 1359,
+      "h": 918,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Container",
+      "id": "2443:9988",
+      "type": "FRAME",
+      "x": 2881,
+      "y": 13525,
+      "w": 439,
+      "h": 135,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Container",
+      "id": "2443:10008",
+      "type": "FRAME",
+      "x": 2881,
+      "y": 13728,
+      "w": 406,
+      "h": 113,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Container",
+      "id": "2443:10050",
+      "type": "FRAME",
+      "x": 2881,
+      "y": 13960,
+      "w": 406,
+      "h": 109,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532068",
+      "id": "4155:4495",
+      "type": "FRAME",
+      "x": 6828,
+      "y": 3722,
+      "w": 549,
+      "h": 917,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 156,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 110,
+       "otherRemote": 46,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532069",
+      "id": "4207:15079",
+      "type": "FRAME",
+      "x": 8121,
+      "y": 3722,
+      "w": 959,
+      "h": 148,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 12,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 8,
+       "otherRemote": 4,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "4250:14678",
+    "name": "Misc",
+    "topLevelCount": 2,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-13-Misc.png",
+    "frames": [
+     {
+      "name": "Appointment Selection",
+      "id": "4250:15022",
+      "type": "FRAME",
+      "x": -196,
+      "y": -169,
+      "w": 457,
+      "h": 315,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 9,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 6,
+       "otherRemote": 3,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758531120",
+      "id": "4348:12604",
+      "type": "FRAME",
+      "x": -149,
+      "y": 355,
+      "w": 1123,
+      "h": 175,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 72,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 44,
+       "otherRemote": 28,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "12:866",
+    "name": "NoFolder Navigation",
+    "topLevelCount": 7,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-14-NoFolder-Navigation.png",
+    "frames": [
+     {
+      "name": "Main",
+      "id": "26:10816",
+      "type": "FRAME",
+      "x": 1876,
+      "y": -8,
+      "w": 1413,
+      "h": 2643,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 187,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 94,
+       "otherRemote": 91,
+       "local": 2,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Main",
+      "id": "74:647",
+      "type": "FRAME",
+      "x": 5101,
+      "y": -8,
+      "w": 1413,
+      "h": 2345,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 779,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 157,
+       "otherRemote": 622,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 758532023",
+      "id": "77:4715",
+      "type": "FRAME",
+      "x": 6898,
+      "y": 393,
+      "w": 843,
+      "h": 38,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Note",
+      "id": "26:11726",
+      "type": "INSTANCE",
+      "x": 1415,
+      "y": -8,
+      "w": 449,
+      "h": 200,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 2,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 2,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "📝 Annotation · SectionMgmt",
+      "id": "26:11864",
+      "type": "GROUP",
+      "x": 3233,
+      "y": 944,
+      "w": 710,
+      "h": 156,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "📝 Annotation · Button",
+      "id": "26:11883",
+      "type": "GROUP",
+      "x": 3249,
+      "y": 1590,
+      "w": 440,
+      "h": 96,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Module Dropdown",
+      "id": "63:463",
+      "type": "FRAME",
+      "x": 1438,
+      "y": 266,
+      "w": 404,
+      "h": 412,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 21,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 12,
+       "otherRemote": 9,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "10:14",
+    "name": "Folder Navigation",
+    "topLevelCount": 1,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-15-Folder-Navigation.png",
+    "frames": [
+     {
+      "name": "CurrentHeader",
+      "id": "10:2208",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1413,
+      "h": 2824,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 195,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 72,
+       "otherRemote": 123,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "4211:15272",
+    "name": "-----RESEARCH------",
+    "topLevelCount": 0,
+    "screenshot": null,
+    "frames": []
+   },
+   {
+    "id": "4211:15273",
+    "name": "Maps",
+    "topLevelCount": 13,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-17-Maps.png",
+    "frames": [
+     {
+      "name": "Frame 4",
+      "id": "4211:15346",
+      "type": "FRAME",
+      "x": -313,
+      "y": -477,
+      "w": 1293,
+      "h": 1072,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 10",
+      "id": "4211:15390",
+      "type": "FRAME",
+      "x": -519,
+      "y": 979,
+      "w": 443,
+      "h": 1068,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 16",
+      "id": "4211:15493",
+      "type": "FRAME",
+      "x": 159,
+      "y": 3395,
+      "w": 443,
+      "h": 352,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 18",
+      "id": "4211:15501",
+      "type": "FRAME",
+      "x": 743,
+      "y": 3395,
+      "w": 443,
+      "h": 352,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 20",
+      "id": "4211:15509",
+      "type": "FRAME",
+      "x": 1283,
+      "y": 3383,
+      "w": 443,
+      "h": 376,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 31",
+      "id": "4216:52",
+      "type": "FRAME",
+      "x": 159,
+      "y": 825,
+      "w": 1499,
+      "h": 496,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 30",
+      "id": "4216:51",
+      "type": "FRAME",
+      "x": 159,
+      "y": 1466,
+      "w": 1576,
+      "h": 1648,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 14",
+      "id": "4211:15485",
+      "type": "FRAME",
+      "x": 1932,
+      "y": 1039,
+      "w": 443,
+      "h": 952,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 22",
+      "id": "4215:2",
+      "type": "FRAME",
+      "x": 3521,
+      "y": -299,
+      "w": 443,
+      "h": 1000,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 23",
+      "id": "4215:6",
+      "type": "FRAME",
+      "x": 4135,
+      "y": -299,
+      "w": 443,
+      "h": 616,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 29",
+      "id": "4215:31",
+      "type": "FRAME",
+      "x": 4645,
+      "y": -307,
+      "w": 459,
+      "h": 2148,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 26",
+      "id": "4215:18",
+      "type": "FRAME",
+      "x": 5139,
+      "y": -307,
+      "w": 459,
+      "h": 1316,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     },
+     {
+      "name": "Frame 21",
+      "id": "4211:15513",
+      "type": "FRAME",
+      "x": 1797,
+      "y": -357,
+      "w": 443,
+      "h": 640,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   },
+   {
+    "id": "1236:3155",
+    "name": "Research Framework",
+    "topLevelCount": 1,
+    "screenshot": "figma-export/npve-enum-2026-09-02/page-18-Research-Framework.png",
+    "frames": [
+     {
+      "name": "Frame 1",
+      "id": "1236:3156",
+      "type": "FRAME",
+      "x": -409,
+      "y": 0,
+      "w": 1231,
+      "h": 369,
+      "isSection": false,
+      "parentSection": null,
+      "visible": true,
+      "instances": {
+       "total": 0,
+       "designSystemRebuild": 0,
+       "tebraWorkingUiKit": 0,
+       "otherRemote": 0,
+       "local": 0,
+       "missingMain": 0
+      }
+     }
+    ]
+   }
+  ],
+  "provenanceSummary": {
+   "totals": {
+    "instances": 22337,
+    "designSystemRebuild": 598,
+    "tebraWorkingUiKit": 10766,
+    "otherRemote": 9629,
+    "local": 1344
+   },
+   "reading": "Of 22,337 instances, 598 (2.7%) resolve to Design System Rebuild, 10,766 (48.2%) to the deprecated Tebra Working UI Kit, 9,629 (43.1%) to remote components in NEITHER inventory, 1,344 (6.0%) to local components. Rebuild usage is concentrated on NeuNeu (Icon/* and Button variants) and the NeuNeu SideRail/NavStack area; nearly every other screen is kit-built.",
+   "otherRemoteGroups": {
+    "categorisedIconPack": {
+     "instances": 3775,
+     "keyCount": 72,
+     "examples": [
+      "Health, Medicine/Syringe",
+      "Arrows, Diagrams/Arrow",
+      "Interface, Essential/bulb-light-gloss",
+      "Health, Medicine/shield-virus-protection",
+      "Health, Medicine/medical-cross-refreash-reload-arrow",
+      "Health, Medicine/Drugs, Pill",
+      "Health, Medicine/prescription-square",
+      "School, Learning/Lab, Tube",
+      "Science/lab-tube",
+      "Interface, Essential/Delete, Disabled",
+      "Health, Medicine/Scales,Weight, Diet Scale",
+      "Weather, Climate/Temperature"
+     ]
+    },
+    "kitStyleNamesNotInCurrentKitCanvas": {
+     "instances": 4399,
+     "keyCount": 54,
+     "examples": [
+      "rcm-overview",
+      "tutorial",
+      "Caption",
+      "menu",
+      "Message_light",
+      "security_outline",
+      "security",
+      "close",
+      "plus",
+      "close-alt",
+      "Icon Button/Default/Small/False/False",
+      "_icon button template"
+     ]
+    },
+    "namesMatchingLocalOrProductComponents": {
+     "instances": 1272,
+     "keyCount": 58,
+     "examples": [
+      "Check-Circle / Mode=NotSelected",
+      "Note / Color=1. Yellow, Dark=True",
+      "Bullet / Color=1. Yellow, Dark=True",
+      "nav / payments / State=inactive",
+      "Badge / Type=Basic",
+      "ThumbsUp / State=Default",
+      "ThumbsDown / State=Default",
+      "TemplateMgmt",
+      "ConfigAndData-Line-Don't remove!",
+      "Check-Circle / Mode=Selected",
+      "Breadcrumb Buttons / Type=Back Button, State=Default",
+      "Breadcrumbs / Stste=Default"
+     ]
+    },
+    "materialStyleIcons": {
+     "instances": 183,
+     "keyCount": 23,
+     "examples": [
+      "print / Style=Outlined",
+      "star_border / Style=Outlined",
+      "check_circle / Style=Filled",
+      "star / Style=Outlined",
+      "expand_more / Style=Outlined",
+      "dashboard / Style=Outlined",
+      "calendar_today / Style=Outlined",
+      "work_outline / Style=Outlined",
+      "person / Style=Outlined",
+      "business / Style=Outlined",
+      "attach_money / Style=Outlined",
+      "close / Style=Outlined"
+     ]
+    }
+   },
+   "otherRemoteObservation": "Four name patterns among the 207 \"other\" keys: (1) a categorised icon pack (\"Interface, Essential/…\", \"Health, Medicine/…\"); (2) Material-style \"Style=Outlined\" icons (calendar_today, expand_more, add); (3) components whose parent-set names match component sets that exist LOCALLY on this file's ⚙️ Components page (SectionMgmt, Check-Circle, Modules, Sidesheetv3, TemplateMgmt) — consistent with this file being a duplicate of, or consuming, an earlier NDE file; (4) kit-style names (close, plus, security, \"Icon Button/Default/Small/…\", \"_icon button template\", Badge, Divider) whose keys are not in the kit canvas today. Which files these come from is NOT determined here; the plugin API exposes no library file key for a remote component. Reported, not resolved."
+  },
+  "staleness": {
+   "_rule": "Evidence only. Nothing here decides which frames are current.",
+   "pageNames": [
+    {
+     "page": "V2:AI Patient Summary",
+     "pageId": "3813:14586",
+     "kind": "page",
+     "id": "3813:14586",
+     "name": "V2:AI Patient Summary",
+     "term": "V2"
+    },
+    {
+     "page": "-----ARCHIVE-----",
+     "pageId": "105:1425",
+     "kind": "page",
+     "id": "105:1425",
+     "name": "-----ARCHIVE-----",
+     "term": "ARCHIVE"
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "kind": "page",
+     "id": "1424:8259",
+     "name": "Neu",
+     "term": "Neu",
+     "extraTerm": true
+    }
+   ],
+   "frameAndNodeNames": [
+    {
+     "page": "Workflows",
+     "pageId": "105:1426",
+     "kind": "RECTANGLE",
+     "id": "3806:13143",
+     "name": "Screenshot 2026-05-05 at 9.44.35 AM 1",
+     "term": "2026"
+    },
+    {
+     "page": "NeuNeu",
+     "pageId": "4740:14057",
+     "kind": "FRAME",
+     "id": "4745:17168",
+     "name": "With Legacy Nav",
+     "term": "Legacy"
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "kind": "COMPONENT_SET",
+     "id": "2230:8575",
+     "name": "SIDENAV-FUTURE",
+     "term": "FUTURE",
+     "extraTerm": true
+    }
+   ],
+   "nearDuplicates": [
+    {
+     "page": "Workflows",
+     "pageId": "105:1426",
+     "by": "name",
+     "name": "Rec_Ready",
+     "ids": [
+      "3124:12369",
+      "4841:17077",
+      "4841:18039"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "pageId": "105:1426",
+     "by": "dimensions",
+     "dims": "2922x2008",
+     "nodes": [
+      "3943:12393 Frame 758532141",
+      "4317:11594 Frame 758532154"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "pageId": "105:1426",
+     "by": "dimensions",
+     "dims": "1429x1013",
+     "nodes": [
+      "3124:12369 Rec_Ready",
+      "4841:17077 Rec_Ready",
+      "4841:18039 Rec_Ready",
+      "3159:20067 Rec_Started",
+      "4296:17197 Rec_Paused",
+      "4275:15285 Rec_Processing",
+      "4294:15013 Rec_Closed",
+      "3159:21282 Rec_Open",
+      "4439:16310 Replace_Section_Modal"
+     ]
+    },
+    {
+     "page": "Error States",
+     "pageId": "1050:8411",
+     "by": "name",
+     "name": "Transcription service disconnected",
+     "ids": [
+      "4508:23664",
+      "4508:24088",
+      "4549:28463",
+      "4597:30566",
+      "4508:26782",
+      "4508:24483"
+     ]
+    },
+    {
+     "page": "Error States",
+     "pageId": "1050:8411",
+     "by": "dimensions",
+     "dims": "1429x790",
+     "nodes": [
+      "4494:15947 Cost Disclosure",
+      "4505:16648 Session Timeout",
+      "4507:22770 E-11 Mic Disconnected",
+      "4508:23234 Session ID Failures",
+      "4505:17114 Internal Service Error - Failed Call for Recording",
+      "4505:17721 Permission Validation Error"
+     ]
+    },
+    {
+     "page": "Error States",
+     "pageId": "1050:8411",
+     "by": "dimensions",
+     "dims": "1429x766",
+     "nodes": [
+      "4505:18288 E-06",
+      "4508:23664 Transcription service disconnected",
+      "4508:24088 Transcription service disconnected",
+      "4549:28463 Transcription service disconnected",
+      "4597:30566 Transcription service disconnected",
+      "4508:26782 Transcription service disconnected",
+      "4508:24483 Transcription service disconnected",
+      "4505:19685 E-07",
+      "4507:22374 No mics detected",
+      "4507:21046 E-09",
+      "4567:30083 Failed to get appointment"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "pageId": "21:321",
+     "by": "name",
+     "name": "sidebar",
+     "ids": [
+      "4667:5031",
+      "4667:13076",
+      "4667:13077",
+      "4667:13075"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "pageId": "21:321",
+     "by": "name",
+     "name": "Paused",
+     "ids": [
+      "4032:14534",
+      "4113:18278"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "pageId": "21:321",
+     "by": "dimensions",
+     "dims": "56x20",
+     "nodes": [
+      "4667:5031 sidebar",
+      "4667:13076 sidebar",
+      "4667:13077 sidebar",
+      "4667:13075 sidebar"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "pageId": "21:321",
+     "by": "dimensions",
+     "dims": "755x659",
+     "nodes": [
+      "968:14897 Ready",
+      "4032:14352 Recording",
+      "4032:14534 Paused",
+      "4113:18278 Paused"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "pageId": "21:321",
+     "by": "dimensions",
+     "dims": "65x65",
+     "nodes": [
+      "2189:10133 Practice",
+      "2189:10294 Dashboard"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "pageId": "4740:14057",
+     "by": "name",
+     "name": "Frame 758532125",
+     "ids": [
+      "4800:20783",
+      "4801:21353"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "pageId": "4740:14057",
+     "by": "name",
+     "name": "Sidesheetv3",
+     "ids": [
+      "4863:23145",
+      "4884:2634",
+      "4946:17224",
+      "4946:17710",
+      "4946:17965",
+      "5034:19820"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "pageId": "4740:14057",
+     "by": "dimensions",
+     "dims": "1146x832",
+     "nodes": [
+      "4803:1007 MacBook Air - 10",
+      "4879:1932 MacBook Air - 12",
+      "4792:14540 MacBook Air - 6"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "pageId": "4740:14057",
+     "by": "dimensions",
+     "dims": "1280x832",
+     "nodes": [
+      "4809:12930 MacBook Air - 11",
+      "4775:10790 MacBook Air - 5",
+      "4745:17168 With Legacy Nav"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "pageId": "4740:14057",
+     "by": "dimensions",
+     "dims": "20x20",
+     "nodes": [
+      "4868:23823 check_filled",
+      "4868:23838 add_circle_outline"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "pageId": "4740:14057",
+     "by": "dimensions",
+     "dims": "550x948",
+     "nodes": [
+      "4946:17224 Sidesheetv3",
+      "4946:17710 Sidesheetv3",
+      "4946:17965 Sidesheetv3",
+      "5034:19820 Sidesheetv3"
+     ]
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "by": "name",
+     "name": "CONTAINER",
+     "ids": [
+      "2154:9260",
+      "2162:7367",
+      "2162:7723"
+     ]
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "by": "name",
+     "name": "SidePanelExpand1",
+     "ids": [
+      "2196:8153",
+      "4113:19513"
+     ]
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "by": "name",
+     "name": "SidePanelDpand2",
+     "ids": [
+      "2233:10042",
+      "2454:841"
+     ]
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "by": "dimensions",
+     "dims": "1280x768",
+     "nodes": [
+      "2154:9260 CONTAINER",
+      "2162:7367 CONTAINER",
+      "2162:7723 CONTAINER"
+     ]
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "by": "dimensions",
+     "dims": "1156x768",
+     "nodes": [
+      "2196:8153 SidePanelExpand1",
+      "4113:19513 SidePanelExpand1"
+     ]
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "by": "dimensions",
+     "dims": "1308x768",
+     "nodes": [
+      "2233:10042 SidePanelDpand2",
+      "2454:841 SidePanelDpand2"
+     ]
+    },
+    {
+     "page": "Neu",
+     "pageId": "1424:8259",
+     "by": "dimensions",
+     "dims": "39x43",
+     "nodes": [
+      "1424:8742 Rectangle 1",
+      "1424:8743 Rectangle 2",
+      "1424:8745 Rectangle 3",
+      "1424:8746 Rectangle 4",
+      "1631:18223 Rectangle 9",
+      "1631:18225 Rectangle 10",
+      "1631:18220 Rectangle 6",
+      "1631:18221 Rectangle 7",
+      "1631:18222 Rectangle 8",
+      "1424:8747 Rectangle 5"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "pageId": "112:4335",
+     "by": "name",
+     "name": "Main",
+     "ids": [
+      "112:4336",
+      "112:4605"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "pageId": "112:4335",
+     "by": "name",
+     "name": "Active AI Note",
+     "ids": [
+      "112:4880",
+      "654:5587"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "pageId": "112:4335",
+     "by": "name",
+     "name": "MegaMenu2",
+     "ids": [
+      "656:4110",
+      "660:4621",
+      "664:5316",
+      "664:5529"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "pageId": "112:4335",
+     "by": "name",
+     "name": "MegaMenu3",
+     "ids": [
+      "656:4322",
+      "4136:4409"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "pageId": "112:4335",
+     "by": "name",
+     "name": "Container",
+     "ids": [
+      "2443:9988",
+      "2443:10008",
+      "2443:10050"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "pageId": "112:4335",
+     "by": "dimensions",
+     "dims": "1413x1555",
+     "nodes": [
+      "112:4336 Main",
+      "112:4605 Main"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "pageId": "112:4335",
+     "by": "dimensions",
+     "dims": "1413x869",
+     "nodes": [
+      "656:3881 MegaMenu1",
+      "656:4110 MegaMenu2",
+      "660:4621 MegaMenu2",
+      "664:5316 MegaMenu2",
+      "664:5529 MegaMenu2",
+      "656:4322 MegaMenu3"
+     ]
+    },
+    {
+     "page": "NoFolder Navigation",
+     "pageId": "12:866",
+     "by": "name",
+     "name": "Main",
+     "ids": [
+      "26:10816",
+      "74:647"
+     ]
+    },
+    {
+     "page": "Maps",
+     "pageId": "4211:15273",
+     "by": "dimensions",
+     "dims": "443x352",
+     "nodes": [
+      "4211:15493 Frame 16",
+      "4211:15501 Frame 18"
+     ]
+    }
+   ],
+   "visibleText": [
+    {
+     "page": "Cover",
+     "string": "2026 // Charts",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "10:4"
+     ],
+     "authoredTextIds": [
+      "10:9"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "DOB: 08/01/1994 (29 y/o)",
+     "count": 39,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     "authoredTextIds": [
+      "112:5666",
+      "112:6140",
+      "4317:11614"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "04/18/2022",
+     "count": 21,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     "authoredTextIds": [
+      "112:5677",
+      "112:6151",
+      "4317:11625"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "Current Situation\n32-year-old male presenting for sick visit",
+     "count": 4,
+     "insideRemoteInstances": 4,
+     "frames": [
+      "3943:12393",
+      "4317:11594"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Workflows",
+     "string": "Save as Draft",
+     "count": 36,
+     "insideRemoteInstances": 36,
+     "frames": [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Workflows",
+     "string": "Created by Steven Strange on 1/23/24",
+     "count": 96,
+     "insideRemoteInstances": 96,
+     "frames": [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Workflows",
+     "string": "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     "count": 50,
+     "insideRemoteInstances": 49,
+     "frames": [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     "authoredTextIds": [
+      "3456:13226"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "5/25/25",
+     "count": 100,
+     "insideRemoteInstances": 98,
+     "frames": [
+      "3943:12393",
+      "4317:11594",
+      "4715:26647",
+      "5093:18693",
+      "3943:12395",
+      "3943:12402"
+     ],
+     "authoredTextIds": [
+      "3456:13263",
+      "3456:13415"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "6/20/25",
+     "count": 100,
+     "insideRemoteInstances": 98,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Workflows",
+     "string": "6/29/25",
+     "count": 100,
+     "insideRemoteInstances": 98,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Workflows",
+     "string": "7/18/25",
+     "count": 100,
+     "insideRemoteInstances": 98,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Workflows",
+     "string": "Created by Tebra on 1/23/24",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [
+      "3943:12393",
+      "4317:11594"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Workflows",
+     "string": "11/21/24",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [
+      "4715:26647"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Workflows",
+     "string": "Status: Signed Final Author: John Doe, MD Signed: 03/03/2026",
+     "count": 4,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3943:13025",
+      "3943:13029"
+     ],
+     "authoredTextIds": [
+      "2175:9406",
+      "3534:17566",
+      "3534:17167"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "HPI:\n36-year-old male presents with 3-month history of worse",
+     "count": 4,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3943:13025",
+      "3943:13029"
+     ],
+     "authoredTextIds": [
+      "2175:9432",
+      "2175:10202",
+      "3534:17176"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "04/24/26 11:46 AM",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3943:13025",
+      "3943:13029"
+     ],
+     "authoredTextIds": [
+      "3534:17614",
+      "3541:14298"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "4/27/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3456:11505"
+     ],
+     "authoredTextIds": [
+      "3456:13210"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "5/1/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3456:11505"
+     ],
+     "authoredTextIds": [
+      "3456:13212"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "4/21/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3456:11505"
+     ],
+     "authoredTextIds": [
+      "3456:13215"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "4/12/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3456:11505"
+     ],
+     "authoredTextIds": [
+      "3456:13218"
+     ]
+    },
+    {
+     "page": "Workflows",
+     "string": "DoS: 3/26/26 (last update 3/28/26)",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3810:13146"
+     ],
+     "authoredTextIds": [
+      "3810:13240"
+     ]
+    },
+    {
+     "page": "Error States",
+     "string": "DOB: 08/01/1994 (29 y/o)",
+     "count": 17,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4494:15947",
+      "4505:18288",
+      "4508:23664",
+      "4508:24088",
+      "4549:28463",
+      "4597:30566"
+     ],
+     "authoredTextIds": [
+      "4494:15962",
+      "4505:18303",
+      "4508:23679"
+     ]
+    },
+    {
+     "page": "Error States",
+     "string": "Save as Draft",
+     "count": 17,
+     "insideRemoteInstances": 17,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Error States",
+     "string": "Created by Steven Strange on 1/23/24",
+     "count": 38,
+     "insideRemoteInstances": 36,
+     "frames": [],
+     "authoredTextIds": [
+      "4507:21217",
+      "4565:29332"
+     ]
+    },
+    {
+     "page": "Error States",
+     "string": "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     "count": 20,
+     "insideRemoteInstances": 18,
+     "frames": [],
+     "authoredTextIds": [
+      "4507:21220",
+      "4565:29335"
+     ]
+    },
+    {
+     "page": "Error States",
+     "string": "5/25/25",
+     "count": 40,
+     "insideRemoteInstances": 36,
+     "frames": [],
+     "authoredTextIds": [
+      "4507:21257",
+      "4507:21409",
+      "4565:29372"
+     ]
+    },
+    {
+     "page": "Error States",
+     "string": "6/20/25",
+     "count": 40,
+     "insideRemoteInstances": 36,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Error States",
+     "string": "6/29/25",
+     "count": 40,
+     "insideRemoteInstances": 36,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Error States",
+     "string": "7/18/25",
+     "count": 40,
+     "insideRemoteInstances": 36,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Error States",
+     "string": "February 2021",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4505:18288"
+     ],
+     "authoredTextIds": [
+      "4565:29949"
+     ]
+    },
+    {
+     "page": "Error States",
+     "string": "March 2021",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4505:18288"
+     ],
+     "authoredTextIds": [
+      "4565:29994"
+     ]
+    },
+    {
+     "page": "Error States",
+     "string": "Created by Tebra on 1/23/24",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4507:21046",
+      "4565:29308"
+     ],
+     "authoredTextIds": [
+      "4507:21214",
+      "4565:29329"
+     ]
+    },
+    {
+     "page": "V2:AI Patient Summary",
+     "string": "06/19/24",
+     "count": 1,
+     "insideRemoteInstances": 1,
+     "frames": [
+      "3813:15084"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "V2:AI Patient Summary",
+     "string": "09/22/2024",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3813:15084"
+     ],
+     "authoredTextIds": [
+      "3813:15167"
+     ]
+    },
+    {
+     "page": "V2:AI Patient Summary",
+     "string": "Current Situation\n32-year-old male presenting for sick visit: sore throat, nasal",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3813:15084"
+     ],
+     "authoredTextIds": [
+      "3813:15585"
+     ]
+    },
+    {
+     "page": "V2:AI Patient Summary",
+     "string": "Key Background\nPrevious Buspirone trial discontinued due to dizziness (2023).",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3813:15084"
+     ],
+     "authoredTextIds": [
+      "3813:15586"
+     ]
+    },
+    {
+     "page": "V2:AI Patient Summary",
+     "string": "DOB: 08/01/1992 (32 y/o)",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "3813:15084"
+     ],
+     "authoredTextIds": [
+      "3813:15285"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "Current Situation\n32-year-old male presenting for sick visit",
+     "count": 4,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "127:3348",
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "127:3154",
+      "3028:16365",
+      "3028:16381"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "DOB: 08/01/1994 (29 y/o)",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "1663:20062",
+      "968:14874"
+     ],
+     "authoredTextIds": [
+      "1663:20074",
+      "968:14889"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "04/18/2022",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "1663:20062"
+     ],
+     "authoredTextIds": [
+      "1663:20085"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "6/3/26\n32-year-old male presenting for sick visit: sore thro",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "4079:15504"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "6/1/26\n32-year-old male presenting for sick visit: sore thro",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "4079:15578"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "2/1/26",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647",
+      "4296:15558"
+     ],
+     "authoredTextIds": [
+      "939:9256",
+      "917:15551",
+      "4305:21717"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "3/4/26",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "893:3615",
+      "909:12698"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "Draft",
+     "count": 3,
+     "insideRemoteInstances": 1,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:7490",
+      "129:7542"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/30/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:7482"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/20/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:7487"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/25/25",
+     "count": 7,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:7563",
+      "129:7570",
+      "129:7577"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/25/25\nClient reports ongoing stress related to work deadl",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:7724"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "11/3/25\nLorem ipsum dolor sit amet consectetur. Aliquam veli",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:7725"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/25/25 - 10/26/25",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:7803",
+      "129:8389",
+      "648:1858"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "11/21/24-11/31/24",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "648:3644"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/25/16",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:8824"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "2014-08-23",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:9117"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "11/21/24",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "4598:31377",
+      "4695:13240"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/27/23",
+     "count": 4,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:10409",
+      "129:10422",
+      "129:10445"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "4/11/26",
+     "count": 10,
+     "insideRemoteInstances": 2,
+     "frames": [
+      "129:6647",
+      "4296:15558"
+     ],
+     "authoredTextIds": [
+      "3496:14067",
+      "3496:14274",
+      "3569:22407"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "4/14/26",
+     "count": 12,
+     "insideRemoteInstances": 3,
+     "frames": [
+      "129:6647",
+      "4296:15558"
+     ],
+     "authoredTextIds": [
+      "3496:14295",
+      "3496:14314",
+      "3496:14333"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "01/14/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "3501:15730"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "11/02/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "3501:15731"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/22/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "3501:15732"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "09/14/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "3501:15733"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "09/01/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "3501:15734"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "4/22/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "3496:15079"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "4/21/26",
+     "count": 6,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "3496:13917",
+      "3496:13934",
+      "3496:13950"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "11/2/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "2116:9033"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/14/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "2116:9077"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "11/3/25",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "129:6647"
+     ],
+     "authoredTextIds": [
+      "129:11274",
+      "129:11292"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "DRAFT • 08/09/2025",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "968:14874"
+     ],
+     "authoredTextIds": [
+      "968:15022"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "Dates: 08/09/2025",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "968:14874"
+     ],
+     "authoredTextIds": [
+      "968:15049",
+      "968:15076"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "Created by Steven Strange on 1/23/24",
+     "count": 11,
+     "insideRemoteInstances": 8,
+     "frames": [
+      "968:14897",
+      "4032:14352",
+      "4032:14534",
+      "4113:18278",
+      "2811:11430"
+     ],
+     "authoredTextIds": [
+      "2811:11453",
+      "2811:12001",
+      "2811:12261"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     "count": 8,
+     "insideRemoteInstances": 4,
+     "frames": [
+      "968:14897",
+      "4032:14352",
+      "4032:14534",
+      "4113:18278",
+      "2811:11430"
+     ],
+     "authoredTextIds": [
+      "2811:11456",
+      "2811:12009",
+      "2811:12269"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "5/25/25",
+     "count": 16,
+     "insideRemoteInstances": 8,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "6/20/25",
+     "count": 16,
+     "insideRemoteInstances": 8,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "6/29/25",
+     "count": 16,
+     "insideRemoteInstances": 8,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "7/18/25",
+     "count": 16,
+     "insideRemoteInstances": 8,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "04/22/26",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4032:14352",
+      "4032:14534",
+      "4113:18278"
+     ],
+     "authoredTextIds": [
+      "4032:14386",
+      "4032:14568",
+      "4113:18312"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "Save as Draft",
+     "count": 1,
+     "insideRemoteInstances": 1,
+     "frames": [
+      "883:6147"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "DOB: 04/21/1982",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2133:8680"
+     ],
+     "authoredTextIds": [
+      "2133:8691",
+      "2133:8822",
+      "2133:8955"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "04/21/1982",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2133:8680"
+     ],
+     "authoredTextIds": [
+      "2133:8773",
+      "2133:8906",
+      "2133:8987"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "10/23/25",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2133:8680"
+     ],
+     "authoredTextIds": [
+      "2133:8783",
+      "2133:8916",
+      "2133:9007"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "1/21/26",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2133:8680"
+     ],
+     "authoredTextIds": [
+      "2133:8788",
+      "2133:8921",
+      "2133:9012"
+     ]
+    },
+    {
+     "page": "⚙️ Components",
+     "string": "Created by Tebra on 1/23/24",
+     "count": 4,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2811:11430"
+     ],
+     "authoredTextIds": [
+      "2811:11450",
+      "2811:11997",
+      "2811:12257"
+     ]
+    },
+    {
+     "page": "Demos/Protos",
+     "string": "4/11/26",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [
+      "3569:14563"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Demos/Protos",
+     "string": "4/14/26",
+     "count": 3,
+     "insideRemoteInstances": 3,
+     "frames": [
+      "3569:14563"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NeuNeu",
+     "string": "DOB: 04/21/1982",
+     "count": 11,
+     "insideRemoteInstances": 11,
+     "frames": [
+      "4803:1007",
+      "4879:1932",
+      "4807:12563",
+      "4809:12930",
+      "4745:17168",
+      "4797:19845"
+     ],
+     "authoredTextIds": [
+      "4775:10830",
+      "4792:14580",
+      "4745:17263"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Encounter - Aug 21 2026",
+     "count": 16,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4803:1007",
+      "4879:1932",
+      "4809:12930",
+      "4775:10790",
+      "4792:14540",
+      "4797:19845"
+     ],
+     "authoredTextIds": [
+      "4803:1397",
+      "4803:1409",
+      "4881:3008"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "8/21/26",
+     "count": 6,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4803:1007",
+      "4879:1932",
+      "4809:12930",
+      "4775:10790"
+     ],
+     "authoredTextIds": [
+      "4803:1045",
+      "4881:18753",
+      "4809:12981"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "10/21/26 @ 11:30 AM",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4803:1007",
+      "4809:12930"
+     ],
+     "authoredTextIds": [
+      "4803:1063",
+      "4809:12999"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Save as Draft",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [
+      "4879:1932",
+      "4792:14540"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Created by Steven Strange on 1/23/24",
+     "count": 4,
+     "insideRemoteInstances": 4,
+     "frames": [
+      "4879:1932",
+      "4792:14540"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [
+      "4879:1932",
+      "4792:14540"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NeuNeu",
+     "string": "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     "count": 16,
+     "insideRemoteInstances": 16,
+     "frames": [
+      "4879:1932",
+      "4792:14540"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NeuNeu",
+     "string": "4/26/1988 (38)",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4803:23538",
+      "4801:21353"
+     ],
+     "authoredTextIds": [
+      "4803:23548",
+      "4801:21363"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "8/18/26",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4803:23538",
+      "4801:21353"
+     ],
+     "authoredTextIds": [
+      "4803:23551",
+      "4801:21361"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "8/12/26",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4803:23538"
+     ],
+     "authoredTextIds": [
+      "4803:23561",
+      "4803:23572"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "08/21/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4775:10790"
+     ],
+     "authoredTextIds": [
+      "4788:14475"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Last appointment: 6/12/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4775:10790"
+     ],
+     "authoredTextIds": [
+      "4778:11742"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Appointment date: 6/12/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4775:10790"
+     ],
+     "authoredTextIds": [
+      "4778:11755"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "02/12/2023 02/11/2023 02/07/2023 01/03/2023 10/15/2022 02/08/2023 10/01/2022",
+     "count": 7,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4775:10790"
+     ],
+     "authoredTextIds": [
+      "4779:13237",
+      "4779:13243",
+      "4779:13247"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Archive",
+     "count": 1,
+     "insideRemoteInstances": 1,
+     "frames": [
+      "4797:19845"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Reviewed by Dr. Lee on 08/21/26",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4863:23145"
+     ],
+     "authoredTextIds": [
+      "4863:23458",
+      "4863:23473"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Ordered  by Dr. Lee on 08/21/26",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4863:23145"
+     ],
+     "authoredTextIds": [
+      "4867:23787"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "11/21/24-11/31/24",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4884:2634"
+     ],
+     "authoredTextIds": [
+      "4885:6143"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "Archived",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4797:20462"
+     ],
+     "authoredTextIds": [
+      "4797:20527"
+     ]
+    },
+    {
+     "page": "NeuNeu",
+     "string": "4/22/28",
+     "count": 1,
+     "insideRemoteInstances": 1,
+     "frames": [
+      "4803:23808"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NeuNeu",
+     "string": "09/12/25",
+     "count": 1,
+     "insideRemoteInstances": 1,
+     "frames": [
+      "4803:23808"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NeuNeu",
+     "string": "4/21/87",
+     "count": 1,
+     "insideRemoteInstances": 1,
+     "frames": [
+      "4946:17224"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Neu",
+     "string": "4:00 PM | 2/25/26",
+     "count": 5,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2154:9260"
+     ],
+     "authoredTextIds": [
+      "2154:9346",
+      "2154:9349",
+      "2154:9352"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "DOB: 08/01/1994 (29 y/o)",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2154:9260"
+     ],
+     "authoredTextIds": [
+      "2154:9379"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "04/18/2022",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2154:9260"
+     ],
+     "authoredTextIds": [
+      "2154:9390"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "Current Situation\n32-year-old male presenting for sick visit",
+     "count": 7,
+     "insideRemoteInstances": 7,
+     "frames": [
+      "2154:9260",
+      "2162:7367",
+      "2196:8153",
+      "4113:19513",
+      "2233:10042",
+      "2454:841"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Neu",
+     "string": "3/3/26",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2154:9260",
+      "2454:841",
+      "2162:7723"
+     ],
+     "authoredTextIds": [
+      "2185:8235",
+      "2454:1394",
+      "2454:1377"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "Save as Draft",
+     "count": 7,
+     "insideRemoteInstances": 7,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Neu",
+     "string": "Created by Steven Strange on 1/23/24",
+     "count": 26,
+     "insideRemoteInstances": 26,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Neu",
+     "string": "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     "count": 13,
+     "insideRemoteInstances": 13,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Neu",
+     "string": "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     "count": 104,
+     "insideRemoteInstances": 104,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Neu",
+     "string": "Last: 4/15/25",
+     "count": 7,
+     "insideRemoteInstances": 3,
+     "frames": [
+      "2162:7367",
+      "2196:8153",
+      "4113:19513",
+      "2233:10042",
+      "2454:841",
+      "2230:8575"
+     ],
+     "authoredTextIds": [
+      "2189:10953",
+      "2454:1534",
+      "2196:11233"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "04/21/1982",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2162:7367",
+      "4113:20227"
+     ],
+     "authoredTextIds": [
+      "2189:11248",
+      "4120:20633",
+      "4113:20331"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "DOB: 04/21/1982",
+     "count": 11,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2162:7367",
+      "2196:8153",
+      "4113:19513",
+      "2233:10042",
+      "2454:841",
+      "2162:7723"
+     ],
+     "authoredTextIds": [
+      "2162:8256",
+      "2196:8965",
+      "2196:8354"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "03/25/26",
+     "count": 24,
+     "insideRemoteInstances": 12,
+     "frames": [
+      "2196:8153",
+      "4113:19513",
+      "2233:10042",
+      "2454:841",
+      "2230:8575"
+     ],
+     "authoredTextIds": [
+      "2454:1599",
+      "2454:1613",
+      "2454:1622"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "Patient is a 58-year-old with multiple chronic conditions pr",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2147:7288"
+     ],
+     "authoredTextIds": [
+      "2147:7334"
+     ]
+    },
+    {
+     "page": "Neu",
+     "string": "Draft",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "2147:7288"
+     ],
+     "authoredTextIds": [
+      "2147:7397"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "string": "DOB: 08/01/1994 (29 y/o)",
+     "count": 13,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "112:4336",
+      "112:4605",
+      "112:4880",
+      "654:5587",
+      "656:3881",
+      "656:4110"
+     ],
+     "authoredTextIds": [
+      "112:4350",
+      "112:4619",
+      "112:4894"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "string": "04/18/2022",
+     "count": 13,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "112:4336",
+      "112:4605",
+      "112:4880",
+      "654:5587",
+      "656:3881",
+      "656:4110"
+     ],
+     "authoredTextIds": [
+      "112:4361",
+      "112:4630",
+      "112:4905"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "string": "last updated 1/6/26 at 1:29 PM",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "112:4336",
+      "112:4605",
+      "112:4880"
+     ],
+     "authoredTextIds": [
+      "112:4414",
+      "112:4683",
+      "112:4958"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "string": "36 y/o (4/21/1988)",
+     "count": 3,
+     "insideRemoteInstances": 3,
+     "frames": [
+      "112:4336",
+      "112:4605",
+      "112:4880"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Sandbox",
+     "string": "12/2/25",
+     "count": 3,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "112:4336",
+      "112:4605",
+      "112:4880"
+     ],
+     "authoredTextIds": [
+      "112:4465",
+      "112:4734",
+      "112:5009"
+     ]
+    },
+    {
+     "page": "Sandbox",
+     "string": "Save as Draft",
+     "count": 3,
+     "insideRemoteInstances": 3,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Sandbox",
+     "string": "Created by Steven Strange on 1/23/24",
+     "count": 6,
+     "insideRemoteInstances": 6,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Sandbox",
+     "string": "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     "count": 3,
+     "insideRemoteInstances": 3,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Sandbox",
+     "string": "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     "count": 24,
+     "insideRemoteInstances": 24,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Misc",
+     "string": "February 26, 2026",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4250:15022"
+     ],
+     "authoredTextIds": [
+      "4250:15019"
+     ]
+    },
+    {
+     "page": "Misc",
+     "string": "February 31, 2026",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4250:15022"
+     ],
+     "authoredTextIds": [
+      "4250:15000"
+     ]
+    },
+    {
+     "page": "Misc",
+     "string": "March 15, 2026",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "4250:15022"
+     ],
+     "authoredTextIds": [
+      "4250:15002"
+     ]
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "DOB: 08/01/1994 (29 y/o)",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "26:10816",
+      "74:647"
+     ],
+     "authoredTextIds": [
+      "26:10830",
+      "74:661"
+     ]
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "04/18/2022",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "26:10816",
+      "74:647"
+     ],
+     "authoredTextIds": [
+      "26:10841",
+      "74:672"
+     ]
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "last updated 1/6/26 at 1:29 PM",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "26:10816",
+      "74:647"
+     ],
+     "authoredTextIds": [
+      "26:11867",
+      "74:725"
+     ]
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "36 y/o (4/21/1988)",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [
+      "26:10816",
+      "74:647"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "10/25/25",
+     "count": 4,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "26:10816"
+     ],
+     "authoredTextIds": [
+      "26:10943",
+      "26:10949",
+      "26:10956"
+     ]
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "12/2/25",
+     "count": 2,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "26:10816",
+      "74:647"
+     ],
+     "authoredTextIds": [
+      "26:10975",
+      "74:846"
+     ]
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "Save as Draft",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "Created by Steven Strange on 1/23/24",
+     "count": 4,
+     "insideRemoteInstances": 4,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     "count": 16,
+     "insideRemoteInstances": 16,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "NoFolder Navigation",
+     "string": "DataGrid patient DOB/visit dates (1/12/1951 ... 10/6/2018), ~60 cells",
+     "count": 60,
+     "insideRemoteInstances": 60,
+     "frames": [
+      "74:647"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "DOB: 08/01/1994 (29 y/o)",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "10:2208"
+     ],
+     "authoredTextIds": [
+      "10:2223"
+     ]
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "04/18/2022",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "10:2208"
+     ],
+     "authoredTextIds": [
+      "10:2234"
+     ]
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "36 y/o (4/21/1988)",
+     "count": 1,
+     "insideRemoteInstances": 1,
+     "frames": [
+      "10:2208"
+     ],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "10/25/25",
+     "count": 4,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "10:2208"
+     ],
+     "authoredTextIds": [
+      "10:2332",
+      "10:2338",
+      "10:2345"
+     ]
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "12/2/25",
+     "count": 1,
+     "insideRemoteInstances": 0,
+     "frames": [
+      "10:2208"
+     ],
+     "authoredTextIds": [
+      "10:2436"
+     ]
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "Save as Draft",
+     "count": 1,
+     "insideRemoteInstances": 1,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "Created by Steven Strange on 1/23/24",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "Lipid Panel (1/27/25) shows cholesterol levels slightly abov",
+     "count": 2,
+     "insideRemoteInstances": 2,
+     "frames": [],
+     "authoredTextIds": []
+    },
+    {
+     "page": "Folder Navigation",
+     "string": "5/25/25 6/20/25 6/29/25 7/18/25 (kit note defaults)",
+     "count": 16,
+     "insideRemoteInstances": 16,
+     "frames": [],
+     "authoredTextIds": []
+    }
+   ],
+   "textReading": "Nearly all date strings are sample patient data (DOB 08/01/1994, lab dates 5/25/25–7/18/25) repeated through the kit's note template; those inside remote instances are library defaults. Authored-in-file items of note: \"2026 // Charts\" on the Cover; \"Status: Signed Final … Signed: 03/03/2026\" and \"04/24/26 11:46 AM\" on Workflows; \"DRAFT • 08/09/2025\" and \"Dates: 08/09/2025\" on ⚙️ Components frame \"8\" (968:14874); \"Draft\" text on Neu 2147:7397 and Components 129:7490/129:7542; \"Archived\" on NeuNeu Autocomplete frame 4797:20527; \"February 2021\"/\"March 2021\" on Error States E-06; \"February 31, 2026\" (a non-existent date) on Misc 4250:15000; \"Encounter - Aug 21 2026\" throughout NeuNeu; a rectangle named \"Screenshot 2026-05-05 at 9.44.35 AM 1\" on Workflows."
+  },
+  "caveats": [
+   "Sections: none exist in the source; every top-level node is a FRAME, COMPONENT, COMPONENT_SET, INSTANCE, GROUP, TEXT, RECTANGLE or SLICE.",
+   "Instance counts include instances nested inside instances (an icon inside a button counts as its own instance).",
+   "Two large kit component sets on ⚙️ Components dominate counts: Sidesheetv3 (129:6647) alone holds 4,722 instances.",
+   "Elements inside frames were not inventoried and nothing was mapped to library components, per instruction."
+  ]
+ }
+}

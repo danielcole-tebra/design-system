@@ -1,0 +1,990 @@
+{
+ "_status": "AWAITING DANIEL'S APPROVAL — nothing published. Naming-freeze items 1-6 executed; item 7 (Button Size default) still resolves to Small and is the one open blocker.",
+ "_scope": "Publishing as a Tebra org library locks these names. Renaming after publish breaks every consuming instance and every Code Connect mapping.",
+ "components": [
+  {
+   "name": "Button",
+   "variants": 54,
+   "axes": {
+    "Variant": [
+     "Contained",
+     "Text"
+    ],
+    "Color": [
+     "Primary",
+     "Secondary",
+     "Error"
+    ],
+    "Size": [
+     "Medium",
+     "Small",
+     "Large"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Disabled"
+    ]
+   },
+   "props": [
+    "Label (TEXT)",
+    "Start icon (BOOLEAN)",
+    "End icon (BOOLEAN)",
+    "Start icon swap (INSTANCE_SWAP)",
+    "End icon swap (INSTANCE_SWAP)"
+   ],
+   "note": "Size axis order is Medium, Small, Large and the default variant is Size=Medium, matching the code default. Corrected 2026-08-03 — see flags.sizeDefaultResolvedByCanvasPositionNotLayerOrder. The default is held by CANVAS POSITION (Medium/Default is the top-left variant), not by axis order or child order; do not 'tidy' the grid by moving the Small block back to the left."
+  },
+  {
+   "name": "Text field",
+   "variants": 20,
+   "axes": {
+    "Size": [
+     "Medium",
+     "Small"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Focused",
+     "Disabled",
+     "Error"
+    ],
+    "Value": [
+     "Empty",
+     "Filled"
+    ]
+   },
+   "props": [
+    "Label (TEXT)",
+    "Value text (TEXT)",
+    "Helper text (TEXT)",
+    "Show helper (BOOLEAN)",
+    "Required (BOOLEAN)",
+    "Select (BOOLEAN)",
+    "Multiline (BOOLEAN)"
+   ],
+   "note": "Size axis built for parity with Autocomplete / Field although the story never exercises it — the one documented exception to structure-from-argTypes. See components.TextField.figmaProperties.sizeAxisProvenance."
+  },
+  {
+   "name": "Checkbox",
+   "variants": 12,
+   "axes": {
+    "Checked": [
+     "Unchecked",
+     "Checked",
+     "Indeterminate"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Focus visible",
+     "Disabled"
+    ]
+   },
+   "props": [],
+   "layer": "themed — CheckboxOverrides registers under the valid MuiCheckbox key",
+   "note": "Axes transcribed from stories/Checkbox/Checkbox.config.ts. Glyphs are genuine Tebra icons registered as defaultProps."
+  },
+  {
+   "name": "Radio",
+   "variants": 8,
+   "axes": {
+    "Checked": [
+     "Unchecked",
+     "Checked"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Focus visible",
+     "Disabled"
+    ]
+   },
+   "props": [],
+   "layer": "SUBSTRATE — RadioButtonOverrides never executes (invalid key MuiRadioButton)",
+   "note": "Page also carries a DO NOT USE intended-vs-shipping reference frame, which is not a component and must not be published as one."
+  },
+  {
+   "name": "Switch",
+   "variants": 16,
+   "axes": {
+    "Size": [
+     "Medium",
+     "Small"
+    ],
+    "Checked": [
+     "Off",
+     "On"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Focus visible",
+     "Disabled"
+    ]
+   },
+   "props": [],
+   "layer": "themed — SwitchOverrides registers under the valid MuiSwitch key"
+  },
+  {
+   "name": "Form control label",
+   "variants": 2,
+   "axes": {
+    "State": [
+     "Default",
+     "Disabled"
+    ]
+   },
+   "props": [
+    "Label (TEXT)",
+    "Control (INSTANCE_SWAP, 9 preferred values)"
+   ],
+   "note": "No labelPlacement axis — the only usage in any story is labelPlacement='end', which is the default. Disabled variant ships an enabled control due to the INSTANCE_SWAP single-default limitation; documented in the description."
+  },
+  {
+   "name": "Button group / Segment",
+   "variants": 54,
+   "axes": {
+    "Color": [
+     "Primary",
+     "Secondary"
+    ],
+    "Size": [
+     "Small",
+     "Medium",
+     "Large"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Disabled"
+    ],
+    "Position": [
+     "First",
+     "Middle",
+     "Last"
+    ]
+   },
+   "props": [
+    "Label (TEXT)",
+    "Start icon (BOOLEAN)",
+    "End icon (BOOLEAN)",
+    "Start icon swap (INSTANCE_SWAP)",
+    "End icon swap (INSTANCE_SWAP)"
+   ],
+   "layer": "themed — ButtonGroupOverrides is post-0.7.0 and executes",
+   "note": "Segments are clones of Button's contained variants. Compose in a horizontal auto-layout with itemSpacing 0 and set Position per segment. Page also carries an Assembled examples frame that is not a component. Default variant is Size=Medium as of 2026-08-03, matching the story default of medium. Held by canvas position — Medium/Default is the top-left variant. The Size axis option order still reads Small, Medium, Large; that is cosmetic and does not drive the default. See flags.buttonGroupSizeDefaultInverted."
+  },
+  {
+   "name": "Chip",
+   "variants": 84,
+   "axes": {
+    "Size": [
+     "Medium",
+     "Small"
+    ],
+    "Variant": [
+     "Filled",
+     "Outlined"
+    ],
+    "Color": [
+     "Default",
+     "Primary",
+     "Secondary",
+     "Error",
+     "Info",
+     "Success",
+     "Warning"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Disabled"
+    ]
+   },
+   "props": [
+    "Label (TEXT)",
+    "Delete icon (BOOLEAN)"
+   ],
+   "layer": "mixed — ChipOverrides supplies colorSuccess/colorInfo/colorWarning/colorError/outlinedPrimary/deleteIcon; primary, secondary, default and all geometry are substrate",
+   "note": "Size added for parity with Autocomplete / Tag though the story declares none — see flags.chipSizeAxisAdded. Hover implies clickable; MUI only applies it to .MuiChip-clickable."
+  },
+  {
+   "name": "Icon button",
+   "variants": 24,
+   "axes": {
+    "Color": [
+     "Default",
+     "Primary",
+     "Error"
+    ],
+    "Size": [
+     "Medium",
+     "Small"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Focus visible",
+     "Disabled"
+    ]
+   },
+   "props": [
+    "Icon (INSTANCE_SWAP, 15 preferred values)"
+   ],
+   "layer": "themed — IconButtonOverrides supplies root, colorPrimary, colorError and sizeSmall",
+   "note": "Small is 34px not MUI's 28px, and hover is solid not a tint — see flags.iconButtonSmallIsTebraNotMui and threeDisabledGreysAcrossSiblings. No Color=Inherit: the story's argTypes do not offer it."
+  },
+  {
+   "name": "Paper",
+   "variants": 12,
+   "axes": {
+    "Variant": [
+     "Elevation 0",
+     "Elevation 1",
+     "Elevation 2",
+     "Elevation 4",
+     "Elevation 8",
+     "Outlined"
+    ],
+    "Square": [
+     "No",
+     "Yes"
+    ]
+   },
+   "props": [
+    "Label (TEXT)"
+   ],
+   "layer": "substrate — no PaperOverrides",
+   "note": "Legitimises the elevation ramp; Elevation / 2 and / 4 created here. Square is an axis because Figma booleans cannot change cornerRadius."
+  },
+  {
+   "name": "Divider",
+   "variants": 2,
+   "axes": {
+    "Orientation": [
+     "Horizontal",
+     "Vertical"
+    ]
+   },
+   "props": [],
+   "layer": "substrate",
+   "note": "No textAlign or children treatments — every Divider in the story is self-closing."
+  },
+  {
+   "name": "Link",
+   "variants": "single component",
+   "axes": {},
+   "props": [
+    "Label (TEXT)"
+   ],
+   "layer": "substrate",
+   "note": "primary.main with a permanent underline; the 40% textDecorationColor tint is not representable in Figma."
+  },
+  {
+   "name": "Alert",
+   "variants": 6,
+   "axes": {
+    "Variant": [
+     "Standard",
+     "Filled"
+    ],
+    "Severity": [
+     "Error",
+     "Info",
+     "Warning"
+    ]
+   },
+   "props": [
+    "Message (TEXT)",
+    "Close action (BOOLEAN)"
+   ],
+   "layer": "themed — AlertOverrides supplies all three standard severities, filledInfo, the filled shadow and the icon mapping",
+   "note": "No success severity and no outlined variant: the story's argTypes offer neither. Filled binds Elevation / 3."
+  },
+  {
+   "name": "Snackbar content",
+   "variants": 2,
+   "axes": {
+    "Type": [
+     "Default",
+     "Success"
+    ]
+   },
+   "props": [
+    "Message (TEXT)",
+    "Action (BOOLEAN)",
+    "Action label (TEXT)"
+   ],
+   "layer": "themed background over MUI substrate",
+   "note": "info.dark / success.dark, NOT grey[900] — see flags.snackbarIsTealNotGrey. Elevation / 6. Anchoring is runtime and not modelled."
+  },
+  {
+   "name": "Tooltip",
+   "variants": "single component",
+   "axes": {},
+   "props": [
+    "Label (TEXT)"
+   ],
+   "layer": "SUBSTRATE — no TooltipOverrides exists",
+   "note": "rgba(97,97,97,0.92) from MUI's grey[700], which Tebra's palette never defines. No arrow (not exercised); 12 placements are runtime and documented, not modelled."
+  },
+  {
+   "name": "Table / Cell",
+   "variants": 6,
+   "axes": {
+    "Variant": [
+     "Head",
+     "Body"
+    ],
+    "Padding": [
+     "Normal",
+     "None",
+     "Checkbox"
+    ]
+   },
+   "props": [
+    "Text (TEXT)"
+   ],
+   "layer": "mixed — head typography is Tebra, body and geometry substrate",
+   "note": "No size/dense axis and no sort indicator; the story exercises neither."
+  },
+  {
+   "name": "Table / Row",
+   "variants": 3,
+   "axes": {
+    "State": [
+     "Default",
+     "Hover",
+     "Selected"
+    ]
+   },
+   "props": [],
+   "layer": "mixed — row and head backgrounds are Tebra, hover and selected are substrate",
+   "note": "Fourth selectable row surface. See flags.fourListRowsDisagree. stickyHeader is scroll behaviour, documented not built."
+  },
+  {
+   "name": "Pagination / Item",
+   "variants": 32,
+   "axes": {
+    "Size": [
+     "Medium",
+     "Large"
+    ],
+    "Type": [
+     "Page",
+     "Previous",
+     "Next",
+     "Ellipsis"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Selected",
+     "Disabled"
+    ]
+   },
+   "props": [],
+   "layer": "substrate geometry, Tebra selected",
+   "note": "Circular shape survives; arrows are MUI chevrons. selected:hover not built."
+  },
+  {
+   "name": "Table pagination",
+   "variants": "single component",
+   "axes": {},
+   "props": [],
+   "layer": "substrate + a Tebra caret defaultProp",
+   "note": "Prev/next are Icon button instances; the rows-per-page select is an honest inline construction because it is a standard-variant Select. See flags.tablePaginationSelectIsStandardVariant."
+  },
+  {
+   "name": "Dialog",
+   "variants": "single component",
+   "axes": {},
+   "props": [
+    "Title (TEXT)",
+    "Body (TEXT)"
+   ],
+   "layer": "substrate — DialogOverrides restates MUI's own maxWidth default",
+   "note": "Elevation / 24, the top of the ramp, created here. Actions right-aligned by MUI substrate, not by Tebra. Page carries a REFERENCE frame with the runtime scrim as a marked non-component layer."
+  },
+  {
+   "name": "Drawer",
+   "variants": "single component",
+   "axes": {},
+   "props": [],
+   "layer": "substrate — no override",
+   "note": "Docked persistent/right per the story: 1px left divider border, no elevation. Contents are instances of Icon button, Divider and List / Item. Anchor is runtime."
+  },
+  {
+   "name": "List / Item",
+   "variants": 2,
+   "axes": {
+    "State": [
+     "Default",
+     "Hover"
+    ]
+   },
+   "props": [
+    "Primary (TEXT)",
+    "Secondary (TEXT)",
+    "Show secondary (BOOLEAN)",
+    "Show icon (BOOLEAN)",
+    "Icon (INSTANCE_SWAP)"
+   ],
+   "layer": "mixed — ListItemOverrides supplies hover; geometry and text are substrate",
+   "note": "Built on the ListItem path the story uses, not ListItemButton. No selected or disabled — the story exercises neither. 72px single-line row. See flags.threeListRowsDisagree."
+  },
+  {
+   "name": "List",
+   "variants": "single component",
+   "axes": {},
+   "props": [],
+   "note": "Container composite; padding 0 from the global MuiList disablePadding."
+  },
+  {
+   "name": "Card",
+   "variants": 2,
+   "axes": {
+    "Variant": [
+     "Elevation",
+     "Outlined"
+    ]
+   },
+   "props": [],
+   "layer": "substrate surface + two Tebra defaultProps/overrides",
+   "note": "Elevation 1 bound to Elevation / 1; CardActions right-aligned per override; no CardActionArea axis — it ships disabled."
+  },
+  {
+   "name": "Accordion",
+   "variants": 4,
+   "axes": {
+    "Expanded": [
+     "Collapsed",
+     "Expanded"
+    ],
+    "State": [
+     "Default",
+     "Disabled"
+    ]
+   },
+   "props": [
+    "Summary (TEXT)"
+   ],
+   "layer": "substrate + one disabled-background override",
+   "note": "Summary 48 collapsed / 64 expanded, caret rotates 180. Page carries a REFERENCE stacked-adjacency frame that is not a component."
+  },
+  {
+   "name": "Menu / Item",
+   "variants": 6,
+   "axes": {
+    "State": [
+     "Default",
+     "Hover",
+     "Selected",
+     "Selected hover",
+     "Focus visible",
+     "Disabled"
+    ]
+   },
+   "props": [
+    "Label (TEXT)"
+   ],
+   "layer": "mixed — MenuItemOverrides supplies selected / selected-hover / focus-visible; geometry and disabled are substrate",
+   "note": "No Dense axis and no icon/secondary-text slots — nothing in the library uses them."
+  },
+  {
+   "name": "Menu",
+   "variants": "single component",
+   "axes": {},
+   "props": [],
+   "note": "Paper composite holding Menu / Item instances. Elevation / 8 effect style; list padding 0 from Tebra's global MuiList disablePadding. Page also carries a REFERENCE composition frame that is not a component."
+  },
+  {
+   "name": "Autocomplete / Field",
+   "variants": 30,
+   "axes": {
+    "Size": [
+     "Medium",
+     "Small"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Focused",
+     "Disabled",
+     "Error"
+    ],
+    "Value": [
+     "Empty",
+     "Filled",
+     "Multiple"
+    ]
+   },
+   "props": [
+    "Label (TEXT)",
+    "Value text (TEXT)",
+    "Clear icon (BOOLEAN)"
+   ]
+  },
+  {
+   "name": "Autocomplete / Option",
+   "variants": 5,
+   "axes": {
+    "State": [
+     "Default",
+     "Focused",
+     "Selected",
+     "Selected focused",
+     "Focus visible"
+    ]
+   },
+   "props": [
+    "Label (TEXT)",
+    "Checkbox (BOOLEAN)",
+    "Grouped (BOOLEAN)"
+   ],
+   "converted": "Grouped was a No/Yes variant axis; converted to BOOLEAN, halving the set from 10 to 5. Backed by an 8px 'Group indent' spacer because a Figma boolean toggles visibility but cannot change padding. Verified: label x moves 16 -> 24, matching MUI's AutocompleteGroupUl paddingLeft 24 against the base 16."
+  },
+  {
+   "name": "Autocomplete / Tag",
+   "variants": 2,
+   "axes": {
+    "Size": [
+     "Medium",
+     "Small"
+    ]
+   },
+   "props": [
+    "Label (TEXT)"
+   ]
+  },
+  {
+   "name": "Tabs / Tab",
+   "variants": 4,
+   "axes": {
+    "Selected": [
+     "No",
+     "Yes"
+    ],
+    "State": [
+     "Default",
+     "Hover"
+    ]
+   },
+   "props": [
+    "Label (TEXT)"
+   ],
+   "layer": "substrate geometry and colour, one Tebra hover",
+   "note": "TabOverrides.tsx supplies only '&:hover, &:active' = action.hover #CBDDE0. Everything else is MUI. The indicator is a 2px primary.main bar that Tabs clones INTO the selected Tab, so it lives on the Selected=Yes variants. No Disabled: the story never sets it. See flags.overridesThatRestateMuiDefaults for TabsOverrides."
+  },
+  {
+   "name": "Tabs",
+   "variants": "single component",
+   "axes": {},
+   "props": [],
+   "layer": "substrate",
+   "note": "Container composite: three Tab instances, third selected, matching the story's value={2}. minHeight 48, overflow hidden, no padding or gap."
+  },
+  {
+   "name": "Toggle button",
+   "variants": 18,
+   "axes": {
+    "Size": [
+     "Medium",
+     "Small",
+     "Large"
+    ],
+    "Selected": [
+     "No",
+     "Yes"
+    ],
+    "State": [
+     "Default",
+     "Hover",
+     "Disabled"
+    ]
+   },
+   "props": [
+    "Icon (INSTANCE_SWAP, 8 preferred values)"
+   ],
+   "layer": "mixed — Tebra supplies root colour, border and both selected states; hover and unselected-disabled are substrate",
+   "note": "Boxes 36 / 48 / 67 as intended (38.86 / 51.43 / 72 as rendered — icons carry the pxToRem inflation). Size ordered Medium-first because medium is the code default. See flags.toggleButtonDisabledRuleIsDeadJss, toggleButtonSelectedBackgroundLostOnHover, toggleButtonStorySizeIsNotAValidSize."
+  },
+  {
+   "name": "Stepper / Step",
+   "variants": 3,
+   "axes": {
+    "State": [
+     "Default",
+     "Active",
+     "Completed"
+    ]
+   },
+   "props": [
+    "Label (TEXT)",
+    "Step number (TEXT)",
+    "Optional (BOOLEAN)",
+    "Optional label (TEXT)"
+   ],
+   "layer": "substrate + one Tebra completed colour",
+   "note": "StepIconOverrides changes only '.Mui-completed' to success.main #3FA266. Third state named Default not Disabled — see flags.stepperDisabledHasNoVisualState. Completed carries no Step number node, so its reference count is 3 where the others are 4."
+  },
+  {
+   "name": "Stepper",
+   "variants": "single component",
+   "axes": {},
+   "props": [],
+   "layer": "substrate",
+   "note": "Horizontal linear composite at activeStep 0: Active / Default+Optional / Default with two connectors. Connectors are grey[400] at every state — see flags.stepperConnectorIgnoresItsOwnState. StepButton adds no visual surface, so the non-linear story needs no separate component."
+  },
+  {
+   "name": "Mobile stepper",
+   "variants": 2,
+   "axes": {
+    "Variant": [
+     "Dots",
+     "Text"
+    ]
+   },
+   "props": [],
+   "layer": "themed root and dot over MUI substrate",
+   "note": "Tebra changes root background to background.paper (MUI's base is background.default) and dot to grey[400] (base is action.disabled); dotActive restates primary.main and changes nothing. Buttons are an honest inline construction, NOT Button instances — the story passes the caret as a plain child, so there is no startIcon margin. Width 400 is the story's Box maxWidth."
+  },
+  {
+   "name": "Avatar",
+   "variants": 3,
+   "axes": {
+    "Content": [
+     "Fallback",
+     "Letter",
+     "Icon"
+    ]
+   },
+   "props": [
+    "Letter (TEXT)",
+    "Icon (INSTANCE_SWAP, 5 preferred values)"
+   ],
+   "layer": "SUBSTRATE — AvatarOverrides.ts is an empty shell",
+   "note": "No Size axis: Avatar has no size prop and the story disables it in argTypes. No Variant axis: the story never sets rounded or square. The img content path is documented, not built. See flags.avatarOverrideIsAnEmptyShell, avatarImageVariantNotBuildable."
+  },
+  {
+   "name": "Badge",
+   "variants": 2,
+   "axes": {
+    "Variant": [
+     "Standard",
+     "Dot"
+    ]
+   },
+   "props": [
+    "Content (TEXT)",
+    "Child icon (INSTANCE_SWAP, 5 preferred values)"
+   ],
+   "layer": "substrate — BadgeOverrides.ts is defaultProps { color: 'secondary' } only",
+   "note": "Variant axis comes from the story's own argTypes options. The badge overhangs its child by design (translate(50%,-50%) about the top-right corner); it is centred with a 48-wide anchor frame and the component has clipsContent false. Any wrapper that nests it must too."
+  },
+  {
+   "name": "Circular progress",
+   "variants": "single component",
+   "axes": {},
+   "props": [],
+   "layer": "substrate — no override file",
+   "note": "Built as an arc ellipse: outer radius 20, innerRadius ratio 18.4/22 = 0.8364, sweep 226.91 degrees from 3 o'clock. See flags.circularProgressArcIsTheStaticDeclaredState."
+  },
+  {
+   "name": "Read more",
+   "variants": 4,
+   "axes": {
+    "Clamp": [
+     "Lines",
+     "Characters"
+    ],
+    "State": [
+     "Collapsed",
+     "Expanded"
+    ]
+   },
+   "props": [],
+   "layer": "Tebra composition over a MUI text Button",
+   "note": "Width 700 from the Box every story wraps its example in. Lines/Collapsed is 72px (three 24px body1 lines, fitted by truncation because Figma has no -webkit-line-clamp); Characters/Collapsed is substring(0,150) + \"...\" exactly as the component composes it, 48px; Expanded is the full story sample, 240px. Toggle is 24px tall — StyledButton sets padding 0, so the height is the button line-height alone. NO text component properties: a set-level TEXT property forces one default across every variant and wiped the per-variant copy the axes exist to show. See flags.readMoreButtonColourInvertsOnHover, readMoreStoryInlinePropTypo."
+  },
+  {
+   "name": "Feedback message",
+   "variants": 12,
+   "axes": {
+    "Variant": [
+     "No results",
+     "Not found",
+     "Forbidden",
+     "Nothing to see here",
+     "Internal server error",
+     "Browser incompatibility"
+    ],
+    "Container": [
+     "Yes",
+     "No"
+    ]
+   },
+   "props": [],
+   "layer": "Tebra composition — Box + Stack + Typography, optionally wrapped in a MUI Paper",
+   "note": "Container is the withContainer prop, default true, so Yes is first. All 12 are 815 wide = 735 content + 40 padding either side. The six disagree on marginTop (0/16/24), spacing (8/16), eyebrow (3 of 6), title maxWidth (45ch on 3 of 6) and action button (2 of 6) — all built as they ship. Action buttons are instances of the Button set at contained/primary/medium, because ButtonOverrides.defaultProps sets variant \"contained\". NO text component properties, for the same reason as Read more. See flags.feedbackMessageSiblingsDisagree, forbiddenUsesRawAnchor, notFoundMessageMissingJsxSpace, chUnitNotExpressibleInFigma."
+  },
+  {
+   "name": "Nav / Icon button",
+   "variants": 4,
+   "axes": {
+    "State": [
+     "Default",
+     "Hover",
+     "Disabled",
+     "Selected"
+    ]
+   },
+   "props": [
+    "Icon (INSTANCE_SWAP, 31 preferred values)"
+   ],
+   "layer": "partner theme — createPartnerTheme MuiIconButton root REPLACES the canonical IconButtonOverrides root (both are functions, so deepmerge takes the later)",
+   "note": "NOT the library Icon button. Square (borderRadius 0), white glyphs, 65x65 from sizeLarge. Hover stands for hover + focus + menu-open, which NavIconButton collapses into one showActiveBackground flag. Disabled recolours the glyph only. Selected added 2026-08-03 by design ruling: source has no distinct selected state (NavIconButton collapses hover, focus and menu-open into one flag), but designers must be able to mock active navigation. Selected paints identically to Hover, which is exactly what the code does."
+  },
+  {
+   "name": "Nav / Menu item",
+   "variants": 2,
+   "axes": {
+    "State": [
+     "Default",
+     "Hover"
+    ]
+   },
+   "props": [
+    "Label (TEXT)"
+   ],
+   "layer": "partner theme — createPartnerTheme MuiMenuItem root REPLACES the canonical MenuItemOverrides root",
+   "note": "NOT the library Menu / Item. The canonical focus-visible treatment (white ground, 3px Growth 1 border, radius 4) does not exist in the nav; hover and focus-visible share submenuItemHoverBackground #417E86 = primary.light."
+  },
+  {
+   "name": "Nav / Dropdown",
+   "variants": 0,
+   "axes": {},
+   "props": [
+    "Title (TEXT)"
+   ],
+   "layer": "partner theme — Popper Paper authored in NavIconButton.tsx plus createPartnerTheme MuiPopper",
+   "note": "Square corners, elevation 0, ground #195b63. Divider is WHITE because the partner theme sets palette.divider to submenuText."
+  },
+  {
+   "name": "Nav / Bar",
+   "variants": 0,
+   "axes": {},
+   "props": [],
+   "layer": "partner theme — AppBar colour=primary substrate plus createPartnerTheme MuiToolbar",
+   "note": "65px rendered (64px minHeight floor raised by 65px icon buttons). 16px gutters: disableGutters then theme.spacing(2) re-added."
+  },
+  {
+   "name": "Nav / Logo",
+   "variants": 0,
+   "axes": {},
+   "props": [],
+   "layer": "partner theme — asset, not themed",
+   "note": "Tebra wordmark 100 x 23.88. Fill #f7f4eb hardcoded in a <style> block, so it does NOT recolour with navText — the one bar element a partner theme cannot restyle. PartnerLogo swaps the whole component for an <img> when partnerId !== tebra."
+  },
+  {
+   "name": "Nav / Search",
+   "variants": 2,
+   "axes": {
+    "State": [
+     "Default",
+     "Hover"
+    ]
+   },
+   "props": [],
+   "layer": "partner theme — canonical Autocomplete/TextField restyled by createPartnerTheme MuiOutlinedInput",
+   "note": "Field 44.8px on a 76.8px column. Hover and focus-within share one ground (action.hover = #195b63). No Label property: the placeholder is fixed copy from Navigation.tsx."
+  }
+ ],
+ "icons": [
+  "Icon / DownCaret",
+  "Icon / PlusOutlined",
+  "Icon / CloseOutlined",
+  "Icon / TrashOutlined",
+  "Icon / CheckboxUnchecked",
+  "Icon / CheckboxChecked",
+  "Icon / CheckboxIndeterminate",
+  "Icon / Cancel (MUI)",
+  "Icon / Clear (MUI)",
+  "Icon / LinearEllipsis",
+  "Icon / RadioUnchecked (MUI)",
+  "Icon / RadioChecked (MUI)",
+  {
+   "_addendum": "2026-08-03 nav glyphs — 9 added, taking the Icons & illustrations page to 47 masters (40 icons + 7 illustrations). SearchOutlined was added in the review pass for the search field adornment.",
+   "added": [
+    "Icon / Platform",
+    "Icon / Clinical",
+    "Icon / Billing",
+    "Icon / Engage",
+    "Icon / Payments",
+    "Icon / Reports",
+    "Icon / MailOutline (MUI)",
+    "Icon / HelpOutline (MUI)",
+    "Icon / SearchOutlined (MUI)"
+   ],
+   "convention": "Named after the source filename with the trailing \"Icon\" stripped, matching DownCaretIcon.tsx -> Icon / DownCaret. MUI-internal glyphs keep the (MUI) suffix.",
+   "binding": "All bound to color/common/white, because the nav glyph rule is navText — these masters are white by default, unlike the canonical icons.",
+   "caveat": "These are the FIRST icon masters bound white rather than to a canonical text colour. They are correct for the nav and wrong anywhere else; do not reuse them on canonical surfaces."
+  }
+ ],
+ "textStyles": {
+  "names": [
+   "h1",
+   "h2",
+   "h3",
+   "h4",
+   "h5",
+   "subtitle2",
+   "body1",
+   "body2",
+   "button",
+   "caption"
+  ],
+  "source": "packages/design-system/src/typography/typography.ts — names match the code keys exactly",
+  "binding": "Each style binds fontSize, lineHeight and fontFamily to Tebra/Typography variables.",
+  "factoring": "One variable per distinct VALUE, one style per ROLE. typography.ts gives several roles identical literals (h4 == body1 at 16/24; h5 == body2 at 14/20; subtitle2 == caption at 12/16), so those styles bind the shared value token rather than duplicating it. Each style's description records which token it binds and why.",
+  "weightMapping": "typography.ts uses only 400 and 700. Akkurat LL ships Regular and Bold exactly, so NO substitution occurs anywhere in this ramp — see flags.akkuratMediumSubstitutionScope."
+ },
+ "variableCollections": [
+  {
+   "name": "Tebra/Color",
+   "modes": [
+    "Light"
+   ],
+   "count": 46
+  },
+  {
+   "name": "Tebra/Typography",
+   "modes": [
+    "Default"
+   ],
+   "count": 17
+  },
+  {
+   "name": "Tebra/Dimension",
+   "modes": [
+    "Default"
+   ],
+   "count": 31
+  }
+ ],
+ "blockers": [
+  {
+   "id": "duplicateButtonName",
+   "severity": "RESOLVED",
+   "detail": "The second COMPONENT_SET named 'Button' (38:6) and the flattened 'ButtonGroup / Primary / Medium / Default — Akkurat' (57:17) were removed with their page, 'Storybook rebuild — working'. Zero external instances existed, so nothing broke. Stray-component scan now returns empty."
+  },
+  {
+   "id": "buttonSizeDefaultSmall",
+   "severity": "CLOSED — accepted by Daniel 2026-08-02; stop reporting it",
+   "detail": "Button's Size axis resolves to Small. componentPropertyDefinitions.Size.defaultValue = 'Small' and defaultVariant = 'Variant=Contained, Color=Primary, Size=Small, State=Default', even though children[0] is the Medium variant. The manual UI reorder has not taken effect. The API cannot set a variant default, so this must be fixed in the UI and re-verified before publish."
+  }
+ ],
+ "carriedForward": [
+  {
+   "id": "buttonGroupHasNoCanonicalCounterpart",
+   "detail": "ButtonGroup exists in code (overrides/ButtonGroupOverrides.ts + stories/ButtonGroup) but has NO canonical Figma component. Its only representation was the flattened single-state component deleted with the superseded page. Backlog item, not a publish blocker."
+  },
+  {
+   "id": "groupLabelWeightSubstitution",
+   "detail": "The one real Akkurat LL weight substitution is the Autocomplete group label: MUI ListSubheader uses fontWeightMedium (500) and Akkurat has no Medium face, so it is built at Regular. It sits OUTSIDE the typography.ts ramp, so no text style carries that note. If a style for it is wanted, it needs a name outside the code-key convention."
+  },
+  "2026-08-03 nav addendum: four Nav / * components added under the partner theme. They are deliberately NOT instances of the canonical primitives and must never be reconciled with them — the divergence is the point. Freeze applies to their names and axes as listed; the six-theme cobranding expansion is out of freeze because it is not built."
+ ],
+ "confusionRisks": [
+  {
+   "id": "twoCloseIconsResolved",
+   "status": "RESOLVED",
+   "detail": "'Icon / Close (MUI)' renamed to 'Icon / Clear (MUI)' — named by role since it has no Tebra source file to trace. 'Icon / CloseOutlined' keeps its name. The two no longer collide in insert-search."
+  },
+  {
+   "id": "linearEllipsisUndiscoverable",
+   "status": "MITIGATED, RE-CHECK AFTER USE",
+   "detail": "Kept as 'Icon / LinearEllipsis' per the source-filename convention. Description now carries search aliases: kebab, overflow menu, more, vertical ellipsis, MoreVert. Figma insert-search weights names over descriptions, so this may still not surface on 'kebab'. Flagged for a discoverability re-check after real use — renaming is only cheap before publish."
+  },
+  {
+   "id": "valueTextProp",
+   "status": "ACCEPTED, NO ACTION",
+   "detail": "Field's TEXT property stays 'Value text' alongside the 'Value' axis. Mirrors MUI's own semantics; renaming away from code costs traceability for cosmetic gain."
+  },
+  {
+   "id": "multiWordStateValues",
+   "status": "ACCEPTED, NO ACTION",
+   "detail": "'Selected focused' and 'Focus visible' stay. They mirror MUI's actual state semantics (.Mui-focused, .Mui-focusVisible)."
+  },
+  {
+   "id": "collectionSlashNames",
+   "status": "COSMETIC",
+   "detail": "Collections are named 'Tebra/Color' etc. Figma does not nest collections, so the slash renders literally in the variable picker."
+  }
+ ],
+ "illustrations": {
+  "_convention": "Illustration / Name, mirroring Icon / Name. Seven masters on the Icons & illustrations page, alongside the 31 icon masters.",
+  "masters": [
+   {
+    "name": "Illustration / Access restricted",
+    "viewBox": "260x240",
+    "usedBy": "ForbiddenErrorMessage at 260x240 (exact)",
+    "story": true
+   },
+   {
+    "name": "Illustration / Almost there",
+    "viewBox": "625x448",
+    "usedBy": "no Feedback message; downstream in signin-ui and clinical-notes-ui",
+    "story": true,
+    "quirk": "the only one styled through a <style> block of CSS classes, inlined to attributes before import; its .e class also sets stroke-width 2 where the rest of the set inherits 1"
+   },
+   {
+    "name": "Illustration / Browser incompatibility",
+    "viewBox": "318x238",
+    "usedBy": "BrowserIncompatibilityErrorMessage at 318x238 (exact)",
+    "story": false,
+    "quirk": "embeds a 200x200 base64 PNG drawn into a 92x92 rect via an SVG pattern — imports as an IMAGE fill, the one paint in the set that legitimately cannot bind to a variable. Also the only fractional stroke, 1.25."
+   },
+   {
+    "name": "Illustration / Error",
+    "viewBox": "416x242",
+    "usedBy": "InternalServerErrorMessage at 416x242 (exact)",
+    "story": true,
+    "quirk": "135 source paths, the most detailed. Only user of #FFCFBF. Wrapped in a clipPath whose rect equals the full viewBox, so it clips nothing; Figma imports it as a mask group and drops the shape fill to black, so the mask vector was bound back to common/white as the source declares."
+   },
+   {
+    "name": "Illustration / Not found",
+    "viewBox": "524x440",
+    "usedBy": "NotFoundErrorMessage AND NoResultsMessage, both at 337x283 (64.3%, ratio preserved)",
+    "story": true,
+    "quirk": "nearly every stroke is 0.989407 rather than 1, so the artwork appears to have been uniformly scaled on export. Only dashed stroke in the set."
+   },
+   {
+    "name": "Illustration / Nothing to see here",
+    "viewBox": "474x273",
+    "usedBy": "NothingToSeeHereMessage at 455x262 (96%, ratio preserved)",
+    "story": true,
+    "quirk": "the only one wrapped in an SVG <mask>, and the only user of #F8F3EB"
+   },
+   {
+    "name": "Illustration / Waiting",
+    "viewBox": "246x176",
+    "usedBy": "no Feedback message; downstream in signin-ui and clinical-notes-ui",
+    "story": false
+   }
+  ],
+  "palette": {
+   "_note": "Only six distinct colours across all seven SVGs, plus white. Four map exactly to palette entries; two do not.",
+   "#004952": "illustrationTeal — 405 uses. NOT palette primary.main #004852. See flags.illustrationTealIsOffPalette.",
+   "#FF8D6E": "secondary.main (vitality 1) — 61 uses",
+   "#CBDDE0": "primary.100 (growth 4) — 20 uses",
+   "#E9EFEE": "core.100 (core 4) — 2 uses",
+   "#FFCFBF": "secondary.200 (vitality 3) — 1 use",
+   "#F8F3EB": "illustrationCream — 1 use, no palette entry. See flags.illustrationCreamHasNoPaletteEntry.",
+   "white": "common.white — 11 uses, declared as the named colour \"white\" rather than a hex, which a hex-only grep misses"
+  },
+  "recipe": "figma.createNodeFromSvg at the viewBox, then walk every descendant binding each SOLID fill and stroke to a variable, set SCALE/SCALE constraints on every shape, and clear the root frame fill — createNodeFromSvg gives the wrapper frame an opaque white background that the source (<svg fill=\"none\">) does not have. That fill was the one unbound paint the first audit caught, on all seven masters."
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_externalCareHospitalizations_2026-09-05",
+ "sequence": 67,
+ "date": "2026-09-05",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "35e4c68b4038e33f7fb0f4f7a071e92428016b4e5315c8e211e945cf1285802c"
+ },
+ "record": {
+  "_status": "DONE. External Care History — Hospitalizations component, body, shared Sidesheet composition, frozen reference, change log, and sole comparison instance built and verified.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-external-care-hospitalizations-2026-09-05/report.md",
+  "recordGate": "npveRebuild_allergiesComparisonHeightCorrection_2026-09-05 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:8316 Page=Clin_ExternalCare-Hospitalizations",
+   "policy": "read only; frozen source export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "sharedSidesheet": "279:2446",
+   "floatingVariant": "6:65",
+   "rebuildComparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "scope": "Create one reusable External care event card and one Hospitalizations body; compose one live shared Sidesheet with the existing two-action footer; create one frozen reference, one transparent rebuild helper, one Change log helper, and one sole comparison instance. Preserve source, library, global tokens, shared masters/defaults, and every prior screen.",
+  "buildPlan": [
+   "Create an External care event card with editable facility name and two live small outlined Chip instances.",
+   "Create a Hospitalizations body with live Tabs/Tab, Divider, contained-primary Button with PlusOutlined, and event-card instances.",
+   "Compose a content-driven Floating Sidesheet titled External Care History, showing Save & Add to Note and Save.",
+   "Create transparent rebuild helper plus frozen reference and Change log helpers, then place the sole comparison on Screens.",
+   "Export and inspect component, body, Sidesheet, and comparison renders; run all standing batch rules."
+  ],
+  "spacingPolicy": "Canonical base 8: 16px body and card padding and 16px major vertical gaps; 8px between related card title and metadata and between Chips. Source 12px card padding, 12px body gap, and compact 28px tabs are normalized and recorded.",
+  "reuseBaseline": {
+   "codeConnect": "No *.figma.* mappings exist for the required controls.",
+   "library": "Design System Rebuild is the sole subscribed library.",
+   "button": "820871c5281ccd91813587a508771cc439f38b93",
+   "selectedTab": "eea2fd71083e80e919a40226f98850fac8090508",
+   "unselectedTab": "b5fadfbc89f4a8ab6a18606ab7228d0dd2b42d2e",
+   "divider": "0143de7b0529ee6fed9d0c163eeab7571480bc67",
+   "chip": "e5db0e4b69da285f4e36a3278a38d84208cf2617",
+   "cardFinding": "Published Card dfc9b7d6ef4ab82cce27c1aa11cc1ba31f0825a5 has no arbitrary-content or content-swap property; use a source-specific local component, matching the established Allergies and Family History pattern."
+  },
+  "discoveries": [
+   "Source 129:8316 is a visible 550x600 screen with a 64px header, compact two-tab strip, Create New Event action, one 518x74 event card, and a 60px two-action footer.",
+   "The source card is 12px padded with a 16/20 title and two 12/16 metadata pills. The rebuild uses 16px padding, canonical 16/24 body typography, and live 24px small Chip instances.",
+   "Flowsheets 939:9228 was audited but deferred because its four-action row introduces an unresolved chart/action-icon mapping. External Care Hospitalizations has no such unresolved dependency.",
+   "The product font is Akkurat LL, matching both source and existing target components."
+  ],
+  "stopCondition": "Stop before target mutation if a required dependency is absent or if exact source evidence introduces a new design decision. Otherwise stop after one component/body/Sidesheet/comparison set passes structural, paint, whole-pixel, font, live-instance, and screenshot verification and is recorded.",
+  "figmaMutations": [
+   "Added the Hospitalizations body component as a preferred value of Sidesheet Body content#279:5 without changing the default.",
+   "Added the External Care reference, rebuild, and change-log helpers as preferred values of the three Rebuild comparison swaps without changing defaults.",
+   "Created one new Templates section and one new Screens comparison section; all source and library files remained read only."
+  ],
+  "createdNodes": {
+   "templatesSection": "370:3340",
+   "eventCard": "370:3341",
+   "hospitalizationsBody": "370:3353",
+   "rebuildHelper": "371:3359",
+   "sidesheetInstance": "371:3360",
+   "referenceHelper": "373:3403",
+   "referenceImage": "373:3404",
+   "changeLogHelper": "378:3403",
+   "screensSection": "378:5612",
+   "comparisonInstance": "378:5613"
+  },
+  "verification": {
+   "visual": "PASS — source, body, rebuilt Sidesheet, and full comparison inspected at native resolution.",
+   "shell": "PASS — 550x383 content-driven Sidesheet; 72px header, 207px body content, 16px body inset, and 71px footer with Save & Add to Note plus Save.",
+   "reuse": "PASS — live Tabs/Tab, Divider, Button, PlusOutlined, Chip, footer Button, Sidesheet, body, and event-card instances retained.",
+   "singlePlacement": "PASS — reference, rebuild, and change-log helpers each have exactly one instance on Screens; the rebuild helper contains exactly one shared Sidesheet instance.",
+   "tokens": "PASS — body gap 16; card padding 16; card title/metadata gap 8; chip gap 8; paper, divider, text, radius/md, hairline, spacing, and typography bindings present.",
+   "geometry": "PASS — owned frames and components use whole-pixel geometry. Fractional coordinates occur only inside the approved PlusOutlined vector geometry.",
+   "fonts": "PASS — Akkurat LL; no mixed-font text nodes in the created scope.",
+   "reference": "PASS — frozen 1100x1200 source PNG placed at 550x600 with image hash 30d541347994461247c7c32129c4842be7429995.",
+   "sourceAndLibrary": "PASS — no writes to zVsuhYehoSLLq880qRBFkq or YX2n4YLrEpBXNbcc73T6dw.",
+   "screenshots": [
+    "figma-export/npve-external-care-hospitalizations-2026-09-05/source-129-8316-2x.png",
+    "figma-export/npve-external-care-hospitalizations-2026-09-05/body-370-3353.png",
+    "figma-export/npve-external-care-hospitalizations-2026-09-05/rebuild-371-3359.png",
+    "figma-export/npve-external-care-hospitalizations-2026-09-05/comparison-378-5613.png"
+   ]
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsAdded": [],
+  "flagsBefore": 231,
+  "flagsAfter": 231,
+  "nextBatch": "External Care History · Facility Stay is the natural adjacent candidate, pending its own source audit and pre-write plan."
+ }
+}

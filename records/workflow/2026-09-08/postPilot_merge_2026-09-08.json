@@ -1,0 +1,70 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "postPilot_merge_2026-09-08",
+ "sequence": 89,
+ "date": "2026-09-08",
+ "workstream": "workflow",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "61f3f73d066d3009085a7858f2c54aada8c410f56acd6613e8d8cc540da4e7bb"
+ },
+ "record": {
+  "_status": "DONE. codex/lean-workflow merged into master with a merge commit; schema, metrics and Figma state agree post-merge; item 2 tier approval verified present in its record (no gate bypass); Daniel's acceptance of both runs 2-3 comparisons written to both pilot records.",
+  "date": "2026-09-08",
+  "workstream": "Workflow / lean pilot close",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "recordGate": "leanPilot_run2-3_2026-09-08 and leanPilot_run3_2026-09-08 recorded DONE — passed",
+  "report": "figma-export/post-pilot-merge-2026-09-08/report.md",
+  "step1_tierApprovalCheck": {
+   "question": "Does record leanPilot_run3_2026-09-08 contain Daniel's quoted approval words as the gate requires?",
+   "result": "PRESENT — no gate bypass.",
+   "quoteInRecord": "I approve pilot2-procedures-edit as medium, go ahead",
+   "approvedAt": "2026-09-09T02:29:44.873Z",
+   "approvedBy": "Daniel (operator)",
+   "alsoInManifest": "workflow/manifest.json pilot2-procedures-edit risk.approval carries the same quote with lock d9692bafc11f…",
+   "item1ForReference": {
+    "quote": "I approve pilot2-hospitalizations-edit as medium, go ahead",
+    "approvedAt": "2026-09-09T00:38:11.672Z"
+   },
+   "operatorAcceptance": {
+    "date": "2026-09-08",
+    "by": "Daniel (operator)",
+    "quote": "comparisons look good",
+    "relayedIn": "the post-pilot close prompt of 2026-09-08 (session message 2026-09-09T03:13Z): \"Daniel has accepted both comparisons, quote his \\\"comparisons look good\\\" with today's date in the record\"",
+    "covers": [
+     "pilot2-hospitalizations-edit comparison 581:11117",
+     "pilot2-procedures-edit comparison 586:11765"
+    ]
+   }
+  },
+  "step2_merge": {
+   "note": "The repository has no branch named main; its default branch is master (main was the name used in the prompt and in the session gitStatus header). Merged into master.",
+   "from": "codex/lean-workflow at c20cd6b (13 commits ahead of master, 0 behind; merge-base cb3a842 = tag baseline/pre-lean-workflow-2026-09-08)",
+   "mergeCommit": "39300ac",
+   "mergeParents": "cb3a842 c20cd6b",
+   "strategy": "git merge --no-ff so the merge is a single reportable commit",
+   "treeClean": true,
+   "postMergeAgreement": {
+    "schema": "records leanPilot_run2-3_2026-09-08, leanPilot_run3_2026-09-08, workflowRefactor_closeout_2026-09-08 and npveRebuild_pastMedicalHistoryBody_2026-09-08 present and DONE on master",
+    "metrics": "workflow/metrics.json holds the Facility Stay baseline and pilot runs 1, 2, 3",
+    "manifest": "five items, all complete",
+    "contract": "validate-workflow PASS on master after the merge (see report for the digest)",
+    "figma": "fdCQVFdvOByaOYIJYag0d6 pages 0:1/3:2/27:2/126:2; comparisons 521:7835, 537:9915, 561:9877, 581:11117, 586:11765 and 434:7474 present at their recorded sizes; Sidesheet Body content preferred values 15; comparison slots 18 each"
+   }
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "PROCESS": 0
+  },
+  "flagsBefore": 285,
+  "flagsAfter": 285,
+  "flagsAdded": [],
+  "figmaMutations": []
+ }
+}

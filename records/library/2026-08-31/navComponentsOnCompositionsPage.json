@@ -1,0 +1,24 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "navComponentsOnCompositionsPage",
+ "sequence": 15,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "position (date of the preceding record in the aggregate)",
+  "contentSha256": "9455aac03c9e4e0b62c48c4d3f3475a33aeabb1f819f59bff1e303de8800483c",
+  "note": "The record carries no date and its id has none; dated from its position in the aggregate (it follows codeDefectRegister2026_08_31)."
+ },
+ "record": {
+  "_status": "OPEN — structural problem in a published library. Not a composition, and must not be lost in the composition queue.",
+  "problem": "The entire Nav component family is defined inside a frame on the Compositions page that is labelled as a theme variant. Six components, fourteen with variants. These are the only component definitions anywhere on the Compositions page.",
+  "whyItMatters": "Compositions are unpublished reference frames by decision (libraryRestructure2026_08_26c.settledDecisionsApplied.compositionsAreReferenceFrames). Component definitions living there means the Nav family is defined in a place the library treats as non-authoritative, and labelled as a variant of something rather than as itself.",
+  "consequence": "Anyone building on nav is building on components whose home contradicts the page they sit on. Resolve before that happens.",
+  "nextStep": "Determine where the Nav family should live and whether it is published, then move it. Verification to date is a count of what is there, not a plan for it.",
+  "relatedTo": "fourCompositions2026_08_31.pageLayoutIntact — any move must preserve the hand-placed Compositions page layout."
+ }
+}

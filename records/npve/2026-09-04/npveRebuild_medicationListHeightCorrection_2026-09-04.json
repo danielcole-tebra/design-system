@@ -1,0 +1,58 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_medicationListHeightCorrection_2026-09-04",
+ "sequence": 54,
+ "date": "2026-09-04",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "c02e749a1e6f7e66f8d4569007572b2e44d3844e52fd4877e2be0643b6f3fe89"
+ },
+ "record": {
+  "_status": "DONE. Medication List footer now follows the active body at y295; the corrected instance is 550x351 and the comparison has been updated.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Page=Clin_MedList 545:5557",
+  "report": "figma-export/npve-medication-list-height-correction-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationListSidesheet_2026-09-04 recorded DONE — passed",
+  "scope": "Correct only the Medication List standalone screen, its rebuild comparison helper, its reference helper, and its plain-language change log. Do not change the shared Sidesheet master or existing Problems screens.",
+  "userDecision": "The footer encloses the active content; it is not pinned a fixed distance below its nearest content.",
+  "evidenceBefore": {
+   "medicationListBody": "236:1758 is 518x206.",
+   "sidesheetInstance": "250:3519 is 550x600; Body 487; swapped Body content is incorrectly stretched to 385; Footer begins at y544.",
+   "rebuildHelper": "253:1840 and nested Sidesheet 253:1841 are both 550x600.",
+   "sourceHelper": "253:1838 is 550x600 although its source export is 550x380."
+  },
+  "intendedGeometry": "Header 56 + 1px divider + body padding 16 + 206px active content + body padding 16 + footer 56 = 351px total.",
+  "stopCondition": "Stop on inability to restore the swapped body to its intrinsic 206px height, any shared-master mutation, any existing Problems-screen mutation, or unrelated diff.",
+  "flagsAdded": [
+   "npveMedicationList_footerFixedGap"
+  ],
+  "changed": {
+   "standalone": "250:3519 resized from 550x600 to 550x351; Body is 238px and Footer is 56px at y295.",
+   "referenceHelper": "253:1838 resized from 550x600 to the source export height 550x380 and its artificial white extension was removed.",
+   "rebuildHelper": "253:1840 and nested Sidesheet 253:1841 resized from 550x600 to 550x351; artificial white extension removed from the helper.",
+   "changeLog": "Shell and Footer rows now describe content-driven height and the footer following active content."
+  },
+  "verification": {
+   "pixels": "PASS — comparison-after.png visually confirms the footer immediately follows the medication rows with canonical 16px body padding.",
+   "geometry": "PASS — standalone 250:3519 is 550x351; Body y57 h238; Footer y295 h56.",
+   "identity": "PASS — standalone and comparison content remain live instances of Sidesheet 6:65; Medication list body remains 236:1758.",
+   "sharedMaster": "PASS — Sidesheet 6:65 remains unchanged at 550x600.",
+   "backwardCompatibility": "PASS — Problems Closed 156:2428 and Open 156:2707 remain unchanged at 550x600 with Footer y544 h56.",
+   "integerGeometry": "PASS — all changed dimensions are whole pixels."
+  },
+  "screenshots": [
+   "figma-export/npve-medication-list-height-correction-2026-09-04/comparison-before.png",
+   "figma-export/npve-medication-list-height-correction-2026-09-04/standalone-after.png",
+   "figma-export/npve-medication-list-height-correction-2026-09-04/comparison-after.png"
+  ],
+  "flagsAfter": 222,
+  "footerPaddingAnnotation_2026_09_04": "Superseded in part by npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04: canonical Footer changed 56px → 71px. Medication content-driven placements therefore changed 550x351 → 550x366 while Body y57 h238 and Footer start y295 remained unchanged.",
+  "headerPaddingAnnotation_2026_09_04": "Superseded for total height by npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04: content-driven Medication placements are now 550×382 so the approved Body remains 238px under the new 72px Header; Footer is y311 h71."
+ }
+}

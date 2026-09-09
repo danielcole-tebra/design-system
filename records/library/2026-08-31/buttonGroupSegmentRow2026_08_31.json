@@ -1,0 +1,48 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "buttonGroupSegmentRow2026_08_31",
+ "sequence": 9,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "a35432bd31fce82ec9c75e07dc34c7bb560857bc545ce9ce32f827550e7f3d5d"
+ },
+ "record": {
+  "_batch": "fourCompositions2026_08_31",
+  "method": "Production counted with a balanced-brace JSX scanner (composition-scan.js) over 5,399 source files under C:/Code/web-app-v2/packages, excluding node_modules, stories, examples, patterns and tests. Import source resolved per file so same-named non-design-system tags cannot be miscounted.",
+  "scannerFixes": "Two real scanner faults found and fixed before any count was trusted. (a) TSX generic call sites — <Autocomplete<PatientSummaryObj> — were rejected by the tag lookahead AND would have been truncated at the generic closing angle bracket, losing every prop. (b) An earlier prop reader matched against the whole raw tag, so nested props leaked into the parent: size=\"small\" read 73 for Autocomplete when the true top-level count is 52. Both are the failure mode the build prompt warned had already occurred twice.",
+  "frame": "161:110, Compositions / Actions",
+  "production": {
+   "files": 20,
+   "elements": 23,
+   "auditSaid": 20,
+   "agreement": "EXACT — the only composition in this batch where the audit count matched."
+  },
+  "positionAxis": "Position was ALREADY demonstrated correctly in the prior frame — all five groups ran First, Middle, Last in order. What was missing was any explanation of why the axis exists. Verified from source: ButtonGroupOverrides styles \"&:not(:last-of-type)\" on groupedContainedPrimary and groupedContainedSecondary to set the shared border and suppress the right edge. Figma cannot evaluate a sibling selector, so Position carries that as a hand-set variant. A correct-versus-wrong pair was added (three segments all set to First visibly doubles the joins), deliberately OUTSIDE a dashed panel because it is an assembly mistake, not a library fault; the frame legend says so.",
+  "threeJobs": {
+   "viewOrPresetSwitcher": "7 files, one segment active",
+   "splitButton": "7 files — and a separate Split button component (627:161, 8 variants) is published for exactly this, so these should not be assembled from segments",
+   "ribbonToolbar": "4 groups in composition-ui EditorRibbon, icon-only formatting controls",
+   "plainActionPair": "the remainder",
+   "segmentCount": "14 of 19 countable groups hold exactly 2, 3 hold 3, 1 holds 4. No cap problem."
+  },
+  "themeFinding": "ButtonGroupOverrides.defaultProps is { variant: \"contained\", color: \"secondary\" }, INVERTING MUI's outlined/primary defaults. Then 12 of 23 elements explicitly set color=\"primary\", overriding the library default back toward MUI's. The default the library chose is the minority outcome. orientation is never set — all 23 horizontal.",
+  "gaps": [
+   "No selected or pressed State — the axis is Default/Hover/Disabled. The most common job the component does is the one it cannot draw. 7 files need it.",
+   "No variant axis; all 54 variants are the contained appearance. 4 elements set variant=\"outlined\", which ButtonGroupOverrides ALSO does not style — every styleOverrides key it defines is contained-specific (groupedContainedPrimary, groupedContainedSecondary, groupedContainedHorizontal, contained), so those files render MUI stock outlined with no Tebra styling. SAME SHAPE as the outlined-Alert finding in the alert composition."
+  ],
+  "convergenceWorthRecording": "How production draws a selected segment is NOT scattered. 6 files add a conditional leading CheckIcon and 6 apply an inline sx. Two of those styles — documents-ui/DocumentsViewSwitcher and appointment-workflow-ui/ApplicationNav — are defined independently in different packages and are character-for-character identical: backgroundColor primary.main, color \"#ffffff\" (a hardcoded hex, not a token). Two teams reached the same answer separately and neither had anywhere shared to put it. RECORDED, NOT PROMOTED TO GUIDANCE.",
+  "instanceRatio": {
+   "allNodes": "21.6%",
+   "excludingAnnotationText": "41.7%",
+   "nodes": 116,
+   "instances": 25
+  },
+  "keptFromPriorFrame": "All five colour/size/disabled permutation groups, and the Position assembly note. Their \"default per ButtonGroupOverrides defaultProps\" annotation was verified correct."
+ }
+}

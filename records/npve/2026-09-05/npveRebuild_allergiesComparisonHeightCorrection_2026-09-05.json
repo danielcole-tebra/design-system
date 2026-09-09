@@ -1,0 +1,75 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_allergiesComparisonHeightCorrection_2026-09-05",
+ "sequence": 66,
+ "date": "2026-09-05",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "107deac499021f61c625bdc6b627137b40c8a32d3e5c6661f54665fc78fb4283"
+ },
+ "record": {
+  "_status": "DONE. The Allergies comparison now shows no false white extension below the live 447px Sidesheet, and the corrected render is verified.",
+  "date": "2026-09-05",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "report": "figma-export/npve-allergies-comparison-height-correction-2026-09-05/report.md",
+  "recordGate": "npveRebuild_allergiesList_2026-09-05 recorded DONE — passed",
+  "scope": "Correct only the unique Allergies rebuild helper surface so the visible white sheet ends with the 447px live Sidesheet even though the shared comparison swap slot retains its canonical 600px geometry. Preserve the shared comparison master, frozen reference, change log, Sidesheet component, body, tokens, and all other comparisons.",
+  "stopCondition": "Stop after the unique helper surface, component links, whole-pixel geometry, paints, and final comparison render are verified. Stop immediately if the fix requires a shared master change or changes the Sidesheet itself.",
+  "audit": {
+   "comparison": "356:6236 at 1708x1290",
+   "rebuildColumn": "I356:6236;35:336 at 550x628",
+   "rebuildContentWrapper": "I356:6236;114:1139 at 550x600 with white fill",
+   "liveSidesheet": "I356:6236;114:1139;356:3249 at 550x447",
+   "rootCause": "Figma preserves the canonical 600px swap-slot geometry after inserting the 447px helper; the helper's white surface therefore extended 153px beyond the child Sidesheet."
+  },
+  "figmaMutations": [
+   "Cleared the paper fill from unique rebuild helper component 356:3248 so its preserved 600px swap-slot instance is visually transparent below the child Sidesheet.",
+   "Left live Allergies Sidesheet I356:6236;114:1139;356:3249 unchanged at 550x447.",
+   "Preserved shared Rebuild comparison master 35:332, frozen reference, change log, component links, paints, and all other comparison instances."
+  ],
+  "verification": {
+   "geometry": "PASS — unique helper and live Sidesheet remain 550x447; the canonical nested swap-slot instance remains 550x600 without a visible surface below the child.",
+   "scope": "PASS — only the unique Allergies rebuild helper fill changed.",
+   "components": "PASS — comparison, helper, and Sidesheet remain linked instances.",
+   "wholePixels": "PASS — all affected widths and heights are integer pixels.",
+   "visual": "PASS — final comparison render was saved and inspected; the false white extension is gone."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 1,
+   "DECISION": 0,
+   "resolvedDuringBatch": 1
+  },
+  "flagsAdded": [
+   "npveAllergiesComparison_fixedRebuildWrapperHeight"
+  ],
+  "nextBatch": "Not started — resume the approved low-oversight Sidesheet sequence after operator review.",
+  "strategyAmendment": "A direct nested-instance resize did not persist because the shared comparison component owns that slot geometry. Use the unique helper surface as the correction point: remove its paper fill and let the unchanged Sidesheet own the visible white surface.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — no paint changed; the live linked Sidesheet was re-rendered in the comparison.",
+   "2_unboundPaintAudit": "PASS — the redundant token-bound paper fill was removed from the unique helper; the live Sidesheet retains its token-bound paper surface.",
+   "3_referenceCounts": "PASS — every affected instance still resolves to its main component.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren=false on audit and verification walks.",
+   "5_opacityLast": "PASS — opacity was not changed.",
+   "6_enumerateDontRecall": "PASS — wrapper and child dimensions were read live before and after mutation.",
+   "7_fileIdentityFirst": "PASS — NPVE Rebuild fdCQVFdvOByaOYIJYag0d6, Screens 27:2, comparison 356:6236.",
+   "8_roundWithRecord": "PASS — no geometry changed; all affected dimensions remain whole pixels.",
+   "9_boundPaintAlpha": "PASS — bound paint alpha was not changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no clone or component-property mutation occurred."
+  },
+  "screenshots": [
+   "figma-export/npve-allergies-comparison-height-correction-2026-09-05/comparison-allergies-356-6236-height-corrected.png"
+  ],
+  "flagsAfter": 231,
+  "recoveryNotes": [
+   "A direct nested-instance resize was rejected by the comparison component constraints and left no persisted mutation.",
+   "The defect was presentation-only in the helper surface; product component geometry was already correct.",
+   "Future comparison helpers must be surface-transparent when their content is shorter than the canonical 600px slot."
+  ]
+ }
+}

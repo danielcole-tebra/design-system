@@ -1,0 +1,72 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_medicationSurfaceCorrection_2026-09-04",
+ "sequence": 52,
+ "date": "2026-09-04",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "1385bb3b5839de181171847078ebbf3187ae12034db8445af37d708f9044e2ec"
+ },
+ "record": {
+  "_status": "DONE. Medication summary row 219:2068 rebound to color/background/paper; all six existing instances inherited white; geometry, API, references, and unrelated content remained unchanged.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Clin_MedList rows 545:5573 and 545:5589",
+  "report": "figma-export/npve-medication-surface-correction-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationListBody_2026-09-04 recorded DONE — passed",
+  "scope": "Change only Medication summary row 219:2068 from color/grey/300 to color/background/paper so all existing instances inherit the white source surface. Preserve geometry, component API, nested instances, and all unrelated nodes.",
+  "before": "color/grey/300 key 4dbef7c8fc453422675312ab6708eeda7e45476b",
+  "after": "color/background/paper key f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+  "expectedInstances": [
+   "224:1733",
+   "224:1754",
+   "238:1760",
+   "238:1778",
+   "I238:1809;238:1760",
+   "I238:1809;238:1778"
+  ],
+  "stopCondition": "Stop on file-identity mismatch, missing master, unexpected instance count, dimension or component-property change, dropped references, or unrelated diff.",
+  "screenshotsPlanned": [
+   "source MainWrap 545:5572",
+   "corrected row states 224:1730",
+   "corrected body preview 238:1806",
+   "reference-vs-rebuilt comparison"
+  ],
+  "mutation": {
+   "master": "219:2068 Medication summary row",
+   "property": "fills",
+   "before": "color/grey/300 key 4dbef7c8fc453422675312ab6708eeda7e45476b",
+   "after": "color/background/paper key f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0"
+  },
+  "verification": {
+   "propagation": "PASS master plus six existing instances use paper at RGB 1/1/1",
+   "geometry": "PASS all row nodes remain 518x76; body and body preview remain 518x206",
+   "api": "PASS Status, Name, Dose, and Show divider definitions unchanged",
+   "references": "PASS each row retains 7 references; body master and preview retain 19",
+   "font": "PASS Akkurat LL only",
+   "rule2": "Templates unbound non-instance paints are the six known #E4E4E4 section chrome nodes only",
+   "rule8": "PASS zero non-exempt fractional authored dimensions on Templates"
+  },
+  "decisions": [
+   "User visual review overrides the earlier grey-row interpretation: medication rows are paper-white.",
+   "The correction is applied at the row master so every current and future instance inherits the same token.",
+   "No source, published library object, spacing, icon, or component property was changed."
+  ],
+  "screenshots": [
+   "figma-export/npve-medication-surface-correction-2026-09-04/corrected-body-instance-238-1809.png",
+   "figma-export/npve-medication-surface-correction-2026-09-04/corrected-body-preview-238-1806.png",
+   "figma-export/npve-medication-surface-correction-2026-09-04/corrected-row-states-224-1730.png",
+   "figma-export/npve-medication-surface-correction-2026-09-04/reference-vs-rebuilt.png",
+   "figma-export/npve-medication-surface-correction-2026-09-04/source-body-545-5572.png"
+  ],
+  "flagsAdded": [],
+  "flagsBefore": 221,
+  "flagsAfter": 221
+ }
+}

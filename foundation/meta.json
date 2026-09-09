@@ -1,0 +1,10 @@
+{
+ "name": "Tebra Design System — Figma build schema",
+ "generatedFrom": "C:/Code/web-app-v2/packages/design-system (read-only reference)",
+ "generatedOn": "2026-08-01",
+ "muiSubstrate": "@mui/material 5.15.12 (resolved from yarn.lock for '^5.15.11'; source read from .yarn/cache)",
+ "rootFontSizePx": 16,
+ "method": "All values transcribed from source. Nothing was rendered, measured, or sampled from a browser.",
+ "targetFigmaFileKey": "YX2n4YLrEpBXNbcc73T6dw",
+ "targetPage": "Button test — MCP (existing hand-transcribed reference to be replaced)"
+}

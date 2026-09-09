@@ -1,0 +1,115 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "libraryRestructure2026_08_26c",
+ "sequence": 2,
+ "date": "2026-08-26",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "e7ac53aeebe43b867810260025327a833a0813546f0164f41da0c58c6fbb0cf0"
+ },
+ "record": {
+  "_status": "BUILT, NOT PUBLISHED. Move, rename and reposition only. No component properties, variants or visual design changed; no publish performed.",
+  "_follows": [
+   "propertySurfaceRepair2026_08_26",
+   "namingConventionMigration2026_08_26b"
+  ],
+  "settledDecisionsApplied": {
+   "compositionsAreReferenceFrames": "Compositions stay unpublished reference frames, not components.",
+   "exemplarRetired": "The word invited copying rather than instantiating - which is how the data grid ended up hand-drawn. All six 'exemplar' pages are gone as a concept.",
+   "specsStayWithTheirComposition": "The two deliberate raw-layer prose frames (Card header band, Selection / bulk action bar) moved with the compositions they describe.",
+   "dataGridFrameKept": "Moved and renamed to state its condition. Not repaired, not deleted.",
+   "nothingDeleted": "No node and no page was deleted."
+  },
+  "pageTaxonomy": [
+   "Cover",
+   "Foundations",
+   "Actions",
+   "Inputs",
+   "Data display",
+   "Feedback",
+   "Surfaces & navigation",
+   "Icons & illustrations",
+   "Compositions",
+   "Layouts",
+   "Reference"
+  ],
+  "pagesRenamed": {
+   "Tokens": "Foundations",
+   "Table exemplars": "Compositions",
+   "Page template exemplars": "Layouts",
+   "DataGrid exemplars": "Empty — merged into Compositions",
+   "Drawer exemplars": "Empty — merged into Compositions",
+   "Drawer in page exemplars": "Empty — merged into Layouts",
+   "Action row exemplars": "Empty — merged into Compositions"
+  },
+  "emptyPagesLeftInPlace": "Four pages were drained and renamed to state their status rather than deleted, per the no-delete rule. They are safe to delete once confirmed.",
+  "movedToCompositions": 15,
+  "movedToLayouts": [
+   "Page templates (was Page template exemplars)",
+   "Drawer in page (was Drawer in page exemplars)"
+  ],
+  "movedToReference": [
+   "Known drift and decisions (from Cover)",
+   "Icon catalogue (from Icons & illustrations)",
+   "Checkbox — Flush verification (from Inputs)",
+   "Checkbox — Flush target measurement (from Inputs)"
+  ],
+  "overlapsResolved": {
+   "count": 7,
+   "rootCause": "Dialog grew to 9040x1162 when the maxWidth x fullScreen axes were built in propertySurfaceRepair2026_08_26, swallowing five neighbouring sets on Surfaces & navigation.",
+   "pairs": [
+    "Dialog / Tabs/Tab",
+    "Dialog / Tabs",
+    "Dialog / Stepper/Step",
+    "Dialog / Stepper",
+    "Dialog / Mobile stepper",
+    "Illustration/Waiting / Icon/Error",
+    "Illustration/Waiting / Icon/Phone"
+   ],
+   "method": "Flow layout with even gutters per page. Illustrations moved to their own band below the icon grid. No frame was resized to fit."
+  },
+  "compositionHeaders": {
+   "added": 12,
+   "fields": "What it is / Uses / Varies. Populated ONLY from the frame's own opening note, its real library instances, and its own section names. Nothing authored.",
+   "notAdded": [
+    "Dialog assembly",
+    "Primary nav with open submenu",
+    "Primary nav — partner theme"
+   ],
+   "notAddedReason": "These three are absolute-positioned (two FRAMEs with layoutMode NONE and one SECTION). A header would require resizing or would clip, and resizing was out of scope.",
+   "emptyWhatItIs": [
+    "Table assembly — composed table"
+   ],
+   "weakVaries": [
+    "Autocomplete open state",
+    "Select + Menu",
+    "Card header band",
+    "Table assembly — composed table",
+    "Assembled pagination",
+    "Stacked adjacency",
+    "Chip — common configurations"
+   ],
+   "weakVariesReason": "These frames name their internal layers Note/Examples/Stack/Table rather than describing variations, so Varies reads as structure not content. Needs deliberate authoring."
+  },
+  "reportedNotActioned": [
+   {
+    "item": "Two frames both named 'Validation — notch on tinted surface' (127:389 and 128:742)",
+    "action": "near-duplicates, left in place"
+   },
+   {
+    "item": "Four emptied pages",
+    "action": "renamed to state status, left in place"
+   },
+   {
+    "item": "Data grid toolbar frame",
+    "action": "hand-drawn, renamed to say so, left for rebuild"
+   }
+  ],
+  "integrityVerified": "All 40 published components re-read after the moves: keys unchanged, variant counts unchanged, property names unchanged, none empty. Dialog and Menu instances still resolve (they now sit on Compositions with the reference frames that hold them). Zero overlaps and zero empty frames on every page."
+ }
+}

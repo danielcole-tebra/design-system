@@ -1,0 +1,14 @@
+{
+ "legend": {
+  "tebra": "Value is authored in the Tebra theme (paletteValues.ts / typography.ts / *Overrides). Canonical.",
+  "mui-substrate": "Value is MUI's own default, surfacing because the Tebra theme never specifies it. Real, but not designed.",
+  "mixed": "Tebra authored part of the rule; MUI supplies the rest."
+ },
+ "temporalFaultLine": {
+  "preProcessEndsAt": "0.7.0 — 2023-10-31",
+  "evidence": "CHANGELOG 0.6.1 (2023-10-19) removed oldKareoOverrides/{ButtonOverrides,ButtonGroupOverrides} and palette/oldKareoPaletteValues but explicitly kept Button and DataGrid on oldPaletteValues. 0.7.0 (2023-10-31) migrated them and deleted oldPaletteValues and the old theme.",
+  "storybookFidelityFixedAt": "0.11.0 — 2024-02-06",
+  "storybookEvidence": "CHANGELOG 0.11.0 'Fixed: Updated StorybookDecorator to load Tebra theme in all stories.' Before this date Storybook rendered stock Material.",
+  "conclusion": "paletteValues.ts, typography.ts and ButtonOverrides.ts are all post-process and canonical. AutocompleteOverrides.tsx (authored 0.5.4, 2023-09-28) and TextFieldOverrides.tsx are pre-process survivors: their colors ride the palette rename but their geometry was never specified and remains raw MUI."
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "checkboxFlushHaloFix2026_08_26d",
+ "sequence": 3,
+ "date": "2026-08-26",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "d62841b62357fda76968473746580303d28b65bca80b896d912b09edc6822ab4"
+ },
+ "record": {
+  "_status": "BUILT, NOT PUBLISHED.",
+  "defect": "In all 12 flush=Left Checkbox variants the hover halo and focus-visible ring were not concentric with the glyph. Offset measured 9px, not 18.",
+  "cause": "The halo and ring were never separate objects. The halo is the variant FRAME's own fill (color/computed (no palette)/alphaPrimary04, cornerRadius 21) and the ring is the frame's own 3px OUTSIDE stroke (color/primary/main). flush=Left was implemented by re-padding the frame from [9,9,9,9] to [9,18,9,0]. Total horizontal padding stayed 18 so the frame stayed 42x42 and did not move; auto-layout pushed the GLYPH from x=9 to x=0. So the glyph moved and the halo could not move, because the halo IS the frame.",
+  "whyItCannotBeFixedInPlace": "A halo concentric with a glyph at x=0 must extend 9px beyond the frame's left edge - exactly what MUI's negative margin does in CSS. A frame cannot paint outside itself, so the paints had to move onto a child.",
+  "fix": "For each of the 12 flush=Left variants: added a 42x42 RECTANGLE named 'Halo' with cornerRadius 21, carried the frame's fill and stroke onto it verbatim (bound variables re-established with setBoundVariableForPaint), cleared the frame's fills and strokes, inserted it at index 0 so it sits behind the glyph, set layoutPositioning ABSOLUTE and positioned it at (-9, 0) so its centre matches the glyph centre (12, 21). clipsContent was already false so the 9px overhang renders.",
+  "preserved": "Flush offset unchanged (glyph still at x=0). All 24 variants still 42x42. The 12 flush=None variants untouched - still pad [9,9,9,9], glyph at (9,9), paints still on the frame, no Halo child.",
+  "structuralAsymmetry": "flush=Left variants now carry a Halo child; flush=None variants keep the paints on the frame. This is a direct consequence of the instruction not to change the None variants. Making all 24 use the Halo child would be tidier and is the recommended end state.",
+  "countCorrection": "The report described 'eight flush=Left variants'. There are 12 - checked (3) x State (4). Same for None. 24 total.",
+  "radio": {
+   "hasDefect": false,
+   "why": "Radio has no Flush axis - its properties are checked and State only. All 8 variants have the glyph centred at 21 in a 42-wide frame, concentric.",
+   "butSharesTheConstruction": "Radio builds its halo and ring the same way - frame fill and frame stroke, single 'Glyph' child, no halo node. If a Flush axis were ever added to Radio by re-padding the frame, the identical defect would appear. It would need the same Halo-child fix.",
+   "sameConstructionElsewhere": "Icon button and Toggle button should be checked for the same pattern before any flush-style axis is added to them."
+  },
+  "alphaFindingThatOverturnsAnEarlierEntry": {
+   "test": "Bound a rectangle to color/computed (no palette)/alphaPrimary04 (stored alpha 0.04) without ever setting opacity, then read paint.opacity back.",
+   "result": "paint.opacity read back as 0.04. Figma SURFACES a bound colour variable's alpha into paint.opacity - it does not multiply. A second rectangle with opacity forced to 1 rendered fully opaque, losing the alpha entirely.",
+   "consequence": "There is NO double-alpha defect in this library. standingBatchRules.1_instancePaintVerification's warning about paint-level opacity is about UNBOUND paints; for bound paints, opacity mirroring the variable alpha is correct and expected.",
+   "regressionIntroduced": "propertySurfaceRepair2026_08_26.defectsFound.alertFilledWarningDoubleAlpha is WRONG and the 'fix' was a regression. Alert variant=filled, severity=warning had its message TEXT and its glyph VECTOR set from opacity 0.87 to 1 while bound to alertFilledWarningText (stored alpha 0.87). Those two nodes now render fully opaque black instead of 87%.",
+   "remediation": "DONE 2026-08-27 - see boundAlphaRegressionRevert2026_08_27. Message text 165:53 restored from paint opacity 1 back to 0.87, with its binding to alertFilledWarningText preserved. The glyph vector I165:50;164:12 needed no change: it was already at 0.87, so the regression had only ever landed on the text node, not on both as this entry assumed. Nothing else on Alert was touched - still 12 variants and 5 component properties."
+  }
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "boundAlphaRegressionRevert2026_08_27",
+ "sequence": 4,
+ "date": "2026-08-27",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "54294600c8c9169fcc9076d44c59ecf664e406767f9160b874edc497554236a3"
+ },
+ "record": {
+  "_status": "BUILT, NOT PUBLISHED. namingFreeze._status still reads AWAITING DANIEL'S APPROVAL.",
+  "_scope": "Revert of one paint opacity on Alert, plus a read-only library-wide audit. Exactly one paint was written. No other component, property, variant or node was modified.",
+  "trigger": "checkboxFlushHaloFix2026_08_26d.alphaFindingThatOverturnsAnEarlierEntry.remediation, which was recorded on 2026-08-26 but deliberately not executed in that pass.",
+  "rootCause": "propertySurfaceRepair2026_08_26 assumed Figma MULTIPLIES a bound colour variable's stored alpha by paint.opacity, and therefore read 'variable alpha 0.87 + paint opacity 0.87' as a double application yielding 0.757. Figma does not multiply: it SURFACES the stored alpha into paint.opacity. The two values agreeing is the correct, expected state. Setting opacity to 1 discarded the alpha instead of correcting it.",
+  "change": {
+   "file": "YX2n4YLrEpBXNbcc73T6dw",
+   "page": "Feedback",
+   "componentSet": "Alert (165:57)",
+   "variant": "variant=filled, severity=warning (165:48)",
+   "nodesWritten": [
+    {
+     "id": "165:53",
+     "name": "Text",
+     "type": "TEXT",
+     "property": "fills[0].opacity",
+     "from": 1,
+     "to": 0.87,
+     "boundVariable": "color/computed (no palette)/alertFilledWarningText (VariableID:164:3, stored rgba 0,0,0,0.87)",
+     "note": "Binding preserved through the edit - fills was cloned, opacity set, array reassigned."
+    }
+   ],
+   "nodesInspectedButNotWritten": [
+    {
+     "id": "I165:50;164:12",
+     "name": "Vector (glyph)",
+     "found": "already at paint opacity 0.87",
+     "note": "The 2026-08-26 regression had only ever landed on the text node. propertySurfaceRepair2026_08_26 claimed both were changed; only one was. Left untouched rather than rewritten with an identical value."
+    }
+   ]
+  },
+  "verification": {
+   "why": "Geometry assertion cannot detect this - the defect is purely a rendering difference. Verified by sampling rendered PNGs.",
+   "requestedComparisonUnavailable": "A comparison against an adjacent filled severity is not meaningful here: filled/error, filled/info and filled/success all bind color/common/white at stored alpha 1 (white text on saturated fills). No other filled severity uses a sub-1 alpha token, so none reads at the same weight by construction.",
+   "referenceUsedInstead": "The glyph vector inside the same variant - same variable, same stored alpha, demonstrably never modified.",
+   "measurements": {
+    "background": "#FCDE73 = rgb(252,222,115)",
+    "textBefore": "rgb(0,0,0) - fully opaque, alpha discarded",
+    "textAfter": "rgb(33,29,15) - exactly 0.13 x background, the composite for 87% black",
+    "glyphBeforeAndAfter": "rgb(54,48,25) - unchanged; matches 0.87 paint x 0.9 Icon-frame opacity = 0.783 effective, predicted rgb(54.7,48.2,25.0)"
+   },
+   "conclusion": "The post-fix text value is the arithmetic result of the restored alpha, not an approximation."
+  },
+  "libraryWideAudit": {
+   "question": "Was the same reasoning error applied anywhere else - any node whose paint opacity was forced to 1 while bound to a variable carrying stored alpha?",
+   "method": "Identified every local COLOR variable whose stored value in any mode has alpha < 1 (17 of 76), then walked every page comparing every fills and strokes paint bound to one of them against that variable's stored alpha. Per-segment text fills read via getStyledTextSegments so mixed-fill TEXT nodes were not skipped.",
+   "coverage": {
+    "pages": 11,
+    "nodes": 10711,
+    "perPage": {
+     "Cover": {
+      "nodes": 16,
+      "boundAlphaPaints": 0
+     },
+     "Foundations": {
+      "nodes": 715,
+      "boundAlphaPaints": 17
+     },
+     "Actions": {
+      "nodes": 625,
+      "boundAlphaPaints": 0
+     },
+     "Inputs": {
+      "nodes": 1328,
+      "boundAlphaPaints": 90
+     },
+     "Data display": {
+      "nodes": 478,
+      "boundAlphaPaints": 39
+     },
+     "Feedback": {
+      "nodes": 1287,
+      "boundAlphaPaints": 3
+     },
+     "Surfaces & navigation": {
+      "nodes": 504,
+      "boundAlphaPaints": 0
+     },
+     "Icons & illustrations": {
+      "nodes": 899,
+      "boundAlphaPaints": 0
+     },
+     "Compositions": {
+      "nodes": 2708,
+      "boundAlphaPaints": 11
+     },
+     "Layouts": {
+      "nodes": 513,
+      "boundAlphaPaints": 3
+     },
+     "Reference": {
+      "nodes": 1638,
+      "boundAlphaPaints": 41
+     }
+    }
+   },
+   "result": "204 bound-alpha paints, 0 mismatches (counted after the Alert fix; before it, Feedback held the single mismatch).",
+   "remoteVariables": "0 paints anywhere in the file bind a non-local variable, so nothing escaped the local-variable list the audit was built from.",
+   "touchedComponentsInScope": "All five components propertySurfaceRepair2026_08_26 modified were covered - Alert on Feedback; Dialog, Drawer, Menu and Stepper on Surfaces & navigation. Both pages returned clean.",
+   "conclusion": "Alert's message text 165:53 was the only instance library-wide. The reasoning error was applied once, not repeatedly.",
+   "notInScope": "This audit compares PAINT-level opacity against bound variable alpha. Node-level opacity is a separate, legitimate mechanism and was not flagged - e.g. Alert's Icon frame 165:49 carries node opacity 0.9, which is MUI's icon treatment and correct."
+  },
+  "ruleRecorded": "standingBatchRules.9_boundPaintAlpha. standingBatchRules.1_instancePaintVerification was also scoped to UNBOUND paints, since its closing sentence read as licence for exactly the change that caused this regression.",
+  "entriesCorrected": [
+   "propertySurfaceRepair2026_08_26.defectsFound.alertFilledWarningDoubleAlpha - status FIXED -> WITHDRAWN",
+   "checkboxFlushHaloFix2026_08_26d.alphaFindingThatOverturnsAnEarlierEntry.remediation - NOT done -> DONE"
+  ]
+ }
+}

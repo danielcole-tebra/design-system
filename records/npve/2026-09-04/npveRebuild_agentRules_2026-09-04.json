@@ -1,0 +1,45 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_agentRules_2026-09-04",
+ "sequence": 42,
+ "date": "2026-09-04",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "5436396f356dcef997cf464823f1a78801c677c3ddb354fd64b60da545abdb01"
+ },
+ "record": {
+  "_status": "DONE. Documentation batch. Repo writes only: CLAUDE.md gained the section \"Rules for any agent working in these files\" after Known plugin API traps; AGENTS.md created in the repo root with the same section verbatim plus one context paragraph. No Figma file opened or written.",
+  "date": "2026-09-04",
+  "_targetFile": "none (no Figma writes)",
+  "_libraryFile": "none",
+  "_sourceFile": "not opened",
+  "report": "figma-export/npve-agent-rules-2026-09-04/report.md",
+  "readFirst": {
+   "claudeMd": "read",
+   "auditRecord": "npveRebuild_audit_2026_09_03 read",
+   "repair1Retro": "not present: no npveRebuild_repair1 record in the schema and figma-export/npve-repair1-2026-09-04/ holds eight screenshots and no report.md. Treated as not yet run."
+  },
+  "stopCondition": "Two repo files edited/created and one schema record written; stop. No Figma writes, no other docs touched.",
+  "filesWritten": {
+   "CLAUDE.md": "New H2 \"Rules for any agent working in these files\" inserted between \"Known plugin API traps\" and \"Recording\". Nine numbered rules plus a lead sentence, text as given in the batch prompt. CRLF preserved.",
+   "AGENTS.md": "New file, repo root. One context paragraph (project, five Figma file keys, location of CLAUDE.md and the schema, CLAUDE.md is canonical and wins on conflict) followed by the same section verbatim. Written for tools that read AGENTS.md by convention (Codex and others)."
+  },
+  "sectionText": "## Rules for any agent working in these files\n\nAny agent — Claude, Codex, or other — editing the Figma files or this repo follows the same loop. Work that skips it gets audited and may be superseded.\n\n1. Read before touching: this file, then design-system-schema.json for current state. The schema is the record; chat history and your own memory are not.\n2. Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.\n3. One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.\n4. Additive only. Nothing is deleted, and nothing is moved, renamed, or superseded without a record saying so. Archives get a README.\n5. No invention. If the library and code lack a pattern, mark it (GAP/DEFECT per the convention) and build with what exists. Recreating a source drawing by hand and calling it a component is a false record, which is worse than the gap.\n6. Verify in pixels. Screenshot what you built and look at it. Property readbacks are claims; renders are evidence. After editing a component, re-screenshot its live instances and diff.\n7. Record every batch: a dated schema record via an apply-*.js script, backup first, findings to flags[]. A batch without a record did not happen and will be treated as suspect.\n8. Report per rule 13: full report to disk, short reply, no tables in chat. Change logs in the file are written in plain graphic-design language, not system jargon.\n9. When sources disagree or a decision is needed, stop and report. Precedence (code > Storybook render > library > source) resolves facts, not design decisions.",
+  "verification": "Section body diffed between CLAUDE.md, AGENTS.md and the prompt text after CRLF normalisation: identical. Heading order in CLAUDE.md: What this folder is, Where truth lives, Superseded, Figma files, Standing rules, Known plugin API traps, Rules for any agent working in these files, Recording, Publishing.",
+  "flagUpdated": {
+   "id": "npveAudit_unrecordedRestructure",
+   "change": "Added addressedBy cross-reference and one line to handling. Flag otherwise unchanged; the retroactive record it asks for is still owed."
+  },
+  "flagsAdded": [],
+  "standingRules": "Not applicable: no Figma node read or written, so the ten standingBatchRules and rules 14/15 have nothing to walk. Rule 13 followed (report on disk, short reply).",
+  "decisionsNeeded": [],
+  "screenshots": [],
+  "flagsBefore": 206,
+  "flagsAfter": 206
+ }
+}

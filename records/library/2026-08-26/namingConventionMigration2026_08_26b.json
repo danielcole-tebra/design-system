@@ -1,0 +1,111 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "namingConventionMigration2026_08_26b",
+ "sequence": 1,
+ "date": "2026-08-26",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "b4ca189d9cacd77aed8a95389003eb972d4866cae7774b5d7c7fc2996651b8f8"
+ },
+ "record": {
+  "_status": "BUILT, NOT PUBLISHED. Resolves the two-convention split that propertySurfaceRepair2026_08_26 created.",
+  "_window": "Renames are safe now because the library has no consuming files. After a consuming file exists, renaming breaks every instance and every Code Connect mapping.",
+  "rule": {
+   "categoryA": "Mirrors a code prop -> code's exact name and values, lowercase. The casing IS the signal that a code prop stands behind it and can be diffed.",
+   "categoryB": "Exists only in Figma -> Sentence case. States, content slots, drawing affordances.",
+   "doNotBlur": "Never lowercase a Figma-only affordance; it falsely claims a code prop exists."
+  },
+  "renamed": {
+   "Button": "Variant->variant (contained/text), Color->color (primary/secondary/error), Size->size (medium/small/large)",
+   "Button group/Segment": "Color->color, Size->size. Position left Sentence (CSS sibling concern)",
+   "Icon button": "Color->color (default/primary/error), Size->size",
+   "Text field": "Size->size; booleans Required->required, Select->select, Multiline->multiline",
+   "Checkbox": "Checked->checked (unchecked/checked/indeterminate)",
+   "Radio": "Checked->checked (unchecked/checked)",
+   "Switch": "Size->size, Checked->checked (off/on)",
+   "Autocomplete/Field": "Size->size",
+   "Autocomplete/Tag": "Size->size",
+   "Toggle button": "Size->size, Selected->selected (no/yes)",
+   "Chip": "Size->size, Variant->variant (filled/outlined), Color->color (default/primary/secondary/error/info/success/warning)",
+   "Table/Cell": "Variant->variant (head/body), Padding->padding (normal/none/checkbox)",
+   "Pagination/Item": "Size->size, Type->type (page/previous/next/ellipsis)",
+   "Badge": "Variant->variant (standard/dot)",
+   "Divider": "Orientation->orientation (horizontal/vertical)",
+   "Snackbar content": "Type->type, AND value Default->info. 'Default' was never a code value: SnackbarContentOverrides reads ownerState.type and the else branch is info.dark; the story's argTypes are ['info','success'].",
+   "Paper": "Square->square (no/yes). Variant left alone - restructure, see below",
+   "Card": "Variant->variant (elevation/outlined)",
+   "Accordion": "Expanded->expanded (collapsed/expanded)",
+   "Tabs/Tab": "Selected->selected (no/yes)",
+   "Mobile stepper": "Variant->variant (dots/text)",
+   "Stepper/Step": "Optional->optional",
+   "Dialog": "CORRECTED FROM THE PREVIOUS PASS - Figma-only slots were wrongly lowercase: DialogTitle->Show title, DialogActions->Show actions, secondAction->Show second action, action1->Action 1, action2->Action 2. maxWidth and fullScreen stay lowercase (Category A).",
+   "Menu": "CORRECTED - item1..4->Item 1..4, showItem2..4->Show item 2..4. elevation stays lowercase.",
+   "Stepper": "CORRECTED - step1..4->Step 1..4, showStep3/4->Show step 3/4."
+  },
+  "leftAloneAndWhy": {
+   "State (every component)": "Category B by rule. Hover, Focus visible, Focused are CSS pseudo-states, not props. disabled was NOT split out of State this pass.",
+   "Position (Button group/Segment)": "CSS sibling concern, no code prop.",
+   "Lines (List/Item)": "Derived from whether secondary text is present, not a prop.",
+   "Value (Text field, Autocomplete/Field)": "Empty/Filled/Multiple describes presence of a value, not the value prop's accepted set.",
+   "Clamp + State (Read more)": "VERIFIED IN SOURCE: ReadMore takes $maxLines and $maxCharacters as separate transient props and holds collapsed state in useState. Clamp abstracts two props; neither is a single code prop. Category B.",
+   "Size + State (Split button)": "No design-system implementation exists - the only SplitButton is local to appointment-workflow-ui. No code component to mirror, so no Category A claim can be made. Left Sentence case.",
+   "Content (Avatar)": "Fallback/Letter/Icon is a drawing affordance; MUI Avatar has no content prop.",
+   "Variant + Container (Feedback message)": "Variant selects among six first-party components (NoResultsMessage etc.), not a variant prop.",
+   "Actions (Card)": "Figma affordance for showing CardActions, not a prop.",
+   "Flush (Checkbox)": "No code prop.",
+   "Nav/* (all)": "navigation-ui components, no design-system props."
+  },
+  "valuesThatDoNotLineUp": [
+   {
+    "where": "Checkbox/Radio/Switch checked, Toggle button selected, Tabs/Tab selected, Accordion expanded, Paper square, Card Actions",
+    "detail": "The code props are BOOLEAN. Figma variant values cannot be booleans, so these carry unchecked/checked, off/on, no/yes, collapsed/expanded. The NAME is Category A and diffable; the VALUES are not. Recorded, not forced to true/false.",
+    "status": "ACCEPTED MISMATCH"
+   },
+   {
+    "where": "Checkbox checked=indeterminate",
+    "detail": "indeterminate is a SEPARATE boolean prop in MUI, not a third value of checked. Figma models three mutually exclusive states. Recorded per instruction, not restructured.",
+    "status": "RECORDED"
+   },
+   {
+    "where": "Pagination/Item type=ellipsis",
+    "detail": "MUI PaginationItem type accepts start-ellipsis and end-ellipsis; there is no plain 'ellipsis'. Figma collapses both into one value.",
+    "status": "RECORDED"
+   }
+  ],
+  "invalidOrUnthemedValues": [
+   {
+    "where": "Chip color=secondary",
+    "detail": "Valid MUI value and used in 1 production file, but ChipOverrides defines NO colorSecondary slot, so it renders raw MUI palette.secondary. Valid but unthemed.",
+    "action": "REPORTED, NOT DELETED"
+   },
+   {
+    "where": "Chip color — MISSING VALUE",
+    "detail": "The code's accepted set is 8 values, not 7. ChipOverrides styles colorBeta, palette.beta is defined (#B4EBF4 pneumo / #83CDD9 placebo), and color=\"beta\" is used in admin-ui and composition-ui plus 3 stories. Figma has no beta.",
+    "action": "GAP - needs a new variant, out of scope for a rename pass"
+   }
+  ],
+  "restructureNotRename": [
+   {
+    "component": "Paper",
+    "figmaShape": "One Variant axis folding Elevation 0 / 1 / 2 / 4 / 8 and Outlined together, plus square.",
+    "codeShape": "Two independent props: numeric elevation (0-24) and variant ('elevation' | 'outlined').",
+    "extra": "Production uses elevation 0,1,2,3,4 - and Figma has no Elevation 3 at all.",
+    "verdict": "SPLIT, NOT A RENAME. Out of scope."
+   },
+   {
+    "component": "Card",
+    "figmaShape": "Variant = elevation | outlined.",
+    "codeShape": "Same two values - Card does NOT have Paper's fold problem. Renamed cleanly.",
+    "extra": "Card is separately missing the raised and square props and a numeric elevation; that is a gap, not a restructure.",
+    "verdict": "NO RESTRUCTURE NEEDED"
+   }
+  ],
+  "verification": "Every changed set: variant count equals the axis cross-product, zero orphaned variants, defaults unchanged, and a FRESH INSTANCE (not the master) confirms the new names and defaults. Screenshots taken of Button, Icon button, Checkbox, Toggle button, Chip, Pagination/Item, Snackbar content, Paper, Accordion.",
+  "defaultsUnchanged": "Confirmed on instances: variant=contained, color=primary, size=medium, checked=unchecked, off; selected=no; variant=filled, color=default; type=page; variant=head, padding=normal; variant=standard; orientation=horizontal; type=info; variant=elevation; expanded=collapsed; variant=dots; maxWidth=sm; fullScreen=false; elevation=8; severity=info."
+ }
+}

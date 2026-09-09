@@ -1,0 +1,6 @@
+{
+ "1_sourceOfTruth": "packages/design-system theme is canonical. src/cobranding (baseThemes.ts, createPartnerTheme.ts) is partner navigation chrome only and is out of scope.",
+ "2_fractionalValues": "Bind Figma to the INTENDED integer, record the true computed value alongside as 'computedPx'. Never emit a fractional value into Figma.",
+ "3_buttonLargeFontSize": "Transcribe the real 15px and flag it. Tebra overrides sizeSmall only, so size=large inherits MUI's 15px font against Tebra's 24px line-height.",
+ "4_autocompleteScope": "Build the full component with a provenance split: every value carries layer='tebra' or layer='mui-substrate' so the unthemed surface is visible rather than silently canonized."
+}

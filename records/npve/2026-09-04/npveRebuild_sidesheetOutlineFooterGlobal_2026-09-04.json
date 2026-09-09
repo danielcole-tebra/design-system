@@ -1,0 +1,97 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+ "sequence": 55,
+ "date": "2026-09-04",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "d5a1bbb54abee2d2f7152454be2135123867a6c1bc2c160813f957bf4217b2bc"
+ },
+ "record": {
+  "_status": "DONE. Shared Sidesheet outline is four-sided and token-bound; Footer Actions use canonical 16px vertical padding. All 21 live instances were validated.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only; existing imported variables only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; 545:5239 and 545:5557 used as outline evidence",
+  "report": "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationListHeightCorrection_2026-09-04 recorded DONE — passed",
+  "scope": "Edit shared Sidesheet 6:65 only for its four-sided outline and Footer Actions vertical padding. Preserve all component properties, width, root fixed-height behavior, body padding, horizontal footer padding, source/library content, and unrelated nodes. Increase the tight Medication List placements by 15px only to preserve their existing 238px body region after the footer grows.",
+  "evidenceBefore": {
+   "outline": "Sidesheet 6:65 and all 21 live instances render top/right/bottom/left weights 0/0/0/1, despite both source sidesheets using 1/1/1/1.",
+   "footer": "Footer Actions 6:84 is fixed 550x55 with 8px vertical padding; a 38px primary button is centered at y8.5.",
+   "code": "Drawer.example.tsx:124-139 uses padding={2}; default MUI spacing resolves that to 16px.",
+   "variables": "space/16 key 6016592c19254dd61e9de9e006459546eaece0bb; border/hairline key e437afaf91519b9a70c82751deb7099cf1576369; color/divider key ba1923abf373a9062e989ce3ac2068f54712d80b."
+  },
+  "intendedGeometry": {
+   "outline": "1px INSIDE on all four edges, all weights bound to border/hairline; color remains bound to color/divider.",
+   "actions": "550x70 with 16px top/bottom and existing 8px left/right; a 38px action sits at y16.",
+   "footer": "71px total = 1px divider + 70px Actions.",
+   "master": "550x600 remains fixed; Body changes from 487 to 472 and Footer moves from y544 to y529.",
+   "medicationCompatibility": "Standalone 250:3519 and rebuild content 253:1841 change 550x351 to 550x366 so Body remains 238 and Footer remains at y295."
+  },
+  "affectedPopulation": {
+   "total": 21,
+   "Templates": 10,
+   "Screens": 8,
+   "Archive": 3,
+   "propagation": "Every live instance inherits the master outline and footer-action padding; no instance was detached or replaced."
+  },
+  "stopCondition": "Stop on component identity mismatch, lost component-property definitions or references, non-integer geometry, unbound outline/padding values, body-region shrink on Medication, unrelated diff, or a render that does not show all four edges and 16px footer padding.",
+  "flagsAdded": [
+   "npveSidesheet_outlineOnlyLeft",
+   "npveSidesheet_footerActionHalfPixel"
+  ],
+  "changed": {
+   "masterOutline": "6:65 top/right/bottom/left changed 0/0/0/1 → 1/1/1/1. All four weights are bound to border/hairline; INSIDE alignment and color/divider paint binding are preserved.",
+   "footerActions": "6:84 changed from fixed 550x55 with 8px vertical padding to HUG 550x70 with 16px top/bottom and 8px left/right. Top and bottom padding are bound to space/16.",
+   "footer": "6:82 now resolves to 550x71: 1px Divider + 70px Actions.",
+   "fixedMaster": "6:65 remains 550x600. Body is y57 h472 and Footer is y529 h71.",
+   "medicationCompatibility": "250:3519, 253:1840, and 253:1841 changed 550x351 → 550x366 so the existing Body y57 h238 and Footer start y295 remain unchanged.",
+   "medicationChangeLog": "I254:1900;18:106 and I254:1924;18:106 now say 550x366 content-driven rebuild; corresponding Footer rows now say 71px footer with 16px vertical padding."
+  },
+  "verification": {
+   "pageIdentity": "PASS — Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2.",
+   "componentIdentity": "PASS — Sidesheet master remains 6:65; all 21 placements remain instances of 6:65.",
+   "api": "PASS — all 12 component-property keys and defaults are unchanged; master reference count remains 70.",
+   "outline": "PASS — master and all 21 instances read 1/1/1/1, INSIDE, with four border/hairline weight bindings and color/divider paint binding.",
+   "footer": "PASS — Actions is 70px high with 16px top/bottom and 8px left/right; Footer is 71px including Divider.",
+   "fixedSheets": "PASS — fixed Sidesheets remain 550x600; Body y57 h472; Footer y529 h71.",
+   "medication": "PASS — standalone and comparison rebuild are 550x366; Body y57 h238; Footer y295 h71.",
+   "problems": "PASS — 156:2428 and 156:2707 remain 550x600 and inherit the corrected shell.",
+   "paints": "PASS — full-page audits found only intentional unbound section/cover chrome; no changed component content gained an unbound visible solid paint.",
+   "integerGeometry": "PASS — no non-exempt fractional authored container dimension remains. Intrinsic centered text at x=183.5 is exempt.",
+   "visual": "PASS — after renders show all four sheet edges and canonical footer breathing room on the master, Problems screens, Medication standalone, and Medication comparison."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — master and live instances agree; changed outline paint remains color/divider.",
+   "2_unboundPaintAudit": "PASS — Cover, Templates, Screens, and Archive audited. Only intentional section/cover chrome is unbound.",
+   "3_referenceCounts": "PASS — master reference count remains 70; instances remain live.",
+   "4_skipInvisibleFalse": "PASS — used for structural and paint audits.",
+   "5_opacityLast": "PASS — no paint opacity was changed.",
+   "6_enumerateDontRecall": "PASS — all four pages and 21 instances were enumerated.",
+   "7_fileIdentityFirst": "PASS — target key and exact page identities verified before mutation.",
+   "8_roundWithRecord": "PASS — changed authored geometry is whole-pixel; intrinsic centered text is exempt.",
+   "9_boundPaintAlpha": "PASS — no bound paint alpha was touched.",
+   "10_cloneDropsPropertyRefs": "N/A — no component or instance clone was made."
+  },
+  "screenshots": [
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/before-master-6-65.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/before-problems-section-156-2427.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/before-medication-250-3519.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/after-master-6-65.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/after-problems-section-156-2427.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/after-medication-250-3519.png",
+   "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/after-medication-comparison-254-3707.png"
+  ],
+  "flagsBefore": 222,
+  "flagsAfter": 224,
+  "nextBatch": "Not started — content-height architecture and migration remains a separate, higher-risk global batch.",
+  "radiusPlacementAnnotation_2026_09_04": "Sidesheet 6:65 is now Placement=Floating inside component set 279:2446. Its four-sided outline, 71px footer, and 16px vertical footer-action padding are unchanged; Docked right and Docked left variants add only corner treatment.",
+  "headerPaddingAnnotation_2026_09_04": "Superseded for Header geometry by npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04: Header is now 72px with 16px top/bottom padding. Fixed Footer remains y529 h71; flexible Body is now y73 h456."
+ }
+}

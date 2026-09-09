@@ -1,0 +1,94 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_medicationListSidesheet_2026-09-04",
+ "sequence": 53,
+ "date": "2026-09-04",
+ "workstream": "npve",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "6846a270231dec432ff6c8d31d08667d5e613354b0b262a505f28bad3ca72578"
+ },
+ "record": {
+  "_status": "DONE. Canonical 550x600 Medication List Sidesheet and comparison screen created; full-width footer action added through a backward-compatible shell API; existing Problems Sidesheets validated unchanged.",
+  "date": "2026-09-04",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only; Page=Clin_MedList 545:5557",
+  "report": "figma-export/npve-medication-list-sidesheet-2026-09-04/report.md",
+  "recordGate": "npveRebuild_medicationSurfaceCorrection_2026-09-04 recorded DONE — passed",
+  "scope": "Compose a canonical 550x600 Medication List Sidesheet from the existing Sidesheet master and Medication list body; add one narrow full-width footer-action wrapper; curate the two existing swap APIs; create standalone and comparison screens. Preserve existing Problems instances and all source/library content.",
+  "sourceGeometry": "545:5557 is 550x380 with Header 64, MainWrap 240, Footer 76",
+  "targetGeometry": "Canonical Sidesheet 6:65 remains 550x600 with Header 56 and Footer 56; body inset remains 16px",
+  "dependencies": [
+   "Sidesheet 6:65",
+   "Medication list body 236:1758",
+   "published Button variant=contained, color=primary, size=medium, State=Default 155:1192",
+   "Rebuild comparison 35:332",
+   "Change log/Row 18:103",
+   "published variables and Divider"
+  ],
+  "plannedApiChanges": [
+   "Body content#6:5 now offers Medication list body 236:1758.",
+   "Show primary action#252:0 defaults true.",
+   "Show full-width action#252:1 defaults false.",
+   "Full-width action#252:2 defaults to and curates Medication list footer action 248:1827.",
+   "Ordinary Primary and Tertiary action preferred lists remain free of the full-width wrapper; all prior defaults are unchanged."
+  ],
+  "plannedScreens": [
+   "04 · Medication list with one live Sidesheet instance",
+   "05 · Medication list comparisons with one live Rebuild comparison instance"
+  ],
+  "stopCondition": "Stop on identity mismatch, duplicate names, unexpected existing-screen mutation, dropped references, non-canonical shell geometry, unresolved library dependency, or unrelated diff.",
+  "created": {
+   "footerActionComponent": "248:1827 Medication list footer action 534x38; published Button 248:1828 fills 518x38 inside bound 8px wrapper padding",
+   "sidesheetApiNode": "252:2211 Full-width action nested instance in Sidesheet 6:65",
+   "standaloneScreen": "250:3518 04 · Medication list; 250:3519 Sidesheet — Medication list",
+   "comparisonReference": "253:1838 with source image 253:1839",
+   "comparisonRebuild": "253:1840 with live Sidesheet 253:1841",
+   "comparisonChangeLog": "254:1895 with six Change log/Row instances",
+   "comparisonScreen": "254:3706 05 · Medication list comparisons; 254:3707 Rebuild comparison — Medication list"
+  },
+  "geometry": {
+   "source": "550x380; Header 64 / MainWrap 240 / Footer 76",
+   "target": "550x600 canonical Sidesheet; Header 56 / Body 487 / Footer 56",
+   "body": "Medication list body 518x206 fills the existing 518px content slot at a 16px inset",
+   "footer": "Full-width action 534x38 at x8 in Actions; nested Button 518x38 at x8, for a total 16px sheet inset",
+   "comparison": "1708x1290 inside a 1868x1536 section"
+  },
+  "decisions": [
+   "Canonical target size wins over the shorter legacy 550x380 source because Sidesheets must remain fixed at 550x600.",
+   "The legacy 64px header and 76px footer map to the established 56px / 56px shell.",
+   "The full-width action is a dedicated optional Sidesheet slot because Figma preserves the geometry of ordinary instance-swap slots.",
+   "New footer properties are backward-compatible: primary visible by default, full-width hidden by default.",
+   "Medication rows remain bound to background/paper following user visual review."
+  ],
+  "verification": {
+   "medicationSheet": "PASS 250:3519 is 550x600 and instances Sidesheet 6:65; body main is 236:1758; full-width action is visible at 534x38; ordinary primary is hidden",
+   "comparison": "PASS 254:3707 is a live 35:332 instance with reference 253:1838, rebuild 253:1840, and change log 254:1895",
+   "references": "PASS row master 7; body master 19; Medication Sidesheet 53; comparison 77",
+   "backwardCompatibility": "PASS Problems Closed 156:2428 and Open 156:2707 remain 550x600 with original body swaps, primary visible, full-width hidden",
+   "typography": "PASS Akkurat LL across new screen and comparison content",
+   "bindings": "PASS zero unbound non-instance solid paints on changed Templates and Screens content; section chrome intentionally #E4E4E4",
+   "rule8": "PASS zero non-exempt fractional authored dimensions on Templates and Screens"
+  },
+  "recovery": "Two atomic Figma rejections changed nothing: nested instance-swap geometry could not be resized inside a Sidesheet instance, which led to the dedicated full-width slot; one immediate post-set descendant selector ran before the nested tree resolved, so property application and validation were split into separate calls.",
+  "screenshots": [
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/comparison-screen-254-3707.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/draft-sidesheet-250-3519.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/medication-list-section-250-3518.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/rebuilt-sidesheet-250-3519.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/reference-vs-rebuilt.png",
+   "figma-export/npve-medication-list-sidesheet-2026-09-04/source-sidesheet-545-5557.png"
+  ],
+  "flagsAdded": [],
+  "flagsBefore": 221,
+  "flagsAfter": 221,
+  "supersededGeometryBy": "npveRebuild_medicationListHeightCorrection_2026-09-04: the 550x600 Medication List presentation height was incorrect; the shared master stays 550x600, while the Medication List instance and rebuild helper are content-driven at 550x351.",
+  "footerPaddingAnnotation_2026_09_04": "Superseded in part by npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04: canonical Footer changed 56px → 71px. Medication content-driven placements therefore changed 550x351 → 550x366 while Body y57 h238 and Footer start y295 remained unchanged.",
+  "headerPaddingAnnotation_2026_09_04": "Superseded for total height by npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04: content-driven Medication placements are now 550×382 so the approved Body remains 238px under the new 72px Header; Footer is y311 h71."
+ }
+}

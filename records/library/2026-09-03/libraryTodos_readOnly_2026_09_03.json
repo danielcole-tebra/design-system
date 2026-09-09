@@ -1,0 +1,167 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "libraryTodos_readOnly_2026_09_03",
+ "sequence": 38,
+ "date": "2026-09-03",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "e9a934db77fd8840078ef62fbb96bd3b5d0d2eb1ce9be2dc661f82bb59b40bbd"
+ },
+ "record": {
+  "_status": "DONE. Read-only. Code and library values read for LIBRARY-TODOS items 1, 5, 7, 8, 11, 12; nothing changed in any Figma file; no flag resolved.",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only. Transient instances 980:147, 980:5323 (created and removed inside one script each) and 986:2, 986:8 (created for get_screenshot, removed in the next call; page findAll for the TRANSIENT name marker returned nothing).",
+  "_repo": "C:/Code/web-app-v2 packages/design-system/src; MUI 5.15.12 per yarn.lock line 10912 (sources unzipped from .yarn/cache, repo is yarn PnP with no node_modules).",
+  "date": "2026-09-03",
+  "report": "figma-export/library-todos-read-2026-09-03/report.md",
+  "fileIdentity": {
+   "pagesRead": [
+    "Cover 118:250",
+    "Foundations 145:2",
+    "Reference 259:2879",
+    "Actions 259:2873",
+    "Inputs 259:2874",
+    "Data display 259:2875",
+    "Feedback 259:2876",
+    "Surfaces & navigation 259:2877",
+    "Icons & illustrations 259:2878",
+    "Compositions 446:2",
+    "Layouts 489:2"
+   ],
+   "finding": "figmaBuild.pages._order is stale: lists Tokens (now Foundations), omits Compositions and Layouts, places Reference last. Component pages match, so the file is the library. Not changed."
+  },
+  "codeReads": {
+   "A1_typography": {
+    "file": "ds/typography/typography.ts",
+    "variants": {
+     "h4": "1rem/1.5rem/700 (16/24)",
+     "h5": "0.875rem/1.25rem/700 (14/20)",
+     "subtitle2": "0.75rem/1rem/700 (12/16)",
+     "body1": "1rem/1.5rem/400",
+     "body2": "0.875rem/1.25rem/400",
+     "caption": "0.75rem/1rem/400",
+     "button": "1rem/1.5rem/400, textTransform capitalize (line 65)"
+    },
+    "letterSpacing": "None defined anywhere in the file. INFERRED from MUI createTypography.js:78 deepmerge: MUI defaults survive per variant — button 0.02857em, caption 0.03333em, body1 0.00938em, body2 0.01071em, h4 0.00735em, h5 0em, subtitle2 0.00714em.",
+    "inflation": "Sizes are literal rem strings, not pxToRem, so rule 4 inflation does not apply to them.",
+    "annotation_2026_09_03": "SUPERSEDED AT RENDER for Button and Tab by libraryTodos_write1_2026_09_03.step0_renderFindings: letter-spacing renders normal, so the deepmerge inference does not hold at render for those two. Chip not checked."
+   },
+   "A2_tab": {
+    "decidedBy": "@mui/material Tab/Tab.js:46 spreads theme.typography.button; TabOverrides.tsx sets hover background only; TabsOverrides.tsx sets indicatorColor only.",
+    "resolves": "Akkurat LL, 16px, line height 24px, weight 400, capitalize, letter spacing 0.02857em (inferred). Padding 12px 16px, minHeight 48.",
+    "annotation_2026_09_03": "SUPERSEDED AT RENDER by libraryTodos_write1_2026_09_03.step0_renderFindings: Storybook renders Tab at 16/20, not 16/24. MUI Tab overrides line height after inheriting typography.button. The 16/24 derivation above is kept as written and is wrong."
+   },
+   "A3_smallRestingLabel": {
+    "source": "@mui/material InputLabel/InputLabel.js:97 (outlined medium translate(14px, 16px)) and :100 (small translate(14px, 9px)); TextFieldOverrides.tsx touches only the Select caret.",
+    "boxCentreOffset": "small +1 (9 + 12 vs 20), medium 0 (16 + 12 vs 28)",
+    "rule4Inflated": "18.29 and 10.29 — reported as asked, but the values are literal px with no pxToRem on the path, so the inflation does not apply. Item 1 says small needs 8; code says 9."
+   },
+   "A4_spacing": {
+    "themeSpacingOverride": "none (ds/theme/theme.ts)",
+    "tebraSpaceGrep": 0
+   },
+   "A5_buttonCase": {
+    "ButtonOverrides": "no textTransform",
+    "typography": "button.textTransform capitalize (typography.ts:65)",
+    "mui": "Button/Button.js:69 spreads theme.typography.button",
+    "renders": "\"Save & Add To Note\" under CSS capitalize"
+   },
+   "A6_storybook": "Unreachable: localhost:6006 returns nothing; PnP unplug missing (npveCloseout_storybookUnreachable). No yarn install run in a read-only batch. Screenshots skipped, no derivation substituted."
+  },
+  "libraryReads": {
+   "B1_textFieldSmall": {
+    "set": "121:350, 20 variants, 10 size=small",
+    "restingLabel": "Label / resting absolute y 16, h 24 in the 40-tall Input on all ten (130:140, 159, 178, 197, 216, 235, 254, 273, 292, 311); medium 121:230 same y 16 / h 24 in 56. Box centre +8 on all ten; glyph centre +8.32 on the four with the label visible (render bounds).",
+    "labelSlot": "56 tall on the four hidden slots (Default/Hover/Disabled/Error × Empty), 40 tall on the six visible ones. Refines npveProblemsBuild_textFieldSmallLabelSlotHeight: the 56 is only ever hidden.",
+    "pixels": "130:140 1x: outline rows 0 and 39, glyph ink rows 22-34, centre 28.5 vs input centre 20.",
+    "screenshots": [
+     "figma-export/library-todos-read-2026-09-03/b1-textfield-small-empty-130-140-1x.png",
+     "figma-export/library-todos-read-2026-09-03/b1-textfield-small-empty-130-140-3x-marked.png"
+    ],
+    "verdict": "DISAGREE with code (+1 small, 0 medium)."
+   },
+   "B2_tabLabel": {
+    "variants": "201:3, 201:5, 201:7, 201:10; 90x48, padding 12/16, Label 37x20 at y 14",
+    "bindings": "fills only (color/text/secondary or color/primary/main). Family, size, line height, weight literal: Akkurat LL Regular 16 / 20px, letter spacing 0%, textCase ORIGINAL, no text style.",
+    "pixels": "201:3 1x: label ink rows 18-30, cols 27-61.",
+    "screenshots": [
+     "figma-export/library-todos-read-2026-09-03/b2-tab-201-3-1x.png",
+     "figma-export/library-todos-read-2026-09-03/b2-tab-201-3-3x.png"
+    ],
+    "verdict": "DISAGREE on line height (code 24) and case (code capitalize); item 5 proposed lineHeight/body2 (20), which is the library literal, not the code value.",
+    "annotation_2026_09_03": "Verdict on line height withdrawn at render: Storybook Tab is 16/20, matching the library literal. Case verdict stands (capitalize vs ORIGINAL)."
+   },
+   "B3_iconButtonGlyph": {
+    "location": "Group 573:3583 is inside COMPONENT 575:17 Icon/FavoritesOutlined (24x24), not inside Icon button 170:77. Icon button variants hold one child, Icon instance-swap slot Icon#170:0 (default Icon/DownCaret 76:5).",
+    "bounds": "Group 573:3583 x 2, y 2, 20.000025 x 19.125002; sole child Vector 573:3584 same bounds, 1 fill, 0 strokes.",
+    "rendered": "Transient instance of 170:5 swapped to 575:17: Group render 20.000025 x 19.125002 at (10,10) in 40x40; Vector render 20 x 19.125; ink 20x20 (rows and cols 10-29). Default DownCaret vector 20.000013 x 11.026 at (2, 6.487), also fractional.",
+    "screenshots": [
+     "figma-export/library-todos-read-2026-09-03/b3-iconbutton-favoritesoutlined-transient-1x.png",
+     "figma-export/library-todos-read-2026-09-03/b3-iconbutton-favoritesoutlined-transient-3x.png"
+    ],
+    "verdict": "DISAGREE with item 12 on node and fix: standingBatchRules.8 exempts GROUP/VECTOR bounds as intrinsic geometry, and any wrapper would live in the icon component."
+   },
+   "B4_variables": {
+    "typography": "17 variables: family/base Akkurat LL; weight regular 400, bold 700; size caption 12, chip 13, body2 14, buttonLarge 15, body1 16, h3 20, h2 24, h1 32; lineHeight caption 16, body2 20, body1 24, h1 48, h2 36, h3 32. No h4/h5/subtitle2, no letter spacing. codeSyntax for lineHeight/h2 and h3 reads --tebra-line-height-* (others --tebra-font-line-height-*).",
+    "dimensionSpace": "space/0,2,3,4,5,6,7,8,9,11,12,13,14,16,17,18,19,23,24,40 (value = name, scopes WIDTH_HEIGHT+GAP). codeSyntax var(--tebra-space-N) on 19 of 20 (space/40 has none). No space/32. Descriptions on space/0, 18, 40 only.",
+    "verdict": "Code has no spacing scale of its own and 0 uses of tebra-space; the code syntax claims a CSS variable that does not exist."
+   },
+   "B5_buttonLabelCase": {
+    "census": "textCase TITLE on 72 of 72 Button variants.",
+    "transient": "986:8 of 78:14 with Label \"Save & Add to Note\": 176x38, text 142x24, renders \"Save & Add To Note\" (capital T seen in pixels).",
+    "screenshots": [
+     "figma-export/library-todos-read-2026-09-03/b5-button-contained-primary-save-add-to-note-transient-1x.png",
+     "figma-export/library-todos-read-2026-09-03/b5-button-contained-primary-save-add-to-note-transient-3x.png"
+    ],
+    "verdict": "AGREE with code capitalize, by CSS semantics; Storybook not available to confirm in a browser."
+   }
+  },
+  "rules": {
+   "1_instancePaintVerification": "n/a, no new variants",
+   "2_unboundPaintAudit": "not run, no paints changed",
+   "3_referenceCounts": "n/a, no clone",
+   "4_skipInvisibleFalse": "set at the top of every walk",
+   "5_opacityLast": "no paint touched",
+   "6_enumerateDontRecall": "variants, variables and text nodes enumerated from the file",
+   "7_fileIdentityFirst": "pages read; component pages match; _order stale (fileIdentity.finding)",
+   "8_roundWithRecord": "only fractional value met is intrinsic GROUP/VECTOR geometry (573:3583, 76:4), exempt by the rule text",
+   "9_boundPaintAlpha": "no paint touched",
+   "10_cloneDropsPropertyRefs": "n/a"
+  },
+  "screenshots": [
+   "figma-export/library-todos-read-2026-09-03/b1-textfield-small-empty-130-140-1x.png",
+   "figma-export/library-todos-read-2026-09-03/b1-textfield-small-empty-130-140-3x-marked.png",
+   "figma-export/library-todos-read-2026-09-03/b2-tab-201-3-1x.png",
+   "figma-export/library-todos-read-2026-09-03/b2-tab-201-3-3x.png",
+   "figma-export/library-todos-read-2026-09-03/b3-iconbutton-favoritesoutlined-transient-1x.png",
+   "figma-export/library-todos-read-2026-09-03/b3-iconbutton-favoritesoutlined-transient-3x.png",
+   "figma-export/library-todos-read-2026-09-03/b5-button-contained-primary-save-add-to-note-transient-1x.png",
+   "figma-export/library-todos-read-2026-09-03/b5-button-contained-primary-save-add-to-note-transient-3x.png"
+  ],
+  "newFlags": [
+   "libraryRead_tabLabelLineHeightAndCase",
+   "libraryRead_iconGlyphGroupIsIntrinsicGeometry",
+   "libraryRead_spaceCodeSyntaxNamesMissingCssVar",
+   "libraryRead_letterSpacingInheritsMuiDefaults",
+   "libraryRead_smallRestingLabelCodeIs9",
+   "libraryRead_pagesOrderStale"
+  ],
+  "flagsAnnotated": [
+   "npveLabelDrift_smallRestingLabelInsetIsMedium",
+   "npveProblemsBuild_textFieldSmallLabelSlotHeight",
+   "npveProblemsRecent_textFieldNoStartAdornment",
+   "npveSearch_noPlaceholderInTextField",
+   "npveSearch_emptyLabelBreaksFilledOutline",
+   "npveProblemsBuild_searchLabelCopy",
+   "npveProblemsBuild_tabLabelTypeUnbound",
+   "npveComparison_noSpace32Token",
+   "npveChangelog_noH4Token",
+   "npveBuild_slotLetterSpacingUnbound",
+   "npveBuild_buttonLabelTitleCase"
+  ]
+ }
+}

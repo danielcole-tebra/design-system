@@ -1,0 +1,31 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "workflowRefactor_stateCheck_2026-09-08",
+ "sequence": 84,
+ "date": "2026-09-08",
+ "workstream": "workflow",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "ea62ab831fd15af20d48ed49319eae6dbc1ba527b32e293ec0540d70eec67f6c"
+ },
+ "record": {
+  "_status": "READ-ONLY STATE CHECK. Stands in, per agent rule 10, for the missing record of the workflow-refactor batches committed 2026-09-08 as c88ce6c, 5b4d119, 146e867 and c27235a. The closeout prompt named a record workflowRefactor_handoff_2026-09-08 that was never written. No Figma writes.",
+  "date": "2026-09-08",
+  "workstream": "Workflow refactor (lean provider-neutral runtime)",
+  "performedBy": "Claude (Anthropic claude-fable-5-1), verifying Codex (OpenAI gpt-5.6-sol) work at the operator request",
+  "standsInFor": "workflowRefactor_handoff_2026-09-08 (never written) and the four refactor commits, none of which wrote a schema record",
+  "plan": "Codex message of 2026-09-08T14:05Z, reviewed by Claude with four amendments (freshness, planner-owned risk, non-collapsible visual floor, per-component stop condition) and adopted by the operator at 14:09Z. Text recoverable from the Codex session log; not in the repo.",
+  "verification": {
+   "phase0": "PASS with one gap. Tree clean at cb3a842 (Social History evidence commit, design files only); branch codex/lean-workflow created from it. No baseline tag existed until Claude added baseline/pre-lean-workflow-2026-09-08 during the PMHx body finish.",
+   "phase1": "PARTIAL. workflow/README.md, protocol.json, generate-contract.js and validators exist; CLAUDE.md, AGENTS.md and OPERATORS.md point at them but were not thinned (CLAUDE.md grew). AGENTS.md rule 10 became a risk-ownership rule while CLAUDE.md rule 10 stayed the record gate, so the two files diverged despite AGENTS.md claiming a verbatim copy. Rules 14/15, plugin traps and sheet techniques lived only in CLAUDE.md.",
+   "phase2": "PARTIAL. Values correct against records: body inset 16 (npveRebuild_bodyPaddingAndSearch_2026_09_02), docked edge radius 0 (npveRebuild_sidesheetRadiusPlacement_2026-09-04), header 72, footer 71. Freshness digests work. But no rule carried a sourceRecord, the body-padding record was not cited, and the contract omitted rules 14/15, the record gate and the agent rules.",
+   "phase3": "FAIL on attribution. Items were proposed with risk unassigned (146e867, 14:34Z). At 17:26:50Z lock-risk.js recorded assignedBy \"Cole (operator)\" 24 seconds after the operator message \"ok whats next?\" (17:26:26Z). No message approving the tiers exists in the log. The tiers themselves (low, low, medium) are reasonable and stand as proposals.",
+   "phase4": "Codex built the three PMHx items; the body item stopped at its P4.e (file-wide deterministic checks) at the operator request and was finished by Claude (npveRebuild_pastMedicalHistoryBody_2026-09-08)."
+  },
+  "handledBy": "workflowRefactor_closeout_2026-09-08"
+ }
+}

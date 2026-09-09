@@ -1,0 +1,70 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "propertySurfaceRepair2026_08_26",
+ "sequence": 0,
+ "date": "2026-08-26",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "507bccdbbb22c984eac78c2ce21d42dde6648b639c2cf126c8508fd5e4c3d8b0"
+ },
+ "record": {
+  "_status": "BUILT, NOT PUBLISHED. namingFreeze._status still reads AWAITING DANIEL'S APPROVAL.",
+  "_scope": "Property surfaces only for Dialog, Menu, Drawer, Alert, Stepper. No restyling, no new components, the other 13 divergent components untouched.",
+  "conventionChange": {
+   "from": "Structure from the story's argTypes; capitalised Figma-style property names and values (Variant=Standard, Severity=Error).",
+   "to": "Structure from the CODE surface; code-cased property names and values (variant=standard, severity=error, maxWidth, fullScreen, anchor, elevation).",
+   "why": "Casing drift already caused real failures: Chip carries color=Secondary which the theme does not style, and MuiRadioButton never applies because MUI's slot is MuiRadio. Names that match are checkable; names that merely correspond are not.",
+   "appliedTo": [
+    "Alert",
+    "Dialog",
+    "Drawer",
+    "Menu",
+    "Stepper"
+   ],
+   "notYetApplied": "Every other component still uses the capitalised convention. The library now carries BOTH conventions. This must be resolved before publish or the split becomes permanent.",
+   "contentPropsExempt": "Properties with no code counterpart (Title, Body, Message, item1..4, step1..4, action1/2, region toggles) keep descriptive names; only real props are code-cased."
+  },
+  "supersedes": "The 'build only what the story exercises' note in the descriptions of all five components. Those descriptions were rewritten in place on 2026-08-26.",
+  "defectsFound": [
+   {
+    "id": "alertFilledWarningDoubleAlpha",
+    "detail": "NOT A DEFECT - this entry's reasoning was wrong and the change it describes was a regression. filled/warning binds color/computed (no palette)/alertFilledWarningText (stored rgba 0,0,0,0.87), and its message text and glyph vector each read back paint opacity 0.87. That is NOT a double application: Figma SURFACES a bound colour variable's stored alpha into paint.opacity rather than multiplying the two, so a bound paint reading 0.87 against a variable storing 0.87 renders at 0.87, never at 0.757. Forcing paint opacity to 1 DISCARDED the alpha and left both nodes rendering fully opaque black. Standing rule 1 does not catch this - rule 1 governs UNBOUND paints. See standingBatchRules.9_boundPaintAlpha.",
+    "status": "WITHDRAWN - not a defect. The change made in this pass was a regression; reverted 2026-08-27. See boundAlphaRegressionRevert2026_08_27."
+   },
+   {
+    "id": "noWarningLightVariable",
+    "detail": "paletteValues.ts sets warning.light === warning.main === #FCDE73, so no color/warning/light variable exists. Alert outlined/warning binds color/warning/main instead.",
+    "status": "RECORDED"
+   },
+   {
+    "id": "alertOverridesMissingSuccessAndOutlined",
+    "detail": "AlertOverrides.tsx overrides standardError/Info/Warning and filledInfo only. It has NO standardSuccess and NO outlined rules, so severity=success (4 production files) and variant=outlined (1) fall through to MUI's computed values. standard/success is a tinted card with no border while the other three standard severities are white cards with a coloured border; outlined renders low-contrast because Tebra's .light entries are pale tints. Transcribed as it ships. THE FIX IS A CODE CHANGE.",
+    "status": "OPEN - code fix needed"
+   }
+  ],
+  "notBuilt": {
+   "Drawer.anchor": "top and bottom - never set in production",
+   "Drawer.variant": "permanent - never set in production",
+   "Stepper.orientation": "vertical - never set in production",
+   "Stepper.alternativeLabel": "set in 3 production files, but it restructures Stepper / Step (label under icon), which is outside this batch's scope. Needs a matching axis on Stepper / Step.",
+   "Dialog.scroll": "never set in production",
+   "Menu": "anchorOrigin, transformOrigin, MenuListProps, variant=selectedMenu - never set on <Menu> in production"
+  },
+  "shouldBeRemovedButLeftInPlace": "Nothing was deleted this pass, per instruction. Dialog carries 6 deliberately redundant variants (fullScreen=true x each maxWidth) because fullScreen overrides maxWidth; the dependency is documented on the component, not modelled. Do not delete them - removing combinations makes Figma resolve to a nearest match.",
+  "pluginApiNote": "INSTANCE_SWAP component properties take the component NODE ID as defaultValue, not the component key. addComponentProperty rejects the key with 'Property value is incompatible with component property type'.",
+  "cloneBehaviour": "component.clone() on a variant places the copy on the PAGE, not in the COMPONENT_SET, and drops all componentPropertyReferences. Correct order: clone -> set.appendChild(clone) -> then set references, which only resolve once the node is inside the owning set.",
+  "elevation16Created": "Elevation / 16 effect style created for Drawer variant=temporary (modal). Previously absent because the ramp only reached what was used.",
+  "variantCounts": {
+   "Alert": "6 -> 12",
+   "Dialog": "1 COMPONENT -> 12 variants",
+   "Drawer": "1 COMPONENT -> 4 variants",
+   "Menu": "1 COMPONENT -> 2 variants",
+   "Stepper": "COMPONENT, 6 properties added, no axis"
+  }
+ }
+}

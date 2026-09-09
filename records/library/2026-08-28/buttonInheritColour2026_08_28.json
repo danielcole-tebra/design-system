@@ -1,0 +1,53 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "buttonInheritColour2026_08_28",
+ "sequence": 5,
+ "date": "2026-08-28",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "9403ac737ce6d714df7e1e4f403feb79f2fd8447574815b88e642291099e9590"
+ },
+ "record": {
+  "_scope": "One value added to one axis on Button (79:2). No other axis, property or component touched. Alert copy change logged separately under defectMarkerConvention2026_08_28.alertMessageDefault.",
+  "problem": "26 of the 46 production Alert action slots pass color=\"inherit\". Button's Figma colour axis was primary|secondary|error, so the majority case could not be expressed and rendered teal on saturated fills — wrong and unreadable.",
+  "mechanism": "AlertOverrides.filled sets \"& .MuiButtonBase-root\": { color: \"inherit\" }, so any button inside a filled Alert takes the Alert's text colour. Product code works around the same gap for links with sx={WHITE_LINK_STYLE}.",
+  "resolutionVerifiedFromTheme": {
+   "rule": "MUI Alert filled sets color: getContrastText(palette[severity].main); getContrastText returns #FFFFFF when the background's contrast ratio against white is >= contrastThreshold (3.0), else rgba(0,0,0,0.87).",
+   "computed": {
+    "error #D83B4D": "4.51 -> #FFFFFF",
+    "info #4678CC": "4.36 -> #FFFFFF",
+    "success #3FA266": "3.20 -> #FFFFFF (marginal, clears by 0.2)",
+    "warning #FCDE73": "1.33 -> rgba(0,0,0,0.87)"
+   },
+   "dominant": "white, 3 of 4 filled severities",
+   "matchesPriorFlag": "flags.alertFilledWarningTextComputed reached the same conclusion for warning."
+  },
+  "built": {
+   "axisValue": "inherit (code-exact lowercase, appended to the existing color axis)",
+   "variantCount": "54 -> 72 (variant 2 x color 4 x size 3 x State 3); 18 added, 0 existing variants modified",
+   "layout": "two new rows appended at y=428 (contained) and y=494 (text); no existing variant repositioned",
+   "appearance": "label and icon fills bound to color/common/white (VariableID:74:44). inherit asserts no background or border of its own.",
+   "states": "Hover is an unbound white wash at 4% — paint-level alpha cannot ride on a bound variable, see standingBatchRules 9_boundPaintAlpha. Disabled uses node-level opacity 0.5 on the label so the variable binding survives the override.",
+   "unverified": "ButtonOverrides.ts supplies no inherit rules, so hover/disabled fall through to MUI defaults. Those two values are modelled, not read from MUI source: node_modules is absent and a filesystem-wide search found no vendored copy."
+  },
+  "instanceOverrideRequired": {
+   "Alert filled/warning": "override the label's bound variable to color/computed (no palette)/alertFilledWarningText (VariableID:164:3, rgba(0,0,0,0.87)). Demonstrated in the alert with actions composition.",
+   "Any standard Alert": "AlertOverrides.standardError/Info/Warning set color: text.primary, so inherit resolves to #000. 13 of the 26 production inherit slots sit on standard/error. Override to color/common/black.",
+   "note": "Only 6 of the 26 production inherit slots are on filled alerts. The built white default is correct for filled and wrong for standard — the binding is what makes that cheap to correct."
+  },
+  "openQuestion": "Contained + inherit background is version-dependent and still unread. MUI v5 renders it from grey[300] (containedInherit); v6 rewrote Button onto CSS variables (--variant-containedBg) and handles inherit differently. A filesystem-wide search found no vendored copy of @mui/material/Button/Button.js anywhere, and node_modules is not installed, so neither could be read here. The built inherit variants therefore carry no background. Resolve by reading the actual installed Button source per major version before adding one.",
+  "muiVersionContext": {
+   "note": "The monorepo is NOT on one MUI version. yarn.lock resolves eight @mui/material entries spanning 5.13.3 to 6.5.0.",
+   "designSystem": "declares ^5.15.11, resolves 5.15.12",
+   "mostConsumers": "declare ^5.13.3, resolve 5.13.3",
+   "outliers": "clinical-notes-ui ^5.16.10 -> 5.17.1; electronic-case-reporting-ui pinned 5.14.11; documents-ui ^6.0.2 and navigation-ui ^6.5.0 are on MUI v6",
+   "bearing": "At least two files carrying an Alert action slot (documents-ui FeatureIntroductionBanner, electronic-case-reporting-ui ElectronicCaseReporting) run MUI v6, not v5. Any claim about MUI internals must say which major version it applies to.",
+   "unaffected": "The inherit resolution itself is safe: getContrastText and contrastThreshold 3.0 behave identically in v5 and v6, so the white / rgba(0,0,0,0.87) split and the built white default still hold. The AlertTitle fontWeight 500 defect is likewise version-stable."
+  }
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "explanation": "MUI computes coef = typography.fontSize / 14, then pxToRem(size) = size / htmlFontSize * coef. typography.ts sets fontSize: 16 and htmlFontSize: 16, so coef = 1.1428571428571428 and EVERY pxToRem call in the theme and in MUI's own component sources is inflated by 14.29%.",
+ "source": "packages/design-system/src/typography/typography.ts:3 + @mui/material/styles/createTypography.js",
+ "coefficient": 1.1428571428571428,
+ "affected": [
+  {
+   "call": "pxToRem(16) — ButtonOverrides iconSize{Small,Medium,Large}",
+   "encodes": 16,
+   "computedRem": "1.1428571428571428rem",
+   "computedPx": 18.2857142857,
+   "figmaValue": 16
+  },
+  {
+   "call": "pxToRem(20) — SvgIconOverrides fontSizeSmall",
+   "encodes": 20,
+   "computedRem": "1.4285714285714284rem",
+   "computedPx": 22.8571428571,
+   "figmaValue": 20
+  },
+  {
+   "call": "pxToRem(24) — SvgIconOverrides fontSizeMedium",
+   "encodes": 24,
+   "computedRem": "1.7142857142857142rem",
+   "computedPx": 27.4285714286,
+   "figmaValue": 24
+  },
+  {
+   "call": "pxToRem(35) — SvgIconOverrides fontSizeLarge",
+   "encodes": 35,
+   "computedRem": "2.5rem",
+   "computedPx": 40,
+   "figmaValue": 40,
+   "note": "Lands on a round number by coincidence, which is why it reads as an authored value. It is not."
+  },
+  {
+   "call": "pxToRem(13) — MuiChip root fontSize",
+   "encodes": 13,
+   "computedRem": "0.9285714285714286rem",
+   "computedPx": 14.8571428571,
+   "figmaValue": 13
+  },
+  {
+   "call": "pxToRem(14) — MuiListSubheader fontSize (Autocomplete groupLabel)",
+   "encodes": 14,
+   "computedRem": "1rem",
+   "computedPx": 16,
+   "figmaValue": 16
+  }
+ ]
+}

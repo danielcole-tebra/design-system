@@ -1,0 +1,52 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "tableAssembly2026_08_31",
+ "sequence": 10,
+ "date": "2026-08-31",
+ "workstream": "library",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "id",
+  "contentSha256": "ca6e93264068abc4fed37d0fb2662b51299d6ead977aec26fae950c0cbc722fc"
+ },
+ "record": {
+  "_batch": "fourCompositions2026_08_31",
+  "method": "Production counted with a balanced-brace JSX scanner (composition-scan.js) over 5,399 source files under C:/Code/web-app-v2/packages, excluding node_modules, stories, examples, patterns and tests. Import source resolved per file so same-named non-design-system tags cannot be miscounted.",
+  "scannerFixes": "Two real scanner faults found and fixed before any count was trusted. (a) TSX generic call sites — <Autocomplete<PatientSummaryObj> — were rejected by the tag lookahead AND would have been truncated at the generic closing angle bracket, losing every prop. (b) An earlier prop reader matched against the whole raw tag, so nested props leaked into the parent: size=\"small\" read 73 for Autocomplete when the true top-level count is 52. Both are the failure mode the build prompt warned had already occurred twice.",
+  "frame": "446:3, Compositions / Data display",
+  "production": {
+   "table": "21 elements / 21 files (audit said 15 — that figure matches TableContainer, which is 15 files)",
+   "tableRow": "62 elements / 32 files",
+   "tableCell": "164 elements / 34 files",
+   "tableHead": "19 / 19",
+   "tableBody": "20 / 20",
+   "tableContainer": "15 / 15",
+   "tableSortLabel": "3 elements / 2 files",
+   "tablePagination": "0 production files",
+   "tableFooter": "0 production files",
+   "distributedAssembly": "16 files use TableCell and 14 use TableRow with NO <Table> in the same file — rows and cells are split into their own component files, so a table is assembled across files. 6 of the 21 tables have no TableContainer."
+  },
+  "duplicateQuestionResolved": {
+   "verdict": "SUPERSEDED, not duplicate and not complementary.",
+   "reasoning": "193:14 \"Table assembly — composed table\" is 51 descendants / 24 instances: one 4-column, 5-row table of placeholder \"Cell value\" text with an empty What-it-is line (already flagged in libraryRestructure2026_08_26c.compositionHeaders.emptyWhatItIs). 446:3 \"Table assembly\" is 1213 descendants / 312 instances across twelve numbered sections, and its section 1 \"Default table\" covers everything 193:14 shows, with real data. 193:14 contributes nothing 446:3 lacks.",
+   "actionTaken": "NOTHING DELETED, per the build prompt. 193:14 was renamed to \"Table assembly — composed table (SUPERSEDED by Table assembly 446:3)\" and its What-it-is line rewritten to say so and to say do not build on it. 446:3 carries a Supersedes line in its header. Whether to remove 193:14 is left as a separate decision."
+  },
+  "gaps": [
+   "ROW STATE AND REAL CONTENT ARE MUTUALLY EXCLUSIVE. Table/Row owns the only Hover and Selected appearance in the system but is four text cells of 180px with no way to change their number, widths or content; an instance cannot take children. Any other table must draw its rows from Table/Cell instances, and a drawn row has no State. The frame proves it: only section 5 of 12 uses Table/Row (5 instances) and 68 rows elsewhere are drawn. In production 87 of 164 cells hold a component rather than text — Typography 47, Box 37, Skeleton 20, IconButton 10, Checkbox 5, Button 5.",
+   "Table/Cell exposes one property (Text), so a cell holds one string. Half of all production cells hold something else.",
+   "No density axis. MUI sets density with size=\"small\" on the Table; 15 of 21 production tables set it and every one sets small, while 6 take medium. Table/Cell has a padding axis but its values are MUI's padding prop (normal/none/checkbox), not density. Section 4 draws both densities by hand."
+  ],
+  "openQuestionRecorded": "Table/Row Hover is a solid #CBDDE0 — exactly palette.action.hover, which is also primary[100] — while Selected is primary.main #004852 over white at 8% alpha. palette.action.selected is #F0EEE8, a warm cream that appears nowhere in the row, so the selected row is not drawn from the token named for it. Whether that is correct depends on MUI's own TableRow rule, which could not be read (node_modules absent). Recorded as an open question, NOT marked as a defect. The observable consequence is not in question: hovering a row signals harder than selecting it.",
+  "instanceRatio": {
+   "allNodes": "41.6%",
+   "excludingAnnotationText": "53.8%",
+   "nodes": 699,
+   "instances": 291,
+   "note": "Highest of the batch — this frame was already the best-built reference in the file."
+  },
+  "deliberateDeviation": "This frame was NOT reshaped to the 1632-wide template. It is 2368 wide with twelve sections already built to 2240, and its own Shows / Use when / Not this when / Source caption convention is accurate and richer than the template note. Reshaping would have destroyed good work. Template-level additions were made instead: header with counts and marker legend, an Anatomy section with parts legend, three GAP markers, and How to build one with an explicit Not established paragraph. RESOLVED 2026-08-31 by captionConvention2026_08_31: the two conventions were at different levels and never in conflict. This frame keeps its width and its caption sidebar; the other five frames adopted the same four fields as a stacked row under each section heading."
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "workflowRefactor_tierApproval_2026-09-08",
+ "sequence": 86,
+ "date": "2026-09-08",
+ "workstream": "workflow",
+ "migration": {
+  "from": "design-system-schema.backup-2026-09-08-pre-schema-split.json @ 3f9c01f",
+  "migratedOn": "2026-09-08",
+  "record": "schemasplit_phase8_2026-09-08",
+  "dateSource": "record.date",
+  "contentSha256": "819bec5f2b011cd0921fe4b23e24fbc7a3c9c9a6ab12c35fa8aadefd7da52e29"
+ },
+ "record": {
+  "_status": "DONE. Documentation batch. Operator approval of the four risk classes and of the three PMHx tiers recorded verbatim; human-decision added to protocol.json; retroactive locks written for the three complete items. No Figma file opened or written.",
+  "date": "2026-09-08",
+  "workstream": "Workflow refactor (lean provider-neutral runtime)",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "recordGate": "workflowRefactor_closeout_2026-09-08 recorded DONE — passed",
+  "report": "figma-export/workflow-tier-approval-2026-09-08/report.md",
+  "operatorApproval": {
+   "by": "Daniel (operator)",
+   "at": "2026-09-08",
+   "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
+   "channel": "chat reply to the closeout report"
+  },
+  "interpretation": "The quote approves the four risk classes and the tiers as proposed for the three PMHx items (low, low, medium). It says \"definitions in the manifest\"; the definitions live in workflow/protocol.json and the manifest now points there. The fourth class, human-decision, was in the 2026-09-08 plan but absent from protocol.json until this record.",
+  "scope": [
+   "workflow/protocol.json: human-decision class and oversight added; approval quoted.",
+   "workflow/manifest.json: riskClasses pointer; the three items locked with the quote through lock-risk.js --retroactive.",
+   "validate-manifest.js accepts human-decision and refuses to let such an item be queued, active, or complete; start-batch.js refuses to start one; lock-risk.js gains --retroactive for complete items.",
+   "workflow/rules.json rule 11 names the four classes; contract regenerated."
+  ],
+  "stopCondition": "Repo writes only; stop if any validator fails after the locks.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsBefore": 285,
+  "flagsAfter": 285,
+  "flagsAdded": [],
+  "figmaMutations": []
+ }
+}
