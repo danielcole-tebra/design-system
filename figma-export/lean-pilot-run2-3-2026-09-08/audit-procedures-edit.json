@@ -1,0 +1,124 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "pilot2-procedures-edit",
+  "capturedAt": "2026-09-09T02:10:00Z",
+  "executors": {
+    "build": "Claude (Anthropic claude-fable-5-1) — preflight through evidence, single executor",
+    "finish": "Claude (Anthropic claude-fable-5-1) — record, finish gate, commit"
+  },
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false,
+    "scope": "All nodes on all four pages (one read-only walk per page, run in parallel after the last mutation), plus master-to-instance paint comparison for the form, body and reused status selector, shared-API readback, component identity, rendered-text checks, reference image check, and single-placement counts."
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "exceptions": [
+        "586:6413 organizer section fill and stroke (Templates)",
+        "586:11764 organizer section fill and stroke (Screens)"
+      ],
+      "details": "Unbound visible solid paints on authored nodes: Cover 1, Templates 41, Screens 42, Archive 12. The only nodes with an id at or above 586 carrying an unbound paint are the two organizer sections. Form fill binds NPVE/Color Form surface, stroke binds color/divider; the Rebuild helper has no fill."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "exceptions": [],
+      "details": "Zero fractional authored x/y/width/height outside instances on any page. Form 518x354, body 518x354, sheet 550x530, reference 550x498, change log 480x870."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "Sidesheet 279:2446 Body content preferred values 14 → 15 (+586:6467); default unchanged at 26:221; 13 properties; three Placement variants 550x600. Rebuild comparison 35:332 slot preferred values 17 → 18 each (+586:6984, +586:6559, +586:11705). Exactly one Procedures edit comparison on Screens (586:11765). The reused status selector 580:6013 now has two placements, one per edit-form comparison."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Form 586:6414 rows: Edit event header (Icon button 77:1109, Icon#170:0 = 389:3433 Icon/TrashOutlined), Procedure row (Text field 77:708 at 380 fill + Hospitalization status selector 580:6013 instance 586:6420), Related to problem (77:708, select=true), Facility Name (77:708), Comments (77:698 medium multiline, 104). Body 586:6467 holds form instance 586:6468 only (no tab strip; the source has none). Sheet 586:6560 → 6:65 Placement=Floating, Body content = 586:6467, Title = Procedures/Surgical History. Comparison 586:11765 → 35:332 with slots 586:6984 / 586:6559 / 586:11705. Change-log rows → 18:103 (nine, all visible). Archive holds no node with an id at or above 586."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "Every Text field renders its Label (Procedure Code, Related to problem, Facility Name, Comments); the status selector instance renders 'Status' from its property; the nine change-log rows render their What text; footer Buttons store Cancel / Save & Add to Note / Save and render in TITLE case. No variant was cloned."
+    },
+    "instancePaintVerification": {
+      "pass": true,
+      "details": "Master versus live instance, visible solid paints in traversal order: form 586:6414 vs 586:6468 — 40 paints, 0 mismatches; body 586:6467 vs the sheet's Body content — 40 paints, 0 mismatches; status selector 580:6013 vs 586:6420 — 3 paints, 0 mismatches."
+    },
+    "sharedDefaultsAndGeometry": {
+      "pass": true,
+      "details": "Sidesheet set unchanged apart from the preferred-value list. Placed sheet 586:6560: 550x530 = Header 72 + divider 1 + Body region 386 (16 + 354 + 16) + Footer 71 at y 459; footer immediately follows the body. Rebuild helper 586:6559 is 550x530 with no fill, so the 70px below the sheet inside the 600 slot reads the grey backdrop (pixel (246,246,246) in the render). Reference helper and rectangle 550x498; both columns keep clipping on because both contents are shorter than the slot."
+    },
+    "reference": {
+      "pass": true,
+      "details": "download_assets export of source 129:8651 at scale 2, png, 48,695 bytes; top rows checked locally (grey outline and white only, no component-set outline). Uploaded through upload_assets to 586:6985, image hash bb92db28530bbf1f5afd18ceac374d0162fd0a91, getSizeAsync 1100x996. Reference column of the comparison render differs from the 1x source capture by 0 thresholded pixels."
+    },
+    "concurrency": {
+      "pass": true,
+      "details": "check-batch.js passed against the run guard (schema digest f1d5b2a7e7ff) before mutation; no schema write between start and finalize. Source read and exported only, current page untouched; library read only."
+    }
+  },
+  "pageAudit": {
+    "nodeCounts": { "Cover": 8, "Templates": 9504, "Screens": 4558, "Archive": 1782 },
+    "unboundSolidPaints": { "Cover": 1, "Templates": 41, "Screens": 42, "Archive": 12 },
+    "fractionalAuthoredGeometry": { "Cover": 0, "Screens": 0, "Templates": 0, "Archive": 0 },
+    "countingNote": "page.findAll(() => true) with skipInvisibleInstanceChildren=false; page node not counted."
+  },
+  "createdNodes": {
+    "templatesSection": "586:6413",
+    "formComponent": "586:6414",
+    "formHeader": "586:6415",
+    "procedureRow": "586:6418",
+    "procedureCodeField": "586:6419",
+    "statusSelectorInstance": "586:6420",
+    "relatedToProblemField": "586:6421",
+    "facilityNameField": "586:6437",
+    "commentsField": "586:6452",
+    "bodyComponent": "586:6467",
+    "formInstance": "586:6468",
+    "rebuildHelper": "586:6559",
+    "rebuildHelperSheet": "586:6560",
+    "referenceHelper": "586:6984",
+    "frozenSourceImage": "586:6985",
+    "changeHelper": "586:11705",
+    "changeRows": ["586:11710", "586:11711", "586:11712", "586:11713", "586:11714", "586:11715", "586:11716", "586:11717", "586:11718"],
+    "screensSection": "586:11764",
+    "comparison": "586:11765",
+    "gapMarkerDropdownChip": "586:12264"
+  },
+  "corrections": [],
+  "visualReview": {
+    "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-procedures-edit.png",
+    "inspectedByExecutor": true,
+    "inspectedBy": "Claude, at 1x (1708x962), plus the standalone sheet at 550x530, the body at 518x354, the change log at 480x870, and PIL crops/diffs of both columns",
+    "observations": [
+      "Reference and rebuild carry the same content in the same order: Procedures/Surgical History header with close, Edit Event card with trash action, Procedure Code with the Status pill, Related to problem select, Facility Name, Comments, and the Cancel / Save & Add to Note / Save footer. No tab strip in either.",
+      "The rebuild is 32px taller than the 498px source (530): 72/71 shell regions and a 16px body inset above the card where the source has 8. Both contents sit inside the 600px slot with nothing false below them; the backdrop shows through under both.",
+      "The Status pill renders in the source colour through color/core/light at 90x32 with the library Regular 16 label, the same stand-in as item 1; the Dropdown chip GAP marker is placed beside the comparison.",
+      "Comments renders resting where the source shows the focused state with a floating label and 'Comments go here'; logged per npve.fieldStates.",
+      "Footer renders 'Save & Add To Note' from the stored sentence-case label; logged per npve.buttonLabels.",
+      "Rebuild column versus the standalone sheet: 78 differing pixels, all corner anti-aliasing against the grey backdrop. Reference column versus the 1x source: 0 thresholded differences."
+    ]
+  },
+  "figmaNodes": {
+    "sidesheetSet": "279:2446",
+    "sidesheetFloating": "6:65",
+    "comparisonMaster": "35:332",
+    "changeLogRow": "18:103",
+    "hospitalizationsEditForm": "580:6017",
+    "statusSelector": "580:6013",
+    "dropdownChipGapMarkerSource": "581:11761"
+  },
+  "toolCalls": {
+    "figmaRead": 6,
+    "figmaWrite": 5,
+    "screenshot": 5,
+    "correctionCycles": 0,
+    "note": "Single Claude session from the operator approval. use_figma: 2 read-only preflight calls plus 4 parallel page audits = 6 reads; 5 write calls (W1 section+form+body, W2 helpers+APIs, W3 change log, W4 change-log preferred value, W5 Screens comparison+marker). Also 1 get_metadata, 1 download_assets, 1 upload_assets, 5 get_screenshot (source 1x, body, sheet, change log, comparison)."
+  }
+}

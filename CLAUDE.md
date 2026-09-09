@@ -8,6 +8,12 @@ Docs, schema, scripts, and exports for the Tebra design system Figma rebuild. So
 
 OPERATORS.md describes the person's side of this loop; agents should assume an operator is holding it.
 
+## Lean startup for NPVE work
+
+For an NPVE batch, do not reread the full schema by default. Run `node scripts/workflow/validate-workflow.js`, then read `workflow/npve-contract.generated.json`, the selected item in `workflow/manifest.json`, and the last record named by that item. The generated contract is a projection, not a second authority: its source digests make the validator fail whenever the schema or standing instructions change. Open the full schema only when validation fails, the selected work exposes a conflict, a convention is being changed, or historical evidence is genuinely required. The contract folds in `workflow/rules.json`: the agent rules, the record gate, standing rules 14 and 15, the sheet and comparison techniques, the proof convention, and every NPVE value with the record that decided it. Sections that live only in this file are declared canonical by name inside the contract.
+
+Risk is assigned by the planner or operator before execution. The executor may not lower its own risk or remove oversight. Every component still requires a comparison render inspected by the executor and shown to the operator; deterministic validation never replaces the pixel look.
+
 ## Where truth lives
 
 Precedence, when sources disagree:
@@ -48,19 +54,12 @@ Pass the file key explicitly on every call. Never rely on the last-used file.
 11. Report, don't resolve. A disagreement between sources is a finding. Never reconcile silently in either direction.
 12. Run all ten `standingBatchRules` from the schema every batch. Set `figma.skipInvisibleInstanceChildren = false` before any audit walk.
 13. Reporting. Every batch writes its full report to `figma-export/<batch>/report.md`, with all tables, mappings, screenshots referenced by filename, and the schema record summary. The chat reply is under 40 lines: outcome, findings needing a decision, GAP and DEFECT counts, and the absolute path to `report.md` and the screenshot folder. No tables in chat. Screenshots are saved as PNG in the batch folder, never only shown inline.
-14. Every rebuilt frame has a Change log beside it, on its right, listing what changed from the source, from → to, and why in one line, in plain graphic-design language. Rows come from the batch prompt. The change log lives once, as a `_Rebuild comparison/Change log/<screen>` sub-component on Templates holding Change log/Row instances; Row stays a component so styling propagates. The schema remains the record; the change log is its plain-language view.
-15. Every rebuilt frame sits in a Rebuild comparison on Screens: an instance of the Rebuild comparison master whose three content slots are swapped per screen to `_Rebuild comparison/Reference|Rebuild|Change log/<screen>` sub-components, left to right on a grey backdrop. Each screen and its change log exist exactly once, inside those sub-components; the comparison instance is the only placement, and a fix goes to the sub-component, never to a copy. The reference is a flat export at 2x captioned with its source node id and export date, and does not update when the source changes. The grey backdrop is a deliberate exception to rule 10.
+14. Change log convention. Canonical text: `workflow/rules.json` → standingRules.14, folded into the contract (records npveRebuild_changelog_2026_09_02, npveRebuild_repair2_2026-09-04). In brief: every rebuilt frame has a plain-language Change log on its right, held once as a `_Rebuild comparison/Change log/<screen>` sub-component of Change log/Row instances.
+15. Rebuild comparison convention. Canonical text: `workflow/rules.json` → standingRules.15, folded into the contract (records npveRebuild_comparisonLayout_2026_09_02, npveRebuild_repair2_2026-09-04, npveRebuild_extReviewRepairs_2026-09-05). In brief: every rebuilt frame sits once, inside a Rebuild comparison instance on Screens whose slots swap to `_Rebuild comparison/Reference|Rebuild|Change log/<screen>`; the reference is a frozen 2x export captioned with node id and date; proofs follow the proof convention in the same file.
 
 ### Sheet and comparison techniques
 
-Adopted 2026-09-05 from the external sidesheet batches (record npveRebuild_extReviewRepairs_2026-09-05).
-
-- **Sheets are as tall as their content.** The Sidesheet master stays 550 by 600. A placed sheet grows or shrinks to fit its body, and the footer sits right under the last row. Never pad a short sheet to 600 or pin its footer to the bottom.
-- **Helpers under a short sheet are transparent.** When a rebuilt sheet is shorter than the comparison slot, the Rebuild sub-component carries no fill, so only the sheet shows white. Nothing false extends below it.
-- **Tall content overflows the slot; the slot does not shrink it.** When a reference or a rebuilt sheet is taller than the 600 slot, keep it at 1:1 and switch clipping off on that column of the placed comparison instance. Never scale a reference to fit.
-- **New bodies join the shell through its Body content list.** Append the new body component to the Sidesheet's Body content preferred values and leave the default alone. Do not fork the shell.
-- **A new state is a new variant of the body it belongs to.** Add State=Empty to the existing body set rather than creating a second set or a loose frame.
-- **Values the library lacks may live in a local NPVE collection.** Name the collection NPVE/<kind>, record the operator's decision in the schema, claim no code syntax, and add the value to the library to-do list. Never write it into the library from a consuming file.
+Adopted 2026-09-05 from the external sidesheet batches (record npveRebuild_extReviewRepairs_2026-09-05). Canonical text: `workflow/rules.json` → sheetAndComparisonTechniques, folded into the contract. In brief: sheets are as tall as their content; helpers under a short sheet are transparent; tall content overflows the slot at 1:1 with clipping off; new bodies join the shell through its Body content list; a new state is a new variant; values the library lacks live in a local NPVE/<kind> collection with a record.
 
 ## Known plugin API traps
 
@@ -72,16 +71,7 @@ Adopted 2026-09-05 from the external sidesheet batches (record npveRebuild_extRe
 
 Any agent — Claude, Codex, or other — editing the Figma files or this repo follows the same loop. Work that skips it gets audited and may be superseded.
 
-1. Read before touching: this file, then design-system-schema.json for current state. The schema is the record; chat history and your own memory are not.
-2. Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.
-3. One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.
-4. Additive only. Nothing is deleted, and nothing is moved, renamed, or superseded without a record saying so. Archives get a README.
-5. No invention. If the library and code lack a pattern, mark it (GAP/DEFECT per the convention) and build with what exists. Recreating a source drawing by hand and calling it a component is a false record, which is worse than the gap.
-6. Verify in pixels. Screenshot what you built and look at it. Property readbacks are claims; renders are evidence. After editing a component, re-screenshot its live instances and diff.
-7. Record every batch: a dated schema record via an apply-*.js script, backup first, findings to flags[]. A batch without a record did not happen and will be treated as suspect.
-8. Report per rule 13: full report to disk, short reply, no tables in chat. Change logs in the file are written in plain graphic-design language, not system jargon.
-9. When sources disagree or a decision is needed, stop and report. Precedence (code > Storybook render > library > source) resolves facts, not design decisions.
-10. Record gate. Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one.
+The eleven rules are canonical in `workflow/rules.json` → agentRules and appear in every generated contract; AGENTS.md points to the same text, so no rule exists only in one instruction file. Their titles: 1 Read before touching; 2 Audit before building; 3 One batch at a time; 4 Additive only; 5 No invention; 6 Verify in pixels; 7 Record every batch; 8 Report per rule 13; 9 Stop on disagreement; 10 Record gate; 11 Risk is planner/operator-owned. Rules 10 and 11 are also stated directly in the contract.
 
 ## Recording
 

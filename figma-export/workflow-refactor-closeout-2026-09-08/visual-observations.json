@@ -1,0 +1,18 @@
+{
+  "comparisonRenders": [
+    "comparison-pmhx-body-561-9877.png",
+    "comparison-pmhx-row-521-7835.png",
+    "comparison-pmhx-section-537-9915.png"
+  ],
+  "inspectedByExecutor": true,
+  "inspectedBy": "Claude, at 1x, every touched node: three comparisons, the change log, the three reference helpers, Archive section 06 and the Archive README, plus PIL row and column diffs",
+  "observations": [
+    "Body comparison: the Rebuild column is pixel-identical to the pre-closeout render (0 changed px); the Reference column changed only by the 2x resharpening (2503 px); the Change log column carries the two new rows (81101 px).",
+    "The raw 2x export of 129:9205 carried the source component set's dashed purple outline on its top two pixel rows in place of the sheet's own 1px grey border; the row and section exports and the Health Status precedent do not. A cleaned copy replaces only those two rows with a nearest-neighbour upscale of the 1x capture's top row (1608 px changed); the raw export is kept beside it on disk. After upload the reference top edge shows 0 purple pixels and the grey border is back.",
+    "Change log: six rows read in plain language; the two new rows use the operator's wording; the Why column wraps to three or four lines like its neighbours; the divider under the last row closes the table.",
+    "Row and section comparisons: captions read 'exported 2026-09-08 at 2x'; the 2x references are visibly sharper at the checkbox and comment glyph edges; layout unchanged.",
+    "Archive 06: four proofs sit in one row at integer positions on a white organizer; the sidesheet proof still renders 'Save & Add To Note' and 'Save', so the moved instances stayed live.",
+    "Archive README: the new 06 paragraph sits under 05 in the same face and size; the frame grew to 600 without clipping.",
+    "Nothing false extends below the 564px rebuilt sheet; the Rebuild helper still has no fill."
+  ]
+}

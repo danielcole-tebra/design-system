@@ -1,0 +1,932 @@
+{
+  "format": "tebra.design-workflow-contract",
+  "version": 2,
+  "generatedAt": "2026-09-09T02:36:58.380Z",
+  "source": {
+    "schema": {
+      "path": "design-system-schema.json",
+      "sha256": "0a621a3e1208efa37ff6fb9372a1068ddc204a960c80ba3cb094a0b8b1fcfbdd"
+    },
+    "instructions": [
+      {
+        "path": "workflow/rules.json",
+        "sha256": "3455892d00b9deefb7840ee9a425f6d72e5a8479da44eb6368e8a855bd7e5c80"
+      },
+      {
+        "path": "CLAUDE.md",
+        "sha256": "a89816ba9fbce7f07eab6ce2fbd70421fd429b92e3d3fcb9c9373600c1427c1d"
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "bafdc1852c0ac9a7971cba1f93f6937ab600936b2b58cd64ae7412786fdf05bc"
+      },
+      {
+        "path": "OPERATORS.md",
+        "sha256": "633263cc1e0a24845bb3645c1e0b2ca1c825ba391060e9405db0c26c780f7cdb"
+      }
+    ],
+    "generator": "scripts/workflow/generate-contract.js",
+    "generatorVersion": 2,
+    "citedRecordsPresent": 25
+  },
+  "authority": {
+    "order": [
+      "code",
+      "Storybook render",
+      "published Figma library",
+      "source design reference"
+    ],
+    "principle": "Facts follow evidence. Design decisions stop for the human operator.",
+    "files": {
+      "code": "C:/Code/web-app-v2/packages/design-system",
+      "library": {
+        "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+        "access": "read-only unless the batch is explicitly library work"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pages": [
+          "0:1 Cover",
+          "3:2 Templates",
+          "27:2 Screens",
+          "126:2 Archive"
+        ]
+      },
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "access": "read-only"
+      },
+      "deprecatedLibrary": {
+        "fileKey": "ZPf0sJy83aPyrHjCVHomya",
+        "access": "read-only reference"
+      }
+    }
+  },
+  "canonicalClaudeMdSections": {
+    "note": "These CLAUDE.md sections are declared canonical by name rather than copied. CLAUDE.md is digest-checked by the contract, so a change to any of them invalidates the contract.",
+    "sections": [
+      "Where truth lives (precedence: code > Storybook render > production behaviour > Figma)",
+      "Figma files (keys and read/write policy)",
+      "Standing rules 1 to 13",
+      "Known plugin API traps",
+      "Recording",
+      "Publishing"
+    ]
+  },
+  "agentRules": {
+    "lead": "Any agent — Claude, Codex, or other — editing the Figma files or this repo follows the same loop. Work that skips it gets audited and may be superseded.",
+    "rules": [
+      {
+        "n": 1,
+        "title": "Read before touching",
+        "text": "Read before touching: CLAUDE.md, then use the validated compact workflow for NPVE work (run node scripts/workflow/validate-workflow.js, read workflow/npve-contract.generated.json, the selected manifest item, and its last record). For other workstreams, or when the compact workflow routes you there, read design-system-schema.json. The schema remains the authoritative record; the generated contract is a freshness-checked projection; chat history and your own memory are not the record.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04",
+          "workflowRefactor_closeout_2026-09-08"
+        ],
+        "note": "Amended 2026-09-08 (commit c88ce6c) to route NPVE work through the compact workflow; that amendment had no record until workflowRefactor_closeout_2026-09-08."
+      },
+      {
+        "n": 2,
+        "title": "Audit before building",
+        "text": "Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
+      },
+      {
+        "n": 3,
+        "title": "One batch at a time",
+        "text": "One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
+      },
+      {
+        "n": 4,
+        "title": "Additive only",
+        "text": "Additive only. Nothing is deleted, and nothing is moved, renamed, or superseded without a record saying so. Archives get a README.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
+      },
+      {
+        "n": 5,
+        "title": "No invention",
+        "text": "No invention. If the library and code lack a pattern, mark it (GAP/DEFECT per the convention) and build with what exists. Recreating a source drawing by hand and calling it a component is a false record, which is worse than the gap.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04",
+          "defectMarkerConvention2026_08_28"
+        ]
+      },
+      {
+        "n": 6,
+        "title": "Verify in pixels",
+        "text": "Verify in pixels. Screenshot what you built and look at it. Property readbacks are claims; renders are evidence. After editing a component, re-screenshot its live instances and diff.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
+      },
+      {
+        "n": 7,
+        "title": "Record every batch",
+        "text": "Record every batch: a dated schema record via an apply-*.js script, backup first, findings to flags[]. A batch without a record did not happen and will be treated as suspect.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
+      },
+      {
+        "n": 8,
+        "title": "Report per rule 13",
+        "text": "Report per rule 13: full report to disk, short reply, no tables in chat. Change logs in the file are written in plain graphic-design language, not system jargon.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
+      },
+      {
+        "n": 9,
+        "title": "Stop on disagreement",
+        "text": "When sources disagree or a decision is needed, stop and report. Precedence (code > Storybook render > library > source) resolves facts, not design decisions.",
+        "sourceRecord": [
+          "npveRebuild_agentRules_2026-09-04"
+        ]
+      },
+      {
+        "n": 10,
+        "title": "Record gate",
+        "text": "Record gate. Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one.",
+        "sourceRecord": [
+          "docsOperatorsGuide_2026-09-04"
+        ]
+      },
+      {
+        "n": 11,
+        "title": "Risk is planner/operator-owned",
+        "text": "Risk is planner/operator-owned, never executor-owned. Classes are low, medium, high and human-decision as defined in workflow/protocol.json. A manifest tier counts as approved only when the operator's approval is quoted verbatim in the manifest and the record; an unapproved tier lets an item proceed only with per-item operator confirmation, also quoted; a human-decision item does not start until the operator decides. Deterministic gates may compress checks, but every component still gets a comparison render inspected by the executor and shown to the operator.",
+        "sourceRecord": [
+          "workflowRefactor_closeout_2026-09-08",
+          "workflowRefactor_tierApproval_2026-09-08"
+        ],
+        "note": "Adopted from amendment 2 of the 2026-09-08 plan review; first written into AGENTS.md by commit c88ce6c as its rule 10, which made AGENTS.md diverge from CLAUDE.md. Numbered 11 in both files from this record on."
+      }
+    ]
+  },
+  "recordGate": {
+    "text": "Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one. In the compact workflow the gate is enforced twice: the apply-*.js script refuses to create the IN PROGRESS record while the previous record is not DONE, and start-batch.js refuses to start while the item's own record is not IN PROGRESS or a dependency is not complete.",
+    "sourceRecord": [
+      "docsOperatorsGuide_2026-09-04",
+      "workflowRefactor_closeout_2026-09-08"
+    ]
+  },
+  "standingRules": {
+    "14": {
+      "title": "Change log beside every rebuilt frame",
+      "text": "Every rebuilt frame has a Change log beside it, on its right, listing what changed from the source, from → to, and why in one line, in plain graphic-design language. Rows come from the batch prompt. The change log lives once, as a `_Rebuild comparison/Change log/<screen>` sub-component on Templates holding Change log/Row instances; Row stays a component so styling propagates. The schema remains the record; the change log is its plain-language view.",
+      "sourceRecord": [
+        "npveRebuild_changelog_2026_09_02",
+        "npveRebuild_repair2_2026-09-04"
+      ],
+      "note": "Added 2026-09-02; amended the same day to the detached-frame convention (flag npveChangelog_placedLogIsDetached); rewritten 2026-09-04 in repair batch 2 to the instance-swap sub-component convention that stands today."
+    },
+    "15": {
+      "title": "Rebuild comparison is the only placement",
+      "text": "Every rebuilt frame sits in a Rebuild comparison on Screens: an instance of the Rebuild comparison master whose three content slots are swapped per screen to `_Rebuild comparison/Reference|Rebuild|Change log/<screen>` sub-components, left to right on a grey backdrop. Each screen and its change log exist exactly once, inside those sub-components; the comparison instance is the only placement, and a fix goes to the sub-component, never to a copy. The reference is a flat export at 2x captioned with its source node id and export date, and does not update when the source changes. The grey backdrop is a deliberate exception to rule 10.",
+      "sourceRecord": [
+        "npveRebuild_comparisonLayout_2026_09_02",
+        "npveRebuild_repair2_2026-09-04",
+        "npveRebuild_extReviewRepairs_2026-09-05"
+      ],
+      "note": "The 2x reference is produced with the Figma MCP download_assets (source node, png, scale 2) and placed with upload_assets targeting the reference rectangle (method recorded in npveRebuild_comparisonLayout_2026_09_02.transport). Verification proofs are not placements; see proofConvention."
+    }
+  },
+  "sheetAndComparisonTechniques": {
+    "adopted": "2026-09-05 from the external sidesheet batches",
+    "sourceRecord": [
+      "npveRebuild_extReviewRepairs_2026-09-05",
+      "npveRebuild_medicationListHeightCorrection_2026-09-04"
+    ],
+    "items": [
+      "Sheets are as tall as their content. The Sidesheet master stays 550 by 600. A placed sheet grows or shrinks to fit its body, and the footer sits right under the last row. Never pad a short sheet to 600 or pin its footer to the bottom.",
+      "Helpers under a short sheet are transparent. When a rebuilt sheet is shorter than the comparison slot, the Rebuild sub-component carries no fill, so only the sheet shows white. Nothing false extends below it.",
+      "Tall content overflows the slot; the slot does not shrink it. When a reference or a rebuilt sheet is taller than the 600 slot, keep it at 1:1 and switch clipping off on that column of the placed comparison instance. Never scale a reference to fit.",
+      "New bodies join the shell through its Body content list. Append the new body component to the Sidesheet's Body content preferred values and leave the default alone. Do not fork the shell.",
+      "A new state is a new variant of the body it belongs to. Add State=Empty to the existing body set rather than creating a second set or a loose frame.",
+      "Values the library lacks may live in a local NPVE collection. Name the collection NPVE/<kind>, record the operator's decision in the schema, claim no code syntax, and add the value to the library to-do list. Never write it into the library from a consuming file."
+    ]
+  },
+  "proofConvention": {
+    "text": "Verification proofs — instances or frames placed only so a batch can read rendered paint and property state — are named `PROOF — <batch folder> · <what>`, live only through their batch, and are archived under additive-only at batch close: moved unchanged to the Archive page section `06 · Pilot proofs`, listed in the Archive README, never deleted. A proof is not a placement under rule 15 and is never fixed in place; fixes go to the master or sub-component.",
+    "sourceRecord": [
+      "workflowRefactor_closeout_2026-09-08"
+    ],
+    "appliedRetroactivelyTo": [
+      "npve-past-medical-history-row-2026-09-08",
+      "npve-past-medical-history-section-2026-09-08",
+      "npve-past-medical-history-body-2026-09-08"
+    ]
+  },
+  "operatingLoop": [
+    "Validate this contract before reading it as current truth.",
+    "Record gate: confirm the previous batch in the workstream has a schema record; if not, refuse and run a read-only state check whose record stands in.",
+    "Use the manifest item selected by the planner; the executor may not change its risk class. An unapproved tier needs per-item operator confirmation, quoted verbatim.",
+    "Verify file identity and current live state before writes.",
+    "Declare one bounded batch and stop condition.",
+    "Create the IN PROGRESS schema record before Figma mutation, regenerate this contract, then start the batch guard.",
+    "Mutate sequentially; stop on the first component failure before touching the next item.",
+    "Run deterministic checks and inspect at least one comparison render per component.",
+    "Save the comparison render and full report; show the render to the operator.",
+    "Archive the batch proofs per proofConvention, finalize the schema record, regenerate this contract, pass the finish gate, and commit with an explicit allowlist."
+  ],
+  "nonNegotiables": {
+    "additiveOnly": true,
+    "noInvention": true,
+    "sourceReadOnly": true,
+    "libraryDefinesConsumersReuse": true,
+    "oneComponentAtATimeInsidePilot": true,
+    "riskPlannerOwned": "Tiers are approved by the operator with a verbatim quote; executors never assign or lower them.",
+    "operatorVisualReviewFloor": "Every component produces a comparison render inspected by the executor and presented to the operator.",
+    "allStandingRulesRequired": true
+  },
+  "standingBatchRules": {
+    "_purpose": "Non-negotiable checks every future batch runs before reporting. Added after the paint-opacity defect reached four already-signed-off components.",
+    "1_instancePaintVerification": "Place ONE INSTANCE of every new variant and read its RENDERED paints — colour, effective alpha and bound variable — comparing each against its master. Master-level reads are NOT evidence: paint-level opacity renders correctly on a master and incorrectly on an instance, which is exactly how the defect survived four batches. Any alpha must live in the variable's stored rgba, never as paint-level opacity. SCOPE: that last sentence governs UNBOUND paints only - for a BOUND paint Figma surfaces the variable's stored alpha into paint.opacity, and that mirrored value is correct; read rule 9_boundPaintAlpha before touching it.",
+    "2_unboundPaintAudit": "Walk EVERY top-level node on EVERY page, not just component sets. Reference frames, notes frames and loose glyphs count. Auditing only component sets is what let 3 unbound paints sit in the Radio reference frame across several batches.",
+    "3_referenceCounts": "Count componentPropertyReferences per variant after any clone or combineAsVariants — cloning a variant inside a set silently drops them all.",
+    "4_skipInvisibleFalse": "Set figma.skipInvisibleInstanceChildren = false before any audit walk, so boolean-hidden slots are inspected.",
+    "5_opacityLast": "If paint-level opacity is genuinely unavoidable somewhere, apply it as the final operation AND verify on an instance. Prefer promoting to a computed variable.",
+    "6_enumerateDontRecall": "When remediating or sweeping, enumerate from the file rather than from a previously reported list. The alpha remediation's known list was missing 18 of 48 paints.",
+    "7_fileIdentityFirst": "Every Figma call passes fileKey YX2n4YLrEpBXNbcc73T6dw explicitly — never rely on an ambient or last-used file. Every session's FIRST Figma action verifies file identity against this schema's page inventory (figmaBuild.pages._order) before any read informs a decision or any write occurs; if the page list does not match, stop and report rather than proceeding. Added 2026-08-03 after a session read the legacy team library (ZPf0sJy83aPyrHjCVHomya, 'Tebra Working UI Kit') and produced a full reorganisation analysis against the wrong file. Note that figma.root.name returns 'Document' for both files, so the file NAME is not a usable identity check — the page list is.",
+    "8_roundWithRecord": "Never carry a fractional dimension into Figma. Two cases, one treatment. (a) pxToRem inflation, where an intended integer exists behind the fraction: bind the intended integer, record computedPx. (b) Authored-fractional sources, where no intended integer exists — a fractional spacing multiplier, a viewBox ratio, a non-square viewBox in a square box: ROUND to the nearest integer and record the true value as computedPx in both the component description and the schema, and label the rounding a design decision with its source and date. Added 2026-08-03 when the primary nav produced the first case-(b) values (76.8, 44.8, 23.88, 18.24); Daniel ruled round-with-record as design authority. Intrinsic geometry is out of scope for this rule: VECTOR and GROUP bounds are the union of their path data, are not authored, and are not rounded — the tier 6 illustrations already set that precedent.",
+    "9_boundPaintAlpha": "Before changing ANY paint-level opacity, first check whether that paint has a bound colour variable. If it does, Figma SURFACES the variable's stored alpha into paint.opacity - it does NOT multiply the two. A paint bound to a variable storing rgba(0,0,0,0.87) correctly reads back paint.opacity 0.87 and renders at 0.87; that is the expected state, not a double-alpha defect, and it must be left alone. Forcing such a paint to opacity 1 DISCARDS the alpha and renders the node fully opaque. Rule 1's 'never as paint-level opacity' applies to UNBOUND paints only. Established empirically 2026-08-26 (checkboxFlushHaloFix2026_08_26d.alphaFindingThatOverturnsAnEarlierEntry) after the opposite assumption produced a real regression on Alert filled/warning; reverted and audited library-wide 2026-08-27 (boundAlphaRegressionRevert2026_08_27). To re-confirm at any time: bind a rectangle to an alpha-carrying variable, never set opacity, then read paint.opacity back - it returns the variable's alpha.",
+    "10_cloneDropsPropertyRefs": "Cloning a variant to add a new axis value DROPS componentPropertyReferences on every child. The clone keeps its layers and looks correct, but Label/icon-visibility/icon-swap stop responding — instance property values are stored yet never render, so a swapped instance silently shows the component default. After any variant clone, re-apply refs by copying them from a known-good sibling keyed on child layer name, then verify by reading a nested instance rendered characters against its property value, not just the property value. Hit during buttonInheritColour2026_08_28."
+  },
+  "npve": {
+    "values": {
+      "npve.files.source": "zVsuhYehoSLLq880qRBFkq read-only; never written, no persisted page or selection change",
+      "npve.files.target": "fdCQVFdvOByaOYIJYag0d6; pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive",
+      "npve.spacing.base": 8,
+      "npve.spacing.verticalDefault": 16,
+      "npve.spacing.tightRelationship": 8,
+      "npve.spacing.semanticGroup": 24,
+      "npve.sidesheet.width": 550,
+      "npve.sidesheet.masterHeight": 600,
+      "npve.sidesheet.header.height": 72,
+      "npve.sidesheet.header.divider": 1,
+      "npve.sidesheet.body.inset": 16,
+      "npve.sidesheet.body.contentWidth": 518,
+      "npve.sidesheet.footer.height": 71,
+      "npve.sidesheet.outline": "four-sided, token-bound",
+      "npve.sidesheet.radius.floating": 8,
+      "npve.sidesheet.radius.dockedEdge": 0,
+      "npve.sidesheet.height": "content-driven; footer immediately follows active content",
+      "npve.backdrop.composition": "color/background/paper",
+      "npve.backdrop.comparison": "color/grey/300",
+      "npve.reference.export": "flat png at 2x, displayed at 1:1, captioned with source node id and export date",
+      "npve.markers": "DEFECT renders differently from what ships and goes in the register; GAP is something the component cannot express and stays marked in the frame; no red, yellow, orange, or green on markers",
+      "npve.touchTargets": "published Checkbox, Radio, Form control label, and Icon button keep their 42px targets; rows built on them are 42px even where the source draws 32px",
+      "npve.buttonLabels": "button labels render in the library's title case because code sets the button typography variant to textTransform capitalize; source mockups that use sentence case are the outlier",
+      "npve.fieldStates": "rebuilt screens show default (resting) control states; a focused or hovered state in a mockup is treated as an incidental capture unless the batch prompt asks for it"
+    },
+    "rules": [
+      {
+        "id": "npve.files.source",
+        "value": "zVsuhYehoSLLq880qRBFkq read-only; never written, no persisted page or selection change",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_enum_2026-09-02"
+        ]
+      },
+      {
+        "id": "npve.files.target",
+        "value": "fdCQVFdvOByaOYIJYag0d6; pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_repair1_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.spacing.base",
+        "value": 8,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.spacing.verticalDefault",
+        "value": 16,
+        "token": "space/16",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_healthStatusObservations_2026-09-05",
+          "npveRebuild_noteHeaderLayout_2026-09-08"
+        ],
+        "note": "Normal vertical separation and semantic-group spacing."
+      },
+      {
+        "id": "npve.spacing.tightRelationship",
+        "value": 8,
+        "token": "space/8",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06",
+          "npveRebuild_noteHeaderLayout_2026-09-08"
+        ],
+        "note": "Use only for intentionally tight relationships such as a heading and its list, or related controls."
+      },
+      {
+        "id": "npve.spacing.semanticGroup",
+        "value": 24,
+        "token": "space/24",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_healthStatusObservations_2026-09-05"
+        ],
+        "note": "Between two content sections of one body when the source separates them."
+      },
+      {
+        "id": "npve.sidesheet.width",
+        "value": 550,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheet_build_2026_09_02"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.masterHeight",
+        "value": 600,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheet_build_2026_09_02",
+          "npveRebuild_sidesheetRadiusPlacement_2026-09-04"
+        ],
+        "note": "The master stays 550x600; placed sheets are content-driven."
+      },
+      {
+        "id": "npve.sidesheet.header.height",
+        "value": 72,
+        "token": "space/16 top and bottom padding",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.header.divider",
+        "value": 1,
+        "token": "color/divider",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheet_build_2026_09_02"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.body.inset",
+        "value": 16,
+        "token": "space/16",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_bodyPaddingAndSearch_2026_09_02"
+        ],
+        "note": "All four sides."
+      },
+      {
+        "id": "npve.sidesheet.body.contentWidth",
+        "value": 518,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_bodyPaddingAndSearch_2026_09_02"
+        ],
+        "note": "550 minus two 16px insets."
+      },
+      {
+        "id": "npve.sidesheet.footer.height",
+        "value": 71,
+        "token": "space/16 top and bottom padding",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+          "npveRebuild_healthStatusObservations_2026-09-05"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.outline",
+        "value": "four-sided, token-bound",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.radius.floating",
+        "value": 8,
+        "token": "NPVE/Dimension radius/md (local, no code syntax)",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetRadiusPlacement_2026-09-04"
+        ]
+      },
+      {
+        "id": "npve.sidesheet.radius.dockedEdge",
+        "value": 0,
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_sidesheetRadiusPlacement_2026-09-04"
+        ],
+        "note": "Docked right 8/0/0/8, docked left 0/8/8/0."
+      },
+      {
+        "id": "npve.sidesheet.height",
+        "value": "content-driven; footer immediately follows active content",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_medicationListHeightCorrection_2026-09-04",
+          "npveRebuild_extReviewRepairs_2026-09-05"
+        ]
+      },
+      {
+        "id": "npve.backdrop.composition",
+        "value": "color/background/paper",
+        "status": "active",
+        "sourceRecord": [
+          "compositionBackdropConvention2026_09_01"
+        ],
+        "note": "Beige is never a backdrop."
+      },
+      {
+        "id": "npve.backdrop.comparison",
+        "value": "color/grey/300",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_comparisonLayout_2026_09_02"
+        ],
+        "note": "Deliberate exception to standing rule 10."
+      },
+      {
+        "id": "npve.reference.export",
+        "value": "flat png at 2x, displayed at 1:1, captioned with source node id and export date",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_comparisonLayout_2026_09_02",
+          "npveRebuild_extReviewRepairs_2026-09-05"
+        ]
+      },
+      {
+        "id": "npve.markers",
+        "value": "DEFECT renders differently from what ships and goes in the register; GAP is something the component cannot express and stays marked in the frame; no red, yellow, orange, or green on markers",
+        "status": "active",
+        "sourceRecord": [
+          "defectMarkerConvention2026_08_28"
+        ]
+      },
+      {
+        "id": "npve.touchTargets",
+        "value": "published Checkbox, Radio, Form control label, and Icon button keep their 42px targets; rows built on them are 42px even where the source draws 32px",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_externalCareFacilityStay_2026-09-05",
+          "npveRebuild_pastMedicalHistoryRow_2026-09-08"
+        ]
+      },
+      {
+        "id": "npve.buttonLabels",
+        "value": "button labels render in the library's title case because code sets the button typography variant to textTransform capitalize; source mockups that use sentence case are the outlier",
+        "status": "active",
+        "sourceRecord": [
+          "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+          "workflowRefactor_closeout_2026-09-08"
+        ]
+      },
+      {
+        "id": "npve.fieldStates",
+        "value": "rebuilt screens show default (resting) control states; a focused or hovered state in a mockup is treated as an incidental capture unless the batch prompt asks for it",
+        "status": "active",
+        "sourceRecord": [
+          "workflowRefactor_closeout_2026-09-08"
+        ]
+      }
+    ],
+    "conventions": [
+      {
+        "id": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+        "status": "DONE. Shared Sidesheet outline is four-sided and token-bound; Footer Actions use canonical 16px vertical padding. All 21 live instances were validated.",
+        "date": "2026-09-04",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-sidesheet-outline-footer-global-2026-09-04/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_sidesheetRadiusPlacement_2026-09-04",
+        "status": "DONE. NPVE-local radius/md=8 is applied to a three-value Sidesheet Placement axis; all existing instances and component-property references are preserved.",
+        "date": "2026-09-04",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-sidesheet-radius-placement-2026-09-04/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04",
+        "status": "DONE. All NPVE Sidesheet Headers use token-bound 16px vertical padding and resolve to 72px; fixed sheets remain 600px and Medication bodies are preserved at 382px total height.",
+        "date": "2026-09-04",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-sidesheet-header-padding-global-2026-09-04/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_bodyPaddingAndSearch_2026_09_02",
+        "status": "DONE through step 10 (run 2026-09-03; record keyed as the prompt named it). Sidesheet template Body padding set to 16 all sides bound space/16; search fields left as built (empty Label is not clean on the Filled variant and blanks the placeholder on the Empty variant); GAP marker 27:295 rewritten; Body padding row amended on both change logs; both screens re-shot; ten rules run.",
+        "date": "2026-09-03",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": null,
+        "target": null
+      },
+      {
+        "id": "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04",
+        "status": "READ-ONLY AUDIT COMPLETE. Sidesheet shell and body stacks are base-8 compliant; four NPVE-owned row values require a policy decision. No Figma mutation.",
+        "date": "2026-09-04",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-sidesheet-base8-spacing-audit-2026-09-04/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_problemEditSpacingCorrection_2026-09-04",
+        "status": "DONE. Edit Problem vertical rhythm is normalized and the clipped Type Chips are corrected and verified in the live Sidesheet.",
+        "date": "2026-09-04",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-problem-edit-spacing-correction-2026-09-04/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06",
+        "status": "DONE — Functional Observations optical gap corrected to bound space/8; dependent heights, change log, comparison, screenshots, and ten standing rules verified.",
+        "date": "2026-09-06",
+        "outcome": "Changed only the Functional Observations heading-to-empty-field gap from 16px to 8px. The Health Status labeled-field rhythm remains 16px and the section separation remains 24px. The body and live sheet are 8px shorter, with the footer still directly following content.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-health-status-optical-spacing-2026-09-06/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_socialHistoryNewEntryPlacement_2026-09-06",
+        "status": "DONE — intentional New Entry hierarchy change, live change-log row, fresh screenshots, and ten standing rules complete.",
+        "date": "2026-09-06",
+        "outcome": "Moved New Entry from the far edge of the 518px section header to 16px after SUBSTANCE/DRUG USE. The action now reads as part of the section while remaining a published Button instance; the source reference and all sheet geometry are unchanged.",
+        "geometry": null,
+        "decision": "New Entry now follows the SUBSTANCE/DRUG USE heading at the existing 16px auto-layout gap; the frozen source remains unchanged.",
+        "report": "figma-export/npve-social-history-new-entry-placement-2026-09-06/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2",
+          "body": "441:4994 Social history body",
+          "substanceHeader": "441:5063 Substance/drug use header",
+          "heading": "441:5064 SUBSTANCE/DRUG USE",
+          "newEntry": "441:5065 New Entry",
+          "changeLog": "446:5475 _Rebuild comparison/Change log/Social History",
+          "comparison": "446:9237 Social History · Reference / Rebuild / Changes"
+        }
+      },
+      {
+        "id": "npveRebuild_noteHeaderLayout_2026-09-08",
+        "status": "DONE. The shared Note card header now uses semantic identity, status/action, and action groups; related items use space/8, semantic groups use space/16, all outer padding is space/16, and the trailing controls remain anchored to the right edge. The card stays 831x748, the component API and sole placed comparison instance remain linked, and one plain-language change-log row was added.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-note-header-layout-2026-09-08/report.md",
+        "target": null
+      },
+      {
+        "id": "workflowRefactor_closeout_2026-09-08",
+        "status": "DONE. Contract completed with provenance (workflow/rules.json), instruction files thinned to pointers, risk attribution corrected and tiers left unapproved pending a quoted operator approval, proof convention adopted and applied, PMHx change log extended by two rows, three references re-exported at 2x with re-dated captions, four proofs archived, pilot run 1 measured against the Facility Stay baseline, ten standing rules run.",
+        "date": "2026-09-08",
+        "outcome": [
+          "Step 1: workflow/rules.json holds the eleven agent rules, the record gate, standing rules 14 and 15, the sheet and comparison techniques, the proof convention and 24 NPVE values, each with sourceRecord provenance (24 cited records verified present by the generator). CLAUDE.md, AGENTS.md and OPERATORS.md now point at it; CLAUDE.md shrank from 10,593 to 8,443 bytes, AGENTS.md from 3,229 to 2,036.",
+          "Step 2: manifest risk objects carry proposedBy (Codex, commit 146e867) and approval {status: unapproved, quote: null, history}. The false \"Cole (operator)\" assignment is kept as history with its basis. No approval arrived with this batch, so all three tiers stay unapproved; lock-risk.js now requires a verbatim quote and start-batch.js requires --confirm for unapproved tiers.",
+          "Step 3: proof convention written to rules.json and the contract; the four PMHx proofs were renamed PROOF — <batch> · <what> and moved unchanged to Archive 06 · Pilot proofs (570:10455); the Archive README gained a paragraph.",
+          "Step 4: change log 560:6172 gained rows \"Button label | …to Note → …To Note | Code capitalises button labels\" and \"Comments field | Focused in the mockup → resting | We build default states, the mockup caught a click\" (480x385 → 480x555). References 518:5826, 537:5841 and 558:6085 now hold 2x exports (1036x64, 1036x168, 1164x1232) placed by upload_assets with rectangle geometry unchanged; the three Source captions read \"exported 2026-09-08 at 2x\". Capitalised label and resting field kept.",
+          "Step 5: workflow/metrics.json version 2 holds the Facility Stay baseline and pilot run 1 of 3 with the same counting method; context loaded fell 94.7%, tool calls and turns rose because one sheet became three gated items.",
+          "Step 6: four-page audit, master/instance paint checks on the new rows, and renders of every touched node inspected; see verification."
+        ],
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-refactor-closeout-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2",
+          "archivePage": "126:2"
+        }
+      }
+    ],
+    "recentRecords": [
+      {
+        "id": "npveRebuild_encounterShell_2026-09-06",
+        "status": "DONE. Encounter page shell skeleton built on Templates section 15 from library parts (Page/Encounter with SCAFFOLDING nav, grey/300 body band, Patient header at the Proposals v1 design, Module strip with GAP-marked chips, MainWrap with the Sidesheet Problems list in the 550 left slot and the Note card shell in the right slot); Rebuild comparison/Page stacked master created; sole comparison placed on Screens section 15 against 4841:17077 with a 2x reference; four GAP markers; twelve-row change log. Toolbar and note body deliberately empty. No stop condition triggered.",
+        "date": "2026-09-06",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-encounter-shell-2026-09-06/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_socialHistoryNewEntryPlacement_2026-09-06",
+        "status": "DONE — intentional New Entry hierarchy change, live change-log row, fresh screenshots, and ten standing rules complete.",
+        "date": "2026-09-06",
+        "outcome": "Moved New Entry from the far edge of the 518px section header to 16px after SUBSTANCE/DRUG USE. The action now reads as part of the section while remaining a published Button instance; the source reference and all sheet geometry are unchanged.",
+        "geometry": null,
+        "decision": "New Entry now follows the SUBSTANCE/DRUG USE heading at the existing 16px auto-layout gap; the frozen source remains unchanged.",
+        "report": "figma-export/npve-social-history-new-entry-placement-2026-09-06/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2",
+          "body": "441:4994 Social history body",
+          "substanceHeader": "441:5063 Substance/drug use header",
+          "heading": "441:5064 SUBSTANCE/DRUG USE",
+          "newEntry": "441:5065 New Entry",
+          "changeLog": "446:5475 _Rebuild comparison/Change log/Social History",
+          "comparison": "446:9237 Social History · Reference / Rebuild / Changes"
+        }
+      },
+      {
+        "id": "npveRebuild_encounterToolbar_2026-09-06",
+        "status": "DONE. Two shell corrections (Note card footer Sign control now a Button contained/secondary with an End icon DownCaret, the Split button hidden and marked superseded; Module strip now carries all nine source modules with five new selected=no chips exposed as swaps) and the toolbar row built as a local Note toolbar component in the Note card's Toolbar slot, per source 3456:11505 with the 4841:17077 state placed. Transcription status built minimal as a local piece and marked as the audit's invention row 15. One shared GAP marker for the toolbar glyph gaps. Change log at fifteen rows. No stop condition triggered.",
+        "date": "2026-09-06",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-encounter-toolbar-2026-09-06/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_moduleChipFix_2026-09-06",
+        "status": "DONE. Module chip masters corrected from Daniel's crop review: selected chips use icon + label + compact close in one color/primary/main ink family with space/16 gaps; unselected chips are label-only grey pills at 40px. The Module strip is reconciled to the nine-item order with Note and Problems selected. The placed encounter comparison inherits the master. Two change-log rows added, page-order snapshot refreshed, screenshots and 1x pixel diff recorded. No new GAP or DEFECT marker. No stop condition triggered.",
+        "date": "2026-09-06",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-module-chip-fix-2026-09-06/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_moduleChipRelationshipSpacing_2026-09-06",
+        "status": "DONE. Selected Module chips now group icon and label as one Module identity at space/8, with the identity group separated from Close by space/16. Note and Problems overrides survived, all strip/comparison instances remain linked, the existing change-log row was amended, evidence and pixel diff were exported, and no new GAP or DEFECT marker was required.",
+        "date": "2026-09-06",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-module-chip-relationship-spacing-2026-09-06/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_noteHeaderLayout_2026-09-08",
+        "status": "DONE. The shared Note card header now uses semantic identity, status/action, and action groups; related items use space/8, semantic groups use space/16, all outer padding is space/16, and the trailing controls remain anchored to the right edge. The card stays 831x748, the component API and sole placed comparison instance remain linked, and one plain-language change-log row was added.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-note-header-layout-2026-09-08/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
+        "status": "DONE. Low-risk pilot item built and validated; stopped before the section item for operator review.",
+        "date": "2026-09-08",
+        "outcome": [
+          "Created a two-variant Past medical history condition row component set at 518px content width.",
+          "Used a 42px row to preserve the published Checkbox and Icon button touch targets; the source 32px height is recorded as an intentional difference.",
+          "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
+          "Shared component APIs and the shared comparison master were not modified."
+        ],
+        "geometry": null,
+        "decision": "Source row 32px → rebuild row 42px so the published 42px Checkbox touch target is not shrunk. Visible glyph size and relationship remain source-faithful.",
+        "report": "figma-export/npve-past-medical-history-row-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2"
+        }
+      },
+      {
+        "id": "npveRebuild_pastMedicalHistorySection_2026-09-08",
+        "status": "DONE. Low-risk PMHx section pilot built and validated; stopped before the body item for operator review.",
+        "date": "2026-09-08",
+        "outcome": [
+          "Created a 518x112 Past medical history section component with Heading text and two live approved condition rows.",
+          "Applied the canonical 8px heading-to-list relationship and kept condition-row touch targets contiguous.",
+          "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
+          "Shared component APIs, tokens, and the approved condition-row master were not modified."
+        ],
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-past-medical-history-section-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2"
+        }
+      },
+      {
+        "id": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+        "status": "DONE. Medium-risk PMHx body and sidesheet pilot built by Codex through P4.d and finished by Claude from P4.e; four operator decisions reported, none resolved. Operator review of comparison.png required before further pilot work.",
+        "date": "2026-09-08",
+        "outcome": [
+          "Created Past medical history body 546:5871 (518x388): three live approved section instances plus the published multiline Text field, 16px between children, paper-bound fill.",
+          "Appended the body to the shared Sidesheet Body content preferred values (12 to 13); default, 12 existing properties, and 550x600 variant geometry unchanged.",
+          "Placed one content-driven sheet at 550x564 (header 72, divider 1, body region 420, footer 71) with source footer labels.",
+          "Created the three _Rebuild comparison sub-components and the sole comparison instance 561:9877 on Screens; comparison slots now hold 16 preferred values each.",
+          "Body proof 552:5930 and sheet proof 555:10031 remain on Templates beside the master, following the row and section pilot convention."
+        ],
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-past-medical-history-body-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2"
+        }
+      },
+      {
+        "id": "workflowRefactor_stateCheck_2026-09-08",
+        "status": "READ-ONLY STATE CHECK. Stands in, per agent rule 10, for the missing record of the workflow-refactor batches committed 2026-09-08 as c88ce6c, 5b4d119, 146e867 and c27235a. The closeout prompt named a record workflowRefactor_handoff_2026-09-08 that was never written. No Figma writes.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": null,
+        "target": null
+      },
+      {
+        "id": "workflowRefactor_closeout_2026-09-08",
+        "status": "DONE. Contract completed with provenance (workflow/rules.json), instruction files thinned to pointers, risk attribution corrected and tiers left unapproved pending a quoted operator approval, proof convention adopted and applied, PMHx change log extended by two rows, three references re-exported at 2x with re-dated captions, four proofs archived, pilot run 1 measured against the Facility Stay baseline, ten standing rules run.",
+        "date": "2026-09-08",
+        "outcome": [
+          "Step 1: workflow/rules.json holds the eleven agent rules, the record gate, standing rules 14 and 15, the sheet and comparison techniques, the proof convention and 24 NPVE values, each with sourceRecord provenance (24 cited records verified present by the generator). CLAUDE.md, AGENTS.md and OPERATORS.md now point at it; CLAUDE.md shrank from 10,593 to 8,443 bytes, AGENTS.md from 3,229 to 2,036.",
+          "Step 2: manifest risk objects carry proposedBy (Codex, commit 146e867) and approval {status: unapproved, quote: null, history}. The false \"Cole (operator)\" assignment is kept as history with its basis. No approval arrived with this batch, so all three tiers stay unapproved; lock-risk.js now requires a verbatim quote and start-batch.js requires --confirm for unapproved tiers.",
+          "Step 3: proof convention written to rules.json and the contract; the four PMHx proofs were renamed PROOF — <batch> · <what> and moved unchanged to Archive 06 · Pilot proofs (570:10455); the Archive README gained a paragraph.",
+          "Step 4: change log 560:6172 gained rows \"Button label | …to Note → …To Note | Code capitalises button labels\" and \"Comments field | Focused in the mockup → resting | We build default states, the mockup caught a click\" (480x385 → 480x555). References 518:5826, 537:5841 and 558:6085 now hold 2x exports (1036x64, 1036x168, 1164x1232) placed by upload_assets with rectangle geometry unchanged; the three Source captions read \"exported 2026-09-08 at 2x\". Capitalised label and resting field kept.",
+          "Step 5: workflow/metrics.json version 2 holds the Facility Stay baseline and pilot run 1 of 3 with the same counting method; context loaded fell 94.7%, tool calls and turns rose because one sheet became three gated items.",
+          "Step 6: four-page audit, master/instance paint checks on the new rows, and renders of every touched node inspected; see verification."
+        ],
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-refactor-closeout-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2",
+          "archivePage": "126:2"
+        }
+      },
+      {
+        "id": "workflowRefactor_tierApproval_2026-09-08",
+        "status": "DONE. Documentation batch. Operator approval of the four risk classes and of the three PMHx tiers recorded verbatim; human-decision added to protocol.json; retroactive locks written for the three complete items. No Figma file opened or written.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-tier-approval-2026-09-08/report.md",
+        "target": null
+      }
+    ],
+    "openFlags": [
+      {
+        "id": "npveWorkflows_patientHeaderNotInLibrary",
+        "severity": "medium",
+        "summary": "The patient header band (1397x96, two rows, Restricted text button) repeats identically on all 27 encounter frames; the library has none, the Proposals file holds a v1 composition at 900x72 (built 2026-08-19).",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
+      {
+        "id": "npveWorkflows_navFamilyHomeBlocksShell",
+        "severity": "medium",
+        "summary": "The top nav on every encounter frame is a Kit Primary Nav; the library Nav/Bar family exists but its home is unresolved (navComponentsOnCompositionsPage OPEN), so a library-consuming page shell cannot start with it.",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
+      {
+        "id": "npveWorkflows_rightDockedPanelConvention",
+        "severity": "medium",
+        "summary": "Sheets sit on the page two ways: inline as the 450/550-wide left column, and as right-docked full-height overlays (550 and 483 wide, square corners, no scrim). Our Sidesheet Placement=Docked right has 8/0/0/8 corners and one width.",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
+      {
+        "id": "npveWorkflows_comparisonLayoutFor1429",
+        "severity": "medium",
+        "summary": "The Rebuild comparison master (1708 wide, 550 slots) cannot hold a 1429-wide reference beside a 1429-wide rebuild with a change log.",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
+      {
+        "id": "npveWorkflows_pageCanvasColourNoToken",
+        "severity": "low",
+        "summary": "The encounter page body is #FBF9F8 on every frame; the library has no such token and the coded default canvas is beige #E8E5DF (beigeSurfaceInvestigation2026_08_31).",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
+      {
+        "id": "npveWorkflows_moduleDropdownOffCanvas",
+        "severity": "info",
+        "summary": "Module Dropdown instances are parked at x -437 outside four encounter frames and one hidden loose instance sits at page level; mockup artefacts, not a page convention.",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
+      {
+        "id": "npveEncounter_unrecordedHealthStatusBatch",
+        "severity": "info",
+        "summary": "A \"14 · Health Status/Observations\" section exists on Templates (412:3888) and Screens (415:7207); at this batch's first read no schema record was visible. The external agent's records arrived during the batch (optical spacing and Social History on 2026-09-06), and the base record npveRebuild_healthStatusObservations_2026-09-05 was then dropped from the live schema by a concurrent write and restored from backup. Its helpers are named \"Rebuild helper · …\" / \"Reference helper · …\" instead of the _Rebuild comparison pattern.",
+        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_patientHeaderPadding10NoToken",
+        "severity": "low",
+        "summary": "The Patient header (proposal geometry) needs 10px vertical padding; Tebra/Dimension has no space/10, so the value is a literal.",
+        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_splitButtonLabelNotAProperty",
+        "severity": "low",
+        "summary": "Library Split button exposes only Size and State; its label (\"New Note\") and leading plus are fixed nested content, so consumers override nested text and hide the plus by instance override.",
+        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_badgeDotCannotSitInline",
+        "severity": "low",
+        "summary": "Badge variant=dot anchors an 8px dot to the top-right of a 24px child; an inline status dot before text is not expressible, so the note header carries a drawn 8px ellipse bound to color/success/main.",
+        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_iconButtonDefaultGlyphAsExpand",
+        "severity": "info",
+        "summary": "With no expand glyph, the note header expand control is an Icon button showing its default glyph (a caret).",
+        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_modulesPillGlyphDelta",
+        "severity": "info",
+        "summary": "The Modules pill uses Icon/Menu and Icon/PlusOutlined on a library Button (pill, 122x38); the source is a white r8 144x40 pill with a Material widgets glyph.",
+        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_schemaRecordDroppedByConcurrentWrite",
+        "severity": "info",
+        "summary": "Two agents wrote design-system-schema.json in the same hour (external sidesheet batches 06:57–07:12, encounter shell 07:20). The record npveRebuild_healthStatusObservations_2026-09-05 was present in every backup up to pre-npve-encounter-shell and absent from the live file afterwards; two later records cite it as their gate. Restored from backup.",
+        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_healthStatusHelperNaming",
+        "severity": "low",
+        "summary": "The Health Status/Observations helpers are named \"Rebuild helper · Health Status/Observations\" and \"Reference helper · Health Status/Observations\" instead of the _Rebuild comparison/<Reference|Rebuild>/<screen> pattern that every other comparison uses.",
+        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_toolbarGlyphsMissing",
+        "severity": "medium",
+        "summary": "The toolbar needs mic, transcribe, person-heart and template-list glyphs the library lacks; Icon/Telehealth, Icon/UserOutlined and Icon/List stand in, the transcribe pill state is unbuilt.",
+        "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_transcriptionStatusInvention",
+        "severity": "medium",
+        "summary": "Nothing in the library expresses an inline status toggle (radio dot + bold teal label); built minimal as a local Transcription status/Start piece from Icon/RadioChecked (MUI) and an h5 text, per audit invention row 15.",
+        "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_moduleChipGlyphsMissing",
+        "severity": "low",
+        "summary": "No vitals, lab, allergy or timeline glyph in the library; the five new module chips use Icon/Clinical, Icon/UserGroupFilled, Icon/Reports, Icon/AttentionOutlined and Icon/Calendar.",
+        "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_navIconsShipWhiteGlyphs",
+        "severity": "medium",
+        "summary": "Icon/Clinical and Icon/Reports carry a vector fill bound color/common/white, so they vanish on light surfaces; the shell batch's Problems chip had shown a white glyph on pale teal. Chips 2, 4 and 6 now bind the glyph fill to color/text/primary as an instance override.",
+        "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_toolbarPillHeightDelta",
+        "severity": "low",
+        "summary": "Toolbar pills are the library Button medium (38 tall, primary stroke, Akkurat 14) where the mockup draws 42-tall pills with a #8CA7A2 stroke; library wins, logged in the change log.",
+        "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06"
+      },
+      {
+        "id": "npveEncounter_splitButtonSuperseded",
+        "severity": "low",
+        "summary": "The Split button instance 424:4417 in the Note card footer is hidden and renamed SUPERSEDED rather than deleted (rule 1); its nested segments cannot be un-exposed by the API.",
+        "discoveredDuring": "npveRebuild_encounterToolbar_2026-09-06"
+      }
+    ],
+    "openFlagCountInProjection": 20
+  },
+  "integrity": {
+    "contractSha256": "2c81496e9c0e7c20b9a391a425bde669a978de973c67054660db2e195526d961"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "pilot-pmhx-condition-row",
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false,
+    "scope": "All nodes on all four pages, plus targeted master-to-instance verification for both new variants."
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "details": "All four pages were walked. Existing unbound paints were enumerated (Cover 1, Templates 33, Screens 34, Archive 10). The only new unbound paints are the established organizer fill/stroke on sections 518:5771 and 521:7834; the product component, comparison helpers, and their descendants introduce no unbound solid paints."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "details": "No fractional authored geometry was found on any page or in either new subtree. Intrinsic VECTOR and GROUP bounds were excluded per standing rule 8."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "Comment=Empty and Comment=Filled each contain two componentPropertyReferences: the row Condition text reference and the published Icon button's inherited Icon reference. Counts match across variants."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Proof instances resolve to Checkbox 155:1492, Icon button default/medium 77:1105 within the published Icon button set, ChatOutlined key 6bc407c23e71eb80b9334cde47be426cba738941, and ChatFilled key d6feeb4017e9bebc5e3bf526f88c8b2e376be6c5. The sole comparison remains an instance of shared master 35:332."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "Trauma renders from Condition=Trauma with Comment=Empty; Cataracts renders from Condition=Cataracts with Comment=Filled. Rendered text and nested icon main-component keys match their instance properties."
+    },
+    "instancePaintVerification": {
+      "pass": true,
+      "details": "Four rendered solid paints were compared for each master/proof pair. Empty and Filled each returned zero colour, effective-alpha, or bound-variable mismatches."
+    }
+  },
+  "pageAudit": {
+    "nodeCounts": {
+      "Cover": 9,
+      "Templates": 8015,
+      "Screens": 3657,
+      "Archive": 1330
+    },
+    "fractionalAuthoredGeometry": {
+      "Cover": 0,
+      "Templates": 0,
+      "Screens": 0,
+      "Archive": 0
+    }
+  },
+  "createdNodes": {
+    "templatesSection": "518:5771",
+    "rowComponentSet": "518:5797",
+    "emptyVariant": "518:5772",
+    "filledVariant": "518:5785",
+    "statesProof": "518:5798",
+    "referenceHelper": "518:5825",
+    "rebuildHelper": "518:5827",
+    "changeHelper": "518:5837",
+    "screensSection": "521:7834",
+    "comparison": "521:7835"
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-past-medical-history-row-2026-09-08/comparison.png",
+    "inspectedByExecutor": true,
+    "observations": [
+      "The source and rebuild preserve the same visible checkbox, label, and outlined comment-glyph relationship.",
+      "The rebuild's 42px row keeps the published Checkbox and Icon button touch targets without enlarging their visible glyphs.",
+      "The filled Cataracts proof uses the published ChatFilled icon and remains aligned with the empty Trauma state.",
+      "The compact comparison uses an instance-level clip override; the shared comparison master is unchanged."
+    ]
+  },
+  "toolCalls": {
+    "figmaRead": 14,
+    "figmaWrite": 15,
+    "screenshot": 6,
+    "correctionCycles": 9,
+    "note": "Counts include dependency discovery and atomic failed writes. Failed Figma scripts rolled back without leaving target nodes."
+  }
+}

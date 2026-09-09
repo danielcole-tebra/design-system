@@ -1,0 +1,137 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "pilot2-hospitalizations-edit",
+  "capturedAt": "2026-09-09T01:20:00Z",
+  "executors": {
+    "build": "Claude (Anthropic claude-fable-5-1) — Step 1 preflight through Step 4 evidence, single executor",
+    "finish": "Claude (Anthropic claude-fable-5-1) — record, finish gate, commit"
+  },
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false,
+    "scope": "All nodes on all four pages (one read-only walk per page, run in parallel after the last mutation), plus master-to-instance paint comparison for the three new components, shared-API readback, component identity, rendered-text checks, and single-placement counts."
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "exceptions": [
+        "580:6012 organizer section fill and stroke (Templates)",
+        "581:11116 organizer section fill and stroke (Screens)"
+      ],
+      "details": "Unbound visible solid paints per page on authored nodes (instance internals excluded): Cover 1, Templates 39, Screens 40, Archive 12. The only nodes with an id at or above 580 that carry an unbound paint are the two organizer sections. No product component, helper, sheet, or comparison descendant introduces an unbound solid paint; the form fill binds NPVE/Color Form surface, its stroke binds color/divider, the status selector fill binds library color/core/light, the Rebuild helper has no fill."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "exceptions": [],
+      "details": "Zero fractional authored x/y/width/height outside instances on any page (VECTOR, GROUP and BOOLEAN_OPERATION bounds excluded per standing rule 8). All new layout values are integers: form 518x410 with 16px padding and gap, Procedure row 486x40 with the field at 380 and the 90px selector after a 16px gap, body 518x475, sheet 550x651, reference 550x606, change log 480x1024."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "Sidesheet 279:2446 Body content preferred values 13 → 14 (+580:10621); default unchanged at 26:221; 13 properties unchanged; three Placement variants remain 550x600. Rebuild comparison 35:332 Reference/Rebuild/Change log content preferred values 16 → 17 each (+581:6630, +581:6216, +581:10997). Status selector master keeps its Label#352:0 TEXT property with the label's componentPropertyReferences.characters intact after the clone. Exactly one Hospitalizations edit comparison exists on Screens (581:11117)."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Form 580:6017 rows: Edit event header (Icon button 77:1109 with Icon#170:0 = 389:3433 Icon/TrashOutlined), Facility Name (Text field 77:708 small/Default/Empty), Dates (two GAP wrappers each holding Text field 77:708 + Icon/Calendar 316:3409), Related to problem (77:708, select=true), Procedure (Text field 77:708 at 380 + Hospitalization status selector 580:6013), Comments (Text field 77:698 medium, multiline=true, 104 tall). Body 580:10621: tab strip clone with Tabs/Tab 77:642 (selected=yes, Hospitalizations) and 77:640 (selected=no, Facility Stay) over Divider, plus form instance 580:10633. Sheet 581:6217 → 6:65 Placement=Floating, Body content = 580:10621, Title = External Care History, tertiary/secondary/primary actions shown. Comparison 581:11117 → 35:332 with slots swapped to 581:6630 / 581:6216 / 581:10997. Change log rows → 18:103 Change log/Row (eleven, all visible). Archive holds no node with an id at or above 580."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "Rendered text matches stored properties: tab labels Hospitalizations / Facility Stay with selected yes / no; every Text field renders its Label (Facility Name, Admission Date, Discharge Date, Related to problem, Procedure Code, Comments); the status selector instance renders 'Status' from Label#352:0 = Status; the eleven change-log rows render their What text; footer Buttons store 'Cancel', 'Save & Add to Note', 'Save' and render in TITLE case (npve.buttonLabels). No variant was cloned; the standalone Allergy severity selector clone kept its property definition and reference."
+    },
+    "instancePaintVerification": {
+      "pass": true,
+      "details": "Master versus live instance, visible solid paints compared in traversal order: Hospitalization status selector 580:6013 vs 580:6081 — 3 paints, 0 mismatches; form 580:6017 vs 580:10633 — 58 paints, 0 mismatches; body 580:10621 vs the sheet's Body content instance — 62 paints, 0 mismatches. The instance of the status selector inside the placed comparison resolves through I581:11117;114:1139;581:6217;6:80;580:10633;580:6081."
+    },
+    "sharedDefaultsAndGeometry": {
+      "pass": true,
+      "details": "Sidesheet set: three variants 550x600, 13 properties, default body 26:221 — unchanged; only the preferred-value list grew. Placed sheet 581:6217: 550x651 = Header 72 + divider 1 + Body region 507 (16 + 475 + 16) + Footer 71 at y 580; the footer immediately follows the body. Rebuild helper 581:6216 is 550x651 with no fill. Reference helper 581:6630 and its rectangle are 550x606 (source is 606 tall), image FIT."
+    },
+    "reference": {
+      "pass": true,
+      "details": "download_assets export of source 129:8401 at scale 2, png, 60,914 bytes; rows 0 to 3 checked locally for the component-set outline (none; grey #D6D6D6 outline and white only). Uploaded through upload_assets to 581:6631, image hash eb453180654dfb5918ad6b37eb9c2d2209136e29, getSizeAsync 1100x1212. Reference column of the comparison render differs from the 1x source capture by 0 thresholded pixels."
+    },
+    "concurrency": {
+      "pass": true,
+      "details": "check-batch.js passed against the run guard after start (schema digest d3e3c4be65f6); no schema write occurred between start and finalize. Source zVsuhYehoSLLq880qRBFkq read and exported only, current page not changed; library YX2n4YLrEpBXNbcc73T6dw read only (one variable imported by key for binding in the consuming file)."
+    }
+  },
+  "pageAudit": {
+    "nodeCounts": { "Cover": 8, "Templates": 9115, "Screens": 4341, "Archive": 1782 },
+    "unboundSolidPaints": { "Cover": 1, "Templates": 39, "Screens": 40, "Archive": 12 },
+    "fractionalAuthoredGeometry": { "Cover": 0, "Templates": 0, "Screens": 0, "Archive": 0 },
+    "countingNote": "page.findAll(() => true) with skipInvisibleInstanceChildren=false; page node not counted. Archive rose from 1528 (PMHx body audit) because the closeout batch moved four proofs there; no node with an id at or above 580 is on Archive."
+  },
+  "createdNodes": {
+    "templatesSection": "580:6012",
+    "statusSelector": "580:6013",
+    "statusSelectorLabel": "580:6014",
+    "formComponent": "580:6017",
+    "formHeader": "580:6018",
+    "facilityNameField": "580:6021",
+    "datesRow": "580:6036",
+    "relatedToProblemField": "580:6043",
+    "procedureRow": "580:6059",
+    "procedureCodeField": "580:6060",
+    "statusSelectorInstance": "580:6081",
+    "commentsField": "580:6085",
+    "bodyComponent": "580:10621",
+    "tabStrip": "580:10622",
+    "formInstance": "580:10633",
+    "rebuildHelper": "581:6216",
+    "rebuildHelperSheet": "581:6217",
+    "referenceHelper": "581:6630",
+    "frozenSourceImage": "581:6631",
+    "changeHelper": "581:10997",
+    "changeRows": ["581:11002", "581:11003", "581:11004", "581:11005", "581:11006", "581:11007", "581:11008", "581:11009", "581:11010", "581:11056", "581:11062"],
+    "screensSection": "581:11116",
+    "comparison": "581:11117",
+    "gapMarkerDateField": "581:11754",
+    "gapMarkerDropdownChip": "581:11761"
+  },
+  "corrections": [
+    "W2→W3: the Status selector hugs to 90px (library Regular 16 label) where the source pill is 85, so the fixed Procedure row overran 486 by 5px; corrected by making Procedure Code fill the row (486 - 16 - 90 = 380).",
+    "W4a→W6: the cloned Facility Stay sheet kept a fixed 853px height after the body swap; a HUG attempt did not take because the shell's Body region fills the sheet, so the sheet was resized explicitly to its content height 651, matching how the PMHx sheet is sized.",
+    "W4b→W5: the cloned change-log Content frame was fixed at 1198px; set to hug so the log is 1024px tall for eleven rows."
+  ],
+  "visualReview": {
+    "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-hospitalizations-edit.png",
+    "inspectedByExecutor": true,
+    "inspectedBy": "Claude, at 1x (1708x1116), plus the standalone sheet at 550x651, the body at 518x475, the form at 518x410, the change log at 480x1024, and PIL crops/diffs of both columns",
+    "observations": [
+      "Reference and rebuild carry the same content in the same order: External Care History header with close, Hospitalizations (selected) and Facility Stay tabs, Edit Event card with trash action, Facility Name, Admission and Discharge dates with calendars, Related to problem select, Procedure Code with the Status pill, Comments, and the Cancel / Save & Add to Note / Save footer.",
+      "The rebuild is 45px taller than the 606px source (651): 72/71 shell regions, 48px library tabs with a hairline, and a 16px tab-to-form gap. Nothing is clipped; both comparison columns have clipping off and the sheet sits at 1:1.",
+      "The Status pill renders in the source colour (#D4E0DD via library color/core/light) at 90x32 with the library Regular 16 label and DownCaret, following the Allergy severity selector stand-in; the Dropdown chip GAP marker is placed beside the comparison.",
+      "Date fields use the recorded GAP wrapper: the library Text field plus Icon/Calendar beside it; the Text field end adornment GAP marker is placed beside the comparison.",
+      "Comments shows the resting state with the library grey outline and label inside the field, where the source shows the focused teal outline with a floating label and 'Comments go here' placeholder; logged as a change-log row per npve.fieldStates.",
+      "Footer renders 'Save & Add To Note' from the stored 'Save & Add to Note' because the published Button applies TITLE case; logged per npve.buttonLabels.",
+      "Rebuild column of the comparison versus the standalone sheet: 76 differing pixels, all corner anti-aliasing against the grey backdrop. Reference column versus the 1x source capture: 0 thresholded differences."
+    ]
+  },
+  "figmaNodes": {
+    "sidesheetSet": "279:2446",
+    "sidesheetFloating": "6:65",
+    "comparisonMaster": "35:332",
+    "changeLogRow": "18:103",
+    "facilityStayForm": "389:3469",
+    "facilityStayBody": "391:3567",
+    "allergySeveritySelector": "352:3206",
+    "dateGapMarkerSource": "394:5611",
+    "dropdownChipGapMarkerSource": "404:7061",
+    "coreLightVariable": "VariableID:f9545265b644c9c79e2deb92e852841880f84343/74:56"
+  },
+  "toolCalls": {
+    "figmaRead": 11,
+    "figmaWrite": 9,
+    "screenshot": 6,
+    "correctionCycles": 3,
+    "note": "Single Claude session from the operator approval. use_figma: 7 read-only preflight/inventory calls plus 4 parallel page audits = 11 reads; 9 write calls (W1 section+selector, W2 form, W3 body, W4a helpers+APIs, W4b change log, W5 sizing, W6 sheet height, W7a change-log preferred value, W7b Screens comparison+markers). Also 1 get_metadata, 1 download_assets, 1 upload_assets, 6 get_screenshot (source 1x, form, body, sheet, change log, comparison)."
+  }
+}

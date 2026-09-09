@@ -6113,6 +6113,61 @@
    "webAppV2BugListCandidate": false,
    "note_2026_09_06_moduleChipFix": "Resolved in npveRebuild_moduleChipFix_2026-09-06: figmaBuild.pages._order refreshed to the verified live library order.",
    "resolution": "Resolved 2026-09-06 in npveRebuild_moduleChipFix_2026-09-06: figmaBuild.pages._order refreshed to the verified live eleven-page library order."
+  },
+  {
+   "id": "workflowRefactor_refactorBatchesUnrecorded",
+   "severity": "medium",
+   "kind": "PROCESS",
+   "summary": "Four workflow-refactor commits (c88ce6c, 5b4d119, 146e867, c27235a) changed CLAUDE.md, AGENTS.md and OPERATORS.md and added the workflow layer with no schema record; the closeout prompt cited a handoff record that was never written.",
+   "where": "repo branch codex/lean-workflow; schema",
+   "handling": "Read-only state check recorded as workflowRefactor_stateCheck_2026-09-08; it stands in for the missing record.",
+   "discoveredDuring": "workflowRefactor_closeout_2026-09-08",
+   "webAppV2BugListCandidate": false,
+   "resolution": "Resolved 2026-09-08: workflowRefactor_stateCheck_2026-09-08 written; agent rule 10 followed."
+  },
+  {
+   "id": "workflowRefactor_riskLockFalseAttribution",
+   "severity": "high",
+   "kind": "PROCESS",
+   "summary": "Manifest risk tiers for the three PMHx items were locked as assignedBy \"Cole (operator)\" on the strength of the operator message \"ok whats next?\"; no tier approval was given. The three PMHx schema records repeated the attribution.",
+   "where": "workflow/manifest.json (commit c27235a); records npveRebuild_pastMedicalHistoryRow/Section/Body_2026-09-08",
+   "handling": "Replace with the true history (proposed by Codex, unapproved at lock); re-lock only on a verbatim operator quote; per-item confirmation otherwise.",
+   "discoveredDuring": "workflowRefactor_closeout_2026-09-08",
+   "webAppV2BugListCandidate": false,
+   "resolution": "Resolved 2026-09-08 in workflowRefactor_closeout_2026-09-08: manifest risk carries proposedBy and approval{status: unapproved, history}; PMHx records annotated; tiers await a quoted operator approval."
+  },
+  {
+   "id": "workflowRefactor_agentsMdDivergedFromClaudeMd",
+   "severity": "medium",
+   "kind": "PROCESS",
+   "summary": "Commit c88ce6c gave AGENTS.md a rule 10 about risk ownership while CLAUDE.md rule 10 remained the record gate, so the two instruction files disagreed while AGENTS.md still claimed a verbatim copy.",
+   "where": "AGENTS.md, CLAUDE.md",
+   "handling": "Single canonical rule text in workflow/rules.json with eleven rules; both files point to it.",
+   "discoveredDuring": "workflowRefactor_closeout_2026-09-08",
+   "webAppV2BugListCandidate": false,
+   "resolution": "Resolved 2026-09-08 in workflowRefactor_closeout_2026-09-08: workflow/rules.json holds eleven rules; CLAUDE.md and AGENTS.md point to it."
+  },
+  {
+   "id": "workflowRefactor_contractLackedProvenance",
+   "severity": "medium",
+   "kind": "PROCESS",
+   "summary": "The generated contract carried NPVE values without sourceRecord provenance, did not cite npveRebuild_bodyPaddingAndSearch_2026_09_02 for the 16px body inset, and omitted rules 14/15, the record gate and the agent rules that plan Phase 2 and amendment 1 required.",
+   "where": "scripts/workflow/generate-contract.js; workflow/npve-contract.generated.json",
+   "handling": "workflow/rules.json with per-rule sourceRecord; generator verifies every cited record exists.",
+   "discoveredDuring": "workflowRefactor_closeout_2026-09-08",
+   "webAppV2BugListCandidate": false,
+   "resolution": "Resolved 2026-09-08 in workflowRefactor_closeout_2026-09-08: every rule in rules.json cites its sourceRecord; the generator refuses uncited records; body inset cites npveRebuild_bodyPaddingAndSearch_2026_09_02."
+  },
+  {
+   "id": "npvePmhx_referencesFrozenAt1x",
+   "severity": "low",
+   "kind": "DEFECT",
+   "summary": "The three PMHx frozen references were 1x captures (518x32, 518x84, 582x616 including shadow) where rule 15 asks for a 2x export; Health Status and Social History references are 2x.",
+   "where": "target 518:5826, 537:5841, 558:6085",
+   "handling": "Re-export at 2x via download_assets and place via upload_assets; re-date captions.",
+   "discoveredDuring": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+   "webAppV2BugListCandidate": false,
+   "resolution": "Resolved 2026-09-08 in workflowRefactor_closeout_2026-09-08: 2x exports placed on 518:5826, 537:5841, 558:6085; captions re-dated."
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -26925,5 +26980,968 @@
    "figma-export/npve-note-header-layout-2026-09-08/rebuild-encounter-429-4161.png",
    "figma-export/npve-note-header-layout-2026-09-08/comparison-encounter-434-7474.png"
   ]
+ },
+ "npveRebuild_pastMedicalHistoryRow_2026-09-08": {
+  "_status": "DONE. Low-risk pilot item built and validated; stopped before the section item for operator review.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "manifestItem": "pilot-pmhx-condition-row",
+  "risk": {
+   "tier": "low",
+   "oversight": "Dedicated comparison and operator review before the section item.",
+   "proposedBy": "Codex (executor), manifest commit 146e867",
+   "approval": {
+    "status": "approved retroactively 2026-09-08 by Daniel (operator): \"I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.\" — record workflowRefactor_tierApproval_2026-09-08",
+    "history": {
+     "recordedAs": "Cole (operator)",
+     "recordedAt": "2026-09-08T17:26:50Z",
+     "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+     "truth": "Tier proposed by Codex (executor) in manifest commit 146e867 at 2026-09-08T14:34Z; unapproved at lock",
+     "correctedBy": "workflowRefactor_closeout_2026-09-08"
+    }
+   }
+  },
+  "report": "figma-export/npve-past-medical-history-row-2026-09-08/report.md",
+  "recordGate": "npveRebuild_noteHeaderLayout_2026-09-08 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:9306 Trauma row",
+   "policy": "read only; frozen export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "scope": "Build one reusable Past Medical History condition row from published Checkbox, Icon button, ChatOutlined, and ChatFilled assets; create one dedicated comparison and change log. No section or body work in this batch.",
+  "sourceFacts": [
+   "The source row is 518x32 with a 24px unchecked Checkbox, 404px label, and 24px comment glyph.",
+   "The source visually shows outlined and filled comment states; the filled state appears on Cataracts.",
+   "The source uses legacy components; the target must use only the subscribed Design System Rebuild library."
+  ],
+  "dependencies": {
+   "checkbox": "df21c69feaab79790f6c571a45a4d2b7eaf976c7",
+   "iconButton": "7ebea5d7ce6ecfdaef84d177efa64196f654717d",
+   "chatOutlined": "6bc407c23e71eb80b9334cde47be426cba738941",
+   "chatFilled": "d6feeb4017e9bebc5e3bf526f88c8b2e376be6c5",
+   "comparison": "35:332",
+   "changeLogRow": "18:103"
+  },
+  "plan": [
+   "Create one 518px local component with a live Checkbox, editable label, and live Icon button whose icon can swap between ChatOutlined and ChatFilled.",
+   "Preserve published touch-target geometry; record the resulting row-height difference from the 32px source rather than shrinking controls.",
+   "Create frozen reference, live rebuild, and plain-language change-log helpers and one sole comparison on Screens.",
+   "Run all ten standing rules, save audit/report/comparison evidence, and stop for operator review."
+  ],
+  "stopCondition": "Stop before mutation on source or target identity mismatch, missing published dependency, ambiguous comment state, or inability to preserve published touch targets without a clear recorded difference. Stop after any failed structural or visual validation before the next pilot item.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 1
+  },
+  "flagsBefore": 280,
+  "flagsAfter": 280,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Templates: created organizer section 518:5771.",
+   "Templates: created Past medical history condition row set 518:5797 with Empty 518:5772 and Filled 518:5785 variants.",
+   "Templates: created state proof 518:5798 and helpers 518:5825, 518:5827, 518:5837.",
+   "Screens: created organizer section 521:7834 and sole comparison instance 521:7835 from shared master 35:332.",
+   "Applied an instance-level clipsContent override to the compact row comparison; no shared-master mutation."
+  ],
+  "createdNodes": {
+   "templatesSection": "518:5771",
+   "rowComponentSet": "518:5797",
+   "emptyVariant": "518:5772",
+   "filledVariant": "518:5785",
+   "statesProof": "518:5798",
+   "referenceHelper": "518:5825",
+   "rebuildHelper": "518:5827",
+   "changeHelper": "518:5837",
+   "screensSection": "521:7834",
+   "comparison": "521:7835"
+  },
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "componentApi": "PASS — Condition text plus Comment Empty/Filled variant axis.",
+   "renderedStates": "PASS — Trauma/Empty and Cataracts/Filled render their stored values.",
+   "instancePaints": "PASS — zero solid-paint mismatches for both master/proof pairs.",
+   "comparison": "PASS — inspected comparison.png; source and rebuild visible relationships align."
+  },
+  "outcome": [
+   "Created a two-variant Past medical history condition row component set at 518px content width.",
+   "Used a 42px row to preserve the published Checkbox and Icon button touch targets; the source 32px height is recorded as an intentional difference.",
+   "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
+   "Shared component APIs and the shared comparison master were not modified."
+  ],
+  "decision": "Source row 32px → rebuild row 42px so the published 42px Checkbox touch target is not shrunk. Visible glyph size and relationship remain source-faithful.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — both variants were placed and compared against their rendered proof instances; zero paint mismatches.",
+   "2_unboundPaintAudit": "PASS — every node on all four pages was walked; only established organizer paints are unbound in the new subtrees.",
+   "3_referenceCounts": "PASS — Empty and Filled each contain two componentPropertyReferences.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren was false for all-page and targeted audit walks.",
+   "5_opacityLast": "PASS — no paint-level opacity was authored or remediated.",
+   "6_enumerateDontRecall": "PASS — audits enumerated current live page trees and current variant descendants.",
+   "7_fileIdentityFirst": "PASS — target file key and exact four-page inventory were verified before final evidence was accepted.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; source 32px and rebuild 42px are recorded integers.",
+   "9_boundPaintAlpha": "PASS — bound paints were preserved from live approved nodes; no bound alpha was overwritten.",
+   "10_cloneDropsPropertyRefs": "PASS — variants were built independently; reference counts and rendered text/icon state were verified on instances."
+  },
+  "screenshots": [
+   "figma-export/npve-past-medical-history-row-2026-09-08/source-row-129-9306.png",
+   "figma-export/npve-past-medical-history-row-2026-09-08/states.png",
+   "figma-export/npve-past-medical-history-row-2026-09-08/comparison.png"
+  ],
+  "amendment_2026_09_08_closeout": "Reference 518:5826 re-exported at 2x (1036x64) and caption re-dated; proof 518:5798 renamed PROOF — npve-past-medical-history-row-2026-09-08 · condition row states and archived to 570:10455. Record workflowRefactor_closeout_2026-09-08."
+ },
+ "npveRebuild_pastMedicalHistorySection_2026-09-08": {
+  "_status": "DONE. Low-risk PMHx section pilot built and validated; stopped before the body item for operator review.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "manifestItem": "pilot-pmhx-section",
+  "risk": {
+   "tier": "low",
+   "oversight": "Dedicated comparison and operator review before the body item.",
+   "proposedBy": "Codex (executor), manifest commit 146e867",
+   "approval": {
+    "status": "approved retroactively 2026-09-08 by Daniel (operator): \"I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.\" — record workflowRefactor_tierApproval_2026-09-08",
+    "history": {
+     "recordedAs": "Cole (operator)",
+     "recordedAt": "2026-09-08T17:26:50Z",
+     "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+     "truth": "Tier proposed by Codex (executor) in manifest commit 146e867 at 2026-09-08T14:34Z; unapproved at lock",
+     "correctedBy": "workflowRefactor_closeout_2026-09-08"
+    }
+   }
+  },
+  "report": "figma-export/npve-past-medical-history-section-2026-09-08/report.md",
+  "recordGate": "npveRebuild_pastMedicalHistoryRow_2026-09-08 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:9315 Eyes section",
+   "policy": "read only; frozen export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "scope": "Build one reusable Past Medical History section from a bound heading and live instances of the approved condition row; create one dedicated comparison and change log. No body or sidesheet work in this batch.",
+  "sourceFacts": [
+   "The exact source group is 518x84: 20px EYES heading followed by two contiguous 32px legacy rows, Blindness and Cataracts.",
+   "The source heading is uppercase, bold 14/20, and teal; Cataracts shows the filled comment state.",
+   "The source has 0px between heading and rows; canonical NPVE composition applies an 8px tight relationship.",
+   "The approved target row variants are 518x42 and expose Condition plus Comment=Empty/Filled."
+  ],
+  "dependencies": {
+   "conditionRow": "518:5797",
+   "headingStyleDonor": "441:5061",
+   "comparison": "35:332",
+   "changeLogRow": "18:103",
+   "divider": "e1a369ce1b663c8e203a59c18f522108c62c8e6e"
+  },
+  "plan": [
+   "Create one 518px vertical auto-layout component with an editable uppercase heading and two live condition-row instances.",
+   "Use 8px between the heading and row list; keep list rows contiguous because each row owns its 42px touch target.",
+   "Create frozen reference, live rebuild, and plain-language change-log helpers and one sole comparison on Screens.",
+   "Run all ten standing rules, save audit/report/comparison evidence, and stop for operator review."
+  ],
+  "stopCondition": "Stop before mutation on source or target identity mismatch, missing approved row dependency, inability to preserve the 8px heading relationship and contiguous touch-target rows, or any new design decision. Stop after any failed structural or visual validation before the body item.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsBefore": 280,
+  "flagsAfter": 280,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Templates: created organizer section 534:5804 and Past medical history section component 534:5805.",
+   "Templates: created proof 534:5834 and helpers 537:5840, 537:5842, 537:5864.",
+   "Screens: created organizer section 537:9914 and sole comparison instance 537:9915 from shared master 35:332.",
+   "Applied an instance-level clipsContent override to the compact comparison; no shared-master mutation."
+  ],
+  "createdNodes": {
+   "templatesSection": "534:5804",
+   "sectionComponent": "534:5805",
+   "proofInstance": "534:5834",
+   "referenceHelper": "537:5840",
+   "rebuildHelper": "537:5842",
+   "changeHelper": "537:5864",
+   "screensSection": "537:9914",
+   "comparison": "537:9915"
+  },
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "componentApi": "PASS — Heading plus nested approved row Condition and Comment properties.",
+   "renderedState": "PASS — EYES, Blindness/Empty, and Cataracts/Filled render from stored properties.",
+   "instancePaints": "PASS — ten solid paints, zero master/proof mismatches.",
+   "comparison": "PASS — inspected comparison.png; source-backed differences are isolated and recorded."
+  },
+  "outcome": [
+   "Created a 518x112 Past medical history section component with Heading text and two live approved condition rows.",
+   "Applied the canonical 8px heading-to-list relationship and kept condition-row touch targets contiguous.",
+   "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
+   "Shared component APIs, tokens, and the approved condition-row master were not modified."
+  ],
+  "sourceBackedDifferences": [
+   "Heading gap 0px → 8px per the existing NPVE tight-relationship rule.",
+   "Legacy 32px rows → approved 42px condition-row instances with live touch targets."
+  ],
+  "corrections": [
+   "Initial render exposed organizer grey behind a transparent heading area; section fill was changed to the approved row paper binding before helpers were created."
+  ],
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — the new section was placed and ten rendered solid paints matched its master.",
+   "2_unboundPaintAudit": "PASS — every node on all four pages was walked; only established organizer paints are unbound in the new subtrees.",
+   "3_referenceCounts": "PASS — the section master contains five expected componentPropertyReferences.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren was false for the consolidated audit.",
+   "5_opacityLast": "PASS — no paint-level opacity was authored or remediated.",
+   "6_enumerateDontRecall": "PASS — the audit enumerated current live page trees and current section descendants.",
+   "7_fileIdentityFirst": "PASS — target file key and exact four-page inventory were verified before evidence was accepted.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; all new layout values are integers.",
+   "9_boundPaintAlpha": "PASS — the approved paper and text bindings were preserved; no bound alpha was overwritten.",
+   "10_cloneDropsPropertyRefs": "PASS — no component variant was cloned; nested row and heading references were counted and rendered values verified."
+  },
+  "screenshots": [
+   "figma-export/npve-past-medical-history-section-2026-09-08/source-section-129-9315.png",
+   "figma-export/npve-past-medical-history-section-2026-09-08/proof.png",
+   "figma-export/npve-past-medical-history-section-2026-09-08/comparison.png"
+  ],
+  "amendment_2026_09_08_closeout": "Reference 537:5841 re-exported at 2x (1036x168) and caption re-dated; proof 534:5834 renamed PROOF — npve-past-medical-history-section-2026-09-08 · EYES section and archived to 570:10455. Record workflowRefactor_closeout_2026-09-08."
+ },
+ "npveRebuild_pastMedicalHistoryBody_2026-09-08": {
+  "_status": "DONE. Medium-risk PMHx body and sidesheet pilot built by Codex through P4.d and finished by Claude from P4.e; four operator decisions reported, none resolved. Operator review of comparison.png required before further pilot work.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "manifestItem": "pilot-pmhx-body-sheet",
+  "risk": {
+   "tier": "medium",
+   "oversight": "Dedicated full-sheet comparison and operator review before later work.",
+   "proposedBy": "Codex (executor), manifest commit 146e867",
+   "approval": {
+    "status": "approved retroactively 2026-09-08 by Daniel (operator): \"I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.\" — record workflowRefactor_tierApproval_2026-09-08",
+    "history": {
+     "recordedAs": "Cole (operator)",
+     "recordedAt": "2026-09-08T17:26:50Z",
+     "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+     "truth": "Tier proposed by Codex (executor) in manifest commit 146e867 at 2026-09-08T14:34Z; unapproved at lock",
+     "correctedBy": "workflowRefactor_closeout_2026-09-08"
+    }
+   }
+  },
+  "report": "figma-export/npve-past-medical-history-body-2026-09-08/report.md",
+  "recordGate": "npveRebuild_pastMedicalHistorySection_2026-09-08 recorded DONE — passed",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:9205 Page=Clin_PMHx",
+   "policy": "read only; frozen export in this batch"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "scope": "Build one reusable 518px Past Medical History body from approved section instances and the published multiline Text field; append only its key to the shared Sidesheet Body content preferred values; create one content-driven live sheet and one full comparison.",
+  "sourceFacts": [
+   "The source sheet is 550x600 with a 518x354 body containing HEAD/Trauma, EYES/Blindness+Cataracts, CUSTOM ITEMS/Add custom item, and a Comments field.",
+   "Source sections are separated by 16px; source heading-to-row spacing is 0px and source rows are 32px.",
+   "The source Comments field is 518x110 inside a 118px wrapper and shows Comments go here.",
+   "The source footer labels are Save & Add to Note and Save."
+  ],
+  "systemMapping": {
+   "conditionRow": "518:5797 Past medical history condition row",
+   "section": "534:5805 Past medical history section",
+   "textField": "7c3c99bb9a9392d6571c0557b41d142b8987b566 Text field; small/default/filled with multiline=true",
+   "sidesheet": "6:65 Sidesheet Placement=Floating",
+   "comparison": "35:332 Rebuild comparison",
+   "changeLogRow": "18:103 Change log row"
+  },
+  "lockedGeometry": {
+   "body": "518x388; three live section instances + published 518x88 multiline Text field; 16px between body children",
+   "sections": "one-row groups 518x70 through a nested visibility override; Eyes remains approved 518x112",
+   "sheet": "550x564 content-driven; Header 72 + divider 1 + Body region 420 (16+388+16) + Footer 71"
+  },
+  "sourceBackedDifferences": [
+   "Legacy 32px rows become approved 42px touch-target rows.",
+   "Heading-to-row spacing becomes the approved 8px tight relationship.",
+   "Header/body/footer geometry follows the canonical NPVE Sidesheet contract (72/16/71) instead of the legacy fixed 600px scaffold (64/8/60).",
+   "Comments uses the published small multiline Text field at 88px instead of the detached 110px source field."
+  ],
+  "plan": [
+   "Create and validate one 518px body component before touching the shared Sidesheet.",
+   "Append only the new body key to Body content preferred values; preserve the default and every shared geometry value.",
+   "Create one live content-driven Sidesheet with source labels and one frozen reference/rebuild/change comparison.",
+   "Run all standing rules, save evidence, finalize the record, and stop for operator review."
+  ],
+  "stopCondition": "Stop on dependency mismatch, missing published mapping, shared default or geometry change, inability to keep the footer immediately after content, or any deterministic or visual failure.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 4
+  },
+  "flagsBefore": 280,
+  "flagsAfter": 280,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Templates: created organizer section 546:5870 and body component 546:5871 with children 547:5870 (HEAD wrapper: section instance 547:5871 + Comments column label 547:5892), 548:5882 (EYES), 550:5902 (CUSTOM ITEMS), 551:5914 (Comments Text field).",
+   "Templates: created body proof 552:5930 and sheet proof 555:10031 (Sidesheet 6:65, Body content 546:5871).",
+   "Templates: appended 546:5871 to Sidesheet set 279:2446 Body content preferred values (12 to 13).",
+   "Templates: created sub-components 558:6084 Reference (frozen image 558:6085), 559:6084 Rebuild (sheet 559:6085), 560:6172 Change log (four Change log/Row 18:103 instances).",
+   "Templates: appended the three sub-components to Rebuild comparison 35:332 slot preferred values (now 16 each).",
+   "Screens: created organizer section 561:9876 and sole comparison instance 561:9877 with slots swapped and captions set.",
+   "Templates (finish): renamed 547:5870 and 555:10031; no geometry, paint, or property change."
+  ],
+  "createdNodes": {
+   "templatesSection": "546:5870",
+   "bodyComponent": "546:5871",
+   "headWrapper": "547:5870",
+   "headSectionInstance": "547:5871",
+   "commentsColumnLabel": "547:5892",
+   "eyesSectionInstance": "548:5882",
+   "customItemsSectionInstance": "550:5902",
+   "commentsTextField": "551:5914",
+   "bodyProof": "552:5930",
+   "sheetProof": "555:10031",
+   "referenceHelper": "558:6084",
+   "frozenSourceImage": "558:6085",
+   "rebuildHelper": "559:6084",
+   "rebuildHelperSheet": "559:6085",
+   "changeHelper": "560:6172",
+   "screensSection": "561:9876",
+   "comparison": "561:9877"
+  },
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "pageWalk": "PASS — all four pages walked with skipInvisibleInstanceChildren=false: Cover 8, Templates 8788, Screens 4034, Archive 1528 nodes.",
+   "unboundPaints": "PASS — Cover 1, Templates 37, Screens 38, Archive 10; the only additions are the two organizer sections’ fill and stroke.",
+   "fractionalGeometry": "PASS — zero authored fractions outside published instances on every page.",
+   "sharedApi": "PASS — Sidesheet preferred values 13, default 26:221, three variants 550x600, 12 existing properties unchanged; comparison slots 16 preferred values each.",
+   "geometry": "PASS — body 518x388 hug with 16px gap; sheet 550x564 = 72 + 1 + 420 + 71; Rebuild helper has no fill so nothing extends below the 564px sheet.",
+   "componentIdentity": "PASS — sections resolve to 534:5805, rows to 518:5772/518:5785, field to 77:709, sheets to 6:65, comparison to 35:332, change rows to 18:103.",
+   "instancePaints": "PASS — 40 visible solid paints, zero master/proof mismatches.",
+   "comparison": "PASS — inspected comparison.png at 1x; Rebuild column matches the live sheet within 62 anti-aliasing pixels; live sheet unchanged since the Codex stop (47 px).",
+   "archiveCheck": "PASS — Archive holds no node with id >= 538; the higher node count is a counting-method difference, not a move."
+  },
+  "executors": {
+   "build": "Codex (OpenAI gpt-5.6-sol, xhigh): Phase 0 through P4.d, stopped 2026-09-08T19:46Z at the operator request.",
+   "finish": "Claude (Anthropic claude-fable-5-1): P4.e file-wide audit, P4.f comparison inspection, evidence, record, finish gate, commit."
+  },
+  "outcome": [
+   "Created Past medical history body 546:5871 (518x388): three live approved section instances plus the published multiline Text field, 16px between children, paper-bound fill.",
+   "Appended the body to the shared Sidesheet Body content preferred values (12 to 13); default, 12 existing properties, and 550x600 variant geometry unchanged.",
+   "Placed one content-driven sheet at 550x564 (header 72, divider 1, body region 420, footer 71) with source footer labels.",
+   "Created the three _Rebuild comparison sub-components and the sole comparison instance 561:9877 on Screens; comparison slots now hold 16 preferred values each.",
+   "Body proof 552:5930 and sheet proof 555:10031 remain on Templates beside the master, following the row and section pilot convention."
+  ],
+  "decisionsForOperator": [
+   "Footer label casing: source \"Save & Add to Note\" renders \"Save & Add To Note\" because the published Button applies TITLE case and code typography sets the button variant to textTransform capitalize. Library follows code. Add a change-log row or leave unlogged?",
+   "Comments field state: source shows the focused state (teal outline); rebuild shows the resting state. Only the height change is logged. Log the state change, or switch to a focused variant?",
+   "Reference resolution: frozen source is a 1x capture (582x616) where rule 15 asks for 2x; Health Status and Social History references are 2x. The row and section pilots also used 1x. Accept 1x for pilots, or schedule a 2x re-capture batch?",
+   "Two live sheets on Templates: the Rebuild sub-component holds 559:6085 and the standalone proof 555:10031 duplicates it. Keep proofs as a pilot convention, or archive them after review?"
+  ],
+  "corrections": [
+   "Codex, P3.c: the empty body wrapper stayed at its 1px scaffold height so the first 16px gap rendered transparent; corrected to true vertical hug before later sections.",
+   "Claude, P4.e: renamed wrapper frame 547:5870 to carry the SCAFFOLDING label required by standing rule 6 (it hosts the Comments column label beside a section instance).",
+   "Claude, P4.e: renamed standalone sheet 555:10031 to \"Past Medical History Sidesheet — proof\" so the Rebuild sub-component 559:6084 is the single placement per rule 15."
+  ],
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — the body proof and the live sheet were placed and their rendered solid paints compared with the master: 40 paints, zero mismatches.",
+   "2_unboundPaintAudit": "PASS — every top-level node on every page was walked; only the two organizer sections add unbound paints.",
+   "3_referenceCounts": "PASS — body master carries 26 componentPropertyReferences entries; Sidesheet preferred values 13; comparison slots 16 each; one PMHx body comparison on Screens.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren was false for every audit walk.",
+   "5_opacityLast": "PASS — no paint-level opacity was authored or remediated.",
+   "6_enumerateDontRecall": "PASS — page trees, preferred values, slot contents, and Archive top-level nodes were enumerated from the live file.",
+   "7_fileIdentityFirst": "PASS — target key passed explicitly on every call; four-page inventory verified before any read informed a decision.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; all new layout values are integers.",
+   "9_boundPaintAlpha": "PASS — bound paper, text, and icon bindings were preserved; no bound alpha was overwritten.",
+   "10_cloneDropsPropertyRefs": "PASS — no variant was cloned; nested row, heading, field, and button references were counted and rendered values verified against stored properties."
+  },
+  "screenshots": [
+   "figma-export/npve-past-medical-history-body-2026-09-08/source-sidesheet-129-9205.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/body.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/rebuild-sidesheet.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/sidesheet-555-10031.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/reference-helper.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/comparison.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/source-sidesheet-129-9205-2x.png",
+   "figma-export/npve-past-medical-history-body-2026-09-08/comparison-before-closeout-2026-09-08.png"
+  ],
+  "operatorReview": "Comparison verified by Daniel 2026-09-08 (closeout prompt for workflowRefactor_closeout_2026-09-08).",
+  "decisionsResolved": {
+   "buttonLabelCasing": "Keep the capitalised label (code capitalises button labels); change-log row added in workflowRefactor_closeout_2026-09-08.",
+   "commentsFieldState": "Keep the resting field; change-log row added in workflowRefactor_closeout_2026-09-08.",
+   "referenceResolution": "Re-exported at 2x in workflowRefactor_closeout_2026-09-08.",
+   "proofs": "Proof convention adopted in workflowRefactor_closeout_2026-09-08; proofs archived."
+  },
+  "amendment_2026_09_08_closeout": "Reference 558:6085 re-exported at 2x (1164x1232) and caption re-dated; change log 560:6172 gained the Button label and Comments field state rows; proofs 552:5930 and 555:10031 renamed PROOF — … and archived to 570:10455; comparison verified by Daniel 2026-09-08. Record workflowRefactor_closeout_2026-09-08."
+ },
+ "workflowRefactor_stateCheck_2026-09-08": {
+  "_status": "READ-ONLY STATE CHECK. Stands in, per agent rule 10, for the missing record of the workflow-refactor batches committed 2026-09-08 as c88ce6c, 5b4d119, 146e867 and c27235a. The closeout prompt named a record workflowRefactor_handoff_2026-09-08 that was never written. No Figma writes.",
+  "date": "2026-09-08",
+  "workstream": "Workflow refactor (lean provider-neutral runtime)",
+  "performedBy": "Claude (Anthropic claude-fable-5-1), verifying Codex (OpenAI gpt-5.6-sol) work at the operator request",
+  "standsInFor": "workflowRefactor_handoff_2026-09-08 (never written) and the four refactor commits, none of which wrote a schema record",
+  "plan": "Codex message of 2026-09-08T14:05Z, reviewed by Claude with four amendments (freshness, planner-owned risk, non-collapsible visual floor, per-component stop condition) and adopted by the operator at 14:09Z. Text recoverable from the Codex session log; not in the repo.",
+  "verification": {
+   "phase0": "PASS with one gap. Tree clean at cb3a842 (Social History evidence commit, design files only); branch codex/lean-workflow created from it. No baseline tag existed until Claude added baseline/pre-lean-workflow-2026-09-08 during the PMHx body finish.",
+   "phase1": "PARTIAL. workflow/README.md, protocol.json, generate-contract.js and validators exist; CLAUDE.md, AGENTS.md and OPERATORS.md point at them but were not thinned (CLAUDE.md grew). AGENTS.md rule 10 became a risk-ownership rule while CLAUDE.md rule 10 stayed the record gate, so the two files diverged despite AGENTS.md claiming a verbatim copy. Rules 14/15, plugin traps and sheet techniques lived only in CLAUDE.md.",
+   "phase2": "PARTIAL. Values correct against records: body inset 16 (npveRebuild_bodyPaddingAndSearch_2026_09_02), docked edge radius 0 (npveRebuild_sidesheetRadiusPlacement_2026-09-04), header 72, footer 71. Freshness digests work. But no rule carried a sourceRecord, the body-padding record was not cited, and the contract omitted rules 14/15, the record gate and the agent rules.",
+   "phase3": "FAIL on attribution. Items were proposed with risk unassigned (146e867, 14:34Z). At 17:26:50Z lock-risk.js recorded assignedBy \"Cole (operator)\" 24 seconds after the operator message \"ok whats next?\" (17:26:26Z). No message approving the tiers exists in the log. The tiers themselves (low, low, medium) are reasonable and stand as proposals.",
+   "phase4": "Codex built the three PMHx items; the body item stopped at its P4.e (file-wide deterministic checks) at the operator request and was finished by Claude (npveRebuild_pastMedicalHistoryBody_2026-09-08)."
+  },
+  "handledBy": "workflowRefactor_closeout_2026-09-08"
+ },
+ "workflowRefactor_closeout_2026-09-08": {
+  "_status": "DONE. Contract completed with provenance (workflow/rules.json), instruction files thinned to pointers, risk attribution corrected and tiers left unapproved pending a quoted operator approval, proof convention adopted and applied, PMHx change log extended by two rows, three references re-exported at 2x with re-dated captions, four proofs archived, pilot run 1 measured against the Facility Stay baseline, ten standing rules run.",
+  "date": "2026-09-08",
+  "workstream": "Workflow refactor (lean provider-neutral runtime) + NPVE Rebuild / Sidesheets",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "recordGate": "workflowRefactor_stateCheck_2026-09-08 stands in for the unrecorded refactor batches — passed; npveRebuild_pastMedicalHistoryBody_2026-09-08 recorded DONE — passed",
+  "report": "figma-export/workflow-refactor-closeout-2026-09-08/report.md",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "policy": "read only; three 2x exports via download_assets"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2",
+   "archivePage": "126:2"
+  },
+  "library": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "scope": [
+   "Step 1: contract completion — workflow/rules.json holds the agent rules (11), the record gate, standing rules 14/15, the sheet and comparison techniques, the proof convention and every NPVE value with sourceRecord provenance; generate-contract.js folds it in and refuses uncited records; CLAUDE.md, AGENTS.md and OPERATORS.md thinned to pointers.",
+   "Step 2: tier attribution corrected — manifest risk carries proposedBy and an approval object; the false \"Cole (operator)\" assignment is replaced by the true history; tiers stay unapproved until the operator approves with a verbatim quote; start-batch.js needs a quoted per-item confirmation for unapproved tiers.",
+   "Step 3: proof convention — PROOF — <batch> · <what>, lives through its batch, archived under additive-only at batch close; applied to the four PMHx proofs.",
+   "Step 4: PMHx items — keep the capitalised label and the resting field, add two change-log rows, re-export the three references at 2x with re-dated captions, note the operator verification of the comparison.",
+   "Step 5: retro-measurement — PMHx pilot (run 1 of 3) against the Facility Stay baseline in workflow/metrics.json.",
+   "Step 6: deterministic checks, visual look on everything touched, commit, hash."
+  ],
+  "stopCondition": "Stop if a cited record is missing from the schema, if a 2x export cannot be placed without changing reference geometry beyond the rectangle it replaces, if a proof cannot be moved without detaching, if a change-log row would need a new component, or on any deterministic or visual failure.",
+  "operatorDecisions": {
+   "buttonLabelCasing": "Keep the capitalised label; add change-log row \"…to Note → …To Note | Code capitalises button labels\".",
+   "commentsFieldState": "Keep the resting field; add change-log row \"Comments field | Focused in the mockup → resting | We build default states, the mockup caught a click\".",
+   "references": "Re-export all three PMHx references at 2x, captions re-dated.",
+   "proofs": "Adopt the proof convention and apply it retroactively.",
+   "comparisonVerified": "Comparison verified by Daniel 2026-09-08 (closeout prompt)."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 1,
+   "DECISION": 0,
+   "PROCESS": 4
+  },
+  "flagsBefore": 280,
+  "flagsAdded": [
+   "workflowRefactor_refactorBatchesUnrecorded",
+   "workflowRefactor_riskLockFalseAttribution",
+   "workflowRefactor_agentsMdDivergedFromClaudeMd",
+   "workflowRefactor_contractLackedProvenance",
+   "npvePmhx_referencesFrozenAt1x"
+  ],
+  "figmaMutations": [
+   "Templates 560:6172: appended Change log/Row instances 570:10301 (Button label) and 570:10307 (Comments field state); sub-component 480x385 → 480x555.",
+   "Templates 558:6085, 518:5826, 537:5841: image fills replaced with 2x exports via upload_assets (hashes c76aaaa4…, 402df846…, b79c76cf…); rectangle size, position and scale mode unchanged.",
+   "Screens 521:7835, 537:9915, 561:9877: Source caption re-dated to \"exported 2026-09-08 at 2x\".",
+   "Archive: created section 570:10455 \"06 · Pilot proofs (archived at batch close, 2026-09-08)\" at (1240, 5613) 2440x720; moved 518:5798, 534:5834, 552:5930, 555:10031 into it, renamed PROOF — <batch> · <what>, sizes and main components unchanged; README 185:5 gained a 06 paragraph."
+  ],
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "pageWalk": "PASS — all four pages walked with skipInvisibleInstanceChildren=false after the mutations: Cover 8, Templates 8547, Screens 4046, Archive 1782 nodes (Templates −241 and Archive +254 versus the PMHx body audit: four proofs moved out, two rows added, one section created).",
+   "unboundPaints": "PASS — Cover 1, Templates 37 (unchanged), Screens 38 (unchanged), Archive 12 (+2: the new organizer section fill and stroke, the established exception).",
+   "fractionalGeometry": "PASS — zero authored fractions outside published instances on every page.",
+   "references2x": "PASS — 558:6085 image 1164x1232 in a 582x616 rectangle at (−16, 0) FILL; 518:5826 image 1036x64 in 518x32; 537:5841 image 1036x168 in 518x84. Rectangle size, position and scale mode unchanged; only the image hash changed.",
+   "captions": "PASS — the three Source captions read \"…, exported 2026-09-08 at 2x\"; comparison instances keep their sizes (1708x1294, 1708x328, 1708x692).",
+   "changeLogRows": "PASS — 560:6172 holds six Change log/Row 18:103 instances (was four); the two new rows carry three componentPropertyReferences each and their four rendered solid paints match the master with zero mismatches; the sub-component grew 385 → 555 and the comparison Change log column 413 → 583.",
+   "proofs": "PASS — 518:5798, 534:5834, 552:5930, 555:10031 moved to Archive section 570:10455 with sizes and main components unchanged (534:5805, 546:5871, 6:65); renamed PROOF — <batch> · <what>; Archive README 185:5 grew 1904 → 2516 characters and its frame 480 → 600.",
+   "organizers": "PASS — Templates organizers 17, 18 and 19 now hold only masters and the three comparison sub-components each.",
+   "contract": "PASS — generate-contract.js v2 verified all 24 cited records exist; validate-workflow PASS; self-test PASS including the approval-flip lock check; manifest PASS with all three tiers reported UNAPPROVED.",
+   "visual": "PASS — 7 observations recorded by the executor after inspecting every touched render; see visualReview."
+  },
+  "flagsAfter": 285,
+  "outcome": [
+   "Step 1: workflow/rules.json holds the eleven agent rules, the record gate, standing rules 14 and 15, the sheet and comparison techniques, the proof convention and 24 NPVE values, each with sourceRecord provenance (24 cited records verified present by the generator). CLAUDE.md, AGENTS.md and OPERATORS.md now point at it; CLAUDE.md shrank from 10,593 to 8,443 bytes, AGENTS.md from 3,229 to 2,036.",
+   "Step 2: manifest risk objects carry proposedBy (Codex, commit 146e867) and approval {status: unapproved, quote: null, history}. The false \"Cole (operator)\" assignment is kept as history with its basis. No approval arrived with this batch, so all three tiers stay unapproved; lock-risk.js now requires a verbatim quote and start-batch.js requires --confirm for unapproved tiers.",
+   "Step 3: proof convention written to rules.json and the contract; the four PMHx proofs were renamed PROOF — <batch> · <what> and moved unchanged to Archive 06 · Pilot proofs (570:10455); the Archive README gained a paragraph.",
+   "Step 4: change log 560:6172 gained rows \"Button label | …to Note → …To Note | Code capitalises button labels\" and \"Comments field | Focused in the mockup → resting | We build default states, the mockup caught a click\" (480x385 → 480x555). References 518:5826, 537:5841 and 558:6085 now hold 2x exports (1036x64, 1036x168, 1164x1232) placed by upload_assets with rectangle geometry unchanged; the three Source captions read \"exported 2026-09-08 at 2x\". Capitalised label and resting field kept.",
+   "Step 5: workflow/metrics.json version 2 holds the Facility Stay baseline and pilot run 1 of 3 with the same counting method; context loaded fell 94.7%, tool calls and turns rose because one sheet became three gated items.",
+   "Step 6: four-page audit, master/instance paint checks on the new rows, and renders of every touched node inspected; see verification."
+  ],
+  "repoMutations": [
+   "workflow/rules.json (new), scripts/workflow/generate-contract.js (v2, folds rules.json, verifies citations), validate-contract.js (accepts v2), validate-manifest.js (approval object), lock-risk.js (quote required), start-batch.js (--confirm for unapproved tiers), self-test.js, workflow/README.md, workflow/check-catalog.json (+3 deterministic checks), workflow/manifest.json (risk attribution), workflow/metrics.json (v2), CLAUDE.md, AGENTS.md, OPERATORS.md (pointers)."
+  ],
+  "tierApproval": {
+   "status": "approved 2026-09-08 — see workflowRefactor_tierApproval_2026-09-08",
+   "toApprove": "node scripts/workflow/lock-risk.js <item-id> \"Daniel (operator)\" \"<his exact words>\" for each item, or leave unapproved and confirm future items one at a time with start-batch.js --confirm."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — the two new Change log/Row instances were read as rendered: four solid paints each, zero colour, alpha or binding mismatches against master 18:103; the moved proofs keep their bound fills.",
+   "2_unboundPaintAudit": "PASS — every top-level node on every page walked; the only new unbound paints are the Archive section 570:10455 fill and stroke.",
+   "3_referenceCounts": "PASS — new rows carry 3 componentPropertyReferences each; Sidesheet preferred values remain 13; comparison slots remain 16 each; one comparison per PMHx item on Screens.",
+   "4_skipInvisibleFalse": "PASS — set before every audit walk.",
+   "5_opacityLast": "PASS — no paint-level opacity touched.",
+   "6_enumerateDontRecall": "PASS — organizers, Archive sections, references, rows and proofs enumerated from the live file; Facility Stay and PMHx measurements taken from the session logs, not from earlier reports.",
+   "7_fileIdentityFirst": "PASS — target key passed explicitly on every call; four-page inventory re-read after the mutations; source file opened read-only for three exports and one geometry read without a page change.",
+   "8_roundWithRecord": "PASS — new section at (1240, 5613) 2440x720; proofs at integer positions; no fractional authored geometry.",
+   "9_boundPaintAlpha": "PASS — no bound paint changed.",
+   "10_cloneDropsPropertyRefs": "PASS — no variant cloned; new rows are createInstance() from 18:103 and their text references were counted and rendered values read back."
+  },
+  "screenshots": [
+   "figma-export/workflow-refactor-closeout-2026-09-08/comparison-pmhx-body-561-9877.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/comparison-pmhx-row-521-7835.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/comparison-pmhx-section-537-9915.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/changelog-pmhx-560-6172.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/reference-pmhx-body-558-6084.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/reference-pmhx-row-518-5825.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/reference-pmhx-section-537-5840.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/archive-06-pilot-proofs-570-10455.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/archive-readme-185-3.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/source-pmhx-129-9205-2x.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/source-pmhx-row-129-9306-2x.png",
+   "figma-export/workflow-refactor-closeout-2026-09-08/source-pmhx-section-129-9315-2x.png"
+  ],
+  "visualReview": {
+   "comparisonRenders": [
+    "comparison-pmhx-body-561-9877.png",
+    "comparison-pmhx-row-521-7835.png",
+    "comparison-pmhx-section-537-9915.png"
+   ],
+   "inspectedByExecutor": true,
+   "inspectedBy": "Claude, at 1x, every touched node: three comparisons, the change log, the three reference helpers, Archive section 06 and the Archive README, plus PIL row and column diffs",
+   "observations": [
+    "Body comparison: the Rebuild column is pixel-identical to the pre-closeout render (0 changed px); the Reference column changed only by the 2x resharpening (2503 px); the Change log column carries the two new rows (81101 px).",
+    "The raw 2x export of 129:9205 carried the source component set's dashed purple outline on its top two pixel rows in place of the sheet's own 1px grey border; the row and section exports and the Health Status precedent do not. A cleaned copy replaces only those two rows with a nearest-neighbour upscale of the 1x capture's top row (1608 px changed); the raw export is kept beside it on disk. After upload the reference top edge shows 0 purple pixels and the grey border is back.",
+    "Change log: six rows read in plain language; the two new rows use the operator's wording; the Why column wraps to three or four lines like its neighbours; the divider under the last row closes the table.",
+    "Row and section comparisons: captions read 'exported 2026-09-08 at 2x'; the 2x references are visibly sharper at the checkbox and comment glyph edges; layout unchanged.",
+    "Archive 06: four proofs sit in one row at integer positions on a white organizer; the sidesheet proof still renders 'Save & Add To Note' and 'Save', so the moved instances stayed live.",
+    "Archive README: the new 06 paragraph sits under 05 in the same face and size; the frame grew to 600 without clipping.",
+    "Nothing false extends below the 564px rebuilt sheet; the Rebuild helper still has no fill."
+   ]
+  },
+  "measurement": {
+   "file": "workflow/metrics.json (version 2)",
+   "pilotRun": "1 of 3",
+   "baseline": "npveRebuild_externalCareFacilityStay_2026-09-05 (Codex, 2026-09-05T17:01–17:28Z): 14 turns, 92 tool calls, 35 Figma calls, 7 screenshots, 1,032,558 startup bytes, peak 214,005 input tokens, 6 correction messages, 1 design decision.",
+   "pilot": "PMHx row + section + body: 141 turns (Codex 43 + Claude finish 98), 272 tool calls, 84 Figma calls, 23 screenshots, 55,219 startup bytes, 13 recorded correction cycles, 4 decisions raised at finish.",
+   "reading": "Context loaded fell 94.7%. Tool calls and turns rose because one sheet became three gated items with three comparisons, three records, three commits and a hand-over. The lean startup set itself grew from 55,219 to 83,412 bytes in this batch because the contract now carries the rule text; still a 94% reduction."
+  },
+  "commit": "see git log: NPVE/Workflow: close out the lean-workflow refactor and correct the PMHx pilot"
+ },
+ "workflowRefactor_tierApproval_2026-09-08": {
+  "_status": "DONE. Documentation batch. Operator approval of the four risk classes and of the three PMHx tiers recorded verbatim; human-decision added to protocol.json; retroactive locks written for the three complete items. No Figma file opened or written.",
+  "date": "2026-09-08",
+  "workstream": "Workflow refactor (lean provider-neutral runtime)",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "recordGate": "workflowRefactor_closeout_2026-09-08 recorded DONE — passed",
+  "report": "figma-export/workflow-tier-approval-2026-09-08/report.md",
+  "operatorApproval": {
+   "by": "Daniel (operator)",
+   "at": "2026-09-08",
+   "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
+   "channel": "chat reply to the closeout report"
+  },
+  "interpretation": "The quote approves the four risk classes and the tiers as proposed for the three PMHx items (low, low, medium). It says \"definitions in the manifest\"; the definitions live in workflow/protocol.json and the manifest now points there. The fourth class, human-decision, was in the 2026-09-08 plan but absent from protocol.json until this record.",
+  "scope": [
+   "workflow/protocol.json: human-decision class and oversight added; approval quoted.",
+   "workflow/manifest.json: riskClasses pointer; the three items locked with the quote through lock-risk.js --retroactive.",
+   "validate-manifest.js accepts human-decision and refuses to let such an item be queued, active, or complete; start-batch.js refuses to start one; lock-risk.js gains --retroactive for complete items.",
+   "workflow/rules.json rule 11 names the four classes; contract regenerated."
+  ],
+  "stopCondition": "Repo writes only; stop if any validator fails after the locks.",
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "flagsBefore": 285,
+  "flagsAfter": 285,
+  "flagsAdded": [],
+  "figmaMutations": []
+ },
+ "leanPilot_run2-3_2026-09-08": {
+  "_status": "DONE. Item 1 (pilot2-hospitalizations-edit, medium, approved by Daniel) built, validated and inspected; stopped for operator review before item 2. Item 2 (pilot2-procedures-edit) not started: tier unapproved, re-pointed at record leanPilot_run3_2026-09-08.",
+  "date": "2026-09-08",
+  "workstream": "NPVE Rebuild / Sidesheets — lean pilot runs 2 and 3 (combined, Phase 7 shape)",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "recordGate": "workflowRefactor_tierApproval_2026-09-08 recorded DONE — passed; contract freshness validated (validate-workflow PASS) before reading; batch guard started 2026-09-09T00:43:52Z (schema digest d3e3c4be65f6) and check-batch PASS before mutation",
+  "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+  "step0": {
+   "authorization": "The batch prompt carried no tier approval, so the executor selected two items, proposed their classes, and stopped.",
+   "surveyed": "Source Sidesheetv3 129:6647 (55 variants) read against the thirteen rebuilt source nodes in existing npveRebuild records. Visible, unbuilt, 550-wide, sidesheet-body-shaped candidates: Hospitalizations edit 129:8401, Allergies edit 129:7826, Family History edit 129:12486, Procedures edit 129:8651, Flowsheets 939:9228 (table-shaped, rejected), Psychotherapy Note 129:7614 (rich-text toolbar, rejected), Vitals family (441 wide, chart shapes, rejected).",
+   "selected": [
+    "pilot2-hospitalizations-edit — 129:8401 Page=Clin_ExternalCare-HEdit, 550x606; proposed medium.",
+    "pilot2-procedures-edit — 129:8651 Page=ClinProSH_Edit, 550x498; proposed medium."
+   ],
+   "why": "Both are Edit Event forms on the Facility Stay pattern already approved (Form surface token, 16px rhythm, date-field GAP wrapper, 42px Form control label rows). Their controls map to published Text field, Tabs, Chip, Button, Icon button and icons; the one control without a library mapping, the Status dropdown chip, follows the recorded Allergy severity selector precedent with a GAP marker. Matched scope against the Facility Stay baseline for the measurement.",
+   "nextInQueue": "Allergies edit 129:7826 and Family History edit 129:12486 (autocomplete, radios, chips) are the next ready items after these two."
+  },
+  "manifestItems": [
+   "pilot2-hospitalizations-edit",
+   "pilot2-procedures-edit"
+  ],
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "page": "21:321",
+   "node": "129:8401 Page=Clin_ExternalCare-HEdit",
+   "policy": "read only; frozen 2x export in this batch (download_assets, scale 2, 60,914 bytes)"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "library": "YX2n4YLrEpBXNbcc73T6dw read only; color/core/light imported by key into the consuming file for one binding",
+  "stopCondition": "Stop at Step 0 until the operator confirms each item. During the build: stop before item 2 mutates on any deterministic or visual failure in item 1.",
+  "findings": {
+   "GAP": 2,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "note": "Both GAPs are existing recorded patterns reused (date-field end adornment; dropdown chip); markers cloned beside the comparison. No new flag."
+  },
+  "flagsBefore": 285,
+  "flagsAfter": 285,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Templates: created organizer section 580:6012 \"20 · External care history · Hospitalizations edit\" at (0, 39960) 1842x2400.",
+   "Templates: cloned Allergy severity selector 352:3206 → 580:6013 Hospitalization status selector; fill rebound to library color/core/light; Label default Status; description written.",
+   "Templates: created form component 580:6017 (Form surface fill, color/divider stroke, radius/md, space/16 padding and gap) from clones of the Facility Stay header 389:3470, Facility Name 389:3502, Dates 389:3543, Related to problem 389:3632 and Comments 389:3707, plus a new Procedure row 580:6059 (Text field clone at fill width + selector instance 580:6081).",
+   "Templates: created body component 580:10621 (space/16 gap, no fill) from a clone of the Facility Stay tab strip 391:3568 with tab variants swapped (Hospitalizations selected) and form instance 580:10633.",
+   "Templates: appended 580:10621 to Sidesheet 279:2446 Body content preferred values (13 → 14); default and geometry unchanged.",
+   "Templates: cloned Rebuild helper 392:3672 → 581:6216, sheet 581:6217 Body content swapped to 580:10621 and resized to 550x651; cloned Reference helper 392:4091 → 581:6630 with rectangle 581:6631 at 550x606 and the 2x export uploaded (hash eb453180…); cloned Change log helper 392:4093 → 581:10997 with title and eleven rows (two rows added by cloning a row instance), Content set to hug.",
+   "Templates: appended the three helpers to Rebuild comparison 35:332 slot preferred values (16 → 17 each).",
+   "Screens: created organizer section 581:11116 \"20 · External care history · Hospitalizations edit comparison\" at (0, 35292) 2268x1536; placed sole comparison 581:11117 with slots swapped, captions set, Reference and Rebuild column clipping off; cloned GAP markers 394:5611 → 581:11754 and 404:7061 → 581:11761 (Difference text rewritten for this screen).",
+   "No node outside this batch was moved, renamed, resized, deleted or restyled. No proofs were created, so nothing was archived."
+  ],
+  "manifestItem": "pilot2-hospitalizations-edit",
+  "risk": {
+   "tier": "medium",
+   "oversight": "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator; deterministic validation immediately after the mutation.",
+   "proposedBy": "Claude (planner proposal), Step 0 of the combined lean pilot, 2026-09-08",
+   "approval": {
+    "status": "approved",
+    "approvedBy": "Daniel (operator)",
+    "approvedAt": "2026-09-09T00:38:11.672Z",
+    "quote": "I approve pilot2-hospitalizations-edit as medium, go ahead"
+   }
+  },
+  "scope": "Item 1: one reusable 518px Hospitalizations edit body on the approved Facility Stay edit-form pattern; appended to the shared Sidesheet Body content; one content-driven sheet, one frozen 2x reference, one plain-language change log, one comparison, two reused GAP markers.",
+  "sourceFacts": [
+   "The source is 550x606: header 64, tab strip at y 72 (28px pills, Hospitalizations selected #004852, Facility Stay #9A9A9A), form card 518x414 at y 124 (#EEF7F9, 1px #D6D6D6, radius 8), footer 60.",
+   "Card rows at 16px rhythm: Edit Event (Bold 16) with a trash glyph; Facility Name 486x40; Admission Date and Discharge Date 239x40 each with a calendar glyph inside the field, 8px apart; Related to problem 486x40 with a caret; Procedure Code 385x40 with a Status pill 85x32 (#D4E0DD, Bold 14, caret) 16px after it; Comments 486x110 in the focused state with a floating label and the placeholder Comments go here.",
+   "Footer labels: Cancel (text), Save & Add to Note (outlined), Save (primary).",
+   "#D4E0DD is the code palette core.light (paletteValues.ts \"core 3\"); the library publishes it as color/core/light."
+  ],
+  "systemMapping": {
+   "textField": "77:708 Text field size=small (Facility Name, Admission Date, Discharge Date, Related to problem select=true, Procedure Code) and 77:698 size=medium multiline=true (Comments)",
+   "iconButton": "77:1109 Icon button color=default size=small with Icon#170:0 = 389:3433 Icon/TrashOutlined",
+   "calendar": "316:3409 Icon/Calendar beside each date field inside the recorded GAP wrapper (npveProblemEdit_textFieldNoEndAdornment)",
+   "tabs": "77:642 Tabs/Tab selected=yes and 77:640 selected=no over Divider, cloned from the Facility Stay tab strip 391:3568",
+   "statusChip": "580:6013 Hospitalization status selector, a clone of the Allergy severity selector 352:3206 with its fill rebound to library color/core/light; GAP stand-in per npveExtReview_allergySeveritySelectorUnmarked (Dropdown chip, LIBRARY-TODOS item 16)",
+   "formSurface": "NPVE/Color Form surface VariableID:387:3434 (#EEF7F9), the Facility Stay operator decision",
+   "sidesheet": "6:65 Sidesheet Placement=Floating; comparison 35:332; change-log row 18:103"
+  },
+  "lockedGeometry": {
+   "statusSelector": "90x32 hug; label Regular 16, DownCaret 16",
+   "form": "518x410: 16px padding and gap bound space/16; header 34, Facility Name 40, Dates 40, Related 40, Procedure 40 (field 380 fill + 16 + selector 90), Comments 104",
+   "body": "518x475: tab strip 49 + 16 + form instance 410",
+   "sheet": "550x651 content-driven: Header 72 + divider 1 + Body region 507 (16 + 475 + 16) + Footer 71",
+   "reference": "550x606 at 1:1 holding the 1100x1212 export",
+   "changeLog": "480x1024, eleven rows",
+   "comparison": "1708x1116 on Screens; Reference and Rebuild columns have clipping off so the 606 and 651 tall contents show at 1:1"
+  },
+  "sourceBackedDifferences": [
+   "Shell regions 64/60 become the canonical 72/71 and the fixed 606 sheet becomes content-driven at 651.",
+   "The 28px source tab pills become the 48px library Tabs with a hairline, as in the Hospitalizations list; the tab-to-form gap goes from 20 to 16.",
+   "Calendar glyphs move from inside the field to beside it (recorded GAP wrapper).",
+   "The Status pill keeps its colour through color/core/light but uses the library Regular 16 label at 90 wide (precedent typography); Procedure Code fills the remainder at 380.",
+   "Comments renders resting at 104 tall (library medium multiline) instead of focused at 110.",
+   "Footer labels render in TITLE case from the stored sentence-case labels."
+  ],
+  "plan": [
+   "Step 1 preflight: contract validated, file identity verified, Facility Stay pattern and precedent nodes read, source read and exported at 2x, library token located.",
+   "Step 2 build: section, status selector, form, body; shared Sidesheet preferred value; rebuild, reference and change-log helpers; comparison preferred values; Screens section, comparison instance, two reused GAP markers.",
+   "Step 3: not run (item 2 awaits the operator).",
+   "Step 4 evidence: four-page audit, master/instance paint checks, renders saved and inspected, evidence JSON, report.",
+   "Step 5: record finalized, contract regenerated, finish gate, one commit."
+  ],
+  "existingGapsReused": [
+   "npveProblemEdit_textFieldNoEndAdornment",
+   "npveExtReview_allergySeveritySelectorUnmarked"
+  ],
+  "createdNodes": {
+   "templatesSection": "580:6012",
+   "statusSelector": "580:6013",
+   "statusSelectorLabel": "580:6014",
+   "formComponent": "580:6017",
+   "formHeader": "580:6018",
+   "facilityNameField": "580:6021",
+   "datesRow": "580:6036",
+   "relatedToProblemField": "580:6043",
+   "procedureRow": "580:6059",
+   "procedureCodeField": "580:6060",
+   "statusSelectorInstance": "580:6081",
+   "commentsField": "580:6085",
+   "bodyComponent": "580:10621",
+   "tabStrip": "580:10622",
+   "formInstance": "580:10633",
+   "rebuildHelper": "581:6216",
+   "rebuildHelperSheet": "581:6217",
+   "referenceHelper": "581:6630",
+   "frozenSourceImage": "581:6631",
+   "changeHelper": "581:10997",
+   "changeRows": [
+    "581:11002",
+    "581:11003",
+    "581:11004",
+    "581:11005",
+    "581:11006",
+    "581:11007",
+    "581:11008",
+    "581:11009",
+    "581:11010",
+    "581:11056",
+    "581:11062"
+   ],
+   "screensSection": "581:11116",
+   "comparison": "581:11117",
+   "gapMarkerDateField": "581:11754",
+   "gapMarkerDropdownChip": "581:11761"
+  },
+  "corrections": [
+   "W2→W3: the Status selector hugs to 90px (library Regular 16 label) where the source pill is 85, so the fixed Procedure row overran 486 by 5px; corrected by making Procedure Code fill the row (486 - 16 - 90 = 380).",
+   "W4a→W6: the cloned Facility Stay sheet kept a fixed 853px height after the body swap; a HUG attempt did not take because the shell's Body region fills the sheet, so the sheet was resized explicitly to its content height 651, matching how the PMHx sheet is sized.",
+   "W4b→W5: the cloned change-log Content frame was fixed at 1198px; set to hug so the log is 1024px tall for eleven rows."
+  ],
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "pageWalk": "PASS — all four pages walked with skipInvisibleInstanceChildren=false: Cover 8, Templates 9115, Screens 4341, Archive 1782 nodes.",
+   "unboundPaints": "PASS — Cover 1, Templates 39, Screens 40, Archive 12; the only new unbound paints are the two organizer sections’ fill and stroke.",
+   "fractionalGeometry": "PASS — zero authored fractions outside instances on every page.",
+   "sharedApi": "PASS — Sidesheet preferred values 14, default 26:221, 13 properties, three variants 550x600 unchanged; comparison slots 17 preferred values each.",
+   "geometry": "PASS — form 518x410, body 518x475, sheet 550x651 = 72 + 1 + 507 + 71 with the footer at y 580; Rebuild helper has no fill; reference 550x606.",
+   "componentIdentity": "PASS — fields resolve to 77:708 / 77:698, icon button to 77:1109 with TrashOutlined, calendars to 316:3409, tabs to 77:642 / 77:640, sheet to 6:65, comparison to 35:332, rows to 18:103.",
+   "instancePaints": "PASS — selector 3, form 58, body 62 visible solid paints compared master-to-instance; zero mismatches.",
+   "reference": "PASS — 2x export 1100x1212 uploaded to 581:6631 (hash eb453180654dfb5918ad6b37eb9c2d2209136e29), FIT; top rows free of the component-set outline; reference column matches the 1x source capture exactly.",
+   "comparison": "PASS — inspected comparison-hospitalizations-edit.png at 1x; Rebuild column matches the standalone sheet within 76 anti-aliasing pixels.",
+   "singlePlacement": "PASS — each helper, the body, the form and the selector have exactly one placement on Screens, all inside 581:11117.",
+   "archiveCheck": "PASS — no node with an id at or above 580 on Archive.",
+   "sourceAndLibrary": "PASS — no writes to zVsuhYehoSLLq880qRBFkq or YX2n4YLrEpBXNbcc73T6dw; source current page untouched."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — the live instances of the status selector (580:6081), the form (580:10633) and the body (inside sheet 581:6217) were read and their rendered solid paints compared with the masters: 3 + 58 + 62 paints, zero mismatches.",
+   "2_unboundPaintAudit": "PASS — every node on every page was walked; only the two organizer sections add unbound paints.",
+   "3_referenceCounts": "PASS — selector Label reference intact after the clone; Sidesheet preferred values 14; comparison slots 17 each; one Hospitalizations edit comparison on Screens.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren was false for every audit walk.",
+   "5_opacityLast": "PASS — no paint-level opacity was authored or remediated.",
+   "6_enumerateDontRecall": "PASS — page trees, section extents, preferred values, slot contents, library variables and Archive ids were enumerated from the live file.",
+   "7_fileIdentityFirst": "PASS — target key passed explicitly on every call; four-page inventory verified before any read informed a decision.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; all new layout values are integers.",
+   "9_boundPaintAlpha": "PASS — bound fills and strokes were preserved through clones; the one rebinding (selector fill to color/core/light) read back at opacity 1 with the variable id.",
+   "10_cloneDropsPropertyRefs": "PASS — no variant was cloned; the standalone selector clone kept its property definition and the label reference; tab, field, selector, footer and change-log text was verified rendered against stored properties."
+  },
+  "screenshots": [
+   "figma-export/lean-pilot-run2-3-2026-09-08/source-hospitalizations-edit-129-8401.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/source-hospitalizations-edit-129-8401-2x.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/form-580-6017.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/body-580-10621.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/rebuild-sidesheet-581-6216.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/changelog-581-10997.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/comparison-hospitalizations-edit.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/crop-reference-column.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/crop-rebuild-column.png"
+  ],
+  "outcome": [
+   "Created Hospitalization status selector 580:6013, Hospitalizations edit form 580:6017 (518x410) and body 580:10621 (518x475) on the Facility Stay pattern; all controls are live library instances or recorded GAP stand-ins.",
+   "Appended the body to the shared Sidesheet Body content preferred values (13 → 14); default, 13 properties and 550x600 variant geometry unchanged.",
+   "Placed one content-driven sheet at 550x651 (header 72, divider 1, body region 507, footer 71) with the source footer labels.",
+   "Created the three _Rebuild comparison sub-components and the sole comparison 581:11117 on Screens with two reused GAP markers; comparison slots now hold 17 preferred values each.",
+   "Item 2 (Procedures edit) not started; awaiting the operator’s tier approval and review of this comparison."
+  ],
+  "decisionsForOperator": [],
+  "executors": {
+   "build": "Claude (Anthropic claude-fable-5-1), single session from the approval at 2026-09-09T00:38Z",
+   "finish": "Claude (Anthropic claude-fable-5-1)"
+  },
+  "item2": {
+   "id": "pilot2-procedures-edit",
+   "status": "proposed, unapproved, not started",
+   "recordId": "leanPilot_run3_2026-09-08 (assigned in the manifest by this finalize so the record gate can open it separately)"
+  }
+ },
+ "leanPilot_run3_2026-09-08": {
+  "_status": "DONE. pilot2-procedures-edit (medium, approved by Daniel) built, validated and inspected; the combined lean pilot runs 2 and 3 are complete and stop for operator review.",
+  "date": "2026-09-09",
+  "workstream": "NPVE Rebuild / Sidesheets — lean pilot run 3 (item 2 of the combined runs 2-3 batch)",
+  "manifestItem": "pilot2-procedures-edit",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "risk": {
+   "tier": "medium",
+   "oversight": "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator; Runs only after item 1 passes deterministic validation",
+   "proposedBy": "Claude (planner proposal), Step 0 of the combined lean pilot, 2026-09-08",
+   "approval": {
+    "status": "approved",
+    "approvedBy": "Daniel (operator)",
+    "approvedAt": "2026-09-09T02:29:44.873Z",
+    "quote": "I approve pilot2-procedures-edit as medium, go ahead",
+    "history": []
+   }
+  },
+  "recordGate": "leanPilot_run2-3_2026-09-08 recorded DONE — passed; contract freshness validated (validate-workflow PASS) before reading; batch guard started 2026-09-09 (schema digest f1d5b2a7e7ff) and check-batch PASS before mutation",
+  "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+  "source": {
+   "file": "zVsuhYehoSLLq880qRBFkq",
+   "node": "129:8651 Page=ClinProSH_Edit",
+   "policy": "read only; one 2x export via download_assets"
+  },
+  "target": {
+   "file": "fdCQVFdvOByaOYIJYag0d6",
+   "templatesPage": "3:2",
+   "screensPage": "27:2"
+  },
+  "library": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "scope": "Build one reusable 518px Procedures edit body on the same edit-form pattern (Procedure Code field, Status chip via the severity-selector precedent, Related to problem, Facility Name, Comments); append it to the shared Sidesheet Body content; one content-driven sheet, one frozen 2x reference, one plain-language change log, one comparison.",
+  "stopCondition": "Same as item 1; additionally, do not start if item 1 failed validation.",
+  "findings": {
+   "GAP": 1,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "note": "The one GAP is the existing dropdown-chip pattern reused; marker cloned beside the comparison. No new flag."
+  },
+  "flagsBefore": 285,
+  "flagsAfter": 285,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Templates: created organizer section 586:6413 \"21 · Procedures & surgical history · Edit Event\" at (0, 42560) 1842x2400.",
+   "Templates: created form component 586:6414 (Form surface fill, color/divider stroke, radius/md, space/16 padding and gap) from clones of the run 2 form rows: header, Procedure row (field + status selector instance 586:6420), Related to problem, Facility Name, Comments.",
+   "Templates: created body component 586:6467 (space/16 gap, no fill) holding form instance 586:6468.",
+   "Templates: appended 586:6467 to Sidesheet 279:2446 Body content preferred values (14 → 15); default and geometry unchanged.",
+   "Templates: cloned Rebuild helper 581:6216 → 586:6559 with sheet 586:6560 (Body content 586:6467, Title Procedures/Surgical History, resized 550x530); cloned Reference helper 581:6630 → 586:6984 with rectangle 586:6985 at 550x498 and the 2x export uploaded (hash bb92db28…); cloned the nine-row Facility Stay change-log helper 392:4093 → 586:11705 with title and rows rewritten, Content set to hug.",
+   "Templates: appended the three helpers to Rebuild comparison 35:332 slot preferred values (17 → 18 each).",
+   "Screens: created organizer section 586:11764 \"21 · Procedures & surgical history · Edit Event comparison\" at (0, 37028) 2268x1536; placed sole comparison 586:11765 with slots swapped and captions set; cloned GAP marker 581:11761 → 586:12264 (Difference text rewritten for this screen).",
+   "No node outside this batch was moved, renamed, resized, deleted or restyled. No proofs were created, so nothing was archived."
+  ],
+  "sourceFacts": [
+   "The source is 550x498: header 64, form card 518x358 at y 72 (8px below the header; #EEF7F9, 1px #D6D6D6, radius 8, 16px padding and rhythm), footer 60. No tab strip.",
+   "Card rows: Edit Event (Bold 16) with a trash glyph; Procedure Code 385x40 with a Status pill 85x32 (#D4E0DD, Bold 14, caret) 16px after it; Related to problem 486x40 with a caret; Facility Name 486x40; Comments 486x110 in the focused state with a floating label and the placeholder Comments go here.",
+   "Footer labels: Cancel (text), Save & Add to Note (outlined), Save (primary)."
+  ],
+  "systemMapping": {
+   "textField": "77:708 Text field size=small (Procedure Code, Related to problem select=true, Facility Name) and 77:698 size=medium multiline=true (Comments)",
+   "iconButton": "77:1109 Icon button color=default size=small with Icon#170:0 = 389:3433 Icon/TrashOutlined",
+   "statusChip": "580:6013 Hospitalization status selector reused from run 2 (fill bound library color/core/light); GAP stand-in per npveExtReview_allergySeveritySelectorUnmarked",
+   "formSurface": "NPVE/Color Form surface VariableID:387:3434 (#EEF7F9)",
+   "sidesheet": "6:65 Sidesheet Placement=Floating; comparison 35:332; change-log row 18:103",
+   "pattern": "Rows cloned from the run 2 form 580:6017 (header 580:6018, Procedure row 580:6059, Related 580:6043, Facility Name 580:6021, Comments 580:6085)"
+  },
+  "lockedGeometry": {
+   "form": "518x354: 16px padding and gap bound space/16; header 34, Procedure 40 (field 380 fill + 16 + selector 90), Related 40, Facility Name 40, Comments 104",
+   "body": "518x354: one form instance, no fill",
+   "sheet": "550x530 content-driven: Header 72 + divider 1 + Body region 386 (16 + 354 + 16) + Footer 71",
+   "reference": "550x498 at 1:1 holding the 1100x996 export",
+   "changeLog": "480x870, nine rows",
+   "comparison": "1708x962 on Screens; both contents shorter than the 600 slot, clipping left on, Rebuild helper transparent"
+  },
+  "sourceBackedDifferences": [
+   "Shell regions 64/60 become 72/71 and the fixed 498 sheet becomes content-driven at 530.",
+   "The 8px inset above the card becomes the shared 16px body inset.",
+   "The Status pill keeps its colour through color/core/light but uses the library Regular 16 label at 90 wide; Procedure Code fills the remainder at 380.",
+   "Comments renders resting at 104 tall instead of focused at 110.",
+   "Footer labels render in TITLE case from the stored sentence-case labels."
+  ],
+  "plan": [
+   "Preflight: contract validated, record opened with backup, batch guard started, file identity verified, section 09 (Procedures history) and section 20 (run 2) read, source read and exported at 2x.",
+   "Build: section 21, form, body; Sidesheet preferred value; rebuild, reference and change-log helpers; comparison preferred values; Screens section 21, comparison, reused Dropdown chip GAP marker.",
+   "Evidence: four-page audit, master/instance paint checks, renders saved and inspected, evidence JSON, report.",
+   "Close: record finalized, contract regenerated, finish gate, one commit."
+  ],
+  "existingGapsReused": [
+   "npveExtReview_allergySeveritySelectorUnmarked"
+  ],
+  "createdNodes": {
+   "templatesSection": "586:6413",
+   "formComponent": "586:6414",
+   "formHeader": "586:6415",
+   "procedureRow": "586:6418",
+   "procedureCodeField": "586:6419",
+   "statusSelectorInstance": "586:6420",
+   "relatedToProblemField": "586:6421",
+   "facilityNameField": "586:6437",
+   "commentsField": "586:6452",
+   "bodyComponent": "586:6467",
+   "formInstance": "586:6468",
+   "rebuildHelper": "586:6559",
+   "rebuildHelperSheet": "586:6560",
+   "referenceHelper": "586:6984",
+   "frozenSourceImage": "586:6985",
+   "changeHelper": "586:11705",
+   "changeRows": [
+    "586:11710",
+    "586:11711",
+    "586:11712",
+    "586:11713",
+    "586:11714",
+    "586:11715",
+    "586:11716",
+    "586:11717",
+    "586:11718"
+   ],
+   "screensSection": "586:11764",
+   "comparison": "586:11765",
+   "gapMarkerDropdownChip": "586:12264"
+  },
+  "corrections": [],
+  "verification": {
+   "fileIdentity": "PASS — 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive.",
+   "pageWalk": "PASS — all four pages walked with skipInvisibleInstanceChildren=false: Cover 8, Templates 9504, Screens 4558, Archive 1782 nodes.",
+   "unboundPaints": "PASS — Cover 1, Templates 41, Screens 42, Archive 12; the only new unbound paints are the two organizer sections’ fill and stroke.",
+   "fractionalGeometry": "PASS — zero authored fractions outside instances on every page.",
+   "sharedApi": "PASS — Sidesheet preferred values 15, default 26:221, 13 properties, three variants 550x600 unchanged; comparison slots 18 preferred values each.",
+   "geometry": "PASS — form 518x354, body 518x354, sheet 550x530 = 72 + 1 + 386 + 71 with the footer at y 459; Rebuild helper has no fill; reference 550x498.",
+   "componentIdentity": "PASS — fields resolve to 77:708 / 77:698, icon button to 77:1109 with TrashOutlined, selector to 580:6013, sheet to 6:65, comparison to 35:332, rows to 18:103.",
+   "instancePaints": "PASS — form 40, body 40, selector 3 visible solid paints compared master-to-instance; zero mismatches.",
+   "reference": "PASS — 2x export 1100x996 uploaded to 586:6985 (hash bb92db28530bbf1f5afd18ceac374d0162fd0a91), FIT; top rows free of the component-set outline; reference column matches the 1x source capture exactly.",
+   "comparison": "PASS — inspected comparison-procedures-edit.png at 1x; Rebuild column matches the standalone sheet within 78 anti-aliasing pixels; the backdrop shows below both contents.",
+   "singlePlacement": "PASS — each helper, the body and the form have exactly one placement on Screens, inside 586:11765; the reused status selector has one placement per edit-form comparison.",
+   "archiveCheck": "PASS — no node with an id at or above 586 on Archive.",
+   "sourceAndLibrary": "PASS — no writes to zVsuhYehoSLLq880qRBFkq or YX2n4YLrEpBXNbcc73T6dw; source current page untouched."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — the live instances of the form (586:6468), the body (inside sheet 586:6560) and the reused status selector (586:6420) were read and their rendered solid paints compared with the masters: 40 + 40 + 3 paints, zero mismatches.",
+   "2_unboundPaintAudit": "PASS — every node on every page was walked; only the two organizer sections add unbound paints.",
+   "3_referenceCounts": "PASS — Sidesheet preferred values 15; comparison slots 18 each; one Procedures edit comparison on Screens; no property definitions were created or cloned.",
+   "4_skipInvisibleFalse": "PASS — figma.skipInvisibleInstanceChildren was false for every audit walk.",
+   "5_opacityLast": "PASS — no paint-level opacity was authored or remediated.",
+   "6_enumerateDontRecall": "PASS — page trees, section extents, preferred values, slot contents and Archive ids were enumerated from the live file.",
+   "7_fileIdentityFirst": "PASS — target key passed explicitly on every call; four-page inventory verified before any read informed a decision.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; all new layout values are integers.",
+   "9_boundPaintAlpha": "PASS — bound fills and strokes were preserved through clones; nothing rebound.",
+   "10_cloneDropsPropertyRefs": "PASS — no variant was cloned; field, selector, footer and change-log text was verified rendered against stored properties."
+  },
+  "screenshots": [
+   "figma-export/lean-pilot-run2-3-2026-09-08/source-procedures-edit-129-8651.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/source-procedures-edit-129-8651-2x.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/body-procedures-586-6467.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/rebuild-sidesheet-procedures-586-6559.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/changelog-procedures-586-11705.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/comparison-procedures-edit.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/crop-reference-column-procedures.png",
+   "figma-export/lean-pilot-run2-3-2026-09-08/crop-rebuild-column-procedures.png"
+  ],
+  "outcome": [
+   "Created Procedure history edit form 586:6414 (518x354) and body 586:6467 from the run 2 pattern, reusing the status selector; all controls are live library instances or the recorded GAP stand-in.",
+   "Appended the body to the shared Sidesheet Body content preferred values (14 → 15); default, 13 properties and 550x600 variant geometry unchanged.",
+   "Placed one content-driven sheet at 550x530 (header 72, divider 1, body region 386, footer 71) with the source title and footer labels.",
+   "Created the three _Rebuild comparison sub-components and the sole comparison 586:11765 on Screens with the reused Dropdown chip GAP marker; comparison slots now hold 18 preferred values each.",
+   "Zero corrections during the build; runs 2 and 3 complete, awaiting operator review of both comparisons."
+  ],
+  "decisionsForOperator": [],
+  "executors": {
+   "build": "Claude (Anthropic claude-fable-5-1), single session from the approval",
+   "finish": "Claude (Anthropic claude-fable-5-1)"
+  }
  }
 }

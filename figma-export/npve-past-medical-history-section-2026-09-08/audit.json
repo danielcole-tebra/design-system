@@ -1,0 +1,85 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "pilot-pmhx-section",
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false,
+    "scope": "All nodes on all four pages, plus targeted master-to-instance verification for the new section."
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "details": "All four pages were walked. Existing unbound paints were enumerated (Cover 1, Templates 35, Screens 36, Archive 10). Relative to the preceding pilot, Templates and Screens each gained only the established organizer section fill/stroke. The product component and comparison helpers introduce no unbound solid paint."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "details": "No fractional authored geometry was found on any page or in either new subtree. Intrinsic VECTOR and GROUP bounds were excluded per standing rule 8."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "The section master contains five references: its Heading text reference plus the inherited Condition and Icon references in each of two approved row instances."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Blindness resolves to row variant 518:5772 and Cataracts to 518:5785 in approved set 518:5797. The sole comparison remains an instance of shared master 35:332."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "The proof renders Heading=EYES, Blindness with Comment=Empty, and Cataracts with Comment=Filled exactly as stored in the live instances."
+    },
+    "instancePaintVerification": {
+      "pass": true,
+      "details": "Ten rendered solid paints were compared between the section master and proof instance with zero colour, effective-alpha, or bound-variable mismatches."
+    }
+  },
+  "pageAudit": {
+    "nodeCounts": {
+      "Cover": 9,
+      "Templates": 8332,
+      "Screens": 3868,
+      "Archive": 1394
+    },
+    "fractionalAuthoredGeometry": {
+      "Cover": 0,
+      "Templates": 0,
+      "Screens": 0,
+      "Archive": 0
+    }
+  },
+  "createdNodes": {
+    "templatesSection": "534:5804",
+    "sectionComponent": "534:5805",
+    "proofInstance": "534:5834",
+    "referenceHelper": "537:5840",
+    "rebuildHelper": "537:5842",
+    "changeHelper": "537:5864",
+    "screensSection": "537:9914",
+    "comparison": "537:9915"
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-past-medical-history-section-2026-09-08/comparison.png",
+    "inspectedByExecutor": true,
+    "observations": [
+      "The uppercase teal EYES heading, row labels, and empty/filled comment glyphs match the source content and order.",
+      "The rebuild applies the approved 8px heading-to-list gap and reuses the 42px condition-row touch targets.",
+      "Rows remain contiguous inside the list; no extra vertical gap was introduced between touch targets.",
+      "The corrected component background uses the bound paper fill and no organizer grey shows through."
+    ]
+  },
+  "toolCalls": {
+    "figmaRead": 8,
+    "figmaWrite": 5,
+    "screenshot": 5,
+    "correctionCycles": 1,
+    "note": "The single correction came from the mandatory first component render and was resolved before helper or comparison construction."
+  }
+}

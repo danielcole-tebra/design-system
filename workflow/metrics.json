@@ -1,0 +1,216 @@
+{
+  "format": "tebra.design-workflow-metrics",
+  "version": 2,
+  "method": {
+    "source": "Codex session log ~/.codex/sessions/2026/09/03/rollout-2026-09-03T12-04-35-*.jsonl, response_item and token_count events inside each batch's operator-prompt-to-completion span; Claude finish phase from its own session log. Counts are reconstructed after the fact, not instrumented.",
+    "fields": {
+      "modelTurns": "assistant messages in the span (visible replies; reasoning items counted separately)",
+      "toolCalls": "function calls of any kind (shell, patch, Figma)",
+      "figmaCalls": "occurrences of use_figma plus download_assets/upload_assets in tool-call arguments (approximate: a wrapper script naming the tool twice counts twice)",
+      "screenshots": "occurrences of get_screenshot in tool-call arguments",
+      "contextLoadedBytes": "bytes of the startup reading set the batch was told to read: legacy = CLAUDE.md + AGENTS.md + OPERATORS.md + design-system-schema.json at that commit; lean = CLAUDE.md + workflow/README.md + protocol.json + manifest.json + generated contract",
+      "peakInputTokens": "largest last_token_usage.input_tokens in the span (Codex context window; includes earlier session history)",
+      "corrections": "assistant messages in the span that mention correcting, fixing, catching, retrying, or stopping; the batch record's own correction count is given where it exists"
+    },
+    "note": "Pilot run 1 of 3. Spans: Facility Stay 2026-09-05T17:01:20Z to 17:27:50Z; PMHx row 2026-09-08T17:26:26Z to 18:00:25Z; PMHx section 18:12:39Z to 18:28:29Z; PMHx body (Codex) 19:18:45Z to 19:46:56Z, then Claude finish 20:00Z to 20:45Z."
+  },
+  "baseline": {
+    "itemId": "npveRebuild_externalCareFacilityStay_2026-09-05",
+    "executor": "Codex (OpenAI gpt-5.6-sol, xhigh)",
+    "workflow": "legacy: full CLAUDE.md, AGENTS.md, OPERATORS.md and 1.0 MB schema read at start",
+    "scope": "one complete edit-form body (5 Text fields, 7 Form control labels, 2 Calendars, 2 Tabs), content-driven sheet, frozen 2x reference, change log, comparison, one local token",
+    "modelTurns": 14,
+    "reasoningItems": 102,
+    "toolCalls": 92,
+    "figmaCalls": 35,
+    "screenshots": 7,
+    "shellCommands": 31,
+    "contextLoadedBytes": 1032558,
+    "peakInputTokens": 214005,
+    "outputTokens": 52574,
+    "elapsedMinutes": 26,
+    "corrections": 6,
+    "operatorMessages": 3,
+    "operatorDecisions": 1,
+    "recordedCorrectionCycles": null
+  },
+  "pilotRuns": [
+    {
+      "run": 1,
+      "of": 3,
+      "workstream": "Past Medical History (row, section, body and sidesheet)",
+      "contextLoadedBytes": 55219,
+      "legacyEquivalentBytes": 1356867,
+      "contextReductionPercent": 95.9,
+      "items": [
+        {
+          "itemId": "pilot-pmhx-condition-row",
+          "risk": "low",
+          "executor": "Codex",
+          "modelTurns": 14,
+          "reasoningItems": 77,
+          "toolCalls": 70,
+          "figmaCalls": 24,
+          "screenshots": 6,
+          "shellCommands": 34,
+          "peakInputTokens": 224331,
+          "outputTokens": 49278,
+          "elapsedMinutes": 34,
+          "corrections": 7,
+          "recordedCorrectionCycles": 9,
+          "operatorMessages": 1,
+          "result": "passed deterministic and visual review; operator said \"That's a pretty small item, seems good so far\""
+        },
+        {
+          "itemId": "pilot-pmhx-section",
+          "risk": "low",
+          "executor": "Codex",
+          "modelTurns": 10,
+          "reasoningItems": 53,
+          "toolCalls": 59,
+          "figmaCalls": 11,
+          "screenshots": 5,
+          "shellCommands": 32,
+          "peakInputTokens": 207387,
+          "outputTokens": 21535,
+          "elapsedMinutes": 16,
+          "corrections": 4,
+          "recordedCorrectionCycles": 1,
+          "operatorMessages": 1,
+          "result": "passed deterministic and visual review; operator said \"this looks good proceed\""
+        },
+        {
+          "itemId": "pilot-pmhx-body-sheet",
+          "risk": "medium",
+          "executor": "Codex build through P4.d; Claude finish from P4.e",
+          "codex": {
+            "modelTurns": 19,
+            "reasoningItems": 79,
+            "toolCalls": 76,
+            "figmaCalls": 36,
+            "screenshots": 10,
+            "shellCommands": 18,
+            "peakInputTokens": 236083,
+            "outputTokens": 36839,
+            "elapsedMinutes": 28,
+            "corrections": 7
+          },
+          "claudeFinish": {
+            "modelTurns": 98,
+            "toolCalls": 67,
+            "figmaCalls": 13,
+            "screenshots": 2,
+            "shellCommands": 38,
+            "peakContextTokens": 264929,
+            "elapsedMinutes": 45,
+            "corrections": 2,
+            "note": "Claude turns include every tool-call step; the finish also verified refactor phases 0 to 3, which is not batch work."
+          },
+          "modelTurns": 117,
+          "toolCalls": 143,
+          "figmaCalls": 49,
+          "screenshots": 12,
+          "recordedCorrectionCycles": 3,
+          "operatorMessages": 2,
+          "result": "passed deterministic and visual review; comparison verified by Daniel 2026-09-08; four decisions resolved in workflowRefactor_closeout_2026-09-08"
+        }
+      ],
+      "totals": {
+        "modelTurns": 141,
+        "toolCalls": 272,
+        "figmaCalls": 84,
+        "screenshots": 23,
+        "recordedCorrectionCycles": 13,
+        "operatorMessages": 4,
+        "operatorDecisions": 4
+      },
+      "againstBaseline": {
+        "note": "The pilot built one sheet in three items with a stop gate and comparison per item; the baseline built one denser sheet in one item. Per-item costs are below the baseline; the sum is above it because three comparisons, three records, three commits and one hand-over were produced instead of one.",
+        "contextLoaded": "1,032,558 bytes → 55,219 bytes (−94.7%)",
+        "figmaCallsPerItem": "35 → 24 / 11 / 36+13",
+        "screenshotsPerItem": "7 → 6 / 5 / 12",
+        "toolCallsTotal": "92 → 272 (+196%)",
+        "modelTurnsTotal": "14 → 141 (Claude finish counts every tool step; Codex-only 43, +207%)",
+        "correctionsTotal": "6 → 18 messages / 13 recorded cycles",
+        "designDecisionsStoppedFor": "1 → 0 during build, 4 raised at finish and resolved by the operator",
+        "successCriterion50PercentReduction": "met for context loaded; not met for tool calls or turns"
+      }
+    },
+    {
+      "run": 2,
+      "of": 3,
+      "workstream": "External Care History · Hospitalizations edit form (item 1 of the combined runs 2-3 batch; item 2 not started)",
+      "contextLoadedBytes": 71944,
+      "contextLoadedNote": "CLAUDE.md + generated contract + the selected manifest item + the last record named by it, per the lean startup. The executor also read, beyond the lean set, the Facility Stay record and report, the PMHx body record, the Allergies list record and two flags, the lean workflow scripts, and three memory notes; those are not counted.",
+      "items": [
+        {
+          "itemId": "pilot2-hospitalizations-edit",
+          "risk": "medium (approved by Daniel before start)",
+          "executor": "Claude (Anthropic claude-fable-5-1)",
+          "modelTurns": 30,
+          "toolCalls": 63,
+          "figmaCalls": 22,
+          "useFigmaReads": 11,
+          "useFigmaWrites": 9,
+          "screenshots": 6,
+          "shellCommands": 16,
+          "elapsedMinutes": 45,
+          "recordedCorrectionCycles": 3,
+          "operatorMessages": 1,
+          "operatorDecisions": 0,
+          "result": "passed deterministic and visual review by the executor; comparison pending operator review",
+          "countingNote": "Counted by the executor from its own session at finalize: every tool call from the approval message to the commit, including parallel calls individually; modelTurns are assistant messages. Not instrumented."
+        }
+      ],
+      "againstBaseline": {
+        "note": "Same scope class as the Facility Stay baseline (one edit-form body, sheet, reference, change log, comparison) built by one executor in one gated item with one approval message and no design decision stopped for.",
+        "contextLoaded": "1,032,558 bytes → 71,944 bytes (−93.0%)",
+        "figmaCalls": "35 → 22",
+        "screenshots": "7 → 6",
+        "toolCallsTotal": "92 → 63",
+        "modelTurns": "14 → 30 (Claude counts every tool step as a turn)",
+        "corrections": "6 → 3 recorded cycles",
+        "designDecisionsStoppedFor": "1 → 0",
+        "successCriterion50PercentReduction": "met for context loaded; tool calls fell 32%, Figma calls 37%"
+      }
+    },
+    {
+      "run": 3,
+      "of": 3,
+      "workstream": "Procedures/Surgical History · Edit Event form (item 2 of the combined runs 2-3 batch)",
+      "contextLoadedBytes": 87208,
+      "contextLoadedNote": "Same lean set as run 2 (CLAUDE.md + generated contract + manifest item + last record); the executor continued in the run 2 session, so the contract and precedent nodes were already in context and were not re-read.",
+      "items": [
+        {
+          "itemId": "pilot2-procedures-edit",
+          "risk": "medium (approved by Daniel before start)",
+          "executor": "Claude (Anthropic claude-fable-5-1)",
+          "modelTurns": 14,
+          "toolCalls": 35,
+          "figmaCalls": 13,
+          "useFigmaReads": 6,
+          "useFigmaWrites": 5,
+          "screenshots": 5,
+          "shellCommands": 9,
+          "elapsedMinutes": 25,
+          "recordedCorrectionCycles": 0,
+          "operatorMessages": 1,
+          "operatorDecisions": 0,
+          "result": "passed deterministic and visual review by the executor; comparison pending operator review",
+          "countingNote": "Counted by the executor from its own session at finalize, from the approval message to the commit, parallel calls counted individually. Not instrumented."
+        }
+      ],
+      "againstBaseline": {
+        "note": "Smaller scope than the Facility Stay baseline (five rows, no tabs or dates) but the same deliverable set; the run 2 pattern and status selector were reused directly.",
+        "contextLoaded": "1,032,558 bytes → 87,208 bytes (−91.6%)",
+        "figmaCalls": "35 → 13",
+        "screenshots": "7 → 5",
+        "toolCallsTotal": "92 → 35",
+        "modelTurns": "14 → 14",
+        "corrections": "6 → 0 recorded cycles",
+        "designDecisionsStoppedFor": "1 → 0",
+        "successCriterion50PercentReduction": "met for context loaded, tool calls and Figma calls"
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "pilot-pmhx-body-sheet",
+  "capturedAt": "2026-09-08T20:15:00Z",
+  "executors": {
+    "build": "Codex (OpenAI gpt-5.6-sol, xhigh) — Phase 0 through P4.d, stopped 2026-09-08T19:46Z at the operator's request",
+    "finish": "Claude (Anthropic claude-fable-5-1) — P4.e file-wide audit, P4.f comparison inspection, evidence, record, finish gate, commit"
+  },
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false,
+    "scope": "All nodes on all four pages (one read-only walk per page), plus targeted master-to-proof, shared-API, and geometry verification for the new body, sheet, helpers, and comparison."
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "exceptions": [
+        "546:5870 organizer section fill and stroke (Templates)",
+        "561:9876 organizer section fill and stroke (Screens)"
+      ],
+      "details": "Unbound visible solid paints per page: Cover 1, Templates 37, Screens 38, Archive 10. Templates rose from 35 to 37 and Screens from 36 to 38 relative to the section pilot; both increments are the established organizer-section fill and stroke. No product node, helper, sheet, or comparison descendant introduces an unbound solid paint."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "exceptions": [],
+      "details": "Zero fractional authored geometry outside instances on any page. The only fractional values found are inherited label x-offsets (183.5, 21.5) inside published Button and Text field instances, which are library-internal and outside this file's authorship. VECTOR, GROUP, and BOOLEAN_OPERATION bounds excluded per standing rule 8."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "Sidesheet Body content preferred values: 13 (12 before this batch, +1 for 546:5871); default unchanged at 26:221. Rebuild comparison slots Reference/Rebuild/Change log content: 16 preferred values each after the three new sub-components. Body master 546:5871 carries 26 componentPropertyReferences entries across 86 descendants. Exactly one PMHx body comparison exists on Screens (561:9877), alongside the one row comparison (521:7835) and one section comparison (537:9915)."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Body 546:5871 children: HEAD wrapper frame 547:5870 hosting section instance 547:5871 (main 534:5805) plus the Comments column label; EYES 548:5882 (main 534:5805); CUSTOM ITEMS 550:5902 (main 534:5805); Comments 551:5914 (main 77:709 Text field size=small State=Default Value=Filled, multiline=true). Rows resolve to 518:5772 Comment=Empty and 518:5785 Comment=Filled. Proof 552:5930 -> 546:5871. Live sheets 555:10031 and 559:6085 -> 6:65 Placement=Floating with Body content=546:5871. Comparison 561:9877 -> shared master 35:332 with slots swapped to 558:6084, 559:6084, 560:6172. Change log rows 560:6175/6176/6187/6193 -> 18:103 Change log/Row. Legacy placeholder layers inside the comparison instance are hidden."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "Rendered text matches stored properties: Title=Past Medical History; HEAD/Trauma; EYES/Blindness (Empty) and Cataracts (Filled); CUSTOM ITEMS/Add custom item (italic override preserved); Comments label and value text Comments go here; footer Label=Save & Add to Note (tertiary, visible) and Label=Save (primary); Cancel secondary and Add Section to Note full-width action hidden. One-row groups hide their second nested row by visibility override (HEAD and CUSTOM ITEMS), not by detaching."
+    },
+    "instancePaintVerification": {
+      "pass": true,
+      "details": "40 visible solid paints compared in traversal order between body master 546:5871 and proof 552:5930: zero colour, opacity, or bound-variable mismatches. The only differing field is the root node's own name."
+    },
+    "sharedDefaultsAndGeometry": {
+      "pass": true,
+      "details": "Sidesheet set 279:2446: all three Placement variants remain 550x600; all 12 pre-existing properties keep their defaults; only Body content preferred values grew. Live sheet 555:10031: 550x564 = Header 72 + divider 1 + Body region 420 (16 + 388 + 16) + Footer 71. Body master: 518x388, vertical auto layout, 16px gap, zero padding, hug height, paper-bound fill. Rebuild helper 559:6084 has no fill, so nothing false extends below the 564px sheet inside the 600px slot (pixel below the sheet in the Rebuild column reads the grey backdrop)."
+    },
+    "concurrency": {
+      "pass": true,
+      "details": "check-batch.js passed against the run guard before finishing; the schema digest outside the owned record was unchanged. Archive node count (1528) exceeds the section pilot's figure (1394) only because of a different counting method; no node with an id at or above 538 exists on Archive, so nothing was moved there."
+    }
+  },
+  "pageAudit": {
+    "nodeCounts": {
+      "Cover": 8,
+      "Templates": 8788,
+      "Screens": 4034,
+      "Archive": 1528
+    },
+    "unboundSolidPaints": {
+      "Cover": 1,
+      "Templates": 37,
+      "Screens": 38,
+      "Archive": 10
+    },
+    "fractionalAuthoredGeometry": {
+      "Cover": 0,
+      "Templates": 0,
+      "Screens": 0,
+      "Archive": 0
+    },
+    "countingNote": "page.findAll(() => true) with skipInvisibleInstanceChildren=false; the page node itself is not counted, which is why Cover reads 8 where the earlier pilots reported 9."
+  },
+  "createdNodes": {
+    "templatesSection": "546:5870",
+    "bodyComponent": "546:5871",
+    "headWrapper": "547:5870",
+    "headSectionInstance": "547:5871",
+    "commentsColumnLabel": "547:5892",
+    "eyesSectionInstance": "548:5882",
+    "customItemsSectionInstance": "550:5902",
+    "commentsTextField": "551:5914",
+    "bodyProof": "552:5930",
+    "sheetProof": "555:10031",
+    "referenceHelper": "558:6084",
+    "frozenSourceImage": "558:6085",
+    "rebuildHelper": "559:6084",
+    "rebuildHelperSheet": "559:6085",
+    "changeHelper": "560:6172",
+    "screensSection": "561:9876",
+    "comparison": "561:9877"
+  },
+  "corrections": [
+    "Codex, P3.c: the empty body wrapper stayed at its 1px scaffold height so the first 16px gap rendered transparent; corrected to true vertical hug before later sections.",
+    "Claude, P4.e: renamed wrapper frame 547:5870 to carry the SCAFFOLDING label required by standing rule 6, because it exists only to host the Comments column label beside a section instance.",
+    "Claude, P4.e: renamed standalone sheet 555:10031 to 'Past Medical History Sidesheet — proof' so the Rebuild sub-component 559:6084 is the screen's single placement per rule 15; the standalone stays as this pilot's validation proof, matching the row and section pilots."
+  ],
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-past-medical-history-body-2026-09-08/comparison.png",
+    "inspectedByExecutor": true,
+    "inspectedBy": "Claude, at 1x (1708x692), plus the standalone live sheet at 550x564 and PIL crops/diffs",
+    "observations": [
+      "Reference and rebuild carry the same content in the same order: HEAD/Trauma, EYES/Blindness and Cataracts (filled comment), CUSTOM ITEMS/Add custom item in italic, Comments field, and a two-action footer.",
+      "The rebuild's 42px rows, 8px heading gaps, 72px header, and 71px footer read as one consistent rhythm; the sheet ends 36px above the reference's fixed 600px bottom and nothing false shows below it.",
+      "Footer label renders as 'Save & Add To Note' while the source reads 'Save & Add to Note'. The stored Label property is 'Save & Add to Note'; the published Button applies TITLE text case, and code typography sets the button variant to textTransform capitalize, so the rebuild follows code. Not logged in the change log; reported for the operator.",
+      "The Comments field shows the resting state with a grey outline, where the source shows the focused state with a teal outline and an overlapping label. Only the height change (110 to 88) is in the change log; the state difference is reported for the operator.",
+      "The frozen reference image is a 1x capture (582x616 including shadow margin) placed in the 550x600 Reference sub-component, so it reads slightly softer than the 2x captures used by Health Status (1100x1200) and Social History (1100x1556). Rule 15 asks for a 2x export; the row and section pilots also used 1x. Reported for the operator.",
+      "Rebuild column of the comparison versus the standalone live sheet: 62 differing pixels, all corner anti-aliasing against the grey backdrop. Live sheet now versus Codex's render before the stop: 47 differing pixels, same cause. No content drift since the stop."
+    ]
+  },
+  "figmaNodes": {
+    "sidesheetSet": "279:2446",
+    "sidesheetFloating": "6:65",
+    "comparisonMaster": "35:332",
+    "changeLogRow": "18:103",
+    "conditionRowSet": "518:5797",
+    "sectionComponent": "534:5805"
+  },
+  "toolCalls": {
+    "figmaRead": 16,
+    "figmaWrite": 18,
+    "screenshot": 9,
+    "correctionCycles": 3,
+    "note": "Codex build phase, reconstructed from its session log after the 19:30Z start: 50 tool calls, of which about 24 were use_figma (about 7 reads, 17 writes) and 7 were screenshots. Claude finish phase: 9 use_figma reads, 1 use_figma write (two renames), 2 screenshots. Correction cycles: one during build (wrapper hug), two naming corrections at finish."
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "format": "tebra.design-work-manifest",
+  "version": 1,
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "plannerPolicy": "Risk is proposed by the planner and approved by the operator before execution; approval is quoted verbatim. Executors may not edit risk, approval, oversight, stopCondition, allowedFiles, or requiredEvidence. An unapproved tier runs only with a quoted per-item operator confirmation recorded by start-batch.js.",
+  "items": [
+    {
+      "id": "pilot-pmhx-condition-row",
+      "title": "Past Medical History condition row",
+      "status": "complete",
+      "dependsOn": [],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:9306",
+        "label": "Trauma row",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pageId": "3:2",
+        "name": "Past medical history condition row"
+      },
+      "expectedRecordId": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
+      "scope": "Build one reusable 518x32 row from published Checkbox, Icon button, ChatOutlined, and ChatFilled components. Model only the states visible in the source reference.",
+      "risk": {
+        "tier": "low",
+        "reasons": [
+          "One local component",
+          "All required controls exist in the subscribed library",
+          "No shared-master or token change"
+        ],
+        "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
+        "approval": {
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-08T21:15:53.933Z",
+          "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
+          "history": [
+            {
+              "at": "2026-09-08T17:26:50.231Z",
+              "recordedAs": "Cole (operator)",
+              "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+              "correctedBy": "workflowRefactor_closeout_2026-09-08",
+              "correctedAt": "2026-09-08T21:00:01.586Z"
+            }
+          ],
+          "retroactive": true
+        },
+        "perItemConfirmationsAtRunTime": [
+          "\"ok whats next?\" 2026-09-08T17:26:26Z (does not approve a tier)"
+        ],
+        "lockedAt": "2026-09-08T21:15:53.933Z",
+        "lock": "c7562bc77a7f4670de979ed0d97441f7566fdb77760bf8775f79c2f4da31df8e"
+      },
+      "oversight": [
+        "Dedicated row reference/rebuild/change comparison",
+        "Operator review before the section item begins"
+      ],
+      "stopCondition": "Stop before mutation on source or target identity mismatch, missing published dependency, ambiguous comment state, or inability to preserve a 42px checkbox/icon touch target without changing the 32px visual row rhythm.",
+      "allowedFiles": [
+        "design-system-schema.json",
+        "design-system-schema.backup-2026-09-08-pre-npve-past-medical-history-row.json",
+        "apply-npve-past-medical-history-row.js",
+        "finalize-npve-past-medical-history-row.js",
+        "figma-export/npve-past-medical-history-row-2026-09-08/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-past-medical-history-row-2026-09-08/audit.json",
+        "report": "figma-export/npve-past-medical-history-row-2026-09-08/report.md",
+        "comparisonRender": "figma-export/npve-past-medical-history-row-2026-09-08/comparison.png"
+      },
+      "completedAt": "2026-09-08T17:59:03.449Z"
+    },
+    {
+      "id": "pilot-pmhx-section",
+      "title": "Past Medical History section group",
+      "status": "complete",
+      "dependsOn": [
+        "pilot-pmhx-condition-row"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:9315",
+        "label": "Eyes section",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pageId": "3:2",
+        "name": "Past medical history section"
+      },
+      "expectedRecordId": "npveRebuild_pastMedicalHistorySection_2026-09-08",
+      "scope": "Build one reusable section component from a bound heading and live instances of the approved Past Medical History condition row; preserve the source's relationship while applying the canonical base-8 spacing policy.",
+      "risk": {
+        "tier": "low",
+        "reasons": [
+          "Local composition of the preceding approved row",
+          "No new library dependency",
+          "No shared-master or token change"
+        ],
+        "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
+        "approval": {
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-08T21:15:53.974Z",
+          "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
+          "history": [
+            {
+              "at": "2026-09-08T17:26:50.269Z",
+              "recordedAs": "Cole (operator)",
+              "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+              "correctedBy": "workflowRefactor_closeout_2026-09-08",
+              "correctedAt": "2026-09-08T21:00:01.587Z"
+            }
+          ],
+          "retroactive": true
+        },
+        "perItemConfirmationsAtRunTime": [
+          "\"That's a pretty small item, seems good so far\" 2026-09-08T18:12:39Z"
+        ],
+        "lockedAt": "2026-09-08T21:15:53.974Z",
+        "lock": "0f8751fda12900b5e8f773182083fdaa87872afc18162095c507d6f97b967bbe"
+      },
+      "oversight": [
+        "Dedicated section reference/rebuild/change comparison",
+        "Operator review before the body item begins"
+      ],
+      "stopCondition": "Stop before mutation if the row item is not complete, the source heading/row relationship cannot be represented with canonical 8px relationships and 16px section separation, or any row must be detached or redrawn.",
+      "allowedFiles": [
+        "design-system-schema.json",
+        "design-system-schema.backup-2026-09-08-pre-npve-past-medical-history-section.json",
+        "apply-npve-past-medical-history-section.js",
+        "finalize-npve-past-medical-history-section.js",
+        "figma-export/npve-past-medical-history-section-2026-09-08/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-past-medical-history-section-2026-09-08/audit.json",
+        "report": "figma-export/npve-past-medical-history-section-2026-09-08/report.md",
+        "comparisonRender": "figma-export/npve-past-medical-history-section-2026-09-08/comparison.png"
+      },
+      "completedAt": "2026-09-08T18:27:46.990Z"
+    },
+    {
+      "id": "pilot-pmhx-body-sheet",
+      "title": "Past Medical History body and sidesheet",
+      "status": "complete",
+      "dependsOn": [
+        "pilot-pmhx-section"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:9205",
+        "label": "Page=Clin_PMHx",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "templatesPageId": "3:2",
+        "screensPageId": "27:2",
+        "name": "Past Medical History"
+      },
+      "expectedRecordId": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+      "scope": "Build the reusable 518px Past Medical History body from approved section instances and a published multiline Text field; append it to the shared Sidesheet preferred values, then create the sole full comparison and plain-language change log.",
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "Appends preferred values to shared Sidesheet and comparison APIs",
+          "Creates a live screen placement",
+          "Depends on two new local components"
+        ],
+        "proposedBy": "Codex (executor), manifest commit 146e867, 2026-09-08T14:34Z",
+        "approval": {
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-08T21:15:54.014Z",
+          "quote": "I approve the risk tiers as proposed: low, medium, high, human-decision, with the definitions in the manifest.",
+          "history": [
+            {
+              "at": "2026-09-08T17:26:50.307Z",
+              "recordedAs": "Cole (operator)",
+              "basis": "lock-risk.js run 24 seconds after the operator message \"ok whats next?\" (2026-09-08T17:26:26Z); no message approving the tiers exists in the session log",
+              "correctedBy": "workflowRefactor_closeout_2026-09-08",
+              "correctedAt": "2026-09-08T21:00:01.587Z"
+            }
+          ],
+          "retroactive": true
+        },
+        "perItemConfirmationsAtRunTime": [
+          "\"this looks good proceed\" 2026-09-08T19:18:45Z"
+        ],
+        "lockedAt": "2026-09-08T21:15:54.014Z",
+        "lock": "7d1510df9069ec5be20cb352088ff19726f3527f3a2b7caa05814e7ba2dd9380"
+      },
+      "oversight": [
+        "Dedicated full-sheet reference/rebuild/change comparison",
+        "Operator review required before any subsequent pilot or schema migration"
+      ],
+      "stopCondition": "Stop before mutation if either dependency is incomplete, any body control lacks a published mapping, shared defaults or geometry would change, the footer cannot follow content, or a new design decision appears. Stop the pilot on any deterministic or visual failure.",
+      "allowedFiles": [
+        "design-system-schema.json",
+        "design-system-schema.backup-2026-09-08-pre-npve-past-medical-history-body.json",
+        "apply-npve-past-medical-history-body.js",
+        "finalize-npve-past-medical-history-body.js",
+        "figma-export/npve-past-medical-history-body-2026-09-08/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-past-medical-history-body-2026-09-08/audit.json",
+        "report": "figma-export/npve-past-medical-history-body-2026-09-08/report.md",
+        "comparisonRender": "figma-export/npve-past-medical-history-body-2026-09-08/comparison.png"
+      },
+      "completedAt": "2026-09-08T20:04:11.015Z"
+    },
+    {
+      "id": "pilot2-hospitalizations-edit",
+      "title": "External Care History · Hospitalizations edit form",
+      "status": "complete",
+      "dependsOn": [],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:8401",
+        "label": "Page=Clin_ExternalCare-HEdit",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "templatesPageId": "3:2",
+        "screensPageId": "27:2",
+        "name": "Hospitalizations edit"
+      },
+      "expectedRecordId": "leanPilot_run2-3_2026-09-08",
+      "scope": "Build one reusable 518px Hospitalizations edit body on the approved Facility Stay edit-form pattern (Form surface token, 16px rhythm, published Text field, Tabs, Chip, Button, Icon button/TrashOutlined, the existing date-field GAP wrapper, and the Allergy severity selector precedent for the Status chip); append it to the shared Sidesheet Body content; one content-driven sheet, one frozen 2x reference, one plain-language change log, one comparison.",
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "New content built inside the established shell",
+          "Appends a preferred value to the shared Sidesheet API",
+          "Reuses the Facility Stay form pattern and two recorded GAP patterns; no unresolved design decision found in the read-only survey"
+        ],
+        "proposedBy": "Claude (planner proposal), Step 0 of the combined lean pilot, 2026-09-08",
+        "approval": {
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-09T00:38:11.672Z",
+          "quote": "I approve pilot2-hospitalizations-edit as medium, go ahead",
+          "history": []
+        },
+        "lockedAt": "2026-09-09T00:38:11.672Z",
+        "lock": "2e2d60f85c6cf1274a1ac1790eb66c1fe5635bad64d486fe7df1e3f3c4f50ac1"
+      },
+      "oversight": [
+        "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator",
+        "Deterministic validation immediately after the mutation; failure stops the batch before item 2"
+      ],
+      "stopCondition": "Stop before mutation on identity mismatch, a control with no published mapping and no recorded GAP pattern, any shared default or geometry change, or a new design decision. Stop the batch on any deterministic or visual failure before item 2 mutates.",
+      "allowedFiles": [
+        "design-system-schema.json",
+        "design-system-schema.backup-2026-09-08-pre-lean-pilot-run2-3.json",
+        "apply-lean-pilot-run2-3.js",
+        "finalize-lean-pilot-run2-3.js",
+        "figma-export/lean-pilot-run2-3-2026-09-08/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/lean-pilot-run2-3-2026-09-08/audit-hospitalizations-edit.json",
+        "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+        "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-hospitalizations-edit.png"
+      },
+      "completedAt": "2026-09-09T00:54:04.025Z"
+    },
+    {
+      "id": "pilot2-procedures-edit",
+      "title": "Procedures/Surgical History · Edit Event form",
+      "status": "complete",
+      "dependsOn": [
+        "pilot2-hospitalizations-edit"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:8651",
+        "label": "Page=ClinProSH_Edit",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "templatesPageId": "3:2",
+        "screensPageId": "27:2",
+        "name": "Procedures edit"
+      },
+      "expectedRecordId": "leanPilot_run3_2026-09-08",
+      "scope": "Build one reusable 518px Procedures edit body on the same edit-form pattern (Procedure Code field, Status chip via the severity-selector precedent, Related to problem, Facility Name, Comments); append it to the shared Sidesheet Body content; one content-driven sheet, one frozen 2x reference, one plain-language change log, one comparison.",
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "New content built inside the established shell",
+          "Appends a preferred value to the shared Sidesheet API",
+          "Same control set as item 1 minus tabs and dates; the Status chip needs the recorded GAP pattern, not a new decision"
+        ],
+        "proposedBy": "Claude (planner proposal), Step 0 of the combined lean pilot, 2026-09-08",
+        "approval": {
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-09T02:29:44.873Z",
+          "quote": "I approve pilot2-procedures-edit as medium, go ahead",
+          "history": []
+        },
+        "lockedAt": "2026-09-09T02:29:44.873Z",
+        "lock": "d9692bafc11fc14c145ea8a9e5a5a0caf482cd3a9bbf9f9db01fc2f1840b7a9b"
+      },
+      "oversight": [
+        "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator",
+        "Runs only after item 1 passes deterministic validation"
+      ],
+      "stopCondition": "Same as item 1; additionally, do not start if item 1 failed validation.",
+      "allowedFiles": [
+        "design-system-schema.json",
+        "design-system-schema.backup-2026-09-08-pre-lean-pilot-run3.json",
+        "apply-lean-pilot-run3.js",
+        "finalize-lean-pilot-run3.js",
+        "figma-export/lean-pilot-run2-3-2026-09-08/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/lean-pilot-run2-3-2026-09-08/audit-procedures-edit.json",
+        "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+        "comparisonRender": "figma-export/lean-pilot-run2-3-2026-09-08/comparison-procedures-edit.png"
+      },
+      "recordNote": "Re-pointed from leanPilot_run2-3_2026-09-08 at item 1 finalize (2026-09-09): that record closed DONE with item 1 while this item was still unapproved.",
+      "completedAt": "2026-09-09T02:36:58.645Z"
+    }
+  ],
+  "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"
+}
