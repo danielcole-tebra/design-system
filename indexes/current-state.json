@@ -3,15 +3,17 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "npveTidy_2026-09-08",
-  "date": "2026-09-08",
+  "id": "npveRebuild_allergiesEdit_2026-09-09",
+  "date": "2026-09-09",
   "workstream": "npve",
-  "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
-  "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49"
+  "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
+  "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, f"
  },
  "recordGate": {
-  "inProgress": [],
-  "clear": true,
+  "inProgress": [
+   "npveRebuild_allergiesEdit_2026-09-09"
+  ],
+  "clear": false,
   "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
  },
  "byWorkstream": {
@@ -25,12 +27,12 @@
    }
   },
   "npve": {
-   "count": 62,
+   "count": 63,
    "latest": {
-    "id": "npveTidy_2026-09-08",
-    "date": "2026-09-08",
-    "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
-    "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49"
+    "id": "npveRebuild_allergiesEdit_2026-09-09",
+    "date": "2026-09-09",
+    "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
+    "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, f"
    }
   },
   "workflow": {
@@ -50,7 +52,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "975362d1b382fa700099c3c12d195f6d833035f35303a3dfc8995c3c919eeb42",
-  "bytes": 1453124
+  "sha256": "9f032685c79befd8d4fcbd0ed80a8b7a73dab8be74a0b2abd8eafa19149beee9",
+  "bytes": 1464356
  }
 }

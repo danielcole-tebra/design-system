@@ -919,6 +919,15 @@
    "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
    "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-leve",
    "recordSha256": "a514142a075091739e3a3313d1b0ab72b6ac54b296522aae39f1cb2902489e1a"
+  },
+  {
+   "id": "npveRebuild_allergiesEdit_2026-09-09",
+   "sequence": 94,
+   "date": "2026-09-09",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
+   "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09;",
+   "recordSha256": "acf61d97e78b30962a6779664ffdd39ab8fec04d2a2fab1bef8c4bc12fee384e"
   }
  ],
  "flags": {
@@ -1220,8 +1229,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 94,
-  "aggregateTopLevelKeys": 108,
-  "nextRecordSequence": 94
+  "records": 95,
+  "aggregateTopLevelKeys": 109,
+  "nextRecordSequence": 95
  }
 }

@@ -1,0 +1,95 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_allergiesEdit_2026-09-09",
+ "sequence": 94,
+ "date": "2026-09-09",
+ "workstream": "npve",
+ "created": {
+  "by": "Cline (Anthropic Claude)",
+  "at": "2026-09-09T18:50:44.817Z",
+  "script": "apply-npve-allergies-edit.js"
+ },
+ "record": {
+  "_status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, form, comparison, verification, report) remain, in a write-capable session.",
+  "date": "2026-09-09",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "executor": "Cline (Anthropic Claude)",
+  "trigger": "Operator approved the next queued manifest item (npve-allergies-edit, medium tier) and settled the caption-placement question.",
+  "recordGate": "npveTidy_2026-09-08 recorded DONE in indexes/record-index.json — passed; validate-workflow PASS before reading",
+  "manifestItem": "npve-allergies-edit (medium tier; risk locked 2026-09-09 by lock-risk.js; approver and verbatim quote recorded in workflow/manifest.json)",
+  "report": "figma-export/npve-allergies-edit-2026-09-09/report.md",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only — node 129:7826 (Page=Clin_Allergies-Edit, 550x673, variant of Sidesheetv3 129:6647); touched only for the frozen 2x reference export",
+  "fileIdentity": "PASS 2026-09-09 — all four pages verified live via the official Figma MCP get_metadata (read-only): 0:1 Cover; 3:2 Templates (01 · Sidesheet shell with Sidesheet masters 6:65 Floating / 279:2416 Docked right / 279:2431 Docked left; runs 2-3 precedents in sections 20 · Hospitalizations edit 580:6012 and 21 · Procedures edit 586:6413); 27:2 Screens (reused GAP marker frames 581:11754 end-adornment and 581:11761 dropdown chip in section 20); 126:2 Archive (07 · Emptied organizers, 08 · Legacy oversize as tidied by npveTidy_2026-09-08). Capability boundary: the connected toolset is read-only (metadata, screenshots, variables — no write tool), so steps 4-8 run in a write-capable session. Standing-rule deviation recorded: the available tools cannot pass an explicit file key (they read the active file in the Figma desktop app), so identity is verified from the returned page structure on every call — the operator sets the active file before each phase.",
+  "planning": {
+   "proposal": "figma-export/npve-planning-2026-09-09/proposal.md (planner scoped read; source facts, mapping and expected dimensions live there and in the manifest item)",
+   "sourceFacts": [
+    "550x673: header Breadcrumbs 64 (back 32x32 tinted #E9EFEE at 16,16; title \"Edit Allergies\" Bold; close glyph 24 at right), Main Wrap 609 with the form card 518x517 at y 8 inside a 16px side inset, footer row 518x60 at y 541 (Cancel text 72, Save & Add to Note outlined 171, Save primary 66; gap 21).",
+    "Card padding 12 (rows 494 wide): \"Edit Allergen\" Bold 16 + trash 24 (34 tall); Allergen caption + autocomplete 384x40 with caret, Severity caption + status chip 70x32 at the right; Status caption + two Radio Option 24px in a 40px row; Reactions caption + rows 494x40 (flushing, hives) each with a red X 24, then Add reaction input 426x36 + Add outlined button 60x36; Comments 494x110 focused with placeholder \"Comments go here\".",
+    "Card fill pale teal (#EEF7F9 family), 1px #D6D6D6, radius 8 — the Form surface pattern."
+   ]
+  },
+  "decisions": [
+   {
+    "id": "captionPlacement_A_floatingLabel",
+    "what": "Caption placement A — library floating label, captions dropped, one change-log row per form.",
+    "operator": "Daniel (operator), decision-prompt answer 2026-09-09, verbatim: \"A — Library floating label, captions dropped, one change-log row per form (recommended: what the library ships, what runs 2-3 did)\".",
+    "settles": "This decision settles the same question for npve-family-history-edit (manifest plannerNotes.newPatternWatch)."
+   },
+   {
+    "id": "tierApproval_medium",
+    "what": "Medium tier approved and locked before start.",
+    "operator": "Daniel (operator), 2026-09-09; approver and verbatim quote recorded in workflow/manifest.json by scripts/workflow/lock-risk.js.",
+    "quoteVerbatim": "Daniel (operator), 2026-09-09: \"I approve the medium tier for npve-allergies-edit; caption placement A — library floating label, captions dropped, one change-log row per form.\"",
+    "manifestQuoteNote": "The manifest risk payload was locked by lock-risk.js before batch start and is frozen by the active run; it carries the same approval assembled verbatim from the session messages. This quoteVerbatim is the operator's own single-sentence form and governs."
+   }
+  ],
+  "scope": "Build one reusable 518px Allergies edit form and body on the runs 2-3 edit-form pattern: Edit Allergen header with trash Icon button; Allergen Autocomplete/Field size=small Value=Filled (\"Penicillin\") beside the existing Allergy severity selector 352:3206 (\"Mild\"); Status radio group (Active checked, Inactive) on Radio + Form control label; Reactions list of two outlined rows (flushing, hives) with trailing error Icon button in the recorded end-adornment GAP wrapper, plus an add-reaction Text field with an outlined Add Button; Comments medium multiline resting; footer Cancel / Save & Add to Note / Save through the shell. Append the body to the shared Sidesheet Body content; one placed sheet with Show back on; frozen 2x reference; change log; comparison; markers for the dropdown chip, the end adornment and the back-control DEFECT.",
+  "systemMapping": {
+   "header": "Sidesheet 6:65 Placement=Floating, Show back=true (Icon button + Icon/LeftCaret), Title \"Edit Allergies\", Close as published",
+   "trash": "Icon button 77:1109 color=default size=small with Icon/TrashOutlined (run 2 precedent)",
+   "allergen": "Autocomplete/Field size=small State=Default Value=Filled, Value text \"Penicillin\", floating label per caption decision A, width fills to the selector",
+   "severity": "Allergy severity selector 352:3206 (73x32, label \"Mild\"); dropdown-chip GAP marker reused (pattern 404:7061)",
+   "status": "Form control label ×2 with Control swapped to Radio (checked / unchecked), horizontal row gap 16, 42 tall per npve.touchTargets",
+   "reactions": "two GAP wrappers: Text field size=small Value=Filled (\"flushing\", \"hives\") + Icon button color=error size=small with Icon/Close (recorded pattern 324:4934 / 394:5611); add row: Text field size=small Value=Empty placeholder \"Add reaction\" + Button variant=outlined size=small \"Add\"",
+   "comments": "Text field 77:698 size=medium multiline=true Value=Empty placeholder \"Comments go here\", 104 tall resting per npve.fieldStates",
+   "footer": "shell Footer with Show tertiary action on: Cancel (text) / Save & Add to Note (outlined) / Save (primary)",
+   "formSurface": "NPVE/Color Form surface VariableID:387:3434 (#EEF7F9, 1px color/divider, radius 8), 16px inset bound npve.sidesheet.body.inset, rows 486 wide, rhythm bound space/16"
+  },
+  "approvedDifferences": [
+   "Shell regions: source header 64/65 and footer 60 become the canonical 72 and 71; the fixed source height becomes content-driven (npve.sidesheet.height).",
+   "Template padding: the form card uses the shared 16px inset on all sides, so rows are 486 wide even where the source draws 12px/494.",
+   "Base-8 rhythm: 16px between rows, 8px only for tight relationships (npve.spacing.verticalDefault, npve.spacing.tightRelationship).",
+   "Capitalized labels: button labels render in the library title case (npve.buttonLabels).",
+   "Resting field states: the focused Comments field renders resting at 104 tall (library medium multiline) instead of focused at 110.",
+   "Touch targets: radio rows built on Radio + Form control label are 42px tall where the source draws 24px radios in a 40px row (npve.touchTargets).",
+   "Library sizes: the 36px \"Add\" pill and the 36px add-entry input become the library small Button (36) and small Text field (40).",
+   "Caption placement A: floating labels, source captions dropped, one change-log row per form."
+  ],
+  "backControlDelta": "Source draws a 32x32 square tinted #E9EFEE with a left caret; the shell Show back control (6:67) is the library Icon button color=default size=medium, 40x40, no fill, Icon/LeftCaret. Recorded DEFECT verdict (npveRebuild_sidesheet_inventory_2026_09_02, \"Back control (edit pages)\"). Plan: shell as published, one change-log row, one DEFECT marker beside the comparison; first sheet built with the back control visible.",
+  "expectedFinding": "Source footer inconsistency: Save is outlined here and primary on every other edit sheet. Report, do not resolve: build as drawn, one change-log row, one flag for Daniel.",
+  "stopConditions": [
+   "Stop before mutation on identity mismatch (file keys or page ids), on a control with no published mapping and no recorded GAP pattern, on any shared default or geometry change, or on a new design decision beyond the recorded outlined-Save finding.",
+   "The source file is never written; the library file is never written.",
+   "Additive only: nothing deleted; superseded content archived, never removed.",
+   "If the Figma bridge is unavailable in a session, the batch pauses IN PROGRESS before mutation instead of proceeding unverified."
+  ],
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "PROCESS": 0
+  },
+  "flagsBefore": {
+   "active": 228,
+   "resolved": 58,
+   "total": 286
+  },
+  "flagsAfter": null,
+  "flagsAdded": [],
+  "figmaMutations": [],
+  "resumeProcedure": "Resume from any MCP-capable session: the run .workflow-runs/npve-allergies-edit.json is active and this record is IN PROGRESS. Nothing in Figma has been mutated yet. 1) node scripts/workflow/validate-workflow.js — PASS expected, inProgress=npveRebuild_allergiesEdit_2026-09-09. 2) node scripts/workflow/check-batch.js npve-allergies-edit — guard PASS expected. 3) Verify target identity fdCQVFdvOByaOYIJYag0d6 (pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive; figma.skipInvisibleInstanceChildren = false for every walk) and record it in fileIdentity. — DONE 2026-09-09, see fileIdentity. 4) Frozen 2x reference export of source node 129:7826 into figma-export/npve-allergies-edit-2026-09-09/, shown at 1:1, captioned with the node id and export date; row-0 checked for the Sidesheetv3 set outline and cleaned if present. 5) Build the reusable 518px form per systemMapping and approvedDifferences in this record; caption decision A applies (floating labels, source captions dropped, one change-log row per form). 6) Run the ten standing batch rules and the deterministic checks; save PNG screenshots into the batch folder. 7) Comparison on Screens 27:2 in section \"22 · Allergies · Edit Allergen comparison (new)\": Reference / Rebuild / Change log with the GAP markers (dropdown chip pattern 404:7061; end-adornment wrapper 324:4934 / 394:5611) and the back-control DEFECT marker; the executor inspects the render and shows it to the operator. 8) node finalize-npve-allergies-edit.js then node scripts/workflow/finish-batch.js npve-allergies-edit (required evidence: audit-allergies-edit.json, report.md, comparison-allergies-edit.png). 9) appendFlags for the outlined-Save footer finding (report, do not resolve), then commit the record, aggregate, indexes, contract, manifest and evidence together."
+ }
+}

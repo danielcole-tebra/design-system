@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-09T14:35:34.620Z",
+  "generatedAt": "2026-09-09T19:17:12.097Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "975362d1b382fa700099c3c12d195f6d833035f35303a3dfc8995c3c919eeb42",
+      "sha256": "9f032685c79befd8d4fcbd0ed80a8b7a73dab8be74a0b2abd8eafa19149beee9",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "7e4bab84f242182ae68252c3893f28eb39dc1ee70f76dd3a675e327be680417d"
+        "sha256": "651a6d5eac5d823bf21abfa056c3b52cf377c0d7aa7d34fc2ada8d7cdf19bdf4"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "76cc302a67c5a3485f4201ecccd4238f9de176e06e20a813023f6d7db8e6b778"
+        "sha256": "6bfb73ddf60b62674b8c6fcea40816eabf25a460547c271f4442442c91e1e896"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 94,
+      "records": 95,
       "flags": {
         "active": 228,
         "resolved": 58
@@ -304,15 +304,17 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "npveTidy_2026-09-08",
-      "date": "2026-09-08",
+      "id": "npveRebuild_allergiesEdit_2026-09-09",
+      "date": "2026-09-09",
       "workstream": "npve",
-      "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
-      "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49"
+      "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
+      "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, f"
     },
     "recordGate": {
-      "inProgress": [],
-      "clear": true,
+      "inProgress": [
+        "npveRebuild_allergiesEdit_2026-09-09"
+      ],
+      "clear": false,
       "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
     },
     "byWorkstream": {
@@ -326,12 +328,12 @@
         }
       },
       "npve": {
-        "count": 62,
+        "count": 63,
         "latest": {
-          "id": "npveTidy_2026-09-08",
-          "date": "2026-09-08",
-          "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
-          "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49"
+          "id": "npveRebuild_allergiesEdit_2026-09-09",
+          "date": "2026-09-09",
+          "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
+          "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, f"
         }
       },
       "workflow": {
@@ -727,26 +729,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_pastMedicalHistorySection_2026-09-08",
-        "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistorySection_2026-09-08.json",
-        "status": "DONE. Low-risk PMHx section pilot built and validated; stopped before the body item for operator review.",
-        "date": "2026-09-08",
-        "outcome": [
-          "Created a 518x112 Past medical history section component with Heading text and two live approved condition rows.",
-          "Applied the canonical 8px heading-to-list relationship and kept condition-row touch targets contiguous.",
-          "Created frozen reference, live rebuild, plain-language change-log helpers, and one sole shared-master comparison on Screens.",
-          "Shared component APIs, tokens, and the approved condition-row master were not modified."
-        ],
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-past-medical-history-section-2026-09-08/report.md",
-        "target": {
-          "file": "fdCQVFdvOByaOYIJYag0d6",
-          "templatesPage": "3:2",
-          "screensPage": "27:2"
-        }
-      },
-      {
         "id": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
         "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryBody_2026-09-08.json",
         "status": "DONE. Medium-risk PMHx body and sidesheet pilot built by Codex through P4.d and finished by Claude from P4.e; four operator decisions reported, none resolved. Operator review of comparison.png required before further pilot work.",
@@ -908,6 +890,17 @@
         "decision": null,
         "report": "figma-export/npve-tidy-2026-09-08/report.md",
         "target": null
+      },
+      {
+        "id": "npveRebuild_allergiesEdit_2026-09-09",
+        "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
+        "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, form, comparison, verification, report) remain, in a write-capable session.",
+        "date": "2026-09-09",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-allergies-edit-2026-09-09/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -1035,6 +1028,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "c3aa73b67e9d4230a4142ec2e2ee84911155bbf76d925de3b2664e226d55d07c"
+    "contractSha256": "442771cd9f4d52812a1d72b43482ddb6b4d3fa78a9f90c149816461fec71d008"
   }
 }

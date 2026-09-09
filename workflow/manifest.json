@@ -410,7 +410,7 @@
       "id": "npve-allergies-edit",
       "title": "Allergies · Edit Allergen form (sidesheet)",
       "workstream": "NPVE Rebuild / Sidesheets",
-      "status": "proposed",
+      "status": "queued",
       "dependsOn": [],
       "source": {
         "fileKey": "zVsuhYehoSLLq880qRBFkq",
@@ -487,12 +487,14 @@
         ],
         "proposedBy": "Claude (planner proposal), 2026-09-09, after the scoped source read in figma-export/npve-planning-2026-09-09/proposal.md",
         "approval": {
-          "status": "unapproved",
-          "approvedBy": null,
-          "approvedAt": null,
-          "quote": null,
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-09T18:49:40.409Z",
+          "quote": "I approve you to do it (plan-mode message, 2026-09-09); Continue with the approved plan now (act-mode go-ahead); caption placement A - Library floating label, captions dropped, one change-log row per form (operator decision-prompt answer)",
           "history": []
-        }
+        },
+        "lockedAt": "2026-09-09T18:49:40.409Z",
+        "lock": "06dd414f45661028587faa019cac8a8e3ed0f9aa352a8c42089b8ed52f194e35"
       },
       "oversight": [
         "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator before the Family History item starts",
