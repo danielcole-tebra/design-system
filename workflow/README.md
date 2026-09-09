@@ -9,19 +9,24 @@ This directory is the compact, provider-neutral entry point for NPVE rebuild bat
 - `manifest.json` — planner-owned work queue. Risk tiers carry who proposed them and whether the operator approved them, with the operator's words quoted.
 - `protocol.json`, `check-catalog.json`, `evidence-template.json`, `metrics.json` — roles and tiers, the deterministic-vs-visual check split, the evidence packet shape, and pilot measurements.
 
+The register itself lives outside this directory as the append-only record store (record schemasplit_phase8_2026-09-08): `records/<workstream>/<date>/<recordId>.json` (immutable batch records), `flags/active.json` + `flags/resolved.json`, `foundation/<section>.json`, and the generated `indexes/record-index.json` + `indexes/current-state.json`. `design-system-schema.json` is generated from it by `scripts/schema/build-aggregate.js`. Concurrent batches write separate record files and never touch shared files except the generated indexes, which regenerate at commit.
+
 ## Start here
 
 1. Run `node scripts/workflow/validate-workflow.js`.
 2. Read `workflow/npve-contract.generated.json` and the selected item in `workflow/manifest.json`.
-3. Read the last completed record named by the work item. Open the full schema only when validation fails, a conflict appears, or the item explicitly requires historical context.
-4. Record gate: the apply-*.js script refuses to create the item's `IN PROGRESS` record while the previous record in the workstream is not DONE. If the previous batch has no record at all, stop and write a read-only state-check record instead.
-5. Create the item's `IN PROGRESS` schema record, regenerate the contract, and run `start-batch.js`. An unapproved tier needs `--confirm="<the operator's exact words for this item>"`.
+3. Read the last completed record named by the work item: find its path in `indexes/record-index.json` (or `indexes/current-state.json` for the last record per workstream) and read that file. Open the full aggregate only when validation fails, a conflict appears, or the item explicitly requires historical context.
+4. Record gate: the apply-*.js script calls `openRecord` in `scripts/schema/lib.js`, which refuses to create the item's `IN PROGRESS` record file while the previous record in the workstream is not DONE in `indexes/record-index.json`. If the previous batch has no record at all, stop and write a read-only state-check record instead.
+5. Create the item's `IN PROGRESS` record file (openRecord regenerates the aggregate and indexes), regenerate the contract, and run `start-batch.js`. An unapproved tier needs `--confirm="<the operator's exact words for this item>"`.
 6. Run `check-batch.js` immediately before each Figma mutation and before finalizing the record.
-7. After finalizing, archive the batch proofs per the proof convention, regenerate the contract, and run `finish-batch.js`.
+7. After finalizing (a finalize-*.js script calling `finalizeRecord`; only an IN PROGRESS record can be rewritten), archive the batch proofs per the proof convention, regenerate the contract, and run `finish-batch.js`. Commit the record file together with the regenerated `design-system-schema.json`, `indexes/` and contract.
 
 ## Commands
 
 ```text
+node scripts/schema/build-aggregate.js [--check]
+node scripts/schema/validate-split.js
+node scripts/schema/self-test.js [scratchDir]
 node scripts/workflow/generate-contract.js
 node scripts/workflow/validate-workflow.js
 node scripts/workflow/lock-risk.js <item-id> <approver> "<verbatim operator approval>"

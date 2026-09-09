@@ -6,5 +6,11 @@
  "rootFontSizePx": 16,
  "method": "All values transcribed from source. Nothing was rendered, measured, or sampled from a browser.",
  "targetFigmaFileKey": "YX2n4YLrEpBXNbcc73T6dw",
- "targetPage": "Button test — MCP (existing hand-transcribed reference to be replaced)"
+ "targetPage": "Button test — MCP (existing hand-transcribed reference to be replaced)",
+ "register": {
+  "storedAs": "append-only record store: records/<workstream>/<date>/<recordId>.json (immutable batch records), flags/active.json + flags/resolved.json, foundation/<section>.json; indexes/record-index.json and indexes/current-state.json are generated",
+  "aggregate": "design-system-schema.json is generated from the store by scripts/schema/build-aggregate.js and is never edited by hand",
+  "since": "2026-09-08",
+  "sourceRecord": "schemasplit_phase8_2026-09-08"
+ }
 }

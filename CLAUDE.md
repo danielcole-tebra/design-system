@@ -10,7 +10,7 @@ OPERATORS.md describes the person's side of this loop; agents should assume an o
 
 ## Lean startup for NPVE work
 
-For an NPVE batch, do not reread the full schema by default. Run `node scripts/workflow/validate-workflow.js`, then read `workflow/npve-contract.generated.json`, the selected item in `workflow/manifest.json`, and the last record named by that item. The generated contract is a projection, not a second authority: its source digests make the validator fail whenever the schema or standing instructions change. Open the full schema only when validation fails, the selected work exposes a conflict, a convention is being changed, or historical evidence is genuinely required. The contract folds in `workflow/rules.json`: the agent rules, the record gate, standing rules 14 and 15, the sheet and comparison techniques, the proof convention, and every NPVE value with the record that decided it. Sections that live only in this file are declared canonical by name inside the contract.
+For an NPVE batch, do not reread the full schema by default. Run `node scripts/workflow/validate-workflow.js`, then read `workflow/npve-contract.generated.json`, the selected item in `workflow/manifest.json`, and the last record named by that item (its file path is in `indexes/record-index.json`; the last record per workstream is in `indexes/current-state.json`). The generated contract is a projection, not a second authority: its source digests make the validator fail whenever the schema or standing instructions change. Open the full schema only when validation fails, the selected work exposes a conflict, a convention is being changed, or historical evidence is genuinely required. The contract folds in `workflow/rules.json`: the agent rules, the record gate, standing rules 14 and 15, the sheet and comparison techniques, the proof convention, and every NPVE value with the record that decided it. Sections that live only in this file are declared canonical by name inside the contract.
 
 Risk is assigned by the planner or operator before execution. The executor may not lower its own risk or remove oversight. Every component still requires a comparison render inspected by the executor and shown to the operator; deterministic validation never replaces the pixel look.
 
@@ -23,7 +23,7 @@ Precedence, when sources disagree:
 3. Production is evidence of behavior, never authority on values.
 4. Figma is derived. Where Figma diverges from code, Figma is wrong.
 
-`design-system-schema.json` is the sole register of decisions, flags, batch rules, and batch records. Archived audits are never cited. Method is `TEBRA-DESIGN-SYSTEM.md` §6. Kit authority is the rule in `REFERENCE-KIT.md`.
+The register is the append-only record store (record schemasplit_phase8_2026-09-08): `records/<workstream>/<date>/<recordId>.json` holds one immutable file per batch record; `flags/active.json` and `flags/resolved.json` hold the flag register split by status; `foundation/<section>.json` holds decisions, tokens, components, the standing batch rules and the other non-record sections. `indexes/record-index.json` and `indexes/current-state.json` are generated and never hand-edited. `design-system-schema.json` is the legacy aggregate, generated from the store by `scripts/schema/build-aggregate.js`; read it for compatibility, never write it. Archived audits are never cited. Method is `TEBRA-DESIGN-SYSTEM.md` §6. Kit authority is the rule in `REFERENCE-KIT.md`.
 
 ## Superseded
 
@@ -75,7 +75,7 @@ The eleven rules are canonical in `workflow/rules.json` → agentRules and appea
 
 ## Recording
 
-Every batch writes a dated record to the schema through an `apply-*.js` script, with a backup first. Open: `flags[]` stopped at 2026-08-04 and later findings went into dated records only. Until that is resolved, write new findings to both.
+Every batch writes a dated record as a new file under `records/<workstream>/<date>/` through an `apply-*.js` script that calls `openRecord` in `scripts/schema/lib.js` (the record gate reads `indexes/record-index.json`), and closes it with a `finalize-*.js` script that calls `finalizeRecord`; both regenerate the aggregate and the indexes, which are committed with the record. A record is immutable once its status leaves IN PROGRESS; a later batch that must annotate an earlier record writes the annotation in its own record. New findings go to `flags/active.json` through `appendFlags`; a resolution moves the entry to `flags/resolved.json` through `resolveFlag`. The full-schema backup before each batch still stands until the operator decides the backup-policy question raised in record schemasplit_phase8_2026-09-08. Open: `flags[]` stopped at 2026-08-04 and later findings went into dated records only. Until that is resolved, write new findings to both.
 
 ## Publishing
 

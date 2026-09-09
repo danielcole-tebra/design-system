@@ -14,7 +14,7 @@ Capability was never the problem. The loop was missing. This guide is the loop, 
 
 - **Code is the root truth.** The design system in code (packages/design-system) outranks everything; Storybook's render outranks derivations; the Figma library outranks any consuming file; source files being rebuilt are evidence of intent, never authority.
 - **The library defines, files consume.** Screens and proposals are built from published library components. Nothing consuming the library invents what the library lacks — gaps get marked (grey GAP/DEFECT cards by the work) and become the library's to-do list.
-- **The schema is the memory.** Every decision, finding, and batch lives as a dated record in design-system-schema.json. Chat history is not the record. A batch without a record didn't happen.
+- **The record store is the memory.** Every decision, finding, and batch lives as a dated, immutable record file under records/<workstream>/<date>/, with findings in flags/active.json and flags/resolved.json and the foundations in foundation/; design-system-schema.json is generated from those files and is never edited by hand (record schemasplit_phase8_2026-09-08). Chat history is not the record. A batch without a record didn't happen.
 - **Everything is additive.** Nothing deleted; superseded work is renamed and archived with a README saying why.
 
 ## The loop, from your seat
@@ -24,7 +24,7 @@ Capability was never the problem. The loop was missing. This guide is the loop, 
 - **Read-only before writes.** New file, uncertain state, resumed work, anything that smells off: inventory first, build second. Nothing builds on an unverified state.
 - **Look at the canvas yourself after every build batch.** Reports claim, renders show. The catches that matter — a flush margin, sagging text, a missing hairline, a wrong color — have come from operator eyes on the file, not from any report.
 - **No record, no next batch.** Every batch ends with a schema record and a report on disk. The builder refuses new work on top of an unrecorded batch; that stop protects the system.
-- **Commit at session end.** The schema, backups, instruction files, reports. The register is the project; protect it.
+- **Commit at session end.** The record files, the generated aggregate and indexes, backups, instruction files, reports. The register is the project; protect it.
 - **Use the compact NPVE entry point when it validates.** `workflow/npve-contract.generated.json` and the planner-owned manifest replace routine full-schema rereads, not the schema itself. A stale-contract failure routes the agent back to regeneration or full evidence. Risk tiers are proposed by the planner and approved by you: your approval is quoted word for word in the manifest, and an item whose tier you have not approved runs only on your per-item confirmation, also quoted. The visual comparison remains mandatory. The rule text agents follow lives in `workflow/rules.json`, one place for every agent.
 
 ## Which decisions are whose

@@ -1,7 +1,7 @@
 {
   "format": "tebra.design-workflow-rules",
   "version": 1,
-  "purpose": "Canonical text of the rules an executor must know that do not live in the schema's standingBatchRules. generate-contract.js folds this file into workflow/npve-contract.generated.json and digest-checks it; CLAUDE.md and AGENTS.md point here instead of repeating the text. Every rule names the schema record that decided it. The schema remains the register; this file is its readable projection of standing instruction text.",
+  "purpose": "Canonical text of the rules an executor must know that do not live in the schema's standingBatchRules. generate-contract.js folds this file into workflow/npve-contract.generated.json and digest-checks it; CLAUDE.md and AGENTS.md point here instead of repeating the text. Every rule names the schema record that decided it. The append-only record store (records/, flags/, foundation/) remains the register and design-system-schema.json is generated from it; this file is the register's readable projection of standing instruction text.",
   "canonicalClaudeMdSections": {
     "note": "These CLAUDE.md sections are declared canonical by name rather than copied. CLAUDE.md is digest-checked by the contract, so a change to any of them invalidates the contract.",
     "sections": [
@@ -19,12 +19,13 @@
       {
         "n": 1,
         "title": "Read before touching",
-        "text": "Read before touching: CLAUDE.md, then use the validated compact workflow for NPVE work (run node scripts/workflow/validate-workflow.js, read workflow/npve-contract.generated.json, the selected manifest item, and its last record). For other workstreams, or when the compact workflow routes you there, read design-system-schema.json. The schema remains the authoritative record; the generated contract is a freshness-checked projection; chat history and your own memory are not the record.",
+        "text": "Read before touching: CLAUDE.md, then use the validated compact workflow for NPVE work (run node scripts/workflow/validate-workflow.js, read workflow/npve-contract.generated.json, the selected manifest item, and its last record). For other workstreams, or when the compact workflow routes you there, read the record store: indexes/record-index.json, then the record files it names (design-system-schema.json is the aggregate generated from them). The record store remains the authoritative record; the generated contract is a freshness-checked projection; chat history and your own memory are not the record.",
         "sourceRecord": [
           "npveRebuild_agentRules_2026-09-04",
-          "workflowRefactor_closeout_2026-09-08"
+          "workflowRefactor_closeout_2026-09-08",
+          "schemasplit_phase8_2026-09-08"
         ],
-        "note": "Amended 2026-09-08 (commit c88ce6c) to route NPVE work through the compact workflow; that amendment had no record until workflowRefactor_closeout_2026-09-08."
+        "note": "Amended 2026-09-08 (commit c88ce6c) to route NPVE work through the compact workflow; that amendment had no record until workflowRefactor_closeout_2026-09-08. Amended by schemasplit_phase8_2026-09-08: the register is the append-only record store; the monolith is generated."
       },
       {
         "n": 2,
@@ -70,10 +71,12 @@
       {
         "n": 7,
         "title": "Record every batch",
-        "text": "Record every batch: a dated schema record via an apply-*.js script, backup first, findings to flags[]. A batch without a record did not happen and will be treated as suspect.",
+        "text": "Record every batch: a dated record file under records/<workstream>/<date>/ via an apply-*.js script (openRecord), backup first, findings to flags/active.json (appendFlags). A record is immutable once its status leaves IN PROGRESS. A batch without a record did not happen and will be treated as suspect.",
         "sourceRecord": [
-          "npveRebuild_agentRules_2026-09-04"
-        ]
+          "npveRebuild_agentRules_2026-09-04",
+          "schemasplit_phase8_2026-09-08"
+        ],
+        "note": "Amended by schemasplit_phase8_2026-09-08: records are files in the append-only store; the full-schema backup stands until the operator decides the backup-policy question raised there."
       },
       {
         "n": 8,
@@ -112,10 +115,11 @@
     ]
   },
   "recordGate": {
-    "text": "Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one. In the compact workflow the gate is enforced twice: the apply-*.js script refuses to create the IN PROGRESS record while the previous record is not DONE, and start-batch.js refuses to start while the item's own record is not IN PROGRESS or a dependency is not complete.",
+    "text": "Before starting any batch, check that the previous batch in this workstream has a schema record. If it does not, refuse the batch and run a read-only state check instead; its record stands in for the missing one. In the compact workflow the gate is enforced twice: the apply-*.js script refuses to create the IN PROGRESS record while the previous record is not DONE, and start-batch.js refuses to start while the item's own record is not IN PROGRESS or a dependency is not complete. Since schemasplit_phase8_2026-09-08 the gate reads indexes/record-index.json: openRecord in scripts/schema/lib.js refuses to create a record file while the previous record in the workstream is not DONE there, and start-batch.js refuses while the item's own record file is not IN PROGRESS.",
     "sourceRecord": [
       "docsOperatorsGuide_2026-09-04",
-      "workflowRefactor_closeout_2026-09-08"
+      "workflowRefactor_closeout_2026-09-08",
+      "schemasplit_phase8_2026-09-08"
     ]
   },
   "standingRules": {
