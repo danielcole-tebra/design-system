@@ -9,14 +9,15 @@
     "referenceCounts": "Expected preferred-value and placement counts match live reads.",
     "componentIdentity": "Required component instances remain attached to expected masters.",
     "propertyReferences": "Cloned variants or rows retain required property references.",
-    "recordCompleteness": "Owned schema record is DONE and contains all ten standing-rule results.",
+    "recordCompleteness": "Owned record file under records/ is DONE and contains all ten standing-rule results.",
     "artifactPresence": "Report, audit JSON, and comparison PNG exist at manifest paths.",
-    "freshness": "Compact contract matches current schema and instruction digests.",
-    "concurrency": "Nothing outside the owned schema record changed during execution.",
+    "freshness": "Compact contract matches the current store digests (record index, flag stores, layout), the generated aggregate and indexes equal what the store generates now, and the instruction digests are current.",
+    "concurrency": "Nothing outside the owned record changed during execution: foundation sections, every other record file and every flag present at start are byte-equal now; separate record files or flags appended by another batch are reported as additions, not violations.",
     "allowlist": "Working-tree changes are within the planner-approved file list.",
     "riskApproval": "Tier is operator-approved with a verbatim quote in the manifest, or the run carries a quoted per-item confirmation.",
-    "citations": "Every sourceRecord cited by workflow/rules.json exists in the schema (generate-contract.js refuses otherwise).",
-    "proofArchive": "Batch proofs are named PROOF — <batch> · <what> and sit in Archive 06 at batch close."
+    "citations": "Every sourceRecord cited by workflow/rules.json exists in the store (generate-contract.js refuses otherwise).",
+    "proofArchive": "Batch proofs are named PROOF — <batch> · <what> and sit in Archive 06 at batch close.",
+    "immutability": "No record whose committed status was not IN PROGRESS has changed since the last commit (validate-split.js compares against HEAD indexes/record-index.json); no record or flag is ever removed."
   },
   "visual": {
     "comparisonRender": "Executor inspects a dedicated reference/rebuild/change comparison for every component.",

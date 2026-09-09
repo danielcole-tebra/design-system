@@ -1,0 +1,16 @@
+store PASS records=92 flags=227+58 aggregate=d7bf2a3ee801 fresh immutable=91 inProgress=schemasplit_phase8_2026-09-08
+workflow PASS store=92r/227+58f contract=5996c45d6790 items=6 deterministic=16 visual=3 inProgress=schemasplit_phase8_2026-09-08
+self-test PASS risk lock (tier and approval), allowlist, and outside-record concurrency guard
+record PASS pilot-pmhx-condition-row (records/npve/2026-09-08/npveRebuild_pastMedicalHistoryRow_2026-09-08.json)
+evidence PASS pilot-pmhx-condition-row reads=14 writes=15 screenshots=6 corrections=9
+record PASS pilot-pmhx-section (records/npve/2026-09-08/npveRebuild_pastMedicalHistorySection_2026-09-08.json)
+evidence PASS pilot-pmhx-section reads=8 writes=5 screenshots=5 corrections=1
+record PASS pilot-pmhx-body-sheet (records/npve/2026-09-08/npveRebuild_pastMedicalHistoryBody_2026-09-08.json)
+evidence PASS pilot-pmhx-body-sheet reads=16 writes=18 screenshots=9 corrections=3
+record PASS pilot2-hospitalizations-edit (records/npve/2026-09-08/leanPilot_run2-3_2026-09-08.json)
+evidence PASS pilot2-hospitalizations-edit reads=11 writes=9 screenshots=6 corrections=3
+record PASS pilot2-procedures-edit (records/npve/2026-09-09/leanPilot_run3_2026-09-08.json)
+evidence PASS pilot2-procedures-edit reads=6 writes=5 screenshots=5 corrections=0
+record PASS npve-module-chip-fix-2026-09-08 (records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json)
+evidence PASS npve-module-chip-fix-2026-09-08 reads=9 writes=1 screenshots=4 corrections=0
+generated files are fresh

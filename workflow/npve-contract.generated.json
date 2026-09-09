@@ -1,11 +1,39 @@
 {
   "format": "tebra.design-workflow-contract",
-  "version": 2,
-  "generatedAt": "2026-09-09T03:25:28.492Z",
+  "version": 3,
+  "generatedAt": "2026-09-09T12:22:04.691Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "ec02a430f5d7ab2bacdfad66c58bfd8b9a0f2cac57b436158f8cf5a709ac4421"
+      "sha256": "d7bf2a3ee8014cf3b878a64cdc53d167736cb2eef589a3380dbb43a854979c7b",
+      "note": "generated aggregate; the register is the store below"
+    },
+    "store": {
+      "recordIndex": {
+        "path": "indexes/record-index.json",
+        "sha256": "426b5fc9ec9c2a0ce68651d87624121b46dd4825d57cc77bb8c1fbb7613d960b"
+      },
+      "currentState": {
+        "path": "indexes/current-state.json",
+        "sha256": "9adc7dc28bf03b3679bc932f16a55901cd38a6a33a062e30425959c26a67d1d3"
+      },
+      "flagsActive": {
+        "path": "flags/active.json",
+        "sha256": "3e19c973e07c74d6efbbe79a788b395b38c2b4a03724755567417fb5b61cf158"
+      },
+      "flagsResolved": {
+        "path": "flags/resolved.json",
+        "sha256": "dc7db0c1afb7be8b7d584d7e79d4dce368aeb225f782fd62fb27c79454944016"
+      },
+      "layout": {
+        "path": "foundation/layout.json",
+        "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
+      },
+      "records": 92,
+      "flags": {
+        "active": 227,
+        "resolved": 58
+      }
     },
     "instructions": [
       {
@@ -26,8 +54,15 @@
       }
     ],
     "generator": "scripts/workflow/generate-contract.js",
-    "generatorVersion": 2,
+    "generatorVersion": 3,
     "citedRecordsPresent": 25
+  },
+  "recordStore": {
+    "layout": "records/<workstream>/<date>/<recordId>.json (one file per batch record, immutable once its status leaves IN PROGRESS); flags/active.json and flags/resolved.json (the flag register split by status); foundation/<section>.json (meta, tokens, components, standing batch rules and the other non-record sections); indexes/record-index.json and indexes/current-state.json (generated, never hand-edited); design-system-schema.json (generated legacy aggregate).",
+    "concurrency": "Concurrent batches write separate record files and never touch shared files except the generated indexes, which regenerate at commit.",
+    "howToRecord": "An apply-*.js script opens the record with scripts/schema/lib.js openRecord (record gate: the previous record in the workstream must be DONE in indexes/record-index.json); a finalize-*.js script closes it with finalizeRecord; both regenerate the aggregate and indexes. New findings go to flags/active.json through appendFlags; a resolution moves an entry to flags/resolved.json through resolveFlag. Never edit a record file by hand, and never edit a DONE record.",
+    "readRecord": "Find a record by id in indexes/record-index.json and read the file at its path. The last record of a workstream is in indexes/current-state.json byWorkstream.<ws>.latest.",
+    "sourceRecord": "schemasplit_phase8_2026-09-08"
   },
   "authority": {
     "order": [
@@ -227,15 +262,15 @@
   },
   "operatingLoop": [
     "Validate this contract before reading it as current truth.",
-    "Record gate: confirm the previous batch in the workstream has a schema record; if not, refuse and run a read-only state check whose record stands in.",
+    "Record gate: confirm the previous batch in the workstream has a DONE record in indexes/record-index.json; if not, refuse and run a read-only state check whose record stands in.",
     "Use the manifest item selected by the planner; the executor may not change its risk class. An unapproved tier needs per-item operator confirmation, quoted verbatim.",
     "Verify file identity and current live state before writes.",
     "Declare one bounded batch and stop condition.",
-    "Create the IN PROGRESS schema record before Figma mutation, regenerate this contract, then start the batch guard.",
+    "Open the IN PROGRESS record as a new file under records/ (apply-*.js via openRecord) before Figma mutation, regenerate this contract, then start the batch guard.",
     "Mutate sequentially; stop on the first component failure before touching the next item.",
     "Run deterministic checks and inspect at least one comparison render per component.",
     "Save the comparison render and full report; show the render to the operator.",
-    "Archive the batch proofs per proofConvention, finalize the schema record, regenerate this contract, pass the finish gate, and commit with an explicit allowlist."
+    "Archive the batch proofs per proofConvention, finalize the record (finalize-*.js via finalizeRecord), regenerate this contract, pass the finish gate, and commit with an explicit allowlist."
   ],
   "nonNegotiables": {
     "additiveOnly": true,
@@ -243,6 +278,7 @@
     "sourceReadOnly": true,
     "libraryDefinesConsumersReuse": true,
     "oneComponentAtATimeInsidePilot": true,
+    "recordsImmutable": "A record file is never edited once its status leaves IN PROGRESS; a later batch that must annotate an earlier record writes the annotation in its own record.",
     "riskPlannerOwned": "Tiers are approved by the operator with a verbatim quote; executors never assign or lower them.",
     "operatorVisualReviewFloor": "Every component produces a comparison render inspected by the executor and presented to the operator.",
     "allStandingRulesRequired": true
@@ -259,6 +295,51 @@
     "8_roundWithRecord": "Never carry a fractional dimension into Figma. Two cases, one treatment. (a) pxToRem inflation, where an intended integer exists behind the fraction: bind the intended integer, record computedPx. (b) Authored-fractional sources, where no intended integer exists — a fractional spacing multiplier, a viewBox ratio, a non-square viewBox in a square box: ROUND to the nearest integer and record the true value as computedPx in both the component description and the schema, and label the rounding a design decision with its source and date. Added 2026-08-03 when the primary nav produced the first case-(b) values (76.8, 44.8, 23.88, 18.24); Daniel ruled round-with-record as design authority. Intrinsic geometry is out of scope for this rule: VECTOR and GROUP bounds are the union of their path data, are not authored, and are not rounded — the tier 6 illustrations already set that precedent.",
     "9_boundPaintAlpha": "Before changing ANY paint-level opacity, first check whether that paint has a bound colour variable. If it does, Figma SURFACES the variable's stored alpha into paint.opacity - it does NOT multiply the two. A paint bound to a variable storing rgba(0,0,0,0.87) correctly reads back paint.opacity 0.87 and renders at 0.87; that is the expected state, not a double-alpha defect, and it must be left alone. Forcing such a paint to opacity 1 DISCARDS the alpha and renders the node fully opaque. Rule 1's 'never as paint-level opacity' applies to UNBOUND paints only. Established empirically 2026-08-26 (checkboxFlushHaloFix2026_08_26d.alphaFindingThatOverturnsAnEarlierEntry) after the opposite assumption produced a real regression on Alert filled/warning; reverted and audited library-wide 2026-08-27 (boundAlphaRegressionRevert2026_08_27). To re-confirm at any time: bind a rectangle to an alpha-carrying variable, never set opacity, then read paint.opacity back - it returns the variable's alpha.",
     "10_cloneDropsPropertyRefs": "Cloning a variant to add a new axis value DROPS componentPropertyReferences on every child. The clone keeps its layers and looks correct, but Label/icon-visibility/icon-swap stop responding — instance property values are stored yet never render, so a swapped instance silently shows the component default. After any variant clone, re-apply refs by copying them from a known-good sibling keyed on child layer name, then verify by reading a nested instance rendered characters against its property value, not just the property value. Hit during buttonInheritColour2026_08_28."
+  },
+  "currentState": {
+    "latestRecord": {
+      "id": "schemasplit_phase8_2026-09-08",
+      "date": "2026-09-08",
+      "workstream": "workflow",
+      "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
+      "status": "IN PROGRESS — steps 1-3 done and committed (snapshot, migration, byte-identical aggregate); steps 4-7 (tooling, backup-policy options, docs, commits) pending."
+    },
+    "recordGate": {
+      "inProgress": [
+        "schemasplit_phase8_2026-09-08"
+      ],
+      "clear": false,
+      "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
+    },
+    "byWorkstream": {
+      "library": {
+        "count": 25,
+        "latest": {
+          "id": "libraryTodos_write2_2026_09_03",
+          "date": "2026-09-03",
+          "path": "records/library/2026-09-03/libraryTodos_write2_2026_09_03.json",
+          "status": "DONE. Variables: space/32 added, 14 non-scale space/* described, WEB codeSyntax removed from all 19 that had it; six typography variables added (h4, h5, subtitl"
+        }
+      },
+      "npve": {
+        "count": 61,
+        "latest": {
+          "id": "npveRebuild_moduleChipFix_2026-09-08",
+          "date": "2026-09-08",
+          "path": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json",
+          "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scale, variant anatomy and strip order verif"
+        }
+      },
+      "workflow": {
+        "count": 6,
+        "latest": {
+          "id": "schemasplit_phase8_2026-09-08",
+          "date": "2026-09-08",
+          "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
+          "status": "IN PROGRESS — steps 1-3 done and committed (snapshot, migration, byte-identical aggregate); steps 4-7 (tooling, backup-policy options, docs, commits) pending."
+        }
+      }
+    }
   },
   "npve": {
     "values": {
@@ -509,6 +590,7 @@
     "conventions": [
       {
         "id": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
+        "path": "records/npve/2026-09-04/npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04.json",
         "status": "DONE. Shared Sidesheet outline is four-sided and token-bound; Footer Actions use canonical 16px vertical padding. All 21 live instances were validated.",
         "date": "2026-09-04",
         "outcome": null,
@@ -519,6 +601,7 @@
       },
       {
         "id": "npveRebuild_sidesheetRadiusPlacement_2026-09-04",
+        "path": "records/npve/2026-09-04/npveRebuild_sidesheetRadiusPlacement_2026-09-04.json",
         "status": "DONE. NPVE-local radius/md=8 is applied to a three-value Sidesheet Placement axis; all existing instances and component-property references are preserved.",
         "date": "2026-09-04",
         "outcome": null,
@@ -529,6 +612,7 @@
       },
       {
         "id": "npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04",
+        "path": "records/npve/2026-09-04/npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04.json",
         "status": "DONE. All NPVE Sidesheet Headers use token-bound 16px vertical padding and resolve to 72px; fixed sheets remain 600px and Medication bodies are preserved at 382px total height.",
         "date": "2026-09-04",
         "outcome": null,
@@ -539,6 +623,7 @@
       },
       {
         "id": "npveRebuild_bodyPaddingAndSearch_2026_09_02",
+        "path": "records/npve/2026-09-03/npveRebuild_bodyPaddingAndSearch_2026_09_02.json",
         "status": "DONE through step 10 (run 2026-09-03; record keyed as the prompt named it). Sidesheet template Body padding set to 16 all sides bound space/16; search fields left as built (empty Label is not clean on the Filled variant and blanks the placeholder on the Empty variant); GAP marker 27:295 rewritten; Body padding row amended on both change logs; both screens re-shot; ten rules run.",
         "date": "2026-09-03",
         "outcome": null,
@@ -549,6 +634,7 @@
       },
       {
         "id": "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04",
+        "path": "records/npve/2026-09-04/npveRebuild_sidesheetBase8SpacingAudit_2026-09-04.json",
         "status": "READ-ONLY AUDIT COMPLETE. Sidesheet shell and body stacks are base-8 compliant; four NPVE-owned row values require a policy decision. No Figma mutation.",
         "date": "2026-09-04",
         "outcome": null,
@@ -559,6 +645,7 @@
       },
       {
         "id": "npveRebuild_problemEditSpacingCorrection_2026-09-04",
+        "path": "records/npve/2026-09-04/npveRebuild_problemEditSpacingCorrection_2026-09-04.json",
         "status": "DONE. Edit Problem vertical rhythm is normalized and the clipped Type Chips are corrected and verified in the live Sidesheet.",
         "date": "2026-09-04",
         "outcome": null,
@@ -569,6 +656,7 @@
       },
       {
         "id": "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06",
+        "path": "records/npve/2026-09-06/npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06.json",
         "status": "DONE — Functional Observations optical gap corrected to bound space/8; dependent heights, change log, comparison, screenshots, and ten standing rules verified.",
         "date": "2026-09-06",
         "outcome": "Changed only the Functional Observations heading-to-empty-field gap from 16px to 8px. The Health Status labeled-field rhythm remains 16px and the section separation remains 24px. The body and live sheet are 8px shorter, with the footer still directly following content.",
@@ -579,6 +667,7 @@
       },
       {
         "id": "npveRebuild_socialHistoryNewEntryPlacement_2026-09-06",
+        "path": "records/npve/2026-09-06/npveRebuild_socialHistoryNewEntryPlacement_2026-09-06.json",
         "status": "DONE — intentional New Entry hierarchy change, live change-log row, fresh screenshots, and ten standing rules complete.",
         "date": "2026-09-06",
         "outcome": "Moved New Entry from the far edge of the 518px section header to 16px after SUBSTANCE/DRUG USE. The action now reads as part of the section while remaining a published Button instance; the source reference and all sheet geometry are unchanged.",
@@ -599,6 +688,7 @@
       },
       {
         "id": "npveRebuild_noteHeaderLayout_2026-09-08",
+        "path": "records/npve/2026-09-08/npveRebuild_noteHeaderLayout_2026-09-08.json",
         "status": "DONE. The shared Note card header now uses semantic identity, status/action, and action groups; related items use space/8, semantic groups use space/16, all outer padding is space/16, and the trailing controls remain anchored to the right edge. The card stays 831x748, the component API and sole placed comparison instance remain linked, and one plain-language change-log row was added.",
         "date": "2026-09-08",
         "outcome": null,
@@ -609,6 +699,7 @@
       },
       {
         "id": "workflowRefactor_closeout_2026-09-08",
+        "path": "records/workflow/2026-09-08/workflowRefactor_closeout_2026-09-08.json",
         "status": "DONE. Contract completed with provenance (workflow/rules.json), instruction files thinned to pointers, risk attribution corrected and tiers left unapproved pending a quoted operator approval, proof convention adopted and applied, PMHx change log extended by two rows, three references re-exported at 2x with re-dated captions, four proofs archived, pilot run 1 measured against the Facility Stay baseline, ten standing rules run.",
         "date": "2026-09-08",
         "outcome": [
@@ -632,57 +723,8 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_socialHistoryNewEntryPlacement_2026-09-06",
-        "status": "DONE — intentional New Entry hierarchy change, live change-log row, fresh screenshots, and ten standing rules complete.",
-        "date": "2026-09-06",
-        "outcome": "Moved New Entry from the far edge of the 518px section header to 16px after SUBSTANCE/DRUG USE. The action now reads as part of the section while remaining a published Button instance; the source reference and all sheet geometry are unchanged.",
-        "geometry": null,
-        "decision": "New Entry now follows the SUBSTANCE/DRUG USE heading at the existing 16px auto-layout gap; the frozen source remains unchanged.",
-        "report": "figma-export/npve-social-history-new-entry-placement-2026-09-06/report.md",
-        "target": {
-          "file": "fdCQVFdvOByaOYIJYag0d6",
-          "templatesPage": "3:2",
-          "screensPage": "27:2",
-          "body": "441:4994 Social history body",
-          "substanceHeader": "441:5063 Substance/drug use header",
-          "heading": "441:5064 SUBSTANCE/DRUG USE",
-          "newEntry": "441:5065 New Entry",
-          "changeLog": "446:5475 _Rebuild comparison/Change log/Social History",
-          "comparison": "446:9237 Social History · Reference / Rebuild / Changes"
-        }
-      },
-      {
-        "id": "npveRebuild_encounterToolbar_2026-09-06",
-        "status": "DONE. Two shell corrections (Note card footer Sign control now a Button contained/secondary with an End icon DownCaret, the Split button hidden and marked superseded; Module strip now carries all nine source modules with five new selected=no chips exposed as swaps) and the toolbar row built as a local Note toolbar component in the Note card's Toolbar slot, per source 3456:11505 with the 4841:17077 state placed. Transcription status built minimal as a local piece and marked as the audit's invention row 15. One shared GAP marker for the toolbar glyph gaps. Change log at fifteen rows. No stop condition triggered.",
-        "date": "2026-09-06",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-encounter-toolbar-2026-09-06/report.md",
-        "target": null
-      },
-      {
-        "id": "npveRebuild_moduleChipFix_2026-09-06",
-        "status": "DONE. Module chip masters corrected from Daniel's crop review: selected chips use icon + label + compact close in one color/primary/main ink family with space/16 gaps; unselected chips are label-only grey pills at 40px. The Module strip is reconciled to the nine-item order with Note and Problems selected. The placed encounter comparison inherits the master. Two change-log rows added, page-order snapshot refreshed, screenshots and 1x pixel diff recorded. No new GAP or DEFECT marker. No stop condition triggered.",
-        "date": "2026-09-06",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-module-chip-fix-2026-09-06/report.md",
-        "target": null
-      },
-      {
-        "id": "npveRebuild_moduleChipRelationshipSpacing_2026-09-06",
-        "status": "DONE. Selected Module chips now group icon and label as one Module identity at space/8, with the identity group separated from Close by space/16. Note and Problems overrides survived, all strip/comparison instances remain linked, the existing change-log row was amended, evidence and pixel diff were exported, and no new GAP or DEFECT marker was required.",
-        "date": "2026-09-06",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-module-chip-relationship-spacing-2026-09-06/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_noteHeaderLayout_2026-09-08",
+        "path": "records/npve/2026-09-08/npveRebuild_noteHeaderLayout_2026-09-08.json",
         "status": "DONE. The shared Note card header now uses semantic identity, status/action, and action groups; related items use space/8, semantic groups use space/16, all outer padding is space/16, and the trailing controls remain anchored to the right edge. The card stays 831x748, the component API and sole placed comparison instance remain linked, and one plain-language change-log row was added.",
         "date": "2026-09-08",
         "outcome": null,
@@ -693,6 +735,7 @@
       },
       {
         "id": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
+        "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryRow_2026-09-08.json",
         "status": "DONE. Low-risk pilot item built and validated; stopped before the section item for operator review.",
         "date": "2026-09-08",
         "outcome": [
@@ -712,6 +755,7 @@
       },
       {
         "id": "npveRebuild_pastMedicalHistorySection_2026-09-08",
+        "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistorySection_2026-09-08.json",
         "status": "DONE. Low-risk PMHx section pilot built and validated; stopped before the body item for operator review.",
         "date": "2026-09-08",
         "outcome": [
@@ -731,6 +775,7 @@
       },
       {
         "id": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
+        "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryBody_2026-09-08.json",
         "status": "DONE. Medium-risk PMHx body and sidesheet pilot built by Codex through P4.d and finished by Claude from P4.e; four operator decisions reported, none resolved. Operator review of comparison.png required before further pilot work.",
         "date": "2026-09-08",
         "outcome": [
@@ -751,6 +796,7 @@
       },
       {
         "id": "workflowRefactor_stateCheck_2026-09-08",
+        "path": "records/workflow/2026-09-08/workflowRefactor_stateCheck_2026-09-08.json",
         "status": "READ-ONLY STATE CHECK. Stands in, per agent rule 10, for the missing record of the workflow-refactor batches committed 2026-09-08 as c88ce6c, 5b4d119, 146e867 and c27235a. The closeout prompt named a record workflowRefactor_handoff_2026-09-08 that was never written. No Figma writes.",
         "date": "2026-09-08",
         "outcome": null,
@@ -761,6 +807,7 @@
       },
       {
         "id": "workflowRefactor_closeout_2026-09-08",
+        "path": "records/workflow/2026-09-08/workflowRefactor_closeout_2026-09-08.json",
         "status": "DONE. Contract completed with provenance (workflow/rules.json), instruction files thinned to pointers, risk attribution corrected and tiers left unapproved pending a quoted operator approval, proof convention adopted and applied, PMHx change log extended by two rows, three references re-exported at 2x with re-dated captions, four proofs archived, pilot run 1 measured against the Facility Stay baseline, ten standing rules run.",
         "date": "2026-09-08",
         "outcome": [
@@ -783,6 +830,7 @@
       },
       {
         "id": "workflowRefactor_tierApproval_2026-09-08",
+        "path": "records/workflow/2026-09-08/workflowRefactor_tierApproval_2026-09-08.json",
         "status": "DONE. Documentation batch. Operator approval of the four risk classes and of the three PMHx tiers recorded verbatim; human-decision added to protocol.json; retroactive locks written for the three complete items. No Figma file opened or written.",
         "date": "2026-09-08",
         "outcome": null,
@@ -792,7 +840,61 @@
         "target": null
       },
       {
+        "id": "leanPilot_run2-3_2026-09-08",
+        "path": "records/npve/2026-09-08/leanPilot_run2-3_2026-09-08.json",
+        "status": "DONE. Item 1 (pilot2-hospitalizations-edit, medium, approved by Daniel) built, validated and inspected; stopped for operator review before item 2. Item 2 (pilot2-procedures-edit) not started: tier unapproved, re-pointed at record leanPilot_run3_2026-09-08.",
+        "date": "2026-09-08",
+        "outcome": [
+          "Created Hospitalization status selector 580:6013, Hospitalizations edit form 580:6017 (518x410) and body 580:10621 (518x475) on the Facility Stay pattern; all controls are live library instances or recorded GAP stand-ins.",
+          "Appended the body to the shared Sidesheet Body content preferred values (13 → 14); default, 13 properties and 550x600 variant geometry unchanged.",
+          "Placed one content-driven sheet at 550x651 (header 72, divider 1, body region 507, footer 71) with the source footer labels.",
+          "Created the three _Rebuild comparison sub-components and the sole comparison 581:11117 on Screens with two reused GAP markers; comparison slots now hold 17 preferred values each.",
+          "Item 2 (Procedures edit) not started; awaiting the operator’s tier approval and review of this comparison."
+        ],
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2"
+        }
+      },
+      {
+        "id": "leanPilot_run3_2026-09-08",
+        "path": "records/npve/2026-09-09/leanPilot_run3_2026-09-08.json",
+        "status": "DONE. pilot2-procedures-edit (medium, approved by Daniel) built, validated and inspected; the combined lean pilot runs 2 and 3 are complete and stop for operator review.",
+        "date": "2026-09-09",
+        "outcome": [
+          "Created Procedure history edit form 586:6414 (518x354) and body 586:6467 from the run 2 pattern, reusing the status selector; all controls are live library instances or the recorded GAP stand-in.",
+          "Appended the body to the shared Sidesheet Body content preferred values (14 → 15); default, 13 properties and 550x600 variant geometry unchanged.",
+          "Placed one content-driven sheet at 550x530 (header 72, divider 1, body region 386, footer 71) with the source title and footer labels.",
+          "Created the three _Rebuild comparison sub-components and the sole comparison 586:11765 on Screens with the reused Dropdown chip GAP marker; comparison slots now hold 18 preferred values each.",
+          "Zero corrections during the build; runs 2 and 3 complete, awaiting operator review of both comparisons."
+        ],
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
+        "target": {
+          "file": "fdCQVFdvOByaOYIJYag0d6",
+          "templatesPage": "3:2",
+          "screensPage": "27:2"
+        }
+      },
+      {
+        "id": "postPilot_merge_2026-09-08",
+        "path": "records/workflow/2026-09-08/postPilot_merge_2026-09-08.json",
+        "status": "DONE. codex/lean-workflow merged into master with a merge commit; schema, metrics and Figma state agree post-merge; item 2 tier approval verified present in its record (no gate bypass); Daniel's acceptance of both runs 2-3 comparisons written to both pilot records.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/post-pilot-merge-2026-09-08/report.md",
+        "target": null
+      },
+      {
         "id": "npveRebuild_moduleChipFix_2026-09-08",
+        "path": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json",
         "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scale, variant anatomy and strip order verified already in place from npveRebuild_moduleChipFix_2026-09-06; one change-log row added for the unlogged chip-fill token delta; crop-compare at 1x and ten rules pass. The prompt's uniform space/16 internal-gap step stopped as a decision because it reverses npveRebuild_moduleChipRelationshipSpacing_2026-09-06 (identity gap space/8); no master was mutated.",
         "date": "2026-09-08",
         "outcome": null,
@@ -800,9 +902,38 @@
         "decision": null,
         "report": "figma-export/npve-module-chip-fix-2026-09-08/report.md",
         "target": null
+      },
+      {
+        "id": "schemasplit_phase8_2026-09-08",
+        "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
+        "status": "IN PROGRESS — steps 1-3 done and committed (snapshot, migration, byte-identical aggregate); steps 4-7 (tooling, backup-policy options, docs, commits) pending.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/schema-split-phase8-2026-09-08/report.md",
+        "target": null
       }
     ],
     "openFlags": [
+      {
+        "id": "npveWorkflows_linkChipColourNoToken",
+        "severity": "low",
+        "summary": "Editor link chips \"(FHx) Diabetes (Father)\" use #F0EBF5 fill and #8657AC stroke at r4; Chip has no purple colour or r4 outlined form and neither value has a token.",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
+      {
+        "id": "npveWorkflows_segmentedChipNoPattern",
+        "severity": "low",
+        "summary": "Medication and order chips on the Med List board are multi-segment (\"Start · Sertraline · 50mg · PO · QD · Approve ×\"); Chip has a single label.",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
+      {
+        "id": "npveWorkflows_templateMenuInlineField",
+        "severity": "low",
+        "summary": "The Template dropdown panel combines a Save-as text field with a two-line item list; library Menu/Item is one line and Menu has no field slot.",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
       {
         "id": "npveWorkflows_patientHeaderNotInLibrary",
         "severity": "medium",
@@ -840,12 +971,6 @@
         "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
       },
       {
-        "id": "npveEncounter_unrecordedHealthStatusBatch",
-        "severity": "info",
-        "summary": "A \"14 · Health Status/Observations\" section exists on Templates (412:3888) and Screens (415:7207); at this batch's first read no schema record was visible. The external agent's records arrived during the batch (optical spacing and Social History on 2026-09-06), and the base record npveRebuild_healthStatusObservations_2026-09-05 was then dropped from the live schema by a concurrent write and restored from backup. Its helpers are named \"Rebuild helper · …\" / \"Reference helper · …\" instead of the _Rebuild comparison pattern.",
-        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
-      },
-      {
         "id": "npveEncounter_patientHeaderPadding10NoToken",
         "severity": "low",
         "summary": "The Patient header (proposal geometry) needs 10px vertical padding; Tebra/Dimension has no space/10, so the value is a literal.",
@@ -864,21 +989,9 @@
         "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
       },
       {
-        "id": "npveEncounter_iconButtonDefaultGlyphAsExpand",
-        "severity": "info",
-        "summary": "With no expand glyph, the note header expand control is an Icon button showing its default glyph (a caret).",
-        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
-      },
-      {
         "id": "npveEncounter_modulesPillGlyphDelta",
         "severity": "info",
         "summary": "The Modules pill uses Icon/Menu and Icon/PlusOutlined on a library Button (pill, 122x38); the source is a white r8 144x40 pill with a Material widgets glyph.",
-        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
-      },
-      {
-        "id": "npveEncounter_schemaRecordDroppedByConcurrentWrite",
-        "severity": "info",
-        "summary": "Two agents wrote design-system-schema.json in the same hour (external sidesheet batches 06:57–07:12, encounter shell 07:20). The record npveRebuild_healthStatusObservations_2026-09-05 was present in every backup up to pre-npve-encounter-shell and absent from the live file afterwards; two later records cite it as their gate. Restored from backup.",
         "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
       },
       {
@@ -927,6 +1040,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "bf2e497bfd79582c09afe42fec12213b6cff406cb8098f7988e5f79da63e8be1"
+    "contractSha256": "5996c45d6790af40a96bf9685c4cb1e8fc052cff7e93f19d3e34611f50a6dee6"
   }
 }

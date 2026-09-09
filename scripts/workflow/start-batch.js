@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { ROOT, fileDigest, jsonDigest, manifestRiskPayload, readJson, withoutKey, writeJson } = require('./lib');
+const { ROOT, fileDigest, jsonDigest, manifestRiskPayload, readStoreRecord, store, writeJson } = require('./lib');
 const { validateContract } = require('./validate-contract');
 const { validateManifest } = require('./validate-manifest');
 
@@ -30,26 +30,29 @@ if (approval.status !== 'approved') {
   perItemConfirmation = { quote, recordedAt: new Date().toISOString(), recordedBy: executor };
 }
 
-const schema = readJson('design-system-schema.json');
-const record = schema[item.expectedRecordId];
+// Record gate: the item's own record must exist as a file in the store and be IN PROGRESS.
+const { store: loaded, env, record } = readStoreRecord(item.expectedRecordId);
 if (!record || !String(record._status || record.status).startsWith('IN PROGRESS')) {
-  throw new Error(`Record gate failed: ${item.expectedRecordId} must exist and be IN PROGRESS before batch start`);
+  throw new Error(`Record gate failed: ${item.expectedRecordId} must exist under records/ and be IN PROGRESS before batch start`);
 }
 
 const runPath = `.workflow-runs/${itemId}.json`;
 if (fs.existsSync(path.resolve(ROOT, runPath))) throw new Error(`Active run already exists: ${runPath}`);
 const run = {
   format: 'tebra.design-work-run',
-  version: 1,
+  version: 2,
   itemId,
   expectedRecordId: item.expectedRecordId,
+  recordPath: env.file,
   startedAt: new Date().toISOString(),
   executor,
   provenance: { provider, model, reasoning },
   riskApproval: approval.status || 'unapproved',
   perItemConfirmation,
   schemaSha256: fileDigest('design-system-schema.json'),
-  outsideRecordSha256: jsonDigest(withoutKey(schema, item.expectedRecordId)),
+  // Everything the batch does not own: foundation, every other record, every flag. Concurrent appends by
+  // other batches are allowed; any change to something present here is caught by check-batch and finish-batch.
+  storeFingerprint: store.fingerprint(loaded, item.expectedRecordId),
   plannerRiskSha256: jsonDigest(manifestRiskPayload(item)),
   allowedFiles: item.allowedFiles,
   requiredEvidence: item.requiredEvidence,
@@ -60,4 +63,4 @@ if (perItemConfirmation) {
   item.perItemConfirmations = [...(item.perItemConfirmations || []), perItemConfirmation];
   writeJson('workflow/manifest.json', manifest);
 }
-console.log(`batch started ${itemId}; guard ${run.schemaSha256.slice(0, 12)}; risk ${item.risk.tier} (${run.riskApproval}${perItemConfirmation ? ', per-item confirmation recorded' : ''})`);
+console.log(`batch started ${itemId}; record ${env.file}; guard ${run.storeFingerprint.foundation.slice(0, 12)} over ${Object.keys(run.storeFingerprint.records).length} records + ${Object.keys(run.storeFingerprint.flags).length} flags; risk ${item.risk.tier} (${run.riskApproval}${perItemConfirmation ? ', per-item confirmation recorded' : ''})`);

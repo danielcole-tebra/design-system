@@ -2,6 +2,9 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+// The register is the append-only store under records/, flags/, foundation/ (scripts/schema/lib.js).
+// design-system-schema.json is generated from it; workflow scripts read records through the store.
+const store = require('../schema/lib');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 
@@ -75,7 +78,18 @@ function matchesAny(file, globs) {
   return globs.some((glob) => globRegex(glob).test(file));
 }
 
+// Files every batch may touch because the store regenerates them at commit.
+const GENERATED_FILES = ['design-system-schema.json', 'indexes/record-index.json', 'indexes/current-state.json', 'workflow/npve-contract.generated.json'];
+
+// Read a batch record from the store (never from the aggregate). Returns { env, record } or null.
+function readStoreRecord(id) {
+  const loaded = store.loadStore();
+  const env = store.findRecord(loaded, id);
+  return env ? { store: loaded, env, record: env.record } : { store: loaded, env: null, record: null };
+}
+
 module.exports = {
+  GENERATED_FILES,
   ROOT,
   changedFiles,
   fileDigest,
@@ -83,8 +97,10 @@ module.exports = {
   manifestRiskPayload,
   matchesAny,
   readJson,
+  readStoreRecord,
   sha256,
   stable,
+  store,
   withoutKey,
   writeJson
 };

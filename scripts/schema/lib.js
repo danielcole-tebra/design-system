@@ -135,7 +135,7 @@ function loadStore() {
     if (sequences.has(env.sequence)) errors.push(`duplicate record sequence ${env.sequence} (${env.id})`);
     ids.add(env.id); sequences.add(env.sequence);
     if (layout.order.includes(env.id)) errors.push(`${env.id} is both a foundation key and a record`);
-    records.push({ ...env, file, recordSha256: contentSha(env.record), fileSha256: sha256(fs.readFileSync(abs(file))) });
+    records.push({ ...env, file, recordSha256: contentSha(env.record) });
   }
   records.sort((a, b) => a.sequence - b.sequence);
   const active = readFlagsFile(PATHS.flagsActive, 'active');
@@ -183,8 +183,7 @@ function buildRecordIndex(store) {
       workstream: env.workstream,
       path: env.file,
       status: recordStatus(env.record).slice(0, 120),
-      recordSha256: env.recordSha256,
-      fileSha256: env.fileSha256
+      recordSha256: env.recordSha256
     })),
     flags: {
       classifier: FLAG_CLASSIFIER,
@@ -240,7 +239,8 @@ function writeGenerated(generated = generate()) {
 // Freshness: the on-disk generated files must equal what the store generates now.
 function checkFreshness(generated = generate()) {
   const stale = [];
-  const same = (file, text) => exists(file) && fs.readFileSync(abs(file), 'utf8') === text;
+  // Line endings are normalised: a checkout that rewrites LF as CRLF changes bytes, not content.
+  const same = (file, text) => exists(file) && fs.readFileSync(abs(file), 'utf8').replaceAll('\r\n', '\n') === text;
   if (!same(PATHS.aggregate, generated.aggregateText)) stale.push(PATHS.aggregate);
   if (!same(PATHS.recordIndex, `${JSON.stringify(generated.recordIndex, null, 1)}\n`)) stale.push(PATHS.recordIndex);
   if (!same(PATHS.currentState, `${JSON.stringify(generated.currentState, null, 1)}\n`)) stale.push(PATHS.currentState);
@@ -325,7 +325,7 @@ function finalizeRecord(id, mutate) {
   if (!env) throw new Error(`${id} does not exist`);
   if (!isInProgress(env.record)) throw new Error(`${id} is not IN PROGRESS (${recordStatus(env.record).slice(0, 60)}); records are immutable once written`);
   const next = mutate(structuredClone(env.record), store) || env.record;
-  const { file, recordSha256, fileSha256, ...clean } = env;
+  const { file, recordSha256, ...clean } = env;
   clean.record = next;
   writeJson(file, clean);
   writeGenerated();

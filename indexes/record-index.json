@@ -81,8 +81,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-26/propertySurfaceRepair2026_08_26.json",
    "status": "BUILT, NOT PUBLISHED. namingFreeze._status still reads AWAITING DANIEL'S APPROVAL.",
-   "recordSha256": "507bccdbbb22c984eac78c2ce21d42dde6648b639c2cf126c8508fd5e4c3d8b0",
-   "fileSha256": "ac49b1f6069ab1dd4b16e48d4172dd25f5a3edc49dcdfb23879125d298e42338"
+   "recordSha256": "507bccdbbb22c984eac78c2ce21d42dde6648b639c2cf126c8508fd5e4c3d8b0"
   },
   {
    "id": "namingConventionMigration2026_08_26b",
@@ -91,8 +90,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-26/namingConventionMigration2026_08_26b.json",
    "status": "BUILT, NOT PUBLISHED. Resolves the two-convention split that propertySurfaceRepair2026_08_26 created.",
-   "recordSha256": "b4ca189d9cacd77aed8a95389003eb972d4866cae7774b5d7c7fc2996651b8f8",
-   "fileSha256": "d1bfffacb0c567e7edaf9d64cc205e1d1868ab472b37492bc000779a09224b07"
+   "recordSha256": "b4ca189d9cacd77aed8a95389003eb972d4866cae7774b5d7c7fc2996651b8f8"
   },
   {
    "id": "libraryRestructure2026_08_26c",
@@ -101,8 +99,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-26/libraryRestructure2026_08_26c.json",
    "status": "BUILT, NOT PUBLISHED. Move, rename and reposition only. No component properties, variants or visual design changed; no p",
-   "recordSha256": "e7ac53aeebe43b867810260025327a833a0813546f0164f41da0c58c6fbb0cf0",
-   "fileSha256": "a863a5ea018905cd65a5d8221dab93ef202385335987772ab93859032aae8a70"
+   "recordSha256": "e7ac53aeebe43b867810260025327a833a0813546f0164f41da0c58c6fbb0cf0"
   },
   {
    "id": "checkboxFlushHaloFix2026_08_26d",
@@ -111,8 +108,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-26/checkboxFlushHaloFix2026_08_26d.json",
    "status": "BUILT, NOT PUBLISHED.",
-   "recordSha256": "d62841b62357fda76968473746580303d28b65bca80b896d912b09edc6822ab4",
-   "fileSha256": "bcec9f8b4d5f925a548130a2681e4dfe2dbcebca33c8e99d7cfa5de94b7e9404"
+   "recordSha256": "d62841b62357fda76968473746580303d28b65bca80b896d912b09edc6822ab4"
   },
   {
    "id": "boundAlphaRegressionRevert2026_08_27",
@@ -121,8 +117,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-27/boundAlphaRegressionRevert2026_08_27.json",
    "status": "BUILT, NOT PUBLISHED. namingFreeze._status still reads AWAITING DANIEL'S APPROVAL.",
-   "recordSha256": "54294600c8c9169fcc9076d44c59ecf664e406767f9160b874edc497554236a3",
-   "fileSha256": "9184c92124d692b170c8915fa92011b28ed2b3e5c2d6d0e8ef5245488701a0b5"
+   "recordSha256": "54294600c8c9169fcc9076d44c59ecf664e406767f9160b874edc497554236a3"
   },
   {
    "id": "buttonInheritColour2026_08_28",
@@ -131,8 +126,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-28/buttonInheritColour2026_08_28.json",
    "status": "",
-   "recordSha256": "9403ac737ce6d714df7e1e4f403feb79f2fd8447574815b88e642291099e9590",
-   "fileSha256": "6a9eb89fe7ad421789aec7d72a49b03a1301235476e70cc3b6c6fd3de2657ca9"
+   "recordSha256": "9403ac737ce6d714df7e1e4f403feb79f2fd8447574815b88e642291099e9590"
   },
   {
    "id": "defectMarkerConvention2026_08_28",
@@ -141,8 +135,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-28/defectMarkerConvention2026_08_28.json",
    "status": "",
-   "recordSha256": "7410afdd30b3c9ba5fedbcad685ebbf21872dae65467470444af82da5c1ce269",
-   "fileSha256": "1abd828beda08227a14ca02474a7865df00bfc7b14743b5b838e97c14c804e52"
+   "recordSha256": "7410afdd30b3c9ba5fedbcad685ebbf21872dae65467470444af82da5c1ce269"
   },
   {
    "id": "autocompleteOpenState2026_08_31",
@@ -151,8 +144,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/autocompleteOpenState2026_08_31.json",
    "status": "",
-   "recordSha256": "d0f0ea794702f8ce05d6c1863ae1327d657a90c3fd8c113097cc83adc20af501",
-   "fileSha256": "cf15b87f0250c0c65fd015ae40d756d6d1094bc58a5e25c6c95da907377668ec"
+   "recordSha256": "d0f0ea794702f8ce05d6c1863ae1327d657a90c3fd8c113097cc83adc20af501"
   },
   {
    "id": "selectAndMenu2026_08_31",
@@ -161,8 +153,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/selectAndMenu2026_08_31.json",
    "status": "",
-   "recordSha256": "62b6fef2241db1d9b44b12528113c6df0f1effd13c9156d446c511714da57f53",
-   "fileSha256": "bccad03acbecffb891114436e5d18fa97556278b3c3f9bfa870362a25b84d9fb"
+   "recordSha256": "62b6fef2241db1d9b44b12528113c6df0f1effd13c9156d446c511714da57f53"
   },
   {
    "id": "buttonGroupSegmentRow2026_08_31",
@@ -171,8 +162,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/buttonGroupSegmentRow2026_08_31.json",
    "status": "",
-   "recordSha256": "a35432bd31fce82ec9c75e07dc34c7bb560857bc545ce9ce32f827550e7f3d5d",
-   "fileSha256": "4e32bf166346baf74a0d01e2faeb89727f2a7b3ec6216bf64987772c97c4014e"
+   "recordSha256": "a35432bd31fce82ec9c75e07dc34c7bb560857bc545ce9ce32f827550e7f3d5d"
   },
   {
    "id": "tableAssembly2026_08_31",
@@ -181,8 +171,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/tableAssembly2026_08_31.json",
    "status": "",
-   "recordSha256": "ca6e93264068abc4fed37d0fb2662b51299d6ead977aec26fae950c0cbc722fc",
-   "fileSha256": "474a89b1a9ebb4af0fa4ea2b775845b8b6b53a6ee6d140fd85d05b73bd6575d4"
+   "recordSha256": "ca6e93264068abc4fed37d0fb2662b51299d6ead977aec26fae950c0cbc722fc"
   },
   {
    "id": "fourCompositions2026_08_31",
@@ -191,8 +180,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/fourCompositions2026_08_31.json",
    "status": "BUILT, NOT PUBLISHED. Compositions remain unpublished reference frames per libraryRestructure2026_08_26c.settledDecision",
-   "recordSha256": "c4c6fb6091991a1b07bc9fddd171132ab747816aecef9572738d315edb7d6175",
-   "fileSha256": "0d5bdb2774cafb1c98e043f6e8676b890637f1f18cfae701c0e239451f853027"
+   "recordSha256": "c4c6fb6091991a1b07bc9fddd171132ab747816aecef9572738d315edb7d6175"
   },
   {
    "id": "handDrawnCheck2026_08_31",
@@ -201,8 +189,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/handDrawnCheck2026_08_31.json",
    "status": "",
-   "recordSha256": "0ffc1889952337ba4bdffd5acc9c9fc082ed20634c5301c517dd9e3bff8efad1",
-   "fileSha256": "05681b43045850e94e1c092b00c0ef7b16cab87a0fe5154abda5010eae2be161"
+   "recordSha256": "0ffc1889952337ba4bdffd5acc9c9fc082ed20634c5301c517dd9e3bff8efad1"
   },
   {
    "id": "auditsRetired2026_08_31",
@@ -211,8 +198,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/auditsRetired2026_08_31.json",
    "status": "",
-   "recordSha256": "344eab8534441afab9ea1113bd5b6ec8dc9f45a3811fce298b057fc04b303b01",
-   "fileSha256": "4a81612dfa933e0b49f26b42e00c49be2dc931ed2b5e8bc478f0ae8f40b3060b"
+   "recordSha256": "344eab8534441afab9ea1113bd5b6ec8dc9f45a3811fce298b057fc04b303b01"
   },
   {
    "id": "codeDefectRegister2026_08_31",
@@ -221,8 +207,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/codeDefectRegister2026_08_31.json",
    "status": "",
-   "recordSha256": "1bfb3bdaeccb4ebb12fe1d31b1f88fa07a0c3eb2a89cb068891ba937591b0a77",
-   "fileSha256": "7afb9db2cb562d367e893826f2fcd763d35b560bc72491757d196edb82b6d0c8"
+   "recordSha256": "1bfb3bdaeccb4ebb12fe1d31b1f88fa07a0c3eb2a89cb068891ba937591b0a77"
   },
   {
    "id": "navComponentsOnCompositionsPage",
@@ -231,8 +216,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/navComponentsOnCompositionsPage.json",
    "status": "OPEN — structural problem in a published library. Not a composition, and must not be lost in the composition queue.",
-   "recordSha256": "9455aac03c9e4e0b62c48c4d3f3475a33aeabb1f819f59bff1e303de8800483c",
-   "fileSha256": "e4ce3f0bd54b3e42a7c85eac95723fb44b9b948cf8b3c2822cd513193dd71f49"
+   "recordSha256": "9455aac03c9e4e0b62c48c4d3f3475a33aeabb1f819f59bff1e303de8800483c"
   },
   {
    "id": "captionConvention2026_08_31",
@@ -241,8 +225,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/captionConvention2026_08_31.json",
    "status": "",
-   "recordSha256": "9d580a6beb3771609db3aaa9247e5bb7f130487f236f4d300eb89a4fa8eebc6f",
-   "fileSha256": "1d906b648dfb45c4360cc1f4ca82cf429803c36776a90669a35093650a2e5268"
+   "recordSha256": "9d580a6beb3771609db3aaa9247e5bb7f130487f236f4d300eb89a4fa8eebc6f"
   },
   {
    "id": "beigeSurfaceInvestigation2026_08_31",
@@ -251,8 +234,7 @@
    "workstream": "library",
    "path": "records/library/2026-08-31/beigeSurfaceInvestigation2026_08_31.json",
    "status": "CLOSED — NO CHANGE MADE. Premise tested and rejected. The beige IS the product default; the library is right.",
-   "recordSha256": "6bdee75099cb109c2a952a9635bd03d2f92811301ddf36b2748c011fddd91b21",
-   "fileSha256": "3187e357e0157e32a4d56140e0df19948c91325543729fe7f773be8761fb5e3c"
+   "recordSha256": "6bdee75099cb109c2a952a9635bd03d2f92811301ddf36b2748c011fddd91b21"
   },
   {
    "id": "compositionBackdropConvention2026_09_01",
@@ -261,8 +243,7 @@
    "workstream": "library",
    "path": "records/library/2026-09-01/compositionBackdropConvention2026_09_01.json",
    "status": "DONE. Backdrop only — no colour token, geometry, component or layout change. Nothing published.",
-   "recordSha256": "ec61fc9b844e7819dc43f70585aa7dfea467e0ecf3a4a998eb30c76788a1b40c",
-   "fileSha256": "7d01225f695ba78ab4a9656a0caa44a40699ca7384793824ab4c73c3c45a0aa0"
+   "recordSha256": "ec61fc9b844e7819dc43f70585aa7dfea467e0ecf3a4a998eb30c76788a1b40c"
   },
   {
    "id": "insightCardAffordances2026_09_01",
@@ -271,8 +252,7 @@
    "workstream": "library",
    "path": "records/library/2026-09-01/insightCardAffordances2026_09_01.json",
    "status": "BUILT in the proposals file. Nothing published — the proposals file consumes the library, it does not define it.",
-   "recordSha256": "22751eab94072235df9e61eda195e920dd9e30950233525b0b10a2330decd4ca",
-   "fileSha256": "c5a00c60949c210bda18f5620fc61520ae7d263d34a31390d6a070de8684d933"
+   "recordSha256": "22751eab94072235df9e61eda195e920dd9e30950233525b0b10a2330decd4ca"
   },
   {
    "id": "patientChartConsolidation2026_09_01",
@@ -281,8 +261,7 @@
    "workstream": "library",
    "path": "records/library/2026-09-01/patientChartConsolidation2026_09_01.json",
    "status": "PARTIAL BY INSTRUCTION. Items 2 and 3 done. Item 1 stopped at its own stop condition and reported instead.",
-   "recordSha256": "05ad9e1b5111a93b8a8c01512b96164702df8dd5217d5d6ee7d48a6be69c3734",
-   "fileSha256": "956912aef11e85998040145b81ffc09ba63b9401487572843abdbce5c07f1e7e"
+   "recordSha256": "05ad9e1b5111a93b8a8c01512b96164702df8dd5217d5d6ee7d48a6be69c3734"
   },
   {
    "id": "quietPatientChipsWithoutFill2026_09_01",
@@ -291,8 +270,7 @@
    "workstream": "library",
    "path": "records/library/2026-09-01/quietPatientChipsWithoutFill2026_09_01.json",
    "status": "BUILT. Additive only — nothing deleted, State 1 and State 2 untouched and verified.",
-   "recordSha256": "18a56f8a4942e1a5693e6c4d0067182a075371ccbe37edebded715ba48838390",
-   "fileSha256": "7432d9ec17e4dc342ad672be8803415504a910eb585d55c66474fd04e1b63836"
+   "recordSha256": "18a56f8a4942e1a5693e6c4d0067182a075371ccbe37edebded715ba48838390"
   },
   {
    "id": "npveRebuild_enum_2026-09-02",
@@ -301,8 +279,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_enum_2026-09-02.json",
    "status": "READ-ONLY ENUMERATION COMPLETE. Stopped after step 5 as instructed. No writes of any kind to the source file; the target",
-   "recordSha256": "3ece1af5b2c781cdf6cf62cabd5db4701ba3fd5fccb68714caf657fa6430a0cd",
-   "fileSha256": "cf945a8855129925444dd5939c46a1f9f0c6dbe5816396499626302927a48462"
+   "recordSha256": "3ece1af5b2c781cdf6cf62cabd5db4701ba3fd5fccb68714caf657fa6430a0cd"
   },
   {
    "id": "npveRebuild_sidesheet_inventory_2026_09_02",
@@ -311,8 +288,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_sidesheet_inventory_2026_09_02.json",
    "status": "READ-ONLY INVENTORY COMPLETE. Stopped after step 7. Nothing built; no writes to source or library; target not opened.",
-   "recordSha256": "02b5ddad985bf45346d8cba3c762338383534e5e2803939086a990cc02d540d6",
-   "fileSha256": "1756489fbb0516502a3978f0c0bffb331a9864a492f7f4f539b764a53687259f"
+   "recordSha256": "02b5ddad985bf45346d8cba3c762338383534e5e2803939086a990cc02d540d6"
   },
   {
    "id": "npveRebuild_sidesheet_build_2026_09_02",
@@ -321,8 +297,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_sidesheet_build_2026_09_02.json",
    "status": "BUILT. Stopped after step 6. Local component Sidesheet and its SCAFFOLDING Slot on a new page Templates in the target; f",
-   "recordSha256": "67aba4b1485eac6b92d43cdc3375d7e031ec48e810f810d1ce701f97fa1899e5",
-   "fileSha256": "d8fe17c9ba10deacf7d35d4e3c9e2cc9f3b208c5179a8b24ab096e9e52eca7e9"
+   "recordSha256": "67aba4b1485eac6b92d43cdc3375d7e031ec48e810f810d1ce701f97fa1899e5"
   },
   {
    "id": "npveRebuild_sidesheet_closeout_2026_09_02",
@@ -331,8 +306,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_sidesheet_closeout_2026_09_02.json",
    "status": "BASE COMPLETE. Steps 1 and 4 pass. Step 2 (Storybook check) is open: Storybook unreachable this session; flag npveBuild_",
-   "recordSha256": "3bd36d4f569b5658c3ad64967afa2922ce796ed89f59b248383403edf959107a",
-   "fileSha256": "1dbc00b28fc1e03fdb2ee5e2e158e2b2d56974e1d58c7a98c94a4a3c83007e60"
+   "recordSha256": "3bd36d4f569b5658c3ad64967afa2922ce796ed89f59b248383403edf959107a"
   },
   {
    "id": "npveRebuild_changelog_2026_09_02",
@@ -341,8 +315,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_changelog_2026_09_02.json",
    "status": "DONE through step 4. Change log/Row 18:103 and Change log 18:109 built on Templates; nine-row change log placed at (1300",
-   "recordSha256": "a0205290a6aea3db8233344bdd61930113774fe76fba5452cbf1cd29f3d4ffa0",
-   "fileSha256": "9f46c1977454316788c647b96d4f96c09964a4a9af879bff788f1c7c822ca399"
+   "recordSha256": "a0205290a6aea3db8233344bdd61930113774fe76fba5452cbf1cd29f3d4ffa0"
   },
   {
    "id": "npveRebuild_problemsRecent_inventory_2026_09_02",
@@ -351,8 +324,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_problemsRecent_inventory_2026_09_02.json",
    "status": "READ-ONLY INVENTORY COMPLETE. Stopped after step 7. Body of source 4618:4930 itemised to the leaf, instances entered. No",
-   "recordSha256": "8cff1842569e7055fd24fe35999bd234c388a71b3ee74ab6e65662053e4c4d42",
-   "fileSha256": "e5c029bd14bca9b74210b9f4022d93e1a33373984536e31c45239b6bad800034"
+   "recordSha256": "8cff1842569e7055fd24fe35999bd234c388a71b3ee74ab6e65662053e4c4d42"
   },
   {
    "id": "npveRebuild_problemsRecent_build_2026_09_02",
@@ -361,8 +333,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_problemsRecent_build_2026_09_02.json",
    "status": "BUILT. Stopped after step 8. First screen: Clin_Problems-Recent as a Sidesheet instance on new target page Screens 27:2,",
-   "recordSha256": "6d53d2182ec1143842066dd550100fd549e57c0eeb21d2b15a479cd3212108eb",
-   "fileSha256": "e9404e55796c9d513b45ddea19ffcea7dd06a291413935d55d55bd87b3ef3eec"
+   "recordSha256": "6d53d2182ec1143842066dd550100fd549e57c0eeb21d2b15a479cd3212108eb"
   },
   {
    "id": "npveRebuild_problemsRecent_corrections_2026_09_02",
@@ -371,8 +342,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_problemsRecent_corrections_2026_09_02.json",
    "status": "STEPS 1-3 DONE. Step 4 (local component \"Rebuild comparison\" on Templates) NOT BUILT: the batch prompt arrived truncated",
-   "recordSha256": "adabfb5b517fdbe8ccdbf933e43177ffe7c7fcb4e5f3572f16638225b30f1231",
-   "fileSha256": "eacb26bbf737c2722710549be6cad503503e8e62f9badc1ddf2efaa8bb0946cd"
+   "recordSha256": "adabfb5b517fdbe8ccdbf933e43177ffe7c7fcb4e5f3572f16638225b30f1231"
   },
   {
    "id": "npveRebuild_comparisonLayout_2026_09_02",
@@ -381,8 +351,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_comparisonLayout_2026_09_02.json",
    "status": "DONE through step 7. Local component Rebuild comparison on Templates; detached copy on Screens holding the 2x source exp",
-   "recordSha256": "d5dde29d121665356a8af7664a25e3be3d79fa6b9c71edd94ed3034ef3c69760",
-   "fileSha256": "2953b2b9d65d99f842f9aead18d87941637834c3e0319bcd04404552111c5344"
+   "recordSha256": "d5dde29d121665356a8af7664a25e3be3d79fa6b9c71edd94ed3034ef3c69760"
   },
   {
    "id": "npveRebuild_problemsFavorites_2026_09_02",
@@ -391,8 +360,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-02/npveRebuild_problemsFavorites_2026_09_02.json",
    "status": "DONE through step 8. Second screen Clin_Problems-Favorites built as a Sidesheet instance with an overridden Problems pic",
-   "recordSha256": "34b6ed9090a65104ea01eb9267ced37fd020efa5b9a5cbebd55af6fc51dce19f",
-   "fileSha256": "2c2594577eb7987128572e9dd268713909e673bdad890db7e42c01807f166ddf"
+   "recordSha256": "34b6ed9090a65104ea01eb9267ced37fd020efa5b9a5cbebd55af6fc51dce19f"
   },
   {
    "id": "npveRebuild_bodyPaddingAndSearch_2026_09_02",
@@ -401,8 +369,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-03/npveRebuild_bodyPaddingAndSearch_2026_09_02.json",
    "status": "DONE through step 10 (run 2026-09-03; record keyed as the prompt named it). Sidesheet template Body padding set to 16 al",
-   "recordSha256": "31f7320126554b78e9dddc8eed8b40a9ed1a7df0947db65d1a15daacd99a6309",
-   "fileSha256": "ae84d9c6eefc2b2da757b979c77d94153d13ee4503c0641689f626228370c47f"
+   "recordSha256": "31f7320126554b78e9dddc8eed8b40a9ed1a7df0947db65d1a15daacd99a6309"
   },
   {
    "id": "npveRebuild_cleanup_2026_09_03",
@@ -411,8 +378,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-03/npveRebuild_cleanup_2026_09_03.json",
    "status": "DONE through step 8. Row master neutral, selection moved to the Recent screen instance; tab underline restored via a Tab",
-   "recordSha256": "19c9042fe39ee92b6aee9a1cee5fa70a480ac74653ce6232e732c1e6cdd83a12",
-   "fileSha256": "9a8a86bd737125350218fae14f62aaeb0795a1d324921505d8088cdb85117e6a"
+   "recordSha256": "19c9042fe39ee92b6aee9a1cee5fa70a480ac74653ce6232e732c1e6cdd83a12"
   },
   {
    "id": "npveRebuild_tabUnderlineFix_2026_09_03",
@@ -421,8 +387,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-03/npveRebuild_tabUnderlineFix_2026_09_03.json",
    "status": "DONE through step 6. Correction to npveRebuild_cleanup_2026-09-03 step 4: the divider stacked after the tabs; it now ove",
-   "recordSha256": "f80d6b5d34000fb42e0289b0a1725208be8ae7167385b9d6e494bec813eea134",
-   "fileSha256": "fd1d7b0f604c9018b274e1b0a65eb66355f05f912bd585069321862144d9bed1"
+   "recordSha256": "f80d6b5d34000fb42e0289b0a1725208be8ae7167385b9d6e494bec813eea134"
   },
   {
    "id": "npveRebuild_labelDriftAndUnderline_2026_09_03",
@@ -431,8 +396,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-03/npveRebuild_labelDriftAndUnderline_2026_09_03.json",
    "status": "DONE through step 5. Label drift measured in the library and on 40:252 (not fixed; library work). Tab underline moved ba",
-   "recordSha256": "044927b8a8ac62fb5ca4891322bc5f84533919e3bf9025ba68d6a640bef887e6",
-   "fileSha256": "0eee2b3109c72cd74b4750203595784463e26160142dd219265de9e7cc34f809"
+   "recordSha256": "044927b8a8ac62fb5ca4891322bc5f84533919e3bf9025ba68d6a640bef887e6"
   },
   {
    "id": "npveRebuild_goldStarsAndCorrections_2026_09_03",
@@ -441,8 +405,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-03/npveRebuild_goldStarsAndCorrections_2026_09_03.json",
    "status": "DONE through step 5. Four Favorites stars rebound to color/warning/dark; colours marker 27:306 corrected to two real gap",
-   "recordSha256": "f74c7d918f00beddd1d9f1f249322f05712b839c81ef905c50ad21ce2fcd6acb",
-   "fileSha256": "1bebccd5aa725fa4c2923bbaecdb9f49ba052829e00647bcc4b41ed97fbf371c"
+   "recordSha256": "f74c7d918f00beddd1d9f1f249322f05712b839c81ef905c50ad21ce2fcd6acb"
   },
   {
    "id": "npveRebuild_pause_2026_09_03",
@@ -451,8 +414,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-03/npveRebuild_pause_2026_09_03.json",
    "status": "PAUSED. NPVE screen rebuild stopped after three artefacts, all base complete and verified in pixels. Library work takes ",
-   "recordSha256": "86dcf6f557a8106b73f90769bed951577e986257051b221318a445337f82b527",
-   "fileSha256": "79845c8553fbade0541ae2cbd2779632ab1ced71211df5fc9b41377bd7539170"
+   "recordSha256": "86dcf6f557a8106b73f90769bed951577e986257051b221318a445337f82b527"
   },
   {
    "id": "libraryTodos_readOnly_2026_09_03",
@@ -461,8 +423,7 @@
    "workstream": "library",
    "path": "records/library/2026-09-03/libraryTodos_readOnly_2026_09_03.json",
    "status": "DONE. Read-only. Code and library values read for LIBRARY-TODOS items 1, 5, 7, 8, 11, 12; nothing changed in any Figma f",
-   "recordSha256": "e9a934db77fd8840078ef62fbb96bd3b5d0d2eb1ce9be2dc661f82bb59b40bbd",
-   "fileSha256": "89aecf04ed65e8f0a976ea1c89ecbf0ad7e79fc5ceb4d74273c783017ec3a7f5"
+   "recordSha256": "e9a934db77fd8840078ef62fbb96bd3b5d0d2eb1ce9be2dc661f82bb59b40bbd"
   },
   {
    "id": "libraryTodos_write1_2026_09_03",
@@ -471,8 +432,7 @@
    "workstream": "library",
    "path": "records/library/2026-09-03/libraryTodos_write1_2026_09_03.json",
    "status": "DONE through step 3. Text field small resting label y 16 → 9 on ten masters and four hidden Label slots 56 → 40; Tabs/Ta",
-   "recordSha256": "b5e90427494c8d8ad1c248c4ee4f7d942999f46ab1d5e007e74b5e84850890e4",
-   "fileSha256": "182e6ac948df7059b2971edf3207e57657d06b2a62fe615bcc9d7c5a0ee3ca3a"
+   "recordSha256": "b5e90427494c8d8ad1c248c4ee4f7d942999f46ab1d5e007e74b5e84850890e4"
   },
   {
    "id": "libraryTodos_write2_2026_09_03",
@@ -481,8 +441,7 @@
    "workstream": "library",
    "path": "records/library/2026-09-03/libraryTodos_write2_2026_09_03.json",
    "status": "DONE. Variables: space/32 added, 14 non-scale space/* described, WEB codeSyntax removed from all 19 that had it; six typ",
-   "recordSha256": "ce03d649a5ea4830f1cccc656c939860a56e6f1bcc763a6972bd9fa1eb875138",
-   "fileSha256": "01bb8fbafdecd995e1efd73c5f386d9019e0a4d6568af892df1f2186330c8e10"
+   "recordSha256": "ce03d649a5ea4830f1cccc656c939860a56e6f1bcc763a6972bd9fa1eb875138"
   },
   {
    "id": "npveRebuild_audit_2026_09_03",
@@ -491,8 +450,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-03/npveRebuild_audit_2026_09_03.json",
    "status": "DONE. Read-only audit of every target change since npveRebuild_pause_2026_09_03. No Figma node created, moved or edited ",
-   "recordSha256": "e5fd32963e78d0d3491c0f9ac3c00044cac583762b07f2022f940c627b99f943",
-   "fileSha256": "6362ab7e0286c41e1ed13b75cc9a5e1df2ef72b4084761eb21c06c0cba3f809e"
+   "recordSha256": "e5fd32963e78d0d3491c0f9ac3c00044cac583762b07f2022f940c627b99f943"
   },
   {
    "id": "npveRebuild_agentRules_2026-09-04",
@@ -501,8 +459,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_agentRules_2026-09-04.json",
    "status": "DONE. Documentation batch. Repo writes only: CLAUDE.md gained the section \"Rules for any agent working in these files\" a",
-   "recordSha256": "5436396f356dcef997cf464823f1a78801c677c3ddb354fd64b60da545abdb01",
-   "fileSha256": "f8700a4a8746f15497153b936a658af97e111b07e3abddb1971cd5e9a62e0ffb"
+   "recordSha256": "5436396f356dcef997cf464823f1a78801c677c3ddb354fd64b60da545abdb01"
   },
   {
    "id": "npveRebuild_externalRestructure_2026-09-03_retro",
@@ -511,8 +468,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-03/npveRebuild_externalRestructure_2026-09-03_retro.json",
    "status": "RETROACTIVE. Written 2026-09-04 by the repair batch to record target work that an external session did on 2026-09-03 wit",
-   "recordSha256": "129db4e067155bd7bc58d607bd8c1a98b9b182e445a2f37021aaf4283367112f",
-   "fileSha256": "37c2487b1547100081da3e767bc9cd3d28d35edc84ad585bd6ed078d09ef2e4d"
+   "recordSha256": "129db4e067155bd7bc58d607bd8c1a98b9b182e445a2f37021aaf4283367112f"
   },
   {
    "id": "npveRebuild_repair1_2026-09-04",
@@ -521,8 +477,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_repair1_2026-09-04.json",
    "status": "DONE except step 2, which stopped on its stated condition: the archived screens and the comparison copies differ by 5 an",
-   "recordSha256": "57461c657cede4750b2f4acf879f2b7b47d9dde797223c86736ff2025e6922d5",
-   "fileSha256": "c2e99124f1ccebc8ce3bbdaf38b9453560988c3ed850da9b8e0611e6f270235f"
+   "recordSha256": "57461c657cede4750b2f4acf879f2b7b47d9dde797223c86736ff2025e6922d5"
   },
   {
    "id": "docsOperatorsGuide_2026-09-04",
@@ -531,8 +486,7 @@
    "workstream": "workflow",
    "path": "records/workflow/2026-09-04/docsOperatorsGuide_2026-09-04.json",
    "status": "DONE. Documentation batch. Repo writes only: OPERATORS.md created; CLAUDE.md gained agent rule 10 (record gate) and one ",
-   "recordSha256": "d92773dddf87e6627e8dd09c82d65bc5242647351913fb0c0ba16991b11fd79a",
-   "fileSha256": "a727b0e166fe5c5d58210ac697fd03899ecec84f27b34c7cf05f02213dda6c05"
+   "recordSha256": "d92773dddf87e6627e8dd09c82d65bc5242647351913fb0c0ba16991b11fd79a"
   },
   {
    "id": "npveRebuild_repair2_2026-09-04",
@@ -541,8 +495,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_repair2_2026-09-04.json",
    "status": "DONE. All eight steps complete; no stop condition triggered. Problem summary row rebuilt on library Icon buttons and Ico",
-   "recordSha256": "8662d6cb189c932f0ef3586dd380df99cef1cb132e2e9321bbc415fc9c363f84",
-   "fileSha256": "c3744f48e47b4379b197bf6093781ba430ebf62839743e6e84551a874d0b3f92"
+   "recordSha256": "8662d6cb189c932f0ef3586dd380df99cef1cb132e2e9321bbc415fc9c363f84"
   },
   {
    "id": "npveRebuild_mgmtFidelity_2026-09-04",
@@ -551,8 +504,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_mgmtFidelity_2026-09-04.json",
    "status": "DONE, read-only. Both Problems management screens itemised against their sources region by region. Verdict: neither is f",
-   "recordSha256": "2abdb4a5d9b1e1ce09a46bff941364194398f893be8791c91322478c2c02d4ef",
-   "fileSha256": "d779e2d675fcaa69b195addf70445eabe61ecb0fb62d81a689bffad0f5662d4a"
+   "recordSha256": "2abdb4a5d9b1e1ce09a46bff941364194398f893be8791c91322478c2c02d4ef"
   },
   {
    "id": "npveRebuild_mgmtFidelityBuild_2026-09-04",
@@ -561,8 +513,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_mgmtFidelityBuild_2026-09-04.json",
    "status": "DONE. Both Problems management screens closed out against the fidelity read: checkbox rows on library Form control label",
-   "recordSha256": "8f3a0230bf63658ef554fccbb04f6679d10755b26b29a2b95c676b34c5dfbc34",
-   "fileSha256": "76f3b0cfdcbd922a00cd40d9b662a1c77f9e200aa0a1c5b1780ef1529464236b"
+   "recordSha256": "8f3a0230bf63658ef554fccbb04f6679d10755b26b29a2b95c676b34c5dfbc34"
   },
   {
    "id": "npveRebuild_rowStructure_2026-09-04",
@@ -571,8 +522,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_rowStructure_2026-09-04.json",
    "status": "DONE. Problem summary row restructured on the source model: centred contents, 19/19 padding to an 88 row (source 87), st",
-   "recordSha256": "cb30882ff8710ddbbe4f0fc704ec5e81cc875f955208f61f7dcd0a719d84c4c0",
-   "fileSha256": "6ee58fa15d4be061f82f6b04d0d8b0fce3d7d6b1076b21f9a7e4fa07c795dd6c"
+   "recordSha256": "cb30882ff8710ddbbe4f0fc704ec5e81cc875f955208f61f7dcd0a719d84c4c0"
   },
   {
    "id": "npveRebuild_medicationSummaryRow_2026-09-04",
@@ -581,8 +531,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_medicationSummaryRow_2026-09-04.json",
    "status": "DONE. Medication summary row 219:2068 created in Templates 06 with Active and Discontinued live preview instances; sourc",
-   "recordSha256": "6933b2a1dab99e03e187f338974faf41c7d95686efbff2e9de4cdce24992d3d8",
-   "fileSha256": "da309d991527732c3aeed749bad667bd2549be61d680e1348551aedb71c6c849"
+   "recordSha256": "6933b2a1dab99e03e187f338974faf41c7d95686efbff2e9de4cdce24992d3d8"
   },
   {
    "id": "npveRebuild_medicationListBody_2026-09-04",
@@ -591,8 +540,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_medicationListBody_2026-09-04.json",
    "status": "DONE. Medication list body 236:1758 created in Templates 06 with one live preview instance; source and library read only",
-   "recordSha256": "bbd21fe24b0167f17806692aa91e5fc121d9bbbb2a26c75e6f795369e72c9b49",
-   "fileSha256": "62442a4b1e719c1a6d8c5d3bfaf725be90f3fff5d9292df4030ed09363c3b001"
+   "recordSha256": "bbd21fe24b0167f17806692aa91e5fc121d9bbbb2a26c75e6f795369e72c9b49"
   },
   {
    "id": "npveRebuild_medicationSurfaceCorrection_2026-09-04",
@@ -601,8 +549,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_medicationSurfaceCorrection_2026-09-04.json",
    "status": "DONE. Medication summary row 219:2068 rebound to color/background/paper; all six existing instances inherited white; geo",
-   "recordSha256": "1385bb3b5839de181171847078ebbf3187ae12034db8445af37d708f9044e2ec",
-   "fileSha256": "9b5b06dd7d08a9c525a2215d168ae2f49a4d302deb9a907c9d24d983e75b942e"
+   "recordSha256": "1385bb3b5839de181171847078ebbf3187ae12034db8445af37d708f9044e2ec"
   },
   {
    "id": "npveRebuild_medicationListSidesheet_2026-09-04",
@@ -611,8 +558,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_medicationListSidesheet_2026-09-04.json",
    "status": "DONE. Canonical 550x600 Medication List Sidesheet and comparison screen created; full-width footer action added through ",
-   "recordSha256": "6846a270231dec432ff6c8d31d08667d5e613354b0b262a505f28bad3ca72578",
-   "fileSha256": "3d959e15c5cd5ce89084577cab586190ca0565516fa9a2e6eb69af9503fb72fb"
+   "recordSha256": "6846a270231dec432ff6c8d31d08667d5e613354b0b262a505f28bad3ca72578"
   },
   {
    "id": "npveRebuild_medicationListHeightCorrection_2026-09-04",
@@ -621,8 +567,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_medicationListHeightCorrection_2026-09-04.json",
    "status": "DONE. Medication List footer now follows the active body at y295; the corrected instance is 550x351 and the comparison h",
-   "recordSha256": "c02e749a1e6f7e66f8d4569007572b2e44d3844e52fd4877e2be0643b6f3fe89",
-   "fileSha256": "ff22157000b704947ee0f8b99db7b05ea9efb5eb6684759476761d14b248567a"
+   "recordSha256": "c02e749a1e6f7e66f8d4569007572b2e44d3844e52fd4877e2be0643b6f3fe89"
   },
   {
    "id": "npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04",
@@ -631,8 +576,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_sidesheetOutlineFooterGlobal_2026-09-04.json",
    "status": "DONE. Shared Sidesheet outline is four-sided and token-bound; Footer Actions use canonical 16px vertical padding. All 21",
-   "recordSha256": "d5a1bbb54abee2d2f7152454be2135123867a6c1bc2c160813f957bf4217b2bc",
-   "fileSha256": "2c10415decc9bfb40668eabbc9512873cab51bf40dd2ac08dbd3145bf2f6db4e"
+   "recordSha256": "d5a1bbb54abee2d2f7152454be2135123867a6c1bc2c160813f957bf4217b2bc"
   },
   {
    "id": "npveRebuild_sidesheetRadiusPlacement_2026-09-04",
@@ -641,8 +585,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_sidesheetRadiusPlacement_2026-09-04.json",
    "status": "DONE. NPVE-local radius/md=8 is applied to a three-value Sidesheet Placement axis; all existing instances and component-",
-   "recordSha256": "d6982146f491ff2247d2582211d88ae10721a5941f71ff6d297fe2cf9a0552e1",
-   "fileSha256": "b3ae118c16ecfefbc977a27e2db06c4a33e6a8a2e5649a57f78628e4fcd2a9d9"
+   "recordSha256": "d6982146f491ff2247d2582211d88ae10721a5941f71ff6d297fe2cf9a0552e1"
   },
   {
    "id": "npveRebuild_sidesheetHeaderInsetAudit_2026-09-04",
@@ -651,8 +594,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_sidesheetHeaderInsetAudit_2026-09-04.json",
    "status": "READ-ONLY AUDIT COMPLETE. Measured 12px rebuild title clearance versus 16px source clearance; global correction is propo",
-   "recordSha256": "5d94432eed3eaa0ccccb83f36bc2bc9fd4f04301690f716bcd8e89d3ae2f45c7",
-   "fileSha256": "d2c64e12ffaff2d17c02606895d390001c3bf70bf3bcf8d06e956c9efc19c618"
+   "recordSha256": "5d94432eed3eaa0ccccb83f36bc2bc9fd4f04301690f716bcd8e89d3ae2f45c7"
   },
   {
    "id": "npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04",
@@ -661,8 +603,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_sidesheetHeaderPaddingGlobal_2026-09-04.json",
    "status": "DONE. All NPVE Sidesheet Headers use token-bound 16px vertical padding and resolve to 72px; fixed sheets remain 600px an",
-   "recordSha256": "e9c295abc7d246e97ff566edd253dfd80019caa0c87c64cb4aeb05bbf1f932d2",
-   "fileSha256": "c97b919a1cdec530b76567968216b64a0d152437af890630e306257e930273ef"
+   "recordSha256": "e9c295abc7d246e97ff566edd253dfd80019caa0c87c64cb4aeb05bbf1f932d2"
   },
   {
    "id": "npveRebuild_sidesheetBase8SpacingAudit_2026-09-04",
@@ -671,8 +612,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_sidesheetBase8SpacingAudit_2026-09-04.json",
    "status": "READ-ONLY AUDIT COMPLETE. Sidesheet shell and body stacks are base-8 compliant; four NPVE-owned row values require a pol",
-   "recordSha256": "2df16f59a92addb1a059af069356914bd3094374579fa5456bd23d4716bf9372",
-   "fileSha256": "1d4f4aa5d391f9d7b8778bc6f17ee149f6eaef9bc644b246970395fc2128265b"
+   "recordSha256": "2df16f59a92addb1a059af069356914bd3094374579fa5456bd23d4716bf9372"
   },
   {
    "id": "npveRebuild_problemsLowOversightBatch_2026-09-04",
@@ -681,8 +621,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_problemsLowOversightBatch_2026-09-04.json",
    "status": "DONE. Problems Empty and Browse/Search Sidesheets are built, compared, and verified; all new screens remain live Sideshe",
-   "recordSha256": "047517eefc2664d4fa1163b104f07b1f8bd720d3a4e76d694eaa8de46d8e1e77",
-   "fileSha256": "5d676f0412ce1a976b603962e7f665499add7070a594274352e2011e8caa1ade"
+   "recordSha256": "047517eefc2664d4fa1163b104f07b1f8bd720d3a4e76d694eaa8de46d8e1e77"
   },
   {
    "id": "npveRebuild_problemEdit_2026-09-04",
@@ -691,8 +630,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_problemEdit_2026-09-04.json",
    "status": "DONE. Edit Problem Sidesheet, comparison, change log, and GAP marker are built and verified; the sole screen remains a l",
-   "recordSha256": "53e191253c0a59ca9f9b39a3eb94adbb22453814cc464dffce794633dc145acb",
-   "fileSha256": "65502383ee08bc2250f899505f9dd755983b8529afe143452b0ec05a0cd85452"
+   "recordSha256": "53e191253c0a59ca9f9b39a3eb94adbb22453814cc464dffce794633dc145acb"
   },
   {
    "id": "npveRebuild_problemEditSpacingCorrection_2026-09-04",
@@ -701,8 +639,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_problemEditSpacingCorrection_2026-09-04.json",
    "status": "DONE. Edit Problem vertical rhythm is normalized and the clipped Type Chips are corrected and verified in the live Sides",
-   "recordSha256": "952001cad0a5ffc649f06e89532157b25302fa4e2a47c1486091ebacc56a6f4f",
-   "fileSha256": "87a1c64cc497549216da7a08d1af3cfc4c488e360bcad9cc9a7ff2f8fcd56a91"
+   "recordSha256": "952001cad0a5ffc649f06e89532157b25302fa4e2a47c1486091ebacc56a6f4f"
   },
   {
    "id": "npveRebuild_procedureHistory_2026-09-04",
@@ -711,8 +648,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-04/npveRebuild_procedureHistory_2026-09-04.json",
    "status": "DONE. Procedures/Surgical History metadata, event row, body, live Sidesheet, comparison, and evidence are built and veri",
-   "recordSha256": "827d6e1a4f5b41fefb2bef70b631e7132174dee15cbad1483f86df3f41de5e5e",
-   "fileSha256": "ddd43a8a810d1f5c771fc6fdf9b7fbc7be550eaa66647cdb7a1eb63f89850b63"
+   "recordSha256": "827d6e1a4f5b41fefb2bef70b631e7132174dee15cbad1483f86df3f41de5e5e"
   },
   {
    "id": "npveRebuild_familyHistory_2026-09-05",
@@ -721,8 +657,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_familyHistory_2026-09-05.json",
    "status": "DONE. Family History condition row, member card, body, live Sidesheet, comparison, and evidence are built and verified.",
-   "recordSha256": "8cdb605e406bf785267bf4a6971e28162edb9583f1d95f4863f75706bd17368d",
-   "fileSha256": "6a52d374cfb3875aea179c27a844368df9ffb83c88e39dcf1379a4cacff16f23"
+   "recordSha256": "8cdb605e406bf785267bf4a6971e28162edb9583f1d95f4863f75706bd17368d"
   },
   {
    "id": "npveRebuild_allergiesList_2026-09-05",
@@ -731,8 +666,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_allergiesList_2026-09-05.json",
    "status": "DONE. Allergies severity selector, card, body, live Sidesheet, comparison, and evidence are built and verified.",
-   "recordSha256": "377f5bec472096dd6bed9e9d95e5391aaa96aee6aa2e8a691f1d132040178a75",
-   "fileSha256": "204b56d675b454a4103b82c197520726b13a05ecfba389d9b4d576d8bff2740a"
+   "recordSha256": "377f5bec472096dd6bed9e9d95e5391aaa96aee6aa2e8a691f1d132040178a75"
   },
   {
    "id": "npveRebuild_allergiesComparisonHeightCorrection_2026-09-05",
@@ -741,8 +675,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_allergiesComparisonHeightCorrection_2026-09-05.json",
    "status": "DONE. The Allergies comparison now shows no false white extension below the live 447px Sidesheet, and the corrected rend",
-   "recordSha256": "107deac499021f61c625bdc6b627137b40c8a32d3e5c6661f54665fc78fb4283",
-   "fileSha256": "e1d720aa1bf6248d66895f2f70f2903f6142917c5e7c124f977dfad420d6b045"
+   "recordSha256": "107deac499021f61c625bdc6b627137b40c8a32d3e5c6661f54665fc78fb4283"
   },
   {
    "id": "npveRebuild_externalCareHospitalizations_2026-09-05",
@@ -751,8 +684,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_externalCareHospitalizations_2026-09-05.json",
    "status": "DONE. External Care History — Hospitalizations component, body, shared Sidesheet composition, frozen reference, change l",
-   "recordSha256": "35e4c68b4038e33f7fb0f4f7a071e92428016b4e5315c8e211e945cf1285802c",
-   "fileSha256": "88b0a05a4b4873e1d817381cc1e1f3dc552664bfa7346bfac169990dff4b482f"
+   "recordSha256": "35e4c68b4038e33f7fb0f4f7a071e92428016b4e5315c8e211e945cf1285802c"
   },
   {
    "id": "npveRebuild_externalCareFacilityStay_2026-09-05",
@@ -761,8 +693,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_externalCareFacilityStay_2026-09-05.json",
    "status": "DONE. External Care History — Facility Stay form, body, shared Sidesheet composition, local form-surface token, frozen r",
-   "recordSha256": "7bf3dd66c5896dabfa8005208445bcb8a5ff8f419685ba9cddeb8fbb0bd6d2a7",
-   "fileSha256": "b803aee64e69dddec848fb699543ff9d90b27b3f94d6ac2fc1bcd42c1f7bb52f"
+   "recordSha256": "7bf3dd66c5896dabfa8005208445bcb8a5ff8f419685ba9cddeb8fbb0bd6d2a7"
   },
   {
    "id": "npveRebuild_externalReview_2026-09-05",
@@ -771,8 +702,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_externalReview_2026-09-05.json",
    "status": "READ-ONLY REVIEW COMPLETE. Peer review of the external (Codex) sidesheet work since cd092d9. All 20 batches recorded and",
-   "recordSha256": "e90a65b08988c6e6b147dd9129465851b479bf0b810b9ae6614535a8f64089fb",
-   "fileSha256": "68728a06a64ba08aacf895d5b7f72a0eb5dfea67704645aa7acb50ee9dfc90be"
+   "recordSha256": "e90a65b08988c6e6b147dd9129465851b479bf0b810b9ae6614535a8f64089fb"
   },
   {
    "id": "npveRebuild_extReviewRepairs_2026-09-05",
@@ -781,8 +711,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_extReviewRepairs_2026-09-05.json",
    "status": "DONE. All seven review decisions applied: ring override removed and the ringed-buttons DEFECT marker extended; two GAP m",
-   "recordSha256": "98c188f5e4acad26bb7b44637d067a21b3f679f7f2169832527fcc7e337f94ed",
-   "fileSha256": "20982ff09f1b539a5c13a31fd7226ca7c29f8a3d13e22c0d9dcf3fe9770fa394"
+   "recordSha256": "98c188f5e4acad26bb7b44637d067a21b3f679f7f2169832527fcc7e337f94ed"
   },
   {
    "id": "npveRebuild_healthStatusObservations_2026-09-05",
@@ -791,8 +720,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_healthStatusObservations_2026-09-05.json",
    "status": "DONE — reusable body, shared Sidesheet, frozen reference, conforming change log, sole comparison, screenshots, and ten s",
-   "recordSha256": "1d4102860058d3866109cd0becb0d92724f0d3115b208cc0eee4a2329ef297f7",
-   "fileSha256": "cee7e05a0c5f2b1ba8923137e447561415693190b4ba48f5db9986f1f38ea6d5"
+   "recordSha256": "1d4102860058d3866109cd0becb0d92724f0d3115b208cc0eee4a2329ef297f7"
   },
   {
    "id": "npveRebuild_workflowsAudit_2026-09-05",
@@ -801,8 +729,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-05/npveRebuild_workflowsAudit_2026-09-05.json",
    "status": "READ-ONLY AUDIT COMPLETE. Stopped after step 5 as instructed. 26 top-level nodes mapped with refreshed provenance, dated",
-   "recordSha256": "6e276e050fbe004812fcc2b9bf55aa78bee9e2d6128854e951a77564320d8899",
-   "fileSha256": "3f34c00a46380875d2776f00e754fbf7a79d60f2d38b2244ef8067c4034f3141"
+   "recordSha256": "6e276e050fbe004812fcc2b9bf55aa78bee9e2d6128854e951a77564320d8899"
   },
   {
    "id": "npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06",
@@ -811,8 +738,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-06/npveRebuild_healthStatusObservationsOpticalSpacing_2026-09-06.json",
    "status": "DONE — Functional Observations optical gap corrected to bound space/8; dependent heights, change log, comparison, screen",
-   "recordSha256": "9c3a156f18f4adfb7c63577c10537a5208b72f19c36e7c537eeaff2744f59817",
-   "fileSha256": "8e497d643528e076d67d753eed4d831084affdb7c045c3b53c0feacccfb12b4f"
+   "recordSha256": "9c3a156f18f4adfb7c63577c10537a5208b72f19c36e7c537eeaff2744f59817"
   },
   {
    "id": "npveRebuild_socialHistory_2026-09-06",
@@ -821,8 +747,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-06/npveRebuild_socialHistory_2026-09-06.json",
    "status": "DONE — reusable Social History body, shared Sidesheet, frozen reference, conforming change log, sole comparison, screens",
-   "recordSha256": "278da4035b5dde083d1e0986130581682ecd0e857b2db6cfbb56f751ed81579f",
-   "fileSha256": "0f81c3be72730e9c714912cdecec45f1c625eef65b51d38d16bae71a4d30a78a"
+   "recordSha256": "278da4035b5dde083d1e0986130581682ecd0e857b2db6cfbb56f751ed81579f"
   },
   {
    "id": "npveRebuild_encounterShell_2026-09-06",
@@ -831,8 +756,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-06/npveRebuild_encounterShell_2026-09-06.json",
    "status": "DONE. Encounter page shell skeleton built on Templates section 15 from library parts (Page/Encounter with SCAFFOLDING na",
-   "recordSha256": "6a294f565f0c3c12006b0b0e24a870feba7acabda10f6446df8c0fc5bf7b028e",
-   "fileSha256": "7509145309e6229a7f36bf1e70878c85879ebe87a498b9fadfecf26f9a0b771f"
+   "recordSha256": "6a294f565f0c3c12006b0b0e24a870feba7acabda10f6446df8c0fc5bf7b028e"
   },
   {
    "id": "npveRebuild_socialHistoryNewEntryPlacement_2026-09-06",
@@ -841,8 +765,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-06/npveRebuild_socialHistoryNewEntryPlacement_2026-09-06.json",
    "status": "DONE — intentional New Entry hierarchy change, live change-log row, fresh screenshots, and ten standing rules complete.",
-   "recordSha256": "460ea561e27280820c2323473b42cecb43437bd44efc7407a6eec24664b5f236",
-   "fileSha256": "0e1948a11bc3cfa300306751ee1788c971182f4429b09928bf285871f9e98b3a"
+   "recordSha256": "460ea561e27280820c2323473b42cecb43437bd44efc7407a6eec24664b5f236"
   },
   {
    "id": "npveRebuild_encounterToolbar_2026-09-06",
@@ -851,8 +774,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-06/npveRebuild_encounterToolbar_2026-09-06.json",
    "status": "DONE. Two shell corrections (Note card footer Sign control now a Button contained/secondary with an End icon DownCaret, ",
-   "recordSha256": "dc93aa671852bd1aa2e59866ee6525c7e284484d920e22b0c8ce1099d16d556d",
-   "fileSha256": "fe118ba14ea5f5912e130ed7c98fdbbac6ec12d24c8f87a3c4f8877f916aa254"
+   "recordSha256": "dc93aa671852bd1aa2e59866ee6525c7e284484d920e22b0c8ce1099d16d556d"
   },
   {
    "id": "npveRebuild_moduleChipFix_2026-09-06",
@@ -861,8 +783,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-06/npveRebuild_moduleChipFix_2026-09-06.json",
    "status": "DONE. Module chip masters corrected from Daniel's crop review: selected chips use icon + label + compact close in one co",
-   "recordSha256": "91a26d71172b320be3ee857bf531abc7815caf77f582e9890c910ff3d803dc93",
-   "fileSha256": "57408a6a9351583c100aade0b14b1acd3336e5d4921a8461c7e40795a577e8b4"
+   "recordSha256": "91a26d71172b320be3ee857bf531abc7815caf77f582e9890c910ff3d803dc93"
   },
   {
    "id": "npveRebuild_moduleChipRelationshipSpacing_2026-09-06",
@@ -871,8 +792,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-06/npveRebuild_moduleChipRelationshipSpacing_2026-09-06.json",
    "status": "DONE. Selected Module chips now group icon and label as one Module identity at space/8, with the identity group separate",
-   "recordSha256": "67b8c73f164d7951a7ba96d17d8db34ee000a07312ce1708f54309815846302c",
-   "fileSha256": "4ddb0b4ba3be0f23216ee5a4ffde617fdb7fe1fb47ce858e535131b32b48bf02"
+   "recordSha256": "67b8c73f164d7951a7ba96d17d8db34ee000a07312ce1708f54309815846302c"
   },
   {
    "id": "npveRebuild_noteHeaderLayout_2026-09-08",
@@ -881,8 +801,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-08/npveRebuild_noteHeaderLayout_2026-09-08.json",
    "status": "DONE. The shared Note card header now uses semantic identity, status/action, and action groups; related items use space/",
-   "recordSha256": "0acbca3dc75f35a2be22272a5878fc5f88f4cca68bc7b8dfa8c97074bd62eddb",
-   "fileSha256": "d2952d780ae7fc7c46b05f919851fed1a76392c9d2907aa207510cc274974628"
+   "recordSha256": "0acbca3dc75f35a2be22272a5878fc5f88f4cca68bc7b8dfa8c97074bd62eddb"
   },
   {
    "id": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
@@ -891,8 +810,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryRow_2026-09-08.json",
    "status": "DONE. Low-risk pilot item built and validated; stopped before the section item for operator review.",
-   "recordSha256": "226d41f427cb4f3ce3f1795a7e9ef44cadf517ab8a2bfabfa2c2a50f1e470c95",
-   "fileSha256": "d961011fc1d22fccee591d841306a7728d664c13dedb4b7f94676c033bcd05f1"
+   "recordSha256": "226d41f427cb4f3ce3f1795a7e9ef44cadf517ab8a2bfabfa2c2a50f1e470c95"
   },
   {
    "id": "npveRebuild_pastMedicalHistorySection_2026-09-08",
@@ -901,8 +819,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistorySection_2026-09-08.json",
    "status": "DONE. Low-risk PMHx section pilot built and validated; stopped before the body item for operator review.",
-   "recordSha256": "756e91b72e868eb35d3057ec61efb7668cecbbb1234d900d44277ffcf9f8e7ee",
-   "fileSha256": "173c3f00b09ec7da92470c9053f08c96074405e135770b39b12ddb7ba3bb6a11"
+   "recordSha256": "756e91b72e868eb35d3057ec61efb7668cecbbb1234d900d44277ffcf9f8e7ee"
   },
   {
    "id": "npveRebuild_pastMedicalHistoryBody_2026-09-08",
@@ -911,8 +828,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryBody_2026-09-08.json",
    "status": "DONE. Medium-risk PMHx body and sidesheet pilot built by Codex through P4.d and finished by Claude from P4.e; four opera",
-   "recordSha256": "a5d9bd416e6176a6e7d4d82771252c5268cef72cd1a92cd58384b5d3b85c9a71",
-   "fileSha256": "766457a7ec0b4c3a874423c4a64f40650e30250db366dc99ad9153591282ca90"
+   "recordSha256": "a5d9bd416e6176a6e7d4d82771252c5268cef72cd1a92cd58384b5d3b85c9a71"
   },
   {
    "id": "workflowRefactor_stateCheck_2026-09-08",
@@ -921,8 +837,7 @@
    "workstream": "workflow",
    "path": "records/workflow/2026-09-08/workflowRefactor_stateCheck_2026-09-08.json",
    "status": "READ-ONLY STATE CHECK. Stands in, per agent rule 10, for the missing record of the workflow-refactor batches committed 2",
-   "recordSha256": "ea62ab831fd15af20d48ed49319eae6dbc1ba527b32e293ec0540d70eec67f6c",
-   "fileSha256": "66a7d0350e6b8c86b67391f4b2521737b114ce303e041a6d18f2f5d05ed651c6"
+   "recordSha256": "ea62ab831fd15af20d48ed49319eae6dbc1ba527b32e293ec0540d70eec67f6c"
   },
   {
    "id": "workflowRefactor_closeout_2026-09-08",
@@ -931,8 +846,7 @@
    "workstream": "workflow",
    "path": "records/workflow/2026-09-08/workflowRefactor_closeout_2026-09-08.json",
    "status": "DONE. Contract completed with provenance (workflow/rules.json), instruction files thinned to pointers, risk attribution ",
-   "recordSha256": "453f397a1d1adaa8020e0b022d146d57f1c457a1c62d7970c5db2ed37928383d",
-   "fileSha256": "af0e93deb09b2c43e8735db469ed7533e1f9e45c698ebf83c257287e86b2db18"
+   "recordSha256": "453f397a1d1adaa8020e0b022d146d57f1c457a1c62d7970c5db2ed37928383d"
   },
   {
    "id": "workflowRefactor_tierApproval_2026-09-08",
@@ -941,8 +855,7 @@
    "workstream": "workflow",
    "path": "records/workflow/2026-09-08/workflowRefactor_tierApproval_2026-09-08.json",
    "status": "DONE. Documentation batch. Operator approval of the four risk classes and of the three PMHx tiers recorded verbatim; hum",
-   "recordSha256": "819bec5f2b011cd0921fe4b23e24fbc7a3c9c9a6ab12c35fa8aadefd7da52e29",
-   "fileSha256": "1d0906b1514c36f4248b3a69af18570caccde4439ef430681c9dfbcef39976cf"
+   "recordSha256": "819bec5f2b011cd0921fe4b23e24fbc7a3c9c9a6ab12c35fa8aadefd7da52e29"
   },
   {
    "id": "leanPilot_run2-3_2026-09-08",
@@ -951,8 +864,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-08/leanPilot_run2-3_2026-09-08.json",
    "status": "DONE. Item 1 (pilot2-hospitalizations-edit, medium, approved by Daniel) built, validated and inspected; stopped for oper",
-   "recordSha256": "02928aa8960f71b977c0b65f8aeb922a06d0dfaf83c62fd7193eced3eb538c16",
-   "fileSha256": "9add02d1f54da98c5dec751ac48afa6dca755915753cfc88cafe870717a7e0be"
+   "recordSha256": "02928aa8960f71b977c0b65f8aeb922a06d0dfaf83c62fd7193eced3eb538c16"
   },
   {
    "id": "leanPilot_run3_2026-09-08",
@@ -961,8 +873,7 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-09/leanPilot_run3_2026-09-08.json",
    "status": "DONE. pilot2-procedures-edit (medium, approved by Daniel) built, validated and inspected; the combined lean pilot runs 2",
-   "recordSha256": "90e9d827ae49ca236aefca3e3399a8649830d2d4f7a3710315a986a1697a68f1",
-   "fileSha256": "60559681058f6ca48d3650140307ff6f1f1451418c994a6348f64fa0e1368909"
+   "recordSha256": "90e9d827ae49ca236aefca3e3399a8649830d2d4f7a3710315a986a1697a68f1"
   },
   {
    "id": "postPilot_merge_2026-09-08",
@@ -971,8 +882,7 @@
    "workstream": "workflow",
    "path": "records/workflow/2026-09-08/postPilot_merge_2026-09-08.json",
    "status": "DONE. codex/lean-workflow merged into master with a merge commit; schema, metrics and Figma state agree post-merge; item",
-   "recordSha256": "61f3f73d066d3009085a7858f2c54aada8c410f56acd6613e8d8cc540da4e7bb",
-   "fileSha256": "d1a8f3b1fd3bb60852c742ef7e522dfa56e8eb05efe9d286d5b35c44bb907135"
+   "recordSha256": "61f3f73d066d3009085a7858f2c54aada8c410f56acd6613e8d8cc540da4e7bb"
   },
   {
    "id": "npveRebuild_moduleChipFix_2026-09-08",
@@ -981,8 +891,16 @@
    "workstream": "npve",
    "path": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json",
    "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scal",
-   "recordSha256": "b30fc9493d822bd7121231d08246f3eb1be0737dc613d38d7e0c9434515d9edc",
-   "fileSha256": "7b9b6dc114104700e9b9f9a10fbf3501b99f102d6b3a47f5c85ba04009f24acb"
+   "recordSha256": "b30fc9493d822bd7121231d08246f3eb1be0737dc613d38d7e0c9434515d9edc"
+  },
+  {
+   "id": "schemasplit_phase8_2026-09-08",
+   "sequence": 91,
+   "date": "2026-09-08",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
+   "status": "IN PROGRESS — steps 1-3 done and committed (snapshot, migration, byte-identical aggregate); steps 4-7 (tooling, backup-p",
+   "recordSha256": "15066ff724ff500ed3a4a2e86a9394ebcad4b0d24f49acfe69f76e288b2937a5"
   }
  ],
  "flags": {
@@ -1283,8 +1201,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 91,
-  "aggregateTopLevelKeys": 105,
-  "nextRecordSequence": 91
+  "records": 92,
+  "aggregateTopLevelKeys": 106,
+  "nextRecordSequence": 92
  }
 }

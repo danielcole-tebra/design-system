@@ -1,0 +1,9 @@
+# The record store and the files generated from it stay LF on every checkout, so content digests and
+# freshness checks do not flip with the platform (record schemasplit_phase8_2026-09-08).
+records/** text eol=lf
+flags/*.json text eol=lf
+foundation/*.json text eol=lf
+indexes/*.json text eol=lf
+design-system-schema.json text eol=lf
+workflow/*.json text eol=lf
+scripts/**/*.js text eol=lf

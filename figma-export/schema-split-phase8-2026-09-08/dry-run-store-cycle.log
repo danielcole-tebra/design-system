@@ -1,0 +1,11 @@
+scratch store at C:\Users\coled\AppData\Local\Temp\claude\C--Code-design-system\84ff42db-f72d-4b15-ac9b-2299cb2b9cf2\scratchpad\store-dry-run
+loaded 91 records, 227+58 flags; fresh=true
+opened records/workflow/2026-09-08/dryRun_record_2026-09-08.json
+gate: duplicate refused; second record refused while the first is IN PROGRESS
+read back: sequence 91, aggregate key order preserved
+flags: appended to active.json, resolved into resolved.json, sequence kept
+fingerprint: own appends tolerated; an edit to an older record is caught
+finalize: IN PROGRESS -> DONE once; second finalize refused as immutable
+freshness: hand edit to the aggregate detected and repaired by rebuild
+real store untouched by this run: working tree already had changes; compare digests instead
+self-test PASS store write/read cycle: open, gate, read back, flags, fingerprint, finalize, immutability, freshness
