@@ -71,12 +71,13 @@
       {
         "n": 7,
         "title": "Record every batch",
-        "text": "Record every batch: a dated record file under records/<workstream>/<date>/ via an apply-*.js script (openRecord), backup first, findings to flags/active.json (appendFlags). A record is immutable once its status leaves IN PROGRESS. A batch without a record did not happen and will be treated as suspect.",
+        "text": "Record every batch: a dated record file under records/<workstream>/<date>/ via an apply-*.js script (openRecord), findings to flags/active.json (appendFlags). A record is immutable once its status leaves IN PROGRESS. The backup is the committed record files plus a milestone tag (scripts/schema/milestone.js) at each workstream close or weekly, whichever comes first; no per-batch copy of the aggregate. A batch without a record did not happen and will be treated as suspect.",
         "sourceRecord": [
           "npveRebuild_agentRules_2026-09-04",
-          "schemasplit_phase8_2026-09-08"
+          "schemasplit_phase8_2026-09-08",
+          "backupPolicyB_2026-09-08"
         ],
-        "note": "Amended by schemasplit_phase8_2026-09-08: records are files in the append-only store; the full-schema backup stands until the operator decides the backup-policy question raised there."
+        "note": "Amended by schemasplit_phase8_2026-09-08 (records are files in the append-only store) and by backupPolicyB_2026-09-08 (backup policy B replaces the per-batch full-schema backup; operator decision quoted in that record)."
       },
       {
         "n": 8,

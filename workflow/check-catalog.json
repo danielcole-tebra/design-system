@@ -16,8 +16,9 @@
     "allowlist": "Working-tree changes are within the planner-approved file list.",
     "riskApproval": "Tier is operator-approved with a verbatim quote in the manifest, or the run carries a quoted per-item confirmation.",
     "citations": "Every sourceRecord cited by workflow/rules.json exists in the store (generate-contract.js refuses otherwise).",
-    "proofArchive": "Batch proofs are named PROOF — <batch> · <what> and sit in Archive 06 at batch close.",
-    "immutability": "No record whose committed status was not IN PROGRESS has changed since the last commit (validate-split.js compares against HEAD indexes/record-index.json); no record or flag is ever removed."
+    "proofArchive": "Batch proofs are named PROOF \u2014 <batch> \u00b7 <what> and sit in Archive 06 at batch close.",
+    "immutability": "No record whose committed status was not IN PROGRESS has changed since the last commit (validate-split.js compares against HEAD indexes/record-index.json); no record or flag is ever removed.",
+    "milestone": "A milestone tag (milestone/<date>-<reason>) exists and is at most seven days old; milestones are taken at each workstream close or weekly, whichever comes first (backup policy B)."
   },
   "visual": {
     "comparisonRender": "Executor inspects a dedicated reference/rebuild/change comparison for every component.",

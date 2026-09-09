@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-09T12:26:15.823Z",
+  "generatedAt": "2026-09-09T14:21:44.957Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "092040c1546dbb2939803a5f2d87afc60e58ec9b9b9c03160e3546a683d42ac3",
+      "sha256": "b9c3786626a579f0d1383b6a178c5a605178aee40f13bec70409deae326c8754",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "cba5bb0b65910422f0c5da168a8ba535ba81111d771af8c7285a7e7731718166"
+        "sha256": "583d549586eab96ba84a57e912278dab0270ed7003d640f06244de6abf5cb011"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "4a3bf0aee37f2200cb1d5fbe6ff33f4dfed37dc6394d9cf916208e033fecf765"
+        "sha256": "107a34659b80955be38c72440b835cfdc89e385839e1b693da96cb464d94829b"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 92,
+      "records": 93,
       "flags": {
         "active": 227,
         "resolved": 58
@@ -38,11 +38,11 @@
     "instructions": [
       {
         "path": "workflow/rules.json",
-        "sha256": "b6f7a6ce7a34711d257cb0ed8655dbc94c3a046d573fff5b5d0e7bb3613ca03f"
+        "sha256": "a2277f10bb5c89130ea1ee25f76b286654cfc5095a1c86b5d97b4c4c09598bdb"
       },
       {
         "path": "CLAUDE.md",
-        "sha256": "90a506e96c307be46bdcf58ef0d18222045d64806ab79fbf19eb3b20990fe463"
+        "sha256": "7cfa7912fa63bd9bfd54ec7207c41763b2c7eb0c862d026340248a1f8bafd967"
       },
       {
         "path": "AGENTS.md",
@@ -50,16 +50,17 @@
       },
       {
         "path": "OPERATORS.md",
-        "sha256": "42f33027bf697e1f20db735d1027cc550a30cb2dfa0a4fdd09f604b387658b9b"
+        "sha256": "d75682b73bc74e6b4468784516916b44351f792dabd9f32032b118215b91f236"
       }
     ],
     "generator": "scripts/workflow/generate-contract.js",
     "generatorVersion": 3,
-    "citedRecordsPresent": 26
+    "citedRecordsPresent": 27
   },
   "recordStore": {
     "layout": "records/<workstream>/<date>/<recordId>.json (one file per batch record, immutable once its status leaves IN PROGRESS); flags/active.json and flags/resolved.json (the flag register split by status); foundation/<section>.json (meta, tokens, components, standing batch rules and the other non-record sections); indexes/record-index.json and indexes/current-state.json (generated, never hand-edited); design-system-schema.json (generated legacy aggregate).",
     "concurrency": "Concurrent batches write separate record files and never touch shared files except the generated indexes, which regenerate at commit.",
+    "backupPolicy": "Policy B (record backupPolicyB_2026-09-08, operator decision quoted there): the backup is the immutable record files in git plus milestone tags (scripts/schema/milestone.js) at each workstream close or weekly, whichever comes first; validate-split fails when the latest milestone is older than seven days. No per-batch copy of the aggregate is taken any more; the 90 historical backup files stay as history.",
     "howToRecord": "An apply-*.js script opens the record with scripts/schema/lib.js openRecord (record gate: the previous record in the workstream must be DONE in indexes/record-index.json); a finalize-*.js script closes it with finalizeRecord; both regenerate the aggregate and indexes. New findings go to flags/active.json through appendFlags; a resolution moves an entry to flags/resolved.json through resolveFlag. Never edit a record file by hand, and never edit a DONE record.",
     "readRecord": "Find a record by id in indexes/record-index.json and read the file at its path. The last record of a workstream is in indexes/current-state.json byWorkstream.<ws>.latest.",
     "sourceRecord": "schemasplit_phase8_2026-09-08"
@@ -166,12 +167,13 @@
       {
         "n": 7,
         "title": "Record every batch",
-        "text": "Record every batch: a dated record file under records/<workstream>/<date>/ via an apply-*.js script (openRecord), backup first, findings to flags/active.json (appendFlags). A record is immutable once its status leaves IN PROGRESS. A batch without a record did not happen and will be treated as suspect.",
+        "text": "Record every batch: a dated record file under records/<workstream>/<date>/ via an apply-*.js script (openRecord), findings to flags/active.json (appendFlags). A record is immutable once its status leaves IN PROGRESS. The backup is the committed record files plus a milestone tag (scripts/schema/milestone.js) at each workstream close or weekly, whichever comes first; no per-batch copy of the aggregate. A batch without a record did not happen and will be treated as suspect.",
         "sourceRecord": [
           "npveRebuild_agentRules_2026-09-04",
-          "schemasplit_phase8_2026-09-08"
+          "schemasplit_phase8_2026-09-08",
+          "backupPolicyB_2026-09-08"
         ],
-        "note": "Amended by schemasplit_phase8_2026-09-08: records are files in the append-only store; the full-schema backup stands until the operator decides the backup-policy question raised there."
+        "note": "Amended by schemasplit_phase8_2026-09-08 (records are files in the append-only store) and by backupPolicyB_2026-09-08 (backup policy B replaces the per-batch full-schema backup; operator decision quoted in that record)."
       },
       {
         "n": 8,
@@ -274,7 +276,7 @@
     "Mutate sequentially; stop on the first component failure before touching the next item.",
     "Run deterministic checks and inspect at least one comparison render per component.",
     "Save the comparison render and full report; show the render to the operator.",
-    "Archive the batch proofs per proofConvention, finalize the record (finalize-*.js via finalizeRecord), regenerate this contract, pass the finish gate, and commit with an explicit allowlist."
+    "Archive the batch proofs per proofConvention, finalize the record (finalize-*.js via finalizeRecord), regenerate this contract, pass the finish gate, and commit with an explicit allowlist. At a workstream close, or when a week has passed since the last milestone, create a milestone tag on the committed tree."
   ],
   "nonNegotiables": {
     "additiveOnly": true,
@@ -302,11 +304,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "schemasplit_phase8_2026-09-08",
+      "id": "backupPolicyB_2026-09-08",
       "date": "2026-09-08",
       "workstream": "workflow",
-      "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
-      "status": "DONE. Monolithic design-system-schema.json split into an append-only record store: 91 records migrated verbatim to records/<workstream>/<date>/<id>.json, 285 fl"
+      "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
+      "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or we"
     },
     "recordGate": {
       "inProgress": [],
@@ -333,12 +335,12 @@
         }
       },
       "workflow": {
-        "count": 6,
+        "count": 7,
         "latest": {
-          "id": "schemasplit_phase8_2026-09-08",
+          "id": "backupPolicyB_2026-09-08",
           "date": "2026-09-08",
-          "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
-          "status": "DONE. Monolithic design-system-schema.json split into an append-only record store: 91 records migrated verbatim to records/<workstream>/<date>/<id>.json, 285 fl"
+          "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
+          "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or we"
         }
       }
     }
@@ -725,17 +727,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_noteHeaderLayout_2026-09-08",
-        "path": "records/npve/2026-09-08/npveRebuild_noteHeaderLayout_2026-09-08.json",
-        "status": "DONE. The shared Note card header now uses semantic identity, status/action, and action groups; related items use space/8, semantic groups use space/16, all outer padding is space/16, and the trailing controls remain anchored to the right edge. The card stays 831x748, the component API and sole placed comparison instance remain linked, and one plain-language change-log row was added.",
-        "date": "2026-09-08",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-note-header-layout-2026-09-08/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_pastMedicalHistoryRow_2026-09-08",
         "path": "records/npve/2026-09-08/npveRebuild_pastMedicalHistoryRow_2026-09-08.json",
         "status": "DONE. Low-risk pilot item built and validated; stopped before the section item for operator review.",
@@ -915,6 +906,17 @@
         "decision": null,
         "report": "figma-export/schema-split-phase8-2026-09-08/report.md",
         "target": null
+      },
+      {
+        "id": "backupPolicyB_2026-09-08",
+        "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
+        "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or weekly, whichever comes first. Agent rule 7 amended, milestone tooling and weekly check added, docs updated; the last old-style backup was taken before the change. The first milestone tag follows the commit carrying this record.",
+        "date": "2026-09-08",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/backup-policy-b-2026-09-08/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -1042,6 +1044,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "a1dc6ae467cd73cb28400d3b4152081867f4f38d53371cfa4ea3abb17ce13fc6"
+    "contractSha256": "ac6f8c3694677452b24e91f5a90934ab917a3d17e1087294367fc768cb26219c"
   }
 }

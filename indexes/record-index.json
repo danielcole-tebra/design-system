@@ -901,6 +901,15 @@
    "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
    "status": "DONE. Monolithic design-system-schema.json split into an append-only record store: 91 records migrated verbatim to recor",
    "recordSha256": "1a6262ffc8257efb1c9883e9e946490e978fad2b34ac26143cdf5dc931bab7d3"
+  },
+  {
+   "id": "backupPolicyB_2026-09-08",
+   "sequence": 92,
+   "date": "2026-09-08",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
+   "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus miles",
+   "recordSha256": "1e9224ec7811d1012e27c645ce568dd703259004aeaa6f47c83273f85127ab05"
   }
  ],
  "flags": {
@@ -1201,8 +1210,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 92,
-  "aggregateTopLevelKeys": 106,
-  "nextRecordSequence": 92
+  "records": 93,
+  "aggregateTopLevelKeys": 107,
+  "nextRecordSequence": 93
  }
 }

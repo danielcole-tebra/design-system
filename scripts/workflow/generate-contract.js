@@ -88,6 +88,7 @@ const contract = {
   recordStore: {
     layout: 'records/<workstream>/<date>/<recordId>.json (one file per batch record, immutable once its status leaves IN PROGRESS); flags/active.json and flags/resolved.json (the flag register split by status); foundation/<section>.json (meta, tokens, components, standing batch rules and the other non-record sections); indexes/record-index.json and indexes/current-state.json (generated, never hand-edited); design-system-schema.json (generated legacy aggregate).',
     concurrency: 'Concurrent batches write separate record files and never touch shared files except the generated indexes, which regenerate at commit.',
+    backupPolicy: 'Policy B (record backupPolicyB_2026-09-08, operator decision quoted there): the backup is the immutable record files in git plus milestone tags (scripts/schema/milestone.js) at each workstream close or weekly, whichever comes first; validate-split fails when the latest milestone is older than seven days. No per-batch copy of the aggregate is taken any more; the 90 historical backup files stay as history.',
     howToRecord: 'An apply-*.js script opens the record with scripts/schema/lib.js openRecord (record gate: the previous record in the workstream must be DONE in indexes/record-index.json); a finalize-*.js script closes it with finalizeRecord; both regenerate the aggregate and indexes. New findings go to flags/active.json through appendFlags; a resolution moves an entry to flags/resolved.json through resolveFlag. Never edit a record file by hand, and never edit a DONE record.',
     readRecord: 'Find a record by id in indexes/record-index.json and read the file at its path. The last record of a workstream is in indexes/current-state.json byWorkstream.<ws>.latest.',
     sourceRecord: 'schemasplit_phase8_2026-09-08'
@@ -119,7 +120,7 @@ const contract = {
     'Mutate sequentially; stop on the first component failure before touching the next item.',
     'Run deterministic checks and inspect at least one comparison render per component.',
     'Save the comparison render and full report; show the render to the operator.',
-    'Archive the batch proofs per proofConvention, finalize the record (finalize-*.js via finalizeRecord), regenerate this contract, pass the finish gate, and commit with an explicit allowlist.'
+    'Archive the batch proofs per proofConvention, finalize the record (finalize-*.js via finalizeRecord), regenerate this contract, pass the finish gate, and commit with an explicit allowlist. At a workstream close, or when a week has passed since the last milestone, create a milestone tag on the committed tree.'
   ],
   nonNegotiables: {
     additiveOnly: true,

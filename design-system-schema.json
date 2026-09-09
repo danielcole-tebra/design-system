@@ -28342,5 +28342,60 @@
   ],
   "screenshots": [],
   "screenshotsNote": "Repo-only batch; no Figma render exists to inspect. Evidence is the reconciliation JSON, the validator and dry-run logs, and the byte comparison."
+ },
+ "backupPolicyB_2026-09-08": {
+  "_status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or weekly, whichever comes first. Agent rule 7 amended, milestone tooling and weekly check added, docs updated; the last old-style backup was taken before the change. The first milestone tag follows the commit carrying this record.",
+  "date": "2026-09-08",
+  "workstream": "Workflow / backup policy",
+  "executor": "Claude (Anthropic claude-fable-5-1)",
+  "recordGate": "schemasplit_phase8_2026-09-08 recorded DONE in indexes/record-index.json — passed",
+  "report": "figma-export/backup-policy-b-2026-09-08/report.md",
+  "operatorDecision": {
+   "by": "Daniel (operator)",
+   "date": "2026-09-08",
+   "quote": "Backup policy B: immutable records, git, and milestone tags — milestones at each workstream close or weekly, whichever comes first.",
+   "relayedIn": "operator message in the Phase 8 session, 2026-09-08 (after the schemasplit report)",
+   "decides": "schemasplit_phase8_2026-09-08.step5_backupPolicy option B",
+   "changesStandingRule": "agent rule 7 (workflow/rules.json) and the CLAUDE.md Recording section; standing rules 1-15 in CLAUDE.md are untouched"
+  },
+  "lastOldStyleBackup": {
+   "path": "design-system-schema.backup-2026-09-08-pre-backup-policy-b.json",
+   "sha256": "092040c1546dbb2939803a5f2d87afc60e58ec9b9b9c03160e3546a683d42ac3",
+   "note": "taken because rule 7 as it stood required it; the last per-batch copy of the aggregate"
+  },
+  "policy": {
+   "backup": "The committed record files (immutable once DONE; validate-split refuses a changed DONE record and any removed record or flag) plus git history.",
+   "milestones": "Annotated tags milestone/<YYYY-MM-DD>-<reason>, created by node scripts/schema/milestone.js \"<reason>\" on a clean, validated, committed tree, at each workstream close or weekly, whichever comes first.",
+   "enforcement": "validate-split.js fails when no milestone tag exists or the latest is older than seven days; validate-workflow, finish-batch and the contract validator inherit the check. The remedy is one command on a committed tree.",
+   "perBatchBackup": "No longer taken. The 90 historical design-system-schema.backup-*.json files stay as history (additive only)."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0,
+   "PROCESS": 0
+  },
+  "flagsBefore": {
+   "active": 227,
+   "resolved": 58,
+   "total": 285
+  },
+  "flagsAfter": {
+   "active": 227,
+   "resolved": 58,
+   "total": 285
+  },
+  "flagsAdded": [],
+  "figmaMutations": [],
+  "changes": {
+   "rules": "workflow/rules.json agentRules 7 text and note (sourceRecord adds this record); recordGate untouched",
+   "tooling": "scripts/schema/milestone.js (create a milestone/<date>-<slug> annotated tag on a clean validated tree; --status); scripts/schema/validate-split.js fails when the latest milestone is missing or older than seven days (skipMilestone only while creating one); workflow/check-catalog.json gains the milestone check",
+   "contract": "recordStore.backupPolicy line and the final operating-loop step (milestone at workstream close or weekly)",
+   "docs": "CLAUDE.md Recording, OPERATORS.md commit line, workflow/README.md commands",
+   "applyScriptConvention": "apply-*.js no longer copies the aggregate; openRecord is the first write. Historical backup files remain untouched."
+  },
+  "firstMilestone": "milestone/2026-09-08-backup-policy-b-adopted, created on the commit carrying this record (workflow workstream close for the schema split and policy batches); hash in the report",
+  "screenshots": [],
+  "screenshotsNote": "Repo-only batch; no render to inspect."
  }
 }

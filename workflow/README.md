@@ -27,6 +27,7 @@ The register itself lives outside this directory as the append-only record store
 node scripts/schema/build-aggregate.js [--check]
 node scripts/schema/validate-split.js
 node scripts/schema/self-test.js [scratchDir]
+node scripts/schema/milestone.js "<reason>" | --status
 node scripts/workflow/generate-contract.js
 node scripts/workflow/validate-workflow.js
 node scripts/workflow/lock-risk.js <item-id> <approver> "<verbatim operator approval>"

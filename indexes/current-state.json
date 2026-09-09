@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "schemasplit_phase8_2026-09-08",
+  "id": "backupPolicyB_2026-09-08",
   "date": "2026-09-08",
   "workstream": "workflow",
-  "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
-  "status": "DONE. Monolithic design-system-schema.json split into an append-only record store: 91 records migrated verbatim to records/<workstream>/<date>/<id>.json, 285 fl"
+  "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
+  "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or we"
  },
  "recordGate": {
   "inProgress": [],
@@ -34,12 +34,12 @@
    }
   },
   "workflow": {
-   "count": 6,
+   "count": 7,
    "latest": {
-    "id": "schemasplit_phase8_2026-09-08",
+    "id": "backupPolicyB_2026-09-08",
     "date": "2026-09-08",
-    "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
-    "status": "DONE. Monolithic design-system-schema.json split into an append-only record store: 91 records migrated verbatim to records/<workstream>/<date>/<id>.json, 285 fl"
+    "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
+    "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or we"
    }
   }
  },
@@ -50,7 +50,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "092040c1546dbb2939803a5f2d87afc60e58ec9b9b9c03160e3546a683d42ac3",
-  "bytes": 1433669
+  "sha256": "b9c3786626a579f0d1383b6a178c5a605178aee40f13bec70409deae326c8754",
+  "bytes": 1437402
  }
 }
