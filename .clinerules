@@ -1,0 +1,11 @@
+# .clinerules
+
+Cline reads this file by convention. It points at the same canonical rule text as CLAUDE.md and adds nothing. Where the two differ, CLAUDE.md wins.
+
+## Read first
+
+`CLAUDE.md` in the repo root is the canonical instruction file: standing rules 1-15, the precedence order (code in `packages/design-system` > Storybook > production > Figma), the Figma file keys, the record store layout, and the known plugin API traps. AGENTS.md says the same to Codex and other tools; OPERATORS.md describes the operator seat.
+
+## NPVE loop
+
+Run `node scripts/workflow/validate-workflow.js`, then read `workflow/npve-contract.generated.json`, the selected item in `workflow/manifest.json`, and its last record (path in `indexes/record-index.json`; last record per workstream in `indexes/current-state.json`). The record store is the authority; the contract is a freshness-checked projection; chat history is not the record.
