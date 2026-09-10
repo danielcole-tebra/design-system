@@ -29522,5 +29522,52 @@
     "evidence": "scripts/workflow/start-batch.js; scripts/workflow/validate-execution.js"
    }
   ]
+ },
+ "workflow_runCostTracking_2026-09-10": {
+  "_status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement.",
+  "date": "2026-09-10",
+  "workstream": "Workflow / run cost tracking",
+  "report": "figma-export/workflow-run-cost-tracking-2026-09-10/report.md",
+  "scope": "Record operator-reported credits and observed token totals for completed Patient Summary content run; establish append-only cost observations for future runs. Repository-only; no Figma mutation.",
+  "approvalQuote": "I'd like to keep some count of the token cost of these runs, that last run cost about 179 credits all together",
+  "supplements": "npveRebuild_patientSummaryContent_2026-09-10",
+  "costObservation": {
+   "itemId": "npve-patient-summary-content",
+   "buildCommit": "d25641d",
+   "provider": "OpenAI",
+   "model": "gpt-6-astra",
+   "reasoning": "medium",
+   "credits": {
+    "amount": 179,
+    "approximate": true,
+    "source": "operator-reported",
+    "quote": "I'd like to keep some count of the token cost of these runs, that last run cost about 179 credits all together",
+    "scope": "Whole preceding Patient Summary content run, as reported by operator",
+    "recordedDate": "2026-09-10"
+   },
+   "tokens": {
+    "source": "Codex session token_usage_record.payload.usage, summed once per unique response_id for the two completed turns",
+    "sessionId": "01a08d30-c73d-7811-b355-997a3eb49947",
+    "turnIds": [
+     "01a08d30-cf46-7c62-b363-b4f3f111afe1",
+     "01a08d35-0fc6-7ce3-8e13-d6ee0f3ddd2c"
+    ],
+    "firstUsageAt": "2026-09-10T21:19:48.555Z",
+    "lastUsageAt": "2026-09-10T21:38:33.102Z",
+    "responses": 42,
+    "input": 4857672,
+    "cachedInput": 4693632,
+    "uncachedInput": 164040,
+    "cacheWriteInput": 0,
+    "output": 22556,
+    "reasoningOutput": 3232,
+    "total": 4880228,
+    "note": "Input includes cached input; output includes reasoning output. Repeated input across responses is included. Total is input + output, not unique context size. Excludes this cost-tracking follow-up."
+   },
+   "dollarCost": null,
+   "note": "Credit amount is an approximate operator report, not an inferred token-to-credit conversion. This supplement supersedes the build report's unavailable-token statement; immutable DONE record and original prefix measurements are preserved."
+  },
+  "outcome": "Patient Summary content: approximately 179 credits; 164040 uncached input, 4693632 cached input, 22556 output tokens. Cost tracking method added to metrics and workflow README.",
+  "verification": "42 unique response IDs summed across the two completed run turns; cached input and reasoning output not double-counted. Original DONE record and prefix measurements preserved. No Figma activity; pixel checks not applicable."
  }
 }

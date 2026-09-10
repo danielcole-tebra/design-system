@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-10T21:37:50.675Z",
+  "generatedAt": "2026-09-10T23:54:49.320Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "e2495a12f4154195e94b0b3f3edab3539c87f0098a787800454b055811c8110c",
+      "sha256": "99290d37ed64465b997d89c14ec2067ef5cf8b946eaf7598339901b6aacbba07",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "d51a6d7fcd8bd0b021e20795c4a39ff9e1cc4f849a6c6a23eedf5fe760a3a6a1"
+        "sha256": "fa539cfaa8e36112bc836a5f3dd03617a0aa73a9f9d5f071f208748b1f1dd443"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "d8ecf1f9b58c64a3762a3e52e1a87e64348677ceffb75560c40055bd09d5255e"
+        "sha256": "d8ad215ddb87e8c63eda77716dd52bbbf53fabc1d6257db31260dca2f83fe558"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 100,
+      "records": 101,
       "flags": {
         "active": 230,
         "resolved": 58
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "npveRebuild_patientSummaryContent_2026-09-10",
+      "id": "workflow_runCostTracking_2026-09-10",
       "date": "2026-09-10",
-      "workstream": "npve",
-      "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
-      "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2."
+      "workstream": "workflow",
+      "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
+      "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement."
     },
     "recordGate": {
       "inProgress": [],
@@ -352,12 +352,12 @@
         }
       },
       "workflow": {
-        "count": 10,
+        "count": 11,
         "latest": {
-          "id": "workflow_npveQueueRefresh_2026-09-10",
+          "id": "workflow_runCostTracking_2026-09-10",
           "date": "2026-09-10",
-          "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
-          "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies"
+          "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
+          "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement."
         }
       }
     }
@@ -744,27 +744,6 @@
     ],
     "recentRecords": [
       {
-        "id": "leanPilot_run3_2026-09-08",
-        "path": "records/npve/2026-09-09/leanPilot_run3_2026-09-08.json",
-        "status": "DONE. pilot2-procedures-edit (medium, approved by Daniel) built, validated and inspected; the combined lean pilot runs 2 and 3 are complete and stop for operator review.",
-        "date": "2026-09-09",
-        "outcome": [
-          "Created Procedure history edit form 586:6414 (518x354) and body 586:6467 from the run 2 pattern, reusing the status selector; all controls are live library instances or the recorded GAP stand-in.",
-          "Appended the body to the shared Sidesheet Body content preferred values (14 → 15); default, 13 properties and 550x600 variant geometry unchanged.",
-          "Placed one content-driven sheet at 550x530 (header 72, divider 1, body region 386, footer 71) with the source title and footer labels.",
-          "Created the three _Rebuild comparison sub-components and the sole comparison 586:11765 on Screens with the reused Dropdown chip GAP marker; comparison slots now hold 18 preferred values each.",
-          "Zero corrections during the build; runs 2 and 3 complete, awaiting operator review of both comparisons."
-        ],
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
-        "target": {
-          "file": "fdCQVFdvOByaOYIJYag0d6",
-          "templatesPage": "3:2",
-          "screensPage": "27:2"
-        }
-      },
-      {
         "id": "postPilot_merge_2026-09-08",
         "path": "records/workflow/2026-09-08/postPilot_merge_2026-09-08.json",
         "status": "DONE. codex/lean-workflow merged into master with a merge commit; schema, metrics and Figma state agree post-merge; item 2 tier approval verified present in its record (no gate bypass); Daniel's acceptance of both runs 2-3 comparisons written to both pilot records.",
@@ -888,6 +867,17 @@
           "pageId": "3:2",
           "name": "Patient summary content"
         }
+      },
+      {
+        "id": "workflow_runCostTracking_2026-09-10",
+        "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
+        "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement.",
+        "date": "2026-09-10",
+        "outcome": "Patient Summary content: approximately 179 credits; 164040 uncached input, 4693632 cached input, 22556 output tokens. Cost tracking method added to metrics and workflow README.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-run-cost-tracking-2026-09-10/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -1015,6 +1005,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "632cd006be0c928f62a707eb37d4e287204c060e1f306a6c215df7bdd799b2cc"
+    "contractSha256": "4b45058559189357462e27e6581b969e5b4226a2ea4b30989d3511d4e66ca3e6"
   }
 }

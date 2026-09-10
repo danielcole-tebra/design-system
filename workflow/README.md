@@ -1,5 +1,9 @@
 # Lean design-workflow runtime
 
+## Run cost tracking
+
+At run close, append an observation to `workflow/metrics.json` → `costObservations`: provider, model, reasoning, measured input/cached-input/output tokens, and credit cost with its source and approximate flag. Follow `costTracking` in the same file. Sum per-response usage once per response ID within the completed run; never add cumulative counters or double-count cached/reasoning subsets. Record unavailable values as null. Keep credits separate from tokens; do not infer conversion rates. Late operator cost reports supplement the completed run through a new record without editing its DONE record.
+
 This directory is the compact, provider-neutral entry point for NPVE rebuild batches. It reduces repeated reading without weakening the operator loop.
 
 ## Files

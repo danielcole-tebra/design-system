@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "npveRebuild_patientSummaryContent_2026-09-10",
+  "id": "workflow_runCostTracking_2026-09-10",
   "date": "2026-09-10",
-  "workstream": "npve",
-  "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
-  "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2."
+  "workstream": "workflow",
+  "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
+  "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement."
  },
  "recordGate": {
   "inProgress": [],
@@ -34,12 +34,12 @@
    }
   },
   "workflow": {
-   "count": 10,
+   "count": 11,
    "latest": {
-    "id": "workflow_npveQueueRefresh_2026-09-10",
+    "id": "workflow_runCostTracking_2026-09-10",
     "date": "2026-09-10",
-    "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
-    "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies"
+    "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
+    "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement."
    }
   }
  },
@@ -50,7 +50,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "e2495a12f4154195e94b0b3f3edab3539c87f0098a787800454b055811c8110c",
-  "bytes": 1514537
+  "sha256": "99290d37ed64465b997d89c14ec2067ef5cf8b946eaf7598339901b6aacbba07",
+  "bytes": 1517329
  }
 }
