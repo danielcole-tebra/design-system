@@ -1,0 +1,61 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "workflow_executionReliability_2026-09-10",
+ "sequence": 95,
+ "date": "2026-09-10",
+ "workstream": "workflow",
+ "created": {
+  "by": "Codex",
+  "at": "2026-09-10T12:44:02.816Z",
+  "script": "apply-execution-reliability.js"
+ },
+ "record": {
+  "_status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch.",
+  "date": "2026-09-10",
+  "workstream": "Workflow reliability across models and harnesses",
+  "executor": "Codex",
+  "operatorAuthorization": "Ok, let's have a good think about what we can do to insure something like that doesn't happen again and enshrine that in the repo for other models/harnesses.",
+  "priorVisualReview": {
+   "record": "npveRebuild_allergiesEdit_2026-09-09",
+   "operatorQuote": "Looks good. Is there any way we could have avoided the failures with the other models?",
+   "verdict": "Operator accepted the Allergies comparison; earlier immutable record remains unchanged."
+  },
+  "scope": [
+   "Canonical execution policy and plain-language communication",
+   "Portable instruction entry points and single-session operator workflow",
+   "Small evidence checkpoint at start and finish of future runs",
+   "Regression tests and generated contract freshness"
+  ],
+  "report": "figma-export/workflow-execution-reliability-2026-09-10/report.md",
+  "figmaMutations": [],
+  "flagsAdded": [],
+  "stopCondition": "Repository changes only; keep risk ownership, additive-only rules and final visual checks intact.",
+  "outcome": "One canonical policy across harnesses; actual component-definition checks before new builds, visible milestone evidence at close, bounded recovery instructions and single-session planning/execution.",
+  "validation": {
+   "execution": "PASS — 29 readiness, mapping, recovery, render and unrelated-baseline regression scenarios",
+   "existingWorkflowTests": "PASS — risk lock, allowlist and record isolation",
+   "workflow": "PASS — store consistency, generated contract freshness, manifest validation",
+   "canvas": "N/A — no Figma read/write, no design content changed",
+   "screenshots": "N/A — repository instructions and local gate code only"
+  },
+  "policy": "workflow/execution-policy.md",
+  "enforcement": [
+   "start-batch version 3 requires ready execution.json",
+   "check-batch version 3 rejects unresolved execution failures",
+   "finish-batch version 3 requires verified renders and preserves unchanged unrelated baseline files",
+   "generated contract includes the policy text and checks its freshness"
+  ],
+  "limitations": [
+   "Local checks validate submitted evidence, not live Figma truth or visual quality",
+   "Two-attempt and five-minute limits are model instructions; no harness interceptor installed",
+   "Historical version-2 runs remain compatible"
+  ],
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 0
+  },
+  "standingBatchRules": "N/A for this repository-only workflow batch; existing Figma rules are unchanged and still required for design batches."
+ }
+}

@@ -928,6 +928,15 @@
    "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
    "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History.",
    "recordSha256": "36638f587ec39b0a1abdd92ca7038cae09ff8ba5f05b4e9eb1ab46af1b7b1fce"
+  },
+  {
+   "id": "workflow_executionReliability_2026-09-10",
+   "sequence": 95,
+   "date": "2026-09-10",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
+   "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch.",
+   "recordSha256": "9ac4f7b14ef51de954974d31f91a421304bf59e7f6f96ef61660bc1f863a0ade"
   }
  ],
  "flags": {
@@ -1230,8 +1239,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 95,
-  "aggregateTopLevelKeys": 109,
-  "nextRecordSequence": 95
+  "records": 96,
+  "aggregateTopLevelKeys": 110,
+  "nextRecordSequence": 96
  }
 }

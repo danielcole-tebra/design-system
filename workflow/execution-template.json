@@ -1,0 +1,23 @@
+{
+  "format": "tebra.design-execution",
+  "version": 1,
+  "itemId": "",
+  "recordId": "",
+  "preflight": {
+    "targetFileKey": "",
+    "identityEvidence": "",
+    "tools": [],
+    "toolEvidence": "",
+    "controls": [
+      { "name": "", "component": "", "properties": {}, "evidence": "" }
+    ]
+  },
+  "corrections": [],
+  "milestones": [
+    { "name": "Form", "status": "pending", "nodeIds": [], "render": null, "inspected": false },
+    { "name": "Complete sheet", "status": "pending", "nodeIds": [], "render": null, "inspected": false },
+    { "name": "Comparison", "status": "pending", "nodeIds": [], "render": null, "inspected": false }
+  ],
+  "unresolved": [],
+  "nextAction": ""
+}

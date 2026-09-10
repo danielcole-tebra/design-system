@@ -3,6 +3,7 @@ const path = require('path');
 const { ROOT, jsonDigest, manifestRiskPayload, readJson, store } = require('./lib');
 const { validateContract } = require('./validate-contract');
 const { validateManifest } = require('./validate-manifest');
+const { validateExecution } = require('./validate-execution');
 
 const [itemId] = process.argv.slice(2);
 if (!itemId) throw new Error('Usage: node scripts/workflow/check-batch.js <item-id>');
@@ -15,6 +16,7 @@ const manifest = validateManifest();
 const item = manifest.items.find((candidate) => candidate.id === itemId);
 if (!item) throw new Error(`Manifest item disappeared: ${itemId}`);
 if (jsonDigest(manifestRiskPayload(item)) !== run.plannerRiskSha256) throw new Error('Planner-owned risk/scope fields changed after batch start');
+if (run.version >= 3) validateExecution(item, 'ready');
 // Concurrency guard over the store: nothing the batch does not own may change. Separate record files appended
 // by another batch are additions, not violations, and are reported.
 const loaded = store.loadStore();

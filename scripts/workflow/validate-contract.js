@@ -1,4 +1,6 @@
-const { fileDigest, jsonDigest, readJson, store } = require('./lib');
+const fs = require('fs');
+const path = require('path');
+const { ROOT, fileDigest, jsonDigest, readJson, store } = require('./lib');
 
 function validateContract() {
   const contract = readJson('workflow/npve-contract.generated.json');
@@ -14,6 +16,10 @@ function validateContract() {
   for (const source of contract.source.instructions) {
     if (source.sha256 !== fileDigest(source.path)) errors.push(`${source.path} digest is stale`);
   }
+  const policy = readJson('workflow/rules.json').executionPolicy;
+  if (contract.executionPolicy?.path !== policy.path || contract.executionPolicy?.version !== policy.version ||
+      contract.executionPolicy?.text !== fs.readFileSync(path.join(ROOT, policy.path), 'utf8')) errors.push('execution policy projection is missing or stale');
+  if (!contract.source.instructions.some(source => source.path === policy.path)) errors.push('execution policy digest is missing');
   // The aggregate and indexes must be what the store generates now; a stale aggregate would make every digest above meaningless.
   const stale = store.checkFreshness();
   if (stale.length) errors.push(`generated files are stale: ${stale.join(', ')} (run node scripts/schema/build-aggregate.js)`);

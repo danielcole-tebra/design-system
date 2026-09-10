@@ -8,6 +8,8 @@ const { validateEvidence } = require('./validate-evidence');
 const { validateManifest } = require('./validate-manifest');
 const { validateRecord } = require('./validate-record');
 const { validateSplit } = require('../schema/validate-split');
+const { validateExecution } = require('./validate-execution');
+const { unchangedBaseline } = require('./workspace-baseline');
 
 const [itemId] = process.argv.slice(2);
 if (!itemId) throw new Error('Usage: node scripts/workflow/finish-batch.js <item-id>');
@@ -20,6 +22,9 @@ if (!fs.existsSync(path.resolve(ROOT, runPath))) throw new Error(`No active run:
 const run = readJson(runPath);
 if (!run.storeFingerprint) throw new Error(`${runPath} predates the record store split`);
 const errors = [];
+if (run.version >= 3) {
+  try { validateExecution(item, 'finish'); } catch (error) { errors.push(error.message); }
+}
 
 try { validateEvidence(itemId); } catch (error) { errors.push(error.message); }
 try { validateRecord(itemId); } catch (error) { errors.push(error.message); }
@@ -36,8 +41,12 @@ for (const evidence of [item.requiredEvidence.report, item.requiredEvidence.comp
 }
 // The owned record file, the flag stores and the generated files are always allowed; everything else must be on the allowlist.
 const implicitlyAllowed = [...GENERATED_FILES, store.PATHS.flagsActive, store.PATHS.flagsResolved, ...(owned ? [owned.file] : [])];
-const outsideAllowlist = changedFiles().filter((file) => !implicitlyAllowed.includes(file) && !matchesAny(file, item.allowedFiles));
+const outsideAllowlist = changedFiles().filter((file) => !implicitlyAllowed.includes(file) && !matchesAny(file, item.allowedFiles) && !(run.version >= 3 && unchangedBaseline(file, run.preexistingFiles)));
 if (outsideAllowlist.length) errors.push(`working tree has files outside allowlist: ${outsideAllowlist.join(', ')}`);
+// Also catch a pre-existing edit that was reverted/deleted and disappeared from git status.
+if (run.version >= 3) for (const file of Object.keys(run.preexistingFiles || {})) {
+  if (!unchangedBaseline(file, run.preexistingFiles)) errors.push(`pre-existing unrelated file changed: ${file}`);
+}
 if (errors.length) throw new Error(`Finish gate failed:\n- ${errors.join('\n- ')}`);
 
 item.status = 'complete';

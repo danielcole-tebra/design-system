@@ -1,6 +1,12 @@
 {
   "format": "tebra.design-workflow-rules",
   "version": 1,
+  "executionPolicy": {
+    "path": "workflow/execution-policy.md",
+    "version": 1,
+    "sourceRecord": "workflow_executionReliability_2026-09-10",
+    "summary": "Verify component mappings, build visible milestones, recover from actual state with bounded retries, and preserve a portable execution checkpoint. Resolve routine facts and repairs within scope; ask the UX designer only for real decisions."
+  },
   "purpose": "Canonical text of the rules an executor must know that do not live in the schema's standingBatchRules. generate-contract.js folds this file into workflow/npve-contract.generated.json and digest-checks it; CLAUDE.md and AGENTS.md point here instead of repeating the text. Every rule names the schema record that decided it. The append-only record store (records/, flags/, foundation/) remains the register and design-system-schema.json is generated from it; this file is the register's readable projection of standing instruction text.",
   "canonicalClaudeMdSections": {
     "note": "These CLAUDE.md sections are declared canonical by name rather than copied. CLAUDE.md is digest-checked by the contract, so a change to any of them invalidates the contract.",
@@ -10,7 +16,8 @@
       "Standing rules 1 to 13",
       "Known plugin API traps",
       "Recording",
-      "Publishing"
+      "Publishing",
+      "Execution and communication (delegates to workflow/execution-policy.md)"
     ]
   },
   "agentRules": {
@@ -90,9 +97,10 @@
       {
         "n": 9,
         "title": "Stop on disagreement",
-        "text": "When sources disagree or a decision is needed, stop and report. Precedence (code > Storybook render > library > source) resolves facts, not design decisions.",
+        "text": "Resolve unambiguous factual planning mistakes from precedence evidence and record the correction within approved intent. Actual code/library divergence, ambiguous ownership or a new design choice stops for the operator. Do not silently reconcile sources or repeatedly ask permission for routine repairs; follow workflow/execution-policy.md.",
         "sourceRecord": [
-          "npveRebuild_agentRules_2026-09-04"
+          "npveRebuild_agentRules_2026-09-04",
+          "workflow_executionReliability_2026-09-10"
         ]
       },
       {

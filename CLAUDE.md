@@ -8,6 +8,10 @@ Docs, schema, scripts, and exports for the Tebra design system Figma rebuild. So
 
 OPERATORS.md describes the person's side of this loop; agents should assume an operator is holding it.
 
+## Execution and communication
+
+`workflow/execution-policy.md` is canonical for reliable execution, recovery and communication across models/harnesses. Read it once per session, either directly or in the generated contract. It requires verified component mappings, visible milestones, bounded retries and resumable evidence. Speak plainly to the UX designer and show screenshots; keep implementation details in the report unless requested. Planning and execution may remain in one session.
+
 ## Lean startup for NPVE work
 
 For an NPVE batch, do not reread the full schema by default. Run `node scripts/workflow/validate-workflow.js`, then read `workflow/npve-contract.generated.json`, the selected item in `workflow/manifest.json`, and the last record named by that item (its file path is in `indexes/record-index.json`; the last record per workstream is in `indexes/current-state.json`). The generated contract is a projection, not a second authority: its source digests make the validator fail whenever the schema or standing instructions change. Open the full schema only when validation fails, the selected work exposes a conflict, a convention is being changed, or historical evidence is genuinely required. The contract folds in `workflow/rules.json`: the agent rules, the record gate, standing rules 14 and 15, the sheet and comparison techniques, the proof convention, and every NPVE value with the record that decided it. Sections that live only in this file are declared canonical by name inside the contract.
@@ -51,7 +55,7 @@ Pass the file key explicitly on every call. Never rely on the last-used file.
 8. Outlined is not transparent by default. Tebra chip overrides beat MUI's outlined rule except warning; outlined primary is white; OutlinedInput has no background. Check each component at the theme layer.
 9. Defect markers follow `defectMarkerConvention2026_08_28` in the schema. DEFECT renders differently from what ships and goes in the register. GAP is something the component cannot express and stays marked in the frame. No red, yellow, orange, or green on markers.
 10. Composition backdrops bind to `color/background/paper`. Beige is never a backdrop.
-11. Report, don't resolve. A disagreement between sources is a finding. Never reconcile silently in either direction.
+11. Report, don't resolve silently. Resolve unambiguous factual planning mistakes from the precedence evidence and record the correction within approved scope. Actual code/library divergence, ambiguous ownership or a new design choice remains a finding for the operator. Routine repairs follow `workflow/execution-policy.md`; they do not need repeated approval.
 12. Run all ten `standingBatchRules` from the schema every batch. Set `figma.skipInvisibleInstanceChildren = false` before any audit walk.
 13. Reporting. Every batch writes its full report to `figma-export/<batch>/report.md`, with all tables, mappings, screenshots referenced by filename, and the schema record summary. The chat reply is under 40 lines: outcome, findings needing a decision, GAP and DEFECT counts, and the absolute path to `report.md` and the screenshot folder. No tables in chat. Screenshots are saved as PNG in the batch folder, never only shown inline.
 14. Change log convention. Canonical text: `workflow/rules.json` → standingRules.14, folded into the contract (records npveRebuild_changelog_2026_09_02, npveRebuild_repair2_2026-09-04). In brief: every rebuilt frame has a plain-language Change log on its right, held once as a `_Rebuild comparison/Change log/<screen>` sub-component of Change log/Row instances.

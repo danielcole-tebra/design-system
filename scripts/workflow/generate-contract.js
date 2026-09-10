@@ -79,7 +79,9 @@ const contract = {
       { path: 'workflow/rules.json', sha256: fileDigest('workflow/rules.json') },
       { path: 'CLAUDE.md', sha256: fileDigest('CLAUDE.md') },
       { path: 'AGENTS.md', sha256: fileDigest('AGENTS.md') },
-      { path: 'OPERATORS.md', sha256: fileDigest('OPERATORS.md') }
+      { path: 'OPERATORS.md', sha256: fileDigest('OPERATORS.md') },
+      { path: rules.executionPolicy.path, sha256: fileDigest(rules.executionPolicy.path) },
+      { path: '.github/copilot-instructions.md', sha256: fileDigest('.github/copilot-instructions.md') }
     ],
     generator: 'scripts/workflow/generate-contract.js',
     generatorVersion: 3,
@@ -110,6 +112,7 @@ const contract = {
   standingRules: rules.standingRules,
   sheetAndComparisonTechniques: rules.sheetAndComparisonTechniques,
   proofConvention: rules.proofConvention,
+  executionPolicy: { ...rules.executionPolicy, text: fs.readFileSync(path.join(ROOT, rules.executionPolicy.path), 'utf8') },
   operatingLoop: [
     'Validate this contract before reading it as current truth.',
     'Record gate: confirm the previous batch in the workstream has a DONE record in indexes/record-index.json; if not, refuse and run a read-only state check whose record stands in.',
@@ -117,7 +120,7 @@ const contract = {
     'Verify file identity and current live state before writes.',
     'Declare one bounded batch and stop condition.',
     'Open the IN PROGRESS record as a new file under records/ (apply-*.js via openRecord) before Figma mutation, regenerate this contract, then start the batch guard.',
-    'Mutate sequentially; stop on the first component failure before touching the next item.',
+    'Verify the next milestone mappings and save execution.json before start. Mutate sequentially, verify visible milestones, and use bounded evidence-based recovery; stop the failed operation before extending dependent work.',
     'Run deterministic checks and inspect at least one comparison render per component.',
     'Save the comparison render and full report; show the render to the operator.',
     'Archive the batch proofs per proofConvention, finalize the record (finalize-*.js via finalizeRecord), regenerate this contract, pass the finish gate, and commit with an explicit allowlist. At a workstream close, or when a week has passed since the last milestone, create a milestone tag on the committed tree.'

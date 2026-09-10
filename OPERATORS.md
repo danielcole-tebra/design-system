@@ -19,8 +19,8 @@ Capability was never the problem. The loop was missing. This guide is the loop, 
 
 ## The loop, from your seat
 
-- **Work inside the Claude project.** Open chats there so instructions load. First line declares the work: library work (authority: code) or screen work (authority: library).
-- **One batch, one stop condition, one reply.** Claude drafts the prompt; you send it to the builder; you paste the builder's full reply back — every time, even routine ones. Claude interprets, you decide, next batch. Work run in side sessions gets its reply pasted back too, or it's invisible to the person checking.
+- **Use one surface if you prefer.** Planning and building may happen in the same session, with any capable model/harness that reads the repository instructions. Declare library work (authority: code) or screen work (authority: library). No particular provider or separate planning chat is required.
+- **One approved batch, visible milestones, one closing reply.** The agent checks the plan, builds and verifies the form, finishes its surrounding screen, then shows the comparison. You decide design questions and review the result. Internal milestones do not require you to say “continue.” If you change sessions, the agent resumes from the saved record and execution checkpoint; paste a reply only when the receiving session cannot access the repo evidence.
 - **Read-only before writes.** New file, uncertain state, resumed work, anything that smells off: inventory first, build second. Nothing builds on an unverified state.
 - **Look at the canvas yourself after every build batch.** Reports claim, renders show. The catches that matter — a flush margin, sagging text, a missing hairline, a wrong color — have come from operator eyes on the file, not from any report.
 - **No record, no next batch.** Every batch ends with a schema record and a report on disk. The builder refuses new work on top of an unrecorded batch; that stop protects the system.
@@ -29,7 +29,7 @@ Capability was never the problem. The loop was missing. This guide is the loop, 
 
 ## Which decisions are whose
 
-Fact questions go to evidence. What padding ships, whether a color has a token, what height a component renders — resolved by the precedence order, usually by telling the agent "go read it," not by anyone's memory or taste.
+Fact questions go to evidence. What padding ships, whether a color has a token, what height a component renders — the agent resolves these from the precedence order and records any correction. You should not have to tell it to look up an available fact. Fixing this batch's misplaced field, clipped label or default text is routine execution, with the disposition recorded; it is not a new design approval.
 
 Design questions stop for a human. Keep a button the source lacks, generalize a pattern or keep it specific, adopt a mechanism better than the written rule, choose between two defensible spacings. Agents must stop and ask; an agent deciding these silently is the core failure mode. When an agent presents a design question with a recommendation, that's the system working — the recommendation is input, the call is yours.
 
@@ -37,4 +37,4 @@ Ownership: [who decides design questions — fill in per project or team].
 
 ## What good looks like
 
-Unglamorous. Small batches, short replies, records accumulating, periodic stop-and-reports that resolve into one-line decisions. Work sits beside its source snapshot with a plain-language change list a designer can read without knowing any of this machinery. Library gaps wear grey cards instead of workarounds, and the cards drain into library batches. A scheduled read-only audit every week or few batches, diffing the file against the schema, whichever operator is on. If it feels fast and nothing is stopping to ask anything — that's the warning, not the win.
+Small batches, visible progress, short replies and records accumulating. Work sits beside its source snapshot with a plain-language change list. Library gaps wear grey cards and become future library work. Fast progress is welcome when the evidence supports it; repeated requests for permission are not evidence of quality. See `workflow/execution-policy.md` for the executor's retry limits and checkpoints. If work stalls, the agent should explain the specific obstacle and preserve its progress, rather than ask you to supervise another open-ended retry.

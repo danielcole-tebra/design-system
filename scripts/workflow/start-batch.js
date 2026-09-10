@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const { ROOT, fileDigest, jsonDigest, manifestRiskPayload, readStoreRecord, store, writeJson } = require('./lib');
+const { ROOT, GENERATED_FILES, changedFiles, matchesAny, fileDigest, jsonDigest, manifestRiskPayload, readStoreRecord, store, writeJson } = require('./lib');
+const { fileState } = require('./workspace-baseline');
 const { validateContract } = require('./validate-contract');
 const { validateManifest } = require('./validate-manifest');
+const { executionPath, validateExecution } = require('./validate-execution');
 
 // Usage: node scripts/workflow/start-batch.js <item-id> <executor> [provider] [model] [reasoning] [--confirm="<verbatim operator confirmation>"]
 // --confirm is required when the item's risk tier is not approved; it records the operator's per-item confirmation in the run.
@@ -38,9 +40,14 @@ if (!record || !String(record._status || record.status).startsWith('IN PROGRESS'
 
 const runPath = `.workflow-runs/${itemId}.json`;
 if (fs.existsSync(path.resolve(ROOT, runPath))) throw new Error(`Active run already exists: ${runPath}`);
+// New runs carry a portable preflight checkpoint. Historical runs remain version 2.
+validateExecution(item, 'ready');
 const run = {
   format: 'tebra.design-work-run',
-  version: 2,
+  version: 3,
+  executionEvidence: executionPath(item),
+  // Preserve unrelated dirty files; unchanged baseline files are not batch changes at finish.
+  preexistingFiles: Object.fromEntries(changedFiles().filter(file => ![...GENERATED_FILES, store.PATHS.flagsActive, store.PATHS.flagsResolved, env.file].includes(file) && !matchesAny(file, item.allowedFiles)).map(file => [file, fileState(file)])),
   itemId,
   expectedRecordId: item.expectedRecordId,
   recordPath: env.file,

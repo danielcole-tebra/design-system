@@ -8,6 +8,7 @@ This directory is the compact, provider-neutral entry point for NPVE rebuild bat
 - `npve-contract.generated.json` — the executor's reading: rules.json plus the schema's ten standing batch rules, recent records, and open flags. A projection, never a second authority.
 - `manifest.json` — planner-owned work queue. Risk tiers carry who proposed them and whether the operator approved them, with the operator's words quoted.
 - `protocol.json`, `check-catalog.json`, `evidence-template.json`, `metrics.json` — roles and tiers, the deterministic-vs-visual check split, the evidence packet shape, and pilot measurements.
+- `execution-policy.md` — canonical model/harness-neutral execution and communication rules, included in the contract. `execution-template.json` is the small per-batch checkpoint template; copy it into the report folder as `execution.json` and populate it from evidence.
 
 The register itself lives outside this directory as the append-only record store (record schemasplit_phase8_2026-09-08): `records/<workstream>/<date>/<recordId>.json` (immutable batch records), `flags/active.json` + `flags/resolved.json`, `foundation/<section>.json`, and the generated `indexes/record-index.json` + `indexes/current-state.json`. `design-system-schema.json` is generated from it by `scripts/schema/build-aggregate.js`. Concurrent batches write separate record files and never touch shared files except the generated indexes, which regenerate at commit.
 
@@ -17,9 +18,9 @@ The register itself lives outside this directory as the append-only record store
 2. Read `workflow/npve-contract.generated.json` and the selected item in `workflow/manifest.json`.
 3. Read the last completed record named by the work item: find its path in `indexes/record-index.json` (or `indexes/current-state.json` for the last record per workstream) and read that file. Open the full aggregate only when validation fails, a conflict appears, or the item explicitly requires historical context.
 4. Record gate: the apply-*.js script calls `openRecord` in `scripts/schema/lib.js`, which refuses to create the item's `IN PROGRESS` record file while the previous record in the workstream is not DONE in `indexes/record-index.json`. If the previous batch has no record at all, stop and write a read-only state-check record instead.
-5. Create the item's `IN PROGRESS` record file (openRecord regenerates the aggregate and indexes), regenerate the contract, and run `start-batch.js`. An unapproved tier needs `--confirm="<the operator's exact words for this item>"`.
+5. Create the item's `IN PROGRESS` record file (openRecord regenerates the aggregate and indexes), verify the actual tools, target identity and control mappings, and populate `execution.json` in its report folder. Evidence paths are repo-relative saved readbacks/notes, never credentials or expiring URLs. List the visible milestones appropriate to this item; the template's three milestones are an example, not mandatory anatomy. Regenerate the contract and run `start-batch.js`; new version-3 runs require this checkpoint. An unapproved tier needs `--confirm="<the operator's exact words for this item>"`.
 6. Run `check-batch.js` immediately before each Figma mutation and before finalizing the record.
-7. After finalizing (a finalize-*.js script calling `finalizeRecord`; only an IN PROGRESS record can be rewritten), archive the batch proofs per the proof convention, regenerate the contract, and run `finish-batch.js`. Commit the record file together with the regenerated `design-system-schema.json`, `indexes/` and contract.
+7. Update the checkpoint after each meaningful milestone or failure, not every tool call. Keep verified node IDs, an inspected PNG, unresolved errors and the next action. Validate execution at `finish` before finalizing the immutable record. After finalizing, archive the batch proofs per the proof convention, regenerate the contract, and run `finish-batch.js`, which repeats the execution gate for new runs. Commit the record with the generated aggregate/indexes/contract and evidence. Old runs are not retroactively required to supply a checkpoint.
 
 ## Commands
 
@@ -33,6 +34,8 @@ node scripts/workflow/validate-workflow.js
 node scripts/workflow/lock-risk.js <item-id> <approver> "<verbatim operator approval>"
 node scripts/workflow/start-batch.js <item-id> <executor> [provider] [model] [reasoning] [--confirm="<operator quote>"]
 node scripts/workflow/check-batch.js <item-id>
+node scripts/workflow/validate-execution.js <item-id> [ready|finish]
+node scripts/workflow/execution-self-test.js
 node scripts/workflow/finish-batch.js <item-id>
 node scripts/workflow/stop-batch.js <item-id> <reason>
 node scripts/workflow/measure-context.js
@@ -43,3 +46,9 @@ Risk classification is planner/operator-owned. A tier is approved only when the 
 The visual floor is not compressible: every component gets its own comparison render, the executor inspects it, and the operator sees it before the next medium/high-risk item or at the agreed low-risk checkpoint.
 
 Provider and model names are optional provenance only. Any Anthropic, OpenAI, open-weight, or future model can follow this protocol if it has the capability tier required by the work item.
+
+## Component evidence for the execution checkpoint
+
+Each `preflight.controls` entry names its chosen component ID or published key, desired exact `properties`, and a repo-relative JSON `evidence` file. Save a scoped Figma readback as `{ "components": [...] }`. Each component entry contains its actual `id` and/or `key`, measured `width`/`height` when relevant, and native `componentPropertyDefinitions` (for a variant, read definitions from its owning set). Do not ask a variant node for standalone definitions. Several control entries may reuse one snapshot.
+
+The validator matches the component identity, checks exact property names, checks variant values against `variantOptions`, and checks text/boolean/swap value types. It rejects the Allergies failure of requesting `variant=outlined` from a definition that offers only `contained` and `text`. It does not independently fetch Figma or prove that supplied snapshots are current; the executor must obtain and inspect them. Identity and tool evidence may be separate saved readbacks or concise notes. PNG validation checks file presence/signature, not visual correctness.

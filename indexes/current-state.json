@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "npveRebuild_allergiesEdit_2026-09-09",
-  "date": "2026-09-09",
-  "workstream": "npve",
-  "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
-  "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History."
+  "id": "workflow_executionReliability_2026-09-10",
+  "date": "2026-09-10",
+  "workstream": "workflow",
+  "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
+  "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch."
  },
  "recordGate": {
   "inProgress": [],
@@ -34,12 +34,12 @@
    }
   },
   "workflow": {
-   "count": 7,
+   "count": 8,
    "latest": {
-    "id": "backupPolicyB_2026-09-08",
-    "date": "2026-09-08",
-    "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
-    "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or we"
+    "id": "workflow_executionReliability_2026-09-10",
+    "date": "2026-09-10",
+    "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
+    "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch."
    }
   }
  },
@@ -50,7 +50,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "4151bea4d7d620833e83c665d9805119ab2ff1c7f5a1b1a87e9b0b0512845030",
-  "bytes": 1475396
+  "sha256": "0a0dd5e5e16062f81b802de8f2e4a95b8cc4f367dc988e623b94f6af9e415cdc",
+  "bytes": 1478217
  }
 }
