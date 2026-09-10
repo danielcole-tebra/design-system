@@ -212,5 +212,48 @@
         "successCriterion50PercentReduction": "met for context loaded, tool calls and Figma calls"
       }
     }
+  ],
+  "observedBatches": [
+    {
+      "itemId": "npve-patient-summary-content",
+      "provider": "OpenAI",
+      "model": "gpt-6-astra",
+      "reasoning": "medium",
+      "spanStart": "2026-09-10T21:19:41.880Z",
+      "observedThrough": "2026-09-10T21:36:42.000Z",
+      "elapsedSeconds": 1020.12,
+      "assistantMessages": 9,
+      "modelTurnsDefinition": "Visible assistant commentary/final messages, matching prior Codex metrics; tool orchestration steps counted separately.",
+      "toolCalls": 37,
+      "toolCallsDefinition": "Top-level logged function/custom tool calls (functions.exec wrappers); nested operations are not independently logged. Figma operations counted separately from actual call expressions and the observed asset POST.",
+      "figmaToolExpressions": {
+        "mcp__codex_apps__figma_use_figma": 11,
+        "mcp__codex_apps__figma_get_libraries": 1,
+        "mcp__codex_apps__figma_search_design_system": 1,
+        "mcp__codex_apps__figma_download_assets": 3,
+        "mcp__codex_apps__figma_upload_assets": 1
+      },
+      "figmaReads": 13,
+      "figmaWrites": 4,
+      "figmaUploadPreparations": 1,
+      "screenshots": 3,
+      "screenshotDefinition": "Three PNG exports saved and visually inspected: source, content instance, comparison; not get_screenshot API count.",
+      "visualCorrectionCycles": 0,
+      "diagnosticRecoveryCycles": 3,
+      "startupContext": {
+        "legacyBytes": 1523655,
+        "leanBytes": 155953,
+        "reductionPercent": 89.8,
+        "targetPercent": 50,
+        "targetMet": true,
+        "manifestItems": 11
+      },
+      "unavailable": [
+        "Input/output token totals for this bounded task",
+        "Billing cost",
+        "Nested non-Figma tool total"
+      ],
+      "note": "Observed prefix through this snapshot, including startup and approval wait. Closeout commands after cutoff are excluded; no future usage guessed."
+    }
   ]
 }

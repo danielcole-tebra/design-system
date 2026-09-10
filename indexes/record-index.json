@@ -964,6 +964,15 @@
    "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
    "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies",
    "recordSha256": "d664cc446d04fee5ee5ea2cdda4de5c1b17e270c78bbbf85dddfa0050a33c9b2"
+  },
+  {
+   "id": "npveRebuild_patientSummaryContent_2026-09-10",
+   "sequence": 99,
+   "date": "2026-09-10",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
+   "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2.",
+   "recordSha256": "8be3c71f01c4c8b63ccbf2f5080bdf28d00e36933d0d7dd987dbd00a94ccf1a7"
   }
  ],
  "flags": {
@@ -1267,8 +1276,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 99,
-  "aggregateTopLevelKeys": 113,
-  "nextRecordSequence": 99
+  "records": 100,
+  "aggregateTopLevelKeys": 114,
+  "nextRecordSequence": 100
  }
 }

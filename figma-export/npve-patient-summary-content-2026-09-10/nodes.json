@@ -1,0 +1,73 @@
+{
+  "createdNodeIds": [
+    "654:9852",
+    "654:9853",
+    "654:9854",
+    "654:9855",
+    "654:9856",
+    "654:9857",
+    "654:9858",
+    "654:9859",
+    "654:9860",
+    "654:9861",
+    "654:9862",
+    "654:9863",
+    "654:9864",
+    "654:9865",
+    "654:9866",
+    "654:9867"
+  ],
+  "section": "654:9852",
+  "component": "654:9853",
+  "rebuildHelper": "654:9866",
+  "instance": "654:9867",
+  "width": 518,
+  "height": 752,
+  "children": [
+    {
+      "id": "654:9854",
+      "name": "Current Situation",
+      "width": 518,
+      "height": 224,
+      "itemSpacing": 8
+    },
+    {
+      "id": "654:9857",
+      "name": "Key Background",
+      "width": 518,
+      "height": 152,
+      "itemSpacing": 8
+    },
+    {
+      "id": "654:9860",
+      "name": "Active Care Plan",
+      "width": 518,
+      "height": 176,
+      "itemSpacing": 8
+    },
+    {
+      "id": "654:9863",
+      "name": "Progress & Next Steps",
+      "width": 518,
+      "height": 152,
+      "itemSpacing": 8
+    }
+  ],
+  "bindings": {
+    "itemSpacing": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+    },
+    "fills": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+      }
+    ]
+  },
+  "referenceHelper": "656:7695",
+  "referenceImage": "656:7696",
+  "changeHelper": "656:7697",
+  "screensSection": "656:13013",
+  "comparison": "656:13014"
+}

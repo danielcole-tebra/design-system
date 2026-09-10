@@ -1,0 +1,53 @@
+{
+  "id": "126:2",
+  "name": "Archive",
+  "topLevel": [
+    {
+      "id": "126:2025",
+      "name": "01 · Gap and defect markers — empty since 2026-09-04; the four markers live on Screens 01 beside their comparisons (npveRebuild_repair2_2026-09-04)"
+    },
+    {
+      "id": "126:2026",
+      "name": "02 · Detached comparison history"
+    },
+    {
+      "id": "126:2027",
+      "name": "03 · Template checks and legacy"
+    },
+    {
+      "id": "142:996",
+      "name": "04 · Recovery checks"
+    },
+    {
+      "id": "185:3",
+      "name": "README — Archive"
+    },
+    {
+      "id": "407:5492",
+      "name": "05 · Superseded standalone screens (moved from Screens 2026-09-05)"
+    },
+    {
+      "id": "570:10455",
+      "name": "06 · Pilot proofs (archived at batch close, 2026-09-08)"
+    },
+    {
+      "id": "597:11595",
+      "name": "07 · Emptied organizers (moved from Screens 2026-09-08)"
+    },
+    {
+      "id": "597:11596",
+      "name": "08 · Legacy oversize — loose dividers frame moved unchanged from 03 on 2026-09-08 (it is 3188 wide; 03 is 1200)"
+    }
+  ],
+  "nodeCount": 1786,
+  "solidPaints": 1011,
+  "unboundPaints": 20,
+  "unboundTypes": {
+    "SECTION": 20
+  },
+  "fractional": [],
+  "readme": {
+    "id": "185:3",
+    "parent": "126:2"
+  }
+}

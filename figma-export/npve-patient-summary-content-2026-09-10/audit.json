@@ -1,0 +1,688 @@
+{
+  "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "skipInvisibleInstanceChildren": false,
+  "component": {
+    "id": "654:9853",
+    "key": "9a290f114df97f5ffe733a946648103a2ab8bca5",
+    "width": 518,
+    "height": 752,
+    "verticalSizing": "HUG",
+    "gap": 16,
+    "gapBound": true,
+    "content": [
+      {
+        "id": "654:9854",
+        "name": "Current Situation",
+        "y": 0,
+        "height": 224,
+        "gap": 8,
+        "gapBound": true,
+        "copyEqual": true,
+        "texts": [
+          {
+            "id": "654:9855",
+            "width": 518,
+            "height": 24,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Bold"
+            },
+            "size": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "list": {
+              "type": "NONE"
+            },
+            "indent": 0,
+            "textAutoResize": "HEIGHT",
+            "boundFields": [
+              "fills",
+              "fontSize",
+              "fontFamily",
+              "lineHeight",
+              "fontWeight"
+            ]
+          },
+          {
+            "id": "654:9856",
+            "width": 518,
+            "height": 192,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "size": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "list": {
+              "type": "UNORDERED"
+            },
+            "indent": 1,
+            "textAutoResize": "HEIGHT",
+            "boundFields": [
+              "fills",
+              "fontSize",
+              "fontFamily",
+              "lineHeight",
+              "fontWeight"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "654:9857",
+        "name": "Key Background",
+        "y": 240,
+        "height": 152,
+        "gap": 8,
+        "gapBound": true,
+        "copyEqual": true,
+        "texts": [
+          {
+            "id": "654:9858",
+            "width": 518,
+            "height": 24,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Bold"
+            },
+            "size": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "list": {
+              "type": "NONE"
+            },
+            "indent": 0,
+            "textAutoResize": "HEIGHT",
+            "boundFields": [
+              "fills",
+              "fontSize",
+              "fontFamily",
+              "lineHeight",
+              "fontWeight"
+            ]
+          },
+          {
+            "id": "654:9859",
+            "width": 518,
+            "height": 120,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "size": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "list": {
+              "type": "UNORDERED"
+            },
+            "indent": 1,
+            "textAutoResize": "HEIGHT",
+            "boundFields": [
+              "fills",
+              "fontSize",
+              "fontFamily",
+              "lineHeight",
+              "fontWeight"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "654:9860",
+        "name": "Active Care Plan",
+        "y": 408,
+        "height": 176,
+        "gap": 8,
+        "gapBound": true,
+        "copyEqual": true,
+        "texts": [
+          {
+            "id": "654:9861",
+            "width": 518,
+            "height": 24,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Bold"
+            },
+            "size": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "list": {
+              "type": "NONE"
+            },
+            "indent": 0,
+            "textAutoResize": "HEIGHT",
+            "boundFields": [
+              "fills",
+              "fontSize",
+              "fontFamily",
+              "lineHeight",
+              "fontWeight"
+            ]
+          },
+          {
+            "id": "654:9862",
+            "width": 518,
+            "height": 144,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "size": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "list": {
+              "type": "UNORDERED"
+            },
+            "indent": 1,
+            "textAutoResize": "HEIGHT",
+            "boundFields": [
+              "fills",
+              "fontSize",
+              "fontFamily",
+              "lineHeight",
+              "fontWeight"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "654:9863",
+        "name": "Progress & Next Steps",
+        "y": 600,
+        "height": 152,
+        "gap": 8,
+        "gapBound": true,
+        "copyEqual": true,
+        "texts": [
+          {
+            "id": "654:9864",
+            "width": 518,
+            "height": 24,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Bold"
+            },
+            "size": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "list": {
+              "type": "NONE"
+            },
+            "indent": 0,
+            "textAutoResize": "HEIGHT",
+            "boundFields": [
+              "fills",
+              "fontSize",
+              "fontFamily",
+              "lineHeight",
+              "fontWeight"
+            ]
+          },
+          {
+            "id": "654:9865",
+            "width": 518,
+            "height": 120,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "size": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "list": {
+              "type": "UNORDERED"
+            },
+            "indent": 1,
+            "textAutoResize": "HEIGHT",
+            "boundFields": [
+              "fills",
+              "fontSize",
+              "fontFamily",
+              "lineHeight",
+              "fontWeight"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "pairs": [
+    {
+      "master": "654:9853",
+      "instance": "654:9867",
+      "count": 9,
+      "equal": true,
+      "mainComponent": "654:9853",
+      "allSolidPaintsBound": true
+    },
+    {
+      "master": "654:9866",
+      "instance": "I656:13014;114:1139",
+      "count": 9,
+      "equal": true,
+      "mainComponent": "654:9866",
+      "allSolidPaintsBound": true
+    },
+    {
+      "master": "656:7697",
+      "instance": "I656:13014;114:1240",
+      "count": 22,
+      "equal": true,
+      "mainComponent": "656:7697",
+      "allSolidPaintsBound": true
+    },
+    {
+      "master": "656:7695",
+      "instance": "I656:13014;114:1137",
+      "count": 0,
+      "equal": true,
+      "mainComponent": "656:7695",
+      "allSolidPaintsBound": true
+    }
+  ],
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Cover",
+      "topLevel": [
+        {
+          "id": "1:5",
+          "name": "Cover — NPVE rebuild"
+        }
+      ],
+      "nodeCount": 8,
+      "solidPaints": 1,
+      "unboundPaints": 1,
+      "unboundTypes": {
+        "FRAME": 1
+      },
+      "fractional": []
+    },
+    {
+      "id": "3:2",
+      "name": "Templates",
+      "topLevel": [
+        {
+          "id": "126:2020",
+          "name": "01 · Sidesheet shell"
+        },
+        {
+          "id": "126:2021",
+          "name": "02 · Problems picker"
+        },
+        {
+          "id": "126:2022",
+          "name": "04 · Change log utilities"
+        },
+        {
+          "id": "126:2023",
+          "name": "05 · Rebuild comparison"
+        },
+        {
+          "id": "153:1185",
+          "name": "03 · Problems management"
+        },
+        {
+          "id": "219:2067",
+          "name": "06 · Medications"
+        },
+        {
+          "id": "309:4528",
+          "name": "07 · Problems state comparison helpers"
+        },
+        {
+          "id": "316:3411",
+          "name": "08 · Problem editing"
+        },
+        {
+          "id": "337:3880",
+          "name": "09 · Procedures & surgical history"
+        },
+        {
+          "id": "346:3079",
+          "name": "10 · Family history"
+        },
+        {
+          "id": "352:3205",
+          "name": "11 · Allergies list"
+        },
+        {
+          "id": "370:3340",
+          "name": "12 · External care history"
+        },
+        {
+          "id": "388:3433",
+          "name": "13 · External care history · Facility Stay"
+        },
+        {
+          "id": "412:3888",
+          "name": "14 · Health Status/Observations"
+        },
+        {
+          "id": "424:4085",
+          "name": "15 · Encounter page shell"
+        },
+        {
+          "id": "441:4993",
+          "name": "16 · Social History"
+        },
+        {
+          "id": "518:5771",
+          "name": "17 · Past Medical History · Condition row"
+        },
+        {
+          "id": "534:5804",
+          "name": "18 · Past Medical History · Section group"
+        },
+        {
+          "id": "546:5870",
+          "name": "19 · Past Medical History · Body and sidesheet"
+        },
+        {
+          "id": "580:6012",
+          "name": "20 · External care history · Hospitalizations edit"
+        },
+        {
+          "id": "586:6413",
+          "name": "21 · Procedures & surgical history · Edit Event"
+        },
+        {
+          "id": "634:6807",
+          "name": "22 · Allergies · Edit Allergen"
+        },
+        {
+          "id": "636:2",
+          "name": "23 · Family history · Edit Family Member"
+        },
+        {
+          "id": "642:7556",
+          "name": "MODEL TEST — not for production"
+        },
+        {
+          "id": "654:9852",
+          "name": "24 · Patient Summary · Content"
+        }
+      ],
+      "nodeCount": 10940,
+      "solidPaints": 6210,
+      "unboundPaints": 48,
+      "unboundTypes": {
+        "SECTION": 48
+      },
+      "fractional": []
+    },
+    {
+      "id": "27:2",
+      "name": "Screens",
+      "topLevel": [
+        {
+          "id": "126:2024",
+          "name": "01 · Current comparisons"
+        },
+        {
+          "id": "156:2427",
+          "name": "02 · Problems management markers — standalone screens moved to Archive 05 on 2026-09-05; see 03 · Problems management comparisons"
+        },
+        {
+          "id": "160:3168",
+          "name": "03 · Problems management comparisons"
+        },
+        {
+          "id": "254:3706",
+          "name": "05 · Medication list comparisons"
+        },
+        {
+          "id": "309:4530",
+          "name": "07 · Problems states comparisons"
+        },
+        {
+          "id": "318:6739",
+          "name": "08 · Problem editing comparison"
+        },
+        {
+          "id": "339:6480",
+          "name": "09 · Procedures & surgical history comparison"
+        },
+        {
+          "id": "346:5992",
+          "name": "10 · Family history comparison"
+        },
+        {
+          "id": "356:6235",
+          "name": "11 · Allergies list comparison"
+        },
+        {
+          "id": "378:5612",
+          "name": "12 · External care history comparison"
+        },
+        {
+          "id": "393:7688",
+          "name": "13 · External care history · Facility Stay comparison"
+        },
+        {
+          "id": "415:7207",
+          "name": "14 · Health Status/Observations"
+        },
+        {
+          "id": "429:6859",
+          "name": "15 · Encounter page shell comparison"
+        },
+        {
+          "id": "446:9236",
+          "name": "16 · Social History"
+        },
+        {
+          "id": "521:7834",
+          "name": "17 · Past Medical History · Condition row"
+        },
+        {
+          "id": "537:9914",
+          "name": "18 · Past Medical History · Section group"
+        },
+        {
+          "id": "561:9876",
+          "name": "19 · Past Medical History"
+        },
+        {
+          "id": "581:11116",
+          "name": "20 · External care history · Hospitalizations edit comparison"
+        },
+        {
+          "id": "586:11764",
+          "name": "21 · Procedures & surgical history · Edit Event comparison"
+        },
+        {
+          "id": "634:12489",
+          "name": "22 · Allergies · Edit Allergen comparison"
+        },
+        {
+          "id": "638:13052",
+          "name": "23 · Family history · Edit Family Member comparison"
+        },
+        {
+          "id": "656:13013",
+          "name": "24 · Patient Summary · Content"
+        }
+      ],
+      "nodeCount": 5229,
+      "solidPaints": 3109,
+      "unboundPaints": 43,
+      "unboundTypes": {
+        "SECTION": 43
+      },
+      "fractional": []
+    },
+    {
+      "id": "126:2",
+      "name": "Archive",
+      "topLevel": [
+        {
+          "id": "126:2025",
+          "name": "01 · Gap and defect markers — empty since 2026-09-04; the four markers live on Screens 01 beside their comparisons (npveRebuild_repair2_2026-09-04)"
+        },
+        {
+          "id": "126:2026",
+          "name": "02 · Detached comparison history"
+        },
+        {
+          "id": "126:2027",
+          "name": "03 · Template checks and legacy"
+        },
+        {
+          "id": "142:996",
+          "name": "04 · Recovery checks"
+        },
+        {
+          "id": "185:3",
+          "name": "README — Archive"
+        },
+        {
+          "id": "407:5492",
+          "name": "05 · Superseded standalone screens (moved from Screens 2026-09-05)"
+        },
+        {
+          "id": "570:10455",
+          "name": "06 · Pilot proofs (archived at batch close, 2026-09-08)"
+        },
+        {
+          "id": "597:11595",
+          "name": "07 · Emptied organizers (moved from Screens 2026-09-08)"
+        },
+        {
+          "id": "597:11596",
+          "name": "08 · Legacy oversize — loose dividers frame moved unchanged from 03 on 2026-09-08 (it is 3188 wide; 03 is 1200)"
+        }
+      ],
+      "nodeCount": 1786,
+      "solidPaints": 1011,
+      "unboundPaints": 20,
+      "unboundTypes": {
+        "SECTION": 20
+      },
+      "fractional": [],
+      "readme": {
+        "id": "185:3",
+        "parent": "126:2"
+      }
+    }
+  ],
+  "shared": [
+    {
+      "id": "18:103",
+      "geometryUnchanged": true,
+      "definitionsUnchanged": true
+    },
+    {
+      "id": "35:332",
+      "geometryUnchanged": true,
+      "definitionsUnchanged": true
+    }
+  ],
+  "reference": {
+    "width": 534,
+    "height": 708,
+    "imageSize": {
+      "width": 1069,
+      "height": 1416
+    }
+  },
+  "comparison": {
+    "id": "656:13014",
+    "width": 1708,
+    "height": 844,
+    "mainComponent": "35:332",
+    "columns": [
+      {
+        "name": "Reference",
+        "clipsContent": false
+      },
+      {
+        "name": "Rebuild",
+        "clipsContent": false
+      },
+      {
+        "name": "Change log",
+        "clipsContent": false
+      }
+    ]
+  },
+  "counts": {
+    "contentMasters": 1,
+    "placedComparisons": 1
+  },
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "npve-patient-summary-content",
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "details": "40 master/instance paint samples match across four pairs; every new solid paint bound. Whole-file unbound paints restricted to existing Cover frame and organizer sections."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "details": "No authored fractional geometry found on any of four pages."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "One content master, one placed comparison, three helpers, no standalone proof nodes."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Actual helper mainComponent IDs match; comparison uses 35:332. Source 3028:16364 and expected target pages verified."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "No variants cloned. Shared definitions and geometry unchanged; row text and comparison caption/swap properties visibly render their assigned values."
+    }
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-patient-summary-content-2026-09-10/comparison.png",
+    "inspectedByExecutor": true,
+    "shownToOperator": true,
+    "observations": [
+      "All four headings and twelve native bullet paragraphs render in source order; exact source-copy equality passed for each section.",
+      "Content is 518x752 with bound 16px section gaps and 8px heading/list gaps; all eight text nodes are 16/24 with bound family, weight, size, line height and color.",
+      "Reference and rebuild are shown at 1:1 design scale in an unclipped comparison. Rebuild text is editable; only frozen reference is raster.",
+      "White content surface ends immediately after the last bullet. No controls, feedback, or sidesheet were built.",
+      "Five Change log/Row instances show approved width, section spacing, heading/list spacing, height, and linked typography changes. No material unexplained visual differences."
+    ]
+  },
+  "toolCalls": {
+    "figmaRead": 13,
+    "figmaWrite": 4,
+    "screenshot": 3,
+    "correctionCycles": 0,
+    "uploadPreparation": 1,
+    "note": "13 reads include 8 use_figma reads, 2 discovery calls and 3 PNG exports. Four applied canvas writes: 3 use_figma scripts and 1 asset POST; upload_assets allocated the URL. No visual correction cycles; output capture recovery tracked separately."
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "format": "tebra.design-execution",
+  "version": 2,
+  "workflowRunVersion": 3,
+  "itemId": "npve-patient-summary-content",
+  "recordId": "npveRebuild_patientSummaryContent_2026-09-10",
+  "provenance": {
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning": "medium",
+    "evidence": "Session turn_context at 2026-09-10T21:24:20.085Z"
+  },
+  "preflight": {
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "identityEvidence": "figma-export/npve-patient-summary-content-2026-09-10/identity.json",
+    "tools": [
+      "mcp__codex_apps__figma_use_figma",
+      "mcp__codex_apps__figma_get_libraries",
+      "mcp__codex_apps__figma_search_design_system"
+    ],
+    "toolEvidence": "figma-export/npve-patient-summary-content-2026-09-10/preflight.md",
+    "controls": [
+      {
+        "name": "Rebuild comparison",
+        "component": "35:332",
+        "properties": {},
+        "evidence": "figma-export/npve-patient-summary-content-2026-09-10/controls-snapshot.json"
+      },
+      {
+        "name": "Change log/Row",
+        "component": "18:103",
+        "properties": {
+          "What#18:0": "Content width",
+          "From to#18:1": "534px → 518px",
+          "Why#18:2": "Canonical body width"
+        },
+        "evidence": "figma-export/npve-patient-summary-content-2026-09-10/controls-snapshot.json"
+      }
+    ]
+  },
+  "appearance": {
+    "specification": "figma-export/npve-patient-summary-content-2026-09-10/appearance.md",
+    "review": {
+      "inspected": true,
+      "render": "figma-export/npve-patient-summary-content-2026-09-10/comparison.png",
+      "areas": {
+        "surfaces": "White content surface ends after final bullet; grey comparison backdrop; helpers transparent.",
+        "borders": "No content border required; change-log dividers remain visible.",
+        "content": "All four headings and 12 bullets visible; all four source strings match exactly.",
+        "states": "Static content; no interaction states in scope.",
+        "layout": "518x752 content, 16px section gaps, 8px internal gaps; no clipping or truncation.",
+        "actions": "No actions required or created for item 1."
+      },
+      "differences": [
+        {
+          "observation": "Width 534 to 518, section spacing 12 to 16, heading/list gap 0 to 8, height 708 to 752; typography linked to existing tokens.",
+          "disposition": "approved",
+          "evidence": "workflow/manifest.json; figma-export/npve-patient-summary-content-2026-09-10/appearance.md; figma-export/npve-patient-summary-content-2026-09-10/source.json"
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "kind": "factual-version-label",
+      "original": "version-3 execution checkpoint",
+      "resolved": "Repository uses version-3 work runs and version-2 execution checkpoints; no validator changes.",
+      "evidence": "scripts/workflow/start-batch.js; scripts/workflow/validate-execution.js"
+    }
+  ],
+  "milestones": [
+    {
+      "name": "Content instance",
+      "status": "verified",
+      "nodeIds": [
+        "654:9853",
+        "654:9867"
+      ],
+      "render": "figma-export/npve-patient-summary-content-2026-09-10/content-instance.png",
+      "inspected": true
+    },
+    {
+      "name": "Dedicated comparison",
+      "status": "verified",
+      "nodeIds": [
+        "656:13014"
+      ],
+      "render": "figma-export/npve-patient-summary-content-2026-09-10/comparison.png",
+      "inspected": true
+    }
+  ],
+  "unresolved": [],
+  "nextAction": "Finalize record, pass finish-batch, commit; await operator visual review before item 2.",
+  "measurements": {
+    "itemId": "npve-patient-summary-content",
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning": "medium",
+    "spanStart": "2026-09-10T21:19:41.880Z",
+    "observedThrough": "2026-09-10T21:36:42.000Z",
+    "elapsedSeconds": 1020.12,
+    "assistantMessages": 9,
+    "modelTurnsDefinition": "Visible assistant commentary/final messages, matching prior Codex metrics; tool orchestration steps counted separately.",
+    "toolCalls": 37,
+    "toolCallsDefinition": "Top-level logged function/custom tool calls (functions.exec wrappers); nested operations are not independently logged. Figma operations counted separately from actual call expressions and the observed asset POST.",
+    "figmaToolExpressions": {
+      "mcp__codex_apps__figma_use_figma": 11,
+      "mcp__codex_apps__figma_get_libraries": 1,
+      "mcp__codex_apps__figma_search_design_system": 1,
+      "mcp__codex_apps__figma_download_assets": 3,
+      "mcp__codex_apps__figma_upload_assets": 1
+    },
+    "figmaReads": 13,
+    "figmaWrites": 4,
+    "figmaUploadPreparations": 1,
+    "screenshots": 3,
+    "screenshotDefinition": "Three PNG exports saved and visually inspected: source, content instance, comparison; not get_screenshot API count.",
+    "visualCorrectionCycles": 0,
+    "diagnosticRecoveryCycles": 3,
+    "startupContext": {
+      "legacyBytes": 1523655,
+      "leanBytes": 155953,
+      "reductionPercent": 89.8,
+      "targetPercent": 50,
+      "targetMet": true,
+      "manifestItems": 11
+    },
+    "unavailable": [
+      "Input/output token totals for this bounded task",
+      "Billing cost",
+      "Nested non-Figma tool total"
+    ],
+    "note": "Observed prefix through this snapshot, including startup and approval wait. Closeout commands after cutoff are excluded; no future usage guessed."
+  },
+  "diagnostics": [
+    {
+      "kind": "response-size",
+      "count": 2,
+      "detail": "Detailed anatomy and audit output exceeded 20KB; replaced by compact complete readbacks. No Figma errors or retries of writes."
+    },
+    {
+      "kind": "lazy-page-hydration",
+      "count": 1,
+      "detail": "Root-only Archive walk omitted README; explicit getNodeByIdAsync page/README read restored all 9 top-level nodes and 1786 total nodes.",
+      "evidence": "figma-export/npve-patient-summary-content-2026-09-10/audit-archive.json"
+    }
+  ]
+}

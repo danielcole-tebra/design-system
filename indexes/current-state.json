@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "workflow_npveQueueRefresh_2026-09-10",
+  "id": "npveRebuild_patientSummaryContent_2026-09-10",
   "date": "2026-09-10",
-  "workstream": "workflow",
-  "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
-  "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies"
+  "workstream": "npve",
+  "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
+  "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2."
  },
  "recordGate": {
   "inProgress": [],
@@ -25,12 +25,12 @@
    }
   },
   "npve": {
-   "count": 64,
+   "count": 65,
    "latest": {
-    "id": "npveRebuild_familyHistoryEdit_2026-09-09",
-    "date": "2026-09-09",
-    "path": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json",
-    "status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review."
+    "id": "npveRebuild_patientSummaryContent_2026-09-10",
+    "date": "2026-09-10",
+    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
+    "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2."
    }
   },
   "workflow": {
@@ -50,7 +50,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "c10a4fde6fb647caac429a8a5dc6d20e22d61d5e5158c3f422688d970baaa2cb",
-  "bytes": 1502521
+  "sha256": "e2495a12f4154195e94b0b3f3edab3539c87f0098a787800454b055811c8110c",
+  "bytes": 1514537
  }
 }

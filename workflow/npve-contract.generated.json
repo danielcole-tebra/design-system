@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-10T21:13:52.784Z",
+  "generatedAt": "2026-09-10T21:37:50.675Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "c10a4fde6fb647caac429a8a5dc6d20e22d61d5e5158c3f422688d970baaa2cb",
+      "sha256": "e2495a12f4154195e94b0b3f3edab3539c87f0098a787800454b055811c8110c",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "49efa3cd94095d6efdd09d50ee0ec032b22de95ffd0ec512f4de813743765781"
+        "sha256": "d51a6d7fcd8bd0b021e20795c4a39ff9e1cc4f849a6c6a23eedf5fe760a3a6a1"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "18a1ef716533f290e6b4b28cc8a9fadfe0a6be667d31aa5495afeb47e910653a"
+        "sha256": "d8ecf1f9b58c64a3762a3e52e1a87e64348677ceffb75560c40055bd09d5255e"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 99,
+      "records": 100,
       "flags": {
         "active": 230,
         "resolved": 58
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "workflow_npveQueueRefresh_2026-09-10",
+      "id": "npveRebuild_patientSummaryContent_2026-09-10",
       "date": "2026-09-10",
-      "workstream": "workflow",
-      "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
-      "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies"
+      "workstream": "npve",
+      "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
+      "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2."
     },
     "recordGate": {
       "inProgress": [],
@@ -343,12 +343,12 @@
         }
       },
       "npve": {
-        "count": 64,
+        "count": 65,
         "latest": {
-          "id": "npveRebuild_familyHistoryEdit_2026-09-09",
-          "date": "2026-09-09",
-          "path": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json",
-          "status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review."
+          "id": "npveRebuild_patientSummaryContent_2026-09-10",
+          "date": "2026-09-10",
+          "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
+          "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2."
         }
       },
       "workflow": {
@@ -744,27 +744,6 @@
     ],
     "recentRecords": [
       {
-        "id": "leanPilot_run2-3_2026-09-08",
-        "path": "records/npve/2026-09-08/leanPilot_run2-3_2026-09-08.json",
-        "status": "DONE. Item 1 (pilot2-hospitalizations-edit, medium, approved by Daniel) built, validated and inspected; stopped for operator review before item 2. Item 2 (pilot2-procedures-edit) not started: tier unapproved, re-pointed at record leanPilot_run3_2026-09-08.",
-        "date": "2026-09-08",
-        "outcome": [
-          "Created Hospitalization status selector 580:6013, Hospitalizations edit form 580:6017 (518x410) and body 580:10621 (518x475) on the Facility Stay pattern; all controls are live library instances or recorded GAP stand-ins.",
-          "Appended the body to the shared Sidesheet Body content preferred values (13 → 14); default, 13 properties and 550x600 variant geometry unchanged.",
-          "Placed one content-driven sheet at 550x651 (header 72, divider 1, body region 507, footer 71) with the source footer labels.",
-          "Created the three _Rebuild comparison sub-components and the sole comparison 581:11117 on Screens with two reused GAP markers; comparison slots now hold 17 preferred values each.",
-          "Item 2 (Procedures edit) not started; awaiting the operator’s tier approval and review of this comparison."
-        ],
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/lean-pilot-run2-3-2026-09-08/report.md",
-        "target": {
-          "file": "fdCQVFdvOByaOYIJYag0d6",
-          "templatesPage": "3:2",
-          "screensPage": "27:2"
-        }
-      },
-      {
         "id": "leanPilot_run3_2026-09-08",
         "path": "records/npve/2026-09-09/leanPilot_run3_2026-09-08.json",
         "status": "DONE. pilot2-procedures-edit (medium, approved by Daniel) built, validated and inspected; the combined lean pilot runs 2 and 3 are complete and stop for operator review.",
@@ -894,6 +873,21 @@
         "decision": null,
         "report": "figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
         "target": null
+      },
+      {
+        "id": "npveRebuild_patientSummaryContent_2026-09-10",
+        "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
+        "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2.",
+        "date": "2026-09-10",
+        "outcome": "Reusable 518x752 editable Patient summary content with four preserved heading/bullet sections, bound typography/color/spacing, and sole dedicated comparison 656:13014.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-patient-summary-content-2026-09-10/report.md",
+        "target": {
+          "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+          "pageId": "3:2",
+          "name": "Patient summary content"
+        }
       }
     ],
     "openFlags": [
@@ -1021,6 +1015,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "51e0831f82094533d7e682eb204490a1117cd74943d9702476b058ef8ef6cf33"
+    "contractSha256": "632cd006be0c928f62a707eb37d4e287204c060e1f306a6c215df7bdd799b2cc"
   }
 }

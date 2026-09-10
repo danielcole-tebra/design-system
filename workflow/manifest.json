@@ -643,7 +643,7 @@
       "id": "npve-patient-summary-content",
       "title": "Patient Summary · Summary content",
       "workstream": "NPVE Rebuild / Sidesheets",
-      "status": "proposed",
+      "status": "complete",
       "dependsOn": [],
       "source": {
         "fileKey": "zVsuhYehoSLLq880qRBFkq",
@@ -676,12 +676,14 @@
         ],
         "proposedBy": "Codex (planner proposal), 2026-09-10, after the scoped read in figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
         "approval": {
-          "status": "unapproved",
-          "approvedBy": null,
-          "approvedAt": null,
-          "quote": null,
+          "status": "approved",
+          "approvedBy": "Operator",
+          "approvedAt": "2026-09-10T21:24:34.734Z",
+          "quote": "I approve the `npve-patient-summary-content`, proceed",
           "history": []
-        }
+        },
+        "lockedAt": "2026-09-10T21:24:34.734Z",
+        "lock": "98c1dcad56d9fcd5c565ee841be33be13a03c8801a9a1b6919cd2a030e61fbfc"
       },
       "oversight": [
         "Dedicated content reference/rebuild/change comparison inspected by the executor and shown to the operator",
@@ -705,7 +707,8 @@
         "audit": "figma-export/npve-patient-summary-content-2026-09-10/audit.json",
         "report": "figma-export/npve-patient-summary-content-2026-09-10/report.md",
         "comparisonRender": "figma-export/npve-patient-summary-content-2026-09-10/comparison.png"
-      }
+      },
+      "completedAt": "2026-09-10T21:37:51.268Z"
     },
     {
       "id": "npve-patient-summary-feedback",
@@ -731,9 +734,21 @@
       "plannerNotes": {
         "scopedRead": "figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
         "stateSources": [
-          { "state": "Default", "nodeId": "2545:4855", "sourceParent": "129:7340" },
-          { "state": "Error/Entry", "nodeId": "2459:10191", "sourceParent": "2459:10180" },
-          { "state": "Success", "nodeId": "2474:10628", "sourceParent": "2466:10562" }
+          {
+            "state": "Default",
+            "nodeId": "2545:4855",
+            "sourceParent": "129:7340"
+          },
+          {
+            "state": "Error/Entry",
+            "nodeId": "2459:10191",
+            "sourceParent": "2459:10180"
+          },
+          {
+            "state": "Success",
+            "nodeId": "2474:10628",
+            "sourceParent": "2466:10562"
+          }
         ],
         "sourceCopyNote": "Preserve the visible source wording, including 'How would your rate the accuracy of this summary?', unless the operator separately authorizes copy editing."
       },
@@ -803,9 +818,21 @@
       "plannerNotes": {
         "scopedRead": "figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
         "stateSources": [
-          { "state": "Default", "nodeId": "129:7340", "size": "550x894" },
-          { "state": "Error/Entry", "nodeId": "2459:10180", "size": "550x1188" },
-          { "state": "Success", "nodeId": "2466:10562", "size": "550x932" }
+          {
+            "state": "Default",
+            "nodeId": "129:7340",
+            "size": "550x894"
+          },
+          {
+            "state": "Error/Entry",
+            "nodeId": "2459:10180",
+            "size": "550x1188"
+          },
+          {
+            "state": "Success",
+            "nodeId": "2466:10562",
+            "size": "550x932"
+          }
         ],
         "referencePlan": "Frozen source exports for each complete source state, placed at 1:1 in dedicated comparison rows. Tall states must not be clipped or scaled to hide spacing differences."
       },

@@ -1,0 +1,15 @@
+const fs=require('fs');
+const log='C:/Users/coled/.codex/sessions/2026/09/10/rollout-2026-09-10T16-19-39-01a08d30-c73d-7811-b355-997a3eb49947.jsonl';
+const d='figma-export/npve-patient-summary-content-2026-09-10/';
+const rows=fs.readFileSync(log,'utf8').trim().split('\n').map(JSON.parse);
+const start=rows.findIndex(r=>r.type==='response_item'&&r.payload.type==='message'&&r.payload.role==='user'&&JSON.stringify(r.payload.content).includes('Continue the NPVE sidesheet rebuild'));
+if(start<0)throw new Error('Prompt span not found');
+const span=rows.slice(start),first=span[0].timestamp,last=span.at(-1).timestamp;
+const calls=span.filter(r=>r.type==='response_item'&&['custom_tool_call','function_call'].includes(r.payload.type));
+const messages=span.filter(r=>r.type==='response_item'&&r.payload.type==='message'&&r.payload.role==='assistant');
+const names={};for(const c of calls)for(const match of (c.payload.input||c.payload.arguments||'').matchAll(/await tools\.(mcp__codex_apps__figma_\w+)\(/g))names[match[1]]=(names[match[1]]||0)+1;
+const e=JSON.parse(fs.readFileSync(d+'execution.json'));
+const observation={itemId:e.itemId,provider:'OpenAI',model:'gpt-6-astra',reasoning:'medium',spanStart:first,observedThrough:last,elapsedSeconds:(Date.parse(last)-Date.parse(first))/1000,assistantMessages:messages.length,modelTurnsDefinition:'Visible assistant commentary/final messages, matching prior Codex metrics; tool orchestration steps counted separately.',toolCalls:calls.length,toolCallsDefinition:'Top-level logged function/custom tool calls (functions.exec wrappers); nested operations are not independently logged. Figma operations counted separately from actual call expressions and the observed asset POST.',figmaToolExpressions:names,figmaReads:13,figmaWrites:4,figmaUploadPreparations:1,screenshots:3,screenshotDefinition:'Three PNG exports saved and visually inspected: source, content instance, comparison; not get_screenshot API count.',visualCorrectionCycles:0,diagnosticRecoveryCycles:3,startupContext:e.measurements.startupContext,unavailable:['Input/output token totals for this bounded task','Billing cost','Nested non-Figma tool total'],note:'Observed prefix through this snapshot, including startup and approval wait. Closeout commands after cutoff are excluded; no future usage guessed.'};
+e.measurements=observation;fs.writeFileSync(d+'execution.json',JSON.stringify(e,null,2)+'\n');fs.writeFileSync(d+'measurements.json',JSON.stringify(observation,null,2)+'\n');
+const m=JSON.parse(fs.readFileSync('workflow/metrics.json'));m.observedBatches=m.observedBatches||[];if(m.observedBatches.some(x=>x.itemId===e.itemId))throw new Error('Measurement already exists');m.observedBatches.push(observation);fs.writeFileSync('workflow/metrics.json',JSON.stringify(m,null,2)+'\n');
+console.log(JSON.stringify(observation,null,2));

@@ -1,0 +1,8 @@
+Execution finish-stage gate: PASS before finalization.
+evidence PASS npve-patient-summary-content reads=13 writes=4 screenshots=3 corrections=0
+batch guard PASS npve-patient-summary-content foundation f1054f31606a; 99 records and 288 flags unchanged
+finalize-npve-patient-summary-content.js: records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json
+generate-contract.js: 75209 bytes; 28 cited records verified; 100 records in the store
+finish gate PASS npve-patient-summary-content; record records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json DONE; comparison and report present; store outside the owned record unchanged
+workflow PASS store=100r/230+58f contract=632cd006be0c items=11 deterministic=17 visual=3
+git diff --check: PASS (no output).

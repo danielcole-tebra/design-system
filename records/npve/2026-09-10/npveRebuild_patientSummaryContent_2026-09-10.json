@@ -1,0 +1,283 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_patientSummaryContent_2026-09-10",
+ "sequence": 99,
+ "date": "2026-09-10",
+ "workstream": "npve",
+ "created": {
+  "by": "Codex (OpenAI)",
+  "at": "2026-09-10T21:27:28.726Z",
+  "script": "apply-npve-patient-summary-content.js"
+ },
+ "record": {
+  "_status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2.",
+  "date": "2026-09-10",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "executor": "Codex (OpenAI)",
+  "manifestItem": "npve-patient-summary-content",
+  "report": "figma-export/npve-patient-summary-content-2026-09-10/report.md",
+  "scope": "Build one reusable 518px Patient Summary content component containing the four visible rich-text sections (Current Situation, Key Background, Active Care Plan, Progress & Next Steps). Preserve the source hierarchy and copy while applying the canonical 16px default vertical rhythm and bound typography/color tokens. This item does not create a sidesheet, edit a shared master, or build feedback controls.",
+  "source": {
+   "fileKey": "zVsuhYehoSLLq880qRBFkq",
+   "nodeId": "3028:16364",
+   "label": "Summary_Wrap in Page=PatientSummary 129:7340, 534x708",
+   "access": "read-only"
+  },
+  "target": {
+   "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+   "pageId": "3:2",
+   "name": "Patient summary content"
+  },
+  "risk": {
+   "tier": "low",
+   "reasons": [
+    "One local reusable content component with no interactive controls",
+    "No shared-master, token, preferred-value, or screen-placement mutation",
+    "Canonical width and spacing behavior are already recorded"
+   ],
+   "proposedBy": "Codex (planner proposal), 2026-09-10, after the scoped read in figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+   "approval": {
+    "status": "approved",
+    "approvedBy": "Operator",
+    "approvedAt": "2026-09-10T21:24:34.734Z",
+    "quote": "I approve the `npve-patient-summary-content`, proceed",
+    "history": []
+   },
+   "lockedAt": "2026-09-10T21:24:34.734Z",
+   "lock": "98c1dcad56d9fcd5c565ee841be33be13a03c8801a9a1b6919cd2a030e61fbfc"
+  },
+  "approvalQuote": "I approve the `npve-patient-summary-content`, proceed",
+  "recordGate": "Previous NPVE record npveRebuild_familyHistoryEdit_2026-09-09 is DONE; current operator confirms formal closure.",
+  "stopCondition": "Stop before mutation on source or target identity mismatch, unavailable bound typography/color tokens, ambiguous mixed-text hierarchy, or any need to detach, rasterize, truncate, or invent clinical copy. Stop the family before the feedback item if deterministic or visual validation fails.",
+  "planning": {
+   "sourceFacts": [
+    "The source content is 534x708 inside an 8px body inset; the target width is 518 inside the canonical 16px sidesheet inset.",
+    "The four source blocks are separated by 12px. Rebuild with 16px between sections; preserve tight heading/body relationships within each section.",
+    "Text reflow may change height. Height is content-driven and must not be forced to the source's 708px."
+   ],
+   "sections": [
+    "Current Situation",
+    "Key Background",
+    "Active Care Plan",
+    "Progress & Next Steps"
+   ],
+   "appearance": "figma-export/npve-patient-summary-content-2026-09-10/appearance.md"
+  },
+  "mutationsPlanned": [
+   "Create one 518px content component with four heading/list stacks and bound tokens.",
+   "Create reference, rebuild and change-log helper components with a frozen 2x reference; one comparison instance on Screens. No shared-master or preferred-value edits.",
+   "Any required proof archive move will be recorded before it is performed."
+  ],
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0
+  },
+  "provenance": {
+   "provider": "OpenAI",
+   "model": "gpt-6-astra",
+   "reasoning": "medium",
+   "evidence": "Session turn_context at 2026-09-10T21:24:20.085Z"
+  },
+  "createdNodes": {
+   "createdNodeIds": [
+    "654:9852",
+    "654:9853",
+    "654:9854",
+    "654:9855",
+    "654:9856",
+    "654:9857",
+    "654:9858",
+    "654:9859",
+    "654:9860",
+    "654:9861",
+    "654:9862",
+    "654:9863",
+    "654:9864",
+    "654:9865",
+    "654:9866",
+    "654:9867"
+   ],
+   "section": "654:9852",
+   "component": "654:9853",
+   "rebuildHelper": "654:9866",
+   "instance": "654:9867",
+   "width": 518,
+   "height": 752,
+   "children": [
+    {
+     "id": "654:9854",
+     "name": "Current Situation",
+     "width": 518,
+     "height": 224,
+     "itemSpacing": 8
+    },
+    {
+     "id": "654:9857",
+     "name": "Key Background",
+     "width": 518,
+     "height": 152,
+     "itemSpacing": 8
+    },
+    {
+     "id": "654:9860",
+     "name": "Active Care Plan",
+     "width": 518,
+     "height": 176,
+     "itemSpacing": 8
+    },
+    {
+     "id": "654:9863",
+     "name": "Progress & Next Steps",
+     "width": 518,
+     "height": 152,
+     "itemSpacing": 8
+    }
+   ],
+   "bindings": {
+    "itemSpacing": {
+     "type": "VARIABLE_ALIAS",
+     "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+    },
+    "fills": [
+     {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+     }
+    ]
+   },
+   "referenceHelper": "656:7695",
+   "referenceImage": "656:7696",
+   "changeHelper": "656:7697",
+   "screensSection": "656:13013",
+   "comparison": "656:13014"
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — 40 paint samples across content/rebuild/change/reference master-instance pairs match in color, alpha and variable binding; screenshot inspected.",
+   "2_unboundPaintAudit": "PASS — all top-level nodes on four pages walked with explicit Archive hydration. Existing unbound Cover/section organizer paints retained; all new production paints bound.",
+   "3_referenceCounts": "PASS — no clone/combineAsVariants; existing shared definitions unchanged. One content master and one placed comparison verified.",
+   "4_skipInvisibleFalse": "PASS — false before every audit walk.",
+   "5_opacityLast": "PASS — no authored paint-opacity override.",
+   "6_enumerateDontRecall": "PASS — four live page trees enumerated; saved node counts and IDs, not recalled from history.",
+   "7_fileIdentityFirst": "PASS — explicit file keys and target four-page identity verified before writes; source and library read-only.",
+   "8_roundWithRecord": "PASS — zero authored fractional geometry; fixed width 518 and content-driven height 752. Exporter returned 1069x1416 pixels for requested 2x source; the unchanged asset is placed at source geometry 534x708.",
+   "9_boundPaintAlpha": "PASS — imported paints retain stored variable alpha; no opacity reset.",
+   "10_cloneDropsPropertyRefs": "PASS — no variant cloning; comparison swaps/captions and five Change log/Row instances render assigned values."
+  },
+  "verification": {
+   "unboundPaints": {
+    "pass": true,
+    "details": "40 master/instance paint samples match across four pairs; every new solid paint bound. Whole-file unbound paints restricted to existing Cover frame and organizer sections."
+   },
+   "fractionalAuthoredGeometry": {
+    "pass": true,
+    "details": "No authored fractional geometry found on any of four pages."
+   },
+   "referenceCounts": {
+    "pass": true,
+    "details": "One content master, one placed comparison, three helpers, no standalone proof nodes."
+   },
+   "componentIdentity": {
+    "pass": true,
+    "details": "Actual helper mainComponent IDs match; comparison uses 35:332. Source 3028:16364 and expected target pages verified."
+   },
+   "propertyReferences": {
+    "pass": true,
+    "details": "No variants cloned. Shared definitions and geometry unchanged; row text and comparison caption/swap properties visibly render their assigned values."
+   }
+  },
+  "appearance": {
+   "specification": "figma-export/npve-patient-summary-content-2026-09-10/appearance.md",
+   "review": {
+    "inspected": true,
+    "render": "figma-export/npve-patient-summary-content-2026-09-10/comparison.png",
+    "areas": {
+     "surfaces": "White content surface ends after final bullet; grey comparison backdrop; helpers transparent.",
+     "borders": "No content border required; change-log dividers remain visible.",
+     "content": "All four headings and 12 bullets visible; all four source strings match exactly.",
+     "states": "Static content; no interaction states in scope.",
+     "layout": "518x752 content, 16px section gaps, 8px internal gaps; no clipping or truncation.",
+     "actions": "No actions required or created for item 1."
+    },
+    "differences": [
+     {
+      "observation": "Width 534 to 518, section spacing 12 to 16, heading/list gap 0 to 8, height 708 to 752; typography linked to existing tokens.",
+      "disposition": "approved",
+      "evidence": "workflow/manifest.json; figma-export/npve-patient-summary-content-2026-09-10/appearance.md; figma-export/npve-patient-summary-content-2026-09-10/source.json"
+     }
+    ]
+   }
+  },
+  "measurements": {
+   "itemId": "npve-patient-summary-content",
+   "provider": "OpenAI",
+   "model": "gpt-6-astra",
+   "reasoning": "medium",
+   "spanStart": "2026-09-10T21:19:41.880Z",
+   "observedThrough": "2026-09-10T21:36:42.000Z",
+   "elapsedSeconds": 1020.12,
+   "assistantMessages": 9,
+   "modelTurnsDefinition": "Visible assistant commentary/final messages, matching prior Codex metrics; tool orchestration steps counted separately.",
+   "toolCalls": 37,
+   "toolCallsDefinition": "Top-level logged function/custom tool calls (functions.exec wrappers); nested operations are not independently logged. Figma operations counted separately from actual call expressions and the observed asset POST.",
+   "figmaToolExpressions": {
+    "mcp__codex_apps__figma_use_figma": 11,
+    "mcp__codex_apps__figma_get_libraries": 1,
+    "mcp__codex_apps__figma_search_design_system": 1,
+    "mcp__codex_apps__figma_download_assets": 3,
+    "mcp__codex_apps__figma_upload_assets": 1
+   },
+   "figmaReads": 13,
+   "figmaWrites": 4,
+   "figmaUploadPreparations": 1,
+   "screenshots": 3,
+   "screenshotDefinition": "Three PNG exports saved and visually inspected: source, content instance, comparison; not get_screenshot API count.",
+   "visualCorrectionCycles": 0,
+   "diagnosticRecoveryCycles": 3,
+   "startupContext": {
+    "legacyBytes": 1523655,
+    "leanBytes": 155953,
+    "reductionPercent": 89.8,
+    "targetPercent": 50,
+    "targetMet": true,
+    "manifestItems": 11
+   },
+   "unavailable": [
+    "Input/output token totals for this bounded task",
+    "Billing cost",
+    "Nested non-Figma tool total"
+   ],
+   "note": "Observed prefix through this snapshot, including startup and approval wait. Closeout commands after cutoff are excluded; no future usage guessed."
+  },
+  "screenshots": [
+   "figma-export/npve-patient-summary-content-2026-09-10/reference-2x.png",
+   "figma-export/npve-patient-summary-content-2026-09-10/content-instance.png",
+   "figma-export/npve-patient-summary-content-2026-09-10/comparison.png"
+  ],
+  "outcome": "Reusable 518x752 editable Patient summary content with four preserved heading/bullet sections, bound typography/color/spacing, and sole dedicated comparison 656:13014.",
+  "operatorReview": "Comparison shown; acceptance pending. Feedback and body/sheet items not started.",
+  "proofs": "No disposable proof nodes created; actual reusable helper instance and comparison used for verification, so no proof archival required.",
+  "flagsAdded": [],
+  "recovery": [
+   {
+    "kind": "response-size",
+    "count": 2,
+    "detail": "Detailed anatomy and audit output exceeded 20KB; replaced by compact complete readbacks. No Figma errors or retries of writes."
+   },
+   {
+    "kind": "lazy-page-hydration",
+    "count": 1,
+    "detail": "Root-only Archive walk omitted README; explicit getNodeByIdAsync page/README read restored all 9 top-level nodes and 1786 total nodes.",
+    "evidence": "figma-export/npve-patient-summary-content-2026-09-10/audit-archive.json"
+   }
+  ],
+  "processCorrection": [
+   {
+    "kind": "factual-version-label",
+    "original": "version-3 execution checkpoint",
+    "resolved": "Repository uses version-3 work runs and version-2 execution checkpoints; no validator changes.",
+    "evidence": "scripts/workflow/start-batch.js; scripts/workflow/validate-execution.js"
+   }
+  ]
+ }
+}
