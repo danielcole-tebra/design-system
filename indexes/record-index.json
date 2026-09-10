@@ -926,8 +926,8 @@
    "date": "2026-09-09",
    "workstream": "npve",
    "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
-   "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09;",
-   "recordSha256": "e6fbc72e187b635dcc660a48c39235484ac9f8feeb8f7a17dbbfe3d145fc4e9c"
+   "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History.",
+   "recordSha256": "36638f587ec39b0a1abdd92ca7038cae09ff8ba5f05b4e9eb1ab46af1b7b1fce"
   }
  ],
  "flags": {

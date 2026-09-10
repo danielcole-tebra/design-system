@@ -11,10 +11,10 @@
   "script": "apply-npve-allergies-edit.js"
  },
  "record": {
-  "_status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, form, comparison, verification, report) remain, in a write-capable session.",
+  "_status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History.",
   "date": "2026-09-09",
   "workstream": "NPVE Rebuild / Sidesheets",
-  "executor": "Cline (Anthropic Claude)",
+  "executor": "Earlier Cline/VS Code sessions; completed and verified by Codex",
   "trigger": "Operator approved the next queued manifest item (npve-allergies-edit, medium tier) and settled the caption-placement question.",
   "recordGate": "npveTidy_2026-09-08 recorded DONE in indexes/record-index.json — passed; validate-workflow PASS before reading",
   "manifestItem": "npve-allergies-edit (medium tier; risk locked 2026-09-09 by lock-risk.js; approver and verbatim quote recorded in workflow/manifest.json)",
@@ -22,7 +22,7 @@
   "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
   "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
   "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only — node 129:7826 (Page=Clin_Allergies-Edit, 550x673, variant of Sidesheetv3 129:6647); touched only for the frozen 2x reference export",
-  "fileIdentity": "PASS 2026-09-09 — all four pages verified live via the official Figma MCP get_metadata (read-only): 0:1 Cover; 3:2 Templates (01 · Sidesheet shell with Sidesheet masters 6:65 Floating / 279:2416 Docked right / 279:2431 Docked left; runs 2-3 precedents in sections 20 · Hospitalizations edit 580:6012 and 21 · Procedures edit 586:6413); 27:2 Screens (reused GAP marker frames 581:11754 end-adornment and 581:11761 dropdown chip in section 20); 126:2 Archive (07 · Emptied organizers, 08 · Legacy oversize as tidied by npveTidy_2026-09-08). Capability boundary: the connected toolset is read-only (metadata, screenshots, variables — no write tool), so steps 4-8 run in a write-capable session. Standing-rule deviation recorded: the available tools cannot pass an explicit file key (they read the active file in the Figma desktop app), so identity is verified from the returned page structure on every call — the operator sets the active file before each phase.",
+  "fileIdentity": "PASS — explicit target fdCQVFdvOByaOYIJYag0d6; Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2. Remote write tools authenticated and working. Earlier capability limitation superseded.",
   "planning": {
    "proposal": "figma-export/npve-planning-2026-09-09/proposal.md (planner scoped read; source facts, mapping and expected dimensions live there and in the manifest item)",
    "sourceFacts": [
@@ -77,32 +77,152 @@
    "If the Figma bridge is unavailable in a session, the batch pauses IN PROGRESS before mutation instead of proceeding unverified."
   ],
   "findings": {
-   "GAP": 0,
-   "DEFECT": 0,
-   "DECISION": 1,
-   "PROCESS": 0
+   "GAP": 2,
+   "DEFECT": 1,
+   "DECISION": 0,
+   "note": "Existing severity dropdown and end-adornment gaps plus known back-control defect. No new library convention."
   },
   "flagsBefore": {
    "active": 228,
    "resolved": 58,
    "total": 286
   },
-  "flagsAfter": {
-   "active": 229,
-   "resolved": 58,
-   "total": 287
-  },
+  "flagsAfter": 287,
   "flagsAdded": [
    "npveFamilyHistory_sourceSaveOutlined"
   ],
-  "figmaMutations": [],
+  "figmaMutations": [
+   "Repaired the inherited form; converted frame 614:11471 to reusable component 634:6808, preserving its children.",
+   "Created body, full sheet, frozen reference, eleven-row change log, and one comparison in section 22.",
+   "Appended preferred choices only; shared defaults and master geometry unchanged.",
+   "Reused two GAP markers and one DEFECT marker. No canvas node deleted during takeover."
+  ],
   "resumeProcedure": "Resume from any MCP-capable session: the run .workflow-runs/npve-allergies-edit.json is active and this record is IN PROGRESS. Nothing in Figma has been mutated yet. 1) node scripts/workflow/validate-workflow.js — PASS expected, inProgress=npveRebuild_allergiesEdit_2026-09-09. 2) node scripts/workflow/check-batch.js npve-allergies-edit — guard PASS expected. 3) Verify target identity fdCQVFdvOByaOYIJYag0d6 (pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive; figma.skipInvisibleInstanceChildren = false for every walk) and record it in fileIdentity. — DONE 2026-09-09, see fileIdentity. 4) Frozen 2x reference export of source node 129:7826 into figma-export/npve-allergies-edit-2026-09-09/, shown at 1:1, captioned with the node id and export date; row-0 checked for the Sidesheetv3 set outline and cleaned if present. 5) Build the reusable 518px form per systemMapping and approvedDifferences in this record; caption decision A applies (floating labels, source captions dropped, one change-log row per form). 6) Run the ten standing batch rules and the deterministic checks; save PNG screenshots into the batch folder. 7) Comparison on Screens 27:2 in section \"22 · Allergies · Edit Allergen comparison (new)\": Reference / Rebuild / Change log with the GAP markers (dropdown chip pattern 404:7061; end-adornment wrapper 324:4934 / 394:5611) and the back-control DEFECT marker; the executor inspects the render and shows it to the operator. 8) node finalize-npve-allergies-edit.js then node scripts/workflow/finish-batch.js npve-allergies-edit (required evidence: audit-allergies-edit.json, report.md, comparison-allergies-edit.png). 9) Flag npveFamilyHistory_sourceSaveOutlined was appended by the 2026-09-09 attribution amendment (see expectedFindingSuperseded_2026_09_09); commit the record, aggregate, indexes, contract, manifest and evidence together.",
   "expectedFindingSuperseded_2026_09_09": {
-   "originalVerbatim": "No Allergies footer inconsistency: Save is Type=Primary here (button 129:7949, variant 26:2165, coral pill), the same as Facility Stay 648:1735, Hospitalizations 129:8516 and Procedures 129:8773. The outlined Save belongs to the Family History source 129:12486 (button 129:12800, Type=Default) and is that item's expectedFinding. The current evidence supports misattribution in the original wording (kept verbatim in expectedFindingSuperseded_2026_09_09); historical source changes were not investigated and are neither claimed nor ruled out. Build the Allergies footer as drawn (Cancel / Save & Add to Note outlined / Save primary) with no Save-inconsistency change-log row.",
+   "originalVerbatim": "Source footer inconsistency: Save is outlined here and primary on every other edit sheet. Report, do not resolve: build as drawn, one change-log row, one flag for Daniel.",
    "correctedBy": "Operator-directed amendment 2026-09-09 (amend-npve-allergies-edit-save-attribution.js) after live node reads of all five edit-sheet sources in zVsuhYehoSLLq880qRBFkq.",
    "verdict": "The current evidence supports misattribution: the outlined-Save observation belongs to the Family History source 129:12486, not to this Allergies source. Historical source changes were not investigated.",
    "evidence": "Allergies 129:7949 Primary; Facility Stay 648:1735 Primary; Hospitalizations 129:8516 Primary; Procedures 129:8773 Primary; Family History 129:12800 Type=Default (white fill, 1px #8CA7A2). All Button set 26:2112, 66x36.",
-   "manifestNote": "The Allergies manifest stopCondition clause \"beyond the recorded outlined-Save finding\" is stale for the same reason and is corrected by the operator or planner after this run closes (the finish gate freezes planner-owned fields mid-run)."
-  }
+   "manifestNote": "The Allergies manifest stopCondition clause \"beyond the recorded outlined-Save finding\" is stale for the same reason and is corrected by the operator or planner after this run closes (the finish gate freezes planner-owned fields mid-run).",
+   "historyCorrection": "Recovered exact original from ef2952f; previous amendment had accidentally copied corrected wording into originalVerbatim."
+  },
+  "placementCorrection": {
+   "authorizedBy": "operator 2026-09-09: correcting accidental placement of existing Allergen field",
+   "disposition": "Move instance 616:15026 from Cover 0:1 into Allergies edit form 614:11471, preserving component connection (Autocomplete/Field size=small State=Default Value=Filled) and content (Label Allergen, Value Penicillin). Placement correction only, not a design decision.",
+   "at": "2026-09-10T01:30:40.197Z"
+  },
+  "beforeTakeover": {
+   "status": "IN PROGRESS — placement correction authorized; moving Allergen field into form, then continuing build to visual-review checkpoint.",
+   "fileIdentity": "PASS 2026-09-09 — all four pages verified live via the official Figma MCP get_metadata (read-only): 0:1 Cover; 3:2 Templates (01 · Sidesheet shell with Sidesheet masters 6:65 Floating / 279:2416 Docked right / 279:2431 Docked left; runs 2-3 precedents in sections 20 · Hospitalizations edit 580:6012 and 21 · Procedures edit 586:6413); 27:2 Screens (reused GAP marker frames 581:11754 end-adornment and 581:11761 dropdown chip in section 20); 126:2 Archive (07 · Emptied organizers, 08 · Legacy oversize as tidied by npveTidy_2026-09-08). Capability boundary: the connected toolset is read-only (metadata, screenshots, variables — no write tool), so steps 4-8 run in a write-capable session. Standing-rule deviation recorded: the available tools cannot pass an explicit file key (they read the active file in the Figma desktop app), so identity is verified from the returned page structure on every call — the operator sets the active file before each phase.",
+   "figmaMutations": [],
+   "findings": {
+    "GAP": 0,
+    "DEFECT": 0,
+    "DECISION": 1,
+    "PROCESS": 0
+   }
+  },
+  "createdNodes": {
+   "templatesSection": "634:6807",
+   "formComponent": "634:6808",
+   "bodyComponent": "634:6809",
+   "formInstance": "634:6810",
+   "rebuildHelper": "634:11955",
+   "sheet": "634:11956",
+   "referenceHelper": "634:12416",
+   "frozenSourceImage": "634:12417",
+   "changeHelper": "634:12418",
+   "screensSection": "634:12489",
+   "comparison": "634:12490",
+   "gapEndAction": "634:13016",
+   "gapDropdown": "634:13025",
+   "defectBack": "634:13034"
+  },
+  "mappingCorrection": {
+   "original": {
+    "header": "Sidesheet 6:65 Placement=Floating, Show back=true (Icon button + Icon/LeftCaret), Title \"Edit Allergies\", Close as published",
+    "trash": "Icon button 77:1109 color=default size=small with Icon/TrashOutlined (run 2 precedent)",
+    "allergen": "Autocomplete/Field size=small State=Default Value=Filled, Value text \"Penicillin\", floating label per caption decision A, width fills to the selector",
+    "severity": "Allergy severity selector 352:3206 (73x32, label \"Mild\"); dropdown-chip GAP marker reused (pattern 404:7061)",
+    "status": "Form control label ×2 with Control swapped to Radio (checked / unchecked), horizontal row gap 16, 42 tall per npve.touchTargets",
+    "reactions": "two GAP wrappers: Text field size=small Value=Filled (\"flushing\", \"hives\") + Icon button color=error size=small with Icon/Close (recorded pattern 324:4934 / 394:5611); add row: Text field size=small Value=Empty placeholder \"Add reaction\" + Button variant=outlined size=small \"Add\"",
+    "comments": "Text field 77:698 size=medium multiline=true Value=Empty placeholder \"Comments go here\", 104 tall resting per npve.fieldStates",
+    "footer": "shell Footer with Show tertiary action on: Cancel (text) / Save & Add to Note (outlined) / Save (primary)",
+    "formSurface": "NPVE/Color Form surface VariableID:387:3434 (#EEF7F9, 1px color/divider, radius 8), 16px inset bound npve.sidesheet.body.inset, rows 486 wide, rhythm bound space/16"
+   },
+   "resolvedAdd": "Button contained/primary/small/Default, 64×30 with Label Add; published variant key 8fc8f57f80196e40aff7b3b1116226ea0a925120",
+   "evidence": [
+    "packages/design-system/src/overrides/ButtonOverrides.ts:40",
+    "foundation/components.json Button.geometry.contained.small",
+    "Library 79:2 offers contained/text; 78:2 is the published small primary variant"
+   ],
+   "reason": "Original outlined/36px mapping is factually unavailable; use published white bordered small control under code-first authority."
+  },
+  "existingGapsReused": [
+   "npveExtReview_allergySeveritySelectorUnmarked",
+   "npveProblemEdit_textFieldNoEndAdornment"
+  ],
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — six actual comparison instances matched their masters: 191 solid paints, no color/alpha/binding mismatch.",
+   "2_unboundPaintAudit": "PASS — all four pages walked; only new unbound paints are organizer section fills/strokes; existing exceptions preserved in live-audit.json.",
+   "3_referenceCounts": "PASS — no variant clone; stored property values verified against rendered text. Body choices 15→16, comparison choices 18→19, defaults unchanged.",
+   "4_skipInvisibleFalse": "PASS — skipInvisibleInstanceChildren=false for every final page and instance audit.",
+   "5_opacityLast": "PASS — no paint-opacity override authored.",
+   "6_enumerateDontRecall": "PASS — live four-page trees enumerated; actual IDs and counts saved.",
+   "7_fileIdentityFirst": "PASS — explicit target fileKey and four-page identity verified; source/library read only, task-specific target deviation retained.",
+   "8_roundWithRecord": "PASS — zero fractional authored geometry on all four pages; no new rounding decisions.",
+   "9_boundPaintAlpha": "PASS — inherited bound paints retained; actual instance alpha and binding match master.",
+   "10_cloneDropsPropertyRefs": "PASS — no variants cloned; all eleven change rows and controls render supplied labels in the placed comparison."
+  },
+  "verification": {
+   "unboundPaints": {
+    "pass": true,
+    "details": "Cover 1, Templates 43, Screens 42, Archive 20. Only the two new organizer sections add exceptions; detailed IDs in live-audit.json."
+   },
+   "fractionalAuthoredGeometry": {
+    "pass": true,
+    "details": "Zero on all four pages."
+   },
+   "referenceCounts": {
+    "pass": true,
+    "details": "One new comparison; form/body/helpers each occur once. Shell choices 16, comparison choices 19 each; defaults unchanged."
+   },
+   "componentIdentity": {
+    "pass": true,
+    "details": "Actual IDs, library keys, sizes and properties in live-audit.json; all controls preserve component connections."
+   },
+   "propertyReferences": {
+    "pass": true,
+    "details": "Allergen, Mild, radio labels, reactions, Add, Comments, footer and eleven change rows verified in rendered text and screenshot."
+   },
+   "instancePaintVerification": {
+    "pass": true,
+    "details": "Six master/instance pairs, 191 solid paints, no mismatches."
+   },
+   "sharedDefaultsAndGeometry": {
+    "pass": true,
+    "details": "13 shell properties, original defaults, three 550×600 master variants unchanged. Placed sheet 550×644 = 72+1+500+71."
+   },
+   "reference": {
+    "pass": true,
+    "details": "Frozen image hash 821b8e8d522caa54ca7b84156229d652d4bc7d12, 1100×1346, FIT at 550×673."
+   },
+   "sourceAndLibrary": {
+    "pass": true,
+    "details": "Read only. Every write targeted fdCQVFdvOByaOYIJYag0d6."
+   }
+  },
+  "screenshots": [
+   "figma-export/npve-allergies-edit-2026-09-09/reference-2x-129-7826.png",
+   "figma-export/npve-allergies-edit-2026-09-09/rebuilt-sheet.png",
+   "figma-export/npve-allergies-edit-2026-09-09/comparison-allergies-edit.png",
+   "figma-export/npve-allergies-edit-2026-09-09/comparison-with-markers.png"
+  ],
+  "outcome": "Reusable 518×468 form and body; complete 550×644 sheet; frozen original and full comparison on Screens section 22. Executor checks passed; operator review pending.",
+  "diagnosis": "Repeated broad searches, suppressed errors, ineffective property changes and a nonexistent planned Button variant caused wasted work. Prior transport root cause remains unverified; no transport error recurred during takeover.",
+  "probeDisposition": "614:11466 already absent at takeover verification; no PROBE nodes on any page. 614:11471 converted to 634:6808. Earlier session logs report PROBE7 removal; this takeover did not delete probes.",
+  "decisionsForOperator": [
+   "Visual review of the completed comparison before starting Family History."
+  ]
  }
 }

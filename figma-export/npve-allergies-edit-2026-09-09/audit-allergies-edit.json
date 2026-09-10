@@ -1,0 +1,765 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "npve-allergies-edit",
+  "capturedAt": "2026-09-10T04:31:22.799Z",
+  "executors": {
+    "build": "Earlier VS Code sessions; completed by Codex takeover",
+    "finish": "Codex"
+  },
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false,
+    "scope": "Every node on every page; actual comparison instances; shared defaults and geometry; visual inspection."
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "details": "Cover 1, Templates 43, Screens 42, Archive 20. Only the two new organizer sections add exceptions; detailed IDs in live-audit.json."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "details": "Zero on all four pages."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "One new comparison; form/body/helpers each occur once. Shell choices 16, comparison choices 19 each; defaults unchanged."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Actual IDs, library keys, sizes and properties in live-audit.json; all controls preserve component connections."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "Allergen, Mild, radio labels, reactions, Add, Comments, footer and eleven change rows verified in rendered text and screenshot."
+    },
+    "instancePaintVerification": {
+      "pass": true,
+      "details": "Six master/instance pairs, 191 solid paints, no mismatches."
+    },
+    "sharedDefaultsAndGeometry": {
+      "pass": true,
+      "details": "13 shell properties, original defaults, three 550×600 master variants unchanged. Placed sheet 550×644 = 72+1+500+71."
+    },
+    "reference": {
+      "pass": true,
+      "details": "Frozen image hash 821b8e8d522caa54ca7b84156229d652d4bc7d12, 1100×1346, FIT at 550×673."
+    },
+    "sourceAndLibrary": {
+      "pass": true,
+      "details": "Read only. Every write targeted fdCQVFdvOByaOYIJYag0d6."
+    }
+  },
+  "createdNodes": {
+    "templatesSection": "634:6807",
+    "formComponent": "634:6808",
+    "bodyComponent": "634:6809",
+    "formInstance": "634:6810",
+    "rebuildHelper": "634:11955",
+    "sheet": "634:11956",
+    "referenceHelper": "634:12416",
+    "frozenSourceImage": "634:12417",
+    "changeHelper": "634:12418",
+    "screensSection": "634:12489",
+    "comparison": "634:12490",
+    "gapEndAction": "634:13016",
+    "gapDropdown": "634:13025",
+    "defectBack": "634:13034"
+  },
+  "pageAudit": [
+    {
+      "page": "Cover",
+      "count": 8,
+      "unbound": [
+        {
+          "id": "1:5",
+          "name": "Cover — NPVE rebuild",
+          "prop": "fills"
+        }
+      ],
+      "fractional": [],
+      "probes": []
+    },
+    {
+      "page": "Templates",
+      "count": 10076,
+      "unbound": [
+        {
+          "id": "126:2020",
+          "name": "01 · Sidesheet shell",
+          "prop": "fills"
+        },
+        {
+          "id": "126:2020",
+          "name": "01 · Sidesheet shell",
+          "prop": "strokes"
+        },
+        {
+          "id": "126:2021",
+          "name": "02 · Problems picker",
+          "prop": "fills"
+        },
+        {
+          "id": "126:2021",
+          "name": "02 · Problems picker",
+          "prop": "strokes"
+        },
+        {
+          "id": "126:2022",
+          "name": "04 · Change log utilities",
+          "prop": "fills"
+        },
+        {
+          "id": "126:2022",
+          "name": "04 · Change log utilities",
+          "prop": "strokes"
+        },
+        {
+          "id": "126:2023",
+          "name": "05 · Rebuild comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "126:2023",
+          "name": "05 · Rebuild comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "153:1185",
+          "name": "03 · Problems management",
+          "prop": "fills"
+        },
+        {
+          "id": "153:1185",
+          "name": "03 · Problems management",
+          "prop": "strokes"
+        },
+        {
+          "id": "219:2067",
+          "name": "06 · Medications",
+          "prop": "fills"
+        },
+        {
+          "id": "309:4528",
+          "name": "07 · Problems state comparison helpers",
+          "prop": "fills"
+        },
+        {
+          "id": "309:4528",
+          "name": "07 · Problems state comparison helpers",
+          "prop": "strokes"
+        },
+        {
+          "id": "316:3411",
+          "name": "08 · Problem editing",
+          "prop": "fills"
+        },
+        {
+          "id": "316:3411",
+          "name": "08 · Problem editing",
+          "prop": "strokes"
+        },
+        {
+          "id": "337:3880",
+          "name": "09 · Procedures & surgical history",
+          "prop": "fills"
+        },
+        {
+          "id": "337:3880",
+          "name": "09 · Procedures & surgical history",
+          "prop": "strokes"
+        },
+        {
+          "id": "346:3079",
+          "name": "10 · Family history",
+          "prop": "fills"
+        },
+        {
+          "id": "346:3079",
+          "name": "10 · Family history",
+          "prop": "strokes"
+        },
+        {
+          "id": "352:3205",
+          "name": "11 · Allergies list",
+          "prop": "fills"
+        },
+        {
+          "id": "352:3205",
+          "name": "11 · Allergies list",
+          "prop": "strokes"
+        },
+        {
+          "id": "370:3340",
+          "name": "12 · External care history",
+          "prop": "fills"
+        },
+        {
+          "id": "370:3340",
+          "name": "12 · External care history",
+          "prop": "strokes"
+        },
+        {
+          "id": "388:3433",
+          "name": "13 · External care history · Facility Stay",
+          "prop": "fills"
+        },
+        {
+          "id": "388:3433",
+          "name": "13 · External care history · Facility Stay",
+          "prop": "strokes"
+        },
+        {
+          "id": "412:3888",
+          "name": "14 · Health Status/Observations",
+          "prop": "fills"
+        },
+        {
+          "id": "412:3888",
+          "name": "14 · Health Status/Observations",
+          "prop": "strokes"
+        },
+        {
+          "id": "424:4085",
+          "name": "15 · Encounter page shell",
+          "prop": "fills"
+        },
+        {
+          "id": "424:4085",
+          "name": "15 · Encounter page shell",
+          "prop": "strokes"
+        },
+        {
+          "id": "441:4993",
+          "name": "16 · Social History",
+          "prop": "fills"
+        },
+        {
+          "id": "441:4993",
+          "name": "16 · Social History",
+          "prop": "strokes"
+        },
+        {
+          "id": "518:5771",
+          "name": "17 · Past Medical History · Condition row",
+          "prop": "fills"
+        },
+        {
+          "id": "518:5771",
+          "name": "17 · Past Medical History · Condition row",
+          "prop": "strokes"
+        },
+        {
+          "id": "534:5804",
+          "name": "18 · Past Medical History · Section group",
+          "prop": "fills"
+        },
+        {
+          "id": "534:5804",
+          "name": "18 · Past Medical History · Section group",
+          "prop": "strokes"
+        },
+        {
+          "id": "546:5870",
+          "name": "19 · Past Medical History · Body and sidesheet",
+          "prop": "fills"
+        },
+        {
+          "id": "546:5870",
+          "name": "19 · Past Medical History · Body and sidesheet",
+          "prop": "strokes"
+        },
+        {
+          "id": "580:6012",
+          "name": "20 · External care history · Hospitalizations edit",
+          "prop": "fills"
+        },
+        {
+          "id": "580:6012",
+          "name": "20 · External care history · Hospitalizations edit",
+          "prop": "strokes"
+        },
+        {
+          "id": "586:6413",
+          "name": "21 · Procedures & surgical history · Edit Event",
+          "prop": "fills"
+        },
+        {
+          "id": "586:6413",
+          "name": "21 · Procedures & surgical history · Edit Event",
+          "prop": "strokes"
+        },
+        {
+          "id": "634:6807",
+          "name": "22 · Allergies · Edit Allergen",
+          "prop": "fills"
+        },
+        {
+          "id": "634:6807",
+          "name": "22 · Allergies · Edit Allergen",
+          "prop": "strokes"
+        }
+      ],
+      "fractional": [],
+      "probes": [
+        {
+          "id": "424:4360",
+          "name": "SCAFFOLDING — Note body placeholder",
+          "parent": "424:4085"
+        },
+        {
+          "id": "429:4162",
+          "name": "SCAFFOLDING — Nav placeholder (GAP: nav family home unsettled)",
+          "parent": "429:4161"
+        },
+        {
+          "id": "I434:4394;429:4162",
+          "name": "SCAFFOLDING — Nav placeholder (GAP: nav family home unsettled)",
+          "parent": "434:4394"
+        },
+        {
+          "id": "I434:4866;434:4394;429:4162",
+          "name": "SCAFFOLDING — Nav placeholder (GAP: nav family home unsettled)",
+          "parent": "I434:4866;434:4394"
+        },
+        {
+          "id": "547:5870",
+          "name": "HEAD · Trauma · SCAFFOLDING wrapper (hosts the Comments column label beside a section instance)",
+          "parent": "546:5871"
+        },
+        {
+          "id": "I559:6085;6:80;547:5870",
+          "name": "HEAD · Trauma · SCAFFOLDING wrapper (hosts the Comments column label beside a section instance)",
+          "parent": "I559:6085;6:80"
+        }
+      ]
+    },
+    {
+      "page": "Screens",
+      "count": 4862,
+      "unbound": [
+        {
+          "id": "126:2024",
+          "name": "01 · Current comparisons",
+          "prop": "fills"
+        },
+        {
+          "id": "126:2024",
+          "name": "01 · Current comparisons",
+          "prop": "strokes"
+        },
+        {
+          "id": "156:2427",
+          "name": "02 · Problems management markers — standalone screens moved to Archive 05 on 2026-09-05; see 03 · Problems management comparisons",
+          "prop": "fills"
+        },
+        {
+          "id": "156:2427",
+          "name": "02 · Problems management markers — standalone screens moved to Archive 05 on 2026-09-05; see 03 · Problems management comparisons",
+          "prop": "strokes"
+        },
+        {
+          "id": "160:3168",
+          "name": "03 · Problems management comparisons",
+          "prop": "fills"
+        },
+        {
+          "id": "160:3168",
+          "name": "03 · Problems management comparisons",
+          "prop": "strokes"
+        },
+        {
+          "id": "254:3706",
+          "name": "05 · Medication list comparisons",
+          "prop": "fills"
+        },
+        {
+          "id": "254:3706",
+          "name": "05 · Medication list comparisons",
+          "prop": "strokes"
+        },
+        {
+          "id": "309:4530",
+          "name": "07 · Problems states comparisons",
+          "prop": "fills"
+        },
+        {
+          "id": "309:4530",
+          "name": "07 · Problems states comparisons",
+          "prop": "strokes"
+        },
+        {
+          "id": "318:6739",
+          "name": "08 · Problem editing comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "318:6739",
+          "name": "08 · Problem editing comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "339:6480",
+          "name": "09 · Procedures & surgical history comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "339:6480",
+          "name": "09 · Procedures & surgical history comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "346:5992",
+          "name": "10 · Family history comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "346:5992",
+          "name": "10 · Family history comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "356:6235",
+          "name": "11 · Allergies list comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "356:6235",
+          "name": "11 · Allergies list comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "378:5612",
+          "name": "12 · External care history comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "378:5612",
+          "name": "12 · External care history comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "393:7688",
+          "name": "13 · External care history · Facility Stay comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "393:7688",
+          "name": "13 · External care history · Facility Stay comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "415:7207",
+          "name": "14 · Health Status/Observations",
+          "prop": "fills"
+        },
+        {
+          "id": "415:7207",
+          "name": "14 · Health Status/Observations",
+          "prop": "strokes"
+        },
+        {
+          "id": "429:6859",
+          "name": "15 · Encounter page shell comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "429:6859",
+          "name": "15 · Encounter page shell comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "446:9236",
+          "name": "16 · Social History",
+          "prop": "fills"
+        },
+        {
+          "id": "446:9236",
+          "name": "16 · Social History",
+          "prop": "strokes"
+        },
+        {
+          "id": "521:7834",
+          "name": "17 · Past Medical History · Condition row",
+          "prop": "fills"
+        },
+        {
+          "id": "521:7834",
+          "name": "17 · Past Medical History · Condition row",
+          "prop": "strokes"
+        },
+        {
+          "id": "537:9914",
+          "name": "18 · Past Medical History · Section group",
+          "prop": "fills"
+        },
+        {
+          "id": "537:9914",
+          "name": "18 · Past Medical History · Section group",
+          "prop": "strokes"
+        },
+        {
+          "id": "561:9876",
+          "name": "19 · Past Medical History",
+          "prop": "fills"
+        },
+        {
+          "id": "561:9876",
+          "name": "19 · Past Medical History",
+          "prop": "strokes"
+        },
+        {
+          "id": "581:11116",
+          "name": "20 · External care history · Hospitalizations edit comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "581:11116",
+          "name": "20 · External care history · Hospitalizations edit comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "586:11764",
+          "name": "21 · Procedures & surgical history · Edit Event comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "586:11764",
+          "name": "21 · Procedures & surgical history · Edit Event comparison",
+          "prop": "strokes"
+        },
+        {
+          "id": "634:12489",
+          "name": "22 · Allergies · Edit Allergen comparison",
+          "prop": "fills"
+        },
+        {
+          "id": "634:12489",
+          "name": "22 · Allergies · Edit Allergen comparison",
+          "prop": "strokes"
+        }
+      ],
+      "fractional": [],
+      "probes": [
+        {
+          "id": "I434:7474;434:4866;434:4394;429:4162",
+          "name": "SCAFFOLDING — Nav placeholder (GAP: nav family home unsettled)",
+          "parent": "I434:7474;434:4866;434:4394"
+        },
+        {
+          "id": "I561:9877;114:1139;559:6085;6:80;547:5870",
+          "name": "HEAD · Trauma · SCAFFOLDING wrapper (hosts the Comments column label beside a section instance)",
+          "parent": "I561:9877;114:1139;559:6085;6:80"
+        }
+      ]
+    },
+    {
+      "page": "Archive",
+      "count": 1786,
+      "unbound": [
+        {
+          "id": "126:2025",
+          "name": "01 · Gap and defect markers — empty since 2026-09-04; the four markers live on Screens 01 beside their comparisons (npveRebuild_repair2_2026-09-04)",
+          "prop": "fills"
+        },
+        {
+          "id": "126:2025",
+          "name": "01 · Gap and defect markers — empty since 2026-09-04; the four markers live on Screens 01 beside their comparisons (npveRebuild_repair2_2026-09-04)",
+          "prop": "strokes"
+        },
+        {
+          "id": "126:2026",
+          "name": "02 · Detached comparison history",
+          "prop": "fills"
+        },
+        {
+          "id": "126:2026",
+          "name": "02 · Detached comparison history",
+          "prop": "strokes"
+        },
+        {
+          "id": "126:2027",
+          "name": "03 · Template checks and legacy",
+          "prop": "fills"
+        },
+        {
+          "id": "126:2027",
+          "name": "03 · Template checks and legacy",
+          "prop": "strokes"
+        },
+        {
+          "id": "142:996",
+          "name": "04 · Recovery checks",
+          "prop": "fills"
+        },
+        {
+          "id": "142:996",
+          "name": "04 · Recovery checks",
+          "prop": "strokes"
+        },
+        {
+          "id": "407:5492",
+          "name": "05 · Superseded standalone screens (moved from Screens 2026-09-05)",
+          "prop": "fills"
+        },
+        {
+          "id": "407:5492",
+          "name": "05 · Superseded standalone screens (moved from Screens 2026-09-05)",
+          "prop": "strokes"
+        },
+        {
+          "id": "570:10455",
+          "name": "06 · Pilot proofs (archived at batch close, 2026-09-08)",
+          "prop": "fills"
+        },
+        {
+          "id": "570:10455",
+          "name": "06 · Pilot proofs (archived at batch close, 2026-09-08)",
+          "prop": "strokes"
+        },
+        {
+          "id": "597:11595",
+          "name": "07 · Emptied organizers (moved from Screens 2026-09-08)",
+          "prop": "fills"
+        },
+        {
+          "id": "597:11595",
+          "name": "07 · Emptied organizers (moved from Screens 2026-09-08)",
+          "prop": "strokes"
+        },
+        {
+          "id": "250:3518",
+          "name": "_Emptied organizer — Screens 04 · Medication list — its standalone Sidesheet moved to Archive 05 on 2026-09-05; the live comparison is Screens 05",
+          "prop": "fills"
+        },
+        {
+          "id": "250:3518",
+          "name": "_Emptied organizer — Screens 04 · Medication list — its standalone Sidesheet moved to Archive 05 on 2026-09-05; the live comparison is Screens 05",
+          "prop": "strokes"
+        },
+        {
+          "id": "309:4529",
+          "name": "_Emptied organizer — Screens 06 · Problems states — its two standalone Sidesheets moved to Archive 05 on 2026-09-05; the live comparisons are Screens 07",
+          "prop": "fills"
+        },
+        {
+          "id": "309:4529",
+          "name": "_Emptied organizer — Screens 06 · Problems states — its two standalone Sidesheets moved to Archive 05 on 2026-09-05; the live comparisons are Screens 07",
+          "prop": "strokes"
+        },
+        {
+          "id": "597:11596",
+          "name": "08 · Legacy oversize — loose dividers frame moved unchanged from 03 on 2026-09-08 (it is 3188 wide; 03 is 1200)",
+          "prop": "fills"
+        },
+        {
+          "id": "597:11596",
+          "name": "08 · Legacy oversize — loose dividers frame moved unchanged from 03 on 2026-09-08 (it is 3188 wide; 03 is 1200)",
+          "prop": "strokes"
+        }
+      ],
+      "fractional": [],
+      "probes": [
+        {
+          "id": "I552:5930;547:5870",
+          "name": "HEAD · Trauma · SCAFFOLDING wrapper (hosts the Comments column label beside a section instance)",
+          "parent": "552:5930"
+        },
+        {
+          "id": "I555:10031;6:80;547:5870",
+          "name": "HEAD · Trauma · SCAFFOLDING wrapper (hosts the Comments column label beside a section instance)",
+          "parent": "I555:10031;6:80"
+        }
+      ]
+    }
+  ],
+  "instanceAudit": [
+    {
+      "master": "634:6808",
+      "instance": "I634:12490;114:1139;634:11956;6:80;634:6810",
+      "masterPaints": 42,
+      "instancePaints": 42,
+      "equal": true
+    },
+    {
+      "master": "634:6809",
+      "instance": "I634:12490;114:1139;634:11956;6:80",
+      "masterPaints": 42,
+      "instancePaints": 42,
+      "equal": true
+    },
+    {
+      "master": "352:3206",
+      "instance": "I634:12490;114:1139;634:11956;6:80;634:6810;629:14678",
+      "masterPaints": 3,
+      "instancePaints": 3,
+      "equal": true
+    },
+    {
+      "master": "634:11955",
+      "instance": "I634:12490;114:1139",
+      "masterPaints": 56,
+      "instancePaints": 56,
+      "equal": true
+    },
+    {
+      "master": "634:12416",
+      "instance": "I634:12490;114:1137",
+      "masterPaints": 0,
+      "instancePaints": 0,
+      "equal": true
+    },
+    {
+      "master": "634:12418",
+      "instance": "I634:12490;114:1240",
+      "masterPaints": 48,
+      "instancePaints": 48,
+      "equal": true
+    }
+  ],
+  "corrections": [
+    "Title and clipped Severity",
+    "Hidden helper text and clipped floating labels",
+    "Actual small bordered Add variant and text",
+    "Resting multiline Comments with sample text cleared",
+    "Plan Button variant/height corrected from code and published component"
+  ],
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-allergies-edit-2026-09-09/comparison-allergies-edit.png",
+    "inspectedByExecutor": true,
+    "operatorApproval": "Pending; comparison shown, next item not started",
+    "observations": [
+      "Full content order matches source; approved floating labels and canonical spacing applied.",
+      "No clipped controls or placeholder sample text; footer complete.",
+      "Known two GAPs and back DEFECT marked alongside comparison.",
+      "Original and rebuild are at natural size; helper backgrounds are transparent below the content."
+    ]
+  },
+  "standingBatchRules": {
+    "1_instancePaintVerification": "PASS — six actual comparison instances matched their masters: 191 solid paints, no color/alpha/binding mismatch.",
+    "2_unboundPaintAudit": "PASS — all four pages walked; only new unbound paints are organizer section fills/strokes; existing exceptions preserved in live-audit.json.",
+    "3_referenceCounts": "PASS — no variant clone; stored property values verified against rendered text. Body choices 15→16, comparison choices 18→19, defaults unchanged.",
+    "4_skipInvisibleFalse": "PASS — skipInvisibleInstanceChildren=false for every final page and instance audit.",
+    "5_opacityLast": "PASS — no paint-opacity override authored.",
+    "6_enumerateDontRecall": "PASS — live four-page trees enumerated; actual IDs and counts saved.",
+    "7_fileIdentityFirst": "PASS — explicit target fileKey and four-page identity verified; source/library read only, task-specific target deviation retained.",
+    "8_roundWithRecord": "PASS — zero fractional authored geometry on all four pages; no new rounding decisions.",
+    "9_boundPaintAlpha": "PASS — inherited bound paints retained; actual instance alpha and binding match master.",
+    "10_cloneDropsPropertyRefs": "PASS — no variants cloned; all eleven change rows and controls render supplied labels in the placed comparison."
+  },
+  "toolCalls": {
+    "figmaRead": null,
+    "figmaWrite": null,
+    "screenshot": 5,
+    "correctionCycles": 2,
+    "note": "Full inherited session call totals not instrumented; null means unavailable."
+  }
+}

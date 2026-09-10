@@ -410,7 +410,7 @@
       "id": "npve-allergies-edit",
       "title": "Allergies · Edit Allergen form (sidesheet)",
       "workstream": "NPVE Rebuild / Sidesheets",
-      "status": "queued",
+      "status": "complete",
       "dependsOn": [],
       "source": {
         "fileKey": "zVsuhYehoSLLq880qRBFkq",
@@ -518,7 +518,8 @@
         "audit": "figma-export/npve-allergies-edit-2026-09-09/audit-allergies-edit.json",
         "report": "figma-export/npve-allergies-edit-2026-09-09/report.md",
         "comparisonRender": "figma-export/npve-allergies-edit-2026-09-09/comparison-allergies-edit.png"
-      }
+      },
+      "completedAt": "2026-09-10T04:31:50.152Z"
     },
     {
       "id": "npve-family-history-edit",

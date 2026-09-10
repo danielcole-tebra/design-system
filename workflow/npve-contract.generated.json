@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-10T00:21:18.901Z",
+  "generatedAt": "2026-09-10T04:31:30.447Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "4063cd2d9c3b9f74244837f81674fdfccb6c8111e7251e57405e4c896c40aa51",
+      "sha256": "4151bea4d7d620833e83c665d9805119ab2ff1c7f5a1b1a87e9b0b0512845030",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "c57ebf2a1f29bd54376da4f05d99f023eaea3e3ede11fc7b7cd0ed587f9364b4"
+        "sha256": "e007c748f3ddbb6f0f2dd1f47efa959713cd4bb294197b416b510b0a43da9186"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "12b0438f8b26a6976ce991d96786ed62238a9ee09be9a155f57438cb6b319d38"
+        "sha256": "7a73e3ea48d1484c644ecf2a06e621f39063ba66e9d9230569c914e0a5d71c4d"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -308,13 +308,11 @@
       "date": "2026-09-09",
       "workstream": "npve",
       "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
-      "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, f"
+      "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History."
     },
     "recordGate": {
-      "inProgress": [
-        "npveRebuild_allergiesEdit_2026-09-09"
-      ],
-      "clear": false,
+      "inProgress": [],
+      "clear": true,
       "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
     },
     "byWorkstream": {
@@ -333,7 +331,7 @@
           "id": "npveRebuild_allergiesEdit_2026-09-09",
           "date": "2026-09-09",
           "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
-          "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, f"
+          "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History."
         }
       },
       "workflow": {
@@ -894,9 +892,9 @@
       {
         "id": "npveRebuild_allergiesEdit_2026-09-09",
         "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
-        "status": "IN PROGRESS — risk locked, approval and caption decision recorded; target identity verified live (read-only) 2026-09-09; source read and the build (reference, form, comparison, verification, report) remain, in a write-capable session.",
+        "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History.",
         "date": "2026-09-09",
-        "outcome": null,
+        "outcome": "Reusable 518×468 form and body; complete 550×644 sheet; frozen original and full comparison on Screens section 22. Executor checks passed; operator review pending.",
         "geometry": null,
         "decision": null,
         "report": "figma-export/npve-allergies-edit-2026-09-09/report.md",
@@ -1028,6 +1026,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "7fe032cc33399680e1ee3b64ae55c3ee716822f5f65da163e4a0e0a71b38a09b"
+    "contractSha256": "fe5ace24ac97ba736edd613bff52a0b9e04b8f62a641c2d82e2fb8693759e6e7"
   }
 }
