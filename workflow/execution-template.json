@@ -1,6 +1,6 @@
 {
   "format": "tebra.design-execution",
-  "version": 1,
+  "version": 2,
   "itemId": "",
   "recordId": "",
   "preflight": {
@@ -11,6 +11,10 @@
     "controls": [
       { "name": "", "component": "", "properties": {}, "evidence": "" }
     ]
+  },
+  "appearance": {
+    "specification": "workflow/appearance/npve-edit-forms.md",
+    "review": null
   },
   "corrections": [],
   "milestones": [

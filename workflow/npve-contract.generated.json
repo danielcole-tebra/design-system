@@ -1,25 +1,25 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-10T12:53:33.629Z",
+  "generatedAt": "2026-09-10T21:06:38.556Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "0a0dd5e5e16062f81b802de8f2e4a95b8cc4f367dc988e623b94f6af9e415cdc",
+      "sha256": "41afe108744563af57d378f283d8b986e3c18e72c7ce1e53697590201680cdf4",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "b646259909ba45b9c97caabb21b0964f56d0cbcd6574bc64c36deb844e5c59e4"
+        "sha256": "f9bad7e9b07a3d6b1d1e75bab0fd6addd28005b11d6711db95f8b124748dba79"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "2b854e0f09b4a778c551102e1a46b67919dd903e4ba6989795e7ccba943aa45a"
+        "sha256": "4a3db95bc6bc7515ceefdde508b5ff608feede0a68644f9d89c4cd578c6b6865"
       },
       "flagsActive": {
         "path": "flags/active.json",
-        "sha256": "70803b2cc531a83e228b4664a7a415acb9e753d85c95b727f4f1bab11fcb2b49"
+        "sha256": "259a60ec23a031961ae80d95ed31daaba8555b10c89056dc742985cd4c82e529"
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
@@ -29,9 +29,9 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 96,
+      "records": 98,
       "flags": {
-        "active": 229,
+        "active": 230,
         "resolved": 58
       }
     },
@@ -42,7 +42,7 @@
       },
       {
         "path": "CLAUDE.md",
-        "sha256": "a6f8bd53d5c82b628e4fc678928008d082b86c1ed37a1c5e1c7b19297404a866"
+        "sha256": "ed50371261bb89815ecdeeb5cea8cc7cdeaff5d4e6a834ac97c746f55cb07599"
       },
       {
         "path": "AGENTS.md",
@@ -50,11 +50,11 @@
       },
       {
         "path": "OPERATORS.md",
-        "sha256": "d47e9db54f659aaf82f92ee3f15d03c296355cab73743c27322b2c3a95596219"
+        "sha256": "004a2dc3c62352e9038e8ad992d5255e4de105939f00fa8ebeb8c80f63da66ec"
       },
       {
         "path": "workflow/execution-policy.md",
-        "sha256": "e07a4eefd5b29e3548713e73b90f623fbc4d20bf981a171db81957a341fad873"
+        "sha256": "cab13e49555125059c281656e5c537621008613dd515b8d7dd26b0956d4c6ae8"
       },
       {
         "path": ".github/copilot-instructions.md",
@@ -281,7 +281,7 @@
     "version": 1,
     "sourceRecord": "workflow_executionReliability_2026-09-10",
     "summary": "Verify component mappings, build visible milestones, recover from actual state with bounded retries, and preserve a portable execution checkpoint. Resolve routine facts and repairs within scope; ask the UX designer only for real decisions.",
-    "text": "# Reliable execution across models and harnesses\n\nApplies to every executor. Adopted by `workflow_executionReliability_2026-09-10` after the Allergies recovery. Read this once per session; it is also included in the generated contract. This clarifies how to execute approved work, without lowering its risk or replacing the ten standing batch checks.\n\nThe execution checkpoint is for Figma build runs. Repository-only work records canvas checks as not applicable; never fabricate component mappings or screenshots to satisfy a documentation batch.\n\n## Talk to the operator as a UX designer\n\nLead with what changed on the screen. Use familiar design language and show saved screenshots for comparison. Keep code, property names, node IDs, schema details, command transcripts and diagnostic tables in the report unless the operator asks for them or needs a specific setup action. Provide a concise progress update about once a minute during active work: what is now visible, what remains, or the exact obstacle. Never describe an unverified edit as complete.\n\nPlanning and execution may happen in one session. The selected model can do both within the operator-approved scope. Do not require Claude, a second chat, a plugin stack, or manual message copying. A change of model or harness is a continuation of the same batch, not permission to restart or duplicate it.\n\n## Establish a buildable plan once\n\nUse the lean startup. Confirm the repository root, target file/page identity and current batch state. Inspect the actual authenticated tool list and make a read-only call against the target. A tool name, seat type or successful identity call does not alone prove canvas write permission. Verify writing through the first intended, authorized edit and its readback; do not create disposable probes solely to test it.\n\nBefore building, check the distinct controls needed for the next visible milestone against the actual published components: exact component identity, variant choices, exposed properties and dimensions. Repeated controls can cite the same evidence. Reuse verified mappings from the same session or a current precedent; do not rediscover the whole library. Revalidate a reused mapping if it fails or the library has changed.\n\nRecord the results in the batch's small `execution.json` checkpoint using `workflow/execution-template.json`. Cite saved readback evidence, rather than writing only “verified.” Control evidence uses the native property definitions in a JSON snapshot, as described in `workflow/README.md`; the validator checks the requested properties against it. This supports resumption and the start/finish gates; it is not another approval request or a second batch record. The IN PROGRESS record remains authoritative for scope, decisions and dispositions.\n\nTreat a prompt's component names and estimated dimensions as hypotheses until checked. The Allergies plan called for an outlined 36px Add button; the published white bordered small button was named contained/primary and measured 30px. Resolve an unambiguous factual mistake from code, Storybook and library evidence, document original → correction, and continue within approved intent. Do not invent a missing variant, resize a library control to satisfy an estimate, or repeatedly try an unavailable value. An actual code/library divergence or multiple defensible design choices remains a finding for the operator; do not silently “repair” the library.\n\n## Build visible milestones inside one batch\n\nUse a short sequence such as form → complete sheet → comparison and closeout. A milestone is an internal checkpoint, not a new record or permission boundary. Continue through the authorized batch after it passes.\n\nMake a small group of dependent edits, then check the affected nodes. After a meaningful visual milestone, save and inspect a screenshot before extending it. Check expected text, missing controls, clipping, layout overflow, selected states and default/sample content. Inspect actual instance rendering, not just stored properties or master nodes. Run the required full-page and ten-rule audits at batch completion; repeat broad audits only if subsequent changes invalidate them. The existing concurrency guard still runs before mutations.\n\nUse documented APIs for the current tool. Load and await the actual fonts before changing text; set instance properties by their exact exposed names; append new nodes to the intended parent immediately; apply fill/hug sizing after fixed resizing. Import and use remote components in the same call. Never swallow an error or assume a generic helper changed a property: read back the affected node and inspect its rendered text. Prefer stable IDs and scoped searches over repeated whole-file scans. One discovery inventory is enough unless new evidence requires another.\n\n## Recover without a retry loop\n\nA failed or disconnected write may still have landed. Read the affected IDs and parent children before any retry. Classify the result as applied, not applied, or still uncertain. If applied, continue from that state; if not applied, make an evidence-based correction; if uncertain, perform read-only diagnosis. Never replay a creation blindly. Server hints such as `safeToRetryWithoutCanvasRead` are not proof of canvas state.\n\nAfter two unsuccessful attempts at the same operation, stop that operation. Rephrasing the prompt or changing models does not reset this limit. Inspect the exact error and current state once, then use a materially different, evidence-supported approach. Record what changed and verify its result. If no supported correction is available, save the checkpoint and report the specific blocker. Work on independent authorized parts may continue. Do not reinstall servers, switch endpoints, change authentication or add plugins without evidence that the failure is in that layer.\n\nIf about five minutes pass without a verified visual change or a concrete diagnostic finding, checkpoint and diagnose the lack of progress instead of accepting another unbounded “Continue.” This is a progress signal, not a total task deadline: slow exports and worthwhile diagnosis can take longer. Do not keep a user waiting through identical retries.\n\nKeep unresolved failures in `execution.json` until readback evidence establishes their resolution. Do not clear them merely to pass a validator. Log failed operation, exact error, known node IDs, whether a mutation landed, and the next different approach in a short batch note. Do not record tokens, credentials, signed asset URLs or guessed tool-call counts.\n\n## Routine repairs and human decisions\n\nWithin the approved batch, the executor may correct labels and component properties, clipping and layout mistakes, empty generated placeholders, or a misplaced node it can identify as belonging to this batch. Record moves/conversions/supersession in the IN PROGRESS record **before** performing them, preserving IDs or recording old → new IDs. No second permission is needed for such a repair. Never delete: archive unused batch scaffolding with a README, and do not displace verified or unrelated work. An unrelated leftover does not block a separate, safe part of the form.\n\nAsk the operator only when a real design choice, ownership ambiguity, scope/risk expansion, destructive action or explicit approval boundary remains. Present the visible consequence and a recommendation in plain language. Routine factual corrections are reported, not turned into taste questions. Do not weaken locked risk, oversight or file boundaries to get a gate to pass.\n\nPreserve unrelated dirty files. New runs fingerprint them at startup; finish allows them only if unchanged. Do not hide, relocate, commit or expand the allowlist for unrelated work merely to make a finish gate green. For an older run without a baseline, report that limitation with the completed evidence rather than fabricating a baseline after the fact; it is a workflow limitation, not a reason to rebuild Figma.\n\n## Resume and close\n\nAt a handoff, keep the IN PROGRESS record, saved control mappings and this checkpoint. List verified milestone renders, actual created/moved IDs, unresolved errors, and exactly one next action. Resume by checking those IDs once. Do not reread every historical record, rebuild a completed milestone, or retest authentication just because the model changed.\n\nAt close, every planned milestone must have a saved render inspected by the executor, all unresolved failures must have a recorded resolution, and all existing standing checks still apply. Show the comparison to the operator, save the report, finalize and commit. Record operator acceptance in the next appropriate record without editing a DONE record. A screenshot checkpoint does not silently grant approval for the next batch.\n\n## What the local checks can and cannot guarantee\n\nNew workflow runs require `execution.json` at start, validate it before mutations, and require verified milestone renders at finish. The checker rejects missing mappings/evidence, unresolved failures and incomplete milestones. Historical runs are not retroactively invalidated. It checks the submitted evidence and local files; it cannot independently authenticate Figma, inspect pixels, count unreported retries or force a harness to call it. The executor must follow this policy honestly. Evaluate cheaper models on a clean bounded task by visible progress, corrections and total cost/time, not token price alone.\n"
+    "text": "# Reliable execution across models and harnesses\n\nApplies to every executor. Adopted by `workflow_executionReliability_2026-09-10` after the Allergies recovery. Read this once per session; it is also included in the generated contract. This clarifies how to execute approved work, without lowering its risk or replacing the ten standing batch checks.\n\nThe execution checkpoint is for Figma build runs. Repository-only work records canvas checks as not applicable; never fabricate component mappings or screenshots to satisfy a documentation batch.\n\n## Talk to the operator as a UX designer\n\nLead with what changed on the screen. Use familiar design language and show saved screenshots for comparison. Keep code, property names, node IDs, schema details, command transcripts and diagnostic tables in the report unless the operator asks for them or needs a specific setup action. Provide a concise progress update about once a minute during active work: what is now visible, what remains, or the exact obstacle. Never describe an unverified edit as complete.\n\nPlanning and execution may happen in one session. The selected model can do both within the operator-approved scope. Do not require Claude, a second chat, a plugin stack, or manual message copying. A change of model or harness is a continuation of the same batch, not permission to restart or duplicate it.\n\n## Establish a buildable plan once\n\nUse the lean startup. Confirm the repository root, target file/page identity and current batch state. Inspect the actual authenticated tool list and make a read-only call against the target. A tool name, seat type or successful identity call does not alone prove canvas write permission. Verify writing through the first intended, authorized edit and its readback; do not create disposable probes solely to test it.\n\nBefore building, check the distinct controls needed for the next visible milestone against the actual published components: exact component identity, variant choices, exposed properties and dimensions. Repeated controls can cite the same evidence. Reuse verified mappings from the same session or a current precedent; do not rediscover the whole library. Revalidate a reused mapping if it fails or the library has changed.\n\nRecord one short, reusable appearance specification for the composition: card surface, field surface, borders, selected/focused states, and the evidence or approved decision behind them. Link it in `appearance.specification` in new execution checkpoints; do not duplicate it for every field. See `workflow/appearance/npve-edit-forms.md` for the current edit-form requirement. A precedent is reusable only for the properties actually verified: a previously accepted layout is not proof of correct surfaces. Check its linked open findings before reuse.\n\nA transparent library input does not determine the surface of the composed field. Check the enclosing treatment and code/Storybook evidence. Preserve code-first authority: implement the approved appearance using the supported token/composition treatment; if the library cannot express it, report the conflict or GAP instead of silently editing the shared library or inventing an override.\n\nRecord the results in the batch's small `execution.json` checkpoint using `workflow/execution-template.json`. Cite saved readback evidence, rather than writing only “verified.” Control evidence uses the native property definitions in a JSON snapshot, as described in `workflow/README.md`; the validator checks the requested properties against it. This supports resumption and the start/finish gates; it is not another approval request or a second batch record. The IN PROGRESS record remains authoritative for scope, decisions and dispositions.\n\nTreat a prompt's component names and estimated dimensions as hypotheses until checked. The Allergies plan called for an outlined 36px Add button; the published white bordered small button was named contained/primary and measured 30px. Resolve an unambiguous factual mistake from code, Storybook and library evidence, document original → correction, and continue within approved intent. Do not invent a missing variant, resize a library control to satisfy an estimate, or repeatedly try an unavailable value. An actual code/library divergence or multiple defensible design choices remains a finding for the operator; do not silently “repair” the library.\n\n## Build visible milestones inside one batch\n\nUse a short sequence such as form → complete sheet → comparison and closeout. A milestone is an internal checkpoint, not a new record or permission boundary. Continue through the authorized batch after it passes.\n\nMake a small group of dependent edits, then check the affected nodes. After a meaningful visual milestone, save and inspect a screenshot before extending it. Check expected text, missing controls, clipping, layout overflow, selected states and default/sample content. Inspect actual instance rendering, not just stored properties or master nodes. Run the required full-page and ten-rule audits at batch completion; repeat broad audits only if subsequent changes invalidate them. The existing concurrency guard still runs before mutations.\n\nAt the completed comparison, inspect the whole form, not only the latest repair: card/field surfaces and contrast, borders, labels/content, states, spacing/clipping, and actions. Each material difference from the reference must be corrected or explained by cited code/Storybook evidence and an approved decision where required. Record this brief review at `appearance.review`, with the final screenshot, the inspected areas, and a `differences` list (empty only when no material differences remain). Each difference states the observation, disposition (`corrected` or `approved`), and evidence. A saved image or a passing validator is not visual proof by itself.\n\nIf a defect came from a reused pattern, append one tracked finding naming the precedent and known derivatives, with separate review/repair status for each. Link that finding from the appearance specification so the next builder encounters it without a history search. Do not mark all consumers fixed from one corrected screenshot, rewrite DONE records, or expand the current repair to other forms without authorization. Add new consumers when discovered; broad inventory is not required for every batch.\n\nUse documented APIs for the current tool. Load and await the actual fonts before changing text; set instance properties by their exact exposed names; append new nodes to the intended parent immediately; apply fill/hug sizing after fixed resizing. Import and use remote components in the same call. Never swallow an error or assume a generic helper changed a property: read back the affected node and inspect its rendered text. Prefer stable IDs and scoped searches over repeated whole-file scans. One discovery inventory is enough unless new evidence requires another.\n\n## Recover without a retry loop\n\nA failed or disconnected write may still have landed. Read the affected IDs and parent children before any retry. Classify the result as applied, not applied, or still uncertain. If applied, continue from that state; if not applied, make an evidence-based correction; if uncertain, perform read-only diagnosis. Never replay a creation blindly. Server hints such as `safeToRetryWithoutCanvasRead` are not proof of canvas state.\n\nAfter two unsuccessful attempts at the same operation, stop that operation. Rephrasing the prompt or changing models does not reset this limit. Inspect the exact error and current state once, then use a materially different, evidence-supported approach. Record what changed and verify its result. If no supported correction is available, save the checkpoint and report the specific blocker. Work on independent authorized parts may continue. Do not reinstall servers, switch endpoints, change authentication or add plugins without evidence that the failure is in that layer.\n\nIf about five minutes pass without a verified visual change or a concrete diagnostic finding, checkpoint and diagnose the lack of progress instead of accepting another unbounded “Continue.” This is a progress signal, not a total task deadline: slow exports and worthwhile diagnosis can take longer. Do not keep a user waiting through identical retries.\n\nKeep unresolved failures in `execution.json` until readback evidence establishes their resolution. Do not clear them merely to pass a validator. Log failed operation, exact error, known node IDs, whether a mutation landed, and the next different approach in a short batch note. Do not record tokens, credentials, signed asset URLs or guessed tool-call counts.\n\n## Routine repairs and human decisions\n\nWithin the approved batch, the executor may correct labels and component properties, clipping and layout mistakes, empty generated placeholders, or a misplaced node it can identify as belonging to this batch. Record moves/conversions/supersession in the IN PROGRESS record **before** performing them, preserving IDs or recording old → new IDs. No second permission is needed for such a repair. Never delete: archive unused batch scaffolding with a README, and do not displace verified or unrelated work. An unrelated leftover does not block a separate, safe part of the form.\n\nAsk the operator only when a real design choice, ownership ambiguity, scope/risk expansion, destructive action or explicit approval boundary remains. Present the visible consequence and a recommendation in plain language. Routine factual corrections are reported, not turned into taste questions. Do not weaken locked risk, oversight or file boundaries to get a gate to pass.\n\nPreserve unrelated dirty files. New runs fingerprint them at startup; finish allows them only if unchanged. Do not hide, relocate, commit or expand the allowlist for unrelated work merely to make a finish gate green. For an older run without a baseline, report that limitation with the completed evidence rather than fabricating a baseline after the fact; it is a workflow limitation, not a reason to rebuild Figma.\n\n## Resume and close\n\nAt a handoff, keep the IN PROGRESS record, saved control mappings and this checkpoint. List verified milestone renders, actual created/moved IDs, unresolved errors, and exactly one next action. Resume by checking those IDs once. Do not reread every historical record, rebuild a completed milestone, or retest authentication just because the model changed.\n\nAt close, every planned milestone must have a saved render inspected by the executor, all unresolved failures must have a recorded resolution, and all existing standing checks still apply. Show the comparison to the operator, save the report, finalize and commit. Record operator acceptance in the next appropriate record without editing a DONE record. A screenshot checkpoint does not silently grant approval for the next batch.\n\n## What the local checks can and cannot guarantee\n\nNew workflow runs require `execution.json` at start, validate it before mutations, and require verified milestone renders at finish. The checker rejects missing mappings/evidence, unresolved failures and incomplete milestones. Historical runs are not retroactively invalidated. It checks the submitted evidence and local files; it cannot independently authenticate Figma, inspect pixels, count unreported retries or force a harness to call it. The executor must follow this policy honestly. Evaluate cheaper models on a clean bounded task by visible progress, corrections and total cost/time, not token price alone.\n"
   },
   "operatingLoop": [
     "Validate this contract before reading it as current truth.",
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "workflow_executionReliability_2026-09-10",
+      "id": "workflow_appearanceReview_2026-09-10",
       "date": "2026-09-10",
       "workstream": "workflow",
-      "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
-      "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch."
+      "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
+      "status": "DONE — reusable appearance specification and whole-form review requirements installed"
     },
     "recordGate": {
       "inProgress": [],
@@ -343,21 +343,21 @@
         }
       },
       "npve": {
-        "count": 63,
+        "count": 64,
         "latest": {
-          "id": "npveRebuild_allergiesEdit_2026-09-09",
+          "id": "npveRebuild_familyHistoryEdit_2026-09-09",
           "date": "2026-09-09",
-          "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
-          "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History."
+          "path": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json",
+          "status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review."
         }
       },
       "workflow": {
-        "count": 8,
+        "count": 9,
         "latest": {
-          "id": "workflow_executionReliability_2026-09-10",
+          "id": "workflow_appearanceReview_2026-09-10",
           "date": "2026-09-10",
-          "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
-          "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch."
+          "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
+          "status": "DONE — reusable appearance specification and whole-form review requirements installed"
         }
       }
     }
@@ -744,40 +744,6 @@
     ],
     "recentRecords": [
       {
-        "id": "workflowRefactor_stateCheck_2026-09-08",
-        "path": "records/workflow/2026-09-08/workflowRefactor_stateCheck_2026-09-08.json",
-        "status": "READ-ONLY STATE CHECK. Stands in, per agent rule 10, for the missing record of the workflow-refactor batches committed 2026-09-08 as c88ce6c, 5b4d119, 146e867 and c27235a. The closeout prompt named a record workflowRefactor_handoff_2026-09-08 that was never written. No Figma writes.",
-        "date": "2026-09-08",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": null,
-        "target": null
-      },
-      {
-        "id": "workflowRefactor_closeout_2026-09-08",
-        "path": "records/workflow/2026-09-08/workflowRefactor_closeout_2026-09-08.json",
-        "status": "DONE. Contract completed with provenance (workflow/rules.json), instruction files thinned to pointers, risk attribution corrected and tiers left unapproved pending a quoted operator approval, proof convention adopted and applied, PMHx change log extended by two rows, three references re-exported at 2x with re-dated captions, four proofs archived, pilot run 1 measured against the Facility Stay baseline, ten standing rules run.",
-        "date": "2026-09-08",
-        "outcome": [
-          "Step 1: workflow/rules.json holds the eleven agent rules, the record gate, standing rules 14 and 15, the sheet and comparison techniques, the proof convention and 24 NPVE values, each with sourceRecord provenance (24 cited records verified present by the generator). CLAUDE.md, AGENTS.md and OPERATORS.md now point at it; CLAUDE.md shrank from 10,593 to 8,443 bytes, AGENTS.md from 3,229 to 2,036.",
-          "Step 2: manifest risk objects carry proposedBy (Codex, commit 146e867) and approval {status: unapproved, quote: null, history}. The false \"Cole (operator)\" assignment is kept as history with its basis. No approval arrived with this batch, so all three tiers stay unapproved; lock-risk.js now requires a verbatim quote and start-batch.js requires --confirm for unapproved tiers.",
-          "Step 3: proof convention written to rules.json and the contract; the four PMHx proofs were renamed PROOF — <batch> · <what> and moved unchanged to Archive 06 · Pilot proofs (570:10455); the Archive README gained a paragraph.",
-          "Step 4: change log 560:6172 gained rows \"Button label | …to Note → …To Note | Code capitalises button labels\" and \"Comments field | Focused in the mockup → resting | We build default states, the mockup caught a click\" (480x385 → 480x555). References 518:5826, 537:5841 and 558:6085 now hold 2x exports (1036x64, 1036x168, 1164x1232) placed by upload_assets with rectangle geometry unchanged; the three Source captions read \"exported 2026-09-08 at 2x\". Capitalised label and resting field kept.",
-          "Step 5: workflow/metrics.json version 2 holds the Facility Stay baseline and pilot run 1 of 3 with the same counting method; context loaded fell 94.7%, tool calls and turns rose because one sheet became three gated items.",
-          "Step 6: four-page audit, master/instance paint checks on the new rows, and renders of every touched node inspected; see verification."
-        ],
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/workflow-refactor-closeout-2026-09-08/report.md",
-        "target": {
-          "file": "fdCQVFdvOByaOYIJYag0d6",
-          "templatesPage": "3:2",
-          "screensPage": "27:2",
-          "archivePage": "126:2"
-        }
-      },
-      {
         "id": "workflowRefactor_tierApproval_2026-09-08",
         "path": "records/workflow/2026-09-08/workflowRefactor_tierApproval_2026-09-08.json",
         "status": "DONE. Documentation batch. Operator approval of the four risk classes and of the three PMHx tiers recorded verbatim; human-decision added to protocol.json; retroactive locks written for the three complete items. No Figma file opened or written.",
@@ -906,15 +872,31 @@
         "decision": null,
         "report": "figma-export/workflow-execution-reliability-2026-09-10/report.md",
         "target": null
+      },
+      {
+        "id": "npveRebuild_familyHistoryEdit_2026-09-09",
+        "path": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json",
+        "status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review.",
+        "date": "2026-09-09",
+        "outcome": "Reusable 518x468 form/body and 550x644 Sidesheet, with white field surfaces, shared swap-menu access, frozen reference, marked GAP/DEFECT, and sole comparison on Screens section 23.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-family-history-edit-2026-09-09/report.md",
+        "target": null
+      },
+      {
+        "id": "workflow_appearanceReview_2026-09-10",
+        "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
+        "status": "DONE — reusable appearance specification and whole-form review requirements installed",
+        "date": "2026-09-10",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-appearance-review-2026-09-10/report.md",
+        "target": null
       }
     ],
     "openFlags": [
-      {
-        "id": "npveWorkflows_templateMenuInlineField",
-        "severity": "low",
-        "summary": "The Template dropdown panel combines a Save-as text field with a two-line item list; library Menu/Item is one line and Menu has no field slot.",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
       {
         "id": "npveWorkflows_patientHeaderNotInLibrary",
         "severity": "medium",
@@ -1028,11 +1010,17 @@
         "severity": "low",
         "summary": "The Family History edit source 129:12486 (Clin_FHX-Editing) draws footer Save as outlined (button 129:12800, Type=Default, white fill, 1px #8CA7A2, 66x36) where Allergies 129:7949, Facility Stay 648:1735, Hospitalizations 129:8516 and Procedures 129:8773 all use Type=Primary (coral #FF8D6E pill). First surfaced in figma-export/npve-planning-2026-09-09/proposal.md; record npveRebuild_allergiesEdit_2026-09-09 originally misattributed it to Allergies and was amended 2026-09-09.",
         "discoveredDuring": "npveRebuild_allergiesEdit_2026-09-09"
+      },
+      {
+        "id": "npveEditForms_fieldSurfaceInheritance_2026-09-10",
+        "severity": "OPEN — composition surface mismatch; per-consumer repair evidence required",
+        "summary": null,
+        "discoveredDuring": null
       }
     ],
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "959aaaa641162cc156f7763c2947ce9651f592c1fd19334609ec447cef9296b4"
+    "contractSha256": "b9e79d44f9446b1b81897ec7f91c5927cc6139417326f04ed48dea1e4afc459a"
   }
 }

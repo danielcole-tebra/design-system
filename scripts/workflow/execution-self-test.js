@@ -35,6 +35,23 @@ try {
   accepts(ready, 'ready');
   accepts(finished, 'finish');
   accepts(finished, 'ready'); // Resuming verified work is valid; it must not be rebuilt.
+  const visual = structuredClone(finished);
+  visual.version = 2;
+  visual.appearance = { specification: 'batch/readback.json', review: {
+    render: 'batch/comparison.png', inspected: true,
+    areas: { surfaces: 'White fields on teal card', borders: 'Field outlines visible', content: 'Expected labels present', states: 'Living selected', layout: 'No clipped rows', actions: 'Save white bordered' },
+    differences: [{ observation: 'Floating labels replace captions', disposition: 'approved', evidence: 'Recorded caption decision A' }]
+  } };
+  accepts(visual, 'finish');
+  const visualReady = structuredClone(visual); visualReady.appearance.review = null;
+  accepts(visualReady, 'ready');
+  rejects(visual, d => { delete d.appearance; }, /appearance specification/);
+  rejects(visual, d => { d.appearance.specification = 'missing.md'; }, /missing or empty/);
+  rejects(visual, d => { d.appearance.review = null; }, /whole-form review/);
+  rejects(visual, d => { delete d.appearance.review.areas.surfaces; }, /surfaces observation/);
+  rejects(visual, d => { d.appearance.review.render = 'batch/not-image.png'; }, /not a PNG/);
+  rejects(visual, d => { d.appearance.review.differences[0].disposition = 'unresolved'; }, /corrected\/approved/);
+  rejects(visual, d => { d.appearance.review.differences[0].evidence = ''; }, /evidence/);
   rejects(ready, () => {}, /not verified/);
   rejects(finished, d => { d.preflight.targetFileKey = 'wrong-file'; }, /identity mismatch/);
   rejects(finished, d => { d.recordId = 'other-record'; }, /record mismatch/);

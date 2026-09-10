@@ -1,0 +1,26 @@
+{
+  "verifiedAt": "2026-09-10",
+  "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "method": "mcp_figma_mcp_ser_get_metadata on the document root and page 3:2",
+  "pages": [
+    { "id": "0:1", "name": "Cover" },
+    { "id": "3:2", "name": "Templates" },
+    { "id": "27:2", "name": "Screens" },
+    { "id": "126:2", "name": "Archive" }
+  ],
+  "templatesEvidence": {
+    "page": "3:2",
+    "shell": { "sidesheetMasterFrame": "279:2446", "floating": "6:65", "dockedRight": "279:2416", "dockedLeft": "279:2431" },
+    "precedentSections": {
+      "familyHistoryDisplay": "346:3079 (10 · Family history; condition row 346:3080, member card 346:3089, body 346:3113 — untouched by this batch)",
+      "hospitalizationsEdit": "580:6012",
+      "proceduresEdit": "586:6413",
+      "allergiesEdit": "634:6807 (form 634:6808 518x468, body 634:6809, rebuild 634:11955, reference 634:12416, change log 634:12418)"
+    },
+    "nextTemplatesSectionY": 48060,
+    "comparisonMaster": "35:332",
+    "changeLogRow": "18:103"
+  },
+  "screensEvidence": "page 27:2 exists (verified in the same document listing); sections 20-22 hold the runs 2-3 and Allergies comparisons with reused GAP markers 581:11754 / 581:11761 and DEFECT marker 634:13034",
+  "skipInvisibleInstanceChildren": false
+}

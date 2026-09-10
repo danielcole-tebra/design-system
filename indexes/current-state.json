@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "workflow_executionReliability_2026-09-10",
+  "id": "workflow_appearanceReview_2026-09-10",
   "date": "2026-09-10",
   "workstream": "workflow",
-  "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
-  "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch."
+  "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
+  "status": "DONE — reusable appearance specification and whole-form review requirements installed"
  },
  "recordGate": {
   "inProgress": [],
@@ -25,32 +25,32 @@
    }
   },
   "npve": {
-   "count": 63,
+   "count": 64,
    "latest": {
-    "id": "npveRebuild_allergiesEdit_2026-09-09",
+    "id": "npveRebuild_familyHistoryEdit_2026-09-09",
     "date": "2026-09-09",
-    "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
-    "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History."
+    "path": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json",
+    "status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review."
    }
   },
   "workflow": {
-   "count": 8,
+   "count": 9,
    "latest": {
-    "id": "workflow_executionReliability_2026-09-10",
+    "id": "workflow_appearanceReview_2026-09-10",
     "date": "2026-09-10",
-    "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
-    "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch."
+    "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
+    "status": "DONE — reusable appearance specification and whole-form review requirements installed"
    }
   }
  },
  "flags": {
-  "active": 229,
+  "active": 230,
   "resolved": 58
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "0a0dd5e5e16062f81b802de8f2e4a95b8cc4f367dc988e623b94f6af9e415cdc",
-  "bytes": 1478217
+  "sha256": "41afe108744563af57d378f283d8b986e3c18e72c7ce1e53697590201680cdf4",
+  "bytes": 1500339
  }
 }

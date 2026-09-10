@@ -1,0 +1,132 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "npve-family-history-edit",
+  "capturedAt": "2026-09-10T20:30:00.000Z",
+  "executors": {
+    "build": "GitHub Copilot (Z.ai GLM)",
+    "closeout": "Codex (OpenAI)"
+  },
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false,
+    "scope": "Every node on every page; locally authored geometry separated from inherited instance internals; actual comparison instances; shared defaults and preferred-value APIs; final visual comparison."
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "details": "All visible production surfaces added or changed by this batch are token-bound. Existing unbound exceptions are the Cover artwork and organizer section fills/strokes; the unrelated MODEL TEST organizer is preserved."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "details": "Zero locally authored fractional nodes on Cover, Templates, Screens, and Archive. Half-pixel text positions seen only inside inherited component instances are not local authored geometry."
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "Exactly one placed Family History comparison and one instance of each helper. Sidesheet Body content choices are 17 and include the Family History body. All three comparison choices are 20 and include the matching helper."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "Form bf60d1b5..., body eb15da50..., rebuild helper f66fba20..., reference helper f1f7edc1..., and change helper 6f7b165b... remain live components; the sheet and comparison remain linked instances."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "Verified published Autocomplete, Text field, Radio/Form control label, Button and Icon button mappings from controls-snapshot.json. Rendered Family History title, values, states, conditions, comments, and actions are present once in the intended order."
+    },
+    "instancePaintVerification": {
+      "pass": true,
+      "details": "Form/master instance 93/93, body/master instance 93/93, rebuild helper 118/118, reference helper 0/0, and change helper 48/48 solid paints match in color, opacity, and binding."
+    },
+    "sharedDefaultsAndGeometry": {
+      "pass": true,
+      "details": "Sidesheet default remains 26:221 at 550x600; comparison defaults remain 114:777, 114:779, and 114:880 at 1708x1290. Only preferred-value lists grew additively."
+    },
+    "fieldSurfaces": {
+      "pass": true,
+      "details": "Relationship 636:8, Age 637:31, Add condition 636:20, Diabetes 636:14, Hypertension 636:17, and Comments 636:22 are bound to color/background/paper; the form card remains bound to NPVE/Color Form surface."
+    },
+    "semanticNames": {
+      "pass": true,
+      "details": "No locally authored Allergies, reaction, flushing, or hives layer names remain inside the Family History production form/body/rebuild helper."
+    },
+    "reference": {
+      "pass": true,
+      "details": "Frozen source export is 1100x1370 and displayed at 550x685 at 1:1 design scale; source node 129:12486 remains read only."
+    },
+    "sourceAndLibrary": {
+      "pass": true,
+      "details": "Every mutation targeted fdCQVFdvOByaOYIJYag0d6. Source zVsuhYehoSLLq880qRBFkq and library YX2n4YLrEpBXNbcc73T6dw were not written."
+    }
+  },
+  "pageAudit": [
+    { "page": "Cover", "nodeCount": 9, "localFractional": 0, "probes": 0 },
+    { "page": "Templates", "nodeCount": 10879, "localFractional": 0, "probes": 0 },
+    { "page": "Screens", "nodeCount": 5171, "localFractional": 0, "probes": 0 },
+    { "page": "Archive", "nodeCount": 1787, "localFractional": 0, "probes": 0 }
+  ],
+  "createdNodes": {
+    "templatesSection": "636:2",
+    "formComponent": "636:3",
+    "bodyComponent": "638:2",
+    "rebuildHelper": "638:538",
+    "sheet": "638:539",
+    "referenceHelper": "638:1255",
+    "frozenSourceImage": "638:1256",
+    "changeHelper": "638:12981",
+    "screensSection": "638:13052",
+    "comparison": "638:13053",
+    "gapEndAction": "639:2",
+    "defectBack": "639:9"
+  },
+  "instanceAudit": [
+    { "master": "636:3", "instance": "638:3", "masterPaints": 93, "instancePaints": 93, "equal": true },
+    { "master": "638:2", "instance": "I638:539;6:80", "masterPaints": 93, "instancePaints": 93, "equal": true },
+    { "master": "638:538", "instance": "I638:13053;114:1139", "masterPaints": 118, "instancePaints": 118, "equal": true },
+    { "master": "638:1255", "instance": "I638:13053;114:1137", "masterPaints": 0, "instancePaints": 0, "equal": true },
+    { "master": "638:12981", "instance": "I638:13053;114:1240", "masterPaints": 48, "instancePaints": 48, "equal": true }
+  ],
+  "corrections": [
+    "Bound six field roots to color/background/paper so white fields separate from the pale teal card.",
+    "Renamed eight inherited Allergies-oriented layers to Family History semantics.",
+    "Appended the Family History body and three helpers to the existing shared swap menus; defaults and geometry did not change.",
+    "Preserved earlier fixes to Comments properties and the source caption."
+  ],
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png",
+    "inspectedByExecutor": true,
+    "operatorApproval": "Pending after this closeout report",
+    "observations": [
+      "White fields now read distinctly on the pale teal form card and match the reference treatment.",
+      "Content order, selected radio state, labels, values, remove actions, Add, Cancel, and Save are complete and unclipped.",
+      "The sheet remains content-driven at 550x644; the source stays visible at 550x685 for comparison.",
+      "The known back-control DEFECT and condition end-adornment GAP remain marked beside the comparison."
+    ]
+  },
+  "standingBatchRules": {
+    "1_instancePaintVerification": "PASS — five master/actual-instance pairs match across 352 sampled solid paints.",
+    "2_unboundPaintAudit": "PASS — full four-page walk; changed production surfaces are bound and only established organizer/Cover exceptions remain.",
+    "3_referenceCounts": "PASS — one comparison; Sidesheet 17 choices and comparison 20 choices, with original defaults unchanged.",
+    "4_skipInvisibleFalse": "PASS — false for every full-tree and pair audit.",
+    "5_opacityLast": "PASS — no paint-opacity override authored.",
+    "6_enumerateDontRecall": "PASS — all four live page trees enumerated; IDs and counts recorded from the artifact.",
+    "7_fileIdentityFirst": "PASS — explicit target and exact four-page identity verified before closeout mutation; source/library read only.",
+    "8_roundWithRecord": "PASS — zero locally authored fractional geometry; no rounding decision added.",
+    "9_boundPaintAlpha": "PASS — white field roots use a bound semantic paper token; inherited bindings/alpha preserved.",
+    "10_cloneDropsPropertyRefs": "PASS — all planned control text/state properties render, and stale cloned layer names were corrected."
+  },
+  "toolCalls": {
+    "figmaRead": null,
+    "figmaWrite": null,
+    "screenshot": null,
+    "correctionCycles": 3,
+    "note": "The batch crossed models and harnesses, so complete inherited call totals are unavailable; null is intentional."
+  }
+}

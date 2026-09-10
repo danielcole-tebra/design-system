@@ -1,0 +1,66 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "workflow_appearanceReview_2026-09-10",
+ "sequence": 97,
+ "date": "2026-09-10",
+ "workstream": "workflow",
+ "created": {
+  "by": "Codex",
+  "at": "2026-09-10T18:17:26.163Z",
+  "script": "apply-appearance-review.js"
+ },
+ "record": {
+  "_status": "DONE — reusable appearance specification and whole-form review requirements installed",
+  "date": "2026-09-10",
+  "operatorAuthorization": "Ok do that",
+  "scope": "Reusable appearance specification, whole-form review evidence, inherited-defect tracking; preserve active builder work.",
+  "flags": [
+   {
+    "id": "npveEditForms_fieldSurfaceInheritance_2026-09-10",
+    "status": "OPEN — composition surface mismatch; per-consumer repair evidence required",
+    "finding": "Reviewed Allergies and Family History rebuilds show the pale teal card through fields; operator requires white fields. Family History reused Allergies; the isolated model test reused Family History.",
+    "operatorQuote": "The rebuild should contain white fields, they should not match the background. The same as the reference.",
+    "specification": "workflow/appearance/npve-edit-forms.md",
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "consumers": [
+     {
+      "record": "npveRebuild_allergiesEdit_2026-09-09",
+      "nodeId": "634:6808",
+      "role": "precedent",
+      "status": "Needs repair verification; DONE record remains immutable"
+     },
+     {
+      "record": "npveRebuild_familyHistoryEdit_2026-09-09",
+      "nodeId": "636:3",
+      "role": "production derivative",
+      "status": "Operator requested builder correction; latest correction not verified by this workflow batch"
+     },
+     {
+      "nodeId": "642:7557",
+      "role": "isolated model test derivative",
+      "status": "Not for production; do not reuse as a surface precedent; repair or retain with warning"
+     }
+    ],
+    "handling": "Resolve per consumer with fresh screenshot and supported implementation evidence. A repaired Family History screenshot does not clear Allergies. No shared-library or canvas changes authorized by this repository-only batch.",
+    "evidence": [
+     "figma-export/npve-family-history-edit-2026-09-09/form-636-3-v2.png",
+     "figma-export/model-test-2026-09-10/before-form-636-3.png"
+    ],
+    "scopeLimit": "Known derivatives only; not an exhaustive inventory or a conclusion about all library inputs."
+   }
+  ],
+  "figmaMutations": [],
+  "report": "figma-export/workflow-appearance-review-2026-09-10/report.md",
+  "validation": {
+   "executionTests": "PASS — 38 regression scenarios including version-1 compatibility and version-2 appearance evidence",
+   "canvas": "N/A — no Figma mutation in this batch",
+   "standingBatchRules": "N/A — repository workflow change; design-batch requirements preserved"
+  },
+  "limitations": [
+   "Evidence completeness is enforceable; pixel correctness and approval authenticity remain human/model judgments",
+   "Existing version-1 checkpoints are not retroactively blocked",
+   "Surface repairs and per-consumer verification remain open in the tracked finding"
+  ]
+ }
+}

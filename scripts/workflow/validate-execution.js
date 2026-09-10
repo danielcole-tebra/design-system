@@ -29,7 +29,26 @@ function validateExecutionData(data, item, { stage = 'ready', root = ROOT } = {}
     return full;
   };
   if (!['ready', 'finish'].includes(stage)) throw new Error(`Unknown execution stage: ${stage}`);
-  if (data?.format !== 'tebra.design-execution' || data.version !== 1) errors.push('unsupported execution format/version');
+  if (data?.format !== 'tebra.design-execution' || ![1, 2].includes(data.version)) errors.push('unsupported execution format/version');
+  // Version 1 checkpoints already in flight remain valid; version 2 records appearance evidence.
+  if (data?.version === 2) {
+    file(data.appearance?.specification, 'appearance specification');
+    if (stage === 'finish') {
+      const review = data.appearance?.review;
+      if (review?.inspected !== true) errors.push('appearance: whole-form review not inspected');
+      file(review?.render, 'appearance review render', true);
+      if (review?.render !== item.requiredEvidence.comparisonRender) errors.push('appearance: review must use final comparison');
+      for (const area of ['surfaces', 'borders', 'content', 'states', 'layout', 'actions']) {
+        if (!nonempty(review?.areas?.[area])) errors.push(`appearance: missing ${area} observation`);
+      }
+      if (!Array.isArray(review?.differences)) errors.push('appearance: differences must be an array');
+      else for (const difference of review.differences) {
+        if (!nonempty(difference?.observation) || !['corrected', 'approved'].includes(difference?.disposition) || !nonempty(difference?.evidence)) {
+          errors.push('appearance: each difference needs observation, corrected/approved disposition and evidence');
+        }
+      }
+    }
+  }
   if (data?.itemId !== item.id || data?.recordId !== item.expectedRecordId) errors.push('execution item/record mismatch');
   const pre = data?.preflight || {};
   if (pre.targetFileKey !== item.target.fileKey) errors.push('execution target identity mismatch');

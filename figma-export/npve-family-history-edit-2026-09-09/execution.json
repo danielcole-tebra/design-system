@@ -1,0 +1,192 @@
+{
+  "format": "tebra.design-execution",
+  "version": 2,
+  "itemId": "npve-family-history-edit",
+  "recordId": "npveRebuild_familyHistoryEdit_2026-09-09",
+  "preflight": {
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "identityEvidence": "figma-export/npve-family-history-edit-2026-09-09/identity-readback.json",
+    "tools": [
+      "mcp_figma_mcp_ser_get_metadata",
+      "mcp_figma_mcp_ser_get_screenshot",
+      "mcp_figma_mcp_ser_download_assets",
+      "mcp_figma_mcp_ser_upload_assets",
+      "mcp_figma_mcp_ser_use_figma"
+    ],
+    "toolEvidence": "figma-export/npve-family-history-edit-2026-09-09/tool-evidence.md",
+    "controls": [
+      {
+        "name": "Relationship autocomplete",
+        "component": "616:14502",
+        "properties": {
+          "size": "small",
+          "State": "Default",
+          "Value": "Filled",
+          "Label#86:0": "Relationship",
+          "Value text#86:31": "Father"
+        },
+        "evidence": "figma-export/npve-family-history-edit-2026-09-09/controls-snapshot.json"
+      },
+      {
+        "name": "Status radio row (Form control label)",
+        "component": "197:3282",
+        "properties": {
+          "State": "Default",
+          "Label#140:0": "Living",
+          "Control#140:3": "389:3445"
+        },
+        "evidence": "figma-export/npve-family-history-edit-2026-09-09/controls-snapshot.json"
+      },
+      {
+        "name": "Age text field",
+        "component": "77:708",
+        "properties": {
+          "size": "small",
+          "State": "Default",
+          "Value": "Filled",
+          "Label#123:0": "Age",
+          "Value text#123:11": "65"
+        },
+        "evidence": "figma-export/npve-family-history-edit-2026-09-09/controls-snapshot.json"
+      },
+      {
+        "name": "Condition list row (end-adornment GAP wrapper field)",
+        "component": "77:709",
+        "properties": {
+          "size": "small",
+          "State": "Default",
+          "Value": "Filled",
+          "Label#123:0": "Condition",
+          "Value text#123:11": "Diabetes",
+          "Show helper#123:33": false
+        },
+        "evidence": "figma-export/npve-family-history-edit-2026-09-09/controls-snapshot.json"
+      },
+      {
+        "name": "Add condition input",
+        "component": "77:708",
+        "properties": {
+          "size": "small",
+          "State": "Default",
+          "Value": "Empty",
+          "Label#123:0": "Add condition"
+        },
+        "evidence": "figma-export/npve-family-history-edit-2026-09-09/controls-snapshot.json"
+      },
+      {
+        "name": "Add button",
+        "component": "155:1193",
+        "properties": {
+          "variant": "contained",
+          "color": "primary",
+          "size": "small",
+          "State": "Default",
+          "Label#83:165": "Add"
+        },
+        "evidence": "figma-export/npve-family-history-edit-2026-09-09/controls-snapshot.json"
+      },
+      {
+        "name": "Comments multiline field",
+        "component": "77:698",
+        "properties": {
+          "size": "medium",
+          "State": "Default",
+          "Value": "Empty",
+          "multiline#123:66": true,
+          "Label#123:0": "Comments go here"
+        },
+        "evidence": "figma-export/npve-family-history-edit-2026-09-09/controls-snapshot.json"
+      },
+      {
+        "name": "Trash icon button",
+        "component": "77:1109",
+        "properties": {
+          "color": "default",
+          "size": "small",
+          "Icon#170:0": "389:3433"
+        },
+        "evidence": "figma-export/npve-family-history-edit-2026-09-09/controls-snapshot.json"
+      }
+    ]
+  },
+  "appearance": {
+    "specification": "workflow/appearance/npve-edit-forms.md",
+    "review": {
+      "inspected": true,
+      "render": "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png",
+      "areas": {
+        "surfaces": "The form card remains the pale teal Form surface; Relationship, Age, Add condition, both Condition rows, and Comments are white paper surfaces and visibly separate from the card.",
+        "borders": "All six field outlines, the card outline, sheet outline, header/body divider, and footer divider are visible with no clipped or doubled edges.",
+        "content": "Edit Family History, Edit Family Member, Father, Living, Deceased, 65, Add condition, Diabetes, Hypertension, and Comments go here each render once in the intended order.",
+        "states": "Living remains selected, Deceased unselected; Relationship, Age, and condition rows are filled; Add condition and Comments preserve their planned empty/resting treatment.",
+        "layout": "The 518x468 form uses 16px inset/rhythm, the 550x644 sheet remains content-driven, and no label, control, footer, or comparison column clips.",
+        "actions": "Back, close, delete member, two remove actions, Add, Cancel, and Save are present; the recorded back-control DEFECT and source Save inconsistency remain explicitly documented."
+      },
+      "differences": [
+        {
+          "observation": "The inherited rebuild originally let the teal card show through all six fields.",
+          "disposition": "corrected",
+          "evidence": "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png"
+        },
+        {
+          "observation": "Eight structural layer names still referred to the Allergies precedent although visible content was Family History.",
+          "disposition": "corrected",
+          "evidence": "figma-export/npve-family-history-edit-2026-09-09/audit-family-history-edit.json"
+        },
+        {
+          "observation": "The Family History body and comparison helpers were absent from the shared preferred-value menus.",
+          "disposition": "corrected",
+          "evidence": "figma-export/npve-family-history-edit-2026-09-09/audit-family-history-edit.json"
+        },
+        {
+          "observation": "Source captions above fields become the approved library floating-label treatment.",
+          "disposition": "approved",
+          "evidence": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json"
+        },
+        {
+          "observation": "The source 32px tinted back control becomes the published 40px untinted icon button.",
+          "disposition": "approved",
+          "evidence": "records/npve/2026-09-02/npveRebuild_sidesheet_inventory_2026_09_02.json"
+        },
+        {
+          "observation": "The source fixed 685px sheet becomes the canonical content-driven 644px sheet with 72px header and 71px footer.",
+          "disposition": "approved",
+          "evidence": "workflow/npve-contract.generated.json"
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "what": "Comments lookup mistake (confirmed, executor error)",
+      "detail": "The first rewrite script looked up the Comments control with children.find(c => c.type === 'INSTANCE'), but the Comments row 636:22 is itself an INSTANCE (its only child is the Input frame), so the lookup returned undefined and setProperties threw 'cannot read property setProperties of undefined'. Corrected by setting the properties directly on 636:22; readback confirmed Label 'Comments go here' and multiline=true."
+    },
+    {
+      "what": "Unexplained tool errors (two batched use_figma calls)",
+      "detail": "Two batched rewrite calls returned only {safeToRetryWithoutCanvasRead:true} with no result payload and no canvas mutation. Per the recovery policy no blind retry was made: each operation was diagnosed in isolation (setProperties on the autocomplete, severity.remove(), the radio INSTANCE_SWAP, resize, Comments props) and every one succeeded individually, so the failure was in the transport layer of the batched calls, not the plugin API. The rewrite was completed in small dependent groups with readbacks. Root cause not established; recorded here rather than cleared."
+    },
+    {
+      "what": "Source caption correction above left comparison column",
+      "detail": "Corrected visible source caption text on node I638:13053;35:334 from 'Source: 129:7826 · exported 2026-09-09 at 2× · shown 1:1' to 'Source: 129:12486 · exported 2026-09-10 at 2× · shown 1:1'. Verified via fresh 2x screenshot export."
+    },
+    {
+      "what": "Field surface correction requested by the operator",
+      "detail": "The live comparison still showed the pale teal Form surface through Relationship, Age, Add condition, both Condition rows, and Comments. The isolated model test 642:7557 verifies the supported composition treatment: bind only those six published field-instance roots to color/background/paper, preserving the teal card, component borders, labels, values, states, and action controls. This repair is recorded before mutation and will be verified with a fresh full comparison."
+    },
+    {
+      "what": "Inherited Allergies layer names",
+      "detail": "The structural closeout found eight direct production layers whose visible Family History content was correct but whose layer names still referred to Allergies, reactions, flushing, or hives. Rename only those layers to Family History semantics before finalization; component identity, properties, geometry, and rendered pixels remain unchanged."
+    },
+    {
+      "what": "Shared swap-menu append was missing",
+      "detail": "Final readback found the Sidesheet Body content preferred list still at 16 and the three Rebuild comparison preferred lists still at 19; none contains the Family History body/helper keys. Shared defaults and geometry are unchanged. Append only the missing body and matching helper to their exact properties, producing 17 and 20 choices while preserving every existing value and default."
+    }
+  ],
+  "milestones": [
+    { "name": "Form", "status": "verified", "nodeIds": ["636:2", "636:3", "636:4", "636:7", "636:10", "636:13", "636:16", "636:19", "636:22"], "render": "figma-export/npve-family-history-edit-2026-09-09/form-636-3-final-white.png", "inspected": true },
+    { "name": "Complete sheet", "status": "verified", "nodeIds": ["638:2", "638:538", "638:539", "638:1255", "638:1256", "638:12981"], "render": "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png", "inspected": true },
+    { "name": "Comparison", "status": "verified", "nodeIds": ["638:13052", "638:13053", "639:2", "639:9"], "render": "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png", "inspected": true }
+  ],
+  "unresolved": [],
+  "nextAction": "Finalize the audit, report, immutable record, workflow run, and commit; then queue the next proposed work in a separate planning change."
+}

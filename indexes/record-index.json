@@ -937,14 +937,32 @@
    "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
    "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch.",
    "recordSha256": "9ac4f7b14ef51de954974d31f91a421304bf59e7f6f96ef61660bc1f863a0ade"
+  },
+  {
+   "id": "npveRebuild_familyHistoryEdit_2026-09-09",
+   "sequence": 96,
+   "date": "2026-09-09",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json",
+   "status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review.",
+   "recordSha256": "ffe4358c81792f078211599947d6e6adaf9fab9fdfd0c65c5ffd6e04ba08efac"
+  },
+  {
+   "id": "workflow_appearanceReview_2026-09-10",
+   "sequence": 97,
+   "date": "2026-09-10",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
+   "status": "DONE — reusable appearance specification and whole-form review requirements installed",
+   "recordSha256": "27d2d1d758bbf00cd138cddcefef1d7aa946188576710dc37eeab1f76ba7531e"
   }
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
-  "active": 229,
+  "active": 230,
   "resolved": 58,
-  "total": 287,
-  "nextSequence": 287,
+  "total": 288,
+  "nextSequence": 288,
   "activeIds": [
    "pxToRemInflation",
    "svgIconTwoUnitSystems",
@@ -1174,7 +1192,8 @@
    "npveEncounter_toolbarPillHeightDelta",
    "npveEncounter_splitButtonSuperseded",
    "npveTidy_looseModuleChipFrameUnexplained",
-   "npveFamilyHistory_sourceSaveOutlined"
+   "npveFamilyHistory_sourceSaveOutlined",
+   "npveEditForms_fieldSurfaceInheritance_2026-09-10"
   ],
   "resolvedIds": [
    "paintOpacityDoesNotReachInstances",
@@ -1239,8 +1258,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 96,
-  "aggregateTopLevelKeys": 110,
-  "nextRecordSequence": 96
+  "records": 98,
+  "aggregateTopLevelKeys": 112,
+  "nextRecordSequence": 98
  }
 }

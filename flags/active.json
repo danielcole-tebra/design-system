@@ -3122,6 +3122,42 @@
     "detail": "The current evidence supports misattribution of the original record wording to the Allergies source; live reads 2026-09-09 show every other edit-sheet Save as Type=Primary. Historical source changes were not investigated.",
     "handling": "Report, do not resolve. Build the Family History footer as drawn with one change-log row; decision for Daniel at the npve-family-history-edit batch (as-drawn vs align to primary)."
    }
+  },
+  {
+   "sequence": 287,
+   "flag": {
+    "id": "npveEditForms_fieldSurfaceInheritance_2026-09-10",
+    "status": "OPEN — composition surface mismatch; per-consumer repair evidence required",
+    "finding": "Reviewed Allergies and Family History rebuilds show the pale teal card through fields; operator requires white fields. Family History reused Allergies; the isolated model test reused Family History.",
+    "operatorQuote": "The rebuild should contain white fields, they should not match the background. The same as the reference.",
+    "specification": "workflow/appearance/npve-edit-forms.md",
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "consumers": [
+     {
+      "record": "npveRebuild_allergiesEdit_2026-09-09",
+      "nodeId": "634:6808",
+      "role": "precedent",
+      "status": "Needs repair verification; DONE record remains immutable"
+     },
+     {
+      "record": "npveRebuild_familyHistoryEdit_2026-09-09",
+      "nodeId": "636:3",
+      "role": "production derivative",
+      "status": "VERIFIED 2026-09-10 — six production field roots bound to color/background/paper; final comparison and master-instance paint parity pass; evidence in figma-export/npve-family-history-edit-2026-09-09/"
+     },
+     {
+      "nodeId": "642:7557",
+      "role": "isolated model test derivative",
+      "status": "Not for production; do not reuse as a surface precedent; repair or retain with warning"
+     }
+    ],
+    "handling": "Resolve per consumer with fresh screenshot and supported implementation evidence. A repaired Family History screenshot does not clear Allergies. No shared-library or canvas changes authorized by this repository-only batch.",
+    "evidence": [
+     "figma-export/npve-family-history-edit-2026-09-09/form-636-3-v2.png",
+     "figma-export/model-test-2026-09-10/before-form-636-3.png"
+    ],
+    "scopeLimit": "Known derivatives only; not an exhaustive inventory or a conclusion about all library inputs."
+   }
   }
  ]
 }

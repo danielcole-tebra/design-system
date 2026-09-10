@@ -1,0 +1,119 @@
+{
+  "components": [
+    {
+      "id": "616:14502",
+      "key": "0f2922e41ee4f1d7940987e9bf1b1797e19a0e1e",
+      "name": "Autocomplete/Field",
+      "width": 397,
+      "height": 40,
+      "componentPropertyDefinitions": {
+        "Label#86:0": { "type": "TEXT", "defaultValue": "Allergen" },
+        "Value text#86:31": { "type": "TEXT", "defaultValue": "" },
+        "Clear icon#86:62": { "type": "BOOLEAN", "defaultValue": false },
+        "size": { "type": "VARIANT", "variantOptions": ["medium", "small"] },
+        "State": { "type": "VARIANT", "variantOptions": ["Default", "Error"] },
+        "Value": { "type": "VARIANT", "variantOptions": ["Empty", "Filled", "Multiple"] }
+      }
+    },
+    {
+      "id": "197:3282",
+      "key": "9821b1c515db0ecc146dd21d2bcca3961aef1424",
+      "name": "Form control label",
+      "width": 89,
+      "height": 42,
+      "componentPropertyDefinitions": {
+        "Label#140:0": { "type": "TEXT", "defaultValue": "Label" },
+        "Control#140:3": { "type": "INSTANCE_SWAP", "defaultValue": "389:3441" },
+        "State": { "type": "VARIANT", "variantOptions": ["Default", "Error"] }
+      }
+    },
+    {
+      "id": "77:708",
+      "key": "542540ea8fa199c81ea0128aea9c78a5cc8e8abf",
+      "name": "Text field (small)",
+      "width": 406,
+      "height": 40,
+      "componentPropertyDefinitions": {
+        "Label#123:0": { "type": "TEXT", "defaultValue": "Label" },
+        "Value text#123:11": { "type": "TEXT", "defaultValue": "Default Value" },
+        "Helper text#123:22": { "type": "TEXT", "defaultValue": "Text underneath the input" },
+        "Show helper#123:33": { "type": "BOOLEAN", "defaultValue": false },
+        "required#123:44": { "type": "BOOLEAN", "defaultValue": false },
+        "select#123:55": { "type": "BOOLEAN", "defaultValue": false },
+        "multiline#123:66": { "type": "BOOLEAN", "defaultValue": false },
+        "size": { "type": "VARIANT", "variantOptions": ["medium", "small"] },
+        "State": { "type": "VARIANT", "variantOptions": ["Default", "Error"] },
+        "Value": { "type": "VARIANT", "variantOptions": ["Empty", "Filled"] }
+      }
+    },
+    {
+      "id": "77:709",
+      "key": "679a3842ec3982166e616a8f294684199e2e5c94",
+      "name": "Text field (filled row)",
+      "width": 436,
+      "height": 40,
+      "componentPropertyDefinitions": {
+        "Label#123:0": { "type": "TEXT", "defaultValue": "Label" },
+        "Value text#123:11": { "type": "TEXT", "defaultValue": "Default Value" },
+        "Helper text#123:22": { "type": "TEXT", "defaultValue": "Text underneath the input" },
+        "Show helper#123:33": { "type": "BOOLEAN", "defaultValue": false },
+        "required#123:44": { "type": "BOOLEAN", "defaultValue": false },
+        "select#123:55": { "type": "BOOLEAN", "defaultValue": false },
+        "multiline#123:66": { "type": "BOOLEAN", "defaultValue": false },
+        "size": { "type": "VARIANT", "variantOptions": ["medium", "small"] },
+        "State": { "type": "VARIANT", "variantOptions": ["Default", "Error"] },
+        "Value": { "type": "VARIANT", "variantOptions": ["Empty", "Filled"] }
+      }
+    },
+    {
+      "id": "77:698",
+      "key": "ee985b01789ea929c155aac26f9cd55370bb057e",
+      "name": "Text field (medium multiline)",
+      "width": 486,
+      "height": 104,
+      "componentPropertyDefinitions": {
+        "Label#123:0": { "type": "TEXT", "defaultValue": "Label" },
+        "Value text#123:11": { "type": "TEXT", "defaultValue": "Default Value" },
+        "Helper text#123:22": { "type": "TEXT", "defaultValue": "Text underneath the input" },
+        "Show helper#123:33": { "type": "BOOLEAN", "defaultValue": false },
+        "required#123:44": { "type": "BOOLEAN", "defaultValue": false },
+        "select#123:55": { "type": "BOOLEAN", "defaultValue": false },
+        "multiline#123:66": { "type": "BOOLEAN", "defaultValue": false },
+        "size": { "type": "VARIANT", "variantOptions": ["medium", "small"] },
+        "State": { "type": "VARIANT", "variantOptions": ["Default", "Error"] },
+        "Value": { "type": "VARIANT", "variantOptions": ["Empty", "Filled"] }
+      }
+    },
+    {
+      "id": "155:1193",
+      "key": "8fc8f57f80196e40aff7b3b1116226ea0a925120",
+      "name": "Button",
+      "width": 64,
+      "height": 30,
+      "componentPropertyDefinitions": {
+        "Label#83:165": { "type": "TEXT", "defaultValue": "Button" },
+        "Start icon#83:220": { "type": "BOOLEAN", "defaultValue": false },
+        "Start icon swap#83:331": { "type": "INSTANCE_SWAP", "defaultValue": "3:75" },
+        "End icon#83:275": { "type": "BOOLEAN", "defaultValue": false },
+        "End icon swap#83:386": { "type": "INSTANCE_SWAP", "defaultValue": "3:5" },
+        "variant": { "type": "VARIANT", "variantOptions": ["contained", "text"] },
+        "color": { "type": "VARIANT", "variantOptions": ["primary", "default", "error"] },
+        "size": { "type": "VARIANT", "variantOptions": ["medium", "small"] },
+        "State": { "type": "VARIANT", "variantOptions": ["Default", "Hover", "Pressed", "Disabled"] }
+      }
+    },
+    {
+      "id": "77:1109",
+      "key": "77:1109",
+      "name": "Icon button",
+      "width": 40,
+      "height": 40,
+      "componentPropertyDefinitions": {
+        "Icon#170:0": { "type": "INSTANCE_SWAP", "defaultValue": "389:3433" },
+        "color": { "type": "VARIANT", "variantOptions": ["default", "error"] },
+        "size": { "type": "VARIANT", "variantOptions": ["medium", "small"] },
+        "State": { "type": "VARIANT", "variantOptions": ["Default", "Hover", "Pressed", "Disabled"] }
+      }
+    }
+  ]
+}

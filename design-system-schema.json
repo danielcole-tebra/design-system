@@ -6195,6 +6195,39 @@
    "where": "NPVE source zVsuhYehoSLLq880qRBFkq 129:12486 › footer button 129:12800",
    "detail": "The current evidence supports misattribution of the original record wording to the Allergies source; live reads 2026-09-09 show every other edit-sheet Save as Type=Primary. Historical source changes were not investigated.",
    "handling": "Report, do not resolve. Build the Family History footer as drawn with one change-log row; decision for Daniel at the npve-family-history-edit batch (as-drawn vs align to primary)."
+  },
+  {
+   "id": "npveEditForms_fieldSurfaceInheritance_2026-09-10",
+   "status": "OPEN — composition surface mismatch; per-consumer repair evidence required",
+   "finding": "Reviewed Allergies and Family History rebuilds show the pale teal card through fields; operator requires white fields. Family History reused Allergies; the isolated model test reused Family History.",
+   "operatorQuote": "The rebuild should contain white fields, they should not match the background. The same as the reference.",
+   "specification": "workflow/appearance/npve-edit-forms.md",
+   "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+   "consumers": [
+    {
+     "record": "npveRebuild_allergiesEdit_2026-09-09",
+     "nodeId": "634:6808",
+     "role": "precedent",
+     "status": "Needs repair verification; DONE record remains immutable"
+    },
+    {
+     "record": "npveRebuild_familyHistoryEdit_2026-09-09",
+     "nodeId": "636:3",
+     "role": "production derivative",
+     "status": "VERIFIED 2026-09-10 — six production field roots bound to color/background/paper; final comparison and master-instance paint parity pass; evidence in figma-export/npve-family-history-edit-2026-09-09/"
+    },
+    {
+     "nodeId": "642:7557",
+     "role": "isolated model test derivative",
+     "status": "Not for production; do not reuse as a surface precedent; repair or retain with warning"
+    }
+   ],
+   "handling": "Resolve per consumer with fresh screenshot and supported implementation evidence. A repaired Family History screenshot does not clear Allergies. No shared-library or canvas changes authorized by this repository-only batch.",
+   "evidence": [
+    "figma-export/npve-family-history-edit-2026-09-09/form-636-3-v2.png",
+    "figma-export/model-test-2026-09-10/before-form-636-3.png"
+   ],
+   "scopeLimit": "Known derivatives only; not an exhaustive inventory or a conclusion about all library inputs."
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -28903,5 +28936,271 @@
    "DECISION": 0
   },
   "standingBatchRules": "N/A for this repository-only workflow batch; existing Figma rules are unchanged and still required for design batches."
+ },
+ "npveRebuild_familyHistoryEdit_2026-09-09": {
+  "_status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review.",
+  "date": "2026-09-09",
+  "workstream": "NPVE Rebuild / Sidesheets",
+  "executor": "GitHub Copilot (Z.ai GLM) build; Codex (OpenAI) closeout and repair",
+  "trigger": "Operator accepted the Allergies comparison and approved this item at medium risk within the planned scope, with routine corrections delegated to the executor.",
+  "recordGate": "npveRebuild_allergiesEdit_2026-09-09 recorded DONE in indexes/record-index.json — passed; validate-workflow PASS before reading",
+  "manifestItem": "npve-family-history-edit (medium tier; approval unapproved in the manifest, per-item operator confirmation quoted verbatim and recorded by start-batch.js)",
+  "report": "figma-export/npve-family-history-edit-2026-09-09/report.md",
+  "_targetFile": "fdCQVFdvOByaOYIJYag0d6",
+  "_libraryFile": "YX2n4YLrEpBXNbcc73T6dw read only",
+  "_sourceFile": "zVsuhYehoSLLq880qRBFkq read only — node 129:12486 (Page=Clin_FHX-Editing, 550x685, variant of Sidesheetv3 129:6647); touched only for the frozen 2x reference export",
+  "fileIdentity": "PASS — target fdCQVFdvOByaOYIJYag0d6 with Cover 0:1, Templates 3:2, Screens 27:2, Archive 126:2; source and library read only.",
+  "planning": {
+   "proposal": "figma-export/npve-planning-2026-09-09/proposal.md (planner scoped read; source facts, mapping and expected dimensions live there and in the manifest item)",
+   "sourceFacts": [
+    "550x685: NoteHeader 65 (back 32x32 tinted #E9EFEE at 16,16; title \"Edit Family History\" Bold; close glyph 24 direct child), Main Wrap 620 with the form card 518x520 at y 16 (8 + 8) inside a 16px side inset, footer row 518x60 at y 552 with only Cancel (text 72) and Save (outlined 66) — no Save & Add to Note, and Save is outlined rather than primary; gap 21.",
+    "Card padding 16 (rows 486): \"Edit Family Member\" Bold 16 + trash 24; Relationship caption + Autocomplete Select Field 486x40 with caret (\"Father\"); Status caption + two Radio Option 24px in a 40px row (Living checked, Deceased) with Age caption + 80x40 field (\"65\") at x 214; Medical Conditions caption + Add condition input 418x36 + Add outlined 60x36, then rows 486x40 (Diabetes, Hypertension) each with a red X 24; Comments 486x110 focused with placeholder.",
+    "Same Form surface card as Allergies edit."
+   ]
+  },
+  "decisions": [
+   {
+    "id": "tierApproval_medium",
+    "what": "Medium tier approved within the planned scope; routine corrections delegated to the executor.",
+    "operator": "Daniel (operator), 2026-09-10, verbatim: \"I approve the Family History edit batch at medium risk, within the planned scope. Continue through the completed comparison and show me the screenshots. Handle routine factual corrections and execution repairs without further approval; ask only if a new design decision arises.\"",
+    "recordedBy": "start-batch.js per-item confirmation (manifest approval status was unapproved at start)."
+   },
+   {
+    "id": "captionPlacement_A_floatingLabel",
+    "what": "Caption placement A — library floating label, captions dropped, one change-log row per form.",
+    "operator": "Daniel (operator), decision-prompt answer 2026-09-09, verbatim: \"A — Library floating label, captions dropped, one change-log row per form (recommended: what the library ships, what runs 2-3 did)\".",
+    "settles": "Recorded in npveRebuild_allergiesEdit_2026-09-09; applies to this item per the manifest plannerNotes."
+   }
+  ],
+  "scope": "Build one reusable 518px Family History edit form and body reusing the compositions the Allergies edit establishes (autocomplete placement, radio row, list-row GAP wrapper, add-entry row): Edit Family Member header with trash Icon button; Relationship Autocomplete/Field size=small Value=Filled (\"Father\"); Status radio group (Living checked, Deceased) beside an Age Text field 80 wide (\"65\"); Medical Conditions add-entry row (Text field + outlined Add) above two outlined rows (Diabetes, Hypertension) with trailing error Icon button; Comments medium multiline resting; footer Cancel / Save through the shell. Reuse from the Codex Family History batch (npveRebuild_familyHistory_2026-09-05): its Templates section 10 stays the home of the display body; the edit body is a sibling section, and nothing in 346:3080-346:3365 is edited. Append the body to the shared Sidesheet Body content; one placed sheet with Show back on; frozen 2x reference; change log; comparison; markers for the end adornment and the back-control DEFECT.",
+  "systemMapping": {
+   "header": "Sidesheet 6:65 Placement=Floating, Show back=true (Icon button + Icon/LeftCaret), Title \"Edit Family History\", Close as published",
+   "trash": "Icon button 77:1109 color=default size=small with Icon/TrashOutlined (Allergies edit precedent)",
+   "relationship": "Autocomplete/Field size=small State=Default Value=Filled, Value text \"Father\", floating label per caption decision A, 486 wide",
+   "status": "the Allergies edit radio row (Form control label ×2, Control → Radio), Living checked; Age: Text field size=small Value=Filled \"65\", 80 wide, in the same row, gap 16",
+   "conditions": "add row (Text field size=small Value=Empty placeholder \"Add condition\" + Button contained/primary size=small \"Add\") above two end-adornment GAP wrappers (Text field Value=Filled \"Diabetes\"/\"Hypertension\" + Icon button color=error size=small with Icon/Close)",
+   "comments": "Text field 77:698 size=medium multiline=true Value=Empty, 104 tall resting per npve.fieldStates",
+   "footer": "shell Footer, Show tertiary action off, Show secondary action on: Cancel (text) / Save — the source draws Save OUTLINED; build as the source shows and log it as a finding",
+   "formSurface": "NPVE/Color Form surface VariableID:387:3434 (#EEF7F9, 1px color/divider, radius 8), 16px inset bound npve.sidesheet.body.inset, rows 486 wide, rhythm bound space/16"
+  },
+  "approvedDifferences": [
+   "Shell regions: source header 64/65 and footer 60 become the canonical 72 and 71; the fixed source height becomes content-driven (npve.sidesheet.height).",
+   "Template padding: the form card uses the shared 16px inset on all sides, so rows are 486 wide even where the source draws 16px/486 (this source already matches).",
+   "Base-8 rhythm: 16px between rows, 8px only for tight relationships (npve.spacing.verticalDefault, npve.spacing.tightRelationship).",
+   "Capitalized labels: button labels render in the library title case (npve.buttonLabels).",
+   "Resting field states: the focused Comments field renders resting at 104 tall (library medium multiline) instead of focused at 110.",
+   "Touch targets: radio rows built on Radio + Form control label are 42px tall where the source draws 24px radios in a 40px row (npve.touchTargets).",
+   "Library sizes: the 36px \"Add\" pill and the 36px add-entry input become the library small Button (30) and small Text field (40).",
+   "Caption placement A: floating labels, source captions dropped, one change-log row per form."
+  ],
+  "backControlDelta": "Source draws a 32x32 square tinted #E9EFEE with a left caret; the shell Show back control (6:67) is the library Icon button color=default size=medium, 40x40, no fill, Icon/LeftCaret. Recorded DEFECT verdict (npveRebuild_sidesheet_inventory_2026_09_02, \"Back control (edit pages)\"). Plan: shell as published, one change-log row, one DEFECT marker beside the comparison.",
+  "expectedFinding": "Source footer inconsistency: Save is outlined here (button 129:12800, Type=Default, white fill, 1px #8CA7A2) and primary on every other edit sheet (Allergies 129:7949, Facility Stay 648:1735, Hospitalizations 129:8516, Procedures 129:8773 — all Primary). Report, do not resolve: build as drawn, one change-log row, one flag for Daniel (flag npveFamilyHistory_sourceSaveOutlined already appended 2026-09-09).",
+  "stopConditions": [
+   "Stop before mutation on identity mismatch (file keys or page ids), on a control with no published mapping and no recorded GAP pattern, on any shared default or geometry change, or on a new design decision beyond the recorded outlined-Save finding.",
+   "The source file is never written; the library file is never written.",
+   "Additive only: nothing deleted; superseded content archived, never removed.",
+   "Nothing from the Codex Family History batch (346:3080-346:3365) is edited."
+  ],
+  "findings": {
+   "GAP": 1,
+   "DEFECT": 1,
+   "DECISION": 0,
+   "PROCESS": 0,
+   "note": "Existing condition end-adornment GAP and back-control DEFECT reused. Source outlined-Save inconsistency remains reported."
+  },
+  "flagsBefore": {
+   "active": 229,
+   "resolved": 58,
+   "total": 287
+  },
+  "flagsAfter": 288,
+  "flagsAdded": [],
+  "figmaMutations": [
+   "Built reusable 518x468 Family History edit form and body, complete 550x644 shared Sidesheet, frozen reference, change log, and one comparison.",
+   "Bound the six production field roots to color/background/paper while preserving the NPVE Form surface card.",
+   "Renamed eight stale Allergies-derived layer names to Family History semantics.",
+   "Appended the body and three helpers to shared preferred-value lists only; defaults and master geometry unchanged."
+  ],
+  "createdNodes": {
+   "templatesSection": "636:2",
+   "formComponent": "636:3",
+   "bodyComponent": "638:2",
+   "rebuildHelper": "638:538",
+   "sheet": "638:539",
+   "referenceHelper": "638:1255",
+   "frozenSourceImage": "638:1256",
+   "changeHelper": "638:12981",
+   "screensSection": "638:13052",
+   "comparison": "638:13053",
+   "gapEndAction": "639:2",
+   "defectBack": "639:9"
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — five master/actual-instance pairs match across 352 sampled solid paints.",
+   "2_unboundPaintAudit": "PASS — full four-page walk; changed production surfaces are bound and only established organizer/Cover exceptions remain.",
+   "3_referenceCounts": "PASS — one comparison; Sidesheet 17 choices and comparison 20 choices, with original defaults unchanged.",
+   "4_skipInvisibleFalse": "PASS — false for every full-tree and pair audit.",
+   "5_opacityLast": "PASS — no paint-opacity override authored.",
+   "6_enumerateDontRecall": "PASS — all four live page trees enumerated; IDs and counts recorded from the artifact.",
+   "7_fileIdentityFirst": "PASS — explicit target and exact four-page identity verified before closeout mutation; source/library read only.",
+   "8_roundWithRecord": "PASS — zero locally authored fractional geometry; no rounding decision added.",
+   "9_boundPaintAlpha": "PASS — white field roots use a bound semantic paper token; inherited bindings/alpha preserved.",
+   "10_cloneDropsPropertyRefs": "PASS — all planned control text/state properties render, and stale cloned layer names were corrected."
+  },
+  "verification": {
+   "unboundPaints": {
+    "pass": true,
+    "details": "All visible production surfaces added or changed by this batch are token-bound. Existing unbound exceptions are the Cover artwork and organizer section fills/strokes; the unrelated MODEL TEST organizer is preserved."
+   },
+   "fractionalAuthoredGeometry": {
+    "pass": true,
+    "details": "Zero locally authored fractional nodes on Cover, Templates, Screens, and Archive. Half-pixel text positions seen only inside inherited component instances are not local authored geometry."
+   },
+   "referenceCounts": {
+    "pass": true,
+    "details": "Exactly one placed Family History comparison and one instance of each helper. Sidesheet Body content choices are 17 and include the Family History body. All three comparison choices are 20 and include the matching helper."
+   },
+   "componentIdentity": {
+    "pass": true,
+    "details": "Form bf60d1b5..., body eb15da50..., rebuild helper f66fba20..., reference helper f1f7edc1..., and change helper 6f7b165b... remain live components; the sheet and comparison remain linked instances."
+   },
+   "propertyReferences": {
+    "pass": true,
+    "details": "Verified published Autocomplete, Text field, Radio/Form control label, Button and Icon button mappings from controls-snapshot.json. Rendered Family History title, values, states, conditions, comments, and actions are present once in the intended order."
+   },
+   "instancePaintVerification": {
+    "pass": true,
+    "details": "Form/master instance 93/93, body/master instance 93/93, rebuild helper 118/118, reference helper 0/0, and change helper 48/48 solid paints match in color, opacity, and binding."
+   },
+   "sharedDefaultsAndGeometry": {
+    "pass": true,
+    "details": "Sidesheet default remains 26:221 at 550x600; comparison defaults remain 114:777, 114:779, and 114:880 at 1708x1290. Only preferred-value lists grew additively."
+   },
+   "fieldSurfaces": {
+    "pass": true,
+    "details": "Relationship 636:8, Age 637:31, Add condition 636:20, Diabetes 636:14, Hypertension 636:17, and Comments 636:22 are bound to color/background/paper; the form card remains bound to NPVE/Color Form surface."
+   },
+   "semanticNames": {
+    "pass": true,
+    "details": "No locally authored Allergies, reaction, flushing, or hives layer names remain inside the Family History production form/body/rebuild helper."
+   },
+   "reference": {
+    "pass": true,
+    "details": "Frozen source export is 1100x1370 and displayed at 550x685 at 1:1 design scale; source node 129:12486 remains read only."
+   },
+   "sourceAndLibrary": {
+    "pass": true,
+    "details": "Every mutation targeted fdCQVFdvOByaOYIJYag0d6. Source zVsuhYehoSLLq880qRBFkq and library YX2n4YLrEpBXNbcc73T6dw were not written."
+   }
+  },
+  "appearance": {
+   "specification": "workflow/appearance/npve-edit-forms.md",
+   "review": {
+    "inspected": true,
+    "render": "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png",
+    "areas": {
+     "surfaces": "The form card remains the pale teal Form surface; Relationship, Age, Add condition, both Condition rows, and Comments are white paper surfaces and visibly separate from the card.",
+     "borders": "All six field outlines, the card outline, sheet outline, header/body divider, and footer divider are visible with no clipped or doubled edges.",
+     "content": "Edit Family History, Edit Family Member, Father, Living, Deceased, 65, Add condition, Diabetes, Hypertension, and Comments go here each render once in the intended order.",
+     "states": "Living remains selected, Deceased unselected; Relationship, Age, and condition rows are filled; Add condition and Comments preserve their planned empty/resting treatment.",
+     "layout": "The 518x468 form uses 16px inset/rhythm, the 550x644 sheet remains content-driven, and no label, control, footer, or comparison column clips.",
+     "actions": "Back, close, delete member, two remove actions, Add, Cancel, and Save are present; the recorded back-control DEFECT and source Save inconsistency remain explicitly documented."
+    },
+    "differences": [
+     {
+      "observation": "The inherited rebuild originally let the teal card show through all six fields.",
+      "disposition": "corrected",
+      "evidence": "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png"
+     },
+     {
+      "observation": "Eight structural layer names still referred to the Allergies precedent although visible content was Family History.",
+      "disposition": "corrected",
+      "evidence": "figma-export/npve-family-history-edit-2026-09-09/audit-family-history-edit.json"
+     },
+     {
+      "observation": "The Family History body and comparison helpers were absent from the shared preferred-value menus.",
+      "disposition": "corrected",
+      "evidence": "figma-export/npve-family-history-edit-2026-09-09/audit-family-history-edit.json"
+     },
+     {
+      "observation": "Source captions above fields become the approved library floating-label treatment.",
+      "disposition": "approved",
+      "evidence": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json"
+     },
+     {
+      "observation": "The source 32px tinted back control becomes the published 40px untinted icon button.",
+      "disposition": "approved",
+      "evidence": "records/npve/2026-09-02/npveRebuild_sidesheet_inventory_2026_09_02.json"
+     },
+     {
+      "observation": "The source fixed 685px sheet becomes the canonical content-driven 644px sheet with 72px header and 71px footer.",
+      "disposition": "approved",
+      "evidence": "workflow/npve-contract.generated.json"
+     }
+    ]
+   }
+  },
+  "screenshots": [
+   "figma-export/npve-family-history-edit-2026-09-09/reference-2x-129-12486.png",
+   "figma-export/npve-family-history-edit-2026-09-09/form-636-3-final-white.png",
+   "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png"
+  ],
+  "outcome": "Reusable 518x468 form/body and 550x644 Sidesheet, with white field surfaces, shared swap-menu access, frozen reference, marked GAP/DEFECT, and sole comparison on Screens section 23.",
+  "decisionsForOperator": [
+   "Review the final comparison. The Family History source draws Save outlined while the other edit sheets draw it primary; the rebuild preserves the source-specific white bordered appearance and does not generalize it."
+  ]
+ },
+ "workflow_appearanceReview_2026-09-10": {
+  "_status": "DONE — reusable appearance specification and whole-form review requirements installed",
+  "date": "2026-09-10",
+  "operatorAuthorization": "Ok do that",
+  "scope": "Reusable appearance specification, whole-form review evidence, inherited-defect tracking; preserve active builder work.",
+  "flags": [
+   {
+    "id": "npveEditForms_fieldSurfaceInheritance_2026-09-10",
+    "status": "OPEN — composition surface mismatch; per-consumer repair evidence required",
+    "finding": "Reviewed Allergies and Family History rebuilds show the pale teal card through fields; operator requires white fields. Family History reused Allergies; the isolated model test reused Family History.",
+    "operatorQuote": "The rebuild should contain white fields, they should not match the background. The same as the reference.",
+    "specification": "workflow/appearance/npve-edit-forms.md",
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "consumers": [
+     {
+      "record": "npveRebuild_allergiesEdit_2026-09-09",
+      "nodeId": "634:6808",
+      "role": "precedent",
+      "status": "Needs repair verification; DONE record remains immutable"
+     },
+     {
+      "record": "npveRebuild_familyHistoryEdit_2026-09-09",
+      "nodeId": "636:3",
+      "role": "production derivative",
+      "status": "Operator requested builder correction; latest correction not verified by this workflow batch"
+     },
+     {
+      "nodeId": "642:7557",
+      "role": "isolated model test derivative",
+      "status": "Not for production; do not reuse as a surface precedent; repair or retain with warning"
+     }
+    ],
+    "handling": "Resolve per consumer with fresh screenshot and supported implementation evidence. A repaired Family History screenshot does not clear Allergies. No shared-library or canvas changes authorized by this repository-only batch.",
+    "evidence": [
+     "figma-export/npve-family-history-edit-2026-09-09/form-636-3-v2.png",
+     "figma-export/model-test-2026-09-10/before-form-636-3.png"
+    ],
+    "scopeLimit": "Known derivatives only; not an exhaustive inventory or a conclusion about all library inputs."
+   }
+  ],
+  "figmaMutations": [],
+  "report": "figma-export/workflow-appearance-review-2026-09-10/report.md",
+  "validation": {
+   "executionTests": "PASS — 38 regression scenarios including version-1 compatibility and version-2 appearance evidence",
+   "canvas": "N/A — no Figma mutation in this batch",
+   "standingBatchRules": "N/A — repository workflow change; design-batch requirements preserved"
+  },
+  "limitations": [
+   "Evidence completeness is enforceable; pixel correctness and approval authenticity remain human/model judgments",
+   "Existing version-1 checkpoints are not retroactively blocked",
+   "Surface repairs and per-consumer verification remain open in the tracked finding"
+  ]
  }
 }

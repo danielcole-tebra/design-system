@@ -525,7 +525,7 @@
       "id": "npve-family-history-edit",
       "title": "Family History · Edit Family Member form (sidesheet)",
       "workstream": "NPVE Rebuild / Sidesheets",
-      "status": "proposed",
+      "status": "queued",
       "dependsOn": [
         "npve-allergies-edit"
       ],
@@ -605,12 +605,14 @@
         ],
         "proposedBy": "Claude (planner proposal), 2026-09-09, after the scoped source read in figma-export/npve-planning-2026-09-09/proposal.md",
         "approval": {
-          "status": "unapproved",
-          "approvedBy": null,
-          "approvedAt": null,
-          "quote": null,
+          "status": "approved",
+          "approvedBy": "Daniel (operator)",
+          "approvedAt": "2026-09-10T14:14:42.896Z",
+          "quote": "I approve the Family History edit batch at medium risk, within the planned scope. Continue through the completed comparison and show me the screenshots. Handle routine factual corrections and execution repairs without further approval; ask only if a new design decision arises.",
           "history": []
-        }
+        },
+        "lockedAt": "2026-09-10T14:14:42.896Z",
+        "lock": "0e3b232c2f4408f6e4c5025550666b4c84378965b7945e2e5d156084f6cda4d1"
       },
       "oversight": [
         "Dedicated reference/rebuild/change comparison inspected by the executor and shown to the operator",
