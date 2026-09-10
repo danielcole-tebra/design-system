@@ -29202,5 +29202,55 @@
    "Existing version-1 checkpoints are not retroactively blocked",
    "Surface repairs and per-consumer verification remain open in the tracked finding"
   ]
+ },
+ "workflow_npveQueueRefresh_2026-09-10": {
+  "_status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies",
+  "date": "2026-09-10",
+  "operatorAuthorization": "Ok we've been making changes to the way the repo works to allow other models to interact with the repo. Let's do a test and queue up some more work here to make sure our established workflow is going well.",
+  "scope": "Read-only source audit and planner-owned queue proposal; no Figma mutation and no risk approval inferred.",
+  "figmaReads": [
+   {
+    "fileKey": "zVsuhYehoSLLq880qRBFkq",
+    "nodeId": "129:7340",
+    "purpose": "Patient Summary base state"
+   },
+   {
+    "fileKey": "zVsuhYehoSLLq880qRBFkq",
+    "nodeId": "2459:10180",
+    "purpose": "Patient Summary feedback error/entry state"
+   },
+   {
+    "fileKey": "zVsuhYehoSLLq880qRBFkq",
+    "nodeId": "2466:10562",
+    "purpose": "Patient Summary feedback success state"
+   },
+   {
+    "fileKey": "zVsuhYehoSLLq880qRBFkq",
+    "nodeId": "939:9228",
+    "purpose": "Flowsheets base-state complexity check"
+   },
+   {
+    "fileKey": "zVsuhYehoSLLq880qRBFkq",
+    "nodeId": "129:7614",
+    "purpose": "Psychotherapy Note editor-pattern complexity check"
+   }
+  ],
+  "figmaMutations": [],
+  "proposedItems": [
+   "npve-patient-summary-content",
+   "npve-patient-summary-feedback",
+   "npve-patient-summary-body-sheet"
+  ],
+  "deferredCandidates": [
+   "Flowsheets — separate compact list, graph, add, and edit items after a deeper pattern audit",
+   "Psychotherapy Note — human decision required for the new rich-text editor toolbar before a build item is queued"
+  ],
+  "report": "figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+  "validation": {
+   "manifest": "PASS — proposed items require no risk lock until operator approval",
+   "workflow": "PASS — store, indexes, generated contract, and workflow validators passed",
+   "canvas": "N/A — read-only Figma planning batch"
+  },
+  "outcome": "Patient Summary is the next coherent batch. The queue separates content, feedback states, and shared-shell composition so each visual packet is reviewed before its dependent item starts."
  }
 }

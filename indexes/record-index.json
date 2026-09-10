@@ -955,6 +955,15 @@
    "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
    "status": "DONE — reusable appearance specification and whole-form review requirements installed",
    "recordSha256": "27d2d1d758bbf00cd138cddcefef1d7aa946188576710dc37eeab1f76ba7531e"
+  },
+  {
+   "id": "workflow_npveQueueRefresh_2026-09-10",
+   "sequence": 98,
+   "date": "2026-09-10",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
+   "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies",
+   "recordSha256": "d664cc446d04fee5ee5ea2cdda4de5c1b17e270c78bbbf85dddfa0050a33c9b2"
   }
  ],
  "flags": {
@@ -1258,8 +1267,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 98,
-  "aggregateTopLevelKeys": 112,
-  "nextRecordSequence": 98
+  "records": 99,
+  "aggregateTopLevelKeys": 113,
+  "nextRecordSequence": 99
  }
 }

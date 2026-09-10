@@ -525,7 +525,7 @@
       "id": "npve-family-history-edit",
       "title": "Family History · Edit Family Member form (sidesheet)",
       "workstream": "NPVE Rebuild / Sidesheets",
-      "status": "queued",
+      "status": "complete",
       "dependsOn": [
         "npve-allergies-edit"
       ],
@@ -636,6 +636,217 @@
         "audit": "figma-export/npve-family-history-edit-2026-09-09/audit-family-history-edit.json",
         "report": "figma-export/npve-family-history-edit-2026-09-09/report.md",
         "comparisonRender": "figma-export/npve-family-history-edit-2026-09-09/comparison-family-history-edit.png"
+      },
+      "completedAt": "2026-09-10T21:07:45.605Z"
+    },
+    {
+      "id": "npve-patient-summary-content",
+      "title": "Patient Summary · Summary content",
+      "workstream": "NPVE Rebuild / Sidesheets",
+      "status": "proposed",
+      "dependsOn": [],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "3028:16364",
+        "label": "Summary_Wrap in Page=PatientSummary 129:7340, 534x708",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pageId": "3:2",
+        "name": "Patient summary content"
+      },
+      "expectedRecordId": "npveRebuild_patientSummaryContent_2026-09-10",
+      "scope": "Build one reusable 518px Patient Summary content component containing the four visible rich-text sections (Current Situation, Key Background, Active Care Plan, Progress & Next Steps). Preserve the source hierarchy and copy while applying the canonical 16px default vertical rhythm and bound typography/color tokens. This item does not create a sidesheet, edit a shared master, or build feedback controls.",
+      "plannerNotes": {
+        "scopedRead": "figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+        "sourceParent": "129:7340",
+        "sourceFacts": [
+          "The source content is 534x708 inside an 8px body inset; the target width is 518 inside the canonical 16px sidesheet inset.",
+          "The four source blocks are separated by 12px. Rebuild with 16px between sections; preserve tight heading/body relationships within each section.",
+          "Text reflow may change height. Height is content-driven and must not be forced to the source's 708px."
+        ]
+      },
+      "risk": {
+        "tier": "low",
+        "reasons": [
+          "One local reusable content component with no interactive controls",
+          "No shared-master, token, preferred-value, or screen-placement mutation",
+          "Canonical width and spacing behavior are already recorded"
+        ],
+        "proposedBy": "Codex (planner proposal), 2026-09-10, after the scoped read in figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": []
+        }
+      },
+      "oversight": [
+        "Dedicated content reference/rebuild/change comparison inspected by the executor and shown to the operator",
+        "Operator review before either dependent Patient Summary item begins"
+      ],
+      "stopCondition": "Stop before mutation on source or target identity mismatch, unavailable bound typography/color tokens, ambiguous mixed-text hierarchy, or any need to detach, rasterize, truncate, or invent clinical copy. Stop the family before the feedback item if deterministic or visual validation fails.",
+      "allowedFiles": [
+        "records/npve/**/npveRebuild_patientSummaryContent_2026-09-10.json",
+        "flags/active.json",
+        "flags/resolved.json",
+        "indexes/**",
+        "design-system-schema.json",
+        "apply-npve-patient-summary-content.js",
+        "finalize-npve-patient-summary-content.js",
+        "figma-export/npve-patient-summary-content-2026-09-10/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-patient-summary-content-2026-09-10/audit.json",
+        "report": "figma-export/npve-patient-summary-content-2026-09-10/report.md",
+        "comparisonRender": "figma-export/npve-patient-summary-content-2026-09-10/comparison.png"
+      }
+    },
+    {
+      "id": "npve-patient-summary-feedback",
+      "title": "Patient Summary · Feedback states",
+      "workstream": "NPVE Rebuild / Sidesheets",
+      "status": "proposed",
+      "dependsOn": [
+        "npve-patient-summary-content"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "2459:10191",
+        "label": "Feedback entry/error region in Page=Page41; related base 2545:4855 and success 2474:10628",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pageId": "3:2",
+        "name": "Patient summary feedback"
+      },
+      "expectedRecordId": "npveRebuild_patientSummaryFeedback_2026-09-10",
+      "scope": "Build one local Patient Summary feedback component set with only the three visible states: Default rating prompt, Error/Entry (error alert, rating, 518px multiline field, character count, improvement prompt, and Submit Feedback action), and Success confirmation. Use published Alert, Text field, Button, and icon controls when verified; apply 16px between vertical elements and 8px only within tight label/control relationships. Do not compose or append a sidesheet in this item.",
+      "plannerNotes": {
+        "scopedRead": "figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+        "stateSources": [
+          { "state": "Default", "nodeId": "2545:4855", "sourceParent": "129:7340" },
+          { "state": "Error/Entry", "nodeId": "2459:10191", "sourceParent": "2459:10180" },
+          { "state": "Success", "nodeId": "2474:10628", "sourceParent": "2466:10562" }
+        ],
+        "sourceCopyNote": "Preserve the visible source wording, including 'How would your rate the accuracy of this summary?', unless the operator separately authorizes copy editing."
+      },
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "First local component set for Patient Summary feedback",
+          "Composes alert, rating, multiline-input, character-count, and action states",
+          "No shared-master mutation, but icon/control mappings must be verified before construction"
+        ],
+        "proposedBy": "Codex (planner proposal), 2026-09-10, after the scoped read in figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": []
+        }
+      },
+      "oversight": [
+        "One reference/rebuild/change comparison showing all three feedback states, inspected by the executor and shown to the operator",
+        "Do not begin the body/sheet item until every feedback state passes visual and deterministic validation"
+      ],
+      "stopCondition": "Does not start until the content item is complete and reviewed. Stop before mutation if a visible rating or feedback control lacks a published mapping or recorded GAP, if an icon would need to be redrawn, if a fourth state must be invented, or if source copy is changed without operator authorization. Stop the family on any deterministic or visual failure.",
+      "allowedFiles": [
+        "records/npve/**/npveRebuild_patientSummaryFeedback_2026-09-10.json",
+        "flags/active.json",
+        "flags/resolved.json",
+        "indexes/**",
+        "design-system-schema.json",
+        "apply-npve-patient-summary-feedback.js",
+        "finalize-npve-patient-summary-feedback.js",
+        "figma-export/npve-patient-summary-feedback-2026-09-10/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-patient-summary-feedback-2026-09-10/audit.json",
+        "report": "figma-export/npve-patient-summary-feedback-2026-09-10/report.md",
+        "comparisonRender": "figma-export/npve-patient-summary-feedback-2026-09-10/comparison.png"
+      }
+    },
+    {
+      "id": "npve-patient-summary-body-sheet",
+      "title": "Patient Summary · Body and sidesheet states",
+      "workstream": "NPVE Rebuild / Sidesheets",
+      "status": "proposed",
+      "dependsOn": [
+        "npve-patient-summary-content",
+        "npve-patient-summary-feedback"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "129:7340",
+        "label": "Page=PatientSummary; related feedback-entry 2459:10180 and feedback-success 2466:10562",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "templatesPageId": "3:2",
+        "screensPageId": "27:2",
+        "name": "Patient Summary"
+      },
+      "expectedRecordId": "npveRebuild_patientSummaryBody_2026-09-10",
+      "scope": "Compose approved live instances of Patient summary content and Patient summary feedback into the three source-visible body states (Default, Error/Entry, Success). Use the canonical Sidesheet shell at 550px, a 16px body inset, 16px default vertical rhythm, content-driven height, and the existing 8px undocked radius policy. Append the Patient Summary body family additively to the shared Sidesheet Body content and comparison preferred values without changing defaults or geometry. Create full reference/rebuild/change comparisons for all three states.",
+      "plannerNotes": {
+        "scopedRead": "figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+        "stateSources": [
+          { "state": "Default", "nodeId": "129:7340", "size": "550x894" },
+          { "state": "Error/Entry", "nodeId": "2459:10180", "size": "550x1188" },
+          { "state": "Success", "nodeId": "2466:10562", "size": "550x932" }
+        ],
+        "referencePlan": "Frozen source exports for each complete source state, placed at 1:1 in dedicated comparison rows. Tall states must not be clipped or scaled to hide spacing differences."
+      },
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "Composes two previously reviewed local dependencies on the established sidesheet shell",
+          "Appends a new component family to shared Sidesheet and comparison instance-swap APIs",
+          "Three tall states require individual visual review, but no new interaction pattern is introduced in this item"
+        ],
+        "proposedBy": "Codex (planner proposal), 2026-09-10, after the scoped read in figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": []
+        }
+      },
+      "oversight": [
+        "Dedicated full-sheet reference/rebuild/change comparison for each of the three states, inspected by the executor and shown to the operator",
+        "Validation failure on one state stops before the next state mutates; preferred-value appends occur only after all local compositions pass"
+      ],
+      "stopCondition": "Does not start until both dependencies are complete and reviewed. Stop before mutation if any shared default or shell geometry would change, if the shared preferred-value update is not additive, if a source state cannot remain content-driven without clipping, or if a new state/design decision appears. Stop immediately on a deterministic or visual failure before mutating the next state.",
+      "allowedFiles": [
+        "records/npve/**/npveRebuild_patientSummaryBody_2026-09-10.json",
+        "flags/active.json",
+        "flags/resolved.json",
+        "indexes/**",
+        "design-system-schema.json",
+        "apply-npve-patient-summary-body.js",
+        "finalize-npve-patient-summary-body.js",
+        "figma-export/npve-patient-summary-body-2026-09-10/**",
+        "workflow/npve-contract.generated.json",
+        "workflow/manifest.json",
+        "workflow/metrics.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-patient-summary-body-2026-09-10/audit.json",
+        "report": "figma-export/npve-patient-summary-body-2026-09-10/report.md",
+        "comparisonRender": "figma-export/npve-patient-summary-body-2026-09-10/comparison-states.png"
       }
     }
   ],

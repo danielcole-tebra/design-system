@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "workflow_appearanceReview_2026-09-10",
+  "id": "workflow_npveQueueRefresh_2026-09-10",
   "date": "2026-09-10",
   "workstream": "workflow",
-  "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
-  "status": "DONE — reusable appearance specification and whole-form review requirements installed"
+  "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
+  "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies"
  },
  "recordGate": {
   "inProgress": [],
@@ -34,12 +34,12 @@
    }
   },
   "workflow": {
-   "count": 9,
+   "count": 10,
    "latest": {
-    "id": "workflow_appearanceReview_2026-09-10",
+    "id": "workflow_npveQueueRefresh_2026-09-10",
     "date": "2026-09-10",
-    "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
-    "status": "DONE — reusable appearance specification and whole-form review requirements installed"
+    "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
+    "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies"
    }
   }
  },
@@ -50,7 +50,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "41afe108744563af57d378f283d8b986e3c18e72c7ce1e53697590201680cdf4",
-  "bytes": 1500339
+  "sha256": "c10a4fde6fb647caac429a8a5dc6d20e22d61d5e5158c3f422688d970baaa2cb",
+  "bytes": 1502521
  }
 }
