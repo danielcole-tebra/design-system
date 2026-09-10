@@ -1,25 +1,25 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-09T19:17:12.097Z",
+  "generatedAt": "2026-09-10T00:21:18.901Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "9f032685c79befd8d4fcbd0ed80a8b7a73dab8be74a0b2abd8eafa19149beee9",
+      "sha256": "4063cd2d9c3b9f74244837f81674fdfccb6c8111e7251e57405e4c896c40aa51",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "651a6d5eac5d823bf21abfa056c3b52cf377c0d7aa7d34fc2ada8d7cdf19bdf4"
+        "sha256": "c57ebf2a1f29bd54376da4f05d99f023eaea3e3ede11fc7b7cd0ed587f9364b4"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "6bfb73ddf60b62674b8c6fcea40816eabf25a460547c271f4442442c91e1e896"
+        "sha256": "12b0438f8b26a6976ce991d96786ed62238a9ee09be9a155f57438cb6b319d38"
       },
       "flagsActive": {
         "path": "flags/active.json",
-        "sha256": "dcf6936d0e3d75ec18d7eb7fefd4a79e73d3125a7603b6cfa63e9ca103b10588"
+        "sha256": "70803b2cc531a83e228b4664a7a415acb9e753d85c95b727f4f1bab11fcb2b49"
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
@@ -31,7 +31,7 @@
       },
       "records": 95,
       "flags": {
-        "active": 228,
+        "active": 229,
         "resolved": 58
       }
     },
@@ -905,12 +905,6 @@
     ],
     "openFlags": [
       {
-        "id": "npveWorkflows_segmentedChipNoPattern",
-        "severity": "low",
-        "summary": "Medication and order chips on the Med List board are multi-segment (\"Start · Sertraline · 50mg · PO · QD · Approve ×\"); Chip has a single label.",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
-      {
         "id": "npveWorkflows_templateMenuInlineField",
         "severity": "low",
         "summary": "The Template dropdown panel combines a Save-as text field with a two-line item list; library Menu/Item is one line and Menu has no field slot.",
@@ -1023,11 +1017,17 @@
         "severity": "low",
         "summary": "A loose FRAME named \"Module chip\" (488:8725, 116x40, teal fill, inner frame + Icon/Close instance) sits at (485,1524) in Templates 15 · Encounter page shell beside the Module chip set 426:4213; no record or flag cites it.",
         "discoveredDuring": "npveTidy_2026-09-08"
+      },
+      {
+        "id": "npveFamilyHistory_sourceSaveOutlined",
+        "severity": "low",
+        "summary": "The Family History edit source 129:12486 (Clin_FHX-Editing) draws footer Save as outlined (button 129:12800, Type=Default, white fill, 1px #8CA7A2, 66x36) where Allergies 129:7949, Facility Stay 648:1735, Hospitalizations 129:8516 and Procedures 129:8773 all use Type=Primary (coral #FF8D6E pill). First surfaced in figma-export/npve-planning-2026-09-09/proposal.md; record npveRebuild_allergiesEdit_2026-09-09 originally misattributed it to Allergies and was amended 2026-09-09.",
+        "discoveredDuring": "npveRebuild_allergiesEdit_2026-09-09"
       }
     ],
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "442771cd9f4d52812a1d72b43482ddb6b4d3fa78a9f90c149816461fec71d008"
+    "contractSha256": "7fe032cc33399680e1ee3b64ae55c3ee716822f5f65da163e4a0e0a71b38a09b"
   }
 }

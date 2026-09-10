@@ -3108,6 +3108,20 @@
     "handling": "Reported, not touched (npveTidy_2026-09-08: unexplained items are flagged, not moved). Decision for Daniel: archive it as a stray under Archive 03, or keep it if it was a deliberate measurement stand-in.",
     "discoveredDuring": "npveTidy_2026-09-08"
    }
+  },
+  {
+   "sequence": 286,
+   "flag": {
+    "id": "npveFamilyHistory_sourceSaveOutlined",
+    "severity": "low",
+    "kind": "DECISION",
+    "discoveredDuring": "npveRebuild_allergiesEdit_2026-09-09",
+    "webAppV2BugListCandidate": false,
+    "summary": "The Family History edit source 129:12486 (Clin_FHX-Editing) draws footer Save as outlined (button 129:12800, Type=Default, white fill, 1px #8CA7A2, 66x36) where Allergies 129:7949, Facility Stay 648:1735, Hospitalizations 129:8516 and Procedures 129:8773 all use Type=Primary (coral #FF8D6E pill). First surfaced in figma-export/npve-planning-2026-09-09/proposal.md; record npveRebuild_allergiesEdit_2026-09-09 originally misattributed it to Allergies and was amended 2026-09-09.",
+    "where": "NPVE source zVsuhYehoSLLq880qRBFkq 129:12486 › footer button 129:12800",
+    "detail": "The current evidence supports misattribution of the original record wording to the Allergies source; live reads 2026-09-09 show every other edit-sheet Save as Type=Primary. Historical source changes were not investigated.",
+    "handling": "Report, do not resolve. Build the Family History footer as drawn with one change-log row; decision for Daniel at the npve-family-history-edit batch (as-drawn vs align to primary)."
+   }
   }
  ]
 }

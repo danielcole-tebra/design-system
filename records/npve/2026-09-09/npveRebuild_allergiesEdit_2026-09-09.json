@@ -69,9 +69,9 @@
    "Caption placement A: floating labels, source captions dropped, one change-log row per form."
   ],
   "backControlDelta": "Source draws a 32x32 square tinted #E9EFEE with a left caret; the shell Show back control (6:67) is the library Icon button color=default size=medium, 40x40, no fill, Icon/LeftCaret. Recorded DEFECT verdict (npveRebuild_sidesheet_inventory_2026_09_02, \"Back control (edit pages)\"). Plan: shell as published, one change-log row, one DEFECT marker beside the comparison; first sheet built with the back control visible.",
-  "expectedFinding": "Source footer inconsistency: Save is outlined here and primary on every other edit sheet. Report, do not resolve: build as drawn, one change-log row, one flag for Daniel.",
+  "expectedFinding": "No Allergies footer inconsistency: Save is Type=Primary here (button 129:7949, variant 26:2165, coral pill), the same as Facility Stay 648:1735, Hospitalizations 129:8516 and Procedures 129:8773. The outlined Save belongs to the Family History source 129:12486 (button 129:12800, Type=Default) and is that item's expectedFinding. The current evidence supports misattribution in the original wording (kept verbatim in expectedFindingSuperseded_2026_09_09); historical source changes were not investigated and are neither claimed nor ruled out. Build the Allergies footer as drawn (Cancel / Save & Add to Note outlined / Save primary) with no Save-inconsistency change-log row.",
   "stopConditions": [
-   "Stop before mutation on identity mismatch (file keys or page ids), on a control with no published mapping and no recorded GAP pattern, on any shared default or geometry change, or on a new design decision beyond the recorded outlined-Save finding.",
+   "Stop before mutation on identity mismatch (file keys or page ids), on a control with no published mapping and no recorded GAP pattern, on any shared default or geometry change, or on a new design decision.",
    "The source file is never written; the library file is never written.",
    "Additive only: nothing deleted; superseded content archived, never removed.",
    "If the Figma bridge is unavailable in a session, the batch pauses IN PROGRESS before mutation instead of proceeding unverified."
@@ -79,7 +79,7 @@
   "findings": {
    "GAP": 0,
    "DEFECT": 0,
-   "DECISION": 0,
+   "DECISION": 1,
    "PROCESS": 0
   },
   "flagsBefore": {
@@ -87,9 +87,22 @@
    "resolved": 58,
    "total": 286
   },
-  "flagsAfter": null,
-  "flagsAdded": [],
+  "flagsAfter": {
+   "active": 229,
+   "resolved": 58,
+   "total": 287
+  },
+  "flagsAdded": [
+   "npveFamilyHistory_sourceSaveOutlined"
+  ],
   "figmaMutations": [],
-  "resumeProcedure": "Resume from any MCP-capable session: the run .workflow-runs/npve-allergies-edit.json is active and this record is IN PROGRESS. Nothing in Figma has been mutated yet. 1) node scripts/workflow/validate-workflow.js — PASS expected, inProgress=npveRebuild_allergiesEdit_2026-09-09. 2) node scripts/workflow/check-batch.js npve-allergies-edit — guard PASS expected. 3) Verify target identity fdCQVFdvOByaOYIJYag0d6 (pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive; figma.skipInvisibleInstanceChildren = false for every walk) and record it in fileIdentity. — DONE 2026-09-09, see fileIdentity. 4) Frozen 2x reference export of source node 129:7826 into figma-export/npve-allergies-edit-2026-09-09/, shown at 1:1, captioned with the node id and export date; row-0 checked for the Sidesheetv3 set outline and cleaned if present. 5) Build the reusable 518px form per systemMapping and approvedDifferences in this record; caption decision A applies (floating labels, source captions dropped, one change-log row per form). 6) Run the ten standing batch rules and the deterministic checks; save PNG screenshots into the batch folder. 7) Comparison on Screens 27:2 in section \"22 · Allergies · Edit Allergen comparison (new)\": Reference / Rebuild / Change log with the GAP markers (dropdown chip pattern 404:7061; end-adornment wrapper 324:4934 / 394:5611) and the back-control DEFECT marker; the executor inspects the render and shows it to the operator. 8) node finalize-npve-allergies-edit.js then node scripts/workflow/finish-batch.js npve-allergies-edit (required evidence: audit-allergies-edit.json, report.md, comparison-allergies-edit.png). 9) appendFlags for the outlined-Save footer finding (report, do not resolve), then commit the record, aggregate, indexes, contract, manifest and evidence together."
+  "resumeProcedure": "Resume from any MCP-capable session: the run .workflow-runs/npve-allergies-edit.json is active and this record is IN PROGRESS. Nothing in Figma has been mutated yet. 1) node scripts/workflow/validate-workflow.js — PASS expected, inProgress=npveRebuild_allergiesEdit_2026-09-09. 2) node scripts/workflow/check-batch.js npve-allergies-edit — guard PASS expected. 3) Verify target identity fdCQVFdvOByaOYIJYag0d6 (pages 0:1 Cover, 3:2 Templates, 27:2 Screens, 126:2 Archive; figma.skipInvisibleInstanceChildren = false for every walk) and record it in fileIdentity. — DONE 2026-09-09, see fileIdentity. 4) Frozen 2x reference export of source node 129:7826 into figma-export/npve-allergies-edit-2026-09-09/, shown at 1:1, captioned with the node id and export date; row-0 checked for the Sidesheetv3 set outline and cleaned if present. 5) Build the reusable 518px form per systemMapping and approvedDifferences in this record; caption decision A applies (floating labels, source captions dropped, one change-log row per form). 6) Run the ten standing batch rules and the deterministic checks; save PNG screenshots into the batch folder. 7) Comparison on Screens 27:2 in section \"22 · Allergies · Edit Allergen comparison (new)\": Reference / Rebuild / Change log with the GAP markers (dropdown chip pattern 404:7061; end-adornment wrapper 324:4934 / 394:5611) and the back-control DEFECT marker; the executor inspects the render and shows it to the operator. 8) node finalize-npve-allergies-edit.js then node scripts/workflow/finish-batch.js npve-allergies-edit (required evidence: audit-allergies-edit.json, report.md, comparison-allergies-edit.png). 9) Flag npveFamilyHistory_sourceSaveOutlined was appended by the 2026-09-09 attribution amendment (see expectedFindingSuperseded_2026_09_09); commit the record, aggregate, indexes, contract, manifest and evidence together.",
+  "expectedFindingSuperseded_2026_09_09": {
+   "originalVerbatim": "No Allergies footer inconsistency: Save is Type=Primary here (button 129:7949, variant 26:2165, coral pill), the same as Facility Stay 648:1735, Hospitalizations 129:8516 and Procedures 129:8773. The outlined Save belongs to the Family History source 129:12486 (button 129:12800, Type=Default) and is that item's expectedFinding. The current evidence supports misattribution in the original wording (kept verbatim in expectedFindingSuperseded_2026_09_09); historical source changes were not investigated and are neither claimed nor ruled out. Build the Allergies footer as drawn (Cancel / Save & Add to Note outlined / Save primary) with no Save-inconsistency change-log row.",
+   "correctedBy": "Operator-directed amendment 2026-09-09 (amend-npve-allergies-edit-save-attribution.js) after live node reads of all five edit-sheet sources in zVsuhYehoSLLq880qRBFkq.",
+   "verdict": "The current evidence supports misattribution: the outlined-Save observation belongs to the Family History source 129:12486, not to this Allergies source. Historical source changes were not investigated.",
+   "evidence": "Allergies 129:7949 Primary; Facility Stay 648:1735 Primary; Hospitalizations 129:8516 Primary; Procedures 129:8773 Primary; Family History 129:12800 Type=Default (white fill, 1px #8CA7A2). All Button set 26:2112, 66x36.",
+   "manifestNote": "The Allergies manifest stopCondition clause \"beyond the recorded outlined-Save finding\" is stale for the same reason and is corrected by the operator or planner after this run closes (the finish gate freezes planner-owned fields mid-run)."
+  }
  }
 }

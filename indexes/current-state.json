@@ -46,13 +46,13 @@
   }
  },
  "flags": {
-  "active": 228,
+  "active": 229,
   "resolved": 58
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "9f032685c79befd8d4fcbd0ed80a8b7a73dab8be74a0b2abd8eafa19149beee9",
-  "bytes": 1464356
+  "sha256": "4063cd2d9c3b9f74244837f81674fdfccb6c8111e7251e57405e4c896c40aa51",
+  "bytes": 1467860
  }
 }
