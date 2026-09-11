@@ -1,0 +1,84 @@
+$ node scripts/workflow/runner-self-test.js
+{
+  "passed": true,
+  "cases": 30,
+  "fixtureOnly": true,
+  "liveFigmaCalls": 0,
+  "successfulDryRun": {
+    "states": [
+      "Default",
+      "Error/Entry",
+      "Success"
+    ],
+    "operation": "guarded additive preferred-value update in mock Plugin API",
+    "events": [
+      "read:zVsuhYehoSLLq880qRBFkq",
+      "read:fdCQVFdvOByaOYIJYag0d6",
+      "check-batch",
+      "mutate"
+    ],
+    "fullReadbackSaved": true
+  },
+  "historicalEvidence": "Patient Summary actual all-page unbound paints and shared property additions checked; no historical visual assertions promoted to fresh review."
+}
+
+exit=0
+
+$ node scripts/workflow/runner-plugin-self-test.js
+runner Plugin API structural self-test PASS shell, helpers, comparison, tokens, ambiguous hierarchy, all-page audit; no live Figma calls or pixel simulation
+
+exit=0
+
+$ node scripts/workflow/self-test.js
+self-test PASS risk lock (tier and approval), allowlist, and outside-record concurrency guard
+
+exit=0
+
+$ node scripts/workflow/execution-self-test.js
+execution self-test PASS 38 readiness, recovery, evidence and completion scenarios
+
+exit=0
+
+$ node scripts/workflow/target-identity-self-test.js
+target identity PASS: both writable files, mismatches, missing pages, read-only files rejected
+
+exit=0
+
+$ node scripts/workflow/validate-workflow.js
+workflow PASS store=106r/231+59f contract=51a2eda71006 items=12 deterministic=17 visual=3
+
+exit=0
+
+$ node scripts/schema/validate-split.js
+store PASS records=106 flags=231+59 aggregate=c1155eb97623 fresh immutable=105 milestone=milestone/2026-09-10-execution-reliability-safeguards-adopted (1.1d)
+
+exit=0
+
+$ node scripts/schema/self-test.js
+scratch store at C:\Users\coled\AppData\Local\Temp\tebra-store-iWwTuR
+loaded 106 records, 231+59 flags; fresh=true
+opened records/workflow/2026-09-08/dryRun_record_2026-09-08.json
+gate: duplicate refused; second record refused while the first is IN PROGRESS
+read back: sequence 106, aggregate key order preserved
+flags: appended to active.json, resolved into resolved.json, sequence kept
+fingerprint: own appends tolerated; an edit to an older record is caught
+finalize: IN PROGRESS -> DONE once; second finalize refused as immutable
+freshness: hand edit to the aggregate detected and repaired by rebuild
+real store untouched by this run: working tree already had changes; compare digests instead
+self-test PASS store write/read cycle: open, gate, read back, flags, fingerprint, finalize, immutability, freshness
+
+exit=0
+
+$ node scripts/workflow/npve-runner.js verify-handoff figma-export/workflow-npve-runner-2026-09-11/handoff.json
+{
+  "itemId": "npve-patient-summary-body-sheet",
+  "freshLocalSources": true,
+  "liveMappingsVerified": false
+}
+
+exit=0
+
+$ git diff --check
+warning: in the working copy of 'workflow/README.md', LF will be replaced by CRLF the next time Git touches it
+
+exit=0

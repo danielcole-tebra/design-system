@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T15:07:49.683Z",
+  "generatedAt": "2026-09-11T15:35:06.346Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "f031f27c74357101696cffc8d32eae76054aaa0938b96f2e07eaf5e0467a92f8",
+      "sha256": "c1155eb976234110688edcd326d736c94c7a3bc142fde7b233107cea8c62df28",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "c3c0611deab984873b0c415347eda9082c61613ecf0114af0af485220b0d63c8"
+        "sha256": "ac101321b558d31a98ae5136d5e58d238065196b2074d9f42a2cdbb3b041322d"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "2ee5e2314c714f6d910d289ae367e49aa7f2294acd1ff22b43d3c89fdcf648e1"
+        "sha256": "c3643d01a490d1e05613b9899e7e29e2f3d6120eb0d45b73aa563e38ab1d9296"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 105,
+      "records": 106,
       "flags": {
         "active": 231,
         "resolved": 59
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "npveRebuild_patientSummaryBody_2026-09-10",
-      "date": "2026-09-10",
-      "workstream": "npve",
-      "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
-      "status": "DONE — three full Patient Summary sheets verified; family build complete"
+      "id": "workflow_npveRunner_2026-09-11",
+      "date": "2026-09-11",
+      "workstream": "workflow",
+      "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
+      "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work"
     },
     "recordGate": {
       "inProgress": [],
@@ -352,12 +352,12 @@
         }
       },
       "workflow": {
-        "count": 12,
+        "count": 13,
         "latest": {
-          "id": "workflow_creditResetObservation_2026-09-10",
-          "date": "2026-09-10",
-          "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
-          "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
+          "id": "workflow_npveRunner_2026-09-11",
+          "date": "2026-09-11",
+          "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
+          "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work"
         }
       }
     }
@@ -744,17 +744,6 @@
     ],
     "recentRecords": [
       {
-        "id": "backupPolicyB_2026-09-08",
-        "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
-        "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or weekly, whichever comes first. Agent rule 7 amended, milestone tooling and weekly check added, docs updated; the last old-style backup was taken before the change. The first milestone tag follows the commit carrying this record.",
-        "date": "2026-09-08",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/backup-policy-b-2026-09-08/report.md",
-        "target": null
-      },
-      {
         "id": "npveTidy_2026-09-08",
         "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
         "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49 nodes) and each empty or near-empty one explained against the records; two emptied Screens organizers and the oversize legacy dividers frame moved to new Archive sections 07 and 08 as labelled bars; Archive 01 kept and shrunk to a one-line bar; Screens 15 · Social History renamed 16 and reordered; four half-empty Screens boards trimmed; Templates 05/06 overlap and section 15 overflow cleared; Screens re-spaced at a uniform 200px rhythm; README paragraph added; one unexplained stray (Templates 488:8725) flagged and not touched. Nothing deleted; no master, instance, token or comparison content edited.",
@@ -877,6 +866,17 @@
         "geometry": null,
         "decision": null,
         "report": "figma-export/npve-patient-summary-body-2026-09-10/report.md",
+        "target": null
+      },
+      {
+        "id": "workflow_npveRunner_2026-09-11",
+        "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
+        "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work",
+        "date": null,
+        "outcome": "Existing record/risk/version-3/checkpoint gates reused; reusable local modules, Plugin API programs and a file-backed authenticated-tool bridge; no live Figma calls.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-npve-runner-2026-09-11/report.md",
         "target": null
       }
     ],
@@ -1005,6 +1005,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "d9f7c02e704098ab45a1baee13a40b1949bb60d81212b42c1525bb2c6c0644d3"
+    "contractSha256": "51a2eda7100611142768cc6201c0f1204980e0ccf7d5df487e1ca5d401fe7df5"
   }
 }

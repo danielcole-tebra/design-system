@@ -1,0 +1,85 @@
+{
+  "id": "append-body",
+  "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "milestone": "Comparisons",
+  "requiresVisual": [
+    "Default",
+    "Error/Entry",
+    "Success"
+  ],
+  "appearanceEvidence": "batch/appearance.md",
+  "reads": [
+    {
+      "fileKey": "zVsuhYehoSLLq880qRBFkq",
+      "pages": [
+        "mock-source Source"
+      ],
+      "nodes": [
+        {
+          "id": "mock-source-node",
+          "name": "Patient Summary",
+          "type": "FRAME",
+          "parentId": "mock-source",
+          "width": 550,
+          "height": 894
+        }
+      ]
+    },
+    {
+      "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+      "pages": [
+        "0:1 Cover",
+        "3:2 Templates",
+        "27:2 Screens",
+        "126:2 Archive"
+      ],
+      "nodes": [
+        {
+          "id": "mock-master",
+          "key": "mock-master-key",
+          "name": "Sidesheet",
+          "type": "COMPONENT",
+          "parentId": "3:2",
+          "width": 550,
+          "height": 600,
+          "definitions": {
+            "Body#1": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "old-body",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "old-key"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "mock-body",
+          "key": "mock-body-key",
+          "name": "Body",
+          "type": "COMPONENT",
+          "parentId": "3:2",
+          "width": 518,
+          "height": 800,
+          "definitions": {}
+        }
+      ]
+    }
+  ],
+  "operation": {
+    "kind": "preferred",
+    "master": "mock-master",
+    "additions": {
+      "Body#1": [
+        {
+          "id": "mock-body",
+          "key": "mock-body-key",
+          "type": "COMPONENT"
+        }
+      ]
+    }
+  },
+  "fixtureNotice": "SYNTHETIC ONLY. No live IDs, approval or visual evidence."
+}

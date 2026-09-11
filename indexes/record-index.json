@@ -1018,6 +1018,15 @@
    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
    "status": "DONE — three full Patient Summary sheets verified; family build complete",
    "recordSha256": "c77e2c58da3cc06f2ad52e2d9d1581c02ca6446bc7a2628e6d84f8c2450076ed"
+  },
+  {
+   "id": "workflow_npveRunner_2026-09-11",
+   "sequence": 105,
+   "date": "2026-09-11",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
+   "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work",
+   "recordSha256": "8fbeabfbcdda57816c5631c12706e89a16b8aceecb39d1c9f262bf41973f161d"
   }
  ],
  "flags": {
@@ -1323,8 +1332,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 105,
-  "aggregateTopLevelKeys": 119,
-  "nextRecordSequence": 105
+  "records": 106,
+  "aggregateTopLevelKeys": 120,
+  "nextRecordSequence": 106
  }
 }

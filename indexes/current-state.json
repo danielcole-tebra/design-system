@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "npveRebuild_patientSummaryBody_2026-09-10",
-  "date": "2026-09-10",
-  "workstream": "npve",
-  "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
-  "status": "DONE — three full Patient Summary sheets verified; family build complete"
+  "id": "workflow_npveRunner_2026-09-11",
+  "date": "2026-09-11",
+  "workstream": "workflow",
+  "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
+  "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work"
  },
  "recordGate": {
   "inProgress": [],
@@ -34,12 +34,12 @@
    }
   },
   "workflow": {
-   "count": 12,
+   "count": 13,
    "latest": {
-    "id": "workflow_creditResetObservation_2026-09-10",
-    "date": "2026-09-10",
-    "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
-    "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
+    "id": "workflow_npveRunner_2026-09-11",
+    "date": "2026-09-11",
+    "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
+    "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work"
    }
   }
  },
@@ -50,7 +50,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "f031f27c74357101696cffc8d32eae76054aaa0938b96f2e07eaf5e0467a92f8",
-  "bytes": 1543568
+  "sha256": "c1155eb976234110688edcd326d736c94c7a3bc142fde7b233107cea8c62df28",
+  "bytes": 1545872
  }
 }

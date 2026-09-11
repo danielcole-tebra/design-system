@@ -1,0 +1,45 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "workflow_npveRunner_2026-09-11",
+ "sequence": 105,
+ "date": "2026-09-11",
+ "workstream": "workflow",
+ "created": {
+  "by": "Codex",
+  "at": "2026-09-11T15:16:30.654Z",
+  "script": "apply-workflow-npve-runner.js"
+ },
+ "record": {
+  "_status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work",
+  "scope": "Reusable established NPVE assembly, evidence, handoff, usage and closeout tooling; no Figma calls or design batches.",
+  "operatorQuote": "Proceed autonomously with reversible repository work. Do not create another task or delegate to subagents.",
+  "report": "figma-export/workflow-npve-runner-2026-09-11/report.md",
+  "canvasChecks": "NOT APPLICABLE — repository tooling only. No fake mappings, screenshots, approvals or workflow runs created for this tooling record; synthetic data lives only in tests/evidence labeled dry-run.",
+  "stopCondition": "Do not change approval/risk policy, DONE records, shared defaults or design decisions.",
+  "outcome": "Existing record/risk/version-3/checkpoint gates reused; reusable local modules, Plugin API programs and a file-backed authenticated-tool bridge; no live Figma calls.",
+  "implementation": [
+   "scripts/workflow/npve-runner.js",
+   "scripts/workflow/runner/",
+   "workflow/runner.md"
+  ],
+  "example": "figma-export/workflow-npve-runner-2026-09-11/handoff.json",
+  "measurement": {
+   "beforeBytes": 133174,
+   "afterBytes": 113847,
+   "reductionPercent": 14.51,
+   "method": "UTF-8 bytes of identical selected information: pretty JSON versus compact JSON. Both parse to the same canonical digest.",
+   "measuredRuntimeSavings": null,
+   "measuredTokenSavings": null,
+   "measuredCreditSavings": null
+  },
+  "validation": {
+   "runnerCases": 30,
+   "structuralPluginTests": "PASS — shell, helpers, comparison, token and hierarchy failures, all-page audit; offline double, no pixel simulation",
+   "existingChecks": "PASS — workflow self-test, execution self-test (38), target identity self-test, validate-workflow, validate-split and diff whitespace checks. Store write/read self-test is run after this record becomes DONE because it requires the latest record DONE.",
+   "figmaCalls": 0,
+   "existingDoneRecordsEdited": 0
+  },
+  "nextAction": "Operator may use these utilities on a separately authorized NPVE item; completed Patient Summary remains historical. First live use still needs authenticated-tool discovery, fresh mappings, guarded mutations and visual review."
+ }
+}

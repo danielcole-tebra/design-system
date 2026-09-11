@@ -1,0 +1,66 @@
+{
+  "complete": true,
+  "identities": [
+    {
+      "id": "mock-master",
+      "name": "Sidesheet",
+      "type": "COMPONENT",
+      "parentId": "3:2",
+      "key": "mock-master-key",
+      "width": 550,
+      "height": 600,
+      "definitions": {
+        "Body#1": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "old-body",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "old-key"
+            },
+            {
+              "key": "mock-body-key",
+              "type": "COMPONENT"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "before": {
+    "Body#1": {
+      "type": "INSTANCE_SWAP",
+      "defaultValue": "old-body",
+      "preferredValues": [
+        {
+          "type": "COMPONENT",
+          "key": "old-key"
+        },
+        {
+          "key": "mock-body-key",
+          "type": "COMPONENT"
+        }
+      ]
+    }
+  },
+  "after": {
+    "Body#1": {
+      "type": "INSTANCE_SWAP",
+      "defaultValue": "old-body",
+      "preferredValues": [
+        {
+          "type": "COMPONENT",
+          "key": "old-key"
+        },
+        {
+          "key": "mock-body-key",
+          "type": "COMPONENT"
+        }
+      ]
+    }
+  },
+  "differences": [],
+  "counts": {
+    "updatedMenus": 1
+  }
+}

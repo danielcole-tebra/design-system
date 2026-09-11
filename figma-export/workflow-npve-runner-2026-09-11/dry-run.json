@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "cases": 30,
+  "fixtureOnly": true,
+  "liveFigmaCalls": 0,
+  "successfulDryRun": {
+    "states": [
+      "Default",
+      "Error/Entry",
+      "Success"
+    ],
+    "operation": "guarded additive preferred-value update in mock Plugin API",
+    "events": [
+      "read:zVsuhYehoSLLq880qRBFkq",
+      "read:fdCQVFdvOByaOYIJYag0d6",
+      "check-batch",
+      "mutate"
+    ],
+    "fullReadbackSaved": true
+  },
+  "historicalEvidence": "Patient Summary actual all-page unbound paints and shared property additions checked; no historical visual assertions promoted to fresh review."
+}
