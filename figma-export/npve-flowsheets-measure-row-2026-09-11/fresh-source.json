@@ -1,0 +1,235 @@
+{
+  "complete": true,
+  "fileKey": "zVsuhYehoSLLq880qRBFkq",
+  "pages": [
+    "0:1 Cover",
+    "10:15 -----DESIGNS-----",
+    "105:1426 Workflows",
+    "1050:8411 Error States",
+    "3813:14586 V2:AI Patient Summary",
+    "21:320 -----COMPONENTS-----",
+    "21:321 ⚙️ Components",
+    "105:1425 -----ARCHIVE-----",
+    "5264:20606 Module Evolution",
+    "4740:14057 NeuNeu",
+    "1424:8259 Neu",
+    "112:4335 Sandbox",
+    "4250:14678 Misc",
+    "12:866 NoFolder Navigation",
+    "10:14 Folder Navigation",
+    "4211:15272 -----RESEARCH------",
+    "4211:15273 Maps",
+    "1236:3155 Research Framework"
+  ],
+  "rows": [
+    {
+      "id": "939:9251",
+      "name": "Main Wrap",
+      "type": "FRAME",
+      "parentId": "939:9233",
+      "width": 548,
+      "height": 64,
+      "text": [
+        {
+          "id": "939:9254",
+          "text": "PHQ-9",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Bold"
+          },
+          "size": 16,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 20
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.3291666805744171,
+                "g": 0.3291666805744171,
+                "b": 0.3291666805744171
+              },
+              "boundVariables": {}
+            }
+          ]
+        },
+        {
+          "id": "939:9255",
+          "text": "15",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Bold"
+          },
+          "size": 16,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 20
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.7098039388656616,
+                "g": 0.3045751750469208,
+                "b": 0.10196078568696976
+              },
+              "boundVariables": {}
+            }
+          ]
+        },
+        {
+          "id": "939:9256",
+          "text": "2/1/26",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Regular"
+          },
+          "size": 14,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 18
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.3291666805744171,
+                "g": 0.3291666805744171,
+                "b": 0.3291666805744171
+              },
+              "boundVariables": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "939:9353",
+      "name": "2NDMEASURE",
+      "type": "FRAME",
+      "parentId": "939:9233",
+      "width": 548,
+      "height": 64,
+      "text": [
+        {
+          "id": "939:9356",
+          "text": "GAD-7",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Bold"
+          },
+          "size": 16,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 20
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.3291666805744171,
+                "g": 0.3291666805744171,
+                "b": 0.3291666805744171
+              },
+              "boundVariables": {}
+            }
+          ]
+        },
+        {
+          "id": "939:9357",
+          "text": "12",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Bold"
+          },
+          "size": 16,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 20
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.7098039388656616,
+                "g": 0.3045751750469208,
+                "b": 0.10196078568696976
+              },
+              "boundVariables": {}
+            }
+          ]
+        },
+        {
+          "id": "939:9359",
+          "text": "15%",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Regular"
+          },
+          "size": 14,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 18
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.3291666805744171,
+                "g": 0.3291666805744171,
+                "b": 0.3291666805744171
+              },
+              "boundVariables": {}
+            }
+          ]
+        },
+        {
+          "id": "939:9362",
+          "text": "2 days ago",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Regular"
+          },
+          "size": 14,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 18
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.3291666805744171,
+                "g": 0.3291666805744171,
+                "b": 0.3291666805744171
+              },
+              "boundVariables": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

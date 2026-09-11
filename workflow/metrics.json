@@ -441,6 +441,20 @@
       "source": "No measured per-response usage or billing counters available through tools for this run.",
       "approximate": false,
       "coverage": "completed audit; usage unavailable"
+    },
+    {
+      "itemId": "npve-flowsheets-measure-row",
+      "recordId": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+      "provider": "OpenAI",
+      "model": null,
+      "reasoning": null,
+      "input": null,
+      "cachedInput": null,
+      "output": null,
+      "credits": null,
+      "source": "No measured complete-run per-response usage or billing counters supplied for this bounded batch.",
+      "approximate": false,
+      "coverage": "Completed batch; usage unavailable. Context measurements report bytes only."
     }
   ],
   "activeCostBaselines": [

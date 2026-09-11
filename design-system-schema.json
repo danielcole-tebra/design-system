@@ -30396,5 +30396,261 @@
    "workflow": "PASS before finalization; repeated after generated contract refresh",
    "canvas": "N/A — source-only screenshots inspected, no rebuilt UI"
   }
+ },
+ "npveRebuild_flowsheetsMeasureRow_2026-09-11": {
+  "_status": "DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception documented",
+  "manifestItem": "npve-flowsheets-measure-row",
+  "risk": {
+   "tier": "medium",
+   "reasons": [
+    "One two-variant local component set with approved temporary icon substitutions",
+    "Dedicated live comparisons; shared masters and tokens unchanged"
+   ],
+   "proposedBy": "Codex planner after operator substitution decision, 2026-09-11",
+   "approval": {
+    "status": "unapproved",
+    "approvedBy": null,
+    "approvedAt": null,
+    "quote": null,
+    "history": []
+   },
+   "lockedAt": "2026-09-11T16:05:11.468Z",
+   "lock": "1af03d41ac698be99388b2b865d5432ae7025839f80c9966b7f36b42d901ba4c"
+  },
+  "scope": "Build one 518px local Flowsheets measure row set with Basic and With trend variants, source copy and live published substitute icons. Preserve existing Icon button geometry in 42px local action areas. Dedicated source/rebuild/change comparison for each variant. No body/sheet, graph, questionnaire, library write or preferred-value changes.",
+  "operatorContinuationQuote": "build the row with substitute icons for now",
+  "stopCondition": "Stop on source/target identity drift, unavailable exact selected library mapping/token/property, a need to redraw/detach/rasterize UI, shared-master changes, or deterministic/visual failure. Temporary icon substitutions are explicitly authorized; local 42px action areas retain unchanged 40px masters. No graph/questionnaire/body/sheet work.",
+  "planning": {
+   "auditRecord": "npveRebuild_flowsheetsAudit_2026-09-11",
+   "audit": "figma-export/npve-flowsheets-audit-2026-09-11/report.md",
+   "decisionFlags": [
+    "npveFlowsheets_rowIconMappings_2026-09-11",
+    "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11"
+   ],
+   "previousRecordAtProposal": "npveRebuild_flowsheetsAudit_2026-09-11",
+   "recordGate": "Audit record must be DONE; no build record exists. Open a new record after operator decisions, re-tiering and per-item approval, then generate its task-specific runner handoff.",
+   "futureDependencies": "No local Flowsheets dependency exists. Selected published glyphs must be verified before start; exact missing glyphs require separately authorized library work and publication.",
+   "sourceRows": [
+    "939:9251",
+    "939:9353"
+   ],
+   "sourceCopy": {
+    "basic": [
+     "PHQ-9",
+     "15",
+     "2/1/26"
+    ],
+    "withTrend": [
+     "GAD-7",
+     "12",
+     "15%",
+     "2 days ago"
+    ]
+   },
+   "deferred": [
+    "Graph",
+    "Add readings questionnaire",
+    "Edit readings questionnaire",
+    "Selector/header/body/sheet"
+   ],
+   "previousProposal": {
+    "risk": {
+     "tier": "human-decision",
+     "reasons": [
+      "Missing exact monitoring/trend glyphs and unapproved note/edit substitutions",
+      "Recorded target-size wording disagrees with live Icon button geometry"
+     ],
+     "proposedBy": "Codex (planner), read-only Flowsheets audit 2026-09-11",
+     "approval": {
+      "status": "unapproved",
+      "approvedBy": null,
+      "approvedAt": null,
+      "quote": null,
+      "history": []
+     }
+    },
+    "oversight": [
+     "Operator resolves icon mappings and size disagreement, then re-tiers and explicitly approves this item before start",
+     "Executor inspects dedicated reference/rebuild/change comparisons for both row variants and shows operator before a dependent item"
+    ],
+    "stopCondition": "Do not start while human-decision. Stop before mutation on missing published mapping without an approved GAP treatment, unresolved 34/40/42px disagreement, identity drift, unsupported property, invented copy/state, need to detach/redraw/rasterize UI, or shared-master change. Stop on deterministic or visual failure before extending the batch."
+   },
+   "operatorDecision": "build the row with substitute icons for now",
+   "mappingDecision": "Temporary AddPaymentNote / Reports / EditOutlined / PlusOutlined; UpCaret for trend. All remain live published instances; neutral GAP marker stays in each variant.",
+   "geometryResolution": "40px library Icon button retained inside a 42px local action area; no shared geometry change or global rule edit. This meets the NPVE minimum without claiming the master is 42px."
+  },
+  "report": "figma-export/npve-flowsheets-measure-row-2026-09-11/report.md",
+  "mutationsPlanned": [
+   "Create two independent variants and a local Templates organizer",
+   "Create dedicated live rebuild helpers with both row samples and neutral GAP labels",
+   "Create frozen 2x reference and Change log/Row helpers plus comparison instances using reusable runner",
+   "Archive any disposable property-check proof unchanged with README before close"
+  ],
+  "flagsResolved": [],
+  "nextAction": "No next batch authorized by this completion. Review the comparison; subsequent Flowsheets list/body work requires a new bounded record and approval.",
+  "pendingDecision": null,
+  "figmaMutations": [
+   {
+    "section": "684:8265",
+    "set": "686:8437",
+    "variants": [
+     "684:8266",
+     "685:8297"
+    ],
+    "screensSection": "687:13026",
+    "comparisons": [
+     "691:611",
+     "691:929"
+    ]
+   }
+  ],
+  "evidence": {
+   "source": "figma-export/npve-flowsheets-measure-row-2026-09-11/fresh-source.json",
+   "library": "figma-export/npve-flowsheets-measure-row-2026-09-11/fresh-library.json",
+   "target": "figma-export/npve-flowsheets-measure-row-2026-09-11/target.json",
+   "checkpoint": "figma-export/npve-flowsheets-measure-row-2026-09-11/execution.json",
+   "preparedBuild": "figma-export/npve-flowsheets-measure-row-2026-09-11/build-row.js"
+  },
+  "operatorSeverityClarification": "Oh I see scores in the flowsheet are a different color depending on their severity. Those should be bound to a design token color.",
+  "operatorColorDecision": {
+   "quote": "Maybe just juse Neuron and first Aid for the color token for now.",
+   "mapping": {
+    "PHQ-9 15": {
+     "name": "First Aid",
+     "token": "color/error/main",
+     "key": "138a46cabb1d233ffc170d8f5c88290ff17ecd35"
+    },
+    "GAD-7 12": {
+     "name": "Neuron",
+     "token": "color/warning/dark",
+     "key": "c7b6e6f8145265bb911f98a5a2f0d9e3c2fccf78"
+    }
+   },
+   "limitation": "Temporary example colors; no clinical severity thresholds or automatic scoring rules."
+  },
+  "proofArchivePlan": {
+   "ids": [
+    "687:8335",
+    "687:8361"
+   ],
+   "from": "684:8265",
+   "to": "New dated section on Archive 126:2",
+   "treatment": "Move tested instances unchanged, with new bound-text README. Preserve IDs; no deletion."
+  },
+  "runnerNotes": [
+   "Basic helpers: figma.io.write did not expose a result file in this client; complete newly-created subtree readback saved before acknowledging the runner. No mutation replay.",
+   "Reference helper containers set to vertical auto-layout before runner comparison because its slot uses HUG. Frozen rectangle stays exactly 548x64.",
+   "Comparison transport uses reversible string-table encoding to keep complete readbacks below the tool response cap; decoded native JSON is saved. Program and guards unchanged."
+  ],
+  "processIncident": {
+   "issue": "Archive write was dispatched after check-batch failed on stale generated contract; orchestration failed to check exit_code. This is a guard violation, not a successful guarded call.",
+   "landed": "692:2392,692:2393 created; 687:8335 and 687:8361 moved within target Archive. Readback confirmed these IDs; no replay.",
+   "recovery": "Regenerated contract; check-batch passed with unchanged 107 other records and 294 flags. Future mutation dispatch explicitly aborts on nonzero exit_code.",
+   "limitation": "Successful later checks do not retroactively authorize or erase the missed pre-mutation guard."
+  },
+  "proofArchiveCorrection": {
+   "move": "692:2392 with README and both proofs into mandated section 570:10455",
+   "rename": {
+    "687:8335": "PROOF — npve-flowsheets-measure-row-2026-09-11 · Basic text properties",
+    "687:8361": "PROOF — npve-flowsheets-measure-row-2026-09-11 · With trend text properties"
+   },
+   "reason": "Correct archive destination and naming to proofConvention; preserve content and IDs.",
+   "layout": "Nest new section at x2520 y72 inside 570:10455; expand pilot section width to3716, height unchanged720 so following sections do not move.",
+   "README": "Append entry to existing Archive README text185:5; expand its containing frame185:3 to800px high, ending at y-20 without touching section01."
+  },
+  "finalVisualCorrection": {
+   "source": "939:9353 has solid#D6D6D6 strokes, top/bottom1,left/right0; Basic939:9251 has no strokes.",
+   "target": "Bind color/divider on new trend Measure content685:8298, top/bottom1,left/right0; retain row and GAP heights.",
+   "reason": "Restore source separators, an unambiguous factual omission. Reinspect live row and comparisons; recollect affected audits."
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — audit-instances.json and final-placements.json: both variants and nested comparison instances match full master paint arrays, including alpha and bindings.",
+   "2_unboundPaintAudit": "PASS — complete activated-page walks: Cover1, Templates48, Screens43, Archive20 before and after; exact unbound entries unchanged.",
+   "3_referenceCounts": "PASS — after combineAsVariants: Basic7/7 and With trend8/8 descendant references; set-built.json preserves exact text references.",
+   "4_skipInvisibleFalse": "PASS — all audit walks explicitly set skipInvisibleInstanceChildren=false.",
+   "5_opacityLast": "PASS — no paint-level opacity override introduced; bound variable alpha preserved.",
+   "6_enumerateDontRecall": "PASS — every node on every activated page walked, including notes, references, sections, hidden descendants and proofs.",
+   "7_fileIdentityFirst": "PASS — explicit source/library/target keys and complete inventories freshly checked. NPVE calls use its target key; source/library read-only. Separate procedural guard lapse is disclosed, not included in this identity result.",
+   "8_roundWithRecord": "PASS — zero fractional authored geometry in all new roots. Published intrinsic glyph geometry retained; widths518/548 and controls40/42 integer. No authored rounding introduced.",
+   "9_boundPaintAlpha": "PASS — no bound paint opacity forced to1; rendered master/instance alpha arrays match.",
+   "10_cloneDropsPropertyRefs": "PASS — independently built variants combined; refs verified after combination and exposed fields changed rendered proof characters. No variant cloning."
+  },
+  "screenshots": [
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison.png",
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison-basic.png",
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison-trend.png",
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/basic.png",
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/trend.png",
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/proofs.png",
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/archive-readme.png"
+  ],
+  "proofDisposition": {
+   "id": "692:2392",
+   "parent": "570:10455",
+   "x": 2520,
+   "y": 72,
+   "proofIds": [
+    "687:8335",
+    "687:8361"
+   ],
+   "README": "185:5"
+  },
+  "operatorPresentationEvidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/operator-presentation.md",
+  "outcome": {
+   "componentSet": "686:8437",
+   "variants": {
+    "Basic": "684:8266",
+    "With trend": "685:8297"
+   },
+   "comparisons": {
+    "Basic": "691:611",
+    "With trend": "691:929"
+   },
+   "gapGlyphs": 4,
+   "visualDefects": 0,
+   "proceduralGuardExceptions": 1,
+   "sourceAndLibraryWritten": false,
+   "sharedComponentChanges": 0
+  },
+  "createdAndMutatedEvidence": [
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/final-placements.json",
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/proof-final.json",
+   "figma-export/npve-flowsheets-measure-row-2026-09-11/set-built.json"
+  ],
+  "audit": "figma-export/npve-flowsheets-measure-row-2026-09-11/audit.json",
+  "execution": "figma-export/npve-flowsheets-measure-row-2026-09-11/execution.json",
+  "closeoutCompatibility": "Batch-local finalizer supplies omitted repositoryContext export using authoritative files; reusable closeout approval, check, evidence, finalize and finish gates remain unchanged. Dry-run passed.",
+  "executionCorrections": [
+   {
+    "issue": "Reference helpers need auto-layout for runner HUG slots.",
+    "outcome": "Changed only the new helper containers; frozen reference remains548x64.",
+    "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/helper-ready.json"
+   },
+   {
+    "issue": "Basic helper file-output transport did not expose an attachment.",
+    "outcome": "Saved complete fresh subtree readback before acknowledging runner; no creation replay.",
+    "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/runner/helpers-basic/result.json"
+   },
+   {
+    "issue": "Archive write dispatched despite stale-contract guard failure.",
+    "outcome": "Guard violation recorded; later regeneration and guard passed. Readback confirmed landed IDs and unchanged outside record/flag scope. No claim of retroactive compliance.",
+    "evidence": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json — processIncident"
+   },
+   {
+    "issue": "Proof archive destination and naming did not follow proofConvention.",
+    "outcome": "Recorded correction before guarded move into06 Pilot proofs; README appended; IDs and proof content preserved.",
+    "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/proof-final.json"
+   },
+   {
+    "issue": "Trend row source dividers omitted",
+    "outcome": "Restored top/bottom1px color/divider; final row and comparisons reinspected; final audits recollected.",
+    "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/divider-correction.json"
+   },
+   {
+    "issue": "Two oversized read-only audit responses truncated",
+    "outcome": "Rejected both; switched to separate page and bounded direct/nested instance snapshots. No mutation or replay.",
+    "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/audit-instances.json"
+   }
+  ]
  }
 }

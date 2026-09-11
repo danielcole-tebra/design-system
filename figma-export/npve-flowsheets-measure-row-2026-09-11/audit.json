@@ -1,0 +1,99 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "npve-flowsheets-measure-row",
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "evidence": [
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/audit-instances.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/final-placements.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/deterministic-audit.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-0-1.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-3-2.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-27-2.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-126-2.json"
+      ]
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "evidence": [
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/audit-instances.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/final-placements.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/deterministic-audit.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-0-1.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-3-2.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-27-2.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-126-2.json"
+      ]
+    },
+    "referenceCounts": {
+      "pass": true,
+      "evidence": [
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/audit-instances.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/final-placements.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/deterministic-audit.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-0-1.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-3-2.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-27-2.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-126-2.json"
+      ]
+    },
+    "componentIdentity": {
+      "pass": true,
+      "evidence": [
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/audit-instances.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/final-placements.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/deterministic-audit.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-0-1.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-3-2.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-27-2.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/after-126-2.json"
+      ]
+    },
+    "propertyReferences": {
+      "pass": true,
+      "evidence": [
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/proof-test.json",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/proofs.png",
+        "figma-export/npve-flowsheets-measure-row-2026-09-11/final-placements.json"
+      ],
+      "observation": "Changed exposed text appears on both live proof variants after combine; reference counts7/7 and8/8."
+    }
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison.png",
+    "inspectedByExecutor": true,
+    "observations": [
+      "Both dedicated source/rebuild/change comparisons inspected at full size. Text, scores, all actions and trend visible; no clipped content."
+    ]
+  },
+  "toolCalls": {
+    "figmaRead": null,
+    "figmaWrite": null,
+    "screenshot": null,
+    "correctionCycles": null
+  },
+  "workflowGuardCompliance": {
+    "pass": false,
+    "incident": {
+      "issue": "Archive write was dispatched after check-batch failed on stale generated contract; orchestration failed to check exit_code. This is a guard violation, not a successful guarded call.",
+      "landed": "692:2392,692:2393 created; 687:8335 and 687:8361 moved within target Archive. Readback confirmed these IDs; no replay.",
+      "recovery": "Regenerated contract; check-batch passed with unchanged 107 other records and 294 flags. Future mutation dispatch explicitly aborts on nonzero exit_code.",
+      "limitation": "Successful later checks do not retroactively authorize or erase the missed pre-mutation guard."
+    },
+    "finalGuard": "Passed after regeneration; does not erase the earlier missed gate."
+  }
+}

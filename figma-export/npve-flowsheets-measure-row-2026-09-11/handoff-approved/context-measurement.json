@@ -1,0 +1,13 @@
+{
+  "method": "UTF-8 bytes of identical selected information: pretty JSON versus compact JSON. Both parse to the same canonical digest.",
+  "beforeBytes": 134533,
+  "afterBytes": 113967,
+  "reductionPercent": 15.29,
+  "equivalentPayloadSha256": "8014d67f93435329a7001807c489e9a9d5a8e3ca78858b4d5efbb6d01cdd0a57",
+  "sourceBundleBytes": 462314,
+  "sourceBundleNote": "Broader files contain unrelated information; this is not the equivalent-information baseline.",
+  "tokensSaved": null,
+  "runtimeToolCallsSaved": null,
+  "creditsSaved": null,
+  "runtimeExpectation": "Reusable programs and file-backed readbacks should reduce generation and model-facing output; no live execution comparison measured."
+}

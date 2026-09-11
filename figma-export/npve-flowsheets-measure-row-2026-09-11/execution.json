@@ -1,0 +1,179 @@
+{
+  "format": "tebra.design-execution",
+  "version": 2,
+  "itemId": "npve-flowsheets-measure-row",
+  "recordId": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+  "preflight": {
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "identityEvidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/target.json",
+    "tools": [
+      "mcp__codex_apps__figma_use_figma",
+      "mcp__codex_apps__figma_get_screenshot"
+    ],
+    "toolEvidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/preflight.md",
+    "controls": [
+      {
+        "name": "Rebuild comparison",
+        "component": "35:332",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/controls.json"
+      },
+      {
+        "name": "Change log/Row",
+        "component": "18:103",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/controls.json"
+      },
+      {
+        "name": "color=default, size=medium, State=Default",
+        "component": "170:5",
+        "properties": {
+          "color": "default",
+          "size": "medium",
+          "State": "Default"
+        },
+        "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/controls.json"
+      },
+      {
+        "name": "Icon/AddPaymentNote",
+        "component": "575:2",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/controls.json"
+      },
+      {
+        "name": "Icon/EditOutlined",
+        "component": "575:13",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/controls.json"
+      },
+      {
+        "name": "Icon/PlusOutlined",
+        "component": "76:8",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/controls.json"
+      },
+      {
+        "name": "Icon/UpCaret",
+        "component": "575:37",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/controls.json"
+      },
+      {
+        "name": "Icon/Reports",
+        "component": "292:4",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/controls.json"
+      }
+    ]
+  },
+  "appearance": {
+    "specification": "figma-export/npve-flowsheets-measure-row-2026-09-11/appearance.md",
+    "review": {
+      "inspected": true,
+      "render": "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison.png",
+      "areas": {
+        "surfaces": "Paper row surfaces and grey comparison backdrop render correctly.",
+        "borders": "No stray section borders; trend row top/bottom dividers restored with color/divider; Basic has no strokes.",
+        "content": "Source PHQ-9 15 2/1/26 and GAD-7 12 15% 2 days ago retained. First Aid and Neuron scores visible.",
+        "states": "Basic and With trend both inspected; no additional interaction states invented.",
+        "layout": "518px rebuilt row, 16px gaps/padding, 40px buttons centered in 42px local areas. GAP labels fit below rows.",
+        "actions": "Four live library button instances in each row; temporary glyph substitutions explicitly labelled."
+      },
+      "differences": [
+        {
+          "observation": "Temporary note, chart, edit and trend glyph substitutions.",
+          "disposition": "approved",
+          "evidence": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json — operatorContinuationQuote"
+        },
+        {
+          "observation": "Source orange replaced with First Aid for PHQ-9 15 and Neuron for GAD-7 12; temporary example mapping.",
+          "disposition": "approved",
+          "evidence": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json — operatorColorDecision"
+        },
+        {
+          "observation": "Rebuilt content width518; controls retain40px library geometry within42px areas; code text styles use24px heading line height.",
+          "disposition": "corrected",
+          "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/appearance.md"
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "issue": "Reference helpers need auto-layout for runner HUG slots.",
+      "outcome": "Changed only the new helper containers; frozen reference remains548x64.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/helper-ready.json"
+    },
+    {
+      "issue": "Basic helper file-output transport did not expose an attachment.",
+      "outcome": "Saved complete fresh subtree readback before acknowledging runner; no creation replay.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/runner/helpers-basic/result.json"
+    },
+    {
+      "issue": "Archive write dispatched despite stale-contract guard failure.",
+      "outcome": "Guard violation recorded; later regeneration and guard passed. Readback confirmed landed IDs and unchanged outside record/flag scope. No claim of retroactive compliance.",
+      "evidence": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json — processIncident"
+    },
+    {
+      "issue": "Proof archive destination and naming did not follow proofConvention.",
+      "outcome": "Recorded correction before guarded move into06 Pilot proofs; README appended; IDs and proof content preserved.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/proof-final.json"
+    },
+    {
+      "issue": "Trend row source dividers omitted",
+      "outcome": "Restored top/bottom1px color/divider; final row and comparisons reinspected; final audits recollected.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/divider-correction.json"
+    },
+    {
+      "issue": "Two oversized read-only audit responses truncated",
+      "outcome": "Rejected both; switched to separate page and bounded direct/nested instance snapshots. No mutation or replay.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/audit-instances.json"
+    }
+  ],
+  "milestones": [
+    {
+      "name": "Basic row",
+      "status": "verified",
+      "nodeIds": [
+        "684:8266",
+        "684:8296",
+        "684:8297"
+      ],
+      "render": "figma-export/npve-flowsheets-measure-row-2026-09-11/basic.png",
+      "inspected": true,
+      "observations": [
+        "PHQ-9, 15 and 2/1/26 readable; First Aid score shown; four live substitute actions visible; GAP label below row; no overlap or clipping."
+      ]
+    },
+    {
+      "name": "With trend row",
+      "status": "verified",
+      "nodeIds": [
+        "685:8297",
+        "685:8331",
+        "685:8332"
+      ],
+      "render": "figma-export/npve-flowsheets-measure-row-2026-09-11/trend.png",
+      "inspected": true,
+      "observations": [
+        "GAD-7, Neuron 12, 15%, UpCaret and 2 days ago readable; all four actions visible; no overlap or clipping."
+      ]
+    },
+    {
+      "name": "Comparisons",
+      "status": "verified",
+      "nodeIds": [
+        "691:611",
+        "691:929",
+        "687:13026"
+      ],
+      "render": "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison.png",
+      "inspected": true,
+      "observations": [
+        "Both dedicated source/rebuild/change comparisons inspected at full size. Text, scores, all actions and trend visible; no clipped content."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "nextAction": "Batch complete after closeout; operator reviews comparison before any separately authorized dependent work."
+}

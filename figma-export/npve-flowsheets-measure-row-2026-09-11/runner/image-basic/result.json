@@ -1,0 +1,61 @@
+{
+  "complete": true,
+  "identities": [
+    {
+      "id": "688:3",
+      "name": "Frozen source / Flowsheets Basic",
+      "type": "RECTANGLE",
+      "parentId": "688:2",
+      "width": 548,
+      "height": 64
+    }
+  ],
+  "trees": [
+    {
+      "id": "688:3",
+      "name": "Frozen source / Flowsheets Basic",
+      "type": "RECTANGLE",
+      "parentId": "688:2",
+      "width": 548,
+      "height": 64,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "4d85a31727ac13041b6fc703c8d8aaeba333f64a"
+        }
+      ],
+      "references": {}
+    }
+  ],
+  "counts": {
+    "createdOrTouched": 1
+  },
+  "differences": []
+}

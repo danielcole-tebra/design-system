@@ -1036,6 +1036,15 @@
    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsAudit_2026-09-11.json",
    "status": "DONE — four Flowsheets states audited; row proposal awaits icon and geometry decisions",
    "recordSha256": "0830f77fa08f29da49742c227c0144f0e40652d681c887effb81a1efb044eb81"
+  },
+  {
+   "id": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+   "sequence": 107,
+   "date": "2026-09-11",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json",
+   "status": "DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception document",
+   "recordSha256": "9ccfe0aae0e822dbb574c3efceb4b8163733dd16748ddfb34e58c5797a4b449d"
   }
  ],
  "flags": {
@@ -1345,8 +1354,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 107,
-  "aggregateTopLevelKeys": 121,
-  "nextRecordSequence": 107
+  "records": 108,
+  "aggregateTopLevelKeys": 122,
+  "nextRecordSequence": 108
  }
 }

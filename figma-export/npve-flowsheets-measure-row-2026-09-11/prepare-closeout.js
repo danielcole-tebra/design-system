@@ -1,0 +1,41 @@
+const fs=require('fs');
+const d='figma-export/npve-flowsheets-measure-row-2026-09-11/';
+const read=f=>JSON.parse(fs.readFileSync(d+f,'utf8'));
+const save=(f,x)=>fs.writeFileSync(d+f,JSON.stringify(x,null,2)+'\n');
+const recordPath='records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json';
+const record=JSON.parse(fs.readFileSync(recordPath)).record;
+const e=read('execution.json');
+Object.assign(e.milestones[2],{status:'verified',nodeIds:['691:611','691:929','687:13026'],render:d+'comparison.png',inspected:true,observations:['Both dedicated source/rebuild/change comparisons inspected at full size. Text, scores, all actions and trend visible; no clipped content.']});
+e.appearance.review={inspected:true,render:d+'comparison.png',areas:{surfaces:'Paper row surfaces and grey comparison backdrop render correctly.',borders:'No stray section borders; trend row top/bottom dividers restored with color/divider; Basic has no strokes.',content:'Source PHQ-9 15 2/1/26 and GAD-7 12 15% 2 days ago retained. First Aid and Neuron scores visible.',states:'Basic and With trend both inspected; no additional interaction states invented.',layout:'518px rebuilt row, 16px gaps/padding, 40px buttons centered in 42px local areas. GAP labels fit below rows.',actions:'Four live library button instances in each row; temporary glyph substitutions explicitly labelled.'},differences:[{observation:'Temporary note, chart, edit and trend glyph substitutions.',disposition:'approved',evidence:recordPath+' — operatorContinuationQuote'},{observation:'Source orange replaced with First Aid for PHQ-9 15 and Neuron for GAD-7 12; temporary example mapping.',disposition:'approved',evidence:recordPath+' — operatorColorDecision'},{observation:'Rebuilt content width518; controls retain40px library geometry within42px areas; code text styles use24px heading line height.',disposition:'corrected',evidence:d+'appearance.md'}]};
+e.corrections=[{issue:'Reference helpers need auto-layout for runner HUG slots.',outcome:'Changed only the new helper containers; frozen reference remains548x64.',evidence:d+'helper-ready.json'},{issue:'Basic helper file-output transport did not expose an attachment.',outcome:'Saved complete fresh subtree readback before acknowledging runner; no creation replay.',evidence:d+'runner/helpers-basic/result.json'},{issue:'Archive write dispatched despite stale-contract guard failure.',outcome:'Guard violation recorded; later regeneration and guard passed. Readback confirmed landed IDs and unchanged outside record/flag scope. No claim of retroactive compliance.',evidence:recordPath+' — processIncident'},{issue:'Proof archive destination and naming did not follow proofConvention.',outcome:'Recorded correction before guarded move into06 Pilot proofs; README appended; IDs and proof content preserved.',evidence:d+'proof-final.json'}];
+e.corrections.push({issue:"Trend row source dividers omitted",outcome:"Restored top/bottom1px color/divider; final row and comparisons reinspected; final audits recollected.",evidence:d+"divider-correction.json"},{issue:"Two oversized read-only audit responses truncated",outcome:"Rejected both; switched to separate page and bounded direct/nested instance snapshots. No mutation or replay.",evidence:d+"audit-instances.json"});
+e.unresolved=[];
+e.nextAction='Batch complete after closeout; operator reviews comparison before any separately authorized dependent work.';
+save('execution.json',e);
+const audit=read('deterministic-audit.json');
+const evidence=require('../../scripts/workflow/runner/evidence').evidenceDraft(
+ JSON.parse(fs.readFileSync('workflow/manifest.json')).items.find(i=>i.id===e.itemId),audit,
+ {fileKey:'fdCQVFdvOByaOYIJYag0d6',pages:read('target.json').pages},
+ ['audit-instances.json','final-placements.json','deterministic-audit.json',...['0-1','3-2','27-2','126-2'].map(p=>'after-'+p+'.json')].map(f=>d+f));
+evidence.checks.propertyReferences={pass:true,evidence:[d+'proof-test.json',d+'proofs.png',d+'final-placements.json'],observation:'Changed exposed text appears on both live proof variants after combine; reference counts7/7 and8/8.'};
+evidence.visualReview={comparisonRender:d+'comparison.png',inspectedByExecutor:true,observations:e.milestones[2].observations};
+evidence.workflowGuardCompliance={pass:false,incident:record.processIncident,finalGuard:'Passed after regeneration; does not erase the earlier missed gate.'};
+delete evidence.draft;save('audit.json',evidence);
+const rules={
+ '1_instancePaintVerification':'PASS — audit-instances.json and final-placements.json: both variants and nested comparison instances match full master paint arrays, including alpha and bindings.',
+ '2_unboundPaintAudit':'PASS — complete activated-page walks: Cover1, Templates48, Screens43, Archive20 before and after; exact unbound entries unchanged.',
+ '3_referenceCounts':'PASS — after combineAsVariants: Basic7/7 and With trend8/8 descendant references; set-built.json preserves exact text references.',
+ '4_skipInvisibleFalse':'PASS — all audit walks explicitly set skipInvisibleInstanceChildren=false.',
+ '5_opacityLast':'PASS — no paint-level opacity override introduced; bound variable alpha preserved.',
+ '6_enumerateDontRecall':'PASS — every node on every activated page walked, including notes, references, sections, hidden descendants and proofs.',
+ '7_fileIdentityFirst':'PASS — explicit source/library/target keys and complete inventories freshly checked. NPVE calls use its target key; source/library read-only. Separate procedural guard lapse is disclosed, not included in this identity result.',
+ '8_roundWithRecord':'PASS — zero fractional authored geometry in all new roots. Published intrinsic glyph geometry retained; widths518/548 and controls40/42 integer. No authored rounding introduced.',
+ '9_boundPaintAlpha':'PASS — no bound paint opacity forced to1; rendered master/instance alpha arrays match.',
+ '10_cloneDropsPropertyRefs':'PASS — independently built variants combined; refs verified after combination and exposed fields changed rendered proof characters. No variant cloning.'};
+const body={_status:'DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception documented',standingBatchRules:rules,report:d+'report.md',screenshots:['comparison.png','comparison-basic.png','comparison-trend.png','basic.png','trend.png','proofs.png','archive-readme.png'].map(f=>d+f),proofDisposition:read('proof-final.json').archive,operatorPresentationEvidence:d+'operator-presentation.md',outcome:{componentSet:'686:8437',variants:{Basic:'684:8266','With trend':'685:8297'},comparisons:{Basic:'691:611','With trend':'691:929'},gapGlyphs:4,visualDefects:0,proceduralGuardExceptions:1,sourceAndLibraryWritten:false,sharedComponentChanges:0},createdAndMutatedEvidence:[d+'final-placements.json',d+'proof-final.json',d+'set-built.json'],audit:d+'audit.json',execution:d+'execution.json',pendingDecision:null,nextAction:'No next batch authorized by this completion. Review the comparison; subsequent Flowsheets list/body work requires a new bounded record and approval.'};
+save('final-body.json',body);
+fs.writeFileSync(d+'operator-presentation.md','# Operator presentation\n\nThe Basic and With trend live row PNGs and combined source/rebuild/change comparison were shown in this task on2026-09-11 and inspected by the executor. Both individual comparisons, archived proofs and Archive README were inspected. No operator acceptance of the finished result or approval of a next item is inferred. The final reply links the comparison and report, with the cleanup guard exception disclosed.\n');
+const metrics=JSON.parse(fs.readFileSync('workflow/metrics.json'));
+if(!metrics.costObservations.some(x=>x.itemId===e.itemId))metrics.costObservations.push({itemId:e.itemId,recordId:e.recordId,provider:'OpenAI',model:null,reasoning:null,input:null,cachedInput:null,output:null,credits:null,source:'No measured complete-run per-response usage or billing counters supplied for this bounded batch.',approximate:false,coverage:'Completed batch; usage unavailable. Context measurements report bytes only.'});
+fs.writeFileSync('workflow/metrics.json',JSON.stringify(metrics,null,2)+'\n');
+console.log('Closeout evidence prepared from verified results; procedural exception retained.');

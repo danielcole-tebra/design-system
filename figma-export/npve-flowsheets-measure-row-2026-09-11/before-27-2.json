@@ -1,0 +1,374 @@
+{
+  "complete": true,
+  "id": "27:2",
+  "name": "Screens",
+  "count": 5839,
+  "top": [
+    {
+      "id": "126:2024",
+      "name": "01 · Current comparisons",
+      "x": 0,
+      "y": 0,
+      "width": 2400,
+      "height": 2900
+    },
+    {
+      "id": "156:2427",
+      "name": "02 · Problems management markers — standalone screens moved to Archive 05 on 2026-09-05; see 03 · Problems management comparisons",
+      "x": 0,
+      "y": 3100,
+      "width": 1800,
+      "height": 900
+    },
+    {
+      "id": "160:3168",
+      "name": "03 · Problems management comparisons",
+      "x": 0,
+      "y": 4200,
+      "width": 1868,
+      "height": 2900
+    },
+    {
+      "id": "254:3706",
+      "name": "05 · Medication list comparisons",
+      "x": 0,
+      "y": 7300,
+      "width": 1868,
+      "height": 1536
+    },
+    {
+      "id": "309:4530",
+      "name": "07 · Problems states comparisons",
+      "x": 0,
+      "y": 9036,
+      "width": 1868,
+      "height": 2900
+    },
+    {
+      "id": "318:6739",
+      "name": "08 · Problem editing comparison",
+      "x": 0,
+      "y": 12136,
+      "width": 1868,
+      "height": 1890
+    },
+    {
+      "id": "339:6480",
+      "name": "09 · Procedures & surgical history comparison",
+      "x": 0,
+      "y": 14226,
+      "width": 2268,
+      "height": 1536
+    },
+    {
+      "id": "346:5992",
+      "name": "10 · Family history comparison",
+      "x": 0,
+      "y": 15962,
+      "width": 1868,
+      "height": 1536
+    },
+    {
+      "id": "356:6235",
+      "name": "11 · Allergies list comparison",
+      "x": 0,
+      "y": 17698,
+      "width": 2268,
+      "height": 1536
+    },
+    {
+      "id": "378:5612",
+      "name": "12 · External care history comparison",
+      "x": 0,
+      "y": 19434,
+      "width": 1868,
+      "height": 1536
+    },
+    {
+      "id": "393:7688",
+      "name": "13 · External care history · Facility Stay comparison",
+      "x": 0,
+      "y": 21170,
+      "width": 1868,
+      "height": 1536
+    },
+    {
+      "id": "415:7207",
+      "name": "14 · Health Status/Observations",
+      "x": 0,
+      "y": 22906,
+      "width": 1868,
+      "height": 1054
+    },
+    {
+      "id": "429:6859",
+      "name": "15 · Encounter page shell comparison",
+      "x": 0,
+      "y": 24160,
+      "width": 2600,
+      "height": 3200
+    },
+    {
+      "id": "446:9236",
+      "name": "16 · Social History",
+      "x": 0,
+      "y": 27560,
+      "width": 1868,
+      "height": 1128
+    },
+    {
+      "id": "521:7834",
+      "name": "17 · Past Medical History · Condition row",
+      "x": 0,
+      "y": 28888,
+      "width": 1840,
+      "height": 1408
+    },
+    {
+      "id": "537:9914",
+      "name": "18 · Past Medical History · Section group",
+      "x": 0,
+      "y": 30496,
+      "width": 1840,
+      "height": 456
+    },
+    {
+      "id": "561:9876",
+      "name": "19 · Past Medical History",
+      "x": 0,
+      "y": 31152,
+      "width": 1840,
+      "height": 820
+    },
+    {
+      "id": "581:11116",
+      "name": "20 · External care history · Hospitalizations edit comparison",
+      "x": 0,
+      "y": 32172,
+      "width": 2268,
+      "height": 1362
+    },
+    {
+      "id": "586:11764",
+      "name": "21 · Procedures & surgical history · Edit Event comparison",
+      "x": 0,
+      "y": 33734,
+      "width": 2268,
+      "height": 1208
+    },
+    {
+      "id": "634:12489",
+      "name": "22 · Allergies · Edit Allergen comparison",
+      "x": 0,
+      "y": 35142,
+      "width": 2348,
+      "height": 1360
+    },
+    {
+      "id": "638:13052",
+      "name": "23 · Family history · Edit Family Member comparison",
+      "x": 0,
+      "y": 36602,
+      "width": 2268,
+      "height": 1536
+    },
+    {
+      "id": "656:13013",
+      "name": "24 · Patient Summary · Content",
+      "x": 0,
+      "y": 38338,
+      "width": 1842,
+      "height": 972
+    },
+    {
+      "id": "668:10805",
+      "name": "25 · Patient Summary · Feedback",
+      "x": 0,
+      "y": 39510,
+      "width": 1842,
+      "height": 2364
+    },
+    {
+      "id": "676:11185",
+      "name": "26 · Patient Summary · Complete sheets",
+      "x": 0,
+      "y": 42074,
+      "width": 1842,
+      "height": 3799
+    }
+  ],
+  "unbound": [
+    {
+      "id": "126:2024",
+      "field": "fills"
+    },
+    {
+      "id": "126:2024",
+      "field": "strokes"
+    },
+    {
+      "id": "156:2427",
+      "field": "fills"
+    },
+    {
+      "id": "156:2427",
+      "field": "strokes"
+    },
+    {
+      "id": "160:3168",
+      "field": "fills"
+    },
+    {
+      "id": "160:3168",
+      "field": "strokes"
+    },
+    {
+      "id": "254:3706",
+      "field": "fills"
+    },
+    {
+      "id": "254:3706",
+      "field": "strokes"
+    },
+    {
+      "id": "309:4530",
+      "field": "fills"
+    },
+    {
+      "id": "309:4530",
+      "field": "strokes"
+    },
+    {
+      "id": "318:6739",
+      "field": "fills"
+    },
+    {
+      "id": "318:6739",
+      "field": "strokes"
+    },
+    {
+      "id": "339:6480",
+      "field": "fills"
+    },
+    {
+      "id": "339:6480",
+      "field": "strokes"
+    },
+    {
+      "id": "346:5992",
+      "field": "fills"
+    },
+    {
+      "id": "346:5992",
+      "field": "strokes"
+    },
+    {
+      "id": "356:6235",
+      "field": "fills"
+    },
+    {
+      "id": "356:6235",
+      "field": "strokes"
+    },
+    {
+      "id": "378:5612",
+      "field": "fills"
+    },
+    {
+      "id": "378:5612",
+      "field": "strokes"
+    },
+    {
+      "id": "393:7688",
+      "field": "fills"
+    },
+    {
+      "id": "393:7688",
+      "field": "strokes"
+    },
+    {
+      "id": "415:7207",
+      "field": "fills"
+    },
+    {
+      "id": "415:7207",
+      "field": "strokes"
+    },
+    {
+      "id": "429:6859",
+      "field": "fills"
+    },
+    {
+      "id": "429:6859",
+      "field": "strokes"
+    },
+    {
+      "id": "446:9236",
+      "field": "fills"
+    },
+    {
+      "id": "446:9236",
+      "field": "strokes"
+    },
+    {
+      "id": "521:7834",
+      "field": "fills"
+    },
+    {
+      "id": "521:7834",
+      "field": "strokes"
+    },
+    {
+      "id": "537:9914",
+      "field": "fills"
+    },
+    {
+      "id": "537:9914",
+      "field": "strokes"
+    },
+    {
+      "id": "561:9876",
+      "field": "fills"
+    },
+    {
+      "id": "561:9876",
+      "field": "strokes"
+    },
+    {
+      "id": "581:11116",
+      "field": "fills"
+    },
+    {
+      "id": "581:11116",
+      "field": "strokes"
+    },
+    {
+      "id": "586:11764",
+      "field": "fills"
+    },
+    {
+      "id": "586:11764",
+      "field": "strokes"
+    },
+    {
+      "id": "634:12489",
+      "field": "fills"
+    },
+    {
+      "id": "634:12489",
+      "field": "strokes"
+    },
+    {
+      "id": "638:13052",
+      "field": "fills"
+    },
+    {
+      "id": "638:13052",
+      "field": "strokes"
+    },
+    {
+      "id": "656:13013",
+      "field": "strokes"
+    }
+  ]
+}

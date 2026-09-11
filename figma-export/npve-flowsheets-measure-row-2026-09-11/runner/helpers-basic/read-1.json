@@ -1,0 +1,44 @@
+{
+  "complete": true,
+  "nonce": "2e88e42c-3244-4c75-a04f-aa23350035f2",
+  "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "pages": [
+    "0:1 Cover",
+    "3:2 Templates",
+    "27:2 Screens",
+    "126:2 Archive"
+  ],
+  "nodes": [
+    {
+      "id": "684:8265",
+      "name": "27 · Flowsheets · Measure rows",
+      "type": "SECTION",
+      "parentId": "3:2",
+      "width": 2400,
+      "height": 1500
+    },
+    {
+      "id": "18:103",
+      "name": "Change log/Row",
+      "type": "COMPONENT",
+      "parentId": "126:2022",
+      "key": "a56978dc10fc0599f7128e3266752a3ec2b2f66f",
+      "width": 448,
+      "height": 37,
+      "definitions": {
+        "What#18:0": {
+          "type": "TEXT",
+          "defaultValue": "What"
+        },
+        "From to#18:1": {
+          "type": "TEXT",
+          "defaultValue": "From → to"
+        },
+        "Why#18:2": {
+          "type": "TEXT",
+          "defaultValue": "Why"
+        }
+      }
+    }
+  ]
+}

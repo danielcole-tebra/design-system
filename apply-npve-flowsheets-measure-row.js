@@ -1,0 +1,17 @@
+const fs=require('fs');
+const {openRecord,readJson}=require('./scripts/schema/lib');
+const {jsonDigest,manifestRiskPayload}=require('./scripts/workflow/lib');
+const m=readJson('workflow/manifest.json'),item=m.items.find(x=>x.id==='npve-flowsheets-measure-row');
+if(item.status!=='proposed')throw Error('Not a fresh proposal');
+const quote='build the row with substitute icons for now';
+item.plannerNotes.previousProposal=JSON.parse(JSON.stringify({risk:item.risk,oversight:item.oversight,stopCondition:item.stopCondition}));
+item.plannerNotes.operatorDecision=quote;
+item.plannerNotes.mappingDecision='Temporary AddPaymentNote / Reports / EditOutlined / PlusOutlined; UpCaret for trend. All remain live published instances; neutral GAP marker stays in each variant.';
+item.plannerNotes.geometryResolution='40px library Icon button retained inside a 42px local action area; no shared geometry change or global rule edit. This meets the NPVE minimum without claiming the master is 42px.';
+item.risk={tier:'medium',reasons:['One two-variant local component set with approved temporary icon substitutions','Dedicated live comparisons; shared masters and tokens unchanged'],proposedBy:'Codex planner after operator substitution decision, 2026-09-11',approval:{status:'unapproved',approvedBy:null,approvedAt:null,quote:null,history:[]}};
+item.oversight=['Inspect both live row variants and both dedicated comparisons','Show operator before any dependent body/sheet batch; no implicit continuation'];
+item.stopCondition='Stop on source/target identity drift, unavailable exact selected library mapping/token/property, a need to redraw/detach/rasterize UI, shared-master changes, or deterministic/visual failure. Temporary icon substitutions are explicitly authorized; local 42px action areas retain unchanged 40px masters. No graph/questionnaire/body/sheet work.';
+item.scope='Build one 518px local Flowsheets measure row set with Basic and With trend variants, source copy and live published substitute icons. Preserve existing Icon button geometry in 42px local action areas. Dedicated source/rebuild/change comparison for each variant. No body/sheet, graph, questionnaire, library write or preferred-value changes.';
+item.risk.lockedAt=new Date().toISOString();item.risk.lock=jsonDigest(manifestRiskPayload(item));item.status='queued';
+fs.writeFileSync('workflow/manifest.json',JSON.stringify(m,null,2)+'\n');
+openRecord({id:item.expectedRecordId,previous:'npveRebuild_flowsheetsAudit_2026-09-11',workstream:'npve',date:'2026-09-11',createdBy:'Codex',script:'apply-npve-flowsheets-measure-row.js',body:{_status:'IN PROGRESS',manifestItem:item.id,risk:item.risk,scope:item.scope,operatorContinuationQuote:quote,stopCondition:item.stopCondition,planning:item.plannerNotes,report:item.requiredEvidence.report,mutationsPlanned:['Create two independent variants and a local Templates organizer','Create dedicated live rebuild helpers with both row samples and neutral GAP labels','Create frozen 2x reference and Change log/Row helpers plus comparison instances using reusable runner','Archive any disposable property-check proof unchanged with README before close'],flagsResolved:[],nextAction:'Fresh preflight and visible Basic row'}});

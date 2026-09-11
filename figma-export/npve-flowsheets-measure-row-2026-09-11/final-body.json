@@ -1,0 +1,95 @@
+{
+  "_status": "DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception documented",
+  "standingBatchRules": {
+    "1_instancePaintVerification": "PASS — audit-instances.json and final-placements.json: both variants and nested comparison instances match full master paint arrays, including alpha and bindings.",
+    "2_unboundPaintAudit": "PASS — complete activated-page walks: Cover1, Templates48, Screens43, Archive20 before and after; exact unbound entries unchanged.",
+    "3_referenceCounts": "PASS — after combineAsVariants: Basic7/7 and With trend8/8 descendant references; set-built.json preserves exact text references.",
+    "4_skipInvisibleFalse": "PASS — all audit walks explicitly set skipInvisibleInstanceChildren=false.",
+    "5_opacityLast": "PASS — no paint-level opacity override introduced; bound variable alpha preserved.",
+    "6_enumerateDontRecall": "PASS — every node on every activated page walked, including notes, references, sections, hidden descendants and proofs.",
+    "7_fileIdentityFirst": "PASS — explicit source/library/target keys and complete inventories freshly checked. NPVE calls use its target key; source/library read-only. Separate procedural guard lapse is disclosed, not included in this identity result.",
+    "8_roundWithRecord": "PASS — zero fractional authored geometry in all new roots. Published intrinsic glyph geometry retained; widths518/548 and controls40/42 integer. No authored rounding introduced.",
+    "9_boundPaintAlpha": "PASS — no bound paint opacity forced to1; rendered master/instance alpha arrays match.",
+    "10_cloneDropsPropertyRefs": "PASS — independently built variants combined; refs verified after combination and exposed fields changed rendered proof characters. No variant cloning."
+  },
+  "report": "figma-export/npve-flowsheets-measure-row-2026-09-11/report.md",
+  "screenshots": [
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison.png",
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison-basic.png",
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison-trend.png",
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/basic.png",
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/trend.png",
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/proofs.png",
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/archive-readme.png"
+  ],
+  "proofDisposition": {
+    "id": "692:2392",
+    "parent": "570:10455",
+    "x": 2520,
+    "y": 72,
+    "proofIds": [
+      "687:8335",
+      "687:8361"
+    ],
+    "README": "185:5"
+  },
+  "operatorPresentationEvidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/operator-presentation.md",
+  "outcome": {
+    "componentSet": "686:8437",
+    "variants": {
+      "Basic": "684:8266",
+      "With trend": "685:8297"
+    },
+    "comparisons": {
+      "Basic": "691:611",
+      "With trend": "691:929"
+    },
+    "gapGlyphs": 4,
+    "visualDefects": 0,
+    "proceduralGuardExceptions": 1,
+    "sourceAndLibraryWritten": false,
+    "sharedComponentChanges": 0
+  },
+  "createdAndMutatedEvidence": [
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/final-placements.json",
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/proof-final.json",
+    "figma-export/npve-flowsheets-measure-row-2026-09-11/set-built.json"
+  ],
+  "audit": "figma-export/npve-flowsheets-measure-row-2026-09-11/audit.json",
+  "execution": "figma-export/npve-flowsheets-measure-row-2026-09-11/execution.json",
+  "pendingDecision": null,
+  "nextAction": "No next batch authorized by this completion. Review the comparison; subsequent Flowsheets list/body work requires a new bounded record and approval.",
+  "closeoutCompatibility": "Batch-local finalizer supplies omitted repositoryContext export using authoritative files; reusable closeout approval, check, evidence, finalize and finish gates remain unchanged. Dry-run passed.",
+  "executionCorrections": [
+    {
+      "issue": "Reference helpers need auto-layout for runner HUG slots.",
+      "outcome": "Changed only the new helper containers; frozen reference remains548x64.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/helper-ready.json"
+    },
+    {
+      "issue": "Basic helper file-output transport did not expose an attachment.",
+      "outcome": "Saved complete fresh subtree readback before acknowledging runner; no creation replay.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/runner/helpers-basic/result.json"
+    },
+    {
+      "issue": "Archive write dispatched despite stale-contract guard failure.",
+      "outcome": "Guard violation recorded; later regeneration and guard passed. Readback confirmed landed IDs and unchanged outside record/flag scope. No claim of retroactive compliance.",
+      "evidence": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json — processIncident"
+    },
+    {
+      "issue": "Proof archive destination and naming did not follow proofConvention.",
+      "outcome": "Recorded correction before guarded move into06 Pilot proofs; README appended; IDs and proof content preserved.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/proof-final.json"
+    },
+    {
+      "issue": "Trend row source dividers omitted",
+      "outcome": "Restored top/bottom1px color/divider; final row and comparisons reinspected; final audits recollected.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/divider-correction.json"
+    },
+    {
+      "issue": "Two oversized read-only audit responses truncated",
+      "outcome": "Rejected both; switched to separate page and bounded direct/nested instance snapshots. No mutation or replay.",
+      "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/audit-instances.json"
+    }
+  ]
+}

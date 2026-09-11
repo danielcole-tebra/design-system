@@ -956,7 +956,7 @@
       "id": "npve-flowsheets-measure-row",
       "title": "Flowsheets · Measure row variants",
       "workstream": "NPVE Rebuild / Sidesheets",
-      "status": "proposed",
+      "status": "complete",
       "dependsOn": [],
       "source": {
         "fileKey": "zVsuhYehoSLLq880qRBFkq",
@@ -970,7 +970,7 @@
         "name": "Flowsheets measure row"
       },
       "expectedRecordId": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
-      "scope": "After explicit mapping and geometry decisions, build one 518px local row set with Basic (PHQ-9) and With trend (GAD-7) variants, source copy, bound values and live library actions. Dedicated comparison for both. No body/sheet, charts, questionnaire, library writes or shared preferred-value changes.",
+      "scope": "Build one 518px local Flowsheets measure row set with Basic and With trend variants, source copy and live published substitute icons. Preserve existing Icon button geometry in 42px local action areas. Dedicated source/rebuild/change comparison for each variant. No body/sheet, graph, questionnaire, library write or preferred-value changes.",
       "plannerNotes": {
         "auditRecord": "npveRebuild_flowsheetsAudit_2026-09-11",
         "audit": "figma-export/npve-flowsheets-audit-2026-09-11/report.md",
@@ -1003,28 +1003,55 @@
           "Add readings questionnaire",
           "Edit readings questionnaire",
           "Selector/header/body/sheet"
-        ]
+        ],
+        "previousProposal": {
+          "risk": {
+            "tier": "human-decision",
+            "reasons": [
+              "Missing exact monitoring/trend glyphs and unapproved note/edit substitutions",
+              "Recorded target-size wording disagrees with live Icon button geometry"
+            ],
+            "proposedBy": "Codex (planner), read-only Flowsheets audit 2026-09-11",
+            "approval": {
+              "status": "unapproved",
+              "approvedBy": null,
+              "approvedAt": null,
+              "quote": null,
+              "history": []
+            }
+          },
+          "oversight": [
+            "Operator resolves icon mappings and size disagreement, then re-tiers and explicitly approves this item before start",
+            "Executor inspects dedicated reference/rebuild/change comparisons for both row variants and shows operator before a dependent item"
+          ],
+          "stopCondition": "Do not start while human-decision. Stop before mutation on missing published mapping without an approved GAP treatment, unresolved 34/40/42px disagreement, identity drift, unsupported property, invented copy/state, need to detach/redraw/rasterize UI, or shared-master change. Stop on deterministic or visual failure before extending the batch."
+        },
+        "operatorDecision": "build the row with substitute icons for now",
+        "mappingDecision": "Temporary AddPaymentNote / Reports / EditOutlined / PlusOutlined; UpCaret for trend. All remain live published instances; neutral GAP marker stays in each variant.",
+        "geometryResolution": "40px library Icon button retained inside a 42px local action area; no shared geometry change or global rule edit. This meets the NPVE minimum without claiming the master is 42px."
       },
       "risk": {
-        "tier": "human-decision",
+        "tier": "medium",
         "reasons": [
-          "Missing exact monitoring/trend glyphs and unapproved note/edit substitutions",
-          "Recorded target-size wording disagrees with live Icon button geometry"
+          "One two-variant local component set with approved temporary icon substitutions",
+          "Dedicated live comparisons; shared masters and tokens unchanged"
         ],
-        "proposedBy": "Codex (planner), read-only Flowsheets audit 2026-09-11",
+        "proposedBy": "Codex planner after operator substitution decision, 2026-09-11",
         "approval": {
           "status": "unapproved",
           "approvedBy": null,
           "approvedAt": null,
           "quote": null,
           "history": []
-        }
+        },
+        "lockedAt": "2026-09-11T16:05:11.468Z",
+        "lock": "1af03d41ac698be99388b2b865d5432ae7025839f80c9966b7f36b42d901ba4c"
       },
       "oversight": [
-        "Operator resolves icon mappings and size disagreement, then re-tiers and explicitly approves this item before start",
-        "Executor inspects dedicated reference/rebuild/change comparisons for both row variants and shows operator before a dependent item"
+        "Inspect both live row variants and both dedicated comparisons",
+        "Show operator before any dependent body/sheet batch; no implicit continuation"
       ],
-      "stopCondition": "Do not start while human-decision. Stop before mutation on missing published mapping without an approved GAP treatment, unresolved 34/40/42px disagreement, identity drift, unsupported property, invented copy/state, need to detach/redraw/rasterize UI, or shared-master change. Stop on deterministic or visual failure before extending the batch.",
+      "stopCondition": "Stop on source/target identity drift, unavailable exact selected library mapping/token/property, a need to redraw/detach/rasterize UI, shared-master changes, or deterministic/visual failure. Temporary icon substitutions are explicitly authorized; local 42px action areas retain unchanged 40px masters. No graph/questionnaire/body/sheet work.",
       "allowedFiles": [
         "records/npve/**/npveRebuild_flowsheetsMeasureRow_2026-09-11.json",
         "flags/active.json",
@@ -1042,7 +1069,15 @@
         "audit": "figma-export/npve-flowsheets-measure-row-2026-09-11/audit.json",
         "report": "figma-export/npve-flowsheets-measure-row-2026-09-11/report.md",
         "comparisonRender": "figma-export/npve-flowsheets-measure-row-2026-09-11/comparison.png"
-      }
+      },
+      "perItemConfirmations": [
+        {
+          "quote": "build the row with substitute icons for now",
+          "recordedAt": "2026-09-11T17:12:50.066Z",
+          "recordedBy": "Codex"
+        }
+      ],
+      "completedAt": "2026-09-11T17:35:26.475Z"
     }
   ],
   "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"
