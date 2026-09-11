@@ -32,7 +32,7 @@
     "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
     "date": "2026-09-10",
     "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-    "status": "IN PROGRESS — repaired library icons await publication; no NPVE mutation"
+    "status": "IN PROGRESS — icon publication verified; feedback preflight continues"
    }
   },
   "workflow": {
@@ -52,7 +52,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "3103774afd20070d10f9fa39356c20d9c7ba75a383394ab4d53d7d74016ca296",
-  "bytes": 1529822
+  "sha256": "e15dc80ed430bcba0f41f2003def3c90b2fdc007c7c0d8573544c572e665c6b9",
+  "bytes": 1530770
  }
 }

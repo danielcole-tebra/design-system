@@ -989,8 +989,8 @@
    "date": "2026-09-10",
    "workstream": "npve",
    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-   "status": "IN PROGRESS — repaired library icons await publication; no NPVE mutation",
-   "recordSha256": "2e8c4369f1a64d66af94e419585ffef299a6e5ef0aaf3d94323e232fd5f5da7b"
+   "status": "IN PROGRESS — icon publication verified; feedback preflight continues",
+   "recordSha256": "9013154fadee732e262cde8762ac0ef27b0c7d484e990bccaff2779bc9b726f8"
   },
   {
    "id": "libraryThumbIcons_2026-09-10",

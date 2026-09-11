@@ -1,0 +1,12 @@
+{
+  "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "canvasMutations": 0,
+  "status": "All four exact keys import successfully as remote components",
+  "components": [
+    {"name":"Icon/ThumbUpAlt (MUI)","key":"dc48038cc1e602a271ce4e5ba07d720099cabd80","id":"662:2","remote":true},
+    {"name":"Icon/ThumbUpOffAlt (MUI)","key":"c6ddb0d4737fb41e6ba417ac97802eda28cbac85","id":"662:4","remote":true},
+    {"name":"Icon/ThumbDownAlt (MUI)","key":"78d7b7482ce3e0fa514ac566351699a5f92df7dd","id":"662:6","remote":true},
+    {"name":"Icon/ThumbDownOffAlt (MUI)","key":"64189258b7ae5287ed30bee01269187c0f1e6a45","id":"662:8","remote":true}
+  ],
+  "note": "Import results must be reimported and used within each mutation call; IDs are readback evidence."
+}

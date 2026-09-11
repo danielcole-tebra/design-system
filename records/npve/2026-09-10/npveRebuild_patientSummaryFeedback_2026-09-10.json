@@ -11,7 +11,7 @@
   "script": "apply-npve-patient-summary-feedback.js"
  },
  "record": {
-  "_status": "IN PROGRESS — repaired library icons await publication; no NPVE mutation",
+  "_status": "IN PROGRESS — icon publication verified; feedback preflight continues",
   "date": "2026-09-10",
   "workstream": "NPVE Rebuild / Sidesheets",
   "manifestItem": "npve-patient-summary-feedback",
@@ -55,7 +55,7 @@
     ]
    }
   ],
-  "nextAction": "Operator publishes the four new library thumb icons; verify their exact keys before feedback construction.",
+  "nextAction": "Complete feedback appearance and control preflight, validate checkpoint, and build the three states under the existing operator continuation.",
   "screenshots": [
    "figma-export/npve-patient-summary-feedback-2026-09-10/source-error-entry.png"
   ],
@@ -86,6 +86,38 @@
     "targetMet": true,
     "manifestItems": 12
    }
+  },
+  "publicationVerification": {
+   "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+   "canvasMutations": 0,
+   "status": "All four exact keys import successfully as remote components",
+   "components": [
+    {
+     "name": "Icon/ThumbUpAlt (MUI)",
+     "key": "dc48038cc1e602a271ce4e5ba07d720099cabd80",
+     "id": "662:2",
+     "remote": true
+    },
+    {
+     "name": "Icon/ThumbUpOffAlt (MUI)",
+     "key": "c6ddb0d4737fb41e6ba417ac97802eda28cbac85",
+     "id": "662:4",
+     "remote": true
+    },
+    {
+     "name": "Icon/ThumbDownAlt (MUI)",
+     "key": "78d7b7482ce3e0fa514ac566351699a5f92df7dd",
+     "id": "662:6",
+     "remote": true
+    },
+    {
+     "name": "Icon/ThumbDownOffAlt (MUI)",
+     "key": "64189258b7ae5287ed30bee01269187c0f1e6a45",
+     "id": "662:8",
+     "remote": true
+    }
+   ],
+   "note": "Import results must be reimported and used within each mutation call; IDs are readback evidence."
   }
  }
 }

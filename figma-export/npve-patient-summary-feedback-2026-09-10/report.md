@@ -17,3 +17,7 @@ The expected NPVE record is open IN PROGRESS. No start-batch run or ready execut
 ## Resumption check — 2026-09-11
 
 Operator: “Ok lets finish out the patient summary”. Target identity verified; exact-key import of the repaired ThumbUpAlt failed with “Component with key not found”. Stopped after the first failure; remaining three keys were not tested. No canvas mutations. Library publication remains required before the feedback build. Two Figma reads, zero screenshots. Current credit baseline is 143 after the suspected reset; no delta inferred. Evidence: publication-check-2026-09-11.json.
+
+## Publication verified — 2026-09-11
+
+All four repaired thumb icons now import into NPVE by their exact published keys as remote components. Publication blocker cleared; no canvas changes. Evidence: publication-verified-2026-09-11.json. Scoped Button, Icon button, Text field and Alert definitions saved in controls-preflight.json after a truncated initial inventory was recovered with bounded output.

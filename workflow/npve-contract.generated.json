@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T12:06:36.248Z",
+  "generatedAt": "2026-09-11T12:42:47.710Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "3103774afd20070d10f9fa39356c20d9c7ba75a383394ab4d53d7d74016ca296",
+      "sha256": "e15dc80ed430bcba0f41f2003def3c90b2fdc007c7c0d8573544c572e665c6b9",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "c387870935ff65f54797d1164f9473cecc3067e3f6d69d9041e16c2d59102fc0"
+        "sha256": "33ec8aeff320a4387e971c8ff09c75f7103a1fbb0c4e85ca75a40b7a163ff95c"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "8f993b2f448595708d9a2f4e49275607ed2234b14b2a0c11ea2064adb8396284"
+        "sha256": "1d36b96f707f2ed9b6aa1965657fb6e14636d0d5d5f31981a75286e008018e28"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -350,7 +350,7 @@
           "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
           "date": "2026-09-10",
           "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-          "status": "IN PROGRESS — repaired library icons await publication; no NPVE mutation"
+          "status": "IN PROGRESS — icon publication verified; feedback preflight continues"
         }
       },
       "workflow": {
@@ -862,7 +862,7 @@
       {
         "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
         "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-        "status": "IN PROGRESS — repaired library icons await publication; no NPVE mutation",
+        "status": "IN PROGRESS — icon publication verified; feedback preflight continues",
         "date": "2026-09-10",
         "outcome": null,
         "geometry": null,
@@ -1007,6 +1007,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "9c39fba348429f3c4de6180ea117e1fc3f31c29436d939771de758a336a40b84"
+    "contractSha256": "3ecc5e47157a8c696d46b04927b90b7f7455473dde5ebee70cfc5d2739cd4f62"
   }
 }

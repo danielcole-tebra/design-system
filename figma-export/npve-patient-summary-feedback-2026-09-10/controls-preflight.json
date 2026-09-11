@@ -1,0 +1,354 @@
+{
+  "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+  "components": [
+    {
+      "id": "79:2",
+      "key": "cfb726c79b456d52901243b7c33839efd0780a93",
+      "name": "Button",
+      "componentPropertyDefinitions": {
+        "Label#83:165": {
+          "type": "TEXT",
+          "defaultValue": "Button"
+        },
+        "Start icon#83:220": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "End icon#83:275": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Start icon swap#83:331": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "76:8",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            }
+          ]
+        },
+        "End icon swap#83:386": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "76:5",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            }
+          ]
+        },
+        "variant": {
+          "type": "VARIANT",
+          "defaultValue": "contained",
+          "variantOptions": [
+            "contained",
+            "text"
+          ]
+        },
+        "color": {
+          "type": "VARIANT",
+          "defaultValue": "primary",
+          "variantOptions": [
+            "primary",
+            "secondary",
+            "error",
+            "inherit"
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "medium",
+          "variantOptions": [
+            "medium",
+            "small",
+            "large"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Disabled"
+          ]
+        }
+      }
+    },
+    {
+      "id": "170:77",
+      "key": "7ebea5d7ce6ecfdaef84d177efa64196f654717d",
+      "name": "Icon button",
+      "componentPropertyDefinitions": {
+        "Icon#170:0": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "76:5",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "63080d8b342bcaf0e92aa4ad7d85c8ddd0cc26a3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "e53ac58ac970cb01188617f4dc758ea56d6595e1"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a9304f869a99a07f78361cf12284245594fa9173"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "cd53dbdaaf9f53529296291884eb0905ec98ee38"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "24066524a0e4c8d4ac5f9640398309c195c05cdf"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "3b77b458aa0a650d2fc96c1577cfaed5683dda41"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "9b7c50f78ca556d0d6d02ac2a6cd601643c1f60a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "84e24a992ae19d29a6cc413f2d5bf85717ec373d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "0022f330670fca62e3533011c6f917bd964fff52"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "6764d262600e89084127e47685287da98faafb2a"
+            }
+          ]
+        },
+        "color": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "primary",
+            "error"
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "medium",
+          "variantOptions": [
+            "medium",
+            "small"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Focus visible",
+            "Disabled"
+          ]
+        }
+      }
+    },
+    {
+      "id": "121:350",
+      "key": "7c3c99bb9a9392d6571c0557b41d142b8987b566",
+      "name": "Text field",
+      "componentPropertyDefinitions": {
+        "Label#123:0": {
+          "type": "TEXT",
+          "defaultValue": "TextField Label"
+        },
+        "Value text#123:11": {
+          "type": "TEXT",
+          "defaultValue": "Default Value"
+        },
+        "Helper text#123:22": {
+          "type": "TEXT",
+          "defaultValue": "Text underneath the input"
+        },
+        "Show helper#123:33": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "required#123:44": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "select#123:55": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "multiline#123:66": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "medium",
+          "variantOptions": [
+            "medium",
+            "small"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Focused",
+            "Disabled",
+            "Error"
+          ]
+        },
+        "Value": {
+          "type": "VARIANT",
+          "defaultValue": "Empty",
+          "variantOptions": [
+            "Empty",
+            "Filled"
+          ]
+        }
+      }
+    },
+    {
+      "id": "165:57",
+      "key": "d97e12577a5662f35e49275eec702a6bd446efa8",
+      "name": "Alert",
+      "componentPropertyDefinitions": {
+        "Message#165:0": {
+          "type": "TEXT",
+          "defaultValue": "This is an alert message."
+        },
+        "onClose#165:7": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "icon#745:0": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Title#802:0": {
+          "type": "TEXT",
+          "defaultValue": "Alert title"
+        },
+        "Show title#802:13": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "action#802:26": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "76:11",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "cfb726c79b456d52901243b7c33839efd0780a93"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "7ebea5d7ce6ecfdaef84d177efa64196f654717d"
+            }
+          ]
+        },
+        "variant": {
+          "type": "VARIANT",
+          "defaultValue": "standard",
+          "variantOptions": [
+            "standard",
+            "filled",
+            "outlined"
+          ]
+        },
+        "severity": {
+          "type": "VARIANT",
+          "defaultValue": "info",
+          "variantOptions": [
+            "success",
+            "error",
+            "info",
+            "warning"
+          ]
+        }
+      },
+      "variants": [
+        {
+          "id": "165:3",
+          "key": "ea8b1b1e64dec5e45ae4b1f5168dde920d5dda10",
+          "name": "variant=standard, severity=error",
+          "w": 420,
+          "h": 48
+        },
+        {
+          "id": "743:4390",
+          "key": "1984672af8b64917c0f9f0c9bf2c9c7fd9047d7a",
+          "name": "variant=standard, severity=success",
+          "w": 420,
+          "h": 48
+        }
+      ]
+    }
+  ]
+}
