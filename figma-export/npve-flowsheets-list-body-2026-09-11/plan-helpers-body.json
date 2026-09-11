@@ -1,0 +1,166 @@
+{
+  "itemId": "npve-flowsheets-list-body",
+  "id": "helpers-body",
+  "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "milestone": "Comparisons",
+  "requiresVisual": [
+    "Header",
+    "Body and footer action"
+  ],
+  "appearanceEvidence": "figma-export/npve-flowsheets-list-body-2026-09-11/appearance.md",
+  "fonts": [
+    {
+      "family": "Akkurat LL",
+      "style": "Regular"
+    },
+    {
+      "family": "Akkurat LL",
+      "style": "Bold"
+    }
+  ],
+  "reads": [
+    {
+      "fileKey": "zVsuhYehoSLLq880qRBFkq",
+      "pages": [
+        "0:1 Cover",
+        "10:15 -----DESIGNS-----",
+        "105:1426 Workflows",
+        "1050:8411 Error States",
+        "3813:14586 V2:AI Patient Summary",
+        "21:320 -----COMPONENTS-----",
+        "21:321 ⚙️ Components",
+        "105:1425 -----ARCHIVE-----",
+        "5264:20606 Module Evolution",
+        "4740:14057 NeuNeu",
+        "1424:8259 Neu",
+        "112:4335 Sandbox",
+        "4250:14678 Misc",
+        "12:866 NoFolder Navigation",
+        "10:14 Folder Navigation",
+        "4211:15272 -----RESEARCH------",
+        "4211:15273 Maps",
+        "1236:3155 Research Framework"
+      ],
+      "nodes": [
+        {
+          "id": "939:9233",
+          "name": "BODY",
+          "type": "FRAME",
+          "parentId": "939:9228",
+          "width": 550,
+          "height": 236
+        },
+        {
+          "id": "939:9234",
+          "name": "SUBHEADER",
+          "type": "FRAME",
+          "parentId": "939:9233",
+          "width": 548,
+          "height": 74
+        },
+        {
+          "id": "939:9383",
+          "name": "Button",
+          "type": "INSTANCE",
+          "parentId": "939:9378",
+          "width": 123,
+          "height": 36
+        }
+      ]
+    },
+    {
+      "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+      "pages": [
+        "0:1 Cover",
+        "3:2 Templates",
+        "27:2 Screens",
+        "126:2 Archive"
+      ],
+      "nodes": [
+        {
+          "id": "705:8365",
+          "name": "28 · Flowsheets list header and body",
+          "type": "SECTION",
+          "parentId": "3:2",
+          "width": 2400,
+          "height": 1900
+        },
+        {
+          "id": "18:103",
+          "name": "Change log/Row",
+          "type": "COMPONENT",
+          "parentId": "126:2022",
+          "width": 448,
+          "height": 37,
+          "key": "a56978dc10fc0599f7128e3266752a3ec2b2f66f",
+          "definitions": {
+            "What#18:0": {
+              "type": "TEXT",
+              "defaultValue": "What"
+            },
+            "From to#18:1": {
+              "type": "TEXT",
+              "defaultValue": "From → to"
+            },
+            "Why#18:2": {
+              "type": "TEXT",
+              "defaultValue": "Why"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "operation": {
+    "kind": "helpers",
+    "parent": "705:8365",
+    "row": "18:103",
+    "rows": [
+      {
+        "What#18:0": "Dates",
+        "From to#18:1": "Both under Updated",
+        "Why#18:2": "Operator approved"
+      },
+      {
+        "What#18:0": "Heading",
+        "From to#18:1": "core.light color token",
+        "Why#18:2": "Code Table head"
+      },
+      {
+        "What#18:0": "Rows",
+        "From to#18:1": "Live approved measure rows",
+        "Why#18:2": "Temporary icons/colors"
+      },
+      {
+        "What#18:0": "Layout",
+        "From to#18:1": "550 →518px content",
+        "Why#18:2": "NPVE body convention"
+      }
+    ],
+    "referenceName": "_Rebuild comparison/Reference/Flowsheets list body",
+    "changeName": "_Rebuild comparison/Change log/Flowsheets list body",
+    "imageName": "Frozen source / Flowsheets body",
+    "width": 550,
+    "height": 236,
+    "logWidth": 480,
+    "x": 1200,
+    "y": 600,
+    "logX": 1800,
+    "paper": {
+      "key": "f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+      "name": "color/background/paper",
+      "valuesByMode": {
+        "74:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    },
+    "spacing": {
+      "key": "6016592c19254dd61e9de9e006459546eaece0bb",
+      "name": "space/16"
+    }
+  }
+}

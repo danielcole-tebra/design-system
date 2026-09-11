@@ -1,0 +1,76 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "npve-flowsheets-list-body",
+  "capturedAt": "2026-09-11T18:18:38.318Z",
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "exceptions": [],
+      "details": "Baseline/final1/48/43/20; exact IDs identical on all activated pages."
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "exceptions": []
+    },
+    "referenceCounts": {
+      "pass": true,
+      "details": "14 master/live pairs: all12 new component/helper masters and2 existing row variants; descendant references identical."
+    },
+    "componentIdentity": {
+      "pass": true,
+      "details": "All instance main IDs match; Rebuild comparison/Change log row/Measure row set definitions and dimensions preserved."
+    },
+    "propertyReferences": {
+      "pass": true,
+      "details": "Header selector/button, table headings, row source copy and footer text read from actual nested rendered characters; no cloning or detaching."
+    }
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-flowsheets-list-body-2026-09-11/comparison.png",
+    "inspectedByExecutor": true,
+    "observations": [
+      "Header: approved Flowsheets floating label and Mental Health selection fit beside complete Create New Flowsheet button.",
+      "Body: MEASURE/LATEST/UPDATED/ACTIONS align; dates share x216. Both approved score paints and temporary icon GAP markers retained.",
+      "Footer: separate right-aligned Add to Note action uses published38px button; full sheet remains out of scope.",
+      "Three dedicated source/rebuild/change comparisons inspected at full size. Source2x images displayed1:1; no rebuilt UI rasterized.",
+      "Basic row regression screenshot inspected after spacer reorder. No text clipping or unintended paint changes.",
+      "Two new section default strokes removed; final all-page unbound IDs match baseline exactly."
+    ]
+  },
+  "figmaNodes": {
+    "templates": "705:8365",
+    "screens": "709:12062",
+    "header": "705:8366",
+    "body": "706:8405",
+    "footer": "706:8637",
+    "comparisons": [
+      "712:611",
+      "712:962",
+      "715:1017"
+    ]
+  },
+  "toolCalls": {
+    "figmaRead": null,
+    "figmaWrite": 13,
+    "screenshot": 9,
+    "correctionCycles": 4
+  },
+  "deterministicEvidence": "figma-export/npve-flowsheets-list-body-2026-09-11/audit-result.json",
+  "workflowGuardCompliance": {
+    "pass": false,
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/execution.json"
+  }
+}

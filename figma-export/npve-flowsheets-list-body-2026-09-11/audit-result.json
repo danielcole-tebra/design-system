@@ -1,0 +1,24 @@
+{
+  "deterministicPass": true,
+  "pages": 4,
+  "variants": 14,
+  "shared": [
+    {
+      "properties": 6,
+      "additions": 0,
+      "differences": []
+    },
+    {
+      "properties": 3,
+      "additions": 0,
+      "differences": []
+    },
+    {
+      "properties": 5,
+      "additions": 0,
+      "differences": []
+    }
+  ],
+  "differences": [],
+  "visualReview": "REQUIRED — not evaluated by audit"
+}

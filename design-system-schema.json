@@ -6289,6 +6289,19 @@
    "status": "OPEN",
    "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
    "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+  },
+  {
+   "id": "npveFlowsheetsList_bridgeDispatchGuard",
+   "severity": "medium",
+   "status": "RESOLVED",
+   "summary": "First helpers-header runner step passed its internal guard but the client bridge omitted the additional immediately-before-dispatch guard due to mutate/mutation discriminator mismatch.",
+   "discoveredDuring": "npveRebuild_flowsheetsListBody_2026-09-11",
+   "evidence": [
+    "figma-export/npve-flowsheets-list-body-2026-09-11/execution.json",
+    "figma-export/npve-flowsheets-list-body-2026-09-11/runner/helpers-header/result.json"
+   ],
+   "resolvedDuring": "npveRebuild_flowsheetsListBody_2026-09-11",
+   "resolution": "Corrected bridge discriminator before later writes. Subsequent explicit guards passed. No failed guard was bypassed and full file/record checks show no outside-scope changes. Historical omission remains documented; do not claim perfect guard compliance."
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -30652,5 +30665,195 @@
     "evidence": "figma-export/npve-flowsheets-measure-row-2026-09-11/audit-instances.json"
    }
   ]
+ },
+ "npveRebuild_flowsheetsListBody_2026-09-11": {
+  "_status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented",
+  "manifestItem": "npve-flowsheets-list-body",
+  "operatorContinuationQuote": "Yeah, let's build list header and body next",
+  "scope": "Build a local518px Flowsheets list header and body around the completed live measure rows: Mental Health selector, Create New Flowsheet action, column headings and two rows. Prepare Add to Note as a separate reusable footer action for later shell composition. Dedicated source/rebuild/change comparisons. No complete Sidesheet composition, charts, questionnaires, library writes, new scoring logic or shared shell/comparison edits.",
+  "risk": {
+   "tier": "medium",
+   "reasons": [
+    "Operator resolved both appearance choices; bounded composition reuses existing library controls.",
+    "Approved Basic row spacer reorder affects existing row instances and requires regression renders."
+   ],
+   "proposedBy": "Codex planner, following operator resolution2026-09-11",
+   "approval": {
+    "status": "approved",
+    "approvedBy": "Operator",
+    "approvedAt": "2026-09-11T17:57:32.296Z",
+    "quote": "go ahead with those recommendations",
+    "history": [
+     {
+      "tier": "human-decision",
+      "resolution": "go ahead with those recommendations"
+     }
+    ]
+   },
+   "lockedAt": "2026-09-11T17:57:32.296Z",
+   "lock": "2de4d549b0c22b7909ec5b35abfb8390f21fb4460195b5eeb96ac4cc450424a4"
+  },
+  "stopCondition": "Stop before mutation while design choices are unresolved. After decisions, stop on identity/mapping drift, missing supported property/token, required detachment/redrawing, source/library mutation, out-of-scope master changes, failed guard or visual failure. Never dispatch a mutation unless the immediately preceding guard exit_code is zero.",
+  "planning": {
+   "operatorBuildRequest": "Yeah, let's build list header and body next",
+   "previousRecord": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+   "audit": "figma-export/npve-flowsheets-audit-2026-09-11/report.md",
+   "pendingDecisions": [
+    {
+     "id": "date_alignment",
+     "recommendation": "Align both dates under Updated; reserve the trend column for Basic.",
+     "question": "The source places the two rows’ dates in different columns. For the list, should both dates align under Updated?",
+     "status": "approved",
+     "operatorQuote": "go ahead with those recommendations"
+    },
+    {
+     "id": "selector_label",
+     "recommendation": "Use the existing filled Autocomplete/Field with Flowsheets floating label and Mental Health value.",
+     "question": "The library filled dropdown requires a floating label; source has none. Use Flowsheets label or defer selector for a library enhancement?",
+     "status": "approved",
+     "operatorQuote": "go ahead with those recommendations"
+    }
+   ],
+   "preservedDecisions": "Temporary live row icons and First Aid/Neuron example bindings remain as recorded; no clinical thresholds introduced.",
+   "preflight": "Fresh authenticated source/target/library readbacks saved; no Figma mutation. Code Connect search returned no files. Existing form controls inspected before library discovery.",
+   "decisionResolution": {
+    "quote": "go ahead with those recommendations",
+    "dateAlignment": "Both dates under Updated; move Basic spacer before Updated.",
+    "selectorLabel": "Flowsheets label above Mental Health using the existing filled dropdown."
+   }
+  },
+  "report": "figma-export/npve-flowsheets-list-body-2026-09-11/report.md",
+  "figmaMutations": [
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/header.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/body.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/helpers-header/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/helpers-body/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/helpers-footer/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/image-header-compact/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/image-body/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/image-footer/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/comparison-header/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/comparison-body/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/comparison-footer/result.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/comparison-ready.json"
+   },
+   {
+    "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/section-border-fix.json"
+   }
+  ],
+  "mutationsPlanned": [
+   {
+    "action": "Reorder",
+    "node": "684:8271",
+    "parent": "684:8267",
+    "fromIndex": 3,
+    "toIndex": 2,
+    "reason": "Operator approved aligning dates; preserves master dimensions, paints and references."
+   },
+   {
+    "action": "Create",
+    "scope": "Dedicated Templates section below y59620 with local Header, List body and Footer action components; use live published controls and completed row instances. Live helpers and frozen source/change-log helpers for each component. Dedicated Screens comparisons only; any temporary proofs archived with README before close."
+   },
+   {
+    "action": "Set layout",
+    "nodes": [
+     "707:2",
+     "708:2",
+     "708:29"
+    ],
+    "layout": "VERTICAL",
+    "reason": "New frozen reference helpers must support runner HUG slots; retain exact image geometry."
+   }
+  ],
+  "flagsResolved": [
+   "npveFlowsheetsList_bridgeDispatchGuard"
+  ],
+  "nextAction": "Review this list batch. Full Flowsheets sheet composition and graphs remain separate, unstarted work requiring a new bounded item and approval.",
+  "operatorAppearanceDecision": "go ahead with those recommendations",
+  "findings": [
+   {
+    "id": "npveFlowsheetsList_bridgeDispatchGuard",
+    "severity": "medium",
+    "status": "RESOLVED",
+    "summary": "First helpers-header runner step passed its internal guard but the client bridge omitted the additional immediately-before-dispatch guard due to mutate/mutation discriminator mismatch.",
+    "discoveredDuring": "npveRebuild_flowsheetsListBody_2026-09-11",
+    "evidence": [
+     "figma-export/npve-flowsheets-list-body-2026-09-11/execution.json",
+     "figma-export/npve-flowsheets-list-body-2026-09-11/runner/helpers-header/result.json"
+    ],
+    "resolvedDuring": "npveRebuild_flowsheetsListBody_2026-09-11",
+    "resolution": "Corrected bridge discriminator before later writes. Subsequent explicit guards passed. No failed guard was bypassed and full file/record checks show no outside-scope changes. Historical omission remains documented; do not claim perfect guard compliance."
+   }
+  ],
+  "workflowGuardCompliance": {
+   "pass": false,
+   "exception": "First helpers-header runner step passed its internal guard but the client bridge omitted the additional immediately-before-dispatch guard due to mutate/mutation discriminator mismatch.",
+   "resolution": "Corrected bridge discriminator before later writes. Subsequent explicit guards passed. No failed guard was bypassed and full file/record checks show no outside-scope changes. Historical omission remains documented; do not claim perfect guard compliance."
+  },
+  "screenshots": [
+   "figma-export/npve-flowsheets-list-body-2026-09-11/header.png",
+   "figma-export/npve-flowsheets-list-body-2026-09-11/body.png",
+   "figma-export/npve-flowsheets-list-body-2026-09-11/footer.png",
+   "figma-export/npve-flowsheets-list-body-2026-09-11/row-regression.png",
+   "figma-export/npve-flowsheets-list-body-2026-09-11/comparison-header.png",
+   "figma-export/npve-flowsheets-list-body-2026-09-11/comparison-body.png",
+   "figma-export/npve-flowsheets-list-body-2026-09-11/comparison-footer.png",
+   "figma-export/npve-flowsheets-list-body-2026-09-11/comparison.png"
+  ],
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — 14 actual master/live paint arrays match; audit-input.json.",
+   "2_unboundPaintAudit": "PASS — All4 activated pages match exact baseline unbound IDs1/48/43/20.",
+   "3_referenceCounts": "PASS — All14 descendant-reference counts match.",
+   "4_skipInvisibleFalse": "PASS — Every audit sets skipInvisibleInstanceChildren=false.",
+   "5_opacityLast": "PASS — No authored paint opacity set; native bound alpha retained.",
+   "6_enumerateDontRecall": "PASS — Fresh authenticated inventories and actual subtree enumerations saved.",
+   "7_fileIdentityFirst": "PASS — Explicit file keys and full page inventories verified; source/library read-only.",
+   "8_roundWithRecord": "PASS — Zero fractional authored geometry; native vector bounds excluded; no rounding invented.",
+   "9_boundPaintAlpha": "PASS — No bound paint opacity forced; master/live paint arrays identical.",
+   "10_cloneDropsPropertyRefs": "PASS — No variants cloned. Native property changes render in actual nested text, saved header/body/runner evidence."
+  },
+  "proofDisposition": {
+   "temporaryProofsCreated": 0,
+   "archived": [],
+   "reason": "Permanent local master/live rebuild helpers provide instance proof. Three sole comparisons on Screens. No temporary loose proof nodes or Archive changes in this batch."
+  },
+  "operatorPresentationEvidence": "figma-export/npve-flowsheets-list-body-2026-09-11/operator-presentation.md",
+  "completed": {
+   "header": "705:8366",
+   "body": "706:8405",
+   "footer": "706:8637",
+   "comparisons": [
+    "712:611",
+    "712:962",
+    "715:1017"
+   ]
+  },
+  "gapCount": 2,
+  "defectCount": 0,
+  "gapDetail": "Two inherited visible row markers covering temporary note/chart/edit/trend substitutions; no new visual GAP introduced.",
+  "deterministicAudit": "figma-export/npve-flowsheets-list-body-2026-09-11/audit-result.json"
  }
 }

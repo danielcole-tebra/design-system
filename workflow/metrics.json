@@ -455,6 +455,19 @@
       "source": "No measured complete-run per-response usage or billing counters supplied for this bounded batch.",
       "approximate": false,
       "coverage": "Completed batch; usage unavailable. Context measurements report bytes only."
+    },
+    {
+      "itemId": "npve-flowsheets-list-body",
+      "date": "2026-09-11",
+      "provider": "OpenAI",
+      "model": "GPT-6",
+      "reasoning": null,
+      "inputTokens": null,
+      "cachedInputTokens": null,
+      "outputTokens": null,
+      "creditCost": null,
+      "source": "Per-response token and credit usage unavailable in current tool transport; no estimates made.",
+      "approximate": false
     }
   ],
   "activeCostBaselines": [

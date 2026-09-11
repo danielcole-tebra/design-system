@@ -1,0 +1,47 @@
+{
+  "_status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented",
+  "report": "figma-export/npve-flowsheets-list-body-2026-09-11/report.md",
+  "screenshots": [
+    "figma-export/npve-flowsheets-list-body-2026-09-11/header.png",
+    "figma-export/npve-flowsheets-list-body-2026-09-11/body.png",
+    "figma-export/npve-flowsheets-list-body-2026-09-11/footer.png",
+    "figma-export/npve-flowsheets-list-body-2026-09-11/row-regression.png",
+    "figma-export/npve-flowsheets-list-body-2026-09-11/comparison-header.png",
+    "figma-export/npve-flowsheets-list-body-2026-09-11/comparison-body.png",
+    "figma-export/npve-flowsheets-list-body-2026-09-11/comparison-footer.png",
+    "figma-export/npve-flowsheets-list-body-2026-09-11/comparison.png"
+  ],
+  "standingBatchRules": {
+    "1_instancePaintVerification": "PASS — 14 actual master/live paint arrays match; audit-input.json.",
+    "2_unboundPaintAudit": "PASS — All4 activated pages match exact baseline unbound IDs1/48/43/20.",
+    "3_referenceCounts": "PASS — All14 descendant-reference counts match.",
+    "4_skipInvisibleFalse": "PASS — Every audit sets skipInvisibleInstanceChildren=false.",
+    "5_opacityLast": "PASS — No authored paint opacity set; native bound alpha retained.",
+    "6_enumerateDontRecall": "PASS — Fresh authenticated inventories and actual subtree enumerations saved.",
+    "7_fileIdentityFirst": "PASS — Explicit file keys and full page inventories verified; source/library read-only.",
+    "8_roundWithRecord": "PASS — Zero fractional authored geometry; native vector bounds excluded; no rounding invented.",
+    "9_boundPaintAlpha": "PASS — No bound paint opacity forced; master/live paint arrays identical.",
+    "10_cloneDropsPropertyRefs": "PASS — No variants cloned. Native property changes render in actual nested text, saved header/body/runner evidence."
+  },
+  "proofDisposition": {
+    "temporaryProofsCreated": 0,
+    "archived": [],
+    "reason": "Permanent local master/live rebuild helpers provide instance proof. Three sole comparisons on Screens. No temporary loose proof nodes or Archive changes in this batch."
+  },
+  "operatorPresentationEvidence": "figma-export/npve-flowsheets-list-body-2026-09-11/operator-presentation.md",
+  "completed": {
+    "header": "705:8366",
+    "body": "706:8405",
+    "footer": "706:8637",
+    "comparisons": [
+      "712:611",
+      "712:962",
+      "715:1017"
+    ]
+  },
+  "gapCount": 2,
+  "defectCount": 0,
+  "gapDetail": "Two inherited visible row markers covering temporary note/chart/edit/trend substitutions; no new visual GAP introduced.",
+  "deterministicAudit": "figma-export/npve-flowsheets-list-body-2026-09-11/audit-result.json",
+  "nextAction": "Review this list batch. Full Flowsheets sheet composition and graphs remain separate, unstarted work requiring a new bounded item and approval."
+}

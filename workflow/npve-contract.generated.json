@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T17:35:26.139Z",
+  "generatedAt": "2026-09-11T18:20:11.377Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "83843c2c4e7146317493badb55da7164b9cbd88a2aa2d586dddd4ace6c4b6134",
+      "sha256": "495337771ccc6f09b753dbbd373c987be0b52ac8c1e69c8d3d380fcb9accf16a",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "bb5032432007a50a41e9b4ed0525b48c1f71c1715557c9e7315a3f90b2b13a4c"
+        "sha256": "f3bf02a8f2efef47ebe7bb8bac93defd840a694ce87925a8310d7f1c72a7e016"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "3d27b0337b3c95d4438b9b808baffd823af9ba94d22877ef84adb39cbabbab96"
+        "sha256": "3ad853ad415a7d4e88da4215e3c5467f74cd4bc41f49a54af3bb1a1c69021a53"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -23,16 +23,16 @@
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
-        "sha256": "e22570d5e6d593de6c243ec2456229d928fc954d450100fff038ca69edf99811"
+        "sha256": "15faaea1bc2c84519c8505fee337d918f7dbeb55b59a09cca7bd2a1b91128dc9"
       },
       "layout": {
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 108,
+      "records": 109,
       "flags": {
         "active": 235,
-        "resolved": 59
+        "resolved": 60
       }
     },
     "instructions": [
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+      "id": "npveRebuild_flowsheetsListBody_2026-09-11",
       "date": "2026-09-11",
       "workstream": "npve",
-      "path": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json",
-      "status": "DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception documented"
+      "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
+      "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented"
     },
     "recordGate": {
       "inProgress": [],
@@ -343,12 +343,12 @@
         }
       },
       "npve": {
-        "count": 69,
+        "count": 70,
         "latest": {
-          "id": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+          "id": "npveRebuild_flowsheetsListBody_2026-09-11",
           "date": "2026-09-11",
-          "path": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json",
-          "status": "DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception documented"
+          "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
+          "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented"
         }
       },
       "workflow": {
@@ -744,17 +744,6 @@
     ],
     "recentRecords": [
       {
-        "id": "workflow_executionReliability_2026-09-10",
-        "path": "records/workflow/2026-09-10/workflow_executionReliability_2026-09-10.json",
-        "status": "DONE — portable execution policy, checkpoint gates and regression coverage installed; repository-only batch.",
-        "date": "2026-09-10",
-        "outcome": "One canonical policy across harnesses; actual component-definition checks before new builds, visible milestone evidence at close, bounded recovery instructions and single-session planning/execution.",
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/workflow-execution-reliability-2026-09-10/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_familyHistoryEdit_2026-09-09",
         "path": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json",
         "status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review.",
@@ -893,6 +882,17 @@
         "decision": null,
         "report": "figma-export/npve-flowsheets-measure-row-2026-09-11/report.md",
         "target": null
+      },
+      {
+        "id": "npveRebuild_flowsheetsListBody_2026-09-11",
+        "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
+        "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented",
+        "date": null,
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-flowsheets-list-body-2026-09-11/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -1020,6 +1020,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "1ee5185a7e7061a2fbfa6342dc61c42da22472981ab926b41ae873866a79a5a9"
+    "contractSha256": "358664f1e0dfc7c042768500e5abf6d6910ddc95a6e20aef4efca7381cce958d"
   }
 }

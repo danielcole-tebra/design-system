@@ -1078,6 +1078,104 @@
         }
       ],
       "completedAt": "2026-09-11T17:35:26.475Z"
+    },
+    {
+      "id": "npve-flowsheets-list-body",
+      "title": "Flowsheets · List header and body",
+      "workstream": "NPVE Rebuild / Sidesheets",
+      "status": "complete",
+      "dependsOn": [
+        "npve-flowsheets-measure-row"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "939:9233",
+        "label": "Flowsheets list body, with source subheader939:9234 and footer action939:9383",
+        "access": "read-only"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pageId": "3:2",
+        "name": "Flowsheets list header and body"
+      },
+      "expectedRecordId": "npveRebuild_flowsheetsListBody_2026-09-11",
+      "scope": "Build a local518px Flowsheets list header and body around the completed live measure rows: Mental Health selector, Create New Flowsheet action, column headings and two rows. Prepare Add to Note as a separate reusable footer action for later shell composition. Dedicated source/rebuild/change comparisons. No complete Sidesheet composition, charts, questionnaires, library writes, new scoring logic or shared shell/comparison edits.",
+      "plannerNotes": {
+        "operatorBuildRequest": "Yeah, let's build list header and body next",
+        "previousRecord": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+        "audit": "figma-export/npve-flowsheets-audit-2026-09-11/report.md",
+        "pendingDecisions": [
+          {
+            "id": "date_alignment",
+            "recommendation": "Align both dates under Updated; reserve the trend column for Basic.",
+            "question": "The source places the two rows’ dates in different columns. For the list, should both dates align under Updated?",
+            "status": "approved",
+            "operatorQuote": "go ahead with those recommendations"
+          },
+          {
+            "id": "selector_label",
+            "recommendation": "Use the existing filled Autocomplete/Field with Flowsheets floating label and Mental Health value.",
+            "question": "The library filled dropdown requires a floating label; source has none. Use Flowsheets label or defer selector for a library enhancement?",
+            "status": "approved",
+            "operatorQuote": "go ahead with those recommendations"
+          }
+        ],
+        "preservedDecisions": "Temporary live row icons and First Aid/Neuron example bindings remain as recorded; no clinical thresholds introduced.",
+        "preflight": "Fresh authenticated source/target/library readbacks saved; no Figma mutation. Code Connect search returned no files. Existing form controls inspected before library discovery.",
+        "decisionResolution": {
+          "quote": "go ahead with those recommendations",
+          "dateAlignment": "Both dates under Updated; move Basic spacer before Updated.",
+          "selectorLabel": "Flowsheets label above Mental Health using the existing filled dropdown."
+        }
+      },
+      "risk": {
+        "tier": "medium",
+        "reasons": [
+          "Operator resolved both appearance choices; bounded composition reuses existing library controls.",
+          "Approved Basic row spacer reorder affects existing row instances and requires regression renders."
+        ],
+        "proposedBy": "Codex planner, following operator resolution2026-09-11",
+        "approval": {
+          "status": "approved",
+          "approvedBy": "Operator",
+          "approvedAt": "2026-09-11T17:57:32.296Z",
+          "quote": "go ahead with those recommendations",
+          "history": [
+            {
+              "tier": "human-decision",
+              "resolution": "go ahead with those recommendations"
+            }
+          ]
+        },
+        "lockedAt": "2026-09-11T17:57:32.296Z",
+        "lock": "2de4d549b0c22b7909ec5b35abfb8390f21fb4460195b5eeb96ac4cc450424a4"
+      },
+      "oversight": [
+        "Operator resolved both appearance choices in the recorded quote; retain executor and operator visual reviews.",
+        "Executor inspects header, body, footer-action and final comparison renders.",
+        "Reverify and inspect affected existing row instances if their layout changes; preserve unrelated masters.",
+        "Show operator before any separately scoped full-sheet or graph work."
+      ],
+      "stopCondition": "Stop before mutation while design choices are unresolved. After decisions, stop on identity/mapping drift, missing supported property/token, required detachment/redrawing, source/library mutation, out-of-scope master changes, failed guard or visual failure. Never dispatch a mutation unless the immediately preceding guard exit_code is zero.",
+      "allowedFiles": [
+        "records/npve/**/npveRebuild_flowsheetsListBody_2026-09-11.json",
+        "flags/active.json",
+        "flags/resolved.json",
+        "indexes/**",
+        "design-system-schema.json",
+        "apply-npve-flowsheets-list-body.js",
+        "finalize-npve-flowsheets-list-body.js",
+        "figma-export/npve-flowsheets-list-body-2026-09-11/**",
+        "workflow/manifest.json",
+        "workflow/metrics.json",
+        "workflow/npve-contract.generated.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-flowsheets-list-body-2026-09-11/audit.json",
+        "report": "figma-export/npve-flowsheets-list-body-2026-09-11/report.md",
+        "comparisonRender": "figma-export/npve-flowsheets-list-body-2026-09-11/comparison.png"
+      },
+      "completedAt": "2026-09-11T18:20:11.687Z"
     }
   ],
   "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"

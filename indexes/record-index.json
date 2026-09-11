@@ -1045,14 +1045,23 @@
    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json",
    "status": "DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception document",
    "recordSha256": "9ccfe0aae0e822dbb574c3efceb4b8163733dd16748ddfb34e58c5797a4b449d"
+  },
+  {
+   "id": "npveRebuild_flowsheetsListBody_2026-09-11",
+   "sequence": 108,
+   "date": "2026-09-11",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
+   "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented",
+   "recordSha256": "98d1c6888f2d0824a32bf21f1e68e119fa5c6d939dea2d6e0412862478815a80"
   }
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
   "active": 235,
-  "resolved": 59,
-  "total": 294,
-  "nextSequence": 294,
+  "resolved": 60,
+  "total": 295,
+  "nextSequence": 295,
   "activeIds": [
    "pxToRemInflation",
    "svgIconTwoUnitSystems",
@@ -1349,13 +1358,14 @@
    "workflowRefactor_agentsMdDivergedFromClaudeMd",
    "workflowRefactor_contractLackedProvenance",
    "npvePmhx_referencesFrozenAt1x",
-   "npvePatientSummary_feedbackThumbMapping"
+   "npvePatientSummary_feedbackThumbMapping",
+   "npveFlowsheetsList_bridgeDispatchGuard"
   ]
  },
  "counts": {
   "foundation": 14,
-  "records": 108,
-  "aggregateTopLevelKeys": 122,
-  "nextRecordSequence": 108
+  "records": 109,
+  "aggregateTopLevelKeys": 123,
+  "nextRecordSequence": 109
  }
 }

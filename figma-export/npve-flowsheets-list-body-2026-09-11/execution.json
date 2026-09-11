@@ -1,0 +1,183 @@
+{
+  "format": "tebra.design-execution",
+  "version": 2,
+  "itemId": "npve-flowsheets-list-body",
+  "recordId": "npveRebuild_flowsheetsListBody_2026-09-11",
+  "preflight": {
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "identityEvidence": "figma-export/npve-flowsheets-list-body-2026-09-11/fresh-target.json",
+    "tools": [
+      "mcp__codex_apps__figma_use_figma",
+      "mcp__codex_apps__figma_get_screenshot"
+    ],
+    "toolEvidence": "figma-export/npve-flowsheets-list-body-2026-09-11/preflight.md",
+    "controls": [
+      {
+        "name": "Rebuild comparison",
+        "component": "35:332",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      },
+      {
+        "name": "Change log/Row",
+        "component": "18:103",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      },
+      {
+        "name": "State=Basic",
+        "component": "684:8266",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      },
+      {
+        "name": "State=With trend",
+        "component": "685:8297",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      },
+      {
+        "name": "size=small, State=Default, Value=Filled",
+        "component": "85:258",
+        "properties": {
+          "Label#86:0": "Flowsheets",
+          "Value text#86:31": "Mental Health",
+          "Clear icon#86:62": false,
+          "size": "small",
+          "State": "Default",
+          "Value": "Filled"
+        },
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      },
+      {
+        "name": "variant=contained, color=primary, size=large, State=Default",
+        "component": "78:26",
+        "properties": {
+          "Label#83:165": "Create New Flowsheet",
+          "End icon#83:275": true
+        },
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      },
+      {
+        "name": "variant=contained, color=primary, size=medium, State=Default",
+        "component": "78:14",
+        "properties": {
+          "Label#83:165": "Add to Note"
+        },
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      },
+      {
+        "name": "Icon/PlusOutlined",
+        "component": "76:8",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      },
+      {
+        "name": "variant=head, padding=none",
+        "component": "190:11",
+        "properties": {
+          "Text#190:0": "MEASURE",
+          "variant": "head",
+          "padding": "none"
+        },
+        "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/controls.json"
+      }
+    ]
+  },
+  "appearance": {
+    "specification": "figma-export/npve-flowsheets-list-body-2026-09-11/appearance.md",
+    "review": {
+      "inspected": true,
+      "render": "figma-export/npve-flowsheets-list-body-2026-09-11/comparison.png",
+      "areas": {
+        "surfaces": "Paper behind transparent library field and all list content; core.light heading bound.",
+        "borders": "Published field/button borders preserved; trend divider retained; no default section strokes.",
+        "content": "Mental Health, Create New Flowsheet, four headings, PHQ-9/GAD-7, scores, dates, trend and Add to Note verified in rendered descendants.",
+        "states": "Single requested list state uses both approved Basic and With trend row variants; hidden source graphs excluded.",
+        "layout": "518px body,16px header spacing,36px heading, dates x216; source/rebuild1:1; no clipping.",
+        "actions": "Live library buttons, PlusOutlined and existing row action instances; no detached controls."
+      },
+      "differences": [
+        {
+          "observation": "Flowsheets label added and Basic date aligned with trend date.",
+          "disposition": "approved",
+          "evidence": "operatorAppearanceDecision: go ahead with those recommendations"
+        },
+        {
+          "observation": "Code typography and518px NPVE width replace source dimensions; footer medium38px replaces source36.",
+          "disposition": "corrected",
+          "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/appearance.md; fresh-library.json; source.json"
+        },
+        {
+          "observation": "Temporary icon substitutions and First Aid/Neuron examples remain with GAP labels.",
+          "disposition": "approved",
+          "evidence": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json"
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "issue": "Bridge mutation classification used mutate instead of mutation for the first helper step; runner internal guard passed but the extra pre-dispatch bridge guard was omitted.",
+      "outcome": "No failed guard was bypassed. Native result saved. Fixed bridge to recognize mutation, ran current guard successfully; all later dispatches explicitly fail closed.",
+      "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/helpers-header/result.json"
+    },
+    {
+      "step": "image-header",
+      "error": "Mutation outcome uncertain/truncated: read affected nodes before recovery",
+      "intent": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/image-header/intent.json",
+      "outcome": "Not applied; connector schema limit50000; rectangle707:3 fills empty. Recover via lossless base64 transport with unchanged runner operation.",
+      "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/image-header-not-applied.json"
+    },
+    {
+      "issue": "Comparison body response exceeded output cap; broad readback encodings also exceeded it.",
+      "outcome": "Read actual parent children and five bounded subtrees, reconstructed full native snapshot and saved via file patch after shell length limit. No mutation replay.",
+      "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/runner/comparison-body/reply-3-recovered.json"
+    },
+    {
+      "issue": "New section default strokes unbound.",
+      "outcome": "Removed only new section strokes; full final all-page audit matches baseline.",
+      "evidence": "figma-export/npve-flowsheets-list-body-2026-09-11/section-border-fix.json"
+    }
+  ],
+  "milestones": [
+    {
+      "name": "Header",
+      "status": "verified",
+      "nodeIds": [
+        "705:8366",
+        "705:8411"
+      ],
+      "render": "figma-export/npve-flowsheets-list-body-2026-09-11/header.png",
+      "inspected": true,
+      "observations": "Flowsheets floating label, Mental Health selection and complete Create New Flowsheet text plus end icon fit cleanly at518px."
+    },
+    {
+      "name": "Body and footer action",
+      "status": "verified",
+      "nodeIds": [
+        "706:8405",
+        "706:8538",
+        "706:8637",
+        "706:8647"
+      ],
+      "render": "figma-export/npve-flowsheets-list-body-2026-09-11/body.png",
+      "inspected": true,
+      "observations": "Header and four heading cells fit. Both dates x216 under Updated, scores tokenbound, action glyphs preserved, GAP labels readable. Footer separately inspected in footer.png; Basic comparison regression inspected in row-regression.png."
+    },
+    {
+      "name": "Comparisons",
+      "status": "verified",
+      "nodeIds": [
+        "712:611",
+        "712:962",
+        "715:1017"
+      ],
+      "render": "figma-export/npve-flowsheets-list-body-2026-09-11/comparison.png",
+      "inspected": true,
+      "observations": "Header: approved Flowsheets floating label and Mental Health selection fit beside complete Create New Flowsheet button. Body: MEASURE/LATEST/UPDATED/ACTIONS align; dates share x216. Both approved score paints and temporary icon GAP markers retained. Footer: separate right-aligned Add to Note action uses published38px button; full sheet remains out of scope. Three dedicated source/rebuild/change comparisons inspected at full size. Source2x images displayed1:1; no rebuilt UI rasterized. Basic row regression screenshot inspected after spacer reorder. No text clipping or unintended paint changes. Two new section default strokes removed; final all-page unbound IDs match baseline exactly."
+    }
+  ],
+  "unresolved": [],
+  "nextAction": "Batch closed. Review completed list header/body/footer comparisons. Full-sheet composition is separate and unstarted."
+}

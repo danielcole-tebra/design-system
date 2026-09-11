@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+  "id": "npveRebuild_flowsheetsListBody_2026-09-11",
   "date": "2026-09-11",
   "workstream": "npve",
-  "path": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json",
-  "status": "DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception documented"
+  "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
+  "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented"
  },
  "recordGate": {
   "inProgress": [],
@@ -25,12 +25,12 @@
    }
   },
   "npve": {
-   "count": 69,
+   "count": 70,
    "latest": {
-    "id": "npveRebuild_flowsheetsMeasureRow_2026-09-11",
+    "id": "npveRebuild_flowsheetsListBody_2026-09-11",
     "date": "2026-09-11",
-    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsMeasureRow_2026-09-11.json",
-    "status": "DONE — Basic and With trend built and visually verified; temporary icons/colors; one procedural guard exception documented"
+    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
+    "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented"
    }
   },
   "workflow": {
@@ -45,12 +45,12 @@
  },
  "flags": {
   "active": 235,
-  "resolved": 59
+  "resolved": 60
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "83843c2c4e7146317493badb55da7164b9cbd88a2aa2d586dddd4ace6c4b6134",
-  "bytes": 1568140
+  "sha256": "495337771ccc6f09b753dbbd373c987be0b52ac8c1e69c8d3d380fcb9accf16a",
+  "bytes": 1579211
  }
 }

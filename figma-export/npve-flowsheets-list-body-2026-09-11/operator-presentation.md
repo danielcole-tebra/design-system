@@ -1,0 +1,1 @@
+2026-09-11: Header and list body screenshots shown inline during the build. Final three comparisons shown with closeout, with links to the saved PNGs and report. Operator approved the scope and both appearance choices before mutation; acceptance of the finished batch is not assumed. The next full-sheet or graph batch is not authorized by this completion.

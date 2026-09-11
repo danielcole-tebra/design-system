@@ -1,0 +1,813 @@
+{
+  "complete": true,
+  "identities": [
+    {
+      "id": "715:1017",
+      "name": "Flowsheets list footer · Source / Rebuild / Changes",
+      "type": "INSTANCE",
+      "parentId": "709:12062",
+      "width": 1708,
+      "height": 238
+    }
+  ],
+  "trees": [
+    {
+      "id": "715:1017",
+      "name": "Flowsheets list footer · Source / Rebuild / Changes",
+      "type": "INSTANCE",
+      "parentId": "709:12062",
+      "width": 1708,
+      "height": 238,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.9647058844566345,
+            "g": 0.9647058844566345,
+            "b": 0.9647058844566345
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:4dbef7c8fc453422675312ab6708eeda7e45476b/74:115"
+            }
+          }
+        }
+      ],
+      "references": null,
+      "children": [
+        {
+          "id": "I715:1017;35:333",
+          "name": "Reference",
+          "type": "FRAME",
+          "parentId": "715:1017",
+          "width": 550,
+          "height": 64,
+          "fills": [],
+          "references": {},
+          "children": [
+            {
+              "id": "I715:1017;35:334",
+              "name": "Source caption",
+              "type": "TEXT",
+              "parentId": "I715:1017;35:333",
+              "width": 261,
+              "height": 20,
+              "characters": "Source: NDE-2026 939:9383 · 2026-09-11",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.3294117748737335,
+                    "g": 0.3294117748737335,
+                    "b": 0.3294117748737335
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                    }
+                  }
+                }
+              ],
+              "references": {
+                "characters": "Source caption#35:0"
+              }
+            },
+            {
+              "id": "I715:1017;35:335",
+              "name": "__Legacy placeholder — Source export",
+              "type": "RECTANGLE",
+              "parentId": "I715:1017;35:333",
+              "width": 550,
+              "height": 600,
+              "fills": [
+                {
+                  "type": "IMAGE",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "scaleMode": "FIT",
+                  "scalingFactor": 1,
+                  "rotation": 0,
+                  "filters": {
+                    "exposure": 0,
+                    "contrast": 0,
+                    "saturation": 0,
+                    "temperature": 0,
+                    "tint": 0,
+                    "highlights": 0,
+                    "shadows": 0
+                  },
+                  "imageTransform": [
+                    [
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0
+                    ]
+                  ],
+                  "imageHash": "852f657a7f13fd576d731eefab26712cb71f8e22"
+                }
+              ],
+              "references": {}
+            },
+            {
+              "id": "I715:1017;114:1137",
+              "name": "Reference content",
+              "type": "INSTANCE",
+              "parentId": "I715:1017;35:333",
+              "width": 550,
+              "height": 36,
+              "fills": [],
+              "references": {
+                "mainComponent": "Reference content#114:0"
+              },
+              "children": [
+                {
+                  "id": "I715:1017;114:1137;708:30",
+                  "name": "Frozen source / Flowsheets footer",
+                  "type": "RECTANGLE",
+                  "parentId": "I715:1017;114:1137",
+                  "width": 123,
+                  "height": 36,
+                  "fills": [
+                    {
+                      "type": "IMAGE",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "scaleMode": "FILL",
+                      "scalingFactor": 1,
+                      "rotation": 0,
+                      "filters": {
+                        "exposure": 0,
+                        "contrast": 0,
+                        "saturation": 0,
+                        "temperature": 0,
+                        "tint": 0,
+                        "highlights": 0,
+                        "shadows": 0
+                      },
+                      "imageTransform": [
+                        [
+                          1,
+                          0,
+                          0
+                        ],
+                        [
+                          0,
+                          1,
+                          0
+                        ]
+                      ],
+                      "imageHash": "f0b25f5a88b2768e1ebc51b76d26b0277d0ae40e"
+                    }
+                  ],
+                  "references": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "I715:1017;35:336",
+          "name": "Rebuild",
+          "type": "FRAME",
+          "parentId": "715:1017",
+          "width": 550,
+          "height": 66,
+          "fills": [],
+          "references": {},
+          "children": [
+            {
+              "id": "I715:1017;35:337",
+              "name": "Rebuild caption",
+              "type": "TEXT",
+              "parentId": "I715:1017;35:336",
+              "width": 175,
+              "height": 20,
+              "characters": "Rebuild: Flowsheets footer",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.3294117748737335,
+                    "g": 0.3294117748737335,
+                    "b": 0.3294117748737335
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                    }
+                  }
+                }
+              ],
+              "references": {
+                "characters": "Rebuild caption#35:1"
+              }
+            },
+            {
+              "id": "I715:1017;35:338",
+              "name": "__Legacy placeholder — Rebuilt screen",
+              "type": "FRAME",
+              "parentId": "I715:1017;35:336",
+              "width": 550,
+              "height": 600,
+              "fills": [],
+              "references": {},
+              "children": []
+            },
+            {
+              "id": "I715:1017;114:1139",
+              "name": "Rebuild content",
+              "type": "INSTANCE",
+              "parentId": "I715:1017;35:336",
+              "width": 550,
+              "height": 38,
+              "fills": [],
+              "references": {
+                "mainComponent": "Rebuild content#114:1"
+              },
+              "children": [
+                {
+                  "id": "I715:1017;114:1139;706:8647",
+                  "name": "Flowsheets/Footer action",
+                  "type": "INSTANCE",
+                  "parentId": "I715:1017;114:1139",
+                  "width": 518,
+                  "height": 38,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1
+                      },
+                      "boundVariables": {
+                        "color": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+                        }
+                      }
+                    }
+                  ],
+                  "references": {},
+                  "children": [
+                    {
+                      "id": "I715:1017;114:1139;706:8647;706:8638",
+                      "name": "Button",
+                      "type": "INSTANCE",
+                      "parentId": "I715:1017;114:1139;706:8647",
+                      "width": 124,
+                      "height": 38,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1
+                          },
+                          "boundVariables": {
+                            "color": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:c8ba6328373a5250862153929995a6d7ea75cef4/74:165"
+                            }
+                          }
+                        }
+                      ],
+                      "references": {},
+                      "children": [
+                        {
+                          "id": "I715:1017;114:1139;706:8647;706:8638;78:15",
+                          "name": "Start icon",
+                          "type": "INSTANCE",
+                          "parentId": "I715:1017;114:1139;706:8647;706:8638",
+                          "width": 16,
+                          "height": 16,
+                          "fills": [],
+                          "references": {
+                            "visible": "Start icon#83:220",
+                            "mainComponent": "Start icon swap#83:331"
+                          },
+                          "children": [
+                            {
+                              "id": "I715:1017;114:1139;706:8647;706:8638;78:15;76:7",
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "parentId": "I715:1017;114:1139;706:8647;706:8638;78:15",
+                              "width": 13.333333015441895,
+                              "height": 13.329133033752441,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0,
+                                    "g": 0.2823529541492462,
+                                    "b": 0.32156863808631897
+                                  },
+                                  "boundVariables": {
+                                    "color": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:dedc1a77d282f7a6f23fed99e34e2d6e4d0ebd46/74:68"
+                                    }
+                                  }
+                                }
+                              ],
+                              "references": {}
+                            }
+                          ]
+                        },
+                        {
+                          "id": "I715:1017;114:1139;706:8647;706:8638;78:16",
+                          "name": "Label",
+                          "type": "TEXT",
+                          "parentId": "I715:1017;114:1139;706:8647;706:8638",
+                          "width": 90,
+                          "height": 24,
+                          "characters": "Add to Note",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0,
+                                "g": 0.2823529541492462,
+                                "b": 0.32156863808631897
+                              },
+                              "boundVariables": {
+                                "color": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:dedc1a77d282f7a6f23fed99e34e2d6e4d0ebd46/74:68"
+                                }
+                              }
+                            }
+                          ],
+                          "references": {
+                            "characters": "Label#83:165"
+                          }
+                        },
+                        {
+                          "id": "I715:1017;114:1139;706:8647;706:8638;78:17",
+                          "name": "End icon",
+                          "type": "INSTANCE",
+                          "parentId": "I715:1017;114:1139;706:8647;706:8638",
+                          "width": 16,
+                          "height": 16,
+                          "fills": [],
+                          "references": {
+                            "visible": "End icon#83:275",
+                            "mainComponent": "End icon swap#83:386"
+                          },
+                          "children": [
+                            {
+                              "id": "I715:1017;114:1139;706:8647;706:8638;78:17;76:4",
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "parentId": "I715:1017;114:1139;706:8647;706:8638;78:17",
+                              "width": 13.333342552185059,
+                              "height": 7.350666046142578,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0,
+                                    "g": 0.2823529541492462,
+                                    "b": 0.32156863808631897
+                                  },
+                                  "boundVariables": {
+                                    "color": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:dedc1a77d282f7a6f23fed99e34e2d6e4d0ebd46/74:68"
+                                    }
+                                  }
+                                }
+                              ],
+                              "references": {}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "I715:1017;35:339",
+          "name": "Change log",
+          "type": "FRAME",
+          "parentId": "715:1017",
+          "width": 480,
+          "height": 174,
+          "fills": [],
+          "references": {},
+          "children": [
+            {
+              "id": "I715:1017;35:340",
+              "name": "Change log caption",
+              "type": "TEXT",
+              "parentId": "I715:1017;35:339",
+              "width": 57,
+              "height": 20,
+              "characters": "Changes",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.3294117748737335,
+                    "g": 0.3294117748737335,
+                    "b": 0.3294117748737335
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                    }
+                  }
+                }
+              ],
+              "references": {
+                "characters": "Change log caption#35:2"
+              }
+            },
+            {
+              "id": "I715:1017;35:341",
+              "name": "__Legacy placeholder — Change log",
+              "type": "FRAME",
+              "parentId": "I715:1017;35:339",
+              "width": 480,
+              "height": 200,
+              "fills": [],
+              "references": {},
+              "children": []
+            },
+            {
+              "id": "I715:1017;114:1240",
+              "name": "Change log content",
+              "type": "INSTANCE",
+              "parentId": "I715:1017;35:339",
+              "width": 480,
+              "height": 146,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+                    }
+                  }
+                }
+              ],
+              "references": {
+                "mainComponent": "Change log content#114:2"
+              },
+              "children": [
+                {
+                  "id": "I715:1017;114:1240;708:32",
+                  "name": "Change log/Row",
+                  "type": "INSTANCE",
+                  "parentId": "I715:1017;114:1240",
+                  "width": 448,
+                  "height": 57,
+                  "fills": [],
+                  "references": {},
+                  "children": [
+                    {
+                      "id": "I715:1017;114:1240;708:32;18:104",
+                      "name": "Cells",
+                      "type": "FRAME",
+                      "parentId": "I715:1017;114:1240;708:32",
+                      "width": 448,
+                      "height": 56,
+                      "fills": [],
+                      "references": {},
+                      "children": [
+                        {
+                          "id": "I715:1017;114:1240;708:32;18:105",
+                          "name": "What",
+                          "type": "TEXT",
+                          "parentId": "I715:1017;114:1240;708:32;18:104",
+                          "width": 120,
+                          "height": 20,
+                          "characters": "Add to Note",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 0
+                              },
+                              "boundVariables": {
+                                "color": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                                }
+                              }
+                            }
+                          ],
+                          "references": {
+                            "characters": "What#18:0"
+                          }
+                        },
+                        {
+                          "id": "I715:1017;114:1240;708:32;18:106",
+                          "name": "From to",
+                          "type": "TEXT",
+                          "parentId": "I715:1017;114:1240;708:32;18:104",
+                          "width": 184,
+                          "height": 20,
+                          "characters": "Live medium button",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 0
+                              },
+                              "boundVariables": {
+                                "color": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                                }
+                              }
+                            }
+                          ],
+                          "references": {
+                            "characters": "From to#18:1"
+                          }
+                        },
+                        {
+                          "id": "I715:1017;114:1240;708:32;18:107",
+                          "name": "Why",
+                          "type": "TEXT",
+                          "parentId": "I715:1017;114:1240;708:32;18:104",
+                          "width": 120,
+                          "height": 40,
+                          "characters": "Published38px control",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0.3294117748737335,
+                                "g": 0.3294117748737335,
+                                "b": 0.3294117748737335
+                              },
+                              "boundVariables": {
+                                "color": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                                }
+                              }
+                            }
+                          ],
+                          "references": {
+                            "characters": "Why#18:2"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "I715:1017;114:1240;708:32;18:108",
+                      "name": "Row divider",
+                      "type": "INSTANCE",
+                      "parentId": "I715:1017;114:1240;708:32",
+                      "width": 448,
+                      "height": 1,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 0.8392156958580017,
+                            "g": 0.8392156958580017,
+                            "b": 0.8392156958580017
+                          },
+                          "boundVariables": {
+                            "color": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                            }
+                          }
+                        }
+                      ],
+                      "references": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "I715:1017;114:1240;708:38",
+                  "name": "Change log/Row",
+                  "type": "INSTANCE",
+                  "parentId": "I715:1017;114:1240",
+                  "width": 448,
+                  "height": 57,
+                  "fills": [],
+                  "references": {},
+                  "children": [
+                    {
+                      "id": "I715:1017;114:1240;708:38;18:104",
+                      "name": "Cells",
+                      "type": "FRAME",
+                      "parentId": "I715:1017;114:1240;708:38",
+                      "width": 448,
+                      "height": 56,
+                      "fills": [],
+                      "references": {},
+                      "children": [
+                        {
+                          "id": "I715:1017;114:1240;708:38;18:105",
+                          "name": "What",
+                          "type": "TEXT",
+                          "parentId": "I715:1017;114:1240;708:38;18:104",
+                          "width": 120,
+                          "height": 20,
+                          "characters": "Scope",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 0
+                              },
+                              "boundVariables": {
+                                "color": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                                }
+                              }
+                            }
+                          ],
+                          "references": {
+                            "characters": "What#18:0"
+                          }
+                        },
+                        {
+                          "id": "I715:1017;114:1240;708:38;18:106",
+                          "name": "From to",
+                          "type": "TEXT",
+                          "parentId": "I715:1017;114:1240;708:38;18:104",
+                          "width": 184,
+                          "height": 20,
+                          "characters": "Separate footer action",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 0
+                              },
+                              "boundVariables": {
+                                "color": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                                }
+                              }
+                            }
+                          ],
+                          "references": {
+                            "characters": "From to#18:1"
+                          }
+                        },
+                        {
+                          "id": "I715:1017;114:1240;708:38;18:107",
+                          "name": "Why",
+                          "type": "TEXT",
+                          "parentId": "I715:1017;114:1240;708:38;18:104",
+                          "width": 120,
+                          "height": 40,
+                          "characters": "Full sheet follows later",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0.3294117748737335,
+                                "g": 0.3294117748737335,
+                                "b": 0.3294117748737335
+                              },
+                              "boundVariables": {
+                                "color": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                                }
+                              }
+                            }
+                          ],
+                          "references": {
+                            "characters": "Why#18:2"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "I715:1017;114:1240;708:38;18:108",
+                      "name": "Row divider",
+                      "type": "INSTANCE",
+                      "parentId": "I715:1017;114:1240;708:38",
+                      "width": 448,
+                      "height": 1,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 0.8392156958580017,
+                            "g": 0.8392156958580017,
+                            "b": 0.8392156958580017
+                          },
+                          "boundVariables": {
+                            "color": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                            }
+                          }
+                        }
+                      ],
+                      "references": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "createdOrTouched": 1
+  },
+  "differences": []
+}

@@ -888,6 +888,22 @@
     "resolvedDuring": "npveRebuild_patientSummaryFeedback_2026-09-10",
     "resolution": "Four Alt/OffAlt icons published; target imports and feedback selected/unselected live instances verified. See publication-verified-2026-09-11.json, final-read.json and comparison.png in the feedback report folder."
    }
+  },
+  {
+   "sequence": 294,
+   "flag": {
+    "id": "npveFlowsheetsList_bridgeDispatchGuard",
+    "severity": "medium",
+    "status": "RESOLVED",
+    "summary": "First helpers-header runner step passed its internal guard but the client bridge omitted the additional immediately-before-dispatch guard due to mutate/mutation discriminator mismatch.",
+    "discoveredDuring": "npveRebuild_flowsheetsListBody_2026-09-11",
+    "evidence": [
+     "figma-export/npve-flowsheets-list-body-2026-09-11/execution.json",
+     "figma-export/npve-flowsheets-list-body-2026-09-11/runner/helpers-header/result.json"
+    ],
+    "resolvedDuring": "npveRebuild_flowsheetsListBody_2026-09-11",
+    "resolution": "Corrected bridge discriminator before later writes. Subsequent explicit guards passed. No failed guard was bypassed and full file/record checks show no outside-scope changes. Historical omission remains documented; do not claim perfect guard compliance."
+   }
   }
  ]
 }

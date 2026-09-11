@@ -1,0 +1,17 @@
+const fs=require('fs');
+const {finalizeRecord}=require('../../scripts/schema/lib');
+const {readJson,writeJson}=require('../../scripts/workflow/lib');
+const d='figma-export/npve-flowsheets-list-body-2026-09-11/';
+const id='npve-flowsheets-list-body';
+const quote='go ahead with those recommendations';
+const m=readJson('workflow/manifest.json'),i=m.items.find(x=>x.id===id);
+i.plannerNotes.pendingDecisions.forEach(x=>{x.status='approved';x.operatorQuote=quote;});
+i.plannerNotes.decisionResolution={quote,dateAlignment:'Both dates under Updated; move Basic spacer before Updated.',selectorLabel:'Flowsheets label above Mental Health using the existing filled dropdown.'};
+i.risk={tier:'medium',reasons:['Operator resolved both appearance choices; bounded composition reuses existing library controls.','Approved Basic row spacer reorder affects existing row instances and requires regression renders.'],proposedBy:'Codex planner, following operator resolution2026-09-11',approval:{status:'unapproved',approvedBy:null,approvedAt:null,quote:null,history:[{tier:'human-decision',resolution:quote}]}};
+i.oversight[0]='Operator resolved both appearance choices in the recorded quote; retain executor and operator visual reviews.';
+writeJson('workflow/manifest.json',m);
+finalizeRecord(i.expectedRecordId,r=>({...r,_status:'IN PROGRESS — operator decisions approved; preparing guarded header build',planning:i.plannerNotes,risk:i.risk,operatorAppearanceDecision:quote,mutationsPlanned:[{action:'Reorder',node:'684:8271',parent:'684:8267',fromIndex:3,toIndex:2,reason:'Operator approved aligning dates; preserves master dimensions, paints and references.'},{action:'Create',scope:'Dedicated Templates section below y59620 with local Header, List body and Footer action components; use live published controls and completed row instances. Live helpers and frozen source/change-log helpers for each component. Dedicated Screens comparisons only; any temporary proofs archived with README before close.'}],nextAction:'Build and inspect header, then body and footer action, then comparisons and audit.'}));
+const target=readJson(d+'fresh-target.json'),lib=readJson(d+'fresh-library.json');
+writeJson(d+'controls.json',{components:[...target.components.filter(x=>x.componentPropertyDefinitions),...lib.components]});
+const props={'85:258':{'Label#86:0':'Flowsheets','Value text#86:31':'Mental Health','Clear icon#86:62':false,size:'small',State:'Default',Value:'Filled'},'78:26':{'Label#83:165':'Create New Flowsheet','End icon#83:275':true},'78:14':{'Label#83:165':'Add to Note'},'190:11':{'Text#190:0':'MEASURE',variant:'head',padding:'none'}};
+writeJson(d+'execution.json',{format:'tebra.design-execution',version:2,itemId:id,recordId:i.expectedRecordId,preflight:{targetFileKey:i.target.fileKey,identityEvidence:d+'fresh-target.json',tools:['mcp__codex_apps__figma_use_figma','mcp__codex_apps__figma_get_screenshot'],toolEvidence:d+'preflight.md',controls:[...target.components.filter(x=>x.componentPropertyDefinitions),...lib.components].map(c=>({name:c.name,component:c.id,properties:props[c.id]||{},evidence:d+'controls.json'}))},appearance:{specification:d+'appearance.md',review:null},corrections:[],milestones:['Header','Body and footer action','Comparisons'].map(name=>({name,status:'pending',nodeIds:[],render:null,inspected:false})),unresolved:[],nextAction:'Collect baseline and build Header.'});
