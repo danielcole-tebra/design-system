@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-11",
+  "operatorContinuationQuote": "Ok lets finish out the patient summary",
+  "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "targetPages": ["0:1 Cover", "3:2 Templates", "27:2 Screens", "126:2 Archive"],
+  "attemptedComponentKey": "dc48038cc1e602a271ce4e5ba07d720099cabd80",
+  "result": "Component with key not found",
+  "remainingKeysTested": false,
+  "canvasMutations": 0,
+  "figmaReads": 2,
+  "screenshots": 0,
+  "creditBaseline": 143,
+  "creditDelta": null,
+  "nextAction": "Operator publishes the four new library thumb icons; verify their exact keys before feedback construction.",
+  "contextMeasurement": {"legacyBytes":1550163,"leanBytes":157329,"reductionPercent":89.9,"targetPercent":50,"targetMet":true,"manifestItems":12}
+}

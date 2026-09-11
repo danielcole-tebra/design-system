@@ -1,7 +1,7 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T01:12:52.441Z",
+  "generatedAt": "2026-09-11T12:06:23.960Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
@@ -1007,6 +1007,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "34564d9da7f8014b896499a35853ea07807741d87b7ded2f36d116b6aa02fa5d"
+    "contractSha256": "695edb99fa41411e352b358b3ba43cd5294462bb06b5f0b98ffcd7c26bee8646"
   }
 }
