@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { ROOT, readJson } = require('./lib');
 const { validateManifest } = require('./validate-manifest');
+const { validateTargetIdentity } = require('./target-identity');
 
 function validateEvidence(itemId) {
   const manifest = validateManifest();
@@ -11,9 +12,7 @@ function validateEvidence(itemId) {
   const errors = [];
   if (evidence.format !== 'tebra.design-batch-evidence' || evidence.version !== 1) errors.push('unsupported evidence format/version');
   if (evidence.itemId !== itemId) errors.push('evidence itemId does not match manifest');
-  if (evidence.fileIdentity?.fileKey !== 'fdCQVFdvOByaOYIJYag0d6') errors.push('target file identity mismatch');
-  const expectedPages = ['0:1 Cover', '3:2 Templates', '27:2 Screens', '126:2 Archive'];
-  if (JSON.stringify(evidence.fileIdentity?.pages) !== JSON.stringify(expectedPages)) errors.push('target page inventory mismatch');
+  try { validateTargetIdentity(item.target, evidence.fileIdentity); } catch (error) { errors.push(error.message); }
   if (evidence.auditConfiguration?.skipInvisibleInstanceChildren !== false) errors.push('audit did not record skipInvisibleInstanceChildren=false');
   for (const key of ['unboundPaints', 'fractionalAuthoredGeometry', 'referenceCounts', 'componentIdentity', 'propertyReferences']) {
     if (evidence.checks?.[key]?.pass !== true) errors.push(`${key} did not pass`);

@@ -991,14 +991,23 @@
    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
    "status": "IN PROGRESS — read-only preflight stopped for rating-icon mapping decision",
    "recordSha256": "38c2216260b41b0ac4684e4236cd9f16996b2e39aa1aa65bbad21acb37e7892a"
+  },
+  {
+   "id": "libraryThumbIcons_2026-09-10",
+   "sequence": 102,
+   "date": "2026-09-10",
+   "workstream": "library",
+   "path": "records/library/2026-09-10/libraryThumbIcons_2026-09-10.json",
+   "status": "DONE — four draft library icons verified; operator publication pending",
+   "recordSha256": "cb6bc52cc994eda437655a49218d269517fb06a6b6df5c372ca62061dea60138"
   }
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
-  "active": 231,
+  "active": 232,
   "resolved": 58,
-  "total": 289,
-  "nextSequence": 289,
+  "total": 290,
+  "nextSequence": 290,
   "activeIds": [
    "pxToRemInflation",
    "svgIconTwoUnitSystems",
@@ -1230,7 +1239,8 @@
    "npveTidy_looseModuleChipFrameUnexplained",
    "npveFamilyHistory_sourceSaveOutlined",
    "npveEditForms_fieldSurfaceInheritance_2026-09-10",
-   "npvePatientSummary_feedbackThumbMapping"
+   "npvePatientSummary_feedbackThumbMapping",
+   "libraryThumbAltOutlined_followup_2026_09_10"
   ],
   "resolvedIds": [
    "paintOpacityDoesNotReachInstances",
@@ -1295,8 +1305,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 102,
-  "aggregateTopLevelKeys": 116,
-  "nextRecordSequence": 102
+  "records": 103,
+  "aggregateTopLevelKeys": 117,
+  "nextRecordSequence": 103
  }
 }

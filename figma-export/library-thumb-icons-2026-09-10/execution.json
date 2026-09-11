@@ -1,0 +1,99 @@
+{
+  "format": "tebra.design-execution",
+  "version": 1,
+  "itemId": "library-thumb-icons",
+  "recordId": "libraryThumbIcons_2026-09-10",
+  "provenance": {
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning": "medium"
+  },
+  "preflight": {
+    "targetFileKey": "YX2n4YLrEpBXNbcc73T6dw",
+    "identityEvidence": "figma-export/library-thumb-icons-2026-09-10/identity.json",
+    "toolEvidence": "figma-export/library-thumb-icons-2026-09-10/identity.json",
+    "tools": [
+      "mcp__codex_apps__figma_use_figma"
+    ],
+    "controls": [
+      {
+        "name": "Existing standalone icon convention (not reused as substitute)",
+        "component": "919:4",
+        "properties": {},
+        "evidence": "figma-export/library-thumb-icons-2026-09-10/identity.json"
+      }
+    ]
+  },
+  "unresolved": [],
+  "corrections": [
+    {
+      "kind": "read recovery",
+      "description": "Audit response exceeded 20KB; replaced with complete page totals before any mutation"
+    }
+  ],
+  "nextAction": "Operator reviews comparison and manually publishes four library additions; verify consumer availability before resuming feedback.",
+  "milestones": [
+    {
+      "name": "Four icons and comparison",
+      "status": "verified",
+      "nodeIds": [
+        "1080:2",
+        "1080:11",
+        "1080:21",
+        "1080:31",
+        "1080:41"
+      ],
+      "inspected": true,
+      "render": "figma-export/library-thumb-icons-2026-09-10/comparison.png"
+    }
+  ],
+  "measurements": {
+    "itemId": "library-thumb-icons",
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning": "medium",
+    "turnId": "01a08de9-9f11-7c10-970e-e18d7cb45c7d",
+    "startedAt": "2026-09-11T00:41:33.231Z",
+    "measuredThrough": "2026-09-11T00:53:07.409Z",
+    "elapsedSeconds": 694.178,
+    "assistantUserTurns": 1,
+    "modelResponses": 33,
+    "topLevelToolCalls": 32,
+    "nestedToolInvocations": {
+      "exec_command": 28,
+      "mcp__codex_apps__figma_use_figma": 7,
+      "apply_patch": 10,
+      "mcp__codex_app__load_workspace_dependencies": 1,
+      "mcp__codex_apps__figma_download_assets": 1,
+      "view_image": 1,
+      "write_stdin": 1
+    },
+    "figmaReads": 7,
+    "figmaWrites": 1,
+    "screenshots": 1,
+    "correctionCycles": 0,
+    "readRecoveryCycles": 1,
+    "tokens": {
+      "input": 2867573,
+      "cachedInput": 2755968,
+      "uncachedInput": 111605,
+      "output": 17749,
+      "reasoningOutput": 2260,
+      "total": 2885322
+    },
+    "credits": {
+      "startReading": 275,
+      "endReading": null,
+      "delta": null,
+      "direction": null,
+      "source": "Operator-reported continuation baseline; not a library-only starting meter"
+    },
+    "notes": [
+      "Prefix through measuredThrough; excludes later closeout and final response.",
+      "Tokens sum payload.usage once per response_id; input includes cached input and output includes reasoning.",
+      "One Figma mutation call: build four icons and proof; exports count as reads and screenshots.",
+      "No token-to-credit conversion inferred; unknown billing and dollar cost remain unavailable.",
+      "Nested calls counted from observed tool-call code; top-level orchestrator calls are separate, not additive API bills."
+    ]
+  }
+}

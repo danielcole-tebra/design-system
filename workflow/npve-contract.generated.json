@@ -1,25 +1,25 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T00:15:25.360Z",
+  "generatedAt": "2026-09-11T00:54:37.704Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "7282f74f47fde91f5681ddbf756be6c43ca8f9fd3eb029abe27e05a59f001103",
+      "sha256": "bdf4ddff9590853c93f9fe3666cbcf9a5d2eee1ebd560a05de4958fa3645e9f1",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "fd0686bdecdfff10e839778e292273ac6484c5c3d85eccf858bf6cdbaf5862ff"
+        "sha256": "f0d75a945a12fdc1ae49a27de5e1736898c0718846f6531b8b68da6c91797c5a"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "1d183d089738ffdf8761f84af23fce32e75c9bee44628f21817d7e9f919df9a0"
+        "sha256": "698086441e62876d3ad525fe55061737366baa0ac3ad822b288f6b14b5b140c2"
       },
       "flagsActive": {
         "path": "flags/active.json",
-        "sha256": "c6022af7bc3bf0973ee85d6d10a38249d85a895f4d6bec08afd9e26c6c60c5a8"
+        "sha256": "872e6d5d1fd8f2c6765b6eadba3cf3992f86676dcc8120f86cec66dce3df59c3"
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
@@ -29,9 +29,9 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 102,
+      "records": 103,
       "flags": {
-        "active": 231,
+        "active": 232,
         "resolved": 58
       }
     },
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
+      "id": "libraryThumbIcons_2026-09-10",
       "date": "2026-09-10",
-      "workstream": "npve",
-      "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-      "status": "IN PROGRESS — read-only preflight stopped for rating-icon mapping decision"
+      "workstream": "library",
+      "path": "records/library/2026-09-10/libraryThumbIcons_2026-09-10.json",
+      "status": "DONE — four draft library icons verified; operator publication pending"
     },
     "recordGate": {
       "inProgress": [
@@ -336,12 +336,12 @@
     },
     "byWorkstream": {
       "library": {
-        "count": 25,
+        "count": 26,
         "latest": {
-          "id": "libraryTodos_write2_2026_09_03",
-          "date": "2026-09-03",
-          "path": "records/library/2026-09-03/libraryTodos_write2_2026_09_03.json",
-          "status": "DONE. Variables: space/32 added, 14 non-scale space/* described, WEB codeSyntax removed from all 19 that had it; six typography variables added (h4, h5, subtitl"
+          "id": "libraryThumbIcons_2026-09-10",
+          "date": "2026-09-10",
+          "path": "records/library/2026-09-10/libraryThumbIcons_2026-09-10.json",
+          "status": "DONE — four draft library icons verified; operator publication pending"
         }
       },
       "npve": {
@@ -884,12 +884,6 @@
     ],
     "openFlags": [
       {
-        "id": "npveWorkflows_navFamilyHomeBlocksShell",
-        "severity": "medium",
-        "summary": "The top nav on every encounter frame is a Kit Primary Nav; the library Nav/Bar family exists but its home is unresolved (navComponentsOnCompositionsPage OPEN), so a library-consuming page shell cannot start with it.",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
-      {
         "id": "npveWorkflows_rightDockedPanelConvention",
         "severity": "medium",
         "summary": "Sheets sit on the page two ways: inline as the 450/550-wide left column, and as right-docked full-height overlays (550 and 483 wide, square corners, no scrim). Our Sidesheet Placement=Docked right has 8/0/0/8 corners and one width.",
@@ -1002,11 +996,17 @@
         "severity": "medium",
         "summary": "Source Error/Entry shows selected filled thumbs-up; library has only Icon/ThumbUpOutlined (MUI) 919:4 and Icon/ThumbDownOutlined (MUI) 919:7. Production SummaryFeedback.tsx uses ThumbUpAlt/ThumbUpOffAlt and ThumbDownAlt/ThumbDownOffAlt. Library descriptions explicitly call out the unresolved mismatch.",
         "discoveredDuring": "npveRebuild_patientSummaryFeedback_2026-09-10"
+      },
+      {
+        "id": "libraryThumbAltOutlined_followup_2026_09_10",
+        "severity": "medium",
+        "summary": "Adjacent RecommendationsFeedback and SuggestReplyControls import ThumbUpAltOutlined/ThumbDownAltOutlined; these two exports remain absent from the live library inventory. Separate bounded follow-up; this batch adds only the four Patient Summary Alt/OffAlt exports.",
+        "discoveredDuring": "libraryThumbIcons_2026-09-10"
       }
     ],
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "2cd2b5eac10f7708d18740e30369c1fff8642f6c48a48f99f59aa0da0d1851bd"
+    "contractSha256": "e5ec8ee17a5b9ff1dbe3360da3aee7d871e5e014d39f4c003997368b4fa5b649"
   }
 }

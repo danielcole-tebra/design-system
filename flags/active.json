@@ -3173,6 +3173,20 @@
      "C:/Code/web-app-v2/packages/clinical-system/src/modules/components/AiPatientSummary/SummaryFeedback.tsx"
     ]
    }
+  },
+  {
+   "sequence": 289,
+   "flag": {
+    "id": "libraryThumbAltOutlined_followup_2026_09_10",
+    "severity": "medium",
+    "status": "OPEN",
+    "summary": "Adjacent RecommendationsFeedback and SuggestReplyControls import ThumbUpAltOutlined/ThumbDownAltOutlined; these two exports remain absent from the live library inventory. Separate bounded follow-up; this batch adds only the four Patient Summary Alt/OffAlt exports.",
+    "discoveredDuring": "libraryThumbIcons_2026-09-10",
+    "evidence": [
+     "figma-export/library-thumb-icons-2026-09-10/baseline.json",
+     "figma-export/npve-patient-summary-feedback-2026-09-10/thumb-mapping.json"
+    ]
+   }
   }
  ]
 }

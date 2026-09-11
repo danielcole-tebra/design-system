@@ -1,0 +1,1021 @@
+{
+  "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+  "pages": [
+    {
+      "id": "118:250",
+      "name": "Cover",
+      "topLevel": 1,
+      "count": 16,
+      "unbound": 0
+    },
+    {
+      "id": "145:2",
+      "name": "Foundations",
+      "topLevel": 1,
+      "count": 715,
+      "unbound": 0
+    },
+    {
+      "id": "259:2879",
+      "name": "Reference",
+      "topLevel": 18,
+      "count": 1917,
+      "unbound": 90
+    },
+    {
+      "id": "259:2873",
+      "name": "Actions",
+      "topLevel": 6,
+      "count": 977,
+      "unbound": 6
+    },
+    {
+      "id": "259:2874",
+      "name": "Inputs",
+      "topLevel": 9,
+      "count": 1503,
+      "unbound": 0
+    },
+    {
+      "id": "259:2875",
+      "name": "Data display",
+      "topLevel": 10,
+      "count": 562,
+      "unbound": 0
+    },
+    {
+      "id": "259:2876",
+      "name": "Feedback",
+      "topLevel": 5,
+      "count": 1327,
+      "unbound": 0
+    },
+    {
+      "id": "259:2877",
+      "name": "Surfaces & navigation",
+      "topLevel": 12,
+      "count": 635,
+      "unbound": 0
+    },
+    {
+      "id": "259:2878",
+      "name": "Icons & illustrations",
+      "topLevel": 101,
+      "count": 911,
+      "unbound": 74
+    },
+    {
+      "id": "446:2",
+      "name": "Compositions",
+      "topLevel": 7,
+      "count": 4856,
+      "unbound": 436
+    },
+    {
+      "id": "489:2",
+      "name": "Layouts",
+      "topLevel": 2,
+      "count": 625,
+      "unbound": 0
+    }
+  ],
+  "controls": [
+    {
+      "id": "1080:11",
+      "key": "dc48038cc1e602a271ce4e5ba07d720099cabd80",
+      "width": 24,
+      "height": 24,
+      "properties": {},
+      "refs": 0,
+      "instances": [
+        {
+          "id": "1080:16",
+          "width": 24,
+          "height": 24,
+          "master": "1080:11",
+          "vectors": [
+            {
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0.2823529541492462,
+                    "b": 0.32156863808631897
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:74:3"
+                    }
+                  }
+                }
+              ],
+              "paths": [
+                "NONZERO"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1080:14",
+          "width": 96,
+          "height": 96,
+          "master": "1080:11",
+          "vectors": [
+            {
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0.2823529541492462,
+                    "b": 0.32156863808631897
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:74:3"
+                    }
+                  }
+                }
+              ],
+              "paths": [
+                "NONZERO"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1080:21",
+      "key": "c6ddb0d4737fb41e6ba417ac97802eda28cbac85",
+      "width": 24,
+      "height": 24,
+      "properties": {},
+      "refs": 0,
+      "instances": [
+        {
+          "id": "1080:26",
+          "width": 24,
+          "height": 24,
+          "master": "1080:21",
+          "vectors": [
+            {
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0.2823529541492462,
+                    "b": 0.32156863808631897
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:74:3"
+                    }
+                  }
+                }
+              ],
+              "paths": [
+                "NONZERO"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1080:24",
+          "width": 96,
+          "height": 96,
+          "master": "1080:21",
+          "vectors": [
+            {
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0.2823529541492462,
+                    "b": 0.32156863808631897
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:74:3"
+                    }
+                  }
+                }
+              ],
+              "paths": [
+                "NONZERO"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1080:31",
+      "key": "78d7b7482ce3e0fa514ac566351699a5f92df7dd",
+      "width": 24,
+      "height": 24,
+      "properties": {},
+      "refs": 0,
+      "instances": [
+        {
+          "id": "1080:36",
+          "width": 24,
+          "height": 24,
+          "master": "1080:31",
+          "vectors": [
+            {
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0.2823529541492462,
+                    "b": 0.32156863808631897
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:74:3"
+                    }
+                  }
+                }
+              ],
+              "paths": [
+                "NONZERO"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1080:34",
+          "width": 96,
+          "height": 96,
+          "master": "1080:31",
+          "vectors": [
+            {
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0.2823529541492462,
+                    "b": 0.32156863808631897
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:74:3"
+                    }
+                  }
+                }
+              ],
+              "paths": [
+                "NONZERO"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1080:41",
+      "key": "64189258b7ae5287ed30bee01269187c0f1e6a45",
+      "width": 24,
+      "height": 24,
+      "properties": {},
+      "refs": 0,
+      "instances": [
+        {
+          "id": "1080:46",
+          "width": 24,
+          "height": 24,
+          "master": "1080:41",
+          "vectors": [
+            {
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0.2823529541492462,
+                    "b": 0.32156863808631897
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:74:3"
+                    }
+                  }
+                }
+              ],
+              "paths": [
+                "NONZERO"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1080:44",
+          "width": 96,
+          "height": 96,
+          "master": "1080:41",
+          "vectors": [
+            {
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0.2823529541492462,
+                    "b": 0.32156863808631897
+                  },
+                  "boundVariables": {
+                    "color": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:74:3"
+                    }
+                  }
+                }
+              ],
+              "paths": [
+                "NONZERO"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "oldUnchanged": [
+    {
+      "id": "919:4",
+      "pass": true
+    },
+    {
+      "id": "919:7",
+      "pass": true
+    }
+  ],
+  "text": [
+    {
+      "id": "1080:3",
+      "characters": "Patient Summary · thumb icon repair",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 920,
+      "h": 20
+    },
+    {
+      "id": "1080:4",
+      "characters": "Source: MUI 5.15.12 · frozen PNG at 2× · 2026-09-10",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 920,
+      "h": 20
+    },
+    {
+      "id": "1080:5",
+      "characters": "Component",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 220,
+      "h": 20
+    },
+    {
+      "id": "1080:6",
+      "characters": "Source",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 160,
+      "h": 20
+    },
+    {
+      "id": "1080:7",
+      "characters": "Rebuild · live instances",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 240,
+      "h": 20
+    },
+    {
+      "id": "1080:8",
+      "characters": "Change",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 240,
+      "h": 20
+    },
+    {
+      "id": "1080:12",
+      "characters": "ThumbUpAlt",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 220,
+      "h": 20
+    },
+    {
+      "id": "1080:18",
+      "characters": "Added missing selected icon.\n24px component; 4× detail shown.\nEditable vector; bound color.",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 240,
+      "h": 60
+    },
+    {
+      "id": "1080:22",
+      "characters": "ThumbUpOffAlt",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 220,
+      "h": 20
+    },
+    {
+      "id": "1080:28",
+      "characters": "Added missing unselected icon.\n24px component; 4× detail shown.\nEditable vector; bound color.",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 240,
+      "h": 60
+    },
+    {
+      "id": "1080:32",
+      "characters": "ThumbDownAlt",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 220,
+      "h": 20
+    },
+    {
+      "id": "1080:38",
+      "characters": "Added missing selected icon.\n24px component; 4× detail shown.\nEditable vector; bound color.",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 240,
+      "h": 60
+    },
+    {
+      "id": "1080:42",
+      "characters": "ThumbDownOffAlt",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 220,
+      "h": 20
+    },
+    {
+      "id": "1080:48",
+      "characters": "Added missing unselected icon.\n24px component; 4× detail shown.\nEditable vector; bound color.",
+      "font": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "bound": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:36"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:55"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:50"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:62"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:74:51"
+          }
+        ]
+      },
+      "w": 240,
+      "h": 60
+    }
+  ],
+  "createdSubtreeIds": [
+    "1080:2",
+    "1080:3",
+    "1080:4",
+    "1080:5",
+    "1080:6",
+    "1080:7",
+    "1080:8",
+    "1080:12",
+    "1080:13",
+    "1080:14",
+    "I1080:14;1080:10",
+    "1080:16",
+    "I1080:16;1080:10",
+    "1080:18",
+    "1080:22",
+    "1080:23",
+    "1080:24",
+    "I1080:24;1080:20",
+    "1080:26",
+    "I1080:26;1080:20",
+    "1080:28",
+    "1080:32",
+    "1080:33",
+    "1080:34",
+    "I1080:34;1080:30",
+    "1080:36",
+    "I1080:36;1080:30",
+    "1080:38",
+    "1080:42",
+    "1080:43",
+    "1080:44",
+    "I1080:44;1080:40",
+    "1080:46",
+    "I1080:46;1080:40",
+    "1080:48",
+    "1080:11",
+    "1080:21",
+    "1080:31",
+    "1080:41"
+  ]
+}

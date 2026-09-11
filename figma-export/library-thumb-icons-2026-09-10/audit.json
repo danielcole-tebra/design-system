@@ -1,0 +1,81 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "library-thumb-icons",
+  "fileIdentity": {
+    "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+    "pages": [
+      "118:250 Cover",
+      "145:2 Foundations",
+      "259:2879 Reference",
+      "259:2873 Actions",
+      "259:2874 Inputs",
+      "259:2875 Data display",
+      "259:2876 Feedback",
+      "259:2877 Surfaces & navigation",
+      "259:2878 Icons & illustrations",
+      "446:2 Compositions",
+      "489:2 Layouts"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "new-node-audit.json",
+        "baseline.json"
+      ]
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "new-node-audit.json",
+        "baseline.json"
+      ]
+    },
+    "referenceCounts": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "new-node-audit.json",
+        "baseline.json"
+      ]
+    },
+    "componentIdentity": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "new-node-audit.json",
+        "baseline.json"
+      ]
+    },
+    "propertyReferences": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "new-node-audit.json",
+        "baseline.json"
+      ]
+    }
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/library-thumb-icons-2026-09-10/comparison.png",
+    "inspectedByExecutor": true,
+    "observations": [
+      "Selected and unselected silhouettes match independently rasterized MUI source PNGs; counters remain open.",
+      "Four 24px instances and four enlarged 96px instances show intact vector shapes and consistent teal color.",
+      "Labels and change notes are legible, unclipped, and aligned; white backdrop and text are bound."
+    ]
+  },
+  "toolCalls": {
+    "figmaRead": 7,
+    "figmaWrite": 1,
+    "screenshot": 1,
+    "correctionCycles": 0
+  }
+}

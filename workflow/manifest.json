@@ -875,6 +875,62 @@
         "report": "figma-export/npve-patient-summary-body-2026-09-10/report.md",
         "comparisonRender": "figma-export/npve-patient-summary-body-2026-09-10/comparison-states.png"
       }
+    },
+    {
+      "id": "library-thumb-icons",
+      "status": "complete",
+      "dependsOn": [],
+      "target": {
+        "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+        "iconsPageId": "259:2878",
+        "referencePageId": "259:2879"
+      },
+      "expectedRecordId": "libraryThumbIcons_2026-09-10",
+      "scope": "Add four exact MUI Alt/OffAlt thumb icons from design-system locked MUI 5.15.12, token-bound at 24px. Add live-instance reference/rebuild/change proof. Existing masters unchanged. Publish manually after review. No NPVE writes.",
+      "risk": {
+        "tier": "medium",
+        "proposedBy": "Codex planner, bounded library addition requested by operator",
+        "reasons": [
+          "Shared library additions require instance verification and manual publication"
+        ],
+        "approval": {
+          "status": "unapproved",
+          "approvedBy": null,
+          "approvedAt": null,
+          "quote": null,
+          "history": []
+        },
+        "lockedAt": "2026-09-11T00:47:35.404Z",
+        "lock": "53a3ff12c866876836750951b2bc3dc7a3dd149c513b19dc5b177b645141e994"
+      },
+      "oversight": [
+        "Operator per-item confirmation: Ok go",
+        "Executor inspects and shows comparison before operator publishes"
+      ],
+      "stopCondition": "Stop for identity mismatch, missing token, new design decision, path/render mismatch or unrelated repair.",
+      "allowedFiles": [
+        "apply-library-thumb-icons.js",
+        "finalize-library-thumb-icons.js",
+        "figma-export/library-thumb-icons-2026-09-10/**",
+        "workflow/manifest.json",
+        "workflow/metrics.json",
+        "scripts/workflow/target-identity.js",
+        "scripts/workflow/target-identity-self-test.js",
+        "scripts/workflow/validate-evidence.js"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/library-thumb-icons-2026-09-10/audit.json",
+        "report": "figma-export/library-thumb-icons-2026-09-10/report.md",
+        "comparisonRender": "figma-export/library-thumb-icons-2026-09-10/comparison.png"
+      },
+      "perItemConfirmations": [
+        {
+          "quote": "Ok go",
+          "recordedAt": "2026-09-11T00:47:35.900Z",
+          "recordedBy": "Codex"
+        }
+      ],
+      "completedAt": "2026-09-11T00:54:38.107Z"
     }
   ],
   "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"

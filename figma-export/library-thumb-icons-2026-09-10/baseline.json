@@ -1,0 +1,158 @@
+{
+  "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+  "skipInvisibleInstanceChildren": false,
+  "pages": [
+    {
+      "id": "118:250",
+      "name": "Cover",
+      "topLevel": 1,
+      "count": 16,
+      "unbound": 0
+    },
+    {
+      "id": "145:2",
+      "name": "Foundations",
+      "topLevel": 1,
+      "count": 715,
+      "unbound": 0
+    },
+    {
+      "id": "259:2879",
+      "name": "Reference",
+      "topLevel": 17,
+      "count": 1882,
+      "unbound": 90
+    },
+    {
+      "id": "259:2873",
+      "name": "Actions",
+      "topLevel": 6,
+      "count": 977,
+      "unbound": 6
+    },
+    {
+      "id": "259:2874",
+      "name": "Inputs",
+      "topLevel": 9,
+      "count": 1503,
+      "unbound": 0
+    },
+    {
+      "id": "259:2875",
+      "name": "Data display",
+      "topLevel": 10,
+      "count": 562,
+      "unbound": 0
+    },
+    {
+      "id": "259:2876",
+      "name": "Feedback",
+      "topLevel": 5,
+      "count": 1327,
+      "unbound": 0
+    },
+    {
+      "id": "259:2877",
+      "name": "Surfaces & navigation",
+      "topLevel": 12,
+      "count": 635,
+      "unbound": 0
+    },
+    {
+      "id": "259:2878",
+      "name": "Icons & illustrations",
+      "topLevel": 97,
+      "count": 903,
+      "unbound": 74
+    },
+    {
+      "id": "446:2",
+      "name": "Compositions",
+      "topLevel": 7,
+      "count": 4856,
+      "unbound": 436
+    },
+    {
+      "id": "489:2",
+      "name": "Layouts",
+      "topLevel": 2,
+      "count": 625,
+      "unbound": 0
+    }
+  ],
+  "old": [
+    {
+      "id": "919:4",
+      "key": "4b430b97be90f5543655e35c412ecd08a4beafe1",
+      "name": "Icon/ThumbUpOutlined (MUI)",
+      "description": "Positive feedback affordance. Source: @mui/icons-material/ThumbUpOutlined.js (5.15.12), which wraps the MUI Material Symbols path — NOT a Tebra icon. 24 viewBox; SCALE constraints; single path with three subpaths (outer outline, interior counter, cuff). Winding rule set explicitly to NONZERO, which is the SVG default the MUI path is authored against; see the WarningFilled precedent where an import lost fill-rule and the counter filled in.\n\nPRODUCTION NOTE, recorded not resolved: no file imports ThumbUpOutlined. The three feedback surfaces that do this job import the Alt family instead — ThumbUpAltOutlined in facesheet-ui RecommendationsFeedback.tsx:102 and messages-ui SuggestReplyControls.tsx:396, and ThumbUpAlt / ThumbUpOffAlt in clinical-system SummaryFeedback.tsx:1-4. Alt is a visibly different glyph (one unified shape, no separate cuff). If the library is meant to match what ships, this should be ThumbUpAltOutlined.",
+      "children": [
+        {
+          "id": "919:3",
+          "paths": [
+            {
+              "windingRule": "NONZERO",
+              "data": "M 8 20 L 17 20 C 17.8299999833107 20 18.54000014066696 19.500000715255737 18.84000015258789 18.780000686645508 L 21.860000610351562 11.729999542236328 C 21.95000061392784 11.499999538064003 22 11.259999990463257 22 11 L 22 9 C 22 7.899999976158142 21.100000023841858 7 20 7 L 13.6899995803833 7 L 14.640000343322754 2.430000066757202 L 14.670000076293945 2.109999895095825 C 14.670000076293945 1.6999998986721039 14.499999552965164 1.3199999630451202 14.229999542236328 1.0499999523162842 L 13.170000076293945 0 L 6.579999923706055 6.590000152587891 C 6.21999990940094 6.950000166893005 6 7.449999988079071 6 8 L 6 18 C 6 19.100000023841858 6.899999976158142 20 8 20 Z M 8 8 L 12.34000015258789 3.6599998474121094 L 11 9 L 20 9 L 20 11 L 17 18 L 8 18 L 8 8 Z M 0 8 L 4 8 L 4 20 L 0 20 L 0 8 Z"
+            }
+          ],
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0,
+                "g": 0.2823529541492462,
+                "b": 0.32156863808631897
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:74:3"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "919:7",
+      "key": "a2788dbffe153201e0f3786bd750f8545ffac439",
+      "name": "Icon/ThumbDownOutlined (MUI)",
+      "description": "Negative feedback affordance. Source: @mui/icons-material/ThumbDownOutlined.js (5.15.12), which wraps the MUI Material Symbols path — NOT a Tebra icon. 24 viewBox; SCALE constraints; single path with three subpaths (outer outline, interior counter, cuff). Winding rule set explicitly to NONZERO, which is the SVG default the MUI path is authored against; see the WarningFilled precedent where an import lost fill-rule and the counter filled in.\n\nPRODUCTION NOTE, recorded not resolved: no file imports ThumbDownOutlined. The three feedback surfaces that do this job import the Alt family instead — ThumbDownAltOutlined in facesheet-ui RecommendationsFeedback.tsx:113 and messages-ui SuggestReplyControls.tsx:408, and ThumbDownAlt / ThumbDownOffAlt in clinical-system SummaryFeedback.tsx:1-4. Alt is a visibly different glyph (one unified shape, no separate cuff). If the library is meant to match what ships, this should be ThumbDownAltOutlined.",
+      "children": [
+        {
+          "id": "919:6",
+          "paths": [
+            {
+              "windingRule": "NONZERO",
+              "data": "M 14 0 L 5 0 C 4.1700000166893005 0 3.4599998593330383 0.4999997615814209 3.1599998474121094 1.2199997901916504 L 0.13999998569488525 8.270000457763672 C 0.04999998211860657 8.500000461935997 0 8.740000009536743 0 9 L 0 11 C 0 12.100000023841858 0.8999999761581421 13 2 13 L 8.3100004196167 13 L 7.359999656677246 17.56999969482422 L 7.329999923706055 17.889999389648438 C 7.329999923706055 18.29999938607216 7.500000447034836 18.680000752210617 7.770000457763672 18.950000762939453 L 8.829999923706055 20 L 15.420000076293945 13.40999984741211 C 15.78000009059906 13.049999833106995 16 12.550000011920929 16 12 L 16 2 C 16 0.8999999761581421 15.100000023841858 0 14 0 Z M 14 12 L 9.65999984741211 16.34000015258789 L 11 11 L 2 11 L 2 9 L 5 2 L 14 2 L 14 12 Z M 18 0 L 22 0 L 22 12 L 18 12 L 18 0 Z"
+            }
+          ],
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0,
+                "g": 0.2823529541492462,
+                "b": 0.32156863808631897
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:74:3"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "referenceBottom": 5148
+}

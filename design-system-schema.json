@@ -6240,6 +6240,17 @@
     "figma-export/npve-patient-summary-feedback-2026-09-10/thumb-mapping.json",
     "C:/Code/web-app-v2/packages/clinical-system/src/modules/components/AiPatientSummary/SummaryFeedback.tsx"
    ]
+  },
+  {
+   "id": "libraryThumbAltOutlined_followup_2026_09_10",
+   "severity": "medium",
+   "status": "OPEN",
+   "summary": "Adjacent RecommendationsFeedback and SuggestReplyControls import ThumbUpAltOutlined/ThumbDownAltOutlined; these two exports remain absent from the live library inventory. Separate bounded follow-up; this batch adds only the four Patient Summary Alt/OffAlt exports.",
+   "discoveredDuring": "libraryThumbIcons_2026-09-10",
+   "evidence": [
+    "figma-export/library-thumb-icons-2026-09-10/baseline.json",
+    "figma-export/npve-patient-summary-feedback-2026-09-10/thumb-mapping.json"
+   ]
   }
  ],
  "openDecisionsFromCanonicalPage": {
@@ -29631,5 +29642,167 @@
   "screenshots": [
    "figma-export/npve-patient-summary-feedback-2026-09-10/source-error-entry.png"
   ]
+ },
+ "libraryThumbIcons_2026-09-10": {
+  "_status": "DONE — four draft library icons verified; operator publication pending",
+  "date": "2026-09-10",
+  "report": "figma-export/library-thumb-icons-2026-09-10/report.md",
+  "scope": "Add four exact MUI Alt/OffAlt thumb icons from design-system locked MUI 5.15.12, token-bound at 24px. Add live-instance reference/rebuild/change proof. Existing masters unchanged. Publish manually after review. No NPVE writes.",
+  "risk": {
+   "tier": "medium",
+   "proposedBy": "Codex planner, bounded library addition requested by operator",
+   "reasons": [
+    "Shared library additions require instance verification and manual publication"
+   ],
+   "approval": {
+    "status": "unapproved",
+    "approvedBy": null,
+    "approvedAt": null,
+    "quote": null,
+    "history": []
+   },
+   "lockedAt": "2026-09-11T00:47:35.404Z",
+   "lock": "53a3ff12c866876836750951b2bc3dc7a3dd149c513b19dc5b177b645141e994"
+  },
+  "operatorConfirmationQuote": "Ok go",
+  "creditBaseline": {
+   "reading": 275,
+   "unit": "credits",
+   "source": "operator-reported earlier in this continuation",
+   "endingReading": null,
+   "delta": null
+  },
+  "sourceAuthority": "Design-system yarn.lock resolves @mui/icons-material ^5.15.11 to 5.15.12; clinical-system uses 5.11.16. Both exact sources saved; version changes include explicit SVG closing segments replaced with z. Library values follow design-system authority.",
+  "findings": [
+   {
+    "id": "npvePatientSummary_feedbackThumbMapping",
+    "disposition": "Repair dependency; flag remains open until publication and NPVE consumer verification"
+   },
+   {
+    "type": "deferred",
+    "description": "ThumbUpAltOutlined and ThumbDownAltOutlined used by adjacent feedback surfaces are outside these four icons."
+   },
+   {
+    "id": "libraryThumbAltOutlined_followup_2026_09_10",
+    "severity": "medium",
+    "status": "OPEN",
+    "summary": "Adjacent RecommendationsFeedback and SuggestReplyControls import ThumbUpAltOutlined/ThumbDownAltOutlined; these two exports remain absent from the live library inventory. Separate bounded follow-up; this batch adds only the four Patient Summary Alt/OffAlt exports.",
+    "discoveredDuring": "libraryThumbIcons_2026-09-10",
+    "evidence": [
+     "figma-export/library-thumb-icons-2026-09-10/baseline.json",
+     "figma-export/npve-patient-summary-feedback-2026-09-10/thumb-mapping.json"
+    ]
+   }
+  ],
+  "provenance": {
+   "provider": "OpenAI",
+   "model": "gpt-6-astra",
+   "reasoning": "medium"
+  },
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — both 24px and 96px instances of each master match bound primary/main #004852, alpha 1; NONZERO paths verified.",
+   "2_unboundPaintAudit": "PASS — every top-level subtree on all 11 pages audited before/after. Existing counts 606 unchanged; every new solid paint bound. Existing paints are triage candidates, not newly declared defects.",
+   "3_referenceCounts": "PASS — four standalone icons have no component properties or property references; no variant combining.",
+   "4_skipInvisibleFalse": "PASS — false for all audit walks, including boolean-hidden descendants.",
+   "5_opacityLast": "PASS — no opacity override or computed-alpha workaround used.",
+   "6_enumerateDontRecall": "PASS — page inventory and full subtree counts enumerated live; scoped new-node inventory saved.",
+   "7_fileIdentityFirst": "PASS — explicit library file key and matching 11-page inventory verified; no source or NPVE writes.",
+   "8_roundWithRecord": "PASS — all new authored geometry integer; 24px source viewBox, 96px enlarged instance. Intrinsic vector geometry preserved without rounding.",
+   "9_boundPaintAlpha": "PASS — retained binding-returned opacity; primary/main is opaque. No post-binding opacity assignment.",
+   "10_cloneDropsPropertyRefs": "PASS — no variant clones; new instances resolve to exact masters and zero property references are expected."
+  },
+  "screenshots": [
+   "figma-export/library-thumb-icons-2026-09-10/comparison.png"
+  ],
+  "created": {
+   "board": "1080:2",
+   "created": [
+    {
+     "name": "Icon/ThumbUpAlt (MUI)",
+     "id": "1080:11",
+     "key": "dc48038cc1e602a271ce4e5ba07d720099cabd80",
+     "largeInstance": "1080:14",
+     "actualInstance": "1080:16",
+     "source": "1080:13"
+    },
+    {
+     "name": "Icon/ThumbUpOffAlt (MUI)",
+     "id": "1080:21",
+     "key": "c6ddb0d4737fb41e6ba417ac97802eda28cbac85",
+     "largeInstance": "1080:24",
+     "actualInstance": "1080:26",
+     "source": "1080:23"
+    },
+    {
+     "name": "Icon/ThumbDownAlt (MUI)",
+     "id": "1080:31",
+     "key": "78d7b7482ce3e0fa514ac566351699a5f92df7dd",
+     "largeInstance": "1080:34",
+     "actualInstance": "1080:36",
+     "source": "1080:33"
+    },
+    {
+     "name": "Icon/ThumbDownOffAlt (MUI)",
+     "id": "1080:41",
+     "key": "64189258b7ae5287ed30bee01269187c0f1e6a45",
+     "largeInstance": "1080:44",
+     "actualInstance": "1080:46",
+     "source": "1080:43"
+    }
+   ]
+  },
+  "measurements": {
+   "itemId": "library-thumb-icons",
+   "provider": "OpenAI",
+   "model": "gpt-6-astra",
+   "reasoning": "medium",
+   "turnId": "01a08de9-9f11-7c10-970e-e18d7cb45c7d",
+   "startedAt": "2026-09-11T00:41:33.231Z",
+   "measuredThrough": "2026-09-11T00:53:07.409Z",
+   "elapsedSeconds": 694.178,
+   "assistantUserTurns": 1,
+   "modelResponses": 33,
+   "topLevelToolCalls": 32,
+   "nestedToolInvocations": {
+    "exec_command": 28,
+    "mcp__codex_apps__figma_use_figma": 7,
+    "apply_patch": 10,
+    "mcp__codex_app__load_workspace_dependencies": 1,
+    "mcp__codex_apps__figma_download_assets": 1,
+    "view_image": 1,
+    "write_stdin": 1
+   },
+   "figmaReads": 7,
+   "figmaWrites": 1,
+   "screenshots": 1,
+   "correctionCycles": 0,
+   "readRecoveryCycles": 1,
+   "tokens": {
+    "input": 2867573,
+    "cachedInput": 2755968,
+    "uncachedInput": 111605,
+    "output": 17749,
+    "reasoningOutput": 2260,
+    "total": 2885322
+   },
+   "credits": {
+    "startReading": 275,
+    "endReading": null,
+    "delta": null,
+    "direction": null,
+    "source": "Operator-reported continuation baseline; not a library-only starting meter"
+   },
+   "notes": [
+    "Prefix through measuredThrough; excludes later closeout and final response.",
+    "Tokens sum payload.usage once per response_id; input includes cached input and output includes reasoning.",
+    "One Figma mutation call: build four icons and proof; exports count as reads and screenshots.",
+    "No token-to-credit conversion inferred; unknown billing and dollar cost remain unavailable.",
+    "Nested calls counted from observed tool-call code; top-level orchestrator calls are separate, not additive API bills."
+   ]
+  },
+  "publication": {
+   "status": "pending operator review and manual publish"
+  },
+  "nextAction": "Operator reviews comparison and manually publishes four library additions; verify consumer availability before resuming feedback."
  }
 }

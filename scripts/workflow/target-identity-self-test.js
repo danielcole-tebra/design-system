@@ -1,0 +1,12 @@
+const assert = require('assert');
+const { validateTargetIdentity } = require('./target-identity');
+const npve = {fileKey:'fdCQVFdvOByaOYIJYag0d6',pages:['0:1 Cover','3:2 Templates','27:2 Screens','126:2 Archive']};
+const library = require('../../figma-export/library-thumb-icons-2026-09-10/identity.json');
+const evidence = {...library,pages:library.pages.map(p=>`${p.id} ${p.name}`)};
+validateTargetIdentity(npve,npve);
+validateTargetIdentity(library,evidence);
+assert.throws(()=>validateTargetIdentity(npve,evidence));
+assert.throws(()=>validateTargetIdentity(library,npve));
+assert.throws(()=>validateTargetIdentity(library,{...evidence,pages:evidence.pages.slice(1)}));
+for(const fileKey of ['zVsuhYehoSLLq880qRBFkq','ZPf0sJy83aPyrHjCVHomya','unknown']) assert.throws(()=>validateTargetIdentity({fileKey},{fileKey,pages:[]}));
+console.log('target identity PASS: both writable files, mismatches, missing pages, read-only files rejected');

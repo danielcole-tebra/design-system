@@ -1,0 +1,21 @@
+const fs=require('fs');
+const path=require('path');
+const session=process.argv[2];
+if(!session)throw new Error('Pass local session JSONL path');
+const all=fs.readFileSync(session,'utf8').trim().split('\n').flatMap(l=>{try{return[JSON.parse(l)]}catch{return[]}});
+const contexts=all.filter(x=>x.type==='turn_context');
+const context=contexts.at(-1).payload,turnId=context.turn_id;
+const startedAt=contexts.find(x=>x.payload.turn_id===turnId).timestamp;
+const cutoff=new Date().toISOString();
+const calls=all.filter(x=>x.timestamp>=startedAt&&x.timestamp<=cutoff&&x.type==='response_item'&&['custom_tool_call','function_call'].includes(x.payload.type));
+const usage=[...new Map(all.filter(x=>x.type==='token_usage_record'&&x.payload.turn_id===turnId).map(x=>[x.payload.response_id,x])).values()];
+const sum=k=>usage.reduce((s,x)=>s+(x.payload.usage[k]||0),0);
+const nested={};
+for(const c of calls){const input=c.payload.input||c.payload.arguments||'';for(const m of input.matchAll(/(?:await\s+)?tools\.([a-zA-Z0-9_]+)\s*\(/g))nested[m[1]]=(nested[m[1]]||0)+1;}
+const result={itemId:'library-thumb-icons',provider:'OpenAI',model:context.model,reasoning:context.effort,turnId,startedAt,measuredThrough:cutoff,elapsedSeconds:(Date.parse(cutoff)-Date.parse(startedAt))/1000,assistantUserTurns:1,modelResponses:usage.length,topLevelToolCalls:calls.length,nestedToolInvocations:nested,figmaReads:(nested.mcp__codex_apps__figma_use_figma||0)-1+(nested.mcp__codex_apps__figma_download_assets||0),figmaWrites:1,screenshots:nested.mcp__codex_apps__figma_download_assets||0,correctionCycles:0,readRecoveryCycles:1,tokens:{input:sum('input_tokens'),cachedInput:sum('cached_input_tokens'),uncachedInput:sum('input_tokens')-sum('cached_input_tokens'),output:sum('output_tokens'),reasoningOutput:sum('reasoning_output_tokens'),total:sum('total_tokens')},credits:{startReading:275,endReading:null,delta:null,direction:null,source:'Operator-reported continuation baseline; not a library-only starting meter'},notes:['Prefix through measuredThrough; excludes later closeout and final response.','Tokens sum payload.usage once per response_id; input includes cached input and output includes reasoning.','One Figma mutation call: build four icons and proof; exports count as reads and screenshots.','No token-to-credit conversion inferred; unknown billing and dollar cost remain unavailable.','Nested calls counted from observed tool-call code; top-level orchestrator calls are separate, not additive API bills.']};
+fs.writeFileSync(path.join(__dirname,'measurements.json'),JSON.stringify(result,null,2)+'\n');
+const metricsPath=path.resolve(__dirname,'../../workflow/metrics.json');
+const metrics=JSON.parse(fs.readFileSync(metricsPath));metrics.costObservations=metrics.costObservations||[];
+const i=metrics.costObservations.findIndex(x=>x.itemId===result.itemId);if(i<0)metrics.costObservations.push(result);else metrics.costObservations[i]=result;
+fs.writeFileSync(metricsPath,JSON.stringify(metrics,null,2)+'\n');
+console.log(JSON.stringify(result,null,2));

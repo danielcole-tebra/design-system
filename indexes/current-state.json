@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
+  "id": "libraryThumbIcons_2026-09-10",
   "date": "2026-09-10",
-  "workstream": "npve",
-  "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-  "status": "IN PROGRESS — read-only preflight stopped for rating-icon mapping decision"
+  "workstream": "library",
+  "path": "records/library/2026-09-10/libraryThumbIcons_2026-09-10.json",
+  "status": "DONE — four draft library icons verified; operator publication pending"
  },
  "recordGate": {
   "inProgress": [
@@ -18,12 +18,12 @@
  },
  "byWorkstream": {
   "library": {
-   "count": 25,
+   "count": 26,
    "latest": {
-    "id": "libraryTodos_write2_2026_09_03",
-    "date": "2026-09-03",
-    "path": "records/library/2026-09-03/libraryTodos_write2_2026_09_03.json",
-    "status": "DONE. Variables: space/32 added, 14 non-scale space/* described, WEB codeSyntax removed from all 19 that had it; six typography variables added (h4, h5, subtitl"
+    "id": "libraryThumbIcons_2026-09-10",
+    "date": "2026-09-10",
+    "path": "records/library/2026-09-10/libraryThumbIcons_2026-09-10.json",
+    "status": "DONE — four draft library icons verified; operator publication pending"
    }
   },
   "npve": {
@@ -46,13 +46,13 @@
   }
  },
  "flags": {
-  "active": 231,
+  "active": 232,
   "resolved": 58
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "7282f74f47fde91f5681ddbf756be6c43ca8f9fd3eb029abe27e05a59f001103",
-  "bytes": 1520346
+  "sha256": "bdf4ddff9590853c93f9fe3666cbcf9a5d2eee1ebd560a05de4958fa3645e9f1",
+  "bytes": 1527887
  }
 }

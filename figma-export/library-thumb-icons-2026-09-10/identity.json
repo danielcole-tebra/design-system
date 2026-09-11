@@ -1,0 +1,98 @@
+{
+  "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+  "pages": [
+    {
+      "id": "118:250",
+      "name": "Cover"
+    },
+    {
+      "id": "145:2",
+      "name": "Foundations"
+    },
+    {
+      "id": "259:2879",
+      "name": "Reference"
+    },
+    {
+      "id": "259:2873",
+      "name": "Actions"
+    },
+    {
+      "id": "259:2874",
+      "name": "Inputs"
+    },
+    {
+      "id": "259:2875",
+      "name": "Data display"
+    },
+    {
+      "id": "259:2876",
+      "name": "Feedback"
+    },
+    {
+      "id": "259:2877",
+      "name": "Surfaces & navigation"
+    },
+    {
+      "id": "259:2878",
+      "name": "Icons & illustrations"
+    },
+    {
+      "id": "446:2",
+      "name": "Compositions"
+    },
+    {
+      "id": "489:2",
+      "name": "Layouts"
+    }
+  ],
+  "components": [
+    {
+      "id": "919:4",
+      "name": "Icon/ThumbUpOutlined (MUI)",
+      "key": "4b430b97be90f5543655e35c412ecd08a4beafe1",
+      "componentPropertyDefinitions": {}
+    }
+  ],
+  "variables": [
+    {
+      "id": "VariableID:74:3",
+      "key": "172c5580bce6e949fd9eac7ffb766a5ab3151022",
+      "name": "color/primary/main",
+      "values": {
+        "74:0": {
+          "r": 0,
+          "g": 0.2823529541492462,
+          "b": 0.32156863808631897,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:74:36",
+      "key": "5c8867e0b6f174db9f69096580158df26e39baae",
+      "name": "color/text/primary",
+      "values": {
+        "74:0": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:74:39",
+      "key": "f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+      "name": "color/background/paper",
+      "values": {
+        "74:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    }
+  ]
+}
