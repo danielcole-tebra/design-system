@@ -1,0 +1,20 @@
+{
+ "kind": "read-only-audit-checkpoint",
+ "recordId": "npveRebuild_flowsheetsAudit_2026-09-11",
+ "completed": [
+  "Source/target/library identity",
+  "Four source state readbacks and inspected PNGs",
+  "Fresh row control/icon definitions",
+  "Code evidence",
+  "Bounded proposal"
+ ],
+ "unresolved": [
+  "npveFlowsheets_rowIconMappings_2026-09-11",
+  "npveFlowsheets_chartMapping_2026-09-11",
+  "npveFlowsheets_questionnairePattern_2026-09-11",
+  "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11"
+ ],
+ "nextAction": "Operator chooses row glyph treatment and clarifies Icon button geometry; planner re-tiers proposal before any build record opens.",
+ "figmaMutations": [],
+ "buildExecutionCheckpoint": "N/A"
+}

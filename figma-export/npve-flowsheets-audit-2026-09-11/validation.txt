@@ -1,0 +1,16 @@
+scripts/workflow/validate-workflow.js
+workflow PASS store=107r/235+59f contract=ab8ccdbbc33e items=13 deterministic=17 visual=3
+
+scripts/schema/validate-split.js
+store PASS records=107 flags=235+59 aggregate=3c24ac4d8de5 fresh immutable=106 milestone=milestone/2026-09-11-npve-runner-tooling-close (0d)
+
+scripts/workflow/measure-context.js
+{
+  "legacyBytes": 1574915,
+  "leanBytes": 157598,
+  "reductionPercent": 90,
+  "targetPercent": 50,
+  "targetMet": true,
+  "manifestItems": 13
+}
+

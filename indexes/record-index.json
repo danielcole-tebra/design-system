@@ -1027,14 +1027,23 @@
    "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
    "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work",
    "recordSha256": "8fbeabfbcdda57816c5631c12706e89a16b8aceecb39d1c9f262bf41973f161d"
+  },
+  {
+   "id": "npveRebuild_flowsheetsAudit_2026-09-11",
+   "sequence": 106,
+   "date": "2026-09-11",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-11/npveRebuild_flowsheetsAudit_2026-09-11.json",
+   "status": "DONE — four Flowsheets states audited; row proposal awaits icon and geometry decisions",
+   "recordSha256": "0830f77fa08f29da49742c227c0144f0e40652d681c887effb81a1efb044eb81"
   }
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
-  "active": 231,
+  "active": 235,
   "resolved": 59,
-  "total": 290,
-  "nextSequence": 290,
+  "total": 294,
+  "nextSequence": 294,
   "activeIds": [
    "pxToRemInflation",
    "svgIconTwoUnitSystems",
@@ -1266,7 +1275,11 @@
    "npveTidy_looseModuleChipFrameUnexplained",
    "npveFamilyHistory_sourceSaveOutlined",
    "npveEditForms_fieldSurfaceInheritance_2026-09-10",
-   "libraryThumbAltOutlined_followup_2026_09_10"
+   "libraryThumbAltOutlined_followup_2026_09_10",
+   "npveFlowsheets_rowIconMappings_2026-09-11",
+   "npveFlowsheets_chartMapping_2026-09-11",
+   "npveFlowsheets_questionnairePattern_2026-09-11",
+   "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11"
   ],
   "resolvedIds": [
    "paintOpacityDoesNotReachInstances",
@@ -1332,8 +1345,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 106,
-  "aggregateTopLevelKeys": 120,
-  "nextRecordSequence": 106
+  "records": 107,
+  "aggregateTopLevelKeys": 121,
+  "nextRecordSequence": 107
  }
 }

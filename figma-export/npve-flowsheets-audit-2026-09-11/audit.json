@@ -1,0 +1,81 @@
+{
+ "recordId": "npveRebuild_flowsheetsAudit_2026-09-11",
+ "figmaMutations": [],
+ "standingBatchRules": {
+  "1_instancePaintVerification": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+  "2_unboundPaintAudit": "N/A — no Figma mutation; scoped source/mapping audit, not a full-file paint certification.",
+  "3_referenceCounts": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+  "4_skipInvisibleFalse": "PASS — scoped traversal scripts explicitly set false; visible state summaries propagate ancestor visibility.",
+  "5_opacityLast": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+  "6_enumerateDontRecall": "PASS — source siblings, target Templates, 101 icon-page masters, actions and Data display enumerated freshly.",
+  "7_fileIdentityFirst": "PASS — explicit source/target/library file keys; complete inventories matched repository baselines before scoped reads.",
+  "8_roundWithRecord": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+  "9_boundPaintAlpha": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+  "10_cloneDropsPropertyRefs": "N/A — read-only audit; no component/paint/property mutation or new live instance."
+ },
+ "visualReview": {
+  "inspectedBy": "Codex",
+  "screenshots": [
+   "source-list.png",
+   "source-graph.png",
+   "source-add.png",
+   "source-edit.png"
+  ],
+  "observations": "Four distinct states confirmed, GAD-7 trend shifts columns, graph and questionnaire patterns unresolved; see report."
+ },
+ "findings": [
+  {
+   "id": "npveFlowsheets_rowIconMappings_2026-09-11",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "Flowsheets rows require monitoring and double-up trend glyphs absent from the 101-master icon-page inventory. AddPaymentNote/EditOutlined exist but differ from source note-add/pencil artwork; substitutions are not approved.",
+   "status": "OPEN",
+   "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
+   "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+  },
+  {
+   "id": "npveFlowsheets_chartMapping_2026-09-11",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "No chart component found in authenticated Data display inventory/Chart search or scoped design-system source. Source curve and axis labels are not an authoritative implementation or dataset; chart work awaits a pattern decision.",
+   "status": "OPEN",
+   "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
+   "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+  },
+  {
+   "id": "npveFlowsheets_questionnairePattern_2026-09-11",
+   "severity": "medium",
+   "kind": "GAP",
+   "summary": "Add/Edit source depicts nine four-option questions, selected response, inline graph, date control and Save caret without scoped prototype behavior except Close. No corresponding implementation found in the scoped TypeScript search; do not invent behavior or rasterize the UI.",
+   "status": "OPEN",
+   "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
+   "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+  },
+  {
+   "id": "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11",
+   "severity": "medium",
+   "kind": "RULE DISAGREEMENT",
+   "summary": "NPVE touch-target wording says Icon button is 42px; fresh library masters measure 34px small and 40px medium. The cited PMHx record specifically attributes its 42px row to Checkbox. Operator/planner clarification needed before Flowsheets chooses geometry; shared masters unchanged.",
+   "status": "OPEN",
+   "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
+   "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+  }
+ ],
+ "scopeLimits": [
+  "No new component or instance verification",
+  "No Storybook render",
+  "No whole-file paint audit"
+ ],
+ "recovery": [
+  {
+   "operation": "verbose source read",
+   "failure": "Tool output truncated at 20KB",
+   "resolution": "Discarded; compact visible hierarchy and scoped state readbacks obtained."
+  },
+  {
+   "operation": "multi-query search",
+   "failure": "Server processed one of six queries",
+   "resolution": "Skipped queries not counted as evidence; exact icon inventory and separate chart search obtained."
+  }
+ ]
+}

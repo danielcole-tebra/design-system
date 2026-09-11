@@ -1,0 +1,104 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_flowsheetsAudit_2026-09-11",
+ "sequence": 106,
+ "date": "2026-09-11",
+ "workstream": "npve",
+ "created": {
+  "by": "Codex",
+  "at": "2026-09-11T15:47:57.687Z",
+  "script": "apply-npve-flowsheets-audit.js"
+ },
+ "record": {
+  "_status": "DONE — four Flowsheets states audited; row proposal awaits icon and geometry decisions",
+  "operatorAuthorization": "Ok lets start flowsheets work",
+  "authorizationContext": "Acceptance of the proposed read-only Flowsheets audit; no build approval inferred.",
+  "scope": "Inspect source Flowsheets states, relevant code and authenticated library mappings; save evidence and propose one bounded build item. No Figma mutation.",
+  "stopCondition": "Do not construct UI. Missing graph patterns or ambiguous behavior become findings and a proposed operator decision.",
+  "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md",
+  "figmaMutations": [],
+  "nextAction": "Resolve row icon treatment and target-size disagreement, re-tier and approve npve-flowsheets-measure-row. Generate its handoff only after its new build record exists.",
+  "outcome": "Read-only source/mapping audit complete; one human-decision row item proposed, no construction authorized.",
+  "findings": [
+   {
+    "id": "npveFlowsheets_rowIconMappings_2026-09-11",
+    "severity": "medium",
+    "kind": "GAP",
+    "summary": "Flowsheets rows require monitoring and double-up trend glyphs absent from the 101-master icon-page inventory. AddPaymentNote/EditOutlined exist but differ from source note-add/pencil artwork; substitutions are not approved.",
+    "status": "OPEN",
+    "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
+    "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+   },
+   {
+    "id": "npveFlowsheets_chartMapping_2026-09-11",
+    "severity": "medium",
+    "kind": "GAP",
+    "summary": "No chart component found in authenticated Data display inventory/Chart search or scoped design-system source. Source curve and axis labels are not an authoritative implementation or dataset; chart work awaits a pattern decision.",
+    "status": "OPEN",
+    "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
+    "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+   },
+   {
+    "id": "npveFlowsheets_questionnairePattern_2026-09-11",
+    "severity": "medium",
+    "kind": "GAP",
+    "summary": "Add/Edit source depicts nine four-option questions, selected response, inline graph, date control and Save caret without scoped prototype behavior except Close. No corresponding implementation found in the scoped TypeScript search; do not invent behavior or rasterize the UI.",
+    "status": "OPEN",
+    "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
+    "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+   },
+   {
+    "id": "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11",
+    "severity": "medium",
+    "kind": "RULE DISAGREEMENT",
+    "summary": "NPVE touch-target wording says Icon button is 42px; fresh library masters measure 34px small and 40px medium. The cited PMHx record specifically attributes its 42px row to Checkbox. Operator/planner clarification needed before Flowsheets chooses geometry; shared masters unchanged.",
+    "status": "OPEN",
+    "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
+    "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
+   }
+  ],
+  "proposedItems": [
+   "npve-flowsheets-measure-row"
+  ],
+  "standingBatchRules": {
+   "1_instancePaintVerification": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+   "2_unboundPaintAudit": "N/A — no Figma mutation; scoped source/mapping audit, not a full-file paint certification.",
+   "3_referenceCounts": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+   "4_skipInvisibleFalse": "PASS — scoped traversal scripts explicitly set false; visible state summaries propagate ancestor visibility.",
+   "5_opacityLast": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+   "6_enumerateDontRecall": "PASS — source siblings, target Templates, 101 icon-page masters, actions and Data display enumerated freshly.",
+   "7_fileIdentityFirst": "PASS — explicit source/target/library file keys; complete inventories matched repository baselines before scoped reads.",
+   "8_roundWithRecord": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+   "9_boundPaintAlpha": "N/A — read-only audit; no component/paint/property mutation or new live instance.",
+   "10_cloneDropsPropertyRefs": "N/A — read-only audit; no component/paint/property mutation or new live instance."
+  },
+  "costObservation": {
+   "recordId": "npveRebuild_flowsheetsAudit_2026-09-11",
+   "itemId": "npve-flowsheets-audit",
+   "provider": "OpenAI",
+   "model": null,
+   "reasoning": null,
+   "input": null,
+   "cachedInput": null,
+   "output": null,
+   "credits": null,
+   "source": "No measured per-response usage or billing counters available through tools for this run.",
+   "approximate": false,
+   "coverage": "completed audit; usage unavailable"
+  },
+  "screenshots": [
+   "figma-export/npve-flowsheets-audit-2026-09-11/source-list.png",
+   "figma-export/npve-flowsheets-audit-2026-09-11/source-graph.png",
+   "figma-export/npve-flowsheets-audit-2026-09-11/source-add.png",
+   "figma-export/npve-flowsheets-audit-2026-09-11/source-edit.png"
+  ],
+  "operatorPresentationEvidence": "figma-export/npve-flowsheets-audit-2026-09-11/operator-presentation.md",
+  "proofDisposition": "N/A — no Figma proofs created",
+  "checkpoint": "figma-export/npve-flowsheets-audit-2026-09-11/checkpoint.json",
+  "validation": {
+   "workflow": "PASS before finalization; repeated after generated contract refresh",
+   "canvas": "N/A — source-only screenshots inspected, no rebuilt UI"
+  }
+ }
+}

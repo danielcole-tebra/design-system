@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "workflow_npveRunner_2026-09-11",
+  "id": "npveRebuild_flowsheetsAudit_2026-09-11",
   "date": "2026-09-11",
-  "workstream": "workflow",
-  "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
-  "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work"
+  "workstream": "npve",
+  "path": "records/npve/2026-09-11/npveRebuild_flowsheetsAudit_2026-09-11.json",
+  "status": "DONE — four Flowsheets states audited; row proposal awaits icon and geometry decisions"
  },
  "recordGate": {
   "inProgress": [],
@@ -25,12 +25,12 @@
    }
   },
   "npve": {
-   "count": 67,
+   "count": 68,
    "latest": {
-    "id": "npveRebuild_patientSummaryBody_2026-09-10",
-    "date": "2026-09-10",
-    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
-    "status": "DONE — three full Patient Summary sheets verified; family build complete"
+    "id": "npveRebuild_flowsheetsAudit_2026-09-11",
+    "date": "2026-09-11",
+    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsAudit_2026-09-11.json",
+    "status": "DONE — four Flowsheets states audited; row proposal awaits icon and geometry decisions"
    }
   },
   "workflow": {
@@ -44,13 +44,13 @@
   }
  },
  "flags": {
-  "active": 231,
+  "active": 235,
   "resolved": 59
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "c1155eb976234110688edcd326d736c94c7a3bc142fde7b233107cea8c62df28",
-  "bytes": 1545872
+  "sha256": "3c24ac4d8de5eca4077be2de1ff2fa981b5f1414039c48303a9756c5067918a4",
+  "bytes": 1553781
  }
 }

@@ -427,6 +427,20 @@
         "screenshots": "3 source + 3 live sheets + 3 individual comparisons + combined comparison"
       },
       "note": "Observed prefix excludes subsequent closeout and final response. Per-response IDs deduplicated; cached input and reasoning output are subsets. Startup guessed medium provenance corrected to session-observed low; no credit conversion inferred."
+    },
+    {
+      "recordId": "npveRebuild_flowsheetsAudit_2026-09-11",
+      "itemId": "npve-flowsheets-audit",
+      "provider": "OpenAI",
+      "model": null,
+      "reasoning": null,
+      "input": null,
+      "cachedInput": null,
+      "output": null,
+      "credits": null,
+      "source": "No measured per-response usage or billing counters available through tools for this run.",
+      "approximate": false,
+      "coverage": "completed audit; usage unavailable"
     }
   ],
   "activeCostBaselines": [

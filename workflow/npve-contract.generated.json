@@ -1,25 +1,25 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T15:35:06.346Z",
+  "generatedAt": "2026-09-11T15:54:43.742Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "c1155eb976234110688edcd326d736c94c7a3bc142fde7b233107cea8c62df28",
+      "sha256": "3c24ac4d8de5eca4077be2de1ff2fa981b5f1414039c48303a9756c5067918a4",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "ac101321b558d31a98ae5136d5e58d238065196b2074d9f42a2cdbb3b041322d"
+        "sha256": "2ecbd18b1c5f4ca9f04476b6f565bb1ec5e7d957ce0042925787f3da667d8560"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "c3643d01a490d1e05613b9899e7e29e2f3d6120eb0d45b73aa563e38ab1d9296"
+        "sha256": "4be2c6a06063701ff748cd51034a0f5d4d13c97ac0ece0f24c2dd79c3372b2ba"
       },
       "flagsActive": {
         "path": "flags/active.json",
-        "sha256": "a9956ddfd0fb8a9f7f7965b70a64b04b91fd4dce4d043410ddc3943a73675107"
+        "sha256": "87e7a4b2bdfa2625f0f91a36d2f2f8787c72081939694cec7a00521f63768315"
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
@@ -29,9 +29,9 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 106,
+      "records": 107,
       "flags": {
-        "active": 231,
+        "active": 235,
         "resolved": 59
       }
     },
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "workflow_npveRunner_2026-09-11",
+      "id": "npveRebuild_flowsheetsAudit_2026-09-11",
       "date": "2026-09-11",
-      "workstream": "workflow",
-      "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
-      "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work"
+      "workstream": "npve",
+      "path": "records/npve/2026-09-11/npveRebuild_flowsheetsAudit_2026-09-11.json",
+      "status": "DONE — four Flowsheets states audited; row proposal awaits icon and geometry decisions"
     },
     "recordGate": {
       "inProgress": [],
@@ -343,12 +343,12 @@
         }
       },
       "npve": {
-        "count": 67,
+        "count": 68,
         "latest": {
-          "id": "npveRebuild_patientSummaryBody_2026-09-10",
-          "date": "2026-09-10",
-          "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
-          "status": "DONE — three full Patient Summary sheets verified; family build complete"
+          "id": "npveRebuild_flowsheetsAudit_2026-09-11",
+          "date": "2026-09-11",
+          "path": "records/npve/2026-09-11/npveRebuild_flowsheetsAudit_2026-09-11.json",
+          "status": "DONE — four Flowsheets states audited; row proposal awaits icon and geometry decisions"
         }
       },
       "workflow": {
@@ -744,17 +744,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveTidy_2026-09-08",
-        "path": "records/npve/2026-09-08/npveTidy_2026-09-08.json",
-        "status": "DONE. Housekeeping tidy of fdCQVFdvOByaOYIJYag0d6 after Daniel reported empty-looking boards: every section and top-level frame on all four pages enumerated (49 nodes) and each empty or near-empty one explained against the records; two emptied Screens organizers and the oversize legacy dividers frame moved to new Archive sections 07 and 08 as labelled bars; Archive 01 kept and shrunk to a one-line bar; Screens 15 · Social History renamed 16 and reordered; four half-empty Screens boards trimmed; Templates 05/06 overlap and section 15 overflow cleared; Screens re-spaced at a uniform 200px rhythm; README paragraph added; one unexplained stray (Templates 488:8725) flagged and not touched. Nothing deleted; no master, instance, token or comparison content edited.",
-        "date": "2026-09-08",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-tidy-2026-09-08/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_allergiesEdit_2026-09-09",
         "path": "records/npve/2026-09-09/npveRebuild_allergiesEdit_2026-09-09.json",
         "status": "DONE — Allergies edit built, verified and shown; awaiting operator visual review before Family History.",
@@ -878,33 +867,20 @@
         "decision": null,
         "report": "figma-export/workflow-npve-runner-2026-09-11/report.md",
         "target": null
+      },
+      {
+        "id": "npveRebuild_flowsheetsAudit_2026-09-11",
+        "path": "records/npve/2026-09-11/npveRebuild_flowsheetsAudit_2026-09-11.json",
+        "status": "DONE — four Flowsheets states audited; row proposal awaits icon and geometry decisions",
+        "date": null,
+        "outcome": "Read-only source/mapping audit complete; one human-decision row item proposed, no construction authorized.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md",
+        "target": null
       }
     ],
     "openFlags": [
-      {
-        "id": "npveWorkflows_navFamilyHomeBlocksShell",
-        "severity": "medium",
-        "summary": "The top nav on every encounter frame is a Kit Primary Nav; the library Nav/Bar family exists but its home is unresolved (navComponentsOnCompositionsPage OPEN), so a library-consuming page shell cannot start with it.",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
-      {
-        "id": "npveWorkflows_rightDockedPanelConvention",
-        "severity": "medium",
-        "summary": "Sheets sit on the page two ways: inline as the 450/550-wide left column, and as right-docked full-height overlays (550 and 483 wide, square corners, no scrim). Our Sidesheet Placement=Docked right has 8/0/0/8 corners and one width.",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
-      {
-        "id": "npveWorkflows_comparisonLayoutFor1429",
-        "severity": "medium",
-        "summary": "The Rebuild comparison master (1708 wide, 550 slots) cannot hold a 1429-wide reference beside a 1429-wide rebuild with a change log.",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
-      {
-        "id": "npveWorkflows_pageCanvasColourNoToken",
-        "severity": "low",
-        "summary": "The encounter page body is #FBF9F8 on every frame; the library has no such token and the coded default canvas is beige #E8E5DF (beigeSurfaceInvestigation2026_08_31).",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
       {
         "id": "npveWorkflows_moduleDropdownOffCanvas",
         "severity": "info",
@@ -1000,11 +976,35 @@
         "severity": "medium",
         "summary": "Adjacent RecommendationsFeedback and SuggestReplyControls import ThumbUpAltOutlined/ThumbDownAltOutlined; these two exports remain absent from the live library inventory. Separate bounded follow-up; this batch adds only the four Patient Summary Alt/OffAlt exports.",
         "discoveredDuring": "libraryThumbIcons_2026-09-10"
+      },
+      {
+        "id": "npveFlowsheets_rowIconMappings_2026-09-11",
+        "severity": "medium",
+        "summary": "Flowsheets rows require monitoring and double-up trend glyphs absent from the 101-master icon-page inventory. AddPaymentNote/EditOutlined exist but differ from source note-add/pencil artwork; substitutions are not approved.",
+        "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11"
+      },
+      {
+        "id": "npveFlowsheets_chartMapping_2026-09-11",
+        "severity": "medium",
+        "summary": "No chart component found in authenticated Data display inventory/Chart search or scoped design-system source. Source curve and axis labels are not an authoritative implementation or dataset; chart work awaits a pattern decision.",
+        "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11"
+      },
+      {
+        "id": "npveFlowsheets_questionnairePattern_2026-09-11",
+        "severity": "medium",
+        "summary": "Add/Edit source depicts nine four-option questions, selected response, inline graph, date control and Save caret without scoped prototype behavior except Close. No corresponding implementation found in the scoped TypeScript search; do not invent behavior or rasterize the UI.",
+        "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11"
+      },
+      {
+        "id": "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11",
+        "severity": "medium",
+        "summary": "NPVE touch-target wording says Icon button is 42px; fresh library masters measure 34px small and 40px medium. The cited PMHx record specifically attributes its 42px row to Checkbox. Operator/planner clarification needed before Flowsheets chooses geometry; shared masters unchanged.",
+        "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11"
       }
     ],
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "51a2eda7100611142768cc6201c0f1204980e0ccf7d5df487e1ca5d401fe7df5"
+    "contractSha256": "ab8ccdbbc33e9540807993ab3c45c344e91b1255d755e66bb239781cc2a72a30"
   }
 }

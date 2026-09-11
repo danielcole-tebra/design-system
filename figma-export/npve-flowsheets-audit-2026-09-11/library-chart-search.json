@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "entity": "component",
+      "query": "Chart",
+      "components": [
+        {
+          "name": "Read more",
+          "libraryName": "Design System Rebuild",
+          "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed",
+          "assetType": "component_set",
+          "updatedAt": "2026-08-19T01:49:04Z",
+          "componentKey": "6a6948b1c0618a451dec06310e5d7e42cac4cf3b",
+          "description": "ReadMore — src/components/ReadMore/ReadMore.tsx. A Tebra-authored composition, not a MUI component: a Box wrapping clamped text plus a MUI text Button that toggles it.\n\nAXES. Clamp comes from the two clamping props the stories exercise: $maxLines 3 (the ReadMore and ReadMore Max Lines stories) and $maxCharacters 150 (the ReadMore Max Characters story). State is isCollapsed, which useState initialises to true — hence Collapsed first. Width 700 is the Box the stories wrap every example in.\n\nGEOMETRY. Body is body1 16/24. Lines/Collapsed is 72px, exactly three 24px lines, fitted by truncation because Figma has no -webkit-line-clamp; the character count is a depiction of the clamp, not a value from source. Characters/Collapsed is text.substring(0,150) + &quot;...&quot; exactly as the component composes it, which wraps to 48px. Expanded is the full story sample at 240px. The toggle is 24px tall: StyledButton sets padding 0, so the height is just the button line-height.\n\nTOGGLE COLOUR. Resting colour is primary.main #004852, NOT the color=&quot;inherit&quot; the component asks for. MUI sets color: inherit in its base styled() for color=&quot;inherit&quot;; ButtonOverrides.text sets color: primary.main and is appended after it at equal specificity, so the theme wins at rest. StyledButton then wins &quot;inherit&quot; back on hover via &quot;&amp;&amp;:hover, &amp;&amp;:active&quot;, so hovering turns the label text.primary #000 over a primary[100] #CBDDE0 background. See flags.readMoreButtonColourInvertsOnHover. Underline is on because isButtonTextUnderlined defaults to true. Labels are the component defaults &quot;Read More&quot; / &quot;See Less&quot;; the Alert story overrides the expand label to &quot;See More&quot;.\n\nNOT BUILT. The isClamped=false case — text shorter than the clamp, where no button renders at all — has no story that produces it. The inline arrangement is also not depicted: three stories pass isInline where the prop is $isInline, so the documented single-line inline layout never actually renders. See flags.readMoreStoryInlinePropTypo.\n\nNO TEXT PROPERTIES. A set-level TEXT component property forces one default across every variant, exactly as INSTANCE_SWAP does. Exposing the copy as properties overwrote each variant with a single default and collapsed the very differences these variants exist to show, so the properties were removed. Text in an instance stays editable without one.",
+          "filePath": "design_systems/Design System Rebuild/components/Read more"
+        },
+        {
+          "name": "Divider",
+          "libraryName": "Design System Rebuild",
+          "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed",
+          "assetType": "component_set",
+          "updatedAt": "2026-08-26T21:04:41Z",
+          "componentKey": "e1a369ce1b663c8e203a59c18f522108c62c8e6e",
+          "description": "Divider. SUBSTRATE — no override. borderColor is palette.divider #D6D6D6 (Synapse 4) at borderBottomWidth 'thin', which computes to 1px; drawn here as a 1px fill bound to color/divider. Orientation is the only axis the story exercises: the default horizontal plus one `orientation=\"vertical\" flexItem` usage. The story's argTypes exist only to hide component/orientation/flexItem from the controls table — they are not option lists. No textAlign and no children: every Divider in the story is self-closing, so the inset, middle and withChildren treatments are unbuilt.",
+          "filePath": "design_systems/Design System Rebuild/components/Divider"
+        },
+        {
+          "name": "Circular progress",
+          "libraryName": "Design System Rebuild",
+          "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed",
+          "assetType": "component",
+          "updatedAt": "2026-08-19T01:49:21Z",
+          "componentKey": "b5748f2c5d1b3ffabdd8cfbe2596f5c5a247a350",
+          "description": "Circular progress, indeterminate. Pure substrate: there is no CircularProgressOverrides file and stories/CircularProgress/CircularProgress.stories.tsx (Components/Feedback/Progress) renders <CircularProgress color=\"primary\"> with every other prop left at its default. GEOMETRY IS EXACT, TAKEN FROM CircularProgress.js: size 40, thickness 3.6, an internal SIZE constant of 44, and a circle at r = (44 - 3.6) / 2 = 20.2 with strokeWidth 3.6, scaled by 40/44. The ring therefore has an outer radius of 20 and an inner radius of 16.727 — drawn here as an arc with innerRadius 18.4/22 = 0.8364 so no fractional dimension is stored. Colour is palette.primary.main #004852 via the root's color and the circle's stroke: currentColor. THE ARC LENGTH IS THE STATIC DECLARED STATE, NOT A FRAME OF THE ANIMATION: the indeterminate circle ships strokeDasharray '80px, 200px' with dashoffset 0, described in the source as 'some default value that looks fine waiting for the animation to kick in'. 80 of the 126.92 circumference is 63.03%, drawn from 3 o'clock clockwise, matching where an SVG <circle> path starts. In the product this arc is simultaneously rotating (1.4s linear) and cycling its dasharray (1.4s ease-in-out), which Figma cannot express. THE DETERMINATE VARIANT IS NOT BUILT because no story uses it; its geometry is the same ring rotated -90deg with endingAngle = value/100 of the full turn, so it can be produced by editing this arc. Not built: color inherit/secondary/error, disableShrink, and any size other than 40.",
+          "filePath": "design_systems/Design System Rebuild/components/Circular progress"
+        }
+      ]
+    }
+  ]
+}
