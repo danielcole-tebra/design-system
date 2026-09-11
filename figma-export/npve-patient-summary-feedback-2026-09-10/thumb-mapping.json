@@ -1,0 +1,25 @@
+{
+  "fileKey": "YX2n4YLrEpBXNbcc73T6dw",
+  "page": {
+    "id": "259:2878",
+    "name": "Icons & illustrations"
+  },
+  "components": [
+    {
+      "id": "919:4",
+      "name": "Icon/ThumbUpOutlined (MUI)",
+      "key": "4b430b97be90f5543655e35c412ecd08a4beafe1",
+      "type": "COMPONENT",
+      "description": "Positive feedback affordance. Source: @mui/icons-material/ThumbUpOutlined.js (5.15.12), which wraps the MUI Material Symbols path — NOT a Tebra icon. 24 viewBox; SCALE constraints; single path with three subpaths (outer outline, interior counter, cuff). Winding rule set explicitly to NONZERO, which is the SVG default the MUI path is authored against; see the WarningFilled precedent where an import lost fill-rule and the counter filled in.\n\nPRODUCTION NOTE, recorded not resolved: no file imports ThumbUpOutlined. The three feedback surfaces that do this job import the Alt family instead — ThumbUpAltOutlined in facesheet-ui RecommendationsFeedback.tsx:102 and messages-ui SuggestReplyControls.tsx:396, and ThumbUpAlt / ThumbUpOffAlt in clinical-system SummaryFeedback.tsx:1-4. Alt is a visibly different glyph (one unified shape, no separate cuff). If the library is meant to match what ships, this should be ThumbUpAltOutlined.",
+      "properties": {}
+    },
+    {
+      "id": "919:7",
+      "name": "Icon/ThumbDownOutlined (MUI)",
+      "key": "a2788dbffe153201e0f3786bd750f8545ffac439",
+      "type": "COMPONENT",
+      "description": "Negative feedback affordance. Source: @mui/icons-material/ThumbDownOutlined.js (5.15.12), which wraps the MUI Material Symbols path — NOT a Tebra icon. 24 viewBox; SCALE constraints; single path with three subpaths (outer outline, interior counter, cuff). Winding rule set explicitly to NONZERO, which is the SVG default the MUI path is authored against; see the WarningFilled precedent where an import lost fill-rule and the counter filled in.\n\nPRODUCTION NOTE, recorded not resolved: no file imports ThumbDownOutlined. The three feedback surfaces that do this job import the Alt family instead — ThumbDownAltOutlined in facesheet-ui RecommendationsFeedback.tsx:113 and messages-ui SuggestReplyControls.tsx:408, and ThumbDownAlt / ThumbDownOffAlt in clinical-system SummaryFeedback.tsx:1-4. Alt is a visibly different glyph (one unified shape, no separate cuff). If the library is meant to match what ships, this should be ThumbDownAltOutlined.",
+      "properties": {}
+    }
+  ]
+}

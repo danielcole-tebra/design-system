@@ -982,14 +982,23 @@
    "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
    "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement.",
    "recordSha256": "21ae24e7a2c92105815fe5f7cde4f90e6718f91ce298cf8df17ed3695cdd9b00"
+  },
+  {
+   "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
+   "sequence": 101,
+   "date": "2026-09-10",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
+   "status": "IN PROGRESS — read-only preflight stopped for rating-icon mapping decision",
+   "recordSha256": "38c2216260b41b0ac4684e4236cd9f16996b2e39aa1aa65bbad21acb37e7892a"
   }
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
-  "active": 230,
+  "active": 231,
   "resolved": 58,
-  "total": 288,
-  "nextSequence": 288,
+  "total": 289,
+  "nextSequence": 289,
   "activeIds": [
    "pxToRemInflation",
    "svgIconTwoUnitSystems",
@@ -1220,7 +1229,8 @@
    "npveEncounter_splitButtonSuperseded",
    "npveTidy_looseModuleChipFrameUnexplained",
    "npveFamilyHistory_sourceSaveOutlined",
-   "npveEditForms_fieldSurfaceInheritance_2026-09-10"
+   "npveEditForms_fieldSurfaceInheritance_2026-09-10",
+   "npvePatientSummary_feedbackThumbMapping"
   ],
   "resolvedIds": [
    "paintOpacityDoesNotReachInstances",
@@ -1285,8 +1295,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 101,
-  "aggregateTopLevelKeys": 115,
-  "nextRecordSequence": 101
+  "records": 102,
+  "aggregateTopLevelKeys": 116,
+  "nextRecordSequence": 102
  }
 }

@@ -3158,6 +3158,21 @@
     ],
     "scopeLimit": "Known derivatives only; not an exhaustive inventory or a conclusion about all library inputs."
    }
+  },
+  {
+   "sequence": 288,
+   "flag": {
+    "id": "npvePatientSummary_feedbackThumbMapping",
+    "severity": "medium",
+    "status": "OPEN",
+    "summary": "Source Error/Entry shows selected filled thumbs-up; library has only Icon/ThumbUpOutlined (MUI) 919:4 and Icon/ThumbDownOutlined (MUI) 919:7. Production SummaryFeedback.tsx uses ThumbUpAlt/ThumbUpOffAlt and ThumbDownAlt/ThumbDownOffAlt. Library descriptions explicitly call out the unresolved mismatch.",
+    "discoveredDuring": "npveRebuild_patientSummaryFeedback_2026-09-10",
+    "evidence": [
+     "figma-export/npve-patient-summary-feedback-2026-09-10/source.json",
+     "figma-export/npve-patient-summary-feedback-2026-09-10/thumb-mapping.json",
+     "C:/Code/web-app-v2/packages/clinical-system/src/modules/components/AiPatientSummary/SummaryFeedback.tsx"
+    ]
+   }
   }
  ]
 }

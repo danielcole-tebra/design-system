@@ -3,15 +3,17 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "workflow_runCostTracking_2026-09-10",
+  "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
   "date": "2026-09-10",
-  "workstream": "workflow",
-  "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
-  "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement."
+  "workstream": "npve",
+  "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
+  "status": "IN PROGRESS — read-only preflight stopped for rating-icon mapping decision"
  },
  "recordGate": {
-  "inProgress": [],
-  "clear": true,
+  "inProgress": [
+   "npveRebuild_patientSummaryFeedback_2026-09-10"
+  ],
+  "clear": false,
   "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
  },
  "byWorkstream": {
@@ -25,12 +27,12 @@
    }
   },
   "npve": {
-   "count": 65,
+   "count": 66,
    "latest": {
-    "id": "npveRebuild_patientSummaryContent_2026-09-10",
+    "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
     "date": "2026-09-10",
-    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
-    "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2."
+    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
+    "status": "IN PROGRESS — read-only preflight stopped for rating-icon mapping decision"
    }
   },
   "workflow": {
@@ -44,13 +46,13 @@
   }
  },
  "flags": {
-  "active": 230,
+  "active": 231,
   "resolved": 58
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "99290d37ed64465b997d89c14ec2067ef5cf8b946eaf7598339901b6aacbba07",
-  "bytes": 1517329
+  "sha256": "7282f74f47fde91f5681ddbf756be6c43ca8f9fd3eb029abe27e05a59f001103",
+  "bytes": 1520346
  }
 }

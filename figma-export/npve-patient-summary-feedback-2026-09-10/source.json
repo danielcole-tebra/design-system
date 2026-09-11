@@ -1,0 +1,1462 @@
+{
+  "fileKey": "zVsuhYehoSLLq880qRBFkq",
+  "states": [
+    {
+      "id": "2545:4855",
+      "name": "Frame 758531795",
+      "type": "FRAME",
+      "width": 534,
+      "height": 90,
+      "visible": true,
+      "layoutMode": "VERTICAL",
+      "itemSpacing": 8,
+      "children": [
+        {
+          "id": "2545:4856",
+          "name": "Frame 758531794",
+          "type": "FRAME",
+          "width": 518,
+          "height": 74,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 24,
+          "children": [
+            {
+              "id": "2548:4893",
+              "name": "Frame 758532112",
+              "type": "FRAME",
+              "width": 354,
+              "height": 16,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 8,
+              "children": [
+                {
+                  "id": "2545:4857",
+                  "name": "How would your rate the accuracy of this summary?",
+                  "type": "TEXT",
+                  "width": 354,
+                  "height": 16,
+                  "visible": true,
+                  "characters": "How would your rate the accuracy of this summary?",
+                  "fontName": {
+                    "family": "Akkurat LL",
+                    "style": "Regular"
+                  },
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "id": "3297:14746",
+              "name": "Frame 758532119",
+              "type": "FRAME",
+              "width": 116,
+              "height": 50,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "itemSpacing": 16,
+              "children": [
+                {
+                  "id": "3297:14725",
+                  "name": "ThumbsUp",
+                  "type": "INSTANCE",
+                  "width": 50,
+                  "height": 50,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 8,
+                  "props": {
+                    "State": {
+                      "value": "Default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "I3297:14725;3557:5177",
+                      "name": "Vector",
+                      "type": "VECTOR",
+                      "width": 21,
+                      "height": 20,
+                      "visible": true
+                    }
+                  ]
+                },
+                {
+                  "id": "3297:14741",
+                  "name": "ThumbsDown",
+                  "type": "INSTANCE",
+                  "width": 50,
+                  "height": 50,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 8,
+                  "props": {
+                    "State": {
+                      "value": "Default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "I3297:14741;2545:115117",
+                      "name": "Frame 758531791",
+                      "type": "FRAME",
+                      "width": 24,
+                      "height": 27,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 8,
+                      "children": [
+                        {
+                          "id": "I3297:14741;3557:5256",
+                          "name": "thumb_down_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1",
+                          "type": "FRAME",
+                          "width": 24,
+                          "height": 24,
+                          "visible": true,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "children": [
+                            {
+                              "id": "I3297:14741;3557:5257",
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "width": 21,
+                              "height": 20,
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2545:4861",
+          "name": "Frame 758532108",
+          "type": "FRAME",
+          "width": 518,
+          "height": 170,
+          "visible": false,
+          "layoutMode": "VERTICAL",
+          "itemSpacing": 8,
+          "children": [
+            {
+              "id": "2545:4862",
+              "name": "Text Field - Desktop",
+              "type": "FRAME",
+              "width": 502,
+              "height": 120,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 0,
+              "children": [
+                {
+                  "id": "2545:4863",
+                  "name": "_input field desktop template",
+                  "type": "FRAME",
+                  "width": 502,
+                  "height": 120,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 2,
+                  "children": [
+                    {
+                      "id": "2545:4864",
+                      "name": "Field",
+                      "type": "FRAME",
+                      "width": 502,
+                      "height": 100,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 8,
+                      "children": [
+                        {
+                          "id": "2545:4865",
+                          "name": "✏️ Input text",
+                          "type": "TEXT",
+                          "width": 470,
+                          "height": 40,
+                          "visible": true,
+                          "characters": "I was hoping I would be able to edit medications directly from this panel",
+                          "fontName": {
+                            "family": "Akkurat LL",
+                            "style": "Regular"
+                          },
+                          "fontSize": 16
+                        },
+                        {
+                          "id": "2545:4866",
+                          "name": "📍Trailing Icon",
+                          "type": "FRAME",
+                          "width": 24,
+                          "height": 24,
+                          "visible": false,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "children": [
+                            {
+                              "id": "2545:4867",
+                              "name": " ↳Color",
+                              "type": "BOOLEAN_OPERATION",
+                              "width": 22,
+                              "height": 15,
+                              "visible": true,
+                              "children": [
+                                {
+                                  "id": "2545:4868",
+                                  "name": "Path",
+                                  "type": "VECTOR",
+                                  "width": 22,
+                                  "height": 15,
+                                  "visible": true
+                                },
+                                {
+                                  "id": "2545:4869",
+                                  "name": "Path",
+                                  "type": "VECTOR",
+                                  "width": 10,
+                                  "height": 10,
+                                  "visible": true
+                                },
+                                {
+                                  "id": "2545:4870",
+                                  "name": "Path",
+                                  "type": "VECTOR",
+                                  "width": 6,
+                                  "height": 6,
+                                  "visible": true
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "2545:4871",
+                          "name": "caret_down",
+                          "type": "INSTANCE",
+                          "width": 16,
+                          "height": 16,
+                          "visible": false,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "props": {},
+                          "children": [
+                            {
+                              "id": "I2545:4871;872:2",
+                              "name": "caret",
+                              "type": "FRAME",
+                              "width": 13.333333015441895,
+                              "height": 13.333333015441895,
+                              "visible": true,
+                              "layoutMode": "NONE",
+                              "itemSpacing": 0,
+                              "children": [
+                                {
+                                  "id": "I2545:4871;872:3",
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "width": 13.333333015441895,
+                                  "height": 7.3506975173950195,
+                                  "visible": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2545:4872",
+                      "name": "Supporting Text",
+                      "type": "FRAME",
+                      "width": 502,
+                      "height": 18,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 8,
+                      "children": [
+                        {
+                          "id": "2545:4873",
+                          "name": "Assistive Text",
+                          "type": "INSTANCE",
+                          "width": 255,
+                          "height": 18,
+                          "visible": false,
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 10,
+                          "props": {},
+                          "children": [
+                            {
+                              "id": "I2545:4873;2951:5595",
+                              "name": "Helper Text",
+                              "type": "TEXT",
+                              "width": 255,
+                              "height": 18,
+                              "visible": true,
+                              "characters": "Assistive text",
+                              "fontName": {
+                                "family": "Akkurat LL",
+                                "style": "Regular"
+                              },
+                              "fontSize": 12
+                            }
+                          ]
+                        },
+                        {
+                          "id": "2545:4874",
+                          "name": "Character Count",
+                          "type": "INSTANCE",
+                          "width": 486,
+                          "height": 18,
+                          "visible": true,
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 10,
+                          "props": {},
+                          "children": [
+                            {
+                              "id": "I2545:4874;2951:5595",
+                              "name": "Helper Text",
+                              "type": "TEXT",
+                              "width": 34,
+                              "height": 18,
+                              "visible": true,
+                              "characters": "0/500",
+                              "fontName": {
+                                "family": "Akkurat LL",
+                                "style": "Regular"
+                              },
+                              "fontSize": 12
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2545:4875",
+                      "name": "Label",
+                      "type": "FRAME",
+                      "width": 192,
+                      "height": 18,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 10,
+                      "children": [
+                        {
+                          "id": "2545:4876",
+                          "name": "✏️ Label",
+                          "type": "TEXT",
+                          "width": 188,
+                          "height": 18,
+                          "visible": true,
+                          "characters": "How can we improve this feature?",
+                          "fontName": {
+                            "family": "Akkurat LL",
+                            "style": "Regular"
+                          },
+                          "fontSize": 12
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2545:4877",
+              "name": "Frame 758532109",
+              "type": "FRAME",
+              "width": 502,
+              "height": 42,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 8,
+              "children": [
+                {
+                  "id": "2545:4878",
+                  "name": "Button",
+                  "type": "INSTANCE",
+                  "width": 161,
+                  "height": 42,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 0,
+                  "props": {
+                    "Type": {
+                      "value": "Default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "Icon": {
+                      "value": "None",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "State": {
+                      "value": "Normal",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "Size": {
+                      "value": "Large",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "Full Width": {
+                      "value": "False",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "I2545:4878;2847:3907",
+                      "name": "_button template",
+                      "type": "INSTANCE",
+                      "width": 161,
+                      "height": 42,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 5,
+                      "props": {
+                        "Size": {
+                          "value": "Large",
+                          "type": "VARIANT",
+                          "boundVariables": {}
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "I2545:4878;2847:3907;2856:4026",
+                          "name": "Left Icon",
+                          "type": "FRAME",
+                          "width": 16,
+                          "height": 16,
+                          "visible": false,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "children": [
+                            {
+                              "id": "I2545:4878;2847:3907;2856:4830",
+                              "name": "plus_outline",
+                              "type": "INSTANCE",
+                              "width": 16,
+                              "height": 16,
+                              "visible": true,
+                              "layoutMode": "NONE",
+                              "itemSpacing": 0,
+                              "props": {},
+                              "children": [
+                                {
+                                  "id": "I2545:4878;2847:3907;2856:4830;676:133",
+                                  "name": "plus",
+                                  "type": "INSTANCE",
+                                  "width": 13.333333015441895,
+                                  "height": 13.333333015441895,
+                                  "visible": true,
+                                  "layoutMode": "NONE",
+                                  "itemSpacing": 0,
+                                  "props": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "I2545:4878;2847:3907;2847:4022",
+                          "name": "Text",
+                          "type": "FRAME",
+                          "width": 131,
+                          "height": 42,
+                          "visible": true,
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 10,
+                          "children": [
+                            {
+                              "id": "I2545:4878;2847:3907;286:135",
+                              "name": "TEXT",
+                              "type": "TEXT",
+                              "width": 131,
+                              "height": 20,
+                              "visible": true,
+                              "characters": "Submit Feedback",
+                              "fontName": {
+                                "family": "Akkurat LL",
+                                "style": "Regular"
+                              },
+                              "fontSize": 16
+                            }
+                          ]
+                        },
+                        {
+                          "id": "I2545:4878;2847:3907;3455:14568",
+                          "name": "Divider",
+                          "type": "FRAME",
+                          "width": 10.000000953674316,
+                          "height": 42,
+                          "visible": false,
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 0,
+                          "children": [
+                            {
+                              "id": "I2545:4878;2847:3907;3455:7814",
+                              "name": "Divider",
+                              "type": "FRAME",
+                              "width": 42,
+                              "height": 0,
+                              "visible": true,
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 10,
+                              "children": [
+                                {
+                                  "id": "I2545:4878;2847:3907;3455:7815",
+                                  "name": "Divider",
+                                  "type": "LINE",
+                                  "width": 42,
+                                  "height": 0,
+                                  "visible": true
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "I2545:4878;2847:3907;2847:3945",
+                          "name": "Right Icon",
+                          "type": "FRAME",
+                          "width": 16,
+                          "height": 16,
+                          "visible": false,
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 10,
+                          "children": [
+                            {
+                              "id": "I2545:4878;2847:3907;2847:4365",
+                              "name": "caret_down",
+                              "type": "INSTANCE",
+                              "width": 16,
+                              "height": 16,
+                              "visible": true,
+                              "layoutMode": "NONE",
+                              "itemSpacing": 0,
+                              "props": {},
+                              "children": [
+                                {
+                                  "id": "I2545:4878;2847:3907;2847:4365;872:2",
+                                  "name": "caret",
+                                  "type": "FRAME",
+                                  "width": 13.333333015441895,
+                                  "height": 13.333333015441895,
+                                  "visible": true,
+                                  "layoutMode": "NONE",
+                                  "itemSpacing": 0
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2459:10191",
+      "name": "Frame 758531795",
+      "type": "FRAME",
+      "width": 534,
+      "height": 328,
+      "visible": true,
+      "layoutMode": "VERTICAL",
+      "itemSpacing": 16,
+      "children": [
+        {
+          "id": "4604:31396",
+          "name": "Contextual Alert",
+          "type": "INSTANCE",
+          "width": 518,
+          "height": 40,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 0,
+          "props": {
+            "Type": {
+              "value": "Error",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "Dismissible": {
+              "value": "True",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "Text Button": {
+              "value": "False",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          },
+          "children": [
+            {
+              "id": "I4604:31396;17450:121434",
+              "name": "_alerts template",
+              "type": "INSTANCE",
+              "width": 518,
+              "height": 40,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "itemSpacing": 0,
+              "props": {},
+              "children": [
+                {
+                  "id": "I4604:31396;17450:121434;3002:5566",
+                  "name": "alert",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 40,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "itemSpacing": 5,
+                  "children": [
+                    {
+                      "id": "I4604:31396;17450:121434;3019:13382",
+                      "name": "Icon",
+                      "type": "FRAME",
+                      "width": 20,
+                      "height": 20,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 0,
+                      "children": [
+                        {
+                          "id": "I4604:31396;17450:121434;3002:5567",
+                          "name": "attention_filled",
+                          "type": "INSTANCE",
+                          "width": 20,
+                          "height": 20,
+                          "visible": true,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "props": {},
+                          "children": [
+                            {
+                              "id": "I4604:31396;17450:121434;3002:5567;690:12",
+                              "name": "attention-alt",
+                              "type": "INSTANCE",
+                              "width": 16.66666603088379,
+                              "height": 16.66666603088379,
+                              "visible": true,
+                              "layoutMode": "NONE",
+                              "itemSpacing": 0,
+                              "props": {},
+                              "children": [
+                                {
+                                  "id": "I4604:31396;17450:121434;3002:5567;690:12;349:13",
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "width": 16.66666603088379,
+                                  "height": 16.66666603088379,
+                                  "visible": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "I4604:31396;17450:121434;3019:14125",
+                      "name": "Message",
+                      "type": "FRAME",
+                      "width": 446,
+                      "height": 18,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 0,
+                      "children": [
+                        {
+                          "id": "I4604:31396;17450:121434;3002:5568",
+                          "name": "This is an informational snack bar.",
+                          "type": "TEXT",
+                          "width": 436,
+                          "height": 18,
+                          "visible": true,
+                          "characters": "Failed to save feedback. Please try again",
+                          "fontName": {
+                            "family": "Akkurat LL",
+                            "style": "Regular"
+                          },
+                          "fontSize": 14
+                        }
+                      ]
+                    },
+                    {
+                      "id": "I4604:31396;17450:121434;3019:14555",
+                      "name": "Link & Dismiss",
+                      "type": "FRAME",
+                      "width": 12,
+                      "height": 20,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 10,
+                      "children": [
+                        {
+                          "id": "I4604:31396;17450:121434;3019:6695",
+                          "name": "Learn More",
+                          "type": "TEXT",
+                          "width": 77,
+                          "height": 14,
+                          "visible": false,
+                          "characters": "LEARN MORE",
+                          "fontName": {
+                            "family": "Akkurat LL",
+                            "style": "Bold"
+                          },
+                          "fontSize": 12
+                        },
+                        {
+                          "id": "I4604:31396;17450:121434;3002:5569",
+                          "name": "close_outlined",
+                          "type": "INSTANCE",
+                          "width": 12,
+                          "height": 12,
+                          "visible": true,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "props": {},
+                          "children": [
+                            {
+                              "id": "I4604:31396;17450:121434;3002:5569;690:19",
+                              "name": "close",
+                              "type": "INSTANCE",
+                              "width": 8,
+                              "height": 7.999999523162842,
+                              "visible": true,
+                              "layoutMode": "NONE",
+                              "itemSpacing": 0,
+                              "props": {},
+                              "children": [
+                                {
+                                  "id": "I4604:31396;17450:121434;3002:5569;690:19;349:33",
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "width": 8,
+                                  "height": 8,
+                                  "visible": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3297:14747",
+          "name": "Frame 758531794",
+          "type": "FRAME",
+          "width": 518,
+          "height": 62,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 24,
+          "children": [
+            {
+              "id": "3297:14748",
+              "name": "Frame 758532112",
+              "type": "FRAME",
+              "width": 354,
+              "height": 16,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 8,
+              "children": [
+                {
+                  "id": "3297:14750",
+                  "name": "How would your rate the accuracy of this summary?",
+                  "type": "TEXT",
+                  "width": 354,
+                  "height": 16,
+                  "visible": true,
+                  "characters": "How would your rate the accuracy of this summary?",
+                  "fontName": {
+                    "family": "Akkurat LL",
+                    "style": "Regular"
+                  },
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "id": "3297:14751",
+              "name": "Frame 758532119",
+              "type": "FRAME",
+              "width": 116,
+              "height": 50,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "itemSpacing": 16,
+              "children": [
+                {
+                  "id": "3297:14752",
+                  "name": "ThumbsUp",
+                  "type": "INSTANCE",
+                  "width": 50,
+                  "height": 50,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 8,
+                  "props": {
+                    "State": {
+                      "value": "Selected",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "I3297:14752;3557:5409",
+                      "name": "thumb_up_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24 1",
+                      "type": "FRAME",
+                      "width": 24,
+                      "height": 24,
+                      "visible": true,
+                      "layoutMode": "NONE",
+                      "itemSpacing": 0,
+                      "children": [
+                        {
+                          "id": "I3297:14752;3557:5410",
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "width": 21,
+                          "height": 20,
+                          "visible": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "3297:14753",
+                  "name": "ThumbsDown",
+                  "type": "INSTANCE",
+                  "width": 50,
+                  "height": 50,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 8,
+                  "props": {
+                    "State": {
+                      "value": "Default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "I3297:14753;2545:115117",
+                      "name": "Frame 758531791",
+                      "type": "FRAME",
+                      "width": 24,
+                      "height": 27,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 8,
+                      "children": [
+                        {
+                          "id": "I3297:14753;3557:5256",
+                          "name": "thumb_down_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1",
+                          "type": "FRAME",
+                          "width": 24,
+                          "height": 24,
+                          "visible": true,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "children": [
+                            {
+                              "id": "I3297:14753;3557:5257",
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "width": 21,
+                              "height": 20,
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2459:10449",
+          "name": "Text Field - Desktop",
+          "type": "FRAME",
+          "width": 518,
+          "height": 120,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "itemSpacing": 0,
+          "children": [
+            {
+              "id": "2459:10464",
+              "name": "_input field desktop template",
+              "type": "FRAME",
+              "width": 518,
+              "height": 120,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 2,
+              "children": [
+                {
+                  "id": "2459:10465",
+                  "name": "Field",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 100,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "itemSpacing": 8,
+                  "children": [
+                    {
+                      "id": "2459:10466",
+                      "name": "✏️ Input text",
+                      "type": "TEXT",
+                      "width": 486,
+                      "height": 20,
+                      "visible": true,
+                      "characters": "This is a great feature!",
+                      "fontName": {
+                        "family": "Akkurat LL",
+                        "style": "Regular"
+                      },
+                      "fontSize": 16
+                    },
+                    {
+                      "id": "2459:10467",
+                      "name": "📍Trailing Icon",
+                      "type": "FRAME",
+                      "width": 24,
+                      "height": 24,
+                      "visible": false,
+                      "layoutMode": "NONE",
+                      "itemSpacing": 0,
+                      "children": [
+                        {
+                          "id": "2459:10468",
+                          "name": " ↳Color",
+                          "type": "BOOLEAN_OPERATION",
+                          "width": 22,
+                          "height": 15,
+                          "visible": true,
+                          "children": [
+                            {
+                              "id": "2459:10469",
+                              "name": "Path",
+                              "type": "VECTOR",
+                              "width": 22,
+                              "height": 15,
+                              "visible": true
+                            },
+                            {
+                              "id": "2459:10470",
+                              "name": "Path",
+                              "type": "VECTOR",
+                              "width": 10,
+                              "height": 10,
+                              "visible": true
+                            },
+                            {
+                              "id": "2459:10471",
+                              "name": "Path",
+                              "type": "VECTOR",
+                              "width": 6,
+                              "height": 6,
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2459:10472",
+                      "name": "caret_down",
+                      "type": "INSTANCE",
+                      "width": 16,
+                      "height": 16,
+                      "visible": false,
+                      "layoutMode": "NONE",
+                      "itemSpacing": 0,
+                      "props": {},
+                      "children": [
+                        {
+                          "id": "I2459:10472;872:2",
+                          "name": "caret",
+                          "type": "FRAME",
+                          "width": 13.333333015441895,
+                          "height": 13.333333015441895,
+                          "visible": true,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "children": [
+                            {
+                              "id": "I2459:10472;872:3",
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "width": 13.333333015441895,
+                              "height": 7.3506975173950195,
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "2459:10473",
+                  "name": "Supporting Text",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 18,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "itemSpacing": 8,
+                  "children": [
+                    {
+                      "id": "2459:10474",
+                      "name": "Assistive Text",
+                      "type": "INSTANCE",
+                      "width": 255,
+                      "height": 18,
+                      "visible": false,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 10,
+                      "props": {},
+                      "children": [
+                        {
+                          "id": "I2459:10474;2951:5595",
+                          "name": "Helper Text",
+                          "type": "TEXT",
+                          "width": 255,
+                          "height": 18,
+                          "visible": true,
+                          "characters": "Assistive text",
+                          "fontName": {
+                            "family": "Akkurat LL",
+                            "style": "Regular"
+                          },
+                          "fontSize": 12
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2459:10475",
+                      "name": "Character Count",
+                      "type": "INSTANCE",
+                      "width": 502,
+                      "height": 18,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 10,
+                      "props": {},
+                      "children": [
+                        {
+                          "id": "I2459:10475;2951:5595",
+                          "name": "Helper Text",
+                          "type": "TEXT",
+                          "width": 34,
+                          "height": 18,
+                          "visible": true,
+                          "characters": "0/500",
+                          "fontName": {
+                            "family": "Akkurat LL",
+                            "style": "Regular"
+                          },
+                          "fontSize": 12
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "2459:10476",
+                  "name": "Label",
+                  "type": "FRAME",
+                  "width": 192,
+                  "height": 18,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "itemSpacing": 10,
+                  "children": [
+                    {
+                      "id": "2459:10477",
+                      "name": "✏️ Label",
+                      "type": "TEXT",
+                      "width": 188,
+                      "height": 18,
+                      "visible": true,
+                      "characters": "How can we improve this feature?",
+                      "fontName": {
+                        "family": "Akkurat LL",
+                        "style": "Regular"
+                      },
+                      "fontSize": 12
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2466:10627",
+          "name": "Frame 758532109",
+          "type": "FRAME",
+          "width": 518,
+          "height": 42,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "itemSpacing": 8,
+          "children": [
+            {
+              "id": "2466:10538",
+              "name": "Button",
+              "type": "INSTANCE",
+              "width": 161,
+              "height": 42,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 0,
+              "props": {
+                "Type": {
+                  "value": "Default",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "Icon": {
+                  "value": "None",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "State": {
+                  "value": "Normal",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "Size": {
+                  "value": "Large",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "Full Width": {
+                  "value": "False",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                }
+              },
+              "children": [
+                {
+                  "id": "I2466:10538;2847:3907",
+                  "name": "_button template",
+                  "type": "INSTANCE",
+                  "width": 161,
+                  "height": 42,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "itemSpacing": 5,
+                  "props": {
+                    "Size": {
+                      "value": "Large",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "I2466:10538;2847:3907;2856:4026",
+                      "name": "Left Icon",
+                      "type": "FRAME",
+                      "width": 16,
+                      "height": 16,
+                      "visible": false,
+                      "layoutMode": "NONE",
+                      "itemSpacing": 0,
+                      "children": [
+                        {
+                          "id": "I2466:10538;2847:3907;2856:4830",
+                          "name": "plus_outline",
+                          "type": "INSTANCE",
+                          "width": 16,
+                          "height": 16,
+                          "visible": true,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "props": {},
+                          "children": [
+                            {
+                              "id": "I2466:10538;2847:3907;2856:4830;676:133",
+                              "name": "plus",
+                              "type": "INSTANCE",
+                              "width": 13.333333015441895,
+                              "height": 13.333333015441895,
+                              "visible": true,
+                              "layoutMode": "NONE",
+                              "itemSpacing": 0,
+                              "props": {},
+                              "children": [
+                                {
+                                  "id": "I2466:10538;2847:3907;2856:4830;676:133;349:229",
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "width": 13.333333015441895,
+                                  "height": 13.329143524169922,
+                                  "visible": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "I2466:10538;2847:3907;2847:4022",
+                      "name": "Text",
+                      "type": "FRAME",
+                      "width": 131,
+                      "height": 42,
+                      "visible": true,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 10,
+                      "children": [
+                        {
+                          "id": "I2466:10538;2847:3907;286:135",
+                          "name": "TEXT",
+                          "type": "TEXT",
+                          "width": 131,
+                          "height": 20,
+                          "visible": true,
+                          "characters": "Submit Feedback",
+                          "fontName": {
+                            "family": "Akkurat LL",
+                            "style": "Regular"
+                          },
+                          "fontSize": 16
+                        }
+                      ]
+                    },
+                    {
+                      "id": "I2466:10538;2847:3907;3455:14568",
+                      "name": "Divider",
+                      "type": "FRAME",
+                      "width": 10.000000953674316,
+                      "height": 42,
+                      "visible": false,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 0,
+                      "children": [
+                        {
+                          "id": "I2466:10538;2847:3907;3455:7814",
+                          "name": "Divider",
+                          "type": "FRAME",
+                          "width": 42,
+                          "height": 0,
+                          "visible": true,
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 10,
+                          "children": [
+                            {
+                              "id": "I2466:10538;2847:3907;3455:7815",
+                              "name": "Divider",
+                              "type": "LINE",
+                              "width": 42,
+                              "height": 0,
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "I2466:10538;2847:3907;2847:3945",
+                      "name": "Right Icon",
+                      "type": "FRAME",
+                      "width": 16,
+                      "height": 16,
+                      "visible": false,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 10,
+                      "children": [
+                        {
+                          "id": "I2466:10538;2847:3907;2847:4365",
+                          "name": "caret_down",
+                          "type": "INSTANCE",
+                          "width": 16,
+                          "height": 16,
+                          "visible": true,
+                          "layoutMode": "NONE",
+                          "itemSpacing": 0,
+                          "props": {},
+                          "children": [
+                            {
+                              "id": "I2466:10538;2847:3907;2847:4365;872:2",
+                              "name": "caret",
+                              "type": "FRAME",
+                              "width": 13.333333015441895,
+                              "height": 13.333333015441895,
+                              "visible": true,
+                              "layoutMode": "NONE",
+                              "itemSpacing": 0,
+                              "children": [
+                                {
+                                  "id": "I2466:10538;2847:3907;2847:4365;872:3",
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "width": 13.333333015441895,
+                                  "height": 7.3506975173950195,
+                                  "visible": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2474:10628",
+      "name": "Frame 758532110",
+      "type": "FRAME",
+      "width": 534,
+      "height": 72,
+      "visible": true,
+      "layoutMode": "HORIZONTAL",
+      "itemSpacing": 16,
+      "children": [
+        {
+          "id": "2466:10574",
+          "name": "Frame 758531794",
+          "type": "FRAME",
+          "width": 518,
+          "height": 48,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 24,
+          "children": [
+            {
+              "id": "2466:10575",
+              "name": "Thank you for your feedback!",
+              "type": "TEXT",
+              "width": 214,
+              "height": 16,
+              "visible": true,
+              "characters": "Thank you for your feedback!",
+              "fontName": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "fontSize": 16
+            },
+            {
+              "id": "2466:10579",
+              "name": "Frame 758531486",
+              "type": "FRAME",
+              "width": 256,
+              "height": 24,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "itemSpacing": 16,
+              "children": [
+                {
+                  "id": "2466:10580",
+                  "name": "Interface, Essential/Delete, Disabled",
+                  "type": "INSTANCE",
+                  "width": 24,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": "NONE",
+                  "itemSpacing": 0,
+                  "props": {},
+                  "children": [
+                    {
+                      "id": "I2466:10580;9:6411",
+                      "name": "Group",
+                      "type": "GROUP",
+                      "width": 24,
+                      "height": 24,
+                      "visible": true,
+                      "children": [
+                        {
+                          "id": "I2466:10580;9:6412",
+                          "name": "Group",
+                          "type": "GROUP",
+                          "width": 24,
+                          "height": 24,
+                          "visible": true,
+                          "children": [
+                            {
+                              "id": "I2466:10580;9:6413",
+                              "name": "Path",
+                              "type": "VECTOR",
+                              "width": 24,
+                              "height": 24,
+                              "visible": true
+                            },
+                            {
+                              "id": "I2466:10580;9:6414",
+                              "name": "Path",
+                              "type": "VECTOR",
+                              "width": 8,
+                              "height": 8,
+                              "visible": true
+                            },
+                            {
+                              "id": "I2466:10580;9:6415",
+                              "name": "Path",
+                              "type": "VECTOR",
+                              "width": 8,
+                              "height": 8,
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

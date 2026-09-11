@@ -300,5 +300,29 @@
       "dollarCost": null,
       "note": "Credit amount is an approximate operator report, not an inferred token-to-credit conversion. This supplement supersedes the build report's unavailable-token statement; immutable DONE record and original prefix measurements are preserved."
     }
+  ],
+  "activeCostBaselines": [
+    {
+      "itemId": "npve-patient-summary-feedback",
+      "provider": "OpenAI",
+      "model": "gpt-6-astra",
+      "reasoning": "medium",
+      "turnId": "01a08dce-f3ac-7951-bedc-fa340e7e66eb",
+      "startedAt": "2026-09-11T00:12:25.429Z",
+      "credits": {
+        "startReading": 275,
+        "endReading": null,
+        "delta": null,
+        "source": "operator-reported",
+        "direction": null
+      },
+      "stage": "preflight awaiting icon decision",
+      "figmaReads": 5,
+      "figmaWrites": 0,
+      "screenshots": 1,
+      "correctionCycles": 0,
+      "tokens": null,
+      "note": "Five Figma reads: target identity, source audit, library search, scoped icon inventory, source export. Token totals will be measured at the run boundary; credit delta waits for operator ending reading."
+    }
   ]
 }
