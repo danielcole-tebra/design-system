@@ -1,0 +1,13 @@
+const fs=require('fs');
+const {openRecord}=require('./scripts/schema/lib');
+const {readJson,writeJson}=require('./scripts/workflow/lib');
+const id='workflow_creditResetObservation_2026-09-10';
+const base='figma-export/workflow-credit-reset-2026-09-10';
+const observation={id,reading:143,unit:'credits',source:'operator-reported',quote:"The credit tracking must have reset, it's 143 now",recordedAt:new Date().toISOString(),previousReading:275,resetStatus:'suspected by operator; not independently verified',comparable:false,delta:null,reason:'Counter continuity and direction are unknown; readings cannot establish run cost.',supplements:['libraryThumbIcons_2026-09-10','npveRebuild_patientSummaryFeedback_2026-09-10']};
+openRecord({id,previous:'workflow_runCostTracking_2026-09-10',workstream:'workflow',date:'2026-09-10',createdBy:'Codex (OpenAI)',script:'apply-workflow-credit-reset.js',body:{_status:'IN PROGRESS',date:'2026-09-10',report:base+'/report.md',scope:'Append reported credit reading and suspected reset; preserve prior token measurements and immutable build records. No Figma changes.',observation}});
+const metrics=readJson('workflow/metrics.json');
+metrics.creditMeterObservations=[...(metrics.creditMeterObservations||[]),observation];
+metrics.currentCreditBaseline={reading:143,source:'operator-reported',observationId:id,recordedAt:observation.recordedAt,direction:null,note:'Fresh baseline after suspected reset. Previous 275 reading cannot establish cost across this boundary.'};
+writeJson('workflow/metrics.json',metrics);
+writeJson(base+'/observation.json',observation);
+fs.writeFileSync(base+'/report.md','# Credit reading supplement\n\nOperator: “'+observation.quote+'”\n\nRecorded 143 credits as a fresh baseline. The previous reading was 275. A reset is suspected, not verified; counter direction and continuity remain unknown. No credit delta or run cost can be calculated from these two readings.\n\nEarlier build records and observed token totals remain unchanged. This supplemental record takes precedence over pending credit-delta statements for the 275-credit continuation. No Figma calls or mutations.\n');

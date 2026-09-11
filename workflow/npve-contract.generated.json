@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T00:54:37.704Z",
+  "generatedAt": "2026-09-11T01:12:52.441Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "bdf4ddff9590853c93f9fe3666cbcf9a5d2eee1ebd560a05de4958fa3645e9f1",
+      "sha256": "443c63375a18b5fe546693d2565b52c1fe93818206ef947a3f88173cd962845f",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "f0d75a945a12fdc1ae49a27de5e1736898c0718846f6531b8b68da6c91797c5a"
+        "sha256": "0d57a9436f251b87bacc58057a14ab73dabc757383a02dfc65e51b956e891013"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "698086441e62876d3ad525fe55061737366baa0ac3ad822b288f6b14b5b140c2"
+        "sha256": "49a9a50e5d0896108a554489934480ed1ede6bf468fa080523806bd9f8e5400d"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 103,
+      "records": 104,
       "flags": {
         "active": 232,
         "resolved": 58
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "libraryThumbIcons_2026-09-10",
+      "id": "workflow_creditResetObservation_2026-09-10",
       "date": "2026-09-10",
-      "workstream": "library",
-      "path": "records/library/2026-09-10/libraryThumbIcons_2026-09-10.json",
-      "status": "DONE — four draft library icons verified; operator publication pending"
+      "workstream": "workflow",
+      "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
+      "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
     },
     "recordGate": {
       "inProgress": [
@@ -354,12 +354,12 @@
         }
       },
       "workflow": {
-        "count": 11,
+        "count": 12,
         "latest": {
-          "id": "workflow_runCostTracking_2026-09-10",
+          "id": "workflow_creditResetObservation_2026-09-10",
           "date": "2026-09-10",
-          "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
-          "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement."
+          "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
+          "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
         }
       }
     }
@@ -746,17 +746,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_moduleChipFix_2026-09-08",
-        "path": "records/npve/2026-09-08/npveRebuild_moduleChipFix_2026-09-08.json",
-        "status": "DONE. Superseding module chip fix prompt re-run under the lean workflow: source chip re-measured; ink family, close scale, variant anatomy and strip order verified already in place from npveRebuild_moduleChipFix_2026-09-06; one change-log row added for the unlogged chip-fill token delta; crop-compare at 1x and ten rules pass. The prompt's uniform space/16 internal-gap step stopped as a decision because it reverses npveRebuild_moduleChipRelationshipSpacing_2026-09-06 (identity gap space/8); no master was mutated.",
-        "date": "2026-09-08",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-module-chip-fix-2026-09-08/report.md",
-        "target": null
-      },
-      {
         "id": "schemasplit_phase8_2026-09-08",
         "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
         "status": "DONE. Monolithic design-system-schema.json split into an append-only record store: 91 records migrated verbatim to records/<workstream>/<date>/<id>.json, 285 flags split 227 active / 58 resolved, 13 foundation sections to foundation/; the aggregate regenerated from the store is byte-identical to the pre-split original with zero count deltas; record gate, contract, freshness digests, validate-record and batch guards read the store; docs updated; backup policy surfaced for the operator, not changed. This record is the first written into the new structure.",
@@ -879,6 +868,17 @@
         "geometry": null,
         "decision": null,
         "report": "figma-export/npve-patient-summary-feedback-2026-09-10/report.md",
+        "target": null
+      },
+      {
+        "id": "workflow_creditResetObservation_2026-09-10",
+        "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
+        "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison",
+        "date": "2026-09-10",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-credit-reset-2026-09-10/report.md",
         "target": null
       }
     ],
@@ -1007,6 +1007,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "e5ec8ee17a5b9ff1dbe3360da3aee7d871e5e014d39f4c003997368b4fa5b649"
+    "contractSha256": "34564d9da7f8014b896499a35853ea07807741d87b7ded2f36d116b6aa02fa5d"
   }
 }

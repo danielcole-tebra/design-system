@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "libraryThumbIcons_2026-09-10",
+  "id": "workflow_creditResetObservation_2026-09-10",
   "date": "2026-09-10",
-  "workstream": "library",
-  "path": "records/library/2026-09-10/libraryThumbIcons_2026-09-10.json",
-  "status": "DONE — four draft library icons verified; operator publication pending"
+  "workstream": "workflow",
+  "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
+  "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
  },
  "recordGate": {
   "inProgress": [
@@ -36,12 +36,12 @@
    }
   },
   "workflow": {
-   "count": 11,
+   "count": 12,
    "latest": {
-    "id": "workflow_runCostTracking_2026-09-10",
+    "id": "workflow_creditResetObservation_2026-09-10",
     "date": "2026-09-10",
-    "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
-    "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement."
+    "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
+    "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
    }
   }
  },
@@ -52,7 +52,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "bdf4ddff9590853c93f9fe3666cbcf9a5d2eee1ebd560a05de4958fa3645e9f1",
-  "bytes": 1527887
+  "sha256": "443c63375a18b5fe546693d2565b52c1fe93818206ef947a3f88173cd962845f",
+  "bytes": 1529029
  }
 }

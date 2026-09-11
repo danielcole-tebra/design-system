@@ -1000,6 +1000,15 @@
    "path": "records/library/2026-09-10/libraryThumbIcons_2026-09-10.json",
    "status": "DONE — four draft library icons verified; operator publication pending",
    "recordSha256": "cb6bc52cc994eda437655a49218d269517fb06a6b6df5c372ca62061dea60138"
+  },
+  {
+   "id": "workflow_creditResetObservation_2026-09-10",
+   "sequence": 103,
+   "date": "2026-09-10",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
+   "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison",
+   "recordSha256": "a230fe0ab2a56da32679f249d0241722027abed444eb7c20bafa1929cfbe4910"
   }
  ],
  "flags": {
@@ -1305,8 +1314,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 103,
-  "aggregateTopLevelKeys": 117,
-  "nextRecordSequence": 103
+  "records": 104,
+  "aggregateTopLevelKeys": 118,
+  "nextRecordSequence": 104
  }
 }

@@ -373,5 +373,32 @@
       "tokens": null,
       "note": "Five Figma reads: target identity, source audit, library search, scoped icon inventory, source export. Token totals will be measured at the run boundary; credit delta waits for operator ending reading."
     }
-  ]
+  ],
+  "creditMeterObservations": [
+    {
+      "id": "workflow_creditResetObservation_2026-09-10",
+      "reading": 143,
+      "unit": "credits",
+      "source": "operator-reported",
+      "quote": "The credit tracking must have reset, it's 143 now",
+      "recordedAt": "2026-09-11T01:12:52.169Z",
+      "previousReading": 275,
+      "resetStatus": "suspected by operator; not independently verified",
+      "comparable": false,
+      "delta": null,
+      "reason": "Counter continuity and direction are unknown; readings cannot establish run cost.",
+      "supplements": [
+        "libraryThumbIcons_2026-09-10",
+        "npveRebuild_patientSummaryFeedback_2026-09-10"
+      ]
+    }
+  ],
+  "currentCreditBaseline": {
+    "reading": 143,
+    "source": "operator-reported",
+    "observationId": "workflow_creditResetObservation_2026-09-10",
+    "recordedAt": "2026-09-11T01:12:52.169Z",
+    "direction": null,
+    "note": "Fresh baseline after suspected reset. Previous 275 reading cannot establish cost across this boundary."
+  }
 }
