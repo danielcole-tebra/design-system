@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Cover",
+      "unbound": 1
+    },
+    {
+      "id": "3:2",
+      "name": "Templates",
+      "unbound": 48
+    },
+    {
+      "id": "27:2",
+      "name": "Screens",
+      "unbound": 43
+    },
+    {
+      "id": "126:2",
+      "name": "Archive",
+      "unbound": 20
+    }
+  ],
+  "sectionStrokes": [
+    {
+      "id": "665:10011",
+      "strokes": []
+    },
+    {
+      "id": "668:10805",
+      "strokes": []
+    }
+  ]
+}

@@ -11,17 +11,31 @@
   "script": "apply-npve-patient-summary-feedback.js"
  },
  "record": {
-  "_status": "IN PROGRESS — icon publication verified; feedback preflight continues",
+  "_status": "DONE — three feedback states verified; awaiting operator review before full sheets",
   "date": "2026-09-10",
   "workstream": "NPVE Rebuild / Sidesheets",
   "manifestItem": "npve-patient-summary-feedback",
   "report": "figma-export/npve-patient-summary-feedback-2026-09-10/report.md",
   "executor": "Codex (OpenAI gpt-6-astra, medium)",
   "scope": "Three Patient summary feedback states, as queued; no sidesheet or shared-master edits.",
-  "operatorContinuationQuote": "Actually can you just pickup the work and let's track the cost, we're currently at 275 credits, we'll see where we end",
+  "operatorContinuationQuote": "proceed",
   "risk": {
    "tier": "medium",
-   "status": "proposed; no mutation guard started"
+   "reasons": [
+    "First local component set for Patient Summary feedback",
+    "Composes alert, rating, multiline-input, character-count, and action states",
+    "No shared-master mutation, but icon/control mappings must be verified before construction"
+   ],
+   "proposedBy": "Codex (planner proposal), 2026-09-10, after the scoped read in figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+   "approval": {
+    "status": "unapproved",
+    "approvedBy": null,
+    "approvedAt": null,
+    "quote": null,
+    "history": []
+   },
+   "lockedAt": "2026-09-11T14:05:53.140Z",
+   "lock": "c4563bdb9e4259f14dcc0a6e8af736192efb2322c5facac0897f3e3ace3c5084"
   },
   "creditBaseline": {
    "reading": 275,
@@ -55,9 +69,12 @@
     ]
    }
   ],
-  "nextAction": "Complete feedback appearance and control preflight, validate checkpoint, and build the three states under the existing operator continuation.",
+  "nextAction": "Operator reviews the three feedback comparisons before the body/sheet batch begins.",
   "screenshots": [
-   "figma-export/npve-patient-summary-feedback-2026-09-10/source-error-entry.png"
+   "figma-export/npve-patient-summary-feedback-2026-09-10/comparison.png",
+   "figma-export/npve-patient-summary-feedback-2026-09-10/rebuild-default.png",
+   "figma-export/npve-patient-summary-feedback-2026-09-10/rebuild-entry.png",
+   "figma-export/npve-patient-summary-feedback-2026-09-10/rebuild-success-final.png"
   ],
   "publicationCheck": {
    "date": "2026-09-11",
@@ -118,6 +135,144 @@
     }
    ],
    "note": "Import results must be reimported and used within each mutation call; IDs are readback evidence."
-  }
+  },
+  "appearance": "figma-export/npve-patient-summary-feedback-2026-09-10/appearance.md",
+  "localRepairs": [
+   {
+    "kind": "read recovery",
+    "description": "Type-specific characters read corrected after error; no canvas mutation."
+   },
+   {
+    "kind": "local success action mapping",
+    "status": "verified",
+    "evidence": "Production SummaryFeedback.tsx success action uses small default IconButton with MUI Close; initial success render inherited red close",
+    "targets": [
+     "665:10077"
+    ],
+    "nextAction": "Compose local dismiss action from published small default Icon button and Close; retain shared masters",
+    "render": "figma-export/npve-patient-summary-feedback-2026-09-10/rebuild-success-final.png"
+   },
+   {
+    "kind": "canvas section paint",
+    "targets": [
+     "665:10011",
+     "668:10805"
+    ],
+    "action": "Remove automatic unbound section strokes; sections are organizational backdrops"
+   }
+  ],
+  "createdEvidence": "figma-export/npve-patient-summary-feedback-2026-09-10/built.json",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — three live variants match master paint arrays exactly, including bound colors and alpha.",
+   "2_unboundPaintAudit": "PASS — every subtree on all four pages audited; final unbound totals match baseline 1/48/43/20. Two automatic section strokes removed; no new unbound paints.",
+   "3_referenceCounts": "PASS — master/instance reference counts 2/2, 21/21, 6/6 after combineAsVariants; rendered text and selected icons verified.",
+   "4_skipInvisibleFalse": "PASS — audit walks use skipInvisibleInstanceChildren=false.",
+   "5_opacityLast": "PASS — no paint-opacity override used; local icon colors assigned by returned bound paint.",
+   "6_enumerateDontRecall": "PASS — actual page subtrees, new node IDs, variant count and instance mappings enumerated.",
+   "7_fileIdentityFirst": "PASS — explicit target/source/library keys; source and library reads only, all canvas writes target NPVE.",
+   "8_roundWithRecord": "PASS — 518px authored widths, integer geometry; intrinsic vector bounds untouched. Final heights 66/336/86 follow content and published controls.",
+   "9_boundPaintAlpha": "PASS — returned bound-paint alpha retained; no post-binding opacity normalization.",
+   "10_cloneDropsPropertyRefs": "PASS — variants built independently, not cloned; post-combine reference counts and rendered control text verified."
+  },
+  "flagsResolved": [
+   "npvePatientSummary_feedbackThumbMapping"
+  ],
+  "componentSet": {
+   "id": "665:10087",
+   "key": "3cf2d05be5816d4b58bc1077becc5f522c483224",
+   "properties": {
+    "State": {
+     "type": "VARIANT",
+     "defaultValue": "Default",
+     "variantOptions": [
+      "Default",
+      "Error/Entry",
+      "Success"
+     ]
+    }
+   },
+   "variantCount": 3
+  },
+  "comparisons": [
+   {
+    "id": "668:10806",
+    "state": "Default",
+    "width": 1708,
+    "height": 692,
+    "rebuildHeight": 66
+   },
+   {
+    "id": "668:11210",
+    "state": "Error entry",
+    "width": 1708,
+    "height": 692,
+    "rebuildHeight": 336
+   },
+   {
+    "id": "668:11631",
+    "state": "Success",
+    "width": 1708,
+    "height": 692,
+    "rebuildHeight": 86
+   }
+  ],
+  "finalSizes": [
+   {
+    "id": "665:10012",
+    "width": 518,
+    "height": 66
+   },
+   {
+    "id": "665:10024",
+    "width": 518,
+    "height": 336
+   },
+   {
+    "id": "665:10076",
+    "width": 518,
+    "height": 86
+   }
+  ],
+  "buildMeasurements": {
+   "itemId": "npve-patient-summary-feedback",
+   "stage": "feedback build only; earlier preflight readings retained separately",
+   "provider": "OpenAI",
+   "model": "gpt-6-astra",
+   "reasoning": "medium",
+   "turnId": "01a090c6-d483-7bc2-acc2-730e1c7be3ed",
+   "startedAt": "2026-09-11T14:02:25.604Z",
+   "measuredThrough": "2026-09-11T14:16:20.874Z",
+   "elapsedSeconds": 835.27,
+   "assistantUserTurns": 1,
+   "modelResponses": 26,
+   "topLevelToolCalls": 26,
+   "figmaReads": 17,
+   "figmaWrites": 8,
+   "uploadAllocations": 1,
+   "screenshots": 9,
+   "correctionCycles": 2,
+   "readRecoveryCycles": 1,
+   "tokens": {
+    "input": 4908470,
+    "cachedInput": 4850816,
+    "uncachedInput": 57654,
+    "output": 18111,
+    "reasoningOutput": 4962,
+    "total": 4926581
+   },
+   "credits": {
+    "baseline": 143,
+    "endingReading": null,
+    "delta": null,
+    "source": "Operator-reported baseline after suspected reset; not a verified counter interval"
+   },
+   "countEvidence": {
+    "reads": "8 Plugin API reads (including failed anatomy read) + 9 exports",
+    "writes": "5 Plugin API mutation calls (states, success repair, helpers, comparisons, section border repair) + 3 image POSTs",
+    "screenshots": "3 source references + 3 initial live states + corrected success + 2 comparison exports"
+   },
+   "note": "Prefix excludes subsequent closeout/final response. Usage is summed once per response ID; cached input and reasoning output are subsets. Credit and dollar cost unavailable."
+  },
+  "proofDisposition": "Required live comparisons/helpers retained; no temporary Figma proofs to archive."
  }
 }

@@ -714,7 +714,7 @@
       "id": "npve-patient-summary-feedback",
       "title": "Patient Summary · Feedback states",
       "workstream": "NPVE Rebuild / Sidesheets",
-      "status": "proposed",
+      "status": "complete",
       "dependsOn": [
         "npve-patient-summary-content"
       ],
@@ -766,7 +766,9 @@
           "approvedAt": null,
           "quote": null,
           "history": []
-        }
+        },
+        "lockedAt": "2026-09-11T14:05:53.140Z",
+        "lock": "c4563bdb9e4259f14dcc0a6e8af736192efb2322c5facac0897f3e3ace3c5084"
       },
       "oversight": [
         "One reference/rebuild/change comparison showing all three feedback states, inspected by the executor and shown to the operator",
@@ -790,7 +792,15 @@
         "audit": "figma-export/npve-patient-summary-feedback-2026-09-10/audit.json",
         "report": "figma-export/npve-patient-summary-feedback-2026-09-10/report.md",
         "comparisonRender": "figma-export/npve-patient-summary-feedback-2026-09-10/comparison.png"
-      }
+      },
+      "perItemConfirmations": [
+        {
+          "quote": "proceed",
+          "recordedAt": "2026-09-11T14:05:53.562Z",
+          "recordedBy": "Codex"
+        }
+      ],
+      "completedAt": "2026-09-11T14:17:59.521Z"
     },
     {
       "id": "npve-patient-summary-body-sheet",

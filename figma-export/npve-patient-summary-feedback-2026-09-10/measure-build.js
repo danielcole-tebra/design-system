@@ -1,0 +1,13 @@
+const fs=require('fs');
+const {writeJson,readJson}=require('../../scripts/workflow/lib');
+const file=process.argv[2];if(!file)throw new Error('Pass session JSONL path');
+const data=fs.readFileSync(file,'utf8').trim().split('\n').flatMap(s=>{try{return[JSON.parse(s)]}catch{return[]}});
+const ctx=data.filter(x=>x.type==='turn_context').at(-1).payload;
+const start=data.find(x=>x.type==='turn_context'&&x.payload.turn_id===ctx.turn_id).timestamp;
+const usage=[...new Map(data.filter(x=>x.type==='token_usage_record'&&x.payload.turn_id===ctx.turn_id).map(x=>[x.payload.response_id,x.payload.usage])).values()];
+const sum=k=>usage.reduce((a,x)=>a+(x[k]||0),0),cutoff=new Date().toISOString();
+const calls=data.filter(x=>x.timestamp>=start&&x.type==='response_item'&&['custom_tool_call','function_call'].includes(x.payload.type));
+const m={itemId:'npve-patient-summary-feedback',stage:'feedback build only; earlier preflight readings retained separately',provider:'OpenAI',model:ctx.model,reasoning:ctx.effort,turnId:ctx.turn_id,startedAt:start,measuredThrough:cutoff,elapsedSeconds:(Date.parse(cutoff)-Date.parse(start))/1000,assistantUserTurns:1,modelResponses:usage.length,topLevelToolCalls:calls.length,figmaReads:17,figmaWrites:8,uploadAllocations:1,screenshots:9,correctionCycles:2,readRecoveryCycles:1,tokens:{input:sum('input_tokens'),cachedInput:sum('cached_input_tokens'),uncachedInput:sum('input_tokens')-sum('cached_input_tokens'),output:sum('output_tokens'),reasoningOutput:sum('reasoning_output_tokens'),total:sum('total_tokens')},credits:{baseline:143,endingReading:null,delta:null,source:'Operator-reported baseline after suspected reset; not a verified counter interval'},countEvidence:{reads:'8 Plugin API reads (including failed anatomy read) + 9 exports',writes:'5 Plugin API mutation calls (states, success repair, helpers, comparisons, section border repair) + 3 image POSTs',screenshots:'3 source references + 3 initial live states + corrected success + 2 comparison exports'},note:'Prefix excludes subsequent closeout/final response. Usage is summed once per response ID; cached input and reasoning output are subsets. Credit and dollar cost unavailable.'};
+const base='figma-export/npve-patient-summary-feedback-2026-09-10';writeJson(base+'/build-measurements.json',m);
+writeJson(base+'/context-measurement.json',{legacyBytes:1551904,leanBytes:157319,reductionPercent:89.9,targetPercent:50,targetMet:true,manifestItems:12});
+const metrics=readJson('workflow/metrics.json');metrics.costObservations.push(m);writeJson('workflow/metrics.json',metrics);console.log(JSON.stringify(m,null,2));

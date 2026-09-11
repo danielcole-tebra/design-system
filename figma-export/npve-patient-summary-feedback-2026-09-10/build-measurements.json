@@ -1,0 +1,40 @@
+{
+  "itemId": "npve-patient-summary-feedback",
+  "stage": "feedback build only; earlier preflight readings retained separately",
+  "provider": "OpenAI",
+  "model": "gpt-6-astra",
+  "reasoning": "medium",
+  "turnId": "01a090c6-d483-7bc2-acc2-730e1c7be3ed",
+  "startedAt": "2026-09-11T14:02:25.604Z",
+  "measuredThrough": "2026-09-11T14:16:20.874Z",
+  "elapsedSeconds": 835.27,
+  "assistantUserTurns": 1,
+  "modelResponses": 26,
+  "topLevelToolCalls": 26,
+  "figmaReads": 17,
+  "figmaWrites": 8,
+  "uploadAllocations": 1,
+  "screenshots": 9,
+  "correctionCycles": 2,
+  "readRecoveryCycles": 1,
+  "tokens": {
+    "input": 4908470,
+    "cachedInput": 4850816,
+    "uncachedInput": 57654,
+    "output": 18111,
+    "reasoningOutput": 4962,
+    "total": 4926581
+  },
+  "credits": {
+    "baseline": 143,
+    "endingReading": null,
+    "delta": null,
+    "source": "Operator-reported baseline after suspected reset; not a verified counter interval"
+  },
+  "countEvidence": {
+    "reads": "8 Plugin API reads (including failed anatomy read) + 9 exports",
+    "writes": "5 Plugin API mutation calls (states, success repair, helpers, comparisons, section border repair) + 3 image POSTs",
+    "screenshots": "3 source references + 3 initial live states + corrected success + 2 comparison exports"
+  },
+  "note": "Prefix excludes subsequent closeout/final response. Usage is summed once per response ID; cached input and reasoning output are subsets. Credit and dollar cost unavailable."
+}

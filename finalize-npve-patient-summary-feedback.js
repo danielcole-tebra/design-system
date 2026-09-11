@@ -1,0 +1,3 @@
+const {finalizeRecord,resolveFlag}=require('./scripts/schema/lib');
+resolveFlag('npvePatientSummary_feedbackThumbMapping',{status:'RESOLVED',resolvedDuring:'npveRebuild_patientSummaryFeedback_2026-09-10',resolution:'Four Alt/OffAlt icons published; target imports and feedback selected/unselected live instances verified. See publication-verified-2026-09-11.json, final-read.json and comparison.png in the feedback report folder.'});
+console.log(finalizeRecord('npveRebuild_patientSummaryFeedback_2026-09-10',r=>({...r,_status:'DONE — three feedback states verified; awaiting operator review before full sheets'})));

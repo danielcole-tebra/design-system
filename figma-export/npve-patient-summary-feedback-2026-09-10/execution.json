@@ -1,0 +1,193 @@
+{
+  "format": "tebra.design-execution",
+  "version": 2,
+  "workflowRunVersion": 3,
+  "itemId": "npve-patient-summary-feedback",
+  "recordId": "npveRebuild_patientSummaryFeedback_2026-09-10",
+  "provenance": {
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning": "medium"
+  },
+  "preflight": {
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "identityEvidence": "figma-export/npve-patient-summary-feedback-2026-09-10/control-anatomy.json",
+    "toolEvidence": "figma-export/npve-patient-summary-feedback-2026-09-10/publication-verified-2026-09-11.json",
+    "tools": [
+      "mcp__codex_apps__figma_use_figma",
+      "mcp__codex_apps__figma_download_assets"
+    ],
+    "controls": [
+      {
+        "name": "Button",
+        "component": "79:2",
+        "properties": {
+          "variant": "contained",
+          "color": "primary",
+          "size": "large",
+          "State": "Default",
+          "Label#83:165": "Submit Feedback"
+        },
+        "evidence": "figma-export/npve-patient-summary-feedback-2026-09-10/controls-preflight.json"
+      },
+      {
+        "name": "Icon button",
+        "component": "170:77",
+        "properties": {
+          "color": "default",
+          "size": "small",
+          "State": "Default"
+        },
+        "evidence": "figma-export/npve-patient-summary-feedback-2026-09-10/controls-preflight.json"
+      },
+      {
+        "name": "Text field",
+        "component": "121:350",
+        "properties": {
+          "size": "medium",
+          "State": "Default",
+          "Value": "Filled",
+          "Label#123:0": "How can we improve this feature?",
+          "Value text#123:11": "This is a great feature!",
+          "multiline#123:66": true,
+          "Show helper#123:33": false
+        },
+        "evidence": "figma-export/npve-patient-summary-feedback-2026-09-10/controls-preflight.json"
+      },
+      {
+        "name": "Alert",
+        "component": "165:57",
+        "properties": {
+          "variant": "standard",
+          "severity": "error",
+          "onClose#165:7": true,
+          "Message#165:0": "Failed to save feedback. Please try again"
+        },
+        "evidence": "figma-export/npve-patient-summary-feedback-2026-09-10/controls-preflight.json"
+      }
+    ]
+  },
+  "appearance": {
+    "specification": "figma-export/npve-patient-summary-feedback-2026-09-10/appearance.md",
+    "review": {
+      "inspected": true,
+      "render": "figma-export/npve-patient-summary-feedback-2026-09-10/comparison.png",
+      "areas": {
+        "surfaces": "Paper backgrounds and published success tint; reference blue retained only in frozen source.",
+        "borders": "Published field/error outlines; only organizational section strokes removed.",
+        "content": "Source wording, entered text, improvement prompt and count preserved; no placeholder lines.",
+        "states": "Exactly Default, Error/Entry and Success; correct positive selected glyph.",
+        "layout": "518px, 16px independent gaps, 8px tight relationships; unclipped content-driven heights.",
+        "actions": "Published rating/submit controls; production-composed neutral success dismiss."
+      },
+      "differences": [
+        {
+          "observation": "Source dimensions/control geometry/tint normalized to canonical width, spacing and published library tokens.",
+          "disposition": "approved",
+          "evidence": "workflow/manifest.json scope and CLAUDE.md code-over-Figma value precedence; appearance.md"
+        },
+        {
+          "observation": "Initial red success dismiss replaced by small default IconButton with MUI Close.",
+          "disposition": "corrected",
+          "evidence": "repair-success.js, rebuild-success-final.png; production SummaryFeedback.tsx action"
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "kind": "read recovery",
+      "description": "Type-specific characters read corrected after error; no canvas mutation."
+    },
+    {
+      "kind": "local success action mapping",
+      "status": "verified",
+      "evidence": "Production SummaryFeedback.tsx success action uses small default IconButton with MUI Close; initial success render inherited red close",
+      "targets": [
+        "665:10077"
+      ],
+      "nextAction": "Compose local dismiss action from published small default Icon button and Close; retain shared masters",
+      "render": "figma-export/npve-patient-summary-feedback-2026-09-10/rebuild-success-final.png"
+    },
+    {
+      "kind": "canvas section paint",
+      "targets": [
+        "665:10011",
+        "668:10805"
+      ],
+      "action": "Remove automatic unbound section strokes; sections are organizational backdrops",
+      "status": "verified",
+      "evidence": "figma-export/npve-patient-summary-feedback-2026-09-10/paint-final.json"
+    }
+  ],
+  "unresolved": [],
+  "milestones": [
+    {
+      "name": "Three feedback states",
+      "status": "verified",
+      "nodeIds": [
+        "665:10012",
+        "665:10024",
+        "665:10076"
+      ],
+      "render": "figma-export/npve-patient-summary-feedback-2026-09-10/rebuild-entry.png",
+      "inspected": true,
+      "additionalRenders": [
+        "figma-export/npve-patient-summary-feedback-2026-09-10/rebuild-default.png",
+        "figma-export/npve-patient-summary-feedback-2026-09-10/rebuild-success-final.png"
+      ]
+    },
+    {
+      "name": "Reference/rebuild/change comparisons",
+      "status": "verified",
+      "nodeIds": [
+        "668:10806",
+        "668:11210",
+        "668:11631"
+      ],
+      "render": "figma-export/npve-patient-summary-feedback-2026-09-10/comparison.png",
+      "inspected": true
+    }
+  ],
+  "nextAction": "Operator reviews the three feedback comparisons before the body/sheet batch begins.",
+  "measurements": {
+    "itemId": "npve-patient-summary-feedback",
+    "stage": "feedback build only; earlier preflight readings retained separately",
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning": "medium",
+    "turnId": "01a090c6-d483-7bc2-acc2-730e1c7be3ed",
+    "startedAt": "2026-09-11T14:02:25.604Z",
+    "measuredThrough": "2026-09-11T14:16:20.874Z",
+    "elapsedSeconds": 835.27,
+    "assistantUserTurns": 1,
+    "modelResponses": 26,
+    "topLevelToolCalls": 26,
+    "figmaReads": 17,
+    "figmaWrites": 8,
+    "uploadAllocations": 1,
+    "screenshots": 9,
+    "correctionCycles": 2,
+    "readRecoveryCycles": 1,
+    "tokens": {
+      "input": 4908470,
+      "cachedInput": 4850816,
+      "uncachedInput": 57654,
+      "output": 18111,
+      "reasoningOutput": 4962,
+      "total": 4926581
+    },
+    "credits": {
+      "baseline": 143,
+      "endingReading": null,
+      "delta": null,
+      "source": "Operator-reported baseline after suspected reset; not a verified counter interval"
+    },
+    "countEvidence": {
+      "reads": "8 Plugin API reads (including failed anatomy read) + 9 exports",
+      "writes": "5 Plugin API mutation calls (states, success repair, helpers, comparisons, section border repair) + 3 image POSTs",
+      "screenshots": "3 source references + 3 initial live states + corrected success + 2 comparison exports"
+    },
+    "note": "Prefix excludes subsequent closeout/final response. Usage is summed once per response ID; cached input and reasoning output are subsets. Credit and dollar cost unavailable."
+  }
+}

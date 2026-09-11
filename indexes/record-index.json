@@ -989,8 +989,8 @@
    "date": "2026-09-10",
    "workstream": "npve",
    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-   "status": "IN PROGRESS — icon publication verified; feedback preflight continues",
-   "recordSha256": "9013154fadee732e262cde8762ac0ef27b0c7d484e990bccaff2779bc9b726f8"
+   "status": "DONE — three feedback states verified; awaiting operator review before full sheets",
+   "recordSha256": "f9bd099ccea6bde8fc2356648c67678fa174d4854e220c753b94b1bafbc409cc"
   },
   {
    "id": "libraryThumbIcons_2026-09-10",
@@ -1013,8 +1013,8 @@
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
-  "active": 232,
-  "resolved": 58,
+  "active": 231,
+  "resolved": 59,
   "total": 290,
   "nextSequence": 290,
   "activeIds": [
@@ -1248,7 +1248,6 @@
    "npveTidy_looseModuleChipFrameUnexplained",
    "npveFamilyHistory_sourceSaveOutlined",
    "npveEditForms_fieldSurfaceInheritance_2026-09-10",
-   "npvePatientSummary_feedbackThumbMapping",
    "libraryThumbAltOutlined_followup_2026_09_10"
   ],
   "resolvedIds": [
@@ -1309,7 +1308,8 @@
    "workflowRefactor_riskLockFalseAttribution",
    "workflowRefactor_agentsMdDivergedFromClaudeMd",
    "workflowRefactor_contractLackedProvenance",
-   "npvePmhx_referencesFrozenAt1x"
+   "npvePmhx_referencesFrozenAt1x",
+   "npvePatientSummary_feedbackThumbMapping"
   ]
  },
  "counts": {

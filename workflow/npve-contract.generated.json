@@ -1,29 +1,29 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T12:42:47.710Z",
+  "generatedAt": "2026-09-11T14:17:59.146Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "e15dc80ed430bcba0f41f2003def3c90b2fdc007c7c0d8573544c572e665c6b9",
+      "sha256": "8e9fbf02f4864a4df29a167387fd6b1d416c6d89394ba33aaa308359349b1afe",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "33ec8aeff320a4387e971c8ff09c75f7103a1fbb0c4e85ca75a40b7a163ff95c"
+        "sha256": "106d107a6993ad6f2a0391a7633f1da46741782fcd871c807ef14506be35fb4b"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "1d36b96f707f2ed9b6aa1965657fb6e14636d0d5d5f31981a75286e008018e28"
+        "sha256": "ac42edf42d453161f76ee2d1880444535b6b8aac10e941ad4e87bbc39bdc36b6"
       },
       "flagsActive": {
         "path": "flags/active.json",
-        "sha256": "872e6d5d1fd8f2c6765b6eadba3cf3992f86676dcc8120f86cec66dce3df59c3"
+        "sha256": "a9956ddfd0fb8a9f7f7965b70a64b04b91fd4dce4d043410ddc3943a73675107"
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
-        "sha256": "dc7db0c1afb7be8b7d584d7e79d4dce368aeb225f782fd62fb27c79454944016"
+        "sha256": "e22570d5e6d593de6c243ec2456229d928fc954d450100fff038ca69edf99811"
       },
       "layout": {
         "path": "foundation/layout.json",
@@ -31,8 +31,8 @@
       },
       "records": 104,
       "flags": {
-        "active": 232,
-        "resolved": 58
+        "active": 231,
+        "resolved": 59
       }
     },
     "instructions": [
@@ -328,10 +328,8 @@
       "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
     },
     "recordGate": {
-      "inProgress": [
-        "npveRebuild_patientSummaryFeedback_2026-09-10"
-      ],
-      "clear": false,
+      "inProgress": [],
+      "clear": true,
       "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
     },
     "byWorkstream": {
@@ -350,7 +348,7 @@
           "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
           "date": "2026-09-10",
           "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-          "status": "IN PROGRESS — icon publication verified; feedback preflight continues"
+          "status": "DONE — three feedback states verified; awaiting operator review before full sheets"
         }
       },
       "workflow": {
@@ -862,7 +860,7 @@
       {
         "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
         "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-        "status": "IN PROGRESS — icon publication verified; feedback preflight continues",
+        "status": "DONE — three feedback states verified; awaiting operator review before full sheets",
         "date": "2026-09-10",
         "outcome": null,
         "geometry": null,
@@ -883,6 +881,12 @@
       }
     ],
     "openFlags": [
+      {
+        "id": "npveWorkflows_navFamilyHomeBlocksShell",
+        "severity": "medium",
+        "summary": "The top nav on every encounter frame is a Kit Primary Nav; the library Nav/Bar family exists but its home is unresolved (navComponentsOnCompositionsPage OPEN), so a library-consuming page shell cannot start with it.",
+        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
+      },
       {
         "id": "npveWorkflows_rightDockedPanelConvention",
         "severity": "medium",
@@ -992,12 +996,6 @@
         "discoveredDuring": null
       },
       {
-        "id": "npvePatientSummary_feedbackThumbMapping",
-        "severity": "medium",
-        "summary": "Source Error/Entry shows selected filled thumbs-up; library has only Icon/ThumbUpOutlined (MUI) 919:4 and Icon/ThumbDownOutlined (MUI) 919:7. Production SummaryFeedback.tsx uses ThumbUpAlt/ThumbUpOffAlt and ThumbDownAlt/ThumbDownOffAlt. Library descriptions explicitly call out the unresolved mismatch.",
-        "discoveredDuring": "npveRebuild_patientSummaryFeedback_2026-09-10"
-      },
-      {
         "id": "libraryThumbAltOutlined_followup_2026_09_10",
         "severity": "medium",
         "summary": "Adjacent RecommendationsFeedback and SuggestReplyControls import ThumbUpAltOutlined/ThumbDownAltOutlined; these two exports remain absent from the live library inventory. Separate bounded follow-up; this batch adds only the four Patient Summary Alt/OffAlt exports.",
@@ -1007,6 +1005,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "3ecc5e47157a8c696d46b04927b90b7f7455473dde5ebee70cfc5d2739cd4f62"
+    "contractSha256": "673382622011cde089b42767b52c9e83364b2c16c4263d0640545d36499ee3b4"
   }
 }

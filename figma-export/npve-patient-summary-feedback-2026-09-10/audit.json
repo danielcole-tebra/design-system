@@ -1,0 +1,75 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "npve-patient-summary-feedback",
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-final.json",
+        "baseline.json"
+      ]
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-final.json",
+        "baseline.json"
+      ]
+    },
+    "referenceCounts": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-final.json",
+        "baseline.json"
+      ]
+    },
+    "componentIdentity": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-final.json",
+        "baseline.json"
+      ]
+    },
+    "propertyReferences": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-final.json",
+        "baseline.json"
+      ]
+    }
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-patient-summary-feedback-2026-09-10/comparison.png",
+    "inspectedByExecutor": true,
+    "observations": [
+      "All three states inspected in standalone live-instance PNGs and final comparison.png; no truncated wording, missing controls or clipping.",
+      "Error/Entry preserves the filled positive thumb, unselected negative thumb, source wording and 0/500 sample count. Placeholder continuation lines cleared.",
+      "Success uses the published green-tinted Alert with icon hidden and a default-color small Icon button/MUI Close action; source blue tint remains visible in comparison.",
+      "All three live instance paints match masters; new authored geometry has no fractions; shared comparison definitions and geometry unchanged."
+    ]
+  },
+  "toolCalls": {
+    "figmaRead": 17,
+    "figmaWrite": 8,
+    "screenshot": 9,
+    "correctionCycles": 2
+  }
+}

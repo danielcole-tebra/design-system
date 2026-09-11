@@ -10,10 +10,8 @@
   "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
  },
  "recordGate": {
-  "inProgress": [
-   "npveRebuild_patientSummaryFeedback_2026-09-10"
-  ],
-  "clear": false,
+  "inProgress": [],
+  "clear": true,
   "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
  },
  "byWorkstream": {
@@ -32,7 +30,7 @@
     "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
     "date": "2026-09-10",
     "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-    "status": "IN PROGRESS — icon publication verified; feedback preflight continues"
+    "status": "DONE — three feedback states verified; awaiting operator review before full sheets"
    }
   },
   "workflow": {
@@ -46,13 +44,13 @@
   }
  },
  "flags": {
-  "active": 232,
-  "resolved": 58
+  "active": 231,
+  "resolved": 59
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "e15dc80ed430bcba0f41f2003def3c90b2fdc007c7c0d8573544c572e665c6b9",
-  "bytes": 1530770
+  "sha256": "8e9fbf02f4864a4df29a167387fd6b1d416c6d89394ba33aaa308359349b1afe",
+  "bytes": 1536852
  }
 }
