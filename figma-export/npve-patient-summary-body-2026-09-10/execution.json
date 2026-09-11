@@ -1,0 +1,184 @@
+{
+  "format": "tebra.design-execution",
+  "version": 2,
+  "workflowRunVersion": 3,
+  "itemId": "npve-patient-summary-body-sheet",
+  "recordId": "npveRebuild_patientSummaryBody_2026-09-10",
+  "provenance": {
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning": "low"
+  },
+  "preflight": {
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "identityEvidence": "figma-export/npve-patient-summary-body-2026-09-10/target-preflight.json",
+    "toolEvidence": "figma-export/npve-patient-summary-body-2026-09-10/alert-preflight.json",
+    "tools": [
+      "mcp__codex_apps__figma_use_figma",
+      "mcp__codex_apps__figma_download_assets"
+    ],
+    "controls": [
+      {
+        "name": "Sidesheet",
+        "component": "279:2446",
+        "properties": {
+          "Placement": "Floating",
+          "Title#279:0": "Patient Summary",
+          "Show back#279:1": false,
+          "Show footer#279:2": false
+        },
+        "evidence": "figma-export/npve-patient-summary-body-2026-09-10/shell-preflight.json"
+      },
+      {
+        "name": "Patient summary content",
+        "component": "654:9853",
+        "properties": {},
+        "evidence": "figma-export/npve-patient-summary-body-2026-09-10/target-preflight.json"
+      },
+      {
+        "name": "Patient summary feedback",
+        "component": "665:10087",
+        "properties": {
+          "State": "Default"
+        },
+        "evidence": "figma-export/npve-patient-summary-body-2026-09-10/target-preflight.json"
+      },
+      {
+        "name": "AI warning Alert",
+        "component": "165:57",
+        "properties": {
+          "variant": "standard",
+          "severity": "warning",
+          "Message#165:0": "AI can make mistakes. Always double check summaries.",
+          "onClose#165:7": false,
+          "icon#745:0": true,
+          "Show title#802:13": false
+        },
+        "evidence": "figma-export/npve-patient-summary-body-2026-09-10/alert-preflight.json"
+      }
+    ]
+  },
+  "appearance": {
+    "specification": "figma-export/npve-patient-summary-body-2026-09-10/appearance.md",
+    "review": {
+      "inspected": true,
+      "render": "figma-export/npve-patient-summary-body-2026-09-10/comparison-states.png",
+      "areas": {
+        "surfaces": "White shell; published warning treatment and approved success tint.",
+        "borders": "Continuous shell, header divider, feedback divider and library alert/field outlines.",
+        "content": "Four clinical sections with source copy and state-specific feedback; hidden source controls excluded.",
+        "states": "Default, Error/Entry and Success only; warning appears in the latter two.",
+        "layout": "550px shell, 518px body, 16px insets and block gaps, radius8; content-driven heights without clipping.",
+        "actions": "Close in header; rating and Submit only in applicable states; no footer/back or hidden Learn More action."
+      },
+      "differences": [
+        {
+          "observation": "Source 8px body insets, 64px header and fixed heights normalized to canonical16px/72px/content-driven shell.",
+          "disposition": "approved",
+          "evidence": "workflow/manifest.json and appearance.md"
+        },
+        {
+          "observation": "Source40px warning uses verified published48px warning Alert; feedback normalizations inherited from operator-reviewed batch.",
+          "disposition": "approved",
+          "evidence": "alert-preflight.json and prior feedback report"
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "kind": "audit interpretation",
+      "description": "Initial generic comparator included root node type COMPONENT versus INSTANCE and the expected shell swap reference. Paint-only comparator and descendant-only counts verify equality; no canvas correction needed.",
+      "evidence": "figma-export/npve-patient-summary-body-2026-09-10/paint-reference-verification.json"
+    }
+  ],
+  "unresolved": [],
+  "milestones": [
+    {
+      "name": "Default sheet",
+      "status": "verified",
+      "nodeIds": [
+        "672:7907",
+        "672:7931",
+        "672:7932"
+      ],
+      "render": "figma-export/npve-patient-summary-body-2026-09-10/rebuild-default.png",
+      "inspected": true
+    },
+    {
+      "name": "Error/Entry sheet",
+      "status": "verified",
+      "nodeIds": [
+        "673:7962",
+        "673:8045",
+        "673:8046"
+      ],
+      "render": "figma-export/npve-patient-summary-body-2026-09-10/rebuild-entry.png",
+      "inspected": true
+    },
+    {
+      "name": "Success sheet",
+      "status": "verified",
+      "nodeIds": [
+        "673:8308",
+        "673:8348",
+        "673:8349"
+      ],
+      "render": "figma-export/npve-patient-summary-body-2026-09-10/rebuild-success.png",
+      "inspected": true
+    },
+    {
+      "name": "Comparisons and additive swap menus",
+      "status": "verified",
+      "nodeIds": [
+        "675:8169",
+        "676:11185",
+        "676:11186",
+        "676:11724",
+        "676:12320"
+      ],
+      "render": "figma-export/npve-patient-summary-body-2026-09-10/comparison-states.png",
+      "inspected": true
+    }
+  ],
+  "nextAction": "Patient Summary family built; operator can review complete sheet comparisons. Psychotherapy Note and Flowsheets remain deferred.",
+  "measurements": {
+    "itemId": "npve-patient-summary-body-sheet",
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning": "low",
+    "turnId": "01a090f2-6554-7f01-b552-a2019b740bc9",
+    "startedAt": "2026-09-11T14:49:59.931Z",
+    "measuredThrough": "2026-09-11T15:07:35.035Z",
+    "elapsedSeconds": 1055.104,
+    "assistantUserTurns": 1,
+    "modelResponses": 32,
+    "topLevelToolCalls": 31,
+    "figmaReads": 21,
+    "figmaWrites": 8,
+    "uploadAllocations": 1,
+    "screenshots": 10,
+    "correctionCycles": 0,
+    "auditInterpretationCorrections": 1,
+    "tokens": {
+      "input": 2982913,
+      "cachedInput": 2875648,
+      "uncachedInput": 107265,
+      "output": 24260,
+      "reasoningOutput": 696,
+      "total": 3007173
+    },
+    "credits": {
+      "baseline": 143,
+      "endingReading": null,
+      "delta": null,
+      "source": "Operator-reported after suspected reset; no verified run interval"
+    },
+    "countEvidence": {
+      "reads": "11 Plugin API reads + 10 PNG exports",
+      "writes": "5 Plugin API mutations + 3 guarded image POSTs",
+      "screenshots": "3 source + 3 live sheets + 3 individual comparisons + combined comparison"
+    },
+    "note": "Observed prefix excludes subsequent closeout and final response. Per-response IDs deduplicated; cached input and reasoning output are subsets. Startup guessed medium provenance corrected to session-observed low; no credit conversion inferred."
+  }
+}

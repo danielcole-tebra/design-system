@@ -1009,6 +1009,15 @@
    "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
    "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison",
    "recordSha256": "a230fe0ab2a56da32679f249d0241722027abed444eb7c20bafa1929cfbe4910"
+  },
+  {
+   "id": "npveRebuild_patientSummaryBody_2026-09-10",
+   "sequence": 104,
+   "date": "2026-09-10",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
+   "status": "DONE — three full Patient Summary sheets verified; family build complete",
+   "recordSha256": "c77e2c58da3cc06f2ad52e2d9d1581c02ca6446bc7a2628e6d84f8c2450076ed"
   }
  ],
  "flags": {
@@ -1314,8 +1323,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 104,
-  "aggregateTopLevelKeys": 118,
-  "nextRecordSequence": 104
+  "records": 105,
+  "aggregateTopLevelKeys": 119,
+  "nextRecordSequence": 105
  }
 }

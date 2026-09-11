@@ -1,0 +1,123 @@
+{
+  "pages": [
+    {
+      "id": "118:250",
+      "name": "Cover"
+    },
+    {
+      "id": "145:2",
+      "name": "Foundations"
+    },
+    {
+      "id": "259:2879",
+      "name": "Reference"
+    },
+    {
+      "id": "259:2873",
+      "name": "Actions"
+    },
+    {
+      "id": "259:2874",
+      "name": "Inputs"
+    },
+    {
+      "id": "259:2875",
+      "name": "Data display"
+    },
+    {
+      "id": "259:2876",
+      "name": "Feedback"
+    },
+    {
+      "id": "259:2877",
+      "name": "Surfaces & navigation"
+    },
+    {
+      "id": "259:2878",
+      "name": "Icons & illustrations"
+    },
+    {
+      "id": "446:2",
+      "name": "Compositions"
+    },
+    {
+      "id": "489:2",
+      "name": "Layouts"
+    }
+  ],
+  "components": [
+    {
+      "id": "165:57",
+      "name": "Alert",
+      "key": "d97e12577a5662f35e49275eec702a6bd446efa8",
+      "componentPropertyDefinitions": {
+        "Message#165:0": {
+          "type": "TEXT",
+          "defaultValue": "This is an alert message."
+        },
+        "onClose#165:7": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "icon#745:0": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Title#802:0": {
+          "type": "TEXT",
+          "defaultValue": "Alert title"
+        },
+        "Show title#802:13": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "action#802:26": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "76:11",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "cfb726c79b456d52901243b7c33839efd0780a93"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "7ebea5d7ce6ecfdaef84d177efa64196f654717d"
+            }
+          ]
+        },
+        "variant": {
+          "type": "VARIANT",
+          "defaultValue": "standard",
+          "variantOptions": [
+            "standard",
+            "filled",
+            "outlined"
+          ]
+        },
+        "severity": {
+          "type": "VARIANT",
+          "defaultValue": "info",
+          "variantOptions": [
+            "success",
+            "error",
+            "info",
+            "warning"
+          ]
+        }
+      }
+    }
+  ],
+  "variants": [
+    {
+      "id": "165:21",
+      "name": "variant=standard, severity=warning",
+      "key": "3b085100fb7571f48d46d24028243a5118ab95de",
+      "width": 420,
+      "height": 48
+    }
+  ]
+}

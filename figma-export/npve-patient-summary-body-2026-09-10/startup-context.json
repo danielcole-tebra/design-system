@@ -1,0 +1,9 @@
+{
+  "command": "node scripts/workflow/measure-context.js",
+  "legacyBytes": 1557986,
+  "leanBytes": 157541,
+  "reductionPercent": 89.9,
+  "targetPercent": 50,
+  "passed": true,
+  "manifestItems": 12
+}

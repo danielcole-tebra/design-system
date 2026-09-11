@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T14:17:59.146Z",
+  "generatedAt": "2026-09-11T15:07:49.683Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "8e9fbf02f4864a4df29a167387fd6b1d416c6d89394ba33aaa308359349b1afe",
+      "sha256": "f031f27c74357101696cffc8d32eae76054aaa0938b96f2e07eaf5e0467a92f8",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "106d107a6993ad6f2a0391a7633f1da46741782fcd871c807ef14506be35fb4b"
+        "sha256": "c3c0611deab984873b0c415347eda9082c61613ecf0114af0af485220b0d63c8"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "ac42edf42d453161f76ee2d1880444535b6b8aac10e941ad4e87bbc39bdc36b6"
+        "sha256": "2ee5e2314c714f6d910d289ae367e49aa7f2294acd1ff22b43d3c89fdcf648e1"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 104,
+      "records": 105,
       "flags": {
         "active": 231,
         "resolved": 59
@@ -321,11 +321,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "workflow_creditResetObservation_2026-09-10",
+      "id": "npveRebuild_patientSummaryBody_2026-09-10",
       "date": "2026-09-10",
-      "workstream": "workflow",
-      "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
-      "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
+      "workstream": "npve",
+      "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
+      "status": "DONE — three full Patient Summary sheets verified; family build complete"
     },
     "recordGate": {
       "inProgress": [],
@@ -343,12 +343,12 @@
         }
       },
       "npve": {
-        "count": 66,
+        "count": 67,
         "latest": {
-          "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
+          "id": "npveRebuild_patientSummaryBody_2026-09-10",
           "date": "2026-09-10",
-          "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-          "status": "DONE — three feedback states verified; awaiting operator review before full sheets"
+          "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
+          "status": "DONE — three full Patient Summary sheets verified; family build complete"
         }
       },
       "workflow": {
@@ -744,17 +744,6 @@
     ],
     "recentRecords": [
       {
-        "id": "schemasplit_phase8_2026-09-08",
-        "path": "records/workflow/2026-09-08/schemasplit_phase8_2026-09-08.json",
-        "status": "DONE. Monolithic design-system-schema.json split into an append-only record store: 91 records migrated verbatim to records/<workstream>/<date>/<id>.json, 285 flags split 227 active / 58 resolved, 13 foundation sections to foundation/; the aggregate regenerated from the store is byte-identical to the pre-split original with zero count deltas; record gate, contract, freshness digests, validate-record and batch guards read the store; docs updated; backup policy surfaced for the operator, not changed. This record is the first written into the new structure.",
-        "date": "2026-09-08",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/schema-split-phase8-2026-09-08/report.md",
-        "target": null
-      },
-      {
         "id": "backupPolicyB_2026-09-08",
         "path": "records/workflow/2026-09-08/backupPolicyB_2026-09-08.json",
         "status": "DONE. Backup policy B adopted on the operator's decision: the backup is the immutable, committed record files plus milestone tags at each workstream close or weekly, whichever comes first. Agent rule 7 amended, milestone tooling and weekly check added, docs updated; the last old-style backup was taken before the change. The first milestone tag follows the commit carrying this record.",
@@ -877,6 +866,17 @@
         "geometry": null,
         "decision": null,
         "report": "figma-export/workflow-credit-reset-2026-09-10/report.md",
+        "target": null
+      },
+      {
+        "id": "npveRebuild_patientSummaryBody_2026-09-10",
+        "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
+        "status": "DONE — three full Patient Summary sheets verified; family build complete",
+        "date": null,
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-patient-summary-body-2026-09-10/report.md",
         "target": null
       }
     ],
@@ -1005,6 +1005,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "673382622011cde089b42767b52c9e83364b2c16c4263d0640545d36499ee3b4"
+    "contractSha256": "d9f7c02e704098ab45a1baee13a40b1949bb60d81212b42c1525bb2c6c0644d3"
   }
 }

@@ -1,0 +1,1743 @@
+{
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Cover"
+    },
+    {
+      "id": "3:2",
+      "name": "Templates"
+    },
+    {
+      "id": "27:2",
+      "name": "Screens"
+    },
+    {
+      "id": "126:2",
+      "name": "Archive"
+    }
+  ],
+  "components": [
+    {
+      "id": "279:2446",
+      "key": "65afae899831b798e475b9471d6d694ac8088586",
+      "name": "Sidesheet",
+      "componentPropertyDefinitions": {
+        "Title#279:0": {
+          "type": "TEXT",
+          "defaultValue": "Title"
+        },
+        "Show back#279:1": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show footer#279:2": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show secondary action#279:3": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show tertiary action#279:4": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Body content#279:5": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "26:221",
+          "preferredValues": [
+            {
+              "type": "COMPONENT_SET",
+              "key": "ad381862a96a6d12cd2a85ddad9431763a204d81"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "1bba811839fbc55c60d41d3da7ee083419511bd4"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "970af653563a2d05132165b3c761f1d7314503b9"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "efb161efc43dc93e0d0e2c7ec5941b130c21b2a9"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2fb69a0852237e7f31dd6e3b0601431abbbed411"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "eb7fa1dfebcfdf206e969d990809a4aee0b4296a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "bd771c1d00c68e2a4348ce6211c5e0927c537453"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "26281bc6e71f96e38e17b6f2785f9fbc88062992"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "62016becae42f82f103ab5eaa2a82e2f9dafecd1"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "c88ab164bc4151c9fc5fd6c128c37f91858754bd"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "7369c5ea35b04599ba8710b383c205a0fe432b61"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "80cd7a1fddb1725e47368d5a6e961d1fe4567c8e"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ff6257d5e342824bbc2612385aae82765bf1886b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ad521d8e34ac8c0f10ee67daa917e3ebaf011ea8"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "f217ea529701694d73c504f60d0d38ff61286f94"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "bd7d6173a78a666f329bbb7349d5d816174a6146"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "eb15da5063ba552813968d65675fdc30ef177dc3"
+            }
+          ]
+        },
+        "Primary action#279:6": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "155:1204",
+          "preferredValues": []
+        },
+        "Secondary action#279:7": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "155:1222",
+          "preferredValues": []
+        },
+        "Tertiary action#279:8": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "155:1192",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "860c2ac68e4f59a56d5a658f43fb53edb291632a"
+            }
+          ]
+        },
+        "Show primary action#279:9": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show full-width action#279:10": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Full-width action#279:11": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "248:1827",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "0cb38a1b31e83e87e11b1f388398cade29febebf"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "550289b0f1464b8fe4ee9fa2cd4893e06636fa34"
+            }
+          ]
+        },
+        "Placement": {
+          "type": "VARIANT",
+          "defaultValue": "Floating",
+          "variantOptions": [
+            "Floating",
+            "Docked right",
+            "Docked left"
+          ]
+        }
+      }
+    }
+  ],
+  "shells": [
+    {
+      "id": "6:65",
+      "name": "Placement=Floating",
+      "type": "COMPONENT",
+      "width": 550,
+      "height": 600,
+      "visible": true,
+      "layoutMode": "VERTICAL",
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sizing": "FIXED",
+      "radius": 8,
+      "children": [
+        {
+          "id": "6:66",
+          "name": "Header",
+          "type": "FRAME",
+          "width": 550,
+          "height": 72,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            16,
+            8,
+            16,
+            16
+          ],
+          "sizing": "HUG",
+          "radius": 0,
+          "children": [
+            {
+              "id": "6:67",
+              "name": "Back",
+              "type": "INSTANCE",
+              "width": 40,
+              "height": 40,
+              "visible": false,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "sizing": "FIXED",
+              "radius": 20,
+              "children": [
+                {
+                  "id": "I6:67;170:6",
+                  "name": "Icon/LeftCaret",
+                  "type": "INSTANCE",
+                  "width": 24,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": "NONE",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            },
+            {
+              "id": "6:73",
+              "name": "Title",
+              "type": "TEXT",
+              "width": 478,
+              "height": 32,
+              "visible": true,
+              "layoutMode": null,
+              "padding": null,
+              "sizing": "HUG",
+              "radius": null
+            },
+            {
+              "id": "6:74",
+              "name": "Close",
+              "type": "INSTANCE",
+              "width": 40,
+              "height": 40,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "sizing": "FIXED",
+              "radius": 20,
+              "children": [
+                {
+                  "id": "I6:74;170:6",
+                  "name": "Icon/CloseOutlined",
+                  "type": "INSTANCE",
+                  "width": 24,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": "NONE",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6:78",
+          "name": "Header divider",
+          "type": "INSTANCE",
+          "width": 550,
+          "height": 1,
+          "visible": true,
+          "layoutMode": "NONE",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sizing": "FIXED",
+          "radius": 0,
+          "children": []
+        },
+        {
+          "id": "6:79",
+          "name": "Body",
+          "type": "FRAME",
+          "width": 550,
+          "height": 456,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "sizing": "FILL",
+          "radius": 0,
+          "children": [
+            {
+              "id": "6:80",
+              "name": "Body content",
+              "type": "INSTANCE",
+              "width": 518,
+              "height": 385,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sizing": "HUG",
+              "radius": 0,
+              "children": [
+                {
+                  "id": "I6:80;26:222",
+                  "name": "Search field",
+                  "type": "INSTANCE",
+                  "width": 518,
+                  "height": 40,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                },
+                {
+                  "id": "I6:80;51:307",
+                  "name": "Tabs strip",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 49,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                },
+                {
+                  "id": "I6:80;26:259",
+                  "name": "Section title",
+                  "type": "TEXT",
+                  "width": 518,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": null,
+                  "padding": null,
+                  "sizing": "HUG",
+                  "radius": null
+                },
+                {
+                  "id": "I6:80;26:260",
+                  "name": "Rows",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 224,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6:82",
+          "name": "Footer",
+          "type": "FRAME",
+          "width": 550,
+          "height": 71,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sizing": "HUG",
+          "radius": 0,
+          "children": [
+            {
+              "id": "6:83",
+              "name": "Footer divider",
+              "type": "INSTANCE",
+              "width": 550,
+              "height": 1,
+              "visible": true,
+              "layoutMode": "NONE",
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sizing": "FIXED",
+              "radius": 0,
+              "children": []
+            },
+            {
+              "id": "6:84",
+              "name": "Actions",
+              "type": "FRAME",
+              "width": 550,
+              "height": 70,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                16,
+                8,
+                16,
+                8
+              ],
+              "sizing": "HUG",
+              "radius": 0,
+              "children": [
+                {
+                  "id": "6:85",
+                  "name": "Secondary action",
+                  "type": "INSTANCE",
+                  "width": 68,
+                  "height": 36,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    6,
+                    8,
+                    6,
+                    8
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "6:93",
+                  "name": "Tertiary action",
+                  "type": "INSTANCE",
+                  "width": 176,
+                  "height": 38,
+                  "visible": false,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    7,
+                    17,
+                    7,
+                    17
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "6:101",
+                  "name": "Primary action",
+                  "type": "INSTANCE",
+                  "width": 70,
+                  "height": 38,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    7,
+                    17,
+                    7,
+                    17
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "252:2211",
+                  "name": "Full-width action",
+                  "type": "INSTANCE",
+                  "width": 534,
+                  "height": 38,
+                  "visible": false,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    0,
+                    8,
+                    0,
+                    8
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "279:2416",
+      "name": "Placement=Docked right",
+      "type": "COMPONENT",
+      "width": 550,
+      "height": 600,
+      "visible": true,
+      "layoutMode": "VERTICAL",
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sizing": "FIXED",
+      "children": [
+        {
+          "id": "279:2417",
+          "name": "Header",
+          "type": "FRAME",
+          "width": 550,
+          "height": 72,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            16,
+            8,
+            16,
+            16
+          ],
+          "sizing": "HUG",
+          "radius": 0,
+          "children": [
+            {
+              "id": "279:2418",
+              "name": "Back",
+              "type": "INSTANCE",
+              "width": 40,
+              "height": 40,
+              "visible": false,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "sizing": "FIXED",
+              "radius": 20,
+              "children": [
+                {
+                  "id": "I279:2418;170:6",
+                  "name": "Icon/LeftCaret",
+                  "type": "INSTANCE",
+                  "width": 24,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": "NONE",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            },
+            {
+              "id": "279:2419",
+              "name": "Title",
+              "type": "TEXT",
+              "width": 478,
+              "height": 32,
+              "visible": true,
+              "layoutMode": null,
+              "padding": null,
+              "sizing": "HUG",
+              "radius": null
+            },
+            {
+              "id": "279:2420",
+              "name": "Close",
+              "type": "INSTANCE",
+              "width": 40,
+              "height": 40,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "sizing": "FIXED",
+              "radius": 20,
+              "children": [
+                {
+                  "id": "I279:2420;170:6",
+                  "name": "Icon/CloseOutlined",
+                  "type": "INSTANCE",
+                  "width": 24,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": "NONE",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "279:2421",
+          "name": "Header divider",
+          "type": "INSTANCE",
+          "width": 550,
+          "height": 1,
+          "visible": true,
+          "layoutMode": "NONE",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sizing": "FIXED",
+          "radius": 0,
+          "children": []
+        },
+        {
+          "id": "279:2422",
+          "name": "Body",
+          "type": "FRAME",
+          "width": 550,
+          "height": 456,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "sizing": "FILL",
+          "radius": 0,
+          "children": [
+            {
+              "id": "279:2423",
+              "name": "Body content",
+              "type": "INSTANCE",
+              "width": 518,
+              "height": 385,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sizing": "HUG",
+              "radius": 0,
+              "children": [
+                {
+                  "id": "I279:2423;26:222",
+                  "name": "Search field",
+                  "type": "INSTANCE",
+                  "width": 518,
+                  "height": 40,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                },
+                {
+                  "id": "I279:2423;51:307",
+                  "name": "Tabs strip",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 49,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                },
+                {
+                  "id": "I279:2423;26:259",
+                  "name": "Section title",
+                  "type": "TEXT",
+                  "width": 518,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": null,
+                  "padding": null,
+                  "sizing": "HUG",
+                  "radius": null
+                },
+                {
+                  "id": "I279:2423;26:260",
+                  "name": "Rows",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 224,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "279:2424",
+          "name": "Footer",
+          "type": "FRAME",
+          "width": 550,
+          "height": 71,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sizing": "HUG",
+          "radius": 0,
+          "children": [
+            {
+              "id": "279:2425",
+              "name": "Footer divider",
+              "type": "INSTANCE",
+              "width": 550,
+              "height": 1,
+              "visible": true,
+              "layoutMode": "NONE",
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sizing": "FIXED",
+              "radius": 0,
+              "children": []
+            },
+            {
+              "id": "279:2426",
+              "name": "Actions",
+              "type": "FRAME",
+              "width": 550,
+              "height": 70,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                16,
+                8,
+                16,
+                8
+              ],
+              "sizing": "HUG",
+              "radius": 0,
+              "children": [
+                {
+                  "id": "279:2427",
+                  "name": "Secondary action",
+                  "type": "INSTANCE",
+                  "width": 68,
+                  "height": 36,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    6,
+                    8,
+                    6,
+                    8
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "279:2428",
+                  "name": "Tertiary action",
+                  "type": "INSTANCE",
+                  "width": 176,
+                  "height": 38,
+                  "visible": false,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    7,
+                    17,
+                    7,
+                    17
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "279:2429",
+                  "name": "Primary action",
+                  "type": "INSTANCE",
+                  "width": 70,
+                  "height": 38,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    7,
+                    17,
+                    7,
+                    17
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "279:2430",
+                  "name": "Full-width action",
+                  "type": "INSTANCE",
+                  "width": 534,
+                  "height": 38,
+                  "visible": false,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    0,
+                    8,
+                    0,
+                    8
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "279:2431",
+      "name": "Placement=Docked left",
+      "type": "COMPONENT",
+      "width": 550,
+      "height": 600,
+      "visible": true,
+      "layoutMode": "VERTICAL",
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sizing": "FIXED",
+      "children": [
+        {
+          "id": "279:2432",
+          "name": "Header",
+          "type": "FRAME",
+          "width": 550,
+          "height": 72,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            16,
+            8,
+            16,
+            16
+          ],
+          "sizing": "HUG",
+          "radius": 0,
+          "children": [
+            {
+              "id": "279:2433",
+              "name": "Back",
+              "type": "INSTANCE",
+              "width": 40,
+              "height": 40,
+              "visible": false,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "sizing": "FIXED",
+              "radius": 20,
+              "children": [
+                {
+                  "id": "I279:2433;170:6",
+                  "name": "Icon/LeftCaret",
+                  "type": "INSTANCE",
+                  "width": 24,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": "NONE",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            },
+            {
+              "id": "279:2434",
+              "name": "Title",
+              "type": "TEXT",
+              "width": 478,
+              "height": 32,
+              "visible": true,
+              "layoutMode": null,
+              "padding": null,
+              "sizing": "HUG",
+              "radius": null
+            },
+            {
+              "id": "279:2435",
+              "name": "Close",
+              "type": "INSTANCE",
+              "width": 40,
+              "height": 40,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "sizing": "FIXED",
+              "radius": 20,
+              "children": [
+                {
+                  "id": "I279:2435;170:6",
+                  "name": "Icon/CloseOutlined",
+                  "type": "INSTANCE",
+                  "width": 24,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": "NONE",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "279:2436",
+          "name": "Header divider",
+          "type": "INSTANCE",
+          "width": 550,
+          "height": 1,
+          "visible": true,
+          "layoutMode": "NONE",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sizing": "FIXED",
+          "radius": 0,
+          "children": []
+        },
+        {
+          "id": "279:2437",
+          "name": "Body",
+          "type": "FRAME",
+          "width": 550,
+          "height": 456,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "sizing": "FILL",
+          "radius": 0,
+          "children": [
+            {
+              "id": "279:2438",
+              "name": "Body content",
+              "type": "INSTANCE",
+              "width": 518,
+              "height": 385,
+              "visible": true,
+              "layoutMode": "VERTICAL",
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sizing": "HUG",
+              "radius": 0,
+              "children": [
+                {
+                  "id": "I279:2438;26:222",
+                  "name": "Search field",
+                  "type": "INSTANCE",
+                  "width": 518,
+                  "height": 40,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                },
+                {
+                  "id": "I279:2438;51:307",
+                  "name": "Tabs strip",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 49,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                },
+                {
+                  "id": "I279:2438;26:259",
+                  "name": "Section title",
+                  "type": "TEXT",
+                  "width": 518,
+                  "height": 24,
+                  "visible": true,
+                  "layoutMode": null,
+                  "padding": null,
+                  "sizing": "HUG",
+                  "radius": null
+                },
+                {
+                  "id": "I279:2438;26:260",
+                  "name": "Rows",
+                  "type": "FRAME",
+                  "width": 518,
+                  "height": 224,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "sizing": "HUG",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "279:2439",
+          "name": "Footer",
+          "type": "FRAME",
+          "width": 550,
+          "height": 71,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sizing": "HUG",
+          "radius": 0,
+          "children": [
+            {
+              "id": "279:2440",
+              "name": "Footer divider",
+              "type": "INSTANCE",
+              "width": 550,
+              "height": 1,
+              "visible": true,
+              "layoutMode": "NONE",
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sizing": "FIXED",
+              "radius": 0,
+              "children": []
+            },
+            {
+              "id": "279:2441",
+              "name": "Actions",
+              "type": "FRAME",
+              "width": 550,
+              "height": 70,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "padding": [
+                16,
+                8,
+                16,
+                8
+              ],
+              "sizing": "HUG",
+              "radius": 0,
+              "children": [
+                {
+                  "id": "279:2442",
+                  "name": "Secondary action",
+                  "type": "INSTANCE",
+                  "width": 68,
+                  "height": 36,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    6,
+                    8,
+                    6,
+                    8
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "279:2443",
+                  "name": "Tertiary action",
+                  "type": "INSTANCE",
+                  "width": 176,
+                  "height": 38,
+                  "visible": false,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    7,
+                    17,
+                    7,
+                    17
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "279:2444",
+                  "name": "Primary action",
+                  "type": "INSTANCE",
+                  "width": 70,
+                  "height": 38,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    7,
+                    17,
+                    7,
+                    17
+                  ],
+                  "sizing": "HUG",
+                  "radius": 24
+                },
+                {
+                  "id": "279:2445",
+                  "name": "Full-width action",
+                  "type": "INSTANCE",
+                  "width": 534,
+                  "height": 38,
+                  "visible": false,
+                  "layoutMode": "HORIZONTAL",
+                  "padding": [
+                    0,
+                    8,
+                    0,
+                    8
+                  ],
+                  "sizing": "FIXED",
+                  "radius": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "baseline": [
+    {
+      "id": "0:1",
+      "name": "Cover",
+      "unbound": [
+        {
+          "id": "1:5",
+          "field": "fills"
+        }
+      ]
+    },
+    {
+      "id": "3:2",
+      "name": "Templates",
+      "unbound": [
+        {
+          "id": "126:2020",
+          "field": "fills"
+        },
+        {
+          "id": "126:2020",
+          "field": "strokes"
+        },
+        {
+          "id": "126:2021",
+          "field": "fills"
+        },
+        {
+          "id": "126:2021",
+          "field": "strokes"
+        },
+        {
+          "id": "126:2022",
+          "field": "fills"
+        },
+        {
+          "id": "126:2022",
+          "field": "strokes"
+        },
+        {
+          "id": "126:2023",
+          "field": "fills"
+        },
+        {
+          "id": "126:2023",
+          "field": "strokes"
+        },
+        {
+          "id": "153:1185",
+          "field": "fills"
+        },
+        {
+          "id": "153:1185",
+          "field": "strokes"
+        },
+        {
+          "id": "219:2067",
+          "field": "fills"
+        },
+        {
+          "id": "309:4528",
+          "field": "fills"
+        },
+        {
+          "id": "309:4528",
+          "field": "strokes"
+        },
+        {
+          "id": "316:3411",
+          "field": "fills"
+        },
+        {
+          "id": "316:3411",
+          "field": "strokes"
+        },
+        {
+          "id": "337:3880",
+          "field": "fills"
+        },
+        {
+          "id": "337:3880",
+          "field": "strokes"
+        },
+        {
+          "id": "346:3079",
+          "field": "fills"
+        },
+        {
+          "id": "346:3079",
+          "field": "strokes"
+        },
+        {
+          "id": "352:3205",
+          "field": "fills"
+        },
+        {
+          "id": "352:3205",
+          "field": "strokes"
+        },
+        {
+          "id": "370:3340",
+          "field": "fills"
+        },
+        {
+          "id": "370:3340",
+          "field": "strokes"
+        },
+        {
+          "id": "388:3433",
+          "field": "fills"
+        },
+        {
+          "id": "388:3433",
+          "field": "strokes"
+        },
+        {
+          "id": "412:3888",
+          "field": "fills"
+        },
+        {
+          "id": "412:3888",
+          "field": "strokes"
+        },
+        {
+          "id": "424:4085",
+          "field": "fills"
+        },
+        {
+          "id": "424:4085",
+          "field": "strokes"
+        },
+        {
+          "id": "441:4993",
+          "field": "fills"
+        },
+        {
+          "id": "441:4993",
+          "field": "strokes"
+        },
+        {
+          "id": "518:5771",
+          "field": "fills"
+        },
+        {
+          "id": "518:5771",
+          "field": "strokes"
+        },
+        {
+          "id": "534:5804",
+          "field": "fills"
+        },
+        {
+          "id": "534:5804",
+          "field": "strokes"
+        },
+        {
+          "id": "546:5870",
+          "field": "fills"
+        },
+        {
+          "id": "546:5870",
+          "field": "strokes"
+        },
+        {
+          "id": "580:6012",
+          "field": "fills"
+        },
+        {
+          "id": "580:6012",
+          "field": "strokes"
+        },
+        {
+          "id": "586:6413",
+          "field": "fills"
+        },
+        {
+          "id": "586:6413",
+          "field": "strokes"
+        },
+        {
+          "id": "634:6807",
+          "field": "fills"
+        },
+        {
+          "id": "634:6807",
+          "field": "strokes"
+        },
+        {
+          "id": "636:2",
+          "field": "fills"
+        },
+        {
+          "id": "636:2",
+          "field": "strokes"
+        },
+        {
+          "id": "642:7556",
+          "field": "fills"
+        },
+        {
+          "id": "642:7556",
+          "field": "strokes"
+        },
+        {
+          "id": "654:9852",
+          "field": "strokes"
+        }
+      ]
+    },
+    {
+      "id": "27:2",
+      "name": "Screens",
+      "unbound": [
+        {
+          "id": "126:2024",
+          "field": "fills"
+        },
+        {
+          "id": "126:2024",
+          "field": "strokes"
+        },
+        {
+          "id": "156:2427",
+          "field": "fills"
+        },
+        {
+          "id": "156:2427",
+          "field": "strokes"
+        },
+        {
+          "id": "160:3168",
+          "field": "fills"
+        },
+        {
+          "id": "160:3168",
+          "field": "strokes"
+        },
+        {
+          "id": "254:3706",
+          "field": "fills"
+        },
+        {
+          "id": "254:3706",
+          "field": "strokes"
+        },
+        {
+          "id": "309:4530",
+          "field": "fills"
+        },
+        {
+          "id": "309:4530",
+          "field": "strokes"
+        },
+        {
+          "id": "318:6739",
+          "field": "fills"
+        },
+        {
+          "id": "318:6739",
+          "field": "strokes"
+        },
+        {
+          "id": "339:6480",
+          "field": "fills"
+        },
+        {
+          "id": "339:6480",
+          "field": "strokes"
+        },
+        {
+          "id": "346:5992",
+          "field": "fills"
+        },
+        {
+          "id": "346:5992",
+          "field": "strokes"
+        },
+        {
+          "id": "356:6235",
+          "field": "fills"
+        },
+        {
+          "id": "356:6235",
+          "field": "strokes"
+        },
+        {
+          "id": "378:5612",
+          "field": "fills"
+        },
+        {
+          "id": "378:5612",
+          "field": "strokes"
+        },
+        {
+          "id": "393:7688",
+          "field": "fills"
+        },
+        {
+          "id": "393:7688",
+          "field": "strokes"
+        },
+        {
+          "id": "415:7207",
+          "field": "fills"
+        },
+        {
+          "id": "415:7207",
+          "field": "strokes"
+        },
+        {
+          "id": "429:6859",
+          "field": "fills"
+        },
+        {
+          "id": "429:6859",
+          "field": "strokes"
+        },
+        {
+          "id": "446:9236",
+          "field": "fills"
+        },
+        {
+          "id": "446:9236",
+          "field": "strokes"
+        },
+        {
+          "id": "521:7834",
+          "field": "fills"
+        },
+        {
+          "id": "521:7834",
+          "field": "strokes"
+        },
+        {
+          "id": "537:9914",
+          "field": "fills"
+        },
+        {
+          "id": "537:9914",
+          "field": "strokes"
+        },
+        {
+          "id": "561:9876",
+          "field": "fills"
+        },
+        {
+          "id": "561:9876",
+          "field": "strokes"
+        },
+        {
+          "id": "581:11116",
+          "field": "fills"
+        },
+        {
+          "id": "581:11116",
+          "field": "strokes"
+        },
+        {
+          "id": "586:11764",
+          "field": "fills"
+        },
+        {
+          "id": "586:11764",
+          "field": "strokes"
+        },
+        {
+          "id": "634:12489",
+          "field": "fills"
+        },
+        {
+          "id": "634:12489",
+          "field": "strokes"
+        },
+        {
+          "id": "638:13052",
+          "field": "fills"
+        },
+        {
+          "id": "638:13052",
+          "field": "strokes"
+        },
+        {
+          "id": "656:13013",
+          "field": "strokes"
+        }
+      ]
+    },
+    {
+      "id": "126:2",
+      "name": "Archive",
+      "unbound": [
+        {
+          "id": "126:2025",
+          "field": "fills"
+        },
+        {
+          "id": "126:2025",
+          "field": "strokes"
+        },
+        {
+          "id": "126:2026",
+          "field": "fills"
+        },
+        {
+          "id": "126:2026",
+          "field": "strokes"
+        },
+        {
+          "id": "126:2027",
+          "field": "fills"
+        },
+        {
+          "id": "126:2027",
+          "field": "strokes"
+        },
+        {
+          "id": "142:996",
+          "field": "fills"
+        },
+        {
+          "id": "142:996",
+          "field": "strokes"
+        },
+        {
+          "id": "407:5492",
+          "field": "fills"
+        },
+        {
+          "id": "407:5492",
+          "field": "strokes"
+        },
+        {
+          "id": "570:10455",
+          "field": "fills"
+        },
+        {
+          "id": "570:10455",
+          "field": "strokes"
+        },
+        {
+          "id": "597:11595",
+          "field": "fills"
+        },
+        {
+          "id": "597:11595",
+          "field": "strokes"
+        },
+        {
+          "id": "250:3518",
+          "field": "fills"
+        },
+        {
+          "id": "250:3518",
+          "field": "strokes"
+        },
+        {
+          "id": "309:4529",
+          "field": "fills"
+        },
+        {
+          "id": "309:4529",
+          "field": "strokes"
+        },
+        {
+          "id": "597:11596",
+          "field": "fills"
+        },
+        {
+          "id": "597:11596",
+          "field": "strokes"
+        }
+      ]
+    }
+  ]
+}

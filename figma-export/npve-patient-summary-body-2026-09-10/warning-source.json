@@ -1,0 +1,362 @@
+[
+  {
+    "id": "3813:15781",
+    "name": "Contextual Alert",
+    "type": "INSTANCE",
+    "visible": true,
+    "width": 534,
+    "height": 40,
+    "props": {
+      "Type": {
+        "value": "Warning",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "Dismissible": {
+        "value": "False",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "Text Button": {
+        "value": "False",
+        "type": "VARIANT",
+        "boundVariables": {}
+      }
+    },
+    "fills": [
+      {
+        "type": "SOLID",
+        "visible": false,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "boundVariables": {}
+      }
+    ],
+    "children": [
+      {
+        "id": "I3813:15781;3502:10057",
+        "name": "_alerts template",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 534,
+        "height": 40,
+        "props": {},
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": false,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "children": [
+          {
+            "id": "I3813:15781;3502:10057;3002:5566",
+            "name": "alert",
+            "type": "FRAME",
+            "visible": true,
+            "width": 534,
+            "height": 40,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "children": [
+              {
+                "id": "I3813:15781;3502:10057;3019:13382",
+                "name": "Icon",
+                "type": "FRAME",
+                "visible": true,
+                "width": 20,
+                "height": 20,
+                "fills": [],
+                "children": [
+                  {
+                    "id": "I3813:15781;3502:10057;3002:5567",
+                    "name": "warning_filled",
+                    "type": "INSTANCE",
+                    "visible": true,
+                    "width": 20,
+                    "height": 20,
+                    "props": {},
+                    "fills": [],
+                    "children": [
+                      {
+                        "id": "I3813:15781;3502:10057;3002:5567;2914:4906",
+                        "name": "warning",
+                        "type": "FRAME",
+                        "visible": true,
+                        "width": 16.66666603088379,
+                        "height": 16.66666603088379,
+                        "fills": [],
+                        "children": [
+                          {
+                            "id": "I3813:15781;3502:10057;3002:5567;4915:25458",
+                            "name": "warning",
+                            "type": "VECTOR",
+                            "visible": true,
+                            "width": 16.537853240966797,
+                            "height": 14.543338775634766,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 1,
+                                  "g": 0.5529412031173706,
+                                  "b": 0.4313725531101227
+                                },
+                                "boundVariables": {}
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "I3813:15781;3502:10057;3019:14125",
+                "name": "Message",
+                "type": "FRAME",
+                "visible": true,
+                "width": 479,
+                "height": 18,
+                "fills": [],
+                "children": [
+                  {
+                    "id": "I3813:15781;3502:10057;3002:5568",
+                    "name": "This is an informational snack bar.",
+                    "type": "TEXT",
+                    "visible": true,
+                    "width": 469,
+                    "height": 18,
+                    "text": "AI can make mistakes. Always double check summaries.",
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0
+                        },
+                        "boundVariables": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3813:15792",
+    "name": "Contextual Alert",
+    "type": "INSTANCE",
+    "visible": true,
+    "width": 534,
+    "height": 40,
+    "props": {
+      "Type": {
+        "value": "Warning",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "Dismissible": {
+        "value": "False",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "Text Button": {
+        "value": "False",
+        "type": "VARIANT",
+        "boundVariables": {}
+      }
+    },
+    "fills": [
+      {
+        "type": "SOLID",
+        "visible": false,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "boundVariables": {}
+      }
+    ],
+    "children": [
+      {
+        "id": "I3813:15792;3502:10057",
+        "name": "_alerts template",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 534,
+        "height": 40,
+        "props": {},
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": false,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "children": [
+          {
+            "id": "I3813:15792;3502:10057;3002:5566",
+            "name": "alert",
+            "type": "FRAME",
+            "visible": true,
+            "width": 534,
+            "height": 40,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "children": [
+              {
+                "id": "I3813:15792;3502:10057;3019:13382",
+                "name": "Icon",
+                "type": "FRAME",
+                "visible": true,
+                "width": 20,
+                "height": 20,
+                "fills": [],
+                "children": [
+                  {
+                    "id": "I3813:15792;3502:10057;3002:5567",
+                    "name": "warning_filled",
+                    "type": "INSTANCE",
+                    "visible": true,
+                    "width": 20,
+                    "height": 20,
+                    "props": {},
+                    "fills": [],
+                    "children": [
+                      {
+                        "id": "I3813:15792;3502:10057;3002:5567;2914:4906",
+                        "name": "warning",
+                        "type": "FRAME",
+                        "visible": true,
+                        "width": 16.66666603088379,
+                        "height": 16.66666603088379,
+                        "fills": [],
+                        "children": [
+                          {
+                            "id": "I3813:15792;3502:10057;3002:5567;4915:25458",
+                            "name": "warning",
+                            "type": "VECTOR",
+                            "visible": true,
+                            "width": 16.537853240966797,
+                            "height": 14.543338775634766,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 1,
+                                  "g": 0.5529412031173706,
+                                  "b": 0.4313725531101227
+                                },
+                                "boundVariables": {}
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "I3813:15792;3502:10057;3019:14125",
+                "name": "Message",
+                "type": "FRAME",
+                "visible": true,
+                "width": 479,
+                "height": 18,
+                "fills": [],
+                "children": [
+                  {
+                    "id": "I3813:15792;3502:10057;3002:5568",
+                    "name": "This is an informational snack bar.",
+                    "type": "TEXT",
+                    "visible": true,
+                    "width": 469,
+                    "height": 18,
+                    "text": "AI can make mistakes. Always double check summaries.",
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0
+                        },
+                        "boundVariables": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

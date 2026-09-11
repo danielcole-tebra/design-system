@@ -1,0 +1,38 @@
+[
+  {
+    "id": "672:7907",
+    "paintsEqual": true,
+    "descendantReferences": [
+      2,
+      2
+    ],
+    "instanceRootReferences": {
+      "mainComponent": "Body content#279:5"
+    },
+    "masterRootReferences": {}
+  },
+  {
+    "id": "673:7962",
+    "paintsEqual": true,
+    "descendantReferences": [
+      30,
+      30
+    ],
+    "instanceRootReferences": {
+      "mainComponent": "Body content#279:5"
+    },
+    "masterRootReferences": {}
+  },
+  {
+    "id": "673:8308",
+    "paintsEqual": true,
+    "descendantReferences": [
+      13,
+      13
+    ],
+    "instanceRootReferences": {
+      "mainComponent": "Body content#279:5"
+    },
+    "masterRootReferences": {}
+  }
+]

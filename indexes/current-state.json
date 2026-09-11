@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "workflow_creditResetObservation_2026-09-10",
+  "id": "npveRebuild_patientSummaryBody_2026-09-10",
   "date": "2026-09-10",
-  "workstream": "workflow",
-  "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
-  "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison"
+  "workstream": "npve",
+  "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
+  "status": "DONE — three full Patient Summary sheets verified; family build complete"
  },
  "recordGate": {
   "inProgress": [],
@@ -25,12 +25,12 @@
    }
   },
   "npve": {
-   "count": 66,
+   "count": 67,
    "latest": {
-    "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
+    "id": "npveRebuild_patientSummaryBody_2026-09-10",
     "date": "2026-09-10",
-    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
-    "status": "DONE — three feedback states verified; awaiting operator review before full sheets"
+    "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
+    "status": "DONE — three full Patient Summary sheets verified; family build complete"
    }
   },
   "workflow": {
@@ -50,7 +50,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "8e9fbf02f4864a4df29a167387fd6b1d416c6d89394ba33aaa308359349b1afe",
-  "bytes": 1536852
+  "sha256": "f031f27c74357101696cffc8d32eae76054aaa0938b96f2e07eaf5e0467a92f8",
+  "bytes": 1543568
  }
 }

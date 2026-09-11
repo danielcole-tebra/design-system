@@ -1,0 +1,750 @@
+{
+  "fileKey": "zVsuhYehoSLLq880qRBFkq",
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Cover"
+    },
+    {
+      "id": "10:15",
+      "name": "-----DESIGNS-----"
+    },
+    {
+      "id": "105:1426",
+      "name": "Workflows"
+    },
+    {
+      "id": "1050:8411",
+      "name": "Error States"
+    },
+    {
+      "id": "3813:14586",
+      "name": "V2:AI Patient Summary"
+    },
+    {
+      "id": "21:320",
+      "name": "-----COMPONENTS-----"
+    },
+    {
+      "id": "21:321",
+      "name": "⚙️ Components"
+    },
+    {
+      "id": "105:1425",
+      "name": "-----ARCHIVE-----"
+    },
+    {
+      "id": "5264:20606",
+      "name": "Module Evolution"
+    },
+    {
+      "id": "4740:14057",
+      "name": "NeuNeu"
+    },
+    {
+      "id": "1424:8259",
+      "name": "Neu"
+    },
+    {
+      "id": "112:4335",
+      "name": "Sandbox"
+    },
+    {
+      "id": "4250:14678",
+      "name": "Misc"
+    },
+    {
+      "id": "12:866",
+      "name": "NoFolder Navigation"
+    },
+    {
+      "id": "10:14",
+      "name": "Folder Navigation"
+    },
+    {
+      "id": "4211:15272",
+      "name": "-----RESEARCH------"
+    },
+    {
+      "id": "4211:15273",
+      "name": "Maps"
+    },
+    {
+      "id": "1236:3155",
+      "name": "Research Framework"
+    }
+  ],
+  "states": [
+    {
+      "tree": {
+        "id": "129:7340",
+        "name": "Page=PatientSummary",
+        "type": "COMPONENT",
+        "w": 550,
+        "h": 894,
+        "visible": true,
+        "children": [
+          {
+            "id": "636:3565",
+            "name": "Breadcrumbs",
+            "type": "FRAME",
+            "w": 550,
+            "h": 64,
+            "visible": true,
+            "children": [
+              {
+                "id": "636:3566",
+                "name": "Patient Summary",
+                "type": "TEXT",
+                "w": 164,
+                "h": 32,
+                "visible": true,
+                "text": "Patient Summary"
+              },
+              {
+                "id": "636:3567",
+                "name": "Frame 758531486",
+                "type": "FRAME",
+                "w": 337.977783203125,
+                "h": 24,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "636:3568",
+                    "name": "Interface, Essential/Delete, Disabled",
+                    "type": "INSTANCE",
+                    "w": 24,
+                    "h": 24,
+                    "visible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "129:7352",
+            "name": "Main Wrap",
+            "type": "FRAME",
+            "w": 550,
+            "h": 830,
+            "visible": true,
+            "children": [
+              {
+                "id": "4068:2915",
+                "name": "Tab Set",
+                "type": "INSTANCE",
+                "w": 534,
+                "h": 56,
+                "visible": false,
+                "children": [
+                  {
+                    "id": "I4068:2915;4470:15120",
+                    "name": "Tab 1",
+                    "type": "FRAME",
+                    "w": 267,
+                    "h": 56,
+                    "visible": true
+                  },
+                  {
+                    "id": "I4068:2915;4470:15119",
+                    "name": "Tab 2",
+                    "type": "FRAME",
+                    "w": 267,
+                    "h": 56,
+                    "visible": true
+                  },
+                  {
+                    "id": "I4068:2915;4470:15121",
+                    "name": "Tab 4",
+                    "type": "FRAME",
+                    "w": 168,
+                    "h": 56,
+                    "visible": false
+                  },
+                  {
+                    "id": "I4068:2915;4470:15122",
+                    "name": "Tab 5",
+                    "type": "FRAME",
+                    "w": 168,
+                    "h": 56,
+                    "visible": false
+                  }
+                ]
+              },
+              {
+                "id": "3813:15624",
+                "name": "Contextual Alert",
+                "type": "INSTANCE",
+                "w": 534,
+                "h": 40,
+                "visible": false,
+                "children": [
+                  {
+                    "id": "I3813:15624;3502:10059",
+                    "name": "_alerts template",
+                    "type": "INSTANCE",
+                    "w": 534,
+                    "h": 40,
+                    "visible": true
+                  }
+                ]
+              },
+              {
+                "id": "4229:14863",
+                "name": "Contextual Alert",
+                "type": "INSTANCE",
+                "w": 534,
+                "h": 40,
+                "visible": false,
+                "children": [
+                  {
+                    "id": "I4229:14863;3502:10057",
+                    "name": "_alerts template",
+                    "type": "INSTANCE",
+                    "w": 534,
+                    "h": 40,
+                    "visible": true
+                  }
+                ]
+              },
+              {
+                "id": "3028:16364",
+                "name": "Summary_Wrap",
+                "type": "FRAME",
+                "w": 534,
+                "h": 708,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "3028:16365",
+                    "name": "Current Situation 32-year-old male presenting for sick visit: sore throat, nasal congestion, and productive cough × 4 days. Low-grade fever (100.4°F) at exam. Rapid strep negative. Clinical impression: viral URI. Supportive care initiated (Acetaminophen 500 mg q6h PRN, Guaifenesin 400 mg q4h PRN). Also being followed for GAD (partially controlled on Sertraline 50 mg, ~2 years) and mild chronic insomnia (Melatonin 5 mg PRN).",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 216,
+                    "visible": true,
+                    "text": "Current Situation\n32-year-old male presenting for sick visit: sore throat, nasal congestion, and productive cough × 4 days. Low-grade fever (100.4°F) at exam.\nRapid strep negative. Clinical impression: viral URI. Supportive care initiated (Acetaminophen 500 mg q6h PRN, Guaifenesin 400 mg q4h PRN).\nAlso being followed for GAD (partially controlled on Sertraline 50 mg, ~2 years) and mild chronic insomnia (Melatonin 5 mg PRN)."
+                  },
+                  {
+                    "id": "3028:16366",
+                    "name": "Key Background Previous Buspirone trial discontinued due to dizziness (2023). Completed 12-session CBT course; continues sleep hygiene practices. Labs (CBC, CMP, TSH) Jan 2026 — within normal limits. Family history: anxiety (mother), hypertension (father).",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 144,
+                    "visible": true,
+                    "text": "Key Background\nPrevious Buspirone trial discontinued due to dizziness (2023).\nCompleted 12-session CBT course; continues sleep hygiene practices.\nLabs (CBC, CMP, TSH) Jan 2026 — within normal limits. Family history: anxiety (mother), hypertension (father)."
+                  },
+                  {
+                    "id": "3028:16367",
+                    "name": "Active Care Plan Sertraline HCl titrated to 75 mg at today's visit. Patient agreeable. Rx sent to CVS Pharmacy · 4521 Main St. Continue Melatonin 5 mg PO QHS PRN for insomnia. Reinforce sleep hygiene. Acetaminophen and Guaifenesin prescribed for URI — return precautions reviewed with patient.",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 168,
+                    "visible": true,
+                    "text": "Active Care Plan\nSertraline HCl titrated to 75 mg at today's visit. Patient agreeable. Rx sent to CVS Pharmacy · 4521 Main St.\nContinue Melatonin 5 mg PO QHS PRN for insomnia. Reinforce sleep hygiene.\nAcetaminophen and Guaifenesin prescribed for URI — return precautions reviewed with patient."
+                  },
+                  {
+                    "id": "3028:16368",
+                    "name": "Progress & Next Steps 2-week follow-up for URI resolution check and Sertraline 75 mg titration response. Monitor mood, anxiety, sleep quality, and functional status. Contact office if worsening mood or new symptoms. Continue CBT techniques for relapse prevention.",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 144,
+                    "visible": true,
+                    "text": "Progress & Next Steps\n2-week follow-up for URI resolution check and Sertraline 75 mg titration response.\nMonitor mood, anxiety, sleep quality, and functional status. Contact office if worsening mood or new symptoms.\nContinue CBT techniques for relapse prevention."
+                  }
+                ]
+              },
+              {
+                "id": "2545:4855",
+                "name": "Frame 758531795",
+                "type": "FRAME",
+                "w": 534,
+                "h": 90,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "2545:4856",
+                    "name": "Frame 758531794",
+                    "type": "FRAME",
+                    "w": 518,
+                    "h": 74,
+                    "visible": true
+                  },
+                  {
+                    "id": "2545:4861",
+                    "name": "Frame 758532108",
+                    "type": "FRAME",
+                    "w": 518,
+                    "h": 170,
+                    "visible": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "texts": [
+        {
+          "id": "636:3566",
+          "text": "Patient Summary",
+          "visible": true
+        },
+        {
+          "id": "I4068:2915;4470:15107;4470:14971;437:2304",
+          "text": "Patient Record",
+          "visible": true
+        },
+        {
+          "id": "I4068:2915;4470:15112;4470:15022;437:2304",
+          "text": "Previous Encounters",
+          "visible": true
+        },
+        {
+          "id": "I4068:2915;4470:15102;4470:15022;437:2304",
+          "text": "This is a Long Tab Title",
+          "visible": true
+        },
+        {
+          "id": "I4068:2915;4470:15097;4470:15087;437:2304",
+          "text": "Disabled Tab",
+          "visible": true
+        },
+        {
+          "id": "I3813:15624;3502:10059;3002:5568",
+          "text": "Failed to retrieve Patient Summary. ",
+          "visible": true
+        },
+        {
+          "id": "I3813:15624;3502:10059;3019:6695",
+          "text": "TRY AGAIN",
+          "visible": true
+        },
+        {
+          "id": "I4229:14863;3502:10057;3002:5568",
+          "text": "AI can make mistakes. Always double check summaries.",
+          "visible": true
+        },
+        {
+          "id": "I4229:14863;3502:10057;3019:6695",
+          "text": "LEARN MORE",
+          "visible": true
+        },
+        {
+          "id": "2545:4857",
+          "text": "How would your rate the accuracy of this summary?",
+          "visible": true
+        },
+        {
+          "id": "2545:4865",
+          "text": "I was hoping I would be able to edit medications directly from this panel",
+          "visible": true
+        },
+        {
+          "id": "I2545:4873;2951:5595",
+          "text": "Assistive text",
+          "visible": true
+        },
+        {
+          "id": "I2545:4874;2951:5595",
+          "text": "0/500",
+          "visible": true
+        },
+        {
+          "id": "2545:4876",
+          "text": "How can we improve this feature?",
+          "visible": true
+        },
+        {
+          "id": "I2545:4878;2847:3907;286:135",
+          "text": "Submit Feedback",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "tree": {
+        "id": "2459:10180",
+        "name": "Page=Page41",
+        "type": "COMPONENT",
+        "w": 550,
+        "h": 1188,
+        "visible": true,
+        "children": [
+          {
+            "id": "2459:10181",
+            "name": "Breadcrumbs",
+            "type": "FRAME",
+            "w": 550,
+            "h": 64,
+            "visible": true,
+            "children": [
+              {
+                "id": "2459:10182",
+                "name": "Patient Summary",
+                "type": "TEXT",
+                "w": 164,
+                "h": 32,
+                "visible": true,
+                "text": "Patient Summary"
+              },
+              {
+                "id": "2459:10183",
+                "name": "Frame 758531486",
+                "type": "FRAME",
+                "w": 337.977783203125,
+                "h": 24,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "2459:10184",
+                    "name": "Interface, Essential/Delete, Disabled",
+                    "type": "INSTANCE",
+                    "w": 24,
+                    "h": 24,
+                    "visible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2459:10185",
+            "name": "Main Wrap",
+            "type": "FRAME",
+            "w": 550,
+            "h": 1124,
+            "visible": true,
+            "children": [
+              {
+                "id": "3813:15781",
+                "name": "Contextual Alert",
+                "type": "INSTANCE",
+                "w": 534,
+                "h": 40,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "I3813:15781;3502:10057",
+                    "name": "_alerts template",
+                    "type": "INSTANCE",
+                    "w": 534,
+                    "h": 40,
+                    "visible": true
+                  }
+                ]
+              },
+              {
+                "id": "3028:16380",
+                "name": "Summary_Wrap",
+                "type": "FRAME",
+                "w": 534,
+                "h": 708,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "3028:16381",
+                    "name": "Current Situation 32-year-old male presenting for sick visit: sore throat, nasal congestion, and productive cough × 4 days. Low-grade fever (100.4°F) at exam. Rapid strep negative. Clinical impression: viral URI. Supportive care initiated (Acetaminophen 500 mg q6h PRN, Guaifenesin 400 mg q4h PRN). Also being followed for GAD (partially controlled on Sertraline 50 mg, ~2 years) and mild chronic insomnia (Melatonin 5 mg PRN).",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 216,
+                    "visible": true,
+                    "text": "Current Situation\n32-year-old male presenting for sick visit: sore throat, nasal congestion, and productive cough × 4 days. Low-grade fever (100.4°F) at exam.\nRapid strep negative. Clinical impression: viral URI. Supportive care initiated (Acetaminophen 500 mg q6h PRN, Guaifenesin 400 mg q4h PRN).\nAlso being followed for GAD (partially controlled on Sertraline 50 mg, ~2 years) and mild chronic insomnia (Melatonin 5 mg PRN)."
+                  },
+                  {
+                    "id": "3028:16382",
+                    "name": "Key Background Previous Buspirone trial discontinued due to dizziness (2023). Completed 12-session CBT course; continues sleep hygiene practices. Labs (CBC, CMP, TSH) Jan 2026 — within normal limits. Family history: anxiety (mother), hypertension (father).",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 144,
+                    "visible": true,
+                    "text": "Key Background\nPrevious Buspirone trial discontinued due to dizziness (2023).\nCompleted 12-session CBT course; continues sleep hygiene practices.\nLabs (CBC, CMP, TSH) Jan 2026 — within normal limits. Family history: anxiety (mother), hypertension (father)."
+                  },
+                  {
+                    "id": "3028:16383",
+                    "name": "Active Care Plan Sertraline HCl titrated to 75 mg at today's visit. Patient agreeable. Rx sent to CVS Pharmacy · 4521 Main St. Continue Melatonin 5 mg PO QHS PRN for insomnia. Reinforce sleep hygiene. Acetaminophen and Guaifenesin prescribed for URI — return precautions reviewed with patient.",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 168,
+                    "visible": true,
+                    "text": "Active Care Plan\nSertraline HCl titrated to 75 mg at today's visit. Patient agreeable. Rx sent to CVS Pharmacy · 4521 Main St.\nContinue Melatonin 5 mg PO QHS PRN for insomnia. Reinforce sleep hygiene.\nAcetaminophen and Guaifenesin prescribed for URI — return precautions reviewed with patient."
+                  },
+                  {
+                    "id": "3028:16384",
+                    "name": "Progress & Next Steps 2-week follow-up for URI resolution check and Sertraline 75 mg titration response. Monitor mood, anxiety, sleep quality, and functional status. Contact office if worsening mood or new symptoms. Continue CBT techniques for relapse prevention.",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 144,
+                    "visible": true,
+                    "text": "Progress & Next Steps\n2-week follow-up for URI resolution check and Sertraline 75 mg titration response.\nMonitor mood, anxiety, sleep quality, and functional status. Contact office if worsening mood or new symptoms.\nContinue CBT techniques for relapse prevention."
+                  }
+                ]
+              },
+              {
+                "id": "2459:10191",
+                "name": "Frame 758531795",
+                "type": "FRAME",
+                "w": 534,
+                "h": 328,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "4604:31396",
+                    "name": "Contextual Alert",
+                    "type": "INSTANCE",
+                    "w": 518,
+                    "h": 40,
+                    "visible": true
+                  },
+                  {
+                    "id": "3297:14747",
+                    "name": "Frame 758531794",
+                    "type": "FRAME",
+                    "w": 518,
+                    "h": 62,
+                    "visible": true
+                  },
+                  {
+                    "id": "2459:10449",
+                    "name": "Text Field - Desktop",
+                    "type": "FRAME",
+                    "w": 518,
+                    "h": 120,
+                    "visible": true
+                  },
+                  {
+                    "id": "2466:10627",
+                    "name": "Frame 758532109",
+                    "type": "FRAME",
+                    "w": 518,
+                    "h": 42,
+                    "visible": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "texts": [
+        {
+          "id": "2459:10182",
+          "text": "Patient Summary",
+          "visible": true
+        },
+        {
+          "id": "I3813:15781;3502:10057;3002:5568",
+          "text": "AI can make mistakes. Always double check summaries.",
+          "visible": true
+        },
+        {
+          "id": "I3813:15781;3502:10057;3019:6695",
+          "text": "LEARN MORE",
+          "visible": true
+        },
+        {
+          "id": "I4604:31396;17450:121434;3002:5568",
+          "text": "Failed to save feedback. Please try again",
+          "visible": true
+        },
+        {
+          "id": "I4604:31396;17450:121434;3019:6695",
+          "text": "LEARN MORE",
+          "visible": false
+        },
+        {
+          "id": "3297:14750",
+          "text": "How would your rate the accuracy of this summary?",
+          "visible": true
+        },
+        {
+          "id": "2459:10466",
+          "text": "This is a great feature!",
+          "visible": true
+        },
+        {
+          "id": "I2459:10474;2951:5595",
+          "text": "Assistive text",
+          "visible": true
+        },
+        {
+          "id": "I2459:10475;2951:5595",
+          "text": "0/500",
+          "visible": true
+        },
+        {
+          "id": "2459:10477",
+          "text": "How can we improve this feature?",
+          "visible": true
+        },
+        {
+          "id": "I2466:10538;2847:3907;286:135",
+          "text": "Submit Feedback",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "tree": {
+        "id": "2466:10562",
+        "name": "Page=Page42",
+        "type": "COMPONENT",
+        "w": 550,
+        "h": 932,
+        "visible": true,
+        "children": [
+          {
+            "id": "2466:10563",
+            "name": "Breadcrumbs",
+            "type": "FRAME",
+            "w": 550,
+            "h": 64,
+            "visible": true,
+            "children": [
+              {
+                "id": "2466:10564",
+                "name": "Patient Summary",
+                "type": "TEXT",
+                "w": 164,
+                "h": 32,
+                "visible": true,
+                "text": "Patient Summary"
+              },
+              {
+                "id": "2466:10565",
+                "name": "Frame 758531486",
+                "type": "FRAME",
+                "w": 337.977783203125,
+                "h": 24,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "2466:10566",
+                    "name": "Interface, Essential/Delete, Disabled",
+                    "type": "INSTANCE",
+                    "w": 24,
+                    "h": 24,
+                    "visible": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2466:10567",
+            "name": "Main Wrap",
+            "type": "FRAME",
+            "w": 550,
+            "h": 868,
+            "visible": true,
+            "children": [
+              {
+                "id": "3813:15792",
+                "name": "Contextual Alert",
+                "type": "INSTANCE",
+                "w": 534,
+                "h": 40,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "I3813:15792;3502:10057",
+                    "name": "_alerts template",
+                    "type": "INSTANCE",
+                    "w": 534,
+                    "h": 40,
+                    "visible": true
+                  }
+                ]
+              },
+              {
+                "id": "3028:16386",
+                "name": "Summary_Wrap",
+                "type": "FRAME",
+                "w": 534,
+                "h": 708,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "3028:16387",
+                    "name": "Current Situation 32-year-old male presenting for sick visit: sore throat, nasal congestion, and productive cough × 4 days. Low-grade fever (100.4°F) at exam. Rapid strep negative. Clinical impression: viral URI. Supportive care initiated (Acetaminophen 500 mg q6h PRN, Guaifenesin 400 mg q4h PRN). Also being followed for GAD (partially controlled on Sertraline 50 mg, ~2 years) and mild chronic insomnia (Melatonin 5 mg PRN).",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 216,
+                    "visible": true,
+                    "text": "Current Situation\n32-year-old male presenting for sick visit: sore throat, nasal congestion, and productive cough × 4 days. Low-grade fever (100.4°F) at exam.\nRapid strep negative. Clinical impression: viral URI. Supportive care initiated (Acetaminophen 500 mg q6h PRN, Guaifenesin 400 mg q4h PRN).\nAlso being followed for GAD (partially controlled on Sertraline 50 mg, ~2 years) and mild chronic insomnia (Melatonin 5 mg PRN)."
+                  },
+                  {
+                    "id": "3028:16388",
+                    "name": "Key Background Previous Buspirone trial discontinued due to dizziness (2023). Completed 12-session CBT course; continues sleep hygiene practices. Labs (CBC, CMP, TSH) Jan 2026 — within normal limits. Family history: anxiety (mother), hypertension (father).",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 144,
+                    "visible": true,
+                    "text": "Key Background\nPrevious Buspirone trial discontinued due to dizziness (2023).\nCompleted 12-session CBT course; continues sleep hygiene practices.\nLabs (CBC, CMP, TSH) Jan 2026 — within normal limits. Family history: anxiety (mother), hypertension (father)."
+                  },
+                  {
+                    "id": "3028:16389",
+                    "name": "Active Care Plan Sertraline HCl titrated to 75 mg at today's visit. Patient agreeable. Rx sent to CVS Pharmacy · 4521 Main St. Continue Melatonin 5 mg PO QHS PRN for insomnia. Reinforce sleep hygiene. Acetaminophen and Guaifenesin prescribed for URI — return precautions reviewed with patient.",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 168,
+                    "visible": true,
+                    "text": "Active Care Plan\nSertraline HCl titrated to 75 mg at today's visit. Patient agreeable. Rx sent to CVS Pharmacy · 4521 Main St.\nContinue Melatonin 5 mg PO QHS PRN for insomnia. Reinforce sleep hygiene.\nAcetaminophen and Guaifenesin prescribed for URI — return precautions reviewed with patient."
+                  },
+                  {
+                    "id": "3028:16390",
+                    "name": "Progress & Next Steps 2-week follow-up for URI resolution check and Sertraline 75 mg titration response. Monitor mood, anxiety, sleep quality, and functional status. Contact office if worsening mood or new symptoms. Continue CBT techniques for relapse prevention.",
+                    "type": "TEXT",
+                    "w": 534,
+                    "h": 144,
+                    "visible": true,
+                    "text": "Progress & Next Steps\n2-week follow-up for URI resolution check and Sertraline 75 mg titration response.\nMonitor mood, anxiety, sleep quality, and functional status. Contact office if worsening mood or new symptoms.\nContinue CBT techniques for relapse prevention."
+                  }
+                ]
+              },
+              {
+                "id": "2474:10628",
+                "name": "Frame 758532110",
+                "type": "FRAME",
+                "w": 534,
+                "h": 72,
+                "visible": true,
+                "children": [
+                  {
+                    "id": "2466:10574",
+                    "name": "Frame 758531794",
+                    "type": "FRAME",
+                    "w": 518,
+                    "h": 48,
+                    "visible": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "texts": [
+        {
+          "id": "2466:10564",
+          "text": "Patient Summary",
+          "visible": true
+        },
+        {
+          "id": "I3813:15792;3502:10057;3002:5568",
+          "text": "AI can make mistakes. Always double check summaries.",
+          "visible": true
+        },
+        {
+          "id": "I3813:15792;3502:10057;3019:6695",
+          "text": "LEARN MORE",
+          "visible": true
+        },
+        {
+          "id": "2466:10575",
+          "text": "Thank you for your feedback!",
+          "visible": true
+        }
+      ]
+    }
+  ]
+}

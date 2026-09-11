@@ -1,0 +1,104 @@
+{
+  "format": "tebra.design-batch-evidence",
+  "version": 1,
+  "itemId": "npve-patient-summary-body-sheet",
+  "capturedAt": "2026-09-11T15:07:35.097Z",
+  "fileIdentity": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "pages": [
+      "0:1 Cover",
+      "3:2 Templates",
+      "27:2 Screens",
+      "126:2 Archive"
+    ]
+  },
+  "auditConfiguration": {
+    "skipInvisibleInstanceChildren": false
+  },
+  "checks": {
+    "unboundPaints": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-reference-verification.json",
+        "shell-preflight.json",
+        "comparisons.json"
+      ]
+    },
+    "fractionalAuthoredGeometry": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-reference-verification.json",
+        "shell-preflight.json",
+        "comparisons.json"
+      ]
+    },
+    "referenceCounts": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-reference-verification.json",
+        "shell-preflight.json",
+        "comparisons.json"
+      ]
+    },
+    "componentIdentity": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-reference-verification.json",
+        "shell-preflight.json",
+        "comparisons.json"
+      ]
+    },
+    "propertyReferences": {
+      "pass": true,
+      "evidence": [
+        "final-read.json",
+        "paint-reference-verification.json",
+        "shell-preflight.json",
+        "comparisons.json"
+      ]
+    }
+  },
+  "visualReview": {
+    "comparisonRender": "figma-export/npve-patient-summary-body-2026-09-10/comparison-states.png",
+    "inspectedByExecutor": true,
+    "observations": [
+      "All three full comparisons visually inspected and displayed to operator. Source reference, live rebuild and change log are visible without clipping.",
+      "16px shell insets confirmed on all four sides; reusable bodies remain 518px, with no extra horizontal body padding.",
+      "Default omits the source-hidden warning. Error/Entry and Success retain warning, exact source text and state-specific feedback.",
+      "Clinical text remains live approved content; no truncation, invented content or rasterized rebuilt UI."
+    ]
+  },
+  "figmaNodes": {
+    "bodySet": "675:8169",
+    "comparisons": [
+      {
+        "id": "676:11186",
+        "state": "Default",
+        "width": 1708,
+        "height": 1031
+      },
+      {
+        "id": "676:11724",
+        "state": "Error entry",
+        "width": 1708,
+        "height": 1365
+      },
+      {
+        "id": "676:12320",
+        "state": "Success",
+        "width": 1708,
+        "height": 1115
+      }
+    ]
+  },
+  "toolCalls": {
+    "figmaRead": 21,
+    "figmaWrite": 8,
+    "screenshot": 10,
+    "correctionCycles": 0
+  }
+}

@@ -1,0 +1,205 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_patientSummaryBody_2026-09-10",
+ "sequence": 104,
+ "date": "2026-09-10",
+ "workstream": "npve",
+ "created": {
+  "by": "Codex (OpenAI)",
+  "at": "2026-09-11T14:57:51.446Z",
+  "script": "apply-npve-patient-summary-body.js"
+ },
+ "record": {
+  "_status": "DONE — three full Patient Summary sheets verified; family build complete",
+  "manifestItem": "npve-patient-summary-body-sheet",
+  "executor": "Codex (OpenAI gpt-6-astra, low)",
+  "operatorContinuationQuote": "then proceed to the next step",
+  "operatorReview": "Operator reviewed feedback padding and authorized the next full-sheet step.",
+  "risk": {
+   "tier": "medium",
+   "reasons": [
+    "Composes two previously reviewed local dependencies on the established sidesheet shell",
+    "Appends a new component family to shared Sidesheet and comparison instance-swap APIs",
+    "Three tall states require individual visual review, but no new interaction pattern is introduced in this item"
+   ],
+   "proposedBy": "Codex (planner proposal), 2026-09-10, after the scoped read in figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
+   "approval": {
+    "status": "unapproved",
+    "approvedBy": null,
+    "approvedAt": null,
+    "quote": null,
+    "history": []
+   },
+   "lockedAt": "2026-09-11T14:57:51.377Z",
+   "lock": "53d754076e349b1b7a60300278a9ffce292394f7f82f24cd20b702fa341af015"
+  },
+  "scope": "Compose approved live instances of Patient summary content and Patient summary feedback into the three source-visible body states (Default, Error/Entry, Success). Use the canonical Sidesheet shell at 550px, a 16px body inset, 16px default vertical rhythm, content-driven height, and the existing 8px undocked radius policy. Append the Patient Summary body family additively to the shared Sidesheet Body content and comparison preferred values without changing defaults or geometry. Create full reference/rebuild/change comparisons for all three states.",
+  "report": "figma-export/npve-patient-summary-body-2026-09-10/report.md",
+  "creditBaseline": {
+   "reading": 143,
+   "source": "operator-reported after suspected reset",
+   "endingReading": null,
+   "delta": null
+  },
+  "nextAction": "Patient Summary family built; operator can review complete sheet comparisons. Psychotherapy Note and Flowsheets remain deferred.",
+  "standingBatchRules": {
+   "1_instancePaintVerification": "PASS — body master/live instance paint arrays match exactly in all three states.",
+   "2_unboundPaintAudit": "PASS — all top-level subtrees on all four pages audited; baseline/final unbound paints unchanged at 1/48/43/20; no new unbound paints.",
+   "3_referenceCounts": "PASS — descendant references 2/2, 30/30, 13/13. Each body instance adds the expected root Body content swap reference. Three matching comparison helper triples.",
+   "4_skipInvisibleFalse": "PASS — all walks explicitly set skipInvisibleInstanceChildren=false.",
+   "5_opacityLast": "PASS — no post-binding opacity edits.",
+   "6_enumerateDontRecall": "PASS — actual pages, shell variants, body variants, helpers and comparison instances enumerated.",
+   "7_fileIdentityFirst": "PASS — verified source/target/library pages and exact component keys. Every call explicitly names its file. All writes target NPVE only.",
+   "8_roundWithRecord": "PASS — no fractional authored geometry; inherited vector geometry untouched. Heights follow content: 939/1273/1023.",
+   "9_boundPaintAlpha": "PASS — returned bound paints retain alpha; no forced paint opacity.",
+   "10_cloneDropsPropertyRefs": "PASS — bodies built independently; post-combine descendant references and root swap binding verified."
+  },
+  "componentSet": {
+   "id": "675:8169",
+   "key": "292fb6008778f904db85a5f72f90d5b8c7ab4296",
+   "properties": {
+    "State": {
+     "type": "VARIANT",
+     "defaultValue": "Default",
+     "variantOptions": [
+      "Default",
+      "Error/Entry",
+      "Success"
+     ]
+    }
+   }
+  },
+  "comparisons": [
+   {
+    "id": "676:11186",
+    "state": "Default",
+    "width": 1708,
+    "height": 1031
+   },
+   {
+    "id": "676:11724",
+    "state": "Error entry",
+    "width": 1708,
+    "height": 1365
+   },
+   {
+    "id": "676:12320",
+    "state": "Success",
+    "width": 1708,
+    "height": 1115
+   }
+  ],
+  "finalSizes": [
+   {
+    "master": "672:7907",
+    "helper": "672:7931",
+    "sheet": "672:7932",
+    "width": 550,
+    "height": 939,
+    "bodyWidth": 518,
+    "bodyHeight": 834,
+    "padding": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "radius": 8,
+    "identity": "672:7907",
+    "paintsEqual": false,
+    "references": [
+     2,
+     3
+    ]
+   },
+   {
+    "master": "673:7962",
+    "helper": "673:8045",
+    "sheet": "673:8046",
+    "width": 550,
+    "height": 1273,
+    "bodyWidth": 518,
+    "bodyHeight": 1168,
+    "padding": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "radius": 8,
+    "identity": "673:7962",
+    "paintsEqual": false,
+    "references": [
+     30,
+     31
+    ]
+   },
+   {
+    "master": "673:8308",
+    "helper": "673:8348",
+    "sheet": "673:8349",
+    "width": 550,
+    "height": 1023,
+    "bodyWidth": 518,
+    "bodyHeight": 918,
+    "padding": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "radius": 8,
+    "identity": "673:8308",
+    "paintsEqual": false,
+    "references": [
+     13,
+     14
+    ]
+   }
+  ],
+  "measurements": {
+   "itemId": "npve-patient-summary-body-sheet",
+   "provider": "OpenAI",
+   "model": "gpt-6-astra",
+   "reasoning": "low",
+   "turnId": "01a090f2-6554-7f01-b552-a2019b740bc9",
+   "startedAt": "2026-09-11T14:49:59.931Z",
+   "measuredThrough": "2026-09-11T15:07:35.035Z",
+   "elapsedSeconds": 1055.104,
+   "assistantUserTurns": 1,
+   "modelResponses": 32,
+   "topLevelToolCalls": 31,
+   "figmaReads": 21,
+   "figmaWrites": 8,
+   "uploadAllocations": 1,
+   "screenshots": 10,
+   "correctionCycles": 0,
+   "auditInterpretationCorrections": 1,
+   "tokens": {
+    "input": 2982913,
+    "cachedInput": 2875648,
+    "uncachedInput": 107265,
+    "output": 24260,
+    "reasoningOutput": 696,
+    "total": 3007173
+   },
+   "credits": {
+    "baseline": 143,
+    "endingReading": null,
+    "delta": null,
+    "source": "Operator-reported after suspected reset; no verified run interval"
+   },
+   "countEvidence": {
+    "reads": "11 Plugin API reads + 10 PNG exports",
+    "writes": "5 Plugin API mutations + 3 guarded image POSTs",
+    "screenshots": "3 source + 3 live sheets + 3 individual comparisons + combined comparison"
+   },
+   "note": "Observed prefix excludes subsequent closeout and final response. Per-response IDs deduplicated; cached input and reasoning output are subsets. Startup guessed medium provenance corrected to session-observed low; no credit conversion inferred."
+  },
+  "screenshots": [
+   "figma-export/npve-patient-summary-body-2026-09-10/comparison-states.png"
+  ],
+  "proofDisposition": "Required reusable live helpers/comparisons retained; no disposable proof nodes."
+ }
+}

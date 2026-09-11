@@ -1,0 +1,39 @@
+{
+  "itemId": "npve-patient-summary-body-sheet",
+  "provider": "OpenAI",
+  "model": "gpt-6-astra",
+  "reasoning": "low",
+  "turnId": "01a090f2-6554-7f01-b552-a2019b740bc9",
+  "startedAt": "2026-09-11T14:49:59.931Z",
+  "measuredThrough": "2026-09-11T15:07:35.035Z",
+  "elapsedSeconds": 1055.104,
+  "assistantUserTurns": 1,
+  "modelResponses": 32,
+  "topLevelToolCalls": 31,
+  "figmaReads": 21,
+  "figmaWrites": 8,
+  "uploadAllocations": 1,
+  "screenshots": 10,
+  "correctionCycles": 0,
+  "auditInterpretationCorrections": 1,
+  "tokens": {
+    "input": 2982913,
+    "cachedInput": 2875648,
+    "uncachedInput": 107265,
+    "output": 24260,
+    "reasoningOutput": 696,
+    "total": 3007173
+  },
+  "credits": {
+    "baseline": 143,
+    "endingReading": null,
+    "delta": null,
+    "source": "Operator-reported after suspected reset; no verified run interval"
+  },
+  "countEvidence": {
+    "reads": "11 Plugin API reads + 10 PNG exports",
+    "writes": "5 Plugin API mutations + 3 guarded image POSTs",
+    "screenshots": "3 source + 3 live sheets + 3 individual comparisons + combined comparison"
+  },
+  "note": "Observed prefix excludes subsequent closeout and final response. Per-response IDs deduplicated; cached input and reasoning output are subsets. Startup guessed medium provenance corrected to session-observed low; no credit conversion inferred."
+}

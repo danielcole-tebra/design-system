@@ -1,0 +1,49 @@
+{
+  "bodySet": {
+    "id": "675:8169",
+    "key": "292fb6008778f904db85a5f72f90d5b8c7ab4296",
+    "properties": {
+      "State": {
+        "type": "VARIANT",
+        "defaultValue": "Default",
+        "variantOptions": [
+          "Default",
+          "Error/Entry",
+          "Success"
+        ]
+      }
+    }
+  },
+  "helpers": [
+    {
+      "state": "Default",
+      "source": "129:7340",
+      "reference": "675:8170",
+      "image": "675:8171",
+      "change": "675:8172",
+      "rebuild": "672:7931",
+      "sourceHeight": 894,
+      "logHeight": 474
+    },
+    {
+      "state": "Error entry",
+      "source": "2459:10180",
+      "reference": "675:8209",
+      "image": "675:8210",
+      "change": "675:8211",
+      "rebuild": "673:8045",
+      "sourceHeight": 1188,
+      "logHeight": 474
+    },
+    {
+      "state": "Success",
+      "source": "2466:10562",
+      "reference": "675:8248",
+      "image": "675:8249",
+      "change": "675:8250",
+      "rebuild": "673:8348",
+      "sourceHeight": 932,
+      "logHeight": 474
+    }
+  ]
+}
