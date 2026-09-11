@@ -13,3 +13,7 @@ Recommendation: repair the missing production icon family in a separate, explici
 Evidence: source.json, identity.json, thumb-mapping.json, source-error-entry.png. The source screenshot was inspected; it confirms a filled teal thumbs-up and outlined thumbs-down. Source copy and the shown 0/500 count remain evidence to preserve, not editing instructions.
 
 The expected NPVE record is open IN PROGRESS. No start-batch run or ready execution checkpoint is claimed: mappings and the operator decision are unresolved. Future work resumes from this checkpoint. Cost baseline is saved in measurements.json and workflow/metrics.json. No full sidesheet work has started.
+
+## Resumption check — 2026-09-11
+
+Operator: “Ok lets finish out the patient summary”. Target identity verified; exact-key import of the repaired ThumbUpAlt failed with “Component with key not found”. Stopped after the first failure; remaining three keys were not tested. No canvas mutations. Library publication remains required before the feedback build. Two Figma reads, zero screenshots. Current credit baseline is 143 after the suspected reset; no delta inferred. Evidence: publication-check-2026-09-11.json.

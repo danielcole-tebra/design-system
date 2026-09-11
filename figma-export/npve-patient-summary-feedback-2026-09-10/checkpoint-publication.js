@@ -1,5 +1,5 @@
 const fs=require('fs');
-const {finalizeRecord}=require('../../../scripts/schema/lib');
+const {finalizeRecord}=require('../../scripts/schema/lib');
 const base='figma-export/npve-patient-summary-feedback-2026-09-10';
 const evidence=JSON.parse(fs.readFileSync(base+'/publication-check-2026-09-11.json'));
 finalizeRecord('npveRebuild_patientSummaryFeedback_2026-09-10',r=>({...r,_status:'IN PROGRESS — repaired library icons await publication; no NPVE mutation',publicationCheck:evidence,nextAction:evidence.nextAction}));
