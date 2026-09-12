@@ -1,0 +1,157 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "npveRebuild_flowsheetsFinish_2026-09-11",
+ "sequence": 109,
+ "date": "2026-09-11",
+ "workstream": "npve",
+ "created": {
+  "by": "Codex",
+  "at": "2026-09-11T21:41:55.143Z",
+  "script": "apply-npve-flowsheets-finish.js"
+ },
+ "record": {
+  "_status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified",
+  "manifestItem": "npve-flowsheets-finish",
+  "operatorContinuationQuote": "Ok let's finish the flowsheets, ignoring any of the graphing stuff were not doing that yet",
+  "operatorScopeClarification": "Yes—finish the list and both forms",
+  "scope": "Finish the Flowsheets main list sheet and Add New Readings/Edit Past Readings forms. Reuse completed header/measure rows/footer and shared Sidesheet. Preserve exact nine questions, response labels/scores, date3/4/26 and first Several days selection in both forms. Omit expanded graphs, inline graphs and per-question graph controls. No graph data, severity thresholds, scoring calculation, invented date/menu/save behavior or library writes. Dedicated full-state comparisons and append-only Body content preferred mapping.",
+  "risk": {
+   "tier": "high",
+   "reasons": [
+    "Three composed states and additive shared Sidesheet Body content registration.",
+    "Operator selected radio answers; retain all visual review and mutation guards."
+   ],
+   "proposedBy": "Codex planner after operator decision2026-09-11",
+   "approval": {
+    "status": "approved",
+    "approvedBy": "Operator",
+    "approvedAt": "2026-09-11T21:50:20.555Z",
+    "quote": "Yes—finish the list and both forms",
+    "history": [
+     {
+      "tier": "human-decision",
+      "resolution": "radio buttons"
+     }
+    ]
+   },
+   "lockedAt": "2026-09-11T21:50:20.555Z",
+   "lock": "827e121d1d57e3b84095e5cc3b513c58fe48e610ed138388fc6e4a420cfb3a28"
+  },
+  "stopCondition": "Stop on identity/property/token drift, unresolved failed writes, missing source copy, required library edits, graph implementation or invented clinical/interaction behavior. Source remains read-only; no detached controls, deletion, silent scope expansion or failed-guard dispatch.",
+  "planning": {
+   "operatorBuildRequest": "Ok let's finish the flowsheets, ignoring any of the graphing stuff were not doing that yet",
+   "operatorScopeClarification": "Yes—finish the list and both forms",
+   "pendingDecision": null,
+   "priorRecord": "npveRebuild_flowsheetsListBody_2026-09-11",
+   "preflight": "figma-export/npve-flowsheets-finish-2026-09-11/source.json",
+   "retainedFindings": [
+    "npveFlowsheets_questionnairePattern_2026-09-11 — functional behavior stays unverified; graph portion deferred."
+   ],
+   "plannedRiskAfterDecision": "high — three composed states and additive shared shell Body content API registration.",
+   "decisionResolution": {
+    "operatorQuote": "radio buttons",
+    "answers": "Live published radio buttons with right-side scores.",
+    "date": "Labelled Date field plus calendar button as proposed with the radio treatment.",
+    "scopeQuote": "Yes—finish the list and both forms"
+   }
+  },
+  "figmaMutations": [
+   {
+    "action": "Created radio set730:8698 and live proof730:8699",
+    "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/radio-built.json"
+   },
+   {
+    "action": "Created Questionnaire732:8713, Body set732:9972 and footer wrappers732:9973/732:9985",
+    "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/forms-built.json"
+   },
+   {
+    "action": "Corrected new vertical sizing and Body set clipping",
+    "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/forms-ancestor-clipping.json",
+    "result": "Both full form interior renders inspected; no shared geometry changes."
+   }
+  ],
+  "mutationsPlanned": [
+   {
+    "action": "Create",
+    "scope": "New Templates section below existing Flowsheets components; Question component states Unanswered and Several days, one Questionnaire component, Flowsheets/Body variants List/Add new/Edit past wrapping live approved controls. Existing List body remains unchanged. New534px list and Save footer wrappers. Dedicated full-state source/rebuild/change-log helpers and Screens comparisons."
+   },
+   {
+    "action": "Combine",
+    "scope": "Only newly created Question states and Body states into their respective component sets; restore and verify exposed text references after combination."
+   },
+   {
+    "action": "Append preferred values",
+    "scope": "New body helpers only, after visual review, to shared Sidesheet Body content; preserve all defaults and geometry."
+   },
+   {
+    "action": "Reference image upload",
+    "scope": "Guarded source2xPNG painting on explicit new frozen-reference rectangles using upload_assets; runner helpers/comparison/shell/preferred required. Large image transfer exceeds use_figma50000-character limit."
+   },
+   {
+    "action": "Create and archive proof",
+    "scope": "PROOF radio states frame with two live Question instances; move to Archive06Pilotproofs with README before close."
+   }
+  ],
+  "report": "figma-export/npve-flowsheets-finish-2026-09-11/report.md",
+  "nextAction": "Planner/operator review of a supported runner treatment for an invalid read-only source component set, or external source repair. Do not change source, substitute the manifest source to bypass verification, replay creations or replace supported runner operations with ad hoc writes.",
+  "operatorAppearanceDecision": "radio buttons",
+  "findings": [
+   {
+    "id": "npveFlowsheets_sourceDefinitionBlocker_2026-09-11",
+    "severity": "high",
+    "kind": "WORKFLOW BLOCKER",
+    "summary": "Read-only source Sidesheetv3 set129:6647 rejects native componentPropertyDefinitions. Flowsheets finish runner source gate cannot verify owning definitions; supported operations stopped before dispatch. Existing target radio and form work preserved.",
+    "status": "OPEN",
+    "discoveredDuring": "npveRebuild_flowsheetsFinish_2026-09-11",
+    "report": "figma-export/npve-flowsheets-finish-2026-09-11/report.md",
+    "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/source-definition-blocker.json"
+   }
+  ],
+  "executionCheckpoint": "figma-export/npve-flowsheets-finish-2026-09-11/execution.json",
+  "verifiedMilestones": [
+   {
+    "name": "Radio answers",
+    "render": "figma-export/npve-flowsheets-finish-2026-09-11/radio.png"
+   },
+   {
+    "name": "Form interiors",
+    "renders": [
+     "figma-export/npve-flowsheets-finish-2026-09-11/add-form.png",
+     "figma-export/npve-flowsheets-finish-2026-09-11/edit-form.png"
+    ]
+   }
+  ],
+  "blocker": {
+   "operation": "Runner preflight source mapping",
+   "error": "in get_componentPropertyDefinitions: Component set has existing errors",
+   "fileKey": "zVsuhYehoSLLq880qRBFkq",
+   "nodeIds": [
+    "129:6647",
+    "939:9228",
+    "867:7460",
+    "909:12649"
+   ],
+   "mutationLanded": false,
+   "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/source-definition-blocker.json",
+   "classification": "Read-only owning-set definition failure. Source identities and geometry remain readable. Existing runner requires full owning-set definitions for the manifest source component.",
+   "nextDifferentApproach": "Planner/operator review of a supported runner treatment for an invalid read-only source component set, or external source repair. Do not change source, substitute the manifest source to bypass verification, replay creations or replace supported runner operations with ad hoc writes."
+  },
+  "workflowGuardCompliance": {
+   "pass": true,
+   "observation": "Explicit check-batch exit_code0 immediately before every Figma mutation. No source/library writes. No runner operation dispatched because mandatory source definitions failed."
+  },
+  "pausedAudit": "figma-export/npve-flowsheets-finish-2026-09-11/paused-audit.json",
+  "proofDisposition": {
+   "status": "pending archive after blocker resolution",
+   "node": "730:8699",
+   "location": "Templates section730:8618; visibly named PROOF"
+  },
+  "remaining": [
+   "Runner sheet assembly for List/Add/Edit",
+   "Dedicated frozen-source/change-log helpers and full comparisons",
+   "Body preferred registration after reviews",
+   "Proof archive, final audits, ten checks, closeout, commit and milestone"
+  ]
+ }
+}

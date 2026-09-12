@@ -1176,6 +1176,94 @@
         "comparisonRender": "figma-export/npve-flowsheets-list-body-2026-09-11/comparison.png"
       },
       "completedAt": "2026-09-11T18:20:11.687Z"
+    },
+    {
+      "id": "npve-flowsheets-finish",
+      "title": "Flowsheets · Finish list and readings forms without graphs",
+      "workstream": "NPVE Rebuild / Sidesheets",
+      "status": "stopped",
+      "dependsOn": [
+        "npve-flowsheets-list-body"
+      ],
+      "source": {
+        "fileKey": "zVsuhYehoSLLq880qRBFkq",
+        "nodeId": "939:9228",
+        "access": "read-only",
+        "label": "List939:9228; Add867:7460; Edit909:12649"
+      },
+      "target": {
+        "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+        "pageId": "3:2",
+        "name": "Flowsheets list, Add and Edit without graphs"
+      },
+      "expectedRecordId": "npveRebuild_flowsheetsFinish_2026-09-11",
+      "scope": "Finish the Flowsheets main list sheet and Add New Readings/Edit Past Readings forms. Reuse completed header/measure rows/footer and shared Sidesheet. Preserve exact nine questions, response labels/scores, date3/4/26 and first Several days selection in both forms. Omit expanded graphs, inline graphs and per-question graph controls. No graph data, severity thresholds, scoring calculation, invented date/menu/save behavior or library writes. Dedicated full-state comparisons and append-only Body content preferred mapping.",
+      "plannerNotes": {
+        "operatorBuildRequest": "Ok let's finish the flowsheets, ignoring any of the graphing stuff were not doing that yet",
+        "operatorScopeClarification": "Yes—finish the list and both forms",
+        "pendingDecision": null,
+        "priorRecord": "npveRebuild_flowsheetsListBody_2026-09-11",
+        "preflight": "figma-export/npve-flowsheets-finish-2026-09-11/source.json",
+        "retainedFindings": [
+          "npveFlowsheets_questionnairePattern_2026-09-11 — functional behavior stays unverified; graph portion deferred."
+        ],
+        "plannedRiskAfterDecision": "high — three composed states and additive shared shell Body content API registration.",
+        "decisionResolution": {
+          "operatorQuote": "radio buttons",
+          "answers": "Live published radio buttons with right-side scores.",
+          "date": "Labelled Date field plus calendar button as proposed with the radio treatment.",
+          "scopeQuote": "Yes—finish the list and both forms"
+        }
+      },
+      "risk": {
+        "tier": "high",
+        "reasons": [
+          "Three composed states and additive shared Sidesheet Body content registration.",
+          "Operator selected radio answers; retain all visual review and mutation guards."
+        ],
+        "proposedBy": "Codex planner after operator decision2026-09-11",
+        "approval": {
+          "status": "approved",
+          "approvedBy": "Operator",
+          "approvedAt": "2026-09-11T21:50:20.555Z",
+          "quote": "Yes—finish the list and both forms",
+          "history": [
+            {
+              "tier": "human-decision",
+              "resolution": "radio buttons"
+            }
+          ]
+        },
+        "lockedAt": "2026-09-11T21:50:20.555Z",
+        "lock": "827e121d1d57e3b84095e5cc3b513c58fe48e610ed138388fc6e4a420cfb3a28"
+      },
+      "oversight": [
+        "Operator selected radio buttons; inspect both forms, list and all comparisons before closeout.",
+        "Executor visually reviews answer component, both form states, full sheets and final comparisons.",
+        "Fresh explicit guard before every mutation, including upload POST; fail closed on nonzero.",
+        "Final operator review before another item."
+      ],
+      "stopCondition": "Stop on identity/property/token drift, unresolved failed writes, missing source copy, required library edits, graph implementation or invented clinical/interaction behavior. Source remains read-only; no detached controls, deletion, silent scope expansion or failed-guard dispatch.",
+      "allowedFiles": [
+        "records/npve/**/npveRebuild_flowsheetsFinish_2026-09-11.json",
+        "flags/active.json",
+        "flags/resolved.json",
+        "indexes/**",
+        "design-system-schema.json",
+        "apply-npve-flowsheets-finish.js",
+        "finalize-npve-flowsheets-finish.js",
+        "figma-export/npve-flowsheets-finish-2026-09-11/**",
+        "workflow/manifest.json",
+        "workflow/metrics.json",
+        "workflow/npve-contract.generated.json"
+      ],
+      "requiredEvidence": {
+        "audit": "figma-export/npve-flowsheets-finish-2026-09-11/audit.json",
+        "report": "figma-export/npve-flowsheets-finish-2026-09-11/report.md",
+        "comparisonRender": "figma-export/npve-flowsheets-finish-2026-09-11/comparison.png"
+      },
+      "stoppedAt": "2026-09-11T22:02:03.674Z",
+      "stopReason": "Read-only source owning-set definitions error blocks required runner preflight"
     }
   ],
   "riskClasses": "low, medium, high, human-decision — defined in workflow/protocol.json → risk; approved by the operator 2026-09-08 (record workflowRefactor_tierApproval_2026-09-08)"

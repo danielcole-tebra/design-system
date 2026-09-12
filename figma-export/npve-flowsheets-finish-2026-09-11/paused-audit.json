@@ -1,0 +1,51 @@
+{
+  "paintAudit": [
+    {
+      "page": "0:1",
+      "name": "Cover",
+      "beforeCount": 9,
+      "afterCount": 9,
+      "unboundCount": 1,
+      "exactUnboundUnchanged": true
+    },
+    {
+      "page": "3:2",
+      "name": "Templates",
+      "beforeCount": 12201,
+      "afterCount": 13573,
+      "unboundCount": 48,
+      "exactUnboundUnchanged": true
+    },
+    {
+      "page": "27:2",
+      "name": "Screens",
+      "beforeCount": 6190,
+      "afterCount": 6190,
+      "unboundCount": 43,
+      "exactUnboundUnchanged": true
+    },
+    {
+      "page": "126:2",
+      "name": "Archive",
+      "beforeCount": 1845,
+      "afterCount": 1845,
+      "unboundCount": 20,
+      "exactUnboundUnchanged": true
+    }
+  ],
+  "radioPairs": [
+    {
+      "master": "730:8619",
+      "instance": "730:8700",
+      "paintMatch": true,
+      "referenceMatch": true
+    },
+    {
+      "master": "730:8658",
+      "instance": "730:8731",
+      "paintMatch": true,
+      "referenceMatch": true
+    }
+  ],
+  "notCloseout": true
+}

@@ -1,0 +1,195 @@
+{
+  "format": "tebra.design-execution",
+  "version": 2,
+  "itemId": "npve-flowsheets-finish",
+  "recordId": "npveRebuild_flowsheetsFinish_2026-09-11",
+  "preflight": {
+    "targetFileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "identityEvidence": "figma-export/npve-flowsheets-finish-2026-09-11/fresh-controls.json",
+    "tools": [
+      "mcp__codex_apps__figma_use_figma",
+      "mcp__codex_apps__figma_get_screenshot",
+      "mcp__codex_apps__figma_download_assets",
+      "mcp__codex_apps__figma_upload_assets"
+    ],
+    "toolEvidence": "figma-export/npve-flowsheets-finish-2026-09-11/report.md",
+    "controls": [
+      {
+        "name": "Rebuild comparison",
+        "component": "35:332",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "Change log/Row",
+        "component": "18:103",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "Flowsheets/List header",
+        "component": "705:8366",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "Flowsheets/List body",
+        "component": "706:8405",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "Flowsheets/Footer action",
+        "component": "706:8637",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "State=Basic",
+        "component": "684:8266",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "State=With trend",
+        "component": "685:8297",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "State=Default",
+        "component": "140:3",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "checked=unchecked, State=Default",
+        "component": "137:3",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "checked=checked, State=Default",
+        "component": "137:15",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "size=small, State=Default, Value=Filled",
+        "component": "130:159",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "color=default, size=medium, State=Default",
+        "component": "170:5",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "Icon/Calendar",
+        "component": "200:32",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "variant=contained, color=primary, size=medium, State=Default",
+        "component": "78:14",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "Icon/DownCaret",
+        "component": "76:5",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      },
+      {
+        "name": "variant=head, padding=none",
+        "component": "190:11",
+        "properties": {},
+        "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/controls.json"
+      }
+    ]
+  },
+  "appearance": {
+    "specification": "figma-export/npve-flowsheets-finish-2026-09-11/appearance.md",
+    "review": null
+  },
+  "corrections": [
+    {
+      "observation": "resize() set newly created vertical frames to FIXED40px; contents exist correctly and are not clipped, but parent heights must hug.",
+      "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/forms-layout-read.json",
+      "action": "Set primaryAxisSizingMode AUTO on new Questionnaire, both Reading form wrappers and three new Body variants after their dimensions are set. No shared node changes."
+    },
+    {
+      "observation": "Plugin readback confirms AUTO and correct2586px body height, but screenshot export still reports40px stored bounds.",
+      "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/forms-persisted-read.json",
+      "action": "Commit calculated integer dimensions explicitly on new containers, then restore AUTO; inspect fresh export."
+    },
+    {
+      "observation": "Both sizing attempts applied but did not fix exports. Read-only ancestor diagnosis identifies new Body component set732:9972 still40px tall with clipsContent=true.",
+      "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/forms-ancestor-clipping.json",
+      "action": "Different supported correction: turn off clipping on the new enclosing component set and resize it to1618×2586. No recreation or shared changes."
+    }
+  ],
+  "milestones": [
+    {
+      "name": "Radio answers",
+      "status": "verified",
+      "nodeIds": [
+        "730:8700",
+        "730:8731"
+      ],
+      "render": "figma-export/npve-flowsheets-finish-2026-09-11/radio.png",
+      "inspected": true,
+      "observation": "Both42px native radio states inspected; right-side scores aligned, source options exact; rendered paints and9 descendant references match each master."
+    },
+    {
+      "name": "Forms",
+      "status": "verified",
+      "nodeIds": [
+        "732:9224",
+        "732:9633"
+      ],
+      "render": "figma-export/npve-flowsheets-finish-2026-09-11/add-form.png",
+      "inspected": true,
+      "additionalRenders": [
+        "figma-export/npve-flowsheets-finish-2026-09-11/edit-form.png"
+      ],
+      "observation": "Both live form interiors inspected: nine questions,36 radios, only first Several days selected, scores0/+1/+2/+3, Date3/4/26 and distinct Add/Edit titles. Exact text saved in forms-text-read.json. No graphs."
+    },
+    {
+      "name": "Sheets",
+      "status": "pending",
+      "nodeIds": [],
+      "render": null,
+      "inspected": false
+    },
+    {
+      "name": "Comparisons",
+      "status": "pending",
+      "nodeIds": [],
+      "render": null,
+      "inspected": false
+    }
+  ],
+  "unresolved": [
+    {
+      "operation": "Runner preflight source mapping",
+      "error": "in get_componentPropertyDefinitions: Component set has existing errors",
+      "fileKey": "zVsuhYehoSLLq880qRBFkq",
+      "nodeIds": [
+        "129:6647",
+        "939:9228",
+        "867:7460",
+        "909:12649"
+      ],
+      "mutationLanded": false,
+      "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/source-definition-blocker.json",
+      "classification": "Read-only owning-set definition failure. Source identities and geometry remain readable. Existing runner requires full owning-set definitions for the manifest source component.",
+      "nextDifferentApproach": "Planner/operator review of a supported runner treatment for an invalid read-only source component set, or external source repair. Do not change source, substitute the manifest source to bypass verification, replay creations or replace supported runner operations with ad hoc writes."
+    }
+  ],
+  "nextAction": "Planner/operator review of a supported runner treatment for an invalid read-only source component set, or external source repair. Do not change source, substitute the manifest source to bypass verification, replay creations or replace supported runner operations with ad hoc writes."
+}

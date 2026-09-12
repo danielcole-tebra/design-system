@@ -3220,6 +3220,19 @@
     "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11",
     "report": "figma-export/npve-flowsheets-audit-2026-09-11/report.md"
    }
+  },
+  {
+   "sequence": 295,
+   "flag": {
+    "id": "npveFlowsheets_sourceDefinitionBlocker_2026-09-11",
+    "severity": "high",
+    "kind": "WORKFLOW BLOCKER",
+    "summary": "Read-only source Sidesheetv3 set129:6647 rejects native componentPropertyDefinitions. Flowsheets finish runner source gate cannot verify owning definitions; supported operations stopped before dispatch. Existing target radio and form work preserved.",
+    "status": "OPEN",
+    "discoveredDuring": "npveRebuild_flowsheetsFinish_2026-09-11",
+    "report": "figma-export/npve-flowsheets-finish-2026-09-11/report.md",
+    "evidence": "figma-export/npve-flowsheets-finish-2026-09-11/source-definition-blocker.json"
+   }
   }
  ]
 }

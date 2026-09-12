@@ -1,0 +1,7 @@
+# Approved Flowsheets appearance
+
+Operator scope: “Yes—finish the list and both forms”; decision: “radio buttons”. Graph work excluded. Use live radio answer controls with scores at right and a labelled Date field with calendar button. All nine source questions and four source response labels/scores are preserved. Only the first question has Several days selected, in both forms. Date3/4/26; source PHQ-9/GAD-7 examples unchanged except form Updated2 days ago. No score calculation or clinical thresholds.
+
+Shared550px Floating Sidesheet,518px content,16px insets; content-height placed sheets. Body states List/Add new/Edit past share one new set. Existing list component stays untouched as a nested live instance. Published42px radio label controls,40px calendar button, small filled date field and medium Save with caret. Questions use h4/body1/body2 library styles and text tokens;8px tight gaps,16px standard gaps,24px question spacing. Paper backdrop. Existing temporary icon GAP markers retained; graphs and per-question graph controls omitted. Calendar popup, save menu and interaction behavior remain unimplemented source behavior findings.
+
+Every full state receives a dedicated1:1 frozen2x source reference, live Rebuild helper and plain-language Change log within the existing comparison master on Screens. Inspect radio states, both forms, all sheets and comparisons. Preserve shared component definitions and550×600 master geometry except explicitly appended preferred values. No detached instances, deletion or source/library writes.
