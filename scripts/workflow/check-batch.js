@@ -4,6 +4,7 @@ const { ROOT, jsonDigest, manifestRiskPayload, readJson, store } = require('./li
 const { validateContract } = require('./validate-contract');
 const { validateManifest } = require('./validate-manifest');
 const { validateExecution } = require('./validate-execution');
+const { describe, validateBatchFiles } = require('./batch-files');
 
 const [itemId] = process.argv.slice(2);
 if (!itemId) throw new Error('Usage: node scripts/workflow/check-batch.js <item-id>');
@@ -24,5 +25,9 @@ const { errors, additions } = store.compareFingerprint(run.storeFingerprint, loa
 if (errors.length) throw new Error(`Concurrent store change detected:\n- ${errors.join('\n- ')}`);
 const owned = store.findRecord(loaded, item.expectedRecordId);
 if (!owned) throw new Error(`Owned record ${item.expectedRecordId} is missing from the store`);
+// Plan and inventory before a write: the nodes to mutate must have been re-verified in Figma by id, name, type and
+// parent since the inventory was walked (record workflow_planInventory_2026-09-12).
+const files = validateBatchFiles({ record: owned.record, recordId: item.expectedRecordId, item, date: owned.date, stage: 'mutation' });
+if (files.errors.length) throw new Error(`Batch files gate failed before mutation:\n- ${files.errors.join('\n- ')}`);
 const appended = [...additions.records.map((id) => `record ${id}`), ...additions.flags.map((id) => `flag ${id}`)];
-console.log(`batch guard PASS ${itemId} foundation ${run.storeFingerprint.foundation.slice(0, 12)}; ${Object.keys(run.storeFingerprint.records).length} records and ${Object.keys(run.storeFingerprint.flags).length} flags unchanged${appended.length ? `; concurrent appends by other batches: ${appended.join(', ')}` : ''}`);
+console.log(`batch guard PASS ${itemId} foundation ${run.storeFingerprint.foundation.slice(0, 12)}; ${Object.keys(run.storeFingerprint.records).length} records and ${Object.keys(run.storeFingerprint.flags).length} flags unchanged${appended.length ? `; concurrent appends by other batches: ${appended.join(', ')}` : ''}; batch files ${describe(files)}`);

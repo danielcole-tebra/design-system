@@ -1,0 +1,116 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "workflow_planInventory_2026-09-12",
+ "sequence": 113,
+ "date": "2026-09-12",
+ "workstream": "workflow",
+ "created": {
+  "by": "Claude Fable 5.1 (Claude Code desktop)",
+  "at": "2026-09-12T19:41:38.080Z",
+  "script": "apply-workflow-plan-inventory-2026-09-12.js"
+ },
+ "record": {
+  "_status": "DONE — plan.md required by every gate from open to finish; a Figma batch's inventory.json with reverification by id, name, type and parent before the first write, absent for a repository-only batch; both in the scaffold, with self-tests; repository-only, no Figma call.",
+  "date": "2026-09-12",
+  "batchKind": "repository",
+  "plan": "figma-export/workflow-plan-inventory-2026-09-12/plan.md",
+  "workstream": "Workflow / session economy",
+  "executor": "Claude Fable 5.1 (Claude Code desktop)",
+  "risk": {
+   "tier": "low",
+   "assignedBy": "Repository-only tooling work, the last of the batches deferred by workflow_sessionEconomy_2026-09-12 (batches A, C and D ran at tier low, accepted by the operator); commissioned by the operator in chat at session start. The executor did not change the tier.",
+   "operatorQuote": "Batch E: durable plan.md and inventory.json per batch. The planner writes its phase checklist to figma-export/<batch>/plan.md, required for every batch by the finish gate. A Figma batch saves its page inventory to figma-export/<batch>/inventory.json on the first walk; later checks read that file to choose what to look at and re-verify the nodes they will mutate by id, name, type and parent before the first write, never treating the file as evidence (rule 3). inventory.json is required by the finish gate for Figma batches and absent for repository-only ones. Add both to the scaffold, with self-tests. Lean start."
+  },
+  "planAsProposed": "Batch E (nextAction of workflow_recordScripts_2026-09-12 and the deferred item of that record): durable plan.md and inventory.json per batch, in the scaffold, with self-tests.",
+  "scope": [
+   "scripts/workflow/batch-files.js (new): validatePlan, validateInventory, batchKind and validateBatchFiles per stage (open, checkpoint, mutation, close, finish); applies to records dated on or after workflow/check-catalog.json → batchFiles.appliesFrom (2026-09-12)",
+   "scripts/schema/record-scripts.js: apply requires batchKind and the plan beside the report; checkpoint keeps the plan parseable; close requires every phase done or dropped and, for a Figma batch, inventory.json with a clean latest reverification once mutations are listed; a repository batch refuses an inventory",
+   "scripts/workflow/start-batch.js, check-batch.js, finish-batch.js and runner/closeout.js: the same gate at open, before a mutation, at close and at finish",
+   "scripts/figma/helpers.js: F.inventory (bounded read-only walk, pages loaded first) and F.reverify (id, name, type, parent read back; strict mode fails before any write); creators refuse until a composed script's reverify passed; compose({ reverify }) puts it in the prelude",
+   "scripts/figma/inventory.js (new): walkScript, save (first walk saved once), addWalk, load, select, expectations, reverifyScript, recordReverification and a CLI (walk, save, select, reverify, record)",
+   "scripts/schema/new-record-scripts.js: --kind and --target; writes plan.md from a phase template beside the apply/finalize pair and, for a Figma batch, inventory-walk.figma.js; the apply body declares batchKind, plan and inventory",
+   "scripts/figma/double.js (new): the Plugin API double shared by the Figma self-tests; scripts/workflow/batch-files-self-test.js, scripts/figma/inventory-self-test.js and scripts/schema/scaffold-self-test.js (new); scripts/schema/record-scripts-self-test.js and scripts/figma/helpers-self-test.js extended; preflight runs the three new self-tests",
+   "workflow/check-catalog.json: deterministic planChecklist and pageInventory (21 checks) and the batchFiles policy; workflow/rules.json notes on agent rules 2 and 3 and standing rule 16; CLAUDE.md Recording; workflow/README.md; contract regenerated; report; finalize through close(); commit"
+  ],
+  "report": "figma-export/workflow-plan-inventory-2026-09-12/report.md",
+  "canvasChecks": "Not applicable: repository-only batch",
+  "figmaMutations": [],
+  "flagsAdded": [],
+  "stopCondition": "Repository-only; no Figma call. No change to risk ownership, additive-only rules, DONE records, the store API in scripts/schema/lib.js, or the execution policy text. Records dated before 2026-09-12, including the stopped Flowsheets batch, are noted by the gate, not refused.",
+  "nextAction": "Design work resumes in a fresh session: the stopped Flowsheets finish batch (npveRebuild_flowsheetsFinish_2026-09-11, exempt by date) or the next planner-selected NPVE item, which opens through the scaffold with its plan.md, saves its first walk as inventory.json and re-verifies the nodes it will mutate before its first write.",
+  "outcome": "The three Batch E deliverables are in place. Every record dated on or after 2026-09-12 opens only with the planner's plan.md beside its report and closes only when every phase is done or dropped with a reason; apply, checkpoint, close, start-batch, check-batch, finish-batch and the runner closeout all run the same gate from scripts/workflow/batch-files.js. A Figma batch saves its first read-only walk as inventory.json, chooses later reads from it, and re-verifies the nodes it will mutate in Figma before the first write: the composed script fails on drift before its body runs, the helpers' creators refuse to write until the check passed, check-batch refuses a mutation until the latest recorded reverification is clean, and close and finish require it once mutations are listed. A repository batch with an inventory is refused. The scaffold writes plan.md, declares batchKind, plan and inventory, and writes the walk script for a Figma batch. This record was scaffolded, opened and closed through that tooling; its first apply was refused by its own gate because the template sentence named the placeholder marker, fixed before the record opened.",
+  "implementation": [
+   "scripts/workflow/batch-files.js (new): parsePlan, validatePlan, validateInventory, batchKind, validateBatchFiles per stage (open, checkpoint, mutation, close, finish), assertBatchFiles, describe; CLI by record or item id; applies from workflow/check-catalog.json → batchFiles.appliesFrom (2026-09-12)",
+   "scripts/schema/record-scripts.js: apply runs the gate at open (batchKind declared, plan present without a placeholder); checkpoint and close run it after the ceiling check; report resolved with path.resolve; DEFAULT_SELF_TESTS gains the three new self-tests",
+   "scripts/workflow/start-batch.js, check-batch.js, finish-batch.js, runner/closeout.js: the gate at open, before a mutation, at finish and at close; PASS lines report kind, plan and inventory",
+   "scripts/figma/helpers.js: F.inventory (bounded read-only walk, pages loaded first), F.reverify (id, name, type, parent read back; strict mode fails, soft mode records), F.reverified; writable() refuses until a composed script's reverify passed; prelude/compose accept reverify",
+   "scripts/figma/inventory.js (new): walkScript, fromWalk, save (first walk once), addWalk, load, select, expectations, reverifyScript, recordReverification, target; CLI walk, save, select, reverify, record",
+   "scripts/figma/double.js (new): the Plugin API double shared by the Figma self-tests, pages with loadAsync",
+   "scripts/schema/new-record-scripts.js: --kind and --target; planTemplate; writes plan.md beside the pair and inventory-walk.figma.js for a Figma batch; the apply body declares batchKind, plan and inventory; the finalize template carries figmaMutations",
+   "scripts/workflow/batch-files-self-test.js, scripts/figma/inventory-self-test.js, scripts/schema/scaffold-self-test.js (new); scripts/schema/record-scripts-self-test.js stages 1b, 5 and 6b; scripts/figma/helpers-self-test.js stages 9 to 11 on double.js",
+   "workflow/check-catalog.json: deterministic planChecklist and pageInventory (21 checks), batchFiles policy; workflow/rules.json: notes on agent rules 2 and 3, standing rule 16 body keys and scaffold; CLAUDE.md Recording; workflow/README.md steps 4, 5, 7 and commands; contract regenerated",
+   "figma-export/workflow-plan-inventory-2026-09-12/: plan.md, report.md, startup-this-session.json, scaffold-demo/ (Figma-kind scaffold with a synthetic inventory round trip on the double)"
+  ],
+  "gates": {
+   "module": "scripts/workflow/batch-files.js validateBatchFiles({ record, recordId, item, date, stage })",
+   "stages": "open: apply, start-batch; checkpoint: checkpoint; mutation: check-batch (latest recorded reverification clean); close: close, runner closeout (every phase done or dropped with a reason; inventory present, clean reverification once mutations are listed); finish: finish-batch (same, plus fileKey equal to the item target)",
+   "kind": "record.batchKind declared by the planner; otherwise a manifest item with target.fileKey or a record listing Figma mutations is a Figma batch; a contradicting declaration is refused; a repository batch with an inventory is refused",
+   "appliesFrom": "2026-09-12 by record date, like the record ceiling; older records (the stopped Flowsheets batch) are noted, not refused",
+   "order": "in checkpoint and close the ceiling check runs before the plan and inventory gate"
+  },
+  "inventory": {
+   "format": "tebra.design-page-inventory version 1: fileKey, capturedAt, capturedBy, skipInvisibleInstanceChildren=false, authority (not evidence), pages, nodes {id, name, type, parent, page, depth, visible}, walks, reverifications {at, script, verified, mismatched, missing}",
+   "lifecycle": "walk script (scaffolded, or inventory.js walk) run with use_figma → save once → select candidates → reverify script for the nodes to mutate, run before the first write → record the readback; a mutation script composes with reverify: expectations so the check precedes the body in the same call",
+   "liveUse": "none this session; the tooling ran only on the in-memory double. First live use is the next design batch, which reads back per the execution policy"
+  },
+  "validation": {
+   "workflowBeforeFinalize": "workflow PASS store=114r/236+60f contract=9e93a77d4cf8 items=15 deterministic=21 visual=3 lean=116834/128000 inProgress=npveRebuild_flowsheetsFinish_2026-09-11,workflow_planInventory_2026-09-12",
+   "ceilingsBeforeFinalize": "ceilings PASS lean=116834/128000",
+   "selfTests": [
+    "scripts/schema/self-test.js: exit 0",
+    "scripts/schema/record-scripts-self-test.js: exit 0",
+    "scripts/schema/scaffold-self-test.js: exit 0",
+    "scripts/figma/helpers-self-test.js: exit 0",
+    "scripts/figma/inventory-self-test.js: exit 0",
+    "scripts/workflow/batch-files-self-test.js: exit 0",
+    "scripts/workflow/self-test.js: exit 0",
+    "scripts/workflow/runner-self-test.js: exit 0",
+    "scripts/workflow/execution-self-test.js: exit 0",
+    "scripts/workflow/runner-plugin-self-test.js: exit 0",
+    "scripts/workflow/target-identity-self-test.js: exit 0"
+   ],
+   "canvas": "N/A — no Figma read or write; the inventory tooling ran only on the in-memory Plugin API double",
+   "screenshots": "N/A — repository-only batch; nothing rendered",
+   "batchFilesCli": "node scripts/workflow/batch-files.js workflow_planInventory_2026-09-12 checkpoint: PASS kind=repository plan=figma-export/workflow-plan-inventory-2026-09-12/plan.md",
+   "figmaCalls": 0,
+   "figmaMutations": 0,
+   "existingDoneRecordsEdited": 0
+  },
+  "startupAccounting": {
+   "measuredBy": "scripts/workflow/measure-startup.js, output in figma-export/workflow-plan-inventory-2026-09-12/startup-this-session.json",
+   "callsBeforeFirstTaskAction": 22,
+   "resultBytesBeforeFirstTaskAction": 225038,
+   "firstTaskAction": {
+    "index": 23,
+    "tool": "Write",
+    "summary": "C:\\Code\\design system\\scripts\\workflow\\batch-files.js"
+   },
+   "note": "Calls 1 to 6 (105,282 bytes) were the lean set: the validator line; the contract read through cat and a persisted tool-result file in two pages (about 8,000 bytes more than a scoped projection); the manifest item list and matched item by projection; the Batch D record. Calls 7 to 22 (119,756 bytes) opened the tooling the approved work changes, named per rule 16: the scripts tree, the scaffold, finish-batch, check-batch, start-batch, validate-evidence, validate-workflow and workflow lib in full; record-scripts.js, helpers.js and their two self-tests in full (all edited); the catalog and execution template by projection; closeout's finalize block; rules.json anchors; the previous report head; README sections; the Flowsheets page-snapshot head. Over the 128,000 lean target because the tooling reads were the work, as in Batch D."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 4
+  },
+  "decisionsForOperator": [
+   "Template bug caught by the gate: the scaffold's plan sentence named the placeholder marker itself and the detector matched it, so this record's first apply was refused; reworded to \"an unfilled placeholder\" before the record opened. Recorded, no decision needed.",
+   "Gating by record date: the gate applies to records dated on or after 2026-09-12, so the stopped Flowsheets batch (2026-09-11) resumes and closes without a plan or inventory and its gate lines say so. Confirm, or ask that the resumed batch adopt a plan.md before it continues.",
+   "Kind for manifest items: an item with target.fileKey is a Figma batch; a repository-only item would carry no target and declare batchKind repository in its record. Whether the manifest should carry an explicit kind field is a planner decision.",
+   "Rule wording: agent rules 2 and 3 gained notes and standing rule 16 states the new body keys and the scaffold's plan.md, citing this record; the canonical text is workflow/rules.json. Confirm or reword."
+  ],
+  "deferred": [],
+  "carryOver": "The stopped Flowsheets batch still holds untracked files and uncommitted edits to flags/active.json and workflow/manifest.json; preserved, not committed. This commit's regenerated indexes and contract digest that working tree, as Batches A, C and D did.",
+  "standingBatchRules": "N/A for this repository-only workflow batch; the ten Figma rules are unchanged and still required for design batches."
+ }
+}

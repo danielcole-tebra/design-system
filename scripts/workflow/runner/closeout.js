@@ -5,6 +5,7 @@ const { validateExecution } = require('../validate-execution');
 const { validateEvidence } = require('../validate-evidence');
 const { repositoryContext, approval, need } = require('./core');
 const { checkRecordCeiling, envelopeWith } = require('../../schema/record-scripts');
+const { validateBatchFiles } = require('../batch-files');
 function command(name, ...args) {
   return execFileSync(process.execPath, [`scripts/workflow/${name}.js`, ...args], { cwd: ROOT, encoding: 'utf8' }).trim();
 }
@@ -35,6 +36,9 @@ function closeout(id, finalBody, { dryRun = true } = {}) {
     const next = { ...record, ...finalBody };
     const env = envelopeWith(loaded, ctx.item.expectedRecordId, next);
     checkRecordCeiling({ id: ctx.item.expectedRecordId, date: env.date, envelope: env, stage: 'close' });
+    // plan.md complete and, for a Figma batch, inventory.json with a clean reverification (record workflow_planInventory_2026-09-12).
+    const files = validateBatchFiles({ record: next, recordId: ctx.item.expectedRecordId, item: ctx.item, date: env.date, stage: 'close' });
+    need(!files.errors.length, `Batch files gate at close: ${files.errors.join('; ')}`);
     return next;
   });
   command('generate-contract');

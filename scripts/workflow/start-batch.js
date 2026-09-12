@@ -5,6 +5,7 @@ const { fileState } = require('./workspace-baseline');
 const { validateContract } = require('./validate-contract');
 const { validateManifest } = require('./validate-manifest');
 const { executionPath, validateExecution } = require('./validate-execution');
+const { describe, validateBatchFiles } = require('./batch-files');
 
 // Usage: node scripts/workflow/start-batch.js <item-id> <executor> [provider] [model] [reasoning] [--confirm="<verbatim operator confirmation>"]
 // --confirm is required when the item's risk tier is not approved; it records the operator's per-item confirmation in the run.
@@ -38,6 +39,10 @@ if (!record || !String(record._status || record.status).startsWith('IN PROGRESS'
   throw new Error(`Record gate failed: ${item.expectedRecordId} must exist under records/ and be IN PROGRESS before batch start`);
 }
 
+// Plan gate: the planner's phase checklist sits beside the report before execution starts (record workflow_planInventory_2026-09-12).
+const files = validateBatchFiles({ record, recordId: item.expectedRecordId, item, date: env.date, stage: 'open' });
+if (files.errors.length) throw new Error(`Batch files gate failed at start:\n- ${files.errors.join('\n- ')}`);
+
 const runPath = `.workflow-runs/${itemId}.json`;
 if (fs.existsSync(path.resolve(ROOT, runPath))) throw new Error(`Active run already exists: ${runPath}`);
 // New runs carry a portable preflight checkpoint. Historical runs remain version 2.
@@ -70,4 +75,4 @@ if (perItemConfirmation) {
   item.perItemConfirmations = [...(item.perItemConfirmations || []), perItemConfirmation];
   writeJson('workflow/manifest.json', manifest);
 }
-console.log(`batch started ${itemId}; record ${env.file}; guard ${run.storeFingerprint.foundation.slice(0, 12)} over ${Object.keys(run.storeFingerprint.records).length} records + ${Object.keys(run.storeFingerprint.flags).length} flags; risk ${item.risk.tier} (${run.riskApproval}${perItemConfirmation ? ', per-item confirmation recorded' : ''})`);
+console.log(`batch started ${itemId}; record ${env.file}; guard ${run.storeFingerprint.foundation.slice(0, 12)} over ${Object.keys(run.storeFingerprint.records).length} records + ${Object.keys(run.storeFingerprint.flags).length} flags; risk ${item.risk.tier} (${run.riskApproval}${perItemConfirmation ? ', per-item confirmation recorded' : ''}); batch files ${describe(files)}`);

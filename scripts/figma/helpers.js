@@ -1,4 +1,5 @@
-// Shared Plugin API helpers for use_figma scripts (record workflow_recordScripts_2026-09-12).
+// Shared Plugin API helpers for use_figma scripts (record workflow_recordScripts_2026-09-12; inventory walk and
+// reverify added by workflow_planInventory_2026-09-12).
 //
 // A use_figma script is text evaluated inside Figma and nothing imported persists between calls, so the helpers
 // ship as text and are composed into every script. They carry the patterns the NPVE build scripts repeated by
@@ -6,10 +7,15 @@
 // imports are used in the call that made them, a bound paint is read back because a null variable returns an
 // unbound paint without throwing, and every setter is followed by a readback so a silent no-op fails the script.
 //
-// compose({ fileKey, pages, pageId, parent, fonts, components, variables, styles, readOnly, body }) returns the
-// script text: `const F = …` (the helpers), the prelude the options describe (guard, `page`, fonts, `parent`,
-// `lib`, `vars`, `styles`), then `body`, then a default `return { created, readback }` that a body's own return
-// shadows. The text is refused over LIMIT characters, the use_figma limit the Flowsheets batch hit.
+// compose({ fileKey, pages, pageId, reverify, parent, fonts, components, variables, styles, readOnly, body }) returns
+// the script text: `const F = …` (the helpers), the prelude the options describe (guard, `page`, reverify, fonts,
+// `parent`, `lib`, `vars`, `styles`), then `body`, then a default `return { created, readback }` that a body's own
+// return shadows. The text is refused over LIMIT characters, the use_figma limit the Flowsheets batch hit.
+//
+// `reverify` is the list of nodes the body will mutate, as { id, name, type, parent } taken from the batch's
+// inventory.json (scripts/figma/inventory.js): F.reverify reads each back in Figma before the body runs and fails on
+// drift, and every creator refuses to write until that check passed (standing rule 3: the file is not evidence).
+// F.inventory(pageIds, depth) is the read-only walk that produces the inventory in the first place.
 //
 // The helpers are a plain function so Node can run them against a double (helpers-self-test.js) and Figma runs
 // the same source. Only documented Plugin API calls are used; nothing here is a layout or pixel claim.
@@ -30,6 +36,7 @@ function helpers(figma, options) {
   const readOnly = new Set(options.readOnly || []);
   const F = {
     created: [],
+    reverified: null,
     fail(message) { throw new Error(message); },
     pages() { return figma.root.children.map((n) => n.id + ' ' + n.name); },
     // File identity first, then the page set (id and name) when one is given; both from a prior read, never assumed.
@@ -38,7 +45,51 @@ function helpers(figma, options) {
       if (pages && JSON.stringify(F.pages()) !== JSON.stringify(pages)) F.fail('Page identity mismatch: ' + JSON.stringify(F.pages()));
       return figma.fileKey;
     },
-    writable() { if (readOnly.has(figma.fileKey)) F.fail('Writes prohibited in read-only file ' + figma.fileKey); },
+    writable() {
+      if (readOnly.has(figma.fileKey)) F.fail('Writes prohibited in read-only file ' + figma.fileKey);
+      if (options.requireReverify && (!F.reverified || F.reverified.missing.length || F.reverified.mismatched.length)) F.fail('Writes refused before the inventory nodes are re-verified by id, name, type and parent (standing rule 3)');
+    },
+    // Re-verify nodes a script will mutate against what the inventory expected: id, name, type and parent id, read
+    // back in Figma now. Fails before any write on a missing or drifted node unless o.soft; the result is returned
+    // for the batch to record in inventory.json.
+    async reverify(expected, o) {
+      const result = { verified: [], mismatched: [], missing: [] };
+      for (const e of expected || []) {
+        if (!e || !e.id) F.fail('reverify: every expectation needs an id');
+        const n = await figma.getNodeByIdAsync(e.id);
+        if (!n) { result.missing.push({ id: e.id, expected: e }); continue; }
+        const found = { id: n.id, name: n.name, type: n.type, parent: n.parent ? n.parent.id : null };
+        const drift = ['name', 'type', 'parent'].filter((k) => e[k] !== undefined && e[k] !== found[k]);
+        if (drift.length) result.mismatched.push({ id: e.id, drift: drift, expected: e, found: found });
+        else result.verified.push(found);
+      }
+      F.reverified = result;
+      if (!(o && o.soft) && (result.missing.length || result.mismatched.length)) {
+        const detail = result.mismatched.map((m) => m.id + ' ' + m.drift.join('/')).concat(result.missing.map((m) => m.id + ' missing'));
+        F.fail('Inventory drift: ' + result.missing.length + ' missing, ' + result.mismatched.length + ' mismatched (' + detail.join(', ') + '); walk again before writing');
+      }
+      return result;
+    },
+    // Read-only page inventory to a bounded depth: id, name, type, parent and page per node. A read, never a claim;
+    // pages are loaded first because a non-current page has no children until loadAsync in dynamic-page mode.
+    async inventory(pageIds, depth) {
+      depth = depth == null ? 2 : depth;
+      const pages = figma.root.children.filter((p) => !pageIds || pageIds.indexOf(p.id) >= 0);
+      if (pageIds && pages.length !== pageIds.length) F.fail('Unknown page id in ' + JSON.stringify(pageIds) + '; pages are ' + JSON.stringify(F.pages()));
+      const nodes = [];
+      const walk = (n, pageId, level) => {
+        for (const c of n.children || []) {
+          nodes.push({ id: c.id, name: c.name, type: c.type, parent: n.id, page: pageId, depth: level, visible: c.visible !== false });
+          if (level < depth) walk(c, pageId, level + 1);
+        }
+      };
+      for (const p of pages) { if (typeof p.loadAsync === 'function') await p.loadAsync(); walk(p, p.id, 1); }
+      return {
+        fileKey: figma.fileKey, capturedAt: new Date().toISOString(), skipInvisibleInstanceChildren: figma.skipInvisibleInstanceChildren,
+        pages: pages.map((p) => ({ id: p.id, name: p.name, children: (p.children || []).length })),
+        nodes: nodes, walk: { pageIds: pageIds || null, depth: depth, count: nodes.length }
+      };
+    },
     async node(id, expect) {
       const n = await figma.getNodeByIdAsync(id);
       if (!n) F.fail('Missing node ' + id);
@@ -166,6 +217,10 @@ function prelude(o) {
   if (!o || !o.fileKey) throw new Error('compose: fileKey is required');
   const lines = [`F.guardFile(${js(o.fileKey)}, ${o.pages ? js(o.pages) : 'null'});`];
   if (o.pageId) lines.push(`const page = await F.page(${js(o.pageId)}${o.pageName ? `, { name: ${js(o.pageName)} }` : ''});`);
+  if (o.reverify) {
+    if (!Array.isArray(o.reverify) || !o.reverify.length || !o.reverify.every((e) => e && e.id)) throw new Error('compose: reverify must be a non-empty list of { id, name, type, parent } from the batch inventory');
+    lines.push(`const reverified = await F.reverify(${js(o.reverify)});`);
+  }
   if (o.fonts && o.fonts.length) lines.push(`await F.fonts(${js(o.fonts)});`);
   if (o.parent) lines.push(`const parent = await F.node(${js(o.parent.id)}, ${js(o.parent.expect || {})});`);
   if (o.components) lines.push(`const lib = await F.components(${js(o.components)});`);
@@ -177,7 +232,7 @@ function prelude(o) {
 function compose(o) {
   const readOnly = o.readOnly || [FILES.npveSource];
   const text = [
-    `const F = (${helpers.toString()})(figma, ${js({ readOnly })});`,
+    `const F = (${helpers.toString()})(figma, ${js({ readOnly, requireReverify: !!o.reverify })});`,
     prelude(o),
     String(o.body || '').trim(),
     'return { created: F.created, readback: await F.readback() };'

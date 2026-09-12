@@ -1,0 +1,3 @@
+# Scaffold demo (synthetic)
+
+Produced by `node scripts/schema/new-record-scripts.js --kind figma` for a demo record id, then a round trip of the inventory tooling on the in-memory Plugin API double (`scripts/figma/double.js`): the scaffolded walk script ran on the double, its result was saved with `inventory.js save`, one node was selected and re-verified with the scaffolded reverify script, and the clean result was recorded. Nothing here came from Figma; the `capturedBy` and file names say SYNTHETIC. The apply script was never run: its TODO markers and the plan's placeholder phase are exactly what `apply` refuses.

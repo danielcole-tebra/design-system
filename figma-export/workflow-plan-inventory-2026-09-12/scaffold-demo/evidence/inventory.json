@@ -1,0 +1,68 @@
+{
+  "format": "tebra.design-page-inventory",
+  "version": 1,
+  "batch": "figma-export/workflow-plan-inventory-2026-09-12/scaffold-demo/evidence",
+  "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "capturedAt": "2026-09-12T19:42:14.305Z",
+  "capturedBy": "SYNTHETIC: scripts/figma/double.js, not Figma",
+  "skipInvisibleInstanceChildren": false,
+  "authority": "A dated candidate list from a read-only walk; not evidence. Re-verify every node a script will mutate by id, name, type and parent in Figma before the first write (standing rule 3).",
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Cover",
+      "children": 0
+    },
+    {
+      "id": "3:2",
+      "name": "Templates",
+      "children": 1
+    },
+    {
+      "id": "27:2",
+      "name": "Screens",
+      "children": 0
+    },
+    {
+      "id": "126:2",
+      "name": "Archive",
+      "children": 0
+    }
+  ],
+  "nodes": [
+    {
+      "id": "5:5",
+      "name": "29 · Section",
+      "type": "SECTION",
+      "parent": "3:2",
+      "page": "3:2",
+      "depth": 1,
+      "visible": true
+    }
+  ],
+  "walks": [
+    {
+      "capturedAt": "2026-09-12T19:42:14.305Z",
+      "script": "inventory-walk.figma.js",
+      "pageIds": null,
+      "depth": 2,
+      "count": 1
+    }
+  ],
+  "reverifications": [
+    {
+      "at": "2026-09-12T19:42:14.322Z",
+      "script": "inventory-reverify.figma.js",
+      "verified": [
+        {
+          "id": "5:5",
+          "name": "29 · Section",
+          "type": "SECTION",
+          "parent": "3:2"
+        }
+      ],
+      "mismatched": [],
+      "missing": []
+    }
+  ]
+}

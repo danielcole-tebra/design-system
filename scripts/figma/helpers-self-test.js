@@ -1,64 +1,11 @@
-// In-memory Plugin API double for scripts/figma/helpers.js. It cannot contact Figma and does not claim to
-// simulate layout or pixels; it checks the helpers' guards, imports, readbacks and composition, including the
-// plugin-API traps: a null variable returns an unbound paint, a wrong property name is ignored, text needs fonts.
+// Self-test of scripts/figma/helpers.js against the in-memory Plugin API double in ./double.js. It cannot contact
+// Figma and does not claim to simulate layout or pixels; it checks the helpers' guards, imports, readbacks,
+// inventory walk, reverification and composition, including the plugin-API traps: a null variable returns an
+// unbound paint, a wrong property name is ignored, text needs fonts.
 const assert = require('assert/strict');
 const { FILES, FONTS, LIMIT, NPVE_TARGET_PAGES, compose, helpers, prelude } = require('./helpers');
 
-let serial = 0;
-const all = new Map(); // every node the double creates, including instances, so readback finds them by id
-class Node {
-  constructor(type, name, width = 100, height = 40) {
-    Object.assign(this, { id: `${++serial}:${serial}`, type, name, width, height, x: 0, y: 0, parent: null, children: [], fills: [], strokes: [], boundVariables: {} });
-    all.set(this.id, this);
-    if (['COMPONENT', 'COMPONENT_SET'].includes(type)) { this.key = `key-${serial}`; this.componentPropertyDefinitions = {}; }
-  }
-  appendChild(n) { n.parent = this; this.children.push(n); }
-  resize(w, h) { this.width = w; this.height = h; }
-  setBoundVariable(field, variable) { if (variable) this.boundVariables[field] = { type: 'VARIABLE_ALIAS', id: variable.id }; }
-  createInstance() {
-    const i = new Node('INSTANCE', this.name, this.width, this.height);
-    i.componentProperties = Object.fromEntries(Object.entries(this.componentPropertyDefinitions).map(([k, d]) => [k, { type: d.type, value: d.defaultValue }]));
-    i.setProperties = (values) => { for (const [k, v] of Object.entries(values)) if (i.componentProperties[k]) i.componentProperties[k].value = v; }; // a wrong name is ignored, as in Figma
-    return i;
-  }
-}
-class Text extends Node {
-  constructor(double) { super('TEXT', 'Text', 100, 24); this.double = double; this._characters = ''; }
-  get characters() { return this._characters; }
-  set characters(v) { if (!this.double.fontsLoaded.size) throw new Error('font not loaded'); this._characters = v; }
-  async setTextStyleIdAsync(id) { this.textStyleId = id; }
-}
-
-function double({ fileKey = FILES.npveTarget, pages = NPVE_TARGET_PAGES } = {}) {
-  const nodes = all;
-  const add = (n) => n;
-  const d = { fontsLoaded: new Set(), currentPage: null, nodes };
-  d.figma = {
-    fileKey,
-    skipInvisibleInstanceChildren: true,
-    root: { children: pages.map((p) => { const [id, ...name] = p.split(' '); const n = new Node('PAGE', name.join(' ')); n.id = id; nodes.set(id, n); return n; }) },
-    getNodeByIdAsync: async (id) => nodes.get(id) || null,
-    setCurrentPageAsync: async (p) => { d.currentPage = p; },
-    loadFontAsync: async (font) => { d.fontsLoaded.add(`${font.family}/${font.style}`); },
-    importComponentByKeyAsync: async (key) => d.components[key] || null,
-    importStyleByKeyAsync: async (key) => d.styles[key] || null,
-    variables: {
-      importVariableByKeyAsync: async (key) => d.vars[key] || null,
-      setBoundVariableForPaint: (paint, field, variable) => (variable && d.vars[variable.key] ? { ...paint, boundVariables: { [field]: { type: 'VARIABLE_ALIAS', id: variable.id } } } : { ...paint }) // null or foreign variable: unbound, no throw
-    },
-    createFrame: () => add(new Node('FRAME', 'Frame')),
-    createComponent: () => add(new Node('COMPONENT', 'Component')),
-    createText: () => add(new Text(d))
-  };
-  d.section = add(new Node('SECTION', '29 · Section', 2000, 2000));
-  d.figma.root.children[Math.min(1, pages.length - 1)].appendChild(d.section);
-  const cell = add(new Node('COMPONENT', 'Table/Cell', 80, 20));
-  cell.componentPropertyDefinitions = { 'Text#190:0': { type: 'TEXT', defaultValue: 'Cell' } };
-  d.components = { cellKey: cell };
-  d.vars = { paperKey: { id: 'VariableID:1', key: 'paperKey', name: 'color/background/paper' }, s8Key: { id: 'VariableID:2', key: 's8Key', name: 'spacing/8' } };
-  d.styles = { h4Key: { id: 'S:h4', key: 'h4Key', name: 'Heading/H4' } };
-  return d;
-}
+const { double, run } = require('./double');
 
 const rejects = async (fn, re, label) => { await assert.rejects(fn, re, label); };
 const say = (line) => console.log(line);
@@ -140,15 +87,61 @@ const say = (line) => console.log(line);
   d.section.id = 'SECTION'; d.nodes.set('SECTION', d.section);
   const script = compose({ ...opts, body: "const row = F.frame(parent, { name: 'Row', width: 518, fills: [F.paint(vars.paper)] });\nawait F.text(row, { characters: 'Hi', style: styles.h4 });\nF.instance(lib.cell, row, { properties: { 'Text#190:0': 'A' } });" });
   assert.ok(script.length < LIMIT && script.endsWith('return { created: F.created, readback: await F.readback() };'));
-  const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor;
-  const result = await new AsyncFunction('figma', script)(d.figma);
+  const result = await run(script, d.figma);
   assert.equal(result.created.length, 3);
   assert.deepEqual(result.readback.map((n) => [n.type, n.parentId]), [['FRAME', 'SECTION'], ['TEXT', result.created[0]], ['INSTANCE', result.created[0]]]);
   assert.equal(d.currentPage.id, '3:2');
   const own = compose({ ...opts, body: 'return { pages: F.pages() };' });
-  assert.deepEqual(await new AsyncFunction('figma', own)(double().figma), { pages: NPVE_TARGET_PAGES });
+  assert.deepEqual(await run(own, double().figma), { pages: NPVE_TARGET_PAGES });
   const guarded = compose({ fileKey: FILES.npveSource, body: "F.frame(figma.root.children[0], { name: 'x', width: 10 });" });
-  await rejects(() => new AsyncFunction('figma', guarded)(double({ fileKey: FILES.npveSource, pages: NPVE_TARGET_PAGES }).figma), /Writes prohibited/);
+  await rejects(() => run(guarded, double({ fileKey: FILES.npveSource, pages: NPVE_TARGET_PAGES }).figma), /Writes prohibited/);
   say(`compose: prelude in order, ${script.length} characters for the three-node body (limit ${LIMIT}), default and own returns, source file read-only`);
-  say('self-test PASS figma helpers: guards, imports, paint/bind readback, text, instances, read-only source, composition');
+
+  // 9. inventory walk: bounded depth, id/name/type/parent/page per node, pages loaded first, unknown page refused
+  d = double();
+  F = helpers(d.figma, {});
+  const row = F.frame(d.section, { name: 'Row', width: 518 });
+  F.frame(row, { name: 'Deep', width: 10 });
+  const inv = await F.inventory(null, 2);
+  assert.deepEqual([inv.fileKey, inv.skipInvisibleInstanceChildren, inv.pages.map((p) => p.id), inv.walk], [FILES.npveTarget, false, ['0:1', '3:2', '27:2', '126:2'], { pageIds: null, depth: 2, count: 2 }]);
+  assert.deepEqual(inv.nodes.map((n) => [n.name, n.type, n.parent, n.page, n.depth]), [['29 · Section', 'SECTION', '3:2', '3:2', 1], ['Row', 'FRAME', d.section.id, '3:2', 2]]);
+  assert.ok(/^\d{4}-\d{2}-\d{2}T/.test(inv.capturedAt) && d.loadedPages.length === 4, 'timestamped; every page loaded before its children were read');
+  const one = await F.inventory(['3:2'], 3);
+  assert.equal(one.nodes.length, 3, 'depth 3 reaches the nested frame');
+  await rejects(() => F.inventory(['9:9'], 1), /Unknown page id/);
+  say('inventory: walk to a bounded depth with parent and page per node; pages loaded first; unknown page refused');
+
+  // 10. reverify: clean, drifted (name, parent) and missing nodes; soft mode records, strict mode fails before any write
+  const expect = { id: row.id, name: 'Row', type: 'FRAME', parent: d.section.id };
+  const clean = await F.reverify([expect, { id: d.section.id, name: '29 · Section', type: 'SECTION', parent: '3:2' }]);
+  assert.deepEqual([clean.verified.length, clean.mismatched, clean.missing], [2, [], []]);
+  row.name = 'Renamed';
+  const soft = await F.reverify([expect, { id: '404:404', name: 'Gone' }], { soft: true });
+  assert.deepEqual([soft.verified, soft.mismatched.map((m) => [m.id, m.drift, m.found.name]), soft.missing.map((m) => m.id)], [[], [[row.id, ['name'], 'Renamed']], ['404:404']]);
+  await rejects(() => F.reverify([expect]), /Inventory drift: 0 missing, 1 mismatched \(.*name\); walk again before writing/);
+  await rejects(() => F.reverify([{ name: 'no id' }]), /every expectation needs an id/);
+  row.name = 'Row';
+  const moved = F.frame(d.section, { name: 'Other', width: 10 });
+  moved.appendChild(row);
+  await rejects(() => F.reverify([expect]), /1 mismatched \(.*parent\)/);
+  say('reverify: clean, renamed, re-parented and missing nodes told apart; strict mode fails, soft mode records');
+
+  // 11. composition with reverify: the prelude re-verifies before the body, creators refuse until it passed, drift stops the script
+  d = double();
+  const target = F.frame(d.section, { name: 'Target', width: 100 });
+  const expectations = [{ id: target.id, name: 'Target', type: 'FRAME', parent: d.section.id }];
+  assert.throws(() => compose({ fileKey: FILES.npveTarget, reverify: [] }), /reverify must be a non-empty list/);
+  const pre9 = prelude({ fileKey: FILES.npveTarget, pageId: '3:2', reverify: expectations, fonts: FONTS.akkurat }).split('\n');
+  assert.deepEqual(pre9.map((l) => l.match(/F\.(\w+)/)[1]), ['guardFile', 'page', 'reverify', 'fonts']);
+  const good = compose({ fileKey: FILES.npveTarget, pages: NPVE_TARGET_PAGES, reverify: expectations, body: "const t = await F.node(reverified.verified[0].id); F.frame(t, { name: 'Child', width: 10 }); return { created: F.created, reverified };" });
+  const ok = await run(good, d.figma);
+  assert.deepEqual([ok.created.length, ok.reverified.verified.length], [1, 1]);
+  target.name = 'Drifted';
+  await rejects(() => run(good, d.figma), /Inventory drift/);
+  assert.equal(d.nodes.get(ok.created[0]).parent.children.length, 1, 'the drifted run created nothing');
+  target.name = 'Target';
+  const unverified = compose({ fileKey: FILES.npveTarget, pages: NPVE_TARGET_PAGES, reverify: expectations, body: "F.reverified = null; F.frame(figma.root.children[1], { name: 'x', width: 10 });" });
+  await rejects(() => run(unverified, d.figma), /Writes refused before the inventory nodes are re-verified/);
+  say('compose: reverify in the prelude before the body; creators refuse until it passed; drift stops the script before any write');
+  say('self-test PASS figma helpers: guards, imports, paint/bind readback, text, instances, read-only source, composition, inventory, reverify');
 })().catch((error) => { console.error(error.stack || error); process.exit(1); });

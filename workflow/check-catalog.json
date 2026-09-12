@@ -16,11 +16,13 @@
     "allowlist": "Working-tree changes are within the planner-approved file list.",
     "riskApproval": "Tier is operator-approved with a verbatim quote in the manifest, or the run carries a quoted per-item confirmation.",
     "citations": "Every sourceRecord cited by workflow/rules.json exists in the store (generate-contract.js refuses otherwise).",
-    "proofArchive": "Batch proofs are named PROOF \u2014 <batch> \u00b7 <what> and sit in Archive 06 at batch close.",
+    "proofArchive": "Batch proofs are named PROOF — <batch> · <what> and sit in Archive 06 at batch close.",
     "immutability": "No record whose committed status was not IN PROGRESS has changed since the last commit (validate-split.js compares against HEAD indexes/record-index.json); no record or flag is ever removed.",
     "milestone": "A milestone tag (milestone/<date>-<reason>) exists and is at most seven days old; milestones are taken at each workstream close or weekly, whichever comes first (backup policy B).",
     "byteCeilings": "Startup files stay under the byte ceilings in byteCeilings: CLAUDE.md, the contract, every manifest item, current-state and the worst-case lean set; a record dated on or after the adoption date stays under the record ceiling (IN PROGRESS fails, DONE is reported on the validator line); the runner packet is checked when it is generated.",
-    "recordCeilingAtWrite": "A record is measured against byteCeilings.record before every write by scripts/schema/record-scripts.js (apply, checkpoint, close) and by the runner closeout, and the write is refused over the ceiling; the stop sits before the record becomes immutable, so a DONE record over the ceiling can only have been written outside the helpers, which byteCeilings reports."
+    "recordCeilingAtWrite": "A record is measured against byteCeilings.record before every write by scripts/schema/record-scripts.js (apply, checkpoint, close) and by the runner closeout, and the write is refused over the ceiling; the stop sits before the record becomes immutable, so a DONE record over the ceiling can only have been written outside the helpers, which byteCeilings reports.",
+    "planChecklist": "plan.md beside the report names the record, carries the planner's phase checklist with no TODO, and has no open phase at close; checked at open (apply, start-batch), checkpoint, close (close, runner closeout) and finish (finish-batch) for records dated on or after batchFiles.appliesFrom by scripts/workflow/batch-files.js.",
+    "pageInventory": "A Figma batch's inventory.json holds the first read-only walk (file key, capture time, skipInvisibleInstanceChildren=false, pages, nodes by id, name, type, parent and page) and, before any write, a clean reverification of the nodes to mutate read back in Figma; check-batch refuses a mutation without one, and close and finish require the latest recorded reverification to be clean when the record lists mutations. Absent for a repository-only batch. The file is a candidate list, never evidence (standing rule 3)."
   },
   "visual": {
     "comparisonRender": "Executor inspects a dedicated reference/rebuild/change comparison for every component.",
@@ -50,5 +52,18 @@
     "leanSetDefinition": "CLAUDE.md + the generated contract + the largest manifest item + indexes/current-state.json + the largest of the latest record per workstream; the validator line itself is not counted",
     "remedy": "Move bulk out of the file: evidence to figma-export/<batch>/, enumerations to a cited file, prose to the report. A DONE record is immutable; its breach is reported, not repaired."
   },
-  "policy": "Scripts may compress deterministic successes. They may never waive, infer, or replace the visual checks."
+  "policy": "Scripts may compress deterministic successes. They may never waive, infer, or replace the visual checks.",
+  "batchFiles": {
+    "adopted": "2026-09-12, record workflow_planInventory_2026-09-12",
+    "appliesFrom": "2026-09-12",
+    "plan": "plan.md",
+    "inventory": "inventory.json",
+    "kinds": [
+      "figma",
+      "repository"
+    ],
+    "kind": "record.batchKind declared by the planner; otherwise a manifest item with a target file, or a record listing Figma mutations, is a Figma batch. A declaration that contradicts either is refused.",
+    "gates": "open: apply and start-batch; checkpoint; mutation: check-batch; close: close and the runner closeout; finish: finish-batch (scripts/workflow/batch-files.js). Records dated before appliesFrom are noted, not refused.",
+    "scaffold": "node scripts/schema/new-record-scripts.js writes plan.md (and, for a Figma batch, inventory-walk.figma.js) beside the apply/finalize pair; node scripts/figma/inventory.js walk|save|select|reverify|record handles the inventory."
+  }
 }

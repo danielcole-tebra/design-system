@@ -1,0 +1,45 @@
+{
+  "inventory": {
+    "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+    "capturedAt": "2026-09-12T19:42:14.305Z",
+    "skipInvisibleInstanceChildren": false,
+    "pages": [
+      {
+        "id": "0:1",
+        "name": "Cover",
+        "children": 0
+      },
+      {
+        "id": "3:2",
+        "name": "Templates",
+        "children": 1
+      },
+      {
+        "id": "27:2",
+        "name": "Screens",
+        "children": 0
+      },
+      {
+        "id": "126:2",
+        "name": "Archive",
+        "children": 0
+      }
+    ],
+    "nodes": [
+      {
+        "id": "5:5",
+        "name": "29 · Section",
+        "type": "SECTION",
+        "parent": "3:2",
+        "page": "3:2",
+        "depth": 1,
+        "visible": true
+      }
+    ],
+    "walk": {
+      "pageIds": null,
+      "depth": 2,
+      "count": 1
+    }
+  }
+}

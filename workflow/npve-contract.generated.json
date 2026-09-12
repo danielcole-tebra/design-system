@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-12T19:14:51.677Z",
+  "generatedAt": "2026-09-12T19:45:22.439Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "d38a1b377337037e8271a70fd52b446ea1d9f18ad11203a4976100da280719a6",
+      "sha256": "dc8e47df721d16d61913ac9e1b5118747d8eb118e989a77d66e592bf89943cb8",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "630461f394f686a7292d7aba3cb5e8400618f351caea0c0032e9143c37883f86"
+        "sha256": "0145af420b845f07f857038d0a50788012e58a4fcad2f03a246fc9c1d2b634d3"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "a277fe149604f106e2b9c6ebc73df0478dd9a9d43eed4eea8ad73a34566cf05a"
+        "sha256": "54d2ed07ea644ba8cf910f92e81f02e1662696aefc65b83bdc697a24bb16037e"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 113,
+      "records": 114,
       "flags": {
         "active": 236,
         "resolved": 60
@@ -38,11 +38,11 @@
     "instructions": [
       {
         "path": "workflow/rules.json",
-        "sha256": "7656e221ded351356a1fd866103f6256f906c73021397c54d61b5cb7796fff4d"
+        "sha256": "7308eff785b644f0aabc4a8864c8d3c319cf66dae83a7c2315bca742065fd5d4"
       },
       {
         "path": "CLAUDE.md",
-        "sha256": "82f08e0ac8e1799a1f21a219469acff7dc020aa077a4efa6db225dd5eca7c1e2"
+        "sha256": "180133a6c97b769a2e0e5fac331bef00841479bcfdaa66c0f3c8ecdb7de5d46e"
       },
       {
         "path": "AGENTS.md",
@@ -63,7 +63,7 @@
     ],
     "generator": "scripts/workflow/generate-contract.js",
     "generatorVersion": 3,
-    "citedRecordsPresent": 30
+    "citedRecordsPresent": 31
   },
   "recordStore": {
     "layout": "records/<workstream>/<date>/<recordId>.json (one file per batch record, immutable once its status leaves IN PROGRESS); flags/active.json and flags/resolved.json (the flag register split by status); foundation/<section>.json (meta, tokens, components, standing batch rules and the other non-record sections); indexes/record-index.json and indexes/current-state.json (generated, never hand-edited); design-system-schema.json (generated legacy aggregate).",
@@ -137,16 +137,20 @@
         "title": "Audit before building",
         "text": "Audit before building: when the current state is uncertain, run a read-only inventory first and report it. Never build onto an unverified state.",
         "sourceRecord": [
-          "npveRebuild_agentRules_2026-09-04"
-        ]
+          "npveRebuild_agentRules_2026-09-04",
+          "workflow_planInventory_2026-09-12"
+        ],
+        "note": "Amended by workflow_planInventory_2026-09-12: a Figma batch saves its first read-only walk of the target pages to figma-export/<batch>/inventory.json (scripts/figma/inventory.js); later checks choose what to look at from that file and re-verify the nodes they will mutate by id, name, type and parent in Figma before the first write (F.reverify; check-batch.js refuses a mutation until the latest recorded reverification is clean). The inventory is a dated candidate list, never evidence (rule 3); a repository-only batch keeps none."
       },
       {
         "n": 3,
         "title": "One batch at a time",
         "text": "One batch at a time, with a stop condition stated up front. A batch that grows past its stop condition becomes two batches.",
         "sourceRecord": [
-          "npveRebuild_agentRules_2026-09-04"
-        ]
+          "npveRebuild_agentRules_2026-09-04",
+          "workflow_planInventory_2026-09-12"
+        ],
+        "note": "Amended by workflow_planInventory_2026-09-12: the planner writes the batch's phase checklist to figma-export/<batch>/plan.md before the record opens (the scaffold writes the template; a TODO blocks apply). Every gate from open to finish requires it (scripts/workflow/batch-files.js), and close refuses an open phase: each is checked ([x]) or dropped ([-] …: why). A batch that grows past its checklist becomes two batches."
       },
       {
         "n": 4,
@@ -252,12 +256,13 @@
     },
     "16": {
       "title": "One batch per session; bounded reads",
-      "text": "A session holds one batch: it opens with the lean start, closes with that batch's finalize and commit, and the next batch starts a fresh session. A stopped batch resumes in a new session from its record and checkpoint; a session that already holds a finished batch does not open a second one. Startup reading is the lean set: the validator line, the generated contract, the selected manifest item, indexes/current-state.json and the last record it names. The contract's sources (workflow/rules.json, workflow/execution-policy.md, the canonical CLAUDE.md sections) and the workflow tooling (scripts/workflow, scripts/schema/lib.js, earlier apply and finalize scripts) are not read at startup: the contract is digest-checked, so the text it carries is current, and the record-script shape is stated here so no earlier script is needed as a template: in scripts/schema/record-scripts.js, apply({ id, previous, workstream, date, createdBy, body }) opens the IN PROGRESS record (body: _status, date, workstream, risk with the operator's quote, scope, report, stopCondition, nextAction) and returns its path and bytes; checkpoint(id, record => next) updates a record that stays IN PROGRESS; close(id, record => ({ ...record, _status: \"DONE — …\", outcome, validation: preflight() })) finalizes; each measures the record against byteCeilings.record and refuses to write over it, every write regenerates the aggregate and indexes, and node scripts/schema/new-record-scripts.js --id --previous --date scaffolds the pair. A tooling file is opened only when the validator fails, the tooling is the approved work, or the contract lacks something the batch needs, and that read is named in the report. Independent reads go in one call. A file is read once per session and by scoped projection (a node -e projection, a line range, a grep), never whole when a part is needed; a persisted tool result is read for the range required, not re-read whole. Every batch report states how many calls and how many result bytes preceded the first task action.",
+      "text": "A session holds one batch: it opens with the lean start, closes with that batch's finalize and commit, and the next batch starts a fresh session. A stopped batch resumes in a new session from its record and checkpoint; a session that already holds a finished batch does not open a second one. Startup reading is the lean set: the validator line, the generated contract, the selected manifest item, indexes/current-state.json and the last record it names. The contract's sources (workflow/rules.json, workflow/execution-policy.md, the canonical CLAUDE.md sections) and the workflow tooling (scripts/workflow, scripts/schema/lib.js, earlier apply and finalize scripts) are not read at startup: the contract is digest-checked, so the text it carries is current, and the record-script shape is stated here so no earlier script is needed as a template: in scripts/schema/record-scripts.js, apply({ id, previous, workstream, date, createdBy, body }) opens the IN PROGRESS record (body: _status, date, workstream, risk with the operator's quote, scope, report, stopCondition, nextAction, batchKind figma|repository, plan and, for a Figma batch, inventory) and returns its path and bytes; checkpoint(id, record => next) updates a record that stays IN PROGRESS; close(id, record => ({ ...record, _status: \"DONE — …\", outcome, validation: preflight() })) finalizes; each measures the record against byteCeilings.record and refuses to write over it, every write regenerates the aggregate and indexes, and node scripts/schema/new-record-scripts.js --id --previous --date [--kind] scaffolds the pair together with figma-export/<batch>/plan.md, the planner's phase checklist that every gate requires, and for a Figma batch the inventory walk script whose saved result is figma-export/<batch>/inventory.json (record workflow_planInventory_2026-09-12). A tooling file is opened only when the validator fails, the tooling is the approved work, or the contract lacks something the batch needs, and that read is named in the report. Independent reads go in one call. A file is read once per session and by scoped projection (a node -e projection, a line range, a grep), never whole when a part is needed; a persisted tool result is read for the range required, not re-read whole. Every batch report states how many calls and how many result bytes preceded the first task action.",
       "sourceRecord": [
         "workflow_sessionEconomy_2026-09-12",
-        "workflow_recordScripts_2026-09-12"
+        "workflow_recordScripts_2026-09-12",
+        "workflow_planInventory_2026-09-12"
       ],
-      "note": "Amended by workflow_recordScripts_2026-09-12: the record-store call shape became the record-script shape once the templated helpers existed. Adopted 2026-09-12 from the read-only token audit of the five Claude Code sessions 2026-09-06 to 2026-09-09 (evidence in figma-export/workflow-session-economy-2026-09-12/token-audit.md). The three long sessions read 154–250 KB of results before their first task action, 2.5–4 times the lean set, mostly workflow tooling and earlier scripts re-read as templates; one session read the contract three times. Their windows reached 459–517k tokens across 48–136 calls, and the fixed ~52k-token base was 21% of all input tokens. Ending the turn at each milestone was considered and not adopted: it conflicts with execution-policy (\"a milestone is an internal checkpoint\") and OPERATORS.md (\"internal milestones do not require you to say continue\") and remains an operator decision."
+      "note": "Amended by workflow_planInventory_2026-09-12: the record-script shape gained batchKind, plan and inventory, and the scaffold writes plan.md. Amended by workflow_recordScripts_2026-09-12: the record-store call shape became the record-script shape once the templated helpers existed. Adopted 2026-09-12 from the read-only token audit of the five Claude Code sessions 2026-09-06 to 2026-09-09 (evidence in figma-export/workflow-session-economy-2026-09-12/token-audit.md). The three long sessions read 154–250 KB of results before their first task action, 2.5–4 times the lean set, mostly workflow tooling and earlier scripts re-read as templates; one session read the contract three times. Their windows reached 459–517k tokens across 48–136 calls, and the fixed ~52k-token base was 21% of all input tokens. Ending the turn at each milestone was considered and not adopted: it conflicts with execution-policy (\"a milestone is an internal checkpoint\") and OPERATORS.md (\"internal milestones do not require you to say continue\") and remains an operator decision."
     }
   },
   "sheetAndComparisonTechniques": {
@@ -331,11 +336,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "workflow_recordScripts_2026-09-12",
+      "id": "workflow_planInventory_2026-09-12",
       "date": "2026-09-12",
       "workstream": "workflow",
-      "path": "records/workflow/2026-09-12/workflow_recordScripts_2026-09-12.json",
-      "status": "DONE — templated record scripts (apply, checkpoint, close, preflight) with the record-ceiling hard stop before every write; schema self-test opens after the lat"
+      "path": "records/workflow/2026-09-12/workflow_planInventory_2026-09-12.json",
+      "status": "DONE — plan.md required by every gate from open to finish; a Figma batch's inventory.json with reverification by id, name, type and parent before the first writ"
     },
     "recordGate": {
       "inProgress": [
@@ -364,12 +369,12 @@
         }
       },
       "workflow": {
-        "count": 16,
+        "count": 17,
         "latest": {
-          "id": "workflow_recordScripts_2026-09-12",
+          "id": "workflow_planInventory_2026-09-12",
           "date": "2026-09-12",
-          "path": "records/workflow/2026-09-12/workflow_recordScripts_2026-09-12.json",
-          "status": "DONE — templated record scripts (apply, checkpoint, close, preflight) with the record-ceiling hard stop before every write; schema self-test opens after the lat"
+          "path": "records/workflow/2026-09-12/workflow_planInventory_2026-09-12.json",
+          "status": "DONE — plan.md required by every gate from open to finish; a Figma batch's inventory.json with reverification by id, name, type and parent before the first writ"
         }
       }
     }
@@ -756,17 +761,6 @@
     ],
     "recentRecords": [
       {
-        "id": "workflow_runCostTracking_2026-09-10",
-        "path": "records/workflow/2026-09-10/workflow_runCostTracking_2026-09-10.json",
-        "status": "DONE — approximate operator credit cost and complete observed token totals recorded; repository-only supplement.",
-        "date": "2026-09-10",
-        "outcome": "Patient Summary content: approximately 179 credits; 164040 uncached input, 4693632 cached input, 22556 output tokens. Cost tracking method added to metrics and workflow README.",
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/workflow-run-cost-tracking-2026-09-10/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_patientSummaryFeedback_2026-09-10",
         "path": "records/npve/2026-09-10/npveRebuild_patientSummaryFeedback_2026-09-10.json",
         "status": "DONE — three feedback states verified; awaiting operator review before full sheets",
@@ -901,6 +895,17 @@
         "decision": null,
         "report": "figma-export/workflow-record-scripts-2026-09-12/report.md",
         "target": null
+      },
+      {
+        "id": "workflow_planInventory_2026-09-12",
+        "path": "records/workflow/2026-09-12/workflow_planInventory_2026-09-12.json",
+        "status": "DONE — plan.md required by every gate from open to finish; a Figma batch's inventory.json with reverification by id, name, type and parent before the first write, absent for a repository-only batch; both in the scaffold, with self-tests; repository-only, no Figma call.",
+        "date": "2026-09-12",
+        "outcome": "The three Batch E deliverables are in place. Every record dated on or after 2026-09-12 opens only with the planner's plan.md beside its report and closes only when every phase is done or dropped with a reason; apply, checkpoint, close, start-batch, check-batch, finish-batch and the runner closeout all run the same gate from scripts/workflow/batch-files.js. A Figma batch saves its first read-only walk as inventory.json, chooses later reads from it, and re-verifies the nodes it will mutate in Figma before the first write: the composed script fails on drift before its body runs, the helpers' creators refuse to write until the check passed, check-batch refuses a mutation until the latest recorded reverification is clean, and close and finish require it once mutations are listed. A repository batch with an inventory is refused. The scaffold writes plan.md, declares batchKind, plan and inventory, and writes the walk script for a Figma batch. This record was scaffolded, opened and closed through that tooling; its first apply was refused by its own gate because the template sentence named the placeholder marker, fixed before the record opened.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-plan-inventory-2026-09-12/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -1028,6 +1033,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "9467cd86ae77f43c35afa3d5af36562422da49cae940734fb57fbc6f5dc12ced"
+    "contractSha256": "3ead8e4fe88f3e6add14ef8b254096b9fdf592dad3660c7ab9db18f5e033bbf1"
   }
 }

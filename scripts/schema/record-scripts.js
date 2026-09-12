@@ -1,13 +1,16 @@
-// Templated apply / checkpoint / close for batch records (record workflow_recordScripts_2026-09-12).
+// Templated apply / checkpoint / close for batch records (record workflow_recordScripts_2026-09-12; plan and
+// inventory gates added by workflow_planInventory_2026-09-12).
 //
 // Thin wrappers over openRecord and finalizeRecord in ./lib that carry what every batch script repeated by hand:
 //   apply(spec)             opens the IN PROGRESS record once the body has the keys a batch record needs (status,
 //                           date, workstream, risk with a quoted operator statement, scope, report, stop condition,
-//                           next action) and no TODO placeholder
+//                           next action, batchKind) and no TODO placeholder, and the planner's plan.md sits beside
+//                           the report (scripts/workflow/batch-files.js)
 //   checkpoint(id, mutate)  rewrites an IN PROGRESS record that stays IN PROGRESS (mid-batch state, a stop)
 //   close(id, mutate)       finalizes: the status must leave IN PROGRESS for a terminal one (DONE), outcome and
-//                           validation must be present, the report must exist, and risk.tier may not change
-//                           (rule 11: risk is planner/operator-owned)
+//                           validation must be present, the report must exist, risk.tier may not change
+//                           (rule 11: risk is planner/operator-owned), every plan.md phase is done or dropped, and a
+//                           Figma batch's inventory.json is present with a clean reverification when it mutated
 //   preflight(options)      runs the validator, the ceilings and the self-tests so the close body cites measured evidence
 //
 // Every write measures the record file the store would produce against workflow/check-catalog.json →
@@ -24,6 +27,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const lib = require('./lib');
+const batchFiles = require('../workflow/batch-files');
 
 // The catalog and the evidence live in the repository even when TEBRA_STORE_ROOT points a self-test at a scratch store.
 const REPO = path.resolve(__dirname, '..', '..');
@@ -36,7 +40,10 @@ const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const DEFAULT_SELF_TESTS = [
   'scripts/schema/self-test.js',
   'scripts/schema/record-scripts-self-test.js',
+  'scripts/schema/scaffold-self-test.js',
   'scripts/figma/helpers-self-test.js',
+  'scripts/figma/inventory-self-test.js',
+  'scripts/workflow/batch-files-self-test.js',
   'scripts/workflow/self-test.js',
   'scripts/workflow/runner-self-test.js',
   'scripts/workflow/execution-self-test.js',
@@ -105,7 +112,7 @@ function checkCloseBody(next, opened, { terminal, allowTierChange }) {
   const before = opened.risk && opened.risk.tier;
   const after = next.risk && next.risk.tier;
   if (!allowTierChange && before !== after) errors.push(`risk.tier changed from ${before} to ${after}; risk is planner/operator-owned (rule 11). Pass allowTierChange only with the operator's quoted decision in the record`);
-  if (typeof next.report === 'string' && next.report && !fs.existsSync(path.join(REPO, next.report))) errors.push(`report ${next.report} does not exist; write the report before closing`);
+  if (typeof next.report === 'string' && next.report && !fs.existsSync(path.resolve(REPO, next.report))) errors.push(`report ${next.report} does not exist; write the report before closing`);
   const placeholders = findPlaceholders(next);
   if (placeholders.length) errors.push(`TODO placeholder left at ${placeholders.join(', ')}`);
   return errors;
@@ -126,11 +133,12 @@ function envelopeWith(store, id, record) {
   return { ...clean, record };
 }
 
-function apply({ id, previous = [], workstream, date, createdBy, script, body, ceiling }) {
+function apply({ id, previous = [], workstream, date, createdBy, script, body, ceiling, files }) {
   if (!id) throw new Error('apply: id is required');
   if (!createdBy) throw new Error('apply: createdBy names the executor (model and harness, or the person)');
   if (!DATE_RE.test(String(date || ''))) throw new Error('apply: date must be YYYY-MM-DD');
   const errors = checkOpenBody(body);
+  if (!errors.length) errors.push(...batchFiles.validateBatchFiles({ record: body, recordId: id, date, stage: 'open', policy: files }).errors);
   if (errors.length) throw new Error(`apply ${id}: ${errors.join('; ')}`);
   const record = { ...body };
   for (const [k, v] of Object.entries({ figmaMutations: [], flagsAdded: [] })) if (record[k] === undefined) record[k] = v;
@@ -146,7 +154,7 @@ function apply({ id, previous = [], workstream, date, createdBy, script, body, c
   return { file, stage: 'apply', ...measured };
 }
 
-function checkpoint(id, mutate, { ceiling } = {}) {
+function checkpoint(id, mutate, { ceiling, files } = {}) {
   let measured;
   const file = lib.finalizeRecord(id, (record, store) => {
     const next = mutate(record, store) || record;
@@ -155,12 +163,14 @@ function checkpoint(id, mutate, { ceiling } = {}) {
     if (placeholders.length) throw new Error(`checkpoint ${id}: TODO placeholder left at ${placeholders.join(', ')}`);
     const env = envelopeWith(store, id, next);
     measured = checkRecordCeiling({ id, date: env.date, envelope: env, stage: 'checkpoint', ceiling });
+    const gate = batchFiles.validateBatchFiles({ record: next, recordId: id, date: env.date, stage: 'checkpoint', policy: files });
+    if (gate.errors.length) throw new Error(`checkpoint ${id}: ${gate.errors.join('; ')}`);
     return next;
   });
   return { file, stage: 'checkpoint', ...measured };
 }
 
-function close(id, mutate, { ceiling, allowTierChange = false, terminal = /^DONE/ } = {}) {
+function close(id, mutate, { ceiling, files, allowTierChange = false, terminal = /^DONE/ } = {}) {
   let measured;
   const file = lib.finalizeRecord(id, (record, store) => {
     const next = mutate(record, store) || record;
@@ -169,6 +179,9 @@ function close(id, mutate, { ceiling, allowTierChange = false, terminal = /^DONE
     if (errors.length) throw new Error(`close ${id}: ${errors.join('; ')}`);
     const env = envelopeWith(store, id, next);
     measured = checkRecordCeiling({ id, date: env.date, envelope: env, stage: 'close', ceiling });
+    // Then the plan and, for a Figma batch, the inventory: every phase resolved, the latest reverification clean.
+    const gate = batchFiles.validateBatchFiles({ record: next, recordId: id, date: env.date, stage: 'close', policy: files });
+    if (gate.errors.length) throw new Error(`close ${id}: ${gate.errors.join('; ')}`);
     return next;
   });
   const entry = lib.readRecordIndex().records.find((r) => r.id === id);

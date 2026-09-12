@@ -10,6 +10,7 @@ const { validateRecord } = require('./validate-record');
 const { validateSplit } = require('../schema/validate-split');
 const { validateExecution } = require('./validate-execution');
 const { unchangedBaseline } = require('./workspace-baseline');
+const { describe, validateBatchFiles } = require('./batch-files');
 
 const [itemId] = process.argv.slice(2);
 if (!itemId) throw new Error('Usage: node scripts/workflow/finish-batch.js <item-id>');
@@ -36,6 +37,9 @@ const guard = store.compareFingerprint(run.storeFingerprint, loaded, item.expect
 errors.push(...guard.errors);
 const owned = store.findRecord(loaded, item.expectedRecordId);
 if (!owned || !store.isDone(owned.record)) errors.push('owned record is not DONE');
+// plan.md for every batch; inventory.json for a Figma batch, absent for a repository-only one (record workflow_planInventory_2026-09-12).
+const files = owned ? validateBatchFiles({ record: owned.record, recordId: item.expectedRecordId, item, date: owned.date, stage: 'finish' }) : { applies: false, errors: [], notes: ['no owned record'] };
+errors.push(...files.errors);
 for (const evidence of [item.requiredEvidence.report, item.requiredEvidence.comparisonRender]) {
   if (!fs.existsSync(path.resolve(ROOT, evidence))) errors.push(`missing evidence: ${evidence}`);
 }
@@ -56,4 +60,4 @@ run.status = 'complete';
 run.completedAt = item.completedAt;
 writeJson(runPath, run);
 const appended = [...guard.additions.records.map((id) => `record ${id}`), ...guard.additions.flags.map((id) => `flag ${id}`)];
-console.log(`finish gate PASS ${itemId}; record ${owned.file} DONE; comparison and report present; store outside the owned record unchanged${appended.length ? ` (concurrent appends: ${appended.join(', ')})` : ''}`);
+console.log(`finish gate PASS ${itemId}; record ${owned.file} DONE; comparison and report present; store outside the owned record unchanged${appended.length ? ` (concurrent appends: ${appended.join(', ')})` : ''}; batch files ${describe(files)}`);
