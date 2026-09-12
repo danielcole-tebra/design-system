@@ -1,0 +1,126 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "workflow_sessionEconomy_2026-09-12",
+ "sequence": 110,
+ "date": "2026-09-12",
+ "workstream": "workflow",
+ "created": {
+  "by": "Claude Fable 5.1 (Claude Code desktop)",
+  "at": "2026-09-12T16:12:23.992Z",
+  "script": "apply-workflow-session-economy-2026-09-12.js"
+ },
+ "record": {
+  "_status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; repository-only.",
+  "date": "2026-09-12",
+  "workstream": "Workflow / session economy",
+  "executor": "Claude Fable 5.1 (Claude Code desktop)",
+  "risk": {
+   "tier": "low",
+   "assignedBy": "Proposed by the executor in chat before execution as repository-only work (batch A of five); accepted by the operator.",
+   "operatorQuote": "OK let's do batch A"
+  },
+  "planAsProposed": "Batch A. Session hygiene rule. No code. Add a standing rule to workflow/rules.json so it lands in the contract: one batch per session, the turn ends at each milestone gate and waits for the operator, independent reads go in one call, and tooling files named in the contract are never cat'd.",
+  "scope": [
+   "Add standingRules.16 to workflow/rules.json (canonical text) so it folds into the generated contract",
+   "Add the rule-16 pointer line to CLAUDE.md (same form as rules 14 and 15) and a one-batch-per-session bullet to OPERATORS.md",
+   "Save the token audit and its parsing scripts as batch evidence",
+   "Regenerate the contract, run the validator, finalize, commit"
+  ],
+  "notAdopted": {
+   "turnEndAtMilestones": "Left out. It conflicts with workflow/execution-policy.md (\"a milestone is an internal checkpoint, not a new record or permission boundary\") and OPERATORS.md (\"internal milestones do not require you to say continue\"), both adopted 2026-09-10. Changing that is an operator decision; the rest of batch A does not depend on it."
+  },
+  "audit": {
+   "evidence": "figma-export/workflow-session-economy-2026-09-12/token-audit.md",
+   "sessions": [
+    "84ff42db (2026-09-09)",
+    "fde5980a (2026-09-08/09)",
+    "9740bfa7 (2026-09-08)",
+    "6a891562 (2026-09-06)",
+    "e7e2148b (2026-09-06)"
+   ],
+   "totals": {
+    "toolCalls": 536,
+    "apiCalls": 317,
+    "inputTokens": 79632957,
+    "cacheReadTokens": 77183028,
+    "cacheWriteTokens": 2440783,
+    "outputTokens": 690537,
+    "images": 59
+   },
+   "fixedBaseTokensPerCall": "50,476 to 53,747 (about 21% of all input tokens across the five sessions)",
+   "finalWindowTokens": {
+    "84ff42db": 469390,
+    "fde5980a": 458566,
+    "9740bfa7": 517447,
+    "6a891562": 268033,
+    "e7e2148b": 102268
+   },
+   "preTaskResultBytes": {
+    "84ff42db": 178112,
+    "fde5980a": 154153,
+    "9740bfa7": 249800,
+    "6a891562": 26421,
+    "e7e2148b": 50775
+   },
+   "leanSetBytes": {
+    "minimum": 100276,
+    "asReadInPractice": 273383
+   },
+   "windowGrowthShares": {
+    "modelOutputRetained": "43–48%",
+    "toolResultText": "24–30%",
+    "harnessInjected": "20–23%",
+    "images": "2%",
+    "operatorPrompts": "2–3%"
+   },
+   "figmaReads": "no node 0:0 reads in 28 sessions; no whole-file walks; page-scoped walks 5/19/17/12/0 per session",
+   "frozenFiles": "HANDOFF.md and CHAT-HANDOFF.md not read in any of the five sessions (last read 2026-09-02)"
+  },
+  "deferred": [
+   "Batch B: detach unused connectors and the Warp plugin (app-side, operator action)",
+   "Batch C: cap and dedupe the contract and runner packet; measure actual pre-task reads from transcripts",
+   "Batch D: templated record scripts and shared Figma helpers",
+   "Batch E: durable plan.md and inventory.json per batch"
+  ],
+  "report": "figma-export/workflow-session-economy-2026-09-12/report.md",
+  "canvasChecks": "Not applicable: instruction and record changes only; no Figma read or write.",
+  "figmaMutations": [],
+  "flagsAdded": [],
+  "stopCondition": "Repository-only. No change to risk ownership, additive-only rules, DONE records, or the execution policy text.",
+  "outcome": "Rule 16 is canonical in workflow/rules.json → standingRules.16 and folds into the generated contract with the record-store call shape, so no earlier script is needed as a template. CLAUDE.md carries the pointer line; OPERATORS.md carries the operator side. Turn-end at milestones was not adopted (conflicts with the 2026-09-10 execution policy) and stays an operator decision.",
+  "implementation": [
+   "workflow/rules.json (+8 lines, standingRules.16)",
+   "CLAUDE.md (+1 line, rule 16 pointer)",
+   "OPERATORS.md (+1 bullet, one batch per session)",
+   "workflow/npve-contract.generated.json (regenerated)",
+   "figma-export/workflow-session-economy-2026-09-12/{report.md,token-audit.md,evidence/}"
+  ],
+  "validation": {
+   "workflow": "PASS — workflow PASS store=111r/236+60f contract=39c81770f17b items=15 deterministic=17 visual=3",
+   "contract": "PASS — rules.json and CLAUDE.md digests current; rule 16 present in standingRules",
+   "rulesJsonDiff": "8 insertions, 0 deletions; file round-trips byte-identical through the inserter (20,920 bytes before insert)",
+   "canvas": "N/A — no Figma read or write",
+   "screenshots": "N/A — instruction and record changes only",
+   "figmaCalls": 0,
+   "existingDoneRecordsEdited": 0
+  },
+  "startupAccounting": {
+   "callsBeforeFirstTaskAction": 3,
+   "resultBytesBeforeFirstTaskAction": "about 30,000",
+   "note": "execution-policy.md read directly (11,584 bytes) as CLAUDE.md permits once per session; four earlier apply/finalize scripts read as templates (6,244 bytes), which rule 16 makes unnecessary from the next batch on."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 3
+  },
+  "decisionsForOperator": [
+   "Turn end at each milestone gate: not adopted; conflicts with execution-policy and OPERATORS.md (2026-09-10); a policy change if wanted.",
+   "Batch B: detach the Gmail, Drive, Calendar, Slack, Chrome and computer-use connectors and decide on the Warp plugin; app-side toggles.",
+   "Stopped Flowsheets batch (2026-09-11): its uncommitted record, apply script and evidence folder are preserved untracked per the execution policy; the regenerated indexes in this batch's commit cite that record, so a fresh clone fails validate-split until those files are committed."
+  ],
+  "standingBatchRules": "N/A for this repository-only workflow batch; the ten Figma rules are unchanged and still required for design batches.",
+  "nextAction": "Batch C in a fresh session: drop rules and flags from the runner packet, add byte ceilings to the validator, add scripts/workflow/measure-startup.js reporting actual pre-task result bytes from the session transcript."
+ }
+}

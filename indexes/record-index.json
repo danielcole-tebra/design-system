@@ -1054,14 +1054,32 @@
    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
    "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented",
    "recordSha256": "98d1c6888f2d0824a32bf21f1e68e119fa5c6d939dea2d6e0412862478815a80"
+  },
+  {
+   "id": "npveRebuild_flowsheetsFinish_2026-09-11",
+   "sequence": 109,
+   "date": "2026-09-11",
+   "workstream": "npve",
+   "path": "records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json",
+   "status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified",
+   "recordSha256": "173b69c0b95b757a0e6d505a808784e4c394dcc052d7567da64a02c6cee8d741"
+  },
+  {
+   "id": "workflow_sessionEconomy_2026-09-12",
+   "sequence": 110,
+   "date": "2026-09-12",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
+   "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; cont",
+   "recordSha256": "2f8a1bec4980056dbf93947f5662c4423c5e88f5d05e61eff13c95c458c4beaf"
   }
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
-  "active": 235,
+  "active": 236,
   "resolved": 60,
-  "total": 295,
-  "nextSequence": 295,
+  "total": 296,
+  "nextSequence": 296,
   "activeIds": [
    "pxToRemInflation",
    "svgIconTwoUnitSystems",
@@ -1297,7 +1315,8 @@
    "npveFlowsheets_rowIconMappings_2026-09-11",
    "npveFlowsheets_chartMapping_2026-09-11",
    "npveFlowsheets_questionnairePattern_2026-09-11",
-   "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11"
+   "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11",
+   "npveFlowsheets_sourceDefinitionBlocker_2026-09-11"
   ],
   "resolvedIds": [
    "paintOpacityDoesNotReachInstances",
@@ -1364,8 +1383,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 109,
-  "aggregateTopLevelKeys": 123,
-  "nextRecordSequence": 109
+  "records": 111,
+  "aggregateTopLevelKeys": 125,
+  "nextRecordSequence": 111
  }
 }

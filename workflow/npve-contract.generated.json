@@ -1,25 +1,25 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-11T18:20:11.377Z",
+  "generatedAt": "2026-09-12T16:14:10.614Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "495337771ccc6f09b753dbbd373c987be0b52ac8c1e69c8d3d380fcb9accf16a",
+      "sha256": "52f4caad29bc7410a1860abd88aba38adb5aaa4c636c53ea7d97d2b575ddf29a",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "f3bf02a8f2efef47ebe7bb8bac93defd840a694ce87925a8310d7f1c72a7e016"
+        "sha256": "0fc97ff17447bcb1562ad86f145c9f290a5dc7ee4c9e9e185c30531f5b095897"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "3ad853ad415a7d4e88da4215e3c5467f74cd4bc41f49a54af3bb1a1c69021a53"
+        "sha256": "6b382d2ea17056a279a834846d6db21af8ac5cd030e0e6d3523e11a00ddab04c"
       },
       "flagsActive": {
         "path": "flags/active.json",
-        "sha256": "87e7a4b2bdfa2625f0f91a36d2f2f8787c72081939694cec7a00521f63768315"
+        "sha256": "14440095f3c917edcdf3c81105e783eccec52256c69869f75673481407a5b4ab"
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
@@ -29,20 +29,20 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 109,
+      "records": 111,
       "flags": {
-        "active": 235,
+        "active": 236,
         "resolved": 60
       }
     },
     "instructions": [
       {
         "path": "workflow/rules.json",
-        "sha256": "ec7aadd6422796470b0f590f9ff91751b0223068395f14f59df88789b94d0b92"
+        "sha256": "365b257ee623a850139ed65ba93aced1915296642fcb7b268b93e9172416d00f"
       },
       {
         "path": "CLAUDE.md",
-        "sha256": "ed50371261bb89815ecdeeb5cea8cc7cdeaff5d4e6a834ac97c746f55cb07599"
+        "sha256": "a5002a6fc771895473480b7f02df76586d3363a9edee252f7d0f4000c5cf671f"
       },
       {
         "path": "AGENTS.md",
@@ -50,7 +50,7 @@
       },
       {
         "path": "OPERATORS.md",
-        "sha256": "004a2dc3c62352e9038e8ad992d5255e4de105939f00fa8ebeb8c80f63da66ec"
+        "sha256": "aadddca7d70ffc6313255fe8db267c0481dc381cb9f496978f5abb961e300629"
       },
       {
         "path": "workflow/execution-policy.md",
@@ -63,7 +63,7 @@
     ],
     "generator": "scripts/workflow/generate-contract.js",
     "generatorVersion": 3,
-    "citedRecordsPresent": 28
+    "citedRecordsPresent": 29
   },
   "recordStore": {
     "layout": "records/<workstream>/<date>/<recordId>.json (one file per batch record, immutable once its status leaves IN PROGRESS); flags/active.json and flags/resolved.json (the flag register split by status); foundation/<section>.json (meta, tokens, components, standing batch rules and the other non-record sections); indexes/record-index.json and indexes/current-state.json (generated, never hand-edited); design-system-schema.json (generated legacy aggregate).",
@@ -248,6 +248,14 @@
         "npveRebuild_extReviewRepairs_2026-09-05"
       ],
       "note": "The 2x reference is produced with the Figma MCP download_assets (source node, png, scale 2) and placed with upload_assets targeting the reference rectangle (method recorded in npveRebuild_comparisonLayout_2026_09_02.transport). Verification proofs are not placements; see proofConvention."
+    },
+    "16": {
+      "title": "One batch per session; bounded reads",
+      "text": "A session holds one batch: it opens with the lean start, closes with that batch's finalize and commit, and the next batch starts a fresh session. A stopped batch resumes in a new session from its record and checkpoint; a session that already holds a finished batch does not open a second one. Startup reading is the lean set: the validator line, the generated contract, the selected manifest item, indexes/current-state.json and the last record it names. The contract's sources (workflow/rules.json, workflow/execution-policy.md, the canonical CLAUDE.md sections) and the workflow tooling (scripts/workflow, scripts/schema/lib.js, earlier apply and finalize scripts) are not read at startup: the contract is digest-checked, so the text it carries is current, and the record-store shape is stated here so no earlier script is needed as a template: openRecord({ id, previous, workstream, date, createdBy, script, body }) writes the record and returns its path; finalizeRecord(id, record => ({ ...record, _status: \"DONE — …\", outcome, validation })) closes it and returns the path; both regenerate the aggregate and indexes. A tooling file is opened only when the validator fails, the tooling is the approved work, or the contract lacks something the batch needs, and that read is named in the report. Independent reads go in one call. A file is read once per session and by scoped projection (a node -e projection, a line range, a grep), never whole when a part is needed; a persisted tool result is read for the range required, not re-read whole. Every batch report states how many calls and how many result bytes preceded the first task action.",
+      "sourceRecord": [
+        "workflow_sessionEconomy_2026-09-12"
+      ],
+      "note": "Adopted 2026-09-12 from the read-only token audit of the five Claude Code sessions 2026-09-06 to 2026-09-09 (evidence in figma-export/workflow-session-economy-2026-09-12/token-audit.md). The three long sessions read 154–250 KB of results before their first task action, 2.5–4 times the lean set, mostly workflow tooling and earlier scripts re-read as templates; one session read the contract three times. Their windows reached 459–517k tokens across 48–136 calls, and the fixed ~52k-token base was 21% of all input tokens. Ending the turn at each milestone was considered and not adopted: it conflicts with execution-policy (\"a milestone is an internal checkpoint\") and OPERATORS.md (\"internal milestones do not require you to say continue\") and remains an operator decision."
     }
   },
   "sheetAndComparisonTechniques": {
@@ -321,15 +329,17 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "npveRebuild_flowsheetsListBody_2026-09-11",
-      "date": "2026-09-11",
-      "workstream": "npve",
-      "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
-      "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented"
+      "id": "workflow_sessionEconomy_2026-09-12",
+      "date": "2026-09-12",
+      "workstream": "workflow",
+      "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
+      "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; reposito"
     },
     "recordGate": {
-      "inProgress": [],
-      "clear": true,
+      "inProgress": [
+        "npveRebuild_flowsheetsFinish_2026-09-11"
+      ],
+      "clear": false,
       "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
     },
     "byWorkstream": {
@@ -343,21 +353,21 @@
         }
       },
       "npve": {
-        "count": 70,
+        "count": 71,
         "latest": {
-          "id": "npveRebuild_flowsheetsListBody_2026-09-11",
+          "id": "npveRebuild_flowsheetsFinish_2026-09-11",
           "date": "2026-09-11",
-          "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
-          "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented"
+          "path": "records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json",
+          "status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified"
         }
       },
       "workflow": {
-        "count": 13,
+        "count": 14,
         "latest": {
-          "id": "workflow_npveRunner_2026-09-11",
-          "date": "2026-09-11",
-          "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
-          "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work"
+          "id": "workflow_sessionEconomy_2026-09-12",
+          "date": "2026-09-12",
+          "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
+          "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; reposito"
         }
       }
     }
@@ -744,28 +754,6 @@
     ],
     "recentRecords": [
       {
-        "id": "npveRebuild_familyHistoryEdit_2026-09-09",
-        "path": "records/npve/2026-09-09/npveRebuild_familyHistoryEdit_2026-09-09.json",
-        "status": "DONE — Family History edit built, cross-model handoff repaired, verified, and shown for operator review.",
-        "date": "2026-09-09",
-        "outcome": "Reusable 518x468 form/body and 550x644 Sidesheet, with white field surfaces, shared swap-menu access, frozen reference, marked GAP/DEFECT, and sole comparison on Screens section 23.",
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/npve-family-history-edit-2026-09-09/report.md",
-        "target": null
-      },
-      {
-        "id": "workflow_appearanceReview_2026-09-10",
-        "path": "records/workflow/2026-09-10/workflow_appearanceReview_2026-09-10.json",
-        "status": "DONE — reusable appearance specification and whole-form review requirements installed",
-        "date": "2026-09-10",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/workflow-appearance-review-2026-09-10/report.md",
-        "target": null
-      },
-      {
         "id": "workflow_npveQueueRefresh_2026-09-10",
         "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
         "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies",
@@ -893,15 +881,31 @@
         "decision": null,
         "report": "figma-export/npve-flowsheets-list-body-2026-09-11/report.md",
         "target": null
+      },
+      {
+        "id": "npveRebuild_flowsheetsFinish_2026-09-11",
+        "path": "records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json",
+        "status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified",
+        "date": null,
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/npve-flowsheets-finish-2026-09-11/report.md",
+        "target": null
+      },
+      {
+        "id": "workflow_sessionEconomy_2026-09-12",
+        "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
+        "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; repository-only.",
+        "date": "2026-09-12",
+        "outcome": "Rule 16 is canonical in workflow/rules.json → standingRules.16 and folds into the generated contract with the record-store call shape, so no earlier script is needed as a template. CLAUDE.md carries the pointer line; OPERATORS.md carries the operator side. Turn-end at milestones was not adopted (conflicts with the 2026-09-10 execution policy) and stays an operator decision.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-session-economy-2026-09-12/report.md",
+        "target": null
       }
     ],
     "openFlags": [
-      {
-        "id": "npveWorkflows_moduleDropdownOffCanvas",
-        "severity": "info",
-        "summary": "Module Dropdown instances are parked at x -437 outside four encounter frames and one hidden loose instance sits at page level; mockup artefacts, not a page convention.",
-        "discoveredDuring": "npveRebuild_workflowsAudit_2026-09-05"
-      },
       {
         "id": "npveEncounter_patientHeaderPadding10NoToken",
         "severity": "low",
@@ -1015,11 +1019,17 @@
         "severity": "medium",
         "summary": "NPVE touch-target wording says Icon button is 42px; fresh library masters measure 34px small and 40px medium. The cited PMHx record specifically attributes its 42px row to Checkbox. Operator/planner clarification needed before Flowsheets chooses geometry; shared masters unchanged.",
         "discoveredDuring": "npveRebuild_flowsheetsAudit_2026-09-11"
+      },
+      {
+        "id": "npveFlowsheets_sourceDefinitionBlocker_2026-09-11",
+        "severity": "high",
+        "summary": "Read-only source Sidesheetv3 set129:6647 rejects native componentPropertyDefinitions. Flowsheets finish runner source gate cannot verify owning definitions; supported operations stopped before dispatch. Existing target radio and form work preserved.",
+        "discoveredDuring": "npveRebuild_flowsheetsFinish_2026-09-11"
       }
     ],
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "358664f1e0dfc7c042768500e5abf6d6910ddc95a6e20aef4efca7381cce958d"
+    "contractSha256": "5fa971e52ddc225f54a1c247118c969c00820f2d7e70550aa1501718be9b265f"
   }
 }

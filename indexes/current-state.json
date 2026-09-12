@@ -3,15 +3,17 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "npveRebuild_flowsheetsListBody_2026-09-11",
-  "date": "2026-09-11",
-  "workstream": "npve",
-  "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
-  "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented"
+  "id": "workflow_sessionEconomy_2026-09-12",
+  "date": "2026-09-12",
+  "workstream": "workflow",
+  "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
+  "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; reposito"
  },
  "recordGate": {
-  "inProgress": [],
-  "clear": true,
+  "inProgress": [
+   "npveRebuild_flowsheetsFinish_2026-09-11"
+  ],
+  "clear": false,
   "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
  },
  "byWorkstream": {
@@ -25,32 +27,32 @@
    }
   },
   "npve": {
-   "count": 70,
+   "count": 71,
    "latest": {
-    "id": "npveRebuild_flowsheetsListBody_2026-09-11",
+    "id": "npveRebuild_flowsheetsFinish_2026-09-11",
     "date": "2026-09-11",
-    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsListBody_2026-09-11.json",
-    "status": "DONE — list header/body and footer action built and verified; one bridge guard omission documented"
+    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json",
+    "status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified"
    }
   },
   "workflow": {
-   "count": 13,
+   "count": 14,
    "latest": {
-    "id": "workflow_npveRunner_2026-09-11",
-    "date": "2026-09-11",
-    "path": "records/workflow/2026-09-11/workflow_npveRunner_2026-09-11.json",
-    "status": "DONE — provider-neutral NPVE runner utilities and offline evidence delivered; repository-only work"
+    "id": "workflow_sessionEconomy_2026-09-12",
+    "date": "2026-09-12",
+    "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
+    "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; reposito"
    }
   }
  },
  "flags": {
-  "active": 235,
+  "active": 236,
   "resolved": 60
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "495337771ccc6f09b753dbbd373c987be0b52ac8c1e69c8d3d380fcb9accf16a",
-  "bytes": 1579211
+  "sha256": "52f4caad29bc7410a1860abd88aba38adb5aaa4c636c53ea7d97d2b575ddf29a",
+  "bytes": 1594302
  }
 }
