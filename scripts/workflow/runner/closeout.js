@@ -4,6 +4,7 @@ const { ROOT, readJson, store } = require('../lib');
 const { validateExecution } = require('../validate-execution');
 const { validateEvidence } = require('../validate-evidence');
 const { repositoryContext, approval, need } = require('./core');
+const { checkRecordCeiling, envelopeWith } = require('../../schema/record-scripts');
 function command(name, ...args) {
   return execFileSync(process.execPath, [`scripts/workflow/${name}.js`, ...args], { cwd: ROOT, encoding: 'utf8' }).trim();
 }
@@ -29,7 +30,13 @@ function closeout(id, finalBody, { dryRun = true } = {}) {
   for (const key of ['risk', 'scope', 'operatorContinuationQuote']) if (key in finalBody) {
     require('./core').equal(finalBody[key], ctx.record[key], `Closeout cannot change ${key}`);
   }
-  store.finalizeRecord(ctx.item.expectedRecordId, record => ({ ...record, ...finalBody }));
+  // The record ceiling stops here, before the record becomes immutable (record workflow_recordScripts_2026-09-12).
+  store.finalizeRecord(ctx.item.expectedRecordId, (record, loaded) => {
+    const next = { ...record, ...finalBody };
+    const env = envelopeWith(loaded, ctx.item.expectedRecordId, next);
+    checkRecordCeiling({ id: ctx.item.expectedRecordId, date: env.date, envelope: env, stage: 'close' });
+    return next;
+  });
   command('generate-contract');
   const finish = command('finish-batch', id);
   return { checks, finish, next: 'Review git diff; commit only the bounded allowlist, generated files, record and evidence. If finish fails after DONE, fix evidence/tooling and retry finish; never rewrite DONE.' };

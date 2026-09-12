@@ -19,7 +19,8 @@
     "proofArchive": "Batch proofs are named PROOF \u2014 <batch> \u00b7 <what> and sit in Archive 06 at batch close.",
     "immutability": "No record whose committed status was not IN PROGRESS has changed since the last commit (validate-split.js compares against HEAD indexes/record-index.json); no record or flag is ever removed.",
     "milestone": "A milestone tag (milestone/<date>-<reason>) exists and is at most seven days old; milestones are taken at each workstream close or weekly, whichever comes first (backup policy B).",
-    "byteCeilings": "Startup files stay under the byte ceilings in byteCeilings: CLAUDE.md, the contract, every manifest item, current-state and the worst-case lean set; a record dated on or after the adoption date stays under the record ceiling (IN PROGRESS fails, DONE is reported on the validator line); the runner packet is checked when it is generated."
+    "byteCeilings": "Startup files stay under the byte ceilings in byteCeilings: CLAUDE.md, the contract, every manifest item, current-state and the worst-case lean set; a record dated on or after the adoption date stays under the record ceiling (IN PROGRESS fails, DONE is reported on the validator line); the runner packet is checked when it is generated.",
+    "recordCeilingAtWrite": "A record is measured against byteCeilings.record before every write by scripts/schema/record-scripts.js (apply, checkpoint, close) and by the runner closeout, and the write is refused over the ceiling; the stop sits before the record becomes immutable, so a DONE record over the ceiling can only have been written outside the helpers, which byteCeilings reports."
   },
   "visual": {
     "comparisonRender": "Executor inspects a dedicated reference/rebuild/change comparison for every component.",

@@ -1081,6 +1081,15 @@
    "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
    "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stoppe",
    "recordSha256": "cb3d2b376727319ffedef70364e5c7c28e6442a5ae8489532fd470265abb40af"
+  },
+  {
+   "id": "workflow_recordScripts_2026-09-12",
+   "sequence": 112,
+   "date": "2026-09-12",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-12/workflow_recordScripts_2026-09-12.json",
+   "status": "DONE — templated record scripts (apply, checkpoint, close, preflight) with the record-ceiling hard stop before every wri",
+   "recordSha256": "8cb0c902270e2d98e67cebcf7c4d47ff2cfa45111789f54a5291d158071ab99f"
   }
  ],
  "flags": {
@@ -1392,8 +1401,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 112,
-  "aggregateTopLevelKeys": 126,
-  "nextRecordSequence": 112
+  "records": 113,
+  "aggregateTopLevelKeys": 127,
+  "nextRecordSequence": 113
  }
 }

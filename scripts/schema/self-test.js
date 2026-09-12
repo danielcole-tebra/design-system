@@ -1,4 +1,6 @@
 // Dry-run record write/read cycle against a scratch copy of the store. Never touches the real store.
+// The dry run opens after the latest DONE record and asserts the gate by inclusion, so it passes while a batch
+// elsewhere is IN PROGRESS (record workflow_recordScripts_2026-09-12).
 // Usage: node scripts/schema/self-test.js [scratchDir]
 const assert = require('assert');
 const fs = require('fs');
@@ -19,7 +21,9 @@ say(`scratch store at ${scratch}`);
 
 const before = lib.generate();
 say(`loaded ${before.recordIndex.counts.records} records, ${before.recordIndex.flags.active}+${before.recordIndex.flags.resolved} flags; fresh=${lib.checkFreshness(before).length === 0}`);
-const previous = before.store.records.at(-1).id;
+const previous = [...before.store.records].reverse().find((env) => lib.isDone(env.record)).id;
+const inProgressBefore = before.currentState.recordGate.inProgress;
+say(`previous DONE record ${previous}; ${inProgressBefore.length} record(s) IN PROGRESS elsewhere: ${inProgressBefore.join(', ') || 'none'}`);
 const started = lib.fingerprint(before.store, 'dryRun_record_2026-09-08');
 
 // 1. open: gate on the previous record, append a new file, regenerate
@@ -29,7 +33,8 @@ say(`opened ${file}`);
 const afterOpen = lib.generate();
 assert.strictEqual(afterOpen.recordIndex.counts.records, before.recordIndex.counts.records + 1, 'index gained one record');
 assert.strictEqual(lib.checkFreshness(afterOpen).length, 0, 'generated files fresh after open');
-assert.deepStrictEqual(afterOpen.currentState.recordGate.inProgress, ['dryRun_record_2026-09-08'], 'gate sees the open record');
+assert.ok(afterOpen.currentState.recordGate.inProgress.includes('dryRun_record_2026-09-08'), 'gate sees the open record');
+assert.strictEqual(afterOpen.currentState.recordGate.clear, false, 'gate is not clear while the dry run is open');
 assert.throws(() => lib.openRecord({ id: 'dryRun_record_2026-09-08', previous, date: '2026-09-08', body: {} }), /already exists/, 'duplicate id refused');
 assert.throws(() => lib.openRecord({ id: 'dryRun_second_2026-09-08', previous: 'dryRun_record_2026-09-08', date: '2026-09-08', body: {} }), /Record gate failed/, 'gate refuses while previous is IN PROGRESS');
 say('gate: duplicate refused; second record refused while the first is IN PROGRESS');
@@ -67,8 +72,11 @@ say('fingerprint: own appends tolerated; an edit to an older record is caught');
 // 5. finalize once, then frozen
 lib.finalizeRecord('dryRun_record_2026-09-08', (record) => { record._status = 'DONE. Dry run.'; return record; });
 assert.throws(() => lib.finalizeRecord('dryRun_record_2026-09-08', (r) => r), /immutable/, 'DONE record cannot be rewritten');
-assert.strictEqual(lib.generate().currentState.recordGate.clear, true, 'gate clear after finalize');
-say('finalize: IN PROGRESS -> DONE once; second finalize refused as immutable');
+const gate = lib.generate().currentState.recordGate;
+assert.ok(!gate.inProgress.includes('dryRun_record_2026-09-08'), 'gate no longer lists the dry run after finalize');
+assert.deepStrictEqual(gate.inProgress, inProgressBefore, 'only the dry run left the IN PROGRESS list');
+assert.strictEqual(gate.clear, gate.inProgress.length === 0, 'clear mirrors the IN PROGRESS list');
+say('finalize: IN PROGRESS -> DONE once; second finalize refused as immutable; gate no longer lists the dry run');
 
 // 6. freshness catches a hand edit to the aggregate
 fs.appendFileSync(path.join(scratch, 'design-system-schema.json'), '\n');

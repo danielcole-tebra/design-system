@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "workflow_sessionEconomyC_2026-09-12",
+  "id": "workflow_recordScripts_2026-09-12",
   "date": "2026-09-12",
   "workstream": "workflow",
-  "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
-  "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stopped Flowsheets item against 128,480 at ver"
+  "path": "records/workflow/2026-09-12/workflow_recordScripts_2026-09-12.json",
+  "status": "DONE — templated record scripts (apply, checkpoint, close, preflight) with the record-ceiling hard stop before every write; schema self-test opens after the lat"
  },
  "recordGate": {
   "inProgress": [
@@ -36,12 +36,12 @@
    }
   },
   "workflow": {
-   "count": 15,
+   "count": 16,
    "latest": {
-    "id": "workflow_sessionEconomyC_2026-09-12",
+    "id": "workflow_recordScripts_2026-09-12",
     "date": "2026-09-12",
-    "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
-    "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stopped Flowsheets item against 128,480 at ver"
+    "path": "records/workflow/2026-09-12/workflow_recordScripts_2026-09-12.json",
+    "status": "DONE — templated record scripts (apply, checkpoint, close, preflight) with the record-ceiling hard stop before every write; schema self-test opens after the lat"
    }
   }
  },
@@ -52,7 +52,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "870fee0e2c9694764ddb021cca13c5ac690d0972bd7ba69373dc5d7c7813e2ee",
-  "bytes": 1605522
+  "sha256": "d38a1b377337037e8271a70fd52b446ea1d9f18ad11203a4976100da280719a6",
+  "bytes": 1618863
  }
 }
