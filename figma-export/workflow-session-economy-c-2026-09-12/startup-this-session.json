@@ -1,0 +1,188 @@
+{
+  "session": "ff20eb81-df49-4ab0-87eb-a318a9266941",
+  "transcript": "C:\\Users\\coled\\.claude\\projects\\C--Code-design-system\\ff20eb81-df49-4ab0-87eb-a318a9266941.jsonl",
+  "first": "2026-09-12T18:27:51.339Z",
+  "last": "2026-09-12T18:38:21.351Z",
+  "firstPrompt": "Batch C: cap the runner packet, add validator byte ceilings, add measure-startup.js. Lean start.",
+  "firstTaskAction": {
+    "index": 9,
+    "tool": "Write",
+    "summary": "C:\\Code\\design system\\apply-workflow-session-economy-c-2026-09-12.js"
+  },
+  "beforeFirstTaskAction": {
+    "calls": 8,
+    "resultBytes": 98360,
+    "resultChars": 98280,
+    "images": 0,
+    "persistedResults": 0
+  },
+  "sessionSoFar": {
+    "calls": 15,
+    "resultBytes": 99390,
+    "resultChars": 99298,
+    "images": 0
+  },
+  "apiContext": {
+    "firstTurn": 74365,
+    "latestTurn": 168556,
+    "maxTurn": 168556,
+    "turns": 10
+  },
+  "filesReadBeforeFirstTaskAction": [
+    "scripts/workflow/validate-workflow.js",
+    "/c/Users/coled/.claude/projects/C--Code-design-system/memory/npve-lean-workflow-state.md",
+    "workflow/npve-contract.generated.json",
+    "workflow/manifest.json",
+    "workflow/rules.json",
+    "workflow/execution-policy.md",
+    "indexes/current-state.json",
+    "indexes/record-index.json",
+    "figma-export/workflow-session-economy-2026-09-12/token-audit.md",
+    "scripts/workflow/npve-runner.js",
+    "scripts/workflow/validate-contract.js",
+    "scripts/workflow/lib.js",
+    "scripts/workflow/measure-context.js",
+    "scripts/schema/lib.js",
+    "figma-export/workflow-session-economy-2026-09-12/report.md",
+    "scripts/workflow/runner/handoff.js",
+    "scripts/workflow/runner-self-test.js",
+    "workflow/check-catalog.json",
+    "scripts/workflow/self-test.js",
+    "figma-export/workflow-session-economy-2026-09-12/evidence/analyze3.js",
+    "/c/Users/coled/.claude/projects/C--Code-design-system/ff20eb81-df49-4ab0-87eb-a318a9266941.jsonl",
+    "handoff.js",
+    "./workflow/check-catalog.json",
+    "analyze2.js",
+    "figma-export/workflow-session-economy-2026-09-12/evidence/analyze2.js",
+    "figma-export/workflow-session-economy-2026-09-12/evidence/analyze4.js",
+    "design-system-schema.json",
+    "workflow/README.md",
+    "OPERATORS.md",
+    "AGENTS.md",
+    "C:/Users/coled/.claude/projects/C--Code-design-system/ff20eb81-df49-4ab0-87eb-a318a9266941.jsonl",
+    "runner.md",
+    "workflow/runner.md",
+    "scripts/workflow/execution-self-test.js",
+    "scripts/workflow/runner-plugin-self-test.js",
+    "core.js",
+    "scripts/workflow/runner/core.js",
+    "scripts/workflow/generate-contract.js",
+    "./workflow/manifest.json",
+    "CLAUDE.md",
+    "./indexes/current-state.json",
+    "./indexes/record-index.json",
+    "figma-export/npve-flowsheets-finish-2026-09-11/handoff-stopped/handoff.json",
+    "scripts/workflow/validate-execution.js",
+    "scripts/workflow/validate-evidence.js",
+    "scripts/workflow/check-batch.js",
+    "scripts/workflow/finish-batch.js",
+    "scripts/workflow/start-batch.js",
+    "scripts/workflow/validate-record.js",
+    "package.json"
+  ],
+  "largestResultsBeforeFirstTaskAction": [
+    {
+      "index": 2,
+      "tool": "Bash",
+      "bytes": 24993,
+      "summary": "cd \"/c/Code/design system\" && node -e ' const fs=require(\"fs\"); const m=JSON.parse(fs.readFileSync(\"workflow/manifest.js"
+    },
+    {
+      "index": 3,
+      "tool": "Bash",
+      "bytes": 22621,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====PACKET GREP=====\"; grep -rn -i \"packet\" scripts/workflow --include=*.js | grep "
+    },
+    {
+      "index": 6,
+      "tool": "Bash",
+      "bytes": 10483,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====analyze2.js 40-90=====\"; sed -n '40,90p' figma-export/workflow-session-economy-"
+    },
+    {
+      "index": 4,
+      "tool": "Bash",
+      "bytes": 10042,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====handoff.js=====\"; cat -n scripts/workflow/runner/handoff.js; echo; echo \"=====r"
+    },
+    {
+      "index": 5,
+      "tool": "Bash",
+      "bytes": 9615,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====handoff.js 55-end=====\"; sed -n '55,200p' scripts/workflow/runner/handoff.js; e"
+    },
+    {
+      "index": 7,
+      "tool": "Bash",
+      "bytes": 9095,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====schema lib openRecord/finalizeRecord (296-334)=====\"; sed -n '296,334p' scripts"
+    },
+    {
+      "index": 1,
+      "tool": "Bash",
+      "bytes": 7605,
+      "summary": "cd \"/c/Code/design system\" && node scripts/workflow/validate-workflow.js; echo \"EXIT=$?\"; echo \"-----MEMORY-----\"; cat \""
+    },
+    {
+      "index": 8,
+      "tool": "Bash",
+      "bytes": 3906,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====catalog consumers=====\"; grep -n \"deterministic\\|check-catalog\\|checks\\.\" scrip"
+    }
+  ],
+  "callsBeforeFirstTaskAction": [
+    {
+      "index": 1,
+      "tool": "Bash",
+      "bytes": 7605,
+      "summary": "cd \"/c/Code/design system\" && node scripts/workflow/validate-workflow.js; echo \"EXIT=$?\"; echo \"-----MEMORY-----\"; cat \""
+    },
+    {
+      "index": 2,
+      "tool": "Bash",
+      "bytes": 24993,
+      "summary": "cd \"/c/Code/design system\" && node -e ' const fs=require(\"fs\"); const m=JSON.parse(fs.readFileSync(\"workflow/manifest.js"
+    },
+    {
+      "index": 3,
+      "tool": "Bash",
+      "bytes": 22621,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====PACKET GREP=====\"; grep -rn -i \"packet\" scripts/workflow --include=*.js | grep "
+    },
+    {
+      "index": 4,
+      "tool": "Bash",
+      "bytes": 10042,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====handoff.js=====\"; cat -n scripts/workflow/runner/handoff.js; echo; echo \"=====r"
+    },
+    {
+      "index": 5,
+      "tool": "Bash",
+      "bytes": 9615,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====handoff.js 55-end=====\"; sed -n '55,200p' scripts/workflow/runner/handoff.js; e"
+    },
+    {
+      "index": 6,
+      "tool": "Bash",
+      "bytes": 10483,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====analyze2.js 40-90=====\"; sed -n '40,90p' figma-export/workflow-session-economy-"
+    },
+    {
+      "index": 7,
+      "tool": "Bash",
+      "bytes": 9095,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====schema lib openRecord/finalizeRecord (296-334)=====\"; sed -n '296,334p' scripts"
+    },
+    {
+      "index": 8,
+      "tool": "Bash",
+      "bytes": 3906,
+      "summary": "cd \"/c/Code/design system\" && echo \"=====catalog consumers=====\"; grep -n \"deterministic\\|check-catalog\\|checks\\.\" scrip"
+    }
+  ],
+  "leanSet": {
+    "bytes": 111333,
+    "ceiling": 128000,
+    "ratio": 0.88
+  }
+}

@@ -18,12 +18,36 @@
     "citations": "Every sourceRecord cited by workflow/rules.json exists in the store (generate-contract.js refuses otherwise).",
     "proofArchive": "Batch proofs are named PROOF \u2014 <batch> \u00b7 <what> and sit in Archive 06 at batch close.",
     "immutability": "No record whose committed status was not IN PROGRESS has changed since the last commit (validate-split.js compares against HEAD indexes/record-index.json); no record or flag is ever removed.",
-    "milestone": "A milestone tag (milestone/<date>-<reason>) exists and is at most seven days old; milestones are taken at each workstream close or weekly, whichever comes first (backup policy B)."
+    "milestone": "A milestone tag (milestone/<date>-<reason>) exists and is at most seven days old; milestones are taken at each workstream close or weekly, whichever comes first (backup policy B).",
+    "byteCeilings": "Startup files stay under the byte ceilings in byteCeilings: CLAUDE.md, the contract, every manifest item, current-state and the worst-case lean set; a record dated on or after the adoption date stays under the record ceiling (IN PROGRESS fails, DONE is reported on the validator line); the runner packet is checked when it is generated."
   },
   "visual": {
     "comparisonRender": "Executor inspects a dedicated reference/rebuild/change comparison for every component.",
     "operatorReview": "The comparison is shown to the operator at the manifest oversight checkpoint.",
     "unknownUnknowns": "Look for clipping, optical imbalance, icon mismatch, sagging labels, false hierarchy, and anything not represented by deterministic rules."
+  },
+  "byteCeilings": {
+    "adopted": "2026-09-12, record workflow_sessionEconomyC_2026-09-12",
+    "unit": "UTF-8 bytes: files and records on disk; a manifest item as its pretty-printed JSON at indent 2, the size a scoped projection returns",
+    "files": {
+      "CLAUDE.md": 16000,
+      "workflow/npve-contract.generated.json": 100000,
+      "indexes/current-state.json": 4000
+    },
+    "manifestItem": 16000,
+    "record": {
+      "bytes": 32000,
+      "appliesFrom": "2026-09-12",
+      "inProgress": "fail",
+      "done": "report on the validator line; the next record cites the breach"
+    },
+    "runnerPacket": 64000,
+    "leanSet": {
+      "target": 128000,
+      "onBreach": "report on the validator line as leanOverTarget; the components above carry the hard stops, because the largest latest record may be an immutable DONE record"
+    },
+    "leanSetDefinition": "CLAUDE.md + the generated contract + the largest manifest item + indexes/current-state.json + the largest of the latest record per workstream; the validator line itself is not counted",
+    "remedy": "Move bulk out of the file: evidence to figma-export/<batch>/, enumerations to a cited file, prose to the report. A DONE record is immutable; its breach is reported, not repaired."
   },
   "policy": "Scripts may compress deterministic successes. They may never waive, infer, or replace the visual checks."
 }

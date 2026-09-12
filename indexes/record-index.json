@@ -1072,6 +1072,15 @@
    "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
    "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; cont",
    "recordSha256": "2f8a1bec4980056dbf93947f5662c4423c5e88f5d05e61eff13c95c458c4beaf"
+  },
+  {
+   "id": "workflow_sessionEconomyC_2026-09-12",
+   "sequence": 111,
+   "date": "2026-09-12",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
+   "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stoppe",
+   "recordSha256": "cb3d2b376727319ffedef70364e5c7c28e6442a5ae8489532fd470265abb40af"
   }
  ],
  "flags": {
@@ -1383,8 +1392,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 111,
-  "aggregateTopLevelKeys": 125,
-  "nextRecordSequence": 111
+  "records": 112,
+  "aggregateTopLevelKeys": 126,
+  "nextRecordSequence": 112
  }
 }

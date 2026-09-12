@@ -4,7 +4,11 @@ const { ROOT, readJson, fileDigest, jsonDigest } = require('../lib');
 const { validateContract } = require('../validate-contract');
 const { validateManifest } = require('../validate-manifest');
 const { executionPath } = require('../validate-execution');
+const { ceilings } = require('../validate-ceilings');
 const { local, need } = require('./core');
+
+// Contract sections a runner needs; they are referenced, not copied (packet version 2).
+const RULE_SECTIONS = ['authority', 'recordStore', 'canonicalClaudeMdSections', 'agentRules', 'recordGate', 'standingRules', 'sheetAndComparisonTechniques', 'proofConvention', 'executionPolicy', 'operatingLoop', 'nonNegotiables', 'standingBatchRules'];
 
 function handoff(id) {
   validateContract();
@@ -28,13 +32,21 @@ function handoff(id) {
     need(actual, `Historical mapping absent: ${control.name}`);
     return { ...control, recordedIdentity: actual, executionStatus: 'HISTORICAL ONLY — verify exact live identity, owning-set definitions and dimensions before use' };
   });
+  // Version 2 (record workflow_sessionEconomyC_2026-09-12): the contract's rule sections, the NPVE rules, the
+  // selected active flags and CLAUDE.md are referenced by path (digests in `sources`), not copied. The reader
+  // already holds the digest-checked contract and CLAUDE.md from the lean start and reads flag entries by id.
   const projectedFlags = new Set(c.npve.openFlags.map(f => f.id));
-  // Conservative inclusion: all projected NPVE flags plus Patient Summary/shared-shell findings.
-  // Keep full flag entries: some have no summary and carry per-consumer repair state.
-  const flags = read('flags/active.json').entries.map(e => e.flag).filter(f => projectedFlags.has(f.id) || /patient.?summary|sidesheet|comparison|bound.?paint|field.?surface/i.test(JSON.stringify(f)));
-  const rules = Object.fromEntries(['authority', 'recordStore', 'canonicalClaudeMdSections', 'agentRules', 'recordGate', 'standingRules', 'sheetAndComparisonTechniques', 'proofConvention', 'executionPolicy', 'operatingLoop', 'nonNegotiables', 'standingBatchRules'].map(k => [k, c[k]]));
+  // Conservative selection: all projected NPVE flags plus Patient Summary/shared-shell findings.
+  const flagIds = read('flags/active.json').entries.map(e => e.flag).filter(f => projectedFlags.has(f.id) || /patient.?summary|sidesheet|comparison|bound.?paint|field.?surface/i.test(JSON.stringify(f))).map(f => f.id);
+  need(RULE_SECTIONS.every(k => c[k] !== undefined), 'Contract lacks a rule section the packet references');
+  const references = {
+    rules: { file: 'workflow/npve-contract.generated.json', sections: RULE_SECTIONS, note: 'Read from the contract, which validate-contract digest-checks against workflow/rules.json, CLAUDE.md, AGENTS.md, OPERATORS.md and the execution policy.' },
+    npveRules: { file: 'workflow/npve-contract.generated.json', section: 'npve.rules' },
+    flags: { file: 'flags/active.json', ids: flagIds, selection: 'All contract-projected NPVE flags plus active entries matching Patient Summary, sidesheet, comparison, bound paint or field surface. Read each entry by id with a projection; some carry no summary and per-consumer repair state. Expand if another family is used.' },
+    instructions: { file: 'CLAUDE.md', note: 'Auto-loaded by the harness at session start; its digest is in sources.' }
+  };
   const payload = {
-    format: 'tebra.npve-runner-handoff', version: 1,
+    format: 'tebra.npve-runner-handoff', version: 2,
     use: item.status === 'complete' ? 'Completed precedent; never restart or replay. New work needs its own selected item, recorded approval and IN PROGRESS record.' : 'Resume selected item through existing start/check/finish gates; this packet grants no approval.',
     item, selectedRecord,
     exactApproval: { tier: item.risk.approval, perItemConfirmations: item.perItemConfirmations || [], recordQuote: selectedRecord.envelope.record.operatorContinuationQuote || null },
@@ -47,9 +59,7 @@ function handoff(id) {
           report: body.report, nextAction: body.nextAction,
           operatorEvidence: Object.fromEntries(Object.entries(body).filter(([key]) => /operator|approval|review/i.test(key))) } };
     }),
-    rules, npveRules: c.npve.rules, flags,
-    flagsSelection: 'All contract-projected NPVE flags plus active entries matching Patient Summary, sidesheet, comparison, bound paint or field surface. Review scope and inherited mappings; expand if another family is used.',
-    claudeInstructions: fs.readFileSync(path.join(ROOT, 'CLAUDE.md'), 'utf8'),
+    references,
     checkpoint: { path: checkpointPath, data: checkpoint }, controls,
     nextAction: item.status === 'complete' ? 'Read this completed example; do not execute it. For an authorized new item, generate its packet, discover authenticated tools and obtain fresh source/target/component readbacks.' : checkpoint?.nextAction || 'Open the scoped IN PROGRESS record and obtain fresh preflight evidence.',
     evidencePolicy: 'Save full replies to files; send only receipt path/hash, identities, counts, differences and failures to the model. Inspect every required PNG yourself and show the operator. Never infer visual approval from a file or validator.'
@@ -65,8 +75,12 @@ function generate(id, outputDir) {
   // Apples-to-apples: exact same required payload, no omitted facts or token guesses.
   need(jsonDigest(JSON.parse(compact)) === jsonDigest(JSON.parse(pretty)), 'Context equivalence failure');
   const beforeBytes = Buffer.byteLength(pretty), afterBytes = Buffer.byteLength(compact);
+  const packetCeilingBytes = ceilings().runnerPacket;
+  need(afterBytes <= packetCeilingBytes, `Runner packet is ${afterBytes} bytes, over the ceiling of ${packetCeilingBytes} (workflow/check-catalog.json → byteCeilings.runnerPacket); shrink the checkpoint, controls or record it carries`);
   const measurement = { method: 'UTF-8 bytes of identical selected information: pretty JSON versus compact JSON. Both parse to the same canonical digest.',
     beforeBytes, afterBytes, reductionPercent: Number(((1 - afterBytes / beforeBytes) * 100).toFixed(2)),
+    packetVersion: packet.version, packetBytes: afterBytes, packetCeilingBytes,
+    dedupe: 'Version 2 references the contract rule sections, the NPVE rules, the selected active flags and CLAUDE.md by path and digest instead of copying them (record workflow_sessionEconomyC_2026-09-12).',
     equivalentPayloadSha256: jsonDigest(packet),
     sourceBundleBytes: packet.sources.reduce((sum, x) => sum + fs.statSync(path.join(ROOT, x.file)).size, 0),
     sourceBundleNote: 'Broader files contain unrelated information; this is not the equivalent-information baseline.',
@@ -79,6 +93,6 @@ function generate(id, outputDir) {
 function verify(file) {
   const packet = readJson(file); validateContract();
   for (const source of packet.sources) need(fileDigest(source.file) === source.sha256, `Stale handoff: ${source.file}`);
-  return { itemId: packet.item.id, freshLocalSources: true, liveMappingsVerified: false };
+  return { itemId: packet.item.id, packetVersion: packet.version, freshLocalSources: true, liveMappingsVerified: false };
 }
 module.exports = { handoff, generate, verify };

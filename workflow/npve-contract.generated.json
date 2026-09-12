@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-12T16:14:10.614Z",
+  "generatedAt": "2026-09-12T18:41:11.922Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "52f4caad29bc7410a1860abd88aba38adb5aaa4c636c53ea7d97d2b575ddf29a",
+      "sha256": "870fee0e2c9694764ddb021cca13c5ac690d0972bd7ba69373dc5d7c7813e2ee",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "0fc97ff17447bcb1562ad86f145c9f290a5dc7ee4c9e9e185c30531f5b095897"
+        "sha256": "0b3d6ccf7d5c1fd39e123c2d4c676a28ae70c841892d3367f64aae971519da05"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "6b382d2ea17056a279a834846d6db21af8ac5cd030e0e6d3523e11a00ddab04c"
+        "sha256": "29f7c5b7e63164b44f43d54c5180fb57e20d522d6ad7818b1d36543a79442e6c"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 111,
+      "records": 112,
       "flags": {
         "active": 236,
         "resolved": 60
@@ -42,7 +42,7 @@
       },
       {
         "path": "CLAUDE.md",
-        "sha256": "a5002a6fc771895473480b7f02df76586d3363a9edee252f7d0f4000c5cf671f"
+        "sha256": "9456b7d01ff37e28609cfe97697f6f4c227ea2d64d9aaca8b0a35fbb6f6c75d2"
       },
       {
         "path": "AGENTS.md",
@@ -329,11 +329,11 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "workflow_sessionEconomy_2026-09-12",
+      "id": "workflow_sessionEconomyC_2026-09-12",
       "date": "2026-09-12",
       "workstream": "workflow",
-      "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
-      "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; reposito"
+      "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
+      "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stopped Flowsheets item against 128,480 at ver"
     },
     "recordGate": {
       "inProgress": [
@@ -362,12 +362,12 @@
         }
       },
       "workflow": {
-        "count": 14,
+        "count": 15,
         "latest": {
-          "id": "workflow_sessionEconomy_2026-09-12",
+          "id": "workflow_sessionEconomyC_2026-09-12",
           "date": "2026-09-12",
-          "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
-          "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; reposito"
+          "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
+          "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stopped Flowsheets item against 128,480 at ver"
         }
       }
     }
@@ -754,17 +754,6 @@
     ],
     "recentRecords": [
       {
-        "id": "workflow_npveQueueRefresh_2026-09-10",
-        "path": "records/workflow/2026-09-10/workflow_npveQueueRefresh_2026-09-10.json",
-        "status": "DONE — three atomic Patient Summary items proposed with planner-owned risk and dependencies",
-        "date": "2026-09-10",
-        "outcome": "Patient Summary is the next coherent batch. The queue separates content, feedback states, and shared-shell composition so each visual packet is reviewed before its dependent item starts.",
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/workflow-npve-queue-refresh-2026-09-10/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_patientSummaryContent_2026-09-10",
         "path": "records/npve/2026-09-10/npveRebuild_patientSummaryContent_2026-09-10.json",
         "status": "DONE — Patient Summary content built, verified and shown; operator review required before item 2.",
@@ -903,6 +892,17 @@
         "decision": null,
         "report": "figma-export/workflow-session-economy-2026-09-12/report.md",
         "target": null
+      },
+      {
+        "id": "workflow_sessionEconomyC_2026-09-12",
+        "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
+        "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stopped Flowsheets item against 128,480 at version 1); byte ceilings in workflow/check-catalog.json enforced by validate-ceilings.js and shown on the validator line; measure-startup.js reproduces the audit's five pre-task counts; repository-only.",
+        "date": "2026-09-12",
+        "outcome": "The three Batch C deliverables are in place. The runner packet no longer carries the contract rule sections, the NPVE rules, the selected flag entries or CLAUDE.md; it references them by path with the digests already in its sources, so the reader uses the digest-checked contract it holds from the lean start. The validator enforces byte ceilings on the startup files and prints the worst-case lean set against its ceiling on every run. measure-startup.js reads the session transcript and reports the calls and result bytes before the first task action, the number standing rule 16 requires in every report.",
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-session-economy-c-2026-09-12/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -1030,6 +1030,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "5fa971e52ddc225f54a1c247118c969c00820f2d7e70550aa1501718be9b265f"
+    "contractSha256": "6b3b56b713a3517d4c7cc2fc311062eee4d9cce84c98a0fd70a4a32cbd3448a7"
   }
 }

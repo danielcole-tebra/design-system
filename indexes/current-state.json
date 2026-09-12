@@ -3,11 +3,11 @@
  "version": 1,
  "generatedBy": "scripts/schema/build-aggregate.js (never hand-edited)",
  "latestRecord": {
-  "id": "workflow_sessionEconomy_2026-09-12",
+  "id": "workflow_sessionEconomyC_2026-09-12",
   "date": "2026-09-12",
   "workstream": "workflow",
-  "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
-  "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; reposito"
+  "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
+  "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stopped Flowsheets item against 128,480 at ver"
  },
  "recordGate": {
   "inProgress": [
@@ -36,12 +36,12 @@
    }
   },
   "workflow": {
-   "count": 14,
+   "count": 15,
    "latest": {
-    "id": "workflow_sessionEconomy_2026-09-12",
+    "id": "workflow_sessionEconomyC_2026-09-12",
     "date": "2026-09-12",
-    "path": "records/workflow/2026-09-12/workflow_sessionEconomy_2026-09-12.json",
-    "status": "DONE — standing rule 16 (one batch per session; bounded reads) adopted into rules.json, CLAUDE.md and OPERATORS.md; contract regenerated and validated; reposito"
+    "path": "records/workflow/2026-09-12/workflow_sessionEconomyC_2026-09-12.json",
+    "status": "DONE — runner packet version 2 references rules, flags and CLAUDE.md instead of copying them (45945 bytes for the stopped Flowsheets item against 128,480 at ver"
    }
   }
  },
@@ -52,7 +52,7 @@
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "52f4caad29bc7410a1860abd88aba38adb5aaa4c636c53ea7d97d2b575ddf29a",
-  "bytes": 1594302
+  "sha256": "870fee0e2c9694764ddb021cca13c5ac690d0972bd7ba69373dc5d7c7813e2ee",
+  "bytes": 1605522
  }
 }
