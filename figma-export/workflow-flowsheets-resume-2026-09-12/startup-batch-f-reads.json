@@ -1,0 +1,214 @@
+{
+  "firstBatchFWrite": {
+    "index": 35,
+    "summary": "C:\\Code\\design system\\figma-export\\workflow-flowsheets-resume-2026-09-12\\plan.md"
+  },
+  "callsBeforeFirstBatchFWrite": 34,
+  "resultBytesBeforeFirstBatchFWrite": 444048,
+  "calls": [
+    {
+      "index": 1,
+      "tool": "Bash",
+      "bytes": 368,
+      "summary": "Show git status and run workflow validator"
+    },
+    {
+      "index": 2,
+      "tool": "Bash",
+      "bytes": 9860,
+      "summary": "Inspect pending Flowsheets diffs and untracked files"
+    },
+    {
+      "index": 3,
+      "tool": "Bash",
+      "bytes": 10434,
+      "summary": "Verify indexes reference the record, stage Flowsheets stop state"
+    },
+    {
+      "index": 4,
+      "tool": "Bash",
+      "bytes": 98,
+      "summary": "Commit the stopped Flowsheets state alone"
+    },
+    {
+      "index": 5,
+      "tool": "Bash",
+      "bytes": 2406,
+      "summary": "List tooling scripts and their sizes"
+    },
+    {
+      "index": 6,
+      "tool": "Bash",
+      "bytes": 10907,
+      "summary": "Read runner folder listing, stop/start batch, workspace baseline, workflow lib"
+    },
+    {
+      "index": 7,
+      "tool": "Bash",
+      "bytes": 14407,
+      "summary": "Read validate-execution, check-batch, finish-batch"
+    },
+    {
+      "index": 8,
+      "tool": "Bash",
+      "bytes": 13019,
+      "summary": "Read npve-runner and runner core"
+    },
+    {
+      "index": 9,
+      "tool": "Bash",
+      "bytes": 23658,
+      "summary": "Read runner plugin (source gate) and handoff"
+    },
+    {
+      "index": 10,
+      "tool": "Bash",
+      "bytes": 16706,
+      "summary": "Read Flowsheets execution evidence, blocker, stopped run, gitignore"
+    },
+    {
+      "index": 11,
+      "tool": "Bash",
+      "bytes": 15647,
+      "summary": "Read check catalog, ceilings, contract validator, self-test aggregator"
+    },
+    {
+      "index": 12,
+      "tool": "Bash",
+      "bytes": 26243,
+      "summary": "Read workflow rules.json in full"
+    },
+    {
+      "index": 13,
+      "tool": "Bash",
+      "bytes": 74,
+      "summary": "Grep README and policy for command mentions; read AGENTS, protocol, Batch E file list"
+    },
+    {
+      "index": 14,
+      "tool": "Bash",
+      "bytes": 3954,
+      "summary": "Locate README files and grep for batch command mentions"
+    },
+    {
+      "index": 15,
+      "tool": "Bash",
+      "bytes": 28597,
+      "summary": "Read workflow README, AGENTS, policy greps, protocol, Batch E file list"
+    },
+    {
+      "index": 16,
+      "tool": "Bash",
+      "bytes": 2232,
+      "summary": "Read Batch E apply/finalize/plan/record and current-state index"
+    },
+    {
+      "index": 17,
+      "tool": "Bash",
+      "bytes": 2232,
+      "summary": "Read persisted Batch E template output"
+    },
+    {
+      "index": 18,
+      "tool": "Bash",
+      "bytes": 16499,
+      "summary": "Read first half of persisted Batch E template"
+    },
+    {
+      "index": 19,
+      "tool": "Bash",
+      "bytes": 17591,
+      "summary": "Read second half of persisted Batch E template"
+    },
+    {
+      "index": 20,
+      "tool": "Bash",
+      "bytes": 26613,
+      "summary": "Read batch-files and record-scripts"
+    },
+    {
+      "index": 21,
+      "tool": "Bash",
+      "bytes": 20744,
+      "summary": "Read schema store library"
+    },
+    {
+      "index": 22,
+      "tool": "Bash",
+      "bytes": 22555,
+      "summary": "Read scaffold, closeout, target identity, small validators"
+    },
+    {
+      "index": 23,
+      "tool": "Bash",
+      "bytes": 15234,
+      "summary": "Read execution and plugin self-tests"
+    },
+    {
+      "index": 24,
+      "tool": "Bash",
+      "bytes": 22826,
+      "summary": "Read runner self-test and contract generator"
+    },
+    {
+      "index": 25,
+      "tool": "Bash",
+      "bytes": 2110,
+      "summary": "Read validator, Flowsheets record, controls head, run tail, manifest header"
+    },
+    {
+      "index": 26,
+      "tool": "Bash",
+      "bytes": 22101,
+      "summary": "Read Flowsheets record from persisted output"
+    },
+    {
+      "index": 27,
+      "tool": "Bash",
+      "bytes": 23680,
+      "summary": "Read controls head, run tail, manifest header from persisted output"
+    },
+    {
+      "index": 28,
+      "tool": "Bash",
+      "bytes": 16231,
+      "summary": "Read runner.md, measure-startup usage, copilot instructions grep"
+    },
+    {
+      "index": 29,
+      "tool": "Bash",
+      "bytes": 19432,
+      "summary": "Read Batch E report and startup accounting shape"
+    },
+    {
+      "index": 30,
+      "tool": "Bash",
+      "bytes": 17632,
+      "summary": "Read record-scripts self-test and scratch-store setup"
+    },
+    {
+      "index": 31,
+      "tool": "Bash",
+      "bytes": 6245,
+      "summary": "Check item status semantics, run field usage, execution template, doc anchors, milestone status"
+    },
+    {
+      "index": 32,
+      "tool": "Bash",
+      "bytes": 4623,
+      "summary": "Inspect the Flowsheets source preflight and fresh-controls evidence shapes"
+    },
+    {
+      "index": 33,
+      "tool": "Bash",
+      "bytes": 8468,
+      "summary": "Read the rest of measure-startup for the close accounting"
+    },
+    {
+      "index": 34,
+      "tool": "Bash",
+      "bytes": 622,
+      "summary": "Scaffold the Batch F record pair and plan.md"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+ "format": "tebra.design-record",
+ "version": 1,
+ "id": "workflow_flowsheetsResume_2026-09-12",
+ "sequence": 114,
+ "date": "2026-09-12",
+ "workstream": "workflow",
+ "created": {
+  "by": "Claude Fable 5.1 (Claude Code desktop)",
+  "at": "2026-09-12T20:07:56.470Z",
+  "script": "apply-workflow-flowsheets-resume-2026-09-12.js"
+ },
+ "record": {
+  "_status": "DONE — a supported source-gate treatment for a read-only source set Figma cannot read (exact error, set identity and geometry, every variant, matched variant, marked control, flag), and resume-batch.js for a stopped item under the operator's quoted go-ahead; both with self-tests; repository-only, no Figma call.",
+  "date": "2026-09-12",
+  "batchKind": "repository",
+  "plan": "figma-export/workflow-flowsheets-resume-2026-09-12/plan.md",
+  "workstream": "Workflow / session economy",
+  "executor": "Claude Fable 5.1 (Claude Code desktop)",
+  "risk": {
+   "tier": "low",
+   "assignedBy": "The operator, in the commissioning message at session start (\"Repository-only, risk low, one record, one commit\"). The executor did not change the tier.",
+   "operatorQuote": "Batch F: Flowsheets resume tooling. Repository-only, risk low, one record, one commit. Lean start."
+  },
+  "operatorCommission": {
+   "firstCommit": "First, before anything else, commit the stopped Flowsheets state on its own: the untracked record records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json, apply-npve-flowsheets-finish.js, figma-export/npve-flowsheets-finish-2026-09-11/, and the pending edits to flags/active.json and workflow/manifest.json. Nothing else in that commit.",
+   "deliverable1": "A supported source-gate treatment for a read-only source component set whose definitions Figma cannot read. When componentPropertyDefinitions on the owning set throws (the Flowsheets case: set 129:6647 in zVsuhYehoSLLq880qRBFkq answers \"Component set has existing errors\"), the runner preflight and validate-execution accept the mapping only when the exact Figma error is quoted, the set's identity (id, name, type, parent, page) and geometry are read, every variant child's name and variantProperties are read, and the variant the batch uses is matched by those properties. The control entry is marked \"definitions unreadable at source\" and a flag names the set. The library component the rebuild uses is verified exactly as today. No edit to the source, no substitute source in the manifest, no skipped check.",
+   "deliverable2": "node scripts/workflow/resume-batch.js <item-id> <executor> --confirm=\"<my words>\". Resumes a stopped item in a fresh session: requires the item and run stopped, the record IN PROGRESS, execution.json valid at ready, and my quoted go-ahead; refuses anything else. It sets the run active and the item back to the status an active run shows today, refreshes the store fingerprint and the pre-existing-files baseline (listing what was appended since the start), appends the resume to the run, and writes a checkpoint on the record through record-scripts quoting me. The batch-files gate runs at open and reports; records dated before 2026-09-12 are noted, not refused.",
+   "documentation": "Rule 16, agent rule 9 and the README name the resume command; check-catalog gains the two checks. Beyond that first commit, the Flowsheets batch is not touched."
+  },
+  "planAsProposed": "Batch F, commissioned by the operator at session start after Batch E (workflow_planInventory_2026-09-12) closed with the Flowsheets finish batch stopped at its source definition gate (flag npveFlowsheets_sourceDefinitionBlocker_2026-09-11, record npveRebuild_flowsheetsFinish_2026-09-11).",
+  "scope": [
+   "Commit 5be9df8 (before this record opened): the stopped Flowsheets state alone — record npveRebuild_flowsheetsFinish_2026-09-11, apply-npve-flowsheets-finish.js, figma-export/npve-flowsheets-finish-2026-09-11/, flags/active.json (flag npveFlowsheets_sourceDefinitionBlocker_2026-09-11) and workflow/manifest.json (item npve-flowsheets-finish stopped)",
+   "scripts/workflow/source-definitions.js (new): the shape and checks of a read-only source set whose definitions Figma cannot read; scripts/workflow/validate-execution.js accepts a control marked \"definitions unreadable at source\" only under those checks, never for the target or library file",
+   "scripts/workflow/runner/plugin.js: the read program quotes the exact error and reads the set, page, geometry and variants instead of throwing on a source read; a mutation refuses an unreadable target set; validatePlan accepts the record on a source read only",
+   "scripts/workflow/resume-batch.js (new) with scripts/workflow/validate-manifest.js exporting validateManifestData; resumes a stopped item under the operator's quoted go-ahead",
+   "scripts/workflow/source-definitions-self-test.js and scripts/workflow/resume-batch-self-test.js (new), both in DEFAULT_SELF_TESTS of scripts/schema/record-scripts.js",
+   "workflow/check-catalog.json: deterministic sourceDefinitions and batchResume (23 checks); workflow/rules.json: standing rule 16 and agent rule 9 name the resume command; workflow/README.md, workflow/runner.md, CLAUDE.md rule 16 brief and OPERATORS.md; contract regenerated; report; finalize through close(); one commit"
+  ],
+  "report": "figma-export/workflow-flowsheets-resume-2026-09-12/report.md",
+  "canvasChecks": "Not applicable: repository-only batch",
+  "figmaMutations": [],
+  "flagsAdded": [],
+  "stopCondition": "Repository-only; no Figma call. The Flowsheets batch is not touched beyond its own stopped-state commit: no edit to the source, no substitute source in the manifest, no skipped check, no change to risk ownership, DONE records, the store API in scripts/schema/lib.js or the execution policy text.",
+  "nextAction": "Fresh session, the Flowsheets finish batch: read the source set fresh with the new read program, rewrite the source control marked \"unreadable at source\" with the exact error, the flag and the matched variant, clear the unresolved entry on that evidence, then node scripts/workflow/resume-batch.js npve-flowsheets-finish <executor> --confirm=\"<operator go-ahead>\" and continue through check-batch before each mutation.",
+  "outcome": "The stopped Flowsheets state was committed alone first (5be9df8). Then: scripts/workflow/source-definitions.js states what the gate accepts when componentPropertyDefinitions throws on a read-only source set, validate-execution.js accepts a control marked \"unreadable at source\" only under those checks and only for the item's source file, the runner's read program quotes the exact error and reads the set, page, geometry and variants instead of failing, its plan validation accepts that record on a source read only, a mutation stops on an unreadable target set, and the live readback comparison is exact; the library component is verified exactly as before. scripts/workflow/resume-batch.js resumes a stopped item under the operator's quoted go-ahead, refusing anything else and writing nothing until every check passes; it checkpoints the record quoting the operator, sets the run active with a refreshed guard and baseline listing the appends since the start, returns the item to queued (what an active run shows today), reports the batch-files gate and regenerates the contract. Two self-tests (59 and 17 cases) join the thirteen preflight runs; the catalog, rules 16 and 9, the README, runner.md, CLAUDE.md and OPERATORS.md name the command and the treatment.",
+  "stopAndResume": {
+   "stoppedAt": "2026-09-12",
+   "stopReason": "Operator asked to come to a stopping point",
+   "checkpoint": "figma-export/workflow-flowsheets-resume-2026-09-12/checkpoint-stop.js",
+   "resumedIn": "the same session, at the operator's word",
+   "operatorResumeQuote": "resume the work",
+   "note": "Standing rule 16 says a stopped batch resumes in a fresh session; the operator chose to continue here. Recorded, no decision needed."
+  },
+  "implementation": [
+   "scripts/workflow/source-definitions.js (new): MARKER, ERROR_RE, sameProperties, unreadableErrors, matchVariant, unreadableNodeErrors, flagNamesSet, unreadableControlErrors",
+   "scripts/workflow/validate-execution.js: a control with definitions \"unreadable at source\" goes through unreadableControlErrors; every other control exactly as before",
+   "scripts/workflow/runner/plugin.js: snap catches the definitions read and saves definitionsUnreadable (error, set with page and geometry, variants) and the variant's variantProperties; a mutation fails on an unreadable target node; validatePlan accepts definitionsUnreadable on a source read only",
+   "scripts/workflow/resume-batch.js (new): resumeBatch(options, deps), summary, CLI; ACTIVE_ITEM_STATUS = queued; scripts/workflow/validate-manifest.js exports validateManifestData",
+   "scripts/workflow/source-definitions-self-test.js (59 cases) and scripts/workflow/resume-batch-self-test.js (17 cases, scratch store and root); both in DEFAULT_SELF_TESTS of scripts/schema/record-scripts.js",
+   "workflow/check-catalog.json: deterministic sourceDefinitions and batchResume (23 checks); workflow/rules.json: standing rule 16 and agent rule 9 name the resume command; workflow/README.md step 8, commands and component evidence; workflow/runner.md; CLAUDE.md rule 16 brief; OPERATORS.md; contract regenerated",
+   "figma-export/workflow-flowsheets-resume-2026-09-12/: plan.md, report.md, checkpoint-stop.js, startup-this-session.json, startup-batch-f-reads.json"
+  ],
+  "sourceGate": {
+   "accepts": "exact Figma error quoted (must name componentPropertyDefinitions); set id, name, type COMPONENT_SET, parentId, page { id, name }, width, height; every variant id, name, variantProperties; the used variant matched uniquely by properties and equal to the mapped component; control fileKey equal to the item's read-only source and never the target; flag in the register naming the set by id",
+   "refuses": "the marker on the target or library file; a snapshot component that reads its definitions; a different error text; properties of another variant or of none; the set mapped instead of the variant; a missing or unknown flag or one not naming the set; an unmarked control without definitions, as before",
+   "liveUse": "none this session; the read program ran on an in-memory double whose set throws the recorded error text. First live use is the Flowsheets resume, which reads the source fresh"
+  },
+  "resumeCommand": {
+   "usage": "node scripts/workflow/resume-batch.js <item-id> <executor> [provider] [model] [reasoning] --confirm=\"<operator go-ahead>\"",
+   "requires": "item and run stopped; record IN PROGRESS; execution.json valid at ready; risk lock unchanged; dependencies complete; no record that left IN PROGRESS changed since the start; quoted go-ahead",
+   "writes": "record checkpoint (RESUMED, resumes[] quoting the operator) → run (active, refreshed storeFingerprint, schemaSha256 and preexistingFiles, resumes[] with the stop and the appends) → item (queued, resumes[] with the stop) → generate-contract",
+   "reports": "the batch-files gate at open: refused for a record dated on or after 2026-09-12 with a plan problem, noted before it",
+   "flowsheets": "refuses today: execution.json still carries the unresolved preflight failure. The resumed session reads the source fresh with the new program, rewrites the source control with the marker, clears the unresolved entry on that evidence, then runs the command with the operator's words"
+  },
+  "validation": {
+   "workflowBeforeFinalize": "workflow PASS store=115r/236+60f contract=1dc98aaef689 items=15 deterministic=23 visual=3 lean=119683/128000 inProgress=npveRebuild_flowsheetsFinish_2026-09-11,workflow_flowsheetsResume_2026-09-12",
+   "ceilingsBeforeFinalize": "ceilings PASS lean=119683/128000",
+   "selfTests": [
+    "scripts/schema/self-test.js: exit 0",
+    "scripts/schema/record-scripts-self-test.js: exit 0",
+    "scripts/schema/scaffold-self-test.js: exit 0",
+    "scripts/figma/helpers-self-test.js: exit 0",
+    "scripts/figma/inventory-self-test.js: exit 0",
+    "scripts/workflow/batch-files-self-test.js: exit 0",
+    "scripts/workflow/self-test.js: exit 0",
+    "scripts/workflow/runner-self-test.js: exit 0",
+    "scripts/workflow/execution-self-test.js: exit 0",
+    "scripts/workflow/runner-plugin-self-test.js: exit 0",
+    "scripts/workflow/target-identity-self-test.js: exit 0",
+    "scripts/workflow/source-definitions-self-test.js: exit 0",
+    "scripts/workflow/resume-batch-self-test.js: exit 0"
+   ],
+   "canvas": "N/A — no Figma read or write; the read program ran only on the in-memory double",
+   "screenshots": "N/A — repository-only batch; nothing rendered",
+   "batchFilesCli": "node scripts/workflow/batch-files.js workflow_flowsheetsResume_2026-09-12 open: PASS kind=repository plan=figma-export/workflow-flowsheets-resume-2026-09-12/plan.md",
+   "figmaCalls": 0,
+   "figmaMutations": 0,
+   "existingDoneRecordsEdited": 0
+  },
+  "startupAccounting": {
+   "measuredBy": "scripts/workflow/measure-startup.js, output in figma-export/workflow-flowsheets-resume-2026-09-12/startup-this-session.json; the calls before this batch's first write in figma-export/workflow-flowsheets-resume-2026-09-12/startup-batch-f-reads.json",
+   "callsBeforeFirstTaskAction": 3,
+   "resultBytesBeforeFirstTaskAction": 20662,
+   "firstTaskAction": {
+    "index": 4,
+    "tool": "Bash",
+    "summary": "cd \"/c/Code/design system\" && git commit -q -F - <<'EOF' Flowsheets finish: stopped state (record IN PROGRESS, blocker flag, manifest item stopped) Read-only so"
+   },
+   "callsBeforeFirstBatchFWrite": 34,
+   "resultBytesBeforeFirstBatchFWrite": 444048,
+   "note": "By the tool's definition the first task action was the Flowsheets commit the operator asked for first (call 4): 3 calls before it. This batch's first write was call 35: 34 calls, 444,048 bytes, of which calls 1 to 4 (20,760) were the lean start and that commit, and calls 5 to 34 (423,288) the tooling the approved work changes, named in the report per rule 16: the batch scripts, the runner, the validators, the store library, the record scripts, the scaffold, the self-tests, rules.json in full (edited), the Batch E pair, plan, record and report as the template, the Flowsheets execution, blocker, run and record. Over the target because the tooling reads were the work, as in Batches D and E; the report names three avoidable costs."
+  },
+  "findings": {
+   "GAP": 0,
+   "DEFECT": 0,
+   "DECISION": 3
+  },
+  "decisionsForOperator": [
+   "Resumed in the same session at the operator's word (\"resume the work\") after a STOPPED checkpoint; rule 16 says a fresh session. Recorded, no decision needed.",
+   "resume-batch refuses when a record that has left IN PROGRESS changed or disappeared while stopped, and only reports a change to another batch's open record, a foundation section or a flag; check-batch still refuses any record change inside the run window. Confirm the split, or ask that the resume refuse on any change.",
+   "After a resume the item shows queued, what an active run's item shows today. Showing active for a running item would change start-batch as well; a planner decision."
+  ],
+  "deferred": [],
+  "carryOver": "The Flowsheets batch is stopped exactly as committed in 5be9df8. The weekly milestone tag is due by 2026-09-18.",
+  "standingBatchRules": "N/A for this repository-only workflow batch; the ten Figma rules are unchanged and still required for design batches."
+ }
+}

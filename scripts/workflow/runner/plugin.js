@@ -18,13 +18,28 @@ async function program(figma, p) {
     const owner = n.type === 'COMPONENT' && n.parent?.type === 'COMPONENT_SET' ? n.parent : n;
     const out = { id: n.id, name: n.name, type: n.type, parentId: n.parent?.id };
     for (const k of ['key', 'width', 'height']) if (k in n) out[k] = n[k];
-    if (['COMPONENT', 'COMPONENT_SET'].includes(owner.type)) out.definitions = owner.componentPropertyDefinitions;
+    if (['COMPONENT', 'COMPONENT_SET'].includes(owner.type)) {
+      try { out.definitions = owner.componentPropertyDefinitions; }
+      catch (error) {
+        // A read-only source set Figma cannot read (record workflow_flowsheetsResume_2026-09-12): quote the exact error
+        // and read the set's identity, page, geometry and every variant's name and properties instead of failing the
+        // read. Only a source read may carry this; a mutation stops on it below.
+        let page = owner.parent; while (page && page.type !== 'PAGE') page = page.parent;
+        out.definitionsUnreadable = {
+          error: String(error && error.message !== undefined ? error.message : error),
+          set: { id: owner.id, name: owner.name, type: owner.type, parentId: owner.parent?.id, page: page ? { id: page.id, name: page.name } : null, width: owner.width, height: owner.height },
+          variants: (owner.children || []).map(c => ({ id: c.id, name: c.name, variantProperties: c.variantProperties }))
+        };
+        if (n.type === 'COMPONENT') out.variantProperties = n.variantProperties;
+      }
+    }
     return out;
   };
   const nodes = [];
   // Reverify inside the mutation call as well: saved IDs and a prior read are not proof.
   for (const expected of request.nodes) {
     const actual = snap(await get(expected.id)); nodes.push(actual);
+    if (p.kind !== 'read' && actual.definitionsUnreadable) fail(`Definitions unreadable on ${expected.id} in the target file: ${actual.definitionsUnreadable.error}`);
     for (const [k, v] of Object.entries(expected)) if (!eq(actual[k], v)) fail(`Stale identity/mapping ${expected.id}.${k}`);
   }
   if (p.kind === 'read') return { complete: true, nonce: p.nonce, fileKey: figma.fileKey, pages, nodes };
@@ -157,10 +172,20 @@ function validatePlan(plan) {
   need(typeof plan.appearanceEvidence === 'string' && plan.appearanceEvidence, 'Reviewed appearance/configuration evidence required');
   const target = plan.reads.find(r => r.fileKey === plan.fileKey);
   need(target?.nodes?.length, 'Target mappings required');
+  const { unreadableNodeErrors } = require('../source-definitions');
   for (const read of plan.reads) for (const n of read.nodes || []) {
     need(n.id && n.name && n.type && n.parentId, 'Every source/target/component requires explicit name, type and parent identity');
     if (!['PAGE', 'DOCUMENT'].includes(n.type)) need(Number.isFinite(n.width) && Number.isFinite(n.height), 'Every geometry-bearing identity requires fresh dimensions');
-    if (['COMPONENT', 'COMPONENT_SET'].includes(n.type)) need(n.key && n.definitions, 'Every component needs exact key and owning-set definitions');
+    if (['COMPONENT', 'COMPONENT_SET'].includes(n.type)) {
+      if (n.definitionsUnreadable !== undefined) {
+        // Only a read-only source read may carry a set Figma cannot read (record workflow_flowsheetsResume_2026-09-12);
+        // the target file's components read their definitions exactly as before.
+        need(read.fileKey !== plan.fileKey, `Definitions unreadable on ${n.id}: the target file's components must read their definitions`);
+        need(n.key, `Exact key required: ${n.id}`);
+        const errors = unreadableNodeErrors(n, n.id);
+        need(!errors.length, errors.join('; '));
+      } else need(n.key && n.definitions, 'Every component needs exact key and owning-set definitions');
+    }
   }
   const mapped = id => {
     const n = target.nodes.find(n => n.id === id);

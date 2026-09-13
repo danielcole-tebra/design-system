@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { ROOT, readJson } = require('./lib');
+const { MARKER, unreadableControlErrors } = require('./source-definitions');
 
 function executionPath(item) {
   return path.posix.join(path.posix.dirname(item.requiredEvidence.report), 'execution.json');
@@ -64,7 +65,12 @@ function validateExecutionData(data, item, { stage = 'ready', root = ROOT } = {}
       try {
         const snapshot = JSON.parse(fs.readFileSync(evidence, 'utf8'));
         const component = snapshot.components?.find(c => c.id === control.component || c.key === control.component);
-        if (!component?.componentPropertyDefinitions || typeof component.componentPropertyDefinitions !== 'object') {
+        if (control.definitions === MARKER) {
+          // A read-only source set Figma cannot read (record workflow_flowsheetsResume_2026-09-12): accepted only with
+          // the exact error quoted, the set's identity and geometry, every variant read and the used variant matched by
+          // its properties, a flag naming the set, and never for the target or library file.
+          errors.push(...unreadableControlErrors({ control, component, item, root, label: `control ${i}` }));
+        } else if (!component?.componentPropertyDefinitions || typeof component.componentPropertyDefinitions !== 'object') {
           errors.push(`control ${i}: component identity/definitions absent from saved snapshot`);
         } else for (const [name, value] of Object.entries(control.properties || {})) {
           const definition = component.componentPropertyDefinitions[name];

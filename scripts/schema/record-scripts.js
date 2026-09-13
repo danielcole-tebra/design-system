@@ -48,7 +48,9 @@ const DEFAULT_SELF_TESTS = [
   'scripts/workflow/runner-self-test.js',
   'scripts/workflow/execution-self-test.js',
   'scripts/workflow/runner-plugin-self-test.js',
-  'scripts/workflow/target-identity-self-test.js'
+  'scripts/workflow/target-identity-self-test.js',
+  'scripts/workflow/source-definitions-self-test.js',
+  'scripts/workflow/resume-batch-self-test.js'
 ];
 
 class RecordCeilingError extends Error {}

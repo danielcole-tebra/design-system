@@ -1,7 +1,8 @@
 const { jsonDigest, manifestRiskPayload, readJson } = require('./lib');
 
-function validateManifest() {
-  const manifest = readJson('workflow/manifest.json');
+// The checks on a manifest object; validateManifest() reads the repository's. Exported so a self-test can validate a
+// scratch manifest (record workflow_flowsheetsResume_2026-09-12).
+function validateManifestData(manifest) {
   const errors = [];
   const ids = new Set();
   if (manifest.format !== 'tebra.design-work-manifest' || manifest.version !== 1) errors.push('unsupported manifest format/version');
@@ -32,10 +33,14 @@ function validateManifest() {
   return manifest;
 }
 
+function validateManifest() {
+  return validateManifestData(readJson('workflow/manifest.json'));
+}
+
 if (require.main === module) {
   const manifest = validateManifest();
   const unapproved = manifest.items.filter((item) => item.status !== 'proposed' && item.risk?.approval?.status !== 'approved').map((item) => item.id);
   console.log(`manifest PASS ${manifest.items.length} item(s)${unapproved.length ? `; tiers UNAPPROVED on ${unapproved.join(', ')}` : ''}`);
 }
 
-module.exports = { validateManifest };
+module.exports = { validateManifest, validateManifestData };

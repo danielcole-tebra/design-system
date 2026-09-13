@@ -1099,6 +1099,15 @@
    "path": "records/workflow/2026-09-12/workflow_planInventory_2026-09-12.json",
    "status": "DONE — plan.md required by every gate from open to finish; a Figma batch's inventory.json with reverification by id, nam",
    "recordSha256": "0eeba81fa6ba33aa119c9e574a606f50d5dbb59feffd7cb2ac024e1430a92090"
+  },
+  {
+   "id": "workflow_flowsheetsResume_2026-09-12",
+   "sequence": 114,
+   "date": "2026-09-12",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-12/workflow_flowsheetsResume_2026-09-12.json",
+   "status": "DONE — a supported source-gate treatment for a read-only source set Figma cannot read (exact error, set identity and geo",
+   "recordSha256": "ba395ebc7a5c5aeff147dae47eb4721070a044951aa2d9dd12c463f2bd272b56"
   }
  ],
  "flags": {
@@ -1410,8 +1419,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 114,
-  "aggregateTopLevelKeys": 128,
-  "nextRecordSequence": 114
+  "records": 115,
+  "aggregateTopLevelKeys": 129,
+  "nextRecordSequence": 115
  }
 }
