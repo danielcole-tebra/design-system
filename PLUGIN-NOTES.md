@@ -7,6 +7,7 @@ use_figma takes fileKey, code and description; the code runs in the plugin sandb
 1. importComponentByKeyAsync / importVariableByKeyAsync results do not persist between calls. Import and use in one script.
 2. setBoundVariableForPaint with a null variable returns an unbound paint without throwing. Read the paint back.
 3. Assigning componentPropertyReferences replaces the whole object. Set every key in one assignment.
+4. Importing by key is a write: importComponentByKeyAsync, importComponentSetByKeyAsync and importVariableByKeyAsync create a remote copy in the file. Never do it on read-only work.
 
 ## Paints
 1. setBoundVariableForPaint keeps the raw colour you passed and Figma renders it ({0,0,0} rendered black); write the resolved value into the paint, then bind.

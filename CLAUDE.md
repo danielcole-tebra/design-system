@@ -5,6 +5,7 @@ Figma builder for Tebra's design system. Given a spec, a screenshot, or a node i
 ## Files
 - Library (Design System Rebuild): YX2n4YLrEpBXNbcc73T6dw
 - Proposals: zKT34LQogNjz3Z07fY4VQB. Consumes the library, never defines it.
+- Composition System: oNrOL9kQCpJHyK4rBCGqsq. Record of canonical compositions built from the library. Consumes, never defines.
 - NPVE target: fdCQVFdvOByaOYIJYag0d6
 - NPVE legacy source: zVsuhYehoSLLq880qRBFkq
 - Tebra Working UI Kit: deprecated, read only.
@@ -17,6 +18,8 @@ Code is authority on values. Storybook is authority on render; a screenshot outr
 TEBRA-DESIGN-SYSTEM.md is the written form of the code: theme architecture, token derivations, and the per-component table of what Tebra overrides versus MUI substrate. Read the component's row before building it. REFERENCE-KIT.md is the manifest of the deprecated kit and holds the open "need Daniel" items.
 
 APPEARANCE-NPVE-EDIT-FORMS.md is the approved appearance specification for NPVE edit forms. Check a rebuilt form against it before reporting.
+
+COMPOSITIONS.md indexes the patterns; the Composition System file shows them. Read the index before composing anything larger than a component.
 
 ## Rules
 1. Additive only. Never delete nodes, pages, or files. Mark superseded, archive with a README.
@@ -36,6 +39,8 @@ Plugin API traps and the icon recipe are in PLUGIN-NOTES.md. Read it before writ
 
 ## Record
 After every batch, append one entry to LOG.md: date, file key, what was built, what was found, path to the screenshot. Open findings go in FLAGS.md as one line each, tagged DEFECT, GAP, or DECISION, and get struck through when closed. These two files are the only record.
+
+Build bottom up. Never rebuild a screen whole cloth from a screenshot or a source frame. Build the smallest unit that isn't already in the library or the compositions file, screenshot it, and stop for Daniel's read before building the thing that contains it. A batch is one level. If a batch produces more than one screenshot's worth of new decisions, it should have been two.
 
 ## Agents
 Any agent may run a batch. One agent per batch. Read this file first, append to LOG.md before stopping. A batch with no log entry is treated as unverified and audited before the next one starts. Stop and ask Daniel on any design question. Otherwise proceed. Don't ask for approval sentences, don't assign risk, don't ask before reading.
