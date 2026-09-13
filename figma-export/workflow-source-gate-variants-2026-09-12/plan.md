@@ -1,0 +1,33 @@
+# workflow_sourceGateVariants_2026-09-12 plan
+
+Record: workflow_sourceGateVariants_2026-09-12
+Kind: repository
+Evidence: figma-export/workflow-source-gate-variants-2026-09-12
+Stop condition: Repository-only plus one read-only Figma call against the read-only source zVsuhYehoSLLq880qRBFkq; no target or library call. Stop if the amended read program still throws on the real set, if an existing self-test can pass only by weakening a check, or if the change would need an edit to a DONE record, to the store API in scripts/schema/lib.js, to the execution policy text, or to risk ownership. The Flowsheets batch and its files are not touched: no control written there, no unresolved entry cleared, no resume.
+
+The planner writes this checklist before the record opens and keeps it current through the batch. A phase is checked (`[x]`) when its evidence exists; a dropped phase is marked `[-]` with the reason after a colon. The gates refuse an unfilled placeholder at open and an open phase at close.
+
+## Commission
+
+Operator, 2026-09-12: "relax the tooling, plan the workflow batch". Context: the Flowsheets finish resume attempt of 2026-09-12 (record npveRebuild_flowsheetsFinish_2026-09-11, flag npveFlowsheets_sourceVariantPropertiesUnreadable_2026-09-12) found that on source set 129:6647 Figma refuses variantProperties on every child ("in get_variantProperties: Component set for node has existing errors") and variantGroupProperties on the set, not only componentPropertyDefinitions. The treatment of record workflow_flowsheetsResume_2026-09-12 reads each variant's variantProperties inside its catch and matches the used variant by them, so the read program throws before returning. Evidence: figma-export/npve-flowsheets-finish-2026-09-11/source-read-2026-09-12/ (plan.json, script.js, error.json, diagnostic.json).
+
+Risk proposed: low. Reasons: repository-only code with self-tests; the one live call is a read of the read-only source with no page or selection change; readable sets keep today's behaviour exactly; target and library components keep reading their definitions; nothing is written to Figma. Operator approval of the tier is quoted in the record before the apply script runs.
+
+## What the amended treatment accepts
+
+A read-only source set is either "variants readable" (every variant carries variantProperties, exactly as today) or "variants unreadable" (every variant carries a variantPropertiesError naming variantProperties, plus id, name, key, width, height). A mixed set is refused. When variants are readable the used variant is matched by properties as today. When they are unreadable the control names the used variant by `variant: { id, key }`, its `properties` is `{}`, both errors are quoted on the control (`error` for the definitions read, `variantPropertiesError` for the variant read) and must equal the readback word for word, and the match is by id and key against the read variant list, unique, and equal to the mapped component's id and key. The variant's name is recorded as evidence, never matched. The flag naming the set, the source-file-only rule and the refusal on a target or library node stay as they are.
+
+## Phases
+
+- [ ] Lean start: validator line, contract, this plan and the last record read by scoped projection; the calls and bytes before the first task action noted for the report; operator tier approval quoted in the record body before apply
+- [ ] Read program: scripts/workflow/runner/plugin.js snap reads each child's variantProperties in its own try inside the definitions catch, saving variantPropertiesError with the exact text and the child's id, name, key, width and height; the snapped node's own variantProperties likewise; validatePlan still accepts the record on a source read only; a mutation still stops on an unreadable target set
+- [ ] Gate: scripts/workflow/source-definitions.js accepts a variants-unreadable set as stated above (uniform set, both errors quoted, used variant named by id and key with empty properties, unique match equal to the mapped component); refuses a mixed set, a claimed property on an unreadable set, a key or id that does not match, a different error text, the target or library file; readable sets and every existing refusal unchanged; validate-execution.js changed only if the control shape needs it
+- [ ] Self-tests: scripts/workflow/source-definitions-self-test.js gains the accept and refuse cases above and its existing 59 cases still pass; scripts/workflow/runner-plugin-self-test.js gains a double whose set throws on componentPropertyDefinitions, variantGroupProperties and every child's variantProperties, proving the read returns and a mutation on such a target node still fails; the full DEFAULT_SELF_TESTS run and the validator pass
+- [ ] Live proof, read-only: the amended read program compiled from the Flowsheets plan.json with a fresh nonce runs once against zVsuhYehoSLLq880qRBFkq; the full reply is saved in this batch's evidence folder and checked with verifyReadback; the three Flowsheets variants come back with both errors quoted and their ids and keys; nothing in the Flowsheets folder changes
+- [ ] Documentation: workflow/check-catalog.json sourceDefinitions text names the variants-unreadable case; workflow/README.md paragraph on the read-only source set amended; the module header comment amended; workflow/runner.md and rules.json touched only if their text names variantProperties (today they do not); contract regenerated against the open record
+- [ ] Report written to figma-export/workflow-source-gate-variants-2026-09-12/report.md with the startup accounting and the exact record shape the Flowsheets resume session must write for its source control
+- [ ] Record closed through finalize-workflow-sourceGateVariants-2026-09-12.js under about 15,000 bytes (lean set already over target, accepted as reported on 2026-09-12: "agree on both"), committed with the regenerated indexes; milestone tag if a week has passed since the last one
+
+## Not in this batch
+
+The Flowsheets resume itself. A later fresh session reruns the source read with the amended program, writes the source control (`definitions: "unreadable at source"`, `variant: { id: "939:9228", key: "8ac09a9476c741ba2858a49d9ad0a2ba780d9114" }`, `properties: {}`, both errors quoted, flag npveFlowsheets_sourceVariantPropertiesUnreadable_2026-09-12), clears both unresolved entries on that evidence, validates at ready, runs `node scripts/workflow/resume-batch.js npve-flowsheets-finish <executor> --confirm="<the operator's own go-ahead sentence>"`, and finishes the batch as planned.
