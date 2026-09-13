@@ -11,7 +11,7 @@ Rhythm: 16 default separation and inset; 8 for tight pairs (heading and its list
 - Record card, 346:3089. Title, metadata line, trailing actions, 16 inset, 8 between related lines.
 - Summary row, 153:1186. Status control, text, trailing icon buttons, row-owned divider on a boolean. Open flags on padding.
 - Section group, 534:5805. Uppercase heading 8 above a contiguous list of rows.
-- Full-width footer action, 745:9862. One action spanning the sheet in place of the button trio.
+- Full-width footer action, 732:9985. One action spanning the sheet in place of the button trio.
 - Table heading band, 752:13439. Head cells on a teal band bleeding 16 past the content column.
 - Picker, 94:812. Search field, filter tabs, pick rows.
 - List with status menu, 156:2426. Toolbar, status groups, menu as a body state.
