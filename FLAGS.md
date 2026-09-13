@@ -2,7 +2,7 @@
 
 One line per open finding: tag | file key | node id | finding | date raised | id. Strike a line through when it is closed. Carried over on 2026-09-12 from `flags/active.json` (the 82 entries tagged DEFECT, GAP or DECISION; untagged severity notes were not carried; the full text of each is still under that id in `flags/active.json`). File keys: library YX2n4YLrEpBXNbcc73T6dw, NPVE target fdCQVFdvOByaOYIJYag0d6, NPVE legacy source zVsuhYehoSLLq880qRBFkq, Proposals zKT34LQogNjz3Z07fY4VQB; `repo` means code or docs, no Figma node.
 
-## DEFECT (26)
+## DEFECT (24 open, 2 closed)
 
 - DEFECT | fdCQVFdvOByaOYIJYag0d6 | 1:5 | Target page Cover 0:1 carries one unbound fill (#010000 on Frame 1 1:5), pre-existing before any batch. | 2026-09-02 | npveProblemsBuild_coverPageUnboundFill
 - DEFECT | fdCQVFdvOByaOYIJYag0d6 | 18:129 | A stray Change log/Row instance 18:129 sat at (0, 0) on Templates: the changelog batch created it before appendChild into the instance threw, and the atomic-failure assumption did not cover a partially built script. | 2026-09-02 | npveProblemsBuild_strayChangelogRow
@@ -13,7 +13,7 @@ One line per open finding: tag | file key | node id | finding | date raised | id
 - DEFECT | YX2n4YLrEpBXNbcc73T6dw | 201:14 | Source filter tabs are hand-drawn 28-tall cells, Akkurat LL Bold 14/28, #9A9A9A unselected, #004852 selected with a 2px #417E86 underline; library Tabs/Tab 201:13 is 48 tall, Regular 16/20, #545454 bound unselected, #004852 bound selected, 2px indicator. | 2026-09-02 | npveProblemsRecent_filterTabsCompact
 - DEFECT | zVsuhYehoSLLq880qRBFkq | 4618:5008 | Row 1 (4618:5008) nests its name and code frames as siblings with the name frame at HUG 131; rows 2 to 4 nest the code frame inside a FILL 406 name frame. | 2026-09-02 | npveProblemsRecent_rowStructureInconsistent
 - DEFECT | YX2n4YLrEpBXNbcc73T6dw | 121:350 | Library Text field size=small Value=Filled with an empty Label keeps a 10px Label slot in the outline, leaving a break in the top edge; the Empty variant hides the slot and closes cleanly. | 2026-09-02 | npveSearch_emptyLabelBreaksFilledOutline
-- DEFECT | repo | none | figmaBuild.pages._order lists Tokens and omits Compositions and Layouts; the file has Foundations, Compositions and Layouts. | 2026-09-03 | libraryRead_pagesOrderStale
+- ~~DEFECT | repo | none | figmaBuild.pages._order lists Tokens and omits Compositions and Layouts; the file has Foundations, Compositions and Layouts. | 2026-09-03 | libraryRead_pagesOrderStale~~ closed 2026-09-13: the file it describes was archived in the reset
 - DEFECT | YX2n4YLrEpBXNbcc73T6dw | none | 19 of 20 space/* variables carry codeSyntax var(--tebra-space-N); the repo has 0 occurrences of tebra-space and theme.ts has no spacing override. | 2026-09-03 | libraryRead_spaceCodeSyntaxNamesMissingCssVar
 - DEFECT | YX2n4YLrEpBXNbcc73T6dw | 201:3 | Tabs/Tab label renders 16/20 with textCase ORIGINAL; code Tab inherits typography.button 16/24 capitalize. | 2026-09-03 | libraryRead_tabLabelLineHeightAndCase
 - DEFECT | fdCQVFdvOByaOYIJYag0d6 | 6:7 | Icon button 6:7 (old subscription copy, 74-series refs) has 0 instances; all 182 Icon button instances use 77:1104. | 2026-09-03 | npveAudit_iconButtonOrphanImport
@@ -22,7 +22,7 @@ One line per open finding: tag | file key | node id | finding | date raised | id
 - DEFECT | YX2n4YLrEpBXNbcc73T6dw | 121:350 | Library Text field masters carry a hidden "Multiline rows" text "Second line of the comment / Third line of the comment" (20 in set 121:350); it rides into every target Text field instance. | 2026-09-03 | npveAudit_textFieldHiddenPlaceholderCopy
 - DEFECT | YX2n4YLrEpBXNbcc73T6dw | 201:14 | Library Tabs 201:14 renders no rule under the strip. | 2026-09-03 | npveCleanup_tabsNoBottomRule
 - DEFECT | YX2n4YLrEpBXNbcc73T6dw | 121:350 | Library Text field size=small: the resting label sits 8px too low. | 2026-09-03 | npveLabelDrift_smallRestingLabelInsetIsMedium
-- DEFECT | repo | none | AGENTS.md says it repeats the CLAUDE.md agent-rules section verbatim; CLAUDE.md now has item 10 (record gate) and AGENTS.md has items 1–9. | 2026-09-04 | docsAgentsMdVerbatimClaimStale
+- ~~DEFECT | repo | none | AGENTS.md says it repeats the CLAUDE.md agent-rules section verbatim; CLAUDE.md now has item 10 (record gate) and AGENTS.md has items 1–9. | 2026-09-04 | docsAgentsMdVerbatimClaimStale~~ closed 2026-09-13: the file it describes was archived in the reset
 - DEFECT | fdCQVFdvOByaOYIJYag0d6 | 356:6236 | The Allergies comparison kept its Rebuild content wrapper at the canonical 600px slot height after swapping in a 447px content-driven Sidesheet, leaving 153px of false white sheet below the live component. | 2026-09-05 | npveAllergiesComparison_fixedRebuildWrapperHeight
 - DEFECT | fdCQVFdvOByaOYIJYag0d6 | 316:3412 | Problem edit body carries literal (unbound) spacing: paddingTop 8 and gap 16 on 316:3412, gaps on 316:3434, 316:3456, 316:3458 and 316:3475; every other new body binds its padding and gaps. | 2026-09-05 | npveExtReview_problemEditUnboundSpacing
 - DEFECT | fdCQVFdvOByaOYIJYag0d6 | 316:3457 | Two text styles changed against the source without a log row: Edit Problem "Type" label Regular 14 → Bold 14; Allergies "Mild" Bold 14 → Regular 16. | 2026-09-05 | npveExtReview_unloggedTypeStyleDrift
@@ -63,7 +63,7 @@ One line per open finding: tag | file key | node id | finding | date raised | id
 - GAP | zVsuhYehoSLLq880qRBFkq | none | Add/Edit source depicts nine four-option questions, selected response, inline graph, date control and Save caret without scoped prototype behavior except Close. | 2026-09-11 | npveFlowsheets_questionnairePattern_2026-09-11
 - GAP | YX2n4YLrEpBXNbcc73T6dw | none | Flowsheets rows require monitoring and double-up trend glyphs absent from the 101-master icon-page inventory. | 2026-09-11 | npveFlowsheets_rowIconMappings_2026-09-11
 
-## DECISION (27)
+## DECISION (29)
 
 - DECISION | fdCQVFdvOByaOYIJYag0d6 | 6:65 | No authoritative sidesheet body padding exists in code or the library; the template uses 16 all sides bound space/16 by decision (prompt default). | 2026-09-02 | npveBody_paddingNotAuthoritative
 - DECISION | fdCQVFdvOByaOYIJYag0d6 | 26:222 | The Filled Text field must show a notch label; the source search field has none. | 2026-09-02 | npveProblemsBuild_searchLabelCopy
@@ -92,3 +92,5 @@ One line per open finding: tag | file key | node id | finding | date raised | id
 - DECISION | fdCQVFdvOByaOYIJYag0d6 | 426:4214 | The Modules pill uses Icon/Menu and Icon/PlusOutlined on a library Button (pill, 122x38); the source is a white r8 144x40 pill with a Material widgets glyph. | 2026-09-06 | npveEncounter_modulesPillGlyphDelta
 - DECISION | fdCQVFdvOByaOYIJYag0d6 | 424:4417 | The Split button instance 424:4417 in the Note card footer is hidden and renamed SUPERSEDED rather than deleted (rule 1); its nested segments cannot be un-exposed by the API. | 2026-09-06 | npveEncounter_splitButtonSuperseded
 - DECISION | zVsuhYehoSLLq880qRBFkq | 129:12486 | The Family History edit source 129:12486 (Clin_FHX-Editing) draws footer Save as outlined (button 129:12800, Type=Default, white fill, 1px #8CA7A2, 66x36) where Allergies 129:7949, Facility Stay 648:1735, Hospitalizations 129:8516 and Procedures 129:8773 all use Type=Primary (coral #FF8D6E pill). | 2026-09-09 | npveFamilyHistory_sourceSaveOutlined
+- DECISION | fdCQVFdvOByaOYIJYag0d6 | 732:8713 | Flowsheets/Questionnaire sets the form heading and the nine questions in h4 16px Bold where the source draws the heading 20px Regular and the questions 16px Regular; keep the bold hierarchy or move questions to body1 and the heading to a 20px style. | 2026-09-13 | npveFlowsheets_formTypeWeight_2026-09-13
+- DECISION | fdCQVFdvOByaOYIJYag0d6 | 732:9188 | Flowsheets/Body State=Add new and State=Edit past carry hand-placed copies of the list body's Column headings frame (732:9188, 732:9597), so a change to the list body's headings will not reach the forms; promote the headings to a component or accept the copies. | 2026-09-13 | npveFlowsheets_headingsCopies_2026-09-13

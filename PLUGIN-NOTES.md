@@ -28,30 +28,31 @@ use_figma takes fileKey, code and description; the code runs in the plugin sandb
 15. A property-driven sizer must mirror every node that can widen the element (label plus optional asterisk); test with the optional child on.
 16. Never fake a border gap with a background-coloured mask; build it from auto-layout slices with per-side stroke weights, end radii and a hugging middle slice sized by transparent text bound to the label.
 17. Set figma.skipInvisibleInstanceChildren = false before any walk; the first unbound-paint audit reported 0 while blind to hidden slots.
+18. resize() and resizeWithoutConstraints() on an instance nested inside another instance are silently ignored: the swapped slot keeps the master's size (a 600px reference slot stayed 600 around a 2399px helper, 2026-09-13). Read the size back; let the column clip off instead.
 
 ## Layout
-18. resize() after counterAxisSizingMode locks the axis to FIXED; re-set AUTO or clones inherit a frozen height.
-19. Auto-layout frames accept minWidth, maxWidth, minHeight, maxHeight.
-20. Frames default clipsContent true, so overhanging absolute children (notch label, focus ring, Badge anchor) vanish; clear it on the component and every wrapper.
-21. Badge's translate(50%,-50%) has no equivalent; use a centring anchor frame twice the offset wide, primaryAxisAlignItems CENTER, centred on the anchor.
-22. combineAsVariants keeps the layout you give; layoutMode NONE with a size-per-row grid reviews better than WRAP.
-23. GROUP, BOOLEAN_OPERATION and VECTOR bounds derive from contents and may be fractional; exclude them from integer checks.
-24. ELLIPSE arcData {startingAngle, endingAngle, innerRadius} draws an SVG dasharray ring with no fractional value stored (innerRadius is a 0-1 ratio). Angle 0 is 3 o'clock, as in SVG.
+19. resize() after counterAxisSizingMode locks the axis to FIXED; re-set AUTO or clones inherit a frozen height.
+20. Auto-layout frames accept minWidth, maxWidth, minHeight, maxHeight (Tab: minWidth 90, maxWidth 360, minHeight 48).
+21. Frames default clipsContent true, so overhanging absolute children (notch label, focus ring, Badge anchor) vanish; clear it on the component and every wrapper.
+22. Badge's translate(50%,-50%) has no equivalent; use a centring anchor frame twice the offset wide, primaryAxisAlignItems CENTER, centred on the anchor.
+23. combineAsVariants keeps the layout you give; layoutMode NONE with a size-per-row grid reviews better than WRAP.
+24. GROUP, BOOLEAN_OPERATION and VECTOR bounds derive from contents and may be fractional; exclude them from integer checks.
+25. ELLIPSE arcData {startingAngle, endingAngle, innerRadius} draws an SVG dasharray ring with no fractional value stored (innerRadius is a 0-1 ratio). Angle 0 is 3 o'clock, as in SVG.
 
 ## Text
-25. Name a TEXT node after setting characters, never the literal "Text" (autoRename overwrites it); prefer type or index lookup.
-26. An empty TEXT node collapses to width 0 and FILL does not recover it: textAutoResize HEIGHT, resize() to a real width, then FILL; verify width > 0.
-27. Order: fontName, characters, setTextStyleIdAsync, textAutoResize, resize; textAutoResize set earlier does not survive.
-28. resize() on a TEXT node silently resets textAutoResize to NONE; set the mode after the resize.
-29. setTextStyleIdAsync resets textDecoration; apply UNDERLINE after it and after any later characters assignment.
+26. Name a TEXT node after setting characters, never the literal "Text" (autoRename overwrites it); prefer type or index lookup.
+27. An empty TEXT node collapses to width 0 and FILL does not recover it: textAutoResize HEIGHT, resize() to a real width, then FILL; verify width > 0.
+28. Order: fontName, characters, setTextStyleIdAsync, textAutoResize, resize; textAutoResize set earlier does not survive.
+29. resize() on a TEXT node silently resets textAutoResize to NONE; set the mode after the resize.
+30. setTextStyleIdAsync resets textDecoration; apply UNDERLINE after it and after any later characters assignment.
 
 ## SVG import
-30. createNodeFromSvg gives its wrapper an opaque white fill the SVG did not declare; walk the frame itself or clear it.
-31. createNodeFromSvg accepts an embedded base64 image (RECTANGLE with IMAGE fill); probe with a 1x1 PNG.
-32. An SVG clipPath imports as a mask group with a black fill that renders nothing but reads as unbound; bind it to what the source declares.
+31. createNodeFromSvg gives its wrapper an opaque white fill the SVG did not declare; walk the frame itself or clear it.
+32. createNodeFromSvg accepts an embedded base64 image (RECTANGLE with IMAGE fill); probe with a 1x1 PNG.
+33. An SVG clipPath imports as a mask group with a black fill that renders nothing but reads as unbound; bind it to what the source declares.
 
 ## Icon recipe
-1. Keep the imported viewBox position inside the 24x24 frame; never reset x/y to 0.
+1. Keep the imported viewBox position inside the 24x24 frame; never reset x/y to 0. createNodeFromSvg positions them correctly; verified: DownCaret (2, 6.49), Cancel (2, 2), Close-MUI (5, 5), TrashOutlined (2.52, 2), Checkbox (3, 3).
 2. Every vector gets constraints {horizontal:'SCALE', vertical:'SCALE'} on the master; CENTER renders oversized at 16px.
 3. No currentColor: clone the source text paint (resolved colour and boundVariables together) onto every vector per variant; skip white knockout shapes.
 4. Vector layers are named "Vector"; swap overrides survive only across matching layer names. Masters are Icon/Name, MUI-internal glyphs Icon/Name (MUI).

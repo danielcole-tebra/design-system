@@ -16,6 +16,8 @@ Code is authority on values. Storybook is authority on render; a screenshot outr
 
 TEBRA-DESIGN-SYSTEM.md is the written form of the code: theme architecture, token derivations, and the per-component table of what Tebra overrides versus MUI substrate. Read the component's row before building it. REFERENCE-KIT.md is the manifest of the deprecated kit and holds the open "need Daniel" items.
 
+APPEARANCE-NPVE-EDIT-FORMS.md is the approved appearance specification for NPVE edit forms. Check a rebuilt form against it before reporting.
+
 ## Rules
 1. Additive only. Never delete nodes, pages, or files. Mark superseded, archive with a README.
 2. Names. A property mirroring a code prop uses code's exact name and values, lowercase. Figma-only affordances use Sentence case. Sub-component paths use / with no spaces. Published names are locked.
