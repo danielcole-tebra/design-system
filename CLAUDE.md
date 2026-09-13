@@ -14,6 +14,8 @@ Pass the file key on every call. Figma reports every file as "Document".
 ## Truth
 Code is authority on values. Storybook is authority on render; a screenshot outranks a derivation. Production is evidence of behavior only. Figma is derived; where it disagrees with code, Figma is wrong.
 
+TEBRA-DESIGN-SYSTEM.md is the written form of the code: theme architecture, token derivations, and the per-component table of what Tebra overrides versus MUI substrate. Read the component's row before building it. REFERENCE-KIT.md is the manifest of the deprecated kit and holds the open "need Daniel" items.
+
 ## Rules
 1. Additive only. Never delete nodes, pages, or files. Mark superseded, archive with a README.
 2. Names. A property mirroring a code prop uses code's exact name and values, lowercase. Figma-only affordances use Sentence case. Sub-component paths use / with no spaces. Published names are locked.
