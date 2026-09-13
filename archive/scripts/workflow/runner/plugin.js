@@ -22,15 +22,25 @@ async function program(figma, p) {
       try { out.definitions = owner.componentPropertyDefinitions; }
       catch (error) {
         // A read-only source set Figma cannot read (record workflow_flowsheetsResume_2026-09-12): quote the exact error
-        // and read the set's identity, page, geometry and every variant's name and properties instead of failing the
-        // read. Only a source read may carry this; a mutation stops on it below.
+        // and read the set's identity, page, geometry and every variant instead of failing the read. When a variant's
+        // variantProperties throws as well (record workflow_sourceGateVariants_2026-09-12), that exact error is saved as
+        // variantPropertiesError with the variant's id, name, key and geometry, and the read still returns; a readable
+        // variant is saved exactly as before. Only a source read may carry this; a mutation stops on it below.
+        const text = e => String(e && e.message !== undefined ? e.message : e);
         let page = owner.parent; while (page && page.type !== 'PAGE') page = page.parent;
-        out.definitionsUnreadable = {
-          error: String(error && error.message !== undefined ? error.message : error),
-          set: { id: owner.id, name: owner.name, type: owner.type, parentId: owner.parent?.id, page: page ? { id: page.id, name: page.name } : null, width: owner.width, height: owner.height },
-          variants: (owner.children || []).map(c => ({ id: c.id, name: c.name, variantProperties: c.variantProperties }))
+        const variant = c => {
+          try { return { id: c.id, name: c.name, variantProperties: c.variantProperties }; }
+          catch (e) { return { id: c.id, name: c.name, key: c.key, width: c.width, height: c.height, variantPropertiesError: text(e) }; }
         };
-        if (n.type === 'COMPONENT') out.variantProperties = n.variantProperties;
+        out.definitionsUnreadable = {
+          error: text(error),
+          set: { id: owner.id, name: owner.name, type: owner.type, parentId: owner.parent?.id, page: page ? { id: page.id, name: page.name } : null, width: owner.width, height: owner.height },
+          variants: (owner.children || []).map(variant)
+        };
+        if (n.type === 'COMPONENT') {
+          try { out.variantProperties = n.variantProperties; }
+          catch (e) { out.variantPropertiesError = text(e); }
+        }
       }
     }
     return out;
@@ -178,8 +188,8 @@ function validatePlan(plan) {
     if (!['PAGE', 'DOCUMENT'].includes(n.type)) need(Number.isFinite(n.width) && Number.isFinite(n.height), 'Every geometry-bearing identity requires fresh dimensions');
     if (['COMPONENT', 'COMPONENT_SET'].includes(n.type)) {
       if (n.definitionsUnreadable !== undefined) {
-        // Only a read-only source read may carry a set Figma cannot read (record workflow_flowsheetsResume_2026-09-12);
-        // the target file's components read their definitions exactly as before.
+        // Only a read-only source read may carry a set Figma cannot read (records workflow_flowsheetsResume_2026-09-12
+        // and workflow_sourceGateVariants_2026-09-12); the target file's components read their definitions exactly as before.
         need(read.fileKey !== plan.fileKey, `Definitions unreadable on ${n.id}: the target file's components must read their definitions`);
         need(n.key, `Exact key required: ${n.id}`);
         const errors = unreadableNodeErrors(n, n.id);

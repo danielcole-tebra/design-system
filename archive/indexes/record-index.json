@@ -1108,6 +1108,15 @@
    "path": "records/workflow/2026-09-12/workflow_flowsheetsResume_2026-09-12.json",
    "status": "DONE — a supported source-gate treatment for a read-only source set Figma cannot read (exact error, set identity and geo",
    "recordSha256": "ba395ebc7a5c5aeff147dae47eb4721070a044951aa2d9dd12c463f2bd272b56"
+  },
+  {
+   "id": "workflow_sourceGateVariants_2026-09-12",
+   "sequence": 115,
+   "date": "2026-09-12",
+   "workstream": "workflow",
+   "path": "records/workflow/2026-09-12/workflow_sourceGateVariants_2026-09-12.json",
+   "status": "IN PROGRESS — source-gate treatment amended for a read-only source set whose variantProperties also throw: the runner re",
+   "recordSha256": "6a833674d677dde25e3b2136d657f2aae8658b065463d7b9cca485813460b418"
   }
  ],
  "flags": {
@@ -1420,8 +1429,8 @@
  },
  "counts": {
   "foundation": 14,
-  "records": 115,
-  "aggregateTopLevelKeys": 129,
-  "nextRecordSequence": 115
+  "records": 116,
+  "aggregateTopLevelKeys": 130,
+  "nextRecordSequence": 116
  }
 }

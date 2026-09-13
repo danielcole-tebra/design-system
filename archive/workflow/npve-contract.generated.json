@@ -1,21 +1,21 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-13T02:27:38.260Z",
+  "generatedAt": "2026-09-13T02:58:49.628Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "77189cb0d20ed6244c645e17d05c0bd6fa46a169265eb462c38013c3eebc6337",
+      "sha256": "275ba9d083cf4eddf7dea7fac02f8776b7ebc5cd535fcc462a1eb5d09b40e2eb",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "b3ca132a0bab876de06e206084f0fd11031e3d6b8580095f2cdc1f1ae6cbecb7"
+        "sha256": "37463fc6b144024eedf278743a4767d1bade4c24fa8a26149e7d9c89c9b2776d"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "d39147aa4d8950c2cde7260ceb54b57ede05ba3363dd59b1b34372c3d20e9906"
+        "sha256": "5ce6fc3ef630c95838f0c0e0c4c6304f2aa3710025ee8d98e6a718924b27cf4b"
       },
       "flagsActive": {
         "path": "flags/active.json",
@@ -29,7 +29,7 @@
         "path": "foundation/layout.json",
         "sha256": "a415c881dc18a03cc59b9ac855add892d4bbd55fcf962082c01165e83a30559b"
       },
-      "records": 115,
+      "records": 116,
       "flags": {
         "active": 237,
         "resolved": 60
@@ -339,15 +339,16 @@
   },
   "currentState": {
     "latestRecord": {
-      "id": "workflow_flowsheetsResume_2026-09-12",
+      "id": "workflow_sourceGateVariants_2026-09-12",
       "date": "2026-09-12",
       "workstream": "workflow",
-      "path": "records/workflow/2026-09-12/workflow_flowsheetsResume_2026-09-12.json",
-      "status": "DONE — a supported source-gate treatment for a read-only source set Figma cannot read (exact error, set identity and geometry, every variant, matched variant, m"
+      "path": "records/workflow/2026-09-12/workflow_sourceGateVariants_2026-09-12.json",
+      "status": "IN PROGRESS — source-gate treatment amended for a read-only source set whose variantProperties also throw: the runner read program records the refusal instead o"
     },
     "recordGate": {
       "inProgress": [
-        "npveRebuild_flowsheetsFinish_2026-09-11"
+        "npveRebuild_flowsheetsFinish_2026-09-11",
+        "workflow_sourceGateVariants_2026-09-12"
       ],
       "clear": false,
       "rule": "a new record may open only while the previous record in its workstream is DONE; the apply script checks this index"
@@ -372,12 +373,12 @@
         }
       },
       "workflow": {
-        "count": 18,
+        "count": 19,
         "latest": {
-          "id": "workflow_flowsheetsResume_2026-09-12",
+          "id": "workflow_sourceGateVariants_2026-09-12",
           "date": "2026-09-12",
-          "path": "records/workflow/2026-09-12/workflow_flowsheetsResume_2026-09-12.json",
-          "status": "DONE — a supported source-gate treatment for a read-only source set Figma cannot read (exact error, set identity and geometry, every variant, matched variant, m"
+          "path": "records/workflow/2026-09-12/workflow_sourceGateVariants_2026-09-12.json",
+          "status": "IN PROGRESS — source-gate treatment amended for a read-only source set whose variantProperties also throw: the runner read program records the refusal instead o"
         }
       }
     }
@@ -764,17 +765,6 @@
     ],
     "recentRecords": [
       {
-        "id": "workflow_creditResetObservation_2026-09-10",
-        "path": "records/workflow/2026-09-10/workflow_creditResetObservation_2026-09-10.json",
-        "status": "DONE — 143-credit reading recorded; suspected reset prevents cost comparison",
-        "date": "2026-09-10",
-        "outcome": null,
-        "geometry": null,
-        "decision": null,
-        "report": "figma-export/workflow-credit-reset-2026-09-10/report.md",
-        "target": null
-      },
-      {
         "id": "npveRebuild_patientSummaryBody_2026-09-10",
         "path": "records/npve/2026-09-10/npveRebuild_patientSummaryBody_2026-09-10.json",
         "status": "DONE — three full Patient Summary sheets verified; family build complete",
@@ -909,6 +899,17 @@
         "decision": null,
         "report": "figma-export/workflow-flowsheets-resume-2026-09-12/report.md",
         "target": null
+      },
+      {
+        "id": "workflow_sourceGateVariants_2026-09-12",
+        "path": "records/workflow/2026-09-12/workflow_sourceGateVariants_2026-09-12.json",
+        "status": "IN PROGRESS — source-gate treatment amended for a read-only source set whose variantProperties also throw: the runner read program records the refusal instead of failing, the gate accepts the used variant by id and key with both errors quoted, self-tests and one read-only live proof",
+        "date": "2026-09-12",
+        "outcome": null,
+        "geometry": null,
+        "decision": null,
+        "report": "figma-export/workflow-source-gate-variants-2026-09-12/report.md",
+        "target": null
       }
     ],
     "openFlags": [
@@ -1036,6 +1037,6 @@
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "bc1df1f6cb5fda56e036d5f2acd966f20a9ebaf038f4b7e9b2a7773f9725cbf1"
+    "contractSha256": "896689d4fd8c09b4b1d4eb48acfba047b2ece9bfc863dda5db0def374d69293b"
   }
 }
