@@ -1,25 +1,25 @@
 {
   "format": "tebra.design-workflow-contract",
   "version": 3,
-  "generatedAt": "2026-09-13T00:20:03.272Z",
+  "generatedAt": "2026-09-13T02:27:38.260Z",
   "source": {
     "schema": {
       "path": "design-system-schema.json",
-      "sha256": "4bd5ed89999675e99aa99a29a64bd269709f39a70f9bf4382e2751253efea3ff",
+      "sha256": "77189cb0d20ed6244c645e17d05c0bd6fa46a169265eb462c38013c3eebc6337",
       "note": "generated aggregate; the register is the store below"
     },
     "store": {
       "recordIndex": {
         "path": "indexes/record-index.json",
-        "sha256": "3add04eff11d712b392883f90e84795ce51af807a6b4902fe005945aa56eb256"
+        "sha256": "b3ca132a0bab876de06e206084f0fd11031e3d6b8580095f2cdc1f1ae6cbecb7"
       },
       "currentState": {
         "path": "indexes/current-state.json",
-        "sha256": "70b9a3d8b164d9841114bb4a0a46d93b5c203b8b63abd60a4571bf89644ea327"
+        "sha256": "d39147aa4d8950c2cde7260ceb54b57ede05ba3363dd59b1b34372c3d20e9906"
       },
       "flagsActive": {
         "path": "flags/active.json",
-        "sha256": "14440095f3c917edcdf3c81105e783eccec52256c69869f75673481407a5b4ab"
+        "sha256": "f76d1f3b5b03ce1f1ed869ca36782ff83c807fdd39132dbfc0de74b1d004b37d"
       },
       "flagsResolved": {
         "path": "flags/resolved.json",
@@ -31,7 +31,7 @@
       },
       "records": 115,
       "flags": {
-        "active": 236,
+        "active": 237,
         "resolved": 60
       }
     },
@@ -368,7 +368,7 @@
           "id": "npveRebuild_flowsheetsFinish_2026-09-11",
           "date": "2026-09-11",
           "path": "records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json",
-          "status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified"
+          "status": "IN PROGRESS — STOPPED again 2026-09-12 at the source read: the runner read program cannot read set 129:6647 (variantProperties throws on every child); radio ans"
         }
       },
       "workflow": {
@@ -847,7 +847,7 @@
       {
         "id": "npveRebuild_flowsheetsFinish_2026-09-11",
         "path": "records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json",
-        "status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified",
+        "status": "IN PROGRESS — STOPPED again 2026-09-12 at the source read: the runner read program cannot read set 129:6647 (variantProperties throws on every child); radio answers and form interiors remain verified",
         "date": null,
         "outcome": null,
         "geometry": null,
@@ -912,12 +912,6 @@
       }
     ],
     "openFlags": [
-      {
-        "id": "npveEncounter_patientHeaderPadding10NoToken",
-        "severity": "low",
-        "summary": "The Patient header (proposal geometry) needs 10px vertical padding; Tebra/Dimension has no space/10, so the value is a literal.",
-        "discoveredDuring": "npveRebuild_encounterShell_2026-09-06"
-      },
       {
         "id": "npveEncounter_splitButtonLabelNotAProperty",
         "severity": "low",
@@ -1031,11 +1025,17 @@
         "severity": "high",
         "summary": "Read-only source Sidesheetv3 set129:6647 rejects native componentPropertyDefinitions. Flowsheets finish runner source gate cannot verify owning definitions; supported operations stopped before dispatch. Existing target radio and form work preserved.",
         "discoveredDuring": "npveRebuild_flowsheetsFinish_2026-09-11"
+      },
+      {
+        "id": "npveFlowsheets_sourceVariantPropertiesUnreadable_2026-09-12",
+        "severity": "high",
+        "summary": "Read-only source Sidesheetv3 set 129:6647 also rejects variantProperties on every one of its 55 children (\"in get_variantProperties: Component set for node has existing errors\") and variantGroupProperties on the set. The source-gate treatment of record workflow_flowsheetsResume_2026-09-12 reads each variant's variantProperties inside its catch for componentPropertyDefinitions, so the runner read program throws before returning and the \"unreadable at source\" control cannot be written. Flowsheets finish stays stopped.",
+        "discoveredDuring": "npveRebuild_flowsheetsFinish_2026-09-11 (resume attempt 2026-09-12, Claude Code)"
       }
     ],
     "openFlagCountInProjection": 20
   },
   "integrity": {
-    "contractSha256": "eccaa0344b359f33227b7603c164e71d8371d8bbe320e1009391b96a509aa4c9"
+    "contractSha256": "bc1df1f6cb5fda56e036d5f2acd966f20a9ebaf038f4b7e9b2a7773f9725cbf1"
   }
 }

@@ -1061,8 +1061,8 @@
    "date": "2026-09-11",
    "workstream": "npve",
    "path": "records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json",
-   "status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified",
-   "recordSha256": "173b69c0b95b757a0e6d505a808784e4c394dcc052d7567da64a02c6cee8d741"
+   "status": "IN PROGRESS — STOPPED again 2026-09-12 at the source read: the runner read program cannot read set 129:6647 (variantProp",
+   "recordSha256": "fa5bb4330279e616216425e2efe0864fef4c3ef3f2085b14e2eb9dcef634637f"
   },
   {
    "id": "workflow_sessionEconomy_2026-09-12",
@@ -1112,10 +1112,10 @@
  ],
  "flags": {
   "classifier": "resolved when status starts with CLOSED|RESOLVED|SUPERSEDED|RETRACTED, or resolution (not starting REOPENED), resolvedBy, resolved, superseded, addressedBy or a withdrawn_* field is present, or handling starts with Resolved / contains RESOLVED; a status starting with REOPENED forces active",
-  "active": 236,
+  "active": 237,
   "resolved": 60,
-  "total": 296,
-  "nextSequence": 296,
+  "total": 297,
+  "nextSequence": 297,
   "activeIds": [
    "pxToRemInflation",
    "svgIconTwoUnitSystems",
@@ -1352,7 +1352,8 @@
    "npveFlowsheets_chartMapping_2026-09-11",
    "npveFlowsheets_questionnairePattern_2026-09-11",
    "npveFlowsheets_iconButtonTargetDisagreement_2026-09-11",
-   "npveFlowsheets_sourceDefinitionBlocker_2026-09-11"
+   "npveFlowsheets_sourceDefinitionBlocker_2026-09-11",
+   "npveFlowsheets_sourceVariantPropertiesUnreadable_2026-09-12"
   ],
   "resolvedIds": [
    "paintOpacityDoesNotReachInstances",

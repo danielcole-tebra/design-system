@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-12",
+  "tool": "mcp__figma__use_figma",
+  "fileKey": "zVsuhYehoSLLq880qRBFkq",
+  "program": "scripts/workflow/runner/plugin.js read program, compiled by scripts/workflow/npve-runner.js compile from plan.json into script.js",
+  "outcome": "threw before returning; no readback saved",
+  "error": "in get_variantProperties: Component set for node has existing errors",
+  "stack": [
+    "at get (<input>:52:11)",
+    "at <anonymous> (PLUGIN_1_SOURCE:29:100)",
+    "at map (native)",
+    "at snap (PLUGIN_1_SOURCE:29:47)",
+    "at program (PLUGIN_1_SOURCE:39:24)"
+  ],
+  "figmaDebugUUID": "0711a620-8236-462e-9e29-d9d86f8d907f",
+  "where": "snap(): the catch branch for componentPropertyDefinitions maps owner.children to c.variantProperties; that getter throws on this set too",
+  "mutation": false
+}

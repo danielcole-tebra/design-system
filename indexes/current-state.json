@@ -32,7 +32,7 @@
     "id": "npveRebuild_flowsheetsFinish_2026-09-11",
     "date": "2026-09-11",
     "path": "records/npve/2026-09-11/npveRebuild_flowsheetsFinish_2026-09-11.json",
-    "status": "IN PROGRESS — STOPPED at source definition gate; radio answers and form interiors verified"
+    "status": "IN PROGRESS — STOPPED again 2026-09-12 at the source read: the runner read program cannot read set 129:6647 (variantProperties throws on every child); radio ans"
    }
   },
   "workflow": {
@@ -46,13 +46,13 @@
   }
  },
  "flags": {
-  "active": 236,
+  "active": 237,
   "resolved": 60
  },
  "standingBatchRules": 10,
  "aggregate": {
   "path": "design-system-schema.json",
-  "sha256": "4bd5ed89999675e99aa99a29a64bd269709f39a70f9bf4382e2751253efea3ff",
-  "bytes": 1648198
+  "sha256": "77189cb0d20ed6244c645e17d05c0bd6fa46a169265eb462c38013c3eebc6337",
+  "bytes": 1655533
  }
 }
