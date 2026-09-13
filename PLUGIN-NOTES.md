@@ -1,7 +1,7 @@
 # Plugin notes
 
 ## Calling
-use_figma takes fileKey, code and description; the code runs in the plugin sandbox with the `figma` global; top-level await works; `return` a JSON value. Change pages with `await figma.setCurrentPageAsync(page)`. No loadAllPagesAsync, setPluginData or createImageAsync. Variables live under figma.variables.*, not on figma.
+use_figma takes fileKey, code and description; the code runs in the plugin sandbox with the `figma` global; top-level await works; `return` a JSON value. Change pages with `await figma.setCurrentPageAsync(page)`. No loadAllPagesAsync, setPluginData, createImageAsync or saveVersionHistoryAsync ("not a supported API", 2026-09-13), so a script cannot name a version checkpoint; back up with a before export and a before.json of the exact pre-state. Variables live under figma.variables.*, not on figma.
 
 ## Traps
 1. importComponentByKeyAsync / importVariableByKeyAsync results do not persist between calls. Import and use in one script.

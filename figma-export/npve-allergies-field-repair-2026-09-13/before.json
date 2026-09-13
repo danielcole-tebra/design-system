@@ -1,0 +1,84 @@
+{
+ "batch": "npve-allergies-field-repair-2026-09-13",
+ "file": "fdCQVFdvOByaOYIJYag0d6",
+ "master": {
+  "id": "634:6808",
+  "name": "Allergies edit form",
+  "w": 518,
+  "h": 468,
+  "fill": "SOLID bound NPVE/Color Form surface VariableID:387:3434 (#EEF7F9), untouched by this batch"
+ },
+ "backup": "figma.saveVersionHistoryAsync is not a supported API in use_figma; this file and form-634-6808-before-2x.png are the pre-write state. Repo state at git 4e1954f (clean before the batch).",
+ "restore": "set fills = [] on each field root below; nothing else was changed",
+ "fieldRoots": [
+  {
+   "id": "616:15026",
+   "name": "Allergen",
+   "main": "Autocomplete/Field :: size=small, State=Default, Value=Filled (remote)",
+   "parent": "629:14677 Allergen and severity",
+   "w": 397,
+   "h": 40,
+   "fills": [],
+   "overrides": [
+    "616:15026 :: height,name,width"
+   ]
+  },
+  {
+   "id": "629:14701",
+   "name": "Reaction flushing",
+   "main": "Text field :: size=small, State=Default, Value=Filled (remote)",
+   "parent": "629:14700 Reaction flushing (GAP wrapper)",
+   "w": 436,
+   "h": 40,
+   "fills": [],
+   "overrides": [
+    "629:14701 :: height,name,width"
+   ]
+  },
+  {
+   "id": "629:14724",
+   "name": "Reaction hives",
+   "main": "Text field :: size=small, State=Default, Value=Filled (remote)",
+   "parent": "629:14723 Reaction hives (GAP wrapper)",
+   "w": 436,
+   "h": 40,
+   "fills": [],
+   "overrides": [
+    "629:14724 :: height,name,width"
+   ]
+  },
+  {
+   "id": "629:14746",
+   "name": "Add reaction input",
+   "main": "Text field :: size=small, State=Default, Value=Empty (remote)",
+   "parent": "629:14745 Add reaction",
+   "w": 406,
+   "h": 40,
+   "fills": [],
+   "overrides": [
+    "629:14746 :: height,name,width"
+   ]
+  },
+  {
+   "id": "629:14766",
+   "name": "Comments",
+   "main": "Text field :: size=medium, State=Default, Value=Empty (remote)",
+   "parent": "634:6808 Allergies edit form",
+   "x": 16,
+   "y": 348,
+   "w": 486,
+   "h": 104,
+   "fills": [],
+   "overrides": [
+    "629:14766 :: height,name,primaryAxisSizingMode,width",
+    "I629:14766;121:234 :: characters,styledTextSegments"
+   ]
+  }
+ ],
+ "pattern": "636:3 Family history edit form: paper bound on the field INSTANCE roots (636:8, 637:31, 636:20, 636:14, 636:17, 636:22), Input frames left fills []",
+ "paperVariable": {
+  "name": "color/background/paper",
+  "key": "f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+  "idInFile": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+ }
+}
