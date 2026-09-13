@@ -33,3 +33,9 @@ One entry per batch, newest last: date, file key, what was built, what was found
 - Heights unchanged: Body variants 2586, sheet helpers 2762, comparisons 2854.
 - Not done, reported: the list sheet still shows the inset band from the list body's own hand-built headings frame `706:8459`, which is not a consumer of the component. Swapping it is a one-step change if wanted.
 - Screenshots: `figma-export/npve-flowsheets-finish-2026-09-13/m5-forms-and-row-1x.png` (row instance and both sheets at 1x, replaced), `inspect-m5-band-source-vs-rebuild.png` (source beside both sheets).
+
+## 2026-09-13 · List body headings swap, AGENTS.md
+- File: NPVE target `fdCQVFdvOByaOYIJYag0d6`. Daniel: swap the list body too.
+- Built: Table/Headings/Flowsheets instance `755:11007` (local copy `752:13439`) inserted at index 1 of Flowsheets/List body `706:8405`; the hand-built frame `706:8459` hidden and renamed SUPERSEDED, left in place. Propagated without patching into Flowsheets/Body State=List `732:9023`, the section 28 list-body helper `706:8537`, the list sheet helper `745:9862` (band 0px from both sheet edges) and both list comparisons `712:962` and `748:15938`. Heights unchanged: list body 306, list sheet 482, comparison 692. All three sheets now share one headings row; no hand-built headings frame remains visible.
+- Repo: `AGENTS.md` added at the root with the single line "Read CLAUDE.md. It is the only instruction file."
+- Screenshots: `figma-export/npve-flowsheets-finish-2026-09-13/m5-list-745-9862.png` (list sheet at 1x), `inspect-m5-list-source-vs-rebuild.png` (source beside it).
