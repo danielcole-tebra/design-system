@@ -10,6 +10,7 @@ use_figma takes fileKey, code and description; the code runs in the plugin sandb
 4. Importing by key is a write: importComponentByKeyAsync, importComponentSetByKeyAsync and importVariableByKeyAsync create a remote copy in the file. Never do it on read-only work.
 5. download_assets renders a node against everything behind it inside its bounds, so a fill-less node or a rounded corner bakes the parent section's colour into the PNG (Sidesheet Floating corners and the Problems picker body came out on #E4E4E4, 2026-09-13). When the ground matters, export an instance placed in a paper-filled PROOF frame.
 6. upload_assets with nodeIds can store an image without placing it: a pass whose POST responses carried no placedOnNodeId left the old fills in place (2026-09-13). Read the fill back; if the hash is wrong, set fills to {type IMAGE, scaleMode, imageHash} with the returned hash, which is legitimate because the image is already in the file.
+7. absoluteRenderBounds on a component master leaves out a child that overhangs the box: masters 26:221 and 732:8713 read equal to their boxes while an instance of the same master (771:11274) and the 2x exports carried the 8px floating-label overflow (2026-09-13). Size a plate from the stored image (figma.getImageByHash(hash).getSizeAsync()) against its rectangle, never from the master's bounds.
 
 ## Paints
 1. setBoundVariableForPaint keeps the raw colour you passed and Figma renders it ({0,0,0} rendered black); write the resolved value into the paint, then bind.
