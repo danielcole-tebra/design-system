@@ -32,7 +32,9 @@ use_figma takes fileKey, code and description; the code runs in the plugin sandb
 15. A property-driven sizer must mirror every node that can widen the element (label plus optional asterisk); test with the optional child on.
 16. Never fake a border gap with a background-coloured mask; build it from auto-layout slices with per-side stroke weights, end radii and a hugging middle slice sized by transparent text bound to the label.
 17. Set figma.skipInvisibleInstanceChildren = false before any walk; the first unbound-paint audit reported 0 while blind to hidden slots.
-18. resize() and resizeWithoutConstraints() on an instance nested inside another instance are silently ignored: the swapped slot keeps the master's size (a 600px reference slot stayed 600 around a 2399px helper, 2026-09-13). Read the size back; let the column clip off instead.
+34. setProperties() on a VARIANT axis drops the instance's text overrides and takes the target variant's own defaults. Switching a Session row from State=default to State=failed reset Name and Capture time from "Marcus Vance" / "9:42 AM" to the failed master's "Dolores Okonkwo" / "9:12 AM" (2026-09-15); the layer names match on both variants and the overrides were still lost. Read the characters back after every variant switch and re-apply, following the font-load recipe. Reactions on the instance survive the switch.
+
+18. resize() and resizeWithoutConstraints() on an instance nested inside another instance are silently ignored: the swapped slot keeps the master's size (a 600px reference slot stayed 600 around a 2399px helper, 2026-09-13). Read the size back; let the column clip off instead. When the swapped helper's master is an auto-layout frame, the nested slot accepts layoutSizingVertical = 'HUG' and grows to the helper's height (Flowsheets forms comparisons; verified 2026-09-14 on 803:19794: 550x600 slots became 604 and 740 after the reference and rebuild helpers were given a vertical auto-layout hugging their single child, sizes unchanged).
 
 ## Layout
 19. resize() after counterAxisSizingMode locks the axis to FIXED; re-set AUTO or clones inherit a frozen height.
@@ -42,6 +44,8 @@ use_figma takes fileKey, code and description; the code runs in the plugin sandb
 23. combineAsVariants keeps the layout you give; layoutMode NONE with a size-per-row grid reviews better than WRAP.
 24. GROUP, BOOLEAN_OPERATION and VECTOR bounds derive from contents and may be fractional; exclude them from integer checks.
 25. ELLIPSE arcData {startingAngle, endingAngle, innerRadius} draws an SVG dasharray ring with no fractional value stored (innerRadius is a 0-1 ratio). Angle 0 is 3 o'clock, as in SVG.
+
+26. A 1px component inside an auto-layout stack adds its pixel to the stack (the library Divider made a two-chip delta 33 tall, 2026-09-14). layoutPositioning = 'ABSOLUTE' takes it out of flow and keeps it rendering: set the positioning first, then x/y and constraints, then resize. The parent must not clip. Renumber nothing else; later Text notes keep their numbers.
 
 ## Text
 26. Name a TEXT node after setting characters, never the literal "Text" (autoRename overwrites it); prefer type or index lookup.
