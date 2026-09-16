@@ -1035,3 +1035,78 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders.
 - Repo: FLAGS.md one DECISION struck as superseded and one added (92 open, 29 → 30 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: circle controls complete. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Controls back inside the library Icon button
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. Library `YX2n4YLrEpBXNbcc73T6dw` **read only**, the Icon button set imported by key. **Nothing on `Screens`. No node deleted** — every superseded node is hidden and renamed. `figma.skipInvisibleInstanceChildren = false` on every read. The five MUI circle masters from 95e9432 are unchanged and still the only glyphs in use.
+
+### 1. Read-only first: the library Icon button
+
+- **`Icon button` `170:77`, 24 variants, and the size axis offers exactly two options: `medium` and `small`. There is no `large`.**
+
+| size | box | padding | radius | glyph slot |
+|---|---|---|---|---|
+| medium | **40 × 40** | 8 / 8 / 8 / 8 | 20 | **24 × 24** at (8, 8) |
+| small | **34 × 34** | 8 / 8 / 8 / 8 | 17 | **18 × 18** at (8, 8) |
+
+- TEBRA-DESIGN-SYSTEM.md §3.3 explains why the boxes are 34 and 40 rather than MUI's 28 and 40: `IconButtonOverrides` sets `sizeSmall` padding to `0.5rem` = 8, **the same as medium**, so the two sizes differ only by icon size. The set's own description says the same and adds that the glyph is an `Icon#170:0` INSTANCE_SWAP whose default is DownCaret.
+
+### 2. Size — the library cannot reach large, and that was probed, not assumed
+
+- **`PROOF · Icon button glyph slot probe 2026-09-16` `80:524`**, kept on canvas under rule 1, four instances:
+
+| Test | Button | Slot | Disc ink |
+|---|---|---|---|
+| A · swap the Icon property only | 40 | 24 | **20** |
+| B · `resize(35, 35)` on the nested slot | 40 | **24 — silently ignored** (trap 18) | **20** |
+| C · `layoutSizingHorizontal = 'HUG'` on the slot | 40 | 24 — **throws**, a plain icon master is not an auto-layout frame | **20** |
+| D · resize the *button* to 51 | **51** | 24 — unmoved | **20** |
+
+- So `medium` is the nearest library size and it yields a **20 disc in a 40 box, not the 29 in 35 that was asked for**. A 29 disc is reachable only by overflowing the button's 24 slot, which would break the icon recipe's viewBox rule and the button's own padding — **not done, reported instead**. `visitDrawer_iconButtonHasNoLargeSize`.
+- **One correction to the brief's own premise, and it does not change the target.** MUI's `SvgIcon` `fontSizeLarge` encodes `pxToRem(35)` but **renders at 40** in this theme — §2.5's inflation table lists it as the one call that "lands on a round number by coincidence". 35 is the encoded integer, which is what rule 4 says to aim at, so 35 was the right number to ask for; it is simply not reachable through this component either way.
+- **The button recolours the swap**, as the standing GAP records, so pause, stop and play carry a **SCAFFOLDING** white override on the glyph vector bound to `color/common/white`. **Cancel needs none** — `grey[600]` is both the button's root colour and the Cancel master's own binding, and the vector reads back bound to `color/grey/600` on every frame.
+
+### 3, 4. Placement — before and after
+
+| Measure | Before (40 disc, hand-built frame) | After (library Icon button, medium) |
+|---|---|---|
+| Control container | 274, 71.68, 104 × 48 | **308, 75.68, 76 × 40** |
+| Left control box | 48 × 48 | **40 × 40** |
+| Left disc ink | 278–318, **40 wide** | **318–338, 20 wide** |
+| Stop disc ink | 334–374, **40 wide** | **354–374, 20 wide** |
+| Stop ink right edge | 374 | **374** |
+| Visible gap between discs | 16 | **16** |
+| Disc centre Y vs timer cap 95.68 | delta 0.00 | **delta 0.00** |
+| Control box vs bar bottom | **0.68 past** 119 | **3.32 inside** — nothing overhangs now |
+| Disc clearance above bar bottom | 3.32 | **13.32** |
+| Bar height | 119 | **119** |
+| Close box | 330, 0, 48 × 48 | **344, 4, 40 × 40** |
+| Close disc ink | 334–374, 40 wide | **354–374, 20 wide** |
+| Close ink right edge | 374 | **374** |
+| Close disc centre Y in the row | 24 | **24** |
+| Close disc below the bar | 4 | **14** |
+| Handle row height | 48 | **48** |
+| Puller | 180–210 at y 8, 30 × 6 | **unchanged** |
+| Clearance, close box to puller | 120 | **134** |
+
+- The close button sits **4 from the top and 4 from the bottom of the 48 row** — fully inside the drawer — and its disc is now **14** below the bar rather than 4, so nothing crowds the bar above.
+
+### 5. Wiring — 87 before, 87 after
+
+- **Moved, fifteen.** Ten control reactions from the hidden 48 tap frames to the new button instances, each keeping its own destination — Pause/Play to the opposite state, Stop to `43:830` on all five frames — and five close reactions from the hidden close tap targets to the new buttons, three to `43:809` and two to `43:819`. Every old node reads 0.
+- **The five handle-row ON_DRAGs were not touched** and still read ON_DRAG.
+
+### A trap that a read-back caught
+
+- **The first close move silently did nothing, and the count did not move to tell me.** `Close tap target 48` carried `componentPropertyReferences {visible: 'Closable#48:1'}`, so setting `visible = false` on the master was **overridden by the property** — on every V5 instance, where `Closable` is true, the old 48 target was still visible, still painting the old 40 disc, and my finder (which looked for hidden nodes) skipped it. Both the old disc and the new button would have shipped. Fixed by clearing the reference first, then hiding; `Closable` now owns exactly one node per variant, the new button. **A property-driven `visible` cannot be overridden by writing `visible` on the master** — that is the lesson, and it is why the reaction count staying at 87 was not on its own evidence of success.
+
+### Verification
+
+- **Measured in the 2x render, not only in the tree.** At the disc centre row the white runs read **318.0–338.0** and **354.0–374.0** on the recording frame and the same on the paused frame: **20 of disc ink each, a 16.0 gap, stop ink right at 374.0**. The runs are broken mid-disc by the knockouts, which is the Pause bars, the Stop square and the Play triangle doing their job. The close disc reads **40 device px = 20pt**, right edge **374.0**, colour **(84, 84, 84) = #545454 = grey/600**.
+- **Read on instances, not masters**: all five V5 frames identical to the decimal — controls at 308 / 75.68 / 76 × 40, disc ink 20, gap 16, cap-centre delta **0.00** on both controls, bar **119**, handle row **48**, close disc 354–374 centred at 24 in the row.
+- **Reactions 87 across 84, unchanged**, 79 ON_CLICK, 7 ON_DRAG, 1 AFTER_TIMEOUT, none leaving the page.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes**, and still **zero `Visit/` component instances** on that page.
+- Verified in pixels and looked at, **true 2x** in `figma-export/visit-controls-large-2026-09-16/`: `v5-recording-summary-51-1760-top300-2x.png` and `v5-paused-summary-51-2027-top300-2x.png` (780 × 600, top 300pt), plus `CONTACT-tops.png`.
+- **Not proven: still unplayed.** Stored geometry and static renders.
+- Repo: FLAGS.md one DECISION struck, one GAP added (51 → 52 open) and one DECISION added (92 open, 30 → 31 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: controls sized and placed. **Open for Daniel: the disc is 20, not the 29 asked for, and the library cannot close that gap from inside the Icon button.** Phase 2 (P1 onward) still needs a source node per sheet.
