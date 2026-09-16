@@ -1170,3 +1170,66 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders.
 - Repo: FLAGS.md two DECISION struck as superseded and one added (92 → 91 open, 31 → 33 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: the drawer list is library geometry end to end. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Handle row and header merged into one top row
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. **Nothing on `Screens`. No node deleted** — the old handle row is hidden and renamed. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1, 2. One 56 row, built to the collapsed edge's numbers
+
+- A new **`Top row`** in both drawer variants — `87:742` in Mode=sheet, `87:2057` in Mode=list — **56 tall**, FILL to 390, replacing the separate 48 handle row and the 48 header on V5.
+- Every number is the edge's, not a fresh choice: **puller 30 × 6 at y 8, centred on 195**; **title switcher at x 16 with its text line at y 16**; **close at x 344 so its disc ink runs 354 to 374**, its disc centre at **28 into the row**, which is the title line box's centre exactly.
+- **Sheet mode keeps the divider** as the row's own 1px INSIDE bottom stroke bound to `color/divider` — the same construction the header used. **List mode has no stroke**, hides the title switcher, and puts the list directly below: puller and close only.
+
+### 3. V4 is untouched, and that cost a second boolean
+
+- **Two booleans now have to be set opposite on every frame.** `Handle row#73:1` shows the new Top row — true on the five V5 frames, false on the three V4 — and a new **`Legacy header#87:0`** shows the old 48 header — false on V5, true on V4. One boolean cannot do it: Figma booleans drive `visible` in one direction only, and V4 had to keep its old header verbatim. The cost is real and is on the register.
+- Read back on the V4 frames: header **visible at 48**, title at **x 16, y 212.5**, reading "Patient summary" and "Medications", reaction still to `48:1371`. Drawer y 201 h 643, sheet body **595**, sheet list **643** — every V4 number identical to before.
+
+### A trap that a read-back caught, and PLUGIN-NOTES 38
+
+- **Moving the title switcher into the top row silently blanked V4's header.** Reparenting a node inside a component keeps its id, so `59:504` carried its per-frame reactions and text overrides across intact — and left the three V4 frames rendering a visible 48 header **with nothing in it**. Nothing threw. The reaction count did not move. The geometry read still reported a title, because the node was `visible: true` inside a now-hidden parent; only comparing V4's title y against its pre-batch 212.5 exposed it.
+- Fixed by putting `59:504` **back in the header** and giving the Top row a **clone, `87:3105`**. The clone does not inherit the per-frame text overrides the way a move does, so "Medications" had to be re-typed on `V5 Recording / medications` — done, read back, correct. Recorded as trap 38: before moving a node out of a shared parent, list every variant and frame that renders that parent; if more than one needs it, clone rather than move.
+
+### Heights — before and after on V5, and V4 unchanged
+
+| | Before | After |
+|---|---|---|
+| V5 top of drawer | Handle row 48 + Header 48 = 96 | **Top row 56** |
+| V5 sheet body | 629 | **669** |
+| V5 sheet list | 677 | **669** |
+| V5 drawer | y 119, h 725 | y 119, h 725 |
+| V4 sheet body | 595 | **595** |
+| V4 sheet list | 643 | **643** |
+| V4 drawer | y 201, h 643 | y 201, h 643 |
+
+- The list still scrolls: content **706** against a **669** scroller, **37** of overflow — down from 48, because the top row costs 8 more than the handle row it replaced.
+
+### 4. Wiring — 87 before, 87 after
+
+- **Drags moved, five**, from the old handle row to the new Top row, keeping their targets and their SMART_ANIMATE transition: three to `43:809`, two to `43:819`.
+- **Close kept its targets on all five V5 frames** — the node moved with the reparent, so nothing had to be rewired.
+- **Title switcher reactions moved, three**, from `59:504` to the clone on the V5 sheet frames — `51:1760` and `51:1901` → `51:1682`, `51:2027` → `54:1901`. The two V4 sheet frames keep theirs on `59:504` → `48:1371`.
+- 79 ON_CLICK, 7 ON_DRAG, 1 AFTER_TIMEOUT. No edge leaves the page.
+
+### Overlay: does the open row land where the edge does?
+
+- **Yes, and it was diffed rather than eyeballed.** The collapsed edge's top 56 (`V S5 Recording / recording`, frame y 754–810) and the open top row (`V5 Recording / summary`, y 119–175), both at true 2x, zone by zone:
+
+| Zone | Result |
+|---|---|
+| Puller band, rows 0–18pt | **pixel-identical** |
+| Title zone, x < 350 | differs **only** at 159–169pt × 26–31pt — the drop-down triangle, which the edge does not have |
+| Close zone, x ≥ 350 | differs — the Cancel disc, which the edge does not have |
+| Bottom 1pt | differs — the divider, which the edge does not have |
+
+- Independently measured in both crops: puller **x 180.0–210.0** on the same row, title ink left **17.0**, title ink rows **22.0–37.5**. Identical in both. The only differences are the three things that are meant to differ.
+
+### Verification
+
+- All eight drawer frames read on the instances: Top row **56** and visible on the five V5, hidden on the three V4; divider **1** on the three V5 sheet frames and **0** on the two V5 list frames; puller y-in-row **8** and centre **195** on all five; title x **16**, y-in-row **16** on the three V5 sheet frames; close disc **354–374**, centre **147** on all five.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes**, zero `Visit/` or `List/Item` instances on it.
+- Verified in pixels and looked at, **true 2x** in `figma-export/visit-merged-top-row-2026-09-16/`: `v5-recording-summary-51-1760-top300-2x.png` and `v5-recording-drawer-list-51-1682-top300-2x.png` (780 × 600), plus `OVERLAY-edge-vs-top-row-2x.png` and `OVERLAY-blend-2x.png`.
+- **Not proven: still unplayed.** Stored geometry and static renders.
+- Repo: FLAGS.md one DECISION added (91 → 92 open). PLUGIN-NOTES.md trap 38 added. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: the open drawer and the collapsed edge now share one top row. **Open for Daniel: `Legacy header` is a transitional property that only exists because V4 is frozen — if V4 ever adopts the 56 row, it and the old header should both go.** Phase 2 (P1 onward) still needs a source node per sheet.
