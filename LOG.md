@@ -877,3 +877,49 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and a static render.
 - Repo: FLAGS.md one DECISION added (86 → 87 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: keyline complete. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Collapsed drawer edge replaces "Patient info"
+
+- File `TP5KrQtY0T5IcMNqi375So`, page `Components` (one new component) and page `Visit screens` (two frames). Library `YX2n4YLrEpBXNbcc73T6dw` **read only**, one variable imported by key. **Nothing on `Screens`. No node deleted** — the button removed here is hidden. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. Read-only first: what the library has, what code says, what the demo uses
+
+- **The library HAS Drawer and cannot express this.** `Drawer` `749:239` is a COMPONENT_SET of exactly four variants — `anchor=left|right` × `variant=temporary|persistent`. **No anchor=bottom, no anchor=top, no SwipeableDrawer of any kind**, and no puller, grip or handle among the 65 components on Surfaces & navigation or the 101 on Icons & illustrations.
+- **Code is narrower still.** TEBRA-DESIGN-SYSTEM.md §3.23: **no `MuiDrawer` override at all**; the only usage in `packages/design-system` is `variant="persistent" anchor="right"`, the docked path — no scrim, no elevation, a 1px divider border instead. §2.6 records that MUI's step 16, the temporary Drawer's elevation, **is not reachable**. So Tebra overrides nothing on Drawer and never renders the variant a bottom sheet would use.
+- **The demo's values, read off its source** (`docs/data/material/components/drawers/SwipeableEdgeDrawer.js`), not from memory: `drawerBleeding = 56`; `Puller` **30 × 6**, `borderRadius 3`, `backgroundColor grey[300]`, `position absolute`, `top 8`, `left calc(50% - 15px)`; the edge `StyledBox` is `#fff` with `borderTopLeftRadius 8`, `borderTopRightRadius 8`, `left 0 right 0`, sitting at `top: -drawerBleeding`; the label beside the puller is `sx={{ p: 2, color: 'text.secondary' }}`.
+- Raised as `visitDrawer_libraryHasNoSwipeableEdge`.
+
+### 2. A separate component, and why
+
+- Built as **`Visit/Drawer edge` `70:1480`**, not as `Mode=collapsed` on `Visit/Drawer` `48:897`. **In the demo the edge is its own `StyledBox` rendered outside the Drawer paper, not a Drawer state**, so a separate component is the faithful shape; `Visit/Drawer` also carries three properties a collapsed state has no use for, and trap 10 forces one INSTANCE_SWAP default across every variant; and adding a variant to a set five frames depend on risks rule 9 and trap 12 for nothing.
+- **56 edge + 34 bottom safe area = 90**, 390 wide, square corners, fill bound `color/background/paper`. Puller **30 × 6 at radius 3, x 180, y 8** — `left calc(50% - 15px)` on a 390 frame is exactly 180. Title "Patient summary" in the drawer header's own **h4** style (`S:888b271e…`, Akkurat LL Bold 16/24, ink bound `color/text/primary`) at **x 16, y 16** — which is precisely the demo's `p: 2`, its inset rather than a second opinion. **No caret.**
+- **Three deliberate departures from the demo, all reported rather than absorbed**: square corners against its 8px top radii (the brief, and COMPOSITIONS' docked-sheets rule); a 34 safe area it has no concept of; and no elevation, which follows code, since elevation 16 is unreachable in this theme. `visitDrawer_collapsesToVisibleEdge`.
+- **The puller grey is a genuine conflict and was not resolved silently.** The demo says `grey[300]`. MUI's `grey[300]` is `#E0E0E0`, but §2.4 records that Tebra defines grey **300, 400, 500, 600, 900 only**, re-based on Synapse: **`grey.300` is `#F6F6F6`** and `grey.400` is `#D6D6D6`. Compiled against Tebra's theme the demo's own code renders a **#F6F6F6 puller on a #FFFFFF surface, about 1.04:1 — invisible**. The token name and the token value cannot both be honoured. **Value fidelity was chosen**: `color/grey/400` `#D6D6D6`, the nearest token to `#E0E0E0` and the same value as `color/divider`, which every other hairline here already uses. One binding change reverses it. `visitDrawer_pullerUsesGrey400NotGrey300`.
+
+### 3. The two S5 frames — every y that moves
+
+| | Before | After |
+|---|---|---|
+| Patient info button | y 666, visible | y 666, **hidden** (unmoved, not deleted) |
+| Field buttons (Pause/Stop, Resume/Stop) | y 738 | **y 682** |
+| Collapsed edge | — | **y 754**, 390 × 90 |
+
+- **Those are the only two y values that change, and only one of them moves**: the control row up **56**, to sit exactly **16** above the edge (738 + 16 = 754, read back as a 16 gap on both frames). The hidden button keeps its y.
+- **The timer and meter stay put and do not collide.** Recording readout unmoved at y 288 h 204 on recording and y 264 h 252 on paused; its bottom edge is 492 and 516 against a control row that now starts at 682, leaving **190** and **166** of clearance. Nothing was nudged.
+
+### 4. Wiring — 83 before, 83 after
+
+- **Moved, two, and retargeted while moving.** `51:2170` recording went to `51:1682` V5 Recording / **drawer list**; it now sits on the edge `70:1485` → **`51:1760` V5 Recording / summary**. `51:2177` paused went to `54:1901` V5 Paused / drawer list; it now sits on `70:1491` → **`51:2027` V5 Paused / summary**. Both buttons read 0 reactions.
+- **The drawer opens straight to the last sheet, not the list** — that is the retarget, and it is what makes the edge a collapsed drawer rather than a menu button.
+- **Close icons untouched and confirmed**: all five V5 frames still point at `43:809` or `43:819` in the matching state, which now show the edge. Recording / summary, medications and drawer list → `43:809`; Paused / summary and drawer list → `43:819`.
+
+### Verification
+
+- **Measured in the 2x render, not only in the tree.** Edge top lands at frame y **754.0** with a hard green-to-white transition and no antialias row. Puller occupies device rows 236–247 — **12px = 6pt** — beginning **8** below the edge top, and device columns 360–419 — **60px = 30pt** — centred on device x 390, which is **195pt, exactly half of 390**. Colour reads **(214, 214, 214) = #D6D6D6**.
+- **Read on the instances, not the master**, per rule 3: both edges (0, 754) 390 × 90, corner radius **0**, fill bound `color/background/paper`, edge child 56, safe area 34, title ink at 17.34 (box 16, the same "P" side bearing every drawer title reads), **0 carets inside**.
+- **`Visit screens` 83 reactions across 82 nodes, unchanged**, and no edge leaves the page.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes — and the originals really are untouched**: `S5 Recording / recording` `6:856` and `S5 Recording / paused` `6:902` still have **two children each**, Field buttons still at **y 738**, no drawer edge and no Patient info button on either. The button this batch hides never existed on the originals; it was added to the duplicates.
+- Verified in pixels and looked at, three **true 2x** full-frame exports (780 × 1688) in `figma-export/visit-drawer-edge-2026-09-16/`: `vs5-recording-43-809-full-2x.png`, `vs5-paused-43-819-full-2x.png`, `v5-recording-summary-51-1760-full-2x.png`, plus `CONTACT-full.png` and `ZOOM-edge-recording.png`, the bottom 200pt the measurements were taken from.
+- **Not proven: still unplayed, and the swipe is not modeled.** MUI's edge is dragged; this is a tap target with a grip drawn on it. The puller is a picture of an affordance this prototype cannot perform.
+- Repo: FLAGS.md one GAP added (50 → 51 open) and two DECISION added (87 → 89 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: collapsed edge complete. Phase 2 (P1 onward) still needs a source node per sheet.
