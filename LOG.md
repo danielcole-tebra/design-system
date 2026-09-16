@@ -644,3 +644,53 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: the prototype still has not been played.** Everything above is a read of stored reactions and a graph walk. It proves each edge exists and points where the instruction says. It does not prove hit areas are tappable, that the 3 second timeout fires, that the drawer and the sheet actually scroll, or how the four BACK edges on V S3 resolve at runtime — and BACK is now load-bearing for the microphone path from both V4 and six V S2 frames.
 - Repo: FLAGS.md nine DECISION added (74 → 83 open), one annotated. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: **D4 complete, and phase 1 of the addendum with it.** Phase 2 is P1 onward, one sheet per batch against the pattern D2 set, each needing its source node from Daniel first.
+
+## 2026-09-16 · Mobile visit drawer · Optical alignment of the Visit icons
+
+- File `TP5KrQtY0T5IcMNqi375So`, page `Components` written — `Visit/Drawer` `48:897` and `Visit/Recording bar` `48:918` only. **Nothing on `Screens`, nothing on `Visit screens`, and no component outside `Visit/` touched.** `figma.skipInvisibleInstanceChildren = false` on every read. No node created or deleted.
+- **Every number below is measured from the painted vector**, via `absoluteBoundingBox` on the VECTOR inside each icon, expressed relative to the header or bar frame. The glyph boxes inside the 24 icon masters, which are what makes the tuck-in happen: LeftCaret `x 5.97, w 11.03`, CloseOutlined `x 2, w 20`, Pause `x 6, w 12`, Stop `x 6, w 12`, PlayArrow `x 8, w 11`. On top of that the library Icon button adds 8 of its own padding and the 48 tap frame adds 4, so a caret whose tap frame starts at 16 paints at **33.97**.
+
+### 1. Drawer header, both modes
+
+| Glyph | Edge | Before | After |
+|---|---|---|---|
+| Back chevron (sheet) | left | 33.97 | **16** |
+| Close X (list) | right | 360 | **374** |
+| Close X (sheet) | right | 360 | **374** |
+
+- Both tap targets are still **48 x 48** and are now absolutely positioned inside the header: back at x **-1.97** (running to 46.03, so it is clipped by the drawer's left edge, which the brief allows), close at x **340** (running to 388).
+- **The title stays where it was** — 72 on sheet, 16 on list — rather than moving to 16 after the chevron's right edge. That option was measured and rejected: the chevron now ends at 27.03, so a 16 gap would put the title at **43.03**, inside the back tap target's 46.03 right edge, and the brief forbids the target overlapping the title. Header padding is now 72 left on sheet, 16 on list, and **58 right** on both, which stops the title box at **332**, eight clear of the close target at 340.
+
+### 2. Recording bar, ready
+
+| Glyph | Edge | Before | After |
+|---|---|---|---|
+| Back chevron | left | 33.97 | **16** |
+
+- Same treatment, tap target absolute at x -1.97 inside the Back row, still 48 wide.
+
+### 3. Recording bar, recording and paused
+
+- **The spacer is gone.** The two buttons now sit at one fixed `itemSpacing`, and it is **negative** — **-12** on recording, **-11** on paused — because each 40 Icon button carries 14 of air to the left of its glyph and 14 to the right, so 28 of the visible gap is padding before any spacing is added. PlayArrow is a narrower glyph than Pause, hence the one-pixel difference between the two states.
+
+| Measure | Before | After |
+|---|---|---|
+| Visible gap between glyphs (recording) | 36 | **16** |
+| Visible gap between glyphs (paused) | 35 | **16** |
+| Stop glyph right edge | 360 | **374** |
+| Control glyph centre Y | 83 | **95.68** |
+
+- **Vertical centring is now on the timer's cap height, not the stack.** The timer's ink box had to be measured on an INSTANCE — `absoluteRenderBounds` returns null on the master — and reads **y 87.03, height 17.30, centre 95.68**, which is a cap height of 0.72em at 24px. The name-and-timer stack's box centre is 95 and the 72 row's centre is 83, so the old centring was 12.68 above the digits. **Controls glyph centre after: 95.68. Timer cap-height centre: 95.68. Delta 0.00 on both states**, and the stop glyph reads the same 95.68, so the two controls agree with each other as well as with the digits.
+- The Controls frame is absolutely positioned in the row so it can carry that y and still bleed past the row's 16 right padding. **The name and timer were not touched** — still left, still at x 16.
+
+### Verification
+
+- **All 25 Visit frames read back correct**: every bar back glyph at **16**, every drawer back glyph at **16**, every close glyph right at **374**, every stop glyph right at **374**, every visible gap **16**, every cap-centre delta **0**.
+- **No geometry moved outside the two components.** Frame sizes and positions, drawer y and height (223/621 on V4, 119/725 on V5), scroller heights (573, 525, 677, 629) and bottom padding (122 on V4, 34 on V5), the CTA at (16, 738) and the footer band at y 722 all read exactly as they did after D4.
+- **Reactions unchanged: `Visit screens` 82 across 81 nodes, `Screens` 42 across 41**, and zero edges cross between the pages in either direction.
+- Found, two DECISION. The alignment rule itself, which is Figma-only and has no counterpart in code (`visitDrawer_iconsAlignOpticallyTapTargetsBleed`), and the fact that **the same tuck-in exists in the base build's Top bar 4:431 and in the library's own top bars and was deliberately left alone** — whether optical alignment becomes the library rule is Daniel's call, not a prototype fix (`visitDrawer_libraryTopBarsTuckIconsIn`).
+- Verified in pixels and looked at, three **true 2x** renders cropped to the top 300pt, in `figma-export/visit-optical-2026-09-16/`: `v5-recording-summary-51-1760-top300-2x.png`, `v5-paused-summary-51-2027-top300-2x.png` and `v4-patient-summary-50-1570-top300-2x.png`, each 780 x 600.
+- **A correction to the standing note on exports.** `get_screenshot` is still capped at natural size — asked for 1688 on a 390 x 844 frame it returned 390 x 844 — but the `download_assets` tool with `defaultScale: 2` returns a **real** 780 x 1688 render, verified by file size before cropping. Previous batches upscaled 1x captures locally because the note said above-1x evidence was unreachable. It is reachable; the memory note has been corrected.
+- **Not proven: still nothing played.** These are measurements of stored geometry and static renders.
+- Repo: FLAGS.md two DECISION added (83 → 85 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: alignment pass complete. Phase 2 (P1 onward) is unchanged and still needs a source node per sheet.
