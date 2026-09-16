@@ -2105,3 +2105,65 @@ On the true 2x export:
 - **One thing the renders turned up that nobody asked about.** The sheet begins at y 588 and the device pill sits at **557–595** on the recording frame and **569–607** on the paused one, so the sheet clips the pill by **7** and **19** px and its dimmed top edge pokes out above the sheet on both. It is what a bottom sheet over an unchanged screen does — but the two frames disagree with each other by 12px, which reads as an accident rather than a choice. Reported, not resolved: `mobileAccount_sheetTopEdgeClipsTheDevicePill`.
 - Repo: FLAGS.md one DEFECT struck closed, one DECISION struck superseded, six DECISIONs added (DEFECT 29 open / 8 closed, DECISION 112 / 40, 52 struck lines). COMPOSITIONS.md the corners entry rewritten for 32 plus the stroke and the bar-fill rule, and the microphone sheet entry updated. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: A3 complete. **A4 next** — `A S9 Account`, `/ unsent`, the sign-out warning, `A S2 Home / unsent`, the seven-avatar retarget and the `Unsent recording` starting point. Still interim until then: the home avatars lead to `A S3 Microphone`.
+
+## 2026-09-16 · Mobile account addendum · A4a, the account and unsent frames
+
+- Spec: `mobile-account-spec.md` revision 3 sections 5.1, 5.2 and 5.5. File `TP5KrQtY0T5IcMNqi375So`, library read only. Additive only; nothing deleted, everything superseded hidden and labelled. **No wiring beyond what the clones carried.** `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 0. The pill under the sheet
+
+- `Input device pill` hidden and renamed SUPERSEDED on both microphone frames — 133:4422 and 133:4521 — with the measured peek in the name, 7px on recording and 19px on paused. **Neither carried a reaction**, so nothing was lost, and nothing else on either frame changed. The pill stays visible and live on `A S5 Recording / recording` and `/ paused`, which is where it is tapped.
+
+### 1. A S9 Account
+
+- **Base: `A S3 Microphone` 103:2397**, which is what the brief expected and what the structure confirms — it is the only A frame that pairs `Account/Top bar` `Back with title` with a list beneath. Cloned to **140:1481** at (120, 8900).
+- Title retyped to "Account". **Reactions: back → BACK kept, three row taps dropped** — they pointed at BACK from rows that are now hidden. Frame-own reactions compared before anything was re-applied (trap 35): source 0, clone 0.
+- Everything the base carried and A S9 does not list is **hidden and labelled**: the three device rows, the three older superseded `Microphone list row` instances, and the `Recording note` wrapper. `Content` fell to 64, then rebuilt to 208.
+- **Identity block 140:1534, and the geometry came off a real row rather than a guess.** I instantiated a `List/Item` `Lines=Two` with its icon shown, measured it, and threw the probe away: a two-line row puts its lead element at x **16** in a **56-wide** column and its text at x **72**, 302 wide. The block reproduces that exactly — 390 × **72**, padding **16/8/16/8**, avatar 40 at x 16, text at x 72.
+  - Name **Akkurat LL Regular 24 / 36**. The brief said "the text style the top bar title uses" — **the top bar title uses no style**: read off the bar, `textStyleId` is empty and it is a raw Regular 24. So the name matches a raw setting, and that is recorded rather than dressed up as a style binding.
+  - Practice **Regular 14 / 20**, fill taken from the `List/Item` Secondary node itself, which resolves to **`color/text/secondary`** — so the two agree by construction rather than by my picking the same variable.
+  - 36 + 20 = 56, plus 8 + 8 = **72**. The block lands on a two-line row height by arithmetic, not by nudging.
+- **Microphone row**: `List/Item` `Lines=Two`, `Show icon` off, "Microphone" / "iPhone microphone", 390 × 72 at y 183.
+- **Sign out**: library Button `variant=contained, color=primary`, **358 × 38 at x 16, bottom edge 794** — 16 above the 810 safe-area top. Fill bound `color/common/white` over a stroke bound `color/core/main`, which is the outlined rendering. Label stored "Sign out" and **renders "Sign Out"**, confirmed in the render — the capitalisation rev 3 already writes into the copy.
+
+### 2. A S9 Account / unsent
+
+- Cloned from A S9 Account to **140:1547** at (590, 8900); frame-own reactions 0 → 0. One `List/Item` `Lines=Two` inserted **above** Microphone: "1 recording not sent" / "Marcus Vance · Yesterday, 4:30 PM". Identity 111, unsent row 183, Microphone 255.
+
+### 3. A S2 Home / unsent, and the thing that took three goes
+
+- Cloned from `A S2 Home / after failed capture` 103:3010 to **140:1618** at (3880, 1120), keeping the S2 family in its own row.
+- List: heading "Today" → **"Yesterday"**, the one visible `Session row` `State=failed` retimed **9:42 AM → 4:30 PM**, name and status untouched, the two already-hidden rows relabelled SUPERSEDED. **Flat stack of heading and row siblings, no Retry button.**
+- **The search field needed three separate fixes, and only the pixel diff found the second and third.** Toggling the label nodes to match the resting reference left it *still looking focused*:
+  1. **Visibility** — `Label / resting` on, `Label / floating` and `Label slot` off, `Value` blanked from "Start typing a patient name or DOB".
+  2. **Stroke** — `Cap left`, `Label slot` and `Body right` carried per-side weights of **2** bound `color/primary/main`; resting is **1** bound `color/substrate/inputOutline`.
+  3. **Label ink** — both `Label` nodes and their `Asterisk` siblings were `color/primary/main`; resting is `color/text/secondary`.
+- **Confirmed by diff, not by eye.** Against `A S2 Home / sessions` 103:2353: the top bar and the **search block are pixel-identical, empty diff bbox**, and the list block differs as it should. Written up as PLUGIN-NOTES trap **44** — the tree read looked right twice before the pixels did.
+- **Reactions left in place for A4b**, all three: the avatar `Action tap target 60 x 48` → `A S3 Microphone` 103:2397 (the interim destination), the search field → `A S2 Home / results` 103:2370, and the `Session row` → `A S8 Sent / failed` 103:2969. A4b retargets the avatar to `A S9 Account / unsent` and the row to `A S7 Sending`.
+
+### 4. The library GAP check passes
+
+- **`Session row` shows this data without detaching.** The row reads `type: INSTANCE`, its main component is still linked, and Marcus Vance / 4:30 PM / "Failed to send" are all plain text overrides on it. No GAP, and no stop. The only avatar-side GAP is a different one: there is still **no large avatar**, so the identity block uses 40 — the same size as the one in the top bar, which leaves the 24pt name carrying the whole hierarchy. `mobileAccount_noLargeAvatarIdentityUsesForty`.
+
+### 5 and 6. Renders and counts
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens, screen frames | 30 | **30** (+4 PROOF, +3 components = 37 top-level children) |
+| Account screens reactions | — | **104 across 101**, 96 click / 7 drag / 1 timeout |
+| Cross-page edges | 0 | **0** |
+| `Account device` | intact | **intact** |
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, `Visit device` intact |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41** |
+| `Account/` instances on locked pages | 0 | **0** |
+
+- **Reactions: 99 across 96 → 104 across 101**, and every one of the +5 is a clone's inherited wiring: A S9 Account **1** (back → BACK), A S9 Account / unsent **1**, A S2 Home / unsent **3**. No reaction was authored this batch, as the brief required.
+- **Text: 471 / 9,387 → 528 / 10,207**, and the delta is exactly the three new frames: **17 + 19 + 21 = 57 nodes** and **258 + 311 + 251 = 820 characters**. Nothing else moved — step 0 hid pills without touching text, and the blanked search `Value` is inside one of the three.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a4a-frames-2026-09-16/`: `as9-account-140-1481-1x.png`, `as9-account-unsent-140-1547-1x.png`, `as2-home-unsent-140-1618-1x.png`, `identity-block-140-1534-TRUE-2x.png` (780 × 144), the two microphone frames without their pill, and `COMPARE-search-label-unsent-vs-sessions-5x.png` from the intermediate diff.
+- **Not proven: still unplayed**, and **nothing is wired to these three frames yet** — no reaction anywhere leads to `A S9 Account`, `A S9 Account / unsent` or `A S2 Home / unsent`. They are reachable only by selecting them on the canvas until A4b.
+- Believed but not verified in pixels: that the identity block reads correctly at the 2x export as well as 1x — the 2x was taken and saved but the 1x frame render is what I read the layout from; and the `A S9 Account / unsent` sign-out button, which is the same instance as the one confirmed on `A S9 Account`.
+- Repo: FLAGS.md two DECISIONs struck closed, one GAP and two DECISIONs added (GAP 57 open / 4 closed, DECISION 113 / 42, 54 struck). COMPOSITIONS.md one entry, the identity block. PLUGIN-NOTES.md trap 44. LOG.md this entry. CLAUDE.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: A4a complete. **A4b next**: the sign-out warning dialog, the seven-avatar retarget, the `A S2 Home / unsent` row and avatar retargets, and the `Unsent recording` starting point.
