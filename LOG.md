@@ -1518,3 +1518,67 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - Repo: FLAGS.md two DECISIONs added (181 → 183 open). PLUGIN-NOTES.md trap 35 amended. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Note on the brief: step 3 named the destinations `A S7 Sent` and `A S7 Failed`; the frames are `A S8 Sent / sent` 103:2473 and `A S8 Sent / failed` 103:2969, and the brief's own instruction to use the A0 record settled it.
 - Status: A1 complete. A2 and A3 are unblocked. **Still blocking A4 and A5: provider name, practice name, initials and email.** Still open from A0: no outlined Button for Sign out, and no session row that can carry Retry or an unsent status.
+
+## 2026-09-16 · Mobile account addendum · A2a, the two reads and Account/Avatar
+
+- Spec: `mobile-account-spec.md` revision 2, batch A2a. Files `TP5KrQtY0T5IcMNqi375So` (written) and `YX2n4YLrEpBXNbcc73T6dw` (**read only — nothing imported into it, nothing edited**). Code read at `C:\Code\web-app-v2\packages\design-system`. Additive only; no node deleted, no existing component or frame edited, no screen touched. `figma.skipInvisibleInstanceChildren = false` on every read. A1 was logged (`5e6be23`), so the batch proceeded.
+
+### 1. Daniel is right: there is an outlined button, and it is not a variant value
+
+- **Three sources, all agreeing, none of them containing the word.**
+  - **Code.** `overrides/ButtonOverrides.ts` `containedPrimary` → `backgroundColor: common.white`, `border: 1px solid core.main`, `color: core.contrastText`. `containedSecondary` is the filled coral. **`grep outlined` across `packages/design-system` returns nothing** — MUI's `outlined` variant is never overridden and never used.
+  - **Doc.** TEBRA-DESIGN-SYSTEM.md 3.1, under Traps: *"The hierarchy is inverted."* `containedPrimary` is "a visually *outlined* button", and "the contained primary is the quieter of the two".
+  - **Figma.** `Button` 79:2, 72 variants on `variant = contained | text`, `color = primary | secondary | error | inherit`, `size = medium | small | large`, `State = Default | Hover | Disabled`. Nothing named outlined anywhere on the Actions page except `Icon/PlusOutlined` glyphs.
+- **Instantiated, not read off masters** (rule 3): six instances of every variant value, `PROOF · Button every variant value` **109:1212** on `Account screens`. `contained primary` 109:1214 reads fill bound **`color/common/white`** over a 1px stroke bound **`color/core/main`**, and renders as a white pill with a hairline teal border and a teal label. `contained secondary` 109:1224 is fill and stroke both `color/secondary/main`. The three text variants carry no fill and no stroke at all.
+- **So it is not a DEFECT.** Figma matches code exactly; the axis is honest and the *name* is the trap. **A0 was wrong**, and wrong in a specific way worth naming: it read the axis values as the list of appearances instead of reading what each value draws. The doc row it was told to read says so in words, and it still got missed.
+- **Consequence for the spec.** 5.1's "outlined library button" for Sign out is `variant=contained, color=primary` at full width in the 16 gutters. The A0 GAP is struck closed; `mobileAccount_containedPrimaryIsTheOutlinedButton` replaces it.
+
+### 2. Avatar typeface: already the system face, and the disc is grey, not salmon
+
+- **`Content=Letter` 208:6, read from the file.** Letter text node: **Akkurat LL Regular, 20 px, line-height 20, `textAlignHorizontal: CENTER`, `textAlignVertical: TOP`, and `textStyleId` empty** — a raw font setting, no style bound. Characters "A", 13 × 20.
+- **The typeface is the system face and matches code.** Akkurat LL is what the Avatar's own component description records from the substrate (`fontFamily Akkurat LL, fontSize pxToRem(20)`), and it is the family behind all ten published text styles. **It is not a serif**, confirmed in the render — the "A" in `library-avatar-208-11-set-1x.png` is unmistakably sans. Logged as asked, and the finding is that this one agrees with code.
+- **The fills are the surprise.** Disc bound **`color/grey/400` #D6D6D6**; letter bound **`color/background/default` #E8E5DF**. Every one of the three variants is that pairing. **There is no salmon anywhere in the Avatar.** The salmon in this system is `color/secondary/main` #FF8D6E — the filled CTA, `containedSecondary`.
+- One more thing fell out of reading the scopes: **`color/background/default` is scoped `["FRAME_FILL"]` only**, and the library binds it to a TEXT fill on 208:6 and to SHAPE fills on the other two. It holds and renders; it just is not offered in the picker. Same class as the two scope notes already on this file's Foundations page. `mobileAccount_avatarInkBindsFrameFillScopedVariable`.
+
+### 3. Account/Avatar
+
+- **`Account/Avatar` 108:1212**, local COMPONENT on `Account screens` at (4000, 120), beside the A frames — **not on `Visit screens`, not on `Screens`, and not in the library.**
+
+| | Built | Source |
+|---|---|---|
+| Geometry | 40 × 40, corner radius 20, `clipsContent` | matches 208:11 exactly |
+| Disc fill | bound **`color/grey/400`** | the same variable 208:11 binds |
+| Initials | **"SB"**, text style **`h3`** — Akkurat LL **Bold 20 / 32** | the library's only 20 px style; 208:6 binds none |
+| Ink | bound **`color/background/default`** | the same pairing as 208:6 |
+| Property | `Initials#108:0`, TEXT, default **"SB"** | — |
+
+- **Read back on the instance, not the master** (rule 3): 108:1226 reads 40 × 40, radius 20, `Initials#108:0 = "SB"`, text 27 × 32 at x 7 — so the two letters sit centred with 6.5 either side inside the 40 disc — font Akkurat LL Bold 20, line-height 32, style id `S:d3d1857d99805de2943adf94e6697d84b6be4059`.
+- **Rule 5**: paint opacity was never set. Both variables store `a: 1`, the paints were built from the resolved value and then bound (Paints note 1), and the `opacity: 1` that reads back is Figma's default on a new SOLID paint, not an override written over a variable's alpha.
+- **The brief's two instructions for the disc do not resolve to the same paint**, so neither was guessed at. Built to the checkable clause — `color/grey/400`, the same variable as 208:11 — and **both options are on the canvas**: `PROOF · Account/Avatar vs library Avatar` **108:1225** holds the as-built instance, a second instance overridden to `color/secondary/main` with `color/secondary/contrastText` ink, and the library's own `Content=Letter`.
+- **Looked at, and it settles it.** At 1x on the beige page background the as-built grey avatar is close to invisible — a `#D6D6D6` disc carrying `#E8E5DF` letters, on `#E8E5DF` — while the salmon one reads cleanly at 40 px. **Recommendation: salmon.** It is a two-line rebind on 108:1212. Not done, because rule 10 says report rather than correct a source. `mobileAccount_avatarDiscIsGreyNotSalmon`.
+
+### 4. Counts
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens, screen frames | 25 | **25** (+2 PROOF frames and 1 component = 28 top-level children) |
+| Account screens reactions | 87 across 84 | **87 across 84**, 79 / 7 / 1, **0 off-page** |
+| `Account device` | intact | **intact**, → 103:2320 |
+| Visit screens | 25 / 87 across 84 | **25 / 87 across 84**, 0 off-page, `Visit device` intact, **433 text nodes / 9,074 chars unchanged** |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41**, 0 off-page |
+| `Account/` instances on Visit screens | 0 | **0** |
+| `Account/` instances on Screens | 0 | **0** |
+
+### 5. A better way to take a 2x, found while taking one
+
+- **`get_screenshot` cannot produce a 2x and never could.** It caps at the node's natural size: `maxDimension` 1688 on a 390 × 844 frame returns 390 × 844. A0 and A1 therefore saved LANCZOS upscales and labelled them as such.
+- **`download_assets` with `defaultFormat: "png"` and `defaultScale: 2` returns a true 2x export** that curl saves to disk — 1084 × 136 came back **2168 × 272**, 1074 × 134 came back **2148 × 268**. `defaultScale` takes 0.01 to 4. Trap 5 still applies, so the proof frames were given their own `color/background/default` fill rather than being left transparent.
+- Written up as PLUGIN-NOTES trap **40**. Both proofs in this batch are true 2x, not upscales.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a2a-2026-09-16/`: `button-variants-109-1212-TRUE-2x.png` (2148 × 268) and `-1x.png`, `avatar-proof-108-1225-TRUE-2x.png` (2168 × 272) and `-1x.png`, `library-avatar-208-11-set-1x.png` (248 × 104) with `ZOOM-library-avatar-4x.png`.
+- **Not proven: still unplayed**, and `Account/Avatar` is **not yet placed on any screen** — it exists as a component and two proof instances on the canvas. The top-bar swap, the 48 tap target and the optical edge question raised in A0 (a filled 40 disc's ink lands differently from a 16-wide glyph) are all A2b's, untouched here.
+- Not verified in pixels: the 25 screen frames, unchanged in this batch and read as counts only.
+- Repo: FLAGS.md one GAP struck closed, one GAP and five DECISIONs added (183 → 188 lines, 40 struck). PLUGIN-NOTES.md trap 40. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: A2a complete. **A4 and A5 are unblocked** — Dr. Sarah Bennett, Windsor Family Medicine, sbennett@windsorfm.com, SB, and Sign out has a button to be. **One open question for Daniel: grey or salmon on the avatar disc**, with both on the canvas to look at.
