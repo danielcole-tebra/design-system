@@ -1455,3 +1455,66 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders.
 - Repo: FLAGS.md six findings added (175 → 181 open: one DEFECT, three GAP, two DECISION). PLUGIN-NOTES.md trap 39. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: A0 complete, nothing written to Figma. **Blocking A4 and A5: provider name, practice name, initials and email.** **Blocking 5.1: Sign out has no outlined button to be.** **Blocking 5.5: the session row cannot Retry and there is no unsent status.** A1, A2 and A3 are unblocked.
+
+## 2026-09-16 · Mobile account addendum · A1, the page
+
+- Spec: `mobile-account-spec.md` revision 2, batch A1, clone only. File `TP5KrQtY0T5IcMNqi375So`. **No design change**: nothing was restyled, no component was created or edited, and no node was deleted. `figma.skipInvisibleInstanceChildren = false` on every read. The source page `Visit screens` 43:705 was read but **not written to**, and `Screens` 1:3 was not touched at all.
+
+### 0. Trap 35 did not reproduce, and the check caught it rather than the recipe
+
+- The batch brief, the spec and PLUGIN-NOTES trap 35 all expect `clone()` to drop a top-level frame's **own** reactions, so step 3 was to restore `V S7 Sending`'s two. **They were already there.** `A S7 Sending` 103:2463 read **2** reactions straight out of the clone, still pointing at `43:852` and `43:863` on the Visit page — and the whole page read **87 across 84** before any repointing, the same as the source.
+- Had the brief been followed literally — add the two back — the frame would now carry **four**. What was done instead: `setReactionsAsync` **replaced** the array with the same two triggers pointed at the A frames, so the count never moved off 2. Read back on the instance, not assumed.
+- Trap 35 amended in place with the counter-evidence rather than rewritten: the 2026-09-15 loss is real and recorded, it simply is not a property of `clone()` on a top-level frame as such. The durable instruction is the one that worked here — **compare source and clone before re-applying anything**.
+- Recorded from the file, not from the A0 report (rule 3): the source's frame-own reactions are exactly two, both on `V S7 Sending` 43:842 — `AFTER_TIMEOUT` 3s → 43:852 and `ON_CLICK` → 43:863, both NAVIGATE, `transition: null`, `resetScrollPosition: true`.
+
+### 1. The page
+
+- **`Account screens` 103:2319** created, sixth page in the file after `Foundations`, `Components`, `Screens`, `Flow`, `Visit screens`.
+- **All 25 frames cloned, same layout, same x and y**, set explicitly after `appendChild` rather than trusted. Every frame is 390 × 844 and sits at the coordinate its Visit original sits at, so the two pages are overlays of each other.
+
+| | Visit | Account |
+|---|---|---|
+| S1 default / error | 43:706 / 43:716 | **103:2320** / 103:2330 |
+| S2 empty / sessions / results / no results / searching / after first / after failed | 43:727 / 43:739 / 43:756 / 43:769 / 43:875 / 43:887 / 43:904 | 103:2341 / 103:2353 / 103:2370 / 103:2383 / 103:2981 / 103:2993 / 103:3010 |
+| S3 Microphone | 43:783 | 103:2397 |
+| S4 Patient (SUPERSEDED) | 43:795 | 103:2412 |
+| S5 recording / paused | 43:809 / 43:819 | 103:2426 / 103:2438 |
+| S6 / S7 / S8 sent / S8 failed | 43:830 / 43:842 / 43:852 / 43:863 | 103:2451 / **103:2463** / 103:2473 / 103:2969 |
+| 4 list / placeholder / summary | 48:1371 / 48:1463 / 50:1570 | 103:3027 / 103:3032 / 103:3037 |
+| 5 rec list / rec summary / medications / paused summary / paused list | 51:1682 / 51:1760 / 51:1901 / 51:2027 / 54:1901 | 103:3042 / 103:3045 / 103:3048 / 103:3051 / 103:3054 |
+
+- **Eight frames had no `V ` to replace.** The rename rule in spec 2 and in the brief is a leading `V ` with a space, which fits the seventeen `V S…` frames and none of the eight `V4 …` / `V5 …` ones. Leaving those on the Account page under their Visit names would have defeated the check the same section asks for — that nothing on this page reads as, or leads to, a Visit frame. Renamed on the leading letter instead, `/^V(?=[\s\d])/ → A`, so the page is uniformly A-prefixed. Flagged for Daniel, reversible with a rename: `mobileAccount_v4v5FramesHaveNoSpacePrefix`.
+- One name came across stale and was **left exactly as it arrived**, because this was a clone-only batch: `A S4 Patient (SUPERSEDED · replaced by V4 Patient / summary…)` still names a frame on the other page. `mobileAccount_clonedSupersededNoteNamesVisitFrame`.
+
+### 2. Wiring
+
+- **84 nodes carry reactions on the new page; 79 were repointed and 5 were correctly left alone.** The five: `A S7 Sending` (already on A destinations from step 3) and four `BACK` actions on `A S3 Microphone` — the back tap target and the three `List/Item` device rows — which carry no `destinationId` to rewrite.
+- Every reaction was rebuilt from its own JSON with only `destinationId` swapped, so triggers, `navigation`, `transition`, `resetScrollPosition` and the seven `SMART_ANIMATE` drags survived untouched (trap 37: an `ON_DRAG` with a null transition is rejected, and none was created).
+- **Zero cross-page edges, checked by reading every destination against the page's own frame ids, in both directions**: `Account screens` has 0 destinations outside itself, `Visit screens` has 0, `Screens` has 0.
+- **Starting point `Account device` → `A S1 Login / default` 103:2320.** `Visit device` → 43:706 is intact and untouched, and `Screens` still starts at `Happy path` 2:892.
+
+### 3. Counts, all four as asked
+
+| | Asked | Read back |
+|---|---|---|
+| Account screens frames | 25 | **25** |
+| Account screens reactions | 87 across 84 | **87 across 84** |
+| Account triggers | 79 click, 7 drag, 1 timeout | **79 / 7 / 1** |
+| Account cross-page edges | 0 | **0** |
+| Visit screens | 25 / 87 across 84 | **25 / 87 across 84**, same 79 / 7 / 1 |
+| `Visit device` starting point | intact | **intact**, → 43:706 |
+| Visit → A destinations | 0 | **0** |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41** |
+| `Account/` components anywhere | 0 | **0** — `Components` holds 27, of which 18 are `Visit/`, none `Account/`; zero instances of an `Account/` main on any page |
+
+- **The overrides carried.** Both pages read **433 text nodes and 9,074 characters** — identical — which is the evidence that the per-instance text overrides came across whole. Consistent with trap 35's note that `componentPropertyReferences` does not drop on a frame clone.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a1-clone-2026-09-16/`: `account-screens-page-overview.png` (854 × 2000, the page node at `maxDimension` 2000 from a natural 3680 × 8624), `as1-login-default-103-2320-1x.png` and `as7-sending-103-2463-1x.png` (390 × 844). The two frame renders are indistinguishable from their Visit originals, which is the point of the batch.
+- **One artefact, not a file problem**: the page-node render clips the left column's left edge. The frames themselves read x 120, width 390 in the tree, the same as their originals, so this is the page screenshot's bounds, not geometry. Frame renders were taken per frame for that reason.
+- **Not proven: still unplayed.** Stored reactions and static renders. Nothing here demonstrates that the prototype *plays* the Account loop; it demonstrates that every edge resolves to a frame on the same page.
+- Also not verified in pixels: the other 23 frames, read as geometry and reaction counts only. Two were rendered, and the page overview shows all 25 at thumbnail scale.
+- Repo: FLAGS.md two DECISIONs added (181 → 183 open). PLUGIN-NOTES.md trap 35 amended. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Note on the brief: step 3 named the destinations `A S7 Sent` and `A S7 Failed`; the frames are `A S8 Sent / sent` 103:2473 and `A S8 Sent / failed` 103:2969, and the brief's own instruction to use the A0 record settled it.
+- Status: A1 complete. A2 and A3 are unblocked. **Still blocking A4 and A5: provider name, practice name, initials and email.** Still open from A0: no outlined Button for Sign out, and no session row that can carry Retry or an unsent status.
