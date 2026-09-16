@@ -38,9 +38,11 @@ COMPOSITIONS.md indexes the patterns; the Composition System file shows them. Re
 Plugin API traps and the icon recipe are in PLUGIN-NOTES.md. Read it before writing to Figma, not before reading.
 
 ## Record
-After every batch, append one entry to LOG.md: date, file key, what was built, what was found, path to the screenshot. Open findings go in FLAGS.md as one line each, tagged DEFECT, GAP, or DECISION, and get struck through when closed. These two files are the only record.
+After every batch, append one entry to LOG.md: date, file key, what was built, what was found, path to the screenshot. LOG.md is history. Open findings go in FLAGS.md as one line each, tagged DEFECT, GAP, or DECISION, struck through when closed. Composition decisions, meaning how library parts are assembled or overridden in a reusable pattern, go in COMPOSITIONS.md with decider, date, and what they override. Screen decisions stay in FLAGS.md and the spec. These three files are the record.
 
-Build bottom up. Never rebuild a screen whole cloth from a screenshot or a source frame. Build the smallest unit that isn't already in the library or the compositions file, screenshot it, and stop for Daniel's read before building the thing that contains it. A batch is one level. If a batch produces more than one screenshot's worth of new decisions, it should have been two.
+Build bottom up. Never rebuild a screen whole cloth from a screenshot or a source frame. Before building, break the target into its sections. A section that already exists in the library or the compositions file is reused, not rebuilt. Each section that doesn't exist is one batch, and that batch builds whatever smaller pieces the section needs before building the section. After the sections, one final batch assembles the target. For a flow, a section is a stage of the flow. Screenshot every batch and stop for Daniel's read before the next. If a question comes up mid-batch, finish what doesn't depend on it and raise it at the stop.
+
+Pieces built in any file other than the library, proposals, or Composition System are local to that file and never go to the library.
 
 ## Agents
 Any agent may run a batch. One agent per batch. Read this file first, append to LOG.md before stopping. A batch with no log entry is treated as unverified and audited before the next one starts. Stop and ask Daniel on any design question. Otherwise proceed. Don't ask for approval sentences, don't assign risk, don't ask before reading.
