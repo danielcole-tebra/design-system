@@ -1582,3 +1582,60 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - Not verified in pixels: the 25 screen frames, unchanged in this batch and read as counts only.
 - Repo: FLAGS.md one GAP struck closed, one GAP and five DECISIONs added (183 → 188 lines, 40 struck). PLUGIN-NOTES.md trap 40. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: A2a complete. **A4 and A5 are unblocked** — Dr. Sarah Bennett, Windsor Family Medicine, sbennett@windsorfm.com, SB, and Sign out has a button to be. **One open question for Daniel: grey or salmon on the avatar disc**, with both on the canvas to look at.
+
+## 2026-09-16 · Mobile account addendum · A2a.1, the Account/Avatar rebind
+
+- Spec: `mobile-account-spec.md` revision 2, batch A2a.1. File `TP5KrQtY0T5IcMNqi375So`. **Only `Account/Avatar` 108:1212, its text child and its proof cells were touched** — no screen frame, no reaction, no library node, nothing on `Visit screens` or `Screens`, and nothing deleted. Code read at `C:\Code\web-app-v2\packages\design-system`. `figma.skipInvisibleInstanceChildren = false` on every read.
+- Daniel's rulings applied: **the disc is salmon** and **the initials are Akkurat LL Regular**.
+
+### 1. The ink token, read from code and confirmed on an instance
+
+- **Code.** `overrides/ButtonOverrides.ts`, `containedSecondary`: `backgroundColor: theme.palette.secondary.main`, `color: theme.palette.secondary.contrastText`. `palette/paletteValues.ts` gives `secondary.main "#FF8D6E"` — commented *vitality 1* — and `secondary.contrastText "#004852"`.
+- **Figma, on the instance not the master** (rule 3). Button instance 109:1224, `variant=contained, color=secondary`: its `Label` node `I109:1224;78:52` binds **`color/secondary/contrastText`**, stored **#004852**, scopes **`["TEXT_FILL"]`**; the button's own fill binds **`color/secondary/main`**, stored **#FF8D6E**.
+- So the token asked for is **`color/secondary/contrastText`**, key `fac67193612ef7c1bb90012c6e762245138dc2e4`. `color/background/default` was not used.
+
+### 2. The typeface: no style fits, so it is raw, as the library itself does it
+
+- **All ten published text styles are Akkurat LL, and they split at 16.** Every Regular one is 16 or smaller — `body1` 16/24, `button` 16/24, `body2` 14/20, `caption` 12/16 — and every style at 20 or above is Bold — `h3` 20/32, `h2` 24/36, `h1` 32/48. **There is no Akkurat LL Regular at or near 20 to bind.**
+- That is presumably why library Avatar 208:6 carries `textStyleId: ""` and sets Akkurat LL Regular 20 / line-height 20 raw. A2a bound `h3` to avoid a raw setting and paid for it in Bold 20/32; on the Regular ruling the same raw pair is now set deliberately, for the reason the library sets it. Logged as `mobileAccount_noRegularTextStyleAtTwenty`.
+
+### 3. What changed on 108:1212
+
+| | A2a | A2a.1 |
+|---|---|---|
+| Disc fill | bound `color/grey/400` **#D6D6D6** | bound **`color/secondary/main` #FF8D6E** |
+| Ink | bound `color/background/default` **#E8E5DF** | bound **`color/secondary/contrastText` #004852** |
+| Ink scope | `["FRAME_FILL"]` — out of scope for text | **`["TEXT_FILL"]`** — in scope |
+| Face | text style `h3`, Akkurat LL **Bold** 20 / 32 | raw Akkurat LL **Regular** 20 / **20** |
+| "SB" | 27 × 32 at x **6.5**, y 4 | **26 × 20 at x 7, y 10** |
+| Contrast | **1.16 : 1** | **4.53 : 1** |
+
+- **Read back on instance 108:1226**, not the master: 40 × 40, radius 20, `Initials#108:0 = "SB"`, characters "SB", Akkurat LL Regular 20, line-height 20, `textStyleId` empty, text **26 wide at x 7** — **7 clear on each side** inside the 40 disc — and y 10, so the line box is centred in the 40 too. Every number an integer, which the Bold version was not: `h3`'s 27-wide box landed at **x 6.5**, a half-pixel off grid under rule 4. The Regular rebind fixed that as a side effect, not by intention.
+- **Rule 5**: paint opacity was never set. Both variables store `a: 1`; each paint was built from the resolved value and then bound (Paints note 1), and the `opacity: 1` that reads back is Figma's default on a new SOLID paint.
+- **Contrast 4.53 : 1** for #004852 on #FF8D6E, computed from the WCAG relative-luminance formula. That clears AA for normal text (4.5) with almost nothing to spare — worth knowing, because at 20px Regular these initials are *not* WCAG "large text" (that needs 24px regular or 18.66px bold), so 4.5 is the bar that applies and 4.53 is the number. The pairing it replaces scored **1.16 : 1**, which is why the A2a render looked empty.
+
+### 4. The proof frame
+
+- `PROOF · Account/Avatar rebound vs library Avatar` **108:1225**, on the `Account screens` background (`color/background/default`), now shows **two cells**: the rebound `Account/Avatar` instance and library `Avatar` `Content=Letter` for comparison.
+- The third cell — A2a's salmon *instance override* — became redundant the moment the master carried salmon. **Hidden and renamed `SUPERSEDED 2026-09-16 …`, not deleted** (rule 1). Its hard fill overrides are left on it untouched, so it is still readable as the record of what was proposed.
+
+### 5. Counts
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens, screen frames | 25 | **25** (+2 PROOF frames +1 component = 28 top-level children) |
+| Account screens reactions | 87 across 84 | **87 across 84**, 79 / 7 / 1, **0 off-page**, `Account device` intact |
+| Visit screens | 25 / 87 across 84 | **25 / 87 across 84**, 0 off-page, `Visit device` intact, **433 text nodes / 9,074 chars** unchanged |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41**, 0 off-page |
+| `Account/` instances on Visit screens / Screens | 0 / 0 | **0 / 0** |
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a2a1-rebind-2026-09-16/`: `avatar-rebound-108-1225-TRUE-2x.png` (**2330 × 272**, a real 2x export via `download_assets defaultScale: 2`, trap 40) and `avatar-rebound-108-1225-1x.png` (1165 × 136). The salmon disc with dark teal "SB" reads cleanly at 40 px beside the library's grey disc and ghost "A".
+- **Not proven: still unplayed**, and **`Account/Avatar` is still not on any screen.** It is a component and one visible proof instance on the canvas. The top-bar swap across the seven `A S2 Home` frames, the 48 tap target, the optical-edge question for a filled 40 disc, and the device pill label are all A2b's and were not touched.
+- Believed but not verified in pixels: that the initials read well at 40 px **against the top bar's actual background** rather than the page background. The proof sits on `color/background/default`, which is what `A S2 Home` uses behind its bar, so the comparison should hold — but it has not been seen in place, and it is the only thing about this avatar that A2b could still overturn.
+- Not verified in pixels: the 25 screen frames, unchanged in this batch and read as counts only.
+- Repo: FLAGS.md one GAP and three DECISIONs added, two DECISIONs struck closed (189 lines, 43 struck). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Also recorded from Daniel's rulings, for the batches that will use them: **Sign out is `Button variant=contained, color=primary`, full width** (closed), and **the A S5 device pill reads "iPhone microphone" as an instance override on the A frames only** (closed) — so the blank pill deliberately survives on `Visit screens` and that DEFECT stays open against those frames.
+- Lead logged, not chased: the serif avatar Daniel remembers is most likely the **desktop navigation header composition** on the library's `Compositions` page, since `Avatar` 208:11 is Akkurat LL Regular on all three variants. **Not audited** — no read was made of it, and no writes were made to the library. `mobileAccount_serifAvatarLeadIsNavHeader`.
+- Status: A2a.1 complete. **A2b is unblocked**, and so are A3, A4 and A5.
