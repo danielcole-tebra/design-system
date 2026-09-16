@@ -1841,3 +1841,64 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - Repo: FLAGS.md three DEFECTs struck closed, one DECISION annotated superseded, two DECISIONs added (193 open lines, 47 struck; DEFECT now 29 open / 6 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - **One thing survives the fix and should not be lost with it.** The pill no longer exercises it, but the library Button still capitalises any label it is handed — measured this week as "iPhone microphone" → **"IPhone Microphone"** — and `textTransform` is not an instance override. The moment a real device list, a brand name or any lower-case-initial system string reaches a Button, it will be mangled. Carried as a note for engineering: `mobileAccount_buttonCapitalisesAnyDeviceName`.
 - Status: A2d complete, and A2 is finished. A3 (the microphone sheet and wiring the two pills), A4 and A5 are unblocked. Still interim from A2c: the seven home avatars lead to `A S3 Microphone` until A4 builds `A S9 Account`.
+
+## 2026-09-16 · Mobile account addendum · R1, backfilling COMPOSITIONS.md
+
+- Batch R1, **repo only**. No Figma writes. Two read-only `use_figma` calls to describe the home session list from the file rather than from memory (rule 3, enumerate from the file). Files changed: `COMPOSITIONS.md`, `FLAGS.md`, `LOG.md`.
+
+### 1. What COMPOSITIONS.md held
+
+- 30 lines. A one-paragraph preamble stating the entry rule — **"Add a pattern only after it has been built twice"**, each with **one plate in the Composition System file `oNrOL9kQCpJHyK4rBCGqsq`** — then a rhythm paragraph, then two sections: **Sheets (NPVE `fdCQVFdvOByaOYIJYag0d6`)**, 11 entries, and **Pages (Proposals `zKT34LQogNjz3Z07fY4VQB`)**, 10 entries.
+- Format is one dense line each: `- Name, node id. What it is, in a sentence or two.` No dates, no deciders, no override notes.
+- **Nothing covered any of the four.** There was no mobile section at all, no top bar of any kind, no avatar, no pill, and no session or schedule list. Both existing sections are desktop, and both point at files other than the mobile prototype. The closest neighbours are conceptual only: `Left rail drawer` (List/Item rows at a 48 pitch) and `Summary row` (status control, text, trailing actions, row-owned divider) — neither is a mobile pattern and neither was touched.
+
+### 2. Every account DECISION, sorted
+
+**Composition — six, now in COMPOSITIONS.md**
+
+| Decision | Source |
+|---|---|
+| `Account/Avatar` is a local redraw, not a library instance | `mobileAccount_avatarRedrawnLocally`, A2a |
+| Its disc is salmon, ink is the filled button's label token, initials are Akkurat LL Regular | `mobileAccount_avatarIsSalmonWithFilledButtonInk`, A2a.1 |
+| `Account/Top bar` is a clone with the avatar in the trailing slot; only one variant differs | `mobileAccount_accountTopBarClonedWithAvatar`, A2b |
+| The tap target is 60 × 48 flush to the edge, disc ink at 374 | `mobileAccount_avatarTapTargetIsSixtyFlush`, A2c |
+| The device pill is icon and caret, never a label | `mobileAccount_devicePillIsIconAndCaretOnly`, A2d |
+| `variant=contained, color=primary` **is** the outlined button | `mobileAccount_containedPrimaryIsTheOutlinedButton` (closed), A2a |
+
+- Three **closed precursors** carry no separate pointer, because their substance is now inside the entry that replaced them: `mobileAccount_avatarDiscIsGreyNotSalmon`, `mobileAccount_avatarTapTargetCannotAlsoReachTheEdge`, `mobileAccount_devicePillLabelOnAFramesOnly`.
+- Four **GAPs** are cited inside the entries as reasons but were not moved, because they are not decisions: `mobileAccount_noRegularTextStyleAtTwenty`, `mobileAccount_avatarHasNoSizeAxisOrTwoLetterInitials`, `mobileAccount_avatarInkBindsFrameFillScopedVariable`, `mobileAccount_sessionRowHasNoRetryOrUnsentStatus`.
+
+**Screen — six, left in FLAGS.md only**
+
+1. `mobileAccount_demoProviderIsSarahBennett` — Dr. Sarah Bennett, Windsor Family Medicine, sbennett@windsorfm.com, SB. Demo content, not a pattern.
+2. `mobileAccount_homeAvatarInterimDestination` — the seven home avatars lead to `A S3 Microphone` until A4 builds `A S9 Account`. Interim wiring.
+3. `mobileAccount_unsentRowIsFailedRowWholeRowTap` — `A S2 Home / unsent` uses `State=failed` as is and taps through whole-row, no Retry button. The general half of this — the row has no action slot, so the row is the target — went into the session-list entry; the frame-specific half stayed here.
+4. `mobileAccount_v4v5FramesHaveNoSpacePrefix` — eight frames renamed on the leading letter because they had no `V ` to replace. Naming inside one page.
+5. `mobileAccount_clonedSupersededNoteNamesVisitFrame` — the stale cross-page pointer in `A S4 Patient`'s name. **Fixed in A2c but the line is still open**; not struck here, because the brief said not to strike anything that was not already closed. Worth closing in a later pass.
+6. `mobileAccount_noProviderOrPracticeName` — the A0 blocker. Superseded by (1) and **also still open and unstruck**; same note applies.
+
+**Engineering note — three**
+
+1. `mobileAccount_buttonCapitalisesAnyDeviceName` — the library Button capitalises whatever label it is given, so a system-supplied device or brand name is mangled; measured as "iPhone microphone" → **"IPhone Microphone"**. `textTransform` is not an instance override. Figma is faithful; the behaviour is in the theme.
+2. `mobileAccount_buttonLabelsRenderTitleCase` — the same fact raised in A0 against final copy: "Sign out" will read "Sign Out", "Back to sign in" will read "Back To Sign In".
+3. `mobileAccount_serifAvatarLeadIsNavHeader` — a lead rather than an engineering note strictly, filed here because it belongs to neither of the other two: the serif avatar Daniel remembers is most likely the desktop navigation header composition, since `Avatar` 208:11 is Akkurat LL Regular on all three variants. **Still not audited.**
+
+### 3. What went into COMPOSITIONS.md, and one thing I did not do silently
+
+- A third section, **`## Mobile (ambient capture TP5KrQtY0T5IcMNqi375So)`**, five entries, in the file's existing one-line-per-pattern shape extended with the fields the brief asked for: decision, reason, what it overrides, decider, date, node id.
+- **The file's own entry rule does not admit these yet, and I did not quietly break it.** The preamble requires two builds and a plate in `oNrOL9kQCpJHyK4rBCGqsq`; every one of these has **one build and no plate**. The section therefore opens by saying so and calling itself provisional, not canonical, with a note that everything in it is local to the mobile file and never goes to the library. That keeps the backfill findable without letting five unpromoted patterns sit indistinguishably beside twenty-one that earned their place. Promoting them is a later call, and needs a second build and a plate.
+- The **home session list** entry is the one with no FLAGS line behind it — it came from the R1 brief, not from a finding — so it is attributed to the brief and its geometry was read from the file rather than asserted: `List` 103:2364 is a vertical stack, spacing 0, padding 0, full width, holding a `List heading` frame and its `Session row` instances as **flat siblings** at a 72 pitch, with no per-group container. That is what makes it regroupable and retitleable, and it is why the claim is worth making: the empty home frame's `List` has zero children, and the two one-row frames hold exactly one heading and one row in the same stack.
+
+### 4. FLAGS.md
+
+- **Six pointers added**, one per composition entry, appended to the line that *owns* each id: lines 251, 252, 256, 259, 261, 263.
+- **Nothing deleted and nothing struck.** Open lines 193 and struck lines 47, both unchanged from before this batch; section counts untouched at DEFECT 29/6, GAP 56/4, DECISION 107/37.
+- Caught and corrected in passing: the first annotation pass matched any line **mentioning** a flag id and tagged 11 lines instead of 6, because closed entries cross-reference their replacements in prose. Re-run matching only the trailing `| <id>` field. The stray five were stripped before the correct pass, verified by count.
+
+### Verification
+
+- No Figma writes, so nothing to render. The two reads were read-only and are the evidence behind the session-list entry.
+- **Believed but not verified**: that these five are the right five. They are the decisions that would repeat, judged against a brief that named four of them; the fifth, `Account/Top bar`, is included because the disc-is-the-ink rule generalises to any filled trailing affordance. Nothing here has been built twice, which is the file's own test of whether a pattern is real, so **every entry is a prediction that it will repeat, not evidence that it has.**
+- Not checked: whether any of the 21 existing entries should have carried override or decider fields too. The new section uses them; the old ones do not. That inconsistency is now in the file and is worth a decision rather than a drift.
+- Repo: `COMPOSITIONS.md` 30 → 40 lines, one new section of five entries. `FLAGS.md` six pointers, no other change. `LOG.md` this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: R1 complete. A3, A4 and A5 unblocked and unchanged by this batch.
