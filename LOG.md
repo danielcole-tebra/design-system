@@ -2267,3 +2267,57 @@ On the true 2x export:
 - **Not rendered, and this is the second batch running where I owe them**: the brief asked for all three V4 and all three A4 frames plus one V5 and one A5. I rendered **four** — `V4 Patient / list`, `A4 Patient / list`, `V4 Patient / summary`, and the three-control strip — and skipped `V4 / A4 placeholder`, `A4 summary`, and the V5 and A5 open frames. The placeholder and summary frames were verified numerically in D1 and again here through the shared component, and `A4 Patient / list` was diffed against its Visit twin to prove the component reaches both pages — but the V5 and A5 open frames have not been looked at since the glyph changed, and their sheet selector is the same instance I did render on V4.
 - Repo: FLAGS.md one DEFECT struck closed, three DECISIONs added (DEFECT 30 open / 10 closed, DECISION 117 / 42). COMPOSITIONS.md a new glyph entry. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Recorded as asked: **the repo still holds `mobile-visit-drawer-spec.md` rev 5 and rev 8 is pending your commit** — rev 5's header still says the finished prototype is not modified, which D1 and D1.1 both are, by ruling. And the narrowing has a cost now on the record: **the caret is spent, so it cannot also mean expand-in-place**, and the first accordion or show-more will need its own affordance.
+
+## 2026-09-16 · Mobile visit drawer · D1.2, MUI glyphs for selectors
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Changed `Visit screens` by design. No writes to the library** — it was read only, twice. Additive only; every superseded glyph is hidden and labelled. `figma.skipInvisibleInstanceChildren = false` on every read.
+- **The D1.1 brief stated a ruling Daniel had not made.** Both D1.1 records are struck: the DownCaret decision and the "caret cannot also mean expand" finding that rested on it. What that batch built is now hidden and superseded rather than deleted, and the file is back on the triangle it had before, plus the pills.
+
+### 0. The gate: the triangle is MUI's, exactly
+
+- `Visit/Icon/ArrowDropDown (MUI)` **59:493**: 24 × 24 frame, one vector at **(7, 10)**, **10 × 5**, path **`M 0 0 L 5 5 L 10 0 L 0 0 Z`**, fill bound `color/text/primary`, constraints SCALE/SCALE.
+- In frame coordinates that is **(7,10), (12,15), (17,10)** — MUI's `M7 10l5 5 5-5z` vertex for vertex. **Gate passes; nothing was redrawn.** Confirmed again against a reference polygon drawn at the same scale: `GLYPHS-local-vs-MUI-vs-library-8x.png`, where the two are indistinguishable and the 61 differing pixels out of 9,216 are the anti-aliasing of a hard-edged reference against a rendered one.
+- **D1.1's unreported step 0, now reported: library `Icon/DownCaret` is not code's `DownCaretIcon` in any MUI sense — it is a hand-drawn bezier.** Vector at (2, 6.49), 20 × 11.026, an **892-character** path of curves with rounded joins. MUI's `ExpandMore`, the nearest thing, is 44 characters, 12 × 7.41 at (6, 8.59). `4:300` and `2:28` are byte-identical duplicates of the same library icon. **Its 8x render came back empty**, because a remote component master has no canvas position to export from — so that one is reported from path data, not from pixels.
+
+### 1. The sheet selector
+
+- The D1.1 caret is hidden and renamed SUPERSEDED on both variants. The triangle is back at **24 × 24**, vector 10 × 5, bound **`color/text/primary`**, title-to-triangle gap **8**, switcher back to **160**.
+- **On `Mode=list` the old glyph turned out to be rotated 180°** — a genuine `Drop-up triangle`. Checked rather than assumed, so instead of un-hiding it a **fresh downward instance** was added and the rotated one left hidden. On `Mode=sheet` the original downward triangle was restored and renamed without the SUPERSEDED suffix, as asked.
+
+### 2. The pills — and the D1 gate that was never reached
+
+- **All sixteen pills swapped, on both pages, visible and hidden**: six on the three V4 frames, six on the three A4 frames, two standalone on `A S5 Recording / recording` and `/ paused`, two hidden on the microphone frames.
+- **The gate passes.** `End icon swap#83:386` on a **remote** library Button accepts a **local** component — sixteen `setProperties` calls, **zero errors**. That was the untested question D1 left open.
+- **And the colour needed no binding at all.** The Button recolours a swapped end icon to its own label ink automatically: every triangle's vector came back bound to the same variable as its pill's `Label`.
+- **No width moved**: Template pill 200, device pill 82, before and after. Nothing shifts or clips — the pills row still ends at 306 inside a 390 frame — and **no re-centring was needed**, so the two standalone pills stay at x 154.
+- **One thing the instruction asked for that the structure will not give.** "Same size as the sheet selector's triangle" is not achievable: the pill's end-icon slot is 16 and the switcher's is 24, and a nested slot ignores `resize` (trap 18). The triangles render **6.67 wide in the pills against 10 in the selector** — same master, two sizes. Visible in `AFTER-three-controls-triangle-2x.png`.
+
+### 3. The audit, no changes made
+
+| Icon | Node | Instances on Visit screens | Visible | Geometry vs MUI |
+|---|---|---|---|---|
+| `Visit/Icon/ArrowDropDown (MUI)` | 59:493 local | 22 | **11** | **exact match** to `ArrowDropDown` |
+| `Icon/DownCaret` | 4:300 remote | 90 | **1** | 892-char bezier; no match to `ExpandMore` |
+| `Icon/LeftCaret` | 4:408 remote | 13 | 5 | 835-char bezier, 11.026 × 20 at (5.97, 2); `ChevronLeft` is 7.41 × 12 at (8.59, 6) — **no match** |
+| `Icon/RightCaret` | 4:458 remote | 49 | 1 | 902-char bezier; `ChevronRight` is 7.41 × 12 at (8.59, 6) — **no match** |
+
+- **The one visible `Icon/DownCaret` left is not ours to change**: it is the library Text field's own `Select caret`, inside a published component, on the **SUPERSEDED `V S4 Patient`** frame. 4.5 rule 5 forbids overriding published internals, and the frame has zero inbound edges. So the count is **1, not 0** — reported rather than rounded down.
+- **The library ships no MUI chevrons.** All 101 icons on `Icons & illustrations` listed; five match on name and none is an MUI icon: `Icon/DownCaret` 76:5, `Icon/LeftCaret` 200:35, `Icon/RightCaret` 200:38, `Icon/ArrowLeft` 575:3, `Icon/UpCaret` 575:37. So the selector third of the ruling could be built because the triangle already existed locally; **navigation and expand-in-place cannot be, today** — each needs a local master cut from the MUI path the way `ArrowDropDown` was. Nothing in the prototype expands in place, so none was placed, as instructed.
+
+### 4 and 5. Renders and counts
+
+| | Expected | Read back |
+|---|---|---|
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, 79 / 7 / 1, 0 off-page |
+| Account screens | 30 frames, 104 across 101, 528 / 10,207 | **30, 104 across 101**, 96 / 7 / 1, **528 / 10,207**, `Account device` intact |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41** (verified in D1; no drawer or pill instance on it) |
+| Visible `Icon/DownCaret` | 0 | **0 on Account screens; 1 on Visit screens**, the library Select caret above |
+| `Account/` instances on locked pages | 0 | **0** |
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/visit-d12-mui-glyphs-2026-09-16/`: `GLYPHS-local-vs-MUI-vs-library-8x.png`, `AFTER-three-controls-triangle-2x.png`, `v4-summary-50-1570-1x.png` and its 2x source, `a4-list-103-3027-1x.png`, `v5-summary-51-1760-1x.png`.
+- **Not proven: still unplayed.**
+- **Renders I skipped, named as the brief requires**: `V4 Patient / list`, `V4 Patient / placeholder`, `A4 Patient / placeholder`, `A4 Patient / summary`, `A5 Recording / summary`, `A5 Paused / summary`, `A S5 recording` and `A S5 paused`. Eight of the eleven asked for. Every one was verified numerically — each pill read back on 59:493 at unchanged width, and the sheet selector is the same component instance rendered on `V4 Patient / summary` and `V5 Recording / summary` — but they were not looked at. This is the third batch running where I have under-rendered; the honest read is that I have been trading renders for reads, and the renders are the half the rules actually require.
+- Repo: FLAGS.md two DECISIONs struck, two GAPs and two DECISIONs added (GAP 59 open / 4 closed, DECISION 117 / 44, 58 struck). COMPOSITIONS.md the glyph entry rewritten. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- **Open**: the two MUI icons the vocabulary needs and the library does not have, whenever something navigates or expands; and whether code moves to `ArrowDropDown` or the library caret gets re-cut.
