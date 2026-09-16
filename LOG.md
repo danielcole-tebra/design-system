@@ -1233,3 +1233,81 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders.
 - Repo: FLAGS.md one DECISION added (91 → 92 open). PLUGIN-NOTES.md trap 38 added. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: the open drawer and the collapsed edge now share one top row. **Open for Daniel: `Legacy header` is a transitional property that only exists because V4 is frozen — if V4 ever adopts the 56 row, it and the old header should both go.** Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · 16 between the puller and the title row
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. **Nothing on `Screens`. No node deleted** — the legacy header is hidden and renamed. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1, 3. One stack, used by both the open drawer and the collapsed edge
+
+| Zone | Height | Contents |
+|---|---|---|
+| Puller zone | **30** | 8 above, puller **30 × 6** centred on **195**, **16** below |
+| Title row | **48** | title switcher at **x 16**, line centred at **24** into the row; close at **x 344**, disc ink **354–374**, same line |
+| Bottom safe area (edge only) | 34 | — |
+
+- Open `Top row` = **78**. `Visit/Drawer edge` = **112**. Sheet mode carries the divider as the **title row's** own 1px INSIDE bottom stroke on `color/divider`; list mode has no stroke and hides the switcher, leaving the puller and the close.
+- **No tap target crosses into the puller zone**, measured on instances rather than reasoned: the switcher's box is the title row **exactly** — `0` above its top edge and `0` below its bottom — and the close's box is inset **4**. The highest tap edge in the title row is **149**; the puller zone ends at **149**. Zero overlap, and nothing reaches above the title row's top edge.
+
+### 2. V4 adopted the Top row
+
+- Done in this batch, as the previous prompt specified. The `Top row` is now visible on V4 too, the old `Header` `48:881` is unbound, hidden and renamed SUPERSEDED, and V4's two switcher reactions moved from `59:504` to the Top row's clone `87:3105`, keeping their target `48:1371`. "Medications" was re-typed on `V4 Patient / placeholder`, which a clone does not inherit (trap 38).
+- `Closable#48:1` now does the V4/V5 work on its own: it hides the puller zone in both modes and, **in list mode, the whole Top row** — which is why `V4 Patient / list` still starts its list at the drawer top with no band above it.
+- **One V4 number did change: the title moved from y 212.5 to y 213.** Half a pixel, and it is a consequence worth naming — the old header centred a 48-tall switcher inside a 47 content box (the 1px stroke), while the title row places it at an integer 0. Rule 4 prefers the integer.
+- **Two properties are now vestigial**: `Handle row#73:1` and `Legacy header#87:0` drive nothing. Left in place rather than deleted and raised for a deliberate pass.
+
+### 4. Both V S5 frames — every y that moves
+
+| | Before | After |
+|---|---|---|
+| Collapsed edge height | 90 | **112** |
+| Edge y | 754 | **732** |
+| Field buttons y | 682 | **660** |
+| Gap, buttons to edge | 16 | **16** |
+
+- **The edge's y moved on its own, not by a nudge.** Its instances carry `vertical: MAX`, so growing the master 90 → 112 re-anchored the top from 754 to 732 with the bottom still on 844; the script then set the same value. Worth recording because the number looks like an edit and is not one.
+- **The timer and meter still clear, and neither moved.** Recording readout unmoved at 288–492 with **168** to the control row; paused unmoved at 264–516 with **144**. No collision on either frame.
+
+### 5. Wiring — 87 before, 87 after
+
+- **Drags moved, five**: off the whole `Top row` and onto the **`Puller zone`**, same targets, same SMART_ANIMATE — three to `43:809`, two to `43:819`. Dragging the title or the close no longer opens or closes the drawer; the grip is the grip.
+- **The collapsed edge keeps its drag on the whole edge**, because there the whole thing is the grip, and its tap is unchanged: both S5 edges read ON_CLICK plus ON_DRAG.
+- **Switcher and close keep their targets** everywhere; V4's two switcher reactions moved nodes but not destinations.
+- 79 ON_CLICK, 7 ON_DRAG, 1 AFTER_TIMEOUT. No edge leaves the page.
+
+### Heights, before and after
+
+| | Before | After |
+|---|---|---|
+| V5 drawer | y 119, h 725 | y 119, h 725 |
+| V5 top of drawer | 56 | **78** |
+| V5 sheet body | 669 | **647** |
+| V5 sheet list | 669 | **647** |
+| V4 drawer | y 201, h 643 | y 201, h 643 |
+| V4 top of drawer | 48 (legacy header) | **48** (title row) |
+| V4 sheet body | 595 | **595** |
+| V4 sheet list | 643 | **643** |
+
+- **The list still overflows**: content **706** against a **647** scroller, **59** of overflow — up from 37, because the scroller lost the 22 the taller top row took.
+
+### Overlay: edge against open top row, again
+
+- Diffed zone by zone at true 2x, edge y 732–810 against the open row at y 119–197:
+
+| Zone | Result |
+|---|---|
+| **Puller zone, rows 0–30pt** | **pixel-identical** |
+| Title zone, x < 350 | differs **only** at 159–169pt — the drop-down triangle, which the edge has no reason to carry |
+| Close zone, x ≥ 350 | differs — the Cancel disc |
+| Bottom 1pt | differs — the divider |
+
+- So the puller and the title land in exactly the same place in both, and every difference is one of the three things that are meant to differ.
+
+### Verification
+
+- Read on the instances across all eight drawer frames: Top row **78** on the five V5 and **48** on the two V4 sheet frames, hidden on V4 list; puller zone **30**, puller y-in-zone **8**, centre **195** on all five V5; title row **48** with divider **1** on the three V5 sheet frames and **0** on the two list frames; title at x **16**, line centre **173**; close disc **354–374**, centre **173** — the same line.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes**, zero `Visit/` or `List/Item` instances on it.
+- Verified in pixels and looked at, **true 2x** in `figma-export/visit-puller-gap-2026-09-16/`: `vs5-recording-43-809-full-2x.png` (780 × 1688, full frame), `v5-recording-summary-51-1760-top300-2x.png` and `v4-patient-summary-50-1570-top300-2x.png` (780 × 600, top 300pt), plus `OVERLAY-edge-vs-top-row-2x.png`, `CONTACT-tops.png` and `ZOOM-edge-bottom200-2x.png`.
+- **Not proven: still unplayed.** Stored geometry and static renders.
+- Repo: FLAGS.md one DECISION added (92 → 93 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: the drawer and the edge share one stack, and V4 is on it too. **Open for Daniel: two dead booleans to remove in a deliberate pass.** Phase 2 (P1 onward) still needs a source node per sheet.
