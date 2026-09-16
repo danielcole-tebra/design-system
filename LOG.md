@@ -923,3 +923,55 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed, and the swipe is not modeled.** MUI's edge is dragged; this is a tap target with a grip drawn on it. The puller is a picture of an affordance this prototype cannot perform.
 - Repo: FLAGS.md one GAP added (50 → 51 open) and two DECISION added (87 → 89 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: collapsed edge complete. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Handle row, library selected row, no list header
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. Library `YX2n4YLrEpBXNbcc73T6dw` **read only**, one variable imported by key. **Nothing on `Screens`. No node deleted** — everything removed here is hidden. `figma.skipInvisibleInstanceChildren = false` on every read.
+- Carried forward as instructed: the grey/400 puller stays, and the Tebra grey-ramp conflict is already on the register as `visitDrawer_pullerUsesGrey400NotGrey300` from the previous batch, so it was not duplicated.
+
+### 1. Read-only first: the library's selected row
+
+- **`List/Item` `174:17`** on Data display, **MUI `ListItemButton` + `ListItemText`**. The property is the **`State` VARIANT axis**, `Default | Hover | Selected` (six variants, crossed with `Lines` = One | Two). The selected fill is bound to **`color/computed (no palette)/rowSelected`**, key `c37b15c6…`, stored **#004852 at alpha 0.08** — which is MUI's own `&.Mui-selected: alpha(palette.primary.main, action.selectedOpacity)`, Tebra setting no `selectedOpacity` so MUI's 0.08 stands.
+- Its own description carries two things this batch had to honour. **Only the fill was built, deliberately** — production has no selected treatment to copy, so there is nothing to derive a weight, colour or indicator from. And **selected and hover cannot co-occur**, because they are one axis.
+
+### 2. Applied, not rebuilt — and why the library made that choice for me
+
+- **`List/Item` cannot carry this row's geometry.** It is **400 × 48** with its text at **x 72** behind a 56 icon slot; `Visit/Sheet list row` is **390 × 56** with text at **x 16**. The library's description is emphatic that **48 and 72 are the only heights MUI has a path to**, and that a 52 was the exact defect it was rebuilt to remove — so forcing it to 56 would reintroduce the thing that rebuild fixed.
+- So the **token** was imported and applied rather than the component: a `Selected fill` rectangle, ABSOLUTE, STRETCH/STRETCH, bound to `rowSelected` at its **stored alpha 0.08** (rule 5 — the alpha is the variable's, not a paint override), behind a new BOOLEAN property named **`selected`** — lowercase, mirroring MUI's `ListItemButton` `selected` prop per rule 2.
+- Set on **one node**: the Patient summary row `48:824` inside the drawer master's list mode, so all three list frames inherit. **The check added earlier today is hidden, not deleted.** `visitDrawer_rowSelectedAppliedNotRebuilt`.
+- **The row did not move**: 390 × 56 on every row of every list frame, and the text is back to 358 wide now the check is gone.
+
+### 3, 4. No list header, and a handle row on V5
+
+- **List mode has no header at all.** Hiding the `Header` frame takes the title switcher, the triangle **and the header's own 1px bottom stroke** — which is what the divider is — in one move, and collapses the 48 band so the list starts directly under the handle row. The switcher `64:2241` was additionally hidden on its own flag so the tree says what it means.
+- **Handle row, on both variants, behind a BOOLEAN** — `Handle row#73:1`, default **true**, false on the three V4 frames. A boolean rather than eight per-instance overrides because it makes "V5 has a handle, V4 does not" a declared state, and because a boolean survives what a variant switch would drop.
+- **Height 48, reported as asked.** That is the floor the 48 close target needs, and it puts the puller **8 from the drawer's top edge — exactly where the collapsed edge puts it**, so the puller does not move between closed and open. The cost, worth seeing: the close glyph centres at 24 and the puller at 11, so the two do not align with each other.
+- Puller identical to the edge's: **30 × 6, radius 3, x 180, bound `color/grey/400`**. In sheet mode the title-switcher header sits **below** the handle row.
+- **`Closable#48:1` was re-pointed rather than left ambiguous.** The two header closes `48:817` and `48:888` were unbound from it and hidden; the property now drives **exactly one node per variant**, the handle row's close. `visitDrawer_handleRowAndNoListHeader`.
+
+### 5. Wiring — 83 before, 87 after
+
+- **Already correct, three, changed nothing:** the selected row on each list frame was already pointed at the sheet frame in the same state — V4 list → `50:1570`, V5 Recording list → `51:1760`, V5 Paused list → `51:2027`. Verified rather than rewritten.
+- **Moved, five:** each V5 close from the header to the handle row, same targets — three to `43:809`, two to `43:819`. The old closes read 0 reactions and are hidden.
+- **Cleared, three:** the list-mode header switchers.
+- **Added, seven:** ON_DRAG on the two collapsed edges to the same targets as their tap, and ON_DRAG on the handle row of all five V5 frames to the same target as that frame's close.
+- 83 − 3 + 7 + 2 = **87 across 84 nodes**, by trigger **79 ON_CLICK, 7 ON_DRAG, 1 AFTER_TIMEOUT**.
+
+### A trap, and a forced departure
+
+- **ON_DRAG will not take `transition: null`**, which is the shape every other navigation in this file uses. The first wiring script died on it with nothing but "Reaction at index 0 was invalid" — the trigger passes schema validation, so the failure is later and unexplained. **Probed rather than guessed**: `transition: null` fails, `DISSOLVE` fails, **`SMART_ANIMATE` and `MOVE_IN` succeed**, and ON_PRESS with a null transition succeeds, so it is specific to ON_DRAG and not to the node. PLUGIN-NOTES trap 37.
+- **SMART_ANIMATE was chosen over MOVE_IN because MOVE_IN encodes a direction Figma's ON_DRAG does not carry** — a drag up and a drag down fire the same edge — so a directional transition would assert something the prototype cannot honour. **Durations are MUI's own**: **0.225** opening (`transitions.duration.enteringScreen`) and **0.195** closing (`leavingScreen`), which apply because §1.2 records `transitions` as untouched MUI defaults. Destination, navigation and resetScrollPosition match each drag's tap exactly; only the transition differs. `visitDrawer_onDragNeedsATransition`.
+- The failed script rolled back completely, per trap 36, and the re-run began by re-reading the two frames it would have touched first — both clean.
+
+### Verification
+
+- **Measured in the 2x render.** Puller on V5 at device rows 254–265 — **12px = 6pt** — beginning **8** below the drawer top, columns 360–419 — **60px = 30pt** — centred on **195pt, exactly half of 390**, colour **(214, 214, 214)**: pixel-for-pixel the collapsed edge's puller. Selected fill reads **(235, 241, 242)**, which is `alpha(#004852, 0.08)` composited on paper, spanning exactly one 56-tall row with the next row pure white.
+- **Read on instances, not masters**, across all eight drawer frames: handle row **48**, hidden on all three V4 and visible on all five V5; close ink right **374** on every V5 frame; **exactly one selected row per list frame**, labelled "Patient summary", **zero checks visible anywhere**; every row **390 × 56**.
+- **V4 geometry apart from the list header is unchanged**: bar 201, drawer y 201 h 643, sheet body **595** on both V4 sheet frames, footer and CTA untouched. The one V4 change is the intended one — V4 Patient / list's scroller grows **595 → 643** because its header collapsed.
+- **V5**: sheet list **677**, unchanged, because the handle row costs exactly what the header cost. Sheet body **677 → 629**, which is the handle row's 48 added above a header that stays.
+- **Text overrides survived.** `Handle row` is a boolean, not a variant, so trap 34 does not apply — confirmed by reading every drawer's titles back: "Patient summary" and "Medications" intact on all eight.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes**, its S5 originals still two children with Field buttons at y 738. No edge crosses between the pages in either direction.
+- Verified in pixels and looked at, three **true 2x** full-frame exports (780 × 1688) in `figma-export/visit-handle-selected-2026-09-16/`: `v4-patient-list-48-1371-full-2x.png`, `v5-recording-drawer-list-51-1682-full-2x.png`, `v5-recording-summary-51-1760-full-2x.png`, plus `CONTACT-full.png` and `ZOOM-v5-handle-selected.png`.
+- **Not proven: still unplayed, and the drag is a label not a gesture.** Figma's ON_DRAG has no direction, so "drag up to open, drag down to close" is true only because the two triggers live on different nodes. A drag down on the edge opens the drawer just as readily.
+- Repo: FLAGS.md three DECISION added (89 → 92 open). PLUGIN-NOTES.md trap 37 added. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: handle row and selected row complete. Phase 2 (P1 onward) still needs a source node per sheet.
