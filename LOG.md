@@ -856,3 +856,24 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed**, and no new render was taken — nothing in this batch changes a pixel, so the exports from the one-selector pass in `figma-export/visit-one-selector-2026-09-16/` remain the current evidence for these four frames.
 - Repo: LOG.md this entry. FLAGS.md, CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged; no flag opened or closed, since an explicit target was the intent all along and BACK was this build's reading of it, not a ruling.
 - Status: wiring fix complete. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Footer band keyline
+
+- File `TP5KrQtY0T5IcMNqi375So`, page `Visit screens` only. **Nothing on `Components` or `Screens`. No node created or deleted** — three existing rectangles gained a stroke. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### Which construction, reported as asked: an inside top stroke, no extra node
+
+- The footer band is a **RECTANGLE**, and rectangles carry individual stroke weights, so a one-sided rule needed no second node: `strokeTopWeight = 1` with bottom, left and right at **0**, `strokeAlign = INSIDE`. **No separate 1px line was built and none was needed.**
+- The paint is bound to **`color/divider`** `VariableID:ba1923ab…/74:173`, stored **#D6D6D6 alpha 1** — read off the variable, not copied off the header's paint, then written resolved and bound per the paints rule. That is the same token **and the same INSIDE construction** the drawer header divider uses (`strokeBottomWeight 1`, the rest 0), so the two rules in the frame agree by token rather than by eye.
+- Applied to all three V4 frames: `49:1372` list, `49:1379` placeholder, `50:1701` summary. `visitDrawer_footerKeylineIsInsideTopStroke`.
+
+### Verification
+
+- **Measured in the render, not just the tree.** At true 2x the line is exactly **two device pixels** — 1pt — at rows 156–157 of the bottom-200 crop, which is frame y **722.0**, and reads **(214, 214, 214) = #D6D6D6** identically at x 10, x 400 and x 770, so it is full-bleed 390 wide with no antialiasing spill above or below. On the integer grid, rule 4.
+- **Nothing moved.** Band y 722, 390 x 122 and CTA at (16, 738) 358 x 56 on all three V4 frames, before and after. Bar 201, drawer y 201 h 643, scrollers 595. V5 untouched: bar 119, drawer y 119 h 725, scroller 677, no footer band. Each V4 frame still has exactly four children.
+- **`Visit screens` 83 reactions across 82 nodes**, unchanged, and no edge leaves the page. **`Screens` still 18 frames, 42 reactions across 41 nodes.**
+- **Worth seeing rather than fixing.** The keyline draws an explicit edge across the sheet text it clips, so on V4 Patient / summary it cuts "dizziness (2023)" mid-glyph. That overlap is the band's job and was accepted when the band was built; the keyline states it instead of letting it fade into white. Carried in the DECISION so it is a choice on the record, not a surprise in the next screenshot.
+- Verified in pixels and looked at, **true 2x** in `figma-export/visit-footer-keyline-2026-09-16/`: `v4-patient-summary-50-1570-bottom200-2x.png` (780 x 400, the bottom 200pt) and `ZOOM-keyline.png`, a 2x blow-up of the 24pt either side of the line.
+- **Not proven: still unplayed.** Stored geometry and a static render.
+- Repo: FLAGS.md one DECISION added (86 → 87 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: keyline complete. Phase 2 (P1 onward) still needs a source node per sheet.
