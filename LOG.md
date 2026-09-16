@@ -975,3 +975,63 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed, and the drag is a label not a gesture.** Figma's ON_DRAG has no direction, so "drag up to open, drag down to close" is true only because the two triggers live on different nodes. A drag down on the edge opens the drawer just as readily.
 - Repo: FLAGS.md three DECISION added (89 → 92 open). PLUGIN-NOTES.md trap 37 added. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: handle row and selected row complete. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Circle controls at a 40 disc
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. **Nothing on `Screens`. No node deleted** — every superseded node is hidden and renamed. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. Five masters, and the knockout check
+
+- Built through the icon recipe from `mui-icons-material` at viewBox 24, all five reading back **vector at (2, 2), 20 × 20, named `Vector`, constraints SCALE/SCALE, wrapper fill cleared**: `Visit/Icon/PauseCircle (MUI)` `74:531`, `StopCircle` `74:534`, `PlayCircle` `74:537`, `Cancel` `74:540`, `CancelOutlined` `74:543`.
+- **The close token, reported as asked: `color/grey/600`** (`VariableID:7df34eda…/74:127`, #545454). That is what the existing close X already used — library `Icon/CloseOutlined` `2:761` inside the Icon button — so Cancel and CancelOutlined bind it. Pause, Stop and Play bind `color/common/white`.
+- **No icon needed EVENODD. All five knock out on the default NONZERO**, and that was checked in pixels, not assumed. On a `success/dark` ground the Pause bars read **(43, 134, 90)** and the disc body **(255, 255, 255)**; the Stop square and the Play triangle read the same ground. On paper, Cancel's disc reads **(84, 84, 84)** and its X reads **(255, 255, 255)**; CancelOutlined's ring reads 84 and the gap inside it reads paper. Proof: `figma-export/visit-circle-controls-2026-09-16/proof-icons-2x.png`.
+- **The geometry falls out of the path, not out of a preference**: the disc spans 2..22 of 24, so **40 of disc ink requires a 48 render** — and 48 is also the tap target, so the icon and the target are the same box.
+
+### 2. The recording bar
+
+- **The library Icon button had to go, and this was forced, not preferred.** It is 40 with a 24 glyph slot and cannot host a 48 icon, so a 40 disc is unreachable through it. The controls are now the icon placed directly in a 48 tap target. **The good consequence: the white is bound in the master instead of overridden per instance, so the SCAFFOLDING white overrides are gone** — `Keep the white override if the Icon button recolors` no longer applies because nothing recolours any more.
+
+| Measure | Before | After |
+|---|---|---|
+| Controls box | 320, 75.68, 68 × 40 (paused 319 × 69) | **274, 71.68, 104 × 48** |
+| Left control ink (Pause / Play) | 334–346 (paused 335–346), 12 wide | **278–318, 40 wide** |
+| Stop ink | 362–374, 12 wide | **334–374, 40 wide** |
+| Stop ink right edge | 374 | **374** |
+| Visible gap between ink | 16 | **16** |
+| Ink centre Y | 95.68 | **95.68** |
+| Timer cap-height centre | 95.68 | 95.68 |
+| Delta | 0.00 | **0.00** |
+| Bar height | 119 | **119** |
+
+- **The discs fit; the bar did not need to grow.** Disc ink bottom **115.68** against a bar bottom of 119 — **3.32 clear**. Reported because it was asked: the **48 tap target**, being centred on the cap height rather than on the bar, ends at **119.68 — 0.68 below the bar**. That is the invisible box only, nothing painted crosses the edge, and the bar and bar row both have `clipsContent false` so the target is not cut.
+- Identical on all five V5 frames, read on the instances.
+
+### 3. The handle row close
+
+| Measure | Before | After |
+|---|---|---|
+| Glyph | Icon button 40 + Icon/CloseOutlined 24 | **Visit/Icon/Cancel (MUI) at 48** |
+| Tap target box | 340, 0, 48 × 48 | **330, 0, 48 × 48** |
+| Ink | 354–374, 20 wide | **334–374, 40 wide** |
+| Ink right edge | 374 | **374** |
+| Ink centre Y in the row | 24 | **24** |
+| Row height | 48 | **48, unchanged** |
+
+- **No collision with the puller**: the puller occupies x 180–210 and the close target starts at 330, **120 of clearance**. Vertically the disc centres at 24 in a 48 row, so it is centred on the row as asked.
+- **Worth seeing rather than fixing**: a filled 40 disc in grey/600 is a heavy mark on a white row, and it sits only **4** below the bar above it. `CancelOutlined` is on the proof sheet beside it at the same size for comparison and **is used in no frame**.
+
+### 4, 5. Kept, not deleted
+
+- Renamed with a SUPERSEDED marker and hidden where they were in use: `Visit/Icon/Pause (MUI)` `51:983`, `Visit/Icon/Stop (MUI)` `51:986`, `Visit/Icon/PlayArrow (MUI)` `51:989`, the four Icon button instances in the two Controls frames, and the two Icon buttons in the handle-row close targets. The close glyph itself is the **library's** `Icon/CloseOutlined`, remote, so there is nothing local to supersede there.
+- **Two flags were deliberately NOT closed, against the instruction to supersede the playback and close flags.** `visitPlayback_noPlaybackGlyphInLibrary` and the Icon-button-recolours GAP are **statements about the library, not about this build** — the library still has no playback glyph, and now has no circle glyph either, and its Icon button still recolours whatever is swapped into it. This build routed around both; it did not fix either. Closing them would make the register claim a library change that has not happened (rule 10). The build-side flag that genuinely was superseded, the playback master naming DECISION, **is** struck.
+
+### Verification
+
+- **Reactions unchanged: 87 across 84 nodes before and after**, 79 ON_CLICK, 7 ON_DRAG, 1 AFTER_TIMEOUT, none leaving the page. Ten control reactions were **moved** from the hidden Icon buttons to the new tap targets with their per-frame destinations intact — Pause/Play to the opposite state, Stop to `43:830` on every frame — and the old nodes read 0.
+- **The close targets survived the swap and were re-read, as asked**: the tap-target frames were kept and only their contents changed, so all five close reactions are still on the same nodes with the same targets, three to `43:809` and two to `43:819`. The five handle-row ON_DRAGs are untouched.
+- **All five V5 frames picked up the change**, identically and to the decimal: controls at 274/71.68/104 × 48, disc gap 16, cap-centre delta 0.00 on both controls, close disc 334–374.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes**, and **zero instances of any `Visit/` component exist on that page** (179 instances, none Visit-linked), so nothing here could have reached it.
+- Verified in pixels and looked at, **true 2x** in `figma-export/visit-circle-controls-2026-09-16/`: `v5-recording-summary-51-1760-top300-2x.png` and `v5-paused-summary-51-2027-top300-2x.png` (780 × 600, top 300pt), `proof-cancel-vs-canceloutlined-2x.png` (876 × 300, the two handle rows side by side), `proof-icons-2x.png` (876 × 520, the knockout proof) and `CONTACT-tops.png`.
+- **Not proven: still unplayed.** Stored geometry and static renders.
+- Repo: FLAGS.md one DECISION struck as superseded and one added (92 open, 29 → 30 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: circle controls complete. Phase 2 (P1 onward) still needs a source node per sheet.
