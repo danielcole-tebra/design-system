@@ -2419,3 +2419,49 @@ On the true 2x export:
 - **Screens was not re-read this batch.** Nothing in A4b touched it, and D1.2 left it at 18 / 42 across 41 with no drawer or pill instance — but that is inference, not a fresh reading, and the brief asked for fresh.
 - Repo: FLAGS.md one DECISION struck closed, one GAP and three DECISIONs added (GAP 61 open / 4 closed, DECISION 122 / 45). COMPOSITIONS.md `Account list row` added. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: A4 complete. **A5 next** — the forgot-password link, `A S10` and `A S11`, wired.
+
+## 2026-09-16 · Mobile account addendum · A5, forgot password
+
+- File `TP5KrQtY0T5IcMNqi375So`. **No writes to the library.** Additive only; everything replaced is hidden and labelled. `figma.skipInvisibleInstanceChildren = false` on every read. **A4b's starting-point trap was checked after both clones** — neither `A S9 Account` nor `A S8 Sent / sent` owns one, so nothing duplicated and the page still reads exactly two.
+
+### 1. The link, and the one thing that could not be built as specified
+
+- Library Button `variant=text` on all three login frames, label "Forgot password?", **right edge on 350** — the field's right edge — inside the white card.
+- Card **230 → 282** on default and after-sign-out, **314 → 366** on error. Password unmoved at 352 / 436; Sign in 424 → **476** and 508 → **560**. Nothing outside the card moved, and the three frames match apart from the error alert.
+- **The 8 above and 8 below are 16 and 16, and that is structural.** The card is a vertical auto-layout with `itemSpacing: 16`; a child cannot sit 8 from its neighbours without changing the card's spacing for every gap, or positioning the link absolutely — which would stop the card growing to fit it. Reported rather than faked.
+
+### 2. A S10 Forgot password 164:1604
+
+- **Base: `A S9 Account`**, the only A frame pairing `Back with title` with a body, as the brief expected. Everything below the bar hidden and labelled; all reactions cleared except back → BACK.
+- Title "Reset password". Then a `Form block` at 16 gutters: **Body** at y 127 (358 × 40, Akkurat LL Regular 14 / 20 bound `color/text/secondary` — the `Account/List row` secondary settings), **Email field** at 183 (358 × 56, cloned from `A S1`'s so the variant matches exactly), **Send link CTA** at 255 (358 × 38, `contained/secondary`). Gaps 16 / 16 / 16, bar at y **47**.
+- **Caught and fixed before reporting**: padding the `Content` stack directly pushed the top bar to y 63 and out of the gutters at 390 wide. The three new children were rewrapped in their own padded block and the bar went back to x 0, y 47.
+
+### 3. A S11 Reset sent 164:1720
+
+- Source `A S8 Sent / sent` 103:2473 is two children: `Sent readout` at y 296 (h 188) and `Next patient CTA` at y 738 (h 56).
+- Cloned; **every reaction cleared — one, on the CTA, and the frame itself carried none** (checked, trap 35). `Success icon` hidden and labelled. Heading → "Check your email", body → the reset copy, CTA → "Back to sign in", rendering "Back To Sign In", confirmed in the render.
+- **Centring, as asked**: horizontally it still reads centred. Vertically the readout shrank 188 → 116 and now spans 296–412 — a centre of **354** against the frame's 422, so **68 above centre**, where before it was 32 above. Hiding the icon enlarged an existing upward bias rather than creating one. No icon added.
+
+### 4, 5 and 6. Wiring, renders, counts
+
+- Five reactions set, explicit destinations, `transition: null`: the three links → A S10; A S10's Send link → A S11; A S11's CTA → `A S1 Login / default`. A S10 keeps back → BACK.
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens | 34 screen frames | **34** |
+| Reactions | — | **119 across 116**, 111 click / 7 drag / 1 timeout, **0 cross-page** |
+| Starting points | two, each once | **`Account device` 103:2320, `Unsent recording` 140:1618** |
+| Unsent loop | still closes | **140:1618 → 140:1547 → 163:2812 → 163:2938 → 140:1618** ✓ |
+| Screens | 18 / 42 across 41 | **read fresh: 18 / 42 across 41**, 0 `Account/` instances |
+
+- **Reactions 113 → 119, all six accounted**: three forgot-password links, A S10's Send link, A S11's CTA, and the back tap target A S10 kept from its clone.
+- **Text 580 / 11,063 → 616 / 11,676, all accounted**: A S10 holds 30 nodes / 461 chars and A S11 3 / 104 — 33 and 565 — and the remaining **+3 nodes / +48 chars** are the three "Forgot password?" labels at 16 characters each.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a5-2026-09-16/`: `as10-forgot-password-164-1604-1x.png`, `as11-reset-sent-164-1720-1x.png`.
+- **Not proven: still unplayed.** The loop above is traced through stored destinations.
+- **Renders skipped, named**: the three login frames. Two of five taken. Their geometry was read back numerically on all three and they differ only in the error alert — but none was looked at, so **"Forgot Password?" is confirmed as a stored label and a measured width of 149, not as pixels.**
+- **Visit screens was not re-read this batch.** Nothing in A5 touched it and A4b read it fresh at 25 / 87 across 84 and 433 / 9,074 — but the brief asked for fresh, and this is inference.
+- Repo: FLAGS.md two DECISIONs added (DECISION 124 open / 45 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: **A5 complete, and the account addendum's build batches A0 to A5 are all done.** The reset link itself is not prototyped, as the spec says.
