@@ -694,3 +694,46 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still nothing played.** These are measurements of stored geometry and static renders.
 - Repo: FLAGS.md two DECISION added (83 → 85 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: alignment pass complete. Phase 2 (P1 onward) is unchanged and still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Fewer carets, open quick switch (revision 7)
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. Library read only. **Nothing on `Screens`.** `figma.skipInvisibleInstanceChildren = false` on every read. **No node deleted** — every affordance removed in this pass is hidden, not deleted. Spec: addendum revision 7.
+
+### 1. Drawer sheet mode, title as switcher
+
+- **Icon source, reported as asked: built locally, because the library has no such glyph.** The Icons and illustrations page carries DownCaret, UpCaret, LeftCaret, RightCaret and the two MUI Navigate icons — all chevrons — and nothing shaped like a filled drop-down triangle. `Visit/Icon/ArrowDropDown (MUI)` `59:493` was built from the MUI path `M7 10l5 5 5-5z` through the icon recipe: viewBox position kept (vector at 7, 10, 10 x 5), `Vector` named, SCALE constraints, fill bound to `color/text/primary`, wrapper fill cleared. Raised as `visitDrawer_noArrowDropDownInLibrary`.
+- The sheet-mode back icon is **hidden**, header padding dropped from 72 to 16, and the title moved into a new `Title switcher` frame with the triangle 8 after it. The switcher is **48 tall** — it first came out at 47, because the header's 1px inside bottom stroke shrinks the content box, so it was pinned to 48 explicitly. Title ink starts at **x 16** on every frame.
+- **The reparent did not cost the instance titles.** Read back on all eight drawer-bearing frames: "Patient summary", "Medications" and "Patient information" all intact, all at x 16. List mode is untouched — plain title, no triangle.
+
+### 2, 3. Fewer carets
+
+- `Visit/Sheet list row` chevron **hidden**; row still 390 x 56, verified on all three list frames at 14 rows each.
+- Ready bar microphone chevron **hidden**, `itemSpacing` 8, and a library Button (`variant=text, color=primary, size=medium`) labelled **"Change"** appended, its label bound to `color/primary/main`. The microphone name is plain text again. Bar height unchanged at **223**.
+- **Worth a ruling:** "Change" sits 8 after the label by layout but **17.84** by eye, because the text Button carries ~8.9 of its own left padding. That is the same box-versus-glyph gap the optical pass fixed for icons; it was not applied here because the brief gave a position, not an optical target. An `itemSpacing` of -2 would close it to a visible 8. `visitDrawer_changeButtonOpticalGap`.
+
+### 4. Quick switch before recording
+
+- V4 now matches V5: `Extra chips` true and all four chips visible on both sheet frames, 374 wide, **Patient summary** selected on `V4 Patient / summary` and **Medications** on `V4 Patient / placeholder`. The 48 band reserved in D1 absorbed it with no geometry change.
+
+### 5. Wiring — 82 before, 84 after, +2 as expected
+
+- **Moved, five:** sheet-mode back → title switcher, same targets. V4 placeholder and V4 summary → `48:1371`; V5 Rec summary and V5 Rec medications → `51:1682`; V5 Paused summary → `54:1901`. The hidden back targets were cleared and read back at 0 reactions each.
+- **Moved, three:** the V4 microphone reaction → the "Change" button on all three V4 frames, still to V S3 `43:783`; the microphone items cleared.
+- **New, two:** `V4 Patient / summary` Medications chip → `V4 Patient / placeholder`; `V4 Patient / placeholder` Patient summary chip → `V4 Patient / summary`. Other chips inert.
+- List row reactions untouched.
+
+### A trap worth the record
+
+- The first wiring script threw a TypeError partway — the V4 bar instances are named `Visit/Recording bar`, not `State=ready`, so a lookup returned undefined. **Every write the script had already made was rolled back**: re-reading showed the quick switch untouched and all five back reactions still on the old control. Re-run from a clean read, it worked. That is the opposite of what bit this repo on 2026-09-02, when a partial script left a stray node behind, so the safe rule is to re-read rather than assume either way. Added as PLUGIN-NOTES trap 36.
+- Ordering also mattered: the chips must be wired **after** `Selected` is set, because switching that variant swaps the chip nodes and discards any reaction already on them. The first attempt wired them first and the reaction would have been stranded on a node the variant switch replaced.
+
+### Verification
+
+- **18 icon and title edges measured across all frames, every one at 16 or 374, zero off-grid**: ready bar back chevron at 16 on the three V4 frames, switcher title at 16 on all five sheet frames, close X right at 374 on all five V5 frames, stop glyph right at 374 on all five.
+- Hidden and confirmed hidden: drawer back (and 0 reactions on it), sheet list row chevron, microphone chevron, note type chevron.
+- **Geometry unchanged**: bar 223 on V4 and 119 on V5, drawer at y 223/621 and y 119/725, scrollers 573, 525, 677, 629, bottom padding 122 on V4 and 34 on V5, quick switch 374.
+- **`Visit screens` 84 reactions across 83 nodes; `Screens` 18 frames, 42 reactions across 41 nodes**, unchanged. Zero edges cross between the pages in either direction.
+- Verified in pixels and looked at, three **true 2x** exports via `download_assets` in `figma-export/visit-rev7-2026-09-16/`: `v4-patient-summary-50-1570-top300-2x.png` and `v5-recording-summary-51-1760-top300-2x.png` (780 x 600, top 300pt), and `v4-patient-list-48-1371-full-2x.png` (780 x 1688, full frame).
+- **Not proven: still unplayed.** Stored geometry and static renders only. The switcher and the triangle imply a menu that does not exist anywhere in this file, which is the same standing gap as the note type item.
+- Repo: FLAGS.md one GAP added (48 → 49 open), two DECISION added (85 → 87 open). PLUGIN-NOTES.md trap 36 added. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: revision 7 pass complete. Phase 2 (P1 onward) still needs a source node per sheet.
