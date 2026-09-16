@@ -1639,3 +1639,61 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - Also recorded from Daniel's rulings, for the batches that will use them: **Sign out is `Button variant=contained, color=primary`, full width** (closed), and **the A S5 device pill reads "iPhone microphone" as an instance override on the A frames only** (closed) — so the blank pill deliberately survives on `Visit screens` and that DEFECT stays open against those frames.
 - Lead logged, not chased: the serif avatar Daniel remembers is most likely the **desktop navigation header composition** on the library's `Compositions` page, since `Avatar` 208:11 is Akkurat LL Regular on all three variants. **Not audited** — no read was made of it, and no writes were made to the library. `mobileAccount_serifAvatarLeadIsNavHeader`.
 - Status: A2a.1 complete. **A2b is unblocked**, and so are A3, A4 and A5.
+
+## 2026-09-16 · Mobile account addendum · A2b, Account/Top bar
+
+- Spec: `mobile-account-spec.md` revision 2, batch A2b, sections 2 and 3. File `TP5KrQtY0T5IcMNqi375So`. **No screen frame was edited on any page**, and `Visit/Top bar` 93:2734 was read but not written to. Nothing deleted. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. The clone, and why rule 8 did not bite
+
+- **`Account/Top bar` 114:600**, a `set.clone()` of `Visit/Top bar` 93:2734, on `Account screens` at (4000, 640), beside `Account/Avatar`. All three variants: `Config = Title with action` 114:601, `Back with title` 114:605, `Back only` 114:609, each 390 × 64.
+- **Nothing needed rebinding.** Both trees were walked and compared: **3 `componentPropertyReferences` before, the same 3 after**, identical node for node. Two things are worth separating here. First, **rule 8 and trap 12 are about cloning a *variant inside* a set, not the set itself** — `set.clone()` kept everything. Second, and more to the point, **this set has nothing of its own to lose**: it exposes only the `Config` VARIANT axis and no non-variant property, so the only references anywhere in it are the three `{mainComponent: "Icon#170:0"}` on the nested **library** Icon button instances, pointing at the library's own swap property. Checked rather than assumed, and trap 12 amended with the scope.
+
+### 2. The avatar in the trailing slot
+
+- In `Title with action` **only**: the library Icon button is **hidden and renamed** `Icon button (library) (SUPERSEDED 2026-09-16 · replaced by the Account/Avatar instance beside it)` — rule 1, not deleted, and still swappable back — and an `Account/Avatar` instance 114:1719 sits beside it inside the same `Action tap target 48`, `Initials = SB`.
+- **Geometry, and the one number that mattered.** The disc is the ink, so it ends at 374: disc **334–374**, centre 354. The tap target is 48 centred on that centre, so it moved from x 342 to **x 330**, spanning **330–378**, y unchanged at 8. The avatar lands at local (4, 4) inside it — the tap target was already `CENTER`/`CENTER` auto-layout — which is absolute **334, 12**, 40 × 40.
+- **Measured in device pixels, not read from the tree.** On the true 2x export, the salmon disc spans slab-local **334.0 → 373.5**, with the anti-aliased edge pixel closing at **374.0**. That is the optical edge rule satisfied by measurement.
+- **The title is untouched, and the diff proves it.** `Title` 114:602 reads x **16**, y 14, **302 × 36**, `textTruncation: DISABLED`, `maxLines: null`, `textAutoResize: HEIGHT`, `layoutSizingHorizontal: FILL` — byte-identical to the Visit variant's row in the structural diff. It could not have moved: the tap target is `layoutPositioning: ABSOLUTE`, so shifting it changes no layout, and the variant's padding is still `[16, 0, 72, 0]`, which is where the 302 comes from (390 − 16 − 72). Title text ends at most at 318, leaving **16 clear** to the disc at 334.
+- **`Initials` is exposed, and it works — but not where you would first look.** `av.isExposedInstance = true` was accepted and reads back true. The parent instance's own `componentProperties` still lists **`Config` alone**; the exposed property surfaces through **`instance.exposedInstances`** — `I114:1724;114:1719` "Account avatar", carrying `Initials#108:0 = "SB"`. So A4 can type a provider's initials on a bar instance without detaching anything. Written up as PLUGIN-NOTES trap **41**, because looking in the parent's property list makes a working exposure read as a failed one.
+
+### 3. Every other variant is identical, checked node for node
+
+- A structural diff compared each Account variant against its Visit original on depth, name, type, visibility, x, y, width, height, `layoutPositioning`, main component, characters, truncation and property references.
+
+| Variant | Rows | Differences |
+|---|---|---|
+| `Back with title` 114:605 vs 93:2739 | 5 vs 5 | **none** |
+| `Back only` 114:609 vs 93:2743 | 4 vs 4 | **none** |
+| `Title with action` 114:601 vs 93:2735 | 5 vs 7 | **four, all intended** |
+
+- The four: the tap target's x (342 → **330**); the Icon button now `visible: false` and renamed; its two hidden descendants carried along by that 12 px shift; and **two added rows** — the `Account avatar` instance at 334, 12 and its `Initials` text at 341, 22, 26 × 20, holding the `{characters: "Initials#108:0"}` reference. Row 0, the `Title`, is **not** in the diff.
+
+### 4. The proof
+
+- `PROOF · Account/Top bar vs Visit/Top bar, Title with action` **114:1721** at (4000, 1000): two 390-wide slabs, each 47 safe area + 64 bar, both filled with the paint taken **straight off `A S2 Home / empty` 103:2341** rather than re-derived — `color/background/default`, bound. Both bars read "Ambient capture".
+- Looked at: the avatar's right edge and the microphone glyph's right edge land on the same 374, and the titles sit on the same x 16 baseline. The salmon disc reads as an affordance at 40 px where the grey one did not.
+- One layout bug, caught and fixed rather than shipped: the proof columns came out 10 px tall because `resize()` after setting `primaryAxisSizingMode = 'AUTO'` locks the axis to FIXED — **trap 19**, in a place I did not expect it. Re-set to `AUTO`; columns now hug at 163.
+
+### 5. Counts
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens, screen frames | 25 | **25** (+3 PROOF, +2 components = 30 top-level children) |
+| Account screens reactions | 87 across 84 | **87 across 84**, 79 / 7 / 1, **0 off-page**, `Account device` intact |
+| Account screens, `Account/` instances **on screen frames** | 0 | **0** — nothing was placed on a screen |
+| Account screens, text on screen frames | 433 / 9,074 | **433 / 9,074** |
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, 0 off-page, `Visit device` intact |
+| `Visit/Top bar` itself | unchanged | **unchanged** — 3 variants at (3500, 8300), tap target still x **342**, Icon button still **visible**, title x 16 / 302 / DISABLED, and its **9 instances** on `Visit screens` untouched |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41**, 0 off-page |
+| `Account/` instances on Visit screens / Screens | 0 / 0 | **0 / 0** |
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a2b-topbar-2026-09-16/`: `topbar-proof-114-1721-TRUE-2x.png` (**1784 × 454**, a real 2x export via `download_assets defaultScale: 2`, trap 40) and `topbar-proof-114-1721-1x.png` (892 × 227).
+- **Not proven: still unplayed**, and **no screen carries this bar yet.** `Account/Top bar` exists as a component with one proof instance; the swap into the seven `A S2 Home` frames, re-reading each title, and retargeting the seven `Action tap target 48` reactions from `A S3 Microphone` to `A S9 Account` are all still ahead. A component swap re-parents nested nodes onto the new master, so those seven reactions **will** need capturing and replaying, exactly as the 2026-09-16 base-screens batch found.
+- Believed but not verified in pixels: that the other two variants render identically to the Visit ones. They were diffed node for node and returned zero differences, and their subtrees were untouched by this batch, but **only `Title with action` was rendered**.
+- Also not verified in pixels: the bar against the other six `A S2 Home` backgrounds. The proof uses `A S2 Home / empty`'s fill, and all seven are the same bound `color/background/default`, so this should hold — but it was checked on one frame.
+- Repo: FLAGS.md two DECISIONs added (191 lines). PLUGIN-NOTES.md trap 12 amended with the set-clone scope, trap 41 added. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- **One thing for Daniel, because the two rules genuinely conflict.** A 48 target centred on a disc that must end at 374 spans 330–378, which bleeds into the gutter as asked but leaves **12 px of dead screen at the right edge** — the Visit bar's target ran flush to 390. Reaching the edge would push the disc's ink to 386, twelve past the optical line. Built centred, per the brief; `mobileAccount_avatarTapTargetCannotAlsoReachTheEdge`.
+- Status: A2b complete. A2c (placing the bar on the seven home frames and rewiring) is the next natural batch; A3, A4 and A5 are unblocked.
