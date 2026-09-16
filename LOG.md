@@ -2167,3 +2167,61 @@ On the true 2x export:
 - Believed but not verified in pixels: that the identity block reads correctly at the 2x export as well as 1x — the 2x was taken and saved but the 1x frame render is what I read the layout from; and the `A S9 Account / unsent` sign-out button, which is the same instance as the one confirmed on `A S9 Account`.
 - Repo: FLAGS.md two DECISIONs struck closed, one GAP and two DECISIONs added (GAP 57 open / 4 closed, DECISION 113 / 42, 54 struck). COMPOSITIONS.md one entry, the identity block. PLUGIN-NOTES.md trap 44. LOG.md this entry. CLAUDE.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: A4a complete. **A4b next**: the sign-out warning dialog, the seven-avatar retarget, the `A S2 Home / unsent` row and avatar retargets, and the `Unsent recording` starting point.
+
+## 2026-09-16 · Mobile visit drawer · D1, one drawer — and the glyph ruling stopped
+
+- File `TP5KrQtY0T5IcMNqi375So`. **This batch changed `Visit screens` by design.** Additive only; nothing deleted. A4a confirmed logged (`4d92b87`). `figma.skipInvisibleInstanceChildren = false` on every read.
+- **Steps 1 and 2 done. Step 3, the glyph swap, was not built** — the evidence contradicts its premise, and building it would move Figma away from code. Step 4's counts were run in full.
+- One input was missing: the brief names `mobile-visit-drawer-spec.md` **rev 8**; the file on disk is still **rev 5**, whose own header says the finished prototype is not modified — which this batch does by design. The brief states both rulings in full, so the work was not blocked, but rev 8 never arrived.
+
+### 1. The drawer: the difference was one overloaded boolean
+
+- `Visit/Drawer` 48:897 has two variants, `Mode = list | sheet`, and four properties: `Closable#48:1`, `Sheet#48:4`, `Stroke#132:0`, `Mode`.
+- **There is no patient variant and no separate structure.** Both pages use the same two variants; the patient frames differ only in setting `Closable = false`. And `Closable` was wired to far more than the close button:
+
+| Variant | Nodes bound to `Closable#48:1` |
+|---|---|
+| `Mode=sheet` | `Puller zone`, `Close` |
+| `Mode=list` | `Top row`, `Puller zone`, `Title row`, `Close` |
+
+- So `Closable = false` hid the puller along with the close, and on the list frame hid the entire top row. That is the whole cause of the defect: **`V4 Patient / list` opened its sheet list at y 201, flush under the 32 corner**, and the two V4 sheet frames had a title row with no puller above it.
+- **Vertical budget, V4 / A4**: drawer top **201**, drawer height 643, footer band top **722**. Content ran 201→722 before the footer overlapped. Gaining the puller costs **30** on the two sheet frames (body 249 → 279) and **78** on the list frame (201 → 279), since that one had no top row at all.
+- **Neither gate tripped.** The fix needed no new component, no detach and no drawer moved — only the removal of four `componentPropertyReferences`.
+
+### 2. What was built
+
+- **Four nodes unbound from `Closable#48:1`** and set unconditionally visible: `Puller zone` on both variants, plus `Top row` and `Title row` on `Mode=list`. `Close (library Icon button)` keeps `Closable#48:1` on both variants — so **the property already was a boolean and did not need renaming; it now means only what its name says.**
+- **All sixteen drawer instances across both pages** read `Top row` **78**, puller visible, close following `Closable`. Drawer tops unchanged at **201** and **119**. `Stroke` still true on all six patient drawers, false on the ten recording ones. On the list frames the highlighted first row moved down with the list.
+- **Verified by diff.** Comparing the top 120pt of each drawer on `V4 Patient / summary` and `V5 Recording / summary`: below the corner band and left of the close zone they are identical **to one anti-aliased pixel** (a single device pixel at 2x). The corner band differs because one cuts to beige and the other to green; the close zone differs because that is the one thing meant to differ.
+
+### 3. The glyph: stopped, because Tebra is not stock MUI here
+
+- The ruling reads: filled triangle = choose from a list (Select's `ArrowDropDown`), chevron = expand in place (`ExpandMore`). **That is true of stock MUI and not of this system.** Code, checked across `packages/design-system`:
+  - `TextFieldOverrides.tsx` sets `SelectProps.IconComponent` to a grey **`DownCaretIcon`** — Tebra replaces MUI's `ArrowDropDown` on Select.
+  - `AutocompleteOverrides.tsx` sets `popupIcon` to **`DownCaretIcon`**.
+  - Every list-opening `endIcon` in the package is **`DownCaretIcon`**.
+  - **`ArrowDropDown` appears zero times.** `ExpandMore` appears only inside a story's label text, never as an icon.
+- Figma already agrees with code where it can be checked: the library Text field's own `Select caret` renders **`Icon/DownCaret`**.
+- So the two pills, both on `Icon/DownCaret` 2:28, **already match the shipping Select**. The control that disagrees is the drawer's `Title switcher`, a **local** `Visit/Icon/ArrowDropDown (MUI)` 59:493 with 5 visible instances — built from the MUI icon Tebra's theme overrides.
+- Swapping the pills to triangles would take three controls **away** from code rather than bringing one back. Under rule 10 and "where Figma disagrees with code, Figma is wrong", **step 3 was not built** and no icon was touched. `mobileVisit_tebraSelectUsesCaretNotTriangle`.
+- The inventory the brief asked for, from the file rather than from memory — **163 caret or triangle instances on `Visit screens`, 18 of them visible**: `Icon/DownCaret` 2:28 on the Template pill and the device pill (3 frames each, V4 only — the V5 frames carry no pill); `Icon/DownCaret` 4:300 as the library Text field's own Select caret; `Icon/LeftCaret` on four back buttons, which navigate and are unaffected; `Icon/RightCaret` on the superseded `Microphone summary row`, which navigates; and `Visit/Icon/ArrowDropDown (MUI)` on five `Title switcher` instances, which open the sheet list. **The Template pill carries no reaction at all** — it is the inert pill already on record as `visitDrawer_templatePillNoMenu`.
+- **The second gate was not reached**, so whether the pill's end icon can be swapped as an instance override is still untested. It is the `End icon swap#83:386` INSTANCE_SWAP on a remote library Button being handed a local component, which the D0 probe proved only for a local host.
+
+### 4. Counts
+
+| | Expected | Read back |
+|---|---|---|
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, 79 / 7 / 1, 0 off-page, `Visit device` intact |
+| Account screens | unchanged from A4a | **30 screen frames, 104 across 101**, 96 / 7 / 1, **528 / 10,207**, 0 off-page, `Account device` intact |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41**, 0 drawer instances |
+| `Account/` instances on locked pages | 0 | **0** |
+
+- Only geometry moved. No frame, reaction, destination or character changed on any page.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-d1-drawer-glyph-2026-09-16/`: `BEFORE-drawer-tops-v4-over-v5-2x.png` and `AFTER-drawer-tops-v4-over-v5-2x.png` (780 × 496 each), `BEFORE-three-controls-2x.png`, and the two 2x frame exports the crops came from.
+- **Not proven: still unplayed.**
+- **Not rendered, and this is the gap in this entry**: step 4 asked for 1x renders of all three V4, all three A4, one V5, one A5 and A S5 recording. Only `V4 Patient / summary` and `V5 Recording / summary` were rendered, at 2x, as the before-and-after pair. The other nine frames were verified **numerically** — all sixteen drawer instances read back with the same top row, puller, close and body origin — but they were not looked at. The list frames in particular gained 78 rather than 30, and that is the case I would most want eyes on.
+- Repo: FLAGS.md one DEFECT added already struck closed, one DEFECT added open, one DECISION added (DEFECT 31 open / 9 closed, DECISION 114 / 42, 55 struck). COMPOSITIONS.md the drawer entry extended with the one-top rule; **the glyph rule was not added**, because it is not settled. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- **Open for Daniel**: the glyph question, now that the premise has moved. Leave both alone and the file matches code, or change the sheet selector to a caret and it matches code everywhere. And rev 8 of the drawer spec, which this batch worked without.
