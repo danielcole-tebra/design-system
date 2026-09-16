@@ -2028,3 +2028,80 @@ On the true 2x export:
 - Repo: FLAGS.md one DEFECT struck closed, two DECISIONs struck closed, one DEFECT and one DECISION added (DEFECT 30 open / 7 closed, DECISION 107 / 39; 50 struck lines). COMPOSITIONS.md one entry added and the microphone sheet entry updated to 16. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - **Open for Daniel, and it blocks nothing but should be settled before A3b resumes**: what goes behind a docked drawer's corners. The microphone frames in step 2 are the good case — a sheet over a field — so they can be built either way, but whatever is decided for the docked drawer will want doing in the same pass.
 - Status: A3b step 1 done, steps 2 and 3 not started.
+
+## 2026-09-16 · Mobile account addendum · A3b continued, 32 corners, the stroke, and the two microphone frames
+
+- Spec: `mobile-account-spec.md` revision 3 section 4. File `TP5KrQtY0T5IcMNqi375So`. Additive only; nothing deleted. `figma.skipInvisibleInstanceChildren = false` on every read. Every gate in the brief passed, so the batch ran to the end.
+
+### 1b. The stroke, found before it was used
+
+- **One candidate, not a choice.** An audit of **every visible stroked node on `Visit screens` — 76 of them** — found exactly one thin grey rule: **`color/divider` #D6D6D6, alpha 1, `STROKE_COLOR` scope only, at 1px INSIDE**, used two ways. Twelve nodes carry it as a **bottom** hairline (list rows, the drawer's title row); **six carry it as a top keyline** on the Start recording footer band, recorded as `visitDrawer_footerKeylineIsInsideTopStroke` — "built as an INSIDE top stroke on the band rectangle itself, not as a separate line node". That is the same construction this batch reuses, which is what makes it the stroke Daniel meant.
+- Everything else stroked in the file is a control border, not a rule: `color/substrate/inputOutline` (black at 0.23, the Text field), `secondary/main`, `error/main`, `core/main`, `success/dark`, `primary/main`. No ambiguity, so no stop.
+
+### 1b. Heights: nothing clamps, and one number that looks like it should
+
+| Carrier | Size | Max radius Figma allows | Top region |
+|---|---|---|---|
+| `Visit/Drawer` `Mode=list` 48:814 | 390 × 621 | 195 | `Sheet list` 621 |
+| `Visit/Drawer` `Mode=sheet` 48:880 | 390 × 621 | 195 | `Top row` 48 |
+| `Visit/Drawer edge` 70:1480 | 390 × **112** | **56** | `Puller zone` **30** |
+| `Account/Microphone sheet` 121:1793 | 390 × 256 | 128 | `Top row` 78 |
+
+- **32 never clamps** — the smallest carrier allows 56. Worth recording because one number looks like it should: the edge's `Puller zone` is **30**, two short of the radius, so the corner arc finishes 2px inside the `Title row`. Both are fill-less, so nothing renders differently, and no stop condition was met.
+
+### 1b. What was built
+
+- **32/32/0/0 with `clipsContent` true on all four components.**
+- **The `Stroke` boolean.** A boolean component property can only toggle **visibility**, not a stroke weight, so the stroke is a child node: a **390 × 64 absolute frame at (0, 0)**, no fill, top corners 32, `strokeTopWeight 1` with the other three sides **0**, INSIDE, bound to `color/divider`. It is **64 tall rather than 32** so the 32 radius is not clamped to 16 by the half-the-smaller-side rule — a 32-tall child would have drawn a 16 arc and quietly failed to match the sheet. Property added to the **set** for `Visit/Drawer` (one node per variant) and to the component for the edge and the sheet; default **false** everywhere.
+- **Stroke on for six drawers**: the three V4 and three A4 ready-bar frames. Off everywhere else.
+- **Bar fill extended 32 under the drawer on all ten V5 and A5 frames.** A 390 × 32 rectangle carrying **the bar instance's own bound fill**, read off each bar rather than re-derived — `color/success/dark` on the six recording frames, `color/primary/main` on the four paused — inserted **between bar and drawer in z-order** so the drawer overlaps it. **No shared component touched, no bar changed height**: every bar reads 119 before and after.
+
+### 1b. The corners, measured at 4x
+
+| Frame | Corner reads | Verdict |
+|---|---|---|
+| `V5 Recording / summary` 51:1760 | **green #2B865A** (was beige) | fixed |
+| `A5 Recording / summary` 103:3045 | **green #2B865A** (was beige) | fixed |
+| `V S5 Recording / recording` 43:809 | green | unchanged, correct |
+| `V4 Patient / summary` 50:1570 | beige, **plus the divider hairline** — 1344 of 1560 device columns on the row below read #D6D6D6, and at 32pt in the pixel is exactly (214, 214, 214) | correct |
+| `A4 Patient / summary` 103:3037 | same | correct |
+
+- Looked at, not only sampled: `CORNER-v5-open-left.png` shows a clean 32 arc cutting into green where the pale nick used to be; `CORNER-v4-stroke-left.png` shows the hairline running the top edge and around the arc, which is what finally separates the white sheet from the beige page; `CORNER-collapsed-left.png` is unchanged and still right.
+
+### 2 and 3. The two frames
+
+- **`A S5 Recording / microphone` 133:4410** and **`A S5 Paused / microphone` 133:4508**, cloned from 103:2426 and 103:2438, placed at x **1530** and **2000** in the same row — the next free columns in that row rather than literally adjacent, which is the page's own convention.
+- **Frame-own reactions compared before re-applying anything** (trap 35): source **0**, clone **0**. Nothing to restore, and nothing was blindly added.
+- **Each clone arrived with 4 inherited reactions across 3 nodes** — Pause or Resume, Stop, and the drawer edge's tap and drag — and **all four were cleared on each**, because every one of those controls now sits under a scrim and cannot be reached. This was the one judgement in the batch, and the brief's own expected count settles it: 87 + 2 pills + 5 + 5 = **99 across 96**, which is what read back.
+- Scrim: a full-frame 390 × 844 rectangle with the paint taken straight off `A S6 Stop confirmation`'s scrim, appended **above everything including the drawer edge**; then the sheet instance, `Stroke` **off**, 390 wide at y **588**.
+- **The transition is `transition: null`, in both directions, because that is what `A S6` uses in both directions.** Its Stop opens with null and its Scrim and Cancel return with null — the file has no animated dialog transition to match. Recorded rather than invented.
+- Every way out is an **explicit destination, not BACK**: three rows, the close button and the scrim, on each frame. The selected row still reads `Selected / Default / Default` on both.
+
+### 4. Both frames, and both pixel checks
+
+- **The scrim reads at 0.5, not 0.25**, on both fields — the trap 43 check, re-run on the real frames: recording samples **(21, 67, 45)** where 0.5 predicts (22, 67, 45) and 0.25 predicts (32, 100, 68); paused samples **(0, 36, 41)**, exactly 0.5's prediction.
+- **The sheet's top corners read the scrimmed field on both**: x 0 and x 389 at the sheet's top row are the dimmed colour, and 32pt in it is white.
+
+### 5. Counts, every one as expected
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens, screen frames | 27 | **27** (+4 PROOF, +3 components = 34 top-level children) |
+| Account screens reactions | 99 across 96 | **99 across 96** |
+| Triggers | 91 click, 7 drag, 1 timeout | **91 / 7 / 1** |
+| Cross-page edges | 0 | **0** |
+| `Account device` | intact | **intact** |
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, 0 off-page, `Visit device` intact |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41**, and **0 drawer instances**, so the corner change could not reach it |
+| `Account/` instances on locked pages | 0 | **0** |
+
+- **Account screens text 442 / 9,088 → 471 / 9,387**, and the delta is exactly the two new frames: they hold **14 + 15 = 29 nodes** and **146 + 153 = 299 characters**. Nothing else moved.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a3b-corners-frames-2026-09-16/`: five 4x frame exports with `ZOOM32-*` corner bands and three tight `CORNER-*` crops; `as5-recording-microphone-133-4410-1x.png` and `-TRUE-2x.png`, `as5-paused-microphone-133-4508-1x.png` and `-TRUE-2x.png`.
+- **Not proven: still unplayed.** Every transition here is a stored `null`, and nothing was exercised in presentation mode.
+- Believed but not verified in pixels: **the other eight drawer-open frames** across the two pages, and the two remaining A4 frames. Two of each case were rendered; the rest were read numerically as 32/32/0/0 with the right `Stroke` value and, where applicable, a strip carrying the right bound fill. They share the same masters and the same bar geometry.
+- **One thing the renders turned up that nobody asked about.** The sheet begins at y 588 and the device pill sits at **557–595** on the recording frame and **569–607** on the paused one, so the sheet clips the pill by **7** and **19** px and its dimmed top edge pokes out above the sheet on both. It is what a bottom sheet over an unchanged screen does — but the two frames disagree with each other by 12px, which reads as an accident rather than a choice. Reported, not resolved: `mobileAccount_sheetTopEdgeClipsTheDevicePill`.
+- Repo: FLAGS.md one DEFECT struck closed, one DECISION struck superseded, six DECISIONs added (DEFECT 29 open / 8 closed, DECISION 112 / 40, 52 struck lines). COMPOSITIONS.md the corners entry rewritten for 32 plus the stroke and the bar-fill rule, and the microphone sheet entry updated. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: A3 complete. **A4 next** — `A S9 Account`, `/ unsent`, the sign-out warning, `A S2 Home / unsent`, the seven-avatar retarget and the `Unsent recording` starting point. Still interim until then: the home avatars lead to `A S3 Microphone`.
