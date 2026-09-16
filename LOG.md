@@ -1311,3 +1311,68 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders.
 - Repo: FLAGS.md one DECISION added (92 → 93 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: the drawer and the edge share one stack, and V4 is on it too. **Open for Daniel: two dead booleans to remove in a deliberate pass.** Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Copied base screens brought onto the Visit rules
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. **Nothing on `Screens`, and the base components were not edited.** **No node deleted** — the superseded rows are hidden and renamed. Two component *properties* were removed, which rule 1 does not cover. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 0. The two dead properties are gone
+
+- Checked before removing: **zero nodes in either variant referenced `Handle row#73:1` or `Legacy header#87:0`**. Both deleted from `Visit/Drawer` `48:897`, which now carries `Closable#48:1`, `Sheet#48:4` and `Mode`.
+- **Every Visit frame renders the same after**: drawer y 201 h 643 on V4 and y 119 h 725 on V5; Top row 48 on the two V4 sheet frames, hidden on V4 list, 78 on all five V5; sheet bodies 595 and 647; lists 643 and 647; reactions 87 across 84. Closes the open item in `visitDrawer_pullerZoneIsTheDragArea`.
+
+### 1. The audit, before anything changed
+
+- Every visible vector ink within 40 of a frame edge, across all 25 frames — **40 items**. They fall into three groups.
+
+**Off grid, screen-edge affordances — fixed in this batch:**
+
+| Where | Component | Ink before | Ink after |
+|---|---|---|---|
+| V S2 Home × 7, trailing action | base `Top bar` `Config = Title with action` | 342–**358** | 358–**374** |
+| V S3 Microphone, back | base `Top bar` `Config = Back with title` | **33.97**–45 | **16**–27.03 |
+| V S4 Patient, back | base `Top bar` `Config = Back only` | **33.97**–45 | **16**–27.03 |
+| V S3 Microphone, row check | `Microphone list row` `Icon/CheckmarkOutlined` | 352–372 | **removed with the row** |
+
+**Already on grid, untouched:** the V4 ready bar's back chevron at **16**, and every V5 StopCircle and Cancel at **374**.
+
+**Off grid but deliberately left, and this is the whole distinction:**
+
+| Where | Ink | Why untouched |
+|---|---|---|
+| `Icon/Search` in the search field, 7 frames | 336–356 | inside a library Text field's border — inset by the control's padding, not a screen margin |
+| `Icon/DownCaret` in a Select, V S4 | 343.67–360.33 | inside the control |
+| `Icon/AttentionFilled`, V S8 Sent / failed | 33.67–50.33 | inside a library Alert |
+| `Icon/WarningFilled`, 3 frames | 33.67–50.2 | inside the AI alert |
+| `Icon/List` in the Template pill, 3 frames | 34.33–47.67 | inside the pill |
+| `Microphone summary row` `4:468`, V S4 | mic 20, chevron 357–**368.03** | genuinely off grid, but the frame is SUPERSEDED with zero inbound edges |
+
+- The first five are not screen-edge affordances at all; the optical rule does not reach inside a bordered control, and 4.5 rule 5 forbids overriding published internals. The sixth is a real miss on a dead frame — **reported, not fixed**, rather than building a Visit/ copy of a component that appears once, on a screen nothing can reach.
+
+### 2. Visit/Top bar
+
+- **`Top bar` `4:431` is shared with `Screens`, so it was cloned, not edited** — `Visit/Top bar` **`93:2734`**, same `Config` axis and all three variants, 390 × 64.
+- The fix follows the ready bar's precedent: the affordance goes **absolute and bleeds past the gutter**, and the variant's padding takes over holding the title. Back tap target to **x -1.97** with `paddingLeft 72`; action tap target to **x 342** with `paddingRight 72`. Titles read back at **x 16** and **x 72**, **302** wide — exactly where they were.
+- **Swapped into all nine frames** that used the base bar: seven V S2 Home frames, V S3 Microphone, V S4 Patient. **Titles survived the swap on all nine** — checked and read back, none needed re-typing. `Screens` still carries **ten** instances of the original `4:431`.
+- No other base component was copied; see the audit table for why.
+
+### 3. V S3's microphone list
+
+- Three `List/Item` instances at **390 × 48**, `Show icon` off so the text sits at **16**, **State=Selected** on "iPhone microphone" with the library's `rowSelected` fill at opacity 0.08, Default on "AirPods Pro" and "Wired headset". **Zero checkmarks** — the library marks the current row with its fill.
+- The old rows are hidden and renamed, keeping their variants. The footnote is untouched, still reading "Changing input during a recording isn't supported.", and moved up 24 as the rows lost 8 each: `Content` **284 → 260**.
+
+### 4. Wiring — 87 before, 87 after
+
+- **Nine top-bar reactions re-applied after the swap**, matched by layer name, none lost: seven `Action tap target 48` → `43:783`, V S3's `Back tap target 48` → **BACK**, V S4's → `43:727`. A component swap re-parents the nested nodes onto the new master, so these had to be captured and replayed rather than surviving on their own.
+- **Three microphone row reactions moved** to the new `List/Item` instances, all three still `ON_CLICK → BACK`. The old rows read 0.
+- 79 ON_CLICK, 7 ON_DRAG, 1 AFTER_TIMEOUT. No edge leaves the page.
+
+### Verification
+
+- **The audit re-run after the fix**: 39 items, and every screen-edge affordance is now on **16** or **374**. The only off-grid ink left is the six rows in the "deliberately left" table.
+- **Measured in the 2x render, not only in the tree**: V S3's back chevron ink begins at device column 32 = **16.0pt**; V S2's action icon ink ends at device column 747 = **374.0pt**.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes, zero destinations leaving the page, and zero `Visit/` or `List/Item` instances** among its 179 — while still holding ten base `Top bar` instances, which is the proof the base component was left alone.
+- Verified in pixels and looked at, **true 2x** full-frame exports (780 × 1688) in `figma-export/visit-base-screens-align-2026-09-16/`: `vs3-microphone-43-783-full-2x.png`, `vs2-home-sessions-43-739-full-2x.png` and `vs4-patient-superseded-43-795-full-2x.png`, plus `CONTACT-full.png`. **One frame per top-bar variant** rather than all nine — the other six V S2 frames are the same instance of the same variant, and the audit table carries their numbers.
+- **Not proven: still unplayed.** Stored geometry and static renders.
+- Repo: FLAGS.md one DECISION added (93 → 94 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: the copied base screens are on the Visit rules. **Open for Daniel: `Microphone summary row` on the superseded V S4 is still off grid, left on purpose.** Phase 2 (P1 onward) still needs a source node per sheet.
