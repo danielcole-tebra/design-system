@@ -1902,3 +1902,70 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - Not checked: whether any of the 21 existing entries should have carried override or decider fields too. The new section uses them; the old ones do not. That inconsistency is now in the file and is worth a decision rather than a drift.
 - Repo: `COMPOSITIONS.md` 30 → 40 lines, one new section of five entries. `FLAGS.md` six pointers, no other change. `LOG.md` this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: R1 complete. A3, A4 and A5 unblocked and unchanged by this batch.
+
+## 2026-09-16 · Mobile account addendum · A3a, Account/Microphone sheet
+
+- Spec: `mobile-account-spec.md` **revision 3** section 4.2 (the brief cited rev 2; rev 3 is what is on disk and its 4.2 is the same instruction plus the radius, fill and scrim lines). File `TP5KrQtY0T5IcMNqi375So`, library `YX2n4YLrEpBXNbcc73T6dw` read only. **No screen frame edited on any page.** Nothing deleted. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. The three reads, before anything was built
+
+**`Visit/Drawer` 48:897**, read on the master and again on instance 103:3047 as it renders on `A5 Recording / summary`:
+
+| | Value |
+|---|---|
+| Top row | **78** = puller zone **30** + title row **48** |
+| Puller | RECTANGLE 30 × 6 at x **180**, y **8** in the zone, radius 3, fill bound `color/grey/400` |
+| Title | `h4` (Akkurat LL Bold 16/24) at x **16**, y +12 in the row, fill bound `color/text/primary` |
+| Close | library Icon button at x **344**, 40 × 40, y +4; its glyph is `Visit/Icon/Cancel (MUI)`, vector **354–374** |
+| Surface fill | bound **`color/background/paper`** |
+| Corner radius | **0 / 0 / 0 / 0** — see below |
+| Bottom safe area | **34**, carried as `Sheet body` bottom padding, not as a node |
+
+**`A S3 Microphone` 103:2397** — three rows, read off the frame rather than retyped from the spec: **"iPhone microphone"** on `Lines=One, State=Selected` (83:549), then **"AirPods Pro"** and **"Wired headset"** on `Lines=One, State=Default` (83:547). All 390 × 48, `Show icon` false.
+
+**Library `List/Item` — A0's open question is answered: yes.** The set is `Lines = One | Two` × `State = Default | Hover | Selected`, six variants, and **`Lines=One, State=Selected` exists at 48 tall** (83:549) with `Show icon` as a separate BOOLEAN, so "Selected, icon off, 48" is expressible without any workaround. One correction to the brief: in this file the set is **83:546**, not 174:17 — `174:x` is the property-id namespace, not the node.
+
+### 2. What was built
+
+- **`Account/Microphone sheet` 121:1793**, local COMPONENT on `Account screens` at (4000, 1300), **390 × 256** hugging: top row 78, three rows 144, safe area 34.
+- Chrome matches the drawer value for value, listed above. Rows are three library `List/Item` instances, `Show icon` off, full width, the same three strings in the same order, the current device on `State=Selected` — which carries the library's own `rowSelected` fill at **opacity 0.08**, left exactly as the library sets it (rule 5: nothing about that paint was touched).
+- Safe area is **34 of bottom padding on the component root**, which is the drawer's own idiom (`Sheet body` padding `16/8/16/34`) rather than a spacer node.
+- **The scrim is not in the component** and there are **zero reactions** anywhere inside it. A3b builds both.
+
+### 3. Measured in device pixels, not read from the tree
+
+On the true 2x export:
+
+| | Measured | Intended |
+|---|---|---|
+| Close glyph ink | **354 → 374** | ends on the optical edge, 374 |
+| Puller | **180 → 210**, centre 195 | 30 wide, centred on 195 |
+| Title ink | first dark column **17** | node at x 16, normal side bearing |
+
+### 4. Two findings, one of which I nearly got wrong
+
+- **`Visit/Drawer` has no corner radius, and its own spec says 16.** The visit addendum reads "Top corners 16"; the built component is `0/0/0/0` on both variants and on every instance. It has never shown, because the drawer's top edge always sits directly under the recording bar with nothing behind it — and it shows the moment a sheet sits over a field. The brief said to match the drawer, so the sheet is square, and against a scrimmed green field it reads as a slab rather than a sheet. Two values each would close it. Built to match, reported not resolved. `mobileAccount_drawerHasNoCornerRadius`.
+- **The scrim is not double-dimmed, and I was about to report that it was.** The scrim binds `alphaBlack50`, whose stored value is `{0,0,0,a:0.5}`, **and** its paint carries `opacity: 0.5` — two halves that look like a 0.25 render. Sampling the export instead: the scrimmed pixel over `#2B865A` reads **(21, 67, 45)**, and 0.5 predicts (22, 67, 45) where 0.25 predicts (32, 100, 68). **They are not multiplied.** What that does *not* settle is which of the two governs, since both are 0.5; telling them apart needs a paint and a variable carrying different values. Written up as PLUGIN-NOTES trap **43**, because rule 5's wording invites exactly the wrong inference and a "fix" here would have dimmed every scrim in the file.
+
+### 5. Counts
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens, screen frames | 25 | **25** (+4 PROOF, +3 components = 32 top-level children) |
+| Account screens reactions | 87 across 84 | **87 across 84**, 79 / 7 / 1, **0 off-page** |
+| `Account device` | intact | **intact**, → 103:2320 |
+| Account screens text on screen frames | 442 / 9,088 | **442 / 9,088** |
+| Sheet instances on any screen frame | 0 | **0** |
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, `Visit device` intact |
+| `Visit/Drawer` itself | unchanged | **unchanged**, 2 variants at 390 × 621 |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41** |
+| `Account/` instances on locked pages | 0 | **0** |
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a3a-micsheet-2026-09-16/`: `micsheet-proof-121-1848-TRUE-2x.png` (**780 × 1688**, a real 2x export, trap 40) and `micsheet-proof-121-1848-1x.png` (390 × 844). The proof frame is 390 × 844 filled with the paint taken straight off `A S5 Recording / recording` and the scrim taken straight off `A S6 Stop confirmation`, with the sheet pinned at y **588–844**.
+- **Not proven: still unplayed**, and **the sheet is on no screen.** It is a component and one proof instance. The two frames `A S5 Recording / microphone` and `A S5 Paused / microphone`, their scrims, the pill reactions and the return paths are all A3b's.
+- Believed but not verified in pixels: that the sheet reads the same over the **paused** field `#004852` as over the recording green. Only the recording field was rendered; the sheet carries its own paper surface, so the field only shows through the scrim above it, but it has not been looked at.
+- Repo: FLAGS.md one DEFECT and one DECISION added, with a COMPOSITIONS pointer on the DECISION (195 lines; DEFECT 30/6, DECISION 108/37). COMPOSITIONS.md one entry in the provisional Mobile section, per the Record rule as it now stands. PLUGIN-NOTES.md trap 43. LOG.md this entry. CLAUDE.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- **Open for Daniel before A3b**: square corners or 16. A3b builds two frames around this sheet either way, and changing it afterwards is still only two values on each of two components.
+- Status: A3a complete. A3b next; A4 and A5 unblocked. Still interim: the seven home avatars lead to `A S3 Microphone` until A4.
