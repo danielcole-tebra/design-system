@@ -1697,3 +1697,74 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - Repo: FLAGS.md two DECISIONs added (191 lines). PLUGIN-NOTES.md trap 12 amended with the set-clone scope, trap 41 added. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - **One thing for Daniel, because the two rules genuinely conflict.** A 48 target centred on a disc that must end at 374 spans 330–378, which bleeds into the gutter as asked but leaves **12 px of dead screen at the right edge** — the Visit bar's target ran flush to 390. Reaching the edge would push the disc's ink to 386, twelve past the optical line. Built centred, per the brief; `mobileAccount_avatarTapTargetCannotAlsoReachTheEdge`.
 - Status: A2b complete. A2c (placing the bar on the seven home frames and rewiring) is the next natural batch; A3, A4 and A5 are unblocked.
+
+## 2026-09-16 · Mobile account addendum · A2c, the screen edits
+
+- Spec: `mobile-account-spec.md` revision 2, batch A2c, sections 2, 3, 4.1 and 4.3. File `TP5KrQtY0T5IcMNqi375So`. **Every edit landed on `Account screens` frames.** `Visit screens` and `Screens` were read and not written to, and `Visit/Top bar` 93:2734 was not edited. Nothing deleted; two nodes and one frame hidden and relabelled under rule 1. `figma.skipInvisibleInstanceChildren = false` on every read.
+- Daniel's rulings applied: **the avatar tap target runs flush to the screen edge**, and **the device pill reads "iPhone microphone" on A frames**.
+
+### 1. The tap target, 60 × 48, flush
+
+- `Action tap target 48` → **`Action tap target 60 x 48`**, x **330**, y 8, running to **390**. The disc stays at **334–374** because it is held by `paddingLeft 4` / `paddingRight 16` and `primaryAxisAlignItems: MIN` — centring a 60-wide frame would have pushed it to 340. Constraints `[MAX, MIN]`, positioning still `ABSOLUTE`.
+- **Title untouched**: x 16, y 14, **302 × 36**, `textTruncation: DISABLED`, `maxLines: null`; variant padding still `[16, 0, 72, 0]`. Read back on the master and again on all seven instances after the swap.
+
+### 2. Nine bars swapped, and a clean split in what survived
+
+- **Nine, as expected, and here they are**: `A S2 Home / empty` 103:2347, `/ sessions` 103:2359, `/ results` 103:2376, `/ no results` 103:2389, `/ searching` 103:2987, `/ after first capture` 103:2999, `/ after failed capture` 103:3016 — all `Title with action` — plus `A S3 Microphone` 103:2403 (`Back with title`, "Microphone") and `A S4 Patient` 103:2418 (`Back only`, no title). **Zero `Visit/Top bar` instances remain on `Account screens`; nine `Account/Top bar` instances stand in their place.**
+- **All nine titles survived the swap.** Every one read back unchanged and none needed re-typing — "Ambient capture" × 7 at x 16, "Microphone" at x 72, both still 302 wide and `DISABLED`.
+- **The reactions split, and the split is the finding.** The two `Back tap target 48` nodes kept their name on the new master and their reactions **survived** — read back **1** each before anything was replayed. The seven `Action tap target 48` nodes had been renamed `Action tap target 60 x 48`, and their reactions were **gone** — read back **0**. So `swapComponent()` keeps an override where the **layer name matches**, and drops it where it does not. Every reaction was replayed from the pre-swap capture through an explicit old-name → new-name map, so the count never moved. Written up as PLUGIN-NOTES trap **42**; had I replayed blindly onto the two that survived, they would now carry two reactions each.
+- **Interim, and it matters for anyone playing the prototype**: all seven home avatars still lead to `A S3 Microphone`, because `A S9 Account` does not exist yet. The avatar looks like an account affordance and behaves like a microphone one. **A4 retargets all seven.** `mobileAccount_homeAvatarInterimDestination`.
+
+### 3. The device pill
+
+- **The horizontal room, which A0 left open: the whole width.** Scanning both `A S5` frames for anything intersecting the band between the meter and the controls returns **nothing** — `intersecting: []` on each. So the band is empty edge to edge: **390 of frame, 358 between the 16 gutters.**
+- Built as a standalone instance of the same library Button the A4 ready bar uses — `variant=contained, color=primary, size=medium` 6:17 — with the same overrides read off the A4 pill rather than guessed: `Start icon` on, swapped to the local `Icon/Microphone (SCAFFOLDING)` 4:368, `End icon` on, swapped to `Icon/DownCaret` 2:28.
+
+| | `A S5 Recording / recording` 103:2426 | `A S5 Recording / paused` 103:2438 |
+|---|---|---|
+| Pill | **116:2450** | **116:2458** |
+| Size | **227 × 38** | **227 × 38** |
+| Position | x **82**, y **557** | x **82**, y **569** |
+| Clear above / below | **65 / 65** | **53 / 53** |
+| Clear left / right | **82 / 81** | **82 / 81** |
+
+- **The 1px asymmetry is unavoidable and is not a mistake.** 390 − 227 = 163, an odd number, so a perfectly centred pill would sit at x 81.5. Rule 4 forbids the half-pixel, so it is at 82 and its optical centre is 195.5 against the frame's 195.
+- Not on the slim bar: the drawer edge sits at y 732, far below, and the drawer-open `A5` frames were not touched. **No reaction on either pill** — A3 wires them.
+- The three A4 ready bar pills were given the same label, as instructed. **That produced a visible defect, reported not resolved** (see below).
+
+### 4 and 5. The footnote and the superseded frame
+
+- **`A S3 Microphone`**: the footnote "Changing input during a recording isn't supported." is hidden and renamed `Microphone footnote (SUPERSEDED 2026-09-16 · addendum 4.3 …)`. **Hiding the text alone was not enough** — its wrapper `Recording note` 103:2410 is a padded frame in the vertical stack and went on holding a **52 px band** open with nothing in it. The wrapper is hidden and labelled too, and `Content` dropped **260 → 208**. Caught by reading the tree back, then confirmed in the render: the screen is now the bar and three rows.
+- **`A S4 Patient` 103:2412 was visible.** It is now hidden and renamed `A S4 Patient (SUPERSEDED · replaced by A4 Patient / summary 103:3037; zero inbound edges; hidden 2026-09-16)`, which also closes the stale cross-page pointer A1 carried across. **Inbound reactions counted, not assumed: zero.**
+
+### 6. What the renders show, including two things that are wrong
+
+- **"iPhone microphone" renders "IPhone Microphone" in the pill.** The library Button's label sits on the `button` typography variant, `textTransform: capitalize` in code, so the leading lowercase letter is capitalised along with everything else. The same string in the `A S3` list rows renders correctly as "iPhone microphone", because `List/Item` is not a Button — **the two screens now disagree about the name of the same device.** Figma is faithful; the defect would ship. Not correctable through the component; `textTransform` is not an instance override. `mobileAccount_pillLabelCapitalisesIPhone`.
+- **The A4 ready bar now clips its own pill.** Naming it grew it **82 → 227**, and `Pills row` is a horizontal auto-layout with the Template pill at 16–216 and the device pill from 224 to **451** against a 390 frame. The frame clips, the row does not, so the render reads `IPhone Micropho` with **the caret gone entirely**, on all three A4 frames. Done because the brief said to set the label; the overflow is the consequence. `mobileAccount_a4PillsRowOverflowsWhenNamed`.
+- The rest reads as intended: the salmon avatar sits in the home bar with its right edge on 374, and both `A S5` pills sit clean and centred on the green and the teal fields with the white pill carrying its own ground.
+
+### 7. Counts
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens, screen frames | 25 | **25** (one now hidden: A S4) |
+| Account screens reactions | 87 across 84 | **87 across 84**, 79 / 7 / 1 |
+| Cross-page edges | 0 | **0** |
+| `Account device` | intact | **intact**, → 103:2320 |
+| `Visit/Top bar` instances on Account screens | 0 | **0**; **9** `Account/Top bar` |
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, `Visit device` intact |
+| `Visit/Top bar` itself | unchanged | **unchanged** — tap still `Action tap target 48` at x 342, Icon button still visible |
+| Visit S3 footnote / S4 frame / V4 pill | unchanged | **still visible / still visible / still blank at 82 wide** |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41** |
+| `Account/` instances on locked pages | 0 | **0** |
+
+- **Account screens text is now 442 nodes / 9,173 chars**, up from 433 / 9,074, and every one of the +9 and +99 is accounted for: seven avatar `Initials` nodes carrying "SB" (14), two new pill labels (34), and three A4 pill labels going from empty to "iPhone microphone" (51). Nothing else moved.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a2c-screens-2026-09-16/`: `as2-home-sessions-103-2353-1x.png`, `as5-recording-103-2426-1x.png`, `as5-paused-103-2438-1x.png`, `as3-microphone-103-2397-1x.png`, `a4-ready-bar-103-3037-1x.png` (390 × 844 each) and `as2-topbar-103-2359-TRUE-2x.png` (780 × 128, a real 2x export, trap 40).
+- **Not proven: still unplayed.** Stored reactions and static renders; nothing here demonstrates the prototype running.
+- Believed but not verified in pixels: **the other six `A S2 Home` frames**. One was rendered; the other six carry the same instance of the same variant with the same title, and all nine were read back numerically after the swap — but only `/ sessions` was looked at. Same for the two other A4 frames, which read identically to the one rendered.
+- Also not verified in pixels: that `Visit screens` still renders as it did. It was checked numerically — 433 / 9,074, 87 across 84, the bar, footnote, S4 frame and blank pill all confirmed untouched — but no Visit frame was re-rendered this batch.
+- Repo: FLAGS.md two DEFECTs and two DECISIONs added, one DECISION struck closed (194 lines, 44 struck). PLUGIN-NOTES.md trap 42. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: A2c complete. **Two things need Daniel before they get worse**: the pill label capitalising "iPhone", and the A4 ready bar clipping its own pill. Neither blocks A3, which wires the pill to the microphone sheet; A4 and A5 are unblocked.
