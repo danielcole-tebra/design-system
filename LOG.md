@@ -1969,3 +1969,62 @@ On the true 2x export:
 - Repo: FLAGS.md one DEFECT and one DECISION added, with a COMPOSITIONS pointer on the DECISION (195 lines; DEFECT 30/6, DECISION 108/37). COMPOSITIONS.md one entry in the provisional Mobile section, per the Record rule as it now stands. PLUGIN-NOTES.md trap 43. LOG.md this entry. CLAUDE.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - **Open for Daniel before A3b**: square corners or 16. A3b builds two frames around this sheet either way, and changing it afterwards is still only two values on each of two components.
 - Status: A3a complete. A3b next; A4 and A5 unblocked. Still interim: the seven home avatars lead to `A S3 Microphone` until A4.
+
+## 2026-09-16 · Mobile account addendum · A3b, corners — stopped at the step 1 gate
+
+- Spec: `mobile-account-spec.md` revision 3 section 4. File `TP5KrQtY0T5IcMNqi375So`. Additive only; nothing deleted. `figma.skipInvisibleInstanceChildren = false` on every read.
+- **Step 1 only. Steps 2 and 3 were not built**, because the brief says to stop if any corner render looks wrong, and one does. The two microphone frames, their scrims and all wiring are untouched and still ahead.
+
+### 0. Housekeeping
+
+- **The file opens by key and is writable.** `TP5KrQtY0T5IcMNqi375So` returns six pages — `Foundations` 0:1, `Components` 1:2, `Screens` 1:3, `Flow` 1:4, `Visit screens` 43:705, `Account screens` 103:2319 — and a write probe on a scaffolding node succeeded and was reverted in the same script. The move to a new folder changed nothing reachable by key.
+- **Two DECISIONs struck closed**: `mobileAccount_clonedSupersededNoteNamesVisitFrame` (fixed in A2c — the frame is renamed within its own page and hidden) and `mobileAccount_noProviderOrPracticeName` (settled: Dr. Sarah Bennett). DECISION now 107 open / 39 closed.
+- **R1's pill entry says nothing about pending build** — it was written after A2d landed, so there was nothing to remove.
+
+### 1. Corners
+
+**Code specifies no radius for this, which is the finding worth carrying forward.** There is no `shape` key in the theme, so MUI's stock 4 is never overridden; there is no `MuiDrawer` override (TEBRA-DESIGN-SYSTEM.md 3.23 already records the substrate) and no `MuiPaper` override; `DialogOverrides.ts` sets no radius. The only radii anywhere in `packages/design-system` are **Button 24, MenuItem 4, Autocomplete 4** and a partner-theme **0**. So 16 is not a value code specifies differently — it is a value code does not specify at all, and it will need an explicit override when a bottom sheet is built. The brief's stop condition was "a value other than 16"; silence is not that, so I proceeded.
+
+**Four components changed**, each to `16/16/0/0` with `clipsContent` true:
+
+| Component | Before | After |
+|---|---|---|
+| `Visit/Drawer` `Mode=list` 48:814 | 0/0/0/0, clips **true** | 16/16/0/0, clips true |
+| `Visit/Drawer` `Mode=sheet` 48:880 | 0/0/0/0, clips **true** | 16/16/0/0, clips true |
+| `Visit/Drawer edge` 70:1480 | 0/0/0/0, clips **false** | 16/16/0/0, clips **true** |
+| `Account/Microphone sheet` 121:1793 | 0/0/0/0, clips **false** | 16/16/0/0, clips **true** |
+
+- The two drawer variants already clipped, so for them this is radius only. The edge and the sheet had clipping off and now have it on; nothing in either overflows its box, so nothing was newly cut.
+- All **ten** drawer and edge instances on `Visit screens` read back 16/16/0/0 with clipping on.
+
+**What shows in the corners — and this is why I stopped.** The rounding exposes whatever sits *behind* the sheet at that point, and that differs by frame:
+
+| Case | Instances per page | Behind the notch | Verdict |
+|---|---|---|---|
+| Collapsed edge over the field | 2 | the green `#2B865A` / teal field | **correct** — reads as a sheet rising over the recording |
+| V5 / A5 drawer open under the recording bar | 5 | `color/background/default` **#E8E5DF** | **wrong** — two pale nicks at the green/white boundary |
+| V4 / A4 drawer open under the ready bar | 3 | #E8E5DF, same as the bar | invisible — beige on beige, so the rounding does not read at all |
+
+- **Measured, then looked at.** On `V5 Recording / summary` 51:1760 and `A5 Recording / summary` 103:3045 the drawer's top row samples **20 beige pixels** where the bar is green. On `V S5 Recording / recording` 43:809 and `A S5 Recording / recording` 103:2426 the same 20 pixels are **green**. On `V4 Patient / summary` 50:1570 row 201 reads 360 white and 20 beige against a beige bar. Zoomed to 4x in `ZOOM-drawer-open-corner-notch-4x.png` and `ZOOM-collapsed-edge-corner-4x.png`: the collapsed edge looks right, the docked drawer does not.
+- The cause is simple and not a Figma artefact: the recording bar ends at exactly the y the drawer begins, so there is nothing green behind the corner to show through.
+- **Left in place, not reverted.** The ruling is correct for the case it was made for, the evidence is on the canvas, and it is one value to change if Daniel wants it back. `mobileAccount_dockedDrawerCornersExposeTheBackground`.
+- Ways out, none applied: extend the bar 16 behind the drawer so the notch reads as the field; put a 16 strip of field colour behind the drawer's top on the drawer-open frames; or round only where a sheet floats over a field and leave a docked drawer square.
+
+### 2. Counts
+
+| | Expected | Read back |
+|---|---|---|
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, 79 / 7 / 1, 0 off-page, `Visit device` intact |
+| Visit drawer and edge instances | — | **10**, every one 16/16/0/0, clipping on |
+
+- Only geometry changed on `Visit screens`, as the brief required: no frame, reaction, destination or character moved.
+- `Account screens` and `Screens` counts are unchanged from A3a and were not re-walked, because step 1 touched four components and no frame; they are re-verified in the batch that builds step 2.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a3b-corners-frames-2026-09-16/`: `visit-v5-summary-51-1760-corners-1x.png`, `visit-vs5-recording-43-809-corners-1x.png`, `visit-v4-summary-50-1570-corners-1x.png`, `account-a5-summary-103-3045-corners-1x.png`, `account-as5-recording-103-2426-corners-1x.png`, plus the two 4x zooms.
+- **Not proven: still unplayed**, and the corner behaviour above is a static read of what the renderer composites — no drag or transition was exercised.
+- Believed but not verified in pixels: the other five drawer-open frames on each page. Two were rendered per page and the remaining eight were read numerically as 16/16/0/0; they share the same two masters and the same bar geometry, so the same notch follows, but they were not looked at one by one.
+- Repo: FLAGS.md one DEFECT struck closed, two DECISIONs struck closed, one DEFECT and one DECISION added (DEFECT 30 open / 7 closed, DECISION 107 / 39; 50 struck lines). COMPOSITIONS.md one entry added and the microphone sheet entry updated to 16. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- **Open for Daniel, and it blocks nothing but should be settled before A3b resumes**: what goes behind a docked drawer's corners. The microphone frames in step 2 are the good case — a sheet over a field — so they can be built either way, but whatever is decided for the docked drawer will want doing in the same pass.
+- Status: A3b step 1 done, steps 2 and 3 not started.
