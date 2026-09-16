@@ -1110,3 +1110,63 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders.
 - Repo: FLAGS.md one DECISION struck, one GAP added (51 → 52 open) and one DECISION added (92 open, 30 → 31 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: controls sized and placed. **Open for Daniel: the disc is 20, not the 29 asked for, and the library cannot close that gap from inside the Icon button.** Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · Drawer list rebuilt on library List/Item
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. Library `YX2n4YLrEpBXNbcc73T6dw` **read only**, the List/Item set imported by key. **Nothing on `Screens`. No node deleted** — the local row and its instances are hidden and renamed. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. Read-only first: every property on List/Item 174:17
+
+| Property | Type | Default | What it drives |
+|---|---|---|---|
+| `Primary#174:0` | TEXT | "Primary text" | the visible label |
+| `Secondary#174:3` | TEXT | "Secondary text" | the second line, hidden on Lines=One |
+| `Show icon#174:9` | BOOLEAN | **true** | `visible` on the 56-wide `Icon` frame |
+| `Icon#174:12` | INSTANCE_SWAP | DownCaret | the glyph in that frame — **no preferred values** |
+| `Lines` | VARIANT | One | One \| Two |
+| `State` | VARIANT | Default | **Default \| Hover \| Selected** |
+
+- **There is no avatar slot, no trailing slot and no secondary-action slot**, and **secondary text is not a boolean** — it is the `Lines` axis, which is deliberate: the set's description records that a boolean could only flip visibility and produced a 52 height MUI has no path to, so the 4-vs-6 margin conditional had to become an axis. The only leading slot is `Show icon`.
+- Row geometry: 400 × 48, HORIZONTAL, **gap 0**, padding **16 / 8 / 16 / 8**, align CENTER. `Icon` frame 56 × 24 at x 16 with `minWidth 40`; `Text` frame FILL/HUG at x 72.
+- **Can the text sit at 16 through properties alone? Yes — and that is not an inference.** `PROOF · List/Item at 390 with Show icon off 2026-09-16` `83:583`, kept on canvas under rule 1, four instances read on the instance, not the master:
+
+| Case | Row | Icon | Text frame x | Primary box x | Primary width |
+|---|---|---|---|---|---|
+| default, icon on, 400 | 400 × 48 | visible | 72 | 72 | 312 |
+| icon off, 400 | 400 × 48 | hidden | **16** | **16** | 368 |
+| icon off, resized 390 | **390 × 48** | hidden | **16** | **16** | **358** |
+| Selected, icon off, 390 | 390 × 48 | hidden | **16** | **16** | 358 |
+
+- Hiding the `Icon` frame takes it out of the auto-layout, and with gap 0 the `Text` frame falls onto the row's own 16 padding. **No GAP to log, no override needed.**
+
+### 2, 3, 4. The rebuild
+
+- Fourteen `List/Item` instances in `Sheet list` `48:823`: **State=Selected** on Patient summary, **State=Default** on the other thirteen, `Lines=One` throughout, `Show icon` false on all, each **FILL to 390** and hugging the library's **48**. **Nothing overridden on padding, height or text position.**
+- **Trap 34 never fired, because it was designed around**: each instance was created from the variant it needed — `Lines=One, State=Selected` or `Lines=One, State=Default` — rather than created and then switched, so no variant assignment ever happened after the text was set. All fourteen labels were read back anyway and are intact: Patient summary, Allergies, Medications, Problems, Sheet 5 … Sheet 14.
+- Read on the instances across all three list frames: every row **390 × 48**, text box at **x 16**, Primary **358** wide, Icon hidden, Secondary hidden, row 1 carrying the library's own selected fill — **opacity 0.08 bound to `color/computed (no palette)/rowSelected`**, which is MUI's `&.Mui-selected`.
+- **Retired, not deleted**: `Visit/Sheet list row` `48:137` renamed SUPERSEDED, its fourteen instances in the drawer hidden and renamed, and the local `selected#73:0` fill boolean and the `Check` slot retired with it.
+
+### 5. Wiring — 87 before, 87 after
+
+- **Moved, five, matched by label rather than by index**: Patient summary → `50:1570`, `51:1760`, `51:2027` on the three list frames, and Medications → `48:1463` and `51:1901`. V5 Paused / drawer list has only the one, as it always has.
+- **Every retired row reads 0 reactions** on all three frames, and **12, 12 and 13 of the new rows are inert**, which is the other eleven sheets plus Medications on the paused frame.
+
+### The list still scrolls, and by how much
+
+| | Rows | Bottom padding | Content | Scroller | Overflow |
+|---|---|---|---|---|---|
+| V4 Patient / list | 14 × 48 = 672 | **122** | **794** | **643** | **151** |
+| V5 Recording / drawer list | 672 | 34 | **706** | **677** | **29** |
+| V5 Paused / drawer list | 672 | 34 | **706** | **677** | **29** |
+
+- The V4 figure is 794 rather than 706 because that frame's scroller keeps its **122** bottom padding, which has held the list clear of the Start recording CTA since D1 — unchanged, not a defect. **Both still overflow, so both still scroll**, but at 8 less per row the content lost 112 and **the V5 margin is down to 29**. Worth seeing: one more sheet removed from the list would stop V5 scrolling at all.
+
+### Verification
+
+- **Measured in the 2x render.** On V5 Recording / drawer list the selected band runs **167.0 to 215.0 — exactly 48** — reading **(235, 241, 242)**, which is `alpha(#004852, 0.08)` over paper, and the row below it is pure white at 215. 167 is the drawer top 119 plus the 48 handle row, so the list starts immediately under the handle.
+- **Reactions 87 across 84, unchanged.**
+- **`Screens` still 18 frames, 42 reactions across 41 nodes**, and still zero `Visit/` or `List/Item` instances on that page.
+- Verified in pixels and looked at, **true 2x** full-frame exports (780 × 1688) in `figma-export/visit-library-list-2026-09-16/`: `v4-patient-list-48-1371-full-2x.png` and `v5-recording-drawer-list-51-1682-full-2x.png`, plus `CONTACT-full.png`.
+- **Not proven: still unplayed.** Stored geometry and static renders.
+- Repo: FLAGS.md two DECISION struck as superseded and one added (92 → 91 open, 31 → 33 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: the drawer list is library geometry end to end. Phase 2 (P1 onward) still needs a source node per sheet.
