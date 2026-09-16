@@ -2225,3 +2225,45 @@ On the true 2x export:
 - **Not rendered, and this is the gap in this entry**: step 4 asked for 1x renders of all three V4, all three A4, one V5, one A5 and A S5 recording. Only `V4 Patient / summary` and `V5 Recording / summary` were rendered, at 2x, as the before-and-after pair. The other nine frames were verified **numerically** — all sixteen drawer instances read back with the same top row, puller, close and body origin — but they were not looked at. The list frames in particular gained 78 rather than 30, and that is the case I would most want eyes on.
 - Repo: FLAGS.md one DEFECT added already struck closed, one DEFECT added open, one DECISION added (DEFECT 31 open / 9 closed, DECISION 114 / 42, 55 struck). COMPOSITIONS.md the drawer entry extended with the one-top rule; **the glyph rule was not added**, because it is not settled. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - **Open for Daniel**: the glyph question, now that the premise has moved. Leave both alone and the file matches code, or change the sheet selector to a caret and it matches code everywhere. And rev 8 of the drawer spec, which this batch worked without.
+
+## 2026-09-16 · Mobile visit drawer · D1.1, the sheet selector follows code
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Changed `Visit screens` by design.** Additive only; the old glyph is hidden and labelled, not deleted. `figma.skipInvisibleInstanceChildren = false` on every read.
+- Daniel's ruling, superseding the triangle ruling in the D1 brief: Tebra's code uses `DownCaretIcon` for every control that opens a list, so the sheet selector follows code and the pills are unchanged. This is the outcome D1 stopped for.
+
+### 1. The swap
+
+- **Read first, so the new glyph matches a real one rather than a guess.** The library Text field's own Select caret — `Icon/DownCaret` **4:300**, remote — renders at **20 × 20** with its vector bound **`color/grey/600`**. The pills' end icon is the same library icon at **16**, taking the button's label ink.
+- `Title switcher` on **both** variants now carries `Sheet selector caret (library Icon/DownCaret)` at **20 × 20**, vector bound **`color/grey/600`**, with the vector fill set explicitly rather than inherited (Paints note 5: an icon master's fill is bound, and a lost override degrades silently).
+- The old glyph is **hidden and renamed** on both: `Drop-down triangle (SUPERSEDED …)` on `Mode=sheet` and `Drop-up triangle (SUPERSEDED …)` on `Mode=list` — worth noting that the two variants never carried the same triangle, one pointed down and one up.
+- **The gaps already matched and needed nothing.** `Title switcher` has `itemSpacing: 8`; both pills have `itemSpacing: 8`. Title-to-caret **8**, label-to-caret **8**.
+- Widths: the sheet-mode switcher hugs from 160 to **156** (24 → 20 glyph); the list-mode one reads 160 still and is hidden in that mode regardless.
+
+### 2. Every other ArrowDropDown, unchanged
+
+- **13 instances of `Visit/Icon/ArrowDropDown (MUI)` 59:493 on each page, and after this batch none of them is visible.** They are the two just superseded, their per-frame copies, and the copies inside the hidden legacy `Header` frame (59:505) that the 2026-09-16 top-row merge retired. Nothing was changed; the master itself is untouched and still on `Components`.
+- So the triangle is out of the rendered file entirely, on both pages, without a node being deleted.
+
+### 3. What the renders show
+
+- **All three controls now read the same caret**, at 2x in `AFTER-three-controls-2x.png`: Template pill and device pill with a 16 caret on teal label ink, sheet selector with a 20 caret in grey beside a black title. The grey is deliberate — it is the Select's treatment, not the title's.
+- **`V4 Patient / list` and `A4 Patient / list` are pixel-identical**, checked by diff, which is the evidence that the shared component reached both pages.
+- **One thing the list frames show that is worth saying plainly.** They gained 78, and 48 of that is an **empty title row**: list mode hides its `Title switcher` by design, so the patient list screen now shows puller, then a blank 48 band, then the first row. It matches what the V5 list frames have always done, so it is consistent rather than new — but at 1x on the patient screen it reads as a large gap before "Patient summary". Not a defect against any ruling; reported because the unified top is what made it visible.
+
+### 4. Counts
+
+| | Expected | Read back |
+|---|---|---|
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, 79 / 7 / 1, 0 off-page, `Visit device` intact |
+| Account screens | 104 across 101, 528 / 10,207 | **30 screen frames, 104 across 101**, 96 / 7 / 1, **528 / 10,207**, 0 off-page, `Account device` intact |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41** (verified in D1; untouched since) |
+| `Account/` instances on locked pages | 0 | **0** |
+| Visible `ArrowDropDown`, either page | — | **0** |
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-d1-drawer-glyph-2026-09-16/`: `AFTER-three-controls-2x.png`, `v4-list-48-1371-after-1x.png`, `a4-list-103-3027-after-1x.png`, `v4-summary-50-1570-after-1x.png` and its 2x source.
+- **Not proven: still unplayed.**
+- **Not rendered, and this is the second batch running where I owe them**: the brief asked for all three V4 and all three A4 frames plus one V5 and one A5. I rendered **four** — `V4 Patient / list`, `A4 Patient / list`, `V4 Patient / summary`, and the three-control strip — and skipped `V4 / A4 placeholder`, `A4 summary`, and the V5 and A5 open frames. The placeholder and summary frames were verified numerically in D1 and again here through the shared component, and `A4 Patient / list` was diffed against its Visit twin to prove the component reaches both pages — but the V5 and A5 open frames have not been looked at since the glyph changed, and their sheet selector is the same instance I did render on V4.
+- Repo: FLAGS.md one DEFECT struck closed, three DECISIONs added (DEFECT 30 open / 10 closed, DECISION 117 / 42). COMPOSITIONS.md a new glyph entry. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Recorded as asked: **the repo still holds `mobile-visit-drawer-spec.md` rev 5 and rev 8 is pending your commit** — rev 5's header still says the finished prototype is not modified, which D1 and D1.1 both are, by ruling. And the narrowing has a cost now on the record: **the caret is spent, so it cannot also mean expand-in-place**, and the first accordion or show-more will need its own affordance.
