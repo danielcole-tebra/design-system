@@ -1376,3 +1376,82 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders.
 - Repo: FLAGS.md one DECISION added (93 → 94 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: the copied base screens are on the Visit rules. **Open for Daniel: `Microphone summary row` on the superseded V S4 is still off grid, left on purpose.** Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile account addendum · A0, the read-only audit
+
+- Spec: `mobile-account-spec.md` revision 2, batch A0. File `TP5KrQtY0T5IcMNqi375So`, plus read-only reads of library `YX2n4YLrEpBXNbcc73T6dw`. **No writes of any kind.** Nothing created, no node touched, no component imported by key (trap 4 — importing by key is a write, and this batch was read-only). `figma.skipInvisibleInstanceChildren = false` on every read. **`Account screens` does not exist yet**: the file has five pages, `Foundations` 0:1, `Components` 1:2, `Screens` 1:3, `Flow` 1:4, `Visit screens` 43:705.
+
+### 1. V S1 Login, both variants
+
+| | `V S1 Login / default` 43:706 | `V S1 Login / error` 43:716 |
+|---|---|---|
+| Wordmark | `Tebra wordmark (Nav/Logo)` 43:711, x 145 y 192, 100 × 24 | 43:721, identical |
+| Card | `Login card` 43:712, x 16 y 256, 358 × 230 | 43:722, x 16 y 256, 358 × **314** |
+| Alert | — | `Sign-in error alert` 43:723, y 280 h 68, library Alert, "That email and password don't match." |
+| Email | `Email field` 43:713, x 40 y 280, 310 × 56 | 43:724, y 364 |
+| Password | `Password field` 43:714, x 40 y 352, 310 × 56 | 43:725, y 436 |
+| CTA | `Sign in CTA` 43:715, x 40 y 424, 310 × **38** | 43:726, y 508 |
+
+- Both fields are library Text field instances (internals `Input / Outline / Text / Select caret / Label / floating / Label / resting / Helper text`, master ids under `1138:*`). **Both are empty.** Each shows its resting label only — "Email" and "Password" — with `Label / floating` hidden and `Helper text` hidden. **There is no email or username value anywhere on either frame.**
+- **There is no "Forgot password" control of any kind**, on either variant: the card holds exactly three children on the default and four on the error. So addendum 6.1 adds the first one in the file, and 6.2 has nothing to prefill from V S1 — recorded as `mobileAccount_noProviderOrPracticeName`.
+- The CTA's Label stores **"Sign in"** and renders **"Sign In"**. Checked at 8x, not assumed: `ZOOM-signin-label-8x.png`. Code is the reason and agrees — TEBRA-DESIGN-SYSTEM.md's typography table gives the `button` variant `textTransform: capitalize` — so every library Button label in this build renders Title Case. Flagged, because 5.4 calls its copy final: `mobileAccount_buttonLabelsRenderTitleCase`.
+
+### 2. Provider and practice names: there are none
+
+- Every text node on `Visit screens` (**82** unique strings) and on `Screens` (**51**) was read. The only people named are **patients** — Marcus Vance, Dolores Okonkwo, Priya Raghunathan, and the two search terms Vance and Quigley. The only organisation named is the app, "Ambient capture". No provider name, no practice name, **no initials anywhere** — there is no Avatar instance in the file at all.
+- Spec 5.1 says to use the names already present and to **stop and ask** if none exist. Raised as `mobileAccount_noProviderOrPracticeName`; A4 and A5 need provider name, practice name, initials and email from Daniel.
+
+### 3. Every V S2 Home frame
+
+| Frame | Session list | Failed or unsent row |
+|---|---|---|
+| `/ empty` 43:727 | none | — |
+| `/ sessions` 43:739 | 3 rows: Marcus Vance 9:42 AM Sent · Dolores Okonkwo 9:12 AM **Failed to send** · Priya Raghunathan 8:55 AM Sent | 43:754, `Session row / State = failed` 4:445 |
+| `/ results` 43:756 | 1 `Search result row` 43:768, Marcus Vance / DOB 03/14/1972 | — |
+| `/ no results` 43:769 | none, "No patients match" | — |
+| `/ searching` 43:875 | none | — |
+| `/ after first capture` 43:887 | 1 row: Marcus Vance 9:42 AM Sent | — |
+| `/ after failed capture` 43:904 | 1 row: Marcus Vance 9:42 AM **Failed to send** | 43:918, `Session row / State = failed` 4:445 |
+
+- All seven carry `Visit/Top bar` `Config = Title with action` (set 93:2734, variant 93:2735), title "Ambient capture", instances 43:733, 43:745, 43:762, 43:775, 43:881, 43:893, 43:910. The trailing action is a **48 × 48 tap target at x 342, y 55** holding a **40 × 40 library Icon button** with the microphone glyph, and on all seven it reads ON_CLICK → `V S3 Microphone` 43:783. That is the slot §3 replaces with the avatar. Note for A2: the library Avatar is a **filled 40 disc**, so the optical rule bites on the disc edge, not on a 16-wide glyph inside it; right ink at 374 puts the disc at 334–374, which is not where the Icon button sits inside the tap target. Geometry question for A2, not resolved here.
+- **"Unsent" does not exist**, and no row can Retry. Recorded as `mobileAccount_sessionRowHasNoRetryOrUnsentStatus`. The nearest frame to 5.5's `V S2 Home / unsent` is **`V S2 Home / after failed capture` 43:904**, which is already one failed Marcus Vance row.
+- **A first pass got this wrong and the render caught it.** Filtering on `node.visible` reported three rows on the two single-row frames, because the superseded rows are hidden at row level while their text nodes are still `visible: true` inside them. Re-read with an ancestor walk. Written up as PLUGIN-NOTES trap **39**.
+
+### 4. V S5, meter bottom to control top
+
+- **There are only two V S5 frames.** Both already carry the collapsed drawer edge (`Visit/Drawer edge` 70:1485 and 70:1491, y 732 h 112), so the drawer-collapsed state is these same two frames, not two more.
+
+| Frame | Meter | Meter bottom | Pause/Stop top | Clear |
+|---|---|---|---|---|
+| `V S5 Recording / recording` 43:809 | `Level meter` 43:817, y 444 h 48 | **492** | `Field buttons` 43:818, **660** | **168** |
+| `V S5 Recording / paused` 43:819 | `Level meter` 43:828, y 468 h 48 | **516** | `Field buttons` 43:829, **660** | **144** |
+
+- Stack above the meter, recording: Patient name 288–324, Timer 348–420, meter 444–492. Paused: Patient name 264–300, Paused label 324–348, Timer 372–444, meter 468–516.
+- Both frames also hold a **hidden** `Patient info` instance at y 666 h 56 (51:2170, 51:2177), superseded by the drawer edge. The 38-tall pill 4.1 asks for fits either gap with room to spare; placement is A2's call.
+
+### 5. The library: two of the three exist, one does not
+
+- **Avatar `208:11`**, COMPONENT_SET on `Data display`. `Content = Fallback` 208:3 / `Letter` 208:6 / `Icon` 208:8, **every variant 40 × 40**. Props `Letter#208:0` TEXT default "A", `Icon#208:4` INSTANCE_SWAP, `Content` VARIANT. **There is an initials mode, but it is one letter, and there is no size axis** — its own description records that the story disables `size` in argTypes and demonstrates 20/40/70/120/180 through `sx`. 40 is exactly the Icon button it replaces in the top bar, so §3 fits; 5.1's large avatar must be a scaled instance. `mobileAccount_avatarHasNoSizeAxisOrTwoLetterInitials`.
+- **Dialog `747:185`**, COMPONENT_SET on `Surfaces & navigation`, 12 variants: `maxWidth = xs 444 | sm 600 | md 900 | lg 1200 | xl 1536 | false 1376` at h 182, each also at `fullScreen = true` 1440 × 900. Props `Title` TEXT, `Body` TEXT, `Show title` BOOL, `Show actions` BOOL, `Show second action` BOOL, **`Action 1#747:44`** INSTANCE_SWAP default 78:122 and **`Action 2#747:51`** INSTANCE_SWAP default 78:50 — **two action slots**, which is what 5.4 needs for Retry and Sign out anyway. **There is a precedent in this file already**: `V S6 Stop confirmation` 43:830 holds `Stop confirmation dialog` 43:841, `Dialog / maxWidth=xs, fullScreen=false`, **resized to 326 × 238 at x 32, y 303** over a full-frame `Scrim` 43:840, Action 1 = 6:47 (Button `variant=text`), Action 2 = 6:38. So the sign-out warning needs no new component.
+- **Text button: yes. Outlined button: no.** `Button` 79:2 on `Actions` is `variant = contained | text` only, across `color = primary | secondary | error | inherit`, `size = medium | small | large`, `State = Default | Hover | Disabled`, 72 variants. Text sizes are **small 64 × 28, medium 68 × 36, large 71 × 40**. `Link` 171:33 also exists, a plain COMPONENT with one `Label#171:13` TEXT prop. **5.1's "outlined library button" for Sign out cannot be built from the library**: `mobileAccount_libraryHasNoOutlinedButton`.
+
+### 6. The V4 ready bar's device pill
+
+- `Input device pill`, instance **`I50:1571;61:490`** inside `Visit/Recording bar` 50:1571 on `V4 Patient / summary` 50:1570. Main is the **library Button `variant=contained, color=primary, size=medium`**, **82 × 38** at x 224, y 147, inside `Pills row` `I50:1571;61:479` beside `Template pill` `I50:1571;61:480` (200 × 38 at x 16, "Template: SOAP"). Start icon is the **local** `Icon/Microphone (SCAFFOLDING)` 4:368, end icon `Icon/DownCaret`.
+- **Its Label is empty.** Text node `I50:1571;61:490;78:16`, characters `""`, width **0** — the pill renders a mic glyph and a caret and names no device, while 4.1 describes it as "microphone icon, device name, dropdown triangle" and sends A2 to copy it onto the A S5 frames. Reported, not corrected, per rule 10: `mobileAccount_devicePillHasNoDeviceName`.
+- The older `Note type and microphone` row `I50:1571;48:909` is still in the master but **hidden**, with its "SOAP" and "iPhone microphone" labels and a hidden `Change` button — superseded by the pills row, not deleted.
+
+### 7. Baseline for the A1 clone
+
+- **`Visit screens` 43:705: 25 frames, 87 reactions across 84 nodes.** 79 ON_CLICK, 7 ON_DRAG, 1 AFTER_TIMEOUT; no destination leaves the page.
+- **Frame-own reactions: exactly two, both on `V S7 Sending` 43:842.** `AFTER_TIMEOUT` 3s → NAVIGATE `V S8 Sent / sent` 43:852, and `ON_CLICK` → NAVIGATE `V S8 Sent / failed` 43:863, both with `transition: null`. These two are what `clone()` drops (trap 35) and what A1 must re-apply with `setReactionsAsync`; every other reaction sits on a descendant and travels with the clone. The count 87 across 84 is the check.
+- **Starting points on `Visit screens`: one.** `Visit device` → **`V S1 Login / default` 43:706**. A1's `Account device` therefore goes on the `A S1 Login / default` clone.
+- **`Screens` 1:3 confirmed: 18 frames, 42 reactions across 41 nodes**, 0 destinations leaving the page, and **0 `Visit/` instances** among its 179 — the base page is untouched.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a0-2026-09-16/`: `vs1-login-default-43-706-1x.png` and `vs2-after-failed-capture-43-904-1x.png` (390 × 844, the renders), `vs1-login-default-43-706-full-2x.png` and `vs2-after-failed-capture-43-904-full-2x.png` (780 × 1688), and `ZOOM-signin-label-8x.png`.
+- **The 2x files are LANCZOS upscales of the 1x renders, not true 2x exports.** `get_screenshot` returned `original_width` 390 at `maxDimension` 1688; it caps at natural size and never upscales, so a 1x render is the only evidence this path can produce, and the upscale is a magnifier over it. Said plainly rather than labelled 2x.
+- **Not proven: still unplayed.** Stored geometry and static renders.
+- Repo: FLAGS.md six findings added (175 → 181 open: one DEFECT, three GAP, two DECISION). PLUGIN-NOTES.md trap 39. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: A0 complete, nothing written to Figma. **Blocking A4 and A5: provider name, practice name, initials and email.** **Blocking 5.1: Sign out has no outlined button to be.** **Blocking 5.5: the session row cannot Retry and there is no unsent status.** A1, A2 and A3 are unblocked.

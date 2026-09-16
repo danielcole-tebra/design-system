@@ -44,6 +44,8 @@ use_figma takes fileKey, code and description; the code runs in the plugin sandb
 
 18. resize() and resizeWithoutConstraints() on an instance nested inside another instance are silently ignored: the swapped slot keeps the master's size (a 600px reference slot stayed 600 around a 2399px helper, 2026-09-13). Read the size back; let the column clip off instead. When the swapped helper's master is an auto-layout frame, the nested slot accepts layoutSizingVertical = 'HUG' and grows to the helper's height (Flowsheets forms comparisons; verified 2026-09-14 on 803:19794: 550x600 slots became 604 and 740 after the reference and rebuild helpers were given a vertical auto-layout hugging their single child, sizes unchanged).
 
+39. `node.visible` is the node's OWN flag, not effective visibility, and with `figma.skipInvisibleInstanceChildren = false` the traversal deliberately descends into hidden subtrees - so `findAll(...).filter(n => n.visible)` silently reports nodes nobody can see. Reading the seven V S2 Home frames this way (2026-09-16) returned three session rows on frames that render exactly one, because the superseded rows are hidden at the row level and their text nodes are still `visible: true` inside them. Walk to the page and fail on the first ancestor with `visible === false`: `const eff = n => { let c = n; while (c && c.type !== 'PAGE') { if (c.visible === false) return false; c = c.parent } return true }`. The render is the check - one screenshot caught it.
+
 ## Layout
 19. resize() after counterAxisSizingMode locks the axis to FIXED; re-set AUTO or clones inherit a frozen height.
 20. Auto-layout frames accept minWidth, maxWidth, minHeight, maxHeight (Tab: minWidth 90, maxWidth 360, minHeight 48).
