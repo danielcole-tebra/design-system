@@ -737,3 +737,50 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders only. The switcher and the triangle imply a menu that does not exist anywhere in this file, which is the same standing gap as the note type item.
 - Repo: FLAGS.md one GAP added (48 → 49 open), two DECISION added (85 → 87 open). PLUGIN-NOTES.md trap 36 added. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: revision 7 pass complete. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · V4 top bar rebuilt on the NPVE note toolbar
+
+- File `TP5KrQtY0T5IcMNqi375So`, page `Components` written plus three frame-level resizes and six reaction moves on `Visit screens`. NPVE target `fdCQVFdvOByaOYIJYag0d6` **read only**. Library read only, two icons imported from it into this file. **Nothing on `Screens`. No node deleted** — everything removed is hidden. The "Change" optical-gap fix is withdrawn and was not applied.
+
+### 1. Source read
+
+- **`Note toolbar` `468:5582`**, a local NPVE COMPONENT, 799 x 42, in section `15 · Encounter page shell`. Horizontal, 8 gap, no padding, a Left group (16 gap) and a Right group (8 gap).
+- **The pills are not local to NPVE. They are the LIBRARY Button**, key `cfb726c7…`, at `variant=contained, color=primary, size=medium, State=Default` — which is Tebra's white pill, per ButtonOverrides. So there were **no local masters to build**; the Visit pills are the same library component used the same way, which is 4.5 rule 5 rather than a copy.
+- Values read off the source, all identical across its five pills: **height 38, corner radius 24, padding 7 top and bottom / 17 left and right, item gap 8**; fill white bound `color/common/white`; stroke **1px INSIDE** bound to `VariableID:ddc436f0…/74:52` (#B3C6C4); label **Akkurat LL Regular 16/24**, no text style, bound to `VariableID:dedc1a77…/74:68` (#004852); start icon 16 x 16; end icon **Icon/DownCaret** 16 x 16.
+- Icons by name and source, all library: Template pill start icon **Icon/List** (`1c2c521b…`, the node is named "glyph delta: Icon/List for the source list_alt"); end icon **Icon/DownCaret** (`9014d342…`). The device pill is named **"Mic device pill (GAP: no mic glyph; Icon/Telehealth stands in)"** and carries **Icon/Telehealth** — NPVE hit the same microphone GAP this build did and stood in a video glyph. Its label is an empty string, exactly as asked for here.
+- **The current ready bar, every vertical gap from 0 to 223**: safe area 0–47 (47); back row 47–95 (48); identity 95–159 (64, being 8 top padding, name 36 at 24/36, DOB 20 at 14/20, stacked); note type and microphone row 159–207 (48); bottom padding 207–223 (16).
+
+### 2. The rebuilt bar
+
+- **47** safe area, nothing above the back row. **44** back row at y 47, holding a library text button (`variant=text, color=primary`) reading **"Patients"** with Icon/LeftCaret, positioned so the **chevron ink lands at x 16** (the button box sits at 4.02, the same fractional consequence the optical pass already accepted); the whole button is the tap target and the old 48 icon target is hidden. **Identity on one line** at y 91, 8 below the back row: "Marcus Vance" at 24 and "DOB 03/14/1972" at 14 secondary, 8 apart, `counterAxisAlignItems = BASELINE`. **Pills row** at y 135, 12 below the identity, Template pill at x 16 (200 wide) and device pill at x 224 (82 wide), 8 apart, both 38 high at radius 24. **16** bottom padding.
+- **Baseline alignment verified by ink, not by box**: name ink bottom **126.34**, DOB ink bottom **126.20**, delta **0.14**. The DOB's own box reports 36 tall rather than 20, which is Figma padding the box to satisfy baseline alignment; the rendered result is correct.
+- **Bar height 223 → 201, a saving of 22.** The bar had to be switched to hug vertically; it had been FIXED at 223 since D1 and kept reporting 223 with the new content already in place.
+- Hidden, not deleted: the old back icon button, the note type and microphone row, and the "Change" button inside it (hidden on its own flag as well as by its parent).
+- **The Template pill is inert** — no template or note-type menu exists anywhere in this file. Raised as `visitDrawer_templatePillNoMenu`.
+- **One deliberate departure from NPVE**: the device pill uses this file's local `Icon/Microphone (SCAFFOLDING)` 4:368 rather than NPVE's Icon/Telehealth stand-in, because this build already solved the microphone GAP and every other mic affordance here uses it. Everything else matches. `visitDrawer_devicePillUsesLocalMicGlyph`.
+
+### 3. The drawer follows
+
+| | Before | After |
+|---|---|---|
+| Drawer y | 223 | **201** |
+| Drawer height | 621 | **643** |
+| List scroller | 573 | **595** |
+| Sheet scroller | 525 | **547** |
+
+- Bottom padding stays **122**, the footer band stays at y 722 x 122, and the CTA stays at (16, 738) with its bottom edge at 794. All three V4 frames.
+
+### 4. Wiring
+
+- Back moved from the hidden icon target to the "Patients" button on all three V4 frames, still to `43:727`; the old targets read 0 reactions.
+- Microphone moved from "Change" to the input-device pill on all three, still to V S3 `43:783`; "Change" reads 0 reactions.
+- **Count unchanged at 84 across 83 nodes**, as specified.
+
+### Verification
+
+- **V5 frames untouched**: all five still bar 119, drawer y 119 height 725, scrollers 677 and 629, bottom padding 34, bar states recording and paused as before.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes.** Zero edges cross between the pages in either direction.
+- Verified in pixels and looked at, two **true 2x** exports in `figma-export/visit-toolbar-2026-09-16/`: `v4-patient-summary-50-1570-top300-2x.png` (780 x 600, top 300pt) and `npve-note-toolbar-468-5582-2x.png` (1598 x 84, the source toolbar). Side by side the pills match in height, radius, stroke, label colour and caret; the only visible difference is the microphone against NPVE's video glyph.
+- **Not proven: still unplayed.** The template pill and the drawer's title switcher both now imply menus that do not exist in this file.
+- Repo: FLAGS.md one GAP added (49 → 50 open), two DECISION added (87 → 89 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: V4 top bar complete. Phase 2 (P1 onward) still needs a source node per sheet.
