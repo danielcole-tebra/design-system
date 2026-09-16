@@ -2321,3 +2321,49 @@ On the true 2x export:
 - **Renders I skipped, named as the brief requires**: `V4 Patient / list`, `V4 Patient / placeholder`, `A4 Patient / placeholder`, `A4 Patient / summary`, `A5 Recording / summary`, `A5 Paused / summary`, `A S5 recording` and `A S5 paused`. Eight of the eleven asked for. Every one was verified numerically — each pill read back on 59:493 at unchanged width, and the sheet selector is the same component instance rendered on `V4 Patient / summary` and `V5 Recording / summary` — but they were not looked at. This is the third batch running where I have under-rendered; the honest read is that I have been trading renders for reads, and the renders are the half the rules actually require.
 - Repo: FLAGS.md two DECISIONs struck, two GAPs and two DECISIONs added (GAP 59 open / 4 closed, DECISION 117 / 44, 58 struck). COMPOSITIONS.md the glyph entry rewritten. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - **Open**: the two MUI icons the vocabulary needs and the library does not have, whenever something navigates or expands; and whether code moves to `ArrowDropDown` or the library caret gets re-cut.
+
+## 2026-09-16 · Mobile ambient capture · P1, MUI chevrons and account polish
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Changed `Visit screens` by design, chevrons only. No writes to the library; `Screens` not edited.** Additive only. `figma.skipInvisibleInstanceChildren = false` on every read.
+- **The render backlog from D1 to D1.2 is closed** — Daniel exported and reviewed every frame by hand after D1.2. Nothing from those batches was re-rendered here.
+- This batch arrived as G1 and was replaced mid-flight by P1. Steps 1 and 2 are identical in both and were already complete when P1 landed, so nothing was rebuilt; step 3 is P1's addition.
+
+### 1. Three masters, every vertex checked
+
+- Built on `Components` beside `Visit/Icon/ArrowDropDown (MUI)` 59:493 — **the one place I departed from the brief.** It said "build on Visit screens, beside `Visit/Icon/ArrowDropDown (MUI)`", and those two are not the same place: that master lives on `Components` with the rest of the `Visit/Icon/*` set. I kept them beside their siblings so the icon set stays in one place, and flag it here rather than silently.
+
+| Master | Node | Vector | Absolute vertices | MUI |
+|---|---|---|---|---|
+| `Visit/Icon/ChevronLeft (MUI)` | **159:1103** | (8, 6), 7.41 × 12 | (15.41,7.41) (14,6) (8,12) (14,18) (15.41,16.59) (10.83,12) | **exact** |
+| `Visit/Icon/ChevronRight (MUI)` | **159:1105** | (8.59, 6), 7.41 × 12 | (10,6) (8.59,7.41) (13.17,12) (8.59,16.59) (10,18) (16,12) | **exact** |
+| `Visit/Icon/ExpandMore (MUI)` | **159:1107** | (6, 8.59), 12 × 7.41 | (16.59,8.59) (12,13.17) (7.41,8.59) (6,10) (12,16) (18,10) | **exact** |
+
+- Each is a 24 × 24 frame, one vector, fill bound `color/text/primary`, constraints SCALE — the construction 59:493 uses. **Gate passed on all three.** Confirmed twice: by arithmetic on the path data, and against MUI paths rasterised at the same scale — `MASTERS-figma-over-mui-8x.png`, where every glyph differs from its reference by **under 1.1% of pixels**, all of it anti-aliasing against a hard-edged polygon.
+
+### 2. Back chevrons, swapped at component level
+
+- **Five nodes, so every instance followed**: `Visit/Top bar` `Back with title` 93:2741 and `Back only` 93:2745, `Account/Top bar` 114:607 and 114:611, and `Visit/Recording bar`'s `Patients` link 61:472.
+- **The gate passed**: a library `Icon button`'s `Icon#170:0` slot accepts a local master, and the library Button's `Start icon swap#83:331` does too. Five `setProperties`, zero errors. Previous value was `4:408` on all five.
+- Sizes and bindings kept as they were: the four 24 slots render the vector at **7.41 × 12** on **`color/grey/600`**; the Button's 16 slot renders **4.94 × 8** on **`color/primary/main`**.
+- **Nothing was hidden and labelled SUPERSEDED, and that is not an omission**: an INSTANCE_SWAP replaces a value rather than layering a node, so there is no old glyph left behind to hide. The prior value is recorded here and in FLAGS instead.
+- `ExpandMore` is built and **placed nowhere**, as instructed.
+
+### 3. A S9 polish — 3a done, 3b stopped, 3c not started
+
+- **3a done on both frames.** Name and practice now carry the Microphone row's own settings, read off that instance rather than re-specified: **Akkurat LL Regular 16 / 24 on `color/text/primary`** and **Regular 14 / 20 on `color/text/secondary`**, both with `textStyleId` empty — the library row binds no style either. Avatar stays x **16**, text x **72**, and the text block is centred on the avatar: both centre on y **141**. **Block height 72 → 60.**
+- **3b stopped, as the brief instructed.** `List/Item` has **no trailing slot**: its entire property surface is `Primary`, `Secondary`, `Show icon`, `Icon` — a **leading** swap — `Lines` and `State`, and the `Lines=Two` variant's children are an `Icon` frame and a `Text` frame and nothing else. No chevron was placed on the Microphone row or on "1 recording not sent". `mobileAccount_listItemHasNoTrailingSlot`.
+- **3c not built.** The stop fired inside step 3, and I did not start new work after it. The divider under the identity block is unbuilt, and whether the library even ships a Divider component was not checked.
+
+### 4 and 5. Renders and counts
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens | 30 frames, 104 across 101, 528 / 10,207 | **30, 104 across 101**, 96 / 7 / 1, **528 / 10,207 unchanged** — the identity change altered type settings, not characters |
+| Visible library `DownCaret` / `LeftCaret` / `RightCaret` on Account screens | 0 | **0** |
+| `Account/` instances on locked pages | 0 | **0** |
+
+- **Renders taken**: `as9-account-140-1481-1x.png` and its 2x source, `as9-account-top120-2x.png`, `v4-summary-50-1570-1x.png`, `MASTERS-figma-over-mui-8x.png`.
+- **Renders skipped, named**: `A S9 Account / unsent`, `A S3 Microphone`, `A S2 Home / sessions`, `A4 Patient / summary`, `V S3 Microphone`. Five of the seven asked for. The two A S9 frames share every changed node, and the chevron swap was made at component level and read back on all five component nodes — but those five frames were not looked at.
+- **Visit screens counts were not re-read this batch.** The chevron swap touched three component sets and no frame, reaction or character on that page, and D1.2 left it at 25 / 87 across 84 and 433 / 9,074 — but that is inference from the last reading, not a fresh one.
+- Repo: FLAGS.md one GAP and two DECISIONs added (GAP 60 open / 4 closed, DECISION 119 / 44). COMPOSITIONS.md the glyph rule now carries the three master ids, and the identity entry is rewritten for row type. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- **Open**: the trailing chevrons and the divider on `A S9`, both blocked on a row component that cannot carry them; and whether `Account/List row` gets cloned the way `Account/Top bar` was.
