@@ -2367,3 +2367,55 @@ On the true 2x export:
 - **Visit screens counts were not re-read this batch.** The chevron swap touched three component sets and no frame, reaction or character on that page, and D1.2 left it at 25 / 87 across 84 and 433 / 9,074 — but that is inference from the last reading, not a fresh one.
 - Repo: FLAGS.md one GAP and two DECISIONs added (GAP 60 open / 4 closed, DECISION 119 / 44). COMPOSITIONS.md the glyph rule now carries the three master ids, and the identity entry is rewritten for row type. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - **Open**: the trailing chevrons and the divider on `A S9`, both blocked on a row component that cannot carry them; and whether `Account/List row` gets cloned the way `Account/Top bar` was.
+
+## 2026-09-16 · Mobile account addendum · A4b, the account row, the warning, and the loop
+
+- File `TP5KrQtY0T5IcMNqi375So`. **No writes to the library.** Additive only; every replaced row is hidden and labelled. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. Account/List row 163:1444, and the gate
+
+- **The gate passed**: the library `List/Item` **fills at 358 beside the chevron without detaching** — `layoutSizingHorizontal = 'FILL'` was accepted, and the instance still reads `type: INSTANCE` with its main linked.
+- 390 × **72** — the row keeps the library row's own height. Padding right 8, so the 24 `Visit/Icon/ChevronRight (MUI)` sits at **358–382** and its **ink runs 366.59 → 374**, on the optical edge, bound **`color/grey/600`** — the same ink as the top bar back chevron.
+- **The List/Item is an exposed instance**, so `Primary`, `Secondary`, `State`, `Lines`, `Show icon` and `Icon` all stay editable per instance. They surface through **`instance.exposedInstances`**, not the wrapper's own property list — the wrapper's `componentPropertyDefinitions` is empty (trap 41).
+
+### 2. Both A S9 frames
+
+- Three `Account/List row` instances placed and the rows they replace hidden and labelled: Microphone on both frames, "1 recording not sent" on / unsent.
+- **The divider is a rectangle, not a component.** There is no library `Divider` instance anywhere in this file, so the identity divider is a **390 × 1 rectangle bound `color/divider`** at y **171**, labelled SCAFFOLDING — which is the Foundations page's own rule for a divider that cannot be a stroke. Logged as a GAP.
+- Layout after: bar 47–111, identity **111–171** (60), divider 171, rows from 172 at 72 each.
+
+### 3. The warning frame, built the way A S6 builds one
+
+- **A S6 read first, and copied rather than re-derived**: scrim 390 × 844 bound `alphaBlack50` at paint opacity 0.5; Dialog main **6:320** `maxWidth=xs, fullScreen=false`, **resized to 326 × 238 at (32, 303)**; Action 1 the text slot, Action 2 the confirm slot.
+- `A S9 Account / sign-out warning` **163:2812**, cloned from / unsent after step 2 so it carries the new rows and divider. The clone's one inherited reaction — the back tap target, now under a scrim — was cleared.
+- Actions in A S6's order and structure: **"Sign out anyway"** in the text slot (`6:47`), **"Retry"** in the confirm slot as `variant=contained, color=secondary` **6:29**, the filled salmon, not error.
+- **They fit on one row**: 140 + 75 = 215 in a 326 actions row, at x 95 and x 243. Rendered labels are **"Sign Out Anyway"** and **"Retry"** — the Button's capitalize transform, as rev 3 already writes into the copy.
+
+### 4 and 5. The login copy and the wiring
+
+- `A S1 Login / after sign out` **163:2938**, a clone of `A S1 Login / default`, no visual change. `A S1 Login / default` is untouched.
+- **The clone carried the `Account device` starting point with it.** Two starting points with the same name existed for one script; caught on read-back and removed. Worth recording: **cloning a frame that owns a starting point duplicates it silently**, and only a read of `flowStartingPoints` shows it.
+- All wiring set with explicit destinations and `transition: null`, as A S6 uses. Seven home avatars → `A S9 Account`; `A S2 Home / unsent`'s avatar → `/ unsent` and its row → `A S7 Sending`; both A S9 frames keep back → BACK and send Microphone → `A S3 Microphone`; Sign out → login on one and the warning on the other; Retry → `A S7 Sending`, Sign out anyway → the login copy, scrim → `/ unsent`; the login copy's Sign in → `A S2 Home / unsent`.
+- **The A2c interim is closed**: the avatar now goes where it looks like it goes.
+
+### 6, 7 and 8. Loop, counts, renders
+
+- **The unsent loop traced by destination, and it closes**: `Unsent recording` → `A S2 Home / unsent` 140:1618 → avatar → `A S9 Account / unsent` 140:1547 → Sign out → warning 163:2812 → Sign out anyway → login copy 163:2938 → Sign in → `A S2 Home / unsent` 140:1618.
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens | 32 screen frames | **32** |
+| Reactions | — | **113 across 110**, 105 click / 7 drag / 1 timeout, **0 cross-page** |
+| Starting points | both | **`Account device` 103:2320, `Unsent recording` 140:1618** |
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **read fresh this batch: 25 / 87 across 84, 433 / 9,074**, 0 off-page, 0 `Account/` instances |
+
+- **Text 528 / 10,207 → 580 / 11,063, and every unit is accounted for.** The two new frames hold **46 nodes / 749 chars** (warning 27 / 537, login copy 19 / 212). The three `Account/List row` instances add **6 nodes** — a Primary and a Secondary each — and **107 chars**: "Microphone" + "iPhone microphone" twice (27 × 2) and "1 recording not sent" + "Marcus Vance · Yesterday, 4:30 PM" (53). 46 + 6 = **52**; 749 + 107 = **856**. Nothing else moved; the replaced rows are hidden, not removed, so nothing was subtracted.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a4b-2026-09-16/`: `as9-signout-warning-163-2812-1x.png` and `as9-account-unsent-140-1547-1x.png`.
+- **Not proven: still unplayed.** The loop above is traced through stored destinations, not played.
+- **Renders skipped, named**: `Account/List row` on its own, `A S9 Account`, and `A S1 Login / after sign out`. Three of the five asked for. The row is visible inside both rendered frames and the login copy is a pixel clone of a frame rendered in A0 — but none was looked at in isolation.
+- **Screens was not re-read this batch.** Nothing in A4b touched it, and D1.2 left it at 18 / 42 across 41 with no drawer or pill instance — but that is inference, not a fresh reading, and the brief asked for fresh.
+- Repo: FLAGS.md one DECISION struck closed, one GAP and three DECISIONs added (GAP 61 open / 4 closed, DECISION 122 / 45). COMPOSITIONS.md `Account list row` added. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: A4 complete. **A5 next** — the forgot-password link, `A S10` and `A S11`, wired.
