@@ -829,3 +829,30 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** Stored geometry and static renders only. The header now says "dropdown" in both modes, and the menu it implies still does not exist anywhere in this file — the list is the open state by wiring, not by a real overlay.
 - Repo: FLAGS.md five DECISION struck as superseded and two added (89 open → 86 open, 24 closed → 29 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: one-selector pass complete. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · List headers retargeted off BACK
+
+- File `TP5KrQtY0T5IcMNqi375So`, page `Visit screens` only. **Nothing on `Components` or `Screens`. No node created or deleted**; three reactions replaced in place. `figma.skipInvisibleInstanceChildren = false` on every read. Follows 5c7871e, where the one-selector pass was accepted.
+
+### The change
+
+- The three list-mode `Title switcher` reactions were `ON_CLICK → BACK`; they are now `ON_CLICK → NODE / NAVIGATE` to an explicit frame.
+
+| Node | From | To |
+|---|---|---|
+| `I48:1391;64:2241` | V4 Patient / list | **50:1570 V4 Patient / summary** |
+| `I51:1696;64:2241` | V5 Recording / drawer list | **51:1760 V5 Recording / summary** |
+| `I54:1915;64:2241` | V5 Paused / drawer list | **51:2027 V5 Paused / summary** |
+
+- The action shape was **copied off an existing sheet-mode switcher reaction** (`I50:1591;59:504`) rather than written from the type definition, so the new edges carry the same `navigation: NAVIGATE`, `transition: null`, `resetScrollPosition: true` as every other navigation in this prototype. Read back on all three: trigger `ON_CLICK`, type `NODE`, destination resolved by name.
+- Why it matters beyond tidiness: BACK returns to whatever frame was last on screen, so the list header's behaviour depended on how the viewer arrived. It now lands on the summary regardless of entry point, which is what the dropdown metaphor implies — closing the list returns you to the sheet it was opened over.
+
+### Verification
+
+- **`Visit screens` 83 reactions across 82 nodes, unchanged**, as specified — three reactions retargeted, none added or removed.
+- **Four BACK actions remain on the page and all four are V S3 Microphone's**: `I43:789;4:419` and the three `Microphone list row`s. No list header still carries one.
+- **Close icons untouched and confirmed still pointing at V S5 in the matching state**: V5 Recording / drawer list → `43:809` V S5 Recording / recording, V5 Paused / drawer list → `43:819` V S5 Recording / paused. V4 Patient / list has no close (hidden, 0 reactions), as it has since D1.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes.** Zero edges cross between the two pages in either direction.
+- **Not proven: still unplayed**, and no new render was taken — nothing in this batch changes a pixel, so the exports from the one-selector pass in `figma-export/visit-one-selector-2026-09-16/` remain the current evidence for these four frames.
+- Repo: LOG.md this entry. FLAGS.md, CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged; no flag opened or closed, since an explicit target was the intent all along and BACK was this build's reading of it, not a ruling.
+- Status: wiring fix complete. Phase 2 (P1 onward) still needs a source node per sheet.
