@@ -1768,3 +1768,76 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - Also not verified in pixels: that `Visit screens` still renders as it did. It was checked numerically — 433 / 9,074, 87 across 84, the bar, footnote, S4 frame and blank pill all confirmed untouched — but no Visit frame was re-rendered this batch.
 - Repo: FLAGS.md two DEFECTs and two DECISIONs added, one DECISION struck closed (194 lines, 44 struck). PLUGIN-NOTES.md trap 42. LOG.md this entry. CLAUDE.md, COMPOSITIONS.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: A2c complete. **Two things need Daniel before they get worse**: the pill label capitalising "iPhone", and the A4 ready bar clipping its own pill. Neither blocks A3, which wires the pill to the microphone sheet; A4 and A5 are unblocked.
+
+## 2026-09-16 · Mobile account addendum · A2d, the device pill back to icon only
+
+- Spec: `mobile-account-spec.md` revision 2, batch A2d. File `TP5KrQtY0T5IcMNqi375So`. **Five instance overrides changed, all on `Account screens` frames**; nothing created, nothing deleted, no component edited, and `Visit screens` and `Screens` read but not written to. `figma.skipInvisibleInstanceChildren = false` on every read.
+- Daniel's ruling: **the device pill carries no label anywhere.** Mic glyph and caret only, matching the Visit ready bar pill. The device name lives in the microphone list.
+
+### 1. The three A4 ready bars
+
+- Label cleared on `I103:3038;61:490` (`A4 Patient / summary`), `I103:3028;61:490` (`/ list`) and `I103:3033;61:490` (`/ placeholder`). All three: **227 → 82 wide**, 38 tall, Label node back to `""` at width 0.
+- **The pills row fits, with room.** Template pill **16–216**, device pill **224–306**. The row now ends at **306**, which is **68 inside the 374 gutter line** and 84 clear of the frame edge. `clippedPastFrame: 0` on all three, and confirmed in the render rather than only in the tree — the caret is back and the row reads as two complete pills.
+
+### 2. Both A S5 frames
+
+| | `A S5 Recording / recording` 103:2426 | `A S5 Recording / paused` 103:2438 |
+|---|---|---|
+| Pill | 116:2450 | 116:2458 |
+| Size | **227 → 82 × 38** | **227 → 82 × 38** |
+| x | **154** | **154** |
+| Clear left / right | **154 / 154** | **154 / 154** |
+| y | 557 (unchanged) | 569 (unchanged) |
+| Clear above / below | **65 / 65** | **53 / 53** |
+
+- **No rounding was needed, and that is worth saying because A2c did need it.** 390 − 82 = **308**, an even number, so the exact centre is **x 154** and the pill is symmetric to the pixel. At 227 wide the same sum was 163 and the pill sat 1 px right of centre. Rule 4 never had to choose a direction here.
+- Vertical placement from A2c is untouched, and both pills still carry **zero reactions** — A3 wires them.
+
+### 3. Nothing else in the file puts a device name in a Button
+
+- All six pages scanned for `/iphone/i`, with the ancestor chain of every hit walked to see whether a `Button` instance sits above it.
+
+| Page | Hits | Inside a Button |
+|---|---|---|
+| Account screens | 6 | **0** |
+| Visit screens | 6 | **0** |
+| Screens | 2 | **0** |
+| Components | 7 | **0** |
+| Foundations | 0 | — |
+| Flow | 0 | — |
+
+- **21 occurrences, none of them in a Button.** Every one is a `List/Item` primary, a `Microphone list row` or `Microphone summary row` device name, or the superseded `Note type and microphone` label inside `Visit/Recording bar` — all plain text with no transform, which is exactly why they all render correctly lower-case.
+
+### 4. What the renders show
+
+- Both `A S5` frames now carry a compact white pill, mic glyph and caret, centred on the green and the teal fields. The A4 ready bar reads as `Template: SOAP` beside the icon-only pill, complete and unclipped.
+- Both defects the label created are gone, and both are struck closed: `mobileAccount_pillLabelCapitalisesIPhone` and `mobileAccount_a4PillsRowOverflowsWhenNamed`.
+- **The A0 DEFECT about the blank pill is also closed**, and on the opposite reading to the one it was raised on: blank is the design. What A0 read as a missing override was the intended state, and addendum 4.1's "microphone icon, device name, dropdown triangle" is the line that is now out of date, not the component. `Visit screens` already matched and needed no change — its pill is still 82 wide with an empty label.
+
+### 5. Counts, and the text totals reconciled
+
+| | Expected | Read back |
+|---|---|---|
+| Account screens, screen frames | 25 | **25** |
+| Account screens reactions | 87 across 84 | **87 across 84**, 79 / 7 / 1 |
+| Cross-page edges | 0 | **0** |
+| `Account device` | intact | **intact**, → 103:2320 |
+| Visit screens | 25 / 87 across 84, 433 / 9,074 | **25 / 87 across 84, 433 / 9,074**, `Visit device` intact, pill still 82 wide with an empty label |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41** |
+| `Account/` instances on locked pages | 0 | **0** |
+
+- **Account screens text: 442 nodes / 9,088 chars.** Every step of the change accounts for itself:
+  - A1 baseline, matching Visit screens exactly: **433 / 9,074**.
+  - A2c added **+9 nodes** — seven avatar `Initials` nodes from the bar swap, two `Label` nodes from the two new pills — and **+99 chars**: seven × "SB" (14), two new pill labels (34), three A4 labels going from empty to "iPhone microphone" (51). That gave 442 / 9,173.
+  - A2d cleared five labels of 17 characters each: **−85 chars**, no change in node count, because an empty TEXT node still exists at width 0.
+  - 9,173 − 85 = **9,088**, and 9,088 − 9,074 = **14**, which is the seven "SB" and nothing else. The only text this addendum has added to the screens is the provider's initials.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-a2d-pill-2026-09-16/`: `as5-recording-103-2426-1x.png`, `as5-paused-103-2438-1x.png` and `a4-summary-103-3037-1x.png` (390 × 844 each).
+- **Not proven: still unplayed.** Stored geometry and static renders.
+- Believed but not verified in pixels: **the other two A4 frames**, `/ list` 103:3027 and `/ placeholder` 103:3032. Both read back identically to the one rendered — 82 × 38 at 224–306, row ending at 306, nothing clipped — but only `/ summary` was looked at.
+- Also not verified in pixels: that `Visit screens` still renders as it did. Checked numerically — 433 / 9,074, 87 across 84, its pill still 82 wide and blank — but no Visit frame was re-rendered.
+- Repo: FLAGS.md three DEFECTs struck closed, one DECISION annotated superseded, two DECISIONs added (193 open lines, 47 struck; DEFECT now 29 open / 6 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- **One thing survives the fix and should not be lost with it.** The pill no longer exercises it, but the library Button still capitalises any label it is handed — measured this week as "iPhone microphone" → **"IPhone Microphone"** — and `textTransform` is not an instance override. The moment a real device list, a brand name or any lower-case-initial system string reaches a Button, it will be mangled. Carried as a note for engineering: `mobileAccount_buttonCapitalisesAnyDeviceName`.
+- Status: A2d complete, and A2 is finished. A3 (the microphone sheet and wiring the two pills), A4 and A5 are unblocked. Still interim from A2c: the seven home avatars lead to `A S3 Microphone` until A4 builds `A S9 Account`.
