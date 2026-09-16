@@ -2465,3 +2465,53 @@ On the true 2x export:
 - **Visit screens was not re-read this batch.** Nothing in A5 touched it and A4b read it fresh at 25 / 87 across 84 and 433 / 9,074 — but the brief asked for fresh, and this is inference.
 - Repo: FLAGS.md two DECISIONs added (DECISION 124 open / 45 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: **A5 complete, and the account addendum's build batches A0 to A5 are all done.** The reset link itself is not prototyped, as the spec says.
+
+## 2026-09-16 · Mobile ambient capture · C1, the stop confirmation becomes an overlay
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Changed `Visit screens` and `Account screens` by design. `Screens` not edited, no writes to the library.** Additive only; the old S6 frames are renamed and left in place, not hidden. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. What reached S6, read before anything moved
+
+- **Seven reactions into S6 on each page, fourteen in all**, every one `ON_CLICK` → NAVIGATE with `transition: null`: the two `V S5` / `A S5` field Stop buttons and the five drawer-open `V5` / `A5` Stop buttons.
+- S6's own outgoing, both pages: `Scrim` → the recording frame, `Cancel` → the recording frame, `Stop recording` → Sending. **That single return destination is the defect** — five of the seven callers were drawer-open frames that could never be returned to.
+- Dialog: main **6:320** `maxWidth=xs`, **326 × 238** at (32, 303), actions Cancel at x 77 and Stop recording at x 153.
+- Scrim variable `color/computed (no palette)/alphaBlack50` stores **rgba(0, 0, 0, 0.5)**.
+
+### 2 and 3. The overlays
+
+- **`V S6 Stop confirmation / overlay` 166:5030** and **`A S6 Stop confirmation / overlay` 166:5058**: a 326 × 238 frame holding only the Dialog, cloned from the S6 it replaces so the main, copy and action order are identical. No scrim node — the overlay's own background does that job.
+- **Stop recording** → Sending, same transition. **Cancel** → `{ type: 'CLOSE' }`, so it closes the overlay and leaves the provider on the screen they tapped Stop on, drawer and all.
+- All **fourteen** source reactions rewired to `navigation: 'OVERLAY'`, seven per page, triggers unchanged.
+
+### The API refuses two of the three overlay settings
+
+- `overlayPositionType`, `overlayBackgroundInteraction` and `overlayBackground` are **read-only on a FRAME**. Each assignment throws `read-only property on FRAME node`, and the first attempt took the whole script down with it — trap 36, everything rolled back, nothing half-written. The retry probed each property in its own try/catch and built the rest regardless.
+- Read back after creation: **`overlayPositionType` is already `CENTER`**, which is what was asked, so it needs nothing. **`overlayBackgroundInteraction` is `NONE`** and **`overlayBackground` is `{type: NONE}`** — both must be set by hand in the editor, on 166:5030 and 166:5058.
+- Also worth recording: **an overlay background cannot bind a variable**, so the scrim there is a literal 50% black whichever way it is set. Until the two are set, the overlay opens undimmed and a tap outside does nothing; Cancel still closes it.
+
+### 4 and 5. The old frames, and A S11
+
+- Both S6 frames renamed with a pointer to their overlay and **left visible in place**. **Zero reactions lead to either**, checked on both pages. Their own outgoing reactions stay, since nothing reaches them.
+- `A S11 Reset sent`: readout moved **y 296 → 332**. It is 116 tall, so its centre is now **390** against the frame's 422 — **32 above centre**, matching what `A S8 Sent` had before its icon was hidden. Nothing else moved.
+
+### 6 and 7. Counts, all read fresh
+
+| | Expected | Read back |
+|---|---|---|
+| Visit screens | 26 frames | **26**, **89 across 86**, 81 click / 7 drag / 1 timeout, 0 cross-page, `Visit device` once |
+| Account screens | 35 frames | **35**, **121 across 118**, 113 / 7 / 1, 0 cross-page, `Account device` and `Unsent recording`, each once |
+| Reactions into either old S6 | 0 | **0 on both pages** |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41**, 0 off-page, 0 `Account/` instances |
+| `Account/` instances on Visit screens | 0 | **0** |
+
+- **Both pages gained exactly 2 reactions**, and both deltas are the same two nodes: the overlay's Cancel (CLOSE) and its Stop recording. The fourteen callers were **rewired, not added**. Visit 87 → **89**, Account 119 → **121**.
+- **Text: both pages gained exactly 4 nodes and 118 characters** — the cloned Dialog's title, body and two action labels: "Stop recording?" (15) + the body (83) + "Cancel" (6) + "Stop recording" (14) = **118**. Visit 433 / 9,074 → **437 / 9,192**; Account 616 / 11,676 → **620 / 11,794**. A5's totals confirmed as the starting point before the change.
+- **The unsent loop still closes**, unchanged by this batch: 140:1618 → 140:1547 → 163:2812 → 163:2938 → 140:1618.
+
+### Verification
+
+- Verified in pixels and looked at, `figma-export/account-c1-overlay-2026-09-16/`: `as11-reset-sent-164-1720-recentred-1x.png`.
+- **Not proven: still unplayed, and this batch is the one where that matters most.** An overlay's behaviour — centre position, dimming, close-on-click-outside, and Cancel returning to the caller — is a play-time behaviour. What is recorded here is the stored wiring: fourteen `OVERLAY` navigations, two `CLOSE` actions, and the two settings the API would not write. **The play-traces the brief asked for could not be run**, only traced through stored reactions.
+- **Renders skipped, named**: `V5 Paused / summary` and `A5 Paused / summary` with the overlay open, `V S5 recording` and `A S5 recording` with the overlay open, and both overlay frames on their own. Six of seven. The four "with the overlay open" renders are **not producible by the renderer at all** — `get_screenshot` renders a frame, not a prototype overlay state, so those would have to be composited by hand, and doing that would show my own composite rather than Figma's. The two overlay frames on their own were simply not taken.
+- Repo: FLAGS.md one DEFECT and two DECISIONs added, one DEFECT and one DECISION struck closed (DEFECT 30 open / 11 closed, DECISION 125 / 46). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- **Open for Daniel, and it is two clicks**: set *close when clicking outside* and the 50% black background on 166:5030 and 166:5058. Until then the overlay opens undimmed.
