@@ -784,3 +784,48 @@ File key `TP5KrQtY0T5IcMNqi375So`. Library `YX2n4YLrEpBXNbcc73T6dw`, published b
 - **Not proven: still unplayed.** The template pill and the drawer's title switcher both now imply menus that do not exist in this file.
 - Repo: FLAGS.md one GAP added (49 → 50 open), two DECISION added (87 → 89 open). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - Status: V4 top bar complete. Phase 2 (P1 onward) still needs a source node per sheet.
+
+## 2026-09-16 · Mobile visit drawer · One sheet selector, quick switch removed
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Components` and `Visit screens`. Library `YX2n4YLrEpBXNbcc73T6dw` read only apart from one import by key. **Nothing on `Screens`. No node, page or component deleted** — everything removed in this pass is hidden. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. One header, both modes
+
+- Sheet mode is unchanged: `Title switcher` `59:504`, title at x 16, `Visit/Icon/ArrowDropDown (MUI)` 8 after it.
+- List mode gets the same control. `59:504` was cloned into the list header `48:815` at index 0 as `Title switcher` `64:2241`, title set to **"Patient summary"**, 160 x 48 at x 16. The old "Patient information" title `48:816` is **hidden, not deleted**.
+- **Rotation, reported as asked: rotation was used and it renders correctly.** `rotation = 180` on the cloned triangle (now `Drop-up triangle` `64:2243`) rotates about the **top-left**, not the centre — the node's stored x/y moved 136,12 → 160,36 — but auto-layout re-flowed it and the rendered box came back at exactly 152..176 x, 11.5 y, the same place the down triangle occupies in sheet mode. Verified on the render, not the transform. **No `ArrowDropUp` master was built.**
+- **List rows, the check, and its source.** The library is not short a check glyph, so nothing was built locally: `Icon/CheckmarkOutlined` `575:8`, key `1d4c541e…`, is a bare tick. The four other check-shaped library icons are enclosed forms — CheckboxChecked, CheckboxIndeterminate, CheckCircle (MUI), CheckmarkFilled — and were rejected on that ground; the choice was made off a 10x render of the outlined one, not off its name. Imported by key, it became a new **hidden** `Check` slot `64:631` on `Visit/Sheet list row` `48:137`, vector bound to `color/primary/main` (stored rgba 0, 0.2824, 0.3216, a 1 — the bound paint's opacity is the variable's own alpha, not an override).
+- The slot is shown on **one node**: the Patient summary row `48:824` **inside the drawer master's list mode**, so all three list frames inherit it with no per-frame override. Read back on the instances: exactly **one checked row per list frame**, label "Patient summary", check box **350 to 374**, ink **350 to 374**, the row still **390 x 56**, the label shrinking 358 → 318 to make room. `visitDrawer_listCheckIsLibraryCheckmarkOutlined`.
+- Close stays as it was: hidden on the three V4 frames, **visible on all five V5 frames in both modes**, ink right edge 374.
+
+### 2. The quick switch is gone from the design
+
+- `Visit/Quick switch` `51:1092` hidden and the 48 band `48:893` hidden, which takes it out of the vertical stack so the sheet body grows into it. **The component set `51:1091` and all four variants stay on `Components`** under rule 1.
+- **Two frames did not follow the master.** `V4 Patient / placeholder` and `V5 Recording / medications` carried their own `visible` override on the inner instance — a leftover of rev 7 setting `Selected` and `Extra chips` on them — and still read `visible: true` under a hidden band after the master was changed. Caught by reading every frame rather than trusting propagation, and cleared on both. Nothing rendered either way, but "hidden on every frame" was not true until they were fixed.
+
+| Scroller | Before | After |
+|---|---|---|
+| V4 sheet body | 547 | **595** |
+| V5 sheet body | 629 | **677** |
+| V4 sheet list | 595 | 595 |
+| V5 sheet list | 677 | 677 |
+
+- After the collapse the sheet scroller and the list scroller are the same height on each device state, which is the point: the two modes are now the same drawer.
+
+### 3. Wiring — 84 before, 83 after
+
+- **Cleared, four.** Every reaction anywhere inside a Quick switch band, found by walking the band rather than by the four ids from the last batch: `I48:1483;51:1092;51:1041`, `I50:1591;51:1092;51:1027`, `I51:1774;51:1092;51:1027`, `I51:1915;51:1092;51:1041`. No hidden edges remain.
+- **Added, three.** `Title switcher` on each list frame, `ON_CLICK` → **BACK**: `I48:1391;64:2241`, `I51:1696;64:2241`, `I54:1915;64:2241`. Instance-level, not on the master, so the Components page carries no prototype wiring.
+- Sheet-mode headers, list rows, bar controls and CTAs untouched.
+
+### Verification
+
+- **`Visit screens` 84 reactions across 83 nodes before, 83 across 82 after**, which is −4 +3 as specified. Seven BACK actions on the page: the four that V S3 Microphone has always had, plus the three new list headers.
+- **`Screens` still 18 frames, 42 reactions across 41 nodes.** Zero edges cross between the two pages in either direction.
+- **Edges measured on all eight drawer frames, every one on grid**: title switcher box left **16** on all eight (ink 17.34, the "P" side bearing, the same figure sheet mode has always read); close ink right **374** on all five V5 frames; ready bar back chevron ink left **16** on the three V4 frames; stop glyph ink right **374** on all five V5 frames; row check **350 to 374**.
+- **Geometry outside the header and the band did not move**: bar 201 on V4 and 119 on V5, drawer at y 201 h 643 and y 119 h 725, scroller bottom padding 122 and 34, footer band at y 722 x 122, CTA at (16, 738) x 56, 14 rows per list.
+- Verified in pixels and looked at, four **true 2x** full-frame exports (780 x 1688 each) in `figma-export/visit-one-selector-2026-09-16/`: `v4-patient-summary-50-1570-full-2x.png`, `v4-patient-list-48-1371-full-2x.png`, `v5-recording-summary-51-1760-full-2x.png`, `v5-recording-drawer-list-51-1682-full-2x.png`, plus the two contact sheets they were read from, `CONTACT-tops.png` and `CONTACT-full.png`.
+- **Worth a look before it is accepted.** The library tick is a stroked mark with 20 x 17.54 of ink and, next to 16/24 row text, reads heavier than MUI's filled Check would. It is the library's glyph and the library is the source for screens, so it was used as found rather than corrected.
+- **Not proven: still unplayed.** Stored geometry and static renders only. The header now says "dropdown" in both modes, and the menu it implies still does not exist anywhere in this file — the list is the open state by wiring, not by a real overlay.
+- Repo: FLAGS.md five DECISION struck as superseded and two added (89 open → 86 open, 24 closed → 29 closed). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+- Status: one-selector pass complete. Phase 2 (P1 onward) still needs a source node per sheet.
