@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the current time marker was built.
+Last updated after the Sent copy led with the patient's name.
 
 ---
 
@@ -44,6 +44,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - **Sheets and drawers** have 32 top corners and one shared top (puller 30, title row 48). No close (X) button on any of them.
 - Body text is pure black, as the library has it.
 - **Sent confirmation copy says the note will be in the desktop queue.** "Unsigned Notes" is too specific; use **"desktop queue"** going forward.
+- **Sent confirmation copy leads with the patient's name, with each sentence on its own line**, so both Sent screens have the same two-line shape.
 - Status language is Sending, Sent and Failed to send. Never "synced", "complete" or "ready". The phone reports only on the handoff. On schedule rows the pill shortens to one word — Sending, Sent, Failed — because the row leads to the patient, where the alert gives the full context.
 
 **Account**
@@ -392,9 +393,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 - **A S8 Sent / sent.**
   - Success icon.
   - Heading: "Sent for processing".
-  - Body: "The note for Marcus Vance is being generated. You'll find it in your desktop queue."
+  - Body, two sentences on their own lines: "Marcus Vance's note is being generated." / "You'll find it in your desktop queue." The break is authored, not a wrap: in the 326 column each sentence is one line, so the block is **2 lines, 48 tall**.
   - An `Actions` stack at (16, 674), 358 x 120, `itemSpacing` bound `space/8`: **Next Patient** (contained, secondary) then **Back To Schedule** (text, primary), both 358 x 56, the stack ending on 794. The confirmation content does not move.
-- **A S8 Sent / Yusuf 230:5044.** The same screen for the resend leg, body "The note for Yusuf Bahri is being generated. You'll find it in your desktop queue.", with the same `Actions` stack.
+- **A S8 Sent / Yusuf 230:5044.** The same screen for the resend leg, body "Yusuf Bahri's note is being generated." / "You'll find it in your desktop queue.", with the same `Actions` stack. **The two Sent screens are now the same shape**: heading 36, body 48, `Sent readout` 164 at y 296 on both.
 - **A S8 Sent / failed.** **It has no Next Patient**; its two actions are Back To Patients and Retry, and it was left alone this batch.
   - Error alert.
   - Heading: "Couldn't send recording".
