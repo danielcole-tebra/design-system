@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the first phone playthrough notes were applied.
+Last updated after the second phone playthrough notes were applied.
 
 ---
 
@@ -47,6 +47,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 **Account**
 
+- The sign-in screen shows **"Visit Companion"** under the Tebra logo, centred, in the home top bar's title face.
 - One account, one practice. The practice is shown as a fact, never a choice.
 - Demo provider: Dr. Sarah Bennett, Windsor Family Medicine, sbennett@windsorfm.com, initials SB. The avatar is a salmon disc with two initials.
 - Signing out is never blocked. With an unsent recording, a warning offers Retry first and Sign out anyway.
@@ -57,7 +58,10 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The schedule is the only home. Everything that used to land on a home lands there.
 - The schedule header shows the real date, **"Thursday, September 17"**, in place of "Today". If the schedule ever spans days, each day gets its own header in the same format.
 - **The date header floats**: it stays pinned while the list scrolls. It sits above the scroll area, not inside it, so the list passes under it.
-- **The list ends and the beige page background begins.** The end of the list gets a closing line so it reads as the end: **"That's everyone for today"**, centred, in the secondary text style, on the beige.
+- **The scroll area runs to the bottom of the frame.** Ruled 2026-09-17 on the second playthrough, superseding the first playthrough's reading: the beige Daniel saw under the list was the scroll area stopping short at the safe area, not the page showing where the list ends.
+- The end of the list still gets a closing line so it reads as the end: **"That's everyone for today"**, centred, in the secondary text style, on the beige, with 34 of padding below it so it clears the home indicator when the list is scrolled fully.
+- **The pinned date header is separated from the list scrolling under it** by a 1 px bottom divider, the same `color/divider` the rows use.
+- **An empty day still shows the date header.**
 - **Main demo path:** schedule, tap Marcus Vance, read the summary, record, stop, sent, back to the schedule with Marcus marked Sent. Everything goes well.
 - **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row, tap the alert, sent, back to the schedule with both marked Sent.
 - On the schedule, Marcus Vance is the 11:00 appointment and Yusuf Bahri the 9:15.
@@ -103,6 +107,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The pause and stop controls on the recording bar sit on the timer line.
 - The stop confirmation is an overlay, and Cancel returns to the screen the provider was on. Cancelling from pause resumes recording. Pause has no confirmation.
 - The Sending loader uses the library's teal, since the library loader has no grey.
+- The line seen where the green recording field meets the drawer is a **rendering artifact of two adjacent fields, not geometry**. Ruled 2026-09-17; nothing was changed, and the divider question from the first playthrough is closed as that.
 
 ---
 
@@ -138,7 +143,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 |---|---|
 | `Account screens` 103:2319 | **The whole app, and the only working screen page.** 33 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
 | `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (22), `Account/` (4), `Schedule/` (2), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
-| `Archive` 214:3026 | 25 frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, then `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561. Nothing here has a reaction |
+| `Archive` 214:3026 | 26 frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561, then `SCAFFOLDING · schedule scrolled to the end` 241:4998. Nothing here has a reaction |
 | `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
 | `Archive · Screens` 1:3 | The original four-job prototype, archived 2026-09-17. 18 frames, 42 reactions, starting point Happy path. Never edited |
 | `Foundations` | Frame template and colour table |
@@ -183,7 +188,7 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 ### 6.1 Sign in
 
 - **A S1 Login / default, / error, / after sign out.**
-  - Full-bleed `#004852` field, reversed wordmark, white card holding Email, Password and Sign In.
+  - Full-bleed `#004852` field, then an `App identity` lockup at (16, 132), 358 x 84: the reversed wordmark, **24** below it (`space/24`), and **"Visit Companion"** centred on the home top bar's face, Akkurat LL Regular 24/36, bound `color/common/white`. Then the white card holding Email, Password and Sign In, unmoved at y 256, 40 below the lockup.
   - The error state adds an error alert inside the card.
   - "Forgot Password?" is a text Button, centred horizontally in the card at x 120.5, with 16 above and below.
   - The card is 282 tall, 366 on error.
@@ -215,7 +220,7 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 | / schedule, top | The same fourteen rows at the list’s start |
 | / schedule, Marcus sent | After the main path: Marcus reads Sent at 11:00 and is the first full row. Yusuf still Failed at 9:15 |
 | / schedule, both sent | After the resend: Marcus and Yusuf both Sent, drawn at offset 0 so both are visible |
-| / empty day | "No appointments today" |
+| / empty day | The date header, then "No appointments today" |
 | / searching | Search in progress |
 | / results | Search results |
 | / no results | "No patients match" |
@@ -223,11 +228,11 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 Archived: `/ empty`, `/ sessions`, `/ after first capture`, `/ after failed capture`, `/ unsent`.
 **Schedule, built 2026-09-17.** All three clone `A S2 Home / empty`, so the top bar, avatar and search at rest carry over, and each keeps that frame's two reactions (avatar to Account, search to Searching).
 
-- All four schedule frames hold a `Content` stack at y 47, **390 x 763**: the top bar (64), the search block (80), the **`Date header`** (40) and the `Schedule scroll` frame (**390 x 579**, clipping, `overflowDirection` VERTICAL), whose bottom lands on 810, the 34 bottom safe area.
-- **The date header is pinned by structure, not by a property.** It is a sibling of the scroll frame inside `Content`, not a child of the scrolling stack, so it holds while the list moves under it. Figma's "fix position when scrolling" is not reachable from the plugin API in this build (`scrollBehavior` throws on a FRAME), and this is what the structure allows. It sits on the beige, 390 x 40, the date on body2 14/20 at x 16, `color/text/secondary`.
-- Inside the scroll frame a `Schedule content` stack, **390 x 1072**, holds **fourteen** `Schedule/Row` instances (72 each) and a `Schedule/End of list` instance (64) at stack y 1008. **All four frames overflow**: 1072 of content against a 579 container.
+- All four schedule frames hold a `Content` stack at y 47, **390 x 797**: the top bar (64), the search block (80), the **`Date header`** (40) and the `Schedule scroll` frame (**390 x 613**, clipping, `overflowDirection` VERTICAL), whose bottom lands on **844, the frame bottom**. The scroll area deliberately runs past the safe area; the clearance is carried inside the scrolling stack instead, so it moves with the list.
+- **The date header is pinned by structure, not by a property.** It is a sibling of the scroll frame inside `Content`, not a child of the scrolling stack, so it holds while the list moves under it. Figma's "fix position when scrolling" is not reachable from the plugin API in this build (`scrollBehavior` throws on a FRAME), and this is what the structure allows. It sits on the beige, 390 x 40, the date on body2 14/20 at x 16, `color/text/secondary`, over a **1 px INSIDE bottom stroke bound `color/divider`** and 1 of top padding, which keeps the date on y 10 and the row on exactly 40.
+- Inside the scroll frame a `Schedule content` stack, **390 x 1106**, holds **fourteen** `Schedule/Row` instances (72 each), a `Schedule/End of list` instance (64) at stack y 1008, and **34 of bottom padding** so the closing line clears the home indicator when the list is scrolled fully. **All four frames overflow**: 1106 of content against a 613 container.
 - **/ schedule, top** and **/ schedule, both sent** draw the stack at y 0. **/ schedule** and **/ schedule, Marcus sent** offset it to **y -252**, the midpoint of the Renata Ilves row, so the last past appointment peeks in halfway under the date header and Marcus Vance starts 36 below it, fully visible. The offset moved -292 to -252 when the 40-tall heading left the stack; the cue is unchanged, it is now the header rather than the search field that cuts the peeking row.
-- **A S2 Home / empty day** 204:4172 shows "No appointments today", built as a clone of `No patients match` 103:2395.
+- **A S2 Home / empty day** 204:4172 shows the same pinned `Date header` **241:4990** and "No appointments today" below it, on the beige. Its `Content` stack is 390 x 224 and it has no scroll area.
 
 The fourteen rows, in strict time order. Times place the present between 10:20 and 11:00 AM.
 
