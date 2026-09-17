@@ -3540,3 +3540,36 @@ Marcus Vance's row → `A4 Patient / list, not sent` 200:6707 on **both** frames
 - `figma-export/schedule-full-day-2026-09-17/as2-home-schedule-204-4082-1x.png`
 - `figma-export/schedule-full-day-2026-09-17/as2-home-schedule-top-204-4127-1x.png`
 - `figma-export/schedule-full-day-2026-09-17/schedule-row-proof-196-787-1x.png`
+
+## 2026-09-17 · Mobile ambient capture · Tidy the Account screens page — stopped at the version gate
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Nothing in Figma was changed.** `figma.skipInvisibleInstanceChildren = false` on every read. Read-only throughout.
+- **Stopped at step 0, as the brief instructs.** The batch's own first step is a named version checkpoint, and the API cannot make one. Steps 2, 3 and 4 are not started; no DECISION was written, because none of the rulings has been acted on yet.
+- Full inventory and findings: `reports/Tidy the Account screens page.md`.
+
+### The gate
+
+`figma.saveVersionHistoryAsync` **exists as a function** — `typeof` returns `function` — but throws on call: `in saveVersionHistoryAsync: "saveVersionHistoryAsync" is not a supported API`. This confirms the PLUGIN-NOTES entry of 2026-09-13; it was **re-tested rather than assumed**, because the note was four days old and the checkpoint is the only protection for a batch that moves 8 nodes between pages and relays 47. Unchanged. **Daniel to save "Before tidy, 2026-09-17" by hand.**
+
+### Step 1, the inventory, run anyway because it is read-only
+
+**47 top-level nodes on `Account screens`: 43 frames, 3 components, 1 component set. 128 reactions. 3 starting points.** The full table — name, id, type, visibility and label, inbound and outbound counts, starting-point flag, bounding box and overlaps — is in the report.
+
+What it settles before anything moves:
+
+1. **The two SUPERSEDED frames cannot be archived.** `A S4 Patient` 103:2412 and `A S6 Stop confirmation` 103:2451 both have **0 inbound** and would qualify, but each carries **3 outbound reactions to live frames** — 103:2412 to `A S2 Home / empty`, `A S3 Microphone` and `A S5 Recording / recording`; 103:2451 to `A S5 Recording / recording` twice and `A S7 Sending`. Moving either would put six edges across a page boundary, so under the brief's own rule **both stay**. Worth naming: both frames are hidden, so these are dead frames tethered to live ones by reactions nobody can fire. Cutting the six would free both to archive — **a ruling for Daniel, not part of a tidy.**
+2. **Four components move cleanly**: `Account/Avatar` 108:1212, `Account/Top bar` 114:600, `Account/Microphone sheet` 121:1793, `Account/List row` 163:1444 — all 0 in, 0 out.
+3. **Four PROOF frames move cleanly**: 108:1225, 109:1212, 114:1721, 121:1848 — all 0 in, 0 out.
+4. **Five frames stay but want a decision** — zero inbound, not starting points, nothing reaches them: `A S1 Login / error` 103:2330, `A S2 Home / sessions` 103:2353, `A S2 Home / no results` 103:2383, `A S2 Home / schedule, top` 204:4127, `A S2 Home / empty day` 204:4172. Two are more than housekeeping: **`A S2 Home / sessions` may be superseded by the schedule**, and **`A S1 Login / error` is the only login state with no way in**.
+5. **Every overlap on the page is in one band**, x 3880–5680 / y 1120–2144, where last batch put the three schedule frames straight through the parked column of `Account/` masters and PROOF frames. Seven pairs; nothing else on the page overlaps. The tidy dissolves it by construction.
+
+### Found while reading for step 4
+
+The ruling fixing the Forgot Password link's right edge at **350** — `mobileAccount_forgotLinkRightAlignedUnderPassword`, FLAGS.md line 317 — **is already struck through**, closed 2026-09-16 when Daniel ruled the 16/16 spacing. Its text still carries the 350, and **`mobile-spec.md` §6.1 still states it as live**: "\"Forgot Password?\" is a text Button, right edge at 350". The spec line is the one that is actually wrong today. Both get the supersession note when the batch resumes.
+
+### Believed, not seen
+
+- **Nothing was rendered.** No screenshot was taken, because nothing changed; the three the brief asks for belong to the completed batch.
+- **Inbound counts are counts of reactions whose `destinationId` is that node.** A reaction pointing at a descendant rather than the frame would not be counted, and none was looked for.
+- **Overlap is computed from top-level bounding boxes only**, so a child overhanging its frame would not show up.
+- The five zero-inbound frames are unreachable **in the prototype graph**; whether any is reachable by scrolling or by a reaction on a nested instance pointing elsewhere was not tested.
