@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the chart copy was corrected.
+Last updated after two patient page layouts were tried.
 
 ---
 
@@ -133,6 +133,17 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The Sending loader uses the library's teal, since the library loader has no grey.
 - The line seen where the green recording field meets the drawer is a **rendering artifact of two adjacent fields, not geometry**. Ruled 2026-09-17; nothing was changed, and the divider question from the first playthrough is closed as that.
 
+**Open experiment — the patient page. Not settled, and nothing in the demo follows it yet.**
+
+Daniel's rulings for the two alternatives built on `scratchpad` 2026-09-17. They describe the experiment, not the shipping screen; `A4 Patient / summary` and the rest of the demo are unchanged and still follow the settled rulings above.
+
+- The patient page's controls belong at the top, not over the drawer, matching where the recording controls sit on the recording screen.
+- Start Recording becomes **"Start Encounter"** on these variants. The word comes from FHIR and may be temporary.
+- The template pill and the microphone control are co-located with Start Encounter, because they configure it.
+- The drawer starts closed on the patient page and holds the chart. Patient admin details sit on the page behind it.
+
+Built as `EXPERIMENT A · Patient page, plain header` **282:7488** and `EXPERIMENT B · Patient page, resting band` **282:7501**, both 390 x 844 on the `scratchpad` page, side by side at x 1000 and x 1470. Neither is wired and neither is reachable from any flow.
+
 ---
 
 ## 3. Foundations
@@ -171,6 +182,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 | `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
 | `Archive · Screens` 1:3 | The original four-job prototype, archived 2026-09-17. 18 frames, 42 reactions, starting point Happy path. Never edited |
 | `Foundations` | Frame template and colour table |
+| `scratchpad` 262:7760 | Working surface, outside the demo. A clone of `A S2 Home / schedule, top`, the `MEASUREMENT PROBE` 278:401 from the summary polish, and the two patient page experiments **282:7488** and **282:7501** with their labels. One reaction, on the cloned schedule frame; no starting point |
 
 Frame names start with the page's letter: `A` for Account screens, `V` for the archived Visit screens, none for the archived Screens. No reaction crosses pages, and nothing on `Account screens` points at an archived frame.
 

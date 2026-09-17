@@ -30,6 +30,7 @@ One agent at a time.
 
 ## Later
 
+- **Compare the two patient page experiments at arm's length** and pick one, or neither. If one is adopted, `Visit/Recording bar` 48:918 needs a variant that puts the pills above the identity — the experiment's headers are SCAFFOLDING because an instance cannot reorder them.
 - Play the schedule on a phone. Check the scroll, the peeking row, and that Marcus Vance is the only row that goes anywhere.
 - Judge the now marker at arm's length: whether the half dot reads at the screen edge and whether the 2 px teal is heavy enough against the 1 px row dividers.
 - Play both pages on a phone. Check:
@@ -53,7 +54,7 @@ One agent at a time.
 - ~~How yesterday's unsent rows sit beside today's schedule.~~ **Closed 2026-09-17**: there is no separate unsent home any more. `A S2 Home / unsent` is archived, and an unsent recording shows on the schedule itself — from 2026-09-17 that is Yusuf Bahri's 9:15 row reading Failed; the account screen's "1 recording not sent" row opens his chart.
 - ~~**The divider above the Patient chart drawer, from the playthrough note.**~~ **Closed 2026-09-17**: Daniel ruled that the line he saw where the green recording field meets the drawer is a **rendering artifact of two adjacent fields, not geometry**. Nothing was changed, and nothing needed to be: the first batch found no such line in the tree or in the pixels, and that finding stands as the evidence.
 - **On `A4 Yusuf / list, not sent` the chart list ends at Vitals and Social history cannot be reached.** His drawer starts 64 lower to clear the not-sent alert, so the nine rows run past the `Footer band`, and with rows 10 to 14 hidden the list no longer scrolls (466 of content in a 501 area). Social history sits entirely behind the band. Nothing was changed — how a shortened drawer should end is a design question, and his chart is inert either way. Raised 2026-09-17, `mobileVitals_yusufListCannotReachSocialHistory`.
-- In Daniel's words: "The patient screen shows a drawer when a drawer isn't really needed before recording. Reconsider the patient screen. Not urgent."
+- ~~In Daniel's words: "The patient screen shows a drawer when a drawer isn't really needed before recording. Reconsider the patient screen. Not urgent."~~ **Taken up 2026-09-17, not closed**: two alternatives are built on `scratchpad` for a phone comparison — `EXPERIMENT A · Patient page, plain header` 282:7488 and `EXPERIMENT B · Patient page, resting band` 282:7501. Both move the controls to the top, rename the CTA **Start Encounter**, put the template pill and the microphone with it, and start the drawer closed with patient admin details on the page behind it. **Nothing in the demo follows them yet.** What to look at on the phone: whether the band earns its weight against the plain header; whether the controls at the top read as configuring the encounter; and the **175 / 159 of empty page** between the admin rows and the closed drawer.
 - ~~Whether the scroll area should run to the screen bottom.~~ **Closed 2026-09-17, then reopened and closed the other way the same day.** The first playthrough read the beige under the list as the page showing where the list ends, and the closing line "That's everyone for today" was built for it. The second playthrough corrected the premise: **the beige was the scroll area stopping short at the safe area, not the page.** The scroll area now runs to the frame bottom on all four schedule frames and the 34 of clearance moved inside the scrolling stack. The closing line survives the correction and is unchanged.
 - **`Sheet body`'s 122 of bottom padding does not buy scroll clearance**, so the summary carries its own 138 instead. Whether the 122 should come off `Sheet body` — and whether the chart list wants the same treatment — is open; it would touch every sheet frame. Raised 2026-09-17, `mobileSummary_scrollFramePaddingIsNotClearance`.
 - **The Patient summary still carries a feedback action**, which §6.4 says ported sheets drop. It predates the rule. Whether it stays is Daniel's call. Its typo was fixed 2026-09-17; the block itself is still open, `mobileSummary_feedbackBlockSurvivesTheActionDrop`.
@@ -134,5 +135,6 @@ One agent at a time.
 | Make the Vitals sheet real | — | a28dc9f |
 | Polish the patient summaries | — | 32a2158 |
 | Correct the chart copy | — | 657563f |
+| Try two patient page layouts | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
