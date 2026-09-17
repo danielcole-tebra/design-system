@@ -94,6 +94,7 @@ One agent at a time.
 | Show the schedule row for review | — | 9214d43 |
 | Add a chevron and white fill to the schedule row | — | a7f1cd9 |
 | Build the not-sent alert on the patient screen | — | c8e9e22 |
-| Build the schedule home screens | — | (this commit) |
+| Build the schedule home screens | — | bf0178a |
+| Change the telehealth marker to text and icon | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.

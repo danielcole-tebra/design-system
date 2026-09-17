@@ -56,7 +56,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - Search is the spine and stays unchanged. The schedule is a shortcut above the fallback, not a replacement for it.
 - The schedule is a set of ways into a patient, not a record. It shows the schedule as it stands and never reasons about it.
 - A row knows the patient, the time, whether the visit is telehealth, and whether a recording exists. A past row with no recording is quiet: no status, no explanation.
-- Telehealth is marked with a small library Chip reading "Telehealth", on telehealth rows only.
+- The status is the only pill on a schedule row. Telehealth is shown as text with an icon, not a Chip: a separator, a 16 `VideocamOutlined` and the word "Telehealth", on the time line, in secondary ink.
 - Schedule rows show a trailing `ChevronRight` to say they open the patient. It sits on the optical edge, and the status chip moves left to make room.
 - Schedule rows sit on `color/background/paper`, not transparent over the page.
 - A recording for a patient not on the schedule gets its own row, in time order by when it started.
@@ -148,10 +148,10 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 | `Visit/Chart row` | 177:2858 | 390 x 48, library `List/Item` (one line) and `ChevronRight` ending at 374 |
 | `Visit/Sheet/Patient summary` | 50:969 | 358 x 1141, ported from NPVE 672:7906 |
 | `Visit/Sheet/Placeholder` | 48:141 | Stand-in for sheets not yet ported |
-| `Visit/Icon/…` | Components | Exact MUI paths: ArrowDropDown 59:493, ChevronLeft 159:1103, ChevronRight 159:1105, ExpandMore 159:1107 (reserved), PauseCircle 74:531, StopCircle 74:534, PlayCircle 74:537, Cancel 74:540 |
+| `Visit/Icon/…` | Components | Exact MUI paths: ArrowDropDown 59:493, ChevronLeft 159:1103, ChevronRight 159:1105, ExpandMore 159:1107 (reserved), PauseCircle 74:531, StopCircle 74:534, PlayCircle 74:537, Cancel 74:540, VideocamOutlined 206:830 |
 | `Session row` | 4:454 | 390 x 72. Name 16/24 and time 14/20 in a column, `Status chip` trailing, bottom divider. `State`: default, failed |
 | `Status chip` | 4:395 | Library Chip, medium, outlined. `Status`: Sending, Sent, Failed to send |
-| `Schedule/Row` | 196:777 | 390 x 72 on `color/background/paper`, like `Session row`, with a Telehealth Chip after the time and a trailing `ChevronRight` (159:1105, 24, `color/grey/600`, ink ending at 374, right padding 8). Status chip ends at 342. `Name`, `Time`, `Telehealth`, `Status` (none, sending, sent, failed) |
+| `Schedule/Row` | 196:777 | 390 x 72 on `color/background/paper`, like `Session row`. Time line: the time, then 8, then the Telehealth group — `·`, a 16 `VideocamOutlined` and the word, all body2 14/20 on `color/text/secondary`, 4 apart, 97 wide, driven by the `Telehealth` boolean. Trailing `ChevronRight` (159:1105, 24, `color/grey/600`, ink ending at 374, right padding 8). Status chip ends at 342. `Name`, `Time`, `Telehealth`, `Status` (none, sending, sent, failed). The old Telehealth Chip is hidden and labelled SUPERSEDED |
 | Search result row, Level meter, Field buttons | Components | From the original build |
 
 Superseded components are labeled and kept, never deleted. The list is in FLAGS.md.

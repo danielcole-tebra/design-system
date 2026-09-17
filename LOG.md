@@ -3402,3 +3402,62 @@ Five invented names: **Renata Ilves, Yusuf Bahri, Colette Mwangi, Ingrid Solheim
 - `figma-export/schedule-home-2026-09-17/as2-home-schedule-top-204-4127-1x.png`
 - `figma-export/schedule-home-2026-09-17/as2-home-empty-day-204-4172-1x.png`
 - `figma-export/schedule-home-2026-09-17/a4-patient-list-not-sent-200-6707-1x.png`
+
+## 2026-09-17 · Mobile ambient capture · Change the telehealth marker to text and icon
+
+- File `TP5KrQtY0T5IcMNqi375So`, **`Components` page**. Additive: the Chip is hidden and labelled, not deleted. `figma.skipInvisibleInstanceChildren = false` on every read. Nothing wired.
+- Ruling recorded as `mobileSchedule_telehealthIsTextNotChip` and written into `mobile-spec.md` §2. It **supersedes `mobileSchedule_telehealthChipIsSmall`**, now struck.
+- Full report: `reports/Change the telehealth marker to text and icon.md`. Contact sheet: `reports/Change the telehealth marker to text and icon.png`.
+
+### 1. `Visit/Icon/VideocamOutlined (MUI)` 206:830
+
+24 × 24 at (2544, 7518), beside the chevrons, `clipsContent` false, `fills` [].
+
+**The path came from the package, not from memory.** `@mui/icons-material` has no readable `node_modules`, but the yarn cache in `C:\Code\web-app-v2` holds the archives; read out of `@mui-icons-material-npm-5.15.19`:
+`M15 8v8H5V8zm1-2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4V7c0-.55-.45-1-1-1`
+
+**The same archive gave a control**: `ChevronRight.js` reads `M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z`, bbox x 8.59 y 6, 7.41 × 12 — exactly what 159:1105 already carries. Source and import pipeline both checked before the new icon was trusted.
+
+Recipe: vector kept its imported position **(3, 6), 18 × 12**, which is the path's own bbox (1); `constraints` SCALE/SCALE (2); named `Vector`, master `Visit/Icon/… (MUI)` (4); master fill bound **`color/text/primary`** like both chevrons, overridden per instance (3). The `createNodeFromSvg` wrapper and its undeclared white fill (trap 31) were emptied and removed.
+
+### 2. The marker, all four variants
+
+On `Secondary line`, **8 after the time**: a `Telehealth` group, HORIZONTAL, HUG/HUG, gap **4**, CENTER, no fill, **97 × 20** — `·` (4 wide), the icon at **16 × 16** overridden to `color/text/secondary`, and "Telehealth" (69 wide). Both texts body2 **14 / 20** on `color/text/secondary`, matching the time. `Telehealth#196:10` now references the group.
+
+- **Both texts were cloned from `Time`**, so all five type bindings came across as objects. **Each clone's `componentPropertyReferences` was cleared first** — a clone carries them, and `Time` holds `{characters: "Time#196:5"}`, so both would otherwise have read "9:15 AM".
+- **The Chip's reference was cleared before it was hidden**, so the boolean can never show it again; renamed `… (SUPERSEDED 2026-09-17 · replaced by the text and icon group)`.
+
+### The numbers asked for
+
+- **Time line with Telehealth on: 155** — Time 50 + 8 + group 97; in row coordinates x 16 to **171**. With it off, 66.
+- **Text column beside the failed chip: 203**, unchanged — the marker sits inside the column and moves neither the status chip nor the chevron.
+- **Rows stay 72 and nothing truncates**: all eight proof instances 72 × 390, `textTruncation` DISABLED on `Name`, `Time` and the word, every `Name` 24 tall and every `Time` and word 20.
+
+### Found
+
+1. **The column no longer changes height when the marker appears.** Measured off and on across all eight: `Text` column **44 both ways**, at y **13.5** both ways, `Secondary line` **20** both ways. With the Chip it went 44 → 48 and the centred column shifted 2 px up, because the chip was 24 against the time's 20. The old COMPOSITIONS argument for `size=small` was about minimising exactly this; **text at 20 removes it instead**, and the entry is amended to say so.
+2. **Two pills became one**, which was the point: the marker now reads as a continuation of the time in the same ink, and the only pill left on a row is the one reporting the handoff.
+3. **`getInstancesAsync` gave a stale count, and the walk caught it — recorded as a non-finding.** The first call returned **24** of 28, missing exactly the four proof rows with Telehealth off, which looked like a hidden-subtree skip worth a trap. A direct walk and a second call both returned **28**. The first read ran before `Account screens` was loaded in that script. **Its result depends on which pages the current script has loaded**; check against a walk before believing a shortfall. No trap written.
+4. **The proof sheet's title is now partly out of date** — 196:787 still reads "Chevron ink right 374, row on background/paper" and does not mention the marker. Nothing in it is false, so it was left: last batch's title edit made the hugging frame grow 980 → 1289 and needed a second pass, not worth repeating for an addition.
+
+### Verified
+
+- **7 componentPropertyReferences per variant, unchanged and identical** across the four. The group carries `{visible: "Telehealth#196:10"}`; the chip no longer appears — a clean swap, not an addition.
+- **Proof sheet read back**: group 97 wide at x 74 (right edge 171), visible on exactly the four Telehealth-true rows, chip hidden on all eight, status chip still ending at **342**, icon 16 everywhere.
+- **The schedule frames picked it up untouched**: 204:4082 and 204:4127, eight rows each, all 72, **Colette Mwangi the only row showing the group** in both, no chip visible. Effective visibility tested by walking to the page (trap 39).
+- **Counts**: `Components` 44 → **45** children (+1, the icon master). `Account screens` unchanged at 47 children, **126 across 123** — nothing wired this batch.
+
+### Believed, not seen
+
+- **The prototype was not played**; the marker is not interactive and no reaction was touched.
+- **The glyph is right** on the strength of the package path, the ChevronRight control and the 2x render — not against Storybook or a running app.
+- **`Visit screens` and `Screens` were not re-read**; neither uses `Schedule/Row`, so neither can have changed, but that is inference from usage, not a count.
+- **The 16 icon is judged at 2x on a monitor**, not at arm's length on a phone — the same open question the plan already carries for the pill triangle and the avatar.
+- The separator is **U+00B7**, asserted from the character written; at 14 px in secondary ink a render cannot tell it from a bullet.
+- Both 2x exports and the 1x frame were looked at before this was written.
+
+### Screenshots
+
+- `figma-export/telehealth-text-2026-09-17/schedule-row-set-196-777-2x.png`
+- `figma-export/telehealth-text-2026-09-17/schedule-row-proof-196-787-2x.png`
+- `figma-export/telehealth-text-2026-09-17/as2-home-schedule-top-204-4127-1x.png`
