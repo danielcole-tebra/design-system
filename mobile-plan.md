@@ -125,6 +125,6 @@ One agent at a time.
 | Lead the Sent copy with the patient's name | — | ca1ba31 |
 | Enlarge the time marker dot | — | 46bb155 |
 | Make the Medications sheet real | — | 85e1b5e |
-| Make the Vitals sheet real | — | (this commit) |
+| Make the Vitals sheet real | — | a28dc9f |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
