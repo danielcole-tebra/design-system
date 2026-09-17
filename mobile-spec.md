@@ -64,7 +64,10 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The list is in strict time order and opens scrolled to the next upcoming appointment.
 - An empty day reads "No appointments today".
 - Placeholder rows use Marcus Vance, Dolores Okonkwo, Priya Raghunathan and five invented names.
-- Only Marcus Vance's row opens a chart. The Failed to send row retries, and all other rows are inert.
+- Every schedule row opens its patient. No row retries from the list.
+- A recording that was not sent is retried from the patient screen, through an alert above the Patient chart.
+- On the schedule, Marcus Vance's row is the Failed to send row. The next upcoming appointment belongs to another patient and, like every row except Marcus's, does nothing when tapped, because his is the only patient with a chart in the file.
+- `A S2 Home / unsent` is unchanged. Its row still retries straight to Sending.
 
 **Patient chart**
 
@@ -234,6 +237,8 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 **Patient screen, A4 Patient / list, / summary, / placeholder.** Page background, with the ready recording bar above the drawer.
 
+**Not sent, A4 Patient / list, not sent 200:6707.** The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=error, size=small`) in the Alert's own action slot. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
+
 **Ready bar**, 390 x 201:
 
 - Top safe area 47.
@@ -354,6 +359,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | A4 device pill | tap | A S3 Microphone |
 | A4 Template pill | tap | nothing |
 | A4 Start Recording | tap | A S5 Recording / recording |
+| A4 Patient / list, not sent — Retry | tap | A S7 Sending |
 | Chart row, Patient summary | tap | the summary frame of the same screen and state |
 | Chart row, Medications | tap | A4 Patient / placeholder or A5 Recording / medications. Inert on the paused list |
 | Other chart rows | tap | nothing |
@@ -372,15 +378,14 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 | From | Tap | To |
 |---|---|---|
-| Marcus Vance row | tap | A4 Patient / list |
-| Failed to send row | tap | A S7 Sending |
-| Other rows | tap | nothing |
+| Marcus Vance row, which is the Failed to send row | tap | A4 Patient / list, not sent |
+| Every other row, the next upcoming included | tap | nothing |
 
 **Counts now:**
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 39 (35 screens, 4 proof scaffolds) | 114 across 111 |
+| Account screens | 40 (36 screens, 4 proof scaffolds) | 120 across 117 |
 | Visit screens | 26 | 84 across 81 |
 | Screens | 18 | 42 across 41 |
 

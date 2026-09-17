@@ -3267,3 +3267,60 @@ Only the **sheet title 196:788** was edited, to say what the sheet now proves. T
 
 - `figma-export/schedule-chevron-2026-09-17/schedule-row-set-196-777-2x.png` — the four variants
 - `figma-export/schedule-chevron-2026-09-17/schedule-row-proof-196-787-2x.png` — the eight instances, white on beige
+
+## 2026-09-17 · Mobile ambient capture · Build the not-sent alert on the patient screen
+
+- File `TP5KrQtY0T5IcMNqi375So`, page **`Account screens`**. `figma.skipInvisibleInstanceChildren = false` on every read. Additive: nothing deleted, nothing hidden that was visible, **`A4 Patient / list` 103:3027 not edited** (re-read after the build: 4 children, Drawer still y 201 × 643).
+- Four rulings from Daniel recorded in FLAGS.md as DECISIONs and written into `mobile-spec.md` §2: `mobileSchedule_everyRowOpensItsPatient`, `mobilePatient_notSentIsRetriedFromTheChart`, `mobileSchedule_marcusIsTheFailedRow`, `mobileAccount_unsentHomeUnchangedByTheScheduleRulings`. The first **supersedes the retry half of `mobileSchedule_onlyMarcusVanceRowOpensAChart`**.
+
+### Built
+
+**`A4 Patient / list, not sent` 200:6707**, 390 × 844 at (1530, 6800), cloned from 103:3027.
+
+- **Alert** `variant=standard, severity=error` (master 2:785), **358 × 48 at (16, 201)**, message "Recording from 9:15 AM not sent", action a text Button **6:62** `variant=text, color=error, size=small` labelled **"Retry"**, wired `ON_CLICK` → `A S7 Sending` 103:2463.
+- **The Alert does have an action slot**, so nothing was blocked: `action#802:26` INSTANCE_SWAP, default `Icon/CloseOutlined` 2:761, gated behind a separate `onClose#165:7` BOOLEAN that shows the `Action` frame. Two writes, not one. Its `preferredValues` already list two component sets, so a Button there is intended.
+- **Gap 16, on both sides.** The `Pills row` frame ends at **185** and the drawer began at **201**, so the existing gap was 16; the alert takes 201–249 and the drawer starts at 265.
+- **Drawer** moved **201 → 265** and shortened **643 → 579**, bottom still **844**. `resize()` read back (trap 18 did not apply — it is a direct child of the frame, not nested in an instance). **Footer band y 722 × 122 and Start Recording y 738 did not move**; they are siblings, and the drawer's 122 bottom padding still lands on 722.
+
+### Found
+
+1. **The Retry target is 28 tall against the spec's 48 minimum.** The Button is 64 × 28 and the `Action` frame holding it is 64 × 36; the library Alert offers nothing larger, because that frame is sized by the Alert's own 6 px padding. Wiring the frame instead of the button gains 8 px and still falls short. **Not resolved** (rule 10) — the component's limit, and the first wired control in this prototype under 48.
+2. **The alert message fits with 76 px to spare** — 218 wide in a 294 slot, `textTruncation` DISABLED, `textAutoResize` HEIGHT. Longer copy would wrap and grow the alert, which **moves the drawer**, since the drawer's y is derived from the alert's height.
+3. **The clone carried everything, proved by comparison not by recipe.** Source and clone compared **by layer-name path** before anything was touched: 5 reaction nodes each, 5 reactions each, **identical JSON on every path, nothing missing, extra or differing**, 0 frame-own reactions on both. Nothing was re-applied — a blind replay (traps 35, 42) would have doubled all five.
+4. **`flowStartingPoints` unchanged at two, no duplicate**: `Account device` 103:2320, `Unsent recording` 140:1618. A cloned frame does not inherit one, so nothing needed removing.
+5. **The shorter drawer shows eight chart rows before the scroll where the source shows nine.** Sheet 9 is below the fold. Nothing is lost — the list scrolls — but the two frames do not crop identically.
+6. **Severity red agrees with the ramp.** The border samples **#D83B4D**, the spec's Failed-to-send colour, and the alert renders **white on the beige** rather than a pale red wash — which is what `TEBRA-DESIGN-SYSTEM.md` §3.13 says `standardError` does (white ground, 1 px coloured border), not MUI's computed tint.
+
+**Design question raised, not decided: the Retry button's colour was not ruled.** `color=error` was used so the action reads as part of the alert, `size=small` because 28 is exactly the `Action` frame's height. The alternative is `primary` teal, matching every other text action in the app. One property on one instance.
+
+### Counts, before and after
+
+| Page | Frames | Reactions |
+|---|---|---|
+| **Account screens** | 39 → **40** (+4 components either side) | 114 across 111 → **120 across 117** |
+| Visit screens | 26 → 26 | 84 across 81, unchanged |
+| Screens | 18 → 18 | 42 across 41, unchanged |
+
+- **+1 frame**: the clone. Page children went 43 → 44; four are components, which is why 44 children is 40 frames.
+- **+6 reactions on +6 nodes**: **5** carried by the clone (Back to patients, device pill, Patient summary row, Medications row, Start Recording CTA) and **1** new, Retry. No existing reaction edited.
+- **No reaction crosses pages**: all **30** distinct destination ids resolved and walked to their page; every one lands on `Account screens`.
+
+### Believed, not seen
+
+- **The prototype was not played.** Retry's reaction is read back from the node, not observed navigating; the five carried reactions are byte-identical JSON to the source's, which is evidence they were copied, not that they work.
+- **The schedule rulings are recorded, not built** — no schedule frame exists yet, so nothing in the file tests them.
+- **`A S2 Home / unsent` was confirmed unchanged only by not being touched**; its reaction was not re-read. The page total is consistent with it being intact, but that is inference from a total.
+- Renders are **1x** as asked, so the 1 px border's antialiasing is not resolvable in them; the colour was sampled where the line sits on an integer y.
+- Both renders were **looked at before this was written**.
+
+### Repo
+
+- `mobile-spec.md`: §2 Home and schedule — the four rulings replace "Only Marcus Vance's row opens a chart. The Failed to send row retries…"; §6.4 gains the new frame; §7 gains the Retry row, the schedule wiring now sends Marcus's row to `A4 Patient / list, not sent`, and the counts table reads 40 / 120 across 117.
+- `mobile-plan.md`: this batch added to Done; `a7f1cd9` filled in for the previous one; "Build the schedule home screens" and "Wire the schedule" updated for Marcus being the failed row.
+- FLAGS.md: **+4 DECISION** (139 → 143 open, 47 closed; DEFECT and GAP unchanged).
+- `reports/Build the not-sent alert on the patient screen.md` and `.png` — the full report and the two frames side by side.
+
+### Screenshots, 1x, both looked at before reporting
+
+- `figma-export/patient-not-sent-2026-09-17/a4-patient-list-not-sent-200-6707-1x.png`
+- `figma-export/patient-not-sent-2026-09-17/a4-patient-list-103-3027-1x.png`
