@@ -124,13 +124,14 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 | Page | What it is |
 |---|---|
-| `Account screens` 103:2319 | **The full app.** 43 frames (39 screens, 4 proof scaffolds). All new work goes here. Starting points: Account device, Unsent recording, Schedule |
+| `Account screens` 103:2319 | **The full app.** 39 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows. All new work goes here. Starting points: Account device, Unsent recording, Schedule |
 | `Visit screens` 43:705 | The Patient chart demo, without account or schedule. 26 frames. Starting point: Visit device |
 | `Screens` 1:3 | The original four-job prototype. 18 frames. Never edited |
-| `Components` | Local components, shared by all pages |
+| `Components` | Local components, shared by all pages. The four `Account/` masters sit at y 9200, below the `Visit/` band |
+| `Archive` 214:3026 | PROOF and scaffolding frames, moved off the working pages 2026-09-17. Nothing here has a reaction |
 | `Foundations` | Frame template and colour table |
 
-Frame names start with the page's letter: `A` for Account screens, `V` for Visit screens, none for Screens. No reaction crosses pages.
+Frame names start with the page's letter: `A` for Account screens, `V` for Visit screens, none for Screens. No reaction crosses pages. Two hidden SUPERSEDED frames stay on `Account screens` rather than going to `Archive`, because each still points at live frames: `A S4 Patient` 103:2412 and `A S6 Stop confirmation` 103:2451.
 
 ---
 
@@ -170,7 +171,7 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 - **A S1 Login / default, / error, / after sign out.**
   - Full-bleed `#004852` field, reversed wordmark, white card holding Email, Password and Sign In.
   - The error state adds an error alert inside the card.
-  - "Forgot Password?" is a text Button, right edge at 350, with 16 above and below.
+  - "Forgot Password?" is a text Button, centred horizontally in the card at x 120.5, with 16 above and below.
   - The card is 282 tall, 366 on error.
   - The after-sign-out frame looks identical; its Sign In goes to the unsent home.
 - **A S10 Forgot password.**

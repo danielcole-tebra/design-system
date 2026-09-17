@@ -3573,3 +3573,80 @@ The ruling fixing the Forgot Password link's right edge at **350** — `mobileAc
 - **Inbound counts are counts of reactions whose `destinationId` is that node.** A reaction pointing at a descendant rather than the frame would not be counted, and none was looked for.
 - **Overlap is computed from top-level bounding boxes only**, so a child overhanging its frame would not show up.
 - The five zero-inbound frames are unreachable **in the prototype graph**; whether any is reachable by scrolling or by a reaction on a nested instance pointing elsewhere was not tested.
+
+## 2026-09-17 · Mobile ambient capture · Tidy the Account screens page
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Account screens`, `Components` and the new `Archive`. `figma.skipInvisibleInstanceChildren = false` on every read. **No node deleted.**
+- **Resumed after the version gate.** The entry above records the stop: `saveVersionHistoryAsync` exists but throws, so Daniel saved **"Before tidy, 2026-09-17"** by hand and the batch continued from there. The inventory in that entry is the before-state for this one.
+- Two rulings recorded as DECISIONs: `mobileAccount_archivePageHoldsScaffolding`, `mobileAccount_forgotLinkIsCentred`.
+- Full report, including the 47-row inventory table: `reports/Tidy the Account screens page.md`. Contact sheet: `reports/Tidy the Account screens page.png`.
+
+### Moved
+
+**To `Components`**, y 9200 in a clear band below the `Visit/` masters, 600 pitch: `Account/Top bar` 114:600, `Account/Microphone sheet` 121:1793, `Account/List row` 163:1444, `Account/Avatar` 108:1212.
+
+**To `Archive` 214:3026**, a new page: the four PROOF frames 108:1225, 109:1212, 114:1721, 121:1848 — all 0 in, 0 out. `Archive` holds **4 frames, 0 reactions, 0 starting points**, no overlaps.
+
+**Two frames could not go.** `A S4 Patient` 103:2412 and `A S6 Stop confirmation` 103:2451 are hidden, SUPERSEDED and zero inbound, but each carries **three outbound reactions to live frames** — 103:2412 to `A S2 Home / empty`, `A S3 Microphone` and `A S5 Recording / recording`; 103:2451 to `A S5 Recording / recording` twice and `A S7 Sending`. Archiving either would have crossed a page boundary six times, so under the brief's rule **both stayed**, at the end of the Patient and Stop rows. They are **dead frames tethered to live ones by reactions nobody can fire**; cutting the six frees both, which is a ruling rather than a tidy.
+
+**Five frames stay but want a decision** — zero inbound, not starting points, nothing reaches them: `A S1 Login / error` 103:2330 (**the only login state with no way in**), `A S2 Home / sessions` 103:2353 (**the pre-schedule home, arguably superseded**), `A S2 Home / no results` 103:2383, `A S2 Home / schedule, top` 204:4127, `A S2 Home / empty day` 204:4172.
+
+### Laid out
+
+Eight rows, 28 px Akkurat LL Bold label at x 0, frames from x 360, **80 between frames, 200 between rows**. Widest label 259, so no label reaches a frame.
+
+| Row | y | Count |
+|---|---|---|
+| Sign in | 0 | 5 |
+| Home and schedule | 1044 | 11 |
+| Microphone | 2088 | 3 |
+| Patient | 3132 | 5, one hidden |
+| Recording | 4176 | 7 |
+| Stop | 5220 | 2, one hidden |
+| Hand off | 6264 | 3 |
+| Account | 7308 | 3 |
+
+**39 frames placed, 0 unplaced, 0 overlaps** where there were seven. Page bounds 5450 × 8152. **One consequence of keeping the two hidden frames**: they take layout space and render nothing, so the Patient row ends on an empty slot and the Stop row is 844 tall to hold a hidden 844 frame beside a 238 overlay.
+
+### Forgot Password centred
+
+The link is a Button inside a `Forgot password row` that fills the card's 310 content width. The row's `primaryAxisAlignItems` went **`MAX` → `CENTER`** on all three login frames, so the 149-wide button moves **x 201 → 120.5**, right edge 350 → 269.5, centre landing on **179** — exactly the 358 card's centre. **Vertical spacing untouched**: row still 36 tall at y 424 (508 on error), card `itemSpacing` still 16, cards still 282 and 366.
+
+**The new x is a half pixel and cannot be otherwise**: 310 content minus a 149 button leaves 161, an odd number. Exact centring and rule 4's integer px cannot both hold unless the button or the padding changes by one. Centre was kept — it is what was ruled, and the auto-layout keeps it true if the label changes. Recorded, not faked.
+
+**The ruling it supersedes**: `mobileAccount_forgotLinkRightAlignedUnderPassword` set the right edge at 350. It was **already struck through** from 2026-09-16, but its text still carried the 350 and **`mobile-spec.md` §6.1 still stated it as live** — the spec line was the one actually wrong. Both now carry the supersession.
+
+### Verified
+
+| Page | Before | After | Reactions |
+|---|---|---|---|
+| **Account screens** | 43 frames, 4 components | **39 frames, 8 labels, 0 components** | 128 across 125, **unchanged** |
+| **Components** | 45 children | **49** | 0, unchanged |
+| **Archive** | did not exist | **4 frames** | **0** |
+| Visit screens | 26 | 26 | 84 across 81, unchanged |
+| Screens | 18 | 18 | 42 across 41, unchanged |
+
+- **Account screens −4 frames** (PROOF to Archive), **−4 components** (masters to Components), **+8 TEXT** (row labels). 47 → 47 children by coincidence; the composition is entirely different.
+- **Reactions unchanged everywhere.** Moving a frame within a page does not touch its reactions, and all eight nodes that changed page had none.
+- **Starting points unchanged: three**, same nodes. `Archive` has none.
+- **No reaction crosses pages**: all 31 destinations resolved and walked to their page, all on `Account screens`. `Archive` and `Components` hold zero reactions, so neither can source one.
+- **Overlaps seven → zero** on `Account screens`, zero on `Archive`.
+
+### Found, not asked for
+
+**`Components` has eight overlapping pairs of its own**, none involving the four masters just placed. `Visit/Drawer` 48:897 is 1362 tall at y −64 and sits under five other nodes; `PROOF · Batch 2` overlaps `Visit/Recording bar`; `PROOF · Visit MUI icons` overlaps `Visit/Chart row`. The same class of mess this batch cleared off `Account screens`. **Not touched** — out of scope. The plan's Next entry is rewritten from the vague "Tidy up" to name it.
+
+### Believed, not seen
+
+- **The prototype was not played.** That the flows still work is inferred from counts being identical and every destination resolving on-page.
+- **"Moving a frame does not change its reactions" was verified by count, not per-reaction** — 128 across 125 before and after, all 31 destinations resolving, but no per-reaction JSON diff across the relayout.
+- **Row order within each row is my reading of flow order**, not a ruling; the eleven Home frames and seven Recording frames are a judgement.
+- **The two hidden SUPERSEDED frames were not opened** — their outbound reactions were read, their contents not assessed.
+- **The page screenshot is 936 × 1400 for a 5450 × 8152 page**, so frames in it are thumbnails; placement and overlap were verified by arithmetic on bounding boxes, and `A S1 Login / default` was exported separately at 1x to check the link.
+- All three screenshots were looked at before this was written.
+
+### Screenshots
+
+- `figma-export/tidy-account-2026-09-17/account-screens-page.png`
+- `figma-export/tidy-account-2026-09-17/archive-page.png`
+- `figma-export/tidy-account-2026-09-17/as1-login-default-103-2320-1x.png`
