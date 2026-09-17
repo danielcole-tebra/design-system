@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after Colette got her own summary.
+Last updated after the Tebra logo moved to the bottom of sign in.
 
 ---
 
@@ -48,7 +48,9 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 **Account**
 
-- The sign-in screen shows **"Visit Companion"** under the Tebra logo, centred, in the home top bar's title face.
+- The sign-in screen shows **"Visit Companion"**, centred, in the home top bar's title face.
+- **On sign in, the Tebra logo sits at the bottom of the screen as a small accent**, so it no longer competes with "Visit Companion". Ruled 2026-09-17, superseding the lockup that had it above the name. **The logo keeps its current size.**
+- **The sign-in content sits higher than centre.** Dead-centre content doesn't read as centred on a plain field.
 - One account, one practice. The practice is shown as a fact, never a choice.
 - Demo provider: Dr. Sarah Bennett, Windsor Family Medicine, sbennett@windsorfm.com, initials SB. The avatar is a salmon disc with two initials.
 - Signing out is never blocked. With an unsent recording, a warning offers Retry first and Sign out anyway.
@@ -194,10 +196,14 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 ### 6.1 Sign in
 
 - **A S1 Login / default, / error, / after sign out.**
-  - Full-bleed `#004852` field, then an `App identity` lockup at (16, 132), 358 x 84: the reversed wordmark, **24** below it (`space/24`), and **"Visit Companion"** centred on the home top bar's face, Akkurat LL Regular 24/36, bound `color/common/white`. Then the white card holding Email, Password and Sign In, unmoved at y 256, 40 below the lockup.
+  - Full-bleed `#004852` field. **"Visit Companion"** alone at y **190**, centred, on the home top bar's face — Akkurat LL Regular 24/36 bound `color/common/white` — then the white card at y **266**, 40 below it, holding Email, Password and Sign In.
+  - The name and the card move as one block; the block top is **190** on all three frames, so nothing jumps between them.
+  - The reversed wordmark sits alone at the bottom, **(145, 762), 100 x 24**, centred, its bottom edge **24** above the 34 safe area. Same node, same size, same hardcoded cream — it was moved, not rebuilt.
+  - The `App identity` frame stays in place and now holds only the name, so it is 358 x 36. Its `space/24` gap is inert with one child.
+  - **Gaps:** 47 status bar to the name **143** on all three; card bottom to the logo **214** on `/ default` and `/ after sign out`, **130** on `/ error`, whose card is 84 taller.
   - The error state adds an error alert inside the card.
   - "Forgot Password?" is a text Button, centred horizontally in the card at x 120.5, with 16 above and below.
-  - The card is 282 tall, 366 on error.
+  - The card is 282 tall, 366 on error, so the error card's bottom gap to the logo is 130 where the others are 214.
   - The after-sign-out frame looks identical; its Sign In goes to the unsent home.
 - **A S10 Forgot password.**
   - Back with title "Reset password".

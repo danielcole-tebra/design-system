@@ -58,6 +58,7 @@ One agent at a time.
   - The Template pill opens nothing. It now reads "SOAP Note".
   - Start Recording on Colette opens nothing, on all four of her frames.
   - Medications on Colette opens nothing; only Patient summary is wired.
+  - The sign-in `App identity` frame now holds only the name; its bound `space/24` gap has nothing to space.
   - Colette's row is unwired on `schedule` and `schedule, top`; it only opens her screen on the two sent frames, which are the ones the demo reaches.
   - Pausing from Medications drops the drawer.
   - The empty 48 band under the puller in list mode stays.
@@ -112,6 +113,7 @@ One agent at a time.
 | Apply the first phone playthrough notes | — | 254c1ac |
 | Apply the second phone playthrough notes | — | 3712632 |
 | Make Next Patient go to the next patient | — | f010350 |
-| Give Colette her own summary and match the Sent copy | — | (this commit) |
+| Give Colette her own summary and match the Sent copy | — | d37f787 |
+| Move the Tebra logo to the bottom of sign in | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
