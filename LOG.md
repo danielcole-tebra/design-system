@@ -3150,3 +3150,49 @@ So the marker reads quieter than the status chips by three separate means — sm
 - **Batch naming changed.** A line near the top of this file now records it: from today a batch is named in plain words, and that one name is the prompt's first line, this entry's title and the commit message. Older entries keep their letter codes; `mobile-plan.md` holds the table mapping old codes to plain names.
 - **Committed** in one commit with everything already staged: the three record files, and 388 screenshots from the 2026-09-14 to 2026-09-16 batches that had been staged but never committed.
 - Screenshot: none. No Figma change.
+
+## 2026-09-17 · Mobile ambient capture · Show the schedule row for review
+
+- File `TP5KrQtY0T5IcMNqi375So`, **read only. Nothing was created, edited, moved or hidden.** `figma.skipInvisibleInstanceChildren = false` on every read. No export was needed: both S2 renders were already on disk.
+- **Both renders exist and were looked at** before anything was written: `schedule-row-set-196-777-2x.png` (780 × 864) and `schedule-row-proof-196-787-2x.png` (1960 × 1290).
+
+### 1. `Schedule/Row` read against the spec and the S2 entry
+
+Read from the file, not from the S2 report. The set, then the **eight proof instances** rather than the masters (rule 3).
+
+**Set `196:777`** on `Components` at (700, 1400), **390 × 432**, four variants 390 × 72 at a 120 pitch — `none` 196:720, `sending` 196:735, `sent` 196:751, `failed` 196:762. Matches §5 and S2 exactly.
+
+**Properties**, read off the set: `Name#196:0` TEXT "Marcus Vance", `Time#196:5` TEXT "9:15 AM", `Telehealth#196:10` BOOLEAN false, `Status` VARIANT default **none** with options none, sending, sent, failed. Matches §5's four names and four Status values exactly.
+
+**All eight instances read 390 × 72**, every `Name` exactly 24 tall and one line including "Priya Raghunathan".
+
+**Telehealth chip**, identical in all eight: main **4:111** `size=small, variant=outlined, color=default, State=Default`, `remote: true`, in library set `Chip`, label "Telehealth" at **12**, **73 × 24**, radius 12, **`fills` empty**, stroke 1. Box 74–147 in every instance. Matches §2's "small library Chip reading Telehealth" and every number S2 reported.
+
+**Status chip**: mains 4:371 Sending (72 wide), 4:379 Sent (51), 4:387 Failed to send (107), all in set `Status chip`, label 13, height 32, **right edge 374 in all six that show one**. Matches S2.
+
+**S2's "7 references on every variant" verified.** The set read shows 0 at the variant's own top level, which is the wrong place to look; counted across descendants it is **7 on each of the four, identical** — `Name`, `Time`, `Telehealth chip.visible`, plus `Label#156:0` and `Delete icon#156:43` on each of the two nested library Chips.
+
+**One difference found, not fixed (rule 10):** `mobile-spec.md` §5 gives `Schedule/Row`'s Node as **"Components"** where every other built local component in that table carries its node id — `Session row` 4:454, `Status chip` 4:395, `Account/Avatar` 108:1212. The set's id is **196:777**. The row is otherwise correct in every particular. Nothing else in §5 or §2 disagrees with the file.
+
+### 2. The Telehealth pill's interior, checked because the render misleads
+
+In `schedule-row-proof-196-787-2x.png` the pill reads as a lighter capsule than the beige ground. It is not. Scanning a line through it: stroke pixels at both edges read **(214, 214, 214)** = `#D6D6D6`, and every interior pixel between the stroke and the label reads **(232, 229, 223)** — the same as the ground at 16 px outside the pill and at the far edge of the sheet. The node confirms it: `fills` is empty. S2 recorded this same illusion and was right; it is restated here because two readers have now seen a fill that is not there.
+
+### 3. Repo
+
+- `mobile-plan.md`: **eight commit cells filled with `e3bf665`** — N1, drawer audit, K1, K2, band audit, spec check, S0/S0 check, S2. The brief asked for every `e3bf665` to be replaced if the hash differed; **there was no `e3bf665` in the file and the hash does not differ**, so what the table actually needed was the blanks filling.
+- **Six rows were left blank on purpose.** Batches 0 to 5, the original prototype build, were **not** in `e3bf665` — `git log -- LOG.md` puts them in their own earlier commits, ending at `d77853a`. Filling every blank with `e3bf665`, which the table's old footnote invited, would have recorded six batches to the wrong commit. The footnote now says what those blanks are instead.
+- Nothing else edited. FLAGS.md and COMPOSITIONS.md untouched — nothing found here is a new flag.
+
+### Believed, not seen
+
+- Every geometry number is **read from one of the eight instances**; the only master reads are the property definitions and the variant positions.
+- **The prototype was not played** and the row is still on no frame, so this says nothing about behaviour.
+- The pixel sampling is of the 2x PNG on disk, not of the canvas.
+
+### Screenshots, both looked at before reporting
+
+- `figma-export/schedule-s2-2026-09-16/schedule-row-set-196-777-2x.png`
+- `figma-export/schedule-s2-2026-09-16/schedule-row-proof-196-787-2x.png`
+
+Nothing is built next until Daniel has looked at the row.

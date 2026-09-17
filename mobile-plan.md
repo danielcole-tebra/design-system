@@ -85,13 +85,13 @@ One agent at a time.
 | Build the list row, divider and sign-out warning, and wire account | A4b | 55b6a6e |
 | Build forgot password | A5 | 42eefc2 |
 | Make stop confirmation an overlay | C1 | 6c1b3d2 |
-| Turn the drawer into the Patient chart | N1 | |
-| Audit the drawer | drawer audit | |
-| Clean up the drawer | K1 | |
-| Put the controls back on the timer line | K2 | |
-| Audit the Start Recording band | band audit | |
-| Check the specs against the file | spec check | |
-| Audit home for the schedule, and verify it | S0, S0 check | |
-| Build the schedule row | S2 | |
+| Turn the drawer into the Patient chart | N1 | e3bf665 |
+| Audit the drawer | drawer audit | e3bf665 |
+| Clean up the drawer | K1 | e3bf665 |
+| Put the controls back on the timer line | K2 | e3bf665 |
+| Audit the Start Recording band | band audit | e3bf665 |
+| Check the specs against the file | spec check | e3bf665 |
+| Audit home for the schedule, and verify it | S0, S0 check | e3bf665 |
+| Build the schedule row | S2 | e3bf665 |
 
-Blank commits are for the batches in the next commit.
+The six batches still blank are the original prototype build; they were committed before this plan existed and their hashes are not recorded here.
