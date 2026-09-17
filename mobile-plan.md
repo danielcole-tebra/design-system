@@ -133,6 +133,6 @@ One agent at a time.
 | Make the Medications sheet real | — | 85e1b5e |
 | Make the Vitals sheet real | — | a28dc9f |
 | Polish the patient summaries | — | 32a2158 |
-| Correct the chart copy | — | (this commit) |
+| Correct the chart copy | — | 657563f |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
