@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the new header went on the open chart screens.
+Last updated after the page behind the open chart was dimmed.
 
 ---
 
@@ -67,7 +67,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The end of the list still gets a closing line so it reads as the end: **"That's everyone for today"**, centred, in the secondary text style, on the beige, with 34 of padding below it so it clears the home indicator when the list is scrolled fully.
 - **The pinned date header is separated from the list scrolling under it** by a 1 px bottom divider, the same `color/divider` the rows use.
 - **An empty day still shows the date header.**
-- **Main demo path:** schedule, tap Marcus Vance to his **landing page**, open the chart drawer, read the summary, drag the puller down to come back, **Start Encounter** to record, stop, sent, then **Next Patient to Colette Mwangi**, read her summary, and "Patients" back to the schedule with Marcus marked Sent. Everything goes well. Back To Schedule on the Sent screen is the shortcut that skips Colette.
+- **Main demo path:** schedule, tap Marcus Vance to his **landing page**, open the chart drawer, read the summary, tap the dimmed page or drag the puller down to close it, **Start Encounter** to record, stop, sent, then **Next Patient to Colette Mwangi**, read her summary, and "Patients" back to the schedule with Marcus marked Sent. Everything goes well. Back To Schedule on the Sent screen is the shortcut that skips Colette.
 - **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row, tap the alert, sent, then **Next Patient to Colette Mwangi's landing page**, open her chart drawer, read her summary, and "Patients" back to the schedule with both marked Sent.
 - **Next Patient goes to the next patient.** On both demo paths that is **Colette Mwangi**, the 11:30 AM Telehealth appointment.
 - The Sent screen has a **text link under Next Patient that returns to the schedule**.
@@ -146,7 +146,7 @@ Settled 2026-09-17, moved here from the open experiment that produced it.
 - The drawer starts closed on the patient page and holds the chart. Patient admin details sit on the page behind it.
 - "Start Encounter" comes from FHIR and may be temporary.
 - Admin details put the **label on the primary line and the value on the secondary**, because a bare date does not name itself the way "Blood pressure 124/78 mmHg" does.
-- **The open chart screens use the patient page header. The drawer opens below the controls, so the portrait, name, Start Encounter, and pills stay visible while the chart is open.**
+- **On the patient screens, the open chart is a modal drawer. The page behind it is dimmed. The drawer stops just below the patient's name, so the dimmed portrait and name stay visible. Start Encounter is reached by closing the drawer. The recording screen is unchanged.**
 - **There is no Start Recording footer on the patient screens. Start Encounter in the header replaces it.**
 - **With no footer, sheets only need to clear the home indicator.**
 
@@ -176,7 +176,7 @@ Settled 2026-09-17, moved here from the open experiment that produced it.
 | Text and meter on colour fields | `#FFFFFF` `color/common/white` |
 | Body text | `#000000` `color/text/primary` |
 | Dividers | `#D6D6D6` `color/divider` |
-| Scrim | `rgba(0, 0, 0, 0.5)` |
+| Scrim | `rgba(0, 0, 0, 0.5)` `color/computed (no palette)/alphaBlack50` |
 
 ---
 
@@ -352,7 +352,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 **The patient landing page, A4 Patient / landing 287:10395, A4 Colette / landing, after Marcus 287:10504 and A4 Colette / landing, after Yusuf 287:10615.** Built 2026-09-17 from `EXPERIMENT A`, and **the frame a patient now lands on**. Top to bottom: `Visit/Patient header` 287:10323 at **390 x 265**; `Patient admin details` at y **281**, a 390-wide `color/background/paper` block of four 72 rows, the library `List/Item` at `Lines=Two` over a 1 px INSIDE bottom divider, label on the primary line and value on the secondary, last row's divider off; then beige; then `Visit/Drawer edge` closed at y **732**, 112, showing the puller and "Patient chart". **163 of page shows between the admin block and the closed drawer.** Each frame's Start Encounter goes where the frame it replaced sent Start Recording — Marcus to `A S5 Recording / recording`, Colette's two nowhere — and the closed drawer opens that patient's chart list on that path, by tap and by drag. The pills are inert. **The old chart-list frames were not changed and are still reachable**, from their own sheets' drawer back and now from these pages' closed drawers.
 
-**The open chart screens, all twelve.** Rebuilt 2026-09-17 on the same header as the landing page. `Visit/Patient header` 287:10323 at **390 x 265**, the old `Visit/Recording bar` at `State=ready` hidden and labelled SUPERSEDED beneath it. The **drawer starts at y 265** and runs to the frame bottom, so it is **579** tall and its `Sheet body` / `Sheet list` is **501**. **No footer**: the `Footer band` and the `Start recording CTA` are hidden and labelled SUPERSEDED, and `Sheet body` bottom padding drops **122 to 34**, the home indicator alone. The chart list holds all nine rows in 466 against 501, so it **does not scroll**, and its last row ends on **775**. Medications (330) and Vitals (474) do not scroll either. Only the summary does, at 1309. Each frame's Start Encounter goes where its Start Recording went — Marcus to `A S5 Recording / recording`, Colette's eight nowhere — back goes where it went before, the drawer back and every chart row are untouched, and **the puller zone takes a drag down back to that patient's landing frame** on `SMART_ANIMATE / EASE_OUT / 0.225`. The pills are inert.
+**The open chart screens, all twelve.** Rebuilt 2026-09-17 on the same header as the landing page, then made modal the same day. `Visit/Patient header` 287:10323 at **390 x 265**, the old `Visit/Recording bar` at `State=ready` hidden and labelled SUPERSEDED beneath it. A **`Scrim`** rectangle, 390 x 844, sits **above the header and below the drawer**, bound `color/computed (no palette)/alphaBlack50` — the same node the microphone sheet and the sign-out warning already use. The **drawer starts at y 147**, the bottom of the header's identity row, and runs to the frame bottom: **697** tall, `Sheet body` / `Sheet list` **619**. So the dimmed portrait, name and DOB show above it and everything below — Start Encounter, both pills, the admin rows — is behind the drawer until it is closed. **No footer**: the `Footer band` and the `Start recording CTA` are hidden and labelled SUPERSEDED, and `Sheet body` bottom padding drops **122 to 34**, the home indicator alone. The chart list holds all nine rows in 466 against **619**, so it **does not scroll**, and its last row ends on **657**. Medications (330, last row 521) and Vitals (474, last row 665) do not scroll either. Only the summary does, at 1309; scrolled to the end its feedback block lands on **794**. Each frame's Start Encounter goes where its Start Recording went — Marcus to `A S5 Recording / recording`, Colette's eight nowhere — back goes where it went before, the drawer back and every chart row are untouched, and **both the scrim on tap and the puller zone on a drag down return to that patient's landing frame** on `SMART_ANIMATE / EASE_OUT / 0.225`. The pills are inert, and the header's own Start Encounter and back are under the scrim.
 
 **Ready bar**, 390 x 201:
 
@@ -474,8 +474,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | Search result | tap | **A4 Patient / landing** |
 | A4 "Patients", on Marcus's three and on A4 Patient / landing | tap | A S2 Home / schedule |
 | **A4 landing, all three** | closed drawer, tap or drag | that patient's chart list on that path |
-| **A4 open chart, all twelve** | drawer puller | drag down to that patient's landing frame on that path |
-| **A4 open chart, Marcus's four** | Start Encounter | A S5 Recording / recording |
+| **A4 open chart, all twelve** | scrim | tap to that patient's landing frame on that path |
+| **A4 open chart, all twelve** | drawer puller | drag down to the same landing frame |
+| **A4 open chart, Marcus's four** | Start Encounter | A S5 Recording / recording — **under the scrim**, so the scrim's tap wins |
 | **A4 open chart, Colette's eight** | Start Encounter / SOAP Note / microphone | nothing |
 | **A4 Patient / landing** | Start Encounter | A S5 Recording / recording |
 | **A4 Colette / landing, both** | Start Encounter / SOAP Note / microphone | nothing |
@@ -531,7 +532,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 49 screens | 195 across 188 |
+| Account screens | 49 screens | 207 across 200 |
 | Archive · Visit screens | 26 | 84 across 81 |
 | Archive · Screens | 18 | 42 across 41 |
 
