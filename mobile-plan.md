@@ -30,7 +30,9 @@ One agent at a time.
 
 ## Later
 
-- **Compare the two patient page experiments at arm's length** and pick one, or neither. If one is adopted, `Visit/Recording bar` 48:918 needs a variant that puts the pills above the identity — the experiment's headers are SCAFFOLDING because an instance cannot reorder them.
+- ~~**Compare the two patient page experiments at arm's length** and pick one, or neither.~~ **Closed 2026-09-17**: Daniel took Experiment A and it is built as the real patient landing page. Experiment B stays on `scratchpad` for the record. `Visit/Recording bar` 48:918 still has no variant that puts the pills above the identity, which is why `Visit/Patient header` assembles its own top from that component's parts.
+- **Bring the chart list, summary, Medications, Vitals and Yusuf frames in line with the landing page.** Their drawer backs still return to the old chart-list frames, which is why none of those could be marked SUPERSEDED. Next batch.
+- Settle where patient portraits live. They are in `assets/`; the brief expected `assets/patients/`.
 - Play the schedule on a phone. Check the scroll, the peeking row, and that Marcus Vance is the only row that goes anywhere.
 - Judge the now marker at arm's length: whether the half dot reads at the screen edge and whether the 2 px teal is heavy enough against the 1 px row dividers.
 - Play both pages on a phone. Check:
@@ -42,6 +44,7 @@ One agent at a time.
 - Port more real sheets into the Patient chart. Medications and Vitals are done; Daniel supplies the next sheet and its NPVE node.
 - Give Yusuf a patient summary, if his chart should open during the resend demo.
 - Library batch in YX2n4YLrEpBXNbcc73T6dw:
+  - **Avatar: an image slot and a size** — it is 40 x 40 with Fallback / Letter / Icon and no photo, so a 48 portrait needs three local overrides
   - add the MUI glyphs and retire the drawn carets and the drawn eye icons
   - add a trailing slot on List/Item
   - add a Divider component
@@ -74,6 +77,9 @@ One agent at a time.
   - The Vitals rows on `A4 Yusuf / list, not sent` are inert, like the rest of his chart.
   - The sign-in password eye is one glyph and is not wired; there is no revealed state and no `VisibilityOff`.
   - The sign-in fields read `Value=Filled` with a blank value, because that is the only way the library floats a label on an empty field.
+  - The three landing pages leave 163 of page between the admin rows and the closed drawer.
+  - Colette's DOB leaves 7 px of slack on the identity row; a longer name or date would wrap it.
+  - `EXPERIMENT A` on `scratchpad` still carries its superseded header and control group, hidden, under rule 1.
   - The empty 48 band under the puller in list mode stays.
   - The two recording summary frames end with 138 of blank they have no footer to clear, because the clearance is set once on the shared sheet.
   - The new disclaimer reads through to four archived frames, which instance the same summary component.
@@ -140,5 +146,6 @@ One agent at a time.
 | Correct the chart copy | — | 657563f |
 | Try two patient page layouts | — | 1964084 |
 | Match the Tebra login fields | — | 252d434 |
+| Build the new patient landing page | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.

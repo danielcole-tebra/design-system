@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the sign-in fields were matched to the real Tebra login.
+Last updated after the new patient landing page was built.
 
 ---
 
@@ -67,8 +67,8 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The end of the list still gets a closing line so it reads as the end: **"That's everyone for today"**, centred, in the secondary text style, on the beige, with 34 of padding below it so it clears the home indicator when the list is scrolled fully.
 - **The pinned date header is separated from the list scrolling under it** by a 1 px bottom divider, the same `color/divider` the rows use.
 - **An empty day still shows the date header.**
-- **Main demo path:** schedule, tap Marcus Vance, read the summary, record, stop, sent, then **Next Patient to Colette Mwangi**, read her summary, and "Patients" back to the schedule with Marcus marked Sent. Everything goes well. Back To Schedule on the Sent screen is the shortcut that skips Colette.
-- **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row, tap the alert, sent, then **Next Patient to Colette Mwangi**, read her summary, and "Patients" back to the schedule with both marked Sent.
+- **Main demo path:** schedule, tap Marcus Vance to his **landing page**, open the chart drawer, read the summary, record, stop, sent, then **Next Patient to Colette Mwangi**, read her summary, and "Patients" back to the schedule with Marcus marked Sent. Everything goes well. Back To Schedule on the Sent screen is the shortcut that skips Colette.
+- **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row, tap the alert, sent, then **Next Patient to Colette Mwangi's landing page**, open her chart drawer, read her summary, and "Patients" back to the schedule with both marked Sent.
 - **Next Patient goes to the next patient.** On both demo paths that is **Colette Mwangi**, the 11:30 AM Telehealth appointment.
 - The Sent screen has a **text link under Next Patient that returns to the schedule**.
 - **Colette's schedule row opens her patient screen**, so the demo feels cohesive.
@@ -134,16 +134,20 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The Sending loader uses the library's teal, since the library loader has no grey.
 - The line seen where the green recording field meets the drawer is a **rendering artifact of two adjacent fields, not geometry**. Ruled 2026-09-17; nothing was changed, and the divider question from the first playthrough is closed as that.
 
-**Open experiment — the patient page. Not settled, and nothing in the demo follows it yet.**
+**Patient page**
 
-Daniel's rulings for the two alternatives built on `scratchpad` 2026-09-17. They describe the experiment, not the shipping screen; `A4 Patient / summary` and the rest of the demo are unchanged and still follow the settled rulings above.
+Settled 2026-09-17, moved here from the open experiment that produced it.
 
+- **The patient page follows Experiment A: header, then Start Encounter with the SOAP Note pill and microphone beneath it, then patient admin details, then the chart drawer, closed.**
+- **The patient header carries a profile picture.**
+- **The page's primary button reads "Start Encounter". The recording screen is unchanged.**
 - The patient page's controls belong at the top, not over the drawer, matching where the recording controls sit on the recording screen.
-- Start Recording becomes **"Start Encounter"** on these variants. The word comes from FHIR and may be temporary.
 - The template pill and the microphone control are co-located with Start Encounter, because they configure it.
 - The drawer starts closed on the patient page and holds the chart. Patient admin details sit on the page behind it.
+- "Start Encounter" comes from FHIR and may be temporary.
+- Admin details put the **label on the primary line and the value on the secondary**, because a bare date does not name itself the way "Blood pressure 124/78 mmHg" does.
 
-Built as `EXPERIMENT A · Patient page, plain header` **282:7488** and `EXPERIMENT B · Patient page, resting band` **282:7501**, both 390 x 844 on the `scratchpad` page, side by side at x 1000 and x 1470. Neither is wired and neither is reachable from any flow.
+`EXPERIMENT B · Patient page, resting band` **282:7501** was not taken and stays on `scratchpad` for the record. `EXPERIMENT A` **282:7488** stays too, now carrying the real `Visit/Patient header`; its own header and control group are hidden and labelled SUPERSEDED under rule 1.
 
 ---
 
@@ -177,9 +181,9 @@ Built as `EXPERIMENT A · Patient page, plain header` **282:7488** and `EXPERIME
 
 | Page | What it is |
 |---|---|
-| `Account screens` 103:2319 | **The whole app, and the only working screen page.** 46 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
-| `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (24), `Account/` (4), `Schedule/` (3), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
-| `Archive` 214:3026 | **33** frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561, `SCAFFOLDING · schedule scrolled to the end` 241:4998, `PROOF Schedule/Now marker` 257:7208, then the **five `SCAFFOLDING · … scrolled to the end` summary frames** 278:12272, 278:12506, 278:12740, 278:12949 and 278:13158, each a clone of a summary frame whose drawer is detached so the sheet can be held at the end of its scroll, then `PROOF · Visit/Icon/Visibility (MUI) on paper` 286:8824. Nothing here has a reaction |
+| `Account screens` 103:2319 | **The whole app, and the only working screen page.** 49 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
+| `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (27), `Account/` (4), `Schedule/` (3), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
+| `Archive` 214:3026 | **34** frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561, `SCAFFOLDING · schedule scrolled to the end` 241:4998, `PROOF Schedule/Now marker` 257:7208, then the **five `SCAFFOLDING · … scrolled to the end` summary frames** 278:12272, 278:12506, 278:12740, 278:12949 and 278:13158, each a clone of a summary frame whose drawer is detached so the sheet can be held at the end of its scroll, `PROOF · Visit/Icon/Visibility (MUI) on paper` 286:8824, then `PROOF · Visit/Patient header with each avatar` 287:10743. Nothing here has a reaction |
 | `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
 | `Archive · Screens` 1:3 | The original four-job prototype, archived 2026-09-17. 18 frames, 42 reactions, starting point Happy path. Never edited |
 | `Foundations` | Frame template and colour table |
@@ -206,6 +210,9 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 | `Visit/Recording bar` | 48:918 | `State`: ready, recording, paused. Section 6.4 |
 | `Visit/Drawer` | 48:897 | `Mode`: list, sheet. `Sheet` swap, `Stroke`, `Closable` (no visible effect). Section 6.4 |
 | `Visit/Drawer edge` | 70:1480 | 390 x 112, label "Patient chart" |
+| `Visit/Patient header` | 287:10323 | 390 x **265**. Safe area 47, back row 44, an identity row 56 with the **48 patient avatar** before the name and DOB, then the control group 118: Start Encounter 358 x 56 and a config row of the SOAP Note pill and the microphone control, **175 each**. Properties `Name`, `DOB`, `Avatar` (INSTANCE_SWAP, both portraits as preferred values). The DOB **hugs**, because Colette's is 108 against Marcus's 103 and a fixed box wrapped it |
+| `Visit/Avatar/Marcus Vance` | 287:7428 | 48 circle: the library Avatar at `Content=Letter`, resized to 48 with `cornerRadius` 24, initials hidden, fill replaced with `assets/marcus-vance.png` at `scaleMode FILL` so the portrait crops to the circle |
+| `Visit/Avatar/Colette Mwangi` | 287:7431 | The same, from `assets/colette-mwangi.png` |
 | `Visit/Chart row` | 177:2858 | 390 x 48, library `List/Item` (one line) and `ChevronRight` ending at 374 |
 | `Visit/Sheet/Patient summary` | 50:969 | 358 x **1355**, ported from NPVE 672:7906. A library Alert carrying the disclaimer, four section frames (heading + one `UNORDERED` `Bulleted content` TEXT node at `listSpacing` 12), a feedback block, and **138 of bottom padding** for scroll clearance. The feedback prompt reads "How would you rate the accuracy of this summary?" (corrected 2026-09-17). Every summary frame instances it; Colette's text overrides make her 1211 |
 | `Visit/Sheet/Medications` | 272:396 | 358 x 288, four library `List/Item` rows at `Lines=Two`, 72 each, over a 1 px INSIDE bottom stroke bound `color/divider`. Follows the rebuilt NPVE Medication list 254:3707 |
@@ -340,6 +347,8 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 **Not sent, A4 Yusuf / list, not sent 200:6707.** Yusuf Bahri, DOB 07/22/1985 (placeholder), on the same line and the same baseline as Marcus's. **The chart is inert** — only back ("Patients", to `schedule, Marcus sent`) and the alert are wired. The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=primary, size=small`) in the Alert's own action slot. The **whole alert** is the tap target, not the button. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
 
+**The patient landing page, A4 Patient / landing 287:10395, A4 Colette / landing, after Marcus 287:10504 and A4 Colette / landing, after Yusuf 287:10615.** Built 2026-09-17 from `EXPERIMENT A`, and **the frame a patient now lands on**. Top to bottom: `Visit/Patient header` 287:10323 at **390 x 265**; `Patient admin details` at y **281**, a 390-wide `color/background/paper` block of four 72 rows, the library `List/Item` at `Lines=Two` over a 1 px INSIDE bottom divider, label on the primary line and value on the secondary, last row's divider off; then beige; then `Visit/Drawer edge` closed at y **732**, 112, showing the puller and "Patient chart". **163 of page shows between the admin block and the closed drawer.** Each frame's Start Encounter goes where the frame it replaced sent Start Recording — Marcus to `A S5 Recording / recording`, Colette's two nowhere — and the closed drawer opens that patient's chart list on that path, by tap and by drag. The pills are inert. **The old chart-list frames were not changed and are still reachable**, from their own sheets' drawer back and now from these pages' closed drawers.
+
 **Ready bar**, 390 x 201:
 
 - Top safe area 47.
@@ -457,8 +466,11 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 | From | Action | To |
 |---|---|---|
-| Search result | tap | A4 Patient / list |
-| A4 "Patients", on Marcus's three | tap | A S2 Home / schedule |
+| Search result | tap | **A4 Patient / landing** |
+| A4 "Patients", on Marcus's three and on A4 Patient / landing | tap | A S2 Home / schedule |
+| **A4 landing, all three** | closed drawer, tap or drag | that patient's chart list on that path |
+| **A4 Patient / landing** | Start Encounter | A S5 Recording / recording |
+| **A4 Colette / landing, both** | Start Encounter / SOAP Note / microphone | nothing |
 | A4 device pill | tap | A S3 Microphone |
 | A4 Template pill | tap | nothing |
 | A4 Start Recording | tap | A S5 Recording / recording |
@@ -480,9 +492,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | Microphone frame | row or scrim | back to the calling frame |
 | Every Stop | tap | the stop overlay |
 | Stop overlay | Stop Recording / Cancel | A S7 Sending / close |
-| A S8 Sent / sent | Next Patient | **A4 Colette / after Marcus** |
+| A S8 Sent / sent | Next Patient | **A4 Colette / landing, after Marcus** |
 | A S8 Sent / sent | Back To Schedule | A S2 Home / schedule, Marcus sent |
-| A S8 Sent / Yusuf | Next Patient | **A4 Colette / after Yusuf** |
+| A S8 Sent / Yusuf | Next Patient | **A4 Colette / landing, after Yusuf** |
 | A S8 Sent / Yusuf | Back To Schedule | A S2 Home / schedule, both sent |
 | A4 Colette list, both | "Patients" | the schedule frame of its own path |
 | A4 Colette list, both | Patient summary row | **that path's A4 Colette / summary** |
@@ -498,11 +510,11 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | From | Tap | To |
 |---|---|---|
 | Yusuf Bahri row 9:15, on / schedule, / schedule, top and / schedule, Marcus sent | tap | A4 Yusuf / list, not sent |
-| Marcus Vance row 11:00, on / schedule and / schedule, top | tap | A4 Patient / list |
+| Marcus Vance row 11:00, on / schedule and / schedule, top | tap | **A4 Patient / landing** |
 | Marcus Vance row 11:00, on / schedule, Marcus sent | tap | nothing, it reads Sent |
 | Yusuf Bahri row 9:15, on / schedule, both sent | tap | nothing, it reads Sent |
-| **Colette Mwangi row 11:30, on / schedule, Marcus sent** | tap | **A4 Colette / after Marcus** |
-| **Colette Mwangi row 11:30, on / schedule, both sent** | tap | **A4 Colette / after Yusuf** |
+| **Colette Mwangi row 11:30, on / schedule, Marcus sent** | tap | **A4 Colette / landing, after Marcus** |
+| **Colette Mwangi row 11:30, on / schedule, both sent** | tap | **A4 Colette / landing, after Yusuf** |
 | Colette Mwangi row 11:30, on / schedule and / schedule, top | tap | nothing |
 | Every other row, on all four | tap | nothing |
 | Schedule search field | tap | A S2 Home / searching |
@@ -511,11 +523,11 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 46 screens | 157 across 153 |
+| Account screens | 49 screens | 167 across 160 |
 | Archive · Visit screens | 26 | 84 across 81 |
 | Archive · Screens | 18 | 42 across 41 |
 
-No cross-page edges, and nothing on `Account screens` points at an archived frame. 42 destinations. Starting points: `Account device` 103:2320 and `Schedule` 204:4082.
+No cross-page edges, and nothing on `Account screens` points at an archived frame. 45 destinations. Starting points: `Account device` 103:2320 and `Schedule` 204:4082.
 
 ---
 
