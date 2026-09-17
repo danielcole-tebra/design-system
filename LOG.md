@@ -2,6 +2,8 @@
 
 One entry per batch, newest last: date, file key, what was built, what was found, path to the screenshot.
 
+From 2026-09-17, batches are named in plain words, as in `mobile-plan.md`: the name is the prompt's first line, this entry's title and the commit message. Older entries keep their letter codes.
+
 ## 2026-09-12 · repository reset
 - File: none in Figma. Repository only.
 - Built: the gated multi-agent workflow was archived under `archive/` (scripts, contract, manifest, indexes, aggregate, backups, discovery docs, old instruction files). CLAUDE.md replaced with a single page. PLUGIN-NOTES.md, FLAGS.md and this log created. `records/` left in place as closed history.
@@ -2515,3 +2517,636 @@ On the true 2x export:
 - **Renders skipped, named**: `V5 Paused / summary` and `A5 Paused / summary` with the overlay open, `V S5 recording` and `A S5 recording` with the overlay open, and both overlay frames on their own. Six of seven. The four "with the overlay open" renders are **not producible by the renderer at all** — `get_screenshot` renders a frame, not a prototype overlay state, so those would have to be composited by hand, and doing that would show my own composite rather than Figma's. The two overlay frames on their own were simply not taken.
 - Repo: FLAGS.md one DEFECT and two DECISIONs added, one DEFECT and one DECISION struck closed (DEFECT 30 open / 11 closed, DECISION 125 / 46). LOG.md this entry. CLAUDE.md, COMPOSITIONS.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
 - **Open for Daniel, and it is two clicks**: set *close when clicking outside* and the 50% black background on 166:5030 and 166:5058. Until then the overlay opens undimmed.
+
+## 2026-09-16 · Mobile ambient capture · N1, the drawer becomes the Patient chart and every close goes
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Changed `Visit screens` and `Account screens` by design, plus the shared `Visit/Drawer`, `Visit/Drawer edge` and `Account/Microphone sheet` on `Components`. `Screens` not edited, no writes to the library** — `YX2n4YLrEpBXNbcc73T6dw` was not touched at all, and nothing was imported by key anywhere (trap 4). Additive only; fourteen list rows, three close buttons, two switcher triangles and one switcher frame were hidden and labelled SUPERSEDED, nothing deleted. `figma.skipInvisibleInstanceChildren = false` on every read.
+
+### 1. Read first, and both gates passed
+
+- **Every drawer-open recording frame has its drag-down**: `Puller zone` `ON_DRAG` on all five per page — `V5/A5 Recording / drawer list`, `/ summary`, `/ medications`, `V5/A5 Paused / summary`, `/ drawer list`. **Both microphone frames have their scrim back**: `133:4475` → recording, `133:4551` → paused. Neither gate tripped, so the batch ran on.
+- Baseline matched C1 exactly before anything moved: Visit **26 frames, 89 across 86**; Account **35 frames, 121 across 118**.
+- **A live blank, found on the way in.** `V4 Patient / list` rendered a 48 title row with **nothing in it** — D1 moved the title into the new `Top row` and hid the list variant's `Title switcher` 64:2241 without replacing it (trap 38, which was written about this exact node). The before render is in the export folder. "Patient chart" closes it.
+- The five recording drawers on each page carried `Closable = true`; the three patient drawers carried false. Account has **four** `Visit/Drawer edge` instances, not two — the two microphone frames each carry one behind the scrim.
+
+### 2. Visit/Chart row 177:2858
+
+- On `Components` at (2400, 7570), beside the `Visit/Icon` masters. **390 × 48**, horizontal auto-layout, padding right 8, `clipsContent` false, no fill — the `Account/List row` 163:1444 construction at `Lines=One` instead of `Lines=Two`, so the wrapper keeps the library row's own height of 48 rather than 72.
+- Library `List/Item` at `Lines=One, State=Default`, `Show icon` off, **filling at 358**, and `isExposedInstance = true` so `Primary` and `State` stay editable per instance. `Visit/Icon/ChevronRight (MUI)` 159:1105 at 24 beside it: **ink right edge reads back at exactly 374**.
+- The chevron's master binds `color/text/primary`, not the `color/grey/600` the composition rule requires, so it was rebound — resolved value written first, then bound (paints rule 1), and read back.
+
+### 3. Visit/Drawer, both variants
+
+- **List**: a new `Title` reading **"Patient chart"** at (16, 12), 99 × 24, on the drawer's own title style `S:888b…,116:51` bound `color/text/primary`. A **new node rather than the hidden switcher's**, because an instance could still be carrying a stale "Patient summary" override on 64:2242 and un-hiding it would have shown that instead. Fourteen `Visit/Chart row` instances added in order, **none selected**; the fourteen `List/Item` rows they replace — one of which was `State=Selected` — hidden and labelled.
+- **Sheet**: `Back tap target 48` at x **-1.97**, y 0, holding the library Icon button at (4, 4) with `Icon#170:0` swapped to `Visit/Icon/ChevronLeft (MUI)` 159:1103 — `Visit/Top bar` 93:2739's construction verbatim. **Back ink left edge 18.03 and title x 72, both identical to the top bar.** `Title switcher` 87:3105 moved 16 → 72 and renamed `Title block`; its triangle hidden and labelled. Moving the frame rather than the text kept every per-instance title override intact — "Medications" on two frames, "Patient summary" on three — confirmed by reading all eight titles before and after.
+- **Close hidden and labelled on both variants** (80:2106, 80:2112). `Closable#48:1` default was already false and is **left bound**, so the property still means only what its name says.
+- **Gate cleared, not squeezed**: top row 30 + 48 = **78** on both variants, sheet and list both still **621**, stroke untouched.
+
+### 4, 5. The edge and the microphone sheet
+
+- `Visit/Drawer edge` title 70:1483: "Patient summary" → **"Patient chart"**. No instance carried an override, so all four Visit and four Account instances followed the master.
+- `Account/Microphone sheet` close 121:1799 hidden and labelled. Title row still **48**, "Microphone" still at (16, 12).
+
+### 6. Frames, both pages
+
+- **Opening a patient** (1 per page, the only node that does it): `43:768` → `V4 Patient / list`, `103:2382` → `A4 Patient / list`.
+- **Back buttons wired** (5 per page), explicit destinations, not BACK: the two V4/A4 sheet frames → the patient list; `/ summary` and `/ medications` → the recording drawer list; `Paused / summary` → the paused drawer list.
+- **Rows wired** (5 per page), moved off the hidden rows onto the new ones: Patient summary → the summary frame on all three lists; Medications → `/ placeholder` on V4/A4 and `/ medications` on the recording list.
+- **Reactions removed and listed**: Visit **15** — 5 drawer closes, 5 switchers, 5 on the now-hidden `List/Item` rows. Account **17** — the same 15 plus the two microphone-sheet closes. Every one read back at 0.
+- **Not in the brief, and done anyway**: the collapsed edge on all four recording frames pointed at the **summary**. Step 6 said drag reactions stay as they are, but step 8's own trace requires `recording -> drag up -> list`, and an edge labelled "Patient chart" that opens Patient summary contradicts the ruling. `ON_CLICK` and `ON_DRAG` on `70:1485`, `70:1491`, `103:2437`, `103:2450` retargeted to the drawer-list frame. **Destinations edited, none added or removed**, so counts are unaffected. Flagged as a DECISION.
+- Drags, scrims, microphone rows, Start Recording, Stop and the pills untouched.
+
+### 7. Renders — fifteen asked for, fifteen taken, none skipped
+
+`figma-export/npve-n1-drawer-2026-09-16/`: `before-v4-patient-list-48-1371-1x.png` (the blank title row, for the record), `drawer-list-variant-48-814-1x.png`, `drawer-sheet-variant-48-880-1x.png`, `v4-patient-list…`, `v4-patient-summary…`, `v4-patient-placeholder…`, `a4-patient-list…`, `a4-patient-summary…`, `a4-patient-placeholder…`, `v5-recording-drawer-list…`, `v5-recording-summary…`, `a5-recording-drawer-list…`, `a5-recording-summary…`, `a5-paused-drawer-list…`, `a5-paused-summary…`, `v-s5-recording-collapsed-43-809-1x.png`, `a-s5-recording-collapsed-103-2426-1x.png`, `a-s5-recording-microphone-133-4410-1x.png`. All 1x, all looked at.
+
+### 8. Counts, all read fresh
+
+| | C1 | Now | Δ |
+|---|---|---|---|
+| Visit frames | 26 | **26** | — |
+| Visit reactions | 89 across 86 | **84 across 81** — 76 click / 7 drag / 1 timeout | −15 removed, +10 added |
+| Visit text | 437 / 9,192 | **524 / 10,169** | +87 / +977 |
+| Account frames | 35 | **35** | — |
+| Account reactions | 121 across 118 | **114 across 111** — 106 / 7 / 1 | −17 removed, +10 added |
+| Account text (screen frames) | 620 / 11,794 | **707 / 12,767** | +87 / +973 |
+| Cross-page destinations | 0 | **0 both pages** | — |
+| Visible close buttons | — | **0 on both pages** | — |
+| `Account/` instances on Visit screens | 0 | **0** | — |
+| Screens | 18 / 42 across 41 | **18 / 42 across 41**, 0 off-page, 0 `Account/`, 0 chart rows | untouched |
+
+- **Text reconciles to the node.** +87 nodes = 42 chart rows × 2 text nodes (`Primary`, plus the hidden `Secondary` the library row carries at `Lines=One`) + 3 new "Patient chart" titles, one per list drawer. Chars: the 14 labels sum to 118 and 14 × "Secondary text" is 196, so 314 per list drawer × 3 = 942, plus 3 × "Patient chart" = 39, minus 2 per drawer edge for "Patient summary" → "Patient chart". Visit has **two** edges (−4 → **+977**); Account has **four** (−8 → **+973**). The whole difference between the two pages is those two extra edges.
+- Account's page-wide text reads **750 / 13,593** because the page also holds four PROOF frames and four component masters (43 / 826). C1's 620 was the screen-frame figure; both are given so the next batch can pick either.
+- **Starting points unchanged, each once**: `Visit device` on `V S1 Login / default`; `Account device` on `A S1 Login / default` and `Unsent recording` on `A S2 Home / unsent`.
+- **Traces walked through stored reactions, both pages, all closed**: open patient → list → Patient summary → back → list → Medications → back → list → Start Recording → recording → drag up → list → a sheet → back → list → drag down → collapsed. Account's microphone loop closes (recording → pill → sheet → scrim → recording, and choosing a device returns too). **The unsent loop still closes** unchanged: 140:1618 → 140:1547 → 163:2812 → 163:2938 → 140:1618.
+
+### Verification, and what is not proven
+
+- **Verified in pixels and looked at**: the blank list title row is gone and reads "Patient chart"; fourteen rows each carry a ChevronRight and **none is highlighted**; the sheet state shows a back chevron at the left with the title at 72, no triangle; **no close anywhere** on either drawer variant or on the microphone sheet; both collapsed edges read "Patient chart".
+- **Not proven: the prototype is still unplayed.** Everything in section 6 and the traces in section 8 is **stored wiring walked node to node**, not a play-through. C1's two overlay settings are still open by hand on 166:5030 and 166:5058, so a played Stop would still open undimmed.
+- **Not measured against the top bar by diff.** The back button's ink left edge of 18.03 and title x of 72 are read from geometry and confirmed by render; they were not pixel-diffed against `Visit/Top bar`, though the construction is node-for-node identical.
+- **Open, and it is a design question**: **twelve of the fourteen rows in every Patient chart list have no destination.** Only Patient summary and Medications were wired, because those are the only two that reach a frame today, and the brief's own wording for the rest was "the placeholder or medications frame it reaches today" — which none of them does. Allergies, Problems and Sheet 5–14 now carry a chevron that promises navigation and delivers none, on six list frames across the two pages. Either they get placeholder frames, or the list shows only what exists. Daniel's call.
+- Repo: FLAGS.md three DECISIONs and one GAP added, four earlier lines amended (DEFECT 30 open / 11 closed, GAP 62 / 4, DECISION 128 / 46). COMPOSITIONS.md gained `Patient chart drawer` and `Visit/Chart row`, and the microphone sheet, drawer corners and glyph entries were updated. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+
+## 2026-09-16 · Mobile ambient capture · Read-only audit for drawer spec revision 9
+
+- File `TP5KrQtY0T5IcMNqi375So`, page `Visit screens` 43:705 plus `Components` 1:2 for the `Visit/` components. **Read-only: no node, property, reaction or page was written, and nothing was imported by key** (trap 4). `figma.skipInvisibleInstanceChildren = false` on every read. Everything enumerated from the file; the N1 entry above was read for context and then set aside (rule 3).
+- Purpose: `mobile-visit-drawer-spec.md` is being rewritten as a record of what is built. Current values only. Where the file and the logs disagree, both are recorded and neither is corrected (rule 10).
+
+### What the file says
+
+- **26 top-level frames**, all visible, two labelled SUPERSEDED (`V S4 Patient`, `V S6 Stop confirmation`), one overlay (`V S6 Stop confirmation / overlay` 166:5030, 326 x 238, seven inbound `OVERLAY` navigations). One starting point, `Visit device` on `V S1 Login / default`.
+- **22 `Visit/` components** on `Components`, none anywhere else. `Visit/Chart row` 177:2858 declares **no properties of its own** — its `List/Item` is exposed, so labels and state reach instances through `exposedInstances` (trap 41).
+- **`Visit/Drawer` 48:897**: both variants 390 x 621, `color/background/paper`, radii **32/32/0/0**, clips. Puller zone **30** (30 x 6 `color/grey/400` puller at 180, 8, radius 3) over a title row **48**, on both. List title **"Patient chart"** at (16, 12), 99 x 24, h4, bound `color/text/primary`; sheet title at **x 72** beside a `Back tap target 48` at x **-1.97** whose ChevronLeft ink starts at **18.03**. Fourteen rows, all `State=Default`, `Show icon` false, 48 each, bottom padding **34**. `Stroke` default false; **true on all three V4 instances, false on all five V5 instances**. No close on either variant.
+- **`Visit/Drawer edge` 70:1480**: 390 x **112** = 30 + 48 + 34, `color/background/paper`, same 32/32/0/0, label **"Patient chart"**, `Stroke` false on both instances.
+- **84 reactions across 81 source layers**: 76 `ON_CLICK`, **7 `ON_DRAG`**, 1 `AFTER_TIMEOUT`; by navigation 72 NAVIGATE, 7 OVERLAY, 1 CLOSE, 4 BACK. **Zero destinations on another page.** Every drag carries `SMART_ANIMATE` (trap 37 — a drag cannot mirror a tap's null transition).
+- **"Patient info" exists but is dead**: 51:2170 and 51:2177 on the two V S5 field frames, both hidden, **zero reactions**. The drawer edge replaced them.
+
+### Findings
+
+Nine, all in FLAGS.md. Five DEFECT, four GAP. The three that matter most for the spec:
+
+1. **The overlay settings now read as set, and both C1's log and the open DEFECT say they are not.** 166:5030 reads `CLOSE_ON_CLICK_OUTSIDE` and `{SOLID_COLOR, rgba(0,0,0,0.5)}`. Not resolved. The Account twin 166:5058 was out of scope and is unknown.
+2. **`Visit/Recording bar`'s master still carries `Icon/DownCaret`; only its instances carry the MUI triangle.** D1.2 swapped sixteen pills across two pages — instances, never the master. A new instance ships the wrong glyph.
+3. **The two drawer states do not share a title row.** The sheet state has a 1px `color/divider` bottom stroke; the list state has none. Undeclared in every record.
+
+Also: the drawer edge's title is the one title of four with an **unbound** fill; the Patient chart list is **706 of content in a 543–647 frame** and clips at every size; `V5 Paused / drawer list` wires **one** row where the other two lists wire two; `Controls` sits at **y 28.68** on both moving Recording bar variants; and three `Visit/` components have no instance anywhere.
+
+### Screenshots, 1x, all looked at before reporting
+
+`figma-export/visit-drawer-audit-2026-09-16/`: `v4-patient-list-48-1371-1x.png`, `v4-patient-summary-50-1570-1x.png`, `v5-recording-drawer-list-51-1682-1x.png`, `v5-recording-summary-51-1760-1x.png`, `v5-paused-drawer-list-54-1901-1x.png`, `v-s5-recording-collapsed-edge-43-809-1x.png`, `visit-drawer-component-sheet-48-897-1x.png`.
+
+- The renders confirmed three things the tree read alone would not have: the sheet's title divider against the list's bare title row, `Sheet 14` cut through the middle on both V5 lists, and the component sheet stopping at `Sheet 11` because the master is 621 tall.
+
+### Not covered
+
+- `Account screens` was read only to count `Visit/` instances and to locate the single remaining `Visit/Top bar` instance (it is inside the `PROOF · Account/Top bar vs Visit/Top bar` frame, as intended). No Account frame, reaction or component was audited.
+- The prototype was **not played**. Every destination here is stored wiring read node to node.
+
+## 2026-09-16 · Mobile ambient capture · K1, cleanup after the drawer audit
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Changed `Components`, `Visit screens` and `Account screens`. `Screens` not touched, no writes to the library**, nothing imported by key (trap 4). Additive only: two components and seven nodes hidden and labelled, nothing deleted, no reaction added, removed or retargeted. `figma.skipInvisibleInstanceChildren = false` on every read. Enumerated from the file, not from the audit's report.
+
+### 1. The list title row takes the sheet's divider
+
+- Daniel's ruling. `Mode=list`'s `Title row` 90:1926 now carries the paint `Mode=sheet`'s 90:584 already had, copied node-for-node: **1px INSIDE bottom stroke bound `color/divider`** #D6D6D6, side weights **0/0/1/0**.
+- **Nothing moved**, as required: title row **48**, top row **78**, both variants **621**, drawer instances still **643** on the four V4/A4 frames and **725** on the ten V5/A5 frames. An INSIDE stroke takes no height.
+- **All six list drawers on the two pages inherited it from the master**, read back individually — no per-instance work, no override.
+- One thing worth keeping: 90:1926 **already had side weights of 1 on all four sides** and an **empty `strokes` array**. The weights were never what was missing; the paint was. A read that only checked `strokeBottomWeight` would have called this row correct.
+
+### 2. The triangle reaches the Recording bar master
+
+- `End icon swap#83:386` on `Template pill` 61:480 and `Input device pill` 61:490: **2:28 → 59:493**. Pill widths unchanged (200 and 82), and the library Button recoloured the swapped glyph to its own label ink with no binding needed.
+- Verified on a **fresh instance**, not the master (rule 3): `PROOF · Visit/Recording bar ready, MUI triangle on both pills` 182:7090 on scratch space at (4200, 8600), holding 182:7091. Both end icons read `Visit/Icon/ArrowDropDown (MUI)` and render **6.67 × 3.33** in the 16 slot — trap 18's two-sizes-from-one-master, as the glyph entry predicted. Screenshotted, then hidden; it already carried SCAFFOLDING in its name.
+- The two `Icon/DownCaret` end icons still inside the ready bar are on `Back to patients` and `Change`, both effectively hidden and neither a selector.
+
+### 3. The drawer edge title is bound
+
+- `70:1483` now carries `color/text/primary`, written resolved-value-first and then bound (paints rule 1). **All eight drawer-edge instances** across the two pages read bound. The render is identical, which is the point.
+
+### 4. Controls, and what the old number was actually doing
+
+- `Controls` 51:996 and 51:1012 are `layoutPositioning: ABSOLUTE` inside `Bar row`, which is **72 tall** with padding 0/16/0/16 and `counterAxisAlignItems: CENTER`. The frame is **40** tall, so the row's centre is **(72 − 40) / 2 = 16**. No ambiguity, so the batch did not stop.
+- **Old 28.68 → new 16, on both variants.** But the old value was not noise: at 28.68 the controls' centre sat at **48.68** against the **Timer** line's centre of **48** — they were centred on the *second line of the readout*, 0.68 off. At 16 they centre on the row and on the readout block as a whole, both at **36**.
+- So this is a 12.68px move with a visible consequence, not just a rounding. In the renders the circles now sit level with the gap between the name and the timer instead of level with the timer. **Reported rather than assumed correct** — if the timer alignment was the intent, the integer that expresses it is **28**, and this is a one-line reversal.
+
+### 5. Superseded leftovers
+
+| Node | Page | Was | Now |
+|---|---|---|---|
+| `Visit/Quick switch` 51:1091 | Components | visible | hidden, SUPERSEDED — 10 instances, all already hidden |
+| `Visit/Icon/CancelOutlined (MUI)` 74:543 | Components | visible | hidden, SUPERSEDED — zero instances on either page |
+| `Quick switch` 48:893 (inside the drawer) | Components | hidden, unlabelled | labelled |
+| `Patient info` 51:2170, 51:2177 | Visit screens | hidden | labelled |
+| `Patient info` 103:2436, 103:2449, 133:4420, 133:4519 | Account screens | hidden | labelled |
+| `V S4 Patient` 43:795, `V S6 Stop confirmation` 43:830 | Visit screens | visible | hidden |
+| `A S6 Stop confirmation` 103:2451 | Account screens | visible | hidden |
+| `A S4 Patient` 103:2412 | Account screens | **already hidden** | unchanged |
+
+- **Inbound reactions checked before every hide**: all four frames read **0 inbound**, so nothing was orphaned. Their own outgoing reactions (3 each) stay in place and stay counted, which is why the totals do not move.
+- Two things the brief did not predict. **Account carries four `Patient info` buttons, not two** — the two microphone frames are clones of the recording frames and brought copies. And **`A S4 Patient` was already hidden**, so the A twins were not in the same state as the V pair; only `A S6` needed hiding.
+
+### 6. Both overlays read as set
+
+- `A S6 Stop confirmation / overlay` **166:5058**: `overlayPositionType` **CENTER**, `overlayBackgroundInteraction` **CLOSE_ON_CLICK_OUTSIDE**, `overlayBackground` **{SOLID_COLOR, rgba(0, 0, 0, 0.5)}** — identical to `166:5030`. Both struck in FLAGS.
+
+### 7. What K1 could not do, and did not fix
+
+- **`Visit/Recording bar`'s component set cannot be rendered as a sheet.** The set 48:918 is **223 tall** and its variants reach **589**: `ready` at y 0 (201), `recording` at **287** (119), `paused` at **470** (119), and the set clips. `get_screenshot` on 51:990 returns a **1 × 1** image and `node.screenshot({scale: 2})` on both clipped variants returns blank. `Visit/Drawer` is correct by contrast — 1362 against a maximum child bottom of 1362.
+- **Not repaired**, because resizing the set was outside this batch's list and changes the component's canvas footprint. Logged as a DEFECT. The consequence is recorded so the next batch does not repeat the attempt: **the two moving variants can only be verified on instances**, which is what section 4 did.
+
+### Counts, all read fresh — every one unchanged
+
+| | Expected | Read back |
+|---|---|---|
+| Visit screens | 26 frames, 84 across 81 | **26, 84 across 81** — 76 click / 7 drag / 1 timeout, 0 cross-page |
+| Account screens | 35 frames, 114 across 111 | **35, 114 across 111** — 106 / 7 / 1, 0 cross-page |
+| Screens | 18 frames, 42 across 41 | **18, 42 across 41**, 0 off-page |
+| Visit text | 524 / 10,169 | **524 / 10,169** |
+| Account text (screen frames) | 707 / 12,767 | **707 / 12,767** |
+| Starting points | unchanged | `Visit device`; `Account device`, `Unsent recording` |
+
+- **No difference to explain.** Nothing in this batch touched a reaction or a character: the divider is a stroke, the glyph swap is an instance-swap property, the fill is a binding, the Controls move is a y value, and every leftover was hidden rather than removed. Hiding a frame does not change its reaction count, which is why the four hidden frames' twelve descendant reactions are still in the totals.
+
+### Screenshots, 1x, all looked at before reporting
+
+`figma-export/visit-k1-cleanup-2026-09-16/`: `v4-patient-list-48-1371-1x.png`, `v5-recording-drawer-list-51-1682-1x.png`, `v5-paused-drawer-list-54-1901-1x.png`, `a4-patient-list-103-3027-1x.png`, `visit-drawer-component-sheet-48-897-1x.png`, `recording-bar-component-sheet-48-918-1x-READY-ONLY.png`, `proof-recording-bar-ready-fresh-instance-182-7090-1x.png`.
+
+- The renders carried three things a tree read would not have: the divider now sits under "Patient chart" on every list and matches the sheet state; both pills carry the filled triangle where they carried a chevron caret this morning; and the Pause/Stop circles have visibly moved off the timer line.
+- **The Recording bar component sheet is the `ready` variant only**, named so in the filename. The other two are in the frame renders instead.
+
+### Believed, not seen
+
+- **The prototype is still unplayed.** The overlay settings on both S6 frames are read from stored properties; that an overlay actually dims and closes on an outside click has not been watched.
+- **The two clipped Recording bar variants were never seen as masters** — only through instances on the V5 frames. If the master and its instances diverged the way the pills did before this batch, an instance render would not show it. The Controls y was read back as 16 on both masters directly, so the value is certain even though the picture is not.
+- Repo: FLAGS.md — 6 DEFECT and 1 GAP struck closed, 1 DEFECT added, 2 DECISIONs added, 1 GAP amended (DEFECT 30 open / 17 closed, GAP 65 / 5, DECISION 130 / 46). COMPOSITIONS.md — the Patient chart drawer and glyph entries updated. LOG.md this entry. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+
+## 2026-09-16 · Mobile ambient capture · K2, the controls go back on the timer line
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Changed `Components` only**; `Visit screens`, `Account screens` and `Screens` were read for verification and not written to. No writes to the library, nothing imported by key (trap 4). Additive only: one frame resized, two y values set, nothing created, hidden or deleted. `figma.skipInvisibleInstanceChildren = false` on every read. Enumerated from the file.
+- **This batch reverses a K1 decision.** K1 moved `Controls` from 28.68 to 16 on the reading that the bar row was the thing to centre on, and reported the alternative. Daniel's ruling: the controls centre on the **timer line**. K1's own measurement already held the answer — it recorded the timer centre as 48 and the old 28.68 as 48.68 — and chose the row regardless. 28 is the integer that expresses the ruling.
+
+### 1. The set now contains its variants
+
+- `Visit/Recording bar` 48:918: **223 → 589 tall**, width unchanged at **390**, origin unchanged at **(1200, −64)**. `layoutMode` is `NONE`, so a plain `resize` applies and trap 19 does not bite.
+- **No variant moved.** They sit where they sat: `ready` at y 0 (201 tall), `recording` at **287** (119), `paused` at **470** (119) — a maximum bottom of 589, which is exactly the new height. Read back: every variant inside the box.
+- **The default is unchanged and still `ready`**, confirmed two ways: `componentPropertyDefinitions.State.defaultValue` reads `ready` before and after, and `ready` is still the top-left-most variant on canvas, which is what actually decides it (rule 9).
+- The two moving variants are renderable as masters for the first time — `get_screenshot` on 51:990 returned a **1 × 1** image before this batch.
+
+### 2. Controls, and the arithmetic that settles it
+
+| | recording 51:996 | paused 51:1012 |
+|---|---|---|
+| `Controls` y | 16 → **28** | 16 → **28** |
+| height, positioning | 40, `ABSOLUTE` | 40, `ABSOLUTE` |
+| controls centre in row | **48** | **48** |
+| `Timer` in row | y 30, 36 tall | y 30, 36 tall |
+| timer centre in row | **48** | **48** |
+| match | **true** | **true** |
+
+- The `Timer` sits 24 into a `Readout` that is inset 6 into the 72-tall `Bar row`, so it spans **30–66**. A 40-tall frame centred on that starts at 28. Row-centring gives 16 and a centre of 36 — twelve above the timer, which is where K1 left it.
+
+### 3. Every instance follows
+
+- **Sixteen `Visit/Recording bar` instances across the two pages**: 8 on `Visit screens`, 8 on `Account screens`. Six are `ready` and have no `Controls`; **ten are `recording` or `paused`**, five per page.
+- All ten read **`Controls` y 28, centre 48, timer centre 48, match true**, and **zero local overrides** — checked through `instance.overrides` filtered to the `Controls` sub-node, not inferred from the geometry agreeing.
+- **No instance differs.** Nothing needed a per-instance fix.
+
+### 4. What the resize introduced
+
+- The set has **no fill** (`fills: []`), and at 589 tall its box now runs to (1590, 525), crossing `PROOF · Batch 2 local components 2026-09-15` 4:560 at (1300, 120) 438 × 1090. The set draws above it (page index 15 against 7), but with no fill the PROOF frame shows through the empty bands between variants at y 201–287 and 406–470.
+- **`get_screenshot` with `contentsOnly: true` renders the set in isolation** and returns a clean 390 × 589. That is the render in this entry. Logged as a DEFECT with the workaround on it; the fix is a fill on the set or moving one of the two frames, and neither was in K2's list.
+
+### Counts, all read fresh — every one unchanged
+
+| | Expected | Read back |
+|---|---|---|
+| Visit screens | 26 frames, 84 across 81 | **26, 84 across 81** — 76 click / 7 drag / 1 timeout, 0 cross-page |
+| Account screens | 35 frames, 114 across 111 | **35, 114 across 111** — 106 / 7 / 1, 0 cross-page |
+| Screens | 18 frames, 42 across 41 | **18, 42 across 41**, 0 off-page |
+| Visit text | 524 / 10,169 | **524 / 10,169** |
+| Account text (screen frames) | 707 / 12,767 | **707 / 12,767** |
+| Starting points | unchanged | `Visit device`; `Account device`, `Unsent recording` |
+
+- Nothing to explain: a frame resize and two y values touch no reaction and no character.
+
+### Screenshots, 1x, all looked at before reporting
+
+`figma-export/visit-k2-controls-2026-09-16/`: `recording-bar-component-sheet-48-918-1x-all-three.png`, `v5-recording-drawer-list-51-1682-1x.png`, `v5-paused-drawer-list-54-1901-1x.png`, `a5-recording-medications-103-3048-1x.png`.
+
+- The component sheet shows **all three variants** for the first time, and the pause/stop discs sit level with `04:32` on both moving ones. The three frame renders show the same on both pages: the discs are back on the timer line and no longer float above it.
+
+### Believed, not seen
+
+- **The prototype is still unplayed**; nothing in this batch depends on that, since no reaction was touched.
+- **The `ready` variant's controls were not re-checked** because it has none — the `Controls` frame exists only on `recording` and `paused`. If a future batch adds controls to `ready`, this ruling does not yet say where they go.
+- **The overlap with 4:560 was measured, not looked at.** The only render taken of the set used `contentsOnly: true`, which excludes the PROOF frame by design, so what a plain export would have baked in is arithmetic rather than a picture.
+- Repo: FLAGS.md — 1 DEFECT struck closed, 1 DEFECT added, 1 DECISION added, and K1's struck `Controls` DEFECT amended to record that 16 was the wrong integer (DEFECT 30 open / 18 closed, GAP 65 / 5, DECISION 131 / 46). COMPOSITIONS.md gained `Recording bar controls`. LOG.md this entry; K1's entry is left as written, since LOG.md is history. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+
+## 2026-09-16 · Mobile ambient capture · Read-only, the Start Recording surface on V4 and A4
+
+- File `TP5KrQtY0T5IcMNqi375So`, frames `V4 Patient / list` 48:1371 and `V4 Patient / summary` 50:1570 on `Visit screens`, and their twins `A4 Patient / list` 103:3027 and `A4 Patient / summary` 103:3037 on `Account screens`. **Read-only: no node, property or reaction was written, and nothing was imported by key** (trap 4). `figma.skipInvisibleInstanceChildren = false` on every read. Enumerated from the file.
+- **Daniel's ruling ratifies what is already built.** The surface was ruled on 2026-09-15 and the divider on 2026-09-16; all four frames already comply, so this batch changed nothing in Figma and recorded the ruling instead.
+
+### The surface — one node, identical on all four frames
+
+| | Value |
+|---|---|
+| Node | `Footer band`, a **RECTANGLE** — **not** a component instance, no library or code counterpart |
+| Ids | `49:1372` (V4 list), `50:1701` (V4 summary), `103:3030` (A4 list), `103:3040` (A4 summary) |
+| Position and size | **(0, 722), 390 × 122** — top at 722, bottom flush with the 844 frame |
+| Fill | `color/background/paper` **#FFFFFF**, bound |
+| Divider | **1px, top edge only, `strokeAlign` INSIDE**, bound `color/divider` **#D6D6D6** — `strokeTopWeight` 1 with right, bottom and left at **0** |
+| Corner radius | 0 on all four corners |
+
+- The divider is **the band's own stroke, not a separate node**: a rectangle carries per-side weights, so one-sided rules need no extra layer. It is the same token and the same INSIDE construction the drawer's top stroke and header divider use, so the rules in the frame match by token rather than by eye.
+
+### Start Recording within the surface
+
+- `Start recording CTA`, a library Button **`variant=contained, color=secondary, size=medium`** 6:29 — `48:1455`, `50:1702`, `103:3031`, `103:3041`.
+- **(16, 738), 358 × 56**, radius 24, fill `color/secondary/main` #FF8D6E, label "Start recording" on `color/secondary/contrastText` #004852. Start and end icon slots both hidden.
+- Insets within the band: **16 left, 16 top, 16 right, 50 bottom** — the 50 being 16 plus the 34 safe area.
+
+### Drawer bottom padding, and the scroll clearance
+
+- The scrolling body is bottom-padded **122** on all four frames — `Sheet list` on the list frames, `Sheet body` on the summary frames — against a master value of **34**. It is a per-instance override, and it is **exactly the band's height**.
+- **The last chart row clears the divider exactly, with zero margin.** On the two list frames: 14 rows × 48 = 672 of rows plus 122 of padding = **794** of content in a **565** body, so maximum scroll is **229**. Scrolled to the bottom, the last row's bottom edge sits at 565 − 122 = **443** inside the body, and the body starts at 201 + 78 = 279, putting that edge at **722** in the frame — the divider's own y. The row's last pixel is 721 and the divider occupies 722. It clears, and it touches.
+- For contrast, the ten V5/A5 drawers are padded **34**, because those frames carry no footer band and no CTA.
+
+### Where it is recorded
+
+| Record | Entry | Batch |
+|---|---|---|
+| FLAGS.md | `visitDrawer_ctaFooterBand` 49:1372 — the band, 2026-09-15 | D1 fixes and Patient summary (D2) |
+| FLAGS.md | `visitDrawer_footerKeylineIsInsideTopStroke` 50:1701 — the keyline, 2026-09-16 | Footer band keyline |
+| FLAGS.md | `visitDrawer_ctaOverlapsDrawerContent` — struck, the defect the band closed | D1 fixes (D2) |
+| LOG.md | "Footer band" under *2026-09-15 · D1 fixes and Patient summary (D2)* — built on the three V4 frames | same |
+| LOG.md | *2026-09-16 · Footer band keyline* — the whole entry | same |
+| LOG.md | Geometry restated under the V4 top bar rebuild and the quick-switch removal | those batches |
+| **COMPOSITIONS.md** | **No entry.** Only a cross-reference inside `Sheet and drawer corners`, citing "the same construction as the Start recording footer keyline" to explain the drawer stroke, without stating the footer's own values. | — |
+
+- **The Account ids are recorded nowhere.** Every entry names only the Visit trio 49:1372, 49:1379 and 50:1701. `103:3030`, `103:3035` and `103:3040` came across with the A1 page clone rather than being built, so no batch ever wrote them down. Logged as a GAP.
+
+### Findings
+
+- **The four frames do not differ.** Every value above — node type, id pattern, position, size, fill binding, stroke weight, side, alignment and binding, CTA main component, CTA position and size, and the 122 bottom padding — reads identically on all four. There is nothing to reconcile, which is the useful result.
+- Two things worth knowing that the brief did not ask for. The **placeholder frames carry the same surface** (`49:1379` on V4, `103:3035` on A4), so it is six frames, not four. And the superseded `V S4 Patient` and `A S4 Patient` frames carry a `Start recording CTA` at the same (16, 738) **with no band behind it** — they predate the 2026-09-15 ruling, and they are hidden, so nothing renders wrong.
+
+### Believed, not seen
+
+- **No render was taken.** The brief asked for values, not pixels, and this batch wrote nothing, so every number here is a property read rather than a measured pixel. The one claim that would benefit from a render is the scroll clearance: **that the last row lands exactly on the divider is arithmetic**, derived from padding, content height and body height. Figma will not show it without playing the prototype, and the prototype is still unplayed.
+- **The band's z-order was not checked against the drawer.** The band and the CTA are later siblings than the drawer on all four frames, which is why they cover it, but no explicit index comparison was made.
+- Repo: FLAGS.md — 1 DECISION and 1 GAP added, nothing struck (DEFECT 30 open / 18 closed, GAP 66 / 5, DECISION 132 / 46). LOG.md this entry. COMPOSITIONS.md **not** changed — the missing entry is reported as a GAP rather than written, since composing it is a build decision and this batch was read-only. CLAUDE.md, PLUGIN-NOTES.md and TEBRA-DESIGN-SYSTEM.md unchanged.
+
+## 2026-09-16 · Mobile ambient capture · The two specs enter the repo, and are checked against the file
+
+- **No writes to Figma.** Every Figma call this turn was read-only; nothing was created, hidden, moved or bound. `figma.skipInvisibleInstanceChildren = false` on every read. Repo change only: two files added, FLAGS.md updated, this entry.
+- Daniel supplied `mobile-visit-drawer-spec.md` **revision 9** (the build through K2 and the footer band audit) and `mobile-account-spec.md` **revision 5** (through K2). Both copied in from `C:\Users\coled\OneDrive\Desktop\` and **added to the repo for the first time**.
+
+### The standing flag had its premise wrong
+
+- `mobileVisit_drawerSpecRevEightPending` said the repo held revision 5 and that revision 8 was pending. **The repo has never held any revision of either spec**: `git log --all -- "mobile-*.md"` returns nothing and neither file was in the working tree before today. They lived only on the Desktop, which is why D1, D1.1 and every batch since that went looking for them found nothing and ran on the rulings quoted in their briefs instead.
+- Struck closed. Revision 9 also supersedes the rev-5 header that said the finished prototype is not modified — which D1 onward all modified, by ruling.
+
+### Checked against the file
+
+Both specs read as a record of what is built, so every checkable value was read fresh rather than taken on trust. **Confirmed exactly:**
+
+- **Drawer spec.** `Visit/Chart row` 390 × 48, no properties, exposed `List/Item` at Lines=One / Show icon off filling 358, chevron ink right edge **374**. `Visit/Drawer edge` 390 × 112, label "Patient chart" at (16, 12) bound `color/text/primary`. Drawer 390 × 621 both modes, 32 corners, puller 30 + title row 48, list body bottom padding 34 in the master, sheet body 8 / 16 / 34 / 16. Recording bar: timer line 30–66, controls at **y 28**, centre **48**. Footer band 390 × 122 at (0, 722), 1 px INSIDE top stroke `color/divider`, CTA (16, 738) 358 × 56, drawer padded 122. Frames 26, one starting point. Wiring and totals as given. `Visit/Probe/Swap host` visible and unused, as stated.
+- **Account spec.** `Account/Avatar` 40 disc radius 20, `Initials` default **SB**, Akkurat LL Regular **20 / 20**. `Account/Microphone sheet` close hidden, three rows with iPhone microphone `Selected`, 34 bottom padding. `Account/List row` 390 × 72, Lines=Two filling 358, chevron ink **366.59 → 374**. Device pill **82 × 38 at x 154** (centred on 390), y **557** recording and **569** paused. Identity block 390 × **60**, avatar slot at x 16, text at x 72. Forgot-password link right edge **350** on all three login frames; login card **282** on default and after-sign-out, **366** on error. Counts, starting points and the unsent loop as given.
+
+### Two claims that do not match the file
+
+1. **Drawer spec §4 lists six masters as "Superseded, hidden and labeled"; only two are hidden.** `Visit/Quick switch` 51:1091 and `Visit/Icon/CancelOutlined (MUI)` 74:543 are hidden — the two K1 hid. `Visit/Sheet list row` **48:137** and `Visit/Icon/Pause` / `Stop` / `PlayArrow (MUI)` **51:983, 51:986, 51:989** are labelled SUPERSEDED but **still visible** on the Components canvas. The spec is right about the labelling and wrong about the visibility. Not resolved.
+2. **Three stored x values are non-integer and both specs round them.** §6 says the drawer's back tap target is "at x -2 (ink from 18)"; the file reads **-1.97**, ink **18.03**. §5 says the Patients button is "at x 4"; the file reads **4.017**. The same −1.97 sits on `Visit/Top bar` 93:2740 and 93:2744, which the drawer's copy was built from. Under rule 4 the file is at fault and the spec states the intended integers — but a record of what is built should not round. Not resolved.
+
+### One more, found on the way
+
+- `mobileAccount_dividerUnderIdentity` puts the identity divider at **y 171**; 163:2790 reads **y 124**, on the bottom edge of an identity block that is 390 × 60 at y 64. A later batch moved the block and the flag was not updated. The construction it describes is still right, and `mobile-account-spec.md` §5 states no y, so the spec is unaffected. Flag amended, geometry untouched.
+
+### Believed, not seen
+
+- **No render was taken and nothing was played.** Every value above is a property read. The two specs' historical claims — that the login card grew *from* 230 and 314, that the A4 footer bands arrived with the A1 clone, that batches before D0 left `Visit screens` at commit `09a7b09` — are **not verifiable from the current file** and were taken as written.
+- **The Account spec's §9 batch record and the drawer spec's §10 list N1, the audit, K1, K2 and the band audit as "pending"**, which is correct: those five are staged in this repo and not yet committed.
+- Repo: `mobile-visit-drawer-spec.md` and `mobile-account-spec.md` added. FLAGS.md — 1 DECISION struck closed, 2 DEFECTs added, 1 DECISION amended (DEFECT 32 open / 18 closed, GAP 66 / 5, DECISION 131 / 47). LOG.md this entry. COMPOSITIONS.md, CLAUDE.md, PLUGIN-NOTES.md unchanged.
+
+## 2026-09-16 · Mobile ambient capture · Read-only, the two specs checked against the file
+
+- **No writes to Figma.** Every call was read-only; nothing created, hidden, moved, bound or rewired. `figma.skipInvisibleInstanceChildren = false` on every read. Enumerated from the file, not from the specs or from any prior entry above.
+- Scope: `mobile-visit-drawer-spec.md` **§4–9** and `mobile-account-spec.md` **§3, 4, 7, 8**, against `Components`, `Visit screens` and `Account screens`.
+
+### 1. The specs in the repo
+
+- Both present. `mobile-visit-drawer-spec.md` header reads **Revision 9**, `mobile-account-spec.md` reads **Revision 5**. **No older copy anywhere**: `find` over the tree returns exactly those two files, and no other markdown carries either spec's title. Both staged.
+
+### 2. What matches
+
+**Everything checked, apart from three values.** Verified against the file this pass:
+
+- **Drawer §4.** `Visit/Recording bar` 48:918 `State` ready/recording/paused with ready default. `Visit/Drawer` 48:897 all four properties and defaults — `Mode` list, `Sheet` 48:141, `Stroke` false, `Closable` false. `Visit/Drawer edge` 70:1480 390 × 112 as 30 + 48 + 34, paper, 32 top corners, clipping, title "Patient chart" at (16, 12) bound `color/text/primary`, `Stroke` false. `Visit/Chart row` 177:2858 390 × 48, **zero properties**, exposed `List/Item` at Lines=One / Show icon off filling 358, chevron 24 with ink right edge **374** on `color/grey/600`. `Visit/Sheet/Patient summary` 358 × 1141, `Visit/Sheet/Placeholder` 358 × 68. All eight icon masters 24 × 24 at the ids given. `Visit/Probe/Swap host` visible and unused.
+- **Drawer §5.** Ready 390 × 201 `color/background/default`; safe area 47, back row 44 at y 47, identity 44 at y 91, pills row 50 at y 135; Template pill (16, 12) 200 × 38 and device pill (224, 12) 82 × 38 with an empty label, both ending in `ArrowDropDown` at the Button's **16** slot. Recording 390 × 119 `color/success/dark`, paused `color/primary/main`; bar row 72 at y 47, readout (16, 6) 358 × 60, **timer line 30 to 66**, controls (308, **28**) 76 × 40, **centre 48 on both**.
+- **Drawer §6.** Both modes 390 × 621, paper, 32 corners, clipping. Puller zone 30 with a 30 × 6 `color/grey/400` puller at (180, 8) radius 3. **Both** title rows 48 with a 1 px INSIDE bottom stroke bound `color/divider`. List title "Patient chart" at (16, 12) on h4; sheet title at absolute **x 72** on h4. Fourteen chart rows, **all `State=Default`**, in the exact order given. List body padding 0/0/**34**/0, sheet body 8/16/**34**/16, both `overflowDirection` VERTICAL. `Stroke` **true on all three V4 drawers and false on all five V5 drawers**. The bar-fill extension is real: `Bar field behind drawer 32 (SCAFFOLDING)`, 32 tall at y 119 on all five V5 frames, bound `color/success/dark` on recording and `color/primary/main` on paused. Footer band 390 × 122 at (0, 722), paper, 1 px INSIDE top stroke `color/divider`, CTA (16, 738) 358 × 56, body padded 122.
+- **Drawer §8.** 26 frames, one starting point `Visit device`. `V S4 Patient` and `V S6 Stop confirmation` both hidden and labelled. Overlay 166:5030 326 × 238, close on click outside, 50% black. Drawer edge at **y 732** on both V S5 frames. Both `Patient info` buttons hidden, labelled, zero reactions. `V4 Patient / placeholder` title reads "Medications".
+- **Drawer §9.** Every row of the wiring table, destination by destination, including "Inert on V5 Paused / drawer list" — that row really does carry no `ON_CLICK` — and "Chart rows, all others: nothing", checked on Allergies. Totals **84 across 81, 76 click / 7 drag / 1 timeout, 0 cross-page**, and the seven drags are exactly the two edge drags plus five puller drags.
+- **Account §3.** `Account/Avatar` 40 disc radius 20 on `color/secondary/main`, initials on `color/secondary/contrastText`, Akkurat LL Regular 20/20, `Initials` default SB — and the **4.53 : 1** contrast claim computes to **4.533**, so it is right to two places. `Account/Top bar` Title with action: tap target `Action tap target 60 x 48` at **x 330** running to **390**, avatar ink **334 to 374**. `Account/Microphone sheet` 390 × 256, top 30 + 48, title "Microphone", close hidden, three rows with iPhone microphone `Selected`, 34 bottom padding. `Account/List row` 390 × 72, Lines=Two filling 358, chevron ink **366.59 to 374** on `color/grey/600`.
+- **Account §4, §7, §8.** Pills at **x 154**, y **557** and **569**, 82 × 38, no label, `ArrowDropDown` at 16, each opening its own microphone frame; scrim and row both return to the calling frame. Overlay 166:5058 matches 166:5030 exactly, the old `A S6` is hidden and labelled, and **seven** OVERLAY navigations exist on the page. Every row of the §8 wiring table confirmed. Starting points `Account device` and `Unsent recording`, each once. Counts **35 frames, 114 across 111, 707 / 12,767, 0 cross-page**.
+
+### 3. Three mismatches, all already on the register
+
+No new ones. Both existing flags amended with the fresh read rather than duplicated.
+
+| Spec wording | File | Node |
+|---|---|---|
+| §4 "**Superseded, hidden and labeled:** … 48:137, 51:1091, 74:543, 51:983, 51:986, 51:989" | Only **51:1091** and **74:543** are hidden. **48:137, 51:983, 51:986, 51:989** read `visible: true`. All six are labelled. | those six |
+| §6 "Back tap target 48 at **x -2** (ink from **18**)" | **x -1.97**, ink **18.03** | 177:5820 |
+| §5 "'Patients' … 103 x 36 at **x 4**" | **x 4.017** | 61:472 |
+
+- One wording note, not a mismatch: §4 gives `Visit/Top bar` as "390 x 64". Each **variant** is 390 × 64; the **set** node 93:2734 is 390 × 264. The number is the bar height, which is the useful one, but the row cites the set.
+
+### 4. The "to confirm" items, answered
+
+- **The V4 Template pill leads nowhere.** `I<bar>;61:480` carries **no `ON_CLICK`** on `V4 Patient / list`, `/ placeholder`, `/ summary` or any of the three A4 twins. The **input device pill** beside it goes to `V S3 Microphone` / `A S3 Microphone` on all six. Both wear the same selector triangle and only one opens anything; there is no template-picker frame anywhere in the prototype. Logged as a GAP.
+- **Pause from `medications` drops the drawer.** `V5 Recording / medications` pause → **`V S5 Recording / paused`**, the full field, and `A5 Recording / medications` → **`A S5 Recording / paused`**. The other four pause controls keep the drawer: `drawer list` → `Paused / drawer list`, `summary` → `Paused / summary`. The cause is a missing frame — there is no `V5/A5 Paused / medications` — so pause has nowhere drawer-preserving to land. Logged as a DEFECT; it may well be accepted, since medications is a placeholder sheet.
+
+### 5. The edge-drag ruling was not its own DECISION
+
+- It was on the register only as a **consequence**: described inside `mobileVisit_openingAPatientLandsOnTheChartList`, and as the amendment to `visitDrawer_collapsesToVisibleEdge` that struck "tap opens the last sheet". Neither has the drag as its subject, while the spec states it as a standalone ruling in §1.
+- **Added** as `mobileVisit_dragUpFromTheEdgeOpensTheChartList`, with the fresh read behind it: all four collapsed recording frames carry **both** an `ON_CLICK` and an `ON_DRAG` to the matching drawer-list frame, every drag `SMART_ANIMATE` because trap 37 rejects a null transition on `ON_DRAG`.
+
+### Believed, not seen
+
+- **No render was taken and the prototype was not played.** Every value is a property read; the destinations are stored wiring walked node to node.
+- Three claims in the specs are **historical and not checkable from the current file**: that the login card grew *from* 230 and 314, that the A4 footer bands arrived with the A1 clone, and that `Visit screens` was locked at commit `09a7b09`. Taken as written.
+- The MUI path claims — that each `Visit/Icon/…` matches `@mui/icons-material` exactly — were **not re-derived** this pass. Only the ids, sizes and visibility were read; the vertex checks stand on the D1.2 and P1 entries.
+- Repo: both specs staged. FLAGS.md — 1 DECISION and 1 GAP and 1 DEFECT added, 2 DEFECTs amended with the re-verification (DEFECT 33 open / 18 closed, GAP 67 / 5, DECISION 132 / 47). LOG.md this entry. COMPOSITIONS.md, CLAUDE.md, PLUGIN-NOTES.md unchanged, and neither spec was edited.
+
+## 2026-09-16 · Mobile ambient capture · S0, read-only audit for the schedule addendum
+
+- **No writes to Figma.** Every call read-only; nothing created, hidden, moved, bound or rewired. `figma.skipInvisibleInstanceChildren = false` on every read. Enumerated from the file, never from a prior entry.
+- Files read: `TP5KrQtY0T5IcMNqi375So` (all six pages) and `YX2n4YLrEpBXNbcc73T6dw` (Chip). Specs read: `mobile-schedule-spec.md` rev 2 in full, `mobile-account-spec.md` rev 5, `mobile-visit-drawer-spec.md` rev 9 §1–2.
+
+### 1. Eight A S2 Home frames, all visible, none superseded
+
+`A S2 Home / empty` 103:2341, `/ sessions` 103:2353, `/ results` 103:2370, `/ no results` 103:2383, `/ searching` 103:2981, `/ after first capture` 103:2993, `/ after failed capture` 103:3010, `/ unsent` 140:1618. Every one 390 × 844, `clipsContent` true, and holding exactly **one child, `Content`**.
+
+- **`Content`** sits at y **47**, is 390 wide, `VERTICAL` auto-layout, gap 0, padding 0, **`AUTO`/`FIXED` — it hugs**, `clipsContent` true, `overflowDirection` **NONE**. Heights 184 to 400 depending on the list.
+- Stack: `Account/Top bar` **64** → `Search block` **80** (padding 8/16/16/16 round a 358 × 56 search field) → `List`.
+- **`List`** is `VERTICAL`, gap **0**, padding **0**, `FILL`/`HUG`, `clipsContent` true, `overflowDirection` **NONE**. Rows are flat siblings at a 72 pitch, as COMPOSITIONS.md records.
+- **The list starts at frame y 191** on all eight (47 + 64 + 80) and **653 px remain below the search field** to the frame bottom, **619** above the 34 safe area. The tallest list in use is 256. Confirmed in the render: `a-s2-home-sessions-103-2353-1x.png` is empty from y 447 down.
+- **Nothing on a Home frame scrolls.** The page's only eight scrollers are the drawer bodies on the A4/A5 frames.
+- The two lists with no rows (`/ empty` 103:2352, `/ searching` 103:2992) are **100 tall with zero children** — an `AUTO` frame holding its last explicit height.
+
+**The heading.** `List heading` FRAME, 390 × **40**, `HORIZONTAL`, padding **0/16/0/16**, `counterAxisAlignItems CENTER`, `FILL`/`FIXED`, holding one TEXT `Heading` at (16, 10), **`HUG`/`HUG`, `WIDTH_AND_HEIGHT`, truncation DISABLED**. Akkurat LL Regular **14 / 20**, **`textStyleId` null — no published style**, fill bound **`color/text/secondary`** #545454. Four exist: 103:2365 / 103:2366 "Today", 103:3005 / 103:3006 "Today", 103:3022 / 103:3023 "Today", 140:1630 / 140:1631 "Yesterday".
+
+### 2. Session row and Status chip
+
+- **`Session row`** COMPONENT_SET **4:454**, 390 × 192. **One property, `State` = default | failed**, default `default`. Variants 4:436 (0,0) and 4:445 (0,120). **No text properties** — name and time are plain TEXT nodes, set by instance override.
+- Each variant: 390 × **72** `FIXED`/`FIXED`, `HORIZONTAL`, gap **16** (`space/16`), padding 0/16/0/16 (`space/16`), `counterAxisAlignItems CENTER`, 1 px **INSIDE** bottom stroke bound `color/divider` (weights 0/0/1/0, so the row is exactly 72).
+- **Not a library `List/Item`.** It is a local two-child row: a `Text` frame (`FILL`/`HUG`, VERTICAL, gap 0) beside a `Status chip` instance (`HUG`/`HUG`). `Account/List row` and `Visit/Chart row` wrap `List/Item`; this one does not.
+- Positions: `Name` body1 **16/24** `color/text/primary` on line 1, `Capture time` body2 **14/20** `color/text/secondary` on line 2, both `FILL`/`HUG` inside a 44-tall stack at y 13.5. Chip at y **19.5**, x **323** (Sent, 51 wide) or **267** (Failed to send, 107).
+- **`Status chip`** COMPONENT_SET **4:395**, 507 × 32. One property **`Status` = Sending | Sent | Failed to send**, default `Sending`. 4:371 (72 wide), 4:379 (51), 4:387 (107). Each wraps one library Chip at `size=medium, variant=outlined, color=default, State=Default`, stroke and label repainted to `color/text/secondary`, `color/success/dark`, `color/error/main`. **No size axis and no "none".**
+- **A second chip fits on the secondary line without the row growing.** Height: the row is `FIXED` 72 and centres a 44-tall text stack, so the stack can reach 72. A medium Chip on line 2 makes it 24 + 32 = **56** (8 clear top and bottom); a small Chip makes it 24 + 24 = **48** (12 clear). Width, worst case beside the 107-wide Failed chip: text column **235**, line 2 needs time ≈ 55 + gap 8 + Telehealth chip ≈ 88 = **151**, leaving 84. **But the current line 2 is a bare TEXT node in a vertical stack**, so `Schedule/Row` must replace it with a horizontal container; the existing component cannot host it.
+
+### 3. Library Chip
+
+- COMPONENT_SET **156:171** on `Data display`, key `1c8149de…`, 2140 × 424, **84 variants**. Axes **`size` medium | small**, **`variant` filled | outlined**, **`color`** default / primary / secondary / error / info / success / warning, **`State`** Default / Hover / Disabled. Plus TEXT `Label#156:0` and BOOLEAN `Delete icon#156:43`.
+- **medium** 32 tall, r16, padding 12 filled / 11 outlined, gap 6 / 5, label **13 / 18**. **small** 24 tall, r12, padding 8 / 7, gap 4 / 3, label **12 / 18**.
+- **Already imported** into the mobile file as remote set **4:47** (same key); S2 needs no fresh import.
+- **"Telehealth" fits at either size.** Label ≈ **64 px** at 13 and ≈ **59** at 12, giving **≈ 86** medium outlined and **≈ 73** small outlined against 235 of worst-case room. The width is **derived, not measured** — S0 wrote nothing, so no node carries the string; fitted against seven measured Akkurat LL Regular samples (13 px: Sent 29, Sending 50, Failed to send 85, Chip label 61, Ada 24, Grace 36, Ada Lovelace 80).
+
+### 4. Placeholder patients — three names, one DOB, no IDs
+
+Every page read with hidden children included.
+
+| Name | DOB | ID | Where |
+|---|---|---|---|
+| Marcus Vance | **DOB 03/14/1972** | none | all three screen pages and `Components`; the only patient with a DOB, a chart or a recording |
+| Dolores Okonkwo | none | none | Session row `State=failed` master 4:447 and every session list |
+| Priya Raghunathan | none | none | Session row instances on the session lists |
+
+Search terms **"Vance"** (matches) and **"Quigley"** (the no-results query) are typed strings, not patients. **No patient ID, MRN or account number exists anywhere in the file**, and **"Telehealth" appears nowhere**. Times in use: 9:42 AM, 9:12 AM, 8:55 AM, 4:30 PM, and "Yesterday, 4:30 PM".
+
+### 5. A scrolled still
+
+- **The construction is available but nothing in the file uses it.** All eight existing scrollers hold content at y ≥ 0. A scrolled still needs a **fixed-height clipping frame with `overflowDirection` VERTICAL holding the list content at a negative y** — which the current `Content` cannot be, because it is a hugging auto-layout frame with `overflowDirection` NONE, and auto-layout cannot express a negative offset. The content stack must be `layoutPositioning: ABSOLUTE`, or the viewport must be a plain frame.
+- **Expected at the two ends**: Figma takes the scroll range from the children's bounding box and starts at the drawn position, so scrolling up should reveal the cut-off past rows and stop when the content top meets the viewport top, and scrolling down should stop when the content bottom meets the viewport bottom. **Not verified — this prototype has never been played** (`mobile-account-spec.md` §10), and S0 wrote nothing, so no probe exists. One play at S3 settles it.
+- Every navigation in this prototype carries `resetScrollPosition: true`, so arriving at the frame should restore the drawn offset rather than the top.
+- **The spec does not depend on the answer.** §6 already commissions `Home / schedule, top` as a second still, which covers the top of the list whatever the scroll does.
+
+### 6. Page and prefix — recommend building on `Account screens`
+
+| | Build on `Account screens` | Clone to a new page |
+|---|---|---|
+| Frames after | **42** (38 + 4 PROOF) | 42 on the new page, 39 still on the old = **81** |
+| Reactions after | **≈ 136** across ≈ 133 | ≈ 136 new + 114 kept = **250** |
+| Starting points | 2 → **3** (add Schedule) | 3 on the new page, 2 duplicated by the clone and needing renaming |
+| Edges to re-point | 0 | **22**, plus a second Patient chart to maintain |
+
+- Current state read fresh: `Account screens` **39** FRAME children (35 excluding four PROOF scaffolds), **114** reactions across **111** nodes (106 click, 7 drag, 1 timeout), starting points `Account device` and `Unsent recording`, 3525 nodes, 750 text / 114 unique. `Visit screens` 26 / 84 across 81. `Screens` 18 / 42 across 41.
+- The three new frames add ≈ 22 reactions: 8 rows + search + avatar on each of `/ schedule` and `/ schedule, top`, and search + avatar on `/ empty day`.
+- **Cloning buys nothing here.** A1 cloned because every frame had to change; the schedule changes no existing frame (§6 keeps the unsent home as is). A clone duplicates 39 frames and 114 reactions to add three, and because **no reaction crosses pages** — 0 in the file — a schedule on a new page could not reach `A4 Patient / list`, `A S7 Sending` or `A S9 Account` without cloning the Patient chart too.
+- **Prefix: keep the home family.** `A S2 Home / schedule`, `A S2 Home / schedule, top`, `A S2 Home / empty day`, placed on the A S2 row at y 1120 from x 4350 (the row runs 120 to 3880 at a 470 pitch). Components stay `Schedule/`-prefixed per spec §4.
+
+### Findings raised for Daniel
+
+1. **`Schedule/Date header` is not needed.** The existing `List heading` TEXT is `HUG`/`WIDTH_AND_HEIGHT` with truncation disabled in a 358-wide well, so a date is a text override. This answers spec §5's conditional.
+2. **Chip size on the secondary line is a design question.** medium (32) makes line 2 taller than the name line (24); small (24) matches it. Both fit. Spec §3 rules "a library Chip" without a size.
+3. **There is no empty-state pattern under the search field except `No results` 103:2395** — a 390 × 40 frame with the message at (16, 10) on 14/20 `color/text/secondary`. "No appointments today" copies it.
+4. **The schedule needs times and, for the off-schedule row, possibly a fourth patient.** Only three names exist and only Marcus Vance has a DOB and a chart; every row's tap lands on his chart (spec §7). Nine rows drawn from three names is a repetition Daniel should see before S3.
+5. **No "not shown" status.** `Status chip` has three values and no "none", so the quiet row and the upcoming rows carry a hidden chip instance rather than a variant value — the same shape as the hidden Session rows already on the home frames.
+
+### Believed, not seen
+
+- **Three renders taken and looked at**, listed below; the prototype was **not played**, so §5's scroll behaviour and every wiring claim are stored properties, not observed behaviour.
+- The **"Telehealth" chip width is derived from seven measured samples, not measured** — S0 wrote nothing to Figma.
+- **Reaction and frame counts are fresh reads**, not carried from the K2 entry; they agree with it.
+
+### Screenshots, 1x, all looked at before reporting
+
+- `figma-export/schedule-s0-2026-09-16/a-s2-home-sessions-103-2353-1x.png` — the list region and the 653 clear below it
+- `figma-export/schedule-s0-2026-09-16/session-row-set-4-454-1x.png` — both Session row variants and their chips
+- `figma-export/schedule-s0-2026-09-16/library-chip-set-156-171.png` — the 84-variant Chip set, medium left, small right
+
+- Repo: LOG.md this entry. FLAGS.md and COMPOSITIONS.md **unchanged** — S0 raised no DEFECT or GAP and decided nothing; the five findings above are Daniel's to rule at the stop. No spec edited. Staged, not committed.
+
+## 2026-09-16 · Mobile ambient capture · S0 re-run requested; found already logged, verified instead
+
+- **No writes to Figma.** Every call read-only. `figma.skipInvisibleInstanceChildren = false` on every read. Enumerated from the file, not from the S0 entry above it.
+- **S0 had already run and was logged**, by another agent, in the entry immediately above this one — uncommitted, part of the same working tree. Rather than duplicate fifteen reads and append a second S0, this pass **independently verified its load-bearing answers** against the file. Files read: `TP5KrQtY0T5IcMNqi375So` (Account screens, Visit screens, Foundations, Components) and `YX2n4YLrEpBXNbcc73T6dw` (Chip, read-only, nothing imported — trap 4). Specs read: `mobile-schedule-spec.md` rev 2 in full, `mobile-account-spec.md` and `mobile-visit-drawer-spec.md` §1–2.
+
+### Verified, and correct as written
+
+- **§1 Home frames.** Eight `A S2 Home` frames at the ids given, all visible, none superseded. Each holds exactly one child, `Content`, at y **47**, 390 wide, VERTICAL, gap 0, padding 0, clipping, `overflowDirection` **NONE**, heights **184 to 400**. Stack `Account/Top bar` 64 → `Search block` 80 → `List`. `List` VERTICAL, gap 0, padding 0, `FILL`/`HUG`, clipping, overflow **NONE**. **List top at frame y 191 on all eight; 653 to the frame bottom, 619 above the safe area.** Tallest list in use **256**. The two empty lists 103:2352 and 103:2992 are **100 tall with zero children**. **Nothing on a Home frame scrolls** — the page's only eight scrollers are the A4/A5 drawer bodies, confirmed by sweeping every node with a non-NONE `overflowDirection`.
+- **§1 heading.** `List heading` 390 × **40**, HORIZONTAL, padding 0/16/0/16, `counterAxisAlignItems CENTER`, `FILL`/`FIXED`; TEXT at (16, 10), `WIDTH_AND_HEIGHT`, truncation **DISABLED**, Akkurat LL Regular **14 / 20**, **`textStyleId` empty**, fill bound `color/text/secondary`. Four exist, three "Today" and one "Yesterday", at the ids given.
+- **§2 Session row.** COMPONENT_SET **4:454**, 390 × 192, one property `State` = default | failed, default `default`; variants 4:436 (0,0) and 4:445 (0,120), each 390 × **72** `FIXED`/`FIXED`, HORIZONTAL, gap 16, padding 0/16/0/16, CENTER, 1 px INSIDE bottom stroke bound `color/divider`. **Not a library `List/Item`** — a `Text` frame (`FILL`/`HUG`, VERTICAL) beside a `Status chip` instance (`HUG`/`HUG`). `Name` 16/24 `color/text/primary`, `Capture time` 14/20 `color/text/secondary`, stack 44 tall at y 13.5; chip at y 19.5, x 323 beside the 51-wide Sent. Text column **291** beside Sent, **235** beside the 107-wide Failed to send.
+- **§2 Status chip.** COMPONENT_SET **4:395**, 507 × 32, one property `Status` = Sending | Sent | Failed to send, default `Sending`; 4:371 **72**, 4:379 **51**, 4:387 **107**, each wrapping the library Chip at `size=medium, variant=outlined, color=default, State=Default`. **No size axis and no "none" value.**
+- **§2 the second chip fits.** The row is `FIXED` 72 around a 44-tall stack, so line 2 can grow 28 before the row does. A medium Chip makes the stack **56** (8 clear top and bottom), a small Chip **48** (12 clear). Width in the worst case, beside Failed to send: 235 available against roughly 149 for time + gap + a medium Telehealth chip. **But line 2 is a bare TEXT node inside a VERTICAL stack**, so it cannot host a sibling; `Schedule/Row` has to make line 2 a horizontal container. That is a new component, not an override.
+- **§3 library Chip.** COMPONENT_SET **156:171**, key `1c8149de…`, 2140 × 424, **84 variants**; axes `size` medium|small, `variant` filled|outlined, `color` seven, `State` three, plus TEXT `Label#156:0` and BOOLEAN `Delete icon#156:43`. **medium** 32 tall r16, outlined padding 11 gap 5, label **13 / 18**; **small** 24 tall r12, outlined padding 7 gap 3, label **12 / 18**. Already present in the mobile file as **remote** set **4:47** on the same key, so S2 needs no import.
+- **§4 placeholders.** Three patients and one DOB: **Marcus Vance, DOB 03/14/1972** (21 text hits on Account screens, 15 on Visit screens, plus the sheet masters); **Dolores Okonkwo** and **Priya Raghunathan**, name only. **No MRN, chart number or account number anywhere**, and **"Telehealth" appears nowhere in the file**. Times in use 9:42 AM, 9:12 AM, 8:55 AM, 4:30 PM. Only Marcus Vance has a chart.
+- **§5 scroll.** Confirmed that no Home container can express a scrolled still as built: `Content` hugs and carries `overflowDirection` NONE, and auto-layout cannot hold a negative child offset. And confirmed the entry's supporting claim in full: **all 106 NODE actions on the page carry `resetScrollPosition: true`, none without**.
+- **§6 counts.** `Account screens` **39** FRAME children — 35 screens plus 4 PROOF — and four component children, 43 top-level; **114 reactions across 111**; starting points `Account device` and `Unsent recording`. The `A S2 Home` row runs **x 120 to 3880** at a 470 pitch (one 940 gap), rightmost edge **4270**, so the proposed x **4350** is the next clear slot.
+
+### One correction, and one clarification
+
+- **`Session row` 4:454 and `Status chip` 4:395 live on `Components`, not Foundations.** The S0 entry does not name a host page, so nothing there is wrong — but this pass first read the host as Foundations and had to correct it. **`getNodeByIdAsync` resolves a node on any loaded page regardless of `currentPage`**, so probing "which page is this on" by switching pages and testing for a hit returns the first page tried, not the owner. Walk `node.parent` to a PAGE instead. Worth adding to the plugin notes if it catches anyone again.
+- The S0 entry describes `Content` as "`AUTO`/`FIXED` — it hugs". That is `primaryAxisSizingMode`/`counterAxisSizingMode`; the same frame reads `layoutSizingHorizontal` **FIXED**, `layoutSizingVertical` **HUG**. Same fact, two APIs — noted so the next reader does not think they disagree.
+
+### Not verified
+
+- The S0 entry's **three screenshots were not re-taken**, and this pass rendered nothing. Its pixel claim — that `a-s2-home-sessions-103-2353-1x.png` is empty from y 447 down — follows from the geometry I did verify (list top 191 + 256 = 447) but was not re-seen.
+- The **"Telehealth" chip width remains derived, not measured**, in both passes: no node in the file carries the string, and a read-only batch cannot create one. The library's own `Chip label` at 61 px / 13 and 56 px / 12 anchors it, and "Telehealth" is the same character count, so ≈ 86 medium outlined and ≈ 73 small outlined stands — but S2 is where it becomes a measurement.
+- **The prototype is still unplayed**, so §5's behaviour at both ends of a scroll is still an expectation, not an observation.
+- Repo: LOG.md this entry. **Corrected after the fact, same batch:** this line first said FLAGS.md and COMPOSITIONS.md were unchanged and that S0's five findings were still Daniel's to rule. Both were already false when written. A backgrounded filesystem search returned late and prompted two FLAGS lines of my own — a GAP that the base spec `mobile-ambient-capture-spec.md` is not in the repo though all three addenda depend on it, and a DECISION that the Desktop copy of the schedule spec is revision 1 against the repo's revision 2, so a sync in the wrong direction would revert it. And re-reading FLAGS found **four `mobileSchedule_` DECISIONs I did not write**: Daniel ruled all five S0 findings on 2026-09-16 — build on `Account screens` with S1 skipped, the Telehealth chip at `size=small`, eight placeholder patients with five invented at S3, and only Marcus Vance's row opening a chart. **S2 has since run and is logged below this entry.** A second agent is working this repo in parallel; see the report for what that means for CLAUDE.md's one-agent-per-batch rule. COMPOSITIONS.md untouched by me. No spec edited, nothing created in Figma.
+
+## 2026-09-16 · Mobile ambient capture · S2, Schedule/Row
+
+- File `TP5KrQtY0T5IcMNqi375So`, **`Components` page only. No frame was touched**, no row was placed, no reaction created. `figma.skipInvisibleInstanceChildren = false` on every read. Additive: nothing deleted, nothing hidden that was visible, `Session row` 4:454 not edited.
+- Four rulings from Daniel recorded in FLAGS.md as DECISIONs before building: `mobileSchedule_buildsOnAccountScreensNoClone`, `mobileSchedule_telehealthChipIsSmall`, `mobileSchedule_eightPlaceholderPatients`, `mobileSchedule_onlyMarcusVanceRowOpensAChart`. **S1 is skipped.**
+
+### 1. What `Session row State=failed` actually carries, which is the question S2 was asked
+
+Both variants were walked node for node — every layout, sizing, alignment, padding, stroke, radius, font, size, line height, autoresize, truncation and variable binding compared.
+
+**They are identical apart from three things, and one of them is the chip:**
+
+| | `State = default` 4:436 | `State = failed` 4:445 |
+|---|---|---|
+| `Status chip` property | Sent (51 wide) | Failed to send (107 wide) |
+| `Name` characters | "Marcus Vance" | "Dolores Okonkwo" |
+| `Capture time` characters | "9:42 AM" | "9:12 AM" |
+
+The `Text` column's width follows from the chip's (291 against 235) and is not an authored difference. **Nothing else differs** — same 390 × 72, same `space/16` bindings, same `color/divider` INSIDE bottom stroke at 0/0/1/0, same body1/body2 with all five bindings each, same `CENTER|MIN` alignment.
+
+**So the failed variant of `Schedule/Row` carries nothing beyond the chip.** The two placeholder strings that distinguished Session row's variants are now a set-level TEXT property with one default across all four (trap 11), which is the right shape here because the schedule sets the name per row anyway. Worth saying plainly: `mobileCapture_failedRowNoTapAffordance` is the same observation from the component's side — the failed row differs from every other row by a chip colour and nothing else.
+
+### 2. Built
+
+**`Schedule/Row` COMPONENT_SET 196:777**, at (700, 1400) on `Components`, 390 × 432, four variants at a 120 pitch — the same pitch `Session row` uses.
+
+| Variant | id | at |
+|---|---|---|
+| `Status = none` | 196:720 | 0, 0 |
+| `Status = sending` | 196:735 | 0, 120 |
+| `Status = sent` | 196:751 | 0, 240 |
+| `Status = failed` | 196:762 | 0, 360 |
+
+- **Built by cloning 4:436, not by re-drawing it**, so every binding came across as an object rather than as a value retyped from a read. Verified after: `itemSpacing` `space/16`, `paddingLeft`/`paddingRight` `space/16`, `strokes` `color/divider`, strokeAlign INSIDE, weights 0/0/1/0, 390 × 72 FIXED/FIXED, `CENTER|MIN`, `clipsContent` false.
+- **`Text` column** unchanged: FILL/HUG, VERTICAL, gap 0, `clipsContent` true. `Name` body1 **16 / 24**, FILL, all five bindings intact (`color/text/primary`, `font/size/body1`, `font/family/base`, `font/lineHeight/body1`, `font/weight/regular`).
+- **`Secondary line`** is the one new frame: HORIZONTAL, **FILL/HUG**, gap **8**, `CENTER|MIN`, padding 0, no fill, `clipsContent` false. It holds **`Time`** — the old `Capture time` node moved in, so it keeps all five of its body2 **14 / 20** bindings on `color/text/secondary`, switched to `WIDTH_AND_HEIGHT` so it hugs — and **`Telehealth chip`**.
+- **`Telehealth chip`** is the library Chip `size=small, variant=outlined, color=default, State=Default`, local remote **4:111** in set 4:47. No import was needed; the set was already in the file. Label "Telehealth".
+- **Trailing `Status chip`** is an instance of 4:395 as it is in Session row. `none` **hides** it (rule 1: hidden, not removed).
+
+**Properties**, all four read back on the set:
+
+| Property | Type | Default |
+|---|---|---|
+| `Name#196:0` | TEXT | Marcus Vance |
+| `Time#196:5` | TEXT | 9:15 AM |
+| `Telehealth#196:10` | BOOLEAN | false |
+| `Status` | VARIANT | **none**, then sending, sent, failed |
+
+- **Trap 8 honoured**: `none` is the default because it is the top-left-most variant on canvas, not because of layer order.
+- **Trap 12 honoured**: all four variants existed and were combined *before* any property was added, so no `componentPropertyReferences` could be dropped by a variant clone. Counted after: **7 references on every variant** — the three added here plus the four intrinsic to the two nested library Chip instances (`Label#156:0` and `Delete icon#156:43` on each). Identical across all four.
+- **Trap 34 did not fire**: the three cloned variants each had their nested `Status chip` switched with `setProperties`, and all three read back "Marcus Vance" / "9:15 AM" intact, because the switched instance was the nested chip and its label is variant-owned, not an override.
+
+### 3. Proof sheet, and what the instances say
+
+**`PROOF · Schedule/Row, every Status with Telehealth off and on 2026-09-16 (SCAFFOLDING)` 196:787**, at (1160, 1400), 980 × 645, ground bound **`color/background/default`** #E8E5DF — the fill read off `A S2 Home / sessions` itself, so the rows are judged on the ground they will actually sit on, not on paper. Eight instances, **each created from the variant it needed** rather than switched into it.
+
+Every instance read back, in row coordinates:
+
+| Instance | Status | Tele | Row | Text col | Name lines | Telehealth box | Status box | Status right |
+|---|---|---|---|---|---|---|---|---|
+| 196:799 | none | off | 390 × **72** | 358 | 1 | hidden | hidden | — |
+| 196:813 | none | on | 390 × **72** | 358 | 1 | 74–147 | hidden | — |
+| 196:830 | sending | off | 390 × **72** | 270 | 1 | hidden | 302–374 | **374** |
+| 196:844 | sending | on | 390 × **72** | 270 | 1 | 74–147 | 302–374 | **374** |
+| 196:861 | sent | off | 390 × **72** | 291 | 1 | hidden | 323–374 | **374** |
+| 196:875 | sent | on | 390 × **72** | 291 | 1 | 74–147 | 323–374 | **374** |
+| 196:892 | failed | off | 390 × **72** | 235 | 1 | hidden | 267–374 | **374** |
+| 196:906 | failed + "Priya Raghunathan" | on | 390 × **72** | 235 | 1 | 74–147 | 267–374 | **374** |
+
+- **Every row is 72.** The text column goes 44 → 48 when the chip shows and the row does not move, because it is FIXED 72 and `CENTER`; the column simply starts at y **11.5** instead of 13.5.
+- **Nothing truncates and nothing wraps.** `textTruncation` is DISABLED on `Name` in all eight and every `Name` is exactly 24 tall, one line, including "Priya Raghunathan" in the narrowest column (235).
+- **Nothing overlaps.** The Telehealth chip's box ends at **147** in every instance; the narrowest text column right edge is **251**, so the chip has **104 px of slack** even in the worst case, and the column never pushes the status chip anywhere — the status chip is a sibling of the column, not inside it.
+- **The status chip's right edge is 374 in all six** that show one, on the optical edge, matching Session row exactly.
+
+**The numbers asked for:**
+- **Telehealth chip rendered width: 73** (label 59 at 12 px, plus 7 padding each side). Height 24, radius 12.
+- **Smallest gap between the Telehealth chip and the status chip: 120 px**, on `failed` + Telehealth — box edge 147 to box edge 267. Ink to ink it is **138** (label right 140 to label left 278). The other two are 155 (sending) and 176 (sent).
+
+### 4. The chip's paints, sampled rather than assumed
+
+Read on instance 196:906 and then checked against the 2x render, because `mobileCapture_chipCannotExpressStatusColours` records that the library's outlined variants can still carry a filled tint:
+
+- **`Telehealth chip` has no fill at all.** `fills` empty, 1 px stroke bound **`color/grey/400`** #D6D6D6, label bound **`color/text/primary`** #000000 at 12 / 18.
+- Sampled in `schedule-row-proof-196-787-2x.png`: **inside the pill (232, 229, 223), outside the pill (232, 229, 223)** — identical, so the ground shows straight through. The stroke pixels read **(214, 214, 214)** = #D6D6D6 exactly. The pill looks slightly lighter than the ground in the render; it is not.
+- The status chips are unchanged from Session row: no fill, stroke and label both on `color/error/main` #D83B4D, `color/success/dark` #2B865A or `color/text/secondary`, at 13 / 18 and 32 tall.
+
+So the marker reads quieter than the status chips by three separate means — smaller, grey rather than semantic, and 12 rather than 13 — which is what a marker should do beside a status.
+
+### 5. State after S2
+
+| Page | Children | Change |
+|---|---|---|
+| Components | **44** | +2 (the set and the proof sheet) |
+| Account screens | 43 | unchanged |
+| Visit screens | 26 | unchanged |
+| Screens | 18 | unchanged |
+| Flow | 2 | unchanged |
+| Foundations | 3 | unchanged |
+
+`Session row` 4:454 re-read after the build: 390 × 192 at (700, 240), two variants, `State` default | failed, text "Marcus Vance" / "9:42 AM" and "Dolores Okonkwo" / "9:12 AM". **Untouched.**
+
+### Findings and notes for Daniel
+
+1. **`Schedule/Row` has four variants that differ by one chip.** That is faithful to `Session row`, which does the same, but it is worth deciding once: the four `Status` values could equally be a property on the nested chip plus a boolean. Built as a variant axis because the spec asks for one and because `none` needs to hide the chip, which a chip property cannot do.
+2. **The `none` variant's hidden `Status chip` still reads `Status = Sent`** in the layer panel. It renders nothing and switching the row's variant replaces it wholesale, so it has no effect; left as the clone produced it rather than written to, and recorded here so nobody reads it as a mistake later.
+3. **Nothing says an inert row is inert.** Ruling 4 makes seven of nine schedule rows inert, and the row carries no chevron, no ground change and no affordance — the third sighting of `mobileCapture_failedRowNoTapAffordance`. Named here so S3 does not discover it on the frame.
+4. **The row has no tap target of its own.** Like `Session row` it is a plain component; the whole-row tap is a reaction added on the instance at S4.
+
+### Believed, not seen
+
+- **Both exports are true 2x via `download_assets`** (trap 40), confirmed on disk: the set 390 × 432 came back **780 × 864** and the proof sheet 980 × 645 came back **1960 × 1290**. Both were looked at before this was written.
+- Every geometry number above is **read from an instance**, not from a master (rule 3). The only master reads are the property definitions and the variant positions.
+- **The prototype was not played** and the row is on no frame, so nothing here is evidence about behaviour — only about construction and render.
+- The four DECISIONs are Daniel's words as given in the brief; the reasoning attached to each is S0's, restated.
+
+### Screenshots, 2x, both looked at before reporting
+
+- `figma-export/schedule-s2-2026-09-16/schedule-row-set-196-777-2x.png` — the four variants
+- `figma-export/schedule-s2-2026-09-16/schedule-row-proof-196-787-2x.png` — the eight instances on the home ground
+
+- Repo: FLAGS.md **+4 DECISION** (132 → 136 open, 47 closed; DEFECT and GAP unchanged). COMPOSITIONS.md +1 mobile entry, `Schedule/Row` 196:777. LOG.md this entry. No spec edited; `mobile-schedule-spec.md` §8's S1 is now empty and §5's `Schedule/Date header` was already answered at S0. Staged, not committed.
+
+## 2026-09-17 · Mobile ambient capture · Consolidate the specs and commit
+
+- **Repo only. No Figma call was made, nothing was read from or written to any file key.**
+- **Concurrency check first, as the prompt asked.** At 03:09 local, `LOG.md` and `FLAGS.md` last wrote at 00:19 and `COMPOSITIONS.md` at 21:55 the previous evening — all about three hours cold, and all three already staged against the last commit `6c1b3d2`. `mobile-spec.md` and `mobile-plan.md` wrote at 03:08, one minute before this batch opened; those are Daniel's own and are step 1 of this prompt. No unaccounted-for write, so this batch proceeded. (The S0 re-run entry above notes a second agent in this repo on 2026-09-16; nothing in the timestamps says one is here now.)
+- **The two new specs are in the repo**, untracked until this commit: `mobile-spec.md` (20,650 bytes) and `mobile-plan.md` (3,819 bytes). From here they are the only mobile specs.
+- **Archived** with `git mv` into new `archive/mobile-specs/` — nothing deleted: `mobile-visit-drawer-spec.md`, `mobile-account-spec.md`, `mobile-schedule-spec.md`, plus a `README.md` reading "Replaced by mobile-spec.md and mobile-plan.md. Kept for history."
+- **`mobile-ambient-capture-spec.md` was not moved, because it is not in the repo and never has been.** `git log --all` on the path is empty and it is absent from the working tree; it exists only on Daniel's Desktop. This is the standing GAP `mobileSpec_baseSpecIsNotInTheRepo`. `mobile-spec.md` now supersedes it, so the GAP is superseded rather than closed by a move.
+- **References to the four old names outside LOG.md and the archive**, found and left as they are: **FLAGS.md** nine lines — 55, 142, 307, 313, 327, 328, 330, 331, 332 — reported, not edited, since FLAGS records what was true when each line was written. **CLAUDE.md, COMPOSITIONS.md and PLUGIN-NOTES.md hold none.** `mobile-spec.md:3` names all four correctly as the files it replaces. The remaining hits are the three archived specs citing each other internally, which is what an archive is for.
+- **Batch naming changed.** A line near the top of this file now records it: from today a batch is named in plain words, and that one name is the prompt's first line, this entry's title and the commit message. Older entries keep their letter codes; `mobile-plan.md` holds the table mapping old codes to plain names.
+- **Committed** in one commit with everything already staged: the three record files, and 388 screenshots from the 2026-09-14 to 2026-09-16 batches that had been staged but never committed.
+- Screenshot: none. No Figma change.

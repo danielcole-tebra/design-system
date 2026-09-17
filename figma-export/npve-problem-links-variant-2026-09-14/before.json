@@ -1,0 +1,272 @@
+{
+ "capturedAt": "2026-09-14, before Step 2 writes (Step 1 label and card already applied)",
+ "templates": {
+  "body_316_3412": {
+   "name": "Problem edit body",
+   "parent": "316:3411",
+   "x": 120,
+   "y": 120,
+   "w": 518,
+   "h": 304,
+   "key": "2fb69a0852237e7f31dd6e3b0601431abbbed411",
+   "description": "NPVE-local Edit Problem body. Composes subscribed Text field and Chip instances. The two date fields are explicit GAP wrappers around live Text field and Icon/Calendar instances because Text field exposes no adornment slot; this is not a generic Date picker.",
+   "propertyRefsOnDescendants": "nested library-instance references only (Text field, Chip); none to body properties"
+  },
+  "helper_318_3654": {
+   "name": "_Rebuild comparison/Rebuild/Problems · Edit",
+   "parent": "316:3411",
+   "x": 734,
+   "y": 650,
+   "w": 550,
+   "h": 600,
+   "key": "a5360b01fa0499a7c9e6203258eff059e8267685",
+   "description": "Live Edit Problem rebuild for the comparison template. Contains the sole Sidesheet screen instance; keep it attached.",
+   "sheet_318_3655": {
+    "w": 550,
+    "h": 600,
+    "Body content#279:5": "316:3412",
+    "Full-width action#279:11": "320:3849",
+    "Tertiary action#279:8": "318:3643",
+    "Title#279:0": "Edit Problem",
+    "Placement": "Floating"
+   }
+  },
+  "section_08_316_3411": {
+   "x": 0,
+   "y": 17116,
+   "w": 1842,
+   "h": 1900
+  },
+  "section_30_791_11350": {
+   "x": 1900,
+   "y": 17116,
+   "w": 1400,
+   "h": 900
+  },
+  "shell_279_2446_BodyContent_preferredValues_contains": "COMPONENT:2fb69a0852237e7f31dd6e3b0601431abbbed411 (19 entries)",
+  "comparison_35_332_preferredValues_contains": {
+   "Rebuild content#114:1": "COMPONENT:a5360b01fa0499a7c9e6203258eff059e8267685 (26 entries)",
+   "Reference content#114:0": "COMPONENT:e853178baf06c1ab0e3caabc054a8d546fdee766 (26 entries)",
+   "Change log content#114:2": "COMPONENT:2079559506f332f5d9e186dab8cd02c2f38fee67 (26 entries)"
+  }
+ },
+ "screens_sections_before": [
+  [
+   "126:2024",
+   "01 · Current comparisons",
+   0,
+   0,
+   2400,
+   2900
+  ],
+  [
+   "156:2427",
+   "02 · Problems management markers",
+   0,
+   3100,
+   1800,
+   900
+  ],
+  [
+   "160:3168",
+   "03 · Problems management comparisons",
+   0,
+   4200,
+   1868,
+   2900
+  ],
+  [
+   "254:3706",
+   "05 · Medication list comparisons",
+   0,
+   7300,
+   1868,
+   1536
+  ],
+  [
+   "309:4530",
+   "07 · Problems states comparisons",
+   0,
+   9036,
+   1868,
+   2900
+  ],
+  [
+   "318:6739",
+   "08 · Problem editing comparison",
+   0,
+   12136,
+   1868,
+   1890
+  ],
+  [
+   "339:6480",
+   "09",
+   0,
+   14226,
+   2268,
+   1536
+  ],
+  [
+   "346:5992",
+   "10",
+   0,
+   15962,
+   1868,
+   1536
+  ],
+  [
+   "356:6235",
+   "11",
+   0,
+   17698,
+   2268,
+   1536
+  ],
+  [
+   "378:5612",
+   "12",
+   0,
+   19434,
+   1868,
+   1536
+  ],
+  [
+   "393:7688",
+   "13",
+   0,
+   21170,
+   1868,
+   1536
+  ],
+  [
+   "415:7207",
+   "14",
+   0,
+   22906,
+   1868,
+   1054
+  ],
+  [
+   "429:6859",
+   "15",
+   0,
+   24160,
+   2600,
+   3200
+  ],
+  [
+   "446:9236",
+   "16",
+   0,
+   27560,
+   1868,
+   1128
+  ],
+  [
+   "521:7834",
+   "17",
+   0,
+   28888,
+   1840,
+   1408
+  ],
+  [
+   "537:9914",
+   "18",
+   0,
+   30496,
+   1840,
+   456
+  ],
+  [
+   "561:9876",
+   "19",
+   0,
+   31152,
+   1840,
+   820
+  ],
+  [
+   "581:11116",
+   "20",
+   0,
+   32172,
+   2268,
+   1362
+  ],
+  [
+   "586:11764",
+   "21",
+   0,
+   33734,
+   2268,
+   1208
+  ],
+  [
+   "634:12489",
+   "22",
+   0,
+   35142,
+   2348,
+   1360
+  ],
+  [
+   "638:13052",
+   "23",
+   0,
+   36602,
+   2268,
+   1536
+  ],
+  [
+   "656:13013",
+   "24",
+   0,
+   38338,
+   1842,
+   972
+  ],
+  [
+   "668:10805",
+   "25",
+   0,
+   39510,
+   1842,
+   2364
+  ],
+  [
+   "676:11185",
+   "26",
+   0,
+   42074,
+   1842,
+   3799
+  ],
+  [
+   "687:13026",
+   "27",
+   0,
+   46073,
+   1772,
+   1100
+  ],
+  [
+   "709:12062",
+   "28",
+   0,
+   47333,
+   1772,
+   1500
+  ],
+  [
+   "748:15937",
+   "29",
+   0,
+   49000,
+   1772,
+   6624
+  ]
+ ],
+ "restore": "Body: move 316:3412 out of the set to (120,120) named Problem edit body; helper: move 318:3654 out of its set to (734,650); sections 08 and 30 back to the sizes and x above; Screens sections back to the y values above; remove nothing else without Daniel."
+}
