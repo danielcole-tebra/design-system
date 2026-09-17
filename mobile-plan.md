@@ -151,6 +151,6 @@ One agent at a time.
 | Try two patient page layouts | — | 1964084 |
 | Match the Tebra login fields | — | 252d434 |
 | Build the new patient landing page | — | a50722e |
-| Put the new header on the open chart screens | — | (this commit) |
+| Put the new header on the open chart screens | — | 53a452a |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
