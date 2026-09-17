@@ -26,7 +26,6 @@ One agent at a time.
 
 | Batch | What it does |
 |---|---|
-| Build the schedule home screens | A S2 Home / schedule, / schedule, top, / empty day, with the five invented names. Marcus Vance is the Failed to send row; the next upcoming appointment is another patient |
 | Wire the schedule | Marcus Vance's row opens `A4 Patient / list, not sent`; every other row is inert. A starting point if wanted. Then play it once to check the scroll |
 | Tidy up | Hide the four superseded components that are still visible. Fill or move the Recording bar set so it stops overlapping a proof frame. Add the footer band to COMPOSITIONS.md, and record the A4 band ids. Note the page-lookup trap in PLUGIN-NOTES.md |
 
@@ -94,6 +93,7 @@ One agent at a time.
 | Build the schedule row | S2 | e3bf665 |
 | Show the schedule row for review | — | 9214d43 |
 | Add a chevron and white fill to the schedule row | — | a7f1cd9 |
-| Build the not-sent alert on the patient screen | — | (this commit) |
+| Build the not-sent alert on the patient screen | — | c8e9e22 |
+| Build the schedule home screens | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.

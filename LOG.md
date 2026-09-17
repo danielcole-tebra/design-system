@@ -3324,3 +3324,81 @@ Only the **sheet title 196:788** was edited, to say what the sheet now proves. T
 
 - `figma-export/patient-not-sent-2026-09-17/a4-patient-list-not-sent-200-6707-1x.png`
 - `figma-export/patient-not-sent-2026-09-17/a4-patient-list-103-3027-1x.png`
+
+## 2026-09-17 · Mobile ambient capture · Build the schedule home screens
+
+- File `TP5KrQtY0T5IcMNqi375So`, page **`Account screens`**. `figma.skipInvisibleInstanceChildren = false` on every read. Additive: nothing deleted. **`A S2 Home / empty` 103:2341 not edited** (re-read after: `List` still named `List`, 100 tall, 0 children); **`A S2 Home / unsent` 140:1618 untouched**, still 3 reactions.
+- Two rulings recorded as DECISIONs and written into `mobile-spec.md` §2: `mobileAlert_retryIsTealNotError`, `mobileAlert_wholeAlertIsTheTapTarget`. Placeholder data logged as `mobileSchedule_placeholderRowsAndTimes`.
+- Full report: `reports/Build the schedule home screens.md`. Contact sheet: `reports/Build the schedule home screens.png`.
+
+### 1. The alert on `A4 Patient / list, not sent` 200:6707
+
+| | Before | After |
+|---|---|---|
+| Retry colour | `error` | **`primary`**, label fill bound `color/primary/main` #004852 |
+| Button reaction | **1** | **0** |
+| Alert reaction | **0** | **1** |
+| Tap target | 64 × 28 | **358 × 48** |
+
+The reaction was **moved**, so the page total is unchanged by this step. **Trap 34 did not fire**: `color` is a variant axis, but `Label#83:165` read back "Retry" with no re-apply. Recorded because the trap predicts the opposite.
+
+**`mobileAlert_actionTargetUnder48` closed** against the ruling. It had never been given a FLAGS line — the previous batch left it in the LOG and report only — so it was written in and struck through in one line.
+
+### 2. Three frames on the A S2 row at y 1120
+
+All clone `A S2 Home / empty`, each carrying its two reactions with **identical JSON on identical layer paths**: `A S2 Home / schedule` **204:4082** (x 4350), `/ schedule, top` **204:4127** (x 4820), `/ empty day` **204:4172** (x 5290).
+
+- **Scroll container**: the clone's empty 390 × 100 `List` was **repurposed, not replaced**, so nothing was deleted — renamed `Schedule scroll`, `layoutMode` NONE, **390 × 619** (y 191 to the 34 bottom safe area), clipping, `overflowDirection` **VERTICAL**.
+- **Content**: a `Schedule content` stack **390 × 616** holding the "Today" `List heading` cloned from 103:2365 and eight `Schedule/Row` instances, **each created from the variant it needed** rather than switched into it.
+- **Offset −328** on `/ schedule`, 0 on `/ schedule, top`. Yusuf Bahri, the first upcoming row, sits at y 328 in the stack (40 + 4 × 72).
+- **Empty day**: `No patients match` 103:2395 cloned, text changed to "No appointments today".
+
+| Time | Name | Status | |
+|---|---|---|---|
+| 8:30 AM | Dolores Okonkwo | Sent | |
+| 9:15 AM | **Marcus Vance** | **Failed to send** | |
+| 9:45 AM | Priya Raghunathan | none | past, quiet |
+| 10:20 AM | Renata Ilves | Sent | off schedule, by start time |
+| 11:00 AM | Yusuf Bahri | none | first upcoming |
+| 11:30 AM | Colette Mwangi | none | Telehealth |
+| 1:15 PM | Ingrid Solheim | none | |
+| 2:00 PM | Theo Abernathy | none | |
+
+Five invented names: **Renata Ilves, Yusuf Bahri, Colette Mwangi, Ingrid Solheim, Theo Abernathy**. The times put the present between **10:20 and 11:00**. No ID, MRN or DOB invented.
+
+### Found
+
+1. **At eight rows the list cannot scroll, and `/ schedule` is mostly empty.** The stack is **616 in a 619 viewport** — three pixels short of overflowing — so `overflowDirection` has nothing to scroll, and offsetting up by 328 leaves **331 px of bare page** below the last row. Built as specified and **not resolved** (rule 10): the frame reads as a short list floating under search, not a long list scrolled to the next appointment, and the spec's own "drawn scrolled so the next upcoming row sits below search" cannot be satisfied convincingly at this length. Ways out are more rows (about five), a shorter container, or dropping the offset.
+2. **`figma.createAutoLayout()` starts with an unbound literal white fill.** Both stacks had `{r:1,g:1,b:1}` with empty `boundVariables`, rendering a white band behind "Today" as though it sat on a card. Checked against the file first — `A S2 Home / sessions` and `/ unsent` both have `List` `fills: []` — then cleared on both and re-exported. Worth carrying as a trap: it would pass unnoticed on a white ground and only shows over beige, and in this file every fill is meant to be bound.
+3. **The alert no longer says where it is tappable.** The Retry label looks like the control and is not; tapping the message navigates. Third sighting of the `mobileCapture_failedRowNoTapAffordance` shape, now on an alert.
+4. **The library limit behind the closed GAP has not moved** — the Alert's `Action` frame is still 64 × 36. Any alert needing its action tappable on its own hits the same wall.
+
+### Verified
+
+**All 16 row instances read back**: all **72 tall** and 390 wide; **nothing truncates** (`textTruncation` DISABLED throughout, every `Name` 24 tall and every `Time` 20 tall, so nothing wrapped); **in time order**, parsed to minutes and checked strictly ascending — 510, 555, 585, 620, 660, 690, 795, 840. Chevron on all 16, Telehealth visible on Colette Mwangi only.
+
+| Page | Frames | Reactions |
+|---|---|---|
+| **Account screens** | 40 → **43** (+4 components either side) | 120 across 117 → **126 across 123** |
+| Visit screens | 26 → 26 | 84 across 81, unchanged |
+| Screens | 18 → 18 | 42 across 41, unchanged |
+
+- **+3 frames**: the three clones. Children 44 → 47; four are components, so 47 children is 43 frames.
+- **+6 reactions on +6 nodes**: 3 clones × 2 carried. **The alert step is net zero** — Button −1, Alert +1.
+- **Nothing else wired**; the schedule rows carry no reactions.
+- **No reaction crosses pages**: all **30** destinations resolved and walked to their page, all on `Account screens`. `flowStartingPoints` unchanged at two.
+
+### Believed, not seen
+
+- **The prototype was not played.** Retry's reaction is read from the node, not observed navigating; the scroll behaviour is asserted from `overflowDirection` and geometry — and the geometry says it will not scroll.
+- The clones' carried reactions are **byte-identical JSON** to the source's: evidence they were copied, not that they work.
+- **The clock is invented.** Nothing in the file establishes "now"; the 10:20/11:00 boundary exists only because I chose those times. Telehealth on Colette Mwangi is arbitrary — the brief asked for one of the four upcoming without saying which.
+- `A S2 Home / unsent` was verified **by reaction count only**, not by re-reading its row's destination.
+- All four renders were looked at, and the two schedule frames **re-exported and looked at again** after the fill fix.
+
+### Screenshots, 1x
+
+- `figma-export/schedule-home-2026-09-17/as2-home-schedule-204-4082-1x.png`
+- `figma-export/schedule-home-2026-09-17/as2-home-schedule-top-204-4127-1x.png`
+- `figma-export/schedule-home-2026-09-17/as2-home-empty-day-204-4172-1x.png`
+- `figma-export/schedule-home-2026-09-17/a4-patient-list-not-sent-200-6707-1x.png`

@@ -66,6 +66,8 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - Placeholder rows use Marcus Vance, Dolores Okonkwo, Priya Raghunathan and five invented names.
 - Every schedule row opens its patient. No row retries from the list.
 - A recording that was not sent is retried from the patient screen, through an alert above the Patient chart.
+- Retry on that alert uses the library's teal text-button style, `color=primary`, like every other text action in the app.
+- The whole not-sent alert is the tap target for Retry, overriding the library Alert, which only makes its action tappable. It matches the unsent row, where tapping the whole row retries.
 - On the schedule, Marcus Vance's row is the Failed to send row. The next upcoming appointment belongs to another patient and, like every row except Marcus's, does nothing when tapped, because his is the only patient with a chart in the file.
 - `A S2 Home / unsent` is unchanged. Its row still retries straight to Sending.
 
@@ -199,12 +201,32 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 | / after first capture | The newest row reads Sent |
 | / after failed capture | The newest row reads Failed to send |
 | / unsent | "Yesterday", one failed Marcus Vance row at 4:30 PM. The whole row taps to Sending |
+| / schedule | "Today" and eight rows, drawn scrolled to the first upcoming |
+| / schedule, top | The same list at its start |
+| / empty day | "No appointments today" |
 
-**Schedule, to be built.**
+**Schedule, built 2026-09-17.** All three clone `A S2 Home / empty`, so the top bar, avatar and search at rest carry over, and each keeps that frame's two reactions (avatar to Account, search to Searching).
 
-- **A S2 Home / schedule.** "Today", then rows in time order inside a new scrolling container. It is drawn scrolled so the next upcoming row sits below search.
-- **A S2 Home / schedule, top.** The same list scrolled to its start.
-- **A S2 Home / empty day.** "No appointments today", built like "No patients match".
+- **A S2 Home / schedule** 204:4082 and **A S2 Home / schedule, top** 204:4127 hold a `Schedule scroll` frame at y 191, **390 x 619**, clipping, `overflowDirection` VERTICAL, reaching the 34 bottom safe area. Inside it a `Schedule content` stack, 390 x 616, holds the "Today" `List heading` (40) and eight `Schedule/Row` instances (72 each).
+- **/ schedule, top** draws the stack at y 0. **/ schedule** offsets it to **y -328** so the first upcoming row, Yusuf Bahri at 11:00 AM, sits directly below the search block.
+- **A S2 Home / empty day** 204:4172 shows "No appointments today", built as a clone of `No patients match` 103:2395.
+
+The eight rows, in time order. Times place the present between 10:20 and 11:00 AM.
+
+| Time | Name | Status | |
+|---|---|---|---|
+| 8:30 AM | Dolores Okonkwo | Sent | |
+| 9:15 AM | Marcus Vance | Failed to send | the only row that will be wired |
+| 9:45 AM | Priya Raghunathan | none | past and quiet |
+| 10:20 AM | Renata Ilves | Sent | off schedule, placed by when it started |
+| 11:00 AM | Yusuf Bahri | none | first upcoming |
+| 11:30 AM | Colette Mwangi | none | Telehealth |
+| 1:15 PM | Ingrid Solheim | none | |
+| 2:00 PM | Theo Abernathy | none | |
+
+Renata Ilves, Yusuf Bahri, Colette Mwangi, Ingrid Solheim and Theo Abernathy are invented placeholders, logged in FLAGS.md as `mobileSchedule_placeholderRowsAndTimes`.
+
+**At eight rows the list does not overflow.** The stack is 616 in a 619 viewport, so nothing can scroll and `/ schedule` shows four rows above 331 px of empty page. See the LOG entry for the batch.
 
 What a schedule row shows depends on the clock and on whether a recording exists:
 
@@ -237,7 +259,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 **Patient screen, A4 Patient / list, / summary, / placeholder.** Page background, with the ready recording bar above the drawer.
 
-**Not sent, A4 Patient / list, not sent 200:6707.** The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=error, size=small`) in the Alert's own action slot. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
+**Not sent, A4 Patient / list, not sent 200:6707.** The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=primary, size=small`) in the Alert's own action slot. The **whole alert** is the tap target, not the button. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
 
 **Ready bar**, 390 x 201:
 
@@ -359,7 +381,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | A4 device pill | tap | A S3 Microphone |
 | A4 Template pill | tap | nothing |
 | A4 Start Recording | tap | A S5 Recording / recording |
-| A4 Patient / list, not sent — Retry | tap | A S7 Sending |
+| A4 Patient / list, not sent — the whole not-sent alert | tap | A S7 Sending |
 | Chart row, Patient summary | tap | the summary frame of the same screen and state |
 | Chart row, Medications | tap | A4 Patient / placeholder or A5 Recording / medications. Inert on the paused list |
 | Other chart rows | tap | nothing |
@@ -385,7 +407,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 40 (36 screens, 4 proof scaffolds) | 120 across 117 |
+| Account screens | 43 (39 screens, 4 proof scaffolds) | 126 across 123 |
 | Visit screens | 26 | 84 across 81 |
 | Screens | 18 | 42 across 41 |
 
