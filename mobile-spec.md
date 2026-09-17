@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the time marker dot was enlarged.
+Last updated after the Medications sheet was made real.
 
 ---
 
@@ -111,7 +111,10 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The Template pill reads **"SOAP Note"**, with no leading icon and no "Template:" prefix. The caret stays. This deliberately departs from, and supersedes, the earlier ruling that the pill matches the NPVE note toolbar (`visitDrawer_v4TopBarNoteToolbar`).
 - Every sheet is reachable before recording.
 - **Patient summaries can be invented for demo patients**, as long as they follow Marcus Vance's format: the AI disclaimer, then **Current Situation**, **Key Background**, **Active Care Plan** and **Progress & Next Steps**, each as bullets.
+- **Medications is the one real chart sheet.** It follows the rebuilt NPVE Medications sheet's content and hierarchy, adapted to the mobile drawer from library components.
+- **Rows reading "Sheet 5" through "Sheet 9" get real chart names and stay inert.**
 - **Ported sheets** keep their content as is. Only identifying details change, to match Marcus Vance, DOB 03/14/1972. Every action is dropped.
+- **Medications, built 2026-09-17.** `Visit/Sheet/Medications` **272:396**, 358 x 288: four library `List/Item` rows at `Lines=Two`, **72** each, name and dose on the primary line and form and frequency on the secondary, each over a 1 px INSIDE bottom stroke bound `color/divider`, the last row's stroke hidden per instance. From the rebuilt NPVE sheet it keeps the row order and the name-then-dose-then-detail hierarchy; it leaves out the **status control** and the **indication chip**, which the supplied rows do not carry, and drops **Add New Medication**, the per-row **Add to note** and the **Add Section to Note** footer, as every ported sheet drops actions. Marcus shows four rows, Colette three.
 
 **Recording**
 
@@ -154,7 +157,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 | Page | What it is |
 |---|---|
-| `Account screens` 103:2319 | **The whole app, and the only working screen page.** 40 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
+| `Account screens` 103:2319 | **The whole app, and the only working screen page.** 42 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
 | `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (22), `Account/` (4), `Schedule/` (3), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
 | `Archive` 214:3026 | 27 frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561, `SCAFFOLDING · schedule scrolled to the end` 241:4998, then `PROOF Schedule/Now marker` 257:7208. Nothing here has a reaction |
 | `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
@@ -184,6 +187,7 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 | `Visit/Drawer edge` | 70:1480 | 390 x 112, label "Patient chart" |
 | `Visit/Chart row` | 177:2858 | 390 x 48, library `List/Item` (one line) and `ChevronRight` ending at 374 |
 | `Visit/Sheet/Patient summary` | 50:969 | 358 x 1141, ported from NPVE 672:7906 |
+| `Visit/Sheet/Medications` | 272:396 | 358 x 288, four library `List/Item` rows at `Lines=Two`, 72 each, over a 1 px INSIDE bottom stroke bound `color/divider`. Follows the rebuilt NPVE Medication list 254:3707 |
 | `Visit/Sheet/Placeholder` | 48:141 | Stand-in for sheets not yet ported |
 | `Visit/Icon/…` | Components | Exact MUI paths: ArrowDropDown 59:493, ChevronLeft 159:1103, ChevronRight 159:1105, ExpandMore 159:1107 (reserved), PauseCircle 74:531, StopCircle 74:534, PlayCircle 74:537, Cancel 74:540, VideocamOutlined 206:830 |
 | `Session row` | 4:454 | 390 x 72. Name 16/24 and time 14/20 in a column, `Status chip` trailing, bottom divider. `State`: default, failed |
@@ -303,6 +307,8 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 **Patient screen, A4 Patient / list, / summary, / placeholder.** Page background, with the ready recording bar above the drawer.
 
+**Colette's Medications, A4 Colette / medications, after Marcus 272:3459 and A4 Colette / medications, after Yusuf 272:3602.** Two clones of Marcus's `A4 Patient / placeholder`, one per demo path for the same reason her summary needs two: the drawer back chevron has to return to the list it came from. Her three medications override the sheet's rows and the fourth row is hidden. **Nothing on either frame reaches a Marcus frame** — back goes to her own list, "Patients" to that path's schedule, Start Recording is inert, and the device pill still opens `A S3 Microphone`, which names no patient.
+
 **Colette's summary, A4 Colette / summary, after Marcus 249:10819 and A4 Colette / summary, after Yusuf 249:10824.** Two clones of `A4 Patient / summary`, one per demo path. Her summary is **invented for the demo** and follows Marcus's format exactly — the disclaimer, then Current Situation, Key Background, Active Care Plan and Progress & Next Steps, each an `UNORDERED` bulleted TEXT node at 16 / 24 on a 358 column. Her sheet is **997** tall against Marcus's 1141, in the same 565 scroller, so it scrolls the same way and simply ends sooner. The drawer back chevron returns to her list, "Patients" returns to that path's schedule, and **Start Recording is inert**.
 
 **Colette's chart lists, A4 Colette / after Marcus 246:4990 and A4 Colette / after Yusuf 246:4995.** Two clones of `A4 Patient / list`, identical to it and to each other but for the identity: **Colette Mwangi, DOB 05/09/1968** (placeholder). One per demo path, because the only thing that differs is where "Patients" goes back to — `schedule, Marcus sent` and `schedule, both sent`. **Start Recording is unwired on both.** **Patient summary opens her own summary and Medications is inert** as of 2026-09-17; the device pill still opens `A S3 Microphone`, which is patient-agnostic.
@@ -323,7 +329,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 - **Shared top.** A 30 x 6 `color/grey/400` puller at (180, 8), then a 48 title row with a 1 px divider below.
 - **List mode.**
   - "Patient chart" at (16, 12).
-  - Fourteen chart rows, none selected: Patient summary, Allergies, Medications, Problems, and Sheet 5 to 14 as placeholders.
+  - Fourteen chart rows, none selected: Patient summary, Allergies, Medications, Problems, then **Procedures & surgical history, Family history, External care history, Health status/observations and Social history** — the five NPVE sheets that follow Medications, all inert — and Sheet 10 to 14 still as placeholders.
   - The list scrolls.
 - **Sheet mode.**
   - Back button at x -1.97, ink from 18.03, matching the top bar's back.
@@ -433,7 +439,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | A4 Start Recording | tap | A S5 Recording / recording |
 | A4 Yusuf / list, not sent — the whole not-sent alert | tap | A S7 Sending / Yusuf |
 | Chart row, Patient summary | tap | the summary frame of the same screen, state and patient |
-| Chart row, Medications | tap | A4 Patient / placeholder or A5 Recording / medications. Inert on the paused list |
+| Chart row, Medications, Marcus | tap | A4 Patient / placeholder or A5 Recording / medications. Inert on the paused list |
+| Chart row, Medications, Colette | tap | that path's **A4 Colette / medications** |
+| A4 Colette / medications, both | drawer back / "Patients" / Start Recording | that path's Colette list / that path's schedule / nothing |
 | Other chart rows | tap | nothing |
 | Sheet back | tap | the list of the same screen and state |
 | A S5 drawer edge | tap or drag up | A5 Recording or Paused / drawer list |
@@ -474,11 +482,11 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 40 screens | 130 across 126 |
+| Account screens | 42 screens | 138 across 134 |
 | Archive · Visit screens | 26 | 84 across 81 |
 | Archive · Screens | 18 | 42 across 41 |
 
-No cross-page edges, and nothing on `Account screens` points at an archived frame. 36 destinations. Starting points: `Account device` 103:2320 and `Schedule` 204:4082.
+No cross-page edges, and nothing on `Account screens` points at an archived frame. 38 destinations. Starting points: `Account device` 103:2320 and `Schedule` 204:4082.
 
 ---
 

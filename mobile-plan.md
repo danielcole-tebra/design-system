@@ -38,7 +38,7 @@ One agent at a time.
   - the microphone sheet
   - stop and cancel from a paused drawer
 - Judge the 16 px pill triangle and the 40 avatar at arm's length.
-- Port real sheets into the Patient chart, Medications first. Daniel supplies the sheet list and NPVE nodes.
+- Port more real sheets into the Patient chart. Medications is done; Daniel supplies the next sheet and its NPVE node.
 - Give Yusuf a patient summary, if his chart should open during the resend demo.
 - Library batch in YX2n4YLrEpBXNbcc73T6dw:
   - add the MUI glyphs and retire the drawn carets
@@ -61,6 +61,7 @@ One agent at a time.
   - Medications on Colette opens nothing; only Patient summary is wired.
   - The sign-in `App identity` frame now holds only the name; its bound `space/24` gap has nothing to space.
   - The Sent body's first line has 31 px of slack at "Marcus Vance"; a name about four characters longer would wrap it.
+  - Rows 5 to 9 of the chart list now carry real sheet names and still open nothing; rows 10 to 14 are still "Sheet 10" to "Sheet 14".
   - Colette's row is unwired on `schedule` and `schedule, top`; it only opens her screen on the two sent frames, which are the ones the demo reaches.
   - Pausing from Medications drops the drawer.
   - The empty 48 band under the puller in list mode stays.
@@ -119,6 +120,7 @@ One agent at a time.
 | Move the Tebra logo to the bottom of sign in | — | d711368 |
 | Add a current time marker to the schedule | — | 973feb3 |
 | Lead the Sent copy with the patient's name | — | ca1ba31 |
-| Enlarge the time marker dot | — | (this commit) |
+| Enlarge the time marker dot | — | 46bb155 |
+| Make the Medications sheet real | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
