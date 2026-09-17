@@ -26,7 +26,7 @@ One agent at a time.
 
 | Batch | What it does |
 |---|---|
-| Tidy the Components page | Eight overlapping pairs remain there, including the Recording bar set over a proof frame. Hide the four superseded Visit components that are still visible. Add the footer band to COMPOSITIONS.md, and record the A4 band ids |
+| Hide the superseded components | Six `Visit/` masters are labelled SUPERSEDED but still visible on `Components`: Sheet list row 48:137, Icon/Pause 51:983, Icon/Stop 51:986, Icon/PlayArrow 51:989, Quick switch 51:1091 and Icon/CancelOutlined 74:543. Sheet list row still has 128 instances, so check before hiding. Add the footer band to COMPOSITIONS.md, and record the A4 band ids |
 
 ## Later
 
@@ -96,6 +96,7 @@ One agent at a time.
 | Build the schedule home screens | — | bf0178a |
 | Change the telehealth marker to text and icon | — | e687475 |
 | Fill out the schedule day and wire it | — | e434873 |
-| Tidy the Account screens page | — | (this commit) |
+| Tidy the Account screens page | — | 548bd7d |
+| Archive the dead frames and tidy Components | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.

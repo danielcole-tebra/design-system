@@ -3650,3 +3650,75 @@ The link is a Button inside a `Forgot password row` that fills the card's 310 co
 - `figma-export/tidy-account-2026-09-17/account-screens-page.png`
 - `figma-export/tidy-account-2026-09-17/archive-page.png`
 - `figma-export/tidy-account-2026-09-17/as1-login-default-103-2320-1x.png`
+
+## 2026-09-17 · Mobile ambient capture · Archive the dead frames and tidy Components
+
+- File `TP5KrQtY0T5IcMNqi375So`, pages `Account screens`, `Components` and `Archive`. `figma.skipInvisibleInstanceChildren = false` on every read. **No node deleted.**
+- Ruling recorded as `mobileAccount_deadFramesArchived`. New trap **45** in PLUGIN-NOTES.md.
+- Full report: `reports/Archive the dead frames and tidy Components.md`. Contact sheet: `reports/Archive the dead frames and tidy Components.png`.
+
+### 1. The dead frames
+
+Both are hidden and nothing leads to them, so every reaction inside was unfireable — each owner read **`ownerEffectivelyVisible: false`** when walked to the page (trap 39) before removal.
+
+**`A S4 Patient` 103:2412**, three `ON_CLICK`/`NAVIGATE`: `Back tap target 48` → `A S2 Home / empty`; `Microphone summary row` → `A S3 Microphone`; `Start recording CTA` → `A S5 Recording / recording`.
+**`A S6 Stop confirmation` 103:2451**, three: `Scrim` → `A S5 Recording / recording`; `Button` → `A S5 Recording / recording`; `Button` → `A S7 Sending`.
+
+Removed with `setReactionsAsync([])`. **`Account screens` went 128 → 122, exactly six**, nothing else touched. Both frames then moved to `Archive` at y 11248 and 12292, below the PROOF frames. **Neither renders there — both stay hidden**, so the page screenshot shows 17 frames, not 19.
+
+**Rows closed.** Both dead frames were last in their rows, so no middle gap was left. The **Stop row shortened 844 → 238**, the overlay's height, and the two rows below moved up 606: Hand off 6264 → **5658**, Account 7308 → **6702**. Page bottom **8152 → 7546**, 200 between rows throughout.
+
+### 2. `Components`
+
+**All 13 PROOF frames had zero reactions, so all 13 moved and none was skipped**: 4:560, 6:1009, 43:1630, 48:1567, 50:1710, 51:2184, 74:544, 80:524, 83:583, 93:2752, 159:1109, 182:7090, 196:787. **Worth flagging: `PROOF · Schedule/Row` 196:787 is one of them** — the sheet the last four batches used for review, exported this morning. It qualifies on the rule as written and is still readable, but it no longer sits beside the component it proves.
+
+**Four labelled groups**, label at x 0, nodes from x 360, **80 between nodes, 200 between groups**, wrapping at 3000 of content, tallest first within a group:
+
+| Group | Nodes | y | Rows | Height |
+|---|---|---|---|---|
+| `Visit/` | 22 | 0 | 2 | 1510 |
+| `Account/` | 4 | 1710 | 1 | 264 |
+| `Schedule/` | 1 | 2174 | 1 | 432 |
+| Base components | 9 | 2806 | 2 | 400 |
+
+The page went from **9464 tall with 8 overlapping pairs** to **3206 tall with zero**. `Visit/Drawer` 48:897, which sat at y −64 under five other nodes, now starts row one at y 0.
+
+### 3. Moving a master did not change its instances — proving it took a walk
+
+Counts were taken for all 36 masters before and after. **Five appeared to gain instances**, which is impossible: `Icon/Microphone` 31→54, `Status chip` 59→80, `Visit/Sheet list row` 86→128, `Visit/Sheet/Placeholder` 5→7, `Visit/Icon/Cancel` 47→48.
+
+Re-derived by **walking every page** and tallying through `getMainComponentAsync`. For `Visit/Sheet list row`: Components 14 + Screens 0 + Visit screens 42 + Account screens 56 + Archive 16 = **128**. All five sums match the later API number **exactly**.
+
+So the later reads were complete and the earlier ones were short by whatever sat on pages that script had not loaded. **No instance changed; the measurement did.** `getInstancesAsync` counts file-wide but only sees loaded pages, and the shortfall is silent. **The same shape appeared earlier today** — a videocam icon reading 24 against a true 28 — and was written off then as a stale read. It is structural, not stale, and is now **trap 45**: a before/after instance count is only comparable if both reads loaded the same pages; otherwise walk and sum.
+
+### Verified
+
+| Page | Nodes | Reactions |
+|---|---|---|
+| **Account screens** | 47 → **45** (37 frames, 8 labels) | 128 across 125 → **122 across 119** |
+| **Components** | 49 → **40** (36 nodes, 4 labels) | 0 → 0 |
+| **Archive** | 4 → **19** | 0 → 0 |
+| Visit screens | 26 → 26 | 84 across 81, unchanged |
+| Screens | 18 → 18 | 42 across 41, unchanged |
+
+- **Account screens −2 frames** (the dead screens) and **−6 reactions on −6 nodes**, exactly the six the ruling named.
+- **Components −13** (PROOF out) **+4 TEXT** (group labels).
+- **Archive +15**: 13 PROOF plus the 2 dead screens.
+- **Starting points unchanged**: three on `Account screens`, one each on `Visit screens` and `Screens`, none on `Archive` or `Components`.
+- **No reaction crosses pages**: all 31 destinations resolved to `Account screens`; `Archive` and `Components` hold zero reactions, which is also why archiving the two frames was safe only after the six were cut.
+- **Zero overlaps on all three pages**, each checked pair by pair on top-level bounding boxes.
+
+### Believed, not seen
+
+- **The prototype was not played.** That the remaining 122 still work is inferred from the drop being exactly six and every destination resolving.
+- **The six are gone, not relocated** — each owner read 0 straight after, and the page total fell by six, but the two frames were not re-walked once on `Archive`; the page's total of 0 covers it only indirectly.
+- **The instance walk covered five pages.** `Flow` has no children and `Foundations` three; neither was tallied, and the sums already closed exactly, so that is arithmetic rather than a read.
+- **Only the five changed masters were walked.** The other 31 are unchanged on the API's word — which this batch just showed can under-report.
+- **Group membership on `Components` is by name prefix**, so `Icon/Microphone (SCAFFOLDING)` landed in Base components by naming accident rather than decision.
+- All three screenshots were looked at before this was written.
+
+### Screenshots
+
+- `figma-export/archive-dead-frames-2026-09-17/account-screens-page.png`
+- `figma-export/archive-dead-frames-2026-09-17/components-page.png`
+- `figma-export/archive-dead-frames-2026-09-17/archive-page.png`
