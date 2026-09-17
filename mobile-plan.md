@@ -26,7 +26,6 @@ One agent at a time.
 
 | Batch | What it does |
 |---|---|
-| Make Next Patient go to the next patient | Next Patient opens Colette Mwangi's patient screen (11:30, telehealth) on both demo paths. The Sent screen gets a secondary text action, "Back to schedule". Needs a new Colette patient screen, and a named version saved before the batch runs |
 | Hide the superseded components | Six `Visit/` masters are labelled SUPERSEDED but still visible on `Components`: Sheet list row 48:137, Icon/Pause 51:983, Icon/Stop 51:986, Icon/PlayArrow 51:989, Quick switch 51:1091 and Icon/CancelOutlined 74:543. Sheet list row still has 128 instances, so check before hiding. Add the footer band to COMPOSITIONS.md, and record the A4 band ids |
 
 ## Later
@@ -56,6 +55,8 @@ One agent at a time.
 - Search result fields should match desktop patient search. Daniel is checking.
 - Known and accepted:
   - The Template pill opens nothing. It now reads "SOAP Note".
+  - Start Recording on Colette opens nothing.
+  - Colette's row is unwired on `schedule` and `schedule, top`; it only opens her screen on the two sent frames, which are the ones the demo reaches.
   - Pausing from Medications drops the drawer.
   - The empty 48 band under the puller in list mode stays.
 - GAPs the library can't express yet:
@@ -107,6 +108,7 @@ One agent at a time.
 | Make the schedule the only home | — | f4cf75e |
 | Split the demo into Marcus's visit and Yusuf's resend | — | 8d2715a |
 | Apply the first phone playthrough notes | — | 254c1ac |
-| Apply the second phone playthrough notes | — | (this commit) |
+| Apply the second phone playthrough notes | — | 3712632 |
+| Make Next Patient go to the next patient | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
