@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the Sent copy led with the patient's name.
+Last updated after the time marker dot was enlarged.
 
 ---
 
@@ -71,7 +71,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - **Next Patient goes to the next patient.** On both demo paths that is **Colette Mwangi**, the 11:30 AM Telehealth appointment.
 - The Sent screen has a **text link under Next Patient that returns to the schedule**.
 - **Colette's schedule row opens her patient screen**, so the demo feels cohesive.
-- **The schedule shows a current time marker**: a **2 px line across the full row width with an 8 px dot at the left edge**, both bound `color/primary/main`. It has **no time label**.
+- **The schedule shows a current time marker**: a **2 px line across the full row width**, bound `color/primary/main`, with a **16 px dot centred on the left edge of the screen, so half of it shows**. It has **no time label**.
 - **The marker sits on the boundary between rows, under the last appointment that has started**, not at a proportional position. The rows aren't time-scaled.
 - On `schedule` and `schedule, top` it sits between **Renata Ilves (10:20)** and **Marcus Vance (11:00)**. On `schedule, Marcus sent` and `schedule, both sent` it sits between **Marcus Vance** and **Colette Mwangi (11:30)**.
 - **It scrolls with the list and does not push rows apart.**
@@ -173,7 +173,7 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 |---|---|---|
 | `Brand/Tebra logo` | 238:7557 | 18 x 18 box holding the Tebra mark at 17.64 x 17, ink left-flush at x 0 and inset 1 from the top so the box centres on an integer in a 64 bar. Three vectors cloned from the library's `Nav/Logo` 2:882, bound `color/primary/main` |
 | `Schedule/End of list` | 238:7558 | 390 x 64, transparent, one centred body2 14/20 on `color/text/secondary` reading "That's everyone for today" |
-| `Schedule/Now marker` | 257:6162 | 390 x 8: a 2 px line across the full width at local y 3 and an 8 px dot at x 12, both centred on the integer y 4, both bound `color/primary/main` |
+| `Schedule/Now marker` | 257:6162 | 390 x 16: a 2 px line across the full width at local y 7 and a 16 px dot at local x -8, both centred on the integer y 8, both bound `color/primary/main`. The dot overflows the box on the left and is clipped in half at the screen edge |
 | `Account/Avatar` | 108:1212 | 40 disc `color/secondary/main`, initials `color/secondary/contrastText` (4.53 : 1), Akkurat LL Regular 20/20, `Initials` default SB |
 | `Account/Top bar` | 114:600 | `Visit/Top bar` with the avatar as the action: ink 334 to 374, tap target 60 x 48 at x 330. `Title with action` carries a `Brand/Tebra logo` instance at (16, 23), 8 before the title, which moves to x 42 and 276 wide. The other two variants carry no mark |
 | `Account/Microphone sheet` | 121:1793 | Drawer top, title "Microphone", three rows (iPhone microphone selected, AirPods Pro, Wired headset), 34 safe area |
@@ -248,7 +248,7 @@ Archived: `/ empty`, `/ sessions`, `/ after first capture`, `/ after failed capt
 
 - All four schedule frames hold a `Content` stack at y 47, **390 x 797**: the top bar (64), the search block (80), the **`Date header`** (40) and the `Schedule scroll` frame (**390 x 613**, clipping, `overflowDirection` VERTICAL), whose bottom lands on **844, the frame bottom**. The scroll area deliberately runs past the safe area; the clearance is carried inside the scrolling stack instead, so it moves with the list.
 - **The date header is pinned by structure, not by a property.** It is a sibling of the scroll frame inside `Content`, not a child of the scrolling stack, so it holds while the list moves under it. Figma's "fix position when scrolling" is not reachable from the plugin API in this build (`scrollBehavior` throws on a FRAME), and this is what the structure allows. It sits on the beige, 390 x 40, the date on body2 14/20 at x 16, `color/text/secondary`, over a **1 px INSIDE bottom stroke bound `color/divider`** and 1 of top padding, which keeps the date on y 10 and the row on exactly 40.
-- Inside the scroll frame a `Schedule content` stack, **390 x 1106**, holds **fourteen** `Schedule/Row` instances (72 each), a `Schedule/End of list` instance (64) at stack y 1008, and **34 of bottom padding** so the closing line clears the home indicator when the list is scrolled fully. A **`Schedule/Now marker`** instance is the stack's last child, `layoutPositioning ABSOLUTE` with constraints **STRETCH / MIN**, so it sits above the rows in layer order, scrolls with them and takes no space: the stack is 1106 with it and without it. Its line centre lands on a row boundary — stack y **288** on `/ schedule` and `/ schedule, top`, **360** on the two sent frames. **All four frames overflow**: 1106 of content against a 613 container.
+- Inside the scroll frame a `Schedule content` stack, **390 x 1106**, holds **fourteen** `Schedule/Row` instances (72 each), a `Schedule/End of list` instance (64) at stack y 1008, and **34 of bottom padding** so the closing line clears the home indicator when the list is scrolled fully. A **`Schedule/Now marker`** instance is the stack's last child, `layoutPositioning ABSOLUTE` with constraints **STRETCH / MIN**, so it sits above the rows in layer order, scrolls with them and takes no space: the stack is 1106 with it and without it. Its line centre lands on a row boundary — stack y **288** on `/ schedule` and `/ schedule, top`, **360** on the two sent frames, which puts the instance at stack y 280 and 352. **`Schedule content` does the clipping** that halves the dot: it is the innermost ancestor with `clipsContent` true whose left edge is x 0. **All four frames overflow**: 1106 of content against a 613 container.
 - **/ schedule, top** and **/ schedule, both sent** draw the stack at y 0. **/ schedule** and **/ schedule, Marcus sent** offset it to **y -252**, the midpoint of the Renata Ilves row, so the last past appointment peeks in halfway under the date header and Marcus Vance starts 36 below it, fully visible. The offset moved -292 to -252 when the 40-tall heading left the stack; the cue is unchanged, it is now the header rather than the search field that cuts the peeking row.
 - **A S2 Home / empty day** 204:4172 shows the same pinned `Date header` **241:4990** and "No appointments today" below it, on the beige. Its `Content` stack is 390 x 224 and it has no scroll area.
 

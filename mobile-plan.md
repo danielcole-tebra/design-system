@@ -31,7 +31,7 @@ One agent at a time.
 ## Later
 
 - Play the schedule on a phone. Check the scroll, the peeking row, and that Marcus Vance is the only row that goes anywhere.
-- Judge the now marker at arm's length: whether the 8 px dot reads at the gutter and whether the 2 px teal is heavy enough against the 1 px row dividers.
+- Judge the now marker at arm's length: whether the half dot reads at the screen edge and whether the 2 px teal is heavy enough against the 1 px row dividers.
 - Play both pages on a phone. Check:
   - the unsent loop
   - the chart drill-in while recording
@@ -118,6 +118,7 @@ One agent at a time.
 | Give Colette her own summary and match the Sent copy | — | d37f787 |
 | Move the Tebra logo to the bottom of sign in | — | d711368 |
 | Add a current time marker to the schedule | — | 973feb3 |
-| Lead the Sent copy with the patient's name | — | (this commit) |
+| Lead the Sent copy with the patient's name | — | ca1ba31 |
+| Enlarge the time marker dot | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
