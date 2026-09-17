@@ -38,7 +38,7 @@ One agent at a time.
   - the microphone sheet
   - stop and cancel from a paused drawer
 - Judge the 16 px pill triangle and the 40 avatar at arm's length.
-- Port more real sheets into the Patient chart. Medications is done; Daniel supplies the next sheet and its NPVE node.
+- Port more real sheets into the Patient chart. Medications and Vitals are done; Daniel supplies the next sheet and its NPVE node.
 - Give Yusuf a patient summary, if his chart should open during the resend demo.
 - Library batch in YX2n4YLrEpBXNbcc73T6dw:
   - add the MUI glyphs and retire the drawn carets
@@ -52,18 +52,21 @@ One agent at a time.
 - ~~Where `A S2 Home / schedule, sent` should be scrolled.~~ **Closed 2026-09-17**: Marcus moved to the 11:00 appointment, which makes him the first full row at the unchanged -292 offset. Fixed by moving the row, not the offset, so the peek cue survives.
 - ~~How yesterday's unsent rows sit beside today's schedule.~~ **Closed 2026-09-17**: there is no separate unsent home any more. `A S2 Home / unsent` is archived, and an unsent recording shows on the schedule itself — from 2026-09-17 that is Yusuf Bahri's 9:15 row reading Failed; the account screen's "1 recording not sent" row opens his chart.
 - ~~**The divider above the Patient chart drawer, from the playthrough note.**~~ **Closed 2026-09-17**: Daniel ruled that the line he saw where the green recording field meets the drawer is a **rendering artifact of two adjacent fields, not geometry**. Nothing was changed, and nothing needed to be: the first batch found no such line in the tree or in the pixels, and that finding stands as the evidence.
+- **On `A4 Yusuf / list, not sent` the chart list ends at Vitals and Social history cannot be reached.** His drawer starts 64 lower to clear the not-sent alert, so the nine rows run past the `Footer band`, and with rows 10 to 14 hidden the list no longer scrolls (466 of content in a 501 area). Social history sits entirely behind the band. Nothing was changed — how a shortened drawer should end is a design question, and his chart is inert either way. Raised 2026-09-17, `mobileVitals_yusufListCannotReachSocialHistory`.
 - In Daniel's words: "The patient screen shows a drawer when a drawer isn't really needed before recording. Reconsider the patient screen. Not urgent."
 - ~~Whether the scroll area should run to the screen bottom.~~ **Closed 2026-09-17, then reopened and closed the other way the same day.** The first playthrough read the beige under the list as the page showing where the list ends, and the closing line "That's everyone for today" was built for it. The second playthrough corrected the premise: **the beige was the scroll area stopping short at the safe area, not the page.** The scroll area now runs to the frame bottom on all four schedule frames and the 34 of clearance moved inside the scrolling stack. The closing line survives the correction and is unchanged.
 - Search result fields should match desktop patient search. Daniel is checking.
 - Known and accepted:
   - The Template pill opens nothing. It now reads "SOAP Note".
-  - Start Recording on Colette opens nothing, on all four of her frames.
-  - Medications on Colette opens nothing; only Patient summary is wired.
+  - Start Recording on Colette opens nothing, on all six of her frames.
+  - On Colette, Patient summary, Medications and Vitals are wired; every other chart row opens nothing.
   - The sign-in `App identity` frame now holds only the name; its bound `space/24` gap has nothing to space.
   - The Sent body's first line has 31 px of slack at "Marcus Vance"; a name about four characters longer would wrap it.
-  - Rows 5 to 9 of the chart list now carry real sheet names and still open nothing; rows 10 to 14 are still "Sheet 10" to "Sheet 14".
+  - Rows 5 to 9 of the chart list carry real sheet names; row 8 is now Vitals and opens a sheet, the rest still open nothing. Rows 10 to 14 are hidden.
   - Colette's row is unwired on `schedule` and `schedule, top`; it only opens her screen on the two sent frames, which are the ones the demo reaches.
-  - Pausing from Medications drops the drawer.
+  - Pausing from Medications or Vitals drops the drawer.
+  - `A5 Paused / drawer list` opens no sheet at all; Patient summary is its only wired row, as before.
+  - The Vitals rows on `A4 Yusuf / list, not sent` are inert, like the rest of his chart.
   - The empty 48 band under the puller in list mode stays.
 - GAPs the library can't express yet:
   - no Divider component
@@ -121,6 +124,7 @@ One agent at a time.
 | Add a current time marker to the schedule | — | 973feb3 |
 | Lead the Sent copy with the patient's name | — | ca1ba31 |
 | Enlarge the time marker dot | — | 46bb155 |
-| Make the Medications sheet real | — | (this commit) |
+| Make the Medications sheet real | — | 85e1b5e |
+| Make the Vitals sheet real | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
