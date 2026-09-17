@@ -31,7 +31,8 @@ One agent at a time.
 ## Later
 
 - ~~**Compare the two patient page experiments at arm's length** and pick one, or neither.~~ **Closed 2026-09-17**: Daniel took Experiment A and it is built as the real patient landing page. Experiment B stays on `scratchpad` for the record. `Visit/Recording bar` 48:918 still has no variant that puts the pills above the identity, which is why `Visit/Patient header` assembles its own top from that component's parts.
-- **Bring the chart list, summary, Medications, Vitals and Yusuf frames in line with the landing page.** Their drawer backs still return to the old chart-list frames, which is why none of those could be marked SUPERSEDED. Next batch.
+- ~~**Bring the chart list, summary, Medications, Vitals and Yusuf frames in line with the landing page.**~~ **Closed 2026-09-17 for the twelve A4 chart frames**; they now carry `Visit/Patient header`, the drawer at 265, and no footer. **Yusuf's frames are still on the old header**, as are every recording and paused frame — the recording screens deliberately, Yusuf's not yet.
+- **Bring Yusuf's frames in line.** `A4 Yusuf / list, not sent` still has the 201 recording bar, the 122 footer and the not-sent alert wedged between them; its drawer starts at 265 already, for a different reason.
 - Settle where patient portraits live. They are in `assets/`; the brief expected `assets/patients/`.
 - Play the schedule on a phone. Check the scroll, the peeking row, and that Marcus Vance is the only row that goes anywhere.
 - Judge the now marker at arm's length: whether the half dot reads at the screen edge and whether the 2 px teal is heavy enough against the 1 px row dividers.
@@ -80,6 +81,9 @@ One agent at a time.
   - The three landing pages leave 163 of page between the admin rows and the closed drawer.
   - Colette's DOB leaves 7 px of slack on the identity row; a longer name or date would wrap it.
   - `EXPERIMENT A` on `scratchpad` still carries its superseded header and control group, hidden, under rule 1.
+  - 28 of the page's 195 reactions sit on hidden, superseded nodes and cannot be tapped.
+  - The chart list no longer scrolls, and has no closing line the way the schedule does.
+  - The microphone pill is inert on every patient screen, so `A S3 Microphone` is reachable only from the account screen.
   - The empty 48 band under the puller in list mode stays.
   - The two recording summary frames end with 138 of blank they have no footer to clear, because the clearance is set once on the shared sheet.
   - The new disclaimer reads through to four archived frames, which instance the same summary component.
@@ -147,5 +151,6 @@ One agent at a time.
 | Try two patient page layouts | — | 1964084 |
 | Match the Tebra login fields | — | 252d434 |
 | Build the new patient landing page | — | a50722e |
+| Put the new header on the open chart screens | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
