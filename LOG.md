@@ -3825,3 +3825,78 @@ Two worth naming before they surprise anyone:
 
 - `figma-export/schedule-only-home-2026-09-17/account-screens-page.png`
 - `figma-export/schedule-only-home-2026-09-17/as2-home-schedule-sent-227-2420-1x.png`
+
+## 2026-09-17 · Mobile ambient capture · Split the demo into Marcus's visit and Yusuf's resend
+
+- File `TP5KrQtY0T5IcMNqi375So`, page **`Account screens`**. `figma.skipInvisibleInstanceChildren = false` on every read. **No node deleted.**
+- Three rulings recorded as DECISIONs: `mobileDemo_mainPathIsMarcusVisit`, `mobileDemo_secondScenarioIsYusufResend`, `mobileAccount_avatarsFollowTheUnsentState`. One GAP closed, one DEFECT raised and fixed in the same batch.
+- Full report: `reports/Split the demo into Marcus's visit and Yusuf's resend.md`. Contact sheet: `reports/Split the demo into Marcus's visit and Yusuf's resend.png`.
+
+### 1. Inventory — matched the brief, nothing to stop for
+
+Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list, not sent` with six outbound; `A S7 Sending` with two frame-own and four things pointing in. One thing the brief did not mention: **`A S9 Account / unsent`'s back is a `BACK` navigation, not a NODE**, which is why it read as a null destination. Left alone.
+
+### 2. The rows swap
+
+| Frame | 9:15 | 11:00 |
+|---|---|---|
+| `schedule` 204:4082 | **Yusuf Bahri**, failed → `A4 Yusuf` | **Marcus Vance**, none → `A4 Patient / list` |
+| `schedule, top` 204:4127 | Yusuf, failed → `A4 Yusuf` | Marcus, none → `A4 Patient / list` |
+| `schedule, Marcus sent` 227:2420 | Yusuf, failed → `A4 Yusuf` | Marcus, **sent**, no reaction |
+| `schedule, both sent` 230:4677 | Yusuf, **sent**, no reaction | Marcus, **sent**, no reaction |
+
+`schedule, sent` renamed **`schedule, Marcus sent`** and cloned as **`schedule, both sent`** at offset **0**. Avatars: the three schedule frames bar `both sent`, plus all three search screens → `A S9 Account / unsent`; `both sent` → `A S9 Account`.
+
+**`mobileSchedule_sentFrameScrolledPastMarcus` closes itself.** Moving Marcus to 11:00 puts him at stack y **328** — the first full row at the unchanged **−292** offset. The render opens on "Marcus Vance, 11:00 AM, Sent". **Fixed by moving the row, not the offset**, so the peek cue survives: Renata still half-shows above him.
+
+### 3. Yusuf's resend frames
+
+**`A4 Yusuf / list, not sent` 200:6707** — renamed, Yusuf Bahri / DOB 07/22/1985, and **four reactions removed** so the chart is inert: device pill → A S3 Microphone, Patient summary row → A4 summary, Medications row → A4 placeholder, Start Recording → A S5 Recording. Kept: back → `schedule, Marcus sent`, alert → `A S7 Sending / Yusuf`.
+
+**`A S7 Sending / Yusuf` 230:5061** — `AFTER_TIMEOUT` → `A S8 Sent / Yusuf`, `ON_CLICK` → `A S8 Sent / failed` unchanged.
+**`A S8 Sent / Yusuf` 230:5044** — body "The note for Yusuf Bahri is being generated. You'll find it in your desktop queue.", Next Patient → `schedule, both sent`.
+
+**Trap 46 checked after all three clones; none inherited a starting point**, because none of the three sources is one. The check running and finding nothing is the point — the trap fires only when the source is itself a starting point.
+
+### 4. Account copy
+
+**Five** text nodes changed across `A S9 Account / unsent` and `/ sign-out warning`, **two of them on hidden superseded rows**, so no stale "Marcus Vance · Yesterday, 4:30 PM" survives; a re-scan for "Marcus" on both frames returns nothing. Unsent row → `A4 Yusuf`; warning Retry → `A S7 Sending / Yusuf`.
+
+### Found
+
+1. **A defect I introduced, caught only by the render. Yusuf's DOB wrapped and clipped.** `Patient detail` is a **FIXED 103-wide** box with `textAutoResize: NONE`, sized for "DOB 03/14/1972"; "DOB 07/22/1985" needs **105**, so it wrapped, took the identity row 44 → 48 and lost its second line to the row's clip. **Every geometry read passed** — nothing in the tree is wrong, the box is exactly as built. Fixed same batch: `textAutoResize` `WIDTH_AND_HEIGHT`, `layoutSizingHorizontal` `HUG`, matching `Patient name` beside it. Now 105 × 20 on one line, row back to **44**, frame geometry untouched. **The two-pixel margin is the lesson**: any name or date on that row can overflow silently, because the box is fixed and the clip hides it.
+2. **Yusuf's row is above the fold on the frame his scenario starts from.** The resend begins on `schedule, Marcus sent` and asks you to tap the 9:15 row, which at −292 sits at stack y 112–184, entirely above the container top. Wired and scrollable, so the prototype works, but the frame as drawn does not show what the demo asks you to tap next. **The mirror of the GAP just closed, and not resolvable without a trade-off** — the same offset that makes Marcus the first full row is what hides Yusuf. Raised in the plan's Open list.
+
+### Verified
+
+| | Before | After |
+|---|---|---|
+| Frames | 33 | **36** |
+| Children | 41 | **44** (36 + 8 labels) |
+| Reactions | 111 across 108 | **114 across 110** |
+| Destinations | 29 | 32 |
+
+**+3 frames**: `both sent`, `A S8 Sent / Yusuf`, `A S7 Sending / Yusuf`. **Reactions +3 net**, from five movements: **+2** carried in by the `both sent` clone (its 9:15 reaction cleared), **+1** the Yusuf sent frame, **+2** the Yusuf sending frame, **+2** the 11:00 rows on `schedule` and `schedule, top` which were inert and now open Marcus's chart, **−4** stripped from `A4 Yusuf`. The redirects are net zero.
+
+**Starting points exactly `Account device` and `Schedule`**, checked after every clone. **No cross-page edges** — all 32 destinations resolve on `Account screens`. **Zero overlaps.**
+
+**Main path traced**: Sign In → schedule → Marcus row (11:00) → A4 Patient / list → Patient summary → sheet back → Start Recording → A S5 Recording → Stop → the overlay → A S7 Sending → `AFTER_TIMEOUT` → A S8 Sent / sent → Next Patient → **schedule, Marcus sent**. Closed.
+
+**Resend path traced**: Yusuf row on `schedule, Marcus sent` → A4 Yusuf / list, not sent → alert → A S7 Sending / Yusuf → `AFTER_TIMEOUT` → A S8 Sent / Yusuf → Next Patient → **schedule, both sent**. Closed.
+
+### Believed, not seen
+
+- **The prototype was not played.** Both paths are traced through stored `destinationId`s.
+- **Step 4 of the main path needed a correction.** My first trace matched `Back to patients`, the frame-level back to the schedule, because both layers match "back"; the sheet back is `Back tap target 48`. The wiring was never wrong, my predicate was.
+- **DOB 07/22/1985 is a placeholder**, as the brief states.
+- **The five copy changes were verified in the tree, not in pixels** — a re-scan for "Marcus" returns nothing, but those two frames were not re-rendered.
+- **`A S7 Sending / Yusuf`'s failure branch was not traced.** It points at the shared `A S8 Sent / failed`, whose Retry goes back to the **original** `A S7 Sending` — so a failed Yusuf resend rejoins Marcus's sending frame. Reported, not changed: the brief said any failure tap goes to `A S8 Sent / failed`, and it does.
+- All five renders were looked at before this was written, which is the only reason the DOB clip was caught.
+
+### Screenshots, 1x
+
+- `figma-export/marcus-yusuf-split-2026-09-17/1-schedule-204-4082-1x.png`
+- `figma-export/marcus-yusuf-split-2026-09-17/2-schedule-marcus-sent-227-2420-1x.png`
+- `figma-export/marcus-yusuf-split-2026-09-17/3-schedule-both-sent-230-4677-1x.png`
+- `figma-export/marcus-yusuf-split-2026-09-17/4-a4-yusuf-not-sent-200-6707-1x.png`
+- `figma-export/marcus-yusuf-split-2026-09-17/5-as8-sent-yusuf-230-5044-1x.png`

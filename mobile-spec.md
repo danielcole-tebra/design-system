@@ -54,6 +54,10 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 **Home and schedule**
 
 - The schedule is the only home. Everything that used to land on a home lands there.
+- **Main demo path:** schedule, tap Marcus Vance, read the summary, record, stop, sent, back to the schedule with Marcus marked Sent. Everything goes well.
+- **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row, tap the alert, sent, back to the schedule with both marked Sent.
+- On the schedule, Marcus Vance is the 11:00 appointment and Yusuf Bahri the 9:15.
+- Until Yusuf’s recording is sent, every avatar on a home screen goes to `A S9 Account / unsent`.
 - Search stays. `searching`, `results` and `no results` remain, reached from the schedule’s own search field — the way to a patient who is not on today’s list.
 - `A S2 Home / empty`, `/ sessions`, `/ after first capture`, `/ after failed capture` and `/ unsent` are superseded and archived.
 - `Visit screens` and `Screens` are archived, as `Archive · Visit screens` and `Archive · Screens`.
@@ -202,7 +206,8 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 |---|---|
 | / schedule | **The home.** "Today" and fourteen rows, drawn scrolled with the last past row peeking in halfway |
 | / schedule, top | The same fourteen rows at the list’s start |
-| / schedule, sent | After a send: Marcus Vance reads Sent and opens `A4 Patient / list`. Where Next Patient lands |
+| / schedule, Marcus sent | After the main path: Marcus reads Sent at 11:00 and is the first full row. Yusuf still Failed at 9:15 |
+| / schedule, both sent | After the resend: Marcus and Yusuf both Sent, drawn at offset 0 so both are visible |
 | / empty day | "No appointments today" |
 | / searching | Search in progress |
 | / results | Search results |
@@ -220,10 +225,10 @@ The fourteen rows, in strict time order. Times place the present between 10:20 a
 | Time | Name | Status | |
 |---|---|---|---|
 | 8:30 AM | Dolores Okonkwo | Sent | |
-| 9:15 AM | Marcus Vance | Failed | the only wired row |
+| 9:15 AM | **Yusuf Bahri** | Failed | opens `A4 Yusuf / list, not sent` |
 | 9:45 AM | Priya Raghunathan | none | past and quiet |
 | 10:20 AM | Renata Ilves | Sent | off schedule, placed by when it started; the row that peeks |
-| 11:00 AM | Yusuf Bahri | none | first upcoming |
+| 11:00 AM | **Marcus Vance** | none | first full row at the -292 offset; opens `A4 Patient / list` |
 | 11:30 AM | Colette Mwangi | none | Telehealth |
 | 1:15 PM | Ingrid Solheim | none | |
 | 2:00 PM | Theo Abernathy | none | |
@@ -266,7 +271,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 **Patient screen, A4 Patient / list, / summary, / placeholder.** Page background, with the ready recording bar above the drawer.
 
-**Not sent, A4 Patient / list, not sent 200:6707.** The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=primary, size=small`) in the Alert's own action slot. The **whole alert** is the tap target, not the button. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
+**Not sent, A4 Yusuf / list, not sent 200:6707.** Yusuf Bahri, DOB 07/22/1985 (placeholder). **The chart is inert** — only back ("Patients", to `schedule, Marcus sent`) and the alert are wired. The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=primary, size=small`) in the Alert's own action slot. The **whole alert** is the tap target, not the button. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
 
 **Ready bar**, 390 x 201:
 
@@ -372,13 +377,13 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | Any login | Forgot Password? | A S10 |
 | A S10 | back / Send Link | back / A S11 |
 | A S11 | Back To Sign In | A S1 Login / default |
-| / schedule and / schedule, top | avatar | A S9 Account / unsent |
-| / schedule, sent and the search states | avatar | A S9 Account |
-| A S9 Account / unsent | 1 recording not sent row | A4 Patient / list, not sent |
+| / schedule, / schedule, top, / schedule, Marcus sent and the three search screens | avatar | A S9 Account / unsent |
+| / schedule, both sent | avatar | A S9 Account |
+| A S9 Account / unsent | 1 recording not sent row | A4 Yusuf / list, not sent |
 | A S9 Account, both | back / Microphone | back / A S3 Microphone |
 | A S9 Account | Sign Out | A S1 Login / default |
 | A S9 Account / unsent | Sign Out | A S9 Account / sign-out warning |
-| Warning | Retry / Sign Out Anyway / scrim | A S7 Sending / A S1 Login / after sign out / A S9 Account / unsent |
+| Warning | Retry / Sign Out Anyway / scrim | A S7 Sending / Yusuf · A S1 Login / after sign out · A S9 Account / unsent |
 
 **Home, chart and recording**
 
@@ -389,7 +394,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | A4 device pill | tap | A S3 Microphone |
 | A4 Template pill | tap | nothing |
 | A4 Start Recording | tap | A S5 Recording / recording |
-| A4 Patient / list, not sent — the whole not-sent alert | tap | A S7 Sending |
+| A4 Yusuf / list, not sent — the whole not-sent alert | tap | A S7 Sending / Yusuf |
 | Chart row, Patient summary | tap | the summary frame of the same screen and state |
 | Chart row, Medications | tap | A4 Patient / placeholder or A5 Recording / medications. Inert on the paused list |
 | Other chart rows | tap | nothing |
@@ -401,23 +406,26 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | Microphone frame | row or scrim | back to the calling frame |
 | Every Stop | tap | the stop overlay |
 | Stop overlay | Stop Recording / Cancel | A S7 Sending / close |
-| A S8 sent | Next Patient | A S2 Home / schedule, sent |
+| A S8 Sent / sent | Next Patient | A S2 Home / schedule, Marcus sent |
+| A S8 Sent / Yusuf | Next Patient | A S2 Home / schedule, both sent |
 | A S8 failed | Retry / Back To Patients | A S7 Sending / A S2 Home / schedule |
 
 **Schedule**
 
 | From | Tap | To |
 |---|---|---|
-| Marcus Vance row, on / schedule and / schedule, top | tap | A4 Patient / list, not sent |
-| Marcus Vance row, on / schedule, sent | tap | A4 Patient / list |
-| Every other row, on all three | tap | nothing |
+| Yusuf Bahri row 9:15, on / schedule, / schedule, top and / schedule, Marcus sent | tap | A4 Yusuf / list, not sent |
+| Marcus Vance row 11:00, on / schedule and / schedule, top | tap | A4 Patient / list |
+| Marcus Vance row 11:00, on / schedule, Marcus sent | tap | nothing, it reads Sent |
+| Yusuf Bahri row 9:15, on / schedule, both sent | tap | nothing, it reads Sent |
+| Every other row, on all four | tap | nothing |
 | Schedule search field | tap | A S2 Home / searching |
 
 **Counts now:**
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 33 screens | 111 across 108 |
+| Account screens | 36 screens | 114 across 110 |
 | Archive · Visit screens | 26 | 84 across 81 |
 | Archive · Screens | 18 | 42 across 41 |
 

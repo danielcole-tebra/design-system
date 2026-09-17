@@ -46,8 +46,9 @@ One agent at a time.
 
 ## Open
 
-- Where `A S2 Home / schedule, sent` should be scrolled. It is cloned at the schedule's -292 offset, which puts Marcus Vance above the fold — so the frame that exists to show his row reading Sent does not show it. See `mobileSchedule_sentFrameScrolledPastMarcus`.
-- ~~How yesterday's unsent rows sit beside today's schedule.~~ **Closed 2026-09-17**: there is no separate unsent home any more. `A S2 Home / unsent` is archived, and an unsent recording shows on the schedule itself, where Marcus reads Failed; the account screen's "1 recording not sent" row opens his chart.
+- Yusuf’s 9:15 row is above the fold on `schedule, Marcus sent`, the frame the resend scenario starts from. The row is wired and the list scrolls, but the frame as drawn does not show the thing the demo asks you to tap next.
+- ~~Where `A S2 Home / schedule, sent` should be scrolled.~~ **Closed 2026-09-17**: Marcus moved to the 11:00 appointment, which makes him the first full row at the unchanged -292 offset. Fixed by moving the row, not the offset, so the peek cue survives.
+- ~~How yesterday's unsent rows sit beside today's schedule.~~ **Closed 2026-09-17**: there is no separate unsent home any more. `A S2 Home / unsent` is archived, and an unsent recording shows on the schedule itself — from 2026-09-17 that is Yusuf Bahri's 9:15 row reading Failed; the account screen's "1 recording not sent" row opens his chart.
 - Search result fields should match desktop patient search. Daniel is checking.
 - Known and accepted:
   - The Template pill opens nothing.
@@ -99,6 +100,7 @@ One agent at a time.
 | Fill out the schedule day and wire it | — | e434873 |
 | Tidy the Account screens page | — | 548bd7d |
 | Archive the dead frames and tidy Components | — | 9602cf9 |
-| Make the schedule the only home | — | (this commit) |
+| Make the schedule the only home | — | f4cf75e |
+| Split the demo into Marcus's visit and Yusuf's resend | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
