@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after two patient page layouts were tried.
+Last updated after the sign-in fields were matched to the real Tebra login.
 
 ---
 
@@ -50,6 +50,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 **Account**
 
 - The sign-in screen shows **"Visit Companion"**, centred, in the home top bar's title face.
+- **The sign-in fields match the real Tebra login: outlined fields labelled "Email" and "Password", with the label in the outline, and a show/hide icon on the password field. Nothing else on the sign-in screen changes.** Ruled 2026-09-17.
 - **On sign in, the Tebra logo sits at the bottom of the screen as a small accent**, so it no longer competes with "Visit Companion". Ruled 2026-09-17, superseding the lockup that had it above the name. **The logo keeps its current size.**
 - **The sign-in content sits higher than centre.** Dead-centre content doesn't read as centred on a plain field.
 - One account, one practice. The practice is shown as a fact, never a choice.
@@ -177,8 +178,8 @@ Built as `EXPERIMENT A · Patient page, plain header` **282:7488** and `EXPERIME
 | Page | What it is |
 |---|---|
 | `Account screens` 103:2319 | **The whole app, and the only working screen page.** 46 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
-| `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (23), `Account/` (4), `Schedule/` (3), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
-| `Archive` 214:3026 | **32** frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561, `SCAFFOLDING · schedule scrolled to the end` 241:4998, `PROOF Schedule/Now marker` 257:7208, then the **five `SCAFFOLDING · … scrolled to the end` summary frames** 278:12272, 278:12506, 278:12740, 278:12949 and 278:13158, each a clone of a summary frame whose drawer is detached so the sheet can be held at the end of its scroll. Nothing here has a reaction |
+| `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (24), `Account/` (4), `Schedule/` (3), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
+| `Archive` 214:3026 | **33** frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561, `SCAFFOLDING · schedule scrolled to the end` 241:4998, `PROOF Schedule/Now marker` 257:7208, then the **five `SCAFFOLDING · … scrolled to the end` summary frames** 278:12272, 278:12506, 278:12740, 278:12949 and 278:13158, each a clone of a summary frame whose drawer is detached so the sheet can be held at the end of its scroll, then `PROOF · Visit/Icon/Visibility (MUI) on paper` 286:8824. Nothing here has a reaction |
 | `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
 | `Archive · Screens` 1:3 | The original four-job prototype, archived 2026-09-17. 18 frames, 42 reactions, starting point Happy path. Never edited |
 | `Foundations` | Frame template and colour table |
@@ -210,7 +211,7 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 | `Visit/Sheet/Medications` | 272:396 | 358 x 288, four library `List/Item` rows at `Lines=Two`, 72 each, over a 1 px INSIDE bottom stroke bound `color/divider`. Follows the rebuilt NPVE Medication list 254:3707 |
 | `Visit/Sheet/Vitals` | 273:9321 | 358 x 432, six rows on the same construction, cloned from `Visit/Sheet/Medications`. Row 4 (Respiratory rate) is `Lines=One`; row 6 carries no divider. Follows the rebuilt NPVE `Vitals/Body` fdCQVFdvOByaOYIJYag0d6 846:13017 |
 | `Visit/Sheet/Placeholder` | 48:141 | Stand-in for sheets not yet ported |
-| `Visit/Icon/…` | Components | Exact MUI paths: ArrowDropDown 59:493, ChevronLeft 159:1103, ChevronRight 159:1105, ExpandMore 159:1107 (reserved), PauseCircle 74:531, StopCircle 74:534, PlayCircle 74:537, Cancel 74:540, VideocamOutlined 206:830 |
+| `Visit/Icon/…` | Components | Exact MUI paths: ArrowDropDown 59:493, ChevronLeft 159:1103, ChevronRight 159:1105, ExpandMore 159:1107 (reserved), PauseCircle 74:531, StopCircle 74:534, PlayCircle 74:537, Cancel 74:540, VideocamOutlined 206:830, **Visibility 286:7411** |
 | `Session row` | 4:454 | 390 x 72. Name 16/24 and time 14/20 in a column, `Status chip` trailing, bottom divider. `State`: default, failed |
 | `Status chip` | 4:395 | Library Chip, medium, outlined. `Status`: Sending, Sent, Failed to send |
 | `Schedule/Row` | 196:777 | 390 x 72 on `color/background/paper`, like `Session row`. Time line: the time, then 8, then the Telehealth group — `·`, a 16 `VideocamOutlined` and the word, all body2 14/20 on `color/text/secondary`, 4 apart, 97 wide, driven by the `Telehealth` boolean. Trailing `ChevronRight` (159:1105, 24, `color/grey/600`, ink ending at 374, right padding 8). Status chip ends at 342; on `failed` its nested label is overridden to the one word **"Failed"**, 59 wide from x 283, leaving a 251 text column — `Status chip` 4:395 itself is untouched. `Name`, `Time`, `Telehealth`, `Status` (none, sending, sent, failed). The old Telehealth Chip is hidden and labelled SUPERSEDED |
@@ -235,6 +236,7 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
   - The error state adds an error alert inside the card.
   - "Forgot Password?" is a text Button, centred horizontally in the card at x 120.5, with 16 above and below.
   - The card is 282 tall, 366 on error, so the error card's bottom gap to the logo is 130 where the others are 214.
+  - **The fields, matched to the real Tebra login 2026-09-17.** Both are the library **`Text field` 34:633** at `size=medium, State=Default, Fill=Paper`, 310 x 56. The set has **no `variant` axis** — it is outlined by construction, a `Cap left` / `Label slot` / `Body right` outline whose notch opens for the label — so there was no `variant=outlined` to set. The label sits **in the outline** (`Label / floating` at 12 px, y -8, `Label slot` open, `Label / resting` hidden), which the library expresses only through **`Value=Filled`**; the `Value text` is blanked on all six fields so the field still reads empty. No helper text. **The password field carries a 24 `Visit/Icon/Visibility (MUI)` 286:7411** ending 12 from the field's right edge and centred in the 56 — an absolutely-positioned child of the `Login card`, labelled SCAFFOLDING because the library Text field has no end-adornment slot, and **not wired**. The form is **frame content, not a component**, so every change was made three times. **Nothing moved**: fields still 56, cards still 282 / 366 / 282, `App identity` still at y 190, the wordmark still at y 762, card-bottom-to-logo still 214 / 130 / 214.
   - The after-sign-out frame looks identical; its Sign In goes to the unsent home.
 - **A S10 Forgot password.**
   - Back with title "Reset password".

@@ -42,9 +42,10 @@ One agent at a time.
 - Port more real sheets into the Patient chart. Medications and Vitals are done; Daniel supplies the next sheet and its NPVE node.
 - Give Yusuf a patient summary, if his chart should open during the resend demo.
 - Library batch in YX2n4YLrEpBXNbcc73T6dw:
-  - add the MUI glyphs and retire the drawn carets
+  - add the MUI glyphs and retire the drawn carets and the drawn eye icons
   - add a trailing slot on List/Item
   - add a Divider component
+  - **Text field: start and end adornment slots, and a `shrink` boolean independent of `Value`** — without the first the password eye has to sit over the field, and without the second an empty field cannot float its label without claiming to be filled
 - QR or desktop handoff sign-in.
 
 ## Open
@@ -71,6 +72,8 @@ One agent at a time.
   - Pausing from Medications or Vitals drops the drawer.
   - `A5 Paused / drawer list` opens no sheet at all; Patient summary is its only wired row, as before.
   - The Vitals rows on `A4 Yusuf / list, not sent` are inert, like the rest of his chart.
+  - The sign-in password eye is one glyph and is not wired; there is no revealed state and no `VisibilityOff`.
+  - The sign-in fields read `Value=Filled` with a blank value, because that is the only way the library floats a label on an empty field.
   - The empty 48 band under the puller in list mode stays.
   - The two recording summary frames end with 138 of blank they have no footer to clear, because the clearance is set once on the shared sheet.
   - The new disclaimer reads through to four archived frames, which instance the same summary component.
@@ -136,5 +139,6 @@ One agent at a time.
 | Polish the patient summaries | — | 32a2158 |
 | Correct the chart copy | — | 657563f |
 | Try two patient page layouts | — | 1964084 |
+| Match the Tebra login fields | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
