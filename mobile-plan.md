@@ -38,6 +38,7 @@ One agent at a time.
   - stop and cancel from a paused drawer
 - Judge the 16 px pill triangle and the 40 avatar at arm's length.
 - Port real sheets into the Patient chart, Medications first. Daniel supplies the sheet list and NPVE nodes.
+- Give Yusuf a patient summary, if his chart should open during the resend demo.
 - Library batch in YX2n4YLrEpBXNbcc73T6dw:
   - add the MUI glyphs and retire the drawn carets
   - add a trailing slot on List/Item
@@ -55,7 +56,8 @@ One agent at a time.
 - Search result fields should match desktop patient search. Daniel is checking.
 - Known and accepted:
   - The Template pill opens nothing. It now reads "SOAP Note".
-  - Start Recording on Colette opens nothing.
+  - Start Recording on Colette opens nothing, on all four of her frames.
+  - Medications on Colette opens nothing; only Patient summary is wired.
   - Colette's row is unwired on `schedule` and `schedule, top`; it only opens her screen on the two sent frames, which are the ones the demo reaches.
   - Pausing from Medications drops the drawer.
   - The empty 48 band under the puller in list mode stays.
@@ -109,6 +111,7 @@ One agent at a time.
 | Split the demo into Marcus's visit and Yusuf's resend | — | 8d2715a |
 | Apply the first phone playthrough notes | — | 254c1ac |
 | Apply the second phone playthrough notes | — | 3712632 |
-| Make Next Patient go to the next patient | — | (this commit) |
+| Make Next Patient go to the next patient | — | f010350 |
+| Give Colette her own summary and match the Sent copy | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.

@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after Next Patient was wired to the next patient.
+Last updated after Colette got her own summary.
 
 ---
 
@@ -43,6 +43,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - One back chevron per screen.
 - **Sheets and drawers** have 32 top corners and one shared top (puller 30, title row 48). No close (X) button on any of them.
 - Body text is pure black, as the library has it.
+- **Sent confirmation copy says the note will be in the desktop queue.** "Unsigned Notes" is too specific; use **"desktop queue"** going forward.
 - Status language is Sending, Sent and Failed to send. Never "synced", "complete" or "ready". The phone reports only on the handoff. On schedule rows the pill shortens to one word — Sending, Sent, Failed — because the row leads to the patient, where the alert gives the full context.
 
 **Account**
@@ -62,11 +63,12 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The end of the list still gets a closing line so it reads as the end: **"That's everyone for today"**, centred, in the secondary text style, on the beige, with 34 of padding below it so it clears the home indicator when the list is scrolled fully.
 - **The pinned date header is separated from the list scrolling under it** by a 1 px bottom divider, the same `color/divider` the rows use.
 - **An empty day still shows the date header.**
-- **Main demo path:** schedule, tap Marcus Vance, read the summary, record, stop, sent, then **Next Patient to Colette Mwangi**, and "Patients" from her screen back to the schedule with Marcus marked Sent. Everything goes well. Back To Schedule on the Sent screen is the shortcut that skips Colette.
-- **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row, tap the alert, sent, then **Next Patient to Colette Mwangi**, and "Patients" back to the schedule with both marked Sent.
+- **Main demo path:** schedule, tap Marcus Vance, read the summary, record, stop, sent, then **Next Patient to Colette Mwangi**, read her summary, and "Patients" back to the schedule with Marcus marked Sent. Everything goes well. Back To Schedule on the Sent screen is the shortcut that skips Colette.
+- **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row, tap the alert, sent, then **Next Patient to Colette Mwangi**, read her summary, and "Patients" back to the schedule with both marked Sent.
 - **Next Patient goes to the next patient.** On both demo paths that is **Colette Mwangi**, the 11:30 AM Telehealth appointment.
 - The Sent screen has a **text link under Next Patient that returns to the schedule**.
 - **Colette's schedule row opens her patient screen**, so the demo feels cohesive.
+- **The schedule's current time marker is teal.** Recorded 2026-09-17, built in a later batch.
 - On the schedule, Marcus Vance is the 11:00 appointment and Yusuf Bahri the 9:15.
 - Until Yusuf’s recording is sent, every avatar on a home screen goes to `A S9 Account / unsent`.
 - Search stays. `searching`, `results` and `no results` remain, reached from the schedule’s own search field — the way to a patient who is not on today’s list.
@@ -101,6 +103,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - Chart rows with no sheet yet, and the Template pill, stay in place and do nothing when tapped.
 - The Template pill reads **"SOAP Note"**, with no leading icon and no "Template:" prefix. The caret stays. This deliberately departs from, and supersedes, the earlier ruling that the pill matches the NPVE note toolbar (`visitDrawer_v4TopBarNoteToolbar`).
 - Every sheet is reachable before recording.
+- **Patient summaries can be invented for demo patients**, as long as they follow Marcus Vance's format: the AI disclaimer, then **Current Situation**, **Key Background**, **Active Care Plan** and **Progress & Next Steps**, each as bullets.
 - **Ported sheets** keep their content as is. Only identifying details change, to match Marcus Vance, DOB 03/14/1972. Every action is dropped.
 
 **Recording**
@@ -144,7 +147,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 | Page | What it is |
 |---|---|
-| `Account screens` 103:2319 | **The whole app, and the only working screen page.** 38 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
+| `Account screens` 103:2319 | **The whole app, and the only working screen page.** 40 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
 | `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (22), `Account/` (4), `Schedule/` (2), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
 | `Archive` 214:3026 | 26 frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561, then `SCAFFOLDING · schedule scrolled to the end` 241:4998. Nothing here has a reaction |
 | `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
@@ -288,7 +291,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 **Patient screen, A4 Patient / list, / summary, / placeholder.** Page background, with the ready recording bar above the drawer.
 
-**Colette, A4 Colette / after Marcus 246:4990 and A4 Colette / after Yusuf 246:4995.** Two clones of `A4 Patient / list`, identical to it and to each other but for the identity: **Colette Mwangi, DOB 05/09/1968** (placeholder). One per demo path, because the only thing that differs is where "Patients" goes back to — `schedule, Marcus sent` and `schedule, both sent`. **Start Recording is unwired on both**; the device pill and the two live chart rows keep the source's destinations.
+**Colette's summary, A4 Colette / summary, after Marcus 249:10819 and A4 Colette / summary, after Yusuf 249:10824.** Two clones of `A4 Patient / summary`, one per demo path. Her summary is **invented for the demo** and follows Marcus's format exactly — the disclaimer, then Current Situation, Key Background, Active Care Plan and Progress & Next Steps, each an `UNORDERED` bulleted TEXT node at 16 / 24 on a 358 column. Her sheet is **997** tall against Marcus's 1141, in the same 565 scroller, so it scrolls the same way and simply ends sooner. The drawer back chevron returns to her list, "Patients" returns to that path's schedule, and **Start Recording is inert**.
+
+**Colette's chart lists, A4 Colette / after Marcus 246:4990 and A4 Colette / after Yusuf 246:4995.** Two clones of `A4 Patient / list`, identical to it and to each other but for the identity: **Colette Mwangi, DOB 05/09/1968** (placeholder). One per demo path, because the only thing that differs is where "Patients" goes back to — `schedule, Marcus sent` and `schedule, both sent`. **Start Recording is unwired on both.** **Patient summary opens her own summary and Medications is inert** as of 2026-09-17; the device pill still opens `A S3 Microphone`, which is patient-agnostic.
 
 **Not sent, A4 Yusuf / list, not sent 200:6707.** Yusuf Bahri, DOB 07/22/1985 (placeholder), on the same line and the same baseline as Marcus's. **The chart is inert** — only back ("Patients", to `schedule, Marcus sent`) and the alert are wired. The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=primary, size=small`) in the Alert's own action slot. The **whole alert** is the tap target, not the button. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
 
@@ -415,7 +420,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | A4 Template pill | tap | nothing |
 | A4 Start Recording | tap | A S5 Recording / recording |
 | A4 Yusuf / list, not sent — the whole not-sent alert | tap | A S7 Sending / Yusuf |
-| Chart row, Patient summary | tap | the summary frame of the same screen and state |
+| Chart row, Patient summary | tap | the summary frame of the same screen, state and patient |
 | Chart row, Medications | tap | A4 Patient / placeholder or A5 Recording / medications. Inert on the paused list |
 | Other chart rows | tap | nothing |
 | Sheet back | tap | the list of the same screen and state |
@@ -430,8 +435,13 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | A S8 Sent / sent | Back To Schedule | A S2 Home / schedule, Marcus sent |
 | A S8 Sent / Yusuf | Next Patient | **A4 Colette / after Yusuf** |
 | A S8 Sent / Yusuf | Back To Schedule | A S2 Home / schedule, both sent |
-| A4 Colette, both | "Patients" | the schedule frame of its own path |
-| A4 Colette, both | Start Recording | nothing |
+| A4 Colette list, both | "Patients" | the schedule frame of its own path |
+| A4 Colette list, both | Patient summary row | **that path's A4 Colette / summary** |
+| A4 Colette list, both | Medications row | nothing |
+| A4 Colette summary, both | drawer back chevron | that path's A4 Colette list |
+| A4 Colette summary, both | "Patients" | the schedule frame of its own path |
+| A4 Colette, all four | Start Recording | nothing |
+| A4 Colette, all four | device pill | A S3 Microphone |
 | A S8 failed | Retry / Back To Patients | A S7 Sending / A S2 Home / schedule |
 
 **Schedule**
@@ -452,11 +462,11 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 38 screens | 126 across 122 |
+| Account screens | 40 screens | 130 across 126 |
 | Archive · Visit screens | 26 | 84 across 81 |
 | Archive · Screens | 18 | 42 across 41 |
 
-No cross-page edges, and nothing on `Account screens` points at an archived frame. 34 destinations. Starting points: `Account device` 103:2320 and `Schedule` 204:4082.
+No cross-page edges, and nothing on `Account screens` points at an archived frame. 36 destinations. Starting points: `Account device` 103:2320 and `Schedule` 204:4082.
 
 ---
 
