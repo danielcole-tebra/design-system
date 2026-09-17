@@ -26,6 +26,7 @@ One agent at a time.
 
 | Batch | What it does |
 |---|---|
+| Make Next Patient go to the next patient | Next Patient opens Colette Mwangi's patient screen (11:30, telehealth) on both demo paths. The Sent screen gets a secondary text action, "Back to schedule". Needs a new Colette patient screen, and a named version saved before the batch runs |
 | Hide the superseded components | Six `Visit/` masters are labelled SUPERSEDED but still visible on `Components`: Sheet list row 48:137, Icon/Pause 51:983, Icon/Stop 51:986, Icon/PlayArrow 51:989, Quick switch 51:1091 and Icon/CancelOutlined 74:543. Sheet list row still has 128 instances, so check before hiding. Add the footer band to COMPOSITIONS.md, and record the A4 band ids |
 
 ## Later
@@ -49,9 +50,12 @@ One agent at a time.
 - Yusuf’s 9:15 row is above the fold on `schedule, Marcus sent`, the frame the resend scenario starts from. The row is wired and the list scrolls, but the frame as drawn does not show the thing the demo asks you to tap next.
 - ~~Where `A S2 Home / schedule, sent` should be scrolled.~~ **Closed 2026-09-17**: Marcus moved to the 11:00 appointment, which makes him the first full row at the unchanged -292 offset. Fixed by moving the row, not the offset, so the peek cue survives.
 - ~~How yesterday's unsent rows sit beside today's schedule.~~ **Closed 2026-09-17**: there is no separate unsent home any more. `A S2 Home / unsent` is archived, and an unsent recording shows on the schedule itself — from 2026-09-17 that is Yusuf Bahri's 9:15 row reading Failed; the account screen's "1 recording not sent" row opens his chart.
+- **The divider above the Patient chart drawer, from the playthrough note.** There is no line above the drawer on any recording or paused frame: the drawer's `Stroke` boolean is off on all five, and the 1x renders carry exactly one full-width grey line, the drawer's own title divider under "Patient chart". The only frames with a line at the drawer's top edge are the four A4 patient frames, where `Stroke` is deliberately **on** because the drawer docks under a light bar (`mobileVisit_sheetAndDrawerCorners`). Nothing was hidden. Daniel to say which line he meant.
+- In Daniel's words: "The patient screen shows a drawer when a drawer isn't really needed before recording. Reconsider the patient screen. Not urgent."
+- ~~Whether the scroll area should run to the screen bottom.~~ **Closed 2026-09-17**: Daniel ruled that the list ends and the beige page background begins, and that the end of the list gets a closing line, "That's everyone for today". Built as `Schedule/End of list` 238:7558 on all four schedule frames. (No item with this wording was in this list; it is recorded here as closed so the ruling is findable.)
 - Search result fields should match desktop patient search. Daniel is checking.
 - Known and accepted:
-  - The Template pill opens nothing.
+  - The Template pill opens nothing. It now reads "SOAP Note".
   - Pausing from Medications drops the drawer.
   - The empty 48 band under the puller in list mode stays.
 - GAPs the library can't express yet:
@@ -101,6 +105,7 @@ One agent at a time.
 | Tidy the Account screens page | — | 548bd7d |
 | Archive the dead frames and tidy Components | — | 9602cf9 |
 | Make the schedule the only home | — | f4cf75e |
-| Split the demo into Marcus's visit and Yusuf's resend | — | (this commit) |
+| Split the demo into Marcus's visit and Yusuf's resend | — | 8d2715a |
+| Apply the first phone playthrough notes | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.

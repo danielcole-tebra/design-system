@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the schedule row was built.
+Last updated after the first phone playthrough notes were applied.
 
 ---
 
@@ -31,6 +31,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 **Overall**
 
+- The app is named **Visit Companion**, with the Tebra logo in front of the name. Ruled 2026-09-17, replacing "Ambient capture". The mark is `Brand/Tebra logo`, cut from the library's nav lockup because the library has no standalone logo component, and sized to the title's cap height.
 - The library and code are followed where they can be and overruled where their design is wrong. Overrides are logged as Daniel's decisions.
 - Library Buttons render Title Case, and button copy ships that way. System strings such as device names are never Button labels.
 - **Glyphs** match their `@mui/icons-material` path exactly:
@@ -54,6 +55,9 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 **Home and schedule**
 
 - The schedule is the only home. Everything that used to land on a home lands there.
+- The schedule header shows the real date, **"Thursday, September 17"**, in place of "Today". If the schedule ever spans days, each day gets its own header in the same format.
+- **The date header floats**: it stays pinned while the list scrolls. It sits above the scroll area, not inside it, so the list passes under it.
+- **The list ends and the beige page background begins.** The end of the list gets a closing line so it reads as the end: **"That's everyone for today"**, centred, in the secondary text style, on the beige.
 - **Main demo path:** schedule, tap Marcus Vance, read the summary, record, stop, sent, back to the schedule with Marcus marked Sent. Everything goes well.
 - **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row, tap the alert, sent, back to the schedule with both marked Sent.
 - On the schedule, Marcus Vance is the 11:00 appointment and Yusuf Bahri the 9:15.
@@ -88,6 +92,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The drawer tucks away by dragging down on the recording screen. Dragging up from the collapsed edge, which reads "Patient chart", opens the list.
 - Titles have a divider under them in both states.
 - Chart rows with no sheet yet, and the Template pill, stay in place and do nothing when tapped.
+- The Template pill reads **"SOAP Note"**, with no leading icon and no "Template:" prefix. The caret stays. This deliberately departs from, and supersedes, the earlier ruling that the pill matches the NPVE note toolbar (`visitDrawer_v4TopBarNoteToolbar`).
 - Every sheet is reachable before recording.
 - **Ported sheets** keep their content as is. Only identifying details change, to match Marcus Vance, DOB 03/14/1972. Every action is dropped.
 
@@ -132,8 +137,8 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 | Page | What it is |
 |---|---|
 | `Account screens` 103:2319 | **The whole app, and the only working screen page.** 33 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
-| `Components` | Local components, shared by all pages, in four labelled groups: `Visit/` (22), `Account/` (4), `Schedule/` (1), Base components (9). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
-| `Archive` 214:3026 | 24 frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, then the five superseded homes. Nothing here has a reaction |
+| `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (22), `Account/` (4), `Schedule/` (2), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
+| `Archive` 214:3026 | 25 frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, then `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561. Nothing here has a reaction |
 | `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
 | `Archive · Screens` 1:3 | The original four-job prototype, archived 2026-09-17. 18 frames, 42 reactions, starting point Happy path. Never edited |
 | `Foundations` | Frame template and colour table |
@@ -148,8 +153,10 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 
 | Local component | Node | What it is |
 |---|---|---|
+| `Brand/Tebra logo` | 238:7557 | 18 x 18 box holding the Tebra mark at 17.64 x 17, ink left-flush at x 0 and inset 1 from the top so the box centres on an integer in a 64 bar. Three vectors cloned from the library's `Nav/Logo` 2:882, bound `color/primary/main` |
+| `Schedule/End of list` | 238:7558 | 390 x 64, transparent, one centred body2 14/20 on `color/text/secondary` reading "That's everyone for today" |
 | `Account/Avatar` | 108:1212 | 40 disc `color/secondary/main`, initials `color/secondary/contrastText` (4.53 : 1), Akkurat LL Regular 20/20, `Initials` default SB |
-| `Account/Top bar` | 114:600 | `Visit/Top bar` with the avatar as the action: ink 334 to 374, tap target 60 x 48 at x 330 |
+| `Account/Top bar` | 114:600 | `Visit/Top bar` with the avatar as the action: ink 334 to 374, tap target 60 x 48 at x 330. `Title with action` carries a `Brand/Tebra logo` instance at (16, 23), 8 before the title, which moves to x 42 and 276 wide. The other two variants carry no mark |
 | `Account/Microphone sheet` | 121:1793 | Drawer top, title "Microphone", three rows (iPhone microphone selected, AirPods Pro, Wired headset), 34 safe area |
 | `Account/List row` | 163:1444 | 390 x 72, library `List/Item` (two lines) filling 358, `ChevronRight` in `color/grey/600` ending at 374 |
 | `Visit/Top bar` | 93:2734 | `Config`: Title with action, Back with title, Back only. Each variant 390 x 64 |
@@ -204,7 +211,7 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 
 | Frame | What it shows |
 |---|---|
-| / schedule | **The home.** "Today" and fourteen rows, drawn scrolled with the last past row peeking in halfway |
+| / schedule | **The home.** The pinned date header and fourteen rows, drawn scrolled with the last past row peeking in halfway under the header |
 | / schedule, top | The same fourteen rows at the list’s start |
 | / schedule, Marcus sent | After the main path: Marcus reads Sent at 11:00 and is the first full row. Yusuf still Failed at 9:15 |
 | / schedule, both sent | After the resend: Marcus and Yusuf both Sent, drawn at offset 0 so both are visible |
@@ -216,8 +223,10 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 Archived: `/ empty`, `/ sessions`, `/ after first capture`, `/ after failed capture`, `/ unsent`.
 **Schedule, built 2026-09-17.** All three clone `A S2 Home / empty`, so the top bar, avatar and search at rest carry over, and each keeps that frame's two reactions (avatar to Account, search to Searching).
 
-- **A S2 Home / schedule** 204:4082 and **A S2 Home / schedule, top** 204:4127 hold a `Schedule scroll` frame at y 191, **390 x 619**, clipping, `overflowDirection` VERTICAL, reaching the 34 bottom safe area. Inside it a `Schedule content` stack, **390 x 1048**, holds the "Today" `List heading` (40) and **fourteen** `Schedule/Row` instances (72 each). **Both frames overflow**: the content bottom sits at 756 and 1048 against a container bottom of 619.
-- **/ schedule, top** draws the stack at y 0. **/ schedule** offsets it to **y -292**, the midpoint of the Renata Ilves row, so the last past appointment peeks in halfway under the search field and Yusuf Bahri starts 36 below it, fully visible.
+- All four schedule frames hold a `Content` stack at y 47, **390 x 763**: the top bar (64), the search block (80), the **`Date header`** (40) and the `Schedule scroll` frame (**390 x 579**, clipping, `overflowDirection` VERTICAL), whose bottom lands on 810, the 34 bottom safe area.
+- **The date header is pinned by structure, not by a property.** It is a sibling of the scroll frame inside `Content`, not a child of the scrolling stack, so it holds while the list moves under it. Figma's "fix position when scrolling" is not reachable from the plugin API in this build (`scrollBehavior` throws on a FRAME), and this is what the structure allows. It sits on the beige, 390 x 40, the date on body2 14/20 at x 16, `color/text/secondary`.
+- Inside the scroll frame a `Schedule content` stack, **390 x 1072**, holds **fourteen** `Schedule/Row` instances (72 each) and a `Schedule/End of list` instance (64) at stack y 1008. **All four frames overflow**: 1072 of content against a 579 container.
+- **/ schedule, top** and **/ schedule, both sent** draw the stack at y 0. **/ schedule** and **/ schedule, Marcus sent** offset it to **y -252**, the midpoint of the Renata Ilves row, so the last past appointment peeks in halfway under the date header and Marcus Vance starts 36 below it, fully visible. The offset moved -292 to -252 when the 40-tall heading left the stack; the cue is unchanged, it is now the header rather than the search field that cuts the peeking row.
 - **A S2 Home / empty day** 204:4172 shows "No appointments today", built as a clone of `No patients match` 103:2395.
 
 The fourteen rows, in strict time order. Times place the present between 10:20 and 11:00 AM.
@@ -271,16 +280,16 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 **Patient screen, A4 Patient / list, / summary, / placeholder.** Page background, with the ready recording bar above the drawer.
 
-**Not sent, A4 Yusuf / list, not sent 200:6707.** Yusuf Bahri, DOB 07/22/1985 (placeholder). **The chart is inert** — only back ("Patients", to `schedule, Marcus sent`) and the alert are wired. The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=primary, size=small`) in the Alert's own action slot. The **whole alert** is the tap target, not the button. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
+**Not sent, A4 Yusuf / list, not sent 200:6707.** Yusuf Bahri, DOB 07/22/1985 (placeholder), on the same line and the same baseline as Marcus's. **The chart is inert** — only back ("Patients", to `schedule, Marcus sent`) and the alert are wired. The same screen with a library Alert between the pills row and the drawer, for a recording that failed to send. Alert `variant=standard, severity=error`, 358 x 48 at (16, 201), reading "Recording from 9:15 AM not sent", with a text Button "Retry" (`color=primary, size=small`) in the Alert's own action slot. The **whole alert** is the tap target, not the button. 16 of beige above it and 16 below, the same gap the pills row already had to the drawer. The drawer moves to y 265 and shortens to 579 so its bottom stays at 844; the footer band and the 122 bottom padding do not move. One fewer chart row shows before the list scrolls.
 
 **Ready bar**, 390 x 201:
 
 - Top safe area 47.
 - "Patients" link with a 16 `ChevronLeft`, 103 x 36 at x 4.017.
-- "Marcus Vance" with "DOB 03/14/1972" beside it in secondary, on one line at y 91.
+- "Marcus Vance" with "DOB 03/14/1972" beside it in secondary, on one line at y 91. The `Patient detail` box is **120 x 36** on the master, widened from 103 so a longer DOB cannot wrap; every ready bar in the file now sets the DOB ink top at 115.88.
 - Pills row at y 135:
-  - Template pill, 200 x 38 at x 16: list icon, "Template: SOAP", `ArrowDropDown`.
-  - Device pill, 82 x 38 at x 224: mic glyph and `ArrowDropDown`, no label.
+  - Template pill, **139 x 38 at x 16**: "SOAP Note" and `ArrowDropDown`. The Button's `Start icon` boolean is off, so the list glyph is hidden, not deleted.
+  - Device pill, 82 x 38 at **x 163**: mic glyph and `ArrowDropDown`, no label.
 
 **Drawer**, both modes 390 x 621, white, 32 top corners.
 
