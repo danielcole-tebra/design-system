@@ -3196,3 +3196,74 @@ In `schedule-row-proof-196-787-2x.png` the pill reads as a lighter capsule than 
 - `figma-export/schedule-s2-2026-09-16/schedule-row-proof-196-787-2x.png`
 
 Nothing is built next until Daniel has looked at the row.
+
+## 2026-09-17 · Mobile ambient capture · Add a chevron and white fill to the schedule row
+
+- File `TP5KrQtY0T5IcMNqi375So`, **`Components` page only**. No frame touched, no row placed, no reaction created. `figma.skipInvisibleInstanceChildren = false` on every read. Additive: nothing deleted, nothing hidden that was visible, `Session row` 4:454 and `Account/List row` 163:1444 not edited.
+- Two rulings from Daniel recorded in FLAGS.md as DECISIONs and added to `mobile-spec.md` §2 before building: `mobileSchedule_rowCarriesTrailingChevron`, `mobileSchedule_rowSitsOnPaper`.
+
+### 1. Built, on all four variants of `Schedule/Row` 196:777
+
+| Variant | id | chevron |
+|---|---|---|
+| `Status = none` | 196:720 | 199:1571 |
+| `Status = sending` | 196:735 | 199:1573 |
+| `Status = sent` | 196:751 | 199:1575 |
+| `Status = failed` | 196:762 | 199:1577 |
+
+- **Trailing chevron**, appended after the `Status chip` so the child order is `Text`, `Status chip`, `Trailing chevron`. Instance of `Visit/Icon/ChevronRight (MUI)` **159:1105**, 24 × 24, named `Trailing chevron` as `Account/List row` names its own.
+- **The grey is an override, not the master.** 159:1105's vector is bound **`color/text/primary`** — black. `Account/List row`'s chevron overrides it to `color/grey/600` on the instance, and that is what was copied: resolved #545454 written into the paint first, then bound (Paints 1), read back bound on all four.
+- **Ink right edge 374**, by setting the row's `paddingRight` to **8** and unbinding it from `space/16`. The glyph sits at x **8.59** with width **7.41** inside its 24 box, so the box must end at 382 and the row must give back 8 — which is exactly the 8 `Account/List row` carries, and the same reason `Visit/Chart row` carries it. 358 + 8.59 + 7.41 = **374.00** on every instance.
+- **The gap used is the row's own `itemSpacing` 16**, still bound `space/16`. Reported plainly because the brief asked for the same gap `Account/List row` uses before its chevron, and **that row authors 0**: its `List/Item` fills to 358 and the chevron starts immediately. The 16 is not missing there, it is inside `List/Item` as `paddingRight`. Measured to the ink, the two land in the same place — content ink ends at **342** in both, chevron ink starts at **366.59** in both, **24.59** between them. So 16 here reproduces `Account/List row`, and 0 here would not.
+- **Row fill** bound `color/background/paper` #FFFFFF on all four, replacing an empty `fills` array. The bottom divider is untouched: 1 px INSIDE bottom stroke bound `color/divider`, weights 0/0/1/0.
+
+### 2. Read back on the eight proof instances, not the masters
+
+**Every row is still 390 × 72. Nothing truncates**: `textTruncation` DISABLED on `Name` in all eight, every `Name` exactly **24** tall and one line, "Priya Raghunathan" included.
+
+| Status | Text column | Status chip | Chevron ink |
+|---|---|---|---|
+| none | **326** | hidden | 374 |
+| sending | **238** | 270–342 | 374 |
+| sent | **259** | 291–342 | 374 |
+| failed | **203** | 235–342 | 374 |
+
+- **The text column beside the failed chip is 203**, down from 235. "Priya Raghunathan" measures well inside it and stays on one line.
+- **The status chip's right edge moves from 374 to 342 on all six that show one.** The chevron now holds the optical edge. This is the one thing the rulings cost: the schedule row's status chip no longer lines up with `Session row`'s chip on the unsent home, which still ends at 374. Recorded in the DECISION and in COMPOSITIONS.md, **not resolved here** — whether the two lists should agree is Daniel's.
+- **7 componentPropertyReferences on every variant, unchanged** and identical across the four. Trap 12 did not fire: nodes were appended to existing variants, no variant was cloned.
+
+### 3. The half-pixel, which is inherited and not new
+
+The chevron sits at **y 23.5**, not 24. The row carries a 1 px INSIDE bottom stroke, so its auto-layout content box is **71** tall and `CENTER` puts a 24 box at 23.5. The whole row already does this — `Text` at 13.5, `Status chip` at 19.5 — because it was cloned from `Session row`, which has the same stroke. `Account/List row` has no stroke and centres its chevron at a clean 24. Against rule 4 this is a half-pixel, but it is the row's existing behaviour, and the chevron now matches its siblings rather than breaking from them. Named so nobody reads it as introduced here; **not changed**.
+
+### 4. Proof sheet
+
+`PROOF · Schedule/Row …` **196:787**. **Its ground was already `color/background/default`** — bound `74:150` #E8E5DF since S2, so the white rows already had beige behind them and no change was needed there. Verified rather than assumed. The wrappers `Row none|sending|sent|failed` carry no fill, so the ground shows through to every instance.
+
+Only the **sheet title 196:788** was edited, to say what the sheet now proves. The first attempt ran long and the frame, which hugs, **grew from 980 to 1289 wide**; the title was shortened and the sheet read back at **980 × 645**.
+
+### 5. Sampled in the render, not inferred
+
+- **Chevron ink (84, 84, 84)** = #545454 = `color/grey/600` exactly.
+- **Row fill (255, 255, 255)** against ground **(232, 229, 223)**.
+- **Divider still renders**: (214, 214, 214) = #D6D6D6 at row y 71, between the white row and the beige below it.
+- **The white fill closes the Telehealth pill's read.** On beige the unfilled pill looked tinted, and both S2 and the review batch had to prove by pixel sample that it was not. Against white there is nothing to mistake, and the pill is plainly an outline.
+
+### Believed, not seen
+
+- Every geometry number is **read from one of the eight instances**; the only master reads are the property definitions, the variant positions and `Account/List row`'s construction.
+- **The prototype was not played** and the row is on no frame, so this says nothing about behaviour. The chevron is decoration until the schedule is wired.
+- Both exports are **true 2x via `download_assets`** (trap 40), confirmed on disk: the set 390 × 432 came back **780 × 864**, the proof 980 × 645 came back **1960 × 1290**. Both were looked at before this was written.
+
+### Repo
+
+- `.gitignore`: `.tmp.driveupload/` added, the Drive sync folder that broke the previous batch's commit.
+- `mobile-spec.md`: two rulings added to §2 Home and schedule; §5's `Schedule/Row` row given its node id **196:777**, and the chevron and paper fill described.
+- `mobile-plan.md`: **the six remaining blanks filled with `ed321b2`** — the history does show which commit holds them, contrary to what the previous batch concluded. Batches 0 to 5 all landed in that one commit, which added 24 LOG entries at once, including "file, pages and resolution (batch 0)" through "Assembly (batch 5)". "Review the schedule row" moved from Next to Done at `9214d43`; this batch added.
+- `COMPOSITIONS.md`: the `Schedule/Row` entry amended — two of its measurements are superseded by the chevron.
+- FLAGS.md: +2 DECISION (137 → 139 open, 47 closed; DEFECT and GAP unchanged).
+
+### Screenshots, 2x, both looked at before reporting
+
+- `figma-export/schedule-chevron-2026-09-17/schedule-row-set-196-777-2x.png` — the four variants
+- `figma-export/schedule-chevron-2026-09-17/schedule-row-proof-196-787-2x.png` — the eight instances, white on beige

@@ -57,6 +57,8 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The schedule is a set of ways into a patient, not a record. It shows the schedule as it stands and never reasons about it.
 - A row knows the patient, the time, whether the visit is telehealth, and whether a recording exists. A past row with no recording is quiet: no status, no explanation.
 - Telehealth is marked with a small library Chip reading "Telehealth", on telehealth rows only.
+- Schedule rows show a trailing `ChevronRight` to say they open the patient. It sits on the optical edge, and the status chip moves left to make room.
+- Schedule rows sit on `color/background/paper`, not transparent over the page.
 - A recording for a patient not on the schedule gets its own row, in time order by when it started.
 - Several recordings against one appointment make one row, showing the latest status.
 - The list is in strict time order and opens scrolled to the next upcoming appointment.
@@ -144,7 +146,7 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 | `Visit/Icon/…` | Components | Exact MUI paths: ArrowDropDown 59:493, ChevronLeft 159:1103, ChevronRight 159:1105, ExpandMore 159:1107 (reserved), PauseCircle 74:531, StopCircle 74:534, PlayCircle 74:537, Cancel 74:540 |
 | `Session row` | 4:454 | 390 x 72. Name 16/24 and time 14/20 in a column, `Status chip` trailing, bottom divider. `State`: default, failed |
 | `Status chip` | 4:395 | Library Chip, medium, outlined. `Status`: Sending, Sent, Failed to send |
-| `Schedule/Row` | Components | 390 x 72, like `Session row`, with a Telehealth Chip after the time. `Name`, `Time`, `Telehealth`, `Status` (none, sending, sent, failed) |
+| `Schedule/Row` | 196:777 | 390 x 72 on `color/background/paper`, like `Session row`, with a Telehealth Chip after the time and a trailing `ChevronRight` (159:1105, 24, `color/grey/600`, ink ending at 374, right padding 8). Status chip ends at 342. `Name`, `Time`, `Telehealth`, `Status` (none, sending, sent, failed) |
 | Search result row, Level meter, Field buttons | Components | From the original build |
 
 Superseded components are labeled and kept, never deleted. The list is in FLAGS.md.

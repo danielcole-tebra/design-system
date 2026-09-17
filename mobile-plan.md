@@ -26,7 +26,6 @@ One agent at a time.
 
 | Batch | What it does |
 |---|---|
-| Review the schedule row | Daniel reads the schedule row render before anything uses it |
 | Build the schedule home screens | A S2 Home / schedule, / schedule, top, / empty day, with the five invented names |
 | Wire the schedule | Row taps, and a starting point if wanted. Then play it once to check the scroll |
 | Tidy up | Hide the four superseded components that are still visible. Fill or move the Recording bar set so it stops overlapping a proof frame. Add the footer band to COMPOSITIONS.md, and record the A4 band ids. Note the page-lookup trap in PLUGIN-NOTES.md |
@@ -66,12 +65,12 @@ One agent at a time.
 
 | Batch name | Old code | Commit |
 |---|---|---|
-| Set up the file | 0 | |
-| Build sign in | 1 | |
-| Build search, home and patient | 2 | |
-| Build recording | 3 | |
-| Build hand off | 4 | |
-| Wire the first prototype | 5 | |
+| Set up the file | 0 | ed321b2 |
+| Build sign in | 1 | ed321b2 |
+| Build search, home and patient | 2 | ed321b2 |
+| Build recording | 3 | ed321b2 |
+| Build hand off | 4 | ed321b2 |
+| Wire the first prototype | 5 | ed321b2 |
 | Build the visit drawer and Patient summary | D0 to D4, fixes | 09a7b09 |
 | Audit before account work | A0 | eeadd8f |
 | Clone Visit screens into Account screens | A1 | 5e6be23 |
@@ -93,5 +92,7 @@ One agent at a time.
 | Check the specs against the file | spec check | e3bf665 |
 | Audit home for the schedule, and verify it | S0, S0 check | e3bf665 |
 | Build the schedule row | S2 | e3bf665 |
+| Show the schedule row for review | — | 9214d43 |
+| Add a chevron and white fill to the schedule row | — | (this commit) |
 
-The six batches still blank are the original prototype build; they were committed before this plan existed and their hashes are not recorded here.
+Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
