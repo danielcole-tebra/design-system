@@ -32,6 +32,7 @@ One agent at a time.
 
 - ~~**Compare the two patient page experiments at arm's length** and pick one, or neither.~~ **Closed 2026-09-17**: Daniel took Experiment A and it is built as the real patient landing page. Experiment B stays on `scratchpad` for the record. `Visit/Recording bar` 48:918 still has no variant that puts the pills above the identity, which is why `Visit/Patient header` assembles its own top from that component's parts.
 - ~~**Bring the chart list, summary, Medications, Vitals and Yusuf frames in line with the landing page.**~~ **Closed 2026-09-17 for the twelve A4 chart frames**; they now carry `Visit/Patient header`, the drawer at 265, and no footer. ~~**Yusuf's frames are still on the old header**~~ — **closed 2026-09-17**; every recording and paused frame still is, deliberately.
+- ~~**The chart list has no closing line the way the schedule does.**~~ **Closed 2026-09-17**: `Chart/End of list` reading "End of chart" is on the `Mode=list` master, so all six chart lists carry it. `mobileChart_listNoLongerScrollsAndSaysNothingAboutIt` and `mobileChart_drawerRunsWellPastTheChartList` are answered by it — the drawer still runs past the line, by 89 on the patient screens and 117 on the recording ones, but the list now says it has ended.
 - **Play the modal drawer on a phone.** Check that the scrim's tap wins over the header's buttons beneath it, that the tap and the drag feel like the same surface closing, and whether the drawer running 189 px past the chart list reads as restful or unfinished.
 - ~~**Bring Yusuf's frames in line.**~~ **Closed 2026-09-17**: he now has `A4 Yusuf / landing, not sent` 298:11207 and a modal open chart on 200:6707, on the same pattern as Marcus and Colette. The recording bar, the not-sent alert, the footer band and the CTA are hidden and labelled SUPERSEDED on the open chart. **His recording and paused frames do not exist** — there are none — so the only Yusuf frames left on the old shape are none.
 - Settle where patient portraits live. They are in `assets/`; the brief expected `assets/patients/`.
@@ -55,9 +56,9 @@ One agent at a time.
 
 ## Open
 
-- **Where the not-sent alert sits on Yusuf's landing page.** Claude's default, pending Daniel: **between the header and the admin details**, 281–329, with 16 above and 16 below. It reads as a banner about the visit rather than a row of the chart, and it keeps the admin block contiguous. The alternative is under the admin rows, which buries it. Not in the spec until Daniel confirms.
+- ~~**Where the not-sent alert sits on Yusuf's landing page.**~~ **Settled 2026-09-17**: Daniel confirmed Claude's default, **between the header and the admin details**. Moved to `mobile-spec.md` §2.
 - **Yusuf's landing page shows the closed drawer's tap and drag on the same transition**, `SMART_ANIMATE / EASE_OUT / 0.225`, as the brief asked. On Marcus's and Colette's three landing pages **only the drag carries it** and the tap is instant. One of the two is wrong; they should match.
-- **The YB initials are unreadable on the library Avatar's own fallback disc** — `#E8E5DF` ink on `#D6D6D6`, **1.16:1**. It is the library's default pairing, not an override, and it is what every patient without a portrait will get.
+- **The YB initials are unreadable on the library Avatar's own fallback disc** — `#E8E5DF` ink on `#D6D6D6`, **1.16:1**. It is the library's default pairing, not an override, and it is what every patient without a portrait will get. **Accepted for the demo 2026-09-17, not closed**: Daniel ruled Yusuf keeps the initials avatar. `libraryAvatar_fallbackInitialsAreInvisible` and `mobileYusuf_noPortraitInTheRepo` both stay open against the library and the repo.
 
 - Yusuf’s 9:15 row is above the fold on `schedule, Marcus sent`, the frame the resend scenario starts from. The row is wired and the list scrolls, but the frame as drawn does not show the thing the demo asks you to tap next.
 - ~~Where `A S2 Home / schedule, sent` should be scrolled.~~ **Closed 2026-09-17**: Marcus moved to the 11:00 appointment, which makes him the first full row at the unchanged -292 offset. Fixed by moving the row, not the offset, so the peek cue survives.
@@ -160,6 +161,7 @@ One agent at a time.
 | Put the new header on the open chart screens | — | 53a452a |
 | Dim the page behind the open chart | — | 58d6085 |
 | Make Colette younger | — | 0039e25 |
-| Bring Yusuf's page in line | — | — |
+| Bring Yusuf's page in line | — | 5e5832c |
+| Clean up before the demo | — | — |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.

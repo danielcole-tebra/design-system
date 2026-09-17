@@ -51,9 +51,11 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 - The sign-in screen shows **"Visit Companion"**, centred, in the home top bar's title face.
 - **The sign-in fields match the real Tebra login: outlined fields labelled "Email" and "Password", with the label in the outline, and a show/hide icon on the password field. Nothing else on the sign-in screen changes.** Ruled 2026-09-17.
+- **The password field's show/hide icon is the MUI outlined eye.** Ruled 2026-09-17.
 - **On sign in, the Tebra logo sits at the bottom of the screen as a small accent**, so it no longer competes with "Visit Companion". Ruled 2026-09-17, superseding the lockup that had it above the name. **The logo keeps its current size.**
 - **The sign-in content sits higher than centre.** Dead-centre content doesn't read as centred on a plain field.
 - One account, one practice. The practice is shown as a fact, never a choice.
+- **Sarah Bennett's avatar uses her photo.** Ruled 2026-09-17, replacing the salmon disc with initials.
 - Demo provider: Dr. Sarah Bennett, Windsor Family Medicine, sbennett@windsorfm.com, initials SB. The avatar is a salmon disc with two initials.
 - Signing out is never blocked. With an unsent recording, a warning offers Retry first and Sign out anyway.
 - Unsent recordings stay on the phone for the next sign-in. An unsent row is retried by tapping the whole row.
@@ -70,6 +72,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - **Main demo path:** schedule, tap Marcus Vance to his **landing page**, open the chart drawer, read the summary, tap the dimmed page or drag the puller down to close it, **Start Encounter** to record, stop, sent, then **Next Patient to Colette Mwangi**, read her summary, and "Patients" back to the schedule with Marcus marked Sent. Everything goes well. Back To Schedule on the Sent screen is the shortcut that skips Colette.
 - **Second scenario:** Yusuf Bahri’s 9:15 recording failed. Tap his row to his **landing page**, where the not-sent alert sits under the header, tap the alert, sent, then **Next Patient to Colette Mwangi's landing page**, open her chart drawer, read her summary, and "Patients" back to the schedule with both marked Sent. His chart drawer opens from his landing page the same way Marcus's does; the resend never needs it.
 - **Next Patient goes to the next patient.** On both demo paths that is **Colette Mwangi**, the 11:30 AM Telehealth appointment.
+- **The microphone pill is live on every landing page**, so the picker can be shown from the patient screen mid-demo and returns to whichever screen opened it.
 - The Sent screen has a **text link under Next Patient that returns to the schedule**.
 - **Colette's schedule row opens her patient screen**, so the demo feels cohesive.
 - **The schedule shows a current time marker**: a **2 px line across the full row width**, bound `color/primary/main`, with a **16 px dot centred on the left edge of the screen, so half of it shows**. It has **no time label**.
@@ -105,6 +108,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 **Patient chart**
 
 - The drawer is the Patient chart. It works by drilling in, the same on the patient screen and the recording screen: the list is home, a sheet opens from its row, and back returns to the list.
+- **The chart list ends with a closing line, as the schedule does.** Ruled 2026-09-17. It reads **"End of chart"**.
 - Opening a patient lands on the chart list, with no row highlighted.
 - The drawer tucks away by dragging down on the recording screen. Dragging up from the collapsed edge, which reads "Patient chart", opens the list.
 - Titles have a divider under them in both states.
@@ -150,6 +154,9 @@ Settled 2026-09-17, moved here from the open experiment that produced it.
 - **On the patient screens, the open chart is a modal drawer. The page behind it is dimmed. The drawer stops just below the patient's name, so the dimmed portrait and name stay visible. Start Encounter is reached by closing the drawer. The recording screen is unchanged.**
 - **There is no Start Recording footer on the patient screens. Start Encounter in the header replaces it.**
 - **Yusuf's patient page follows the same pattern as Marcus's and Colette's: a landing page with the chart drawer closed, and an open chart that dims the page.** Ruled 2026-09-17.
+- **On Yusuf's landing page, the not-sent alert sits between the header and the admin details.** Ruled 2026-09-17, settled from Claude's default.
+- **The microphone picker is reachable from the patient page's microphone pill.** Ruled 2026-09-17.
+- **Yusuf keeps the initials avatar.** Ruled 2026-09-17. `mobileYusuf_noPortraitInTheRepo` and `libraryAvatar_fallbackInitialsAreInvisible` are **accepted for the demo, not closed**.
 - **With no footer, sheets only need to clear the home indicator.**
 
 `EXPERIMENT B · Patient page, resting band` **282:7501** was not taken and stays on `scratchpad` for the record. `EXPERIMENT A` **282:7488** stays too, now carrying the real `Visit/Patient header`; its own header and control group are hidden and labelled SUPERSEDED under rule 1.
@@ -218,6 +225,8 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 | `Visit/Patient header` | 287:10323 | 390 x **265**. Safe area 47, back row 44, an identity row 56 with the **48 patient avatar** before the name and DOB, then the control group 118: Start Encounter 358 x 56 and a config row of the SOAP Note pill and the microphone control, **175 each**. Properties `Name`, `DOB`, `Avatar` (INSTANCE_SWAP, both portraits as preferred values). The DOB **hugs**, because Colette's is 109 against Marcus's 103 and a fixed box wrapped it. `Avatar` carries **all three** patient avatars as preferred values as of 2026-09-17 |
 | `Visit/Avatar/Marcus Vance` | 287:7428 | 48 circle: the library Avatar at `Content=Letter`, resized to 48 with `cornerRadius` 24, initials hidden, fill replaced with `assets/marcus-vance.png` at `scaleMode FILL` so the portrait crops to the circle |
 | `Visit/Avatar/Colette Mwangi` | 287:7431 | The same, from `assets/colette-mwangi.png` |
+| `Visit/Avatar/Sarah Bennett` | 299:11361 | **40** circle, the provider not a patient: an `Account/Avatar` 108:1212 instance with the disc fill replaced by `assets/sarah-bennett.png` at `scaleMode FILL` and the `SB` initials hidden underneath, the same shell as the patient avatars at 40 rather than 48. Built 2026-09-17. Every avatar that represents her is an instance of it |
+| `Visit/Icon/VisibilityOutlined (MUI)` | 299:8268 | 24 x 24, the MUI `VisibilityOutlined` path, vector at (1, 4) 22 x 15, `SCALE`/`SCALE`, ink bound the same `color/grey/700` the filled eye used. Built 2026-09-17; it is the sign-in password eye. `Visit/Icon/Visibility (MUI)` 286:7411 is SUPERSEDED |
 | `Visit/Avatar/Yusuf Bahri` | 298:8127 | The same shell with **no portrait**: `assets/yusuf-bahri.png` does not exist, so the disc keeps the library's bound grey and the **initials "YB" show** instead of being hidden. Built 2026-09-17. Swap the fill for an IMAGE the day a portrait lands |
 | `Visit/Chart row` | 177:2858 | 390 x 48, library `List/Item` (one line) and `ChevronRight` ending at 374 |
 | `Visit/Sheet/Patient summary` | 50:969 | 358 x **1267**, ported from NPVE 672:7906. A library Alert carrying the disclaimer, four section frames (heading + one `UNORDERED` `Bulleted content` TEXT node at `listSpacing` 12), a feedback block, and **50 of bottom padding** for scroll clearance. The feedback prompt reads "How would you rate the accuracy of this summary?" (corrected 2026-09-17). Every summary frame instances it; Colette's text overrides make her 1211 |
@@ -341,9 +350,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 ### 6.4 Patient chart
 
-**Patient screen, A4 Patient / list, / summary, / placeholder.** Page background, with the ready recording bar above the drawer.
+**Patient screen, A4 Patient / list, / summary, / medications.** Page background, with the ready recording bar above the drawer. (`A4 Patient / placeholder` **103:3032** was renamed `A4 Patient / medications` on 2026-09-17; the node id is unchanged and so is every reaction on and into it.)
 
-**Colette's Medications, A4 Colette / medications, after Marcus 272:3459 and A4 Colette / medications, after Yusuf 272:3602.** Two clones of Marcus's `A4 Patient / placeholder`, one per demo path for the same reason her summary needs two: the drawer back chevron has to return to the list it came from. Her three medications override the sheet's rows and the fourth row is hidden. **Nothing on either frame reaches a Marcus frame** — back goes to her own list, "Patients" to that path's schedule, Start Recording is inert, and the device pill still opens `A S3 Microphone`, which names no patient.
+**Colette's Medications, A4 Colette / medications, after Marcus 272:3459 and A4 Colette / medications, after Yusuf 272:3602.** Two clones of Marcus's `A4 Patient / medications` 103:3032, one per demo path for the same reason her summary needs two: the drawer back chevron has to return to the list it came from. Her three medications override the sheet's rows and the fourth row is hidden. **Nothing on either frame reaches a Marcus frame** — back goes to her own list, "Patients" to that path's schedule, Start Recording is inert, and the device pill still opens `A S3 Microphone`, which names no patient.
 
 **Vitals frames, A4 Patient / vitals 273:9376, A5 Recording / vitals 273:9519, A4 Colette / vitals, after Marcus 273:9637 and A4 Colette / vitals, after Yusuf 273:9780.** Four clones of the four Medications frames, with `Visit/Sheet/Vitals` swapped into the drawer's `Sheet#48:4` slot and the drawer title set to "Vitals". Each keeps every reaction its source had, so back already returns to the chart frame the Vitals row was tapped on. Marcus's two show his six vitals; Colette's two override all six rows with hers. `A4 Patient / vitals` keeps Start Recording; Colette's two have none, as her Medications frames have none.
 
@@ -375,8 +384,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 - **Shared top.** A 30 x 6 `color/grey/400` puller at (180, 8), then a 48 title row with a 1 px divider below.
 - **List mode.**
   - "Patient chart" at (16, 12).
-  - **Nine** chart rows, none selected: Patient summary, Allergies, Medications, Problems, **Procedures & surgical history, Family history, External care history, Vitals and Social history**. Rows 10 to 14 are still there, hidden, under rule 1. **The eighth row was "Health status/observations" and is now Vitals, in the same position.** Of the nine, Patient summary, Medications and Vitals open a sheet; the rest are inert.
-  - The nine rows run 432 in a 543 scroll area, so on the patient and recording screens **the list no longer scrolls** and its last row ends **11 px above the Start Recording keyline**. On the open chart screens, where the drawer runs 147 to 844, the same nine rows sit in **619** and end on **657**. **`A4 Yusuf / list, not sent` now shows all nine too**, as of 2026-09-17: its drawer no longer starts low to clear the alert, because the alert moved to his landing page.
+  - **Nine** chart rows, none selected: Patient summary, Allergies, Medications, Problems, **Procedures & surgical history, Family history, External care history, Vitals and Social history**, then a **closing line reading "End of chart"**. Rows 10 to 14 are still there, hidden, under rule 1. **The eighth row was "Health status/observations" and is now Vitals, in the same position.** Of the nine, Patient summary, Medications and Vitals open a sheet; the rest are inert.
+  - The nine rows run 432, and with the **64** closing line the list content is **496**. On the open chart screens, where the drawer runs 147 to 844 and `Sheet list` is **619** with 34 of bottom padding, that leaves **89** of slack, so **the list does not scroll** and the closing line's bottom lands on **721**. On the recording and paused lists, where `Sheet list` is **647**, the slack is **117** and the line's bottom lands on **693**. **`A4 Yusuf / list, not sent` shows all nine rows and the line too**, as of 2026-09-17: its drawer no longer starts low to clear the alert, because the alert moved to his landing page.
+  - **The closing line is `Chart/End of list` 299:11339**, an instance of `Schedule/End of list` 238:7558 with its text overridden, set once on the `Visit/Drawer` `Mode=list` master 48:814 so all six chart lists carry it. It is the **last child of `Sheet list`**, after the five hidden rows, so unhiding one of them would still leave the line last. 390 x 64, no fill, one centred body2 14 / 20 on `color/text/secondary`.
 - **Sheet mode.**
   - Back button at x -1.97, ink from 18.03, matching the top bar's back.
   - Sheet name at x 72.
@@ -469,7 +479,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | / schedule, / schedule, top, / schedule, Marcus sent and the three search screens | avatar | A S9 Account / unsent |
 | / schedule, both sent | avatar | A S9 Account |
 | A S9 Account / unsent | 1 recording not sent row | **A4 Yusuf / landing, not sent** |
-| A S9 Account, both | back / Microphone | back / A S3 Microphone |
+| A S9 Account, both | back / Microphone | back / A S3 Microphone. **Six visible ways into the picker now**: these two rows and the four landing pages' microphone pills |
 | A S9 Account | Sign Out | A S1 Login / default |
 | A S9 Account / unsent | Sign Out | A S9 Account / sign-out warning |
 | Warning | Retry / Sign Out Anyway / scrim | A S7 Sending / Yusuf · A S1 Login / after sign out · A S9 Account / unsent |
@@ -487,7 +497,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | **A4 open chart, Colette's eight** | Start Encounter / SOAP Note / microphone | nothing |
 | **A4 Patient / landing** | Start Encounter | A S5 Recording / recording |
 | **A4 Colette / landing, both** | Start Encounter / SOAP Note / microphone | nothing |
-| A4 device pill | tap | A S3 Microphone |
+| A4 device pill, on the four **landing pages** | tap | **A S3 Microphone** (wired 2026-09-17) |
+| A4 device pill, on the open chart screens | tap | **nothing reachable** — the live pills are inert and the twelve wired ones are on hidden superseded bars, under the scrim |
+| **A S3 Microphone**, back chevron and all three device rows | tap | **Figma `BACK`** — returns to whichever screen opened the picker |
 | A4 Template pill | tap | nothing |
 | A4 Start Encounter, Marcus | tap | A S5 Recording / recording |
 | **A4 Yusuf / landing, not sent** — the whole not-sent alert | tap | A S7 Sending / Yusuf |
@@ -496,7 +508,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | **A4 Yusuf / list, not sent** | scrim tap and puller drag | **A4 Yusuf / landing, not sent**, the same transition |
 | **A4 Yusuf / list, not sent** | every chart row | nothing |
 | Chart row, Patient summary | tap | the summary frame of the same screen, state and patient |
-| Chart row, Medications, Marcus | tap | A4 Patient / placeholder or A5 Recording / medications. Inert on the paused list |
+| Chart row, Medications, Marcus | tap | **A4 Patient / medications** or A5 Recording / medications. Inert on the paused list |
 | Chart row, Medications, Colette | tap | that path's **A4 Colette / medications** |
 | A4 Colette / medications, both | drawer back / "Patients" / Start Recording | that path's Colette list / that path's schedule / nothing |
 | Chart row, Vitals, Marcus | tap | A4 Patient / vitals or A5 Recording / vitals. Inert on the paused list and on Yusuf's |
