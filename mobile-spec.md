@@ -56,7 +56,8 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - **The sign-in content sits higher than centre.** Dead-centre content doesn't read as centred on a plain field.
 - One account, one practice. The practice is shown as a fact, never a choice.
 - **Sarah Bennett's avatar uses her photo.** Ruled 2026-09-17, replacing the salmon disc with initials.
-- Demo provider: Dr. Sarah Bennett, Windsor Family Medicine, sbennett@windsorfm.com, initials SB. The avatar is a salmon disc with two initials.
+- **Avatars are lifted off the beige with a white ring and a shadow.** Ruled 2026-09-17, hand-applied by Daniel and read back off his node: a **1 px INSIDE stroke, `color/common/white`**, and a **drop shadow X 0, Y 1, blur 1, spread 0, black at 25%, not shown behind transparent areas**. It sits on the node that clips the circle, so the ring follows the circle, and it is **the same at 40 and at 48 — not scaled**.
+- Demo provider: Dr. Sarah Bennett, Windsor Family Medicine, sbennett@windsorfm.com, initials SB. **Her avatar is her photograph**; the salmon disc with two initials is superseded and survives only underneath the image.
 - Signing out is never blocked. With an unsent recording, a warning offers Retry first and Sign out anyway.
 - Unsent recordings stay on the phone for the next sign-in. An unsent row is retried by tapping the whole row.
 
@@ -108,7 +109,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 **Patient chart**
 
 - The drawer is the Patient chart. It works by drilling in, the same on the patient screen and the recording screen: the list is home, a sheet opens from its row, and back returns to the list.
-- **The chart list ends with a closing line, as the schedule does.** Ruled 2026-09-17. It reads **"End of chart"**.
+- **The chart list has no closing line.** Ruled 2026-09-17, superseding the closing line added earlier the same day. The schedule keeps its "That's everyone for today"; the chart list simply ends at Social history, because it never scrolls and so never needs to say it has finished.
 - Opening a patient lands on the chart list, with no row highlighted.
 - The drawer tucks away by dragging down on the recording screen. Dragging up from the collapsed edge, which reads "Patient chart", opens the list.
 - Titles have a divider under them in both states.
@@ -156,7 +157,7 @@ Settled 2026-09-17, moved here from the open experiment that produced it.
 - **Yusuf's patient page follows the same pattern as Marcus's and Colette's: a landing page with the chart drawer closed, and an open chart that dims the page.** Ruled 2026-09-17.
 - **On Yusuf's landing page, the not-sent alert sits between the header and the admin details.** Ruled 2026-09-17, settled from Claude's default.
 - **The microphone picker is reachable from the patient page's microphone pill.** Ruled 2026-09-17.
-- **Yusuf keeps the initials avatar.** Ruled 2026-09-17. `mobileYusuf_noPortraitInTheRepo` and `libraryAvatar_fallbackInitialsAreInvisible` are **accepted for the demo, not closed**.
+- **Yusuf keeps the initials avatar, and his initials must be readable: the disc takes a green token.** Ruled 2026-09-17. `mobileYusuf_noPortraitInTheRepo` and `libraryAvatar_fallbackInitialsAreInvisible` are **accepted for the demo, not closed**. **Which green is open** — the library's only green `main`, `color/success/main` #3FA266, measures **3.20:1** against the `#FFFFFF` that code pairs with success, so Claude's default could not be applied and the question is in `mobile-plan.md`.
 - **With no footer, sheets only need to clear the home indicator.**
 
 `EXPERIMENT B · Patient page, resting band` **282:7501** was not taken and stays on `scratchpad` for the record. `EXPERIMENT A` **282:7488** stays too, now carrying the real `Visit/Patient header`; its own header and control group are hidden and labelled SUPERSEDED under rule 1.
@@ -384,9 +385,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 - **Shared top.** A 30 x 6 `color/grey/400` puller at (180, 8), then a 48 title row with a 1 px divider below.
 - **List mode.**
   - "Patient chart" at (16, 12).
-  - **Nine** chart rows, none selected: Patient summary, Allergies, Medications, Problems, **Procedures & surgical history, Family history, External care history, Vitals and Social history**, then a **closing line reading "End of chart"**. Rows 10 to 14 are still there, hidden, under rule 1. **The eighth row was "Health status/observations" and is now Vitals, in the same position.** Of the nine, Patient summary, Medications and Vitals open a sheet; the rest are inert.
-  - The nine rows run 432, and with the **64** closing line the list content is **496**. On the open chart screens, where the drawer runs 147 to 844 and `Sheet list` is **619** with 34 of bottom padding, that leaves **89** of slack, so **the list does not scroll** and the closing line's bottom lands on **721**. On the recording and paused lists, where `Sheet list` is **647**, the slack is **117** and the line's bottom lands on **693**. **`A4 Yusuf / list, not sent` shows all nine rows and the line too**, as of 2026-09-17: its drawer no longer starts low to clear the alert, because the alert moved to his landing page.
-  - **The closing line is `Chart/End of list` 299:11339**, an instance of `Schedule/End of list` 238:7558 with its text overridden, set once on the `Visit/Drawer` `Mode=list` master 48:814 so all six chart lists carry it. It is the **last child of `Sheet list`**, after the five hidden rows, so unhiding one of them would still leave the line last. 390 x 64, no fill, one centred body2 14 / 20 on `color/text/secondary`.
+  - **Nine** chart rows, none selected: Patient summary, Allergies, Medications, Problems, **Procedures & surgical history, Family history, External care history, Vitals and Social history**. **The list ends at Social history**; the closing line is gone as of 2026-09-17. Rows 10 to 14 are still there, hidden, under rule 1. **The eighth row was "Health status/observations" and is now Vitals, in the same position.** Of the nine, Patient summary, Medications and Vitals open a sheet; the rest are inert.
+  - The nine rows run **432**. On the open chart screens, where the drawer runs 147 to 844 and `Sheet list` is **619** with 34 of bottom padding, that leaves **153** of slack, so **the list does not scroll** and its last row ends on **657**. On the recording and paused lists, where `Sheet list` is **647**, the slack is **181** and the last row ends on **629**. **`A4 Yusuf / list, not sent` shows all nine too**, as of 2026-09-17: its drawer no longer starts low to clear the alert, because the alert moved to his landing page.
+  - **`Chart/End of list` 299:11339 is hidden and labelled SUPERSEDED** on the `Visit/Drawer` `Mode=list` master 48:814, under rule 1. It is still the last child of `Sheet list` and can be brought back with one flag.
 - **Sheet mode.**
   - Back button at x -1.97, ink from 18.03, matching the top bar's back.
   - Sheet name at x 72.

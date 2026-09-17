@@ -32,7 +32,7 @@ One agent at a time.
 
 - ~~**Compare the two patient page experiments at arm's length** and pick one, or neither.~~ **Closed 2026-09-17**: Daniel took Experiment A and it is built as the real patient landing page. Experiment B stays on `scratchpad` for the record. `Visit/Recording bar` 48:918 still has no variant that puts the pills above the identity, which is why `Visit/Patient header` assembles its own top from that component's parts.
 - ~~**Bring the chart list, summary, Medications, Vitals and Yusuf frames in line with the landing page.**~~ **Closed 2026-09-17 for the twelve A4 chart frames**; they now carry `Visit/Patient header`, the drawer at 265, and no footer. ~~**Yusuf's frames are still on the old header**~~ — **closed 2026-09-17**; every recording and paused frame still is, deliberately.
-- ~~**The chart list has no closing line the way the schedule does.**~~ **Closed 2026-09-17**: `Chart/End of list` reading "End of chart" is on the `Mode=list` master, so all six chart lists carry it. `mobileChart_listNoLongerScrollsAndSaysNothingAboutIt` and `mobileChart_drawerRunsWellPastTheChartList` are answered by it — the drawer still runs past the line, by 89 on the patient screens and 117 on the recording ones, but the list now says it has ended.
+- ~~**The chart list has no closing line the way the schedule does.**~~ **Closed 2026-09-17, the other way**: Daniel looked at "End of chart" and dropped it. `Chart/End of list` is hidden and SUPERSEDED on the master, the list ends at Social history, and `mobileChart_listNoLongerScrollsAndSaysNothingAboutIt` and `mobileChart_drawerRunsWellPastTheChartList` are answered by the ruling rather than by a line: a list that never scrolls does not need to announce that it has ended.
 - **Play the modal drawer on a phone.** Check that the scrim's tap wins over the header's buttons beneath it, that the tap and the drag feel like the same surface closing, and whether the drawer running 189 px past the chart list reads as restful or unfinished.
 - ~~**Bring Yusuf's frames in line.**~~ **Closed 2026-09-17**: he now has `A4 Yusuf / landing, not sent` 298:11207 and a modal open chart on 200:6707, on the same pattern as Marcus and Colette. The recording bar, the not-sent alert, the footer band and the CTA are hidden and labelled SUPERSEDED on the open chart. **His recording and paused frames do not exist** — there are none — so the only Yusuf frames left on the old shape are none.
 - Settle where patient portraits live. They are in `assets/`; the brief expected `assets/patients/`.
@@ -58,7 +58,12 @@ One agent at a time.
 
 - ~~**Where the not-sent alert sits on Yusuf's landing page.**~~ **Settled 2026-09-17**: Daniel confirmed Claude's default, **between the header and the admin details**. Moved to `mobile-spec.md` §2.
 - **Yusuf's landing page shows the closed drawer's tap and drag on the same transition**, `SMART_ANIMATE / EASE_OUT / 0.225`, as the brief asked. On Marcus's and Colette's three landing pages **only the drag carries it** and the tap is instant. One of the two is wrong; they should match.
-- **The YB initials are unreadable on the library Avatar's own fallback disc** — `#E8E5DF` ink on `#D6D6D6`, **1.16:1**. It is the library's default pairing, not an override, and it is what every patient without a portrait will get. **Accepted for the demo 2026-09-17, not closed**: Daniel ruled Yusuf keeps the initials avatar. `libraryAvatar_fallbackInitialsAreInvisible` and `mobileYusuf_noPortraitInTheRepo` both stay open against the library and the repo.
+- **Which green Yusuf's disc takes — Daniel's call, blocking.** Daniel ruled the initials must be readable on a green token. **Claude's default could not be applied**: the brief authorised the green `main` with the highest contrast against its paired contrast-text token *at 4.5:1 or better*, and no green `main` reaches it. The library's only green family is **success** (code calls it Status), and code pairs success with `contrastText` **`#FFFFFF`**:
+  - `color/success/light` **#6FC691** on #FFFFFF — **2.07:1**
+  - `color/success/main` **#3FA266** on #FFFFFF — **3.20:1** — the only green `main`, and it fails
+  - `color/success/dark` **#2B865A** on #FFFFFF — **4.51:1** — passes, but it is `dark`, not `main`
+  - For reference, `color/core/main` **#B3C6C4** with `color/core/contrastText` **#004852** reaches **5.76:1**, but code calls Core its own palette slot, not a green.
+  **The question:** take `success.dark` and accept that it is not a `main`, take `success.main` and accept 3.20:1, or use dark ink on a light green (`success.light` #6FC691 with `color/text/primary` reaches **10.16:1**)? Yusuf's disc is unchanged until Daniel says. The old note stands meanwhile: the fallback renders **1.16:1**, and `libraryAvatar_fallbackInitialsAreInvisible` and `mobileYusuf_noPortraitInTheRepo` stay open.
 
 - Yusuf’s 9:15 row is above the fold on `schedule, Marcus sent`, the frame the resend scenario starts from. The row is wired and the list scrolls, but the frame as drawn does not show the thing the demo asks you to tap next.
 - ~~Where `A S2 Home / schedule, sent` should be scrolled.~~ **Closed 2026-09-17**: Marcus moved to the 11:00 appointment, which makes him the first full row at the unchanged -292 offset. Fixed by moving the row, not the offset, so the peek cue survives.
@@ -162,6 +167,7 @@ One agent at a time.
 | Dim the page behind the open chart | — | 58d6085 |
 | Make Colette younger | — | 0039e25 |
 | Bring Yusuf's page in line | — | 5e5832c |
-| Clean up before the demo | — | — |
+| Clean up before the demo | — | fc154ba |
+| Polish the avatars and drop the chart's closing line | — | — |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
