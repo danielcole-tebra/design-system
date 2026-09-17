@@ -80,7 +80,7 @@ One agent at a time.
   - The sign-in password eye is one glyph and is not wired; there is no revealed state and no `VisibilityOff`.
   - The sign-in fields read `Value=Filled` with a blank value, because that is the only way the library floats a label on an empty field.
   - The three landing pages leave 163 of page between the admin rows and the closed drawer.
-  - Colette's DOB leaves 7 px of slack on the identity row; a longer name or date would wrap it.
+  - Colette's DOB leaves **6** px of slack on the identity row, down from 7 when it was 05/09/1968; a longer name or date would wrap it.
   - `EXPERIMENT A` on `scratchpad` still carries its superseded header and control group, hidden, under rule 1.
   - 28 of the page's 195 reactions sit on hidden, superseded nodes and cannot be tapped.
   - The chart list no longer scrolls, and has no closing line the way the schedule does. With the drawer at 697 it now ends 189 px short of the drawer's bottom.
@@ -155,5 +155,6 @@ One agent at a time.
 | Build the new patient landing page | — | a50722e |
 | Put the new header on the open chart screens | — | 53a452a |
 | Dim the page behind the open chart | — | 58d6085 |
+| Make Colette younger | — | — |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
