@@ -58,12 +58,7 @@ One agent at a time.
 
 - ~~**Where the not-sent alert sits on Yusuf's landing page.**~~ **Settled 2026-09-17**: Daniel confirmed Claude's default, **between the header and the admin details**. Moved to `mobile-spec.md` §2.
 - **Yusuf's landing page shows the closed drawer's tap and drag on the same transition**, `SMART_ANIMATE / EASE_OUT / 0.225`, as the brief asked. On Marcus's and Colette's three landing pages **only the drag carries it** and the tap is instant. One of the two is wrong; they should match.
-- **Which green Yusuf's disc takes — Daniel's call, blocking.** Daniel ruled the initials must be readable on a green token. **Claude's default could not be applied**: the brief authorised the green `main` with the highest contrast against its paired contrast-text token *at 4.5:1 or better*, and no green `main` reaches it. The library's only green family is **success** (code calls it Status), and code pairs success with `contrastText` **`#FFFFFF`**:
-  - `color/success/light` **#6FC691** on #FFFFFF — **2.07:1**
-  - `color/success/main` **#3FA266** on #FFFFFF — **3.20:1** — the only green `main`, and it fails
-  - `color/success/dark` **#2B865A** on #FFFFFF — **4.51:1** — passes, but it is `dark`, not `main`
-  - For reference, `color/core/main` **#B3C6C4** with `color/core/contrastText` **#004852** reaches **5.76:1**, but code calls Core its own palette slot, not a green.
-  **The question:** take `success.dark` and accept that it is not a `main`, take `success.main` and accept 3.20:1, or use dark ink on a light green (`success.light` #6FC691 with `color/text/primary` reaches **10.16:1**)? Yusuf's disc is unchanged until Daniel says. The old note stands meanwhile: the fallback renders **1.16:1**, and `libraryAvatar_fallbackInitialsAreInvisible` and `mobileYusuf_noPortraitInTheRepo` stay open.
+- ~~**Which green Yusuf's disc takes.**~~ **Closed 2026-09-17**: Daniel took the green options off the table — the recording band is green, and a green disc on the patient whose recording failed reads wrong. His disc is **teal**: `color/primary/main` #004852 with `color/primary/contrastText` #FFFFFF, **10.25:1**, Claude's default and **pending Daniel's confirmation of the exact token**. Every teal pair is in `reports/Fix the clipping at the bottom of the avatar photos.md`.
 
 - Yusuf’s 9:15 row is above the fold on `schedule, Marcus sent`, the frame the resend scenario starts from. The row is wired and the list scrolls, but the frame as drawn does not show the thing the demo asks you to tap next.
 - ~~Where `A S2 Home / schedule, sent` should be scrolled.~~ **Closed 2026-09-17**: Marcus moved to the 11:00 appointment, which makes him the first full row at the unchanged -292 offset. Fixed by moving the row, not the offset, so the peek cue survives.
@@ -168,6 +163,7 @@ One agent at a time.
 | Make Colette younger | — | 0039e25 |
 | Bring Yusuf's page in line | — | 5e5832c |
 | Clean up before the demo | — | fc154ba |
-| Polish the avatars and drop the chart's closing line | — | — |
+| Polish the avatars and drop the chart's closing line | — | 1913fa4 |
+| Fix the clipping at the bottom of the avatar photos | — | — |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
