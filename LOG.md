@@ -3722,3 +3722,47 @@ So the later reads were complete and the earlier ones were short by whatever sat
 - `figma-export/archive-dead-frames-2026-09-17/account-screens-page.png`
 - `figma-export/archive-dead-frames-2026-09-17/components-page.png`
 - `figma-export/archive-dead-frames-2026-09-17/archive-page.png`
+
+## 2026-09-17 · Mobile ambient capture · Make the schedule the only home — stopped at the version gate
+
+- File `TP5KrQtY0T5IcMNqi375So`. **Nothing in Figma was changed.** Read-only throughout. `figma.skipInvisibleInstanceChildren = false` on every read.
+- **Stopped on the brief's own precondition.** It states a named version has been saved by hand and says to stop and ask if LOG.md does not say so. **LOG.md does not say so.** Steps 2 to 5 are not started and no DECISION was written, because no ruling has been acted on.
+- Inventory and findings: `reports/Make the schedule the only home.md`.
+
+### The gate
+
+The only version recorded in LOG.md is **"Before tidy, 2026-09-17"** (lines 3552 and 3580), belonging to the *Tidy the Account screens page* batch. **A whole batch has landed since** — `Archive the dead frames and tidy Components` `9602cf9`, which moved 15 nodes between pages, cut six reactions and relaid two pages. The newest checkpoint is two batches old and predates the state this batch would build on.
+
+It matters more here than last time: this batch archives **five frames and two entire pages**, rewires **ten** reactions, removes **fourteen** more, and drops a starting point. `saveVersionHistoryAsync` is still unsupported, so the API cannot make the checkpoint itself. **Daniel to save one by hand.**
+
+### Step 1, run because it is read-only
+
+**Ten reactions point at the five superseded frames, and every one is covered by a step 3 rule. No orphans**, so there is nothing to stop and ask about on that count.
+
+| Source | Layer | To | Step 3 sends it to |
+|---|---|---|---|
+| `A S1 Login / default` | Sign in CTA | / empty | `schedule` |
+| `A S1 Login / error` | Sign in CTA | / empty | `schedule`, by the catch-all |
+| `A S8 Sent / sent` | Next patient CTA | / after first capture | `schedule, sent` |
+| `A S8 Sent / failed` | Back to patients | / after failed capture | `schedule` |
+| `A4 Patient / list` | Back to patients | / empty | `schedule` |
+| `A4 Patient / placeholder` | Back to patients | / empty | `schedule` |
+| `A4 Patient / summary` | Back to patients | / empty | `schedule` |
+| `A S9 Account / unsent` | `1 recording not sent` row | / unsent | `A4 Patient / list, not sent` |
+| `A S1 Login / after sign out` | Sign in CTA | / unsent | `schedule` |
+| `A4 Patient / list, not sent` | Back to patients | / empty | `schedule` |
+
+Two worth naming before they surprise anyone:
+
+1. **`A S1 Login / error`'s Sign In is caught by the catch-all, not the Sign In rule**, which names only *default* and *after sign out*. It still resolves to `schedule`. That frame has **zero inbound** and is unreachable today, so its Sign In is wiring nobody can get to.
+2. **Signing out changes meaning, not just destination.** `after sign out` lands on `/ unsent` today — a home whose whole point is an unsent recording waiting. It will land on `schedule`, where Marcus already reads Failed, so the state survives on the schedule instead of its own screen. The ruling working as intended, but it is the one flow whose sense changes.
+
+**Fourteen reactions live inside the five frames**, to be removed at step 4: on each frame the avatar tap and the search field, plus a `Session row` on `/ sessions`, `/ after first capture`, `/ after failed capture` and `/ unsent`. **Thirteen sit on visible layers** — these five are reachable screens being retired by decision, unlike last batch's dead frames, which had decayed. Removing their reactions is what makes archiving them safe, not housekeeping on something already broken. The one exception is `/ after first capture`'s `Session row` 103:3008, already inside a hidden subtree.
+
+**Starting points today**: `Account device` 103:2320, **`Unsent recording` 140:1618** — on a doomed frame, removed at step 4 — and `Schedule` 204:4082, leaving the two the brief asks to end with.
+
+### Believed, not seen
+
+- **Nothing was rendered**; nothing changed, so the two screenshots the brief asks for belong to the completed batch.
+- **Inbound counts are of reactions whose `destinationId` is one of the five frames.** A reaction pointing at a descendant rather than the frame would not appear, and none was looked for.
+- **Only `Account screens` was walked.** `Visit screens` and `Screens` were not searched for edges into the five, on the standing evidence that no reaction crosses pages; that is inference from the invariant, not a fresh read.
