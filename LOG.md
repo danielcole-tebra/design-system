@@ -3766,3 +3766,62 @@ Two worth naming before they surprise anyone:
 - **Nothing was rendered**; nothing changed, so the two screenshots the brief asks for belong to the completed batch.
 - **Inbound counts are of reactions whose `destinationId` is one of the five frames.** A reaction pointing at a descendant rather than the frame would not appear, and none was looked for.
 - **Only `Account screens` was walked.** `Visit screens` and `Screens` were not searched for edges into the five, on the standing evidence that no reaction crosses pages; that is inference from the invariant, not a fresh read.
+
+## 2026-09-17 · Mobile ambient capture · Make the schedule the only home
+
+- File `TP5KrQtY0T5IcMNqi375So`, all pages. `figma.skipInvisibleInstanceChildren = false` on every read. **No node deleted.**
+- **Resumed after the version gate** — the entry above records the stop; Daniel saved a version by hand and the batch continued. Its inventory is the before-state for this one.
+- Three rulings recorded as DECISIONs: `mobileSchedule_scheduleIsTheOnlyHome`, `mobileAccount_fiveHomesArchived`, `mobileAccount_visitAndScreensPagesArchived`. One new GAP and one new trap.
+- Full report: `reports/Make the schedule the only home.md`. Contact sheet: `reports/Make the schedule the only home.png`.
+
+### Built and rewired
+
+**`A S2 Home / schedule, sent` 227:2420**, cloned from the schedule, placed after `schedule, top`. Marcus Vance at **`Status = sent`** opening **`A4 Patient / list`**; all 14 rows read back 72 tall with names, times and statuses intact. **Trap 34 did not fire** — `Status` is a variant axis, but `Name` and `Time` survived the switch with no re-apply.
+
+**Thirteen redirects, no trigger added or removed** — each reaction rebuilt with its original trigger and navigation, only `destinationId` changed. Sign In from all three logins, "Patients" from all four A4 frames, and `A S8 Sent / failed`'s Back To Patients → **`/ schedule`**; `A S8 Sent / sent`'s Next Patient → **`/ schedule, sent`**; `A S9 Account / unsent`'s "1 recording not sent" row → **`A4 Patient / list, not sent`**; avatars on `/ schedule` and `/ schedule, top` → **`A S9 Account / unsent`**, on `/ schedule, sent` unchanged at `A S9 Account`.
+
+**Fourteen reactions removed** from the five superseded homes — on each the avatar and the search field, plus a `Session row` on four of them — then all five moved to `Archive` at y 13336 to 17512, and the **`Unsent recording` starting point removed**. **Thirteen of the fourteen sat on visible layers**: these were reachable screens retired by decision, unlike the previous batch's decayed frames, so cutting the wiring is what made archiving safe.
+
+**Home row repacked to seven**: schedule, schedule top, schedule sent, empty day, searching, results, no results. **This is a reorder, not just a repack, and it is my judgement** — the tidy batch set rows to run in flow order, and keeping the old sequence would have left the row starting with `searching` and the home fourth. Reversible.
+
+**Pages**: `Visit screens` → **`Archive · Visit screens`**, `Screens` → **`Archive · Screens`**, both moved to the end. Contents, reactions and starting points untouched and re-read to prove it. Page list is now Foundations, Components, Flow, **Account screens**, Archive, Archive · Visit screens, Archive · Screens.
+
+### Found
+
+1. **`schedule, sent` is drawn scrolled past the row it exists to show.** The clone inherited the schedule's **y −292** offset, so Marcus Vance — at stack y 112–184 — spans **−180 to −108** in the container and is **entirely above the fold**. The frame is where Next Patient lands and its whole purpose is to show his row reading Sent, which a provider arriving there cannot see. Built exactly as specified and **not resolved** (rule 10): the offset was not named in the ruling. Offset 0 would show the morning including Marcus; −40 would clear the heading. Logged as `mobileSchedule_sentFrameScrolledPastMarcus` and raised in the plan's Open list. **Caught by looking at the render, not by the reads.**
+2. **Cloning a starting-point frame creates a second starting point with the same name.** After the clone, `flowStartingPoints` held **four** entries including a duplicate `Schedule` on 227:2420 — invisible by name, distinguishable only by nodeId, and absent from the clone result. Removed. This **refines the tidy batch's note** that a cloned frame does not inherit one: that clone was of a frame which had none. Now **trap 46**: read `flowStartingPoints` after every frame clone and filter by nodeId, not by name.
+3. **The search screens' avatars still go to `A S9 Account`**, not the unsent variant — consistent with `schedule, sent`, inconsistent with `schedule`. The ruling named only the three schedule frames, so they were left. A provider who searches while holding an unsent recording gets the account screen that does not mention it.
+
+### Verified
+
+| Page | Frames | Reactions |
+|---|---|---|
+| **Account screens** | 37 → **33** (+8 labels) | 122 across 119 → **111 across 108** |
+| **Archive** | 19 → **24** | 0 → 0 |
+| Components | 36 (+4 labels), unchanged | 0 |
+| **Archive · Visit screens** | 26, unchanged | 84 across 81, unchanged |
+| **Archive · Screens** | 18, unchanged | 42 across 41, unchanged |
+
+- **Frames 37 → 33**: +1 clone, −5 archived. **Reactions 122 → 111**: +3 carried in by the clone, −14 stripped; the thirteen redirects are net zero.
+- **Nothing on `Account screens` points at an archived frame** — all 29 destinations resolved and walked; none landed on any Archive page.
+- **No cross-page edges anywhere**: 29 local on Account screens, 20 on Archive · Visit screens, 13 on Archive · Screens; Archive and Components hold none.
+- **Starting points: `Account device` and `Schedule`**, after removing `Unsent recording` and the clone's duplicate.
+- **Zero overlaps** on `Account screens` and `Archive`.
+
+**Flow 1**, traced as stored wiring: `Sign in CTA` → `/ schedule` → `Marcus Vance` row → `A4 Patient / list, not sent` → `Not sent alert` → `A S7 Sending` → frame-own `AFTER_TIMEOUT` → `A S8 Sent / sent` → `Next patient CTA` → `/ schedule, sent`. Closed.
+
+**Flow 2**: schedule `Search field` → `/ searching` → `Search field` → `/ results` → `Search result row` → `A4 Patient / list` → `Back to patients` → `/ schedule`. Closed, returning to the schedule rather than a search state.
+
+### Believed, not seen
+
+- **The prototype was not played.** Both flows are traced hop by hop through stored `destinationId`s; that they navigate is inference from the wiring resolving.
+- **The redirects copied `transition` and `resetScrollPosition` off the old action.** Each read back with the right trigger and destination, but the full action object was not diffed field by field.
+- **"Contents untouched" on the two renamed pages** rests on unchanged frame and reaction counts plus a destination check, not an inspection of their internals.
+- **The search screens' avatar destinations are reported, not tested.**
+- **The page screenshot is 710 × 1500 for a 3570 × 7546 page**, so its frames are thumbnails; counts and overlaps were verified by arithmetic, and `schedule, sent` exported separately at 1x.
+- Both screenshots were looked at before this was written — which is how finding 1 surfaced.
+
+### Screenshots
+
+- `figma-export/schedule-only-home-2026-09-17/account-screens-page.png`
+- `figma-export/schedule-only-home-2026-09-17/as2-home-schedule-sent-227-2420-1x.png`

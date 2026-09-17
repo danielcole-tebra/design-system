@@ -53,7 +53,10 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 **Home and schedule**
 
-- Search is the spine and stays unchanged. The schedule is a shortcut above the fallback, not a replacement for it.
+- The schedule is the only home. Everything that used to land on a home lands there.
+- Search stays. `searching`, `results` and `no results` remain, reached from the schedule’s own search field — the way to a patient who is not on today’s list.
+- `A S2 Home / empty`, `/ sessions`, `/ after first capture`, `/ after failed capture` and `/ unsent` are superseded and archived.
+- `Visit screens` and `Screens` are archived, as `Archive · Visit screens` and `Archive · Screens`.
 - The schedule is a set of ways into a patient, not a record. It shows the schedule as it stands and never reasons about it.
 - A row knows the patient, the time, whether the visit is telehealth, and whether a recording exists. A past row with no recording is quiet: no status, no explanation.
 - The status is the only pill on a schedule row. Telehealth is shown as text with an icon, not a Chip: a separator, a 16 `VideocamOutlined` and the word "Telehealth", on the time line, in secondary ink.
@@ -124,14 +127,14 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 | Page | What it is |
 |---|---|
-| `Account screens` 103:2319 | **The full app.** 37 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. All new work goes here. Starting points: Account device, Unsent recording, Schedule |
-| `Visit screens` 43:705 | The Patient chart demo, without account or schedule. 26 frames. Starting point: Visit device |
-| `Screens` 1:3 | The original four-job prototype. 18 frames. Never edited |
+| `Account screens` 103:2319 | **The whole app, and the only working screen page.** 33 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
 | `Components` | Local components, shared by all pages, in four labelled groups: `Visit/` (22), `Account/` (4), `Schedule/` (1), Base components (9). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
-| `Archive` 214:3026 | 17 PROOF and scaffolding frames, then the two dead screens `A S4 Patient` 103:2412 and `A S6 Stop confirmation` 103:2451. One column, 200 apart. Nothing here has a reaction, and the two dead screens stay hidden |
+| `Archive` 214:3026 | 24 frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, then the five superseded homes. Nothing here has a reaction |
+| `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
+| `Archive · Screens` 1:3 | The original four-job prototype, archived 2026-09-17. 18 frames, 42 reactions, starting point Happy path. Never edited |
 | `Foundations` | Frame template and colour table |
 
-Frame names start with the page's letter: `A` for Account screens, `V` for Visit screens, none for Screens. No reaction crosses pages.
+Frame names start with the page's letter: `A` for Account screens, `V` for the archived Visit screens, none for the archived Screens. No reaction crosses pages, and nothing on `Account screens` points at an archived frame.
 
 ---
 
@@ -193,22 +196,19 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 - Result rows show the name, with DOB and ID below.
 - The home list is a plain vertical stack starting at y 191. Nothing on the existing home frames scrolls.
 
-**A S2 Home frames.**
+**A S2 Home frames.** Five former homes were archived 2026-09-17; what is left is the schedule and the search states.
 
 | Frame | What it shows |
 |---|---|
-| / empty | Nothing below search |
-| / sessions | "Today" and three session rows, one Failed |
+| / schedule | **The home.** "Today" and fourteen rows, drawn scrolled with the last past row peeking in halfway |
+| / schedule, top | The same fourteen rows at the list’s start |
+| / schedule, sent | After a send: Marcus Vance reads Sent and opens `A4 Patient / list`. Where Next Patient lands |
+| / empty day | "No appointments today" |
+| / searching | Search in progress |
 | / results | Search results |
 | / no results | "No patients match" |
-| / searching | Search in progress |
-| / after first capture | The newest row reads Sent |
-| / after failed capture | The newest row reads Failed to send |
-| / unsent | "Yesterday", one failed Marcus Vance row at 4:30 PM. The whole row taps to Sending |
-| / schedule | "Today" and fourteen rows, drawn scrolled with the last past row peeking in halfway |
-| / schedule, top | The same fourteen rows at the list's start |
-| / empty day | "No appointments today" |
 
+Archived: `/ empty`, `/ sessions`, `/ after first capture`, `/ after failed capture`, `/ unsent`.
 **Schedule, built 2026-09-17.** All three clone `A S2 Home / empty`, so the top bar, avatar and search at rest carry over, and each keeps that frame's two reactions (avatar to Account, search to Searching).
 
 - **A S2 Home / schedule** 204:4082 and **A S2 Home / schedule, top** 204:4127 hold a `Schedule scroll` frame at y 191, **390 x 619**, clipping, `overflowDirection` VERTICAL, reaching the 34 bottom safe area. Inside it a `Schedule content` stack, **390 x 1048**, holds the "Today" `List heading` (40) and **fourteen** `Schedule/Row` instances (72 each). **Both frames overflow**: the content bottom sits at 756 and 1048 against a container bottom of 619.
@@ -368,15 +368,16 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 | From | Tap | To |
 |---|---|---|
-| Login | Sign In | A S2 Home / sessions (after sign out: / unsent) |
+| Any login, all three | Sign In | A S2 Home / schedule |
 | Any login | Forgot Password? | A S10 |
 | A S10 | back / Send Link | back / A S11 |
 | A S11 | Back To Sign In | A S1 Login / default |
-| A S2 Home frames | avatar | A S9 Account (from / unsent: A S9 Account / unsent) |
-| A S2 Home / unsent | Marcus Vance row | A S7 Sending |
+| / schedule and / schedule, top | avatar | A S9 Account / unsent |
+| / schedule, sent and the search states | avatar | A S9 Account |
+| A S9 Account / unsent | 1 recording not sent row | A4 Patient / list, not sent |
 | A S9 Account, both | back / Microphone | back / A S3 Microphone |
 | A S9 Account | Sign Out | A S1 Login / default |
-| A S9 Account / unsent | unsent row / Sign Out | A S2 Home / unsent / sign-out warning |
+| A S9 Account / unsent | Sign Out | A S9 Account / sign-out warning |
 | Warning | Retry / Sign Out Anyway / scrim | A S7 Sending / A S1 Login / after sign out / A S9 Account / unsent |
 
 **Home, chart and recording**
@@ -384,7 +385,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | From | Action | To |
 |---|---|---|
 | Search result | tap | A4 Patient / list |
-| A4 "Patients" | tap | home |
+| A4 "Patients", all four | tap | A S2 Home / schedule |
 | A4 device pill | tap | A S3 Microphone |
 | A4 Template pill | tap | nothing |
 | A4 Start Recording | tap | A S5 Recording / recording |
@@ -400,25 +401,27 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | Microphone frame | row or scrim | back to the calling frame |
 | Every Stop | tap | the stop overlay |
 | Stop overlay | Stop Recording / Cancel | A S7 Sending / close |
-| A S8 sent | Next Patient | home |
-| A S8 failed | Retry / Back To Patients | A S7 Sending / home |
+| A S8 sent | Next Patient | A S2 Home / schedule, sent |
+| A S8 failed | Retry / Back To Patients | A S7 Sending / A S2 Home / schedule |
 
 **Schedule**
 
 | From | Tap | To |
 |---|---|---|
-| Marcus Vance row, on both schedule frames | tap | A4 Patient / list, not sent |
-| Every other row, the next upcoming included | tap | nothing |
+| Marcus Vance row, on / schedule and / schedule, top | tap | A4 Patient / list, not sent |
+| Marcus Vance row, on / schedule, sent | tap | A4 Patient / list |
+| Every other row, on all three | tap | nothing |
+| Schedule search field | tap | A S2 Home / searching |
 
 **Counts now:**
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 43 (39 screens, 4 proof scaffolds) | 128 across 125 |
-| Visit screens | 26 | 84 across 81 |
-| Screens | 18 | 42 across 41 |
+| Account screens | 33 screens | 111 across 108 |
+| Archive · Visit screens | 26 | 84 across 81 |
+| Archive · Screens | 18 | 42 across 41 |
 
-No cross-page edges. Starting points: `Account device` 103:2320, `Unsent recording` 140:1618, `Schedule` 204:4082.
+No cross-page edges, and nothing on `Account screens` points at an archived frame. Starting points: `Account device` 103:2320 and `Schedule` 204:4082.
 
 ---
 

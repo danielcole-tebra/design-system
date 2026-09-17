@@ -46,7 +46,8 @@ One agent at a time.
 
 ## Open
 
-- How yesterday's unsent rows sit beside today's schedule. For now they stay on their own unsent home.
+- Where `A S2 Home / schedule, sent` should be scrolled. It is cloned at the schedule's -292 offset, which puts Marcus Vance above the fold — so the frame that exists to show his row reading Sent does not show it. See `mobileSchedule_sentFrameScrolledPastMarcus`.
+- ~~How yesterday's unsent rows sit beside today's schedule.~~ **Closed 2026-09-17**: there is no separate unsent home any more. `A S2 Home / unsent` is archived, and an unsent recording shows on the schedule itself, where Marcus reads Failed; the account screen's "1 recording not sent" row opens his chart.
 - Search result fields should match desktop patient search. Daniel is checking.
 - Known and accepted:
   - The Template pill opens nothing.
@@ -97,6 +98,7 @@ One agent at a time.
 | Change the telehealth marker to text and icon | — | e687475 |
 | Fill out the schedule day and wire it | — | e434873 |
 | Tidy the Account screens page | — | 548bd7d |
-| Archive the dead frames and tidy Components | — | (this commit) |
+| Archive the dead frames and tidy Components | — | 9602cf9 |
+| Make the schedule the only home | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
