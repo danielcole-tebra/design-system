@@ -55,6 +55,8 @@ One agent at a time.
 - **On `A4 Yusuf / list, not sent` the chart list ends at Vitals and Social history cannot be reached.** His drawer starts 64 lower to clear the not-sent alert, so the nine rows run past the `Footer band`, and with rows 10 to 14 hidden the list no longer scrolls (466 of content in a 501 area). Social history sits entirely behind the band. Nothing was changed — how a shortened drawer should end is a design question, and his chart is inert either way. Raised 2026-09-17, `mobileVitals_yusufListCannotReachSocialHistory`.
 - In Daniel's words: "The patient screen shows a drawer when a drawer isn't really needed before recording. Reconsider the patient screen. Not urgent."
 - ~~Whether the scroll area should run to the screen bottom.~~ **Closed 2026-09-17, then reopened and closed the other way the same day.** The first playthrough read the beige under the list as the page showing where the list ends, and the closing line "That's everyone for today" was built for it. The second playthrough corrected the premise: **the beige was the scroll area stopping short at the safe area, not the page.** The scroll area now runs to the frame bottom on all four schedule frames and the 34 of clearance moved inside the scrolling stack. The closing line survives the correction and is unchanged.
+- **`Sheet body`'s 122 of bottom padding does not buy scroll clearance**, so the summary carries its own 138 instead. Whether the 122 should come off `Sheet body` — and whether the chart list wants the same treatment — is open; it would touch every sheet frame. Raised 2026-09-17, `mobileSummary_scrollFramePaddingIsNotClearance`.
+- **The Patient summary still carries a feedback action**, which §6.4 says ported sheets drop. It predates the rule. Whether it stays is Daniel's call; its copy also reads "How would your rate". Raised 2026-09-17, `mobileSummary_feedbackBlockSurvivesTheActionDrop`.
 - Search result fields should match desktop patient search. Daniel is checking.
 - Known and accepted:
   - The Template pill opens nothing. It now reads "SOAP Note".
@@ -68,6 +70,8 @@ One agent at a time.
   - `A5 Paused / drawer list` opens no sheet at all; Patient summary is its only wired row, as before.
   - The Vitals rows on `A4 Yusuf / list, not sent` are inert, like the rest of his chart.
   - The empty 48 band under the puller in list mode stays.
+  - The two recording summary frames end with 138 of blank they have no footer to clear, because the clearance is set once on the shared sheet.
+  - The new disclaimer reads through to four archived frames, which instance the same summary component.
 - GAPs the library can't express yet:
   - no Divider component
   - the overlay background is a literal colour
@@ -126,5 +130,6 @@ One agent at a time.
 | Enlarge the time marker dot | — | 46bb155 |
 | Make the Medications sheet real | — | 85e1b5e |
 | Make the Vitals sheet real | — | a28dc9f |
+| Polish the patient summaries | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.
