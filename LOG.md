@@ -3461,3 +3461,82 @@ On `Secondary line`, **8 after the time**: a `Telehealth` group, HORIZONTAL, HUG
 - `figma-export/telehealth-text-2026-09-17/schedule-row-set-196-777-2x.png`
 - `figma-export/telehealth-text-2026-09-17/schedule-row-proof-196-787-2x.png`
 - `figma-export/telehealth-text-2026-09-17/as2-home-schedule-top-204-4127-1x.png`
+
+## 2026-09-17 · Mobile ambient capture · Fill out the schedule day and wire it
+
+- File `TP5KrQtY0T5IcMNqi375So`, **`Components` page and `Account screens`**. `figma.skipInvisibleInstanceChildren = false` on every read. Additive: nothing deleted; **`Status chip` 4:395, `Session row` 4:454 and the `Screens` page untouched**, all re-read to prove it.
+- Four rulings recorded as DECISIONs and written into `mobile-spec.md` §2: `mobileSchedule_statusPillsAreOneWord`, `mobileSchedule_fullDayToFivePM`, `mobileSchedule_lastPastRowPeeksHalfway`, `mobileSchedule_sixMorePlaceholdersAndWiring`.
+- Full report: `reports/Fill out the schedule day and wire it.md`. Contact sheet: `reports/Fill out the schedule day and wire it.png`.
+
+### 1. The Failed pill
+
+`Status = failed` 196:762 only. The nested `Chip (library)` `I196:768;4:388` had `Label#156:0` set to **"Failed"**.
+
+| | Before | After |
+|---|---|---|
+| Chip width | 107 | **59** |
+| Chip left edge | 235 | **283** |
+| Chip right edge | 342 | **342** |
+| Text column beside it | 203 | **251** |
+
+**The shared master was not touched, and that was checked rather than assumed**: 4:395's failed variant is still 107 / "Failed to send", `Session row` 4:445 the same, and all **six** "Failed to send" labels on `Screens` unchanged at 85 wide.
+
+**The override reaches every failed instance by inheritance, not by editing** — both proof rows and Marcus Vance on both schedule frames read "Failed" at 59 with a 251 column, none of them opened. The pattern worth keeping: **to narrow a shared chip for one consumer, override the nested library instance inside the variant, never the set.**
+
+### 2. Six more rows, both frames
+
+Appended after Theo Abernathy, all `Status = none`, each built from its variant: **Nadia Kowalczyk 2:30 PM**, **Emeka Balogun 3:00 PM (Telehealth)**, **Sofia Renteria 3:30 PM**, **Hamish Croft 4:00 PM**, **Lena Petrova 4:30 PM**, **Amara Dunbar 5:00 PM**. Six invented names, distinct from the existing eight. Each stack is now **fourteen rows, 390 × 1048**.
+
+### 3. Offset −292, and the overflow
+
+Renata Ilves (10:20 AM) sits at y 256 and is 72 tall, so its midpoint is **292**. At `y -292` its bottom half — the time line and the lower half of its Sent pill — shows at the container top, and **Yusuf Bahri starts at container y 36**, fully visible.
+
+| Frame | Stack y | Stack h | Content bottom | Container | Overflows |
+|---|---|---|---|---|---|
+| `/ schedule` | −292 | 1048 | **756** | 619 | yes, by 137 |
+| `/ schedule, top` | 0 | 1048 | **1048** | 619 | yes, by 429 |
+
+Both now genuinely overflow, which is what the eight-row version could not do.
+
+### 4. Wiring
+
+Marcus Vance's row → `A4 Patient / list, not sent` 200:6707 on **both** frames. Every other row on both carries **zero** reactions. Flow starting point **`Schedule`** added on 204:4082.
+
+### Found
+
+1. **`/ schedule, top` has no bottom cue, and it is a near miss.** Row 8 ends at **616** against a container bottom of **619**, so **exactly 3 px of row 9 shows** — the list looks like it stops cleanly at 2:00 PM with nothing to say six more appointments follow. Arithmetic coincidence, not a decision: 40 + 8 × 72 = 616. It is the mirror of the cue Daniel just asked for at the top; **not resolved** (rule 10).
+2. **The peeking row shows a half-clipped pill.** What peeks is the time line plus the **bottom half of Renata's Sent pill** — a green arc with no text. It reads as "something is cut off", which is the point, but it is a pill sliced through the middle rather than a name. Worth a look at arm's length.
+3. **The three pills now read as one family.** `Failed to send` at 107 was nearly the width of `Sent` 51 and `Sending` 72 together, and the only one that carried a phrase rather than a state. At 59 it sits between them. Second-order: the columns are now **Sent 259, Failed 251, Sending 238**, where they were **Sent 259, Sending 238, Failed 203** — the failed row is no longer the tightest.
+
+### Verified
+
+**All 28 row instances read back**: 14 per frame, all **72 tall** and 390 wide; **nothing truncates** (DISABLED on every `Name`, `Time` and Telehealth word; `Name` 24 tall and `Time` 20 throughout); **strict time order** on both, parsed to minutes with no ties; **Telehealth on exactly Colette Mwangi 11:30 AM and Emeka Balogun 3:00 PM**, tested by walking to the page (trap 39); **Marcus Vance's pill reads "Failed"**; **only Marcus carries a reaction** on either frame.
+
+| Page | Frames | Reactions |
+|---|---|---|
+| **Account screens** | 43, unchanged (+4 components) | 126 across 123 → **128 across 125** |
+| Components | 45 children, unchanged | holds none |
+| Visit screens | 26 → 26 | 84 across 81, unchanged |
+| Screens | 18 → 18 | 42 across 41, unchanged |
+
+- **No frame created** — the twelve new rows are children of existing stacks.
+- **+2 reactions on +2 nodes**: Marcus Vance's row on each schedule frame. Nothing existing edited.
+- **Destinations 30 → 31**: 200:6707 is now a destination, where nothing pointed at it before.
+- **No reaction crosses pages**: all 31 resolved and walked to their page, all on `Account screens`.
+
+**Starting points: three, no duplicate** — `Account device` 103:2320, `Unsent recording` 140:1618, `Schedule` 204:4082. The array was read, appended and written back with a guard against a second 204:4082. **The spec was wrong here before today**: §4 listed "Visit device, Account device, Unsent recording" for this page, but `Visit device` belongs to `Visit screens`. §4 now names the three that are actually there.
+
+### Believed, not seen
+
+- **The prototype was not played.** The scroll is arithmetic — `overflowDirection` VERTICAL plus 1048 in a 619 container — not an observed scroll, and Marcus's reaction is read from the node, not watched. Now the top item in the plan's Later list.
+- **The peek is judged from a 1x render on a monitor.** Whether a half-row reads as "scroll up" or as "broken" is exactly what changes at arm's length.
+- **The override's reach was verified on four instances**, not by a census of every instance of the failed variant.
+- **The six names are placeholders and the clock is invented**; 5:00 PM as the day's end is Daniel's ruling, not data.
+- `Components` was recounted for children only; it holds no reactions and never has.
+- All three renders were looked at before this was written.
+
+### Screenshots, 1x
+
+- `figma-export/schedule-full-day-2026-09-17/as2-home-schedule-204-4082-1x.png`
+- `figma-export/schedule-full-day-2026-09-17/as2-home-schedule-top-204-4127-1x.png`
+- `figma-export/schedule-full-day-2026-09-17/schedule-row-proof-196-787-1x.png`

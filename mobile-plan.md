@@ -26,17 +26,16 @@ One agent at a time.
 
 | Batch | What it does |
 |---|---|
-| Wire the schedule | Marcus Vance's row opens `A4 Patient / list, not sent`; every other row is inert. A starting point if wanted. Then play it once to check the scroll |
 | Tidy up | Hide the four superseded components that are still visible. Fill or move the Recording bar set so it stops overlapping a proof frame. Add the footer band to COMPOSITIONS.md, and record the A4 band ids. Note the page-lookup trap in PLUGIN-NOTES.md |
 
 ## Later
 
+- Play the schedule on a phone. Check the scroll, the peeking row, and that Marcus Vance is the only row that goes anywhere.
 - Play both pages on a phone. Check:
   - the unsent loop
   - the chart drill-in while recording
   - the microphone sheet
   - stop and cancel from a paused drawer
-  - the schedule scroll
 - Judge the 16 px pill triangle and the 40 avatar at arm's length.
 - Port real sheets into the Patient chart, Medications first. Daniel supplies the sheet list and NPVE nodes.
 - Library batch in YX2n4YLrEpBXNbcc73T6dw:
@@ -95,6 +94,7 @@ One agent at a time.
 | Add a chevron and white fill to the schedule row | — | a7f1cd9 |
 | Build the not-sent alert on the patient screen | — | c8e9e22 |
 | Build the schedule home screens | — | bf0178a |
-| Change the telehealth marker to text and icon | — | (this commit) |
+| Change the telehealth marker to text and icon | — | e687475 |
+| Fill out the schedule day and wire it | — | (this commit) |
 
 Batches 0 to 5 all landed in one commit, `ed321b2`. A batch cannot carry its own hash, so the newest row names itself and the next batch fills it in.

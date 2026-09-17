@@ -42,7 +42,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - One back chevron per screen.
 - **Sheets and drawers** have 32 top corners and one shared top (puller 30, title row 48). No close (X) button on any of them.
 - Body text is pure black, as the library has it.
-- Status language is Sending, Sent and Failed to send. Never "synced", "complete" or "ready". The phone reports only on the handoff.
+- Status language is Sending, Sent and Failed to send. Never "synced", "complete" or "ready". The phone reports only on the handoff. On schedule rows the pill shortens to one word — Sending, Sent, Failed — because the row leads to the patient, where the alert gives the full context.
 
 **Account**
 
@@ -57,6 +57,9 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - The schedule is a set of ways into a patient, not a record. It shows the schedule as it stands and never reasons about it.
 - A row knows the patient, the time, whether the visit is telehealth, and whether a recording exists. A past row with no recording is quiet: no status, no explanation.
 - The status is the only pill on a schedule row. Telehealth is shown as text with an icon, not a Chip: a separator, a 16 `VideocamOutlined` and the word "Telehealth", on the time line, in secondary ink.
+- Status pills on schedule rows are one word: Sending, Sent, Failed. The row takes the provider to the patient, where the alert gives the full context.
+- The schedule shows a full day, running to 5:00 PM, so the list overflows and scrolls.
+- On `A S2 Home / schedule`, the last past row peeks halfway in under the search field, as a cue that there is more above.
 - Schedule rows show a trailing `ChevronRight` to say they open the patient. It sits on the optical edge, and the status chip moves left to make room.
 - Schedule rows sit on `color/background/paper`, not transparent over the page.
 - A recording for a patient not on the schedule gets its own row, in time order by when it started.
@@ -68,7 +71,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - A recording that was not sent is retried from the patient screen, through an alert above the Patient chart.
 - Retry on that alert uses the library's teal text-button style, `color=primary`, like every other text action in the app.
 - The whole not-sent alert is the tap target for Retry, overriding the library Alert, which only makes its action tappable. It matches the unsent row, where tapping the whole row retries.
-- On the schedule, Marcus Vance's row is the Failed to send row. The next upcoming appointment belongs to another patient and, like every row except Marcus's, does nothing when tapped, because his is the only patient with a chart in the file.
+- On the schedule, Marcus Vance's row is the failed row. The next upcoming appointment belongs to another patient and, like every row except Marcus's, does nothing when tapped, because his is the only patient with a chart in the file.
 - `A S2 Home / unsent` is unchanged. Its row still retries straight to Sending.
 
 **Patient chart**
@@ -121,7 +124,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 
 | Page | What it is |
 |---|---|
-| `Account screens` 103:2319 | **The full app.** 39 frames (35 screens, 4 proof scaffolds). All new work goes here. Starting points: Visit device, Account device, Unsent recording |
+| `Account screens` 103:2319 | **The full app.** 43 frames (39 screens, 4 proof scaffolds). All new work goes here. Starting points: Account device, Unsent recording, Schedule |
 | `Visit screens` 43:705 | The Patient chart demo, without account or schedule. 26 frames. Starting point: Visit device |
 | `Screens` 1:3 | The original four-job prototype. 18 frames. Never edited |
 | `Components` | Local components, shared by all pages |
@@ -151,7 +154,7 @@ Library components are used as they are: Button, Text field, Alert, Dialog, Circ
 | `Visit/Icon/…` | Components | Exact MUI paths: ArrowDropDown 59:493, ChevronLeft 159:1103, ChevronRight 159:1105, ExpandMore 159:1107 (reserved), PauseCircle 74:531, StopCircle 74:534, PlayCircle 74:537, Cancel 74:540, VideocamOutlined 206:830 |
 | `Session row` | 4:454 | 390 x 72. Name 16/24 and time 14/20 in a column, `Status chip` trailing, bottom divider. `State`: default, failed |
 | `Status chip` | 4:395 | Library Chip, medium, outlined. `Status`: Sending, Sent, Failed to send |
-| `Schedule/Row` | 196:777 | 390 x 72 on `color/background/paper`, like `Session row`. Time line: the time, then 8, then the Telehealth group — `·`, a 16 `VideocamOutlined` and the word, all body2 14/20 on `color/text/secondary`, 4 apart, 97 wide, driven by the `Telehealth` boolean. Trailing `ChevronRight` (159:1105, 24, `color/grey/600`, ink ending at 374, right padding 8). Status chip ends at 342. `Name`, `Time`, `Telehealth`, `Status` (none, sending, sent, failed). The old Telehealth Chip is hidden and labelled SUPERSEDED |
+| `Schedule/Row` | 196:777 | 390 x 72 on `color/background/paper`, like `Session row`. Time line: the time, then 8, then the Telehealth group — `·`, a 16 `VideocamOutlined` and the word, all body2 14/20 on `color/text/secondary`, 4 apart, 97 wide, driven by the `Telehealth` boolean. Trailing `ChevronRight` (159:1105, 24, `color/grey/600`, ink ending at 374, right padding 8). Status chip ends at 342; on `failed` its nested label is overridden to the one word **"Failed"**, 59 wide from x 283, leaving a 251 text column — `Status chip` 4:395 itself is untouched. `Name`, `Time`, `Telehealth`, `Status` (none, sending, sent, failed). The old Telehealth Chip is hidden and labelled SUPERSEDED |
 | Search result row, Level meter, Field buttons | Components | From the original build |
 
 Superseded components are labeled and kept, never deleted. The list is in FLAGS.md.
@@ -201,39 +204,42 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 | / after first capture | The newest row reads Sent |
 | / after failed capture | The newest row reads Failed to send |
 | / unsent | "Yesterday", one failed Marcus Vance row at 4:30 PM. The whole row taps to Sending |
-| / schedule | "Today" and eight rows, drawn scrolled to the first upcoming |
-| / schedule, top | The same list at its start |
+| / schedule | "Today" and fourteen rows, drawn scrolled with the last past row peeking in halfway |
+| / schedule, top | The same fourteen rows at the list's start |
 | / empty day | "No appointments today" |
 
 **Schedule, built 2026-09-17.** All three clone `A S2 Home / empty`, so the top bar, avatar and search at rest carry over, and each keeps that frame's two reactions (avatar to Account, search to Searching).
 
-- **A S2 Home / schedule** 204:4082 and **A S2 Home / schedule, top** 204:4127 hold a `Schedule scroll` frame at y 191, **390 x 619**, clipping, `overflowDirection` VERTICAL, reaching the 34 bottom safe area. Inside it a `Schedule content` stack, 390 x 616, holds the "Today" `List heading` (40) and eight `Schedule/Row` instances (72 each).
-- **/ schedule, top** draws the stack at y 0. **/ schedule** offsets it to **y -328** so the first upcoming row, Yusuf Bahri at 11:00 AM, sits directly below the search block.
+- **A S2 Home / schedule** 204:4082 and **A S2 Home / schedule, top** 204:4127 hold a `Schedule scroll` frame at y 191, **390 x 619**, clipping, `overflowDirection` VERTICAL, reaching the 34 bottom safe area. Inside it a `Schedule content` stack, **390 x 1048**, holds the "Today" `List heading` (40) and **fourteen** `Schedule/Row` instances (72 each). **Both frames overflow**: the content bottom sits at 756 and 1048 against a container bottom of 619.
+- **/ schedule, top** draws the stack at y 0. **/ schedule** offsets it to **y -292**, the midpoint of the Renata Ilves row, so the last past appointment peeks in halfway under the search field and Yusuf Bahri starts 36 below it, fully visible.
 - **A S2 Home / empty day** 204:4172 shows "No appointments today", built as a clone of `No patients match` 103:2395.
 
-The eight rows, in time order. Times place the present between 10:20 and 11:00 AM.
+The fourteen rows, in strict time order. Times place the present between 10:20 and 11:00 AM.
 
 | Time | Name | Status | |
 |---|---|---|---|
 | 8:30 AM | Dolores Okonkwo | Sent | |
-| 9:15 AM | Marcus Vance | Failed to send | the only row that will be wired |
+| 9:15 AM | Marcus Vance | Failed | the only wired row |
 | 9:45 AM | Priya Raghunathan | none | past and quiet |
-| 10:20 AM | Renata Ilves | Sent | off schedule, placed by when it started |
+| 10:20 AM | Renata Ilves | Sent | off schedule, placed by when it started; the row that peeks |
 | 11:00 AM | Yusuf Bahri | none | first upcoming |
 | 11:30 AM | Colette Mwangi | none | Telehealth |
 | 1:15 PM | Ingrid Solheim | none | |
 | 2:00 PM | Theo Abernathy | none | |
+| 2:30 PM | Nadia Kowalczyk | none | |
+| 3:00 PM | Emeka Balogun | none | Telehealth |
+| 3:30 PM | Sofia Renteria | none | |
+| 4:00 PM | Hamish Croft | none | |
+| 4:30 PM | Lena Petrova | none | |
+| 5:00 PM | Amara Dunbar | none | |
 
-Renata Ilves, Yusuf Bahri, Colette Mwangi, Ingrid Solheim and Theo Abernathy are invented placeholders, logged in FLAGS.md as `mobileSchedule_placeholderRowsAndTimes`.
-
-**At eight rows the list does not overflow.** The stack is 616 in a 619 viewport, so nothing can scroll and `/ schedule` shows four rows above 331 px of empty page. See the LOG entry for the batch.
-
+Eleven of the fourteen names are invented placeholders, logged in FLAGS.md as `mobileSchedule_placeholderRowsAndTimes` and `mobileSchedule_sixMorePlaceholdersAndWiring`.
 What a schedule row shows depends on the clock and on whether a recording exists:
 
 | Time passed | Recording | Row shows |
 |---|---|---|
 | No | No | Upcoming, no status |
-| Yes | Yes | Sending, Sent or Failed to send |
+| Yes | Yes | Sending, Sent or Failed |
 | Yes | No | Nothing extra |
 
 ### 6.3 Account
@@ -396,22 +402,22 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | A S8 sent | Next Patient | home |
 | A S8 failed | Retry / Back To Patients | A S7 Sending / home |
 
-**Schedule, to be wired**
+**Schedule**
 
 | From | Tap | To |
 |---|---|---|
-| Marcus Vance row, which is the Failed to send row | tap | A4 Patient / list, not sent |
+| Marcus Vance row, on both schedule frames | tap | A4 Patient / list, not sent |
 | Every other row, the next upcoming included | tap | nothing |
 
 **Counts now:**
 
 | Page | Frames | Reactions |
 |---|---|---|
-| Account screens | 43 (39 screens, 4 proof scaffolds) | 126 across 123 |
+| Account screens | 43 (39 screens, 4 proof scaffolds) | 128 across 125 |
 | Visit screens | 26 | 84 across 81 |
 | Screens | 18 | 42 across 41 |
 
-No cross-page edges.
+No cross-page edges. Starting points: `Account device` 103:2320, `Unsent recording` 140:1618, `Schedule` 204:4082.
 
 ---
 
