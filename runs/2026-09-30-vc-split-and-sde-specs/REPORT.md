@@ -123,5 +123,5 @@ specs/patient-summary/npve-patient-summary-feedback-2026-09-10-appearance.md  (1
 
 - `MOVED.md`: appended "as of 2026-09-30, Visit Companion design work lives in visit-companion-prototype/design/. Mobile files remaining here are frozen history."
 - `LOG.md`: entry appended.
-- Commit: only `MOVED.md`, `LOG.md` and this run folder, message "Split Visit Companion design out". Hash: HASH_PENDING. A commit cannot contain its own hash, so it was written into this file in a second commit that touches only this report.
+- Commit: only `MOVED.md`, `LOG.md` and this run folder, message "Split Visit Companion design out". Hash: `380f18e`. A commit cannot contain its own hash, so it was written into this file in a second commit that touches only this report.
 - Uncommitted files left alone at commit time: none. Before committing, `git status` showed only MOVED.md, LOG.md and this run folder.
