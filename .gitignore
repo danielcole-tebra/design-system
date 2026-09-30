@@ -1,2 +1,7 @@
 .workflow-runs/
 .tmp.driveupload/
+desktop.ini
+Thumbs.db
+.DS_Store
+node_modules/
+.env*
