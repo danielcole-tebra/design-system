@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-29",
+  "file": "fdCQVFdvOByaOYIJYag0d6",
+  "item1_edit_form_root_fills": {
+    "note": "all five: SOLID, color bound to file-local variable Form surface (VariableID:387:3434) = {r:0.9333,g:0.9686,b:0.9765}; stroke 1, radius 8. Restore = rebind that variable.",
+    "634:6808": {"w":518,"h":468}, "636:3": {"w":518,"h":468}, "586:6414": {"w":518,"h":354},
+    "580:6017": {"w":518,"h":410}, "389:3469": {"w":518,"h":612}
+  },
+  "item2_carets": {
+    "note": "all four were instances of Icon/DownCaret 3:5 (key 9014d342). Ink bound: status carets color/success/main, selector carets color/text/primary. Restore = swapComponent back to 3:5.",
+    "190:23": {"parent":"170:1590","size":[12,12],"pos":[48,4],"name":"Status caret"},
+    "222:1995": {"parent":"219:2070","size":[12,12],"pos":[49,4],"name":"Status caret"},
+    "352:3208": {"parent":"352:3206","size":[16,16],"pos":[49,8],"name":"DownCaret"},
+    "580:6015": {"parent":"580:6013","size":[16,16],"pos":[66,8],"name":"DownCaret"}
+  },
+  "item3_regrid": {
+    "note": "bound variables before: space/19, space/3, space/12, space/4; pt/pb 10 on 426:4165 was a literal.",
+    "153:1186": {"pt":19,"pb":19,"h":88}, "170:1590": {"gap":3,"w":60},
+    "219:2068": {"pt":12,"pb":12,"h":76}, "219:2070": {"gap":4,"w":61},
+    "426:4165": {"pt":10,"pb":10,"h":72}, "426:4180": {"gap":4,"w":125}, "426:4188": {"gap":12,"w":325},
+    "426:4191": {"gap":4,"w":200}, "426:4196": {"gap":4,"w":95},
+    "426:4199": {"pl":12,"pr":12,"w":120}, "426:4206": {"pl":12,"pr":12,"w":56}, "426:4214": {"gap":12},
+    "429:4161": {"h":989}
+  },
+  "item4_markers": {
+    "817:12493": "I817:12494;816:12440;573:3649 (vector) and I817:12494;816:12443 (text) fills bound color/error/dark",
+    "27:306": "I27:301;170:6;200:40 (vector) fill bound color/success/dark"
+  }
+}

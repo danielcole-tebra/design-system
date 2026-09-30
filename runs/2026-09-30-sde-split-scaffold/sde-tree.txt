@@ -1,0 +1,7 @@
+C:\Code\sde
+AGENTS.md  (1670 bytes)
+APPEARANCE-SDE-EDIT-FORMS.md  (2426 bytes)
+CLAUDE.md  (70 bytes)
+FLAGS.md  (21167 bytes)
+LOG.md  (999 bytes)
+runs\

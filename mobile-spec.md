@@ -6,7 +6,7 @@ What's next, open questions and batch history live in `mobile-plan.md`. When a b
 
 File: Mobile ambient capture prototype, TP5KrQtY0T5IcMNqi375So. Library: YX2n4YLrEpBXNbcc73T6dw. Sheet source (read only): NPVE target fdCQVFdvOByaOYIJYag0d6.
 
-Last updated after the page behind the open chart was dimmed.
+Last updated after batch A9 (2026-09-29): the settled schedule and chart rulings.
 
 ---
 
@@ -45,7 +45,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - Body text is pure black, as the library has it.
 - **Sent confirmation copy says the note will be in the desktop queue.** "Unsigned Notes" is too specific; use **"desktop queue"** going forward.
 - **Sent confirmation copy leads with the patient's name, with each sentence on its own line**, so both Sent screens have the same two-line shape.
-- Status language is Sending, Sent and Failed to send. Never "synced", "complete" or "ready". The phone reports only on the handoff. On schedule rows the pill shortens to one word — Sending, Sent, Failed — because the row leads to the patient, where the alert gives the full context.
+- Status language is Sending, Sent and Failed to send. Never "synced" or "ready". The phone reports only on the handoff. On schedule rows the pill shortens to one word — Sending, Sent, Failed — because the row leads to the patient, where the alert gives the full context. **Amended 2026-09-29 (A9 R4):** "complete" is now allowed in one place. A past patient whose recording was sent reads **Complete** on the schedule row in place of Sent, and the row is dimmed.
 
 **Account**
 
@@ -87,7 +87,7 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - `A S2 Home / empty`, `/ sessions`, `/ after first capture`, `/ after failed capture` and `/ unsent` are superseded and archived.
 - `Visit screens` and `Screens` are archived, as `Archive · Visit screens` and `Archive · Screens`.
 - The schedule is a set of ways into a patient, not a record. It shows the schedule as it stands and never reasons about it.
-- A row knows the patient, the time, whether the visit is telehealth, and whether a recording exists. A past row with no recording is quiet: no status, no explanation.
+- A row knows the patient, the time, whether the visit is telehealth, and whether a recording exists. A past row with no recording is quiet: no status, no explanation. **Amended 2026-09-29 (A9 R5):** it is also dimmed; see "Settled 2026-09-29".
 - The status is the only pill on a schedule row. Telehealth is shown as text with an icon, not a Chip: a separator, a 16 `VideocamOutlined` and the word "Telehealth", on the time line, in secondary ink.
 - Status pills on schedule rows are one word: Sending, Sent, Failed. The row takes the provider to the patient, where the alert gives the full context.
 - The schedule shows a full day, running to 5:00 PM, so the list overflows and scrolls.
@@ -126,9 +126,9 @@ Every design decision Daniel has made that still stands, grouped by area. Supers
 - **The chart list ends at Social history. Rows 10 to 14 are hidden because they have no content.** Ruled 2026-09-17.
 - **Rows reading "Sheet 5" through "Sheet 9" get real chart names and stay inert.**
 - **Ported sheets** keep their content as is. Only identifying details change, to match Marcus Vance, DOB 03/14/1972. Every action is dropped.
-- **Medications, built 2026-09-17.** `Visit/Sheet/Medications` **272:396**, 358 x 288: four library `List/Item` rows at `Lines=Two`, **72** each, name and dose on the primary line and form and frequency on the secondary, each over a 1 px INSIDE bottom stroke bound `color/divider`, the last row's stroke hidden per instance. From the rebuilt NPVE sheet it keeps the row order and the name-then-dose-then-detail hierarchy; it leaves out the **status control** and the **indication chip**, which the supplied rows do not carry, and drops **Add New Medication**, the per-row **Add to note** and the **Add Section to Note** footer, as every ported sheet drops actions. Marcus shows four rows, Colette three. **Corrected 2026-09-17 against the summaries**: Marcus's row 2 reads **Melatonin 5 mg / tablet, at bedtime as needed** (was 3 mg, nightly at bedtime), set on the master; Colette's row 1 reads **Metformin 1000 mg** (was 500 mg), set on both her frames.
+- **Medications, built 2026-09-17.** `Visit/Sheet/Medications` **272:396**, 358 x 288: four library `List/Item` rows at `Lines=Two`, **72** each, name and dose on the primary line and form and frequency on the secondary, each over a 1 px INSIDE bottom stroke bound `color/divider`, the last row's stroke hidden per instance. From the rebuilt NPVE sheet it keeps the row order and the name-then-dose-then-detail hierarchy; it leaves out the **status control** and the **indication chip**, which the supplied rows do not carry, and drops **Add New Medication**, the per-row **Add to note** and the **Add Section to Note** footer, as every ported sheet drops actions. Marcus shows four rows, Colette three. **Corrected 2026-09-17 against the summaries**: Marcus's row 2 reads **Melatonin 5 mg / tablet, at bedtime as needed** (was 3 mg, nightly at bedtime), set on the master; Colette's row 1 reads **Metformin 1000 mg** (was 500 mg), set on both her frames. **Amended 2026-09-27 (SYNC B15):** each row is now 72 minimum and hugs its content, so a wrapping line grows the row; see COMPOSITIONS "Medication row".
 - **Patient summary, polished 2026-09-17.** `Visit/Sheet/Patient summary` **50:969**, 358 x **1355** for Marcus and **1211** for Colette, is the single source all five summary frames instance, so all three rulings were set once on it. The disclaimer reads **"AI-generated summary. Verify before use."**, one line: it renders **267** against the Alert's **294** text column, where the old copy measured **362** and wrapped to two. The Alert drops 68 to **48**. The bullets are `UNORDERED` list items inside one TEXT node per section, so the gap between them is **`listSpacing` 12** — half the body1 24 line height — and `lineHeight` stays 24, which leaves wrapped lines untouched; each section grows 24. Heading spacing is unchanged: a heading is **8** above its own bullets and **16** below the section before it, so the new 12 never makes a heading read with the list above it. The sheet carries **50 of bottom padding** — the 34 home indicator plus 16. It was 138 while the patient screens had a 122 footer band; with the footer gone there is nothing left to clear but the indicator. Scrolled to the end the feedback block, the last thing in the sheet, lands on **794** and the last bullet on **705**, on a patient frame and on `A5 Recording / summary` alike.
-- **Vitals, built 2026-09-17.** `Visit/Sheet/Vitals` **273:9321**, 358 x 432: six library `List/Item` rows at `Lines=Two`, **72** each, in the same FIXED 72 wrapper with a 1 px INSIDE bottom stroke bound `color/divider` that `Visit/Sheet/Medications` uses. Measure, value and unit on the primary line; the qualifier on the secondary. **Respiratory rate has no qualifier, so that row alone is `Lines=One`** and its single line centres in the 72; the row's `Secondary` string is blanked so nothing stale survives a switch back. The last row's divider is off **on the master**, because all six rows show on every instance. Row order is Daniel's supplied order — blood pressure, heart rate, temperature, respiratory rate, SpO2, weight — which **departs from the rebuilt NPVE sheet**, whose five rows run weight, BP, HR, temp, SpO2 and carry no respiratory rate at all. From NPVE it keeps the one-row-per-measure hierarchy and drops what the mobile rows do not carry: the **Quick Entry** field, the **"Or Use Editor"** disclosure, the **"recorded vitals 14 min ago" alert** and its **Pull New Data** action, and per row the **delta**, the **date**, the **sparkline** and the **action slot** — plus the **Add Section To Note** footer, as every ported sheet drops actions. Marcus and Colette each show six rows. **Corrected 2026-09-17 against the summaries**: Marcus's row 3 reads **Temperature 100.4 °F** (was 98.6), the low-grade fever his Current Situation states, set on the master. Colette's rows are all overridden, so hers is unaffected and still reads 98.4 °F.
+- **Vitals, built 2026-09-17.** `Visit/Sheet/Vitals` **273:9321**, 358 x 432: six library `List/Item` rows at `Lines=Two`, **72** each, in the same FIXED 72 wrapper with a 1 px INSIDE bottom stroke bound `color/divider` that `Visit/Sheet/Medications` uses. Measure, value and unit on the primary line; the qualifier on the secondary. **Respiratory rate has no qualifier, so that row alone is `Lines=One`** and its single line centres in the 72; the row's `Secondary` string is blanked so nothing stale survives a switch back. The last row's divider is off **on the master**, because all six rows show on every instance. Row order is Daniel's supplied order — blood pressure, heart rate, temperature, respiratory rate, SpO2, weight — which **departs from the rebuilt NPVE sheet**, whose five rows run weight, BP, HR, temp, SpO2 and carry no respiratory rate at all. From NPVE it keeps the one-row-per-measure hierarchy and drops what the mobile rows do not carry: the **Quick Entry** field, the **"Or Use Editor"** disclosure, the **"recorded vitals 14 min ago" alert** and its **Pull New Data** action, and per row the **delta**, the **date**, the **sparkline** and the **action slot** — plus the **Add Section To Note** footer, as every ported sheet drops actions. Marcus and Colette each show six rows. **Corrected 2026-09-17 against the summaries**: Marcus's row 3 reads **Temperature 100.4 °F** (was 98.6), the low-grade fever his Current Situation states, set on the master. Colette's rows are all overridden, so hers is unaffected and still reads 98.4 °F. **Amended 2026-09-27 (SYNC B15):** each row is now 72 minimum and hugs its content, and the rows centre their `List/Item`, so Respiratory rate's one line still centres in its 72; see COMPOSITIONS "Vitals row".
 
 **Recording**
 
@@ -162,6 +162,18 @@ Settled 2026-09-17, moved here from the open experiment that produced it.
 
 `EXPERIMENT B · Patient page, resting band` **282:7501** was not taken and stays on `scratchpad` for the record. `EXPERIMENT A` **282:7488** stays too, now carrying the real `Visit/Patient header`; its own header and control group are hidden and labelled SUPERSEDED under rule 1.
 
+**Settled 2026-09-29 (batch A9)**
+
+Daniel's rulings on the schedule and chart. R1 to R5 are built in the file (`runs/2026-09-29-settled-rulings-A9/`). R6 and R7 belong to the prototype and are recorded only.
+
+- **R1. The paused recording bar's top line reads "Paused · <patient name>".** "Paused" is bold and " · <patient name>" is regular, both 16 and white; the timer line is unchanged. Built on `Visit/Recording bar` `State=paused` 51:1006 as one text node, `Paused label` 51:1010, with two ranges: "Paused" bound to `font/weight/bold` and the rest to `font/weight/regular`. The four paused instances inherit it (`A5 Paused / summary`, `/ drawer list`, `/ medications`, `/ vitals`), and all four are Marcus's. The full-screen `A S5 Recording / paused` is not the bar and keeps its "Paused" label above the timer.
+- **R2. Allergies has two empty states, shown as written: "None known" and "None recorded".** "None known" is a documented no-known-allergies; "None recorded" means nothing was ever entered. No full stop, unlike "None on file.". `Visit/Sheet/Allergies` is now a component set with `State` = `list`, `none known`, `none recorded`; the two new variants are clones of `Visit/Sheet/Empty` 390:5171 with the text set. This settles SYNC B2 and `mobileAllergies_noKnownVsNoneRecorded`. No patient is assigned either state: Marcus is the only patient with an Allergies frame and he has an entry.
+- **R3. Before the first appointment of the day, the now marker sits above the first patient.** Drawn on `A S2 Home / schedule, before first appointment` 425:9007, a clone of `/ schedule, top`. Every row reads upcoming with no status, since nothing can have been sent or failed yet. The stack has 8 of top padding so the marker's 2 px line sits on the boundary above the first row without being clipped by the stack. This settles SYNC O3.
+- **R4. A past patient whose recording was sent reads "Complete" in place of "Sent", and the row is dimmed.** Built as `Schedule/Row` `Status=complete`. Dimming is by token, never layer opacity: name, time, telehealth text and icon, chevron, and the chip's label and outline are all bound to `color/text/disabled`. A Failed row is not dimmed, because it needs attention.
+- **R5. A past patient with no recording is a no-show: row dimmed, no label, still tappable.** Built as `Schedule/Row` `Status=no-show`. In the demo day that is Priya Raghunathan (9:45 AM). "Still tappable" is a prototype behaviour; in Figma the row keeps whatever reactions it had, which for Priya is none, because she has no chart in the file.
+- **R6. Search covers any patient, any date.** Prototype-owned; recorded only. This settles SYNC O4. It agrees with the ruling above that search is the way to a patient who is not on today's list.
+- **R7. Back during a recording opens the same stop confirmation as the Stop button.** Prototype-owned; recorded only. Back is otherwise swallowed on the recording screen (SYNC P22).
+
 ---
 
 ## 3. Foundations
@@ -194,7 +206,7 @@ Settled 2026-09-17, moved here from the open experiment that produced it.
 
 | Page | What it is |
 |---|---|
-| `Account screens` 103:2319 | **The whole app, and the only working screen page.** 49 screens, in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
+| `Account screens` 103:2319 | **The whole app, and the only working screen page.** For counts, the Flow page 1:4 (`Prototype wiring record` 385:11317) is the generated record of frames, reactions, destinations and starting points. The screens sit in eight labelled rows: Sign in, Home and schedule, Microphone, Patient, Recording, Stop, Hand off, Account. 80 between frames, 200 between rows, no overlaps. Starting points: **Account device, Schedule** |
 | `Components` | Local components, shared by all pages, in five labelled groups: `Visit/` (27), `Account/` (4), `Schedule/` (3), Base components (9), `Brand/` (1). 80 between nodes, 200 between groups, no overlaps. No PROOF frames |
 | `Archive` 214:3026 | **36** frames in one column, 200 apart: 17 PROOF and scaffolding, the two dead screens `A S4 Patient` and `A S6 Stop confirmation`, the five superseded homes, `PROOF Brand/Tebra logo and Schedule/End of list` 238:7561, `SCAFFOLDING · schedule scrolled to the end` 241:4998, `PROOF Schedule/Now marker` 257:7208, then the **five `SCAFFOLDING · … scrolled to the end` summary frames** 278:12272, 278:12506, 278:12740, 278:12949 and 278:13158, each a clone of a summary frame whose drawer is detached so the sheet can be held at the end of its scroll, `PROOF · Visit/Icon/Visibility (MUI) on paper` 286:8824, `PROOF · Visit/Patient header with each avatar` 287:10743, then the two rebuilt `SCAFFOLDING · … scrolled to the end` summary frames 292:10890 and 292:11160. Nothing here has a reaction |
 | `Archive · Visit screens` 43:705 | The Patient chart demo, archived 2026-09-17. 26 frames, 84 reactions, starting point Visit device. Contents untouched |
@@ -288,10 +300,13 @@ Each part lists its frames on `Account screens`. Visit screens has the same Pati
 | / schedule, top | The same fourteen rows at the list’s start |
 | / schedule, Marcus sent | After the main path: Marcus reads Sent at 11:00 and is the first full row. Yusuf still Failed at 9:15 |
 | / schedule, both sent | After the resend: Marcus and Yusuf both Sent, drawn at offset 0 so both are visible |
+| / schedule, before first appointment | **Amended 2026-09-29 (A9 R3).** The same fourteen rows at the start, all upcoming, with the now marker above the first row (Dolores Okonkwo, 8:30) |
 | / empty day | The date header, then "No appointments today" |
 | / searching | Search in progress |
 | / results | Search results |
 | / no results | "No patients match" |
+
+**Amended 2026-09-28 (SYNC B7, backport batch 6):** on / searching, / results and / no results a **clear (X)** takes the search glyph's slot: the library `Icon/CloseOutlined` 2:761 at (318, 16), 24 x 24, in its own `color/text/primary` ink, the same as the glyph. The glyph is hidden there, not removed. The resting schedule frames keep it. Tapping the X goes to `A S2 Home / schedule`.
 
 Archived: `/ empty`, `/ sessions`, `/ after first capture`, `/ after failed capture`, `/ unsent`.
 **Schedule, built 2026-09-17.** All three clone `A S2 Home / empty`, so the top bar, avatar and search at rest carry over, and each keeps that frame's two reactions (avatar to Account, search to Searching).
@@ -330,6 +345,8 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | Yes | Yes | Sending, Sent or Failed |
 | Yes | No | Nothing extra |
 
+**Amended 2026-09-29 (A9 R4, R5):** a past row is read one step further. Sent becomes **Complete** and the row is dimmed, and a past row with no recording is a no-show, dimmed with no label. `Schedule/Row` 196:777 carries them as `Status=complete` and `Status=no-show`, all inks bound to `color/text/disabled`. On the four schedule frames that puts Dolores Okonkwo, Renata Ilves (and Marcus Vance and Yusuf Bahri where sent) on Complete and Priya Raghunathan on no-show. Yusuf's Failed row is not dimmed.
+
 ### 6.3 Account
 
 - **A S9 Account.**
@@ -366,6 +383,12 @@ What a schedule row shows depends on the clock and on whether a recording exists
 **The landing frame** is a clone of `A4 Patient / landing` at (7880, 3132). Top to bottom: `Visit/Patient header` **0–265**; the **not-sent alert 281–329**, 358 x 48 at x 16, with **16 of beige above and 16 below**; `Patient admin details` **345–633**; beige; `Visit/Drawer edge` closed at **732**. **99 of page** shows between the admin block and the closed drawer, against 163 on the other three, because the alert takes 64 of it. The alert is the library Alert at `variant=standard, severity=error`, reading "Recording from 9:15 AM not sent" with a text Button "Retry" in its action slot, and the **whole alert** is the tap target, not the button. His admin rows read Lower back pain follow-up, August 20, 2026, UnitedHealthcare Choice Plus and Dr. Alma Reyes; **no value wraps**, all four secondaries 20 tall.
 
 **The open chart** is the old frame, rebuilt on the same pattern as the twelve: `Visit/Patient header` at 390 x 265, a `Scrim` 390 x 844 above the header and below the drawer, the drawer at **y 147** running **697** to the frame bottom, `Sheet list` **619** with **34** of bottom padding. The old `Visit/Recording bar`, the **not-sent alert**, the `Footer band` and the `Start recording CTA` are hidden and labelled SUPERSEDED beneath it — **the live alert is on the landing page only**, because on the open chart it would sit at 201, behind both the drawer and the scrim. **All nine chart rows show**, 432 in 619, so the list does not scroll and its last row ends on 657. **The chart rows stay inert**, as they were.
+
+**The six undesigned sheets, A4 Patient / allergies 390:8297, / problems 390:8485, / procedures & surgical history 390:8681, / family history 390:8869, / external care history 390:9065 and / social history 390:9253.** Added 2026-09-26 for SYNC B1. They are six clones of `A4 Patient / medications` 103:3032, placed at x 8820 to 11170 in the Patient row. Each swaps `Sheet#48:4` to its own `Visit/Sheet/<name>` (390:5077, 390:5086, 390:5103, 390:5112, 390:5129, 390:5138) and has its title retitled. The content is Marcus's from the prototype's data, resolved against September 17, 2026: Buspirone (Dizziness · Mild intolerance); two active problems since 2024; Vasectomy, 2012; Mother / Anxiety and Father / Hypertension; one behavioral health entry, March 26, 2025, whose secondary line wraps to three lines and grows the row to **112**; and four social history rows. Each frame keeps the medications frame's eight reactions: Patients, Start Encounter, scrim and puller to the landing, and drawer back to `A4 Patient / list`. The hidden sheet switcher inside each drawer still lists its original items. **The empty state, A4 Tomás / external care history, empty 390:9471.** A reference frame for SYNC B3, at x 11640. It shows Tomás Reyes (TR initials) with `Visit/Sheet/Empty` 390:5171 reading "None on file." in the drawer. All eight cloned reactions were cleared, and it is not a starting point.
+
+**New patient, A4 Tomás / landing, new patient 386:14731.** Added 2026-09-26 for SYNC B4 and B5. A clone of `A4 Patient / landing` at (8350, 3132), the last frame in the Patient row. Tomás Reyes, DOB 01/23/1981 (from the prototype's clinic-day data against Figma's clinic day, September 17, 2026), with no portrait, so his header avatar is `Visit/Avatar/Initials` 386:14707 reading **TR**. The admin rows read Reason for visit "New patient: low back pain", **Last seen "New patient"** (no period, amended 2026-09-26; see COMPOSITIONS), Insurance "Cigna Open Access Plus" and Primary care provider "Dr. Sarah Bennett". **Reference only**: all five reactions from the clone were cleared, nothing points at it, and it is not a starting point, because Tomás is not on any schedule frame and has no chart.
+
+**Discharge medications, A4 Frank / external care history 412:5126.** Added 2026-09-28 for SYNC O7 (batch A8). A clone of `A4 Tomás / external care history, empty` at (12110, 3132), the last frame in the Patient row. Frank Albers, DOB 01/15/1943 (as briefed; the prototype's offset resolves to 01/08/1943 against September 17, 2026), with the teal FA initials disc. `Sheet#48:4` is `Visit/Sheet/External care history, discharge` 412:5036: the St. Brendan discharge entry, then "Discharge medications" and nine rows with neutral status chips (COMPOSITIONS "Discharge medication list"). The sheet is 840 tall in a 619 sheet body, so it scrolls: the last three rows, Apixaban, Atorvastatin and Tamsulosin, sit below the fold. Reference only, like Tomás's frames: no reactions and not a starting point, so nothing reaches it.
 
 **The patient landing page, A4 Patient / landing 287:10395, A4 Colette / landing, after Marcus 287:10504, A4 Colette / landing, after Yusuf 287:10615 and A4 Yusuf / landing, not sent 298:11207.** Built 2026-09-17 from `EXPERIMENT A`, and **the frame a patient now lands on**. Top to bottom: `Visit/Patient header` 287:10323 at **390 x 265**; `Patient admin details` at y **281**, a 390-wide `color/background/paper` block of four 72 rows, the library `List/Item` at `Lines=Two` over a 1 px INSIDE bottom divider, label on the primary line and value on the secondary, last row's divider off; then beige; then `Visit/Drawer edge` closed at y **732**, 112, showing the puller and "Patient chart". **163 of page shows between the admin block and the closed drawer.** Each frame's Start Encounter goes where the frame it replaced sent Start Recording — Marcus to `A S5 Recording / recording`, Colette's two nowhere — and the closed drawer opens that patient's chart list on that path, by tap and by drag. The pills are inert. **The old chart-list frames were not changed and are still reachable**, from their own sheets' drawer back and now from these pages' closed drawers.
 
@@ -425,6 +448,7 @@ What a schedule row shows depends on the clock and on whether a recording exists
 
 - `#004852`.
 - "Paused" above the timer, which holds its value.
+- **The paused recording bar** (`Visit/Recording bar` `State=paused`, over an open drawer) reads **"Paused · <patient name>"** on its top line, "Paused" bold (A9 R1). The longest demo name, Priya Raghunathan, makes the line 208 wide, ending 84 before the controls at x 308.
 - The meter becomes a single 236 x 2 line.
 - Pause becomes Resume.
 - The pill sits at y 569.
@@ -432,6 +456,8 @@ What a schedule row shows depends on the clock and on whether a recording exists
 **Microphone sheet frames, A S5 Recording / microphone and A S5 Paused / microphone.** The scrim, with the microphone sheet pinned to the bottom and the pill hidden.
 
 **A5 Recording / drawer list, / summary, / medications, and A5 Paused / drawer list, / summary.**
+
+**Amended 2026-09-27 (SYNC B6, backport batch 5):** `A5 Paused / medications` 400:5693 and `A5 Paused / vitals` 400:5840 join them, so every A5 sheet now has a recording and a paused frame and pausing keeps the drawer and its sheet on screen. Each was cloned from its recording frame, with the bar on `State=paused` and the strip behind the drawer bound to the paused bar's teal, as on `A5 Paused / summary` 103:3051.
 
 - The recording bar sits above the drawer.
 - **Recording bar**, 390 x 119, in the field colour:
@@ -509,18 +535,19 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | **A4 Yusuf / list, not sent** | scrim tap and puller drag | **A4 Yusuf / landing, not sent**, the same transition |
 | **A4 Yusuf / list, not sent** | every chart row | nothing |
 | Chart row, Patient summary | tap | the summary frame of the same screen, state and patient |
-| Chart row, Medications, Marcus | tap | **A4 Patient / medications** or A5 Recording / medications. Inert on the paused list |
+| Chart row, Medications, Marcus | tap | **A4 Patient / medications**, A5 Recording / medications, or **A5 Paused / medications** from the paused list (2026-09-27, SYNC B6) |
 | Chart row, Medications, Colette | tap | that path's **A4 Colette / medications** |
 | A4 Colette / medications, both | drawer back / "Patients" / Start Recording | that path's Colette list / that path's schedule / nothing |
-| Chart row, Vitals, Marcus | tap | A4 Patient / vitals or A5 Recording / vitals. Inert on the paused list and on Yusuf's |
+| Chart row, Vitals, Marcus | tap | A4 Patient / vitals, A5 Recording / vitals, or **A5 Paused / vitals** from the paused list (2026-09-27, SYNC B6). Inert on Yusuf's |
 | Chart row, Vitals, Colette | tap | that path's **A4 Colette / vitals** |
 | A4 Colette / vitals, both | drawer back / "Patients" / Start Recording | that path's Colette list / that path's schedule / nothing |
-| A5 Recording / vitals | bar / pause / stop / puller drag / drawer back | A S5 Recording / recording · / paused · stop overlay · / recording · A5 Recording / drawer list |
-| Other chart rows | tap | nothing |
+| A5 Recording / vitals | bar / pause / stop / puller drag / drawer back | A S5 Recording / recording · **A5 Paused / vitals** (2026-09-27, SYNC B6) · stop overlay · / recording · A5 Recording / drawer list |
+| Chart rows Allergies, Problems, Procedures & surgical history, Family history, External care history and Social history, on **A4 Patient / list** | tap | that sheet's `A4 Patient / <sheet>` frame (wired 2026-09-26, SYNC B1) |
+| Other chart rows, including those six on Colette's, Yusuf's, the recording and the paused lists | tap | nothing |
 | Sheet back | tap | the list of the same screen and state |
 | A S5 drawer edge | tap or drag up | A5 Recording or Paused / drawer list |
 | A5 puller | drag down | A S5 in the matching state |
-| Bar pause / play | tap | the same frame in the other state (from / medications: A S5 Recording / paused) |
+| Bar pause / play | tap | the same frame in the other state. Since 2026-09-27 (SYNC B6) every A5 sheet has both, so pause from / medications goes to A5 Paused / medications |
 | A S5 device pill | tap | the matching microphone frame |
 | Microphone frame | row or scrim | back to the calling frame |
 | Every Stop | tap | the stop overlay |
@@ -551,16 +578,9 @@ What a schedule row shows depends on the clock and on whether a recording exists
 | Colette Mwangi row 11:30, on / schedule and / schedule, top | tap | nothing |
 | Every other row, on all four | tap | nothing |
 | Schedule search field | tap | A S2 Home / searching |
+| Clear (X) on / searching, / results and / no results | tap | A S2 Home / schedule, scroll position kept (2026-09-28, SYNC B7) |
 
-**Counts now:**
-
-| Page | Frames | Reactions |
-|---|---|---|
-| Account screens | 49 screens | 207 across 200 |
-| Archive · Visit screens | 26 | 84 across 81 |
-| Archive · Screens | 18 | 42 across 41 |
-
-No cross-page edges, and nothing on `Account screens` points at an archived frame. 45 destinations. Starting points: `Account device` 103:2320 and `Schedule` 204:4082.
+**Counts.** For `Account screens`, the Flow page 1:4 (`Prototype wiring record` 385:11317) is the generated record of frames, reactions, destinations and starting points. It is regenerated from the file rather than kept by hand, so counts are not repeated here. The two archived pages are frozen, and their counts stand in §4. No cross-page edges, and nothing on `Account screens` points at an archived frame.
 
 ---
 

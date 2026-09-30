@@ -1,0 +1,12 @@
+--- CLAUDE.md (pre-batch, HEAD)
++++ AGENTS.md (new)
+@@ -8,4 +8,2 @@
+ - Composition System: oNrOL9kQCpJHyK4rBCGqsq. Record of canonical compositions built from the library. Consumes, never defines.
+-- NPVE target: fdCQVFdvOByaOYIJYag0d6
+-- NPVE legacy source: zVsuhYehoSLLq880qRBFkq
+ - Tebra Working UI Kit: deprecated, read only.
+@@ -18,4 +16,2 @@
+ TEBRA-DESIGN-SYSTEM.md is the written form of the code: theme architecture, token derivations, and the per-component table of what Tebra overrides versus MUI substrate. Read the component's row before building it. REFERENCE-KIT.md is the manifest of the deprecated kit and holds the open "need Daniel" items.
+-
+-APPEARANCE-NPVE-EDIT-FORMS.md is the approved appearance specification for NPVE edit forms. Check a rebuilt form against it before reporting.
+ 
