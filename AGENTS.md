@@ -40,5 +40,16 @@ Build bottom up. Never rebuild a screen whole cloth from a screenshot or a sourc
 
 Pieces built in any file other than the library, proposals, or Composition System are local to that file and never go to the library.
 
+## Git
+Pull before starting a batch. A project repo that consumes the library also pulls the library first, because its rules come from there.
+
+Work in one working copy of each repo. Never commit from any other copy, including retired or synced folders.
+
+At the end of a batch, after the LOG entry, commit only the paths the batch changed, named individually. Never commit everything. If other uncommitted changes exist, list them in the report and leave them. Then push. A batch is not recorded until it is pushed.
+
+A conflict in LOG.md or FLAGS.md keeps both sides, in date order. A conflict anywhere else stops the batch and gets reported.
+
+Stay on master. No new branches unless Daniel asks.
+
 ## Agents
 Any agent may run a batch. One agent per batch. Read this file first, append to LOG.md before stopping. A batch with no log entry is treated as unverified and audited before the next one starts. Stop and ask Daniel on any design question. Otherwise proceed. Don't ask for approval sentences, don't assign risk, don't ask before reading.

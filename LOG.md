@@ -4376,3 +4376,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Built: three private repos under `danielcole-tebra`: design-system, sde, visit-companion-prototype, all pushed (`master`; library also `codex/lean-workflow` and 9 tags). `.gitignore` entries added in each. Fresh clone at `C:\Code\design-system`, not Drive-synced, HEAD `b3c8f9a` matching the old folder. From here on this clone is the working copy; `C:\Code\design system` is not written to.
 - Found: preflight scans clean (no secret-like files or content, nothing over 50 MB). `gh auth status` labels the account `danielcole-tech` but the token resolves to `danielcole-tebra`, which Daniel confirmed. GitHub defaulted the library repo to `codex/lean-workflow`; changed to `master`. 7 DECISION lines added to the SDE repo's FLAGS.md from the spec supersession check.
 - Screenshot: none (no Figma change). Report: `runs/2026-09-30-github/`.
+
+## 2026-09-30 · Add git habits to AGENTS.md
+- File: none in Figma (no reads or writes).
+- Built: new `## Git` section in `AGENTS.md`, directly after the Record section (pull first, one working copy, commit only named paths then push, LOG and FLAGS conflicts keep both sides, stay on master).
+- Found: nothing. No run folder for this batch.
+- Screenshot: none (no Figma change).
