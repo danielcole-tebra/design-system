@@ -1,3 +1,5 @@
+> HISTORICAL REFERENCE — 2026-10-31: start with AGENTS.md and its three active references. This file is retained as dated evidence; its old instructions, open counts and unresolved SDE work are not the active builder workflow. Read only for a specific unresolved lookup. The original is preserved in archive/builder-docs-2026-10-31/.
+
 # The Tebra Design System
 
 Root knowledge file. Everything here is transcribed from source and stated as fact with the file

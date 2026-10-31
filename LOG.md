@@ -4382,3 +4382,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Built: new `## Git` section in `AGENTS.md`, directly after the Record section (pull first, one working copy, commit only named paths then push, LOG and FLAGS conflicts keep both sides, stay on master).
 - Found: nothing. No run folder for this batch.
 - Screenshot: none (no Figma change).
+
+## 2026-10-31 · Slim builder documentation and blind retrieval test
+- File: none in Figma; documentation only in the canonical C:\Code\design-system checkout. SDE, code and Figma unchanged.
+- Built: active AGENTS.md plus LIBRARY.md, COMPOSITIONS.md and OPEN-ISSUES.md; nine original files preserved under archive/builder-docs-2026-10-31; historical notices on the former long references. Settled SDE work stays historical. Corrected the active edit-form recipe to white paper; consolidated evidenced token/property mappings and targeted verification rules.
+- Found: current publication/consumer state, plan-only variable mappings, dialog style details and uncovered component behavior remain explicitly unverified. Fresh four-file-only agent answered the same eight questions: 8/8 on the internal checklist, one search, no outside files reported; 65 seconds dispatch-to-result-observed, exact token usage unavailable. Active source set 623,657 → 37,662 bytes (94.0% smaller); no controlled end-to-end build-speed claim.
+- Evidence: runs/2026-10-31-slim-builder-docs/REPORT.md, TEST-PROMPT.md and BLIND-RESPONSE.md. Nine snapshot hashes matched pre-change HEAD; active links/encoding and git diff --check passed. Screenshot: not applicable (no visual change).

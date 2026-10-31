@@ -1,3 +1,5 @@
+> HISTORICAL REFERENCE — 2026-10-31: start with AGENTS.md and its three active references. This file is retained as dated evidence; its old instructions, open counts and unresolved SDE work are not the active builder workflow. Read only for a specific unresolved lookup. The original is preserved in archive/builder-docs-2026-10-31/.
+
 # FLAGS
 
 One line per open finding: tag | file key | node id | finding | date raised | id. Strike a line through when it is closed. Carried over on 2026-09-12 from `flags/active.json` (the 82 entries tagged DEFECT, GAP or DECISION; untagged severity notes were not carried; the full text of each is still under that id in `flags/active.json`). File keys: library YX2n4YLrEpBXNbcc73T6dw, NPVE target fdCQVFdvOByaOYIJYag0d6, NPVE legacy source zVsuhYehoSLLq880qRBFkq, Proposals zKT34LQogNjz3Z07fY4VQB; `repo` means code or docs, no Figma node.

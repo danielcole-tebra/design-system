@@ -1,55 +1,54 @@
-# AGENTS.md
+# Tebra Figma builder
 
-Figma builder for Tebra's design system. Given a spec, a screenshot, or a node in another Figma file, build it from the library to specification and report what the library can't express. The library is the source of truth for screens; code is the source of truth for the library. Code lives in web-app-v2/packages/design-system. This folder holds docs and a log, no source.
+Build screens from Tebra's library; report what it cannot express. Code lives in the sibling `web-app-v2/packages/design-system`; this repo contains guidance and evidence, not component source.
 
-## Files
-- Library (Design System Rebuild): YX2n4YLrEpBXNbcc73T6dw
-- Proposals: zKT34LQogNjz3Z07fY4VQB. Consumes the library, never defines it.
-- Composition System: oNrOL9kQCpJHyK4rBCGqsq. Record of canonical compositions built from the library. Consumes, never defines.
-- Tebra Working UI Kit: deprecated, read only.
+## Read only what the task needs
 
-Pass the file key on every call. Figma reports every file as "Document".
+The active builder package is this file plus three references:
 
-## Truth
-Code is authority on values. Storybook is authority on render; a screenshot outranks a derivation. Production is evidence of behavior only. Figma is derived; where it disagrees with code, Figma is wrong.
+- [LIBRARY.md](LIBRARY.md): token mappings, component capabilities, code/Figma differences and essential API checks. Read the requested component entries, not the whole file.
+- [COMPOSITIONS.md](COMPOSITIONS.md): reusable assembly patterns. Read the relevant pattern before composing a section.
+- [OPEN-ISSUES.md](OPEN-ISSUES.md): unresolved facts affecting new builds. Read entries linked from the relevant component or pattern.
 
-TEBRA-DESIGN-SYSTEM.md is the written form of the code: theme architecture, token derivations, and the per-component table of what Tebra overrides versus MUI substrate. Read the component's row before building it. REFERENCE-KIT.md is the manifest of the deprecated kit and holds the open "need Daniel" items.
+Also read the task's own screen spec when supplied. Do not routinely read LOG.md, FLAGS.md, records/, audits/, archive/, or the old long-form references. They are evidence for a specific unanswered question, not startup requirements. CLAUDE.md points here; it adds no rules.
 
-COMPOSITIONS.md indexes the patterns; the Composition System file shows them. Read the index before composing anything larger than a component.
+SDE is settled for now, per Daniel on 2026-10-31. Its residual findings are historical limitations, not a backlog to reopen or blockers for new work. Mobile screen rulings remain local to their project. History is preserved in [archive/builder-docs-2026-10-31](archive/builder-docs-2026-10-31/README.md).
 
-## Rules
-1. Additive only. Never delete nodes, pages, or files. Mark superseded, archive with a README.
-2. Names. A property mirroring a code prop uses code's exact name and values, lowercase. Figma-only affordances use Sentence case. Sub-component paths use / with no spaces. Published names are locked.
-3. Verify in pixels. Screenshot every batch and look at it before reporting. Instantiate every new variant and read the instance; master reads are not evidence. Enumerate from the file, never from a prior report.
-4. Integer px only. pxToRem inflation is 14.29% and affects geometry. Bind the intended integer.
-5. Alpha lives in the variable's stored rgba. Never set a bound paint to opacity 1.
-6. Instances cannot host children. Workarounds are labeled SCAFFOLDING.
-7. Set figma.skipInvisibleInstanceChildren = false before any audit.
-8. Cloning a variant drops componentPropertyReferences. Rebind after cloning.
-9. A variant set's default follows canvas position, not layer order.
-10. Report, don't resolve. A disagreement between sources is a finding. Never silently correct a source.
-11. Markers. DEFECT renders differently from what ships. GAP is something the component cannot express. Grey cards, no red, yellow, orange, or green.
-12. Publishing is manual. The API cannot publish or accept updates.
+## Authority and scope
 
-Plugin API traps and the icon recipe are in PLUGIN-NOTES.md. Read it before writing to Figma, not before reading.
+Code governs declared values. LIBRARY.md is a concise transcription with dated evidence, not a claim of a fresh code or Figma audit. Use the actual library to build; verify its properties in the consuming file before relying on them. A library definition, a published update and an accepted consumer update are three different states; publishing and accepting updates are manual.
 
-## Record
-After every batch, append one entry to LOG.md: date, file key, what was built, what was found, path to the screenshot. LOG.md is history. Open findings go in FLAGS.md as one line each, tagged DEFECT, GAP, or DECISION, struck through when closed. Composition decisions, meaning how library parts are assembled or overridden in a reusable pattern, go in COMPOSITIONS.md with decider, date, and what they override. Screen decisions stay in FLAGS.md and the spec. These three files are the record.
+Storybook defines demonstrated axes and examples. Its documented decorator lacks CssBaseline, so it is not universal rendered truth. For layout or interaction questions, use a screenshot of the relevant implementation and theme; do not replace an explicit code value with a measurement. Legacy/proposal screenshots are design input, not proof of shipping behavior.
 
-Build bottom up. Never rebuild a screen whole cloth from a screenshot or a source frame. Before building, break the target into its sections. A section that already exists in the library or the compositions file is reused, not rebuilt. Each section that doesn't exist is one batch, and that batch builds whatever smaller pieces the section needs before building the section. After the sections, one final batch assembles the target. For a flow, a section is a stage of the flow. Screenshot every batch and stop for Daniel's read before the next. If a question comes up mid-batch, finish what doesn't depend on it and raise it at the stop.
+An explicit approved screen exception applies only to its stated scope. Report conflicting evidence; never silently correct code, the library or a spec. Ask Daniel on an unresolved design choice. Do not re-ask settled decisions within their scope, assign risk tiers, or request ritual approval wording. Finish independent work while a dependent choice remains open.
 
-Pieces built in any file other than the library, proposals, or Composition System are local to that file and never go to the library.
+## Files and boundaries
+
+| File | Key | Role |
+|---|---|---|
+| Design System Rebuild | `YX2n4YLrEpBXNbcc73T6dw` | Library; screen tasks consume it, never modify it |
+| Proposals | `zKT34LQogNjz3Z07fY4VQB` | Consumes the library |
+| Composition System | `oNrOL9kQCpJHyK4rBCGqsq` | Canonical composition record; consumes the library |
+
+Pass the file key on every Figma call; file titles can all read "Document". The deprecated Tebra Working UI Kit is read-only. Components made in a project file remain local; proposing one for the library does not publish or promote it. Importing a component or variable is a write, even if the source is read-only.
+
+## Build and verify
+
+1. Break a target into sections (or flow stages). Reuse an existing section/pattern; build missing smaller parts before their section. State required widths, states and action outcomes before assembly. Do not redraw a screen whole cloth from a screenshot.
+2. Use library instances, supported properties and bound tokens. Token-bound text and ordinary layout frames are legitimate composition; they do not require a new text component. Keep published component internals unchanged unless the task has an explicit scoped exception. Label approved workarounds SCAFFOLDING; instances cannot host added children.
+3. Preserve existing nodes. Additive only: supersede/hide/archive with a README instead of deleting. Published names are locked. Code props use exact lowercase code names/values; Figma-only affordances use Sentence case; subcomponent paths use `/` without surrounding spaces.
+4. Use intended integer px, recording computed inflation or authored rounding. Preserve stored variable alpha; never force a bound paint to opacity 1. Read LIBRARY.md's "API checks by operation" before the corresponding write.
+5. Set `figma.skipInvisibleInstanceChildren = false`. Enumerate the affected scope from the live file, not a prior report. Instantiate every new variant; read its properties and render it. Check affected existing instances, actual target widths, clipping and content changes. Verify reaction destinations after structural edits. Distinguish stored wiring from a played-through prototype.
+6. Screenshot each Figma batch and look at it, including the assembled section in context. Stop for Daniel's read before the next build batch. Expand beyond affected components/instances only for shared changes, unexplained failures or a requested full audit. Documentation-only batches need no invented screenshot.
+
+## Record once, maintain the current answer
+
+DEFECT means a render differs from what ships; GAP means a required capability cannot be expressed; DECISION means a human choice is needed or records its resolution. Shipping quirks are not DEFECTs merely because they are undesirable. Unknown coverage is not proof of absence. Figma markers use grey cards, with no red, yellow, orange or green.
+
+New library findings go in OPEN-ISSUES.md; screen findings belong in the consuming project's current spec/register. Record owner, scope, status, impact, evidence date and any approved workaround. Distinguish a nonblocking limitation from a blocked task. Do not copy SDE's historical flags into the active register.
+
+Update the authoritative component or composition entry when a decision changes it, preserving previous text in history. Composition decisions carry decider, date and what they override. Keep one short LOG.md entry per batch: date, file key, change, finding and evidence/run path. Detailed reads and screenshots go under runs/; do not duplicate them in every document. A batch without a log entry is unverified.
 
 ## Git
-Pull before starting a batch. A project repo that consumes the library also pulls the library first, because its rules come from there.
 
-Work in one working copy of each repo. Never commit from any other copy, including retired or synced folders.
-
-At the end of a batch, after the LOG entry, commit only the paths the batch changed, named individually. Never commit everything. If other uncommitted changes exist, list them in the report and leave them. Then push. A batch is not recorded until it is pushed.
-
-A conflict in LOG.md or FLAGS.md keeps both sides, in date order. A conflict anywhere else stops the batch and gets reported.
-
-Stay on master. No new branches unless Daniel asks.
-
-## Agents
-Any agent may run a batch. One agent per batch. Read this file first, append to LOG.md before stopping. A batch with no log entry is treated as unverified and audited before the next one starts. Stop and ask Daniel on any design question. Otherwise proceed. Don't ask for approval sentences, don't assign risk, don't ask before reading.
+Use one working copy per repo; never commit from retired/synced copies. Stay on master unless Daniel asks for a branch. Pull before a batch; a consuming project pulls its library first. After logging, commit only individually named paths changed by the batch, then push. Report unrelated changes and leave them alone. A batch is not recorded until pushed. LOG.md/register conflicts retain both dated records in order; other conflicts stop the batch for review.
