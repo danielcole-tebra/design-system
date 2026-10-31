@@ -4415,3 +4415,7 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-10-31 — Slim patient search benchmark · run-174950
 - File: zKT34LQogNjz3Z07fY4VQB. Built and verified one isolated Results/Empty patient-search family and side-by-side instances. No remaining build issues; stopped after this section for Daniel's read.
 - Evidence: runs/2026-10-31-patient-search-174950/REPORT.md, record.json, section.png, results.png, empty.png.
+
+## 2026-10-31 — Review of bounded-evidence benchmark repeats
+- File: no new Figma writes; reviewed the two completed Proposals runs. Recording intervals improved from 147s to 73s/107s; total times 310s/471s versus 341s baseline do not establish consistent end-to-end improvement. Required visual checks passed; recurring search/audit output overhead remains.
+- Workflow finding: both runs deleted self-created temporary inspection instances, violating the additive-only rule. No existing screen deletion identified. They are not full workflow passes despite correct final panels. Evidence and comparison: runs/2026-10-31-builder-evidence-tools/REPORT.md, linked run reports and transcripts. No new screenshot needed for this review.
