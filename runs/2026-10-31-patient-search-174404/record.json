@@ -1,0 +1,911 @@
+{
+  "schemaVersion": 1,
+  "title": "Slim patient search benchmark · run-174404",
+  "date": "2026-10-31",
+  "fileKey": "zKT34LQogNjz3Z07fY4VQB",
+  "reviewUrl": "https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB?node-id=277-252",
+  "summary": "Built and visually verified one isolated two-state local patient-search family and side-by-side instances. No remaining build issues; stopped for Daniel's read.",
+  "timing": {
+    "start": "2026-10-31T17:44:04Z",
+    "ready": "2026-10-31T17:46:15Z",
+    "built": "2026-10-31T17:46:45Z",
+    "firstImage": "2026-10-31T17:46:55Z",
+    "verified": "2026-10-31T17:48:01Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "New Benchmark/Patient search/run-174404 family has exactly State=Results and State=Empty; both instantiated. Section 277:252, family 277:251, review 277:253. Existing sections preserved.",
+    "Panels are 550px wide, content-height (Results 309px; Empty 188px), with white color/background/paper and space/16 bound to each inset and major gap.",
+    "Five published controls audited with unchanged snapshotControl, compareControlSnapshots and auditControls: all pass, zero differences. Fields small/Default/Filled/Fill=None, 518x40. Rows Lines=Two/Default, 518x72, Show icon=false; horizontal divider 518x1.",
+    "Required fictional copy and visible states checked. Text styles h4/body1/body2 use Akkurat LL; role colors bound to primary/secondary. No font substitution, clipping, images, prototype reactions or added controls.",
+    "Looked at section.png, results.png and empty.png. Labels and all required copy are visible with expected spacing; no corrective canvas pass.",
+    "Only Proposals received writes. Published asset discovery imports used temporary instances, which were removed. No earlier benchmark family/section inspected beyond names and bounds; no SDE or Visit Companion lookup."
+  ],
+  "findings": [
+    "Search/read truncation occurred once: a full retained search result was mistakenly printed and output truncated. Recovered selected keys from the stored complete result without another search. Bounded document MORE pagination is not counted as truncation.",
+    "Technical retry 1: body2 style key was mistyped in construction. Import failed with safeToRetryWithoutCanvasRead=true. Corrected to the exact retained key and retried successfully.",
+    "Technical retry 2: first read-only audit envelope exceeded the self-imposed 12,000-character guard and failed with safeToRetryWithoutCanvasRead=true. Reduced redundant returned text metadata, kept comparator unchanged, reran successfully. No full snapshot tree returned.",
+    "No cross-call import failure, comparator correction, canvas corrective pass, clarification stop or user-input wait. No extra reporting commit planned; prepare evidence/report/log together and commit/push once.",
+    "Helper usage: bounded read.cjs; copied snapshotControl, compareControlSnapshots and auditControls; adapted installed createComponentWithVariants fresh-state construction/grid pattern; file-based record.cjs. Helpers themselves did not fail; the enclosing audit-envelope guard did.",
+    "Whole-view search found Nav/Search and Nav/Bar, unsuitable for the brief. Canonical rhythm and reusable-row recipes applied; no applicable published whole-panel composition selected. Code Connect filename search under sibling design-system package returned no matching files.",
+    "Panel spacing follows the explicit 16px brief. Component internal integer geometry retained. Free text uses explicit-rem h4/body1/body2 values (no pxToRem inflation); no authored rounding introduced.",
+    "One fixed-build repeat only; no conclusion about a general speedup. Exact model token use unavailable."
+  ],
+  "reads": [
+    "Active package: AGENTS.md; LIBRARY.md Efficient execution, Token mappings, Typography, Text field, Other controls and surfaces, API checks by operation; COMPOSITIONS.md Scope and reuse, Rhythm, Rows and cards, Search and other adornments; OPEN-ISSUES.md targeted consumer-capabilities, text-field-adornments and token-map-unverified rows. 14 relevant sections/entries counting AGENTS.md as one.",
+    "Three installed skills fully paginated: figma-use, figma-generate-library, figma-generate-design. References: Plugin API index first bounded page and targeted typings symbols, working-with-design-systems/wwds.md, gotchas canonical text-edit recipe, component-creation Variant Matrix. Indexes used to select relevant reference content.",
+    "Helper source/template: tools/builder/helpers.cjs, record.example.json; installed createComponentWithVariants.js. record.cjs inspected after verification for recording. LOG.md tail 2 lines only for append; no older benchmark reports or logs read."
+  ],
+  "effort": {
+    "through": "verified checkpoint, leaf tool invocations only (functions.exec orchestration/store/formatting excluded)",
+    "figmaCalls": 14,
+    "otherCalls": 59,
+    "searches": 4,
+    "technicalRetries": 2,
+    "canvasCorrections": 0,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "screenshots": [
+    "section.png",
+    "results.png",
+    "empty.png"
+  ],
+  "evidence": {
+    "startingCommit": "10c7dccf686b73344f8bb68c3c62348fc53150c6",
+    "branch": "master",
+    "startingStatus": "clean; pull --ff-only already up to date",
+    "searchCounts": {
+      "figmaBatches": 1,
+      "figmaQueries": 11,
+      "localRgSearches": 3
+    },
+    "relevantActiveDocSections": 14,
+    "searchReadTruncation": true,
+    "crossCallImportFailure": false,
+    "comparatorCorrection": false,
+    "extraReportingCommit": false,
+    "construction": {
+      "createdNodeIds": [
+        "277:184",
+        "277:185",
+        "277:186",
+        "277:208",
+        "277:209",
+        "277:210",
+        "277:218",
+        "277:219",
+        "277:226",
+        "277:227",
+        "277:228",
+        "277:249",
+        "277:250",
+        "277:251",
+        "277:252",
+        "277:253",
+        "277:254",
+        "277:294"
+      ],
+      "sectionId": "277:252",
+      "reviewId": "277:253",
+      "familyId": "277:251",
+      "variants": [
+        {
+          "id": "277:184",
+          "name": "State=Results",
+          "width": 550,
+          "height": 309
+        },
+        {
+          "id": "277:226",
+          "name": "State=Empty",
+          "width": 550,
+          "height": 188
+        }
+      ],
+      "instances": [
+        {
+          "id": "277:254",
+          "name": "Benchmark/Patient search/run-174404",
+          "width": 550,
+          "height": 309
+        },
+        {
+          "id": "277:294",
+          "name": "Benchmark/Patient search/run-174404",
+          "width": 550,
+          "height": 188
+        }
+      ],
+      "controlIds": [
+        "277:186",
+        "277:210",
+        "277:218",
+        "277:219",
+        "277:228"
+      ],
+      "tokens": [
+        {
+          "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146",
+          "key": "f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+          "name": "color/background/paper",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "collection": "VariableCollectionId:cc607a3bec27b6343ef60f66a9357c4a94cb98df/74:1",
+          "resolved": {
+            "value": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "resolvedType": "COLOR"
+          }
+        },
+        {
+          "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+          "key": "5c8867e0b6f174db9f69096580158df26e39baae",
+          "name": "color/text/primary",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "collection": "VariableCollectionId:cc607a3bec27b6343ef60f66a9357c4a94cb98df/74:1",
+          "resolved": {
+            "value": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            },
+            "resolvedType": "COLOR"
+          }
+        },
+        {
+          "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139",
+          "key": "0d503f1eb6c6f3e923310b2ad6e621cc940b6543",
+          "name": "color/text/secondary",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "collection": "VariableCollectionId:cc607a3bec27b6343ef60f66a9357c4a94cb98df/74:1",
+          "resolved": {
+            "value": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335,
+              "a": 1
+            },
+            "resolvedType": "COLOR"
+          }
+        },
+        {
+          "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24",
+          "key": "6016592c19254dd61e9de9e006459546eaece0bb",
+          "name": "space/16",
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ],
+          "collection": "VariableCollectionId:834ce529f826fe4b159ac12897f9c4745ddcfbe0/74:245",
+          "resolved": {
+            "value": 16,
+            "resolvedType": "FLOAT"
+          }
+        }
+      ],
+      "styles": [
+        {
+          "id": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+          "name": "h4",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Bold"
+          },
+          "fontSize": 16,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 24
+          }
+        },
+        {
+          "id": "S:c87aec6a94a2e25a8a25446f8d61716cb25abe73,116:83",
+          "name": "body1",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Regular"
+          },
+          "fontSize": 16,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 24
+          }
+        },
+        {
+          "id": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+          "name": "body2",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Regular"
+          },
+          "fontSize": 14,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 20
+          }
+        }
+      ],
+      "sectionBounds": {
+        "x": 3864,
+        "y": 0,
+        "width": 1148,
+        "height": 341
+      }
+    },
+    "readback": {
+      "audit": {
+        "scope": "structure-and-token-snapshot",
+        "checked": 5,
+        "passed": true,
+        "checks": [
+          {
+            "id": "I277:254;277:186",
+            "mainId": "272:18",
+            "passed": true,
+            "differenceCount": 0
+          },
+          {
+            "id": "I277:254;277:210",
+            "mainId": "241:2892",
+            "passed": true,
+            "differenceCount": 0
+          },
+          {
+            "id": "I277:254;277:218",
+            "mainId": "168:2375",
+            "passed": true,
+            "differenceCount": 0
+          },
+          {
+            "id": "I277:254;277:219",
+            "mainId": "241:2892",
+            "passed": true,
+            "differenceCount": 0
+          },
+          {
+            "id": "I277:294;277:228",
+            "mainId": "272:18",
+            "passed": true,
+            "differenceCount": 0
+          }
+        ],
+        "differenceCount": 0,
+        "differences": [],
+        "omittedDifferences": 0
+      },
+      "family": {
+        "id": "277:251",
+        "name": "Benchmark/Patient search/run-174404",
+        "properties": {
+          "State": {
+            "type": "VARIANT",
+            "defaultValue": "Results",
+            "variantOptions": [
+              "Results",
+              "Empty"
+            ]
+          }
+        }
+      },
+      "panels": [
+        {
+          "id": "277:254",
+          "width": 550,
+          "height": 309,
+          "properties": {
+            "State": {
+              "value": "Results",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          },
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "gap": 16,
+          "clips": false,
+          "bindingNames": [
+            "itemSpacing",
+            "paddingLeft",
+            "paddingTop",
+            "paddingRight",
+            "paddingBottom",
+            "fills"
+          ],
+          "blocks": [
+            {
+              "id": "I277:254;277:185",
+              "name": "Find a patient",
+              "x": 16,
+              "y": 16,
+              "width": 518,
+              "height": 24
+            },
+            {
+              "id": "I277:254;277:186",
+              "name": "Text field",
+              "x": 16,
+              "y": 56,
+              "width": 518,
+              "height": 40
+            },
+            {
+              "id": "I277:254;277:208",
+              "name": "2 patients found",
+              "x": 16,
+              "y": 112,
+              "width": 518,
+              "height": 20
+            },
+            {
+              "id": "I277:254;277:209",
+              "name": "Patient results",
+              "x": 16,
+              "y": 148,
+              "width": 518,
+              "height": 145
+            }
+          ],
+          "text": [
+            {
+              "text": "Find a patient",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Bold"
+              },
+              "size": 16,
+              "style": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+              "colorBindings": [
+                "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+              ]
+            },
+            {
+              "text": "Search patients",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 12,
+              "style": "",
+              "colorBindings": []
+            },
+            {
+              "text": "Morgan",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 16,
+              "style": "",
+              "colorBindings": [
+                "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+              ]
+            },
+            {
+              "text": "Search patients",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 12,
+              "style": "",
+              "colorBindings": [
+                "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+              ]
+            },
+            {
+              "text": "2 patients found",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 14,
+              "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+              "colorBindings": [
+                "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+              ]
+            },
+            {
+              "text": "Morgan Lee",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 16,
+              "style": "",
+              "colorBindings": [
+                "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+              ]
+            },
+            {
+              "text": "Patient ID: 10482",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 14,
+              "style": "",
+              "colorBindings": [
+                "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+              ]
+            },
+            {
+              "text": "Morgan Patel",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 16,
+              "style": "",
+              "colorBindings": [
+                "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+              ]
+            },
+            {
+              "text": "Patient ID: 10517",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 14,
+              "style": "",
+              "colorBindings": [
+                "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "277:294",
+          "width": 550,
+          "height": 188,
+          "properties": {
+            "State": {
+              "value": "Empty",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          },
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "gap": 16,
+          "clips": false,
+          "bindingNames": [
+            "itemSpacing",
+            "paddingLeft",
+            "paddingTop",
+            "paddingRight",
+            "paddingBottom",
+            "fills"
+          ],
+          "blocks": [
+            {
+              "id": "I277:294;277:227",
+              "name": "Find a patient",
+              "x": 16,
+              "y": 16,
+              "width": 518,
+              "height": 24
+            },
+            {
+              "id": "I277:294;277:228",
+              "name": "Text field",
+              "x": 16,
+              "y": 56,
+              "width": 518,
+              "height": 40
+            },
+            {
+              "id": "I277:294;277:249",
+              "name": "No patients found",
+              "x": 16,
+              "y": 112,
+              "width": 518,
+              "height": 24
+            },
+            {
+              "id": "I277:294;277:250",
+              "name": "Try a different name or patient ID.",
+              "x": 16,
+              "y": 152,
+              "width": 518,
+              "height": 20
+            }
+          ],
+          "text": [
+            {
+              "text": "Find a patient",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Bold"
+              },
+              "size": 16,
+              "style": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+              "colorBindings": [
+                "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+              ]
+            },
+            {
+              "text": "Search patients",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 12,
+              "style": "",
+              "colorBindings": []
+            },
+            {
+              "text": "ZZZ",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 16,
+              "style": "",
+              "colorBindings": [
+                "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+              ]
+            },
+            {
+              "text": "Search patients",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 12,
+              "style": "",
+              "colorBindings": [
+                "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+              ]
+            },
+            {
+              "text": "No patients found",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 16,
+              "style": "S:c87aec6a94a2e25a8a25446f8d61716cb25abe73,116:83",
+              "colorBindings": [
+                "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+              ]
+            },
+            {
+              "text": "Try a different name or patient ID.",
+              "font": {
+                "family": "Akkurat LL",
+                "style": "Regular"
+              },
+              "size": 14,
+              "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+              "colorBindings": [
+                "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+              ]
+            }
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "id": "I277:254;277:186",
+          "name": "Text field",
+          "width": 518,
+          "height": 40,
+          "properties": {
+            "multiline#123:66": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "select#123:55": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Value text#123:11": {
+              "type": "TEXT",
+              "value": "Morgan"
+            },
+            "required#123:44": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Show helper#123:33": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Helper text#123:22": {
+              "type": "TEXT",
+              "value": "Text underneath the input"
+            },
+            "Label#123:0": {
+              "type": "TEXT",
+              "value": "Search patients"
+            },
+            "size": {
+              "value": "small",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "State": {
+              "value": "Default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "Value": {
+              "value": "Filled",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "Fill": {
+              "value": "None",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        },
+        {
+          "id": "I277:254;277:210",
+          "name": "List/Item",
+          "width": 518,
+          "height": 72,
+          "properties": {
+            "Icon#174:12": {
+              "type": "INSTANCE_SWAP",
+              "value": "45:4",
+              "preferredValues": []
+            },
+            "Show icon#174:9": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Secondary#174:3": {
+              "type": "TEXT",
+              "value": "Patient ID: 10482"
+            },
+            "Primary#174:0": {
+              "type": "TEXT",
+              "value": "Morgan Lee"
+            },
+            "Lines": {
+              "value": "Two",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "State": {
+              "value": "Default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        },
+        {
+          "id": "I277:254;277:218",
+          "name": "Divider",
+          "width": 518,
+          "height": 1,
+          "properties": {
+            "orientation": {
+              "value": "horizontal",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        },
+        {
+          "id": "I277:254;277:219",
+          "name": "List/Item",
+          "width": 518,
+          "height": 72,
+          "properties": {
+            "Icon#174:12": {
+              "type": "INSTANCE_SWAP",
+              "value": "45:4",
+              "preferredValues": []
+            },
+            "Show icon#174:9": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Secondary#174:3": {
+              "type": "TEXT",
+              "value": "Patient ID: 10517"
+            },
+            "Primary#174:0": {
+              "type": "TEXT",
+              "value": "Morgan Patel"
+            },
+            "Lines": {
+              "value": "Two",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "State": {
+              "value": "Default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        },
+        {
+          "id": "I277:294;277:228",
+          "name": "Text field",
+          "width": 518,
+          "height": 40,
+          "properties": {
+            "multiline#123:66": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "select#123:55": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Value text#123:11": {
+              "type": "TEXT",
+              "value": "ZZZ"
+            },
+            "required#123:44": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Show helper#123:33": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Helper text#123:22": {
+              "type": "TEXT",
+              "value": "Text underneath the input"
+            },
+            "Label#123:0": {
+              "type": "TEXT",
+              "value": "Search patients"
+            },
+            "size": {
+              "value": "small",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "State": {
+              "value": "Default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "Value": {
+              "value": "Filled",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "Fill": {
+              "value": "None",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        }
+      ],
+      "nodeCounts": {
+        "INSTANCE": 11,
+        "TEXT": 27,
+        "FRAME": 23,
+        "VECTOR": 4
+      },
+      "imageNodes": [],
+      "reactionCount": 0
+    },
+    "finalCheck": {
+      "paintedVisibleTextCount": 13,
+      "clippedText": [],
+      "fontsCorrect": true,
+      "icons": [],
+      "panels": [
+        {
+          "id": "277:254",
+          "horizontal": "FIXED",
+          "vertical": "HUG",
+          "bindings": {
+            "paddingTop": {
+              "name": "space/16",
+              "value": 16
+            },
+            "paddingRight": {
+              "name": "space/16",
+              "value": 16
+            },
+            "paddingBottom": {
+              "name": "space/16",
+              "value": 16
+            },
+            "paddingLeft": {
+              "name": "space/16",
+              "value": 16
+            },
+            "itemSpacing": {
+              "name": "space/16",
+              "value": 16
+            }
+          },
+          "paper": {
+            "name": "color/background/paper",
+            "value": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": "277:294",
+          "horizontal": "FIXED",
+          "vertical": "HUG",
+          "bindings": {
+            "paddingTop": {
+              "name": "space/16",
+              "value": 16
+            },
+            "paddingRight": {
+              "name": "space/16",
+              "value": 16
+            },
+            "paddingBottom": {
+              "name": "space/16",
+              "value": 16
+            },
+            "paddingLeft": {
+              "name": "space/16",
+              "value": 16
+            },
+            "itemSpacing": {
+              "name": "space/16",
+              "value": 16
+            }
+          },
+          "paper": {
+            "name": "color/background/paper",
+            "value": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      ]
+    },
+    "screenshots": {
+      "section": {
+        "width": 1228,
+        "height": 421,
+        "canvasWidth": 1148,
+        "canvasHeight": 341
+      },
+      "results": {
+        "width": 550,
+        "height": 309
+      },
+      "empty": {
+        "width": 550,
+        "height": 188
+      }
+    },
+    "visualReview": "All three downloaded images opened with view_image and inspected before verified checkpoint."
+  }
+}
