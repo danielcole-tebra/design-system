@@ -111,6 +111,47 @@ function compareControlSnapshots(actual, expected, limit = 10) {
     differenceCount: count, differences, omitted: count - differences.length };
 }
 
+// Paste this function WITH snapshotControl and compareControlSnapshots into Figma.
+// Full trees stay inside the call. This is structural/token evidence, not visual QA.
+async function auditControls(instances) {
+  if (!Array.isArray(instances) || instances.length < 1 || instances.length > 20) {
+    throw new Error('Audit 1..20 explicit instances per call');
+  }
+  const checks = [], differences = [];
+  const seen = new Set();
+  const identity = value => {
+    if (typeof value !== 'string' || !value || value.length > 128) throw new Error('Invalid node identity');
+    return value;
+  };
+  const preview = value => {
+    const text = JSON.stringify(value) ?? '[undefined]';
+    return { text: text.slice(0, 160), truncated: text.length > 160 };
+  };
+  for (const instance of instances) {
+    if (!instance || instance.type !== 'INSTANCE') throw new Error('Expected a live INSTANCE');
+    const id = identity(instance.id);
+    if (seen.has(id)) throw new Error('Duplicate audit instance');
+    seen.add(id);
+    const main = await instance.getMainComponentAsync();
+    if (!main) throw new Error('Main component unavailable: ' + id);
+    const mainId = identity(main.id);
+    const result = compareControlSnapshots(snapshotControl(instance), snapshotControl(main), 5);
+    checks.push({ id, mainId, passed: result.passed, differenceCount: result.differenceCount });
+    for (const diff of result.differences) {
+      if (differences.length === 5) break;
+      differences.push({ id, path: diff.path.slice(0, 200), pathTruncated: diff.path.length > 200,
+        actual: preview(diff.actual), expected: preview(diff.expected) });
+    }
+  }
+  const differenceCount = checks.reduce((sum, check) => sum + check.differenceCount, 0);
+  const output = { scope: 'structure-and-token-snapshot', checked: checks.length,
+    passed: checks.every(check => check.passed), checks, differenceCount,
+    differences, omittedDifferences: differenceCount - differences.length };
+  // <=36KB UTF-8 even for non-ASCII text, below the observed 48KB tool limit.
+  if (JSON.stringify(output).length > 12000) throw new Error('Narrow the audit scope before returning evidence');
+  return output;
+}
+
 if (typeof module !== 'undefined') {
-  module.exports = { summarizeMatches, importComponentsForBuild, snapshotControl, compareControlSnapshots };
+  module.exports = { summarizeMatches, importComponentsForBuild, snapshotControl, compareControlSnapshots, auditControls };
 }

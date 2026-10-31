@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "title": "REPLACE_WITH_RUN_TITLE",
+  "date": "2026-10-31",
+  "fileKey": "zKT34LQogNjz3Z07fY4VQB",
+  "reviewUrl": "REPLACE_WITH_ACTUAL_SECTION_URL",
+  "summary": "REPLACE_WITH_ACTUAL_OUTCOME",
+  "timing": {
+    "start": "REPLACE_WITH_CLOCK_UTC_ISO",
+    "ready": "REPLACE_AFTER_PREPARATION_AND_DISCOVERY",
+    "built": "REPLACE_AFTER_CONSTRUCTION_RETURN",
+    "firstImage": "REPLACE_AFTER_FIRST_REVIEWABLE_IMAGE_RETURN",
+    "verified": "REPLACE_AFTER_ALL_READBACK_AND_IMAGE_INSPECTION",
+    "inputWaitSeconds": 0
+  },
+  "verified": ["REPLACE_WITH_CHECKS_ACTUALLY_COMPLETED"],
+  "findings": [],
+  "reads": ["REPLACE_WITH_FILES_AND_SECTIONS_READ"],
+  "effort": {
+    "through": "verification",
+    "figmaCalls": null,
+    "otherCalls": null,
+    "searches": null,
+    "technicalRetries": null,
+    "canvasCorrections": null,
+    "clarificationStops": null,
+    "tokens": null
+  },
+  "screenshots": ["section.png", "results.png", "empty.png"],
+  "evidence": {}
+}

@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { summarizeMatches, importComponentsForBuild, snapshotControl, compareControlSnapshots } = require('./helpers.cjs');
+const { summarizeMatches, importComponentsForBuild, snapshotControl, compareControlSnapshots, auditControls } = require('./helpers.cjs');
 
 const master = () => ({ type: 'COMPONENT', name: 'Library row', layoutMode: 'VERTICAL',
   paddingLeft: 16, itemSpacing: 8, fills: [], boundVariables: { paddingLeft: { id: 'space16' } },
@@ -92,4 +92,32 @@ test('mixed values survive serialization; content/visibility remain separate che
   assert.equal(compareControlSnapshots(snapshotControl(actual), snapshotControl(master())).passed, true);
   actual.children[0].fontSize = Symbol('mixed');
   assert.deepEqual(snapshotControl(actual).children[0].values.fontSize, { mixedValue: true });
+});
+
+test('live audit keeps large trees inside the call and bounds failure details without losing counts', async () => {
+  const controls = Array.from({ length: 5 }, (_, i) => {
+    const source = master(); source.id = 'main' + i;
+    source.children = Array.from({ length: 100 }, () => structuredClone(source.children[0]));
+    const actual = structuredClone(source); actual.type = 'INSTANCE'; actual.id = 'instance' + i;
+    actual.children.forEach(child => { child.fontSize = 15; });
+    actual.getMainComponentAsync = async () => source;
+    return actual;
+  });
+  const result = await auditControls(controls);
+  assert.equal(result.checked, 5);
+  assert.equal(result.passed, false);
+  assert.equal(result.differenceCount, 500);
+  assert.equal(result.differences.length, 5);
+  assert.equal(result.omittedDifferences, 495);
+  assert.ok(Buffer.byteLength(JSON.stringify(result), 'utf8') < 4000);
+  assert.equal('children' in result, false);
+});
+
+test('audit passes valid controls, never empty, unavailable or duplicate evidence', async () => {
+  const source = { ...master(), id: 'master' };
+  const control = { ...instance(), id: 'control', getMainComponentAsync: async () => source };
+  assert.equal((await auditControls([control])).passed, true);
+  await assert.rejects(auditControls([]));
+  await assert.rejects(auditControls([control, control]), /Duplicate/);
+  await assert.rejects(auditControls([{ ...control, getMainComponentAsync: async () => null }]), /unavailable/);
 });

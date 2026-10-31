@@ -4399,3 +4399,7 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 
 ## 2026-10-31 — Patient-search benchmark repeat run-173058
 - Proposals zKT34LQogNjz3Z07fY4VQB: added section 275:162 and unique local Results/Empty family 275:98 from published parts. Required readback and three screenshots pass; no required GAP, zero canvas corrections. Evidence: runs/2026-10-31-patient-search-173058/REPORT.txt, evidence.json and three PNGs. Stopped after one section for Daniel's read.
+
+## 2026-10-31 — Bounded builder evidence and recording tools
+- File: none in Figma; tooling/documentation batch in C:\Code\design-system. Added bounded in-call audit summaries, a paginated heading/section reader, and a file-based record writer/template that generates REPORT and one retry-safe LOG entry. Active startup package remains four files; SDE and design values unchanged.
+- Verified: 15 local tests pass, including 500 audit differences under 4 KB, large disk-based evidence, exact reading pagination, record validation and duplicate-log prevention. Evidence: runs/2026-10-31-builder-evidence-tools/REPORT.md. No screenshot applies. Live speed validation follows in separate fixed-build runs.

@@ -12,7 +12,7 @@ The active builder package is this file plus three references:
 
 Also read the task's own screen spec when supplied. Do not routinely read LOG.md, FLAGS.md, records/, audits/, archive/, or the old long-form references. They are evidence for a specific unanswered question, not startup requirements. CLAUDE.md points here; it adds no rules.
 
-For Figma work, follow LIBRARY.md's **Efficient execution** sequence. Keep search/read output bounded, import and use remote assets in the same call, and avoid repeating passing checks. The optional code helpers are implementation aids, not another startup document.
+For Figma work, follow LIBRARY.md's **Efficient execution** sequence. Use `node tools/builder/read.cjs LIBRARY.md --index` for its current section map, then `--section "Efficient execution"`. The same reader handles installed skills; follow its MORE offsets until required content is complete. Helpers are implementation aids, not extra startup documents.
 
 SDE is settled for now, per Daniel on 2026-10-31. Its residual findings are historical limitations, not a backlog to reopen or blockers for new work. Mobile screen rulings remain local to their project. History is preserved in [archive/builder-docs-2026-10-31](archive/builder-docs-2026-10-31/README.md).
 
