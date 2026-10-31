@@ -14,7 +14,12 @@ Clock start, before preparation: 2026-10-31 17:08:01 UTC (12:08:01 PM CDT).
 First reviewable section screenshot returned: 17:10:55 UTC (12:10:55 PM CDT).
 Wall time to first screenshot: 174 seconds (2m 54s), including required skills.
 Verification/evidence checkpoint: 17:11:58 UTC; 237 seconds (3m 57s).
-Completion through first successful repository push: recorded below after push.
+Completion through first successful repository push: 17:13:11 UTC
+(12:13:11 PM CDT). Total measured wall time: 310 seconds (5m 10s).
+This includes preparation, build, recovery, visual QA, evidence, report, log,
+commit and successful push (2f6ed52). Recording this completion timestamp and
+mirroring deliverables follow the measured checkpoint; that reporting tail is
+not silently included in or subtracted from the 310-second interval.
 Actual user-input wait: 0 seconds. Clarification stops: 0. No time subtracted.
 Exact model token usage: unavailable; no estimate.
 
@@ -84,7 +89,9 @@ OBSERVABLE TOOL CALLS
 16 Figma calls: 1 session, 1 library listing, 2 batched searches, 9 use_figma
 (including failed construction), 3 screenshots. No hidden/internal calls counted.
 Before report/commit: 12 shell calls, 4 clock calls, 3 image views, 1 patch.
-Final reporting/persistence calls and completion measurement recorded below.
+Final reporting/persistence adds 2 patch, 2 shell and 2 clock calls.
+Totals for this turn's completed planned calls: 16 Figma and 26 other calls
+(14 shell, 6 clock, 3 image views, 3 patches), excluding orchestration wrappers.
 No runtime-provided aggregate tool or token meter; counts are transcript counts,
 excluding functions.exec orchestration wrappers.
 
