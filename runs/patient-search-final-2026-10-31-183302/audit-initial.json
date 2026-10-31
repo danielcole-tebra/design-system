@@ -1,0 +1,218 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": false,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 5,
+    "passed": true,
+    "checks": [
+      {
+        "id": "I285:436;285:372",
+        "mainId": "272:18",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I285:436;285:395",
+        "mainId": "241:2892",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I285:436;285:403",
+        "mainId": "241:2892",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I285:436;285:402",
+        "mainId": "168:2375",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I285:476;285:411",
+        "mainId": "272:18",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 57,
+    "failed": 4,
+    "checks": [
+      {
+        "name": "Results width",
+        "passed": true
+      },
+      {
+        "name": "Results content-height",
+        "passed": true
+      },
+      {
+        "name": "Results height",
+        "passed": true
+      },
+      {
+        "name": "Results state",
+        "passed": true
+      },
+      {
+        "name": "Results padding",
+        "passed": true
+      },
+      {
+        "name": "Results gap",
+        "passed": true
+      },
+      {
+        "name": "Results spacing bindings",
+        "passed": true
+      },
+      {
+        "name": "Results paper binding",
+        "passed": true
+      },
+      {
+        "name": "Results visible copy",
+        "passed": false
+      },
+      {
+        "name": "Results fonts",
+        "passed": true
+      },
+      {
+        "name": "Results clipped visible text",
+        "passed": true
+      },
+      {
+        "name": "Results reactions",
+        "passed": true
+      },
+      {
+        "name": "Results image fills",
+        "passed": true
+      },
+      {
+        "name": "Results editable text count",
+        "passed": false
+      },
+      {
+        "name": "Results heading style",
+        "passed": true
+      },
+      {
+        "name": "Results 2 patients found style",
+        "passed": true
+      },
+      {
+        "name": "Results 2 patients found fill",
+        "passed": true
+      },
+      {
+        "name": "Results field width",
+        "passed": true
+      },
+      {
+        "name": "Results field height",
+        "passed": true
+      },
+      {
+        "name": "Results field axes",
+        "passed": true
+      },
+      {
+        "name": "Results field flags",
+        "passed": true
+      },
+      {
+        "name": "Results row count",
+        "passed": true
+      },
+      {
+        "name": "Results row 0 width",
+        "passed": true
+      },
+      {
+        "name": "Results row 0 axes",
+        "passed": true
+      },
+      {
+        "name": "Results row 1 width",
+        "passed": true
+      },
+      {
+        "name": "Results row 1 axes",
+        "passed": true
+      },
+      {
+        "name": "Results dividers",
+        "passed": true
+      },
+      {
+        "name": "Results divider width",
+        "passed": true
+      },
+      {
+        "name": "Empty width",
+        "passed": true
+      },
+      {
+        "name": "Empty content-height",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 27,
+    "failures": [
+      {
+        "name": "Results visible copy",
+        "actual": {
+          "text": "[\"2 patients found\",\"Find a patient\",\"Morgan\",\"Morgan Lee\",\"Morgan Patel\",\"Patient ID: 10482\",\"Patient ID: 10517\",\"Search patients\",\"Search patients\"]",
+          "truncated": false
+        },
+        "expected": {
+          "text": "[\"2 patients found\",\"Find a patient\",\"Morgan\",\"Morgan Lee\",\"Morgan Patel\",\"Patient ID: 10482\",\"Patient ID: 10517\",\"Search patients\"]",
+          "truncated": false
+        }
+      },
+      {
+        "name": "Results editable text count",
+        "actual": {
+          "text": "9",
+          "truncated": false
+        },
+        "expected": {
+          "text": "8",
+          "truncated": false
+        }
+      },
+      {
+        "name": "Empty visible copy",
+        "actual": {
+          "text": "[\"Find a patient\",\"No patients found\",\"Search patients\",\"Search patients\",\"Try a different name or patient ID.\",\"ZZZ\"]",
+          "truncated": false
+        },
+        "expected": {
+          "text": "[\"Find a patient\",\"No patients found\",\"Search patients\",\"Try a different name or patient ID.\",\"ZZZ\"]",
+          "truncated": false
+        }
+      },
+      {
+        "name": "Empty editable text count",
+        "actual": {
+          "text": "6",
+          "truncated": false
+        },
+        "expected": {
+          "text": "5",
+          "truncated": false
+        }
+      }
+    ],
+    "omittedFailures": 0
+  }
+}

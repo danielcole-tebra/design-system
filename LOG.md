@@ -4423,3 +4423,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-10-31 — Final builder wrappers, retained inspection and larger reads
 - File: Proposals zKT34LQogNjz3Z07fY4VQB searched read-only to validate asset response schemas; no canvas changes. Added automatic search/audit output wrappers and bundle commands, explicit retention of scratch instances, and adjustable 16,000-character default reads. Kept the evidence writer and four-file startup package.
 - Verified: 24 local tests passed; captured live search projected to 3,650 characters while retaining all 32 matches. Evidence: runs/2026-10-31-builder-final-wrappers/REPORT.md. No screenshot applies. One final test build follows, with no further tuning afterward per Daniel.
+
+
+<!-- builder-run:runs/patient-search-final-2026-10-31-183302 -->
+## 2026-10-31 — Final wrapper benchmark · Patient search · run-183302
+- File: zKT34LQogNjz3Z07fY4VQB. Built a new isolated family with Results and Empty static states and one instance of each. All 57 measured assertions and five library structure/token comparisons pass; all three screenshots inspected. One fixed-build repeat, not evidence of a general speedup.
+- Evidence: runs/patient-search-final-2026-10-31-183302/REPORT.md, record.json, section.png, results.png, empty.png.

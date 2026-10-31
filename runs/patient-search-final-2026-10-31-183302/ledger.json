@@ -1,0 +1,77 @@
+{
+  "createdNodeIds": [
+    "285:370",
+    "285:368",
+    "285:369",
+    "285:371",
+    "285:372",
+    "285:393",
+    "285:394",
+    "285:395",
+    "285:402",
+    "285:403",
+    "285:410",
+    "285:411",
+    "285:432",
+    "285:433",
+    "285:434",
+    "285:435",
+    "285:436",
+    "285:476"
+  ],
+  "sectionId": "285:434",
+  "reviewId": "285:435",
+  "familyId": "285:370",
+  "variantIds": [
+    "285:368",
+    "285:369"
+  ],
+  "instanceIds": [
+    "285:436",
+    "285:476"
+  ],
+  "fields": [
+    "285:372",
+    "285:411"
+  ],
+  "rows": [
+    "285:395",
+    "285:403"
+  ],
+  "dividers": [
+    "285:402"
+  ],
+  "texts": [
+    "285:371",
+    "285:393",
+    "285:410",
+    "285:432",
+    "285:433"
+  ],
+  "inspectionIds": [],
+  "bounds": [
+    {
+      "id": "285:436",
+      "name": "Benchmark/Patient search/run-183302",
+      "width": 550,
+      "height": 309
+    },
+    {
+      "id": "285:476",
+      "name": "Benchmark/Patient search/run-183302",
+      "width": 550,
+      "height": 188
+    }
+  ],
+  "tokens": {
+    "space": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24",
+    "paper": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146",
+    "primary": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+    "secondary": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+  },
+  "styles": {
+    "h4": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+    "body1": "S:c87aec6a94a2e25a8a25446f8d61716cb25abe73,116:83",
+    "body2": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94"
+  }
+}

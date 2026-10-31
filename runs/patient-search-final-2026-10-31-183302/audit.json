@@ -1,0 +1,173 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": true,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 5,
+    "passed": true,
+    "checks": [
+      {
+        "id": "I285:436;285:372",
+        "mainId": "272:18",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I285:436;285:395",
+        "mainId": "241:2892",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I285:436;285:403",
+        "mainId": "241:2892",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I285:436;285:402",
+        "mainId": "168:2375",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I285:476;285:411",
+        "mainId": "272:18",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 57,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "Results width",
+        "passed": true
+      },
+      {
+        "name": "Results content-height",
+        "passed": true
+      },
+      {
+        "name": "Results height",
+        "passed": true
+      },
+      {
+        "name": "Results state",
+        "passed": true
+      },
+      {
+        "name": "Results padding",
+        "passed": true
+      },
+      {
+        "name": "Results gap",
+        "passed": true
+      },
+      {
+        "name": "Results spacing bindings",
+        "passed": true
+      },
+      {
+        "name": "Results paper binding",
+        "passed": true
+      },
+      {
+        "name": "Results visible copy",
+        "passed": true
+      },
+      {
+        "name": "Results fonts",
+        "passed": true
+      },
+      {
+        "name": "Results clipped visible text",
+        "passed": true
+      },
+      {
+        "name": "Results reactions",
+        "passed": true
+      },
+      {
+        "name": "Results image fills",
+        "passed": true
+      },
+      {
+        "name": "Results editable text count",
+        "passed": true
+      },
+      {
+        "name": "Results heading style",
+        "passed": true
+      },
+      {
+        "name": "Results 2 patients found style",
+        "passed": true
+      },
+      {
+        "name": "Results 2 patients found fill",
+        "passed": true
+      },
+      {
+        "name": "Results field width",
+        "passed": true
+      },
+      {
+        "name": "Results field height",
+        "passed": true
+      },
+      {
+        "name": "Results field axes",
+        "passed": true
+      },
+      {
+        "name": "Results field flags",
+        "passed": true
+      },
+      {
+        "name": "Results row count",
+        "passed": true
+      },
+      {
+        "name": "Results row 0 width",
+        "passed": true
+      },
+      {
+        "name": "Results row 0 axes",
+        "passed": true
+      },
+      {
+        "name": "Results row 1 width",
+        "passed": true
+      },
+      {
+        "name": "Results row 1 axes",
+        "passed": true
+      },
+      {
+        "name": "Results dividers",
+        "passed": true
+      },
+      {
+        "name": "Results divider width",
+        "passed": true
+      },
+      {
+        "name": "Empty width",
+        "passed": true
+      },
+      {
+        "name": "Empty content-height",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 27,
+    "failures": [],
+    "omittedFailures": 0
+  }
+}
