@@ -4409,3 +4409,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-10-31 — Slim patient search benchmark · run-174404
 - File: zKT34LQogNjz3Z07fY4VQB. Built and visually verified one isolated two-state local patient-search family and side-by-side instances. No remaining build issues; stopped for Daniel's read.
 - Evidence: runs/2026-10-31-patient-search-174404/REPORT.md, record.json, section.png, results.png, empty.png.
+
+
+<!-- builder-run:runs/2026-10-31-patient-search-174950 -->
+## 2026-10-31 — Slim patient search benchmark · run-174950
+- File: zKT34LQogNjz3Z07fY4VQB. Built and verified one isolated Results/Empty patient-search family and side-by-side instances. No remaining build issues; stopped after this section for Daniel's read.
+- Evidence: runs/2026-10-31-patient-search-174950/REPORT.md, record.json, section.png, results.png, empty.png.
