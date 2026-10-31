@@ -1,0 +1,96 @@
+Slim builder benchmark — Patient search — 2026-10-31
+
+Result: PASS. One new isolated section in Proposals; reusable local family
+Benchmark/Patient search with State=Results and State=Empty, plus one instance
+of each side by side. No required capability GAP and no canvas corrective pass.
+Single-run baseline only; no old-doc control and no claim of speedup.
+
+Review: https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB?node-id=272-875
+Section 272:875; family 272:874; instances 272:877 and 272:917.
+Masters are outside the review section. Existing Cover retained unchanged.
+
+MEASUREMENT
+Clock start, before preparation: 2026-10-31 17:08:01 UTC (12:08:01 PM CDT).
+First reviewable section screenshot returned: 17:10:55 UTC (12:10:55 PM CDT).
+Wall time to first screenshot: 174 seconds (2m 54s), including required skills.
+Verification/evidence checkpoint: 17:11:58 UTC; 237 seconds (3m 57s).
+Completion through first successful repository push: recorded below after push.
+Actual user-input wait: 0 seconds. Clarification stops: 0. No time subtracted.
+Exact model token usage: unavailable; no estimate.
+
+BUILD AND VERIFICATION
+Results: 550 x 309 px. Empty: 550 x 188 px. Both content-height, white paper,
+16 px outer padding and major gaps bound to space/16; content width 518 px.
+Heading uses library h4 (Akkurat LL Bold, 16/24). Empty message uses body1
+(Regular 16/24); count and supporting copy use body2 (Regular 14/20).
+Text primary/secondary and background.paper were resolved in Tebra/Color;
+space/16 resolved in Tebra/Dimension. Values/scopes/collections verified.
+
+Published reuse: Text field set 7c3c99bb9a9392d6571c0557b41d142b8987b566;
+List/Item set 1884b41be6b397af71aec82d10bea636e00e0789;
+Divider set e1a369ce1b663c8e203a59c18f522108c62c8e6e.
+Fields: small, Default, Filled, Fill=None on paper; 518 x 40. Labels and values
+set through public properties; helper, required, select and multiline false.
+Rows: Lines=Two, State=Default, Show icon=false; 518 x 72; original 8/16 row
+padding and 6 px text-stack margins preserved. Divider: horizontal, 518 x 1.
+All supplied names, IDs and copy verified. Fictional test content.
+
+Read back every placed state's properties, sizes, typography and bindings.
+Compared all five authored library instances with their actual main components:
+no descendant structure, padding/gap or token-binding differences. Only root
+size/name overrides and supported text/visibility properties were applied.
+All visible text uses Akkurat LL. No prototype reactions were added.
+Section has 66 descendants: 24 frames, 11 instances, 27 text nodes, 4 vectors;
+no image-filled nodes. No flattened UI. Only two new top-level objects.
+Viewed section.png (1228 x 421, section bounds 1148 x 341), results.png
+(550 x 309), empty.png (550 x 188). Labels, notches, copy and rows are visible;
+no clipping or overflow found. No visual correction required.
+
+READING AND SEARCH SCOPE
+Canonical C:\Code\design-system: clean master; git pull --ff-only up to date.
+AGENTS.md read in full. LIBRARY.md: Evidence/availability, Token mappings,
+Typography, Text field, Other controls/surfaces (table read), API checks.
+COMPOSITIONS.md: Scope/reuse through Search/adornments (lines 1-45, including
+intervening sheet/edit-form references); no referenced SDE files opened.
+OPEN-ISSUES.md: first 14 lines, including consumer-capabilities,
+text-field-adornments and token-map-unverified. No historical evidence lookup.
+LOG.md: only final 3 lines read immediately before appending the batch entry.
+No earlier benchmark reports, responses or chat history consulted.
+
+Installed skills: figma-use, figma-generate-design, figma-generate-library;
+Plugin API index; working-with-design-systems overview; component-creation
+reference first 140 lines; createComponentWithVariants helper; targeted typings.
+Initial combined skill output truncated; targeted rereads recovered required
+workflow sections. Built family using a scoped adaptation of the helper.
+Searches: heading/component rg across active docs; Code Connect filename search
+in canonical repo (none); targeted Plugin API signatures. Two batched library
+search calls: view, field, row, divider, four tokens, three styles; second call
+recovered exact divider/token keys after verbose first result was truncated.
+Proposals page inventory + Cover asset inventory; Composition System page
+inventory + Inputs top-level inventory (Autocomplete open-state plate only).
+No suitable patient-search composite selected; Nav/Search rejected because its
+navigation theme/purpose does not match. No SDE or Visit Companion inspection.
+
+RECOVERY AND CORRECTIVE PASSES
+Canvas corrective passes after inspection: 0.
+One construction failure before mutation: imported component node ID lookup
+returned null. Tool explicitly allowed safe retry; reimported by published keys
+within the construction call and completed successfully.
+One audit-only comparator correction: INSTANCE versus COMPONENT root type
+initially yielded false mismatches. Normalized root type/name and rechecked;
+all five controls had zero structural/token differences. No canvas edit.
+
+OBSERVABLE TOOL CALLS
+16 Figma calls: 1 session, 1 library listing, 2 batched searches, 9 use_figma
+(including failed construction), 3 screenshots. No hidden/internal calls counted.
+Before report/commit: 12 shell calls, 4 clock calls, 3 image views, 1 patch.
+Final reporting/persistence calls and completion measurement recorded below.
+No runtime-provided aggregate tool or token meter; counts are transcript counts,
+excluding functions.exec orchestration wrappers.
+
+FILES AND BOUNDARIES
+Evidence: state.json, section.png, results.png, empty.png, this report.
+Write scope: new Proposals family/section only. Library and Composition System
+read-only; published imports authorized. No definitions changed or published.
+Batch log appended once. Only individually named batch paths staged/committed.
+Remaining issue: none. Stop here for Daniel's read.
