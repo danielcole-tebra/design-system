@@ -1,0 +1,54 @@
+Patient search benchmark repeat — run-173058 — 2026-10-31
+
+Built: https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB?node-id=275-162
+Canonical checkout: C:\Code\design-system (master, initially clean, pull already current).
+Starting commit: b771f97e34c767348e9f84124e425f706f895b16.
+New local family Benchmark/Patient search/run-173058 (275:98).
+Figma-only State=Results and State=Empty; instances 275:164 and 275:204.
+Results 550×309; Empty 550×188; section 1148×341.
+Both panels: white paper, 16px padding/major gaps, 518px content width.
+Published Text field: small/Default/Filled/Fill=None, transparent over paper; helper/select/required/multiline false.
+Published List/Item: Two/Default, icon hidden, 518×72. Horizontal Divider 518×1.
+No earlier benchmark family inspected or cloned; inventory was names/bounds only.
+Canonical spacing, token-bound headings, reusable rows and section-verification recipes reused. Whole-view library matches were navigation-themed and unsuitable.
+No source library, Composition System, existing screen, SDE or Visit Companion changes.
+
+Verified: actual instance properties, copy, effective visibility, widths, clipping, fonts, reactions and bindings.
+All five controls passed the unchanged structural/token comparator against their actual main components, including descendants/padding/paints/bindings. Copy/visibility/width overrides checked separately.
+Akkurat LL throughout. h4 16/24 Bold, body1 16/24 Regular, body2 14/20 Regular; published styles retain typography bindings.
+Imported paper, primary/secondary ink and space/16/0 resolved with scopes/collections. No authored rounding or inflation introduced.
+Zero clipped text findings, zero reactions, both panels content-height.
+Review subtree: 65 descendants (11 instances, 27 texts, 23 frames, 4 vectors), no image-filled nodes.
+Viewed results.png, empty.png and section.png. Copy, labels, field notches, rows and both states pass visual inspection.
+Required GAPs / remaining acceptance issues: none.
+
+Timing (UTC; includes preparation and installed skills)
+Start 17:30:58.
+First reviewable screenshot return checkpoint 17:33:36: 158s (2m38s).
+Verified checkpoint after readback and viewing all three screenshots 17:34:12: 194s (3m14s).
+First-image clock sampled immediately after the parallel screenshot batch returned, at one-second precision.
+Actual user-input wait: 0s. Clarification stops: 0.
+Report timing ends at verification; actual completion/push outcome is in final chat.
+
+Observable effort through completed verification/LOG-tail tool batch:
+12 Figma calls: session 1, libraries 1, search 1, use_figma 6, screenshots 3.
+The 6 use_figma calls: target inventory, library page inventory, consumer property discovery imports, construction, oversized read failure, successful bounded retry.
+24 other nested calls: shell 17, clock 4, image views 3. Excludes 16 functions orchestration wrappers.
+Searches: 1 Figma call with 11 asset queries; 5 local rg invocations (doc headings, scoped Code Connect files, helper symbols, API signatures, font-recipe heading). No matching needed-component Code Connect files.
+Relevant package reads: 19 heading sections plus 3 issue entries = 22 units.
+AGENTS 6 sections; LIBRARY Evidence/Efficient execution/Tokens/Typography/Text field/Other controls/API checks (7); COMPOSITIONS Scope/Rhythm/Actions/Rows/Search/Comparison (6); OPEN-ISSUES consumer-capabilities/text-field-adornments/token-map-unverified (3 entries). Adjacent text incidentally included in bounded ranges.
+Installed skills: figma-use, figma-generate-design, figma-generate-library. Targeted references: API index/types, design-system concepts, gotchas, component creation.
+Technical retries: 2 total: one Figma read after 69,450 bytes exceeded its 48,000-byte limit; one evidence-save retry after Windows command-line length rejection. Failed Figma result also triggered an orchestration JSON parse error. Neither failed operation changed canvas.
+Canvas corrective passes: 0. Comparator corrections: 0.
+Read truncation: yes, initial combined skills command/outer response and a later combined documentation response; missing mandatory ranges recovered with bounded reads. Search data retained in full with candidate summaries; no search-data loss.
+Cross-call import failure: no. Construction imported by verified published keys and used returned assets in the same call.
+Helpers: installed createComponentWithVariants/cartesianProduct; canonical snapshotControl/compareControlSnapshots copied unchanged.
+Extra reporting commit: none. Evidence/report/LOG prepared for one named-path commit/push.
+No prior reports/chats/history read for implementation. LOG tail of 8 lines incidentally contained an earlier benchmark entry; ignored for implementation and measurement.
+Exact tokens unavailable; no estimate. This is one fixed-build repeat, not proof of a general speedup.
+
+Evidence: C:\Code\design-system\runs\2026-10-31-patient-search-173058
+REPORT.txt, evidence.json (created-ID ledger and full readback), results.png, empty.png, section.png.
+Section PNG includes Figma outside margin: 1228×421.
+Desktop delivery copies of report and section image are required for final clickable outputs. Canonical evidence remains in the folder above.
+

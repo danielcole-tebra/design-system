@@ -1,0 +1,2111 @@
+{
+  "runId": "run-173058",
+  "start": "2026-10-31 17:30:58 UTC",
+  "firstImage": "2026-10-31 17:33:36 UTC",
+  "verified": "2026-10-31 17:34:12 UTC",
+  "startingCommit": "b771f97e34c767348e9f84124e425f706f895b16",
+  "build": {
+    "createdNodeIds": [
+      "275:98",
+      "275:96",
+      "275:99",
+      "275:100",
+      "I275:100;130:160",
+      "I275:100;130:161",
+      "I275:100;130:162",
+      "I275:100;130:163",
+      "I275:100;130:164",
+      "I275:100;133:1012",
+      "I275:100;130:165",
+      "I275:100;130:166",
+      "I275:100;130:167",
+      "I275:100;130:168",
+      "I275:100;130:169",
+      "I275:100;130:169;76:4",
+      "I275:100;130:170",
+      "I275:100;130:171",
+      "I275:100;130:172",
+      "I275:100;130:173",
+      "I275:100;130:174",
+      "I275:100;130:175",
+      "I275:100;130:176",
+      "I275:100;130:177",
+      "275:121",
+      "275:122",
+      "275:123",
+      "I275:123;641:83",
+      "I275:123;641:84",
+      "I275:123;641:84;76:4",
+      "I275:123;641:85",
+      "I275:123;641:86",
+      "I275:123;641:87",
+      "275:130",
+      "275:131",
+      "I275:131;641:83",
+      "I275:131;641:84",
+      "I275:131;641:84;76:4",
+      "I275:131;641:85",
+      "I275:131;641:86",
+      "I275:131;641:87",
+      "275:97",
+      "275:138",
+      "275:139",
+      "I275:139;130:160",
+      "I275:139;130:161",
+      "I275:139;130:162",
+      "I275:139;130:163",
+      "I275:139;130:164",
+      "I275:139;133:1012",
+      "I275:139;130:165",
+      "I275:139;130:166",
+      "I275:139;130:167",
+      "I275:139;130:168",
+      "I275:139;130:169",
+      "I275:139;130:169;76:4",
+      "I275:139;130:170",
+      "I275:139;130:171",
+      "I275:139;130:172",
+      "I275:139;130:173",
+      "I275:139;130:174",
+      "I275:139;130:175",
+      "I275:139;130:176",
+      "I275:139;130:177",
+      "275:160",
+      "275:161",
+      "275:162",
+      "275:163",
+      "275:164",
+      "I275:164;275:99",
+      "I275:164;275:100",
+      "I275:164;275:100;130:160",
+      "I275:164;275:100;130:161",
+      "I275:164;275:100;130:162",
+      "I275:164;275:100;130:163",
+      "I275:164;275:100;130:164",
+      "I275:164;275:100;133:1012",
+      "I275:164;275:100;130:165",
+      "I275:164;275:100;130:166",
+      "I275:164;275:100;130:167",
+      "I275:164;275:100;130:168",
+      "I275:164;275:100;130:169",
+      "I275:164;275:100;130:169;76:4",
+      "I275:164;275:100;130:170",
+      "I275:164;275:100;130:171",
+      "I275:164;275:100;130:172",
+      "I275:164;275:100;130:173",
+      "I275:164;275:100;130:174",
+      "I275:164;275:100;130:175",
+      "I275:164;275:100;130:176",
+      "I275:164;275:100;130:177",
+      "I275:164;275:121",
+      "I275:164;275:122",
+      "I275:164;275:123",
+      "I275:164;275:123;641:83",
+      "I275:164;275:123;641:84",
+      "I275:164;275:123;641:84;76:4",
+      "I275:164;275:123;641:85",
+      "I275:164;275:123;641:86",
+      "I275:164;275:123;641:87",
+      "I275:164;275:130",
+      "I275:164;275:131",
+      "I275:164;275:131;641:83",
+      "I275:164;275:131;641:84",
+      "I275:164;275:131;641:84;76:4",
+      "I275:164;275:131;641:85",
+      "I275:164;275:131;641:86",
+      "I275:164;275:131;641:87",
+      "275:204",
+      "I275:204;275:138",
+      "I275:204;275:139",
+      "I275:204;275:139;130:160",
+      "I275:204;275:139;130:161",
+      "I275:204;275:139;130:162",
+      "I275:204;275:139;130:163",
+      "I275:204;275:139;130:164",
+      "I275:204;275:139;133:1012",
+      "I275:204;275:139;130:165",
+      "I275:204;275:139;130:166",
+      "I275:204;275:139;130:167",
+      "I275:204;275:139;130:168",
+      "I275:204;275:139;130:169",
+      "I275:204;275:139;130:169;76:4",
+      "I275:204;275:139;130:170",
+      "I275:204;275:139;130:171",
+      "I275:204;275:139;130:172",
+      "I275:204;275:139;130:173",
+      "I275:204;275:139;130:174",
+      "I275:204;275:139;130:175",
+      "I275:204;275:139;130:176",
+      "I275:204;275:139;130:177",
+      "I275:204;275:160",
+      "I275:204;275:161"
+    ],
+    "section": {
+      "id": "275:162",
+      "width": 1148,
+      "height": 341
+    },
+    "family": {
+      "id": "275:98",
+      "name": "Benchmark/Patient search/run-173058",
+      "properties": {
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Results",
+          "variantOptions": [
+            "Results",
+            "Empty"
+          ]
+        }
+      }
+    },
+    "instances": [
+      {
+        "id": "275:164",
+        "name": "Benchmark/Patient search/run-173058",
+        "properties": {
+          "State": {
+            "value": "Results",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 550,
+        "height": 309,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "gap": 16,
+        "bindings": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingTop": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingBottom": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+            }
+          ]
+        }
+      },
+      {
+        "id": "275:204",
+        "name": "Benchmark/Patient search/run-173058",
+        "properties": {
+          "State": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 550,
+        "height": 188,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "gap": 16,
+        "bindings": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingTop": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingBottom": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+            }
+          ]
+        }
+      }
+    ],
+    "audit": [
+      {
+        "id": "275:100",
+        "name": "Text field",
+        "mainKey": "679a3842ec3982166e616a8f294684199e2e5c94",
+        "properties": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "Morgan"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Search patients"
+          },
+          "size": {
+            "value": "small",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "None",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 518,
+        "height": 40,
+        "comparison": {
+          "scope": "structure-and-token-snapshot",
+          "passed": true,
+          "differenceCount": 0,
+          "differences": [],
+          "omitted": 0
+        }
+      },
+      {
+        "id": "275:123",
+        "name": "List/Item",
+        "mainKey": "648b022efdf5f2b8fe120df786ac18a9af08c707",
+        "properties": {
+          "Icon#174:12": {
+            "type": "INSTANCE_SWAP",
+            "value": "45:4",
+            "preferredValues": []
+          },
+          "Show icon#174:9": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Secondary#174:3": {
+            "type": "TEXT",
+            "value": "Patient ID: 10482"
+          },
+          "Primary#174:0": {
+            "type": "TEXT",
+            "value": "Morgan Lee"
+          },
+          "Lines": {
+            "value": "Two",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 518,
+        "height": 72,
+        "comparison": {
+          "scope": "structure-and-token-snapshot",
+          "passed": true,
+          "differenceCount": 0,
+          "differences": [],
+          "omitted": 0
+        }
+      },
+      {
+        "id": "275:130",
+        "name": "Divider",
+        "mainKey": "0143de7b0529ee6fed9d0c163eeab7571480bc67",
+        "properties": {
+          "orientation": {
+            "value": "horizontal",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 518,
+        "height": 1,
+        "comparison": {
+          "scope": "structure-and-token-snapshot",
+          "passed": true,
+          "differenceCount": 0,
+          "differences": [],
+          "omitted": 0
+        }
+      },
+      {
+        "id": "275:131",
+        "name": "List/Item",
+        "mainKey": "648b022efdf5f2b8fe120df786ac18a9af08c707",
+        "properties": {
+          "Icon#174:12": {
+            "type": "INSTANCE_SWAP",
+            "value": "45:4",
+            "preferredValues": []
+          },
+          "Show icon#174:9": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Secondary#174:3": {
+            "type": "TEXT",
+            "value": "Patient ID: 10517"
+          },
+          "Primary#174:0": {
+            "type": "TEXT",
+            "value": "Morgan Patel"
+          },
+          "Lines": {
+            "value": "Two",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 518,
+        "height": 72,
+        "comparison": {
+          "scope": "structure-and-token-snapshot",
+          "passed": true,
+          "differenceCount": 0,
+          "differences": [],
+          "omitted": 0
+        }
+      },
+      {
+        "id": "275:139",
+        "name": "Text field",
+        "mainKey": "679a3842ec3982166e616a8f294684199e2e5c94",
+        "properties": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "ZZZ"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Search patients"
+          },
+          "size": {
+            "value": "small",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "None",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 518,
+        "height": 40,
+        "comparison": {
+          "scope": "structure-and-token-snapshot",
+          "passed": true,
+          "differenceCount": 0,
+          "differences": [],
+          "omitted": 0
+        }
+      }
+    ],
+    "variableEvidence": [
+      {
+        "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146",
+        "name": "color/background/paper",
+        "key": "f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+        "scopes": [
+          "FRAME_FILL",
+          "SHAPE_FILL"
+        ],
+        "collection": "Tebra/Color",
+        "resolved": {
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "resolvedType": "COLOR"
+        },
+        "codeSyntax": {
+          "WEB": "var(--tebra-color-background-paper)"
+        }
+      },
+      {
+        "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+        "name": "color/text/primary",
+        "key": "5c8867e0b6f174db9f69096580158df26e39baae",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "collection": "Tebra/Color",
+        "resolved": {
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          },
+          "resolvedType": "COLOR"
+        },
+        "codeSyntax": {
+          "WEB": "var(--tebra-color-text-primary)"
+        }
+      },
+      {
+        "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139",
+        "name": "color/text/secondary",
+        "key": "0d503f1eb6c6f3e923310b2ad6e621cc940b6543",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "collection": "Tebra/Color",
+        "resolved": {
+          "value": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335,
+            "a": 1
+          },
+          "resolvedType": "COLOR"
+        },
+        "codeSyntax": {
+          "WEB": "var(--tebra-color-text-secondary)"
+        }
+      },
+      {
+        "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24",
+        "name": "space/16",
+        "key": "6016592c19254dd61e9de9e006459546eaece0bb",
+        "scopes": [
+          "WIDTH_HEIGHT",
+          "GAP"
+        ],
+        "collection": "Tebra/Dimension",
+        "resolved": {
+          "value": 16,
+          "resolvedType": "FLOAT"
+        },
+        "codeSyntax": {}
+      },
+      {
+        "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34",
+        "name": "space/0",
+        "key": "ce161dd8d210e94082abb2b2d1731fafc1a23767",
+        "scopes": [
+          "WIDTH_HEIGHT",
+          "GAP"
+        ],
+        "collection": "Tebra/Dimension",
+        "resolved": {
+          "value": 0,
+          "resolvedType": "FLOAT"
+        },
+        "codeSyntax": {}
+      }
+    ],
+    "styles": [
+      {
+        "id": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+        "key": "888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3",
+        "name": "h4",
+        "fontName": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "fontSize": 16,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 24
+        }
+      },
+      {
+        "id": "S:c87aec6a94a2e25a8a25446f8d61716cb25abe73,116:83",
+        "key": "c87aec6a94a2e25a8a25446f8d61716cb25abe73",
+        "name": "body1",
+        "fontName": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "fontSize": 16,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 24
+        }
+      },
+      {
+        "id": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+        "key": "cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb",
+        "name": "body2",
+        "fontName": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "fontSize": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        }
+      }
+    ],
+    "editable": {
+      "descendants": 65,
+      "counts": {
+        "INSTANCE": 11,
+        "TEXT": 27,
+        "FRAME": 23,
+        "VECTOR": 4
+      },
+      "imageNodes": []
+    }
+  },
+  "readback": {
+    "bytes": 19190,
+    "results": [
+      {
+        "id": "275:164",
+        "props": {
+          "State": {
+            "value": "Results",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 550,
+        "height": 309,
+        "verticalSizing": "HUG",
+        "children": [
+          {
+            "id": "I275:164;275:99",
+            "type": "TEXT",
+            "name": "Find a patient",
+            "x": 16,
+            "y": 16,
+            "width": 518,
+            "height": 24,
+            "horizontalSizing": "FILL"
+          },
+          {
+            "id": "I275:164;275:100",
+            "type": "INSTANCE",
+            "name": "Text field",
+            "x": 16,
+            "y": 56,
+            "width": 518,
+            "height": 40,
+            "horizontalSizing": "FILL"
+          },
+          {
+            "id": "I275:164;275:121",
+            "type": "TEXT",
+            "name": "2 patients found",
+            "x": 16,
+            "y": 112,
+            "width": 518,
+            "height": 20,
+            "horizontalSizing": "FILL"
+          },
+          {
+            "id": "I275:164;275:122",
+            "type": "FRAME",
+            "name": "Patients",
+            "x": 16,
+            "y": 148,
+            "width": 518,
+            "height": 145,
+            "horizontalSizing": "FILL"
+          }
+        ],
+        "controls": [
+          {
+            "id": "I275:164;275:100",
+            "name": "Text field",
+            "props": {
+              "multiline#123:66": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "select#123:55": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Value text#123:11": {
+                "type": "TEXT",
+                "value": "Morgan"
+              },
+              "required#123:44": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Show helper#123:33": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Helper text#123:22": {
+                "type": "TEXT",
+                "value": "Text underneath the input"
+              },
+              "Label#123:0": {
+                "type": "TEXT",
+                "value": "Search patients"
+              },
+              "size": {
+                "value": "small",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "State": {
+                "value": "Default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "Value": {
+                "value": "Filled",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "Fill": {
+                "value": "None",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "width": 518,
+            "height": 40,
+            "comparison": {
+              "scope": "structure-and-token-snapshot",
+              "passed": true,
+              "differenceCount": 0,
+              "differences": [],
+              "omitted": 0
+            }
+          },
+          {
+            "id": "I275:164;275:123",
+            "name": "List/Item",
+            "props": {
+              "Icon#174:12": {
+                "type": "INSTANCE_SWAP",
+                "value": "45:4",
+                "preferredValues": []
+              },
+              "Show icon#174:9": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Secondary#174:3": {
+                "type": "TEXT",
+                "value": "Patient ID: 10482"
+              },
+              "Primary#174:0": {
+                "type": "TEXT",
+                "value": "Morgan Lee"
+              },
+              "Lines": {
+                "value": "Two",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "State": {
+                "value": "Default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "width": 518,
+            "height": 72,
+            "comparison": {
+              "scope": "structure-and-token-snapshot",
+              "passed": true,
+              "differenceCount": 0,
+              "differences": [],
+              "omitted": 0
+            }
+          },
+          {
+            "id": "I275:164;275:130",
+            "name": "Divider",
+            "props": {
+              "orientation": {
+                "value": "horizontal",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "width": 518,
+            "height": 1,
+            "comparison": {
+              "scope": "structure-and-token-snapshot",
+              "passed": true,
+              "differenceCount": 0,
+              "differences": [],
+              "omitted": 0
+            }
+          },
+          {
+            "id": "I275:164;275:131",
+            "name": "List/Item",
+            "props": {
+              "Icon#174:12": {
+                "type": "INSTANCE_SWAP",
+                "value": "45:4",
+                "preferredValues": []
+              },
+              "Show icon#174:9": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Secondary#174:3": {
+                "type": "TEXT",
+                "value": "Patient ID: 10517"
+              },
+              "Primary#174:0": {
+                "type": "TEXT",
+                "value": "Morgan Patel"
+              },
+              "Lines": {
+                "value": "Two",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "State": {
+                "value": "Default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "width": 518,
+            "height": 72,
+            "comparison": {
+              "scope": "structure-and-token-snapshot",
+              "passed": true,
+              "differenceCount": 0,
+              "differences": [],
+              "omitted": 0
+            }
+          }
+        ],
+        "texts": [
+          {
+            "id": "I275:164;275:99",
+            "text": "Find a patient",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Bold"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2548,
+              "y": 32,
+              "width": 518,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:164;275:100;130:164",
+            "text": "Search patients",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {},
+            "bounds": {
+              "x": 2562,
+              "y": 72,
+              "width": 89,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:164;275:100;133:1012",
+            "text": " *",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {},
+            "bounds": {
+              "x": 2647,
+              "y": 72,
+              "width": 9,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:164;275:100;130:167",
+            "text": "Morgan",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2562,
+              "y": 80,
+              "width": 490,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:164;275:100;130:168",
+            "text": "Second line of the comment\nThird line of the comment",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2562,
+              "y": 104,
+              "width": 272,
+              "height": 48
+            }
+          },
+          {
+            "id": "I275:164;275:100;130:171",
+            "text": "Search patients",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3c9d83d2c49041a34665c239d76c70d894341990/74:231"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d7219a38d00f8b524caf814c7e9450c87c807e64/74:199"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2562,
+              "y": 64,
+              "width": 89,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:164;275:100;130:172",
+            "text": " *",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2647,
+              "y": 64,
+              "width": 9,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:164;275:100;130:174",
+            "text": "Search patients",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2562,
+              "y": 81,
+              "width": 118,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:164;275:100;130:175",
+            "text": " *",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2675,
+              "y": 81,
+              "width": 12,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:164;275:100;130:177",
+            "text": "Text underneath the input",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3c9d83d2c49041a34665c239d76c70d894341990/74:231"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d7219a38d00f8b524caf814c7e9450c87c807e64/74:199"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2562,
+              "y": 116,
+              "width": 272,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:164;275:121",
+            "text": "2 patients found",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 20
+            },
+            "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2548,
+              "y": 128,
+              "width": 518,
+              "height": 20
+            }
+          },
+          {
+            "id": "I275:164;275:123;641:86",
+            "text": "Morgan Lee",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2564,
+              "y": 178,
+              "width": 486,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:164;275:123;641:87",
+            "text": "Patient ID: 10482",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 20
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2564,
+              "y": 202,
+              "width": 486,
+              "height": 20
+            }
+          },
+          {
+            "id": "I275:164;275:131;641:86",
+            "text": "Morgan Patel",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2564,
+              "y": 251,
+              "width": 486,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:164;275:131;641:87",
+            "text": "Patient ID: 10517",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 20
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 2564,
+              "y": 275,
+              "width": 486,
+              "height": 20
+            }
+          }
+        ],
+        "clipped": [],
+        "wrongFonts": [],
+        "reactions": []
+      },
+      {
+        "id": "275:204",
+        "props": {
+          "State": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "width": 550,
+        "height": 188,
+        "verticalSizing": "HUG",
+        "children": [
+          {
+            "id": "I275:204;275:138",
+            "type": "TEXT",
+            "name": "Find a patient",
+            "x": 16,
+            "y": 16,
+            "width": 518,
+            "height": 24,
+            "horizontalSizing": "FILL"
+          },
+          {
+            "id": "I275:204;275:139",
+            "type": "INSTANCE",
+            "name": "Text field",
+            "x": 16,
+            "y": 56,
+            "width": 518,
+            "height": 40,
+            "horizontalSizing": "FILL"
+          },
+          {
+            "id": "I275:204;275:160",
+            "type": "TEXT",
+            "name": "No patients found",
+            "x": 16,
+            "y": 112,
+            "width": 518,
+            "height": 24,
+            "horizontalSizing": "FILL"
+          },
+          {
+            "id": "I275:204;275:161",
+            "type": "TEXT",
+            "name": "Try a different name or patient ID.",
+            "x": 16,
+            "y": 152,
+            "width": 518,
+            "height": 20,
+            "horizontalSizing": "FILL"
+          }
+        ],
+        "controls": [
+          {
+            "id": "I275:204;275:139",
+            "name": "Text field",
+            "props": {
+              "multiline#123:66": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "select#123:55": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Value text#123:11": {
+                "type": "TEXT",
+                "value": "ZZZ"
+              },
+              "required#123:44": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Show helper#123:33": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Helper text#123:22": {
+                "type": "TEXT",
+                "value": "Text underneath the input"
+              },
+              "Label#123:0": {
+                "type": "TEXT",
+                "value": "Search patients"
+              },
+              "size": {
+                "value": "small",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "State": {
+                "value": "Default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "Value": {
+                "value": "Filled",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "Fill": {
+                "value": "None",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "width": 518,
+            "height": 40,
+            "comparison": {
+              "scope": "structure-and-token-snapshot",
+              "passed": true,
+              "differenceCount": 0,
+              "differences": [],
+              "omitted": 0
+            }
+          }
+        ],
+        "texts": [
+          {
+            "id": "I275:204;275:138",
+            "text": "Find a patient",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Bold"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3114,
+              "y": 32,
+              "width": 518,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:204;275:139;130:164",
+            "text": "Search patients",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {},
+            "bounds": {
+              "x": 3128,
+              "y": 72,
+              "width": 89,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:204;275:139;133:1012",
+            "text": " *",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {},
+            "bounds": {
+              "x": 3213,
+              "y": 72,
+              "width": 9,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:204;275:139;130:167",
+            "text": "ZZZ",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3128,
+              "y": 80,
+              "width": 490,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:204;275:139;130:168",
+            "text": "Second line of the comment\nThird line of the comment",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3128,
+              "y": 104,
+              "width": 272,
+              "height": 48
+            }
+          },
+          {
+            "id": "I275:204;275:139;130:171",
+            "text": "Search patients",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3c9d83d2c49041a34665c239d76c70d894341990/74:231"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d7219a38d00f8b524caf814c7e9450c87c807e64/74:199"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3128,
+              "y": 64,
+              "width": 89,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:204;275:139;130:172",
+            "text": " *",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3213,
+              "y": 64,
+              "width": 9,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:204;275:139;130:174",
+            "text": "Search patients",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3128,
+              "y": 81,
+              "width": 118,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:204;275:139;130:175",
+            "text": " *",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3241,
+              "y": 81,
+              "width": 12,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:204;275:139;130:177",
+            "text": "Text underneath the input",
+            "visible": false,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 16
+            },
+            "style": "",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3c9d83d2c49041a34665c239d76c70d894341990/74:231"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d7219a38d00f8b524caf814c7e9450c87c807e64/74:199"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3128,
+              "y": 116,
+              "width": 272,
+              "height": 16
+            }
+          },
+          {
+            "id": "I275:204;275:160",
+            "text": "No patients found",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 24
+            },
+            "style": "S:c87aec6a94a2e25a8a25446f8d61716cb25abe73,116:83",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:d61c8959859922bb0bae42b7e8efe6364f99417f/74:239"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:cb352f5690a1fb0c23ff84cbb012eed6ae77b39c/74:215"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3114,
+              "y": 128,
+              "width": 518,
+              "height": 24
+            }
+          },
+          {
+            "id": "I275:204;275:161",
+            "text": "Try a different name or patient ID.",
+            "visible": true,
+            "font": {
+              "family": "Akkurat LL",
+              "style": "Regular"
+            },
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 20
+            },
+            "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+                }
+              ]
+            },
+            "bounds": {
+              "x": 3114,
+              "y": 168,
+              "width": 518,
+              "height": 20
+            }
+          }
+        ],
+        "clipped": [],
+        "wrongFonts": [],
+        "reactions": []
+      }
+    ]
+  },
+  "screenshots": [
+    {
+      "name": "results",
+      "image_url": "https://www.figma.com/api/mcp/asset/4734b78f-699b-4a90-bb9e-29c55a6124c9.png",
+      "width": 550,
+      "height": 309,
+      "format": "png",
+      "original_width": 550,
+      "original_height": 309
+    },
+    {
+      "name": "empty",
+      "image_url": "https://www.figma.com/api/mcp/asset/7cfe2ffb-62a3-4fa0-9c92-6e8664766dd4.png",
+      "width": 550,
+      "height": 188,
+      "format": "png",
+      "original_width": 550,
+      "original_height": 188
+    },
+    {
+      "name": "section",
+      "image_url": "https://www.figma.com/api/mcp/asset/5208238f-ac62-4793-b682-bfecdde45cba.png",
+      "width": 1228,
+      "height": 421,
+      "format": "png",
+      "original_width": 1148,
+      "original_height": 341
+    }
+  ],
+  "visualInspection": {
+    "allThreeViewed": true,
+    "passed": true,
+    "canvasCorrectivePasses": 0
+  },
+  "oversizedReadFailure": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Return value exceeds the 48000-byte limit (69450 bytes). Canvas edits from this run were not committed."
+      },
+      {
+        "type": "text",
+        "text": "Figma Debug UUID: 039ea628-f836-4bd1-a509-1ca0a697f363"
+      }
+    ],
+    "structuredContent": {
+      "error": {
+        "message": "Return value exceeds the 48000-byte limit (69450 bytes). Canvas edits from this run were not committed.",
+        "debugUuid": "039ea628-f836-4bd1-a509-1ca0a697f363"
+      },
+      "safeToRetryWithoutCanvasRead": true,
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  }
+}
