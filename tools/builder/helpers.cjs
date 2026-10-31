@@ -152,6 +152,55 @@ async function auditControls(instances) {
   return output;
 }
 
+// Complete return envelope: pass measured assertions, never append full metadata.
+async function auditEvidence(instances, assertions) {
+  if (!Array.isArray(assertions) || assertions.length < 1 || assertions.length > 1000) throw new Error('Supply 1..1000 measured assertions');
+  function stable(value) {
+    if (value === null || typeof value === 'string' || typeof value === 'boolean') return JSON.stringify(value);
+    if (typeof value === 'number' && Number.isFinite(value)) return JSON.stringify(value);
+    if (Array.isArray(value)) return '[' + value.map(stable).join(',') + ']';
+    if (value && Object.getPrototypeOf(value) === Object.prototype) return '{' + Object.keys(value).sort().map(key => JSON.stringify(key) + ':' + stable(value[key])).join(',') + '}';
+    throw new Error('Assertions must use finite JSON values');
+  }
+  const preview = value => {
+    const text = value === undefined ? '[unavailable]' : stable(value);
+    return { text: text.slice(0,160), truncated: text.length > 160 };
+  };
+  const checks = [], failures = [], names = new Set();
+  for (const check of assertions) {
+    if (typeof check?.name !== 'string' || !check.name || check.name.length > 160 || names.has(check.name) ||
+        !Object.prototype.hasOwnProperty.call(check, 'actual') || !Object.prototype.hasOwnProperty.call(check, 'expected')) throw new Error('Each assertion needs a unique name, actual and expected');
+    names.add(check.name);
+    const expected = stable(check.expected);
+    const passed = check.actual !== undefined && stable(check.actual) === expected;
+    checks.push({ name: check.name, passed });
+    if (!passed && failures.length < 5) failures.push({ name: check.name, actual: preview(check.actual), expected: preview(check.expected) });
+  }
+  const failed = checks.filter(check => !check.passed).length;
+  const structure = await auditControls(instances);
+  const checkPreview = checks.slice(0,30);
+  const output = { scope: 'structure-and-measured-assertions; screenshots checked separately',
+    passed: structure.passed && failed === 0, structure,
+    assertions: { checked: checks.length, failed, checks: checkPreview, omittedChecks: checks.length - checkPreview.length, failures, omittedFailures: failed - failures.length } };
+  // Compact automatically. Counts and overall failure cannot be lost to pruning.
+  while (JSON.stringify(output).length > 12000) {
+    if (checkPreview.length) { checkPreview.pop(); output.assertions.omittedChecks++; }
+    else if (failures.length) { failures.pop(); output.assertions.omittedFailures++; }
+    else if (structure.differences.length) { structure.differences.pop(); structure.omittedDifferences++; }
+    else throw new Error('Identity-only audit exceeded envelope budget');
+  }
+  return output;
+}
+
+// Master definitions need no probe. If an actual instance is required, retain it.
+function retainInspectionInstance(component, area) {
+  if (component?.type !== 'COMPONENT' || !['FRAME','SECTION'].includes(area?.type) ||
+      typeof area.name !== 'string' || !area.name.startsWith('Inspection · ')) throw new Error('Supply a component and named Inspection · RUN area');
+  const instance = component.createInstance();
+  area.appendChild(instance);
+  return instance; // No remove(), even on later read failures.
+}
+
 if (typeof module !== 'undefined') {
-  module.exports = { summarizeMatches, importComponentsForBuild, snapshotControl, compareControlSnapshots, auditControls };
+  module.exports = { summarizeMatches, importComponentsForBuild, snapshotControl, compareControlSnapshots, auditControls, auditEvidence, retainInspectionInstance };
 }

@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { summarizeMatches, importComponentsForBuild, snapshotControl, compareControlSnapshots, auditControls } = require('./helpers.cjs');
+const { summarizeMatches, importComponentsForBuild, snapshotControl, compareControlSnapshots, auditControls, auditEvidence, retainInspectionInstance } = require('./helpers.cjs');
 
 const master = () => ({ type: 'COMPONENT', name: 'Library row', layoutMode: 'VERTICAL',
   paddingLeft: 16, itemSpacing: 8, fills: [], boundVariables: { paddingLeft: { id: 'space16' } },
@@ -120,4 +120,40 @@ test('audit passes valid controls, never empty, unavailable or duplicate evidenc
   await assert.rejects(auditControls([]));
   await assert.rejects(auditControls([control, control]), /Duplicate/);
   await assert.rejects(auditControls([{ ...control, getMainComponentAsync: async () => null }]), /unavailable/);
+});
+
+test('complete audit compacts huge measurements automatically while preserving every failure count', async () => {
+  const source = { ...master(), id: 'master' };
+  const control = { ...instance(), id: 'control', getMainComponentAsync: async () => source };
+  const checks = Array.from({ length: 1000 }, (_, i) => ({ name: 'Measured property ' + i + 'x'.repeat(100),
+    actual: 'a'.repeat(30000), expected: 'b'.repeat(30000) }));
+  const result = await auditEvidence([control], checks);
+  assert.equal(result.passed, false);
+  assert.equal(result.assertions.checked, 1000);
+  assert.equal(result.assertions.failed, 1000);
+  assert.equal(result.assertions.omittedFailures + result.assertions.failures.length, 1000);
+  assert.equal(result.assertions.omittedChecks + result.assertions.checks.length, 1000);
+  assert.ok(JSON.stringify(result).length <= 12000);
+  assert.ok(result.assertions.failures[0].actual.truncated);
+});
+
+test('audit assertions compare actual values, reject invalid expectations and never treat unavailable values as passing', async () => {
+  const source = { ...master(), id: 'master' };
+  const control = { ...instance(), id: 'control', getMainComponentAsync: async () => source };
+  assert.equal((await auditEvidence([control], [{ name: 'binding', actual: { a: 1, b: 2 }, expected: { b: 2, a: 1 } }])).passed, true);
+  assert.equal((await auditEvidence([control], [{ name: 'width', actual: undefined, expected: 550 }])).passed, false);
+  await assert.rejects(auditEvidence([control], [{ name: 'unknown', actual: undefined, expected: undefined }]));
+  await assert.rejects(auditEvidence([control], []));
+});
+
+test('inspection instance is retained in a named area, with invalid destinations rejected before creation', () => {
+  let created = 0;
+  const instance = { id: 'probe', remove() { throw new Error('Deletion prohibited'); } };
+  const component = { type: 'COMPONENT', createInstance() { created++; return instance; } };
+  assert.throws(() => retainInspectionInstance(component, { type: 'FRAME', name: 'Scratch' }));
+  assert.equal(created, 0);
+  const children = [], area = { type: 'SECTION', name: 'Inspection · fixture', appendChild(node) { children.push(node); } };
+  assert.equal(retainInspectionInstance(component, area), instance);
+  assert.deepEqual(children, [instance]);
+  assert.equal(created, 1);
 });

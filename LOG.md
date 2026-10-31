@@ -4419,3 +4419,7 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-10-31 — Review of bounded-evidence benchmark repeats
 - File: no new Figma writes; reviewed the two completed Proposals runs. Recording intervals improved from 147s to 73s/107s; total times 310s/471s versus 341s baseline do not establish consistent end-to-end improvement. Required visual checks passed; recurring search/audit output overhead remains.
 - Workflow finding: both runs deleted self-created temporary inspection instances, violating the additive-only rule. No existing screen deletion identified. They are not full workflow passes despite correct final panels. Evidence and comparison: runs/2026-10-31-builder-evidence-tools/REPORT.md, linked run reports and transcripts. No new screenshot needed for this review.
+
+## 2026-10-31 — Final builder wrappers, retained inspection and larger reads
+- File: Proposals zKT34LQogNjz3Z07fY4VQB searched read-only to validate asset response schemas; no canvas changes. Added automatic search/audit output wrappers and bundle commands, explicit retention of scratch instances, and adjustable 16,000-character default reads. Kept the evidence writer and four-file startup package.
+- Verified: 24 local tests passed; captured live search projected to 3,650 characters while retaining all 32 matches. Evidence: runs/2026-10-31-builder-final-wrappers/REPORT.md. No screenshot applies. One final test build follows, with no further tuning afterward per Daniel.

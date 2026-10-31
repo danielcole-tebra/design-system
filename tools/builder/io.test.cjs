@@ -18,12 +18,22 @@ test('reader reconstructs long lines and Unicode exactly across bounded pages', 
   const text = '# Title\n' + 'a'.repeat(5991) + '😀' + 'b'.repeat(12000);
   let offset = 0, output = '';
   do {
-    const page = readPage(text, { offset });
+    const page = readPage(text, { offset, maxChars: 6000 });
     assert.ok(page.text.length <= 6000);
     output += page.text;
     offset = page.nextOffset;
   } while (offset !== null);
   assert.equal(output, text);
+});
+
+test('reader fits medium documents in one default read and honors adjustable hard bounds', () => {
+  const text = '# Skill\n' + 'x'.repeat(12000);
+  assert.equal(readPage(text).complete, true);
+  assert.equal(readPage(text).text, text);
+  assert.equal(readPage(text, { maxChars: 2000 }).text.length, 2000);
+  assert.equal(readPage('x'.repeat(30000), { maxChars: 24000 }).nextOffset, 24000);
+  assert.throws(() => readPage(text, { maxChars: 24001 }));
+  assert.throws(() => readPage(text, { maxChars: 0 }));
 });
 
 test('reader selects exact section including subsections, ignores fenced headings and rejects ambiguity', () => {

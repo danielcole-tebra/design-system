@@ -19,8 +19,9 @@ function headings(text) {
     end: result.slice(i + 1).find(next => next.level <= heading.level)?.start ?? text.length }));
 }
 
-function readPage(text, { section, index = false, offset = 0 } = {}) {
-  if (!Number.isSafeInteger(offset) || offset < 0 || (section !== undefined && index)) throw new Error('Invalid read options');
+function readPage(text, { section, index = false, offset = 0, maxChars = 16000 } = {}) {
+  if (!Number.isSafeInteger(offset) || offset < 0 || (section !== undefined && index) ||
+      !Number.isSafeInteger(maxChars) || maxChars < 1000 || maxChars > 24000) throw new Error('Invalid read options; chars must be 1000..24000');
   const entries = headings(text);
   let source = text;
   if (index) {
@@ -31,7 +32,7 @@ function readPage(text, { section, index = false, offset = 0 } = {}) {
     source = text.slice(matches[0].start, matches[0].end);
   }
   if (offset > source.length) throw new Error('Offset exceeds selected text');
-  let end = Math.min(offset + 6000, source.length);
+  let end = Math.min(offset + maxChars, source.length);
   // Keep a surrogate pair together across pages.
   if (end < source.length && /[\uD800-\uDBFF]/.test(source[end - 1])) end--;
   return { text: source.slice(offset, end), offset, nextOffset: end < source.length ? end : null,
@@ -41,12 +42,13 @@ function readPage(text, { section, index = false, offset = 0 } = {}) {
 if (require.main === module) {
   try {
     const [file, ...args] = process.argv.slice(2);
-    if (!file) throw new Error('Usage: node tools/builder/read.cjs FILE [--index | --section "Heading"] [--offset N]');
+    if (!file) throw new Error('Usage: node tools/builder/read.cjs FILE [--index | --section "Heading"] [--offset N] [--chars 1000..24000]');
     const options = {};
     for (let i = 0; i < args.length; i++) {
       if (args[i] === '--index') options.index = true;
       else if (args[i] === '--section' && args[i + 1] !== undefined) options.section = args[++i];
       else if (args[i] === '--offset' && /^\d+$/.test(args[i + 1] ?? '')) options.offset = Number(args[++i]);
+      else if (args[i] === '--chars' && /^\d+$/.test(args[i + 1] ?? '')) options.maxChars = Number(args[++i]);
       else throw new Error('Unknown or incomplete argument: ' + args[i]);
     }
     const page = readPage(fs.readFileSync(file, 'utf8'), options);
