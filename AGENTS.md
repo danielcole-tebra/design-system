@@ -12,6 +12,8 @@ The active builder package is this file plus three references:
 
 Also read the task's own screen spec when supplied. Do not routinely read LOG.md, FLAGS.md, records/, audits/, archive/, or the old long-form references. They are evidence for a specific unanswered question, not startup requirements. CLAUDE.md points here; it adds no rules.
 
+For Figma work, follow LIBRARY.md's **Efficient execution** sequence. Keep search/read output bounded, import and use remote assets in the same call, and avoid repeating passing checks. The optional code helpers are implementation aids, not another startup document.
+
 SDE is settled for now, per Daniel on 2026-10-31. Its residual findings are historical limitations, not a backlog to reopen or blockers for new work. Mobile screen rulings remain local to their project. History is preserved in [archive/builder-docs-2026-10-31](archive/builder-docs-2026-10-31/README.md).
 
 ## Authority and scope
@@ -48,6 +50,8 @@ DEFECT means a render differs from what ships; GAP means a required capability c
 New library findings go in OPEN-ISSUES.md; screen findings belong in the consuming project's current spec/register. Record owner, scope, status, impact, evidence date and any approved workaround. Distinguish a nonblocking limitation from a blocked task. Do not copy SDE's historical flags into the active register.
 
 Update the authoritative component or composition entry when a decision changes it, preserving previous text in history. Composition decisions carry decider, date and what they override. Keep one short LOG.md entry per batch: date, file key, change, finding and evidence/run path. Detailed reads and screenshots go under runs/; do not duplicate them in every document. A batch without a log entry is unverified.
+
+Prepare evidence, one concise report and the LOG entry together, then commit/push once. A benchmark report records start, first reviewable image and verification checkpoints; report actual total time and push outcome in the final chat. Do not make a second commit just to record the first push's timestamp or hash. Required corrections or a failed push still need truthful reporting and recovery.
 
 ## Git
 

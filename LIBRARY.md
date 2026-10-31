@@ -15,6 +15,32 @@ Source abbreviations used here:
 - **P**: archived PLUGIN-NOTES.md, cited operation.
 Read these only to resolve a specific missing fact. Historical records are not instructions to resume old work.
 
+## Efficient execution
+
+These operational improvements address the 2026-10-31 patient-search benchmark; they do not change design rules or required verification.
+
+1. **Prepare bounded reads.** Load required installed skills once per task, honoring all prerequisites. Budget output before batching reads: avoid several full skills or inventories in one response that will truncate. Read large references by the relevant heading/range; recover a truncated range, not the entire preceding read. Do not skip mandatory skill content to save time.
+2. **Search once for known needs.** Batch only the components, tokens and styles already needed by the brief. Restrict to verified library keys when the current tool supports it. Retain complete search results in task-local tool storage, then display only candidate names, published keys, types and library identity, with total/shown/omitted counts. Start with at most five candidates per query. Inspect omitted candidates from the retained result if needed; do not rerun a successful search because printing its raw response lost the keys. Use the actual tool response schema; unknown/empty results are not proof of absence.
+3. **Keep remote imports inside the construction call.** Carry verified published keys between calls, not transient imported node IDs. Import each needed component/set and immediately select variants/create instances in the same `use_figma` call, using returned objects. Deduplicate identical imports within that call only. Variables/styles have the same lifecycle constraint. Imports are writes; on failure obey the tool's safe-retry signal and never blindly replay a partially completed build.
+4. **Return useful evidence with the write.** Include affected IDs, actual props, target dimensions and relevant bindings. Add a separate read only for missing evidence or a change that invalidated it. Compare an instance with its actual main component: root INSTANCE versus COMPONENT and a renamed root are expected, while descendant type/name, padding and binding differences still matter. Separately check content, visibility, size, clipping and reactions; a structural match does not establish those.
+5. **Inspect pixels once they are ready.** A legible section image may cover several instantiated states; use separate crops when the brief requires them or details cannot be judged. Inspect every required state and the assembly. After a correction, inspect the affected new image; do not recapture an unchanged passing image just to call it final.
+6. **Record once.** Save detailed evidence, write the short report below and append LOG in one preparation step, then commit/push named paths once. Do not duplicate artifacts into another output directory unless needed for delivery. Capture actual completion time after push and put it in the final chat, without a timestamp-only follow-up commit. A failed push is not completion.
+
+Optional tested functions live in [tools/builder/helpers.cjs](tools/builder/helpers.cjs). Read/copy only the needed function into the tool script; Figma cannot require a local file path. `summarizeMatches` takes an explicitly adapted array of `{name,key,type,libraryKey}`; it is not a parser for an assumed server schema. `importComponentsForBuild(figma, [{alias,key,type}], async assets => { ... })` supports COMPONENT/COMPONENT_SET and awaits the build callback in the same call. Return the required affected IDs/evidence from that callback. Do not serialize live node objects as reusable state.
+
+For a structural/token audit, include both `snapshotControl` and `compareControlSnapshots`, set skipInvisibleInstanceChildren=false, and compare `snapshotControl(instance)` with `snapshotControl(await instance.getMainComponentAsync())`. The helper fails on incomplete snapshots, an unavailable main component or a detached root. It checks only captured fields and child structure; copy/visibility/dimensions/clipping/reactions and screenshots remain separate. It deliberately does not suppress differences through a broad allowlist. A legitimate scoped internal override needs explicit review, not a silently relaxed comparator. These helpers are locally tested; they are not a claim of a new live Figma benchmark.
+
+Short report template (link detailed evidence instead of repeating it):
+
+```text
+Built: section URL, states, reused components, actual target sizes.
+Verified: properties/bindings, copy/visibility/geometry, screenshots inspected.
+Findings: remaining gaps, corrective passes, technical retries (separately).
+Measured: start / first reviewable image / verified UTC; elapsed; actual input wait.
+Effort: searches, relevant reads, observable Figma/other calls; tokens if exposed.
+Evidence: paths. Timing ends at verification; completion/push outcome in final chat.
+```
+
 ## Token mappings
 
 **Recorded** means the exact Figma name appears in a recorded read/build, with the value corroborated by T §2.1–2.3. It does not certify today's published/consumer state. **Plan only** means the name appears in foundation/figmaVariablePlan.json; it was a creation plan, not proof that the variable exists. Resolve the actual variable and its collection/scope before binding; never construct a name by replacing dots with slashes.
@@ -170,6 +196,7 @@ Use the currently installed Figma tool instructions for calling syntax. The foll
 | Operation | Required check |
 |---|---|
 | Read/audit | skipInvisibleInstanceChildren=false; node.visible alone is not effective visibility—check ancestors. Load the same relevant pages for before/after counts; getInstancesAsync can undercount unloaded pages. |
+| Import | Carry verified published keys, not remote-copy IDs. Import/select/use in the same call; never assume an imported node will resolve in the next call. |
 | Bind paint | Write the resolved colour and preserve the binding object; null binding can silently unbind. Alpha belongs in stored rgba. Never force bound paint opacity to 1 or infer that two alpha readings multiply; sample the render. |
 | Clone variant | Descendant componentPropertyReferences can drop; rebind/count them. Cloning a whole set is different; inspect rather than assume loss. |
 | Set properties / swap | Read text, visibility and reactions after switching; defaults/overrides can transfer or disappear. A clone-related swap can retain old text despite renamed layers. |

@@ -4391,3 +4391,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 
 ## 2026-10-31 — Slim builder patient-search benchmark
 - Proposals zKT34LQogNjz3Z07fY4VQB: added isolated section 272:875 and local Benchmark/Patient search Results/Empty family. Verified published controls, tokens, widths, unchanged internals and three screenshots; no required GAP, zero canvas corrective passes. First screenshot 174s including preparation; completion timing in runs/2026-10-31-slim-patient-search-170801/REPORT.txt. Evidence: that report, state.json and section/results/empty PNGs. Stopped for Daniel's read.
+
+## 2026-10-31 — Builder execution improvements
+- File: none in Figma; documentation and optional local helpers only in C:\Code\design-system.
+- Changed: bounded reads/search summaries, same-call component imports, scoped structural/token comparison, reuse of passing evidence and one report/commit/push sequence. Active package remains four files; helpers are optional, not startup reading. SDE and design rulings unchanged.
+- Verified: all 8 local helper tests passed. No live integration run or measured speedup claimed. Evidence: runs/2026-10-31-builder-efficiency/REPORT.md. Screenshot: not applicable.
