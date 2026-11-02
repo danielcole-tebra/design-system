@@ -24,9 +24,15 @@ The full builder workflow also references source code in the [web-app-v2 reposit
 
 This repository is guidance and evidence. Enabling the Figma library and connecting Codex to Figma are separate steps; cloning the repository does neither automatically.
 
-## 1. Ask Codex to get the repository
+## 1. Copy the design-system files to your computer
 
-Start a local Codex chat with access to a folder on your computer, such as `Code`. Its name and location are up to you. Ask Codex to download the shared design-system repository into its own folder:
+You'll need to copy the design-system files onto your computer and save them in a folder. This is called **cloning the repository**.
+
+Choose somewhere easy to remember, such as a folder called `Code`. Codex will save the files in a `design-system` folder inside it: `Code/design-system`. The parent folder's name and location are your choice.
+
+You won't do your project work in this folder. We'll create a separate folder for that in the next step.
+
+In Codex, start a local chat with access to your chosen location and paste this request:
 
 ```text
 Clone https://github.com/danielcole-tebra/design-system.git into a
@@ -38,7 +44,7 @@ problems. Keep my new project work outside this repository.
 
 This creates a real local copy of the shared guidance. Keep it separate from your new project work. Complete GitHub sign-in through the normal authentication window if prompted. If Git or Node.js is missing, have Codex identify the approved setup action before continuing.
 
-**Checkpoint:** Codex confirms the path to the design-system checkout and any missing tools or access.
+**Checkpoint:** Codex confirms where it saved the design-system files and reports any missing tools or access. Keep that folder location handy for the next step.
 
 ## 2. Create a separate folder for your work
 

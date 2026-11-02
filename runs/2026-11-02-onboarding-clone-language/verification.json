@@ -1,0 +1,62 @@
+{
+  "createdNodeIds": [],
+  "mutatedNodeIds": [
+    "5:8",
+    "5:9",
+    "5:13",
+    "5:14",
+    "5:15",
+    "5:16",
+    "5:17",
+    "5:18",
+    "5:12",
+    "5:11",
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:91",
+    "5:2"
+  ],
+  "cardBounds": {
+    "width": 1200,
+    "height": 1112
+  },
+  "boardBounds": {
+    "width": 1360,
+    "height": 8436
+  },
+  "overflow": [],
+  "textOverlaps": [],
+  "copy": [
+    {
+      "id": "5:8",
+      "text": "1  Copy the design-system files to your computer"
+    },
+    {
+      "id": "5:9",
+      "text": "Codex will download and save a local copy for you."
+    },
+    {
+      "id": "5:14",
+      "text": "You’ll need to copy the design-system files onto your computer and save them in a folder. This is called cloning the repository.\n\nChoose somewhere easy to remember, such as a folder called Code. Codex will save the files in a design-system folder inside it: Code/design-system.\n\nYou won’t do your project work in this folder. We’ll create a separate folder for that in the next step.\n\nIn Codex, start a local chat with access to your chosen location and paste this request:"
+    },
+    {
+      "id": "5:18",
+      "text": "Codex confirms where it saved the design-system files and reports any missing tools or access. Keep that folder location handy for the next step."
+    }
+  ],
+  "panelOrder": [
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:91"
+  ]
+}

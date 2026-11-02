@@ -4465,3 +4465,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: explicit separate design-system download and freely named local work folder. Work folder is primary; design-system is attached for reference with explicit AGENTS.md reading. Explained future GitHub publication of the work folder and aligned docs/capture list.
 - Finding: participant evidence-recording destination requires agreement when the work folder is not yet a Git repository; actual captures and starter remain pending. No nodes deleted or library changes.
 - Evidence: runs/2026-11-02-onboarding-two-folders/REPORT.md, revision.js, verification.json and four inspected renders. No overflow/overlap; prompt-link target updated. Ready for Daniel's read.
+
+## 2026-11-02 — Plain-language clone location
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh, first card 5:7 in section 5:2.
+- Changed: explained copying files onto the computer, named cloning, suggested Code/design-system and deferred the separate work folder to step 2. Matched GETTING-STARTED.md.
+- Finding: copy-only clarification; no library changes. Participant screenshots and starter assets remain pending.
+- Evidence: runs/2026-11-02-onboarding-clone-language/REPORT.md, revision.js, verification.json, step-1.png and board.png. Both renders inspected; no text overflow/overlap. Ready for Daniel's read.
