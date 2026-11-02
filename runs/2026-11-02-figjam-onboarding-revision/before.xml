@@ -1,0 +1,224 @@
+<canvas id="0:1" name="Page 1" x="0" y="0" width="0" height="0">
+  <section id="2:2" x="200" y="200" width="3720" height="5580">
+    <text id="2:3" name="Get started with Codex + Figma" x="80" y="64" width="3500" height="112" />
+    <text id="2:4" name="Tebra design system · A visual setup guide for designers" x="80" y="196" width="3500" height="50" />
+    <text id="2:5" name="Follow 1–7 in reading order. Each step has instructions, a reference image and a checkpoint. Reference images show official examples or guide excerpts, not a completed Tebra setup." x="80" y="272" width="3500" height="68" />
+    <text id="2:6" name="Open the full setup guide ↗" x="80" y="376" width="2000" height="34" />
+    <section id="2:7" x="80" y="500" width="1720" height="1120">
+      <text id="3:2" name="1 Download the repository" x="48" y="40" width="1624" height="56" />
+      <text id="3:3" name="Bring the building rules onto your computer." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="3:4" name="Reference image / clone-reference.png" x="48" y="240" width="960" height="580" />
+      <text id="3:5" name="Official GitHub screenshot. The sample repo shown is not Tebra; use the URL in the instructions." x="48" y="836" width="960" height="22" />
+      <text id="3:6" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="3:7" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="3:8" name="In GitHub Desktop, sign into the account with repository access. Choose File → Clone Repository → URL. Paste the design-system URL below. Choose a local Code folder and click Clone. Keep one working copy. Reuse an existing checkout instead of cloning again." x="1060" y="256" width="612" height="340" />
+      <text id="3:9" name="Repository: danielcole-tebra/design-system For source checks, clone kareo-engineering/web-app-v2 beside it when access is available." x="1060" y="624" width="612" height="84" />
+      <text id="3:10" name="Open the Tebra repository ↗" x="1060" y="864" width="612" height="28" />
+      <text id="3:11" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="3:12" name="You can open the local design-system folder and see AGENTS.md, LIBRARY.md, COMPOSITIONS.md and OPEN-ISSUES.md." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="2:8" x="1920" y="500" width="1720" height="1120">
+      <text id="3:13" name="2 Open a local Codex project" x="48" y="40" width="1624" height="56" />
+      <text id="3:14" name="Make the repository the context for your design work." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="3:15" name="Reference image / projects-reference.jpg" x="48" y="240" width="960" height="580" />
+      <text id="3:16" name="Browser capture of OpenAI’s project-view illustration. It is not a screenshot of a participant’s setup." x="48" y="836" width="960" height="22" />
+      <text id="3:17" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="3:18" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="3:19" name="In Codex, create a local project named Tebra design system. Open Edit project → Add folder and select the cloned design-system folder. Make it the primary folder. Attach web-app-v2 too if you cloned it. Start a new chat in this project." x="1060" y="256" width="612" height="340" />
+      <text id="3:20" name="Ask Codex to read AGENTS.md, confirm the path and branch, check Git and Node.js, and run the read-only LIBRARY.md index helper." x="1060" y="624" width="612" height="84" />
+      <text id="3:21" name="Exact first-message prompt ↗" x="1060" y="864" width="612" height="28" />
+      <text id="3:22" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="3:23" name="Codex reads the real local files. Git, Node.js and the helper work. Missing source-code access is reported." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="2:9" x="80" y="1720" width="1720" height="1120">
+      <text id="3:24" name="3 Connect Figma to Codex" x="48" y="40" width="1624" height="56" />
+      <text id="3:25" name="Give the agent the tools and skills to work on the canvas." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="3:26" name="Reference image / plugin-reference.png" x="48" y="240" width="960" height="580" />
+      <text id="3:27" name="Official Figma screenshot of the Codex plugin browser. Interface labels can vary by version." x="48" y="836" width="960" height="22" />
+      <text id="3:28" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="3:29" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="3:30" name="Open Plugins in Codex and find Figma. Choose Install Figma. Sign into your work Figma account and complete Allow access. Return to Codex. Start a new project chat if the tools have not appeared." x="1060" y="256" width="612" height="306" />
+      <text id="3:31" name="Ask which Figma skills and tools are available: inspect files, edit nodes, import library assets and capture screenshots." x="1060" y="620" width="612" height="56" />
+      <text id="3:32" name="Figma’s installation steps ↗" x="1060" y="864" width="612" height="28" />
+      <text id="3:33" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="3:34" name="The connection uses the intended work account and exposes canvas-editing capabilities. Tool availability alone is not a successful build." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="2:10" x="1920" y="1720" width="1720" height="1120">
+      <text id="3:35" name="4 Create your own Figma file" x="48" y="40" width="1624" height="56" />
+      <text id="3:36" name="Give your first rebuild a clear destination." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="3:37" name="Reference image / file-reference.png" x="48" y="240" width="960" height="580" />
+      <text id="3:38" name="Official Figma reference showing the Design file action. Your team folder and account will differ." x="48" y="836" width="960" height="22" />
+      <text id="3:39" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="3:40" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="3:41" name="In Figma, create a new Design file in your team’s practice location. Name it Tebra first rebuild · Your name. Create a page named First rebuild. Share the file with Daniel for review and copy the file link." x="1060" y="256" width="612" height="306" />
+      <text id="3:42" name="The destination is your new Design file. Keep the published Design System Rebuild library as the source of components." x="1060" y="620" width="612" height="56" />
+      <text id="3:43" name="Create a Figma Design file ↗" x="1060" y="864" width="612" height="28" />
+      <text id="3:44" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="3:45" name="You can edit your named file, Daniel can review it, and you have its file link for Codex." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="2:11" x="80" y="2940" width="1720" height="1120">
+      <text id="3:46" name="5 Add the rebuild library" x="48" y="40" width="1624" height="56" />
+      <text id="3:47" name="Enable Tebra components, styles and variables in your file." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="3:48" name="Reference image / library-reference.png" x="48" y="240" width="960" height="580" />
+      <text id="3:49" name="Official Figma screenshot uses the sample Habitz library. Choose Design System Rebuild for this exercise." x="48" y="836" width="960" height="22" />
+      <text id="3:50" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="3:51" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="3:52" name="In your new file, open Assets → Libraries. Find Design System Rebuild and confirm its source using the link below. Choose Add to file, or leave it enabled if your team already added it. Check that you can browse Button and Text field assets." x="1060" y="256" width="612" height="340" />
+      <text id="3:53" name="If missing, check the signed-in account, source-file access and publication with Daniel. Do not substitute the deprecated Tebra Working UI Kit." x="1060" y="624" width="612" height="84" />
+      <text id="3:54" name="Open the exact Tebra source library ↗" x="1060" y="864" width="612" height="28" />
+      <text id="3:55" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="3:56" name="The correct published library is available in your destination. Opening or duplicating the library is not the same as enabling it." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="2:12" x="1920" y="2940" width="1720" height="1120">
+      <text id="3:57" name="6 Check the setup before building" x="48" y="40" width="1624" height="56" />
+      <text id="3:58" name="Resolve missing access before asking for a full composition." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="3:59" name="Reference image / prompt-reference.jpg" x="48" y="240" width="960" height="580" />
+      <text id="3:60" name="Screenshot of the guide’s setup-prompt excerpt. This is not a Codex response or proof of a completed setup." x="48" y="836" width="960" height="22" />
+      <text id="3:61" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="3:62" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="3:63" name="Paste the setup-check prompt into your project chat. Include your destination file link and the exact source library link. Ask for a read-only check of file identities, library discovery and available capabilities. Read the missing-setup report before continuing." x="1060" y="256" width="612" height="306" />
+      <text id="3:64" name="Actual imports, font loading, editability and screenshot delivery must still be verified during the first build." x="1060" y="620" width="612" height="56" />
+      <text id="3:65" name="Copy the full setup-check prompt ↗" x="1060" y="864" width="612" height="28" />
+      <text id="3:66" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="3:67" name="Codex reports specific findings and unknowns. A list of available tools is not treated as proof that every operation succeeded." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="2:13" x="80" y="4160" width="1720" height="1120">
+      <text id="3:68" name="7 Bring in the practice card" x="48" y="40" width="1624" height="56" />
+      <text id="3:69" name="Pending starter asset. Setup can finish before the exercise is ready." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="3:70" name="Reference image / selection-reference.jpg" x="48" y="240" width="960" height="580" />
+      <text id="3:71" name="Captured frame from Figma’s official selection-link illustration. It is not the Tebra practice card." x="48" y="836" width="960" height="22" />
+      <text id="3:72" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="3:73" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="3:74" name="Once the starter is supplied, copy its editable layers into your First rebuild page. Label it Original · Practice card and keep it intact. Select the card, then copy a link to the selection. Use that node link as Starter card and your file link as Destination." x="1060" y="256" width="612" height="306" />
+      <text id="3:75" name="The manual contact-details starter and verified Empty/Filled reference are not created yet. Do not substitute the old patient-search benchmark." x="1060" y="620" width="612" height="84" />
+      <text id="3:76" name="Open the first-rebuild exercise ↗" x="1060" y="864" width="612" height="28" />
+      <text id="3:77" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="3:78" name="When the asset is ready, your editable starter and its selection link identify the same card. Preserve it beside the rebuilt states." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="2:14" x="1920" y="4160" width="1720" height="1120">
+      <text id="3:79" name="Before your first rebuild" x="48" y="40" width="1624" height="56" />
+      <text id="3:80" name="A quick readiness check, plus what happens next." x="48" y="112" width="1624" height="34" />
+      <text id="3:81" name="ACCOUNTS + TOOLS" x="48" y="216" width="720" height="34" />
+      <text id="3:82" name="Work account in Codex GitHub repository access Git and Node.js available Work Figma account Published rebuild library access Akkurat LL available to the Figma service" x="48" y="268" width="720" height="204" />
+      <text id="3:83" name="YOUR WORKSPACE" x="920" y="216" width="752" height="34" />
+      <text id="3:84" name="Local design-system folder is primary Your own editable Design file Rebuild library added to that file Daniel has access for review Starter card copied once supplied Destination and selection links ready" x="920" y="268" width="752" height="204" />
+      <text id="3:85" name="WHAT YOU WILL RECEIVE" x="48" y="608" width="1624" height="34" />
+      <text id="3:86" name="An editable contact-details rebuild in Empty and Filled states. Screenshots in chat. A Figma link. A checked list of verified changes covering auto layout, library instances, typography, tokens, resizing, content and preserved originals." x="48" y="660" width="1624" height="68" />
+      <text id="3:87" name="PILOT NOTES" x="48" y="836" width="1624" height="34" />
+      <text id="3:88" name="The starter asset is pending. Daniel reviews before the next build batch. Evidence must be recorded and pushed; clone access alone does not establish push access. Missing access and unverified checks stay explicit." x="48" y="884" width="1624" height="68" />
+      <text id="3:89" name="Full setup guide ↗" x="48" y="1040" width="760" height="28" />
+      <text id="3:90" name="First rebuild + what-changed checklist ↗" x="920" y="1040" width="752" height="28" />
+    </section>
+  </section>
+  <section id="5:2" x="5632" y="200" width="1904" height="10776">
+    <text id="5:3" name="Get started with Codex + Figma" x="80" y="64" width="3500" height="112" />
+    <text id="5:4" name="Tebra design system · A visual setup guide for designers" x="80" y="196" width="3500" height="50" />
+    <text id="5:5" name="Follow 1–7 in reading order. Each step has instructions, a reference image and a checkpoint. Reference images show official examples or guide excerpts, not a completed Tebra setup." x="80" y="272" width="3500" height="68" />
+    <text id="5:6" name="Open the full setup guide ↗" x="80" y="376" width="2000" height="34" />
+    <section id="5:7" x="80" y="500" width="1720" height="1120">
+      <text id="5:8" name="1 Download the repository" x="48" y="40" width="1624" height="56" />
+      <text id="5:9" name="Bring the building rules onto your computer." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="5:10" name="Reference image / clone-reference.png" x="48" y="240" width="960" height="580" />
+      <text id="5:11" name="Official GitHub screenshot. The sample repo shown is not Tebra; use the URL in the instructions." x="48" y="836" width="960" height="22" />
+      <text id="5:12" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="5:13" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="5:14" name="In GitHub Desktop, sign into the account with repository access. Choose File → Clone Repository → URL. Paste the design-system URL below. Choose a local Code folder and click Clone. Keep one working copy. Reuse an existing checkout instead of cloning again." x="1060" y="256" width="612" height="340" />
+      <text id="5:15" name="Repository: danielcole-tebra/design-system For source checks, clone kareo-engineering/web-app-v2 beside it when access is available." x="1060" y="624" width="612" height="84" />
+      <text id="5:16" name="Open the Tebra repository ↗" x="1060" y="864" width="612" height="28" />
+      <text id="5:17" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="5:18" name="You can open the local design-system folder and see AGENTS.md, LIBRARY.md, COMPOSITIONS.md and OPEN-ISSUES.md." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="5:19" x="80" y="1710" width="1720" height="1120">
+      <text id="5:20" name="2 Open a local Codex project" x="48" y="40" width="1624" height="56" />
+      <text id="5:21" name="Make the repository the context for your design work." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="5:22" name="Reference image / projects-reference.jpg" x="48" y="240" width="960" height="580" />
+      <text id="5:23" name="Browser capture of OpenAI’s project-view illustration. It is not a screenshot of a participant’s setup." x="48" y="836" width="960" height="22" />
+      <text id="5:24" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="5:25" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="5:26" name="In Codex, create a local project named Tebra design system. Open Edit project → Add folder and select the cloned design-system folder. Make it the primary folder. Attach web-app-v2 too if you cloned it. Start a new chat in this project." x="1060" y="256" width="612" height="340" />
+      <text id="5:27" name="Ask Codex to read AGENTS.md, confirm the path and branch, check Git and Node.js, and run the read-only LIBRARY.md index helper." x="1060" y="624" width="612" height="84" />
+      <text id="5:28" name="Exact first-message prompt ↗" x="1060" y="864" width="612" height="28" />
+      <text id="5:29" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="5:30" name="Codex reads the real local files. Git, Node.js and the helper work. Missing source-code access is reported." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="5:31" x="80" y="2926" width="1720" height="1120">
+      <text id="5:32" name="3 Connect Figma to Codex" x="48" y="40" width="1624" height="56" />
+      <text id="5:33" name="Give the agent the tools and skills to work on the canvas." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="5:34" name="Reference image / plugin-reference.png" x="48" y="240" width="960" height="580" />
+      <text id="5:35" name="Official Figma screenshot of the Codex plugin browser. Interface labels can vary by version." x="48" y="836" width="960" height="22" />
+      <text id="5:36" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="5:37" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="5:38" name="Open Plugins in Codex and find Figma. Choose Install Figma. Sign into your work Figma account and complete Allow access. Return to Codex. Start a new project chat if the tools have not appeared." x="1060" y="256" width="612" height="306" />
+      <text id="5:39" name="Ask which Figma skills and tools are available: inspect files, edit nodes, import library assets and capture screenshots." x="1060" y="620" width="612" height="56" />
+      <text id="5:40" name="Figma’s installation steps ↗" x="1060" y="864" width="612" height="28" />
+      <text id="5:41" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="5:42" name="The connection uses the intended work account and exposes canvas-editing capabilities. Tool availability alone is not a successful build." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="5:43" x="80" y="4142" width="1720" height="1120">
+      <text id="5:44" name="4 Create your own Figma file" x="48" y="40" width="1624" height="56" />
+      <text id="5:45" name="Give your first rebuild a clear destination." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="5:46" name="Reference image / file-reference.png" x="48" y="240" width="960" height="580" />
+      <text id="5:47" name="Official Figma reference showing the Design file action. Your team folder and account will differ." x="48" y="836" width="960" height="22" />
+      <text id="5:48" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="5:49" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="5:50" name="In Figma, create a new Design file in your team’s practice location. Name it Tebra first rebuild · Your name. Create a page named First rebuild. Share the file with Daniel for review and copy the file link." x="1060" y="256" width="612" height="306" />
+      <text id="5:51" name="The destination is your new Design file. Keep the published Design System Rebuild library as the source of components." x="1060" y="620" width="612" height="56" />
+      <text id="5:52" name="Create a Figma Design file ↗" x="1060" y="864" width="612" height="28" />
+      <text id="5:53" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="5:54" name="You can edit your named file, Daniel can review it, and you have its file link for Codex." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="5:55" x="80" y="5358" width="1720" height="1120">
+      <text id="5:56" name="5 Add the rebuild library" x="48" y="40" width="1624" height="56" />
+      <text id="5:57" name="Enable Tebra components, styles and variables in your file." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="5:58" name="Reference image / library-reference.png" x="48" y="240" width="960" height="580" />
+      <text id="5:59" name="Official Figma screenshot uses the sample Habitz library. Choose Design System Rebuild for this exercise." x="48" y="836" width="960" height="22" />
+      <text id="5:60" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="5:61" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="5:62" name="In your new file, open Assets → Libraries. Find Design System Rebuild and confirm its source using the link below. Choose Add to file, or leave it enabled if your team already added it. Check that you can browse Button and Text field assets." x="1060" y="256" width="612" height="340" />
+      <text id="5:63" name="If missing, check the signed-in account, source-file access and publication with Daniel. Do not substitute the deprecated Tebra Working UI Kit." x="1060" y="624" width="612" height="84" />
+      <text id="5:64" name="Open the exact Tebra source library ↗" x="1060" y="864" width="612" height="28" />
+      <text id="5:65" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="5:66" name="The correct published library is available in your destination. Opening or duplicating the library is not the same as enabling it." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="5:67" x="80" y="6574" width="1720" height="1120">
+      <text id="5:68" name="6 Check the setup before building" x="48" y="40" width="1624" height="56" />
+      <text id="5:69" name="Resolve missing access before asking for a full composition." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="5:70" name="Reference image / prompt-reference.jpg" x="48" y="240" width="960" height="580" />
+      <text id="5:71" name="Screenshot of the guide’s setup-prompt excerpt. This is not a Codex response or proof of a completed setup." x="48" y="836" width="960" height="22" />
+      <text id="5:72" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="5:73" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="5:74" name="Paste the setup-check prompt into your project chat. Include your destination file link and the exact source library link. Ask for a read-only check of file identities, library discovery and available capabilities. Read the missing-setup report before continuing." x="1060" y="256" width="612" height="306" />
+      <text id="5:75" name="Actual imports, font loading, editability and screenshot delivery must still be verified during the first build." x="1060" y="620" width="612" height="56" />
+      <text id="5:76" name="Copy the full setup-check prompt ↗" x="1060" y="864" width="612" height="28" />
+      <text id="5:77" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="5:78" name="Codex reports specific findings and unknowns. A list of available tools is not treated as proof that every operation succeeded." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="5:79" x="80" y="7790" width="1720" height="1120">
+      <text id="5:80" name="7 Bring in the practice card" x="48" y="40" width="1624" height="56" />
+      <text id="5:81" name="Pending starter asset. Setup can finish before the exercise is ready." x="48" y="112" width="1624" height="34" />
+      <rounded-rectangle id="5:82" name="Reference image / selection-reference.jpg" x="48" y="240" width="960" height="580" />
+      <text id="5:83" name="Captured frame from Figma’s official selection-link illustration. It is not the Tebra practice card." x="48" y="836" width="960" height="22" />
+      <text id="5:84" name="Image source ↗" x="48" y="900" width="960" height="22" />
+      <text id="5:85" name="DO THIS" x="1060" y="216" width="612" height="28" />
+      <text id="5:86" name="Once the starter is supplied, copy its editable layers into your First rebuild page. Label it Original · Practice card and keep it intact. Select the card, then copy a link to the selection. Use that node link as Starter card and your file link as Destination." x="1060" y="256" width="612" height="306" />
+      <text id="5:87" name="The manual contact-details starter and verified Empty/Filled reference are not created yet. Do not substitute the old patient-search benchmark." x="1060" y="620" width="612" height="84" />
+      <text id="5:88" name="Open the first-rebuild exercise ↗" x="1060" y="864" width="612" height="28" />
+      <text id="5:89" name="CHECKPOINT" x="48" y="964" width="1624" height="28" />
+      <text id="5:90" name="When the asset is ready, your editable starter and its selection link identify the same card. Preserve it beside the rebuilt states." x="48" y="1004" width="1624" height="34" />
+    </section>
+    <section id="5:91" x="80" y="9006" width="1720" height="1120">
+      <text id="5:92" name="Before your first rebuild" x="48" y="40" width="1624" height="56" />
+      <text id="5:93" name="A quick readiness check, plus what happens next." x="48" y="112" width="1624" height="34" />
+      <text id="5:94" name="ACCOUNTS + TOOLS" x="48" y="216" width="720" height="34" />
+      <text id="5:95" name="Work account in Codex GitHub repository access Git and Node.js available Work Figma account Published rebuild library access Akkurat LL available to the Figma service" x="48" y="268" width="720" height="204" />
+      <text id="5:96" name="YOUR WORKSPACE" x="920" y="216" width="752" height="34" />
+      <text id="5:97" name="Local design-system folder is primary Your own editable Design file Rebuild library added to that file Daniel has access for review Starter card copied once supplied Destination and selection links ready" x="920" y="268" width="752" height="204" />
+      <text id="5:98" name="WHAT YOU WILL RECEIVE" x="48" y="608" width="1624" height="34" />
+      <text id="5:99" name="An editable contact-details rebuild in Empty and Filled states. Screenshots in chat. A Figma link. A checked list of verified changes covering auto layout, library instances, typography, tokens, resizing, content and preserved originals." x="48" y="660" width="1624" height="68" />
+      <text id="5:100" name="PILOT NOTES" x="48" y="836" width="1624" height="34" />
+      <text id="5:101" name="The starter asset is pending. Daniel reviews before the next build batch. Evidence must be recorded and pushed; clone access alone does not establish push access. Missing access and unverified checks stay explicit." x="48" y="884" width="1624" height="68" />
+      <text id="5:102" name="Full setup guide ↗" x="48" y="1040" width="760" height="28" />
+      <text id="5:103" name="First rebuild + what-changed checklist ↗" x="920" y="1040" width="752" height="28" />
+    </section>
+  </section>
+</canvas>

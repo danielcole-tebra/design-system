@@ -1,0 +1,170 @@
+{
+  "boardId": "5:2",
+  "panelOrder": [
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:91"
+  ],
+  "singleColumn": [
+    {
+      "id": "5:7",
+      "textX": [
+        48
+      ],
+      "textWidths": [
+        1104
+      ]
+    },
+    {
+      "id": "5:19",
+      "textX": [
+        48
+      ],
+      "textWidths": [
+        1104
+      ]
+    },
+    {
+      "id": "5:31",
+      "textX": [
+        48
+      ],
+      "textWidths": [
+        1104
+      ]
+    },
+    {
+      "id": "5:43",
+      "textX": [
+        48
+      ],
+      "textWidths": [
+        1104
+      ]
+    },
+    {
+      "id": "5:55",
+      "textX": [
+        48
+      ],
+      "textWidths": [
+        1104
+      ]
+    },
+    {
+      "id": "5:67",
+      "textX": [
+        48
+      ],
+      "textWidths": [
+        1104
+      ]
+    },
+    {
+      "id": "5:79",
+      "textX": [
+        48
+      ],
+      "textWidths": [
+        1104
+      ]
+    },
+    {
+      "id": "5:91",
+      "textX": [
+        48
+      ],
+      "textWidths": [
+        1104
+      ]
+    }
+  ],
+  "links": [
+    {
+      "id": "5:6",
+      "text": "Full setup guide ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://github.com/danielcole-tebra/design-system/blob/master/GETTING-STARTED.md"
+      }
+    },
+    {
+      "id": "5:16",
+      "text": "Open the repository if you need to check access ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://github.com/danielcole-tebra/design-system"
+      }
+    },
+    {
+      "id": "5:28",
+      "text": "Copy the project-check prompt ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://github.com/danielcole-tebra/design-system/blob/master/GETTING-STARTED.md#2-make-the-repository-your-project-folder"
+      }
+    },
+    {
+      "id": "5:40",
+      "text": "Open Figma’s connection instructions ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#codex"
+      }
+    },
+    {
+      "id": "5:52",
+      "text": "Create a Figma Design file ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://figma.new"
+      }
+    },
+    {
+      "id": "5:64",
+      "text": "Open the exact Design System Rebuild source ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw"
+      }
+    },
+    {
+      "id": "5:76",
+      "text": "Copy the full setup-check prompt ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://github.com/danielcole-tebra/design-system/blob/master/GETTING-STARTED.md#6-check-the-setup-with-codex"
+      }
+    },
+    {
+      "id": "5:88",
+      "text": "Open the first-rebuild request and checklist ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://github.com/danielcole-tebra/design-system/blob/master/FIRST-RUN.md"
+      }
+    },
+    {
+      "id": "5:102",
+      "text": "Full setup guide ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://github.com/danielcole-tebra/design-system/blob/master/GETTING-STARTED.md"
+      }
+    },
+    {
+      "id": "5:103",
+      "text": "First rebuild + what-changed checklist ↗",
+      "target": {
+        "type": "URL",
+        "value": "https://github.com/danielcole-tebra/design-system/blob/master/FIRST-RUN.md"
+      }
+    }
+  ],
+  "originalRetained": true
+}

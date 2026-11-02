@@ -4453,3 +4453,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: seven illustrated onboarding steps, editable instructions and links, completion checkpoints and readiness panel; linked from README and GETTING-STARTED.
 - Finding: official reference screenshots/illustrations and a guide excerpt are explicitly labeled. Starter card and reference rebuild remain pending; no fresh-participant setup is claimed.
 - Evidence: runs/2026-11-02-figjam-onboarding/REPORT.md, node-ledger.json, audit.json, board.png and step-1.png through step-8.png. All nine renders visually inspected; live readback found no overflow, missing fonts or text overlap and confirmed seven images and 17 links. Ready for Daniel's read.
+
+## 2026-11-02 — Single-column Codex-first onboarding
+- File: Tebra FigJam uKNQ26ndMmK3c58oIaaBdh, Daniel's reordered section 5:2; earlier section 2:2 retained.
+- Changed: Codex clones or reuses the repo in step 1; every card uses one text column in the existing vertical order. Hid prior reference images and supplied real capture instructions. Updated GETTING-STARTED/README and added SCREENSHOT-CAPTURE-LIST.
+- Finding: real screenshots await Daniel; starter and verified rebuild remain pending. No nodes deleted and no library changes.
+- Evidence: runs/2026-11-02-figjam-onboarding-revision/REPORT.md, before.xml, revision.js, verification.json, links-and-alignment.json and nine inspected renders. No overflow/overlap; all cards have one text alignment; ten link targets read back. Ready for Daniel's read.

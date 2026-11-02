@@ -2,9 +2,9 @@
 
 Use Codex connected to Figma to assemble editable screens from Tebra's published library. This repository gives the agent composition guidance and verification rules; component source lives in the sibling `web-app-v2/packages/design-system` repository.
 
-**Start with [Set up Codex and Figma](GETTING-STARTED.md).** Clone the repository, open it as a local Codex project, connect Figma, create your own design file, and enable the published library.
+**Start with [Set up Codex and Figma](GETTING-STARTED.md).** Ask Codex to clone the repository, make it your project folder, connect Figma, create your own design file, and enable the published library.
 
-Prefer a visual walkthrough? Open [Get started with Codex + Figma in FigJam](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=2-2), with seven illustrated steps and readiness checkpoints. Images are labeled references; the practice card is still pending.
+Prefer a visual walkthrough? Open [Get started with Codex + Figma in FigJam](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2), with seven steps arranged top to bottom and one column of instructions per card. Real screenshots are pending; the [capture list](SCREENSHOT-CAPTURE-LIST.md) identifies each view to supply. The practice card is also still pending.
 
 Then follow [Your first rebuild](FIRST-RUN.md). The guided exercise converts a manually built contact-details card into library-based Empty and Filled states, with screenshots and a verified checklist of what changed.
 

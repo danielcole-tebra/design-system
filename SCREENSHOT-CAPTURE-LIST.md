@@ -1,0 +1,34 @@
+# Real screenshots for the getting-started guide
+
+Capture these from your actual Codex and Tebra Figma setup. The [current FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) includes matching capture IDs in each card.
+
+Use PNG at native resolution, keep the same window size and theme where practical, and include enough surrounding interface to show where the action happens. Keep the relevant project, file or library name readable. Hide unrelated chats, personal details and authentication secrets. No screenshot of sign-in credentials is needed. Use the filenames below so each capture maps directly to its card.
+
+| ID / suggested filename | Capture | Must be visible |
+|---|---|---|
+| 01A-codex-clone-request.png | The first Codex project chat, with the clone request entered or sent | Tebra design system project and the actual repository URL; enough app UI to locate the chat |
+| 01B-codex-clone-result.png | Codex's real response after cloning or reusing the checkout | The resulting folder path, successful outcome or actual missing setup items; do not stage a success response |
+| 02-primary-folder.png | Edit project after attaching the cloned folder | design-system identified as the primary folder |
+| 03A-install-figma.png | Figma's plugin page in Codex before installation | Figma name and install control |
+| 03B-figma-connected.png | The same plugin after connection | Installed/connected state; omit private account details. If it was already installed, capture the current state rather than uninstalling it for the guide |
+| 04-new-design-file.png | The actual new Figma Design file | Tebra first rebuild · Your name, First rebuild page, and Share control |
+| 05A-add-rebuild-library.png | Libraries dialog in that destination file | Actual Design System Rebuild name and Add to file or enabled state |
+| 05B-rebuild-assets.png | Assets panel after enabling the library | Design System Rebuild assets, including Button and Text field; expand or scroll as needed |
+| 06-setup-check.png | The real setup-check conversation in Codex | The prompt with destination link plus findings. Use 06A-prompt.png and 06B-result.png if one capture would make text unreadable |
+| 07-starter-card.png — later | The supplied starter selected in your Figma file | Original · Practice card and the Layers panel showing editable text and shapes. Wait until the starter exists |
+
+There are nine capture targets ready now, with the setup check optionally split into two images. The starter capture is pending. If installation is already complete, 03A can wait for a fresh-user capture; do not disconnect a working setup.
+
+After the practice card is built, capture the original beside the Empty and Filled rebuilds and the real chat response containing the screenshots and verified what-changed checklist. Those are exercise-result images, separate from the setup screenshots above.
+
+## First prompt to capture
+
+```text
+Clone https://github.com/danielcole-tebra/design-system.git into a
+design-system folder inside this project's local folder. If a checkout
+already exists, inspect and reuse it without overwriting local work.
+Read AGENTS.md, check Git and Node.js, and tell me the full folder path
+and any access problems. Do not build in Figma yet.
+```
+
+Use the full setup-check prompt in [GETTING-STARTED.md](GETTING-STARTED.md#6-check-the-setup-with-codex) for capture 06. Once captures are supplied, place each under its matching single-column instructions and verify it at readable scale.

@@ -1,6 +1,6 @@
 # Set up Codex and Figma
 
-[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=2-2) for illustrated steps and checkpoints. Reference images show official examples and guide excerpts; they do not document a completed participant setup.
+[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Real screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
 
 Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
 
@@ -14,66 +14,45 @@ Have these accounts and tools available. If access is missing, ask Daniel or you
 |---|---|
 | The desktop app with Codex, signed into your work account | Runs the design agent against your local project. [Official installation guidance](https://learn.chatgpt.com/docs/app). |
 | Access to the [design-system GitHub repository](https://github.com/danielcole-tebra/design-system) | Supplies the building rules, composition references, and evidence helpers. Open the link while signed into GitHub to check access. |
-| GitHub Desktop, or Git available to Codex | Downloads the repository and keeps it current. GitHub Desktop provides a visual clone flow. |
+| Git available to Codex | Codex downloads the repository and keeps it current. No separate GitHub Desktop workflow is needed. |
 | Node.js available to Codex | Runs the repository's builder helpers. Use your approved installation process or the [Node.js download page](https://nodejs.org/en/download). |
 | Your work Figma account with edit access to a destination file | Allows you and the connected agent to build editable designs. |
 | View access to [Design System Rebuild](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw) and access to its published library | Provides Tebra components, styles, and variables. |
 | The approved Tebra fonts | The recorded library uses Akkurat LL. Get the team's licensed font package or organization font access from Daniel; font loading must also work for the agent. |
 
-The full builder workflow also references source code in the [web-app-v2 repository](https://github.com/kareo-engineering/web-app-v2). If you have access, clone it beside design-system as described below. If you do not, report that during the setup check: Codex can read the guidance, but must identify source-code checks it cannot complete.
+The full builder workflow also references source code in the [web-app-v2 repository](https://github.com/kareo-engineering/web-app-v2). If you have access, ask Codex to clone it beside design-system. If you do not, report that during the setup check: Codex can read the guidance, but must identify source-code checks it cannot complete.
 
 This repository is guidance and evidence. Enabling the Figma library and connecting Codex to Figma are separate steps; cloning the repository does neither automatically.
 
-## 1. Download the repository
+## 1. Ask Codex to get the repository
 
-Cloning creates a local copy that stays connected to GitHub. Keep one working copy of each repository on your computer.
+Start in Codex; you do not need to clone anything in a separate app.
 
-Using **GitHub Desktop**:
-
-1. Sign in with the account that can access the repository.
-2. Choose **File → Clone Repository**, then the **URL** tab.
-3. Enter `https://github.com/danielcole-tebra/design-system.git`.
-4. Choose a local folder you can find again, such as a `Code` folder in your home directory, and click **Clone**.
-5. Open the resulting `design-system` folder. You should see `AGENTS.md`, `LIBRARY.md`, `COMPOSITIONS.md`, `OPEN-ISSUES.md`, and this guide.
-
-These menu steps follow [GitHub's cloning instructions](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop). If you already have a clone, update that copy instead of making another one. If GitHub reports that the repository cannot be found, check your signed-in account and access with Daniel.
-
-For source-code access, repeat the clone flow with `https://github.com/kareo-engineering/web-app-v2.git`. Put both folders under the same parent:
-
-```text
-Code/
-  design-system/
-    AGENTS.md
-    GETTING-STARTED.md
-    FIRST-RUN.md
-  web-app-v2/
-    packages/
-      design-system/
-```
-
-Cloning the code repository provides files to inspect. This Figma exercise does not require starting the web app or installing its application dependencies.
-
-If you prefer to ask Codex to clone, first give a local Codex chat access to the parent folder and specify the destination:
+1. Open Codex and create a local project named **Tebra design system**.
+2. Attach a local parent folder where the repository should live, such as a `Code` folder. Use the project's **Edit project → Add folder** controls if needed, then start a chat in that project.
+3. Paste this request:
 
 ```text
 Clone https://github.com/danielcole-tebra/design-system.git into a
-design-system folder inside this project's local folder. If it already
-exists, inspect and reuse it. Report the resulting absolute path.
+design-system folder inside this project's local folder. If a checkout
+already exists, inspect and reuse it without overwriting local work.
+Read AGENTS.md, check Git and Node.js, and tell me the full folder path
+and any access problems. Do not build in Figma yet.
 ```
 
-Complete any GitHub sign-in through the normal authentication window. After cloning, make the cloned folder the project root in the next step; a GitHub URL in chat alone does not give Codex a local checkout.
+Complete GitHub sign-in through the normal authentication window if prompted. If Git or Node.js is missing, have Codex identify the approved setup action before continuing. A repository URL by itself does not attach a local folder to the chat.
 
-**Checkpoint:** The folder exists on your computer and contains the four builder guidance files. Note its location for the next step.
+**Checkpoint:** Codex confirms the checkout path and reports any missing tools or access. The folder contains AGENTS.md, LIBRARY.md, COMPOSITIONS.md and OPEN-ISSUES.md.
 
-## 2. Create your local Codex project
+## 2. Make the repository your project folder
 
-1. Open the desktop app and select **Codex**.
-2. Create a local project for this work using the app's project/folder flow. Give it a recognizable name, such as **Tebra design system**.
-3. In the project's menu, choose **Edit project**, then **Add folder** if needed. Select the cloned `design-system` folder itself.
-4. Make `design-system` the **primary** folder. If you cloned `web-app-v2`, attach that folder too, keeping design-system primary.
-5. Start a **New chat** in this project for the exercise. Use the local checkout and stay on master, as the repository requires.
+1. In the same project's menu, choose **Edit project → Add folder**. Select the `design-system` folder Codex reported.
+2. Make `design-system` the **primary** folder.
+3. Start a new chat in this project so it starts from the repository and discovers its instructions.
 
-The primary folder determines Codex's default working directory and automatic discovery of `AGENTS.md`. A project containing only uploaded files does not provide access to your local checkout. Exact project-creation entry labels can vary by desktop version; **Edit project → Add folder → Make primary** is the documented folder configuration. See [OpenAI's projects documentation](https://learn.chatgpt.com/docs/projects).
+The primary folder provides the default working directory and automatic instruction discovery for new chats. Exact labels can vary by version. See [OpenAI's projects documentation](https://learn.chatgpt.com/docs/projects).
+
+If source-code checks are needed and you have access, ask Codex to clone `https://github.com/kareo-engineering/web-app-v2.git` beside design-system, reusing an existing checkout. Attach that folder too, keeping design-system primary. Report missing source access explicitly. This Figma exercise does not require running the web app or installing its application dependencies.
 
 Send this first message:
 
