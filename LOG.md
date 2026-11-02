@@ -4435,3 +4435,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: README designer entry point and FIRST-RUN guided patient-search exercise with dated visual reference, setup prerequisites, build request, review criteria, recovery guidance and pilot feedback.
 - Finding: suitable reference exists; new-designer/client validation is pending. Daniel's current batch-review requirement remains explicit. No library or composition ruling changed.
 - Evidence: runs/2026-11-02-designer-first-run/REPORT.md; existing reference image inspected, local links and git diff --check verified. No new screenshot applies.
+
+## 2026-11-02 — Contact-card rebuild onboarding revision
+- File: no Figma writes; intended destination Proposals zKT34LQogNjz3Z07fY4VQB. Documentation in the canonical C:\Code\design-system checkout.
+- Changed: per Daniel's voice-session feedback, replaced the first-run patient-search exercise with a supplied manual contact-card rebuild, Empty/Filled states, and a checklist of verified changes. Updated README entry point.
+- Finding: starter card, screenshot, and reference rebuild remain uncreated; guide is explicitly a draft, not pilot-ready. Previous exercise evidence preserved; no component/composition ruling changed.
+- Evidence: runs/2026-11-02-contact-card-guide/REPORT.md. Local links and git diff --check verified; no screenshot applies to this documentation batch.

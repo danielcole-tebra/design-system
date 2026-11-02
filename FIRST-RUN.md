@@ -1,124 +1,115 @@
-# Your first screen
+# Your first rebuild
 
-Build a small patient-search panel with an AI design agent and review the result in Figma. This exercise is for designers. It uses fictional patient details and produces two static visual states: results and no results.
+Turn a manually built contact-details card into an editable Tebra design-system composition. This exercise is for designers who want to bring existing Figma work onto the library, as well as start new projects.
 
-You will learn how to request a composition, recognize library-backed output, and review what the agent built. There is no working search, patient lookup, or navigation in this exercise.
+**Draft for review — November 2, 2026.** The guide reflects the agreed exercise. The supplied starter Figma card, its screenshot, and a verified reference rebuild still need to be created. There is no starter link yet, and the exercise is not ready for a participant pilot. The earlier patient-search example is superseded as the onboarding exercise; its evidence remains in repository history.
 
-Status: ready for a designer pilot, November 2, 2026. The reference below was verified on October 31. This guide has not yet been tested by a new designer, and completion time is not yet established.
+## What you will make
+
+An **Edit contact details** card that lets a practice update how it contacts a patient. You will rebuild a supplied practice card into two visual states: **Empty** and **Filled**.
+
+The card includes a heading, a short description, first name, last name, email and phone fields, a preferred contact method dropdown, a reminder checkbox, and Cancel and Save changes buttons. Practice content is fictional.
+
+The starter will be an editable Figma card made from ordinary text, rectangles, and manually positioned groups. It will deliberately have no auto layout or library instances and will be labeled as a practice example. A screenshot will accompany it. It should look plausible, so the exercise demonstrates conversion of existing design work rather than correction of an obviously broken mockup.
+
+Your output will show the untouched original alongside the two rebuilt states. Empty fields and unselected controls demonstrate the initial state; filled fields and selected controls demonstrate the completed form. These are visual states, not working form submission or persistence. The intended product actions are to discard edits with Cancel and save contact details with Save changes; neither outcome is implemented by this exercise alone.
 
 ## 1. Get ready
 
-You need an agent client with access to this repository and a Figma connection that can inspect library components, create editable nodes, and capture images. A chat window alone is not sufficient. Connection and permission screens vary by client; this guide does not assume Codex and Claude have identical setup.
-
-Open the repository as the agent's project. Have these resources available:
+Open this repository as your agent's project. Your client needs a Figma connection that can inspect components, create editable nodes, and capture images. Connection and permission screens differ between clients.
 
 | Resource | What you need |
 |---|---|
-| [Design System Rebuild](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw) | Access to the published Tebra components and tokens; this is the source library. |
-| [Proposals](https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB) | Edit access for this exercise. Each attempt gets a new, uniquely named section. |
-| Fonts | The library's fonts must load. The reference uses Akkurat LL. |
+| [Design System Rebuild](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw) | Access to the published Tebra library. |
+| [Proposals](https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB) | Edit access for your new practice section. |
+| Supplied starter card | Pending creation. The exercise owner will add a node-specific link and reference screenshot here. |
+| Fonts | The library's required fonts must load. |
 
-Ask the agent to check its repository access, Figma connection, source library access, and destination access before building. If it cannot find this guide or cannot access one of those resources, resolve that setup issue first. The build itself must verify actual imported properties and required fonts; access alone does not prove component availability.
+Ask the agent to check repository access, its Figma connection, and access to both files. The build must also verify the actual component properties, tokens, and fonts available in the consuming file.
 
-For the pilot, Daniel remains the reviewer required by the current builder rules. You can inspect the result yourself, but the agent pauses for Daniel's read before another build batch. Independent review ownership for a wider rollout has not been established.
+During the pilot, Daniel remains the reviewer required by the current builder rules. You can inspect the result yourself, but the agent pauses for Daniel's read before another build batch. Wider rollout review ownership remains unresolved.
 
-## 2. See what you are aiming for
+## 2. Request the rebuild
 
-![Reference: patient-search results and empty state](runs/patient-search-final-2026-10-31-183302/section.png)
-
-[Open the reference in Figma](https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB?node-id=285-434).
-
-This is the saved October 31 reference, not a screenshot of your new attempt. It demonstrates the intended composition; it does not establish current library publication or consumer-update status. Keep the reference intact.
-
-Both panels are 550 px wide, with a paper background and 16 px padding. Each has the heading “Find a patient” and a small outlined field labeled “Search patients,” without a search icon.
-
-| Results state | Empty state |
-|---|---|
-| Field value: Morgan | Field value: ZZZ |
-| 2 patients found | No patients found |
-| Morgan Lee — Patient ID: 10482 | Try a different name or patient ID. |
-| Morgan Patel — Patient ID: 10517 | No result rows |
-| A divider between the two rows | |
-
-The reference heights are 309 px for Results and 188 px for Empty. Content determines height; these are dated observations rather than fixed-height requirements. Success means correct content, supported library parts, readable layout, and an editable result. An unexplained difference should be reported, not hidden to imitate the screenshot.
-
-## 3. Request your first build
-
-Copy this request into the agent chat opened on the repository:
+Once the starter is supplied, open it and include its node-specific link with this request:
 
 ```text
-Use AGENTS.md and FIRST-RUN.md in this repository to build my first
-Tebra patient-search composition in the Proposals file:
-https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB
+Use AGENTS.md and FIRST-RUN.md in this repository to rebuild the supplied
+Edit contact details practice card using the Tebra design system.
 
-Create a new section named “First run · Patient search” with a unique
-attempt suffix. Preserve all existing work and the reference example.
+Starter card: [paste the supplied card's Figma link]
+Destination: https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB
 
-Build the Results and Empty states specified in FIRST-RUN.md, side by
-side, each 550 px wide. Use the published Tebra library instances,
-supported properties, typography, and bound tokens. These are static
-visual states; typing and selecting a patient have no implemented action.
+Create a new, uniquely named “First run · Contact details” section.
+Preserve the source card and all existing work. Inspect its actual
+layers, content, and dimensions. Break it into a header, field groups,
+controls, and actions; use the screenshot as a visual reference.
 
-Check the components and tokens available in this consuming file.
-Report any missing capability or conflicting evidence. Keep the source
-library unchanged and preserve published component internals.
+State the target widths, Empty and Filled states, and intended action
+outcomes before assembly. Reuse supported library instances, bound
+tokens, text styles, and auto-layout compositions. Preserve published
+component internals and keep the source library unchanged.
 
-After this batch, capture the assembled section and any necessary
-detail crops. Open and visually inspect those images, then display the
-actual screenshots in this chat. Include a link to my new Figma section,
-a short verification summary, and any limitations. If image display
-fails, say so and provide an accessible image link; do not claim I saw it.
+Keep the original content and intent. Report unsupported capabilities
+or conflicting evidence, and ask Daniel about unresolved design choices.
+These are static states; do not claim working submission or persistence.
 
-Record the batch using the repository workflow and stop for Daniel's
-read before starting another build batch.
+Capture, open, and visually inspect the rebuilt section and any needed
+detail crops. Display the actual screenshots in this chat and link to
+my editable Figma section. If inline display fails, report that and
+provide an accessible image link.
+
+Return the “What changed” checklist from FIRST-RUN.md, checking only
+verified items. List exceptions and unfinished work separately. Record
+the batch using the repository workflow and stop for Daniel's read
+before another build batch.
 ```
 
-The request names the desired result and delivery expectations. The agent handles component discovery, assembly, verification, and evidence. You should not need to supply internal component IDs or run builder scripts yourself.
+You should not need to supply internal component IDs or run builder scripts. The agent handles discovery, assembly, verification, and evidence. The starter link identifies the source to rebuild; it does not authorize editing that source.
 
-## 4. Review what comes back
+## 3. Review what changed
 
-You should receive the new screenshot in chat, a link to your editable Figma section, and a concise explanation of checks and limitations. The screenshot must show your attempt, not just repeat the reference above.
+Compare your rebuild with the original, then inspect its layers in Figma. The agent returns this checklist with each verified change checked off. Unverified items stay unchecked and get an explanation.
 
-Check these together with the agent's verification summary:
+- [ ] **Layout:** The card, field groups, and button row use auto layout with defined padding, spacing, and alignment.
+- [ ] **Components:** Hand-built fields, dropdown, checkbox, and buttons have been replaced with supported Tebra library instances.
+- [ ] **Typography:** Headings, labels, and supporting text use library text styles.
+- [ ] **Colors and spacing:** Supported values are bound to design-system tokens; exceptions are listed.
+- [ ] **Resizing:** The card has been checked at the stated target widths, with no overlapping or clipped content. The report names the widths actually tested.
+- [ ] **States:** Empty and Filled versions are included, with consistent structure and component usage.
+- [ ] **Content:** Original labels, information, and intended actions are preserved; any changes are explained.
+- [ ] **Editability:** The result remains editable, and library instances retain their component connections.
+- [ ] **Original preserved:** The supplied practice card remains intact, with an intact comparison copy beside the rebuilt versions if a separate section is used.
+- [ ] **Visual review:** Screenshots of the rebuild were inspected and shown in chat.
 
-- Both states are present, with the specified text and 550 px panel width.
-- The results have two readable rows and a divider; the empty state has its explanation and no result rows.
-- Text and controls have no visible clipping or overlap.
-- Opening the Figma link reveals editable layers. Library controls remain instances; ordinary layout frames and token-bound text are valid composition.
-- The agent reports verification of actual component properties and token bindings. A screenshot alone cannot prove either.
-- Any unavailable capability, substitution, or failure is stated plainly. No interaction is claimed for these static states.
+**Exceptions and unfinished work:** List every unsupported feature, workaround, or unverified item. Distinguish visual states, stored prototype wiring, and interactions actually played through.
 
-Select a field or result row in Figma and inspect its instance relationship. Do not detach it to complete the exercise. You do not need a pixel-perfect match to the dated reference, but differences need an explanation grounded in the current library.
+“Uses auto layout” describes the authored layout containers; it does not require changing library internals or putting auto layout on every leaf node. A screenshot alone cannot prove instance relationships or token bindings: those require inspection of the Figma document.
 
-The exercise is complete when you can open your composition, understand both states, see its screenshot in chat, and explain what is editable and what is not implemented. Record whether Daniel's review is pending or complete separately from your own completion.
+Select a rebuilt field or button and inspect its instance relationship. Try a content change on your own output and observe how the layout responds. Keep library instances attached. You should be able to explain both what changed and what the exercise does not implement.
 
 ## If something gets in the way
 
 | What you see | Next step |
 |---|---|
+| The starter link is missing | The exercise is not ready to run. The exercise owner must supply the practice asset first. |
 | The agent cannot read the guide | Open the repository as its project and check workspace access. |
-| Figma cannot be reached or edited | Check the connection and your access to the library and Proposals file. |
-| Components, properties, tokens, or fonts are missing | Have the agent report the specific mismatch. Library publishing and accepting consumer updates are manual; Daniel can help resolve it. |
-| A file was saved but no image appears in chat | Ask for the saved screenshot to be opened and displayed. Record whether inline display or only a link worked. |
-| The result is a flat image in Figma | The editability requirement was not met. Report it before continuing. |
-| Search does nothing when clicked or typed into | Expected: this exercise contains static states, not a functioning search prototype. |
+| Figma cannot be reached or edited | Check the connection and access to the source library and destination. |
+| Components, properties, tokens, or fonts are unavailable | Have the agent report the specific mismatch. Publishing and accepting library updates are manual. |
+| A screenshot was saved but no image appeared | Ask for the image to be opened and displayed; record whether inline display or only a link worked. |
+| The Figma result is a flat image | The editability requirement was not met. |
+| Save or Cancel does nothing | Expected for this static exercise; working interactions require a separate prototype task. |
 
-The search icon is intentionally absent because the documented field has no native adornment slot. Adding an icon is a separate capability/workaround decision, not a requirement for completing this exercise.
+## 4. Tell us how the first run went
 
-## 5. Tell us how the first run went
+After your attempt, send Daniel a short note through your normal team channel: which client you used, a link to your result, whether the image appeared in chat, where you needed help, rough time to a reviewable result, and which existing project you would try next. The agent may draft the note; this guide does not authorize it to send messages.
 
-After the attempt, send Daniel a short note through your normal team channel. The agent can help draft it; this guide does not authorize it to send messages.
+For the pilot, observe a few designers attempting the same supplied exercise. Record setup failures, missing images, assistance, completion, and later use on a real project. A successful reference build is not evidence that onboarding works without help.
 
-- Which client you used and whether setup worked.
-- A link to your new section and whether the screenshot appeared in chat.
-- Whether you completed the task unaided, needed help, or could not finish; where you first got stuck.
-- Rough time from starting setup to the first reviewable image, with access or review waits identified.
-- Whether the result matched your expectations and one real design task you would try next.
+For your next task, supply an existing section or describe a new one. Identify the destination, target widths, content, states, and action outcomes. The same library verification and visual review loop applies.
 
-Pilot facilitator: observe a few designers attempting this exercise without coaching unless they get stuck. Record setup failures, missing screenshots, assistance required, completion, and later use on a real task. These are observations to gather, not results already demonstrated by the reference benchmark.
+## Preparation before the pilot
 
-For the next real task, describe the destination, section, width, content, states, and intended actions. The same library verification and visual review loop still applies.
+The exercise owner still needs to supply the manual starter card and its screenshot, settle its exact fictional copy and target widths, and build and verify the reference Empty and Filled versions. Those assets establish a concrete expected result. Current documentation is a reviewable exercise brief, not a claim those assets exist.
 
-## Reference evidence
-
-[October 31 build report](runs/patient-search-final-2026-10-31-183302/REPORT.md) records the reference's measured assertions, library comparisons, screenshots, and limitations. [LIBRARY.md](LIBRARY.md), [COMPOSITIONS.md](COMPOSITIONS.md), and [OPEN-ISSUES.md](OPEN-ISSUES.md) remain the active technical references. This guide adds a designer entry point without changing component or composition decisions.
+[AGENTS.md](AGENTS.md), [LIBRARY.md](LIBRARY.md), [COMPOSITIONS.md](COMPOSITIONS.md), and [OPEN-ISSUES.md](OPEN-ISSUES.md) remain the authoritative builder guidance. This guide does not change component or composition rulings.
