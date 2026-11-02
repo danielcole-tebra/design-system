@@ -1,6 +1,6 @@
 # Set up Codex and Figma
 
-[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1–3 and 5 include Daniel's real screenshots; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
+[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1–3, 5 and 6 include Daniel's real screenshots; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
 
 Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
 
@@ -131,7 +131,7 @@ The screenshot in card 5 uses SDE Alpha Prototypes as an example of a file with 
 
 ## 6. Check the setup with Codex
 
-Paste this into the project chat, replacing the destination placeholder:
+Copy this full prompt from here or directly from FigJam card 6. Paste it into your own work-project chat, replacing the destination placeholder. You do not need to leave FigJam for GitHub to get the prompt.
 
 ```text
 Check my Tebra Figma setup before building.

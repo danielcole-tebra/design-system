@@ -1,0 +1,46 @@
+{
+  "createdNodeIds": [
+    "23:2",
+    "23:3",
+    "23:4"
+  ],
+  "mutatedNodeIds": [
+    "5:2",
+    "5:67",
+    "5:74",
+    "5:72",
+    "5:71",
+    "5:76",
+    "5:68",
+    "5:69",
+    "5:73",
+    "5:75",
+    "5:77",
+    "5:78",
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:79",
+    "5:91"
+  ],
+  "imageId": "23:4",
+  "promptId": "23:3",
+  "prompt": "Check my Tebra Figma setup before building.\nDestination: [paste my new Figma Design file link]\nSource library: https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw\n\nRead AGENTS.md from the attached design-system folder. Inspect the\ndestination and available published library\nassets without changing either file. Confirm the exact file identities,\navailable editing/screenshot capabilities, and required component,\nstyle, and variable discovery. Report available font evidence and\nanything that still requires an actual import or render to verify.\nDo not claim that permissions, imports, fonts, or screenshots have been\ntested if you have only listed the available tools. Report missing\naccess and next steps. Keep the source library unchanged.",
+  "archivedLinkId": "5:76",
+  "cardBounds": {
+    "width": 1200,
+    "height": 2056
+  },
+  "panelOrder": [
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:91"
+  ]
+}

@@ -4501,3 +4501,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: placed Daniel's real Manage libraries screenshot; manual library addition is recommended for browsing/editing. Updated corresponding guide and capture status.
 - Finding: MCP discovery and published-component import-by-key support the agent workflow without manual Add to file. Publication/access and actual first-build imports still require verification; no participant import test claimed.
 - Evidence: runs/2026-11-02-onboarding-library-screenshot/REPORT.md, source image, creation/audit records and three inspected renders. FIT image hash confirmed, no overlap/overflow, vertical order preserved. Ready for Daniel's read.
+
+## 2026-11-02 — Full prompt directly in step 6
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh, card 5:67, prompt 23:3, screenshot 23:4.
+- Changed: full editable setup-check prompt replaces the visible outbound GitHub link. Added Daniel's real screenshot and updated guide/capture status.
+- Finding: prompt matches GETTING-STARTED exactly; screenshot shows a request, not completed checks. Instructions direct designers to their own work project and destination link.
+- Evidence: runs/2026-11-02-onboarding-step-6-inline-prompt/REPORT.md, source, creation/audit records and two inspected renders. No overlap/overflow; vertical order preserved. Ready for Daniel's read.

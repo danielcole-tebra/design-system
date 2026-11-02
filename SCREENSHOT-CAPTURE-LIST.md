@@ -11,10 +11,10 @@ Use PNG at native resolution, keep the same window size and theme where practica
 | 03-figma-enabled.png — supplied | Daniel's actual Settings → Plugins screenshot | Figma installed with its toggle enabled. Placed in card 3; the written checkpoint covers account and tool availability |
 | 04-new-design-file.png | The actual new Figma Design file | Tebra first rebuild · Your name, First rebuild page, and Share control |
 | 05-rebuild-library.png — supplied | Daniel's actual Manage libraries screenshot from SDE Alpha Prototypes | Design System Rebuild under Used in this file. Accepted as the single image for card 5; the caption directs designers to their own new file |
-| 06-setup-check.png | The real setup-check conversation in Codex | The prompt with destination link plus findings. Use 06A-prompt.png and 06B-result.png if one capture would make text unreadable |
+| 06-setup-check.png — supplied | Daniel's actual setup-check prompt entered in Codex | Accepted as the single image for card 6. The full prompt is also editable text in the card, so designers can copy it without visiting GitHub. The written checkpoint covers reviewing Codex's findings |
 | 07-starter-card.png — later | The supplied starter selected in your Figma file | Original · Practice card and the Layers panel showing editable text and shapes. Wait until the starter exists |
 
-Cards 1–3 and 5 have supplied screenshots placed. Two setup capture targets remain: the new Design file (04) and the setup check (06), which can optionally use two images. The starter capture is also pending.
+Cards 1–3, 5 and 6 have supplied screenshots placed. One setup capture target remains: the new Design file (04). The starter capture is also pending.
 
 After the practice card is built, capture the original beside the Empty and Filled rebuilds and the real chat response containing the screenshots and verified what-changed checklist. Those are exercise-result images, separate from the setup screenshots above.
 
@@ -28,4 +28,4 @@ check Git and Node.js, and tell me the full folder path and any access
 problems. Keep my new project work outside this repository.
 ```
 
-Use the full setup-check prompt in [GETTING-STARTED.md](GETTING-STARTED.md#6-check-the-setup-with-codex) for capture 06. Once captures are supplied, place each under its matching single-column instructions and verify it at readable scale.
+The full setup-check prompt is available directly in FigJam card 6 and in [GETTING-STARTED.md](GETTING-STARTED.md#6-check-the-setup-with-codex). The supplied screenshot shows the request before sending, not completed verification. Once captures are supplied, place each under its matching single-column instructions and verify it at readable scale.
