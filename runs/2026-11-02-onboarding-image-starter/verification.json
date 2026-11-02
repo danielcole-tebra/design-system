@@ -1,0 +1,75 @@
+{
+  "promptMatchesGuide": true,
+  "promptId": "27:3",
+  "image": {
+    "id": "27:5",
+    "name": "Original · Practice image · select and copy",
+    "width": 1104,
+    "height": 1104,
+    "locked": false,
+    "parentLocked": false,
+    "boardLocked": false,
+    "fills": [
+      {
+        "type": "IMAGE",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "scaleMode": "FIT",
+        "scalingFactor": 0.5,
+        "rotation": 0,
+        "filters": {
+          "exposure": 0,
+          "contrast": 0,
+          "saturation": 0,
+          "temperature": 0,
+          "tint": 0,
+          "highlights": 0,
+          "shadows": 0
+        },
+        "imageTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "imageHash": "6eb3b938adae0de3eaf134715037deb1135d1058"
+      }
+    ]
+  },
+  "overflow": [],
+  "overlaps": [],
+  "panelOrder": [
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:91"
+  ],
+  "panelGaps": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+  ],
+  "cardBounds": {
+    "width": 1200,
+    "height": 3496
+  },
+  "boardBounds": {
+    "width": 1360,
+    "height": 15464
+  }
+}

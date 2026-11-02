@@ -1,10 +1,10 @@
 # Set up Codex and Figma
 
-[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1–3, 5 and 6 include Daniel's real screenshots; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
+[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1–3, 5 and 6 include Daniel's real screenshots, and card 7 supplies the practice image. Only the step 4 setup screenshot remains pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact view to capture.
 
 Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
 
-The setup is separate from the [first rebuild exercise](FIRST-RUN.md). You can complete setup now; the supplied practice card and verified reference rebuild are still being prepared. Instructions checked against official documentation on November 2, 2026; a new-designer walkthrough has not yet validated them end to end.
+The setup leads into the [first rebuild exercise](FIRST-RUN.md). The practice image is supplied in FigJam card 7; a verified reference rebuild is still being prepared. Instructions checked against official documentation on November 2, 2026; a new-designer walkthrough has not yet validated them end to end.
 
 ## Before you begin
 
@@ -151,13 +151,16 @@ access and next steps. Keep the source library unchanged.
 
 **Checkpoint:** Codex identifies your destination and the correct library and gives a specific result for each check. Actual import, font loading, editability, and screenshot display are verified during the first build. The repository requires any inspection instances created then to be retained in a named inspection area.
 
-## 7. Bring in the practice card
+## 7. Copy the starter image and request a rebuild
 
-**Pending asset:** The exercise owner must add the starter-card link and screenshot to [FIRST-RUN.md](FIRST-RUN.md). Until then, your setup can be checked, but the guided rebuild cannot be completed.
+1. In [FigJam card 7](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-79), select **only the starter image**, then copy it.
+2. Paste it into the **First rebuild** page of your own Figma Design file. Rename it **Original · Practice image** and preserve it for comparison. If copying fails, download the [starter PNG](assets/onboarding/contact-details-starter.png) and place it in the file.
+3. Select the pasted image and copy a link to the selection.
+4. Copy the full rebuild prompt from card 7 into your own Codex work-project chat. Replace **Starter image** with the selection link and **Destination** with your Design file link, then send it. The prompt is also in [FIRST-RUN.md](FIRST-RUN.md).
 
-Once supplied, copy the entire editable starter card into the **First rebuild** page of your own file. Keep its text, shapes, and manual positioning intact. Label it **Original · Practice card** and retain it for comparison. Select that card and copy a link to the selection so Codex can inspect the exact source node. Use that selection link as **Starter card** and your file link as **Destination** in the exercise request.
+This input is a flat, generated practice image with fictional data. Its fields are not editable. Codex rebuilds its content as editable library-based Empty and Filled cards, using tokens, text styles and auto layout. The image's generic colors and dimensions do not override the library.
 
-**Checkpoint:** The starter is editable layers in your destination, its node-specific link opens the correct card, and the original remains available beside the rebuilt outputs. A pasted screenshot alone is a different input and does not meet this editable-starter exercise.
+**Checkpoint:** The image is in your file, its selection link opens the correct image, and the rebuild request names your destination. The expected output is editable Empty and Filled cards checked at 640 and 400 px, with the original image retained for comparison and a verified what-changed checklist.
 
 ## Ready for the first rebuild
 
@@ -167,7 +170,7 @@ Once supplied, copy the entire editable starter card into the **First rebuild** 
 - [ ] Your own Figma Design file is editable and its link is ready for Codex.
 - [ ] Codex can discover the published Design System Rebuild library. Adding it manually in Figma is recommended; actual imports are verified during the build.
 - [ ] Font availability is checked as far as possible; loading will be verified during the build.
-- [ ] The supplied manual starter has been copied into the file and has a node-specific link.
+- [ ] The supplied starter image has been copied into the file and has a node-specific link.
 
 Continue with [Your first rebuild](FIRST-RUN.md). It contains the request, Empty/Filled requirements, and the checklist of verified changes.
 

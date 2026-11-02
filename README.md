@@ -4,11 +4,11 @@ Use Codex connected to Figma to assemble editable screens from Tebra's published
 
 **Start with [Set up Codex and Figma](GETTING-STARTED.md).** Ask Codex to download the design-system repository into its own folder. Create a separate work folder with any name, make it primary in Codex, and attach design-system as a reference. Then connect Figma, create your own design file, and check access to the published library. Adding the library manually is recommended for browsing and editing in Figma.
 
-Prefer a visual walkthrough? Open [Get started with Codex + Figma in FigJam](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2), with seven steps arranged top to bottom and one column of instructions per card. Cards 1–3, 5 and 6 include Daniel's real screenshots; step 6 includes the full copyable prompt. The [capture list](SCREENSHOT-CAPTURE-LIST.md) identifies the remaining views to supply. The practice card is also still pending.
+Prefer a visual walkthrough? Open [Get started with Codex + Figma in FigJam](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2), with seven steps arranged top to bottom and one column of instructions per card. Cards 1–3, 5 and 6 include Daniel's real screenshots. Step 7 supplies a copyable practice image; steps 6 and 7 include their full prompts. The [capture list](SCREENSHOT-CAPTURE-LIST.md) identifies the remaining setup view to supply.
 
-Then follow [Your first rebuild](FIRST-RUN.md). The guided exercise converts a manually built contact-details card into library-based Empty and Filled states, with screenshots and a verified checklist of what changed.
+Then follow [Your first rebuild](FIRST-RUN.md). Copy the supplied contact-details image into your Design file and ask Codex to rebuild it as editable library-based Empty and Filled states, with screenshots and a verified checklist of what changed.
 
-The guide is a draft for review. The supplied starter Figma card, screenshot, and verified reference rebuild still need to be created before a designer pilot. Setup and image display also need to be checked in each participant's client.
+The guide is a draft for review. The [starter PNG](assets/onboarding/contact-details-starter.png) is supplied; a verified reference rebuild still needs to be created before a designer pilot. Setup, image copying and result display also need to be checked in each participant's client.
 
 ## What you should receive
 

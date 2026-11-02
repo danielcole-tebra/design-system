@@ -4507,3 +4507,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: full editable setup-check prompt replaces the visible outbound GitHub link. Added Daniel's real screenshot and updated guide/capture status.
 - Finding: prompt matches GETTING-STARTED exactly; screenshot shows a request, not completed checks. Instructions direct designers to their own work project and destination link.
 - Evidence: runs/2026-11-02-onboarding-step-6-inline-prompt/REPORT.md, source, creation/audit records and two inspected renders. No overlap/overflow; vertical order preserved. Ready for Daniel's read.
+
+## 2026-11-02 — Copyable image starter and updated rebuild steps
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh, card 5:79, image 27:5, prompt 27:3, readiness 5:91.
+- Changed: generated and placed the fictional contact-details starter PNG; card 7 includes copy/paste steps and the full rebuild prompt. Updated guides/checklist to describe image input and editable Empty/Filled output, with 640/400 px checks.
+- Decision: Daniel requested an image starter, superseding the editable manual-layer starter plan for this onboarding exercise. Image is supplied; reference library rebuild and participant walkthrough remain pending.
+- Evidence: runs/2026-11-02-onboarding-image-starter/REPORT.md, scripts/records, assets/onboarding source PNG and exact generation prompt, and three inspected renders. Prompt matches guide; image unlocked; no overlap/overflow; vertical order preserved. Ready for Daniel's read.
