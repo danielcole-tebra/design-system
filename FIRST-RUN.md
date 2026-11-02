@@ -23,7 +23,7 @@ Complete [Set up Codex and Figma](GETTING-STARTED.md), then start a chat in your
 | Resource | What you need |
 |---|---|
 | [Design System Rebuild](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw) | Access to the published Tebra library. |
-| Your new Figma Design file | Edit access, the rebuild library enabled, and access for Daniel to review. Keep its file link. |
+| Your new Figma Design file | Edit access and the rebuild library enabled. Keep its file link. Sharing for feedback in #uxhotline or with Daniel Cole is optional. |
 | Supplied starter card | Pending creation. The exercise owner will add a node-specific link and reference screenshot here. |
 | Fonts | The library's required fonts must load. |
 
@@ -107,7 +107,7 @@ Select a rebuilt field or button and inspect its instance relationship. Try a co
 
 ## 4. Tell us how the first run went
 
-After your attempt, send Daniel a short note through your normal team channel: which client you used, a link to your result, whether the image appeared in chat, where you needed help, rough time to a reviewable result, and which existing project you would try next. The agent may draft the note; this guide does not authorize it to send messages.
+If you'd like feedback after your attempt, optionally post in #uxhotline or share with Daniel Cole. Useful context includes which client you used, a link to your result, whether the image appeared in chat, where you needed help, rough time to a reviewable result, and which existing project you would try next. The agent may draft the note; this guide does not authorize it to send messages.
 
 For the pilot, observe a few designers attempting the same supplied exercise. Record setup failures, missing images, assistance, completion, and later use on a real project. A successful reference build is not evidence that onboarding works without help.
 

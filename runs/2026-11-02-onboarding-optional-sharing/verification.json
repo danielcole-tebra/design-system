@@ -1,0 +1,73 @@
+{
+  "createdNodeIds": [],
+  "mutatedNodeIds": [
+    "5:2",
+    "5:44",
+    "5:45",
+    "5:49",
+    "5:50",
+    "5:51",
+    "5:52",
+    "5:53",
+    "5:54",
+    "5:48",
+    "5:47",
+    "5:43",
+    "5:92",
+    "5:93",
+    "5:94",
+    "5:95",
+    "5:96",
+    "5:97",
+    "5:98",
+    "5:99",
+    "5:100",
+    "5:101",
+    "5:102",
+    "5:103",
+    "5:91",
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:55",
+    "5:67",
+    "5:79"
+  ],
+  "updatedText": [
+    {
+      "id": "5:50",
+      "text": "Create a Figma Design file in the team’s practice location. Name it Tebra first rebuild · Your name.\n\nCreate a page named First rebuild and copy the file link for Codex.\n\nOptional: if you’d like feedback, post the link in #uxhotline or share it with Daniel Cole."
+    },
+    {
+      "id": "5:54",
+      "text": "You can edit your new file and have its link ready for Codex. Sharing it for feedback is optional."
+    },
+    {
+      "id": "5:97",
+      "text": "Font access is checked; loading is verified during the build.\nThe starter is copied once supplied, and its selection link is ready."
+    }
+  ],
+  "overflow": [],
+  "panelOrder": [
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:91"
+  ],
+  "cardBounds": [
+    {
+      "id": "5:43",
+      "width": 1200,
+      "height": 772
+    },
+    {
+      "id": "5:91",
+      "width": 1200,
+      "height": 964
+    }
+  ]
+}

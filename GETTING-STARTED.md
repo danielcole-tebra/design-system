@@ -102,12 +102,14 @@ Ask Codex: **“Which Figma skills and tools are available here? Can you inspect
 1. In Figma, sign into the same work account used for the connection.
 2. Create a **Figma Design** file. You can use [Create a new design file](https://figma.new) and then move it into your team's designated practice folder, or create it directly in that folder. Follow your team's file-location convention.
 3. Rename it **Tebra first rebuild · Your name**.
-4. Create a page called **First rebuild**. Keep the file editable by you, and share it with Daniel for review using the team's normal access settings.
+4. Create a page called **First rebuild**. Keep the file editable by you.
 5. Copy the file link from **Share** and keep it for the setup check and exercise prompt.
+
+**Optional:** If you'd like feedback, post the file link in **#uxhotline** or share it with **Daniel Cole**. Sharing is not required to complete this setup step.
 
 Figma distinguishes Design files from its other file types; this exercise needs editable Design layers. See [Figma's file-creation instructions](https://help.figma.com/hc/en-us/articles/360038511153-Create-a-new-file).
 
-**Checkpoint:** You can open and edit your own named file, and Daniel can access it for review. This new file is the exercise destination; the library file is the source of components. The shared Proposals file is not the default destination for new participants.
+**Checkpoint:** You can open and edit your own named file and have its link ready for Codex. Sharing for feedback is optional. This new file is the exercise destination; the library file is the source of components. The shared Proposals file is not the default destination for new participants.
 
 ## 5. Add the Tebra rebuild library
 
@@ -158,7 +160,7 @@ Once supplied, copy the entire editable starter card into the **First rebuild** 
 - [ ] My work folder is primary, the separate design-system folder is attached, and Codex has explicitly read its AGENTS.md.
 - [ ] Git, Node.js, and the builder read helper work; source-code access is confirmed or explicitly recorded as missing.
 - [ ] The Figma plugin is connected to the intended account and exposes the required capabilities.
-- [ ] Your own Figma Design file is editable and shared for review.
+- [ ] Your own Figma Design file is editable and its link is ready for Codex.
 - [ ] Design System Rebuild is enabled in that file.
 - [ ] Font availability is checked as far as possible; loading will be verified during the build.
 - [ ] The supplied manual starter has been copied into the file and has a node-specific link.
