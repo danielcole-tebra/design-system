@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "title": "Merge file creation into library setup",
+  "date": "2026-11-02",
+  "fileKey": "uKNQ26ndMmK3c58oIaaBdh",
+  "reviewUrl": "https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-55",
+  "summary": "Combined the standalone new-file instruction with library setup; the walkthrough now has seven cards. Renumbered later steps and synchronized guides. Timing checkpoints cover editing after initial repository/board inspection, not the whole task.",
+  "timing": {
+    "start": "2026-11-02T18:52:59Z",
+    "ready": "2026-11-02T18:54:07Z",
+    "built": "2026-11-02T18:54:10Z",
+    "firstImage": "2026-11-02T18:54:36Z",
+    "verified": "2026-11-02T18:54:52Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "Seven visible cards in chronological order; no overlap or overflow in live returned geometry.",
+    "Inspected the merged card screenshot and full-board context.",
+    "Updated cross-references in README, GETTING-STARTED, FIRST-RUN and capture list; git diff --check passed.",
+    "Preserved Daniel's live edit allowing any file name. Archived the standalone card with a README; no nodes deleted."
+  ],
+  "findings": [
+    "Separate new-file screenshot is no longer requested. All current setup screenshots are supplied.",
+    "New-designer pilot remains pending; this is a documentation edit, not a usability test."
+  ],
+  "reads": [
+    "Current FigJam cards 5:43 and 5:55 and live board order.",
+    "GETTING-STARTED.md; README.md; FIRST-RUN.md; SCREENSHOT-CAPTURE-LIST.md."
+  ],
+  "effort": {
+    "through": "verification",
+    "figmaCalls": 4,
+    "otherCalls": null,
+    "searches": 0,
+    "technicalRetries": 0,
+    "canvasCorrections": 0,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "screenshots": [
+    "step-4.png",
+    "board.png"
+  ],
+  "evidence": {
+    "createdNodeIds": [
+      "34:2"
+    ],
+    "mutatedNodeIds": [
+      "5:5",
+      "5:56",
+      "5:57",
+      "5:62",
+      "5:66",
+      "5:68",
+      "5:80",
+      "5:92",
+      "5:90",
+      "5:43",
+      "5:61",
+      "5:63",
+      "5:64",
+      "5:60",
+      "22:2",
+      "5:59",
+      "5:65",
+      "5:7",
+      "5:19",
+      "5:31",
+      "5:55",
+      "5:67",
+      "5:79",
+      "5:91",
+      "5:2"
+    ],
+    "archivedId": "5:43",
+    "changes": {
+      "5:5": "Follow seven steps from setup to a reviewed rebuild. Use your own project and Figma file; the screenshots show examples.",
+      "5:56": "4  Set up your Figma file",
+      "5:57": "Start a new file, then add the library for easy browsing.",
+      "5:62": "Create a new Figma Design file. Name it whatever you like and name its page First rebuild. Copy the file link from Share for the setup check in step 5.\n\nRecommended: add the rebuild library in this file.\n\n1. Open Assets → Libraries.\n\n2. Find Design System Rebuild. Confirm its source using the link below.\n\n3. Choose Add to file. If it is under Used in this file, it is already added. Close the dialog to browse its assets.",
+      "5:66": "Your new file is editable and its link is ready for Codex. If you added the library, it appears under Used in this file. Codex checks library access and actual imports during the build.",
+      "5:68": "5  Check the setup with Codex",
+      "5:80": "6  Copy the image and request a rebuild",
+      "5:92": "7  Review your rebuild",
+      "5:90": "Wait for the editable Empty and Filled cards at 640 and 400 px, screenshots in chat, a Figma section link and a verified what-changed checklist. Then continue to step 7."
+    },
+    "errors": [],
+    "cards": [
+      {
+        "id": "5:7",
+        "y": 500,
+        "height": 1708
+      },
+      {
+        "id": "5:19",
+        "y": 2304,
+        "height": 2052
+      },
+      {
+        "id": "5:31",
+        "y": 4452,
+        "height": 1668
+      },
+      {
+        "id": "5:55",
+        "y": 6216,
+        "height": 1784
+      },
+      {
+        "id": "5:67",
+        "y": 8096,
+        "height": 2016
+      },
+      {
+        "id": "5:79",
+        "y": 10208,
+        "height": 3084
+      },
+      {
+        "id": "5:91",
+        "y": 13388,
+        "height": 2692
+      }
+    ],
+    "boardHeight": 16160
+  }
+}

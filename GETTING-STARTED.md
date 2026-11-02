@@ -1,6 +1,6 @@
 # Set up Codex and Figma
 
-[Open the FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2). Follow its eight cards from top to bottom. All prompts are included where you need them.
+[Open the FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2). Follow its seven cards from top to bottom. All prompts are included where you need them.
 
 You will copy Tebra’s building guidance to your computer, create a separate project for your work, connect Codex to Figma, and rebuild a supplied contact-details image as editable library-based cards.
 
@@ -66,18 +66,11 @@ Ask Codex: **“Which Figma tools are available here for inspecting files, editi
 
 See [Figma’s Codex setup instructions](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#codex) and [OpenAI’s plugin documentation](https://learn.chatgpt.com/docs/plugins).
 
-## 4. Create your own Figma file
+## 4. Set up your Figma file
 
-1. Create a **Figma Design** file in your team’s practice location, using the same work account connected to Codex. [Create a Design file](https://figma.new).
-2. Name it **Tebra first rebuild · Your name**.
-3. Create a page named **First rebuild**.
-4. Copy the file link from **Share**. Keep it for step 6.
+Create a new **Figma Design** file using your connected work account. Name it whatever you like and name its page **First rebuild**. Copy the file link from **Share** for the setup check in step 5. [Create a Design file](https://figma.new).
 
-**Checkpoint:** You can edit your new file and have its link ready. This is your destination; Design System Rebuild is the source library. Sharing your file for feedback is optional and comes at the end.
-
-## 5. Add the rebuild library (recommended)
-
-In your new file:
+**Recommended:** Add the rebuild library in your new file:
 
 1. Open **Assets → Libraries**.
 2. Find **Design System Rebuild**. Confirm it is [this source library](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw).
@@ -86,11 +79,11 @@ In your new file:
 
 This manual step is recommended for browsing and editing in Figma. Codex can import accessible published components without it; library access is still required. The reference test confirmed imports in a fresh file without manually adding the library first.
 
-**Checkpoint:** If added, the library appears under **Used in this file**. If it is missing, check your account and source-file access, then ask Daniel about publication and availability. Codex checks actual imports during the build.
+**Checkpoint:** Your new file is editable and its link is ready for Codex. If you added the library, it appears under **Used in this file**. If the library is missing, check your account and source-file access, then ask Daniel about publication and availability. Codex checks actual imports during the build.
 
-Card 5’s screenshot uses SDE Alpha Prototypes as an example; follow the steps in your own file. See [Figma’s library instructions](https://help.figma.com/hc/en-us/articles/1500008731201-Add-or-remove-a-library-from-a-design-file).
+Card 4’s screenshot uses SDE Alpha Prototypes as an example; follow the steps in your own file. No separate new-file screenshot is needed. See [Figma’s library instructions](https://help.figma.com/hc/en-us/articles/1500008731201-Add-or-remove-a-library-from-a-design-file).
 
-## 6. Check the setup with Codex
+## 5. Check the setup with Codex
 
 In your work-project chat, paste this prompt. Replace the destination placeholder with the file link from step 4, then send it.
 
@@ -106,20 +99,20 @@ Report font availability, missing access and next steps. Distinguish what you in
 
 **Ready to rebuild?** Continue when Codex has read the guidance, identified your destination and the correct library, and reported the required tools. Resolve missing access or tools first. Keep any unverified build checks visible.
 
-This check is read-only. Actual imports, font loading, editing and screenshot delivery are verified during the first build. Card 6’s screenshot shows an example request; use your own work project and the editable prompt above.
+This check is read-only. Actual imports, font loading, editing and screenshot delivery are verified during the first build. Card 5’s screenshot shows an example request; use your own work project and the editable prompt above.
 
-## 7. Copy the image and request a rebuild
+## 6. Copy the image and request a rebuild
 
-1. In [FigJam card 7](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-79), select **only the starter image** and copy it.
+1. In [FigJam card 6](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-79), select **only the starter image** and copy it.
 2. Paste it into the **First rebuild** page of your Design file. Rename it **Original · Practice image**. If copying fails, download the [PNG](assets/onboarding/contact-details-starter.png) and place it in the file.
 3. Select the pasted image and copy a link to the selection.
-4. Paste the full rebuild prompt from card 7 into your work-project chat. Replace **Starter image** with the selection link and **Destination** with your file link. Send it once. The same prompt is in [FIRST-RUN.md](FIRST-RUN.md#2-request-the-rebuild).
+4. Paste the full rebuild prompt from card 6 into your work-project chat. Replace **Starter image** with the selection link and **Destination** with your file link. Send it once. The same prompt is in [FIRST-RUN.md](FIRST-RUN.md#2-request-the-rebuild).
 
 The starter is a generated, flat practice image with fictional data. Codex rebuilds its content as editable Empty and Filled cards using the library. Its generic colors and dimensions do not override the design system.
 
 **Checkpoint:** Wait for Empty and Filled cards at 640 and 400 px, screenshots in chat, a Figma section link and a verified what-changed checklist. If Codex identifies a blocker, resolve its specific question before continuing.
 
-## 8. Review your rebuild
+## 7. Review your rebuild
 
 1. Open the Figma section Codex links to. Compare the preserved original with Empty and Filled at both widths.
 2. Inspect a field or button: it should be an editable library instance. Check spacing, wrapping and content.
@@ -141,7 +134,7 @@ For your next task, supply an existing section or describe a new one. Include it
 ## Pilot notes for the exercise owner and agent
 
 - The supplied reference build has structural checks and inspected screenshots. Daniel reviewed the result on November 2, 2026. A new-designer trial is still needed: the MCP test uploaded the PNG and did not test the designer’s clipboard flow or fresh-account setup.
-- Cards 1–3, 5 and 6 use real supplied screenshots; card 7 contains the generated input image, and card 8 shows the actual reference result. Only the step 4 setup screenshot remains pending. See [the capture list](SCREENSHOT-CAPTURE-LIST.md).
+- Cards 1–5 use real supplied screenshots; card 6 contains the generated input image, and card 7 shows the actual reference result. No setup screenshots remain pending. See [the capture list](SCREENSHOT-CAPTURE-LIST.md).
 - The full builder workflow references source in [web-app-v2](https://github.com/kareo-engineering/web-app-v2). If a check requires it and access is available, Codex can clone it beside design-system and attach it as another reference. It must report unavailable source checks. This exercise does not require running the web app.
 - Agree the pilot’s evidence repository and write access before a recorded build. A successful clone proves read access, not push access. When a work folder is not yet a Git repository, do not silently use the shared design-system repository for personal project files. Retain evidence and report unresolved recording setup.
 - The current builder rules require evidence, a LOG entry, a named-path commit and push on master. If pushing is unavailable, report the batch as not fully recorded. Do not silently fork or change branches. Wider reviewer ownership and participant access remain to be settled.

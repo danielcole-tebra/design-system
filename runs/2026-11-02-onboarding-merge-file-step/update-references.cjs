@@ -1,0 +1,10 @@
+const fs=require('node:fs');
+let first=fs.readFileSync('FIRST-RUN.md','utf8').replaceAll('card 7','card 6').replace('steps 1–6','steps 1–5');
+fs.writeFileSync('FIRST-RUN.md',first);
+let capture=fs.readFileSync('SCREENSHOT-CAPTURE-LIST.md','utf8');
+capture=capture.replace(/^\| 04-new-design-file\.png.*\r?\n/m,'');
+capture=capture.replaceAll('card 5','card 4').replaceAll('card 6','card 5').replaceAll('card 7','card 6');
+capture=capture.replace('05-rebuild-library.png','04-rebuild-library.png').replace('06-setup-check.png','05-setup-check.png').replace('07 — supplied practice asset','06 — supplied practice asset');
+capture=capture.replace('Cards 1–3, 5 and 6 have supplied screenshots placed. Card 7 contains the generated practice image and the full rebuild prompt. One setup capture target remains: the new Design file (04).','Cards 1–5 have supplied screenshots placed. Card 6 contains the generated practice image and the full rebuild prompt. Creating a new file is now a short instruction in card 4; no separate screenshot is needed. No setup captures remain pending.');
+capture=capture.replace('Card 8 now includes','Card 7 includes').replace('#6-check-the-setup-with-codex','#5-check-the-setup-with-codex');
+fs.writeFileSync('SCREENSHOT-CAPTURE-LIST.md',capture);

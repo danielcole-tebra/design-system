@@ -4523,3 +4523,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-02 — Onboarding chronology and copy review
 - File: FigJam uKNQ26ndMmK3c58oIaaBdh, board 5:2. Tightened eight sequential cards; moved readiness before the rebuild, included the folder prompt inline, and added the real test result and review checklist to card 8. Synchronized README, GETTING-STARTED, FIRST-RUN and capture list. Daniel's reference-result review is recorded; source library and test Design file unchanged.
 - Finding: card 4's setup screenshot and a new-designer trial remain pending. This editorial review does not validate fresh-account setup or clipboard use. Evidence: runs/2026-11-02-onboarding-chronology/REPORT.md, record.json, doc-check.json and nine inspected screenshots. No node deletions, overlap or overflow; ready for Daniel's read.
+
+
+<!-- builder-run:runs/2026-11-02-onboarding-merge-file-step -->
+## 2026-11-02 — Merge file creation into library setup
+- File: uKNQ26ndMmK3c58oIaaBdh. Combined the standalone new-file instruction with library setup; the walkthrough now has seven cards. Renumbered later steps and synchronized guides. Timing checkpoints cover editing after initial repository/board inspection, not the whole task.
+- Evidence: runs/2026-11-02-onboarding-merge-file-step/REPORT.md, record.json, step-4.png, board.png.

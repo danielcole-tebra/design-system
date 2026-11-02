@@ -4,7 +4,7 @@ Turn a supplied contact-details **image** into an editable Tebra design-system c
 
 **New here? Start with [Set up Codex and Figma](GETTING-STARTED.md).** It covers downloading the repository, creating a local Codex project, connecting Figma, creating your own file, and adding the published rebuild library.
 
-**Draft for review — November 2, 2026.** The starter image is supplied in FigJam card 7 and [as a PNG](assets/onboarding/contact-details-starter.png). A [reference test build](https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630) now contains editable Empty and Filled versions at 640 and 400 px, with inspected screenshots and structural evidence. Daniel reviewed the result on November 2, 2026; a new-designer walkthrough remains before the participant pilot. This image-based exercise supersedes the earlier editable-starter plan and patient-search example.
+**Draft for review — November 2, 2026.** The starter image is supplied in FigJam card 6 and [as a PNG](assets/onboarding/contact-details-starter.png). A [reference test build](https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630) now contains editable Empty and Filled versions at 640 and 400 px, with inspected screenshots and structural evidence. Daniel reviewed the result on November 2, 2026; a new-designer walkthrough remains before the participant pilot. This image-based exercise supersedes the earlier editable-starter plan and patient-search example.
 
 ## What you will make
 
@@ -20,13 +20,13 @@ Your output will show the untouched original alongside the two rebuilt states. E
 
 ## 1. Get ready
 
-Complete steps 1–6 of [Set up Codex and Figma](GETTING-STARTED.md), then continue in your own local work project, with the separate design-system folder attached. Use your own practice file as the destination.
+Complete steps 1–5 of [Set up Codex and Figma](GETTING-STARTED.md), then continue in your own local work project, with the separate design-system folder attached. Use your own practice file as the destination.
 
 | Resource | What you need |
 |---|---|
 | [Design System Rebuild](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw) | Access to the published Tebra library. |
 | Your new Figma Design file | Edit access. Adding the rebuild library manually is recommended for browsing; Codex can import accessible published components through the connection. Keep the file link. Sharing for feedback in #uxhotline or with Daniel Cole is optional. |
-| Supplied starter image | Copy the image in [FigJam card 7](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-79), or use the [PNG](assets/onboarding/contact-details-starter.png). Paste it into your First rebuild page and copy a link to that selected image. |
+| Supplied starter image | Copy the image in [FigJam card 6](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-79), or use the [PNG](assets/onboarding/contact-details-starter.png). Paste it into your First rebuild page and copy a link to that selected image. |
 | Fonts | The library's required fonts must load. |
 
 Ask the agent to check repository access, its Figma connection, and access to both files. The build must also verify the actual component properties, tokens, and fonts available in the consuming file.
@@ -35,7 +35,7 @@ During the pilot, Daniel remains the reviewer required by the current builder ru
 
 ## 2. Request the rebuild
 
-Select only the starter image in FigJam card 7, copy it, and paste it into the **First rebuild** page of your own Design file. Rename it **Original · Practice image**. Copy a link to that selected image. Use it and your destination file link below. The same full prompt is included directly in FigJam card 7.
+Select only the starter image in FigJam card 6, copy it, and paste it into the **First rebuild** page of your own Design file. Rename it **Original · Practice image**. Copy a link to that selected image. Use it and your destination file link below. The same full prompt is included directly in FigJam card 6.
 
 ```text
 Read AGENTS.md and FIRST-RUN.md from the attached design-system folder. Follow its build and verification rules. Keep project files and screenshots in my primary work folder.
