@@ -4,7 +4,7 @@ Use Codex connected to Figma to assemble editable screens from Tebra's published
 
 **Start with [Set up Codex and Figma](GETTING-STARTED.md).** Ask Codex to download the design-system repository into its own folder. Create a separate work folder with any name, make it primary in Codex, and attach design-system as a reference. Then connect Figma, create your own design file, and enable the published library.
 
-Prefer a visual walkthrough? Open [Get started with Codex + Figma in FigJam](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2), with seven steps arranged top to bottom and one column of instructions per card. Real screenshots are pending; the [capture list](SCREENSHOT-CAPTURE-LIST.md) identifies each view to supply. The practice card is also still pending.
+Prefer a visual walkthrough? Open [Get started with Codex + Figma in FigJam](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2), with seven steps arranged top to bottom and one column of instructions per card. Card 1 includes Daniel's real screenshot; the [capture list](SCREENSHOT-CAPTURE-LIST.md) identifies the remaining views to supply. The practice card is also still pending.
 
 Then follow [Your first rebuild](FIRST-RUN.md). The guided exercise converts a manually built contact-details card into library-based Empty and Filled states, with screenshots and a verified checklist of what changed.
 

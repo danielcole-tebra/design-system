@@ -1,0 +1,54 @@
+{
+  "image": {
+    "id": "15:2",
+    "width": 1104,
+    "height": 797,
+    "fills": [
+      {
+        "type": "IMAGE",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "scaleMode": "FIT",
+        "scalingFactor": 0.5,
+        "rotation": 0,
+        "filters": {
+          "exposure": 0,
+          "contrast": 0,
+          "saturation": 0,
+          "temperature": 0,
+          "tint": 0,
+          "highlights": 0,
+          "shadows": 0
+        },
+        "imageTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "imageHash": "13a759b934e99c333b0d5730cd493157491b2198"
+      }
+    ]
+  },
+  "overflow": [],
+  "overlaps": [],
+  "visibleImageCount": 1,
+  "remainingCaptureRequest": false,
+  "panelOrder": [
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:91"
+  ]
+}

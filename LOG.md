@@ -4471,3 +4471,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: explained copying files onto the computer, named cloning, suggested Code/design-system and deferred the separate work folder to step 2. Matched GETTING-STARTED.md.
 - Finding: copy-only clarification; no library changes. Participant screenshots and starter assets remain pending.
 - Evidence: runs/2026-11-02-onboarding-clone-language/REPORT.md, revision.js, verification.json, step-1.png and board.png. Both renders inspected; no text overflow/overlap. Ready for Daniel's read.
+
+## 2026-11-02 — First supplied onboarding screenshot
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh, card 5:7, image 15:2.
+- Changed: placed Daniel's real Codex screenshot, replaced capture notes with a caption and marked card 1 complete in the capture list. Daniel accepts this one image; clone-result capture is no longer requested.
+- Finding: image shows the prompt before submission. The written checkpoint covers confirming the saved files; no completed clone is inferred. Other captures and starter assets remain pending.
+- Evidence: runs/2026-11-02-onboarding-first-real-screenshot/REPORT.md, source image, creation.json, verification.json and two inspected renders. Confirmed image hash/FIT placement, no overlap/overflow and preserved vertical order. Ready for Daniel's read.
