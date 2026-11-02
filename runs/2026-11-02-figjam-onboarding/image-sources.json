@@ -1,0 +1,80 @@
+[
+  {
+    "file": "clone-reference.png",
+    "url": "https://docs.github.com/assets/cb-41736/images/help/desktop/choose-repository-location-url-tab-windows.png",
+    "source": "https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop",
+    "caption": "GitHub official reference; sample repository differs.",
+    "dimensions": [
+      1016,
+      614
+    ],
+    "bytes": 41736
+  },
+  {
+    "file": "plugin-reference.png",
+    "url": "https://help.figma.com/hc/article_attachments/39889902107415",
+    "source": "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#codex",
+    "caption": "Figma official screenshot of the Codex Figma plugin.",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "bytes": 878819
+  },
+  {
+    "file": "file-reference.png",
+    "url": "https://help.figma.com/hc/article_attachments/33966617587607",
+    "source": "https://help.figma.com/hc/en-us/articles/30926129986199-FD4B-Create-your-first-design-file",
+    "caption": "Figma official new Design file screenshot.",
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "bytes": 88821
+  },
+  {
+    "file": "library-reference.png",
+    "url": "https://help.figma.com/hc/article_attachments/27999040559767",
+    "source": "https://help.figma.com/hc/en-us/articles/1500008731201-Add-or-remove-a-library-from-a-design-file",
+    "caption": "Figma official reference showing Habitz; select Design System Rebuild instead.",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "bytes": 191638
+  },
+  {
+    "file": "selection-reference.gif",
+    "url": "https://help.figma.com/hc/article_attachments/35819041902231",
+    "source": "https://help.figma.com/hc/en-us/articles/35281350665623-Figma-MCP-collection-How-to-set-up-the-Figma-remote-MCP-server",
+    "caption": "Figma official copy-selection animation; raw source, not uploaded to the board.",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "bytes": 430216
+  },
+  {
+    "file": "projects-reference.jpg",
+    "source": "https://learn.chatgpt.com/docs/projects#app-work-in-a-project",
+    "caption": "Browser capture of the official OpenAI project-view illustration. Not a live participant setup.",
+    "dimensions": [
+      712,
+      346
+    ]
+  },
+  {
+    "file": "selection-reference.jpg",
+    "source": "https://help.figma.com/hc/en-us/articles/35281350665623-Figma-MCP-collection-How-to-set-up-the-Figma-remote-MCP-server",
+    "caption": "Browser capture of one frame of the official selection-link animation. Not the pending Tebra practice card.",
+    "dimensions": [
+      1280,
+      720
+    ]
+  },
+  {
+    "file": "prompt-reference.jpg",
+    "source": "https://github.com/danielcole-tebra/design-system/blob/master/GETTING-STARTED.md#6-check-the-setup-with-codex",
+    "caption": "Browser screenshot of setup-prompt.html, a guide excerpt. Not a Codex response or proof of completed setup."
+  }
+]

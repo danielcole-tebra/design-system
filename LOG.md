@@ -4447,3 +4447,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: GETTING-STARTED.md covers cloning, local Codex project setup, plugin connection, file creation, library enabling, prerequisites and checks. README/FIRST-RUN now route through it and use the participant's destination link.
 - Finding: documented current setup flow; no fresh-user walkthrough performed. Starter assets remain pending. Existing code-access, evidence-push and Daniel-review requirements are explicit, not relaxed.
 - Evidence: runs/2026-11-02-codex-onboarding-setup/REPORT.md and official sources linked in the guide. Local links, reader execution and git diff --check verified; no screenshot applies.
+
+## 2026-11-02 — FigJam visual setup walkthrough
+- File: Tebra FigJam uKNQ26ndMmK3c58oIaaBdh, board 2:2. New file created in Daniel's selected Tebra organization; source library unchanged.
+- Changed: seven illustrated onboarding steps, editable instructions and links, completion checkpoints and readiness panel; linked from README and GETTING-STARTED.
+- Finding: official reference screenshots/illustrations and a guide excerpt are explicitly labeled. Starter card and reference rebuild remain pending; no fresh-participant setup is claimed.
+- Evidence: runs/2026-11-02-figjam-onboarding/REPORT.md, node-ledger.json, audit.json, board.png and step-1.png through step-8.png. All nine renders visually inspected; live readback found no overflow, missing fonts or text overlap and confirmed seven images and 17 links. Ready for Daniel's read.

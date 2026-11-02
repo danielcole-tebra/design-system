@@ -1,0 +1,143 @@
+{
+  "clone": {
+    "page": "https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop",
+    "images": [
+      {
+        "src": "https://docs.github.com/assets/cb-100906/images/help/desktop/clone-file-menu-mac.png",
+        "alt": "Screenshot of the menu bar on a Mac. The \"File\" dropdown menu is expanded, and the \"Clone Repository\" option is highlighted with an orange outline."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-10969/images/help/desktop/clone-file-menu-windows.png",
+        "alt": "Screenshot of the \"GitHub Desktop\" menu bar on Windows. The \"File\" dropdown menu is expanded, and the \"Clone Repository\" option is outlined in orange."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-29400/images/help/desktop/choose-repository-location-mac.png",
+        "alt": "Screenshot of the \"Clone a repository\" window. At the top of the window, \"GitHub.com\", \"GitHub Enterprise\" and \"URL\" tabs are outlined in orange."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-29368/images/help/desktop/clone-a-repository-list-mac.png",
+        "alt": "Screenshot of the \"Clone a repository\" window. The \"github/docs\" repository is highlighted with an orange outline."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-29405/images/help/desktop/clone-choose-button-mac.png",
+        "alt": "Screenshot of the \"Clone a repository\" window. A button, labeled \"Choose\", is highlighted with an orange outline."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-100906/images/help/desktop/clone-file-menu-mac.png",
+        "alt": "Screenshot of the menu bar on a Mac. The \"File\" dropdown menu is expanded, and the \"Clone Repository\" option is highlighted with an orange outline."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-10969/images/help/desktop/clone-file-menu-windows.png",
+        "alt": "Screenshot of the \"GitHub Desktop\" menu bar on Windows. The \"File\" dropdown menu is expanded, and the \"Clone Repository\" option is outlined in orange."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-41736/images/help/desktop/choose-repository-location-url-tab-windows.png",
+        "alt": "Screenshot of the \"URL\" tab of the \"Clone a repository\" window. The \"GitHub.com\", \"GitHub Enterprise\" and \"URL\" tabs are outlined in dark orange."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-41639/images/help/desktop/clone-a-repository-url-tab-name-input.png",
+        "alt": "Screenshot of the \"URL\" tab of the \"Clone a repository\" window. The input containing \"octocat/Spoon-Knife\" is highlighted with an orange outline."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-41729/images/help/desktop/clone-choose-button-url-windows.png",
+        "alt": "Screenshot of the \"URL\" tab of the \"Clone a repository\" window. A button, labeled \"Choose\", is highlighted with an orange outline."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-66852/images/help/desktop/create-fork-button-windows.png",
+        "alt": "Screenshot of the \"Create a fork prompt\" window. A button, labeled \"Fork this repository\", is highlighted with an orange outline."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-131431/images/help/desktop/repository-settings-mac.png",
+        "alt": "Screenshot of the menu bar on a Mac. In the expanded \"Repository\" dropdown menu, a cursor hovers over \"Repository Settings\", highlighted in blue."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-18567/images/help/desktop/repository-settings-win.png",
+        "alt": "Screenshot of the \"GitHub Desktop\" menu bar on Windows. In the open \"Repository\" dropdown menu, the \"Repository Settings\" option is outlined."
+      },
+      {
+        "src": "https://docs.github.com/assets/cb-149196/images/help/desktop/mac-fork-behavior-menu-contribute.png",
+        "alt": "Screenshot of the \"Fork Behavior\" pane. Two radio buttons, \"To contribute to the parent repository\" and \"For my own purposes\", are outlined in orange."
+      }
+    ]
+  },
+  "projects": {
+    "page": "https://learn.chatgpt.com/docs/projects",
+    "images": [
+      {
+        "src": "https://learn.chatgpt.com/OpenAI_Developers.svg",
+        "alt": "OpenAI Developers"
+      }
+    ]
+  },
+  "plugin": {
+    "page": "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/",
+    "images": [
+      {
+        "src": "https://help.figma.com/hc/article_attachments/39888612462999",
+        "alt": "Scene_setup in claude code.gif"
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/39889902107415",
+        "alt": "codex-plugin.png"
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/39890131504407",
+        "alt": "HC_setup in cursor.gif"
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/39890336188055",
+        "alt": "HC_setup in VS code.gif"
+      },
+      {
+        "src": "https://developers.figma.com/assets/images/mcp-client-link-prompt-9d423d7411aa6f368abb1e71ad9fd93c.png",
+        "alt": "MCP client with link-based prompt"
+      }
+    ]
+  },
+  "file": {
+    "page": "https://help.figma.com/hc/en-us/articles/30926129986199-FD4B-Create-your-first-design-file",
+    "images": [
+      {
+        "src": "https://help.figma.com/hc/theming_assets/01JYKS7CZ94QTYRX1XR0HPP9MS"
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/33966617587607",
+        "alt": "Cursor selecting \"Design\" from the file options to create a new Figma Design file."
+      },
+      {
+        "src": "https://help.figma.com/hc/theming_assets/01HZFG1CK3ZD17MJD7X1K6QF2N"
+      }
+    ]
+  },
+  "library": {
+    "page": "https://help.figma.com/hc/en-us/articles/1500008731201-Add-or-remove-a-library-from-a-design-file",
+    "images": [
+      {
+        "src": "https://help.figma.com/hc/theming_assets/01JYKS7CZ94QTYRX1XR0HPP9MS"
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/27999040559767",
+        "alt": "Libraries modal showing Habitz Design System assets with Add to file button highlighted in the upper right corner."
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/27999056226711",
+        "alt": "Libraries modal with tabs for Recommended, Your teams, Your organization, and UI kits highlighted in the left sidebar."
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/27999040564887",
+        "alt": "Cursor pointing to style and variables picker in Figma's Fill section for applying styles. The icon for the picker is four small circles arranged in a 2 by 2 square."
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/27999040567063",
+        "alt": "Assets tab open in Figma, displaying search bar and library options, cursor pointing at tab label."
+      },
+      {
+        "src": "https://help.figma.com/hc/article_attachments/27999040574231",
+        "alt": "Cursor pointing at the border radius input field set to a variable with the value of 2. The value is enclosed in a small white box to indicate it is provided by a variable."
+      },
+      {
+        "src": "https://help.figma.com/hc/theming_assets/01HZFG1CK3ZD17MJD7X1K6QF2N"
+      }
+    ]
+  }
+}

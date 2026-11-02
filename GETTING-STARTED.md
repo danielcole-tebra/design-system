@@ -1,5 +1,7 @@
 # Set up Codex and Figma
 
+[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=2-2) for illustrated steps and checkpoints. Reference images show official examples and guide excerpts; they do not document a completed participant setup.
+
 Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
 
 The setup is separate from the [first rebuild exercise](FIRST-RUN.md). You can complete setup now; the supplied practice card and verified reference rebuild are still being prepared. Instructions checked against official documentation on November 2, 2026; a new-designer walkthrough has not yet validated them end to end.
