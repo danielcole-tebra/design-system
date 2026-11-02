@@ -4441,3 +4441,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: per Daniel's voice-session feedback, replaced the first-run patient-search exercise with a supplied manual contact-card rebuild, Empty/Filled states, and a checklist of verified changes. Updated README entry point.
 - Finding: starter card, screenshot, and reference rebuild remain uncreated; guide is explicitly a draft, not pilot-ready. Previous exercise evidence preserved; no component/composition ruling changed.
 - Evidence: runs/2026-11-02-contact-card-guide/REPORT.md. Local links and git diff --check verified; no screenshot applies to this documentation batch.
+
+## 2026-11-02 — Codex and Figma getting-started walkthrough
+- File: no Figma writes; source library YX2n4YLrEpBXNbcc73T6dw. New onboarding destinations are each participant's own Figma Design file, per Daniel's request.
+- Changed: GETTING-STARTED.md covers cloning, local Codex project setup, plugin connection, file creation, library enabling, prerequisites and checks. README/FIRST-RUN now route through it and use the participant's destination link.
+- Finding: documented current setup flow; no fresh-user walkthrough performed. Starter assets remain pending. Existing code-access, evidence-push and Daniel-review requirements are explicit, not relaxed.
+- Evidence: runs/2026-11-02-codex-onboarding-setup/REPORT.md and official sources linked in the guide. Local links, reader execution and git diff --check verified; no screenshot applies.

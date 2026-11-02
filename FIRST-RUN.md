@@ -1,6 +1,8 @@
 # Your first rebuild
 
-Turn a manually built contact-details card into an editable Tebra design-system composition. This exercise is for designers who want to bring existing Figma work onto the library, as well as start new projects.
+Turn a manually built contact-details card into an editable Tebra design-system composition using Codex. This exercise is for designers who want to bring existing Figma work onto the library, as well as start new projects.
+
+**New here? Start with [Set up Codex and Figma](GETTING-STARTED.md).** It covers downloading the repository, creating a local Codex project, connecting Figma, creating your own file, and adding the published rebuild library.
 
 **Draft for review — November 2, 2026.** The guide reflects the agreed exercise. The supplied starter Figma card, its screenshot, and a verified reference rebuild still need to be created. There is no starter link yet, and the exercise is not ready for a participant pilot. The earlier patient-search example is superseded as the onboarding exercise; its evidence remains in repository history.
 
@@ -16,12 +18,12 @@ Your output will show the untouched original alongside the two rebuilt states. E
 
 ## 1. Get ready
 
-Open this repository as your agent's project. Your client needs a Figma connection that can inspect components, create editable nodes, and capture images. Connection and permission screens differ between clients.
+Complete [Set up Codex and Figma](GETTING-STARTED.md), then start a chat inside your local design-system project. Use your own practice file as the destination.
 
 | Resource | What you need |
 |---|---|
 | [Design System Rebuild](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw) | Access to the published Tebra library. |
-| [Proposals](https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB) | Edit access for your new practice section. |
+| Your new Figma Design file | Edit access, the rebuild library enabled, and access for Daniel to review. Keep its file link. |
 | Supplied starter card | Pending creation. The exercise owner will add a node-specific link and reference screenshot here. |
 | Fonts | The library's required fonts must load. |
 
@@ -31,14 +33,14 @@ During the pilot, Daniel remains the reviewer required by the current builder ru
 
 ## 2. Request the rebuild
 
-Once the starter is supplied, open it and include its node-specific link with this request:
+Once the starter is supplied, copy its editable layers into your own file as described in the setup guide. Use the copied card's node-specific link and your destination file link in this request:
 
 ```text
 Use AGENTS.md and FIRST-RUN.md in this repository to rebuild the supplied
 Edit contact details practice card using the Tebra design system.
 
-Starter card: [paste the supplied card's Figma link]
-Destination: https://www.figma.com/design/zKT34LQogNjz3Z07fY4VQB
+Starter card: [paste the copied starter card's node-specific Figma link]
+Destination: [paste my new Figma Design file link]
 
 Create a new, uniquely named “First run · Contact details” section.
 Preserve the source card and all existing work. Inspect its actual
@@ -94,7 +96,7 @@ Select a rebuilt field or button and inspect its instance relationship. Try a co
 |---|---|
 | The starter link is missing | The exercise is not ready to run. The exercise owner must supply the practice asset first. |
 | The agent cannot read the guide | Open the repository as its project and check workspace access. |
-| Figma cannot be reached or edited | Check the connection and access to the source library and destination. |
+| Figma cannot be reached or edited | Check the connection and access to the source library and your new destination file; see [setup](GETTING-STARTED.md). |
 | Components, properties, tokens, or fonts are unavailable | Have the agent report the specific mismatch. Publishing and accepting library updates are manual. |
 | A screenshot was saved but no image appeared | Ask for the image to be opened and displayed; record whether inline display or only a link worked. |
 | The Figma result is a flat image | The editability requirement was not met. |
