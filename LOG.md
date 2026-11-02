@@ -4429,3 +4429,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-10-31 — Final wrapper benchmark · Patient search · run-183302
 - File: zKT34LQogNjz3Z07fY4VQB. Built a new isolated family with Results and Empty static states and one instance of each. All 57 measured assertions and five library structure/token comparisons pass; all three screenshots inspected. One fixed-build repeat, not evidence of a general speedup.
 - Evidence: runs/patient-search-final-2026-10-31-183302/REPORT.md, record.json, section.png, results.png, empty.png.
+
+## 2026-11-02 — Designer first-run onboarding
+- File: no Figma writes; reference Proposals zKT34LQogNjz3Z07fY4VQB, section 285:434. Documentation batch in the canonical C:\Code\design-system checkout.
+- Changed: README designer entry point and FIRST-RUN guided patient-search exercise with dated visual reference, setup prerequisites, build request, review criteria, recovery guidance and pilot feedback.
+- Finding: suitable reference exists; new-designer/client validation is pending. Daniel's current batch-review requirement remains explicit. No library or composition ruling changed.
+- Evidence: runs/2026-11-02-designer-first-run/REPORT.md; existing reference image inspected, local links and git diff --check verified. No new screenshot applies.
