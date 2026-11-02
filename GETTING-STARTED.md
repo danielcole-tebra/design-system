@@ -1,6 +1,6 @@
 # Set up Codex and Figma
 
-[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1–3 include Daniel's real screenshots; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
+[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1–3 and 5 include Daniel's real screenshots; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
 
 Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
 
@@ -111,19 +111,23 @@ Figma distinguishes Design files from its other file types; this exercise needs 
 
 **Checkpoint:** You can open and edit your own named file and have its link ready for Codex. Sharing for feedback is optional. This new file is the exercise destination; the library file is the source of components. The shared Proposals file is not the default destination for new participants.
 
-## 5. Add the Tebra rebuild library
+## 5. Add the Tebra rebuild library (recommended)
+
+Adding the library makes it easy to browse and use its assets yourself. Codex can import accessible published components through the Figma connection without you completing this manual step. Access and publication are still required; the first build verifies actual imports. The connection's library-discovery tools include libraries available to add, and [Figma's API supports importing published components by key](https://developers.figma.com/docs/plugins/api/figma/#importcomponentbykeyasync).
 
 In **your new file**:
 
 1. Open **Assets** in the left sidebar.
 2. Open **Libraries**. The icon may instead show a tooltip about library updates.
 3. Search for **Design System Rebuild**. Confirm its source is [this library file](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw), especially if names are duplicated.
-4. Open the library's details and choose **Add to file**. If already enabled by your team, leave it enabled.
+4. Open the library's details and choose **Add to file**. If it appears under **Used in this file**, it is already added.
 5. Close the dialog and confirm you can browse the library's assets, such as Button and Text field. Styles and variables are accessed through their respective property pickers.
 
 A library must be published, and you need view access to its source plus edit access to your destination. Availability also depends on the team's Figma plan. See [Figma's library setup instructions](https://help.figma.com/hc/en-us/articles/1500008731201-Add-or-remove-a-library-from-a-design-file).
 
-**Checkpoint:** The correct published library is available in your file. If it is missing, verify your account and source-file access, then ask Daniel to check publication and library availability. Opening or duplicating the library file does not replace adding the published library to your destination. The deprecated Tebra Working UI Kit is not the source for this exercise.
+**Checkpoint:** If you add it, Design System Rebuild appears under **Used in this file**. Codex still checks published-library access and reports any import problems. If the library is missing, verify your account and source-file access, then ask Daniel to check publication and availability. The deprecated Tebra Working UI Kit is not the source for this exercise.
+
+The screenshot in card 5 uses SDE Alpha Prototypes as an example of a file with the library already added. Follow the instructions in your own new file; no second library screenshot is needed.
 
 ## 6. Check the setup with Codex
 
@@ -161,7 +165,7 @@ Once supplied, copy the entire editable starter card into the **First rebuild** 
 - [ ] Git, Node.js, and the builder read helper work; source-code access is confirmed or explicitly recorded as missing.
 - [ ] The Figma plugin is connected to the intended account and exposes the required capabilities.
 - [ ] Your own Figma Design file is editable and its link is ready for Codex.
-- [ ] Design System Rebuild is enabled in that file.
+- [ ] Codex can discover the published Design System Rebuild library. Adding it manually in Figma is recommended; actual imports are verified during the build.
 - [ ] Font availability is checked as far as possible; loading will be verified during the build.
 - [ ] The supplied manual starter has been copied into the file and has a node-specific link.
 

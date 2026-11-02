@@ -4495,3 +4495,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: card 4 offers #uxhotline or Daniel Cole for optional feedback. Removed sharing/access as a setup prerequisite from checkpoints and matching guides.
 - Finding: no file permissions changed or messages sent. Separate builder batch-review rules remain; this is scoped to onboarding sharing.
 - Evidence: runs/2026-11-02-onboarding-optional-sharing/REPORT.md, revision.js, verification.json and three inspected renders. Text fits; vertical order preserved. Ready for Daniel's read.
+
+## 2026-11-02 — Step 5 library screenshot and recommended setup
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh, card 5:55, image 22:2, readiness 5:91.
+- Changed: placed Daniel's real Manage libraries screenshot; manual library addition is recommended for browsing/editing. Updated corresponding guide and capture status.
+- Finding: MCP discovery and published-component import-by-key support the agent workflow without manual Add to file. Publication/access and actual first-build imports still require verification; no participant import test claimed.
+- Evidence: runs/2026-11-02-onboarding-library-screenshot/REPORT.md, source image, creation/audit records and three inspected renders. FIT image hash confirmed, no overlap/overflow, vertical order preserved. Ready for Daniel's read.

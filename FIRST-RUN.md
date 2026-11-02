@@ -23,7 +23,7 @@ Complete [Set up Codex and Figma](GETTING-STARTED.md), then start a chat in your
 | Resource | What you need |
 |---|---|
 | [Design System Rebuild](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw) | Access to the published Tebra library. |
-| Your new Figma Design file | Edit access and the rebuild library enabled. Keep its file link. Sharing for feedback in #uxhotline or with Daniel Cole is optional. |
+| Your new Figma Design file | Edit access. Adding the rebuild library manually is recommended for browsing; Codex can import accessible published components through the connection. Keep the file link. Sharing for feedback in #uxhotline or with Daniel Cole is optional. |
 | Supplied starter card | Pending creation. The exercise owner will add a node-specific link and reference screenshot here. |
 | Fonts | The library's required fonts must load. |
 

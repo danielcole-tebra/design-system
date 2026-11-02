@@ -1,0 +1,169 @@
+{
+  "image": {
+    "id": "22:2",
+    "width": 1104,
+    "height": 694,
+    "fills": [
+      {
+        "type": "IMAGE",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "scaleMode": "FIT",
+        "scalingFactor": 0.5,
+        "rotation": 0,
+        "filters": {
+          "exposure": 0,
+          "contrast": 0,
+          "saturation": 0,
+          "temperature": 0,
+          "tint": 0,
+          "highlights": 0,
+          "shadows": 0
+        },
+        "imageTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "imageHash": "ce9a6c8e11ff2a81fd28458665f21e2cc71c38fd"
+      }
+    ]
+  },
+  "overflow": [],
+  "overlaps": [],
+  "panelOrder": [
+    "5:7",
+    "5:19",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:91"
+  ],
+  "panelGaps": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+  ],
+  "boardBounds": {
+    "width": 1360,
+    "height": 11592
+  },
+  "updatedCards": [
+    {
+      "id": "5:55",
+      "width": 1200,
+      "height": 1588,
+      "text": [
+        {
+          "id": "5:56",
+          "text": "5 Add the rebuild library (recommended)"
+        },
+        {
+          "id": "5:57",
+          "text": "Make it easy to browse and use Tebra’s assets yourself."
+        },
+        {
+          "id": "5:59",
+          "text": "Example from SDE Alpha Prototypes: Design System Rebuild appears under Used in this file. Follow these steps in your own new file."
+        },
+        {
+          "id": "5:60",
+          "text": "LIBRARY ADDED TO A FILE"
+        },
+        {
+          "id": "5:61",
+          "text": "DO THIS"
+        },
+        {
+          "id": "5:62",
+          "text": "In your new file, open Assets → Libraries. Find Design System Rebuild and confirm the source using the link below.\n\nChoose Add to file. If it appears under Used in this file, it is already added. Close the dialog to browse its assets."
+        },
+        {
+          "id": "5:63",
+          "text": "Codex can import accessible published components through the Figma connection without this manual step. Adding the library is recommended for browsing and editing in Figma."
+        },
+        {
+          "id": "5:64",
+          "text": "Open the exact Design System Rebuild source ↗"
+        },
+        {
+          "id": "5:65",
+          "text": "CHECKPOINT"
+        },
+        {
+          "id": "5:66",
+          "text": "If added, Design System Rebuild appears under Used in this file. Codex still checks published-library access and reports any import problems."
+        }
+      ]
+    },
+    {
+      "id": "5:91",
+      "width": 1200,
+      "height": 1000,
+      "text": [
+        {
+          "id": "5:92",
+          "text": "Before your first rebuild"
+        },
+        {
+          "id": "5:93",
+          "text": "Finish setup, then review the rebuilt card."
+        },
+        {
+          "id": "5:94",
+          "text": "READY TO START"
+        },
+        {
+          "id": "5:95",
+          "text": "Your own work folder is primary in Codex.\nThe separate design-system folder is attached, and Codex has read its AGENTS.md.\nGit, Node.js and the read helper work.\nFigma is connected to your work account.\nYour new Design file is editable. Codex can discover the published rebuild library; adding it manually is recommended."
+        },
+        {
+          "id": "5:96",
+          "text": "CHECK THE REMAINING ITEMS"
+        },
+        {
+          "id": "5:97",
+          "text": "Font access is checked; loading is verified during the build.\nThe starter is copied once supplied, and its selection link is ready."
+        },
+        {
+          "id": "5:98",
+          "text": "WHAT YOU WILL RECEIVE"
+        },
+        {
+          "id": "5:99",
+          "text": "Empty and Filled contact-details cards, screenshots in chat, a Figma link and a verified what-changed checklist: auto layout, library instances, typography, tokens, resizing and preserved content."
+        },
+        {
+          "id": "5:100",
+          "text": "REVIEW AND RECORD"
+        },
+        {
+          "id": "5:101",
+          "text": "Daniel reviews before the next build batch. Codex records the evidence, commits and pushes it. Report missing access or unfinished checks."
+        },
+        {
+          "id": "5:102",
+          "text": "Full setup guide ↗"
+        },
+        {
+          "id": "5:103",
+          "text": "First rebuild + what-changed checklist ↗"
+        }
+      ]
+    }
+  ]
+}
