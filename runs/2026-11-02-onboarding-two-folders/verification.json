@@ -1,0 +1,148 @@
+{
+  "mutatedNodeIds": [
+    "5:9",
+    "5:14",
+    "5:15",
+    "5:18",
+    "5:20",
+    "5:21",
+    "5:26",
+    "5:27",
+    "5:28",
+    "5:30",
+    "5:23",
+    "5:95",
+    "5:8",
+    "5:13",
+    "5:16",
+    "5:17",
+    "5:12",
+    "5:11",
+    "5:7",
+    "5:25",
+    "5:29",
+    "5:24",
+    "5:19",
+    "5:92",
+    "5:93",
+    "5:94",
+    "5:96",
+    "5:97",
+    "5:98",
+    "5:99",
+    "5:100",
+    "5:101",
+    "5:102",
+    "5:103",
+    "5:91",
+    "5:31",
+    "5:43",
+    "5:55",
+    "5:67",
+    "5:79",
+    "5:2"
+  ],
+  "createdNodeIds": [],
+  "panels": [
+    {
+      "id": "5:7",
+      "y": 500,
+      "height": 1008
+    },
+    {
+      "id": "5:19",
+      "y": 1604,
+      "height": 1008
+    },
+    {
+      "id": "5:31",
+      "y": 2708,
+      "height": 840
+    },
+    {
+      "id": "5:43",
+      "y": 3644,
+      "height": 704
+    },
+    {
+      "id": "5:55",
+      "y": 4444,
+      "height": 840
+    },
+    {
+      "id": "5:67",
+      "y": 5380,
+      "height": 840
+    },
+    {
+      "id": "5:79",
+      "y": 6316,
+      "height": 840
+    },
+    {
+      "id": "5:91",
+      "y": 7252,
+      "height": 1000
+    }
+  ],
+  "overflow": [],
+  "textOverlaps": [],
+  "boardBounds": {
+    "width": 1360,
+    "height": 8332
+  },
+  "updatedText": [
+    {
+      "id": "5:9",
+      "text": "Download the shared design-system files into their own folder."
+    },
+    {
+      "id": "5:14",
+      "text": "Start a local Codex chat with access to a folder on your computer, such as Code. The name and location are up to you.\n\nAsk Codex to download the design-system repository into its own folder. This is a real local copy of the shared guidance—not the folder for your new work.\n\nPaste this request:"
+    },
+    {
+      "id": "5:15",
+      "text": "Clone https://github.com/danielcole-tebra/design-system.git into a separate design-system folder here. If a checkout already exists, inspect and reuse it without overwriting local work. Read AGENTS.md, check Git and Node.js, and tell me the full folder path and any access problems. Keep my new project work outside this repository."
+    },
+    {
+      "id": "5:18",
+      "text": "Codex confirms where the design-system folder lives and reports missing tools or access. Next, create a separate folder for your own work."
+    },
+    {
+      "id": "5:20",
+      "text": "2  Create a separate folder for your work"
+    },
+    {
+      "id": "5:21",
+      "text": "Name it whatever makes sense for your project."
+    },
+    {
+      "id": "5:26",
+      "text": "Create a new folder beside the design-system folder—for example, Patient intake prototype. Name your folder and Codex project anything you like.\n\nThis is a real folder on your computer for project files, notes and screenshots that Codex creates. Your designs stay in Figma. Later, you can publish your work folder as its own GitHub repository to save versions and share it."
+    },
+    {
+      "id": "5:27",
+      "text": "In Codex, make your work folder primary. Use Edit project → Add folder to attach the separate design-system folder as a reference.\n\nStart a new chat and explicitly ask Codex to read AGENTS.md from the attached design-system folder. Save new project work in your primary folder."
+    },
+    {
+      "id": "5:28",
+      "text": "Copy the two-folder setup prompt ↗"
+    },
+    {
+      "id": "5:30",
+      "text": "Two separate folders are attached: your work folder is primary, and the design-system folder provides the building guidance."
+    },
+    {
+      "id": "5:23",
+      "text": "02 — Project settings showing your named work folder as primary and design-system attached separately. Show both paths."
+    },
+    {
+      "id": "5:95",
+      "text": "Your own work folder is primary in Codex.\nThe separate design-system folder is attached, and Codex has read its AGENTS.md.\nGit, Node.js and the read helper work.\nFigma is connected to your work account.\nYour new Design file has Design System Rebuild enabled."
+    }
+  ],
+  "projectPromptLink": {
+    "type": "URL",
+    "value": "https://github.com/danielcole-tebra/design-system/blob/master/GETTING-STARTED.md#2-create-a-separate-folder-for-your-work"
+  }
+}

@@ -26,46 +26,57 @@ This repository is guidance and evidence. Enabling the Figma library and connect
 
 ## 1. Ask Codex to get the repository
 
-Start in Codex; you do not need to clone anything in a separate app.
-
-1. Open Codex and create a local project named **Tebra design system**.
-2. Attach a local parent folder where the repository should live, such as a `Code` folder. Use the project's **Edit project → Add folder** controls if needed, then start a chat in that project.
-3. Paste this request:
+Start a local Codex chat with access to a folder on your computer, such as `Code`. Its name and location are up to you. Ask Codex to download the shared design-system repository into its own folder:
 
 ```text
 Clone https://github.com/danielcole-tebra/design-system.git into a
-design-system folder inside this project's local folder. If a checkout
-already exists, inspect and reuse it without overwriting local work.
-Read AGENTS.md, check Git and Node.js, and tell me the full folder path
-and any access problems. Do not build in Figma yet.
+separate design-system folder here. If a checkout already exists,
+inspect and reuse it without overwriting local work. Read AGENTS.md,
+check Git and Node.js, and tell me the full folder path and any access
+problems. Keep my new project work outside this repository.
 ```
 
-Complete GitHub sign-in through the normal authentication window if prompted. If Git or Node.js is missing, have Codex identify the approved setup action before continuing. A repository URL by itself does not attach a local folder to the chat.
+This creates a real local copy of the shared guidance. Keep it separate from your new project work. Complete GitHub sign-in through the normal authentication window if prompted. If Git or Node.js is missing, have Codex identify the approved setup action before continuing.
 
-**Checkpoint:** Codex confirms the checkout path and reports any missing tools or access. The folder contains AGENTS.md, LIBRARY.md, COMPOSITIONS.md and OPEN-ISSUES.md.
+**Checkpoint:** Codex confirms the path to the design-system checkout and any missing tools or access.
 
-## 2. Make the repository your project folder
+## 2. Create a separate folder for your work
 
-1. In the same project's menu, choose **Edit project → Add folder**. Select the `design-system` folder Codex reported.
-2. Make `design-system` the **primary** folder.
-3. Start a new chat in this project so it starts from the repository and discovers its instructions.
+1. Create a new folder for your work beside the design-system folder. You can name it anything, such as **Patient intake prototype**.
+2. Create a local Codex project with your work folder as its **primary** folder. The project name is also your choice.
+3. Use **Edit project → Add folder** to attach the separate design-system folder as a reference.
+4. Start a new chat in the project and send the setup prompt below.
 
-The primary folder provides the default working directory and automatic instruction discovery for new chats. Exact labels can vary by version. See [OpenAI's projects documentation](https://learn.chatgpt.com/docs/projects).
+These are real folders on your computer. Your work folder holds project files, notes and screenshots that Codex creates. Your Figma designs stay in Figma. Later, you can ask Codex to publish your work folder as its own GitHub repository to save versions and share it. The design-system clone is already connected to the shared source repository; it is separate from your project's future repository.
 
-If source-code checks are needed and you have access, ask Codex to clone `https://github.com/kareo-engineering/web-app-v2.git` beside design-system, reusing an existing checkout. Attach that folder too, keeping design-system primary. Report missing source access explicitly. This Figma exercise does not require running the web app or installing its application dependencies.
-
-Send this first message:
+For example:
 
 ```text
-Read AGENTS.md in this project's primary folder. Confirm the repository
-path, branch, remote, and whether there are local changes. Check that
-Git and Node.js are available, and run the read-only LIBRARY.md index
-helper. Check whether the sibling web-app-v2/packages/design-system
-source is accessible. Summarize missing setup items. Do not build in
-Figma or change repository files yet.
+Code/
+  design-system/             Shared guidance downloaded from GitHub
+  Patient intake prototype/  Your new work; primary folder in Codex
 ```
 
-**Checkpoint:** Codex can read the actual files and run the helper. It should identify any missing code access rather than treating the written reference as a fresh code audit. If Git or Node.js cannot be found, install/configure it through your approved process, restart the app if necessary, and repeat this check.
+The primary folder determines where new chats start. Codex can read attached reference folders, but does not automatically discover their AGENTS.md instructions, so explicitly ask it to read the builder rules. See [OpenAI's projects documentation](https://learn.chatgpt.com/docs/projects).
+
+```text
+My primary folder is for my new project work. The separately attached
+design-system folder contains the shared builder guidance.
+
+Read AGENTS.md and GETTING-STARTED.md from that design-system folder.
+Use its Figma build and verification rules for this project. Confirm
+both folder paths. Keep project files and screenshots in my work folder.
+
+Check Git and Node.js, and run the read-only LIBRARY.md index helper
+from the design-system checkout. Check whether its sibling
+web-app-v2/packages/design-system source is accessible. Report missing
+setup items and where the pilot's evidence will be recorded.
+Do not build in Figma or change repository files yet.
+```
+
+If source-code checks need it and you have access, ask Codex to clone `https://github.com/kareo-engineering/web-app-v2.git` beside the design-system checkout, reusing any existing clone. Attach it as another reference folder. Your work folder stays primary. This Figma exercise does not require running the web app or installing its application dependencies.
+
+**Checkpoint:** Codex identifies two separate folders, reads the builder rules explicitly, and can run the helper from the design-system checkout. It reports missing source access and any unresolved evidence-recording setup.
 
 ## 3. Connect Figma to Codex
 
@@ -115,7 +126,8 @@ Check my Tebra Figma setup before building.
 Destination: [paste my new Figma Design file link]
 Source library: https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw
 
-Read AGENTS.md. Inspect the destination and available published library
+Read AGENTS.md from the attached design-system folder. Inspect the
+destination and available published library
 assets without changing either file. Confirm the exact file identities,
 available editing/screenshot capabilities, and required component,
 style, and variable discovery. Report available font evidence and
@@ -137,7 +149,7 @@ Once supplied, copy the entire editable starter card into the **First rebuild** 
 
 ## Ready for the first rebuild
 
-- [ ] Codex is working in the local design-system project and can read AGENTS.md.
+- [ ] My work folder is primary, the separate design-system folder is attached, and Codex has explicitly read its AGENTS.md.
 - [ ] Git, Node.js, and the builder read helper work; source-code access is confirmed or explicitly recorded as missing.
 - [ ] The Figma plugin is connected to the intended account and exposes the required capabilities.
 - [ ] Your own Figma Design file is editable and shared for review.
@@ -149,8 +161,10 @@ Continue with [Your first rebuild](FIRST-RUN.md). It contains the request, Empty
 
 ## Returning later and recording work
 
-Reuse this checkout and local project. Before a new batch, ask Codex to inspect local changes and pull the latest guidance; existing changes or conflicts must be handled without discarding work. Figma library publishing and accepting updates are separate manual actions, and Codex still checks the capabilities present in your file.
+Reuse your work project and the separate design-system checkout. Before a new batch, ask Codex to inspect local changes and pull the latest guidance into the design-system folder; existing changes or conflicts must be handled without discarding work. Figma library publishing and accepting updates are separate manual actions, and Codex still checks the capabilities present in your file.
 
-The current repository workflow records evidence, commits individually named batch files, and pushes to master. A successful clone proves read access, not push access. Confirm the pilot's repository write access with Daniel before a recorded build; if pushing is unavailable, the agent must retain the evidence and report the batch as not fully recorded. Do not silently fork, change branches, or omit the required record to work around missing access.
+Keep your project files in your work folder. Publishing that folder to its own GitHub repository is a later step; do not publish personal project work to the shared design-system repository. The pilot's evidence-recording destination still needs to be agreed with Daniel when a participant's work folder is not yet a Git repository.
+
+The current design-system repository workflow records evidence, commits individually named batch files, and pushes to master. A successful clone proves read access, not push access. Confirm the pilot's repository write access with Daniel before a recorded build; if pushing is unavailable, the agent must retain the evidence and report the batch as not fully recorded. Do not silently fork, change branches, or omit the required record to work around missing access.
 
 Daniel's review remains required before the next Figma build batch. The pilot still needs to settle wider reviewer ownership and participant access before independent rollout. These setup instructions do not change those repository rules.

@@ -6,9 +6,9 @@ Use PNG at native resolution, keep the same window size and theme where practica
 
 | ID / suggested filename | Capture | Must be visible |
 |---|---|---|
-| 01A-codex-clone-request.png | The first Codex project chat, with the clone request entered or sent | Tebra design system project and the actual repository URL; enough app UI to locate the chat |
+| 01A-codex-clone-request.png | The first Codex project chat, with the clone request entered or sent | Your chosen local project and the actual repository URL; enough app UI to locate the chat |
 | 01B-codex-clone-result.png | Codex's real response after cloning or reusing the checkout | The resulting folder path, successful outcome or actual missing setup items; do not stage a success response |
-| 02-primary-folder.png | Edit project after attaching the cloned folder | design-system identified as the primary folder |
+| 02-primary-folder.png | Edit project after attaching both folders | Your named work folder marked primary, with the separate design-system reference folder and both paths visible |
 | 03A-install-figma.png | Figma's plugin page in Codex before installation | Figma name and install control |
 | 03B-figma-connected.png | The same plugin after connection | Installed/connected state; omit private account details. If it was already installed, capture the current state rather than uninstalling it for the guide |
 | 04-new-design-file.png | The actual new Figma Design file | Tebra first rebuild · Your name, First rebuild page, and Share control |
@@ -25,10 +25,10 @@ After the practice card is built, capture the original beside the Empty and Fill
 
 ```text
 Clone https://github.com/danielcole-tebra/design-system.git into a
-design-system folder inside this project's local folder. If a checkout
-already exists, inspect and reuse it without overwriting local work.
-Read AGENTS.md, check Git and Node.js, and tell me the full folder path
-and any access problems. Do not build in Figma yet.
+separate design-system folder here. If a checkout already exists,
+inspect and reuse it without overwriting local work. Read AGENTS.md,
+check Git and Node.js, and tell me the full folder path and any access
+problems. Keep my new project work outside this repository.
 ```
 
 Use the full setup-check prompt in [GETTING-STARTED.md](GETTING-STARTED.md#6-check-the-setup-with-codex) for capture 06. Once captures are supplied, place each under its matching single-column instructions and verify it at readable scale.

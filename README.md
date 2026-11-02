@@ -2,7 +2,7 @@
 
 Use Codex connected to Figma to assemble editable screens from Tebra's published library. This repository gives the agent composition guidance and verification rules; component source lives in the sibling `web-app-v2/packages/design-system` repository.
 
-**Start with [Set up Codex and Figma](GETTING-STARTED.md).** Ask Codex to clone the repository, make it your project folder, connect Figma, create your own design file, and enable the published library.
+**Start with [Set up Codex and Figma](GETTING-STARTED.md).** Ask Codex to download the design-system repository into its own folder. Create a separate work folder with any name, make it primary in Codex, and attach design-system as a reference. Then connect Figma, create your own design file, and enable the published library.
 
 Prefer a visual walkthrough? Open [Get started with Codex + Figma in FigJam](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2), with seven steps arranged top to bottom and one column of instructions per card. Real screenshots are pending; the [capture list](SCREENSHOT-CAPTURE-LIST.md) identifies each view to supply. The practice card is also still pending.
 

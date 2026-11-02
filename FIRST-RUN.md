@@ -18,7 +18,7 @@ Your output will show the untouched original alongside the two rebuilt states. E
 
 ## 1. Get ready
 
-Complete [Set up Codex and Figma](GETTING-STARTED.md), then start a chat inside your local design-system project. Use your own practice file as the destination.
+Complete [Set up Codex and Figma](GETTING-STARTED.md), then start a chat in your own local work project, with the separate design-system folder attached. Use your own practice file as the destination.
 
 | Resource | What you need |
 |---|---|
@@ -36,8 +36,10 @@ During the pilot, Daniel remains the reviewer required by the current builder ru
 Once the starter is supplied, copy its editable layers into your own file as described in the setup guide. Use the copied card's node-specific link and your destination file link in this request:
 
 ```text
-Use AGENTS.md and FIRST-RUN.md in this repository to rebuild the supplied
-Edit contact details practice card using the Tebra design system.
+Read AGENTS.md and FIRST-RUN.md in the separately attached design-system
+folder. Use its Figma build and verification rules to rebuild the supplied
+Edit contact details practice card. My primary folder holds my project
+work; keep project files and screenshots there.
 
 Starter card: [paste the copied starter card's node-specific Figma link]
 Destination: [paste my new Figma Design file link]
@@ -63,7 +65,8 @@ provide an accessible image link.
 
 Return the “What changed” checklist from FIRST-RUN.md, checking only
 verified items. List exceptions and unfinished work separately. Record
-the batch using the repository workflow and stop for Daniel's read
+the batch using the pilot's agreed evidence repository and report any
+unresolved recording setup. Stop for Daniel's read
 before another build batch.
 ```
 

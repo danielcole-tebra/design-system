@@ -4459,3 +4459,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: Codex clones or reuses the repo in step 1; every card uses one text column in the existing vertical order. Hid prior reference images and supplied real capture instructions. Updated GETTING-STARTED/README and added SCREENSHOT-CAPTURE-LIST.
 - Finding: real screenshots await Daniel; starter and verified rebuild remain pending. No nodes deleted and no library changes.
 - Evidence: runs/2026-11-02-figjam-onboarding-revision/REPORT.md, before.xml, revision.js, verification.json, links-and-alignment.json and nine inspected renders. No overflow/overlap; all cards have one text alignment; ten link targets read back. Ready for Daniel's read.
+
+## 2026-11-02 — Separate reference and work folders
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh, section 5:2; cards 5:7, 5:19 and readiness 5:91.
+- Changed: explicit separate design-system download and freely named local work folder. Work folder is primary; design-system is attached for reference with explicit AGENTS.md reading. Explained future GitHub publication of the work folder and aligned docs/capture list.
+- Finding: participant evidence-recording destination requires agreement when the work folder is not yet a Git repository; actual captures and starter remain pending. No nodes deleted or library changes.
+- Evidence: runs/2026-11-02-onboarding-two-folders/REPORT.md, revision.js, verification.json and four inspected renders. No overflow/overlap; prompt-link target updated. Ready for Daniel's read.
