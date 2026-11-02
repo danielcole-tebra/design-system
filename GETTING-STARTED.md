@@ -1,6 +1,6 @@
 # Set up Codex and Figma
 
-[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Card 1 includes Daniel's real screenshot; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
+[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1 and 2 include Daniel's real screenshots; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
 
 Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
 
@@ -49,7 +49,7 @@ This creates a real local copy of the shared guidance. Keep it separate from you
 ## 2. Create a separate folder for your work
 
 1. Create a new folder for your work beside the design-system folder. You can name it anything, such as **Patient intake prototype**.
-2. Create a local Codex project with your work folder as its **primary** folder. The project name is also your choice.
+2. In Codex, open **Choose project → New project**. Create a local project with your work folder as its **primary** folder. The project name is also your choice.
 3. Use **Edit project → Add folder** to attach the separate design-system folder as a reference.
 4. Start a new chat in the project and send the setup prompt below.
 
