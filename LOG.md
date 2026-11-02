@@ -4529,3 +4529,7 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-02 — Merge file creation into library setup
 - File: uKNQ26ndMmK3c58oIaaBdh. Combined the standalone new-file instruction with library setup; the walkthrough now has seven cards. Renumbered later steps and synchronized guides. Timing checkpoints cover editing after initial repository/board inspection, not the whole task.
 - Evidence: runs/2026-11-02-onboarding-merge-file-step/REPORT.md, record.json, step-4.png, board.png.
+
+## 2026-11-02 — Walkthrough video artwork and audio cleanup
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh. Added chromatic stretched-type opening and recap graphics (37:2, 37:3), preserving Daniel's live card order. Exported the complete source video with four-second opener, eight-second recap, click/plosive filtering and loudness normalization. Final local MP4: 6:01.6, -16.6 LUFS, -1.28 dBTP; full decode passed. Source recording unchanged.
+- Evidence: runs/2026-11-02-walkthrough-video/REPORT.md, generation prompts, render/audio scripts, figma-evidence.json and inspected screenshots. Final video delivered under C:/Users/coled/Videos/Tebra walkthrough; no claim that every audible pop was removed or that speech received a full listening review.

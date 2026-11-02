@@ -1,0 +1,174 @@
+{
+  "construction": {
+    "createdNodeIds": [
+      "37:2",
+      "37:3"
+    ],
+    "mutatedNodeIds": [
+      "5:3",
+      "5:4",
+      "5:5",
+      "5:6",
+      "5:7",
+      "5:31",
+      "5:55",
+      "5:67",
+      "5:79",
+      "5:91",
+      "5:19",
+      "5:2"
+    ],
+    "titleId": "37:2",
+    "summaryId": "37:3",
+    "boardHeight": 17691,
+    "preservedOrder": [
+      "5:7",
+      "5:31",
+      "5:19",
+      "5:55",
+      "5:67",
+      "5:79",
+      "5:91"
+    ]
+  },
+  "audit": {
+    "issues": [],
+    "children": [
+      {
+        "id": "37:2",
+        "y": 64,
+        "height": 675,
+        "image": [
+          {
+            "type": "IMAGE",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "scaleMode": "FIT",
+            "scalingFactor": 0.5,
+            "rotation": 0,
+            "filters": {
+              "exposure": 0,
+              "contrast": 0,
+              "saturation": 0,
+              "temperature": 0,
+              "tint": 0,
+              "highlights": 0,
+              "shadows": 0
+            },
+            "imageTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "imageHash": "f3d4f9019494eb75949703d68b17034c6e4da458"
+          }
+        ]
+      },
+      {
+        "id": "5:3",
+        "y": 824,
+        "height": 84
+      },
+      {
+        "id": "5:4",
+        "y": 924,
+        "height": 39
+      },
+      {
+        "id": "5:5",
+        "y": 983,
+        "height": 68
+      },
+      {
+        "id": "5:6",
+        "y": 1071,
+        "height": 34
+      },
+      {
+        "id": "5:7",
+        "y": 1260,
+        "height": 1708
+      },
+      {
+        "id": "5:31",
+        "y": 3056,
+        "height": 1668
+      },
+      {
+        "id": "5:19",
+        "y": 4824,
+        "height": 2052
+      },
+      {
+        "id": "5:55",
+        "y": 6976,
+        "height": 1784
+      },
+      {
+        "id": "5:67",
+        "y": 8856,
+        "height": 2016
+      },
+      {
+        "id": "5:79",
+        "y": 10968,
+        "height": 3084
+      },
+      {
+        "id": "5:91",
+        "y": 14148,
+        "height": 2692
+      },
+      {
+        "id": "37:3",
+        "y": 16936,
+        "height": 675,
+        "image": [
+          {
+            "type": "IMAGE",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "scaleMode": "FIT",
+            "scalingFactor": 0.5,
+            "rotation": 0,
+            "filters": {
+              "exposure": 0,
+              "contrast": 0,
+              "saturation": 0,
+              "temperature": 0,
+              "tint": 0,
+              "highlights": 0,
+              "shadows": 0
+            },
+            "imageTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "imageHash": "7f0a064cd31e5a775f3159779b1f4b60316c7d2f"
+          }
+        ]
+      }
+    ],
+    "board": {
+      "width": 1360,
+      "height": 17691
+    }
+  }
+}
