@@ -172,7 +172,7 @@ These are documented code behavior, not a promise of complete Figma axes. Read c
 | Tabs | 48 min-height, 2px primary.main indicator; hover action.hover; no selected ground | T §3.16 |
 | Toggle button | Selected action.selected; selected-hover rgba(0,0,0,.12). Plain disabled override selector is dead | T §3.17 |
 | List / Menu | List padding 0. Menu elevation 8/radius 4; selected action.selected, selected-hover action.hover; focus white plus 3px primary border | T §§3.18–19 |
-| Card | Elevation 1; actions right aligned; CardActionArea disabled by default—clickable code must explicitly enable it | T §3.21 |
+| Card | Elevation 1; actions right aligned; CardActionArea disabled by default—clickable code must explicitly enable it. Published properties read in a new consumer on 2026-11-02 expose no arbitrary form-content swap; use an ordinary local composition for forms, preserving library controls. See `card-form-content-slot` in OPEN-ISSUES.md and runs/2026-11-02-starter-rebuild-test/component-discovery.json. | T §3.21; dated consumer read |
 | Accordion | Summary 48 collapsed/64 expanded, rotating DownCaret; black glyph bypasses palette | T §3.22 |
 | Read more | Separate Tebra composition on text Button; consult T §3.25 for requested inline behavior; story isInline differs from actual $isInline | T §§3.25, 5 |
 | Pagination | Selected primary.dark/white, selected-hover #003239; MUI chevrons. Old kit gap 6 was memory-derived, not verified | T §3.26; kit finding 26 |

@@ -1,0 +1,3580 @@
+[
+  {
+    "id": "3:1636",
+    "width": 640,
+    "height": 542,
+    "types": {
+      "INSTANCE": 20,
+      "FRAME": 49,
+      "TEXT": 50,
+      "RECTANGLE": 2,
+      "VECTOR": 10
+    },
+    "imageNodes": [],
+    "visibleText": [
+      {
+        "id": "I3:1636;3:1366",
+        "name": "Title",
+        "text": "Edit contact details",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "width": 608,
+        "height": 36
+      },
+      {
+        "id": "I3:1636;3:1367",
+        "name": "Description",
+        "text": "Update how we contact this patient.",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 608,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 268,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5845",
+        "name": "Label",
+        "text": "First name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 80,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 268,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5845",
+        "name": "Label",
+        "text": "Last name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 78,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5845",
+        "name": "Label",
+        "text": "Email",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 42,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5845",
+        "name": "Label",
+        "text": "Phone",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 48,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5845",
+        "name": "Label",
+        "text": "Preferred contact method",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 195,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1476;140:8",
+        "name": "Label",
+        "text": "Send appointment reminders",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 218,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1485;78:16",
+        "name": "Label",
+        "text": "Cancel",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 52,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1491;78:52",
+        "name": "Label",
+        "text": "Save changes",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 104,
+        "height": 24
+      }
+    ],
+    "fields": [
+      {
+        "id": "I3:1636;3:1371",
+        "name": "First name",
+        "width": 296,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "First name"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1636;3:1392",
+        "name": "Last name",
+        "width": 296,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Last name"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1636;3:1413",
+        "name": "Email",
+        "width": 608,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Email"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1636;3:1434",
+        "name": "Phone",
+        "width": 608,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Phone"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1636;3:1455",
+        "name": "Preferred contact method",
+        "width": 608,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Preferred contact method"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1636;3:1476",
+        "name": "Appointment reminders",
+        "width": 260,
+        "height": 42,
+        "props": {
+          "Control#140:3": {
+            "type": "INSTANCE_SWAP",
+            "value": "3:23",
+            "preferredValues": [
+              {
+                "type": "COMPONENT",
+                "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "f953298b3405c79fc034074a54664f3225861c26"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+              }
+            ]
+          },
+          "Label#140:0": {
+            "type": "TEXT",
+            "value": "Send appointment reminders"
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      }
+    ],
+    "frames": [
+      {
+        "id": "I3:1636;3:1365",
+        "name": "Header",
+        "layout": "VERTICAL",
+        "width": 608,
+        "height": 68
+      },
+      {
+        "id": "I3:1636;3:1369",
+        "name": "Fields and reminder",
+        "layout": "VERTICAL",
+        "width": 608,
+        "height": 338
+      },
+      {
+        "id": "I3:1636;3:1370",
+        "name": "Name fields",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 296,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 296,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 287,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 268,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 80,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1371;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 296,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 296,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 287,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 268,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 78,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1392;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 599,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 42,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1413;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 599,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 48,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1434;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 599,
+        "height": 56
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 195,
+        "height": 24
+      },
+      {
+        "id": "I3:1636;3:1455;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1636;3:1484",
+        "name": "Actions",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 38
+      }
+    ],
+    "outOfRoot": []
+  },
+  {
+    "id": "3:1769",
+    "width": 640,
+    "height": 542,
+    "types": {
+      "INSTANCE": 20,
+      "FRAME": 49,
+      "TEXT": 50,
+      "RECTANGLE": 2,
+      "VECTOR": 11
+    },
+    "imageNodes": [],
+    "visibleText": [
+      {
+        "id": "I3:1769;3:1498",
+        "name": "Title",
+        "text": "Edit contact details",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "width": 608,
+        "height": 36
+      },
+      {
+        "id": "I3:1769;3:1499",
+        "name": "Description",
+        "text": "Update how we contact this patient.",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 608,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5855",
+        "name": "Gap sizer",
+        "text": "First name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 60,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5859",
+        "name": "Value",
+        "text": "Alex",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 268,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5863",
+        "name": "Label",
+        "text": "First name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 60,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5855",
+        "name": "Gap sizer",
+        "text": "Last name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 59,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5859",
+        "name": "Value",
+        "text": "Morgan",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 268,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5863",
+        "name": "Label",
+        "text": "Last name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 59,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5855",
+        "name": "Gap sizer",
+        "text": "Email",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 32,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5859",
+        "name": "Value",
+        "text": "alex.morgan@example.com",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5863",
+        "name": "Label",
+        "text": "Email",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 32,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5855",
+        "name": "Gap sizer",
+        "text": "Phone",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 36,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5859",
+        "name": "Value",
+        "text": "(202) 555-0148",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5863",
+        "name": "Label",
+        "text": "Phone",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 36,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5855",
+        "name": "Gap sizer",
+        "text": "Preferred contact method",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 146,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5859",
+        "name": "Value",
+        "text": "Email",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5863",
+        "name": "Label",
+        "text": "Preferred contact method",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 146,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1608;140:8",
+        "name": "Label",
+        "text": "Send appointment reminders",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 218,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1618;78:16",
+        "name": "Label",
+        "text": "Cancel",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 52,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1624;78:52",
+        "name": "Label",
+        "text": "Save changes",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 104,
+        "height": 24
+      }
+    ],
+    "fields": [
+      {
+        "id": "I3:1769;3:1503",
+        "name": "First name",
+        "width": 296,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "Alex"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "First name"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1769;3:1524",
+        "name": "Last name",
+        "width": 296,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "Morgan"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Last name"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1769;3:1545",
+        "name": "Email",
+        "width": 608,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "alex.morgan@example.com"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Email"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1769;3:1566",
+        "name": "Phone",
+        "width": 608,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "(202) 555-0148"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Phone"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1769;3:1587",
+        "name": "Preferred contact method",
+        "width": 608,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "Email"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Preferred contact method"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1769;3:1608",
+        "name": "Appointment reminders",
+        "width": 260,
+        "height": 42,
+        "props": {
+          "Control#140:3": {
+            "type": "INSTANCE_SWAP",
+            "value": "3:27",
+            "preferredValues": [
+              {
+                "type": "COMPONENT",
+                "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "f953298b3405c79fc034074a54664f3225861c26"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+              }
+            ]
+          },
+          "Label#140:0": {
+            "type": "TEXT",
+            "value": "Send appointment reminders"
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      }
+    ],
+    "frames": [
+      {
+        "id": "I3:1769;3:1497",
+        "name": "Header",
+        "layout": "VERTICAL",
+        "width": 608,
+        "height": 68
+      },
+      {
+        "id": "I3:1769;3:1501",
+        "name": "Fields and reminder",
+        "layout": "VERTICAL",
+        "width": 608,
+        "height": 338
+      },
+      {
+        "id": "I3:1769;3:1502",
+        "name": "Name fields",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 296,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 296,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 70,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 217,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 268,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 70,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1503;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 296,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 296,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 69,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 218,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 268,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 69,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1524;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 42,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 557,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 42,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1545;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 46,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 553,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 46,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1566;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 156,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 443,
+        "height": 56
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 580,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 156,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:1769;3:1587;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1769;3:1617",
+        "name": "Actions",
+        "layout": "HORIZONTAL",
+        "width": 608,
+        "height": 38
+      }
+    ],
+    "outOfRoot": []
+  },
+  {
+    "id": "3:1904",
+    "width": 400,
+    "height": 614,
+    "types": {
+      "INSTANCE": 20,
+      "FRAME": 49,
+      "TEXT": 50,
+      "RECTANGLE": 2,
+      "VECTOR": 10
+    },
+    "imageNodes": [],
+    "visibleText": [
+      {
+        "id": "I3:1904;3:1366",
+        "name": "Title",
+        "text": "Edit contact details",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "width": 368,
+        "height": 36
+      },
+      {
+        "id": "I3:1904;3:1367",
+        "name": "Description",
+        "text": "Update how we contact this patient.",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 368,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5845",
+        "name": "Label",
+        "text": "First name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 80,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5845",
+        "name": "Label",
+        "text": "Last name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 78,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5845",
+        "name": "Label",
+        "text": "Email",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 42,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5845",
+        "name": "Label",
+        "text": "Phone",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 48,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5838",
+        "name": "Value",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5845",
+        "name": "Label",
+        "text": "Preferred contact method",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 195,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1476;140:8",
+        "name": "Label",
+        "text": "Send appointment reminders",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 218,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1485;78:16",
+        "name": "Label",
+        "text": "Cancel",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 52,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1491;78:52",
+        "name": "Label",
+        "text": "Save changes",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 104,
+        "height": 24
+      }
+    ],
+    "fields": [
+      {
+        "id": "I3:1904;3:1371",
+        "name": "First name",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "First name"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1904;3:1392",
+        "name": "Last name",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Last name"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1904;3:1413",
+        "name": "Email",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Email"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1904;3:1434",
+        "name": "Phone",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Phone"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1904;3:1455",
+        "name": "Preferred contact method",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Preferred contact method"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Empty",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:1904;3:1476",
+        "name": "Appointment reminders",
+        "width": 260,
+        "height": 42,
+        "props": {
+          "Control#140:3": {
+            "type": "INSTANCE_SWAP",
+            "value": "3:23",
+            "preferredValues": [
+              {
+                "type": "COMPONENT",
+                "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "f953298b3405c79fc034074a54664f3225861c26"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+              }
+            ]
+          },
+          "Label#140:0": {
+            "type": "TEXT",
+            "value": "Send appointment reminders"
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      }
+    ],
+    "frames": [
+      {
+        "id": "I3:1904;3:1365",
+        "name": "Header",
+        "layout": "VERTICAL",
+        "width": 368,
+        "height": 68
+      },
+      {
+        "id": "I3:1904;3:1369",
+        "name": "Fields and reminder",
+        "layout": "VERTICAL",
+        "width": 368,
+        "height": 410
+      },
+      {
+        "id": "I3:1904;3:1370",
+        "name": "Name fields",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 128
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 359,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 80,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1371;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 359,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 78,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1392;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 359,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 42,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1413;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 359,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 48,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1434;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5830",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5831",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5832",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5833",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5836",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 359,
+        "height": 56
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5837",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5841",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 95,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5844",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 195,
+        "height": 24
+      },
+      {
+        "id": "I3:1904;3:1455;1138:5847",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:1904;3:1484",
+        "name": "Actions",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 38
+      }
+    ],
+    "outOfRoot": []
+  },
+  {
+    "id": "3:2037",
+    "width": 400,
+    "height": 614,
+    "types": {
+      "INSTANCE": 20,
+      "FRAME": 49,
+      "TEXT": 50,
+      "RECTANGLE": 2,
+      "VECTOR": 11
+    },
+    "imageNodes": [],
+    "visibleText": [
+      {
+        "id": "I3:2037;3:1498",
+        "name": "Title",
+        "text": "Edit contact details",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "width": 368,
+        "height": 36
+      },
+      {
+        "id": "I3:2037;3:1499",
+        "name": "Description",
+        "text": "Update how we contact this patient.",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 368,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5855",
+        "name": "Gap sizer",
+        "text": "First name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 60,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5859",
+        "name": "Value",
+        "text": "Alex",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5863",
+        "name": "Label",
+        "text": "First name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 60,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5855",
+        "name": "Gap sizer",
+        "text": "Last name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 59,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5859",
+        "name": "Value",
+        "text": "Morgan",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5863",
+        "name": "Label",
+        "text": "Last name",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 59,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5855",
+        "name": "Gap sizer",
+        "text": "Email",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 32,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5859",
+        "name": "Value",
+        "text": "alex.morgan@example.com",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5863",
+        "name": "Label",
+        "text": "Email",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 32,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5855",
+        "name": "Gap sizer",
+        "text": "Phone",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 36,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5859",
+        "name": "Value",
+        "text": "(202) 555-0148",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5863",
+        "name": "Label",
+        "text": "Phone",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 36,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5855",
+        "name": "Gap sizer",
+        "text": "Preferred contact method",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 146,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5859",
+        "name": "Value",
+        "text": "Email",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5863",
+        "name": "Label",
+        "text": "Preferred contact method",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 146,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1608;140:8",
+        "name": "Label",
+        "text": "Send appointment reminders",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 218,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1618;78:16",
+        "name": "Label",
+        "text": "Cancel",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 52,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1624;78:52",
+        "name": "Label",
+        "text": "Save changes",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "width": 104,
+        "height": 24
+      }
+    ],
+    "fields": [
+      {
+        "id": "I3:2037;3:1503",
+        "name": "First name",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "Alex"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "First name"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:2037;3:1524",
+        "name": "Last name",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "Morgan"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Last name"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:2037;3:1545",
+        "name": "Email",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "alex.morgan@example.com"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Email"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:2037;3:1566",
+        "name": "Phone",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "(202) 555-0148"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Phone"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:2037;3:1587",
+        "name": "Preferred contact method",
+        "width": 368,
+        "height": 56,
+        "props": {
+          "multiline#123:66": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "select#123:55": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Value text#123:11": {
+            "type": "TEXT",
+            "value": "Email"
+          },
+          "Show helper#123:33": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "required#123:44": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper text#123:22": {
+            "type": "TEXT",
+            "value": "Text underneath the input"
+          },
+          "Label#123:0": {
+            "type": "TEXT",
+            "value": "Preferred contact method"
+          },
+          "size": {
+            "value": "medium",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Value": {
+            "value": "Filled",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Fill": {
+            "value": "Paper",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "I3:2037;3:1608",
+        "name": "Appointment reminders",
+        "width": 260,
+        "height": 42,
+        "props": {
+          "Control#140:3": {
+            "type": "INSTANCE_SWAP",
+            "value": "3:27",
+            "preferredValues": [
+              {
+                "type": "COMPONENT",
+                "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "f953298b3405c79fc034074a54664f3225861c26"
+              },
+              {
+                "type": "COMPONENT",
+                "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+              }
+            ]
+          },
+          "Label#140:0": {
+            "type": "TEXT",
+            "value": "Send appointment reminders"
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      }
+    ],
+    "frames": [
+      {
+        "id": "I3:2037;3:1497",
+        "name": "Header",
+        "layout": "VERTICAL",
+        "width": 368,
+        "height": 68
+      },
+      {
+        "id": "I3:2037;3:1501",
+        "name": "Fields and reminder",
+        "layout": "VERTICAL",
+        "width": 368,
+        "height": 410
+      },
+      {
+        "id": "I3:2037;3:1502",
+        "name": "Name fields",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 128
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 70,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 289,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 70,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1503;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 69,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 290,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 69,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1524;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 42,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 317,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 42,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1545;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 46,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 313,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 46,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1566;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5851",
+        "name": "Input",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5852",
+        "name": "Outline",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5853",
+        "name": "Cap left",
+        "layout": "NONE",
+        "width": 9,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5854",
+        "name": "Label slot",
+        "layout": "HORIZONTAL",
+        "width": 156,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5857",
+        "name": "Body right",
+        "layout": "NONE",
+        "width": 203,
+        "height": 56
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5858",
+        "name": "Text",
+        "layout": "VERTICAL",
+        "width": 340,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5862",
+        "name": "Label / floating",
+        "layout": "HORIZONTAL",
+        "width": 156,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5865",
+        "name": "Label / resting",
+        "layout": "HORIZONTAL",
+        "width": 113,
+        "height": 24
+      },
+      {
+        "id": "I3:2037;3:1587;1138:5868",
+        "name": "Helper text",
+        "layout": "HORIZONTAL",
+        "width": 300,
+        "height": 16
+      },
+      {
+        "id": "I3:2037;3:1617",
+        "name": "Actions",
+        "layout": "HORIZONTAL",
+        "width": 368,
+        "height": 38
+      }
+    ],
+    "outOfRoot": []
+  }
+]

@@ -1,0 +1,475 @@
+{
+  "imported": [
+    {
+      "name": "Card",
+      "key": "dfc9b7d6ef4ab82cce27c1aa11cc1ba31f0825a5",
+      "setId": "2:407",
+      "properties": {
+        "Show header#611:0": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show avatar#611:5": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show subheader#611:10": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show header action#611:15": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show media#611:20": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "variant": {
+          "type": "VARIANT",
+          "defaultValue": "elevation",
+          "variantOptions": [
+            "elevation",
+            "outlined"
+          ]
+        },
+        "Actions": {
+          "type": "VARIANT",
+          "defaultValue": "False",
+          "variantOptions": [
+            "True",
+            "False"
+          ]
+        }
+      },
+      "defaultVariant": {
+        "id": "2:408",
+        "name": "variant=elevation, Actions=False",
+        "width": 350,
+        "height": 88,
+        "layoutMode": "VERTICAL"
+      },
+      "children": [
+        {
+          "id": "2:412",
+          "name": "Header",
+          "type": "FRAME",
+          "width": 350,
+          "height": 76
+        },
+        {
+          "id": "2:418",
+          "name": "Media",
+          "type": "FRAME",
+          "width": 350,
+          "height": 140
+        },
+        {
+          "id": "2:419",
+          "name": "Content",
+          "type": "FRAME",
+          "width": 350,
+          "height": 88
+        }
+      ]
+    },
+    {
+      "name": "Text field",
+      "key": "7c3c99bb9a9392d6571c0557b41d142b8987b566",
+      "setId": "2:466",
+      "properties": {
+        "Label#123:0": {
+          "type": "TEXT",
+          "defaultValue": "TextField Label"
+        },
+        "Value text#123:11": {
+          "type": "TEXT",
+          "defaultValue": "Default Value"
+        },
+        "Helper text#123:22": {
+          "type": "TEXT",
+          "defaultValue": "Text underneath the input"
+        },
+        "Show helper#123:33": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "required#123:44": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "select#123:55": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "multiline#123:66": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "medium",
+          "variantOptions": [
+            "medium",
+            "small"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Focused",
+            "Disabled",
+            "Error"
+          ]
+        },
+        "Value": {
+          "type": "VARIANT",
+          "defaultValue": "Empty",
+          "variantOptions": [
+            "Empty",
+            "Filled"
+          ]
+        },
+        "Fill": {
+          "type": "VARIANT",
+          "defaultValue": "None",
+          "variantOptions": [
+            "None",
+            "Paper"
+          ]
+        }
+      },
+      "defaultVariant": {
+        "id": "2:467",
+        "name": "size=medium, State=Default, Value=Empty, Fill=None",
+        "width": 300,
+        "height": 75,
+        "layoutMode": "VERTICAL"
+      },
+      "children": [
+        {
+          "id": "2:507",
+          "name": "Input",
+          "type": "FRAME",
+          "width": 300,
+          "height": 56
+        },
+        {
+          "id": "2:524",
+          "name": "Helper text",
+          "type": "FRAME",
+          "width": 300,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "name": "Form control label",
+      "key": "77cfa2d6c7b4601fc5a311028da35f42fc8f3ebb",
+      "setId": "2:1339",
+      "properties": {
+        "Label#140:0": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Control#140:3": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "2:1279",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "f953298b3405c79fc034074a54664f3225861c26"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+            }
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Disabled"
+          ]
+        }
+      },
+      "defaultVariant": {
+        "id": "2:1340",
+        "name": "State=Default",
+        "width": 84,
+        "height": 42,
+        "layoutMode": "HORIZONTAL"
+      },
+      "children": [
+        {
+          "id": "2:1342",
+          "name": "Control",
+          "type": "INSTANCE",
+          "width": 42,
+          "height": 42,
+          "properties": {
+            "checked": {
+              "value": "unchecked",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "State": {
+              "value": "Default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "Flush": {
+              "value": "None",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        },
+        {
+          "id": "2:1343",
+          "name": "Label",
+          "type": "TEXT",
+          "width": 42,
+          "height": 24,
+          "text": "Label",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Regular"
+          },
+          "textStyleId": ""
+        }
+      ]
+    },
+    {
+      "name": "Checkbox",
+      "key": "df21c69feaab79790f6c571a45a4d2b7eaf976c7",
+      "setId": "2:1278",
+      "properties": {
+        "checked": {
+          "type": "VARIANT",
+          "defaultValue": "unchecked",
+          "variantOptions": [
+            "unchecked",
+            "checked",
+            "indeterminate"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Focus visible",
+            "Disabled"
+          ]
+        },
+        "Flush": {
+          "type": "VARIANT",
+          "defaultValue": "None",
+          "variantOptions": [
+            "None",
+            "Left"
+          ]
+        }
+      },
+      "defaultVariant": {
+        "id": "2:1279",
+        "name": "checked=unchecked, State=Default, Flush=None",
+        "width": 42,
+        "height": 42,
+        "layoutMode": "HORIZONTAL"
+      },
+      "children": [
+        {
+          "id": "2:1303",
+          "name": "Glyph",
+          "type": "INSTANCE",
+          "width": 24,
+          "height": 24,
+          "properties": {}
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "key": "cfb726c79b456d52901243b7c33839efd0780a93",
+      "setId": "2:118",
+      "properties": {
+        "Label#83:165": {
+          "type": "TEXT",
+          "defaultValue": "Button"
+        },
+        "Start icon#83:220": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "End icon#83:275": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Start icon swap#83:331": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "2:95",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            }
+          ]
+        },
+        "End icon swap#83:386": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "2:30",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            }
+          ]
+        },
+        "variant": {
+          "type": "VARIANT",
+          "defaultValue": "contained",
+          "variantOptions": [
+            "contained",
+            "text"
+          ]
+        },
+        "color": {
+          "type": "VARIANT",
+          "defaultValue": "primary",
+          "variantOptions": [
+            "primary",
+            "secondary",
+            "error",
+            "inherit"
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "medium",
+          "variantOptions": [
+            "medium",
+            "small",
+            "large"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Disabled"
+          ]
+        }
+      },
+      "defaultVariant": {
+        "id": "2:119",
+        "name": "variant=contained, color=primary, size=medium, State=Default",
+        "width": 86,
+        "height": 38,
+        "layoutMode": "HORIZONTAL"
+      },
+      "children": [
+        {
+          "id": "2:191",
+          "name": "Start icon",
+          "type": "INSTANCE",
+          "width": 16,
+          "height": 16,
+          "properties": {}
+        },
+        {
+          "id": "2:192",
+          "name": "Label",
+          "type": "TEXT",
+          "width": 52,
+          "height": 24,
+          "text": "Button",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Regular"
+          },
+          "textStyleId": ""
+        },
+        {
+          "id": "2:193",
+          "name": "End icon",
+          "type": "INSTANCE",
+          "width": 16,
+          "height": 16,
+          "properties": {}
+        }
+      ]
+    }
+  ],
+  "createdNodeIds": [],
+  "mutatedNodeIds": []
+}

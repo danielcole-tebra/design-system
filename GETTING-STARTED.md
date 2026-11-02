@@ -4,7 +4,7 @@
 
 Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
 
-The setup leads into the [first rebuild exercise](FIRST-RUN.md). The practice image is supplied in FigJam card 7; a verified reference rebuild is still being prepared. Instructions checked against official documentation on November 2, 2026; a new-designer walkthrough has not yet validated them end to end.
+The setup leads into the [first rebuild exercise](FIRST-RUN.md). The practice image is supplied in FigJam card 7, and the [reference test build](https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630) is ready for Daniel's review. Instructions checked against official documentation on November 2, 2026; a new-designer walkthrough has not yet validated them end to end.
 
 ## Before you begin
 

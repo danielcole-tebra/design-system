@@ -1,0 +1,317 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": false,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 18,
+    "passed": false,
+    "checks": [
+      {
+        "id": "I3:1904;3:1371",
+        "mainId": "3:441",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:1904;3:1392",
+        "mainId": "3:441",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:1904;3:1413",
+        "mainId": "3:441",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:1904;3:1434",
+        "mainId": "3:441",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:1904;3:1455",
+        "mainId": "3:441",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:1904;3:1476",
+        "mainId": "3:1222",
+        "passed": false,
+        "differenceCount": 1
+      },
+      {
+        "id": "I3:1904;3:1476;140:4",
+        "mainId": "3:23",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:1904;3:1485",
+        "mainId": "3:119",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:1904;3:1491",
+        "mainId": "3:131",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:2037;3:1503",
+        "mainId": "3:442",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:2037;3:1524",
+        "mainId": "3:442",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:2037;3:1545",
+        "mainId": "3:442",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:2037;3:1566",
+        "mainId": "3:442",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:2037;3:1587",
+        "mainId": "3:442",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:2037;3:1608",
+        "mainId": "3:1222",
+        "passed": false,
+        "differenceCount": 6
+      },
+      {
+        "id": "I3:2037;3:1608;140:4",
+        "mainId": "3:27",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:2037;3:1618",
+        "mainId": "3:119",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I3:2037;3:1624",
+        "mainId": "3:131",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 7,
+    "differences": [
+      {
+        "id": "I3:1904;3:1476",
+        "path": "/children/0/name",
+        "pathTruncated": false,
+        "actual": {
+          "text": "\"Checkbox\"",
+          "truncated": false
+        },
+        "expected": {
+          "text": "\"Control\"",
+          "truncated": false
+        }
+      },
+      {
+        "id": "I3:2037;3:1608",
+        "path": "/children/0/children/0/children/length",
+        "pathTruncated": false,
+        "actual": {
+          "text": "2",
+          "truncated": false
+        },
+        "expected": {
+          "text": "1",
+          "truncated": false
+        }
+      },
+      {
+        "id": "I3:2037;3:1608",
+        "path": "/children/0/children/0/children/0/values/fills/0/color/r",
+        "pathTruncated": false,
+        "actual": {
+          "text": "0",
+          "truncated": false
+        },
+        "expected": {
+          "text": "0.3294117748737335",
+          "truncated": false
+        }
+      },
+      {
+        "id": "I3:2037;3:1608",
+        "path": "/children/0/children/0/children/0/values/fills/0/color/g",
+        "pathTruncated": false,
+        "actual": {
+          "text": "0.2823529541492462",
+          "truncated": false
+        },
+        "expected": {
+          "text": "0.3294117748737335",
+          "truncated": false
+        }
+      },
+      {
+        "id": "I3:2037;3:1608",
+        "path": "/children/0/children/0/children/0/values/fills/0/color/b",
+        "pathTruncated": false,
+        "actual": {
+          "text": "0.32156863808631897",
+          "truncated": false
+        },
+        "expected": {
+          "text": "0.3294117748737335",
+          "truncated": false
+        }
+      }
+    ],
+    "omittedDifferences": 2
+  },
+  "assertions": {
+    "checked": 125,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "Empty 400 width",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 layout",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 height",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 raster nodes",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 visible font families",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 paper token",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 paddingTop token",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 paddingBottom token",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 paddingLeft token",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 paddingRight token",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 itemSpacing token",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 title",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 description",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 h2 style",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 body1 style",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 wrapping",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 name row height",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 First name label",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 First name value",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 First name state",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 First name fill",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 First name select",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 First name height",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 First name width",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 Last name label",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 Last name value",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 Last name state",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 Last name fill",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 Last name select",
+        "passed": true
+      },
+      {
+        "name": "Empty 400 Last name height",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 95,
+    "failures": [],
+    "omittedFailures": 0
+  }
+}

@@ -8,7 +8,7 @@ Prefer a visual walkthrough? Open [Get started with Codex + Figma in FigJam](htt
 
 Then follow [Your first rebuild](FIRST-RUN.md). Copy the supplied contact-details image into your Design file and ask Codex to rebuild it as editable library-based Empty and Filled states, with screenshots and a verified checklist of what changed.
 
-The guide is a draft for review. The [starter PNG](assets/onboarding/contact-details-starter.png) is supplied; a verified reference rebuild still needs to be created before a designer pilot. Setup, image copying and result display also need to be checked in each participant's client.
+The guide is a draft for review. The [starter PNG](assets/onboarding/contact-details-starter.png) and [reference rebuild test](https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630) are supplied. The reference has structural checks and inspected screenshots; Daniel's review and a designer pilot remain. Setup, image copying and result display still need to be checked in each participant's client.
 
 ## What you should receive
 

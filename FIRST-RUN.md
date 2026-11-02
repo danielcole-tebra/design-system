@@ -4,7 +4,7 @@ Turn a supplied contact-details **image** into an editable Tebra design-system c
 
 **New here? Start with [Set up Codex and Figma](GETTING-STARTED.md).** It covers downloading the repository, creating a local Codex project, connecting Figma, creating your own file, and adding the published rebuild library.
 
-**Draft for review — November 2, 2026.** The starter image is supplied in FigJam card 7 and [as a PNG](assets/onboarding/contact-details-starter.png). A verified reference rebuild and a new-designer walkthrough still need to be completed before the participant pilot. This image-based exercise supersedes the earlier editable-starter plan and patient-search example.
+**Draft for review — November 2, 2026.** The starter image is supplied in FigJam card 7 and [as a PNG](assets/onboarding/contact-details-starter.png). A [reference test build](https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630) now contains editable Empty and Filled versions at 640 and 400 px, with inspected screenshots and structural evidence. Daniel's review and a new-designer walkthrough remain before the participant pilot. This image-based exercise supersedes the earlier editable-starter plan and patient-search example.
 
 ## What you will make
 
@@ -80,6 +80,8 @@ You should not need to supply internal component IDs or run builder scripts. The
 
 ## 3. Review what changed
 
+See the [tested reference result](https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630), its [screenshot](runs/2026-11-02-starter-rebuild-test/final-review.png), and [verification report](runs/2026-11-02-starter-rebuild-test/REPORT.md). The test uses a local reusable form composition because the published Card has no arbitrary form-content slot. Headings/supporting copy use library text styles; the controls preserve their published typography bindings, which do not all have text-style IDs. The image's blue button and separate labels become the library's filled coral action and floating-label fields. These are explained standardization changes, not a pixel-for-pixel reproduction.
+
 Compare your rebuild with the original, then inspect its layers in Figma. The agent returns this checklist with each verified change checked off. Unverified items stay unchecked and get an explanation.
 
 - [ ] **Layout:** The card, field groups, and button row use auto layout with defined padding, spacing, and alignment.
@@ -121,6 +123,6 @@ For your next task, supply an existing section or describe a new one. Identify t
 
 ## Preparation before the pilot
 
-The starter image, fictional copy and target widths are now supplied. The exercise owner still needs to build and verify reference Empty and Filled versions and observe a designer completing the copy/paste and rebuild flow. The generated starter is an input, not a verified example of the final library-based result.
+The starter image, fictional copy, target widths and technically verified reference build are supplied. Daniel still needs to review the result, and the exercise owner needs to observe a designer completing the copy/paste and rebuild flow. The MCP test uploaded the existing PNG; it did not play through the designer's clipboard steps. The generated starter is an input, not the final library-based result.
 
 [AGENTS.md](AGENTS.md), [LIBRARY.md](LIBRARY.md), [COMPOSITIONS.md](COMPOSITIONS.md), and [OPEN-ISSUES.md](OPEN-ISSUES.md) remain the authoritative builder guidance. This guide does not change component or composition rulings.

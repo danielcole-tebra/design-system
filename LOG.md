@@ -4513,3 +4513,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: generated and placed the fictional contact-details starter PNG; card 7 includes copy/paste steps and the full rebuild prompt. Updated guides/checklist to describe image input and editable Empty/Filled output, with 640/400 px checks.
 - Decision: Daniel requested an image starter, superseding the editable manual-layer starter plan for this onboarding exercise. Image is supplied; reference library rebuild and participant walkthrough remain pending.
 - Evidence: runs/2026-11-02-onboarding-image-starter/REPORT.md, scripts/records, assets/onboarding source PNG and exact generation prompt, and three inspected renders. Prompt matches guide; image unlocked; no overlap/overflow; vertical order preserved. Ready for Daniel's read.
+
+
+<!-- builder-run:runs/2026-11-02-starter-rebuild-test -->
+## 2026-11-02 — Starter image to library: Empty and Filled test
+- File: dZqYSxEj3scbmRP4IqJGLh. Built a local reusable contact-details composition from the supplied image, with editable Empty/Filled instances at 640 and 400 px. Measured requirements and visual review pass; strict master-comparison differences are the exposed checkbox swaps documented below. Ready for Daniel's read; no additional Figma build batch started.
+- Evidence: runs/2026-11-02-starter-rebuild-test/REPORT.md, record.json, final-review.png, original-reference.png, first-review.png.

@@ -1,0 +1,368 @@
+[
+  {
+    "id": "I3:1636;3:1476",
+    "exposedControlSwap": {
+      "type": "INSTANCE_SWAP",
+      "value": "3:23",
+      "preferredValues": [
+        {
+          "type": "COMPONENT",
+          "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "f953298b3405c79fc034074a54664f3225861c26"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+        }
+      ]
+    },
+    "nestedCheckbox": {
+      "id": "I3:1636;3:1476;140:4",
+      "mainKey": "243efa248e3f876e935d48c3d9c9736add2f9ef2",
+      "props": {
+        "checked": {
+          "value": "unchecked",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "State": {
+          "value": "Default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Flush": {
+          "value": "None",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    "differences": {
+      "scope": "structure-and-token-snapshot",
+      "passed": false,
+      "differenceCount": 1,
+      "differences": [
+        {
+          "path": "/children/0/name",
+          "actual": "Checkbox",
+          "expected": "Control"
+        }
+      ],
+      "omitted": 0
+    }
+  },
+  {
+    "id": "I3:1769;3:1608",
+    "exposedControlSwap": {
+      "type": "INSTANCE_SWAP",
+      "value": "3:27",
+      "preferredValues": [
+        {
+          "type": "COMPONENT",
+          "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "f953298b3405c79fc034074a54664f3225861c26"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+        }
+      ]
+    },
+    "nestedCheckbox": {
+      "id": "I3:1769;3:1608;140:4",
+      "mainKey": "5f283caaed33dccc3692aafca8c3d496a0950445",
+      "props": {
+        "checked": {
+          "value": "checked",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "State": {
+          "value": "Default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Flush": {
+          "value": "None",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    "differences": {
+      "scope": "structure-and-token-snapshot",
+      "passed": false,
+      "differenceCount": 6,
+      "differences": [
+        {
+          "path": "/children/0/children/0/children/length",
+          "actual": 2,
+          "expected": 1
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/fills/0/color/r",
+          "actual": 0,
+          "expected": 0.3294117748737335
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/fills/0/color/g",
+          "actual": 0.2823529541492462,
+          "expected": 0.3294117748737335
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/fills/0/color/b",
+          "actual": 0.32156863808631897,
+          "expected": 0.3294117748737335
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/fills/0/boundVariables/color/id",
+          "actual": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5",
+          "expected": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/boundVariables/fills/0/id",
+          "actual": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5",
+          "expected": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+        }
+      ],
+      "omitted": 0
+    }
+  },
+  {
+    "id": "I3:1904;3:1476",
+    "exposedControlSwap": {
+      "type": "INSTANCE_SWAP",
+      "value": "3:23",
+      "preferredValues": [
+        {
+          "type": "COMPONENT",
+          "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "f953298b3405c79fc034074a54664f3225861c26"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+        }
+      ]
+    },
+    "nestedCheckbox": {
+      "id": "I3:1904;3:1476;140:4",
+      "mainKey": "243efa248e3f876e935d48c3d9c9736add2f9ef2",
+      "props": {
+        "checked": {
+          "value": "unchecked",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "State": {
+          "value": "Default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Flush": {
+          "value": "None",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    "differences": {
+      "scope": "structure-and-token-snapshot",
+      "passed": false,
+      "differenceCount": 1,
+      "differences": [
+        {
+          "path": "/children/0/name",
+          "actual": "Checkbox",
+          "expected": "Control"
+        }
+      ],
+      "omitted": 0
+    }
+  },
+  {
+    "id": "I3:2037;3:1608",
+    "exposedControlSwap": {
+      "type": "INSTANCE_SWAP",
+      "value": "3:27",
+      "preferredValues": [
+        {
+          "type": "COMPONENT",
+          "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "5f283caaed33dccc3692aafca8c3d496a0950445"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "10377424741a70b9827db54f7bc3c3d8d012617a"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "61d00ee62f31d4afe998b031d90bdbd84404052b"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "f953298b3405c79fc034074a54664f3225861c26"
+        },
+        {
+          "type": "COMPONENT",
+          "key": "ebaafd9537676c2e3c81828626078d4c6bf8d710"
+        }
+      ]
+    },
+    "nestedCheckbox": {
+      "id": "I3:2037;3:1608;140:4",
+      "mainKey": "5f283caaed33dccc3692aafca8c3d496a0950445",
+      "props": {
+        "checked": {
+          "value": "checked",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "State": {
+          "value": "Default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Flush": {
+          "value": "None",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    "differences": {
+      "scope": "structure-and-token-snapshot",
+      "passed": false,
+      "differenceCount": 6,
+      "differences": [
+        {
+          "path": "/children/0/children/0/children/length",
+          "actual": 2,
+          "expected": 1
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/fills/0/color/r",
+          "actual": 0,
+          "expected": 0.3294117748737335
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/fills/0/color/g",
+          "actual": 0.2823529541492462,
+          "expected": 0.3294117748737335
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/fills/0/color/b",
+          "actual": 0.32156863808631897,
+          "expected": 0.3294117748737335
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/fills/0/boundVariables/color/id",
+          "actual": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5",
+          "expected": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+        },
+        {
+          "path": "/children/0/children/0/children/0/values/boundVariables/fills/0/id",
+          "actual": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5",
+          "expected": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+        }
+      ],
+      "omitted": 0
+    }
+  }
+]

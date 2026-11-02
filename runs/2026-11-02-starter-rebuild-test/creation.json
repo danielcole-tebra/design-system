@@ -1,0 +1,305 @@
+{
+  "createdNodeIds": [
+    "3:1364",
+    "3:1362",
+    "3:1365",
+    "3:1366",
+    "3:1367",
+    "3:1368",
+    "3:1369",
+    "3:1370",
+    "3:1371",
+    "3:1392",
+    "3:1413",
+    "3:1434",
+    "3:1455",
+    "3:1476",
+    "3:1483",
+    "3:1484",
+    "3:1485",
+    "3:1491",
+    "3:1363",
+    "3:1497",
+    "3:1498",
+    "3:1499",
+    "3:1500",
+    "3:1501",
+    "3:1502",
+    "3:1503",
+    "3:1524",
+    "3:1545",
+    "3:1566",
+    "3:1587",
+    "3:1608",
+    "3:1616",
+    "3:1617",
+    "3:1618",
+    "3:1624",
+    "3:1630",
+    "3:1631",
+    "3:1632",
+    "3:1633",
+    "3:1634",
+    "3:1635",
+    "3:1636",
+    "3:1767",
+    "3:1768",
+    "3:1769",
+    "3:1901",
+    "3:1902",
+    "3:1903",
+    "3:1904",
+    "3:2035",
+    "3:2036",
+    "3:2037",
+    "3:2169",
+    "3:2170",
+    "3:2171",
+    "3:2172",
+    "3:2173"
+  ],
+  "mutatedNodeIds": [
+    "0:1"
+  ],
+  "reviewId": "3:1630",
+  "referenceId": "3:2170",
+  "imageId": "3:2172",
+  "componentSetId": "3:1364",
+  "masters": [
+    {
+      "id": "3:1362",
+      "name": "Content=Empty",
+      "width": 640,
+      "height": 542
+    },
+    {
+      "id": "3:1363",
+      "name": "Content=Filled",
+      "width": 640,
+      "height": 542
+    }
+  ],
+  "outputs": [
+    {
+      "id": "3:1636",
+      "state": "Empty",
+      "width": 640
+    },
+    {
+      "id": "3:1769",
+      "state": "Filled",
+      "width": 640
+    },
+    {
+      "id": "3:1904",
+      "state": "Empty",
+      "width": 400
+    },
+    {
+      "id": "3:2037",
+      "state": "Filled",
+      "width": 400
+    }
+  ],
+  "libraryInstances": [
+    "3:1371",
+    "3:1392",
+    "3:1413",
+    "3:1434",
+    "3:1455",
+    "3:1476",
+    "3:1485",
+    "3:1491",
+    "3:1503",
+    "3:1524",
+    "3:1545",
+    "3:1566",
+    "3:1587",
+    "3:1608",
+    "3:1618",
+    "3:1624"
+  ],
+  "ownText": [
+    "3:1366",
+    "3:1367",
+    "3:1498",
+    "3:1499",
+    "3:1631",
+    "3:1632",
+    "3:1635",
+    "3:1768",
+    "3:1903",
+    "3:2036",
+    "3:2169",
+    "3:2171",
+    "3:2173"
+  ],
+  "frames": [
+    "3:1362",
+    "3:1365",
+    "3:1369",
+    "3:1370",
+    "3:1484",
+    "3:1363",
+    "3:1497",
+    "3:1501",
+    "3:1502",
+    "3:1617",
+    "3:1630",
+    "3:1633",
+    "3:1634",
+    "3:1767",
+    "3:1901",
+    "3:1902",
+    "3:2035",
+    "3:2170"
+  ],
+  "fonts": [
+    {
+      "family": "Akkurat LL",
+      "style": "Regular"
+    },
+    {
+      "family": "Akkurat LL",
+      "style": "Bold"
+    }
+  ],
+  "variables": [
+    {
+      "name": "color/text/primary",
+      "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+      "key": "5c8867e0b6f174db9f69096580158df26e39baae",
+      "value": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 1
+      },
+      "scopes": [
+        "TEXT_FILL"
+      ]
+    },
+    {
+      "name": "space/16",
+      "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24",
+      "key": "6016592c19254dd61e9de9e006459546eaece0bb",
+      "value": 16,
+      "scopes": [
+        "WIDTH_HEIGHT",
+        "GAP"
+      ]
+    },
+    {
+      "name": "color/background/paper",
+      "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146",
+      "key": "f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ]
+    },
+    {
+      "name": "color/text/secondary",
+      "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139",
+      "key": "0d503f1eb6c6f3e923310b2ad6e621cc940b6543",
+      "value": {
+        "r": 0.3294117748737335,
+        "g": 0.3294117748737335,
+        "b": 0.3294117748737335,
+        "a": 1
+      },
+      "scopes": [
+        "TEXT_FILL"
+      ]
+    },
+    {
+      "name": "color/divider",
+      "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173",
+      "key": "ba1923abf373a9062e989ce3ac2068f54712d80b",
+      "value": {
+        "r": 0.8392156958580017,
+        "g": 0.8392156958580017,
+        "b": 0.8392156958580017,
+        "a": 1
+      },
+      "scopes": [
+        "STROKE_COLOR"
+      ]
+    },
+    {
+      "name": "radius/sm",
+      "id": "VariableID:82e6514ca37ad695ccb02d0deda9b23a80a8b2ee/74:249",
+      "key": "82e6514ca37ad695ccb02d0deda9b23a80a8b2ee",
+      "value": 4,
+      "scopes": [
+        "CORNER_RADIUS"
+      ]
+    },
+    {
+      "name": "space/0",
+      "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34",
+      "key": "ce161dd8d210e94082abb2b2d1731fafc1a23767",
+      "value": 0,
+      "scopes": [
+        "WIDTH_HEIGHT",
+        "GAP"
+      ]
+    },
+    {
+      "name": "space/8",
+      "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15",
+      "key": "183d5d946d268e8bd37735b8b0dc95111c46eddd",
+      "value": 8,
+      "scopes": [
+        "WIDTH_HEIGHT",
+        "GAP"
+      ]
+    },
+    {
+      "name": "space/24",
+      "id": "VariableID:f377dae9eb274ba0c78c22fe147a6bab50271e78/997:33",
+      "key": "f377dae9eb274ba0c78c22fe147a6bab50271e78",
+      "value": 24,
+      "scopes": [
+        "WIDTH_HEIGHT",
+        "GAP"
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "name": "h2",
+      "id": "S:2e2ad3d421315383c8d117a1e34e4017666511d8,116:29",
+      "key": "2e2ad3d421315383c8d117a1e34e4017666511d8",
+      "type": "TEXT"
+    },
+    {
+      "name": "body1",
+      "id": "S:c87aec6a94a2e25a8a25446f8d61716cb25abe73,116:83",
+      "key": "c87aec6a94a2e25a8a25446f8d61716cb25abe73",
+      "type": "TEXT"
+    },
+    {
+      "name": "body2",
+      "id": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+      "key": "cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb",
+      "type": "TEXT"
+    },
+    {
+      "name": "Elevation / 1",
+      "id": "S:fd6437619397b55367b2b23ebd8e85a01a4eadf1,150:4",
+      "key": "fd6437619397b55367b2b23ebd8e85a01a4eadf1",
+      "type": "EFFECT"
+    }
+  ],
+  "reviewBounds": {
+    "width": 1360,
+    "height": 1452
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "components": [
+    {
+      "index": 0,
+      "name": "Card",
+      "key": "dfc9b7d6ef4ab82cce27c1aa11cc1ba31f0825a5",
+      "type": "component_set",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "Text field",
+      "key": "7c3c99bb9a9392d6571c0557b41d142b8987b566",
+      "type": "component_set",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "Form control label",
+      "key": "77cfa2d6c7b4601fc5a311028da35f42fc8f3ebb",
+      "type": "component_set",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "Checkbox",
+      "key": "df21c69feaab79790f6c571a45a4d2b7eaf976c7",
+      "type": "component_set",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "Button",
+      "key": "cfb726c79b456d52901243b7c33839efd0780a93",
+      "type": "component_set",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    }
+  ],
+  "variables": [
+    {
+      "index": 0,
+      "name": "color/background/paper",
+      "key": "f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "color/text/primary",
+      "key": "5c8867e0b6f174db9f69096580158df26e39baae",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "color/text/secondary",
+      "key": "0d503f1eb6c6f3e923310b2ad6e621cc940b6543",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "color/divider",
+      "key": "ba1923abf373a9062e989ce3ac2068f54712d80b",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "space/8",
+      "key": "183d5d946d268e8bd37735b8b0dc95111c46eddd",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "space/16",
+      "key": "6016592c19254dd61e9de9e006459546eaece0bb",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "space/24",
+      "key": "f377dae9eb274ba0c78c22fe147a6bab50271e78",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "radius/sm",
+      "key": "82e6514ca37ad695ccb02d0deda9b23a80a8b2ee",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 2,
+      "name": "space/0",
+      "key": "ce161dd8d210e94082abb2b2d1731fafc1a23767",
+      "type": "variable",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    }
+  ],
+  "styles": [
+    {
+      "index": 0,
+      "name": "h2",
+      "key": "2e2ad3d421315383c8d117a1e34e4017666511d8",
+      "type": "style",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "body1",
+      "key": "c87aec6a94a2e25a8a25446f8d61716cb25abe73",
+      "type": "style",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "body2",
+      "key": "cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb",
+      "type": "style",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    },
+    {
+      "index": 0,
+      "name": "Elevation / 1",
+      "key": "fd6437619397b55367b2b23ebd8e85a01a4eadf1",
+      "type": "style",
+      "libraryKey": "lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed"
+    }
+  ]
+}
