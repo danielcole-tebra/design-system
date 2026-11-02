@@ -1,0 +1,429 @@
+{
+  "type": "editorial-review",
+  "date": "2026-11-02",
+  "fileKey": "uKNQ26ndMmK3c58oIaaBdh",
+  "reviewUrl": "https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2",
+  "timing": null,
+  "timingNote": "Editorial pass; start and intermediate clock checkpoints were not captured. No elapsed-time benchmark claimed.",
+  "creation": {
+    "createdNodeIds": [
+      "30:2",
+      "30:3"
+    ],
+    "mutatedNodeIds": [
+      "5:5",
+      "5:14",
+      "5:15",
+      "5:18",
+      "5:26",
+      "5:27",
+      "5:28",
+      "5:30",
+      "5:38",
+      "5:39",
+      "5:50",
+      "5:51",
+      "5:48",
+      "5:47",
+      "5:62",
+      "5:63",
+      "5:74",
+      "23:3",
+      "5:75",
+      "5:77",
+      "5:78",
+      "5:71",
+      "5:86",
+      "27:3",
+      "5:90",
+      "5:87",
+      "5:92",
+      "5:93",
+      "5:94",
+      "5:95",
+      "5:96",
+      "5:97",
+      "5:98",
+      "5:99",
+      "5:100",
+      "5:101",
+      "5:102",
+      "5:103",
+      "5:8",
+      "5:9",
+      "5:13",
+      "5:12",
+      "15:2",
+      "5:11",
+      "5:16",
+      "5:17",
+      "5:7",
+      "5:20",
+      "5:21",
+      "5:25",
+      "30:2",
+      "5:24",
+      "16:2",
+      "5:23",
+      "5:29",
+      "5:19",
+      "5:32",
+      "5:33",
+      "5:37",
+      "5:36",
+      "18:2",
+      "5:35",
+      "5:40",
+      "5:41",
+      "5:42",
+      "5:31",
+      "5:44",
+      "5:45",
+      "5:49",
+      "5:52",
+      "5:53",
+      "5:54",
+      "5:43",
+      "5:56",
+      "5:57",
+      "5:61",
+      "5:64",
+      "5:60",
+      "22:2",
+      "5:59",
+      "5:65",
+      "5:66",
+      "5:55",
+      "5:68",
+      "5:69",
+      "5:73",
+      "23:2",
+      "5:72",
+      "23:4",
+      "5:67",
+      "5:80",
+      "5:81",
+      "5:85",
+      "5:84",
+      "27:5",
+      "5:83",
+      "27:4",
+      "27:2",
+      "5:89",
+      "5:88",
+      "5:79",
+      "30:3",
+      "5:91",
+      "5:2"
+    ],
+    "folderPromptId": "30:2",
+    "referenceImageId": "30:3",
+    "geometry": [
+      {
+        "id": "5:7",
+        "y": 500,
+        "height": 1708,
+        "children": [
+          "5:8",
+          "5:9",
+          "5:13",
+          "5:14",
+          "5:15",
+          "5:12",
+          "15:2",
+          "5:11",
+          "5:16",
+          "5:17",
+          "5:18"
+        ]
+      },
+      {
+        "id": "5:19",
+        "y": 2304,
+        "height": 2052,
+        "children": [
+          "5:20",
+          "5:21",
+          "5:25",
+          "5:26",
+          "5:27",
+          "5:28",
+          "30:2",
+          "5:24",
+          "16:2",
+          "5:23",
+          "5:29",
+          "5:30"
+        ]
+      },
+      {
+        "id": "5:31",
+        "y": 4452,
+        "height": 1668,
+        "children": [
+          "5:32",
+          "5:33",
+          "5:37",
+          "5:38",
+          "5:39",
+          "5:36",
+          "18:2",
+          "5:35",
+          "5:40",
+          "5:41",
+          "5:42"
+        ]
+      },
+      {
+        "id": "5:43",
+        "y": 6216,
+        "height": 816,
+        "children": [
+          "5:44",
+          "5:45",
+          "5:49",
+          "5:50",
+          "5:51",
+          "5:52",
+          "5:48",
+          "5:47",
+          "5:53",
+          "5:54"
+        ]
+      },
+      {
+        "id": "5:55",
+        "y": 7128,
+        "height": 1600,
+        "children": [
+          "5:56",
+          "5:57",
+          "5:61",
+          "5:62",
+          "5:63",
+          "5:64",
+          "5:60",
+          "22:2",
+          "5:59",
+          "5:65",
+          "5:66"
+        ]
+      },
+      {
+        "id": "5:67",
+        "y": 8824,
+        "height": 2016,
+        "children": [
+          "5:68",
+          "5:69",
+          "5:73",
+          "5:74",
+          "23:2",
+          "23:3",
+          "5:75",
+          "5:72",
+          "23:4",
+          "5:71",
+          "5:77",
+          "5:78"
+        ]
+      },
+      {
+        "id": "5:79",
+        "y": 10936,
+        "height": 3084,
+        "children": [
+          "5:80",
+          "5:81",
+          "5:85",
+          "5:86",
+          "5:84",
+          "27:5",
+          "5:83",
+          "27:4",
+          "27:2",
+          "27:3",
+          "5:89",
+          "5:90",
+          "5:87",
+          "5:88"
+        ]
+      },
+      {
+        "id": "5:91",
+        "y": 14116,
+        "height": 2692,
+        "children": [
+          "5:92",
+          "5:93",
+          "5:94",
+          "5:95",
+          "5:96",
+          "5:97",
+          "5:98",
+          "5:99",
+          "30:3",
+          "5:102",
+          "5:100",
+          "5:101",
+          "5:103"
+        ]
+      }
+    ],
+    "errors": [],
+    "board": {
+      "width": 1360,
+      "height": 16888
+    }
+  },
+  "audit": {
+    "cards": [
+      {
+        "id": "5:7",
+        "title": "1  Copy the design-system files to your computer",
+        "gap": null
+      },
+      {
+        "id": "5:19",
+        "title": "2  Create a separate folder for your work",
+        "gap": 96
+      },
+      {
+        "id": "5:31",
+        "title": "3  Connect Figma to Codex",
+        "gap": 96
+      },
+      {
+        "id": "5:43",
+        "title": "4  Create your own Figma file",
+        "gap": 96
+      },
+      {
+        "id": "5:55",
+        "title": "5 Add the rebuild library (recommended)",
+        "gap": 96
+      },
+      {
+        "id": "5:67",
+        "title": "6  Check the setup with Codex",
+        "gap": 96
+      },
+      {
+        "id": "5:79",
+        "title": "7 Copy the image and request a rebuild",
+        "gap": 96
+      },
+      {
+        "id": "5:91",
+        "title": "8  Review your rebuild",
+        "gap": 96
+      }
+    ],
+    "errors": [],
+    "prompts": [
+      {
+        "id": "5:15",
+        "matches": true
+      },
+      {
+        "id": "30:2",
+        "matches": true
+      },
+      {
+        "id": "23:3",
+        "matches": true
+      },
+      {
+        "id": "27:3",
+        "matches": true
+      }
+    ],
+    "referenceImage": [
+      {
+        "type": "IMAGE",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "scaleMode": "FIT",
+        "scalingFactor": 0.5,
+        "rotation": 0,
+        "filters": {
+          "exposure": 0,
+          "contrast": 0,
+          "saturation": 0,
+          "temperature": 0,
+          "tint": 0,
+          "highlights": 0,
+          "shadows": 0
+        },
+        "imageTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "imageHash": "ec7bed09ef2a757114aa815654051c4941e152c8"
+      }
+    ],
+    "referenceLink": {
+      "type": "URL",
+      "value": "https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630"
+    },
+    "starterImage": [
+      {
+        "type": "IMAGE",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "scaleMode": "FIT",
+        "scalingFactor": 0.5,
+        "rotation": 0,
+        "filters": {
+          "exposure": 0,
+          "contrast": 0,
+          "saturation": 0,
+          "temperature": 0,
+          "tint": 0,
+          "highlights": 0,
+          "shadows": 0
+        },
+        "imageTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "imageHash": "6eb3b938adae0de3eaf134715037deb1135d1058"
+      }
+    ],
+    "visibleImageCount": 7
+  },
+  "screenshots": [
+    "board.png",
+    "card-1.png",
+    "card-2.png",
+    "card-3.png",
+    "card-4.png",
+    "card-5.png",
+    "card-6.png",
+    "card-7.png",
+    "card-8.png"
+  ],
+  "limitations": [
+    "Step 4 new-file screenshot remains to be supplied.",
+    "New-designer account setup and clipboard workflow have not been tested end to end.",
+    "Evidence repository and reviewer ownership remain pilot setup decisions."
+  ]
+}

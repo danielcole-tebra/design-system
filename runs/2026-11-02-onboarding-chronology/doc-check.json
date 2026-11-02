@@ -1,0 +1,11 @@
+{
+  "documents": [
+    "README.md",
+    "GETTING-STARTED.md",
+    "FIRST-RUN.md",
+    "SCREENSHOT-CAPTURE-LIST.md"
+  ],
+  "inlinePromptsMatched": 4,
+  "localLinksChecked": true,
+  "errors": []
+}

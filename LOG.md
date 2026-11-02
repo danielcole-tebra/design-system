@@ -4519,3 +4519,7 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-02 — Starter image to library: Empty and Filled test
 - File: dZqYSxEj3scbmRP4IqJGLh. Built a local reusable contact-details composition from the supplied image, with editable Empty/Filled instances at 640 and 400 px. Measured requirements and visual review pass; strict master-comparison differences are the exposed checkbox swaps documented below. Ready for Daniel's read; no additional Figma build batch started.
 - Evidence: runs/2026-11-02-starter-rebuild-test/REPORT.md, record.json, final-review.png, original-reference.png, first-review.png.
+
+## 2026-11-02 — Onboarding chronology and copy review
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh, board 5:2. Tightened eight sequential cards; moved readiness before the rebuild, included the folder prompt inline, and added the real test result and review checklist to card 8. Synchronized README, GETTING-STARTED, FIRST-RUN and capture list. Daniel's reference-result review is recorded; source library and test Design file unchanged.
+- Finding: card 4's setup screenshot and a new-designer trial remain pending. This editorial review does not validate fresh-account setup or clipboard use. Evidence: runs/2026-11-02-onboarding-chronology/REPORT.md, record.json, doc-check.json and nine inspected screenshots. No node deletions, overlap or overflow; ready for Daniel's read.

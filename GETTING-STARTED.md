@@ -1,185 +1,148 @@
 # Set up Codex and Figma
 
-[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1–3, 5 and 6 include Daniel's real screenshots, and card 7 supplies the practice image. Only the step 4 setup screenshot remains pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact view to capture.
+[Open the FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2). Follow its eight cards from top to bottom. All prompts are included where you need them.
 
-Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
-
-The setup leads into the [first rebuild exercise](FIRST-RUN.md). The practice image is supplied in FigJam card 7, and the [reference test build](https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630) is ready for Daniel's review. Instructions checked against official documentation on November 2, 2026; a new-designer walkthrough has not yet validated them end to end.
+You will copy Tebra’s building guidance to your computer, create a separate project for your work, connect Codex to Figma, and rebuild a supplied contact-details image as editable library-based cards.
 
 ## Before you begin
 
-Have these accounts and tools available. If access is missing, ask Daniel or your workspace administrator for the specific item.
+You need the desktop app with Codex, your work GitHub and Figma accounts, access to the [design-system repository](https://github.com/danielcole-tebra/design-system), and access to the published [Design System Rebuild library](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw). Ask Daniel or your workspace administrator about missing access.
 
-| You need | Why |
-|---|---|
-| The desktop app with Codex, signed into your work account | Runs the design agent against your local project. [Official installation guidance](https://learn.chatgpt.com/docs/app). |
-| Access to the [design-system GitHub repository](https://github.com/danielcole-tebra/design-system) | Supplies the building rules, composition references, and evidence helpers. Open the link while signed into GitHub to check access. |
-| Git available to Codex | Codex downloads the repository and keeps it current. No separate GitHub Desktop workflow is needed. |
-| Node.js available to Codex | Runs the repository's builder helpers. Use your approved installation process or the [Node.js download page](https://nodejs.org/en/download). |
-| Your work Figma account with edit access to a destination file | Allows you and the connected agent to build editable designs. |
-| View access to [Design System Rebuild](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw) and access to its published library | Provides Tebra components, styles, and variables. |
-| The approved Tebra fonts | The recorded library uses Akkurat LL. Get the team's licensed font package or organization font access from Daniel; font loading must also work for the agent. |
+Codex checks Git and Node.js during setup. If either is missing, follow your approved installation process. The library uses Akkurat LL; use the team’s licensed fonts or organization font access. Actual font loading is tested during the build.
 
-The full builder workflow also references source code in the [web-app-v2 repository](https://github.com/kareo-engineering/web-app-v2). If you have access, ask Codex to clone it beside design-system. If you do not, report that during the setup check: Codex can read the guidance, but must identify source-code checks it cannot complete.
-
-This repository is guidance and evidence. Enabling the Figma library and connecting Codex to Figma are separate steps; cloning the repository does neither automatically.
+Three things stay separate: the local **design-system folder** supplies guidance, your **work folder** holds project files, and your **Figma Design file** holds the editable designs. Downloading the repository does not connect Figma or add its library.
 
 ## 1. Copy the design-system files to your computer
 
-You'll need to copy the design-system files onto your computer and save them in a folder. This is called **cloning the repository**.
+Choose an easy-to-remember location, such as a folder called `Code`. Its name and location are your choice. Codex will save a local copy of the shared guidance in a separate `design-system` folder there. This is called **cloning the repository**. You will create your work folder in step 2.
 
-Choose somewhere easy to remember, such as a folder called `Code`. Codex will save the files in a `design-system` folder inside it: `Code/design-system`. The parent folder's name and location are your choice.
-
-You won't do your project work in this folder. We'll create a separate folder for that in the next step.
-
-In Codex, start a local chat with access to your chosen location and paste this request:
+In Codex, start a local chat with access to your chosen location and send:
 
 ```text
-Clone https://github.com/danielcole-tebra/design-system.git into a
-separate design-system folder here. If a checkout already exists,
-inspect and reuse it without overwriting local work. Read AGENTS.md,
-check Git and Node.js, and tell me the full folder path and any access
-problems. Keep my new project work outside this repository.
+Clone https://github.com/danielcole-tebra/design-system.git into a separate design-system folder here. If a checkout already exists, inspect and reuse it without overwriting local work. Read AGENTS.md, check Git and Node.js, and tell me the full folder path and any access problems. Keep my new project work outside this repository.
 ```
 
-This creates a real local copy of the shared guidance. Keep it separate from your new project work. Complete GitHub sign-in through the normal authentication window if prompted. If Git or Node.js is missing, have Codex identify the approved setup action before continuing.
+Complete GitHub sign-in if prompted. Codex should identify any missing tools or access before you continue.
 
-**Checkpoint:** Codex confirms where it saved the design-system files and reports any missing tools or access. Keep that folder location handy for the next step.
+**Checkpoint:** Codex gives you the saved folder path, such as `Code/design-system`. Keep it for step 2. The card’s screenshot shows the request before sending; the written checkpoint covers completion.
 
 ## 2. Create a separate folder for your work
 
-1. Create a new folder for your work beside the design-system folder. You can name it anything, such as **Patient intake prototype**.
-2. In Codex, open **Choose project → New project**. Create a local project with your work folder as its **primary** folder. The project name is also your choice.
+1. Create a folder beside `design-system` for your work. Name it anything, such as **Patient intake prototype**.
+2. In Codex, choose **Choose project → New project**. Use your work folder as the primary folder.
 3. Use **Edit project → Add folder** to attach the separate design-system folder as a reference.
-4. Start a new chat in the project and send the setup prompt below.
+4. Start a chat in your new project and send the prompt below. Use this work-project chat for the remaining Codex steps.
 
-These are real folders on your computer. Your work folder holds project files, notes and screenshots that Codex creates. Your Figma designs stay in Figma. Later, you can ask Codex to publish your work folder as its own GitHub repository to save versions and share it. The design-system clone is already connected to the shared source repository; it is separate from your project's future repository.
+```text
+My primary folder is for my project work. The separately attached design-system folder contains the shared guidance.
 
-For example:
+Read its AGENTS.md and use those build and verification rules for this project. Confirm both folder paths. Keep project files and screenshots in my work folder. Run the read-only LIBRARY.md index helper from the design-system checkout. Report missing tools, source-code access and unresolved evidence-recording setup. Do not build in Figma or change repository files yet.
+```
+
+These are real folders on your computer:
 
 ```text
 Code/
-  design-system/             Shared guidance downloaded from GitHub
-  Patient intake prototype/  Your new work; primary folder in Codex
+  design-system/             Shared guidance from GitHub
+  Patient intake prototype/  Your work; primary folder in Codex
 ```
 
-The primary folder determines where new chats start. Codex can read attached reference folders, but does not automatically discover their AGENTS.md instructions, so explicitly ask it to read the builder rules. See [OpenAI's projects documentation](https://learn.chatgpt.com/docs/projects).
+Your work folder holds project files, notes and screenshots. Your designs stay in Figma. Later, you can ask Codex to publish your work folder as its own GitHub repository. The shared design-system clone already has its own repository connection.
 
-```text
-My primary folder is for my new project work. The separately attached
-design-system folder contains the shared builder guidance.
+The primary folder determines where chats start. Explicitly reading the reference folder’s AGENTS.md makes its rules available to the agent. See [OpenAI’s projects documentation](https://learn.chatgpt.com/docs/projects).
 
-Read AGENTS.md and GETTING-STARTED.md from that design-system folder.
-Use its Figma build and verification rules for this project. Confirm
-both folder paths. Keep project files and screenshots in my work folder.
-
-Check Git and Node.js, and run the read-only LIBRARY.md index helper
-from the design-system checkout. Check whether its sibling
-web-app-v2/packages/design-system source is accessible. Report missing
-setup items and where the pilot's evidence will be recorded.
-Do not build in Figma or change repository files yet.
-```
-
-If source-code checks need it and you have access, ask Codex to clone `https://github.com/kareo-engineering/web-app-v2.git` beside the design-system checkout, reusing any existing clone. Attach it as another reference folder. Your work folder stays primary. This Figma exercise does not require running the web app or installing its application dependencies.
-
-**Checkpoint:** Codex identifies two separate folders, reads the builder rules explicitly, and can run the helper from the design-system checkout. It reports missing source access and any unresolved evidence-recording setup.
+**Checkpoint:** Codex confirms both folder paths, reads the builder rules and can run the read helper. Resolve missing tools. Source access and evidence-recording questions should be reported explicitly; see the pilot notes below.
 
 ## 3. Connect Figma to Codex
 
-1. Open **Settings → Plugins** in the desktop app.
-2. Find **Figma**. If it is already installed, leave its toggle enabled. Otherwise, find it in **Browse directory** and install it.
-3. If connection is still needed, complete the Figma sign-in and **Allow access** flow with the work account that has access to the Tebra library and your files.
-4. Return to Codex and confirm the Figma connection is available. Start a new chat in the same local project if the installed tools have not appeared.
+1. Open **Settings → Plugins** in Codex.
+2. Find **Figma**. Leave it enabled if installed; otherwise install it through **Browse directory**.
+3. Complete any sign-in with your work Figma account.
+4. Return to your work-project chat. Start a new chat there if the tools have not appeared.
 
-Use the official Figma plugin for this walkthrough. Figma recommends this installation path for Codex; the plugin supplies the integration and workflow skills. See [Figma's Codex setup steps](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#codex) and [OpenAI's plugin documentation](https://learn.chatgpt.com/docs/plugins).
+Ask Codex: **“Which Figma tools are available here for inspecting files, editing the canvas, importing library assets and capturing screenshots?”**
 
-Ask Codex: **“Which Figma skills and tools are available here? Can you inspect a file, create editable Figma nodes, import published components and variables, and capture screenshots?”** Reading a design or generating code is not enough for this exercise; editing the Figma canvas must be available. This checks available capabilities, not successful execution of a write. [Figma documents how to check installed skills](https://help.figma.com/hc/en-us/articles/39287396773399-Use-skills-with-the-Figma-MCP-server).
+**Checkpoint:** The connection uses your intended account and exposes the required capabilities. A toggle or tool list does not prove a successful build; actual execution is checked later. If editing is unavailable, resolve the connection before building.
 
-**Checkpoint:** Codex reports the relevant skills and read/write/screenshot capabilities. If only reading is available, resolve the connection or workspace restriction before the rebuild. Signing into the Figma website alone does not establish the Codex connection.
+See [Figma’s Codex setup instructions](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#codex) and [OpenAI’s plugin documentation](https://learn.chatgpt.com/docs/plugins).
 
-## 4. Create your destination Figma file
+## 4. Create your own Figma file
 
-1. In Figma, sign into the same work account used for the connection.
-2. Create a **Figma Design** file. You can use [Create a new design file](https://figma.new) and then move it into your team's designated practice folder, or create it directly in that folder. Follow your team's file-location convention.
-3. Rename it **Tebra first rebuild · Your name**.
-4. Create a page called **First rebuild**. Keep the file editable by you.
-5. Copy the file link from **Share** and keep it for the setup check and exercise prompt.
+1. Create a **Figma Design** file in your team’s practice location, using the same work account connected to Codex. [Create a Design file](https://figma.new).
+2. Name it **Tebra first rebuild · Your name**.
+3. Create a page named **First rebuild**.
+4. Copy the file link from **Share**. Keep it for step 6.
 
-**Optional:** If you'd like feedback, post the file link in **#uxhotline** or share it with **Daniel Cole**. Sharing is not required to complete this setup step.
+**Checkpoint:** You can edit your new file and have its link ready. This is your destination; Design System Rebuild is the source library. Sharing your file for feedback is optional and comes at the end.
 
-Figma distinguishes Design files from its other file types; this exercise needs editable Design layers. See [Figma's file-creation instructions](https://help.figma.com/hc/en-us/articles/360038511153-Create-a-new-file).
+## 5. Add the rebuild library (recommended)
 
-**Checkpoint:** You can open and edit your own named file and have its link ready for Codex. Sharing for feedback is optional. This new file is the exercise destination; the library file is the source of components. The shared Proposals file is not the default destination for new participants.
+In your new file:
 
-## 5. Add the Tebra rebuild library (recommended)
+1. Open **Assets → Libraries**.
+2. Find **Design System Rebuild**. Confirm it is [this source library](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw).
+3. Choose **Add to file**. If it appears under **Used in this file**, it is already added.
+4. Close the dialog to browse its assets.
 
-Adding the library makes it easy to browse and use its assets yourself. Codex can import accessible published components through the Figma connection without you completing this manual step. Access and publication are still required; the first build verifies actual imports. The connection's library-discovery tools include libraries available to add, and [Figma's API supports importing published components by key](https://developers.figma.com/docs/plugins/api/figma/#importcomponentbykeyasync).
+This manual step is recommended for browsing and editing in Figma. Codex can import accessible published components without it; library access is still required. The reference test confirmed imports in a fresh file without manually adding the library first.
 
-In **your new file**:
+**Checkpoint:** If added, the library appears under **Used in this file**. If it is missing, check your account and source-file access, then ask Daniel about publication and availability. Codex checks actual imports during the build.
 
-1. Open **Assets** in the left sidebar.
-2. Open **Libraries**. The icon may instead show a tooltip about library updates.
-3. Search for **Design System Rebuild**. Confirm its source is [this library file](https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw), especially if names are duplicated.
-4. Open the library's details and choose **Add to file**. If it appears under **Used in this file**, it is already added.
-5. Close the dialog and confirm you can browse the library's assets, such as Button and Text field. Styles and variables are accessed through their respective property pickers.
-
-A library must be published, and you need view access to its source plus edit access to your destination. Availability also depends on the team's Figma plan. See [Figma's library setup instructions](https://help.figma.com/hc/en-us/articles/1500008731201-Add-or-remove-a-library-from-a-design-file).
-
-**Checkpoint:** If you add it, Design System Rebuild appears under **Used in this file**. Codex still checks published-library access and reports any import problems. If the library is missing, verify your account and source-file access, then ask Daniel to check publication and availability. The deprecated Tebra Working UI Kit is not the source for this exercise.
-
-The screenshot in card 5 uses SDE Alpha Prototypes as an example of a file with the library already added. Follow the instructions in your own new file; no second library screenshot is needed.
+Card 5’s screenshot uses SDE Alpha Prototypes as an example; follow the steps in your own file. See [Figma’s library instructions](https://help.figma.com/hc/en-us/articles/1500008731201-Add-or-remove-a-library-from-a-design-file).
 
 ## 6. Check the setup with Codex
 
-Copy this full prompt from here or directly from FigJam card 6. Paste it into your own work-project chat, replacing the destination placeholder. You do not need to leave FigJam for GitHub to get the prompt.
+In your work-project chat, paste this prompt. Replace the destination placeholder with the file link from step 4, then send it.
 
 ```text
 Check my Tebra Figma setup before building.
 Destination: [paste my new Figma Design file link]
 Source library: https://www.figma.com/design/YX2n4YLrEpBXNbcc73T6dw
 
-Read AGENTS.md from the attached design-system folder. Inspect the
-destination and available published library
-assets without changing either file. Confirm the exact file identities,
-available editing/screenshot capabilities, and required component,
-style, and variable discovery. Report available font evidence and
-anything that still requires an actual import or render to verify.
-Do not claim that permissions, imports, fonts, or screenshots have been
-tested if you have only listed the available tools. Report missing
-access and next steps. Keep the source library unchanged.
+Read AGENTS.md from the attached design-system folder. Inspect the destination and published library without changing either file. Confirm the exact files, available editing and screenshot tools, and discovery of the components, styles and variables needed for the contact-details exercise in FIRST-RUN.md.
+
+Report font availability, missing access and next steps. Distinguish what you inspected from imports, font loading, editing and screenshot delivery that still need testing during the build. Keep the source library unchanged.
 ```
 
-**Checkpoint:** Codex identifies your destination and the correct library and gives a specific result for each check. Actual import, font loading, editability, and screenshot display are verified during the first build. The repository requires any inspection instances created then to be retained in a named inspection area.
+**Ready to rebuild?** Continue when Codex has read the guidance, identified your destination and the correct library, and reported the required tools. Resolve missing access or tools first. Keep any unverified build checks visible.
 
-## 7. Copy the starter image and request a rebuild
+This check is read-only. Actual imports, font loading, editing and screenshot delivery are verified during the first build. Card 6’s screenshot shows an example request; use your own work project and the editable prompt above.
 
-1. In [FigJam card 7](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-79), select **only the starter image**, then copy it.
-2. Paste it into the **First rebuild** page of your own Figma Design file. Rename it **Original · Practice image** and preserve it for comparison. If copying fails, download the [starter PNG](assets/onboarding/contact-details-starter.png) and place it in the file.
+## 7. Copy the image and request a rebuild
+
+1. In [FigJam card 7](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-79), select **only the starter image** and copy it.
+2. Paste it into the **First rebuild** page of your Design file. Rename it **Original · Practice image**. If copying fails, download the [PNG](assets/onboarding/contact-details-starter.png) and place it in the file.
 3. Select the pasted image and copy a link to the selection.
-4. Copy the full rebuild prompt from card 7 into your own Codex work-project chat. Replace **Starter image** with the selection link and **Destination** with your Design file link, then send it. The prompt is also in [FIRST-RUN.md](FIRST-RUN.md).
+4. Paste the full rebuild prompt from card 7 into your work-project chat. Replace **Starter image** with the selection link and **Destination** with your file link. Send it once. The same prompt is in [FIRST-RUN.md](FIRST-RUN.md#2-request-the-rebuild).
 
-This input is a flat, generated practice image with fictional data. Its fields are not editable. Codex rebuilds its content as editable library-based Empty and Filled cards, using tokens, text styles and auto layout. The image's generic colors and dimensions do not override the library.
+The starter is a generated, flat practice image with fictional data. Codex rebuilds its content as editable Empty and Filled cards using the library. Its generic colors and dimensions do not override the design system.
 
-**Checkpoint:** The image is in your file, its selection link opens the correct image, and the rebuild request names your destination. The expected output is editable Empty and Filled cards checked at 640 and 400 px, with the original image retained for comparison and a verified what-changed checklist.
+**Checkpoint:** Wait for Empty and Filled cards at 640 and 400 px, screenshots in chat, a Figma section link and a verified what-changed checklist. If Codex identifies a blocker, resolve its specific question before continuing.
 
-## Ready for the first rebuild
+## 8. Review your rebuild
 
-- [ ] My work folder is primary, the separate design-system folder is attached, and Codex has explicitly read its AGENTS.md.
-- [ ] Git, Node.js, and the builder read helper work; source-code access is confirmed or explicitly recorded as missing.
-- [ ] The Figma plugin is connected to the intended account and exposes the required capabilities.
-- [ ] Your own Figma Design file is editable and its link is ready for Codex.
-- [ ] Codex can discover the published Design System Rebuild library. Adding it manually in Figma is recommended; actual imports are verified during the build.
-- [ ] Font availability is checked as far as possible; loading will be verified during the build.
-- [ ] The supplied starter image has been copied into the file and has a node-specific link.
+1. Open the Figma section Codex links to. Compare the preserved original with Empty and Filled at both widths.
+2. Inspect a field or button: it should be an editable library instance. Check spacing, wrapping and content.
+3. Review the screenshots and the [what-changed checklist](FIRST-RUN.md#3-review-what-changed). Unverified items stay unchecked, with an explanation.
+4. Tell Codex what needs changing. During the pilot, Daniel’s read is required before the next build batch.
 
-Continue with [Your first rebuild](FIRST-RUN.md). It contains the request, Empty/Filled requirements, and the checklist of verified changes.
+Use the [tested reference result](https://www.figma.com/design/dZqYSxEj3scbmRP4IqJGLh?node-id=3-1630) for comparison. The library introduces floating-label fields and a coral save action. The result is a local editable form composition made from library controls. Save, Cancel and the dropdown remain static; this exercise does not implement their behavior.
 
-## Returning later and recording work
+**Optional feedback:** Post your link to **#uxhotline** or share it with **Daniel Cole**. Mention where you needed help and whether screenshots appeared in chat. The agent may draft feedback; it does not send messages on your behalf without your instruction.
 
-Reuse your work project and the separate design-system checkout. Before a new batch, ask Codex to inspect local changes and pull the latest guidance into the design-system folder; existing changes or conflicts must be handled without discarding work. Figma library publishing and accepting updates are separate manual actions, and Codex still checks the capabilities present in your file.
+**Done:** You can identify what became editable, what now follows the library, and what remains unimplemented. Codex retains the verification evidence and reports whether the required commit and push succeeded.
 
-Keep your project files in your work folder. Publishing that folder to its own GitHub repository is a later step; do not publish personal project work to the shared design-system repository. The pilot's evidence-recording destination still needs to be agreed with Daniel when a participant's work folder is not yet a Git repository.
+## Returning later
 
-The current design-system repository workflow records evidence, commits individually named batch files, and pushes to master. A successful clone proves read access, not push access. Confirm the pilot's repository write access with Daniel before a recorded build; if pushing is unavailable, the agent must retain the evidence and report the batch as not fully recorded. Do not silently fork, change branches, or omit the required record to work around missing access.
+Reuse your work project and the separate guidance folder. Before a new batch, ask Codex to inspect local changes and pull the latest guidance without discarding work. Figma library publishing and accepting updates are separate manual actions.
 
-Daniel's review remains required before the next Figma build batch. The pilot still needs to settle wider reviewer ownership and participant access before independent rollout. These setup instructions do not change those repository rules.
+For your next task, supply an existing section or describe a new one. Include its destination, content, widths, states and intended actions. Keep project work in your primary folder.
+
+## Pilot notes for the exercise owner and agent
+
+- The supplied reference build has structural checks and inspected screenshots. Daniel reviewed the result on November 2, 2026. A new-designer trial is still needed: the MCP test uploaded the PNG and did not test the designer’s clipboard flow or fresh-account setup.
+- Cards 1–3, 5 and 6 use real supplied screenshots; card 7 contains the generated input image, and card 8 shows the actual reference result. Only the step 4 setup screenshot remains pending. See [the capture list](SCREENSHOT-CAPTURE-LIST.md).
+- The full builder workflow references source in [web-app-v2](https://github.com/kareo-engineering/web-app-v2). If a check requires it and access is available, Codex can clone it beside design-system and attach it as another reference. It must report unavailable source checks. This exercise does not require running the web app.
+- Agree the pilot’s evidence repository and write access before a recorded build. A successful clone proves read access, not push access. When a work folder is not yet a Git repository, do not silently use the shared design-system repository for personal project files. Retain evidence and report unresolved recording setup.
+- The current builder rules require evidence, a LOG entry, a named-path commit and push on master. If pushing is unavailable, report the batch as not fully recorded. Do not silently fork or change branches. Wider reviewer ownership and participant access remain to be settled.
+- Setup instructions were checked against official documentation on November 2, 2026. This editorial pass does not claim a new-user usability test. [AGENTS.md](AGENTS.md) remains authoritative.

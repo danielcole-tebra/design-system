@@ -1,6 +1,6 @@
 # Real screenshots for the getting-started guide
 
-Capture these from your actual Codex and Tebra Figma setup. The [current FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) includes matching capture IDs in each card.
+Capture these from your actual Codex and Tebra Figma setup. The [current FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) pairs instructions with the supplied images.
 
 Use PNG at native resolution, keep the same window size and theme where practical, and include enough surrounding interface to show where the action happens. Keep the relevant project, file or library name readable. Hide unrelated chats, personal details and authentication secrets. No screenshot of sign-in credentials is needed. Use the filenames below so each capture maps directly to its card.
 
@@ -16,7 +16,7 @@ Use PNG at native resolution, keep the same window size and theme where practica
 
 Cards 1–3, 5 and 6 have supplied screenshots placed. Card 7 contains the generated practice image and the full rebuild prompt. One setup capture target remains: the new Design file (04).
 
-After the practice card is built, capture the original beside the Empty and Filled rebuilds and the real chat response containing the screenshots and verified what-changed checklist. Those are exercise-result images, separate from the setup screenshots above.
+Card 8 now includes the actual Empty and Filled reference rebuild at both widths from runs/2026-11-02-starter-rebuild-test/final-review.png. The editable reference file also preserves the original. No additional result screenshot is needed for this editorial pass. A participant pilot should still verify that screenshots and the checklist appear in the designer’s own chat.
 
 ## First prompt to capture
 
