@@ -1,6 +1,6 @@
 # Set up Codex and Figma
 
-[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1 and 2 include Daniel's real screenshots; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
+[Open the visual FigJam walkthrough](https://www.figma.com/board/uKNQ26ndMmK3c58oIaaBdh?node-id=5-2) for illustrated steps and checkpoints. Cards 1–3 include Daniel's real screenshots; the remaining screenshots are pending. See the [screenshot capture list](SCREENSHOT-CAPTURE-LIST.md) for the exact views to capture.
 
 Start here if this is your first time using the Tebra design system with **Codex in the desktop app**. At the end, Codex will have the building guidance, you will have your own Figma Design file, and that file will have the published Tebra library available.
 
@@ -86,9 +86,9 @@ If source-code checks need it and you have access, ask Codex to clone `https://g
 
 ## 3. Connect Figma to Codex
 
-1. Open **Plugins** in the desktop app.
-2. Find **Figma**, choose its install control, then **Install Figma**.
-3. Complete the Figma sign-in and **Allow access** flow with the work account that has access to the Tebra library and your files.
+1. Open **Settings → Plugins** in the desktop app.
+2. Find **Figma**. If it is already installed, leave its toggle enabled. Otherwise, find it in **Browse directory** and install it.
+3. If connection is still needed, complete the Figma sign-in and **Allow access** flow with the work account that has access to the Tebra library and your files.
 4. Return to Codex and confirm the Figma connection is available. Start a new chat in the same local project if the installed tools have not appeared.
 
 Use the official Figma plugin for this walkthrough. Figma recommends this installation path for Codex; the plugin supplies the integration and workflow skills. See [Figma's Codex setup steps](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#codex) and [OpenAI's plugin documentation](https://learn.chatgpt.com/docs/plugins).

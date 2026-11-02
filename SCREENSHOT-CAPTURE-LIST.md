@@ -8,15 +8,14 @@ Use PNG at native resolution, keep the same window size and theme where practica
 |---|---|---|
 | 01-codex-clone-request.png — supplied | Daniel's actual Codex screenshot with the clone request entered | Accepted as the only image for card 1. The written checkpoint covers confirming the saved location; no second result screenshot is needed |
 | 02-new-project.png — supplied | Daniel's actual Choose project menu in Codex | New project entry. Placed in card 2; the written checkpoint covers attaching both folders and making the work folder primary |
-| 03A-install-figma.png | Figma's plugin page in Codex before installation | Figma name and install control |
-| 03B-figma-connected.png | The same plugin after connection | Installed/connected state; omit private account details. If it was already installed, capture the current state rather than uninstalling it for the guide |
+| 03-figma-enabled.png — supplied | Daniel's actual Settings → Plugins screenshot | Figma installed with its toggle enabled. Placed in card 3; the written checkpoint covers account and tool availability |
 | 04-new-design-file.png | The actual new Figma Design file | Tebra first rebuild · Your name, First rebuild page, and Share control |
 | 05A-add-rebuild-library.png | Libraries dialog in that destination file | Actual Design System Rebuild name and Add to file or enabled state |
 | 05B-rebuild-assets.png | Assets panel after enabling the library | Design System Rebuild assets, including Button and Text field; expand or scroll as needed |
 | 06-setup-check.png | The real setup-check conversation in Codex | The prompt with destination link plus findings. Use 06A-prompt.png and 06B-result.png if one capture would make text unreadable |
 | 07-starter-card.png — later | The supplied starter selected in your Figma file | Original · Practice card and the Layers panel showing editable text and shapes. Wait until the starter exists |
 
-Cards 1 and 2 have supplied screenshots placed. Six setup capture targets remain, with the setup check optionally split into two images. The starter capture is also pending. If installation is already complete, 03A can wait for a fresh-user capture; do not disconnect a working setup.
+Cards 1–3 have supplied screenshots placed. Four setup capture targets remain, with the setup check optionally split into two images. The starter capture is also pending.
 
 After the practice card is built, capture the original beside the Empty and Filled rebuilds and the real chat response containing the screenshots and verified what-changed checklist. Those are exercise-result images, separate from the setup screenshots above.
 

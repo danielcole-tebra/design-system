@@ -4483,3 +4483,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Changed: placed Daniel's New project menu screenshot and caption in the single-column second card. Updated setup instructions and capture status; cards 1 and 2 now supplied.
 - Finding: screenshot shows project creation entry point, not completed folder attachment. Six setup captures and the later starter capture remain.
 - Evidence: runs/2026-11-02-onboarding-second-real-screenshot/REPORT.md, source, creation/audit records and two inspected renders. Confirmed FIT image hash, no overlap/overflow and preserved order. Ready for Daniel's read.
+
+## 2026-11-02 — Supplied screenshot for card 3
+- File: FigJam uKNQ26ndMmK3c58oIaaBdh, card 5:31, image 18:2.
+- Changed: placed Daniel's Settings/Plugins screenshot and enabled-Figma caption. Updated the already-installed path and capture status; cards 1–3 now supplied.
+- Finding: enabled toggle does not verify account identity or canvas operations; written checks remain. Four setup captures and the later starter remain.
+- Evidence: runs/2026-11-02-onboarding-third-real-screenshot/REPORT.md, source, creation/audit records and two inspected renders. FIT image hash confirmed; no overlap/overflow; preserved order. Ready for Daniel's read.
