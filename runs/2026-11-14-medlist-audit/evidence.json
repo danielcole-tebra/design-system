@@ -1,0 +1,1589 @@
+{
+  "date": "2026-11-14",
+  "fileKey": "fu7ncgAnIdjvxxxmQILFzK",
+  "page": "9901:57198",
+  "wiring": {
+    "flowStartingPoints": [],
+    "sections": [
+      {
+        "id": "11212:16597",
+        "name": "2026-11-02 / 01 Chart and medication lists",
+        "frames": [
+          {
+            "id": "11198:3155",
+            "name": "A01 / Current medications / Desktop 1440",
+            "width": 1440,
+            "height": 1631,
+            "instances": 101,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:3411",
+            "name": "A02 / Medication history / Desktop 1440",
+            "width": 1440,
+            "height": 1515,
+            "instances": 101,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:4158",
+            "name": "A03 / Two medications selected / Desktop 1440",
+            "width": 1440,
+            "height": 1685,
+            "instances": 107,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:4938",
+            "name": "A04 / No search results / Desktop 1440",
+            "width": 1440,
+            "height": 1002,
+            "instances": 24,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:5206",
+            "name": "A05 / Send failure filter / Desktop 1440",
+            "width": 1440,
+            "height": 1002,
+            "instances": 46,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:5537",
+            "name": "A06 / Clinical timeline expanded / Desktop 1440",
+            "width": 1440,
+            "height": 1779,
+            "instances": 101,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:6872",
+            "name": "A07 / Second medication page / Desktop 1440",
+            "width": 1440,
+            "height": 1002,
+            "instances": 57,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:7236",
+            "name": "A08 / Patient facesheet / Desktop 1440",
+            "width": 1440,
+            "height": 1035,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:7399",
+            "name": "A09 / Table settings / Desktop 1440",
+            "width": 1440,
+            "height": 789,
+            "instances": 21,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:7525",
+            "name": "A10 / Allergies and intolerances / Desktop 1440",
+            "width": 1440,
+            "height": 611,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:7603",
+            "name": "A11 / Restricted chart information / Desktop 1440",
+            "width": 1440,
+            "height": 423,
+            "instances": 3,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:7654",
+            "name": "A12 / Medication overflow actions / Desktop 1440",
+            "width": 1440,
+            "height": 633,
+            "instances": 18,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16610",
+        "name": "2026-11-02 / 02 Medication reconciliation",
+        "frames": [
+          {
+            "id": "11199:7734",
+            "name": "B01 / Review not started / Desktop 1440",
+            "width": 1440,
+            "height": 1631,
+            "instances": 101,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:8493",
+            "name": "B02 / Partial review / Desktop 1440",
+            "width": 1440,
+            "height": 1631,
+            "instances": 101,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:9258",
+            "name": "B03 / All medications reviewed / Desktop 1440",
+            "width": 1440,
+            "height": 1631,
+            "instances": 101,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:10047",
+            "name": "B04 / Completion blocked by remaining medications / Desktop 1440",
+            "width": 1440,
+            "height": 597,
+            "instances": 10,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:10134",
+            "name": "B05 / Confirm completed reconciliation / Desktop 1440",
+            "width": 1440,
+            "height": 537,
+            "instances": 10,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:10220",
+            "name": "B06 / Completion confirmation checked / Desktop 1440",
+            "width": 1440,
+            "height": 537,
+            "instances": 10,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:10308",
+            "name": "B07 / Completed with dated provider confirmation / Desktop 1440",
+            "width": 1440,
+            "height": 1631,
+            "instances": 97,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:11081",
+            "name": "B08 / Reopened with switches reset and previous timestamp / Desktop 1440",
+            "width": 1440,
+            "height": 1705,
+            "instances": 101,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:11840",
+            "name": "B09 / Document reconciliation exception / Desktop 1440",
+            "width": 1440,
+            "height": 635,
+            "instances": 10,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:11943",
+            "name": "B10 / Exception reason entered / Desktop 1440",
+            "width": 1440,
+            "height": 635,
+            "instances": 10,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:12047",
+            "name": "B11 / Exception recorded / Desktop 1440",
+            "width": 1440,
+            "height": 1631,
+            "instances": 101,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:12806",
+            "name": "B12 / Empty current list remains unconfirmed / Desktop 1440",
+            "width": 1440,
+            "height": 1002,
+            "instances": 28,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:13071",
+            "name": "B13 / No medication records remains unconfirmed / Desktop 1440",
+            "width": 1440,
+            "height": 1002,
+            "instances": 28,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:13336",
+            "name": "B14 / No known medications explicitly confirmed / Desktop 1440",
+            "width": 1440,
+            "height": 1002,
+            "instances": 28,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:13603",
+            "name": "B15 / Review or correct No known medications / Desktop 1440",
+            "width": 1440,
+            "height": 463,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:13663",
+            "name": "B16 / Prior No known medications confirmation / Desktop 1440",
+            "width": 1440,
+            "height": 483,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:13727",
+            "name": "B17 / No known medications confirmation cleared / Desktop 1440",
+            "width": 1440,
+            "height": 1002,
+            "instances": 28,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:13994",
+            "name": "B18 / Record patient-reported use / Desktop 1440",
+            "width": 1440,
+            "height": 615,
+            "instances": 10,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16629",
+        "name": "2026-11-02 / 03 Medication records and actions",
+        "frames": [
+          {
+            "id": "11199:14098",
+            "name": "C01 / View signed prescription / Desktop 1440",
+            "width": 1440,
+            "height": 963,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:14199",
+            "name": "C02 / Medication audit history / Desktop 1440",
+            "width": 1440,
+            "height": 875,
+            "instances": 3,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:14275",
+            "name": "C03 / Add medication to chart / Desktop 1440",
+            "width": 1440,
+            "height": 1507,
+            "instances": 41,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:14625",
+            "name": "C04 / Add medication as discontinued / Desktop 1440",
+            "width": 1440,
+            "height": 1507,
+            "instances": 41,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:14972",
+            "name": "C05 / Discontinue current medication / Desktop 1440",
+            "width": 1440,
+            "height": 583,
+            "instances": 8,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:15054",
+            "name": "C06 / Discontinue multiple medications / Desktop 1440",
+            "width": 1440,
+            "height": 583,
+            "instances": 8,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:15135",
+            "name": "C07 / Request pharmacy cancellation / Desktop 1440",
+            "width": 1440,
+            "height": 483,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:15193",
+            "name": "C08 / Mark chart entry as error / Desktop 1440",
+            "width": 1440,
+            "height": 583,
+            "instances": 8,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:15273",
+            "name": "C09 / Reactivate historical chart medication / Desktop 1440",
+            "width": 1440,
+            "height": 583,
+            "instances": 8,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:15354",
+            "name": "C10 / Medication note / Desktop 1440",
+            "width": 1440,
+            "height": 543,
+            "instances": 11,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:15443",
+            "name": "C11 / Print active medication summary / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 3334,
+            "instances": 87,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:15769",
+            "name": "C12 / Rx Saver coupon / Desktop 1440",
+            "width": 1440,
+            "height": 691,
+            "instances": 14,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:15895",
+            "name": "C13 / Related encounter context / Desktop 1440",
+            "width": 1440,
+            "height": 647,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16643",
+        "name": "2026-11-02 / 04 Delivery and patient information",
+        "frames": [
+          {
+            "id": "11199:15972",
+            "name": "D01 / Filled prescription status / Desktop 1440",
+            "width": 1440,
+            "height": 849,
+            "instances": 3,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16042",
+            "name": "D02 / Pending fill prescription status / Desktop 1440",
+            "width": 1440,
+            "height": 849,
+            "instances": 3,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16112",
+            "name": "D03 / Failed send status / Desktop 1440",
+            "width": 1440,
+            "height": 849,
+            "instances": 3,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16183",
+            "name": "D04 / Provide pharmacy-requested patient information / Desktop 1440",
+            "width": 1440,
+            "height": 757,
+            "instances": 13,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16285",
+            "name": "D05 / Verified patient information ready to send / Desktop 1440",
+            "width": 1440,
+            "height": 757,
+            "instances": 13,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16388",
+            "name": "D06 / Patient information submitted / Desktop 1440",
+            "width": 1440,
+            "height": 595,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16461",
+            "name": "D07 / Patient information received / Desktop 1440",
+            "width": 1440,
+            "height": 595,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16533",
+            "name": "D08 / Patient information send failed / Desktop 1440",
+            "width": 1440,
+            "height": 809,
+            "instances": 13,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16636",
+            "name": "D09 / Cancellation awaiting pharmacy response / Desktop 1440",
+            "width": 1440,
+            "height": 1121,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16653",
+        "name": "2026-11-02 / 05 Surescripts medication import",
+        "frames": [
+          {
+            "id": "11199:16723",
+            "name": "E01 / Patient consent acknowledgment / Desktop 1440",
+            "width": 1440,
+            "height": 761,
+            "instances": 13,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16806",
+            "name": "E02 / Consent acknowledged / Desktop 1440",
+            "width": 1440,
+            "height": 761,
+            "instances": 13,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16890",
+            "name": "E03 / Consent declined / Desktop 1440",
+            "width": 1440,
+            "height": 761,
+            "instances": 13,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:16975",
+            "name": "E04 / Review external medication history / Desktop 1440",
+            "width": 1440,
+            "height": 1299.73828125,
+            "instances": 62,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:17302",
+            "name": "E05 / Select external medications and destinations / Desktop 1440",
+            "width": 1440,
+            "height": 1299.73828125,
+            "instances": 62,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16659",
+        "name": "2026-11-02 / 06 Prescribing and order review",
+        "frames": [
+          {
+            "id": "11192:3855",
+            "name": "F01 / New standard prescription / Desktop 1440",
+            "width": 1440,
+            "height": 1275,
+            "instances": 49,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11192:4275",
+            "name": "F02 / Standard prescription details / Desktop 1440",
+            "width": 1440,
+            "height": 1437,
+            "instances": 55,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11192:4706",
+            "name": "F03 / Compound prescription / Desktop 1440",
+            "width": 1440,
+            "height": 1515,
+            "instances": 68,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:17630",
+            "name": "F04 / Clinic administration destination / Desktop 1440",
+            "width": 1440,
+            "height": 1437,
+            "instances": 55,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:18061",
+            "name": "F05 / Multiple prescriptions in queue / Desktop 1440",
+            "width": 1440,
+            "height": 1483,
+            "instances": 67,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:18523",
+            "name": "F06 / Order summary / Desktop 1440",
+            "width": 1440,
+            "height": 1162,
+            "instances": 49,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:19282",
+            "name": "F08 / Prescription preview / Desktop 1440",
+            "width": 1440,
+            "height": 1421,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:19423",
+            "name": "F09 / Prescription preview with Key Question / Desktop 1440",
+            "width": 1440,
+            "height": 1643,
+            "instances": 15,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:19583",
+            "name": "F10 / Assistant prepares prescription / Desktop 1440",
+            "width": 1440,
+            "height": 1437,
+            "instances": 55,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11199:20014",
+            "name": "F11 / Assistant order summary / Desktop 1440",
+            "width": 1440,
+            "height": 1152,
+            "instances": 49,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16670",
+        "name": "2026-11-02 / 07 Edit and renew medications",
+        "frames": [
+          {
+            "id": "11200:10965",
+            "name": "G01 / Edit prescription - unchanged / Desktop 1440",
+            "width": 1440,
+            "height": 1323,
+            "instances": 46,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:11382",
+            "name": "G02 / Edit prescription - changed / Desktop 1440",
+            "width": 1440,
+            "height": 1323,
+            "instances": 46,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:11794",
+            "name": "G03 / Review replacement prescription / Desktop 1440",
+            "width": 1440,
+            "height": 667,
+            "instances": 7,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:11868",
+            "name": "G04 / Edit chart-only medication / Desktop 1440",
+            "width": 1440,
+            "height": 1323,
+            "instances": 49,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:12286",
+            "name": "G05 / Bulk medication editing / Desktop 1440",
+            "width": 1440,
+            "height": 1411,
+            "instances": 52,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:12715",
+            "name": "G06 / Renew a prescription / Desktop 1440",
+            "width": 1440,
+            "height": 1339,
+            "instances": 48,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:13155",
+            "name": "G07 / Bulk prescription renewal / Desktop 1440",
+            "width": 1440,
+            "height": 1417,
+            "instances": 54,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:13611",
+            "name": "G08 / Compound prescription renewal / Desktop 1440",
+            "width": 1440,
+            "height": 1695,
+            "instances": 67,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:14241",
+            "name": "G09 / Discard renewal changes / Desktop 1440",
+            "width": 1440,
+            "height": 443,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:14301",
+            "name": "G10 / Assistant renewal preparation / Desktop 1440",
+            "width": 1440,
+            "height": 1359,
+            "instances": 48,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:14738",
+            "name": "G11 / Delegated medication queue / Desktop 1440",
+            "width": 1440,
+            "height": 467,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16682",
+        "name": "2026-11-02 / 08 eRx requests and Prior Authorization",
+        "frames": [
+          {
+            "id": "11200:14799",
+            "name": "H01 / Renewal requests / Desktop 1440",
+            "width": 1440,
+            "height": 1036,
+            "instances": 103,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:15229",
+            "name": "H02 / Prescription change requests / Desktop 1440",
+            "width": 1440,
+            "height": 860,
+            "instances": 63,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:15549",
+            "name": "H03 / Cancellation requests / Desktop 1440",
+            "width": 1440,
+            "height": 860,
+            "instances": 40,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:15782",
+            "name": "H04 / Pending delegated orders / Desktop 1440",
+            "width": 1440,
+            "height": 860,
+            "instances": 30,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:15983",
+            "name": "H05 / Delivery failures / Desktop 1440",
+            "width": 1440,
+            "height": 860,
+            "instances": 30,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:16184",
+            "name": "H06 / Prior Authorization queue / Desktop 1440",
+            "width": 1440,
+            "height": 860,
+            "instances": 56,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:16479",
+            "name": "H07 / Review renewal request / Desktop 1440",
+            "width": 1440,
+            "height": 785,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:16572",
+            "name": "H08 / Review prescription change / Desktop 1440",
+            "width": 1440,
+            "height": 785,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:16665",
+            "name": "H09 / Review cancellation request / Desktop 1440",
+            "width": 1440,
+            "height": 785,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:16759",
+            "name": "H11 / Prior Authorization - awaiting provider / Desktop 1440",
+            "width": 1440,
+            "height": 923,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:16852",
+            "name": "H12 / Prior Authorization - awaiting payer / Desktop 1440",
+            "width": 1440,
+            "height": 939,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:16939",
+            "name": "H13 / Prior Authorization - approved / Desktop 1440",
+            "width": 1440,
+            "height": 1059,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:17038",
+            "name": "H14 / Prior Authorization - closed / Desktop 1440",
+            "width": 1440,
+            "height": 955,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:17126",
+            "name": "H15 / Prior Authorization - expired / Desktop 1440",
+            "width": 1440,
+            "height": 939,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:17308",
+            "name": "H16 / Secure payer question set / Desktop 1440",
+            "width": 1440,
+            "height": 1071,
+            "instances": 20,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:17434",
+            "name": "H17 / Secure payer session expired / Desktop 1440",
+            "width": 1440,
+            "height": 567,
+            "instances": 9,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:17510",
+            "name": "H18 / eRx queue with no matching requests / Desktop 1440",
+            "width": 1440,
+            "height": 860,
+            "instances": 36,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:17219",
+            "name": "H19 / Prior Authorization - error / Desktop 1440",
+            "width": 1440,
+            "height": 939,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:19020",
+            "name": "H20 / Pending orders prepared for prescriber review / Desktop 1440",
+            "width": 1440,
+            "height": 860,
+            "instances": 37,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:19248",
+            "name": "H21 / Prescriber reviews a delegated prescription / Desktop 1440",
+            "width": 1440,
+            "height": 1287,
+            "instances": 55,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16703",
+        "name": "2026-11-02 / 09 Practice prescription settings",
+        "frames": [
+          {
+            "id": "11200:17727",
+            "name": "I01 / Touchless Prior Authorization prescriber settings / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 1828,
+            "instances": 56,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:18100",
+            "name": "I02 / Enable all prescribers confirmation / Desktop 1440",
+            "width": 1440,
+            "height": 503,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:18159",
+            "name": "I03 / Disable all prescribers confirmation / Desktop 1440",
+            "width": 1440,
+            "height": 523,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:18348",
+            "name": "I04 / Individual prescriber preferences / Desktop 1440",
+            "width": 1440,
+            "height": 925,
+            "instances": 4,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:18467",
+            "name": "I05 / Practice settings - clinical assistant access / Desktop 1440",
+            "width": 1440,
+            "height": 860,
+            "instances": 0,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16709",
+        "name": "2026-11-02 / 10 Ordering v2",
+        "frames": [
+          {
+            "id": "11200:18219",
+            "name": "J01 / Ordering v2 medication list / Desktop 1440",
+            "width": 1440,
+            "height": 1572.991943359375,
+            "instances": 88,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:18615",
+            "name": "J02 / Ordering v2 prescription form / Desktop 1440",
+            "width": 1440,
+            "height": 1184.0517578125,
+            "instances": 53,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11200:19027",
+            "name": "J03 / Ordering v2 patient facesheet / Desktop 1440",
+            "width": 1440,
+            "height": 960,
+            "instances": 6,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:18562",
+            "name": "J04 / Drug monograph and dosage calculator / Desktop 1440",
+            "width": 1440,
+            "height": 1261,
+            "instances": 56,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:19636",
+            "name": "J05 / Configured dosage calculator / Desktop 1440",
+            "width": 1440,
+            "height": 1723,
+            "instances": 69,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16715",
+        "name": "2026-11-02 / 11 AI note and medications to review",
+        "frames": [
+          {
+            "id": "11206:15804",
+            "name": "N01 / AI Note Assist - before listening / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 3477,
+            "instances": 86,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11206:16333",
+            "name": "N02 / AI Note Assist - listening / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 3541,
+            "instances": 89,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11206:16863",
+            "name": "N03 / AI Note Assist - transcribing / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 3541,
+            "instances": 89,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11206:17971",
+            "name": "N05 / Medications to review - missing details / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 2319.77880859375,
+            "instances": 177,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11206:18547",
+            "name": "N06 / Medications to review - full editing / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 2725.77880859375,
+            "instances": 190,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:15792",
+            "name": "N07 / Medications to review - unresolved details after save / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 2722,
+            "instances": 190,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:16532",
+            "name": "N08 / Medications to review - selected prescriptions / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 2358,
+            "instances": 180,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:17133",
+            "name": "N09 / Medications to review - prescriptions sent / Desktop 1440 / Full content",
+            "width": 1440,
+            "height": 2476,
+            "instances": 171,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:17718",
+            "name": "N10 / Find a pharmacy / Desktop 1440",
+            "width": 1440,
+            "height": 1642,
+            "instances": 111,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11208:18148",
+            "name": "N11 / Find a pharmacy - no results / Desktop 1440",
+            "width": 1440,
+            "height": 712,
+            "instances": 31,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      },
+      {
+        "id": "11212:16726",
+        "name": "2026-11-02 / 12 Mobile medication views",
+        "frames": [
+          {
+            "id": "11137:583",
+            "name": "P01 / Current medications / Phone / Phone 390 / Full content",
+            "width": 390,
+            "height": 2175,
+            "instances": 42,
+            "reactionNodes": 0,
+            "reactions": []
+          },
+          {
+            "id": "11140:618",
+            "name": "P02 / Clinical timeline expanded / Phone / Phone 390 / Full content",
+            "width": 390,
+            "height": 2755,
+            "instances": 66,
+            "reactionNodes": 0,
+            "reactions": []
+          }
+        ]
+      }
+    ]
+  },
+  "baseline": {
+    "instances": 101,
+    "instanceNames": [
+      {
+        "name": "Current medications",
+        "count": 1,
+        "exampleId": "11198:3272"
+      },
+      {
+        "name": "Medication history",
+        "count": 1,
+        "exampleId": "11198:3273"
+      },
+      {
+        "name": "Import from Surescripts",
+        "count": 1,
+        "exampleId": "11198:3274"
+      },
+      {
+        "name": "Start icon",
+        "count": 14,
+        "exampleId": "I11198:3274;78:3"
+      },
+      {
+        "name": "End icon",
+        "count": 14,
+        "exampleId": "I11198:3274;78:5"
+      },
+      {
+        "name": "Show medications",
+        "count": 1,
+        "exampleId": "11198:3277"
+      },
+      {
+        "name": "Select caret",
+        "count": 2,
+        "exampleId": "I11198:3277;130:169"
+      },
+      {
+        "name": "Order status",
+        "count": 1,
+        "exampleId": "11198:3278"
+      },
+      {
+        "name": "+ Add To Med List",
+        "count": 1,
+        "exampleId": "11198:3285"
+      },
+      {
+        "name": "+ Prescribe Medications",
+        "count": 1,
+        "exampleId": "11198:3286"
+      },
+      {
+        "name": "Not reviewed",
+        "count": 1,
+        "exampleId": "11198:3907"
+      },
+      {
+        "name": "Complete reconciliation",
+        "count": 1,
+        "exampleId": "11198:3912"
+      },
+      {
+        "name": "Checkbox / unchecked",
+        "count": 11,
+        "exampleId": "11198:3299"
+      },
+      {
+        "name": "Glyph",
+        "count": 11,
+        "exampleId": "I11198:3299;136:4"
+      },
+      {
+        "name": "Medication / Alprazolam 0.25 mg tablet",
+        "count": 1,
+        "exampleId": "11198:3315"
+      },
+      {
+        "name": "Medication status icon / Filled",
+        "count": 2,
+        "exampleId": "I11198:3315;11144:1195"
+      },
+      {
+        "name": "Switch / Not reviewed",
+        "count": 10,
+        "exampleId": "I11198:3315;11144:1169"
+      },
+      {
+        "name": "Edit",
+        "count": 10,
+        "exampleId": "I11198:3315;11144:1172"
+      },
+      {
+        "name": "Medication / Cetirizine 10 mg tablet",
+        "count": 1,
+        "exampleId": "11198:3316"
+      },
+      {
+        "name": "Medication status icon / Pending",
+        "count": 6,
+        "exampleId": "I11198:3316;11144:1195"
+      },
+      {
+        "name": "Medication / Aspirin 81 mg delayed-release tablet",
+        "count": 1,
+        "exampleId": "11198:3317"
+      },
+      {
+        "name": "Medication / Doxycycline hyclate 100 mg capsule",
+        "count": 1,
+        "exampleId": "11198:3318"
+      },
+      {
+        "name": "Medication / Furosemide 20 mg tablet",
+        "count": 1,
+        "exampleId": "11198:3319"
+      },
+      {
+        "name": "Medication / Hydrocortisone 1% compounded cream",
+        "count": 1,
+        "exampleId": "11198:3320"
+      },
+      {
+        "name": "Medication / Melatonin 3 mg tablet",
+        "count": 1,
+        "exampleId": "11198:3321"
+      },
+      {
+        "name": "Medication status icon / Attention",
+        "count": 2,
+        "exampleId": "I11198:3321;11144:1195"
+      },
+      {
+        "name": "Medication / Metformin 500 mg tablet",
+        "count": 1,
+        "exampleId": "11198:3322"
+      },
+      {
+        "name": "Medication / Simvastatin 20 mg tablet",
+        "count": 1,
+        "exampleId": "11198:3323"
+      },
+      {
+        "name": "Medication / Acetaminophen 500 mg tablet",
+        "count": 1,
+        "exampleId": "11198:3324"
+      }
+    ],
+    "textCount": 213,
+    "textWithStyle": 147,
+    "textWithBindings": 209,
+    "fontFamilies": [
+      "Akkurat LL",
+      "mixed"
+    ],
+    "selectedTexts": [
+      {
+        "id": "11198:3270",
+        "text": "Medications List",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 32,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 48
+        },
+        "style": "S:1e9b11b7ed71f1a217d8e2947a8dcf85d145b9f6,116:18",
+        "boundVariables": {
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+            }
+          ],
+          "lineHeight": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5252d53e128390c438a474ddfc31d182165b9434/74:243"
+            }
+          ],
+          "fontFamily": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+            }
+          ],
+          "fontSize": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:a06698bbf5c1e7723a594d620c8f91b679958ba6/74:227"
+            }
+          ]
+        }
+      },
+      {
+        "id": "I11198:3912;78:4",
+        "text": "Complete reconciliation",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "boundVariables": {
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:dedc1a77d282f7a6f23fed99e34e2d6e4d0ebd46/74:68"
+            }
+          ],
+          "lineHeight": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+            }
+          ],
+          "fontFamily": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+            }
+          ],
+          "fontSize": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+            }
+          ]
+        }
+      },
+      {
+        "id": "11198:3301",
+        "text": "Medication",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "S:2ede1d5b604b7eacc72152b001bef5c2b7182c33,116:62",
+        "boundVariables": {
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+            }
+          ],
+          "lineHeight": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+            }
+          ],
+          "fontFamily": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+            }
+          ],
+          "fontSize": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flowCopy": [
+    {
+      "id": "11199:10134",
+      "name": "B05 / Confirm completed reconciliation / Desktop 1440",
+      "text": [
+        "Randalls Pediatrics",
+        "Start typing a patient name or DOB",
+        "1",
+        "Jane Doe",
+        "Complete medication reconciliation",
+        "All 12 current medications are reviewed. Confirm the list below to complete reconciliation.",
+        "Outcome",
+        " *",
+        "Performed",
+        "",
+        "Text underneath the input",
+        "I confirmed the current list and addressed medication discrepancies.",
+        "Cancel",
+        "Complete reconciliation"
+      ]
+    },
+    {
+      "id": "11199:13336",
+      "name": "B14 / No known medications explicitly confirmed / Desktop 1440",
+      "text": [
+        "Randalls Pediatrics",
+        "Start typing a patient name or DOB",
+        "1",
+        "Jane Doe",
+        "Restricted",
+        "Legal Name: Jane Doe",
+        "·",
+        "Gender: Female",
+        "Sex assigned at birth: Female",
+        "DOB: 02/04/1990 (36 y/o)",
+        "Allergies",
+        "Penicillin (severe) · Zofran · Nutracort · Nutriltye II · Nutropin",
+        "View all (8)",
+        "Patient Alert: 1 alert on file",
+        "More",
+        "Collect Payment ($151)",
+        "Print",
+        "Prescribe",
+        "AI Note Assist",
+        "New Note",
+        "Facesheet",
+        "History",
+        "Problems",
+        "Medications",
+        "Immunizations",
+        "Vitals",
+        "Notes",
+        "Demographics",
+        "Labs/Studies",
+        "Recall",
+        "Medications List",
+        "Current medications (0)",
+        "Medication history (16)",
+        "Import from Surescripts",
+        "Show medications",
+        " *",
+        "All active medications (0)",
+        "",
+        "Text underneath the input",
+        "Order status",
+        "All order statuses (0)",
+        "Search for drug or pharmacy",
+        "Add To Med List",
+        "Prescribe Medications",
+        "Medication reconciliation",
+        "No known medications confirmed",
+        "Last reconciled Nov 2, 2026, 1:59 PM PST by Olivia Chen, MD.",
+        "Confirmed for this review and recorded in the patient's chart. Review or correct if medication use changes.",
+        "Review or correct",
+        "No known medications",
+        "This has been explicitly confirmed in the patient's chart. Add a medication if their medication use changes.",
+        "Rows per page:",
+        "10",
+        "10, 25, or 50 matching records per page. Sorting precedes pagination.",
+        "0 of 0",
+        "‹",
+        "›"
+      ]
+    },
+    {
+      "id": "11199:15135",
+      "name": "C07 / Request pharmacy cancellation / Desktop 1440",
+      "text": [
+        "Randalls Pediatrics",
+        "Start typing a patient name or DOB",
+        "1",
+        "Jane Doe",
+        "Send cancellation request?",
+        "Cetirizine 10 mg tablet",
+        "Do you want to send a cancellation request to the pharmacy for this prescription? The prescription remains active until the pharmacy confirms cancellation.",
+        "Cancel",
+        "Send cancellation request"
+      ]
+    },
+    {
+      "id": "11199:17302",
+      "name": "E05 / Select external medications and destinations / Desktop 1440",
+      "text": [
+        "Randalls Pediatrics",
+        "Start typing a patient name or DOB",
+        "1",
+        "Jane Doe",
+        "Review Surescripts medications",
+        "Acknowledgment valid until 11/4/2026, 1:59:38 PM (48 hours).",
+        "Refresh",
+        "Select the medications to add and choose where each belongs. Current medications also appear in medication history.",
+        "Select",
+        "Medication",
+        "Last prescribed",
+        "External provider",
+        "Add to",
+        "Losartan 50 mg tablet Directions and quantity not provided in this demo report",
+        "Sep 3, 2026",
+        "Jordan Lee, MD",
+        "Add Losartan 50 mg tablet to Choose list Current medications History only",
+        "Value",
+        " *",
+        "Choose list",
+        "",
+        "Text underneath the input",
+        "Amlodipine 5 mg tablet Directions and quantity not provided in this demo report",
+        "Jul 20, 2026",
+        "Add Amlodipine 5 mg tablet to Choose list Current medications History only",
+        "Atorvastatin 20 mg tablet Directions and quantity not provided in this demo report",
+        "Jun 11, 2026",
+        "Morgan Rivera, MD",
+        "Add Atorvastatin 20 mg tablet to Choose list Current medications History only",
+        "Cetirizine 10 mg tablet Directions and quantity not provided in this demo report Similar medication already in the chart. Review before adding.",
+        "May 8, 2026",
+        "Add Cetirizine 10 mg tablet to Choose list Current medications History only",
+        "Omeprazole 20 mg capsule Directions and quantity not provided in this demo report Similar medication already in the chart. Review before adding.",
+        "Mar 19, 2026",
+        "Add Omeprazole 20 mg capsule to Choose list Current medications History only",
+        "Levothyroxine 50 mcg tablet Directions and quantity not provided in this demo report Similar medication already in the chart. Review before adding.",
+        "Not recorded",
+        "Provider not recorded",
+        "Add Levothyroxine 50 mcg tablet to Choose list Current medications History only",
+        "Cancel",
+        "Add selected medications"
+      ]
+    }
+  ],
+  "provenanceLimitation": "getMainComponentAsync rejected as a modification in read-only mode; did not import or change components."
+}

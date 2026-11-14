@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "kind": "read-only-scope-audit",
+  "date": "2026-11-14",
+  "fileKey": "fu7ncgAnIdjvxxxmQILFzK",
+  "sessionId": "885b0c38-9b5e-4578-b945-1d238c2a374b",
+  "page": "9901:57198",
+  "timing": {
+    "start": null,
+    "firstImageReturn": null,
+    "firstImageSaved": "2026-11-14T17:22:00Z",
+    "screenshotsInspectedBy": "2026-11-14T17:23:49Z",
+    "construction": null,
+    "totalElapsedSeconds": null
+  },
+  "counts": {
+    "indexedStates": 120,
+    "coreStates": 57,
+    "medlistDesktopStates": 66,
+    "medlistMobileStates": 2,
+    "excludedReviewStates": 10,
+    "adjacentStates": 42,
+    "reactionBearingNodes": 0,
+    "pageFlowStartingPoints": 0
+  },
+  "createdFigmaNodes": [],
+  "modifiedFigmaNodes": [],
+  "screenshots": [
+    "a01-current.png",
+    "b05-reconciliation.png",
+    "e05-import.png"
+  ],
+  "notes": [
+    "Not a benchmark; no construction timestamps invented.",
+    "All three screenshots visually inspected.",
+    "Main-component resolution rejected in read-only mode; no import or mutation bypass.",
+    "Working scope is recommended, not a recorded Daniel approval."
+  ],
+  "titleEvidence": {
+    "id": "11199:10175",
+    "font": "Akkurat LL Bold",
+    "fontSize": 24,
+    "lineHeight": 36
+  },
+  "localSources": [
+    {
+      "id": "11144:1181",
+      "name": "Medication row / Desktop"
+    },
+    {
+      "id": "11148:2222",
+      "name": "Medication row / Desktop / History"
+    },
+    {
+      "id": "11142:726",
+      "name": "Medication card / Phone / Collapsed"
+    },
+    {
+      "id": "11142:813",
+      "name": "Medication card / Phone / Expanded"
+    }
+  ]
+}
