@@ -4577,3 +4577,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Restore working screen to original page
 - File: yh2F6OUgdI6K0risLtKLEQ. Restored working screen 2:1811 to 01 Current medications at its original position. The comparison page now holds a matching editable copy 23:881, with explicit refresh instructions and a link to the working screen.
 - Evidence: runs/2026-11-14-medlist-page-correction/REPORT.md, record.json, working-screen.png, comparison.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-row-review -->
+## 2026-11-14 — Medlist · Individual row density review
+- File: yh2F6OUgdI6K0risLtKLEQ. Created an isolated before/after row study on the original working page. Compact proposal reduces the first row from 143 to 81 px while retaining all visible source text and unchanged column widths. Working screen and running full-page comparison remain unchanged pending row review.
+- Evidence: runs/2026-11-14-medlist-row-review/REPORT.md, record.json, row-review.png.

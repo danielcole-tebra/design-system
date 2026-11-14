@@ -50,6 +50,12 @@ All unresolved rows below are **DECISION**, owned by Daniel, scoped to this medl
 
 ## What the audit can and cannot claim
 
+### Individual row review · 2026-11-14
+
+Daniel identified odd spacing and text volume. [Isolated row study](https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=28-882) on the original page compares the current first row with a compact proposal, plus compound, patient-reported/send-failed and patient-info-required cases. Owner: Daniel; scope: medlist rows; type: DECISION; status: proposal, not approved or applied. Evidence: `../2026-11-14-medlist-row-review/REPORT.md`.
+
+Proposed changes: vertical cell inset 16 → 8, related gaps 8 → 4, supporting metadata 12/16, and existing timeline control alongside actions. Names and directions stay 14/20. Exact visible copy and existing column widths are preserved. First row falls from 143 to 81 px; original A01 was 105 px with smaller directions text. Compound case is 109 px, patient-reported case 101 px, and patient-info-required case 81 px. No disclosure flow was created; deciding whether phone/prescribing-source details should move into expanded details remains open. Working screen and full-page comparison remain unchanged. This proposal does not approve other recorded composition changes.
+
 The live screen inventory contains 706 editable descendants, including 203 instances, 185 frames, 96 vectors, 221 text nodes and one rectangle; zero image-filled nodes and zero unresolved instance masters. Native descendants are distinguishable from the local header mirror and the four unapproved local composition families (toolbar, reconciliation, row, order/pharmacy). Source medication copy was verified in the preceding batch and was not changed here.
 
 The initial statement that a fully verified screen was ready overstated a primitive audit. The current conclusion is: **the requested header is now source-derived and verified; additional authored compositions remain explicitly unapproved and documented, per Daniel's instruction.**
