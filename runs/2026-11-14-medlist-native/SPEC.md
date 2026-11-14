@@ -1,5 +1,7 @@
 # Medlist native rebuild · batch 1
 
+**Historical first-batch spec. Composition claims are superseded by [the current provenance register](../2026-11-14-medlist-sde-correction/SPEC.md), following Daniel's 2026-11-14 correction. Primitive verification was not composition approval.**
+
 Owner/reviewer: Daniel Cole. Builder: Codex. Evidence date: 2026-11-14.
 File: yh2F6OUgdI6K0risLtKLEQ (Tebra organization).
 

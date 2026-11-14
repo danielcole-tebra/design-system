@@ -4559,3 +4559,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist native rebuild · Current medications · Batch 1
 - File: yh2F6OUgdI6K0risLtKLEQ. Created the new Tebra-owned Design file and first Current medications screen (1440 × 1833), connected to Design System Rebuild. Five reusable local component families, with four order-status variants and exposed nested controls. Static review batch; remaining flows await Daniel's visual read per AGENTS.md.
 - Evidence: runs/2026-11-14-medlist-native/REPORT.md, record.json, current-medications.png, local-components.png, inspection-retained.png, first-screen.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-sde-correction -->
+## 2026-11-14 — Medlist · SDE header correction and provenance review
+- File: yh2F6OUgdI6K0risLtKLEQ. Replaced the invented patient header with a faithful local mirror of the exact SDE Updated 11/13 reference. The source master is not cross-file importable. All 34 mirrored nodes match the compared source structure/presentation; the actual Jane Doe instance passed 21 measured assertions. Daniel requested leaving other authored compositions unchanged and documenting them for review; they are explicitly unapproved, not declared verified by the primitive audit.
+- Evidence: runs/2026-11-14-medlist-sde-correction/REPORT.md, record.json, current-medications.png, sde-header-mirror.png, sde-reference.png, mirror-before-fix.png, screen-before-fix.png.

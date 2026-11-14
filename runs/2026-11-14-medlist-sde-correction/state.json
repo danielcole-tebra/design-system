@@ -1,0 +1,19 @@
+{
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "sessionId": "a5e35a59-9a03-4f8b-bb99-ba4ac1741ba6",
+  "pageId": "0:1",
+  "screenId": "2:1811",
+  "headerId": "9:818",
+  "headerMirrorMasterId": "9:784",
+  "archiveId": "9:852",
+  "provenanceReadmeId": "2:2808",
+  "status": "header corrected and verified; remaining authored compositions documented and unapproved",
+  "sourceFile": "ViAWRVVtgkCXzItk0sQ5P0",
+  "sourcePage": "1319:4655",
+  "sourceHeader": "I1319:4659;974:16288",
+  "sourceHeaderImportable": false,
+  "scopeDecision": "Daniel: Replace the header and document the remaining differences",
+  "constructionSequence": ["replace-header.js: direct import failed without canvas changes", "prepare-mirror.cjs output", "match-source-presentation.js", "annotate-provenance.js"],
+  "verification": ["source-comparison.json versus mirror-comparison.json: 34 nodes, zero differences in compared fields", "audit-helper.js plus verify-header.js: 21 measured assertions passed", "final mirror and full-screen screenshots inspected"],
+  "currentSpec": "SPEC.md"
+}

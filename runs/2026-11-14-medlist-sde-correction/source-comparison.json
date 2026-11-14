@@ -1,0 +1,2019 @@
+[
+  {
+    "path": "root",
+    "name": "Patient header",
+    "type": "INSTANCE",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 1493,
+      "height": 68,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 8,
+      "paddingRight": 16,
+      "paddingBottom": 8,
+      "paddingLeft": 16,
+      "itemSpacing": 16,
+      "clipsContent": false,
+      "strokesIncludedInLayout": false,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+            }
+          }
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.8392156958580017,
+            "g": 0.8392156958580017,
+            "b": 0.8392156958580017
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+            }
+          }
+        }
+      ],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+        },
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+        },
+        "paddingTop": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+        },
+        "paddingBottom": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        },
+        "strokeBottomWeight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:e437afaf91519b9a70c82751deb7099cf1576369/74:261"
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+          }
+        ],
+        "strokes": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+          }
+        ]
+      }
+    },
+    "componentKey": "06bddbc3ab5ce64fe2563d499652e204d6902115"
+  },
+  {
+    "path": "root/0",
+    "name": "Avatar",
+    "type": "INSTANCE",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 40,
+      "height": 40,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "FIXED",
+      "primaryAxisAlignItems": "CENTER",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 0,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.8392156958580017,
+            "g": 0.8392156958580017,
+            "b": 0.8392156958580017
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3bacd025918a194da50ed8505bfacb72f1003a83/74:119"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3bacd025918a194da50ed8505bfacb72f1003a83/74:119"
+          }
+        ]
+      }
+    },
+    "componentKey": "e4c9d847a4bbf52a5ddfa6df8c918a57303c0a43"
+  },
+  {
+    "path": "root/0/0",
+    "name": "Letter",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 31,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.16862745583057404,
+            "g": 0.16862745583057404,
+            "b": 0.16862745583057404
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:07b906321fb85c5dab66f45f352a17283bcbd857/74:131"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:07b906321fb85c5dab66f45f352a17283bcbd857/74:131"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "MC"
+    }
+  },
+  {
+    "path": "root/1",
+    "name": "Identity",
+    "type": "FRAME",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 1183,
+      "height": 52,
+      "layoutMode": "VERTICAL",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "FIXED",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 0,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/1/0",
+    "name": "Line 1",
+    "type": "FRAME",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 1183,
+      "height": 32,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 8,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/1/0/0",
+    "name": "Preferred name",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 104,
+      "height": 32,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0,
+            "g": 0.2823529541492462,
+            "b": 0.32156863808631897
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:4495658a412b17d7aa5cedbee6f4aad7e1488bf4/74:219"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:75b2eae3fea92bbf14d197e96cfe432fa1f111f5/116:7"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:b999d55cf9455309069f4bc9e56b1461c0839bc4/74:195"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Bold"
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "UNDERLINE",
+      "characters": "Maya Chen"
+    }
+  },
+  {
+    "path": "root/1/0/1",
+    "name": "Pronouns",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 59,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "(she/her)"
+    }
+  },
+  {
+    "path": "root/1/0/2",
+    "name": "Restriction wrap",
+    "type": "FRAME",
+    "hidden": true,
+    "props": {
+      "visible": false,
+      "width": 78,
+      "height": 20,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 8,
+      "itemSpacing": 0,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+        },
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/1/0/2/0",
+    "name": "Restriction",
+    "type": "TEXT",
+    "hidden": true,
+    "props": {
+      "visible": true,
+      "width": 70,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.7098039388656616,
+            "g": 0.10196078568696976,
+            "b": 0.1725490242242813
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:d36d6ccf95d9ca109c7a788d5c419b99abefa2fb/74:80"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:d36d6ccf95d9ca109c7a788d5c419b99abefa2fb/74:80"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0c7a9b4fd0566b07885f061de826f6c09f91438d/996:14"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0f17bb3d657fda6db4fe76928a848c01c7eb1873/996:19"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:b999d55cf9455309069f4bc9e56b1461c0839bc4/74:195"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Bold"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "Restricted"
+    }
+  },
+  {
+    "path": "root/1/1",
+    "name": "Line 2",
+    "type": "FRAME",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 1183,
+      "height": 20,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 8,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/1/1/0",
+    "name": "Legal name group",
+    "type": "FRAME",
+    "hidden": true,
+    "props": {
+      "visible": false,
+      "width": 184,
+      "height": 20,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 8,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/1/1/0/0",
+    "name": "Legal name",
+    "type": "TEXT",
+    "hidden": true,
+    "props": {
+      "visible": true,
+      "width": 0,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": ""
+    }
+  },
+  {
+    "path": "root/1/1/0/1",
+    "name": "Bullet",
+    "type": "TEXT",
+    "hidden": true,
+    "props": {
+      "visible": true,
+      "width": 6,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.6039215922355652,
+            "g": 0.6039215922355652,
+            "b": 0.6039215922355652
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f049103cf79e9f26de7cda63a111adf87a200b9f/74:143"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f049103cf79e9f26de7cda63a111adf87a200b9f/74:143"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "•"
+    }
+  },
+  {
+    "path": "root/1/1/1",
+    "name": "Sex",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 48,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "Female"
+    }
+  },
+  {
+    "path": "root/1/1/2",
+    "name": "Bullet",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 6,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.6039215922355652,
+            "g": 0.6039215922355652,
+            "b": 0.6039215922355652
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f049103cf79e9f26de7cda63a111adf87a200b9f/74:143"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f049103cf79e9f26de7cda63a111adf87a200b9f/74:143"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "•"
+    }
+  },
+  {
+    "path": "root/1/1/3",
+    "name": "DOB group",
+    "type": "FRAME",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 129,
+      "height": 20,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 8,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/1/1/3/0",
+    "name": "DOB",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 73,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "04/18/1992"
+    }
+  },
+  {
+    "path": "root/1/1/3/1",
+    "name": "Age",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 48,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "(34 y/o)"
+    }
+  },
+  {
+    "path": "root/1/1/4",
+    "name": "Bullet",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 6,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.6039215922355652,
+            "g": 0.6039215922355652,
+            "b": 0.6039215922355652
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f049103cf79e9f26de7cda63a111adf87a200b9f/74:143"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f049103cf79e9f26de7cda63a111adf87a200b9f/74:143"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "•"
+    }
+  },
+  {
+    "path": "root/1/1/5",
+    "name": "Phone",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 92,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "(312) 555-0134"
+    }
+  },
+  {
+    "path": "root/1/1/6",
+    "name": "Bullet",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 6,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.6039215922355652,
+            "g": 0.6039215922355652,
+            "b": 0.6039215922355652
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f049103cf79e9f26de7cda63a111adf87a200b9f/74:143"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f049103cf79e9f26de7cda63a111adf87a200b9f/74:143"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "•"
+    }
+  },
+  {
+    "path": "root/1/1/7",
+    "name": "MRN",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 142,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "MRN: DEMO-MH-0134"
+    }
+  },
+  {
+    "path": "root/2",
+    "name": "Safety",
+    "type": "FRAME",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 206,
+      "height": 52,
+      "layoutMode": "VERTICAL",
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MAX",
+      "counterAxisAlignItems": "MAX",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 0,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/2/0",
+    "name": "Allergy row",
+    "type": "FRAME",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 206,
+      "height": 20,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 8,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/2/0/0",
+    "name": "Allergy icon",
+    "type": "INSTANCE",
+    "hidden": true,
+    "props": {
+      "visible": false,
+      "width": 16,
+      "height": 16,
+      "layoutMode": "NONE",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "FIXED",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 0,
+      "clipsContent": false,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {}
+    },
+    "componentKey": "84e24a992ae19d29a6cc413f2d5bf85717ec373d"
+  },
+  {
+    "path": "root/2/0/0/0",
+    "name": "Vector",
+    "type": "VECTOR",
+    "hidden": true,
+    "props": {
+      "visible": true,
+      "width": 13.333333015441895,
+      "height": 13.333333015441895,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.8470588326454163,
+            "g": 0.23137255012989044,
+            "b": 0.3019607961177826
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:138a46cabb1d233ffc170d8f5c88290ff17ecd35/74:72"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:138a46cabb1d233ffc170d8f5c88290ff17ecd35/74:72"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "root/2/0/1",
+    "name": "Severe group",
+    "type": "FRAME",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 148,
+      "height": 20,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 8,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/2/0/1/0",
+    "name": "Severe label",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 61,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "Allergies:"
+    }
+  },
+  {
+    "path": "root/2/0/1/1",
+    "name": "Severe allergens",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 79,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "none known"
+    }
+  },
+  {
+    "path": "root/2/0/2",
+    "name": "Allergy link",
+    "type": "INSTANCE",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 50,
+      "height": 20,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 0,
+      "clipsContent": false,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {}
+    },
+    "componentKey": "31c895128ccc0a076b3b327be980679c5a169045"
+  },
+  {
+    "path": "root/2/0/2/0",
+    "name": "Label",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 50,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0,
+            "g": 0.2823529541492462,
+            "b": 0.32156863808631897
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "UNDERLINE",
+      "characters": "View all"
+    }
+  },
+  {
+    "path": "root/2/1",
+    "name": "Balance row",
+    "type": "FRAME",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 99,
+      "height": 20,
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "paddingTop": 0,
+      "paddingRight": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "itemSpacing": 8,
+      "clipsContent": true,
+      "strokesIncludedInLayout": false,
+      "fills": [],
+      "strokes": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      }
+    }
+  },
+  {
+    "path": "root/2/1/0",
+    "name": "Balance label",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 53,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "Balance"
+    }
+  },
+  {
+    "path": "root/2/1/1",
+    "name": "Balance value",
+    "type": "TEXT",
+    "hidden": false,
+    "props": {
+      "visible": true,
+      "width": 38,
+      "height": 20,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textDecoration": "NONE",
+      "characters": "$0.00"
+    }
+  }
+]

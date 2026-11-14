@@ -1,0 +1,874 @@
+{
+  "sourceComparison": {
+    "sourceNodeCount": 34,
+    "targetNodeCount": 34,
+    "comparedFields": "Node types, hierarchy, names, visible geometry, layout, typography, fills, strokes, canonical bindings; root identity and hidden stale geometry excluded",
+    "differences": []
+  },
+  "placedInstanceAudit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 1,
+      "passed": true,
+      "checks": [
+        {
+          "id": "9:818",
+          "mainId": "9:784",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 21,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "SDE mirror width at source width",
+          "passed": true
+        },
+        {
+          "name": "SDE mirror source height",
+          "passed": true
+        },
+        {
+          "name": "Patient header at medlist width",
+          "passed": true
+        },
+        {
+          "name": "Patient header at source height",
+          "passed": true
+        },
+        {
+          "name": "Header directly below Nav/Bar",
+          "passed": true
+        },
+        {
+          "name": "Source structure child count",
+          "passed": true
+        },
+        {
+          "name": "Source padding retained",
+          "passed": true
+        },
+        {
+          "name": "Patient context preserved",
+          "passed": true
+        },
+        {
+          "name": "Exact source name typography",
+          "passed": true
+        },
+        {
+          "name": "Header content DOB",
+          "passed": true
+        },
+        {
+          "name": "Header content Age",
+          "passed": true
+        },
+        {
+          "name": "Header content Phone",
+          "passed": true
+        },
+        {
+          "name": "Header content MRN",
+          "passed": true
+        },
+        {
+          "name": "Header content Severe allergens",
+          "passed": true
+        },
+        {
+          "name": "Header content Balance value",
+          "passed": true
+        },
+        {
+          "name": "Restriction preserved",
+          "passed": true
+        },
+        {
+          "name": "No inferred pronouns",
+          "passed": true
+        },
+        {
+          "name": "Old patient context archived",
+          "passed": true
+        },
+        {
+          "name": "Nonheader workspace geometry unchanged",
+          "passed": true
+        },
+        {
+          "name": "No new reactions",
+          "passed": true
+        },
+        {
+          "name": "No header content exceeds parent bounds",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 0,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "inventory": {
+    "nodeCount": 706,
+    "nodeTypes": {
+      "INSTANCE": 203,
+      "FRAME": 185,
+      "VECTOR": 96,
+      "TEXT": 221,
+      "RECTANGLE": 1
+    },
+    "componentFamilies": [
+      {
+        "key": "a0ddf46b289a6aeb17ad295ca709af8c9afeb7ac",
+        "name": "Nav/Bar",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "0c8f0fe4ec4ba8e1580719f38b882ab2ff8739a6",
+        "name": "Nav/Logo",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "1bc400824bf974b249b10245e7a943492cec62a6",
+        "name": "Nav/Icon button/State=Default",
+        "remote": true,
+        "count": 8
+      },
+      {
+        "key": "0450907c6c2f1cae46e716f402c05ddbdb48709b",
+        "name": "Icon/Platform",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "6c4a7b4de8c2641656bee9e4e2eca195b815b8db",
+        "name": "Icon/Clinical",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "9b523070fd9bdaf48820d2f839f040ae675710a1",
+        "name": "Icon/Billing",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "87eb2a790ac2d04d02538618bb00f0eebaec7253",
+        "name": "Icon/Engage",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "fed89f20383800a03c40293c30e5b21af3c7be2b",
+        "name": "Icon/Payments",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "db42927d9f67e0cd570251253ac74ad81941a783",
+        "name": "Icon/Reports",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "0878407fadd1f03e9b2075eadd3aed844ea5e16f",
+        "name": "Nav/Search/State=Default",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "cb435d947a1bbc53cbd1331a317b9659aebebbad",
+        "name": "Icon/SearchOutlined (MUI)",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "a33a2f7dde0d936546ab6e9307c8dfd318bfa155",
+        "name": "Badge/variant=standard",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "28c3bcd89d564050ac9e879d40f635393f29360e",
+        "name": "Icon/MailOutline (MUI)",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "e9313408f818c9f62f5d07369a5196d491127042",
+        "name": "Icon/HelpOutline (MUI)",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "e4c9d847a4bbf52a5ddfa6df8c918a57303c0a43",
+        "name": "Avatar/Content=Letter",
+        "remote": true,
+        "count": 2
+      },
+      {
+        "key": "698e2f79af086962efafa926e8a30c7728958dd3",
+        "name": "Patient header/SDE Updated 11-13 mirror",
+        "remote": false,
+        "count": 1
+      },
+      {
+        "key": "84e24a992ae19d29a6cc413f2d5bf85717ec373d",
+        "name": "Icon/AttentionFilled",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "31c895128ccc0a076b3b327be980679c5a169045",
+        "name": "Link",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "8fc8f57f80196e40aff7b3b1116226ea0a925120",
+        "name": "Button/variant=contained, color=primary, size=small, State=Default",
+        "remote": true,
+        "count": 13
+      },
+      {
+        "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f",
+        "name": "Icon/PlusOutlined",
+        "remote": true,
+        "count": 14
+      },
+      {
+        "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f",
+        "name": "Icon/DownCaret",
+        "remote": true,
+        "count": 28
+      },
+      {
+        "key": "eea2fd71083e80e919a40226f98850fac8090508",
+        "name": "Tabs/Tab/selected=yes, State=Default",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "b5fadfbc89f4a8ab6a18606ab7228d0dd2b42d2e",
+        "name": "Tabs/Tab/selected=no, State=Default",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "473e45c7880933d2226463dc2e99dce6199e4953",
+        "name": "Medlist/Worklist toolbar",
+        "remote": false,
+        "count": 1
+      },
+      {
+        "key": "679a3842ec3982166e616a8f294684199e2e5c94",
+        "name": "Text field/size=small, State=Default, Value=Filled, Fill=None",
+        "remote": true,
+        "count": 2
+      },
+      {
+        "key": "542540ea8fa199c81ea0128aea9c78a5cc8e8abf",
+        "name": "Text field/size=small, State=Default, Value=Empty, Fill=None",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "779c8020ce9c68c7eaea65eebf9f568357082060",
+        "name": "Button/variant=contained, color=secondary, size=small, State=Default",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "a69f61e3c1ebc4c7b093ece85cd9d925266500fd",
+        "name": "Medlist/Reconciliation",
+        "remote": false,
+        "count": 1
+      },
+      {
+        "key": "45071770f83c39f8d313f2307d1d978542398cdd",
+        "name": "Switch/size=small, checked=off, State=Default",
+        "remote": true,
+        "count": 11
+      },
+      {
+        "key": "243efa248e3f876e935d48c3d9c9736add2f9ef2",
+        "name": "Checkbox/checked=unchecked, State=Default, Flush=None",
+        "remote": true,
+        "count": 11
+      },
+      {
+        "key": "63080d8b342bcaf0e92aa4ad7d85c8ddd0cc26a3",
+        "name": "Icon/CheckboxUnchecked",
+        "remote": true,
+        "count": 11
+      },
+      {
+        "key": "bdc0012548d36032b28e0beb73245adeb6792ef2",
+        "name": "Table/Cell/variant=head, padding=normal",
+        "remote": true,
+        "count": 6
+      },
+      {
+        "key": "72dc857582ff943a60b7fcd5271ab134f060cd59",
+        "name": "Medlist/Medication row",
+        "remote": false,
+        "count": 10
+      },
+      {
+        "key": "e5db0e4b69da285f4e36a3278a38d84208cf2617",
+        "name": "Chip/size=small, variant=outlined, color=default, State=Default",
+        "remote": true,
+        "count": 10
+      },
+      {
+        "key": "a9304f869a99a07f78361cf12284245594fa9173",
+        "name": "Icon/Cancel (MUI)",
+        "remote": true,
+        "count": 10
+      },
+      {
+        "key": "e073fb6fa591240262a53206f29e6343d81ca5e3",
+        "name": "Icon button/color=default, size=small, State=Default",
+        "remote": true,
+        "count": 20
+      },
+      {
+        "key": "0489fdfdce29170eb9837dcfa4d83fe38b8a7809",
+        "name": "Medlist/Order and pharmacy/State=Filled",
+        "remote": false,
+        "count": 2
+      },
+      {
+        "key": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "name": "Icon/EllipsisFilled",
+        "remote": true,
+        "count": 10
+      },
+      {
+        "key": "74eb8fcca6edb3ca6a5a5af4e86107c9b75ba141",
+        "name": "Medlist/Order and pharmacy/State=Pending fill",
+        "remote": false,
+        "count": 6
+      },
+      {
+        "key": "c4d394caf006206693c3504efb373d754c354f01",
+        "name": "Medlist/Order and pharmacy/State=Send failed",
+        "remote": false,
+        "count": 1
+      },
+      {
+        "key": "9f171f4b248fa9cf6a647b46b0f239622a36a557",
+        "name": "Medlist/Order and pharmacy/State=Patient info required",
+        "remote": false,
+        "count": 1
+      },
+      {
+        "key": "02d8c82599fac8a9d07abb7586abbb87e88fbfe9",
+        "name": "Table pagination",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "c417c9bd187d428a763cd7763de09f7f258a73b6",
+        "name": "Icon button/color=default, size=medium, State=Default",
+        "remote": true,
+        "count": 2
+      },
+      {
+        "key": "8cbed779c52f8957d52b9bb4a5f25e571ef4fa46",
+        "name": "Icon/NavigateBefore (MUI)",
+        "remote": true,
+        "count": 1
+      },
+      {
+        "key": "864a2f2ee7879848d65b859a6a2868dc27b3d8f3",
+        "name": "Icon/NavigateNext (MUI)",
+        "remote": true,
+        "count": 1
+      }
+    ],
+    "unresolved": [],
+    "imageNodes": [],
+    "topLevel": [
+      {
+        "id": "2:1812",
+        "name": "Global navigation",
+        "type": "INSTANCE",
+        "width": 1440,
+        "height": 65
+      },
+      {
+        "id": "9:818",
+        "name": "Patient header · SDE Updated 11/13",
+        "type": "INSTANCE",
+        "width": 1440,
+        "height": 68
+      },
+      {
+        "id": "2:1988",
+        "name": "Chart workspace",
+        "type": "FRAME",
+        "width": 1440,
+        "height": 1633
+      }
+    ]
+  },
+  "creation": {
+    "createdNodeIds": [
+      "9:784",
+      "9:785",
+      "9:787",
+      "9:788",
+      "9:789",
+      "9:790",
+      "9:791",
+      "9:792",
+      "9:793",
+      "9:794",
+      "9:795",
+      "9:796",
+      "9:797",
+      "9:798",
+      "9:799",
+      "9:800",
+      "9:801",
+      "9:802",
+      "9:803",
+      "9:804",
+      "9:805",
+      "9:806",
+      "9:807",
+      "9:808",
+      "9:810",
+      "9:811",
+      "9:812",
+      "9:813",
+      "9:815",
+      "9:816",
+      "9:817",
+      "9:818",
+      "9:852",
+      "9:853"
+    ],
+    "mutatedNodeIds": [
+      "I9:818;9:785",
+      "2:1928",
+      "2:1811"
+    ],
+    "nodeMap": {
+      "I1319:4659;974:16288": "9:784",
+      "I1319:4659;974:16288;426:4166": "9:785",
+      "I1319:4659;974:16288;426:4168": "9:787",
+      "I1319:4659;974:16288;426:4169": "9:788",
+      "I1319:4659;974:16288;426:4170": "9:789",
+      "I1319:4659;974:16288;426:4171": "9:790",
+      "I1319:4659;974:16288;426:4172": "9:791",
+      "I1319:4659;974:16288;426:4173": "9:792",
+      "I1319:4659;974:16288;426:4174": "9:793",
+      "I1319:4659;974:16288;426:4175": "9:794",
+      "I1319:4659;974:16288;426:4176": "9:795",
+      "I1319:4659;974:16288;426:4177": "9:796",
+      "I1319:4659;974:16288;426:4178": "9:797",
+      "I1319:4659;974:16288;426:4179": "9:798",
+      "I1319:4659;974:16288;426:4180": "9:799",
+      "I1319:4659;974:16288;426:4181": "9:800",
+      "I1319:4659;974:16288;426:4182": "9:801",
+      "I1319:4659;974:16288;426:4183": "9:802",
+      "I1319:4659;974:16288;426:4184": "9:803",
+      "I1319:4659;974:16288;426:4185": "9:804",
+      "I1319:4659;974:16288;426:4186": "9:805",
+      "I1319:4659;974:16288;426:4187": "9:806",
+      "I1319:4659;974:16288;426:4188": "9:807",
+      "I1319:4659;974:16288;426:4189": "9:808",
+      "I1319:4659;974:16288;426:4191": "9:810",
+      "I1319:4659;974:16288;426:4192": "9:811",
+      "I1319:4659;974:16288;426:4193": "9:812",
+      "I1319:4659;974:16288;426:4194": "9:813",
+      "I1319:4659;974:16288;426:4196": "9:815",
+      "I1319:4659;974:16288;426:4197": "9:816",
+      "I1319:4659;974:16288;426:4198": "9:817"
+    },
+    "masterId": "9:784",
+    "headerId": "9:818",
+    "archiveId": "9:852",
+    "masterBounds": {
+      "width": 1493,
+      "height": 69
+    },
+    "headerBounds": {
+      "width": 1440,
+      "height": 68
+    },
+    "properties": {
+      "Preferred name": "Preferred name#9:0",
+      "Pronouns": "Pronouns#9:1",
+      "Legal name": "Legal name#9:2",
+      "Sex": "Sex#9:3",
+      "DOB": "DOB#9:4",
+      "Age": "Age#9:5",
+      "Phone": "Phone#9:6",
+      "MRN": "MRN#9:7",
+      "Severe allergens": "Severe allergens#9:8",
+      "Balance amount": "Balance amount#9:9",
+      "Show pronouns": "Show pronouns#9:10",
+      "Legal name differs": "Legal name differs#9:11",
+      "Restricted": "Restricted#9:12"
+    },
+    "nativeKeys": [
+      "e4c9d847a4bbf52a5ddfa6df8c918a57303c0a43",
+      "84e24a992ae19d29a6cc413f2d5bf85717ec373d",
+      "31c895128ccc0a076b3b327be980679c5a169045"
+    ],
+    "sourceMasterImportable": false
+  },
+  "presentationCorrection": {
+    "mutatedNodeIds": [
+      "9:784",
+      "9:787",
+      "9:788",
+      "9:791",
+      "9:793",
+      "9:794",
+      "9:799",
+      "9:806",
+      "9:807",
+      "9:810",
+      "9:815",
+      "I9:785;208:7",
+      "I9:813;171:34"
+    ],
+    "masterBounds": {
+      "width": 1493,
+      "height": 68
+    },
+    "source": "Exact SDE source stroke-layout flag, avatar text ink and 14/20 Link text overrides; no new visual decisions."
+  },
+  "sourceNativeTextOverrides": {
+    "nativeText": [
+      {
+        "id": "I1319:4659;974:16288;426:4166;208:7",
+        "name": "Letter",
+        "fontName": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "fontSize": 20,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textDecoration": "NONE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.16862745583057404,
+              "g": 0.16862745583057404,
+              "b": 0.16862745583057404
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:07b906321fb85c5dab66f45f352a17283bcbd857/74:131"
+              }
+            }
+          }
+        ],
+        "boundVariables": {
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:07b906321fb85c5dab66f45f352a17283bcbd857/74:131"
+            }
+          ]
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4194;171:34",
+        "name": "Label",
+        "fontName": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "fontSize": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textDecoration": "UNDERLINE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0.2823529541492462,
+              "b": 0.32156863808631897
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+              }
+            }
+          }
+        ],
+        "boundVariables": {
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+            }
+          ],
+          "fontSize": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+            }
+          ],
+          "fontFamily": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+            }
+          ],
+          "lineHeight": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+            }
+          ],
+          "fontWeight": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+            }
+          ]
+        }
+      }
+    ],
+    "strokeLayout": [
+      {
+        "id": "I1319:4659;974:16288",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4168",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4169",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4172",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4174",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4175",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4180",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4187",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4188",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4191",
+        "strokesIncludedInLayout": false
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4196",
+        "strokesIncludedInLayout": false
+      }
+    ]
+  },
+  "remainingCompositionDetails": [
+    {
+      "id": "11198:3898",
+      "name": "Content group / grid",
+      "children": [
+        {
+          "name": "Aligned row",
+          "id": "11198:3899",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 1168,
+          "height": 84,
+          "children": [
+            {
+              "id": "11198:3900",
+              "name": "Content group / grid",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 772.673583984375,
+              "height": 84
+            },
+            {
+              "id": "11198:3904",
+              "name": "Content group / row",
+              "type": "FRAME",
+              "x": 784.673583984375,
+              "y": 27,
+              "width": 383.3263854980469,
+              "height": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11144:1158",
+      "name": "Order status and pharmacy",
+      "children": [
+        {
+          "name": "Status and destination",
+          "id": "11144:1159",
+          "type": "FRAME",
+          "x": 14,
+          "y": 22.5,
+          "width": 312,
+          "height": 60,
+          "children": [
+            {
+              "id": "11144:1160",
+              "name": "Status icon",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 18,
+              "height": 20
+            },
+            {
+              "id": "11144:1164",
+              "name": "Order status text",
+              "type": "FRAME",
+              "x": 26,
+              "y": 0,
+              "width": 286,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11144:1147",
+      "name": "Medication identity",
+      "children": [
+        {
+          "name": "Medication name",
+          "id": "11144:1148",
+          "type": "TEXT",
+          "x": 14,
+          "y": 24.5,
+          "width": 272,
+          "height": 20,
+          "children": []
+        },
+        {
+          "name": "Directions",
+          "id": "11144:1149",
+          "type": "TEXT",
+          "x": 14,
+          "y": 48.5,
+          "width": 272,
+          "height": 32,
+          "children": []
+        },
+        {
+          "name": "Compound classification",
+          "id": "11144:1192",
+          "type": "FRAME",
+          "x": 14,
+          "y": 70.5,
+          "width": 81,
+          "height": 24,
+          "children": [
+            {
+              "id": "11144:1193",
+              "name": "Compound",
+              "type": "TEXT",
+              "x": 9,
+              "y": 4,
+              "width": 61,
+              "height": 16
+            }
+          ]
+        },
+        {
+          "name": "Medication context",
+          "id": "11144:1194",
+          "type": "TEXT",
+          "x": 14,
+          "y": 74.5,
+          "width": 272,
+          "height": 16,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "annotations": {
+    "mutatedNodeIds": [
+      "2:1810",
+      "2:1868",
+      "2:2028",
+      "2:2203",
+      "2:2272",
+      "2:2273",
+      "2:2808",
+      "2:2809",
+      "2:2810",
+      "2:2811",
+      "2:2812",
+      "2:2813"
+    ]
+  },
+  "importAttempt": {
+    "key": "06bddbc3ab5ce64fe2563d499652e204d6902115",
+    "result": "Component with key not found",
+    "canvasChanges": false
+  },
+  "scopeDecision": "Replace the header and document the remaining differences",
+  "scopeQuestionAt": "2026-11-14T18:29:24.864Z",
+  "scopeAnswerAt": "2026-11-14T18:31:17.846Z"
+}

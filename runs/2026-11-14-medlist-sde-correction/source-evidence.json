@@ -1,0 +1,1361 @@
+{
+  "sourceFile": "ViAWRVVtgkCXzItk0sQ5P0",
+  "pageId": "1319:4655",
+  "screenId": "1319:4656",
+  "header": {
+    "id": "I1319:4659;974:16288",
+    "key": "06bddbc3ab5ce64fe2563d499652e204d6902115",
+    "properties": {
+      "Balance amount#426:12": {
+        "type": "TEXT",
+        "value": "$0.00"
+      },
+      "Severe allergens#426:11": {
+        "type": "TEXT",
+        "value": "none known"
+      },
+      "MRN#426:10": {
+        "type": "TEXT",
+        "value": "MRN: DEMO-MH-0134"
+      },
+      "Phone#426:9": {
+        "type": "TEXT",
+        "value": "(312) 555-0134"
+      },
+      "Age#426:8": {
+        "type": "TEXT",
+        "value": "(34 y/o)"
+      },
+      "DOB#426:7": {
+        "type": "TEXT",
+        "value": "04/18/1992"
+      },
+      "Show pronouns#426:2": {
+        "type": "BOOLEAN",
+        "value": true
+      },
+      "Preferred name#426:0": {
+        "type": "TEXT",
+        "value": "Maya Chen"
+      },
+      "Restricted#426:5": {
+        "type": "BOOLEAN",
+        "value": false
+      },
+      "Legal name differs#426:4": {
+        "type": "BOOLEAN",
+        "value": false
+      },
+      "Legal name#426:3": {
+        "type": "TEXT",
+        "value": ""
+      },
+      "Pronouns#426:1": {
+        "type": "TEXT",
+        "value": "(she/her)"
+      },
+      "Sex#426:6": {
+        "type": "TEXT",
+        "value": "Female"
+      }
+    },
+    "definitions": {
+      "Preferred name#426:0": {
+        "type": "TEXT",
+        "defaultValue": "Steven Strange"
+      },
+      "Pronouns#426:1": {
+        "type": "TEXT",
+        "defaultValue": "(he/him)"
+      },
+      "Show pronouns#426:2": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Legal name#426:3": {
+        "type": "TEXT",
+        "defaultValue": "Legal name: Amy Foreman"
+      },
+      "Legal name differs#426:4": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Restricted#426:5": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Sex#426:6": {
+        "type": "TEXT",
+        "defaultValue": "Male"
+      },
+      "DOB#426:7": {
+        "type": "TEXT",
+        "defaultValue": "08/01/1994"
+      },
+      "Age#426:8": {
+        "type": "TEXT",
+        "defaultValue": "(29 y/o)"
+      },
+      "Phone#426:9": {
+        "type": "TEXT",
+        "defaultValue": "(850)-747-1632"
+      },
+      "MRN#426:10": {
+        "type": "TEXT",
+        "defaultValue": "MRN: 08262025-01"
+      },
+      "Severe allergens#426:11": {
+        "type": "TEXT",
+        "defaultValue": "egg, poison ivy extract"
+      },
+      "Balance amount#426:12": {
+        "type": "TEXT",
+        "defaultValue": "$0.00"
+      }
+    },
+    "master": {
+      "id": "6:1142",
+      "width": 900,
+      "height": 68
+    },
+    "reference": {
+      "width": 1493,
+      "height": 68,
+      "padding": [
+        8,
+        16,
+        8,
+        16
+      ],
+      "gap": 16,
+      "layout": "HORIZONTAL"
+    },
+    "children": [
+      {
+        "id": "I1319:4659;974:16288;426:4166",
+        "name": "Avatar",
+        "type": "INSTANCE",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4168",
+        "name": "Identity",
+        "type": "FRAME",
+        "width": 1183,
+        "height": 52
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4187",
+        "name": "Safety",
+        "type": "FRAME",
+        "width": 206,
+        "height": 52
+      }
+    ],
+    "text": [
+      {
+        "id": "I1319:4659;974:16288;426:4166;208:7",
+        "name": "Letter",
+        "text": "MC",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 20,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "Letter#208:0"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4170",
+        "name": "Preferred name",
+        "text": "Maya Chen",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 20,
+        "line": {
+          "unit": "PIXELS",
+          "value": 32
+        },
+        "style": "",
+        "refs": {
+          "characters": "Preferred name#426:0"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4171",
+        "name": "Pronouns",
+        "text": "(she/her)",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "visible": "Show pronouns#426:2",
+          "characters": "Pronouns#426:1"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4173",
+        "name": "Restriction",
+        "text": "Restricted",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {}
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4176",
+        "name": "Legal name",
+        "text": "",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "Legal name#426:3"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4177",
+        "name": "Bullet",
+        "text": "•",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {}
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4178",
+        "name": "Sex",
+        "text": "Female",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "Sex#426:6"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4179",
+        "name": "Bullet",
+        "text": "•",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {}
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4181",
+        "name": "DOB",
+        "text": "04/18/1992",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "DOB#426:7"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4182",
+        "name": "Age",
+        "text": "(34 y/o)",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "Age#426:8"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4183",
+        "name": "Bullet",
+        "text": "•",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {}
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4184",
+        "name": "Phone",
+        "text": "(312) 555-0134",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "Phone#426:9"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4185",
+        "name": "Bullet",
+        "text": "•",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {}
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4186",
+        "name": "MRN",
+        "text": "MRN: DEMO-MH-0134",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "MRN#426:10"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4192",
+        "name": "Severe label",
+        "text": "Allergies:",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {}
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4193",
+        "name": "Severe allergens",
+        "text": "none known",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "Severe allergens#426:11"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4194;171:34",
+        "name": "Label",
+        "text": "View all",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "Label#171:13"
+        }
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4197",
+        "name": "Balance label",
+        "text": "Balance",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {}
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4198",
+        "name": "Balance value",
+        "text": "$0.00",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Regular"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": "",
+        "refs": {
+          "characters": "Balance amount#426:12"
+        }
+      }
+    ],
+    "overrides": [
+      {
+        "id": "I1319:4659;974:16288",
+        "overriddenFields": [
+          "componentProperties"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4166",
+        "overriddenFields": [
+          "componentProperties"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4170",
+        "overriddenFields": [
+          "fills",
+          "textDecoration"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4187",
+        "overriddenFields": [
+          "layoutAlign",
+          "primaryAxisAlignItems",
+          "primaryAxisSizingMode"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4188",
+        "overriddenFields": [
+          "boundVariables",
+          "counterAxisSizingMode",
+          "visible"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4189",
+        "overriddenFields": [
+          "visible"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4191",
+        "overriddenFields": [
+          "visible"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4192",
+        "overriddenFields": [
+          "boundVariables",
+          "characters",
+          "fills",
+          "fontName",
+          "styledTextSegments"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4193",
+        "overriddenFields": [
+          "boundVariables",
+          "fills",
+          "fontName",
+          "visible"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4194",
+        "overriddenFields": [
+          "componentProperties",
+          "reactions"
+        ]
+      },
+      {
+        "id": "I1319:4659;974:16288;426:4194;171:34",
+        "overriddenFields": [
+          "boundVariables"
+        ]
+      }
+    ]
+  },
+  "presentationOverrides": [
+    {
+      "suffix": "426:4170",
+      "name": "Preferred name",
+      "type": "TEXT",
+      "visible": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0,
+            "g": 0.2823529541492462,
+            "b": 0.32156863808631897
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+            }
+          }
+        }
+      ],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:4495658a412b17d7aa5cedbee6f4aad7e1488bf4/74:219"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:75b2eae3fea92bbf14d197e96cfe432fa1f111f5/116:7"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:b999d55cf9455309069f4bc9e56b1461c0839bc4/74:195"
+          }
+        ]
+      },
+      "layoutAlign": "INHERIT",
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Bold"
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "textDecoration": "UNDERLINE",
+      "width": 104,
+      "height": 32
+    },
+    {
+      "suffix": "426:4187",
+      "name": "Safety",
+      "type": "FRAME",
+      "visible": true,
+      "fills": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+        }
+      },
+      "layoutAlign": "STRETCH",
+      "primaryAxisAlignItems": "MAX",
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "AUTO",
+      "width": 206,
+      "height": 52
+    },
+    {
+      "suffix": "426:4188",
+      "name": "Allergy row",
+      "type": "FRAME",
+      "visible": true,
+      "fills": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      },
+      "layoutAlign": "INHERIT",
+      "primaryAxisAlignItems": "MIN",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "width": 206,
+      "height": 20
+    },
+    {
+      "suffix": "426:4189",
+      "name": "Allergy icon",
+      "type": "INSTANCE",
+      "visible": false,
+      "fills": [],
+      "boundVariables": {},
+      "layoutAlign": "INHERIT",
+      "primaryAxisAlignItems": "MIN",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "FIXED",
+      "width": 16,
+      "height": 16,
+      "properties": {}
+    },
+    {
+      "suffix": "426:4191",
+      "name": "Severe group",
+      "type": "FRAME",
+      "visible": true,
+      "fills": [],
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+        }
+      },
+      "layoutAlign": "INHERIT",
+      "primaryAxisAlignItems": "MIN",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "width": 148,
+      "height": 20
+    },
+    {
+      "suffix": "426:4192",
+      "name": "Severe label",
+      "type": "TEXT",
+      "visible": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "layoutAlign": "INHERIT",
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "textDecoration": "NONE",
+      "width": 61,
+      "height": 20
+    },
+    {
+      "suffix": "426:4193",
+      "name": "Severe allergens",
+      "type": "TEXT",
+      "visible": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.3294117748737335,
+            "g": 0.3294117748737335,
+            "b": 0.3294117748737335
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+            }
+          }
+        }
+      ],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:0d503f1eb6c6f3e923310b2ad6e621cc940b6543/74:139"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "layoutAlign": "INHERIT",
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "textDecoration": "NONE",
+      "width": 79,
+      "height": 20
+    },
+    {
+      "suffix": "426:4194",
+      "name": "Allergy link",
+      "type": "INSTANCE",
+      "visible": true,
+      "fills": [],
+      "boundVariables": {},
+      "layoutAlign": "INHERIT",
+      "primaryAxisAlignItems": "MIN",
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "AUTO",
+      "width": 50,
+      "height": 20,
+      "properties": {
+        "Label#171:13": "View all"
+      }
+    },
+    {
+      "suffix": "426:4194;171:34",
+      "name": "Label",
+      "type": "TEXT",
+      "visible": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0,
+            "g": 0.2823529541492462,
+            "b": 0.32156863808631897
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+            }
+          }
+        }
+      ],
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5"
+          }
+        ],
+        "fontSize": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f5e873cedaf2c5be3219920133cd0043d7b87ef9/74:207"
+          }
+        ],
+        "fontFamily": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+          }
+        ],
+        "lineHeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:56fc0b1c2afa97eb33989c4001513966efafaf3e/74:235"
+          }
+        ],
+        "fontWeight": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:c148c97556bca36fe085ac9b9a9a3f164e37fb14/74:191"
+          }
+        ]
+      },
+      "layoutAlign": "INHERIT",
+      "fontName": {
+        "family": "Akkurat LL",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "textDecoration": "UNDERLINE",
+      "width": 50,
+      "height": 20
+    }
+  ],
+  "originalA01": [
+    {
+      "id": "11198:3192",
+      "name": "Patient context and actions",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 142,
+      "layout": "GRID",
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 0,
+      "children": [
+        {
+          "id": "11198:3193",
+          "name": "Container",
+          "type": "FRAME",
+          "x": 16.00018310546875,
+          "y": 16,
+          "width": 737.265625,
+          "height": 71
+        },
+        {
+          "id": "11198:3213",
+          "name": "Container",
+          "type": "FRAME",
+          "x": 777.2658081054688,
+          "y": 16,
+          "width": 646.734375,
+          "height": 66
+        },
+        {
+          "id": "11198:3218",
+          "name": "Container",
+          "type": "FRAME",
+          "x": 16,
+          "y": 95,
+          "width": 1408,
+          "height": 30
+        }
+      ],
+      "text": [
+        "Jane Doe",
+        "Restricted",
+        "Legal Name: Jane Doe",
+        "·",
+        "Gender: Female",
+        "·",
+        "Sex assigned at birth: Female",
+        "DOB: 02/04/1990 (36 y/o)",
+        "Allergies",
+        "Penicillin (severe) · Zofran · Nutracort · Nutriltye II · Nutropin",
+        "View all (8)",
+        "Patient Alert: 1 alert on file",
+        "More",
+        "Collect Payment ($151)",
+        "Print",
+        "Prescribe",
+        "AI Note Assist",
+        "New Note"
+      ]
+    },
+    {
+      "id": "11198:3244",
+      "name": "Patient chart navigation",
+      "type": "FRAME",
+      "width": 194,
+      "height": 793,
+      "layout": "NONE",
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "gap": 0,
+      "children": [
+        {
+          "id": "11198:3245",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 12,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3247",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 64,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3249",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 116,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3251",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 168,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3253",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 220,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3255",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 272,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3257",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 324,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3259",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 376,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3261",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 428,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3263",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 480,
+          "width": 193,
+          "height": 52
+        },
+        {
+          "id": "11198:3265",
+          "name": "Button",
+          "type": "FRAME",
+          "x": 0,
+          "y": 532,
+          "width": 193,
+          "height": 52
+        }
+      ]
+    },
+    {
+      "id": "11198:3267",
+      "name": "Medication list content",
+      "type": "FRAME",
+      "width": 1246,
+      "height": 1422,
+      "layout": "VERTICAL",
+      "padding": [
+        22,
+        22,
+        22,
+        22
+      ],
+      "gap": 16,
+      "children": [
+        {
+          "id": "11198:3268",
+          "name": "Page heading and record views",
+          "type": "FRAME",
+          "x": 22,
+          "y": 22,
+          "width": 1201,
+          "height": 105
+        },
+        {
+          "id": "11198:3275",
+          "name": "Medication worklist / Paper elevation 1",
+          "type": "FRAME",
+          "x": 22,
+          "y": 143,
+          "width": 1202,
+          "height": 1257
+        }
+      ]
+    },
+    {
+      "id": "11198:3268",
+      "name": "Page heading and record views",
+      "type": "FRAME",
+      "width": 1201,
+      "height": 105,
+      "layout": "HORIZONTAL",
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "gap": 16,
+      "children": [
+        {
+          "id": "11198:3269",
+          "name": "Heading and tabs",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 1003,
+          "height": 104
+        },
+        {
+          "id": "11198:3274",
+          "name": "Import from Surescripts",
+          "type": "INSTANCE",
+          "x": 1019,
+          "y": 0,
+          "width": 182,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "id": "11198:3276",
+      "name": "Filters and medication actions",
+      "type": "FRAME",
+      "width": 1200,
+      "height": 77,
+      "layout": "HORIZONTAL",
+      "padding": [
+        20,
+        16,
+        16,
+        16
+      ],
+      "gap": 16,
+      "children": [
+        {
+          "id": "11198:3277",
+          "name": "Show medications",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 22,
+          "width": 220,
+          "height": 36
+        },
+        {
+          "id": "11198:3278",
+          "name": "Order status",
+          "type": "INSTANCE",
+          "x": 252,
+          "y": 22,
+          "width": 200,
+          "height": 36
+        },
+        {
+          "id": "11198:3279",
+          "name": "Search for drug or pharmacy",
+          "type": "FRAME",
+          "x": 468,
+          "y": 20,
+          "width": 347,
+          "height": 40
+        },
+        {
+          "id": "11198:3284",
+          "name": "Medication actions",
+          "type": "FRAME",
+          "x": 831,
+          "y": 20,
+          "width": 325,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "id": "11198:3897",
+      "name": "Medication reconciliation / Current prototype",
+      "type": "FRAME",
+      "width": 1200,
+      "height": 116,
+      "layout": "VERTICAL",
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 8,
+      "children": [
+        {
+          "id": "11198:3898",
+          "name": "Content group / grid",
+          "type": "FRAME",
+          "x": 16,
+          "y": 16,
+          "width": 1168,
+          "height": 84
+        }
+      ]
+    },
+    {
+      "id": "11144:1181",
+      "name": "Medication row / Desktop",
+      "type": "COMPONENT",
+      "key": "03796746cdde0b9f2dec8239a302b72bbdc321b8",
+      "width": 1200,
+      "height": 105,
+      "layout": "HORIZONTAL",
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "gap": 0,
+      "children": [
+        {
+          "id": "11144:1145",
+          "name": "Selection",
+          "type": "FRAME",
+          "x": 0,
+          "y": -0.5,
+          "width": 44,
+          "height": 105
+        },
+        {
+          "id": "11144:1147",
+          "name": "Medication identity",
+          "type": "FRAME",
+          "x": 44,
+          "y": -0.5,
+          "width": 300,
+          "height": 105
+        },
+        {
+          "id": "11144:1150",
+          "name": "Last prescribed or modified",
+          "type": "FRAME",
+          "x": 344,
+          "y": -0.5,
+          "width": 148,
+          "height": 105
+        },
+        {
+          "id": "11144:1154",
+          "name": "Prescription supply",
+          "type": "FRAME",
+          "x": 492,
+          "y": -0.5,
+          "width": 120,
+          "height": 105
+        },
+        {
+          "id": "11144:1158",
+          "name": "Order status and pharmacy",
+          "type": "FRAME",
+          "x": 612,
+          "y": -0.5,
+          "width": 340,
+          "height": 105
+        },
+        {
+          "id": "11144:1168",
+          "name": "Reviewed",
+          "type": "FRAME",
+          "x": 952,
+          "y": -0.5,
+          "width": 80,
+          "height": 105
+        },
+        {
+          "id": "11144:1170",
+          "name": "Actions",
+          "type": "FRAME",
+          "x": 1032,
+          "y": -0.5,
+          "width": 128,
+          "height": 105
+        },
+        {
+          "id": "11144:1178",
+          "name": "Clinical timeline",
+          "type": "FRAME",
+          "x": 1160,
+          "y": -0.5,
+          "width": 40,
+          "height": 105
+        }
+      ]
+    }
+  ]
+}
