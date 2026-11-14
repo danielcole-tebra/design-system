@@ -4565,3 +4565,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · SDE header correction and provenance review
 - File: yh2F6OUgdI6K0risLtKLEQ. Replaced the invented patient header with a faithful local mirror of the exact SDE Updated 11/13 reference. The source master is not cross-file importable. All 34 mirrored nodes match the compared source structure/presentation; the actual Jane Doe instance passed 21 measured assertions. Daniel requested leaving other authored compositions unchanged and documenting them for review; they are explicitly unapproved, not declared verified by the primitive audit.
 - Evidence: runs/2026-11-14-medlist-sde-correction/REPORT.md, record.json, current-medications.png, sde-header-mirror.png, sde-reference.png, mirror-before-fix.png, screen-before-fix.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-comparison -->
+## 2026-11-14 — Medlist · Running comparison page
+- File: yh2F6OUgdI6K0risLtKLEQ. Created a running comparison page with the locked original A01 visual baseline at natural size beside the actual editable current medlist. Moved current frame 2:1811 intact so future edits appear directly in the comparison. Added source links, difference register and maintenance/history notes.
+- Evidence: runs/2026-11-14-medlist-comparison/REPORT.md, record.json, comparison.png, original-a01.png.

@@ -1,0 +1,210 @@
+{
+  "build": {
+    "createdNodeIds": [
+      "17:881",
+      "17:882",
+      "17:883",
+      "17:884",
+      "17:885",
+      "17:886",
+      "17:887",
+      "17:888",
+      "17:889",
+      "17:890",
+      "17:891",
+      "17:892",
+      "17:893",
+      "17:894",
+      "17:895",
+      "17:896",
+      "17:897",
+      "17:898",
+      "17:899",
+      "17:900",
+      "17:901",
+      "17:902",
+      "17:903",
+      "17:904",
+      "17:905",
+      "17:906",
+      "17:907",
+      "17:908",
+      "17:909",
+      "17:910",
+      "17:911",
+      "17:912",
+      "17:913",
+      "17:914",
+      "17:915",
+      "17:916",
+      "17:917",
+      "17:918",
+      "17:919",
+      "17:920",
+      "17:921",
+      "17:922",
+      "17:923",
+      "17:924",
+      "17:925",
+      "17:926",
+      "17:927",
+      "17:928",
+      "17:929",
+      "17:930",
+      "17:931",
+      "17:932",
+      "17:933",
+      "17:934"
+    ],
+    "mutatedNodeIds": [
+      "2:1811"
+    ],
+    "pageId": "17:881",
+    "boardId": "17:882",
+    "baselineId": "17:890",
+    "currentId": "2:1811",
+    "registerId": "17:893",
+    "sourceUrl": "https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11198-3155",
+    "before": {
+      "hash": 250364556,
+      "length": 494204,
+      "count": 707
+    },
+    "after": {
+      "hash": 250364556,
+      "length": 494204,
+      "count": 707
+    },
+    "unchanged": true,
+    "board": {
+      "width": 3030,
+      "height": 2590
+    },
+    "screen": {
+      "width": 1440,
+      "height": 1766
+    },
+    "types": {
+      "TEXT": 258,
+      "FRAME": 200,
+      "RECTANGLE": 2,
+      "INSTANCE": 203,
+      "VECTOR": 96
+    },
+    "imageNodes": [],
+    "reactionCount": 0
+  },
+  "verification": {
+    "mutatedNodeIds": [
+      "17:890"
+    ],
+    "assertions": [
+      {
+        "name": "same vertical origin",
+        "actual": 392,
+        "expected": 392,
+        "pass": true
+      },
+      {
+        "name": "original render natural width",
+        "actual": 1446,
+        "expected": 1446,
+        "pass": true
+      },
+      {
+        "name": "original render natural height",
+        "actual": 1631,
+        "expected": 1631,
+        "pass": true
+      },
+      {
+        "name": "live screen width",
+        "actual": 1440,
+        "expected": 1440,
+        "pass": true
+      },
+      {
+        "name": "live screen height",
+        "actual": 1766,
+        "expected": 1766,
+        "pass": true
+      },
+      {
+        "name": "live descendant count",
+        "actual": 706,
+        "expected": 706,
+        "pass": true
+      },
+      {
+        "name": "baseline locked",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "single labelled reference image",
+        "actual": 1,
+        "expected": 1,
+        "pass": true
+      },
+      {
+        "name": "no label overflow",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      },
+      {
+        "name": "label fonts Akkurat LL",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "live screen images",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      },
+      {
+        "name": "live prototype reaction count",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      }
+    ],
+    "images": [
+      {
+        "id": "17:890",
+        "name": "A01 · Frozen source image · Not editable UI",
+        "type": "RECTANGLE",
+        "width": 1446,
+        "height": 1631,
+        "hash": "1415a68a4461aebf7fc65e169f19866d00e14ad8"
+      }
+    ],
+    "descendants": 759,
+    "counts": {
+      "TEXT": 258,
+      "FRAME": 200,
+      "RECTANGLE": 2,
+      "INSTANCE": 203,
+      "VECTOR": 96
+    },
+    "links": [
+      {
+        "id": "17:889",
+        "hyperlink": {
+          "type": "URL",
+          "value": "https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11198-3155"
+        }
+      },
+      {
+        "id": "17:892",
+        "hyperlink": {
+          "type": "URL",
+          "value": "https://www.figma.com/design/ViAWRVVtgkCXzItk0sQ5P0?node-id=1319-4655"
+        }
+      }
+    ]
+  }
+}
