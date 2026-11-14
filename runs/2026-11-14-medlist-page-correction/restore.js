@@ -1,0 +1,23 @@
+figma.skipInvisibleInstanceChildren=false;
+const originalPage=await figma.getNodeByIdAsync('0:1');
+await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('17:881'));
+const current=await figma.getNodeByIdAsync('2:1811');
+const board=await figma.getNodeByIdAsync('17:882');
+const right=await figma.getNodeByIdAsync('17:887');
+if(current.parent.id!==right.id)throw new Error('Unexpected working-screen location; inspect before moving.');
+const labels=await Promise.all(['17:884','17:891','17:892','17:934'].map(id=>figma.getNodeByIdAsync(id)));
+const fonts=new Map();
+for(const t of [...current.findAllWithCriteria({types:['TEXT']}),...labels])for(const s of t.getStyledTextSegments(['fontName']))fonts.set(JSON.stringify(s.fontName),s.fontName);
+await Promise.all([...fonts.values()].map(f=>figma.loadFontAsync(f)));
+function fingerprint(root){const nodes=[root,...root.findAll(()=>true)];const data=nodes.map((n,i)=>({type:n.type,name:i?n.name:null,width:n.width,height:n.height,x:i?n.x:null,y:i?n.y:null,visible:n.visible,fills:'fills'in n?n.fills:null,boundVariables:n.boundVariables,text:n.type==='TEXT'?n.characters:null,font:n.type==='TEXT'?n.getStyledTextSegments(['fontName','fontSize','lineHeight']):null,master:n.type==='INSTANCE'?n.mainComponent?.key:null,reactions:'reactions'in n?n.reactions:null}));const str=JSON.stringify(data);let hash=2166136261;for(let i=0;i<str.length;i++){hash^=str.charCodeAt(i);hash=Math.imul(hash,16777619);}return{hash:hash>>>0,length:str.length,count:nodes.length};}
+const before=fingerprint(current);
+const copy=current.clone();right.appendChild(copy);copy.name='Current medications · Comparison copy · Updated 2026-11-14';
+originalPage.appendChild(current);current.x=160;current.y=160;
+labels[0].characters='Updated 14 Nov 2026 · Original A01 stays fixed. The right-hand screen is a comparison copy. Edit the working screen on 01 Current medications; refresh this copy with each build.';
+labels[1].characters='B · Current rebuild · Comparison copy';
+labels[2].characters='Comparison copy · Refreshed 14 Nov 2026 · 1440 × 1766\nWorking screen stays on 01 Current medications. Open working screen ↗';
+labels[2].setRangeHyperlink(0,labels[2].characters.length,{type:'URL',value:'https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=2-1811'});
+labels[3].characters='14 Nov 2026 · Comparison established after the SDE header correction. Remaining layouts are documented, unchanged and unapproved.\n14 Nov 2026 · Daniel requested keeping the working version on its original page. Working screen 2:1811 restored to 01 Current medications; a matching copy remains here.\nFor each future build: edit 2:1811 on its original page; refresh this comparison copy; update the date and affected difference rows; append history. This copy is not automatically synchronized. Keep A01 fixed and retain superseded evidence. This is a visual comparison, not a played-through prototype.';
+const moved=fingerprint(current),copied=fingerprint(copy);
+const nodes=board.findAll(()=>true);
+return{createdNodeIds:[copy.id,...copy.findAll(()=>true).map(n=>n.id)],mutatedNodeIds:[current.id,...labels.map(n=>n.id)],workingPageId:originalPage.id,workingScreenId:current.id,comparisonPageId:'17:881',comparisonScreenId:copy.id,before,moved,copied,workingUnchanged:JSON.stringify(before)===JSON.stringify(moved),copyMatches:JSON.stringify(before)===JSON.stringify(copied),workingBounds:{x:current.x,y:current.y,width:current.width,height:current.height},comparisonBounds:{width:copy.width,height:copy.height},boardBounds:{width:board.width,height:board.height},counts:nodes.reduce((a,n)=>(a[n.type]=(a[n.type]||0)+1,a),{}),images:nodes.filter(n=>Array.isArray(n.fills)&&n.fills.some(p=>p.type==='IMAGE')).map(n=>({id:n.id,name:n.name,width:n.width,height:n.height})),labelOverflows:labels.filter(n=>n.x+n.width>n.parent.width||n.y+n.height>n.parent.height).map(n=>n.id)};

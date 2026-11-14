@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "title": "Medlist · Restore working screen to original page",
+  "date": "2026-11-14",
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "reviewUrl": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=2-1811",
+  "summary": "Restored working screen 2:1811 to 01 Current medications at its original position. The comparison page now holds a matching editable copy 23:881, with explicit refresh instructions and a link to the working screen.",
+  "timing": {
+    "start": "2026-11-14T19:42:07Z",
+    "ready": "2026-11-14T19:42:46Z",
+    "built": "2026-11-14T19:42:56Z",
+    "firstImage": "2026-11-14T19:43:06Z",
+    "verified": "2026-11-14T19:43:15Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "Live original-page space and current screen location checked before mutation.",
+    "707-node scope fingerprint identical before move, after move and in comparison clone; geometry, text/font segments, paints, bindings, instance master keys and reactions compared; root name/location and generated node IDs excluded.",
+    "Working screen restored to x160/y160, 1440 × 1766. Comparison copy is also 1440 × 1766.",
+    "Both working-screen and full comparison screenshots viewed; no label overflow. Frozen A01 image unchanged; no nodes deleted."
+  ],
+  "findings": [
+    "Daniel's explicit page-location correction overrides the preceding decision to move the working screen into the comparison.",
+    "Comparison clone is not automatically synchronized. Refresh it alongside each subsequent working-screen batch and update comparison notes/date/history.",
+    "All prior unapproved product-layout differences remain unchanged."
+  ],
+  "reads": [
+    "Live original page and comparison scope; current comparison state and provenance register.",
+    "Previously loaded Figma skills and comparison/API guidance retained for this correction."
+  ],
+  "effort": {
+    "through": "verification",
+    "figmaCalls": 4,
+    "otherCalls": null,
+    "searches": 0,
+    "technicalRetries": 0,
+    "canvasCorrections": 0,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "screenshots": [
+    "working-screen.png",
+    "comparison.png"
+  ],
+  "evidence": {
+    "details": "evidence.json",
+    "script": "restore.js",
+    "currentState": "../2026-11-14-medlist-comparison/state.json"
+  }
+}

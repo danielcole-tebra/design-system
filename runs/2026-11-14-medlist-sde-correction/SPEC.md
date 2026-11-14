@@ -4,9 +4,11 @@ Owner/reviewer: Daniel Cole. Builder: Codex. Evidence date: 2026-11-14.
 
 ## Running comparison · Established 2026-11-14
 
-[Open the comparison page](https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=17-882). The actual current screen `2:1811` now lives on page `17:881`, beside a locked natural-size PNG reference of original A01 `11198:3155`. The original editable source is linked on the board. This is a visual baseline, not a native editable copy of the original.
+[Open the comparison page](https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=17-882). Per Daniel's page-location correction on 2026-11-14, working screen `2:1811` stays on original page `0:1` (01 Current medications). Comparison copy `23:881` lives on page `17:881`, beside the locked natural-size PNG reference of original A01 `11198:3155`. The original editable source and working screen are linked on the board. The original baseline is visual, not a native editable copy.
 
-Daniel requested keeping this comparison current as the work proceeds. Future medlist batches must edit this same right-hand screen, update the affected comparison rows and date, and append a dated history entry. Keep the original baseline fixed; retain superseded evidence. Current node IDs and maintenance protocol: `../2026-11-14-medlist-comparison/state.json`. No remaining layout decision was approved by this comparison request.
+Daniel requested keeping this comparison current as the work proceeds. Future medlist batches must edit `2:1811` on its original page, refresh the separate comparison copy, update affected comparison rows and date, and append a dated history entry. The copy is not automatically synchronized. Keep the original baseline fixed; retain superseded evidence. Current node IDs and maintenance protocol: `../2026-11-14-medlist-comparison/state.json`. No remaining layout decision was approved by this comparison request.
+
+History: the first comparison batch moved the working frame to page `17:881`; Daniel then directed that it remain on the original page. That earlier location/maintenance choice is superseded by the instructions above. Evidence: `../2026-11-14-medlist-page-correction/REPORT.md`.
 
 This register supersedes the first-batch composition claims in `../2026-11-14-medlist-native/SPEC.md`. Primitive fidelity does not establish composition approval.
 

@@ -4,6 +4,8 @@
   "pageId": "17:881",
   "boardId": "17:882",
   "currentId": "2:1811",
+  "workingPageId": "0:1",
+  "comparisonScreenId": "23:881",
   "baselineId": "17:890",
   "registerId": "17:893",
   "updateDateId": "17:884",
@@ -16,5 +18,5 @@
     "kind": "locked raster visual reference"
   },
   "currentRegister": "../2026-11-14-medlist-sde-correction/SPEC.md",
-  "maintenance": "Edit 2:1811 directly on this page; update affected register rows, current date and history. Keep A01 reference fixed. Retain superseded evidence."
+  "maintenance": "Edit 2:1811 on original page 0:1. Refresh comparison copy 23:881 on page 17:881 alongside each build; it is not automatically synchronized. Update affected register rows, current date and history. Keep A01 fixed. Retain superseded evidence."
 }

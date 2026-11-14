@@ -4571,3 +4571,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Running comparison page
 - File: yh2F6OUgdI6K0risLtKLEQ. Created a running comparison page with the locked original A01 visual baseline at natural size beside the actual editable current medlist. Moved current frame 2:1811 intact so future edits appear directly in the comparison. Added source links, difference register and maintenance/history notes.
 - Evidence: runs/2026-11-14-medlist-comparison/REPORT.md, record.json, comparison.png, original-a01.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-page-correction -->
+## 2026-11-14 — Medlist · Restore working screen to original page
+- File: yh2F6OUgdI6K0risLtKLEQ. Restored working screen 2:1811 to 01 Current medications at its original position. The comparison page now holds a matching editable copy 23:881, with explicit refresh instructions and a link to the working screen.
+- Evidence: runs/2026-11-14-medlist-page-correction/REPORT.md, record.json, working-screen.png, comparison.png.
