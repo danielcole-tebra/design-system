@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "kind": "read-only-comparison",
+  "date": "2026-11-14",
+  "author": "Daniel Cole",
+  "agent": "Codex",
+  "fileKey": "fu7ncgAnIdjvxxxmQILFzK",
+  "target": "11198:3155",
+  "sessionId": "885b0c38-9b5e-4578-b945-1d238c2a374b",
+  "timing": {
+    "instrumentedStart": "2026-11-14T17:33:57Z",
+    "verificationComplete": "2026-11-14T17:43:36Z",
+    "instrumentedVerificationElapsedSeconds": 579,
+    "startupBeforeInstrumentation": "not measured",
+    "construction": null,
+    "firstReviewableImageReturn": "not timestamped",
+    "inputWaitSeconds": 0
+  },
+  "coverage": {
+    "instances": 101,
+    "remoteInstances": 81,
+    "localInstances": 20,
+    "representativeControls": 12,
+    "structurePasses": 8,
+    "structureDifferences": 4,
+    "visiblePaintedTextNodes": 181,
+    "textBoundsClipCandidates": 0,
+    "rowBoundaryChecks": 10,
+    "storedReactionNodes": 0
+  },
+  "figmaMutations": [],
+  "screenshots": [
+    "a01-current.png",
+    "a01-filters.png",
+    "library-pagination.png",
+    "sde-main.png",
+    "sde-medications.png"
+  ],
+  "limitations": [
+    "Live library and maintained code transcription; no fresh source-code/shipping screenshot audit.",
+    "Native component key identity does not establish publishing or accepted consumer updates.",
+    "SDE Main and established medication catalogue are separate comparators.",
+    "No runtime keyboard/accessibility or alternate-width tests; no prototype playback.",
+    "Not a construction benchmark; generator requiring construction timestamps not used."
+  ]
+}
