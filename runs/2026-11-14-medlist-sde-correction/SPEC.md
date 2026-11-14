@@ -52,6 +52,8 @@ All unresolved rows below are **DECISION**, owned by Daniel, scoped to this medl
 
 ### Progressive disclosure · 2026-11-14
 
+Spacing correction, 2026-11-14: Daniel identified the isolated overflow control at the far edge. Both proposal variants now group primary action, Details and overflow in one 288 px cell with bound 8 px gaps. Review, selection and action controls are vertically centered. Default Details-to-overflow gap changed from 95 to 8 px; all eight specimens preserve copy, heights and stored disclosure destinations. The prior separate 40 px overflow wrappers remain empty, hidden and labelled superseded. Evidence: `../2026-11-14-medlist-action-spacing/REPORT.md`. This updates the disclosure proposal only.
+
 Daniel chose **review current medications and spot issues; disclose prescribing and pharmacy details**. [Disclosure study](https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=34-1391), local set `34:1388`, is an isolated proposal on the original page. Owner: Daniel; type: DECISION; scope: medlist row information hierarchy; status: review-first direction confirmed, visual proposal not applied to the working list. Evidence: `../2026-11-14-medlist-disclosure/REPORT.md`.
 
 Always visible: medication/strength, complete directions, compound or patient-reported markers when present, order/issue status, review control and existing contextual Edit/Resend/View issue action. Explicit Details/Hide details control expands prescribing date/type/clinician, quantity/duration/refills, pharmacy/phone and existing timeline access inline. Existing overflow remains the secondary-action entry point. Selection, review and primary actions are separate from disclosure; the whole row is not a disclosure click target.

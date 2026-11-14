@@ -1,0 +1,1271 @@
+{
+  "update": {
+    "createdNodeIds": [],
+    "mutatedNodeIds": [
+      "34:1280",
+      "34:1284",
+      "34:1283",
+      "34:1261",
+      "34:1278",
+      "34:1338",
+      "34:1342",
+      "34:1341",
+      "34:1326",
+      "34:1335",
+      "34:1388",
+      "34:1806"
+    ],
+    "affectedIds": [
+      "34:1396",
+      "34:1460",
+      "34:1530",
+      "34:1600",
+      "34:1671",
+      "34:1736",
+      "34:1808",
+      "34:1878"
+    ],
+    "before": [
+      {
+        "id": "34:1396",
+        "height": 61,
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Filled",
+          "Reviewed",
+          "Edit",
+          "Details"
+        ],
+        "gap": 95,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1324",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1324",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1460",
+        "height": 89,
+        "text": [
+          "Hydrocortisone 1% compounded cream",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Pending fill",
+          "Reviewed",
+          "Edit",
+          "Details"
+        ],
+        "gap": 95,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1324",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1324",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1530",
+        "height": 81,
+        "text": [
+          "Melatonin 3 mg tablet",
+          "Take 1 tablet by mouth at bedtime as needed",
+          "Patient-reported supplement",
+          "Send failed",
+          "Reviewed",
+          "Resend",
+          "Details"
+        ],
+        "gap": 88,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1324",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1324",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1600",
+        "height": 61,
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Patient info required",
+          "Reviewed",
+          "View issue",
+          "Details"
+        ],
+        "gap": 69,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1324",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1324",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1671",
+        "height": 157,
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Filled",
+          "Reviewed",
+          "Edit",
+          "Hide details",
+          "Prescribing",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "Supply",
+          "15 tablets",
+          "15 days as needed",
+          "No refills",
+          "Pharmacy",
+          "CVS Pharmacy 1709 in Target",
+          "Phone: (850) 555-0142",
+          "Clinical timeline"
+        ],
+        "gap": 61,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1260",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1260",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1736",
+        "height": 157,
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Patient info required",
+          "Reviewed",
+          "View issue",
+          "Hide details",
+          "Prescribing",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "Supply",
+          "40 tablets",
+          "10 days as needed",
+          "No refills",
+          "Pharmacy",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706"
+        ],
+        "gap": 35,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1260",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1260",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1808",
+        "height": 185,
+        "text": [
+          "Hydrocortisone 1% compounded cream",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Pending fill",
+          "Reviewed",
+          "Edit",
+          "Hide details",
+          "Prescribing",
+          "Mar 14, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "Supply",
+          "1 tube (30 g)",
+          "7 days",
+          "No refills",
+          "Pharmacy",
+          "Accord Specialty Pharmacy",
+          "Phone: (850) 555-2642"
+        ],
+        "gap": 61,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1260",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1260",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1878",
+        "height": 177,
+        "text": [
+          "Melatonin 3 mg tablet",
+          "Take 1 tablet by mouth at bedtime as needed",
+          "Patient-reported supplement",
+          "Send failed",
+          "Reviewed",
+          "Resend",
+          "Hide details",
+          "Prescribing",
+          "Jan 23, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "Supply",
+          "30 tablets",
+          "30 days",
+          "No refills",
+          "Pharmacy",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706"
+        ],
+        "gap": 54,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1260",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1260",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "id": "34:1396",
+        "height": 61,
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Filled",
+          "Reviewed",
+          "Edit",
+          "Details"
+        ],
+        "gap": 8,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1324",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1324",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1460",
+        "height": 89,
+        "text": [
+          "Hydrocortisone 1% compounded cream",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Pending fill",
+          "Reviewed",
+          "Edit",
+          "Details"
+        ],
+        "gap": 8,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1324",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1324",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1530",
+        "height": 81,
+        "text": [
+          "Melatonin 3 mg tablet",
+          "Take 1 tablet by mouth at bedtime as needed",
+          "Patient-reported supplement",
+          "Send failed",
+          "Reviewed",
+          "Resend",
+          "Details"
+        ],
+        "gap": 8,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1324",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1324",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1600",
+        "height": 61,
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Patient info required",
+          "Reviewed",
+          "View issue",
+          "Details"
+        ],
+        "gap": 8,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1324",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1324",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1671",
+        "height": 157,
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Filled",
+          "Reviewed",
+          "Edit",
+          "Hide details",
+          "Prescribing",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "Supply",
+          "15 tablets",
+          "15 days as needed",
+          "No refills",
+          "Pharmacy",
+          "CVS Pharmacy 1709 in Target",
+          "Phone: (850) 555-0142",
+          "Clinical timeline"
+        ],
+        "gap": 8,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1260",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1260",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1736",
+        "height": 157,
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Patient info required",
+          "Reviewed",
+          "View issue",
+          "Hide details",
+          "Prescribing",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "Supply",
+          "40 tablets",
+          "10 days as needed",
+          "No refills",
+          "Pharmacy",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706"
+        ],
+        "gap": 8,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1260",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1260",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1808",
+        "height": 185,
+        "text": [
+          "Hydrocortisone 1% compounded cream",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Pending fill",
+          "Reviewed",
+          "Edit",
+          "Hide details",
+          "Prescribing",
+          "Mar 14, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "Supply",
+          "1 tube (30 g)",
+          "7 days",
+          "No refills",
+          "Pharmacy",
+          "Accord Specialty Pharmacy",
+          "Phone: (850) 555-2642"
+        ],
+        "gap": 8,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1260",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1260",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "34:1878",
+        "height": 177,
+        "text": [
+          "Melatonin 3 mg tablet",
+          "Take 1 tablet by mouth at bedtime as needed",
+          "Patient-reported supplement",
+          "Send failed",
+          "Reviewed",
+          "Resend",
+          "Hide details",
+          "Prescribing",
+          "Jan 23, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "Supply",
+          "30 tablets",
+          "30 days",
+          "No refills",
+          "Pharmacy",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706"
+        ],
+        "gap": 8,
+        "kebab": {
+          "width": 34,
+          "height": 34,
+          "master": "e073fb6fa591240262a53206f29e6343d81ca5e3"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "34:1260",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "34:1260",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      }
+    ],
+    "checks": [
+      {
+        "id": "34:1396",
+        "gap": 8,
+        "textUnchanged": true,
+        "heightUnchanged": true,
+        "kebabUnchanged": true,
+        "reactionsUnchanged": true
+      },
+      {
+        "id": "34:1460",
+        "gap": 8,
+        "textUnchanged": true,
+        "heightUnchanged": true,
+        "kebabUnchanged": true,
+        "reactionsUnchanged": true
+      },
+      {
+        "id": "34:1530",
+        "gap": 8,
+        "textUnchanged": true,
+        "heightUnchanged": true,
+        "kebabUnchanged": true,
+        "reactionsUnchanged": true
+      },
+      {
+        "id": "34:1600",
+        "gap": 8,
+        "textUnchanged": true,
+        "heightUnchanged": true,
+        "kebabUnchanged": true,
+        "reactionsUnchanged": true
+      },
+      {
+        "id": "34:1671",
+        "gap": 8,
+        "textUnchanged": true,
+        "heightUnchanged": true,
+        "kebabUnchanged": true,
+        "reactionsUnchanged": true
+      },
+      {
+        "id": "34:1736",
+        "gap": 8,
+        "textUnchanged": true,
+        "heightUnchanged": true,
+        "kebabUnchanged": true,
+        "reactionsUnchanged": true
+      },
+      {
+        "id": "34:1808",
+        "gap": 8,
+        "textUnchanged": true,
+        "heightUnchanged": true,
+        "kebabUnchanged": true,
+        "reactionsUnchanged": true
+      },
+      {
+        "id": "34:1878",
+        "gap": 8,
+        "textUnchanged": true,
+        "heightUnchanged": true,
+        "kebabUnchanged": true,
+        "reactionsUnchanged": true
+      }
+    ]
+  },
+  "initialStandaloneGlyphAudit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": false,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 6,
+      "passed": false,
+      "checks": [
+        {
+          "id": "I34:1396;34:1262",
+          "mainId": "2:1268",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1279",
+          "mainId": "2:1338",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1281",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1267",
+          "mainId": "2:1570",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1310",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1284;170:18",
+          "mainId": "2:1481",
+          "passed": false,
+          "differenceCount": 5
+        }
+      ],
+      "differenceCount": 5,
+      "differences": [
+        {
+          "id": "I34:1396;34:1284;170:18",
+          "path": "/children/0/values/fills/0/color/r",
+          "pathTruncated": false,
+          "actual": {
+            "text": "0.3294117748737335",
+            "truncated": false
+          },
+          "expected": {
+            "text": "0",
+            "truncated": false
+          }
+        },
+        {
+          "id": "I34:1396;34:1284;170:18",
+          "path": "/children/0/values/fills/0/color/g",
+          "pathTruncated": false,
+          "actual": {
+            "text": "0.3294117748737335",
+            "truncated": false
+          },
+          "expected": {
+            "text": "0.2823529541492462",
+            "truncated": false
+          }
+        },
+        {
+          "id": "I34:1396;34:1284;170:18",
+          "path": "/children/0/values/fills/0/color/b",
+          "pathTruncated": false,
+          "actual": {
+            "text": "0.3294117748737335",
+            "truncated": false
+          },
+          "expected": {
+            "text": "0.32156863808631897",
+            "truncated": false
+          }
+        },
+        {
+          "id": "I34:1396;34:1284;170:18",
+          "path": "/children/0/values/fills/0/boundVariables/color/id",
+          "pathTruncated": false,
+          "actual": {
+            "text": "\"VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127\"",
+            "truncated": false
+          },
+          "expected": {
+            "text": "\"VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5\"",
+            "truncated": false
+          }
+        },
+        {
+          "id": "I34:1396;34:1284;170:18",
+          "path": "/children/0/values/boundVariables/fills/0/id",
+          "pathTruncated": false,
+          "actual": {
+            "text": "\"VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127\"",
+            "truncated": false
+          },
+          "expected": {
+            "text": "\"VariableID:172c5580bce6e949fd9eac7ffb766a5ab3151022/74:5\"",
+            "truncated": false
+          }
+        }
+      ],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 73,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "34:1396 details-overflow gap",
+          "passed": true
+        },
+        {
+          "name": "34:1396 primary-details gap",
+          "passed": true
+        },
+        {
+          "name": "34:1396 group width",
+          "passed": true
+        },
+        {
+          "name": "34:1396 row height",
+          "passed": true
+        },
+        {
+          "name": "34:1396 active columns",
+          "passed": true
+        },
+        {
+          "name": "34:1396 controls share center",
+          "passed": true
+        },
+        {
+          "name": "34:1396 native overflow size",
+          "passed": true
+        },
+        {
+          "name": "34:1396 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "34:1396 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "34:1460 details-overflow gap",
+          "passed": true
+        },
+        {
+          "name": "34:1460 primary-details gap",
+          "passed": true
+        },
+        {
+          "name": "34:1460 group width",
+          "passed": true
+        },
+        {
+          "name": "34:1460 row height",
+          "passed": true
+        },
+        {
+          "name": "34:1460 active columns",
+          "passed": true
+        },
+        {
+          "name": "34:1460 controls share center",
+          "passed": true
+        },
+        {
+          "name": "34:1460 native overflow size",
+          "passed": true
+        },
+        {
+          "name": "34:1460 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "34:1460 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "34:1530 details-overflow gap",
+          "passed": true
+        },
+        {
+          "name": "34:1530 primary-details gap",
+          "passed": true
+        },
+        {
+          "name": "34:1530 group width",
+          "passed": true
+        },
+        {
+          "name": "34:1530 row height",
+          "passed": true
+        },
+        {
+          "name": "34:1530 active columns",
+          "passed": true
+        },
+        {
+          "name": "34:1530 controls share center",
+          "passed": true
+        },
+        {
+          "name": "34:1530 native overflow size",
+          "passed": true
+        },
+        {
+          "name": "34:1530 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "34:1530 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "34:1600 details-overflow gap",
+          "passed": true
+        },
+        {
+          "name": "34:1600 primary-details gap",
+          "passed": true
+        },
+        {
+          "name": "34:1600 group width",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 43,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "finalAudit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 5,
+      "passed": true,
+      "checks": [
+        {
+          "id": "I34:1396;34:1262",
+          "mainId": "2:1268",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1279",
+          "mainId": "2:1338",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1281",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1267",
+          "mainId": "2:1570",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I34:1396;34:1310",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 74,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "34:1396 details-overflow gap",
+          "passed": true
+        },
+        {
+          "name": "34:1396 primary-details gap",
+          "passed": true
+        },
+        {
+          "name": "34:1396 group width",
+          "passed": true
+        },
+        {
+          "name": "34:1396 row height",
+          "passed": true
+        },
+        {
+          "name": "34:1396 active columns",
+          "passed": true
+        },
+        {
+          "name": "34:1396 controls share center",
+          "passed": true
+        },
+        {
+          "name": "34:1396 native overflow size",
+          "passed": true
+        },
+        {
+          "name": "34:1396 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "34:1396 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "34:1460 details-overflow gap",
+          "passed": true
+        },
+        {
+          "name": "34:1460 primary-details gap",
+          "passed": true
+        },
+        {
+          "name": "34:1460 group width",
+          "passed": true
+        },
+        {
+          "name": "34:1460 row height",
+          "passed": true
+        },
+        {
+          "name": "34:1460 active columns",
+          "passed": true
+        },
+        {
+          "name": "34:1460 controls share center",
+          "passed": true
+        },
+        {
+          "name": "34:1460 native overflow size",
+          "passed": true
+        },
+        {
+          "name": "34:1460 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "34:1460 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "34:1530 details-overflow gap",
+          "passed": true
+        },
+        {
+          "name": "34:1530 primary-details gap",
+          "passed": true
+        },
+        {
+          "name": "34:1530 group width",
+          "passed": true
+        },
+        {
+          "name": "34:1530 row height",
+          "passed": true
+        },
+        {
+          "name": "34:1530 active columns",
+          "passed": true
+        },
+        {
+          "name": "34:1530 controls share center",
+          "passed": true
+        },
+        {
+          "name": "34:1530 native overflow size",
+          "passed": true
+        },
+        {
+          "name": "34:1530 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "34:1530 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "34:1600 details-overflow gap",
+          "passed": true
+        },
+        {
+          "name": "34:1600 primary-details gap",
+          "passed": true
+        },
+        {
+          "name": "34:1600 group width",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 44,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  }
+}

@@ -4589,3 +4589,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Progressive disclosure row study
 - File: yh2F6OUgdI6K0risLtKLEQ. Built an isolated review-first disclosure study with collapsed and expanded local row variants. Daniel selected prioritizing medication review and issue detection. Full directions, source/compound labels, status, review and contextual action remain visible; prescribing, supply, pharmacy and timeline access are disclosed inline. Working screen and full-page comparison remain unchanged.
 - Evidence: runs/2026-11-14-medlist-disclosure/REPORT.md, record.json, disclosure-review.png, before-fix.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-action-spacing -->
+## 2026-11-14 — Medlist · Group row actions and overflow
+- File: yh2F6OUgdI6K0risLtKLEQ. Updated both disclosure proposal variants so primary action, Details and overflow form one group with bound 8 px gaps. Review, selection and action controls now share a vertical centerline. Applied to all eight live specimens; no working-screen changes.
+- Evidence: runs/2026-11-14-medlist-action-spacing/REPORT.md, record.json, action-spacing.png.
