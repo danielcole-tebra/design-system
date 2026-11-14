@@ -1,0 +1,17 @@
+{
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "sessionId": "a5e35a59-9a03-4f8b-bb99-ba4ac1741ba6",
+  "pageId": "0:1",
+  "start": "2026-11-14T17:50:32Z",
+  "stage": "verified; ready for Daniel's visual review",
+  "screenId": "2:1811",
+  "localComponentsId": "2:1810",
+  "readmeId": "2:2808",
+  "inspectionId": "4:869",
+  "finalReplacementControls": ["4:871", "4:877", "4:883"],
+  "constructionSequence": ["helpers.js + build.js", "correct-source-copy.js", "restore-native-default-icons.js (reset attempt; did not correct inherited render)", "expose-controls.js", "fresh-native-icons.js"],
+  "verification": "audit-helper.js + verify.js; evidence.json; final screenshots",
+  "finalStructuralDifferences": 0,
+  "measuredAssertionsPassed": 22,
+  "sourceRowsMatched": 10
+}

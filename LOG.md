@@ -4553,3 +4553,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - Author: Daniel Cole; Agent: Codex. Target: `fu7ncgAnIdjvxxxmQILFzK` / `11198:3155`. Read-only comparison with Design System Rebuild `YX2n4YLrEpBXNbcc73T6dw`, SDE Main `ViAWRVVtgkCXzItk0sQ5P0` and medication catalogue `fdCQVFdvOByaOYIJYag0d6`; no Figma changes.
 - Findings: resolved A01 master provenance using synchronous existing references; eight of twelve sampled controls match consumed masters, while two tabs and two filters override type/bindings. Filters measure36 px versus native40. Custom pagination/shell, local token duplicates and clipped fixed-height row cells are documented separately from SDE composition choices. No visible-text-bound clipping candidates in181 checked nodes; five screenshots inspected. No new library GAP or shipping DEFECT; SDE history remains settled.
 - Evidence: runs/2026-11-14-current-medications-comparison/REPORT.md, evidence.json, control-audit.js, record.json and five PNGs. Instrumented verification interval579 seconds; startup not timed. Commit/push outcome reported in chat.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-native -->
+## 2026-11-14 — Medlist native rebuild · Current medications · Batch 1
+- File: yh2F6OUgdI6K0risLtKLEQ. Created the new Tebra-owned Design file and first Current medications screen (1440 × 1833), connected to Design System Rebuild. Five reusable local component families, with four order-status variants and exposed nested controls. Static review batch; remaining flows await Daniel's visual read per AGENTS.md.
+- Evidence: runs/2026-11-14-medlist-native/REPORT.md, record.json, current-medications.png, local-components.png, inspection-retained.png, first-screen.png.

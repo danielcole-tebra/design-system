@@ -1,0 +1,1164 @@
+{
+  "finalAudit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 16,
+      "passed": true,
+      "checks": [
+        {
+          "id": "2:1812",
+          "mainId": "2:94",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2015",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2022",
+          "mainId": "2:1398",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2025",
+          "mainId": "2:1396",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;2:2029",
+          "mainId": "2:467",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;2:2050",
+          "mainId": "2:467",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;2:2071",
+          "mainId": "2:466",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;4:871",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;4:877",
+          "mainId": "2:168",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2243",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2794",
+          "mainId": "2:1448",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2320;2:2275",
+          "mainId": "2:1268",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2320;2:2304",
+          "mainId": "2:1338",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2320;2:2316",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2320;4:883",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2557;2:2282",
+          "mainId": "2:1570",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 22,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Screen width",
+          "passed": true
+        },
+        {
+          "name": "Ten medication rows",
+          "passed": true
+        },
+        {
+          "name": "Medication identity and order",
+          "passed": true
+        },
+        {
+          "name": "All rows 1216 wide",
+          "passed": true
+        },
+        {
+          "name": "All reviewed switches off",
+          "passed": true
+        },
+        {
+          "name": "Refill content restored",
+          "passed": true
+        },
+        {
+          "name": "Last pharmacy preserved",
+          "passed": true
+        },
+        {
+          "name": "Last phone preserved",
+          "passed": true
+        },
+        {
+          "name": "Source statuses preserved",
+          "passed": true
+        },
+        {
+          "name": "Native field heights",
+          "passed": true
+        },
+        {
+          "name": "Native tabs height",
+          "passed": true
+        },
+        {
+          "name": "Native small action heights",
+          "passed": true
+        },
+        {
+          "name": "Native pagination height",
+          "passed": true
+        },
+        {
+          "name": "Pagination visible copy",
+          "passed": true
+        },
+        {
+          "name": "Compound visible in one row",
+          "passed": true
+        },
+        {
+          "name": "Timeline visible in one row",
+          "passed": true
+        },
+        {
+          "name": "All medication names use Akkurat LL Bold",
+          "passed": true
+        },
+        {
+          "name": "All medication names use h5 size",
+          "passed": true
+        },
+        {
+          "name": "Medication direction size",
+          "passed": true
+        },
+        {
+          "name": "Failed status canonical error token",
+          "passed": true
+        },
+        {
+          "name": "No prototype wiring claimed",
+          "passed": true
+        },
+        {
+          "name": "Bounds exceptions only native floating labels",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 0,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "copyComparison": {
+    "source": [
+      {
+        "name": "Medication / Alprazolam 0.25 mg tablet",
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "15 tablets",
+          "15 days as needed",
+          "No refills",
+          "Filled",
+          "CVS Pharmacy 1709 in Target",
+          "Phone: (850) 555-0142",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Cetirizine 10 mg tablet",
+        "text": [
+          "Cetirizine 10 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for allergy symptoms",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "1 refill",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Aspirin 81 mg delayed-release tablet",
+        "text": [
+          "Aspirin 81 mg delayed-release tablet",
+          "Take 1 tablet by mouth once daily",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "90 tablets",
+          "90 days",
+          "1 refill",
+          "Pending fill",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Doxycycline hyclate 100 mg capsule",
+        "text": [
+          "Doxycycline hyclate 100 mg capsule",
+          "Take 1 capsule by mouth twice daily for 7 days",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "14 capsules",
+          "7 days",
+          "No refills",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Furosemide 20 mg tablet",
+        "text": [
+          "Furosemide 20 mg tablet",
+          "Take 1 tablet by mouth every morning",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "1 refill",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Hydrocortisone 1% compounded cream",
+        "text": [
+          "Hydrocortisone 1% compounded cream",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Mar 14, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "1 tube (30 g)",
+          "7 days",
+          "No refills",
+          "Pending fill",
+          "Accord Specialty Pharmacy",
+          "Phone: (850) 555-2642",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Melatonin 3 mg tablet",
+        "text": [
+          "Melatonin 3 mg tablet",
+          "Take 1 tablet by mouth at bedtime as needed",
+          "Patient-reported supplement",
+          "Jan 23, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "No refills",
+          "Send failed",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Resend"
+        ]
+      },
+      {
+        "name": "Medication / Metformin 500 mg tablet",
+        "text": [
+          "Metformin 500 mg tablet",
+          "Take 1 tablet by mouth twice daily with meals",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "180 tablets",
+          "90 days",
+          "1 refill",
+          "Filled",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Simvastatin 20 mg tablet",
+        "text": [
+          "Simvastatin 20 mg tablet",
+          "Take 1 tablet by mouth at bedtime",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "90 tablets",
+          "90 days",
+          "1 refill",
+          "Pending fill",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Acetaminophen 500 mg tablet",
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "40 tablets",
+          "10 days as needed",
+          "No refills",
+          "Patient info required",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "View issue"
+        ]
+      }
+    ],
+    "target": [
+      {
+        "name": "Medication / Alprazolam 0.25 mg tablet",
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "15 tablets",
+          "15 days as needed",
+          "No refills",
+          "Filled",
+          "CVS Pharmacy 1709 in Target",
+          "Phone: (850) 555-0142",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Cetirizine 10 mg tablet",
+        "text": [
+          "Cetirizine 10 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for allergy symptoms",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "1 refill",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Aspirin 81 mg delayed-release tablet",
+        "text": [
+          "Aspirin 81 mg delayed-release tablet",
+          "Take 1 tablet by mouth once daily",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "90 tablets",
+          "90 days",
+          "1 refill",
+          "Pending fill",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Doxycycline hyclate 100 mg capsule",
+        "text": [
+          "Doxycycline hyclate 100 mg capsule",
+          "Take 1 capsule by mouth twice daily for 7 days",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "14 capsules",
+          "7 days",
+          "No refills",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Furosemide 20 mg tablet",
+        "text": [
+          "Furosemide 20 mg tablet",
+          "Take 1 tablet by mouth every morning",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "1 refill",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Hydrocortisone 1% compounded cream",
+        "text": [
+          "Hydrocortisone 1% compounded cream",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Mar 14, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "1 tube (30 g)",
+          "7 days",
+          "No refills",
+          "Pending fill",
+          "Accord Specialty Pharmacy",
+          "Phone: (850) 555-2642",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Melatonin 3 mg tablet",
+        "text": [
+          "Melatonin 3 mg tablet",
+          "Take 1 tablet by mouth at bedtime as needed",
+          "Patient-reported supplement",
+          "Jan 23, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "No refills",
+          "Send failed",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Resend"
+        ]
+      },
+      {
+        "name": "Medication / Metformin 500 mg tablet",
+        "text": [
+          "Metformin 500 mg tablet",
+          "Take 1 tablet by mouth twice daily with meals",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "180 tablets",
+          "90 days",
+          "1 refill",
+          "Filled",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Simvastatin 20 mg tablet",
+        "text": [
+          "Simvastatin 20 mg tablet",
+          "Take 1 tablet by mouth at bedtime",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "90 tablets",
+          "90 days",
+          "1 refill",
+          "Pending fill",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ]
+      },
+      {
+        "name": "Medication / Acetaminophen 500 mg tablet",
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "40 tablets",
+          "10 days as needed",
+          "No refills",
+          "Patient info required",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "View issue"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "name": "Medication / Alprazolam 0.25 mg tablet",
+        "passed": true
+      },
+      {
+        "name": "Medication / Cetirizine 10 mg tablet",
+        "passed": true
+      },
+      {
+        "name": "Medication / Aspirin 81 mg delayed-release tablet",
+        "passed": true
+      },
+      {
+        "name": "Medication / Doxycycline hyclate 100 mg capsule",
+        "passed": true
+      },
+      {
+        "name": "Medication / Furosemide 20 mg tablet",
+        "passed": true
+      },
+      {
+        "name": "Medication / Hydrocortisone 1% compounded cream",
+        "passed": true
+      },
+      {
+        "name": "Medication / Melatonin 3 mg tablet",
+        "passed": true
+      },
+      {
+        "name": "Medication / Metformin 500 mg tablet",
+        "passed": true
+      },
+      {
+        "name": "Medication / Simvastatin 20 mg tablet",
+        "passed": true
+      },
+      {
+        "name": "Medication / Acetaminophen 500 mg tablet",
+        "passed": true
+      }
+    ]
+  },
+  "initialAudit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": false,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 16,
+      "passed": false,
+      "checks": [
+        {
+          "id": "2:1812",
+          "mainId": "2:94",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2015",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2022",
+          "mainId": "2:1398",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2025",
+          "mainId": "2:1396",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;2:2029",
+          "mainId": "2:467",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;2:2050",
+          "mainId": "2:467",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;2:2071",
+          "mainId": "2:466",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2127;2:2113",
+          "mainId": "2:160",
+          "passed": false,
+          "differenceCount": 5
+        },
+        {
+          "id": "I2:2127;2:2120",
+          "mainId": "2:168",
+          "passed": false,
+          "differenceCount": 5
+        },
+        {
+          "id": "2:2243",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "2:2794",
+          "mainId": "2:1448",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2320;2:2275",
+          "mainId": "2:1268",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2320;2:2304",
+          "mainId": "2:1338",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2320;2:2316",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I2:2320;2:2286",
+          "mainId": "2:1426",
+          "passed": false,
+          "differenceCount": 6
+        },
+        {
+          "id": "I2:2557;2:2282",
+          "mainId": "2:1570",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 16,
+      "differences": [
+        {
+          "id": "I2:2127;2:2113",
+          "path": "/children/0/name",
+          "pathTruncated": false,
+          "actual": {
+            "text": "\"Icon/PlusOutlined\"",
+            "truncated": false
+          },
+          "expected": {
+            "text": "\"Start icon\"",
+            "truncated": false
+          }
+        },
+        {
+          "id": "I2:2127;2:2113",
+          "path": "/children/0/children/0/values/fills/0/color/g",
+          "pathTruncated": false,
+          "actual": {
+            "text": "0",
+            "truncated": false
+          },
+          "expected": {
+            "text": "0.2823529541492462",
+            "truncated": false
+          }
+        },
+        {
+          "id": "I2:2127;2:2113",
+          "path": "/children/0/children/0/values/fills/0/color/b",
+          "pathTruncated": false,
+          "actual": {
+            "text": "0",
+            "truncated": false
+          },
+          "expected": {
+            "text": "0.32156863808631897",
+            "truncated": false
+          }
+        },
+        {
+          "id": "I2:2127;2:2113",
+          "path": "/children/0/children/0/values/fills/0/boundVariables/color/id",
+          "pathTruncated": false,
+          "actual": {
+            "text": "\"VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135\"",
+            "truncated": false
+          },
+          "expected": {
+            "text": "\"VariableID:dedc1a77d282f7a6f23fed99e34e2d6e4d0ebd46/74:68\"",
+            "truncated": false
+          }
+        },
+        {
+          "id": "I2:2127;2:2113",
+          "path": "/children/0/children/0/values/boundVariables/fills/0/id",
+          "pathTruncated": false,
+          "actual": {
+            "text": "\"VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135\"",
+            "truncated": false
+          },
+          "expected": {
+            "text": "\"VariableID:dedc1a77d282f7a6f23fed99e34e2d6e4d0ebd46/74:68\"",
+            "truncated": false
+          }
+        }
+      ],
+      "omittedDifferences": 11
+    },
+    "assertions": {
+      "checked": 22,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Screen width",
+          "passed": true
+        },
+        {
+          "name": "Ten medication rows",
+          "passed": true
+        },
+        {
+          "name": "Medication identity and order",
+          "passed": true
+        },
+        {
+          "name": "All rows 1216 wide",
+          "passed": true
+        },
+        {
+          "name": "All reviewed switches off",
+          "passed": true
+        },
+        {
+          "name": "Refill content restored",
+          "passed": true
+        },
+        {
+          "name": "Last pharmacy preserved",
+          "passed": true
+        },
+        {
+          "name": "Last phone preserved",
+          "passed": true
+        },
+        {
+          "name": "Source statuses preserved",
+          "passed": true
+        },
+        {
+          "name": "Native field heights",
+          "passed": true
+        },
+        {
+          "name": "Native tabs height",
+          "passed": true
+        },
+        {
+          "name": "Native small action heights",
+          "passed": true
+        },
+        {
+          "name": "Native pagination height",
+          "passed": true
+        },
+        {
+          "name": "Pagination visible copy",
+          "passed": true
+        },
+        {
+          "name": "Compound visible in one row",
+          "passed": true
+        },
+        {
+          "name": "Timeline visible in one row",
+          "passed": true
+        },
+        {
+          "name": "All medication names use Akkurat LL Bold",
+          "passed": true
+        },
+        {
+          "name": "All medication names use h5 size",
+          "passed": true
+        },
+        {
+          "name": "Medication direction size",
+          "passed": true
+        },
+        {
+          "name": "Failed status canonical error token",
+          "passed": true
+        },
+        {
+          "name": "No prototype wiring claimed",
+          "passed": true
+        },
+        {
+          "name": "Bounds exceptions only native floating labels",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 0,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "iconDifferences": [
+    {
+      "id": "I2:2127;2:2113",
+      "properties": {
+        "End icon swap#83:386": "2:135",
+        "Start icon swap#83:331": "2:133",
+        "End icon#83:275": false,
+        "Start icon#83:220": true,
+        "Label#83:165": "Add to med list",
+        "variant": "contained",
+        "color": "primary",
+        "size": "small",
+        "State": "Default"
+      },
+      "defaults": {
+        "Label#83:165": "Button",
+        "Start icon#83:220": false,
+        "End icon#83:275": false,
+        "Start icon swap#83:331": "2:133",
+        "End icon swap#83:386": "2:135",
+        "variant": "contained",
+        "color": "primary",
+        "size": "medium",
+        "State": "Default"
+      },
+      "children": [
+        {
+          "name": "Start icon",
+          "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+        },
+        {
+          "name": "End icon",
+          "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+        }
+      ],
+      "comparison": {
+        "scope": "structure-and-token-snapshot",
+        "passed": false,
+        "differenceCount": 5,
+        "differences": [
+          {
+            "path": "/children/0/name",
+            "actual": "Icon/PlusOutlined",
+            "expected": "Start icon"
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/color/g",
+            "actual": 0,
+            "expected": 0.2823529541492462
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/color/b",
+            "actual": 0,
+            "expected": 0.32156863808631897
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/boundVariables/color/id",
+            "actual": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+            "expected": "VariableID:dedc1a77d282f7a6f23fed99e34e2d6e4d0ebd46/74:68"
+          },
+          {
+            "path": "/children/0/children/0/values/boundVariables/fills/0/id",
+            "actual": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+            "expected": "VariableID:dedc1a77d282f7a6f23fed99e34e2d6e4d0ebd46/74:68"
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "id": "I2:2127;2:2120",
+      "properties": {
+        "End icon swap#83:386": "2:135",
+        "Start icon swap#83:331": "2:133",
+        "End icon#83:275": false,
+        "Start icon#83:220": true,
+        "Label#83:165": "Prescribe medications",
+        "variant": "contained",
+        "color": "secondary",
+        "size": "small",
+        "State": "Default"
+      },
+      "defaults": {
+        "Label#83:165": "Button",
+        "Start icon#83:220": false,
+        "End icon#83:275": false,
+        "Start icon swap#83:331": "2:133",
+        "End icon swap#83:386": "2:135",
+        "variant": "contained",
+        "color": "primary",
+        "size": "medium",
+        "State": "Default"
+      },
+      "children": [
+        {
+          "name": "Start icon",
+          "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+        },
+        {
+          "name": "End icon",
+          "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+        }
+      ],
+      "comparison": {
+        "scope": "structure-and-token-snapshot",
+        "passed": false,
+        "differenceCount": 5,
+        "differences": [
+          {
+            "path": "/children/0/name",
+            "actual": "Icon/PlusOutlined",
+            "expected": "Start icon"
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/color/g",
+            "actual": 0,
+            "expected": 0.2823529541492462
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/color/b",
+            "actual": 0,
+            "expected": 0.32156863808631897
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/boundVariables/color/id",
+            "actual": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+            "expected": "VariableID:fac67193612ef7c1bb90012c6e762245138dc2e4/74:48"
+          },
+          {
+            "path": "/children/0/children/0/values/boundVariables/fills/0/id",
+            "actual": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+            "expected": "VariableID:fac67193612ef7c1bb90012c6e762245138dc2e4/74:48"
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "id": "I2:2320;2:2286",
+      "properties": {
+        "Icon#170:0": "2:135",
+        "color": "default",
+        "size": "small",
+        "State": "Default"
+      },
+      "defaults": {
+        "Icon#170:0": "2:135",
+        "color": "default",
+        "size": "medium",
+        "State": "Default"
+      },
+      "children": [
+        {
+          "name": "Icon",
+          "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+        }
+      ],
+      "comparison": {
+        "scope": "structure-and-token-snapshot",
+        "passed": false,
+        "differenceCount": 6,
+        "differences": [
+          {
+            "path": "/children/0/name",
+            "actual": "Icon/DownCaret",
+            "expected": "Icon"
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/color/r",
+            "actual": 0,
+            "expected": 0.3294117748737335
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/color/g",
+            "actual": 0,
+            "expected": 0.3294117748737335
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/color/b",
+            "actual": 0,
+            "expected": 0.3294117748737335
+          },
+          {
+            "path": "/children/0/children/0/values/fills/0/boundVariables/color/id",
+            "actual": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+            "expected": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+          },
+          {
+            "path": "/children/0/children/0/values/boundVariables/fills/0/id",
+            "actual": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135",
+            "expected": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+          }
+        ],
+        "omitted": 0
+      }
+    }
+  ],
+  "copyCorrection": {
+    "mutatedNodeIds": [
+      "2:2413",
+      "2:2509",
+      "2:2653",
+      "2:2698",
+      "I2:2746;2:2299"
+    ],
+    "reason": "Source-copy readback: restore four 1-refill values and acetaminophen pharmacy/phone."
+  },
+  "resetAttempt": {
+    "mutatedNodeIds": [
+      "2:2113",
+      "2:2120",
+      "2:2286"
+    ],
+    "reason": "The desired plus and down-caret are already native defaults. Reset redundant swaps, then use only supported label/visibility properties so native contextual ink survives."
+  },
+  "freshNativeCorrection": {
+    "createdNodeIds": [
+      "4:869",
+      "4:870",
+      "4:871",
+      "4:877",
+      "4:883"
+    ],
+    "mutatedNodeIds": [
+      "2:2113",
+      "2:2028",
+      "2:2120",
+      "2:2028",
+      "2:2286",
+      "2:2278"
+    ],
+    "inspectionId": "4:869"
+  },
+  "exposedControls": {
+    "mutatedNodeIds": [
+      "2:1872",
+      "2:1876",
+      "2:1882",
+      "2:1888",
+      "2:1894",
+      "2:1900",
+      "2:1906",
+      "2:1916",
+      "2:1922",
+      "2:2029",
+      "2:2050",
+      "2:2071",
+      "2:2113",
+      "2:2120",
+      "2:2209",
+      "2:2214",
+      "2:2275",
+      "2:2282",
+      "2:2286",
+      "2:2299",
+      "2:2304",
+      "2:2309",
+      "2:2316"
+    ],
+    "rowExposedControls": [
+      {
+        "id": "I2:2320;2:2275",
+        "name": "Select medication"
+      },
+      {
+        "id": "I2:2320;2:2282",
+        "name": "Compound"
+      },
+      {
+        "id": "I2:2320;2:2286",
+        "name": "Expand medication timeline"
+      },
+      {
+        "id": "I2:2320;2:2299",
+        "name": "Order and pharmacy"
+      },
+      {
+        "id": "I2:2320;2:2304",
+        "name": "Reviewed"
+      },
+      {
+        "id": "I2:2320;2:2309",
+        "name": "Edit"
+      },
+      {
+        "id": "I2:2320;2:2316",
+        "name": "Medication actions"
+      }
+    ]
+  }
+}
