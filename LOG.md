@@ -4583,3 +4583,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Individual row density review
 - File: yh2F6OUgdI6K0risLtKLEQ. Created an isolated before/after row study on the original working page. Compact proposal reduces the first row from 143 to 81 px while retaining all visible source text and unchanged column widths. Working screen and running full-page comparison remain unchanged pending row review.
 - Evidence: runs/2026-11-14-medlist-row-review/REPORT.md, record.json, row-review.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-disclosure -->
+## 2026-11-14 — Medlist · Progressive disclosure row study
+- File: yh2F6OUgdI6K0risLtKLEQ. Built an isolated review-first disclosure study with collapsed and expanded local row variants. Daniel selected prioritizing medication review and issue detection. Full directions, source/compound labels, status, review and contextual action remain visible; prescribing, supply, pharmacy and timeline access are disclosed inline. Working screen and full-page comparison remain unchanged.
+- Evidence: runs/2026-11-14-medlist-disclosure/REPORT.md, record.json, disclosure-review.png, before-fix.png.

@@ -50,6 +50,14 @@ All unresolved rows below are **DECISION**, owned by Daniel, scoped to this medl
 
 ## What the audit can and cannot claim
 
+### Progressive disclosure · 2026-11-14
+
+Daniel chose **review current medications and spot issues; disclose prescribing and pharmacy details**. [Disclosure study](https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=34-1391), local set `34:1388`, is an isolated proposal on the original page. Owner: Daniel; type: DECISION; scope: medlist row information hierarchy; status: review-first direction confirmed, visual proposal not applied to the working list. Evidence: `../2026-11-14-medlist-disclosure/REPORT.md`.
+
+Always visible: medication/strength, complete directions, compound or patient-reported markers when present, order/issue status, review control and existing contextual Edit/Resend/View issue action. Explicit Details/Hide details control expands prescribing date/type/clinician, quantity/duration/refills, pharmacy/phone and existing timeline access inline. Existing overflow remains the secondary-action entry point. Selection, review and primary actions are separate from disclosure; the whole row is not a disclosure click target.
+
+Two variants are wired with CHANGE_TO reactions. All four sample medications retain their original text in expansion and preserve data/status on programmatic variant roundtrips. Presentation click-through and other product actions are not declared implemented. First row is 61 px collapsed / 157 expanded. Working screen `2:1811`, comparison copy `23:881` and original baseline are unchanged. This supersedes the earlier open prioritization question for this exploration; it does not approve applying the proposal or change other unresolved compositions.
+
 ### Individual row review · 2026-11-14
 
 Daniel identified odd spacing and text volume. [Isolated row study](https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=28-882) on the original page compares the current first row with a compact proposal, plus compound, patient-reported/send-failed and patient-info-required cases. Owner: Daniel; scope: medlist rows; type: DECISION; status: proposal, not approved or applied. Evidence: `../2026-11-14-medlist-row-review/REPORT.md`.

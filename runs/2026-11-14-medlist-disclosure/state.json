@@ -1,0 +1,55 @@
+{
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "sessionId": "a5e35a59-9a03-4f8b-bb99-ba4ac1741ba6",
+  "pageId": "0:1",
+  "boardId": "34:1391",
+  "setId": "34:1388",
+  "collapsedMasterId": "34:1260",
+  "expandedMasterId": "34:1324",
+  "inspectionId": "34:1807",
+  "specimens": [
+    {
+      "sourceId": "28:932",
+      "id": "34:1396",
+      "state": "Collapsed"
+    },
+    {
+      "sourceId": "28:1022",
+      "id": "34:1460",
+      "state": "Collapsed"
+    },
+    {
+      "sourceId": "28:1112",
+      "id": "34:1530",
+      "state": "Collapsed"
+    },
+    {
+      "sourceId": "28:1202",
+      "id": "34:1600",
+      "state": "Collapsed"
+    },
+    {
+      "sourceId": "28:932",
+      "id": "34:1671",
+      "state": "Expanded"
+    },
+    {
+      "sourceId": "28:1202",
+      "id": "34:1736",
+      "state": "Expanded"
+    },
+    {
+      "sourceId": "28:1022",
+      "id": "34:1808",
+      "state": "Expanded"
+    },
+    {
+      "sourceId": "28:1112",
+      "id": "34:1878",
+      "state": "Expanded"
+    }
+  ],
+  "status": "isolated proposal; review-first direction confirmed; not applied",
+  "workingScreenId": "2:1811",
+  "comparisonScreenId": "23:881"
+}
