@@ -4641,3 +4641,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Comparison C with single-line disclosure rows
 - File: yh2F6OUgdI6K0risLtKLEQ. Removed timeline access from the current row study and added Comparison C beside A and B. C uses the existing page shell with ten single-line rows; first and issue rows start expanded beneath matching headers.
 - Evidence: runs/2026-11-14-medlist-comparison-c/REPORT.md, record.json, comparison-c.png, comparison-board.png, row-study.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-comparison-d -->
+## 2026-11-14 — Medlist · Comparison D makes medication management primary
+- File: yh2F6OUgdI6K0risLtKLEQ. Added a separate D option beside unchanged C. Existing prescribing/add/import actions move to the page title; reconciliation becomes a compact supporting row. C's ten medication rows, data and disclosure states are unchanged in D.
+- Evidence: runs/2026-11-14-medlist-comparison-d/REPORT.md, record.json, comparison-d.png, comparison-board.png, comparison-c-d.png.

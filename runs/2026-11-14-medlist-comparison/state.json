@@ -29,6 +29,16 @@
   "comparisonHeight": 1428,
   "workingHeight": 1766,
   "progressiveDisclosureApplied": false,
+  "comparisonD": {
+    "wrapperId": "77:4771",
+    "screenId": "77:4774",
+    "tableId": "77:4811",
+    "actionsId": "77:6265",
+    "filtersId": "77:6278",
+    "reconciliationId": "77:6342",
+    "scope": "Separate option based on unchanged C. Same ten rows and disclosure states; prescribing/add/import beside page title, compact 47 px reconciliation utility row. No new workflow behavior.",
+    "evidence": "../2026-11-14-medlist-comparison-d/REPORT.md"
+  },
   "comparisonC": {
     "wrapperId": "73:3815",
     "screenId": "73:3818",
