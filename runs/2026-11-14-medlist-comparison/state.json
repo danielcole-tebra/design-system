@@ -18,5 +18,11 @@
     "kind": "locked raster visual reference"
   },
   "currentRegister": "../2026-11-14-medlist-sde-correction/SPEC.md",
-  "maintenance": "Edit 2:1811 on original page 0:1. Refresh comparison copy 23:881 on page 17:881 alongside each build; it is not automatically synchronized. Update affected register rows, current date and history. Keep A01 fixed. Retain superseded evidence."
+  "maintenance": "Latest scope 2026-11-14: Daniel requested spacing changes in Comparison B only, without progressive disclosure. B 23:881 now differs from working screen 2:1811 on original page 0:1. Do not blindly refresh B from the working screen; reconcile the spacing changes first. Update affected register rows, date and history with future builds. Keep A01 fixed and retain superseded evidence.",
+  "spacingMasterId": "52:2511",
+  "preSpacingArchiveId": "52:2451",
+  "latestEvidence": "../2026-11-14-medlist-comparison-spacing/REPORT.md",
+  "comparisonHeight": 1428,
+  "workingHeight": 1766,
+  "progressiveDisclosureApplied": false
 }

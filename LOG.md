@@ -4601,3 +4601,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Single-line disclosure proposal
 - File: yh2F6OUgdI6K0risLtKLEQ. Created a separate single-line row proposal. Full directions move into expanded Details; medication name, inline compound/source markers, status, review and grouped actions stay visible.
 - Evidence: runs/2026-11-14-medlist-single-line/REPORT.md, record.json, single-line.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-comparison-spacing -->
+## 2026-11-14 — Medlist · Comparison B spacing and overflow provenance
+- File: yh2F6OUgdI6K0risLtKLEQ. Updated Comparison B only with the compact row spacing and grouped actions across ten rows. All information remains visible; progressive disclosure is excluded. Verified the existing filled-circle overflow asset and documented its selection as under review.
+- Evidence: runs/2026-11-14-medlist-comparison-spacing/REPORT.md, record.json, comparison-b.png, comparison-board.png.
