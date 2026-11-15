@@ -4653,3 +4653,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-15 — Medlist · Comparison E with clearer labels and quieter routine statuses
 - File: yh2F6OUgdI6K0risLtKLEQ. Added E based on unchanged D. Filled/Pending fill use body2 Regular with color/text/secondary; issue styles remain unchanged. Date/source becomes Prescribed / modified and Order/pharmacy becomes Order status, following original A01 meanings.
 - Evidence: runs/2026-11-15-medlist-comparison-e/REPORT.md, record.json, comparison-e.png, comparison-board.png.
+
+
+<!-- builder-run:runs/2026-11-15-medlist-comparison-f -->
+## 2026-11-15 — Medlist · Comparison F with last activity and detail markers
+- File: yh2F6OUgdI6K0risLtKLEQ. Added F based on E. Last activity shows recorded event plus MM/DD/YY. Compound and patient-reported markers move to expanded Medication details. Rebalanced Medication/Last activity columns while retaining full names, fixed action positions and all clinical data.
+- Evidence: runs/2026-11-15-medlist-comparison-f/REPORT.md, record.json, comparison-f.png, expanded-markers.png, comparison-board.png.

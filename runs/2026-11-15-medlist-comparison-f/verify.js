@@ -1,0 +1,28 @@
+figma.skipInvisibleInstanceChildren=false;await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('17:881'));
+const table=await figma.getNodeByIdAsync('91:10496'),header=await figma.getNodeByIdAsync('91:10517'),rows=table.children.filter(n=>n.visible&&n.type==='INSTANCE'),sources=(await figma.getNodeByIdAsync('85:6308')).children.filter(n=>n.visible&&n.type==='INSTANCE'),assertions=[],controls=[];
+const grid=[[0,44],[44,296],[340,176],[516,136],[652,208],[860,80],[940,276]];
+function add(name,actual,expected){assertions.push({name,actual,expected});}function vis(n,r){for(let p=n;p&&p!==r;p=p.parent)if(!p.visible)return false;return true;}function text(r){return r.findAllWithCriteria({types:['TEXT']}).filter(t=>vis(t,r)).map(t=>t.characters).sort();}
+function overflow(r){return r.findAll(n=>vis(n,r)&&'width'in n&&(n.x<-.1||n.y<-.1||n.x+n.width>n.parent.width+.1||n.y+n.height>n.parent.height+.1)).map(n=>n.name);}
+function statusStyle(r){const t=r.findOne(n=>n.name==='Summary status').findOne(n=>n.type==='TEXT'&&n.name==='Status');return{font:t.fontName,fills:t.fills,size:t.fontSize,line:t.lineHeight};}
+function expected(src){const props=src.componentProperties,values=Object.fromEntries(Object.entries(props).map(([k,v])=>[k.split('#')[0],v.value]));const order=src.findOne(n=>n.name==='Pharmacy fields'),copy=[values['Medication name'],values.Directions,values.Quantity,values.Duration,values.Refills,src.findOne(n=>n.name==='Prescriber').characters,src.findOne(n=>n.name==='Edit').findOne(n=>n.type==='TEXT'&&n.name==='Label').characters,'Hide details'];copy.push(...order.findAllWithCriteria({types:['TEXT']}).map(n=>n.characters));if(values.Compound)copy.push('Compound');if(values['Show source note'])copy.push(values['Source note']);return copy;}
+for(let i=0;i<rows.length;i++){
+ const r=rows[i],src=sources[i],initial=r.componentProperties.Disclosure.value,copy=text(r),activity=r.componentProperties['Last activity#91:3'].value;
+ for(const [key,val]of Object.entries(src.componentProperties))add(r.id+' property '+key,r.componentProperties[key]?.value,val.value);
+ add(r.id+' activity uses actual prescribed event',activity.startsWith(src.findOne(n=>n.type==='TEXT'&&n.name==='Source').characters+' '),true);
+ add(r.id+' grid',r.children.find(n=>n.name==='Summary').children.filter(n=>n.visible).map(n=>[n.x,n.width]),grid);add(r.id+' status treatment',statusStyle(r),statusStyle(src));
+ for(const state of ['Collapsed','Expanded']){
+  r.setProperties({Disclosure:state});const name=r.findOne(n=>n.name==='Medication name'),activityText=r.findOne(n=>n.name==='Last activity');
+  add(r.id+state+' name complete',name.characters,src.findOne(n=>n.name==='Medication name').characters);add(r.id+state+' name fits',[name.width,name.height,name.textTruncation],[280,20,'DISABLED']);add(r.id+state+' activity on one line',[activityText.width,activityText.height],[160,16]);add(r.id+state+' clipping',overflow(r),[]);
+  for(const marker of ['Source note','Compound']){const n=r.findOne(n=>n.name===marker),flag=marker==='Compound'?'Compound#34:14':'Show source note#34:13';add(r.id+state+' '+marker+' visibility',vis(n,r),state==='Expanded'&&r.componentProperties[flag].value);add(r.id+state+' '+marker+' parent',n.parent.name,'Medication supporting details');}
+  const target=state==='Collapsed'?'91:10337':'91:10289';add(r.id+state+' disclosure target',r.findOne(n=>n.name==='Toggle details').reactions.flatMap(x=>x.actions||[]).map(a=>a.destinationId),[target]);
+  add(r.id+state+' fixed actions',['Edit','Toggle details','Medication actions'].map(n=>{const t=r.findOne(t=>t.name===n);return Math.round(t.absoluteTransform[0][2]-r.absoluteTransform[0][2]);}),[948,1052,1164]);
+  if(state==='Collapsed')add(r.id+' collapsed height',r.height,59);else add(r.id+' complete expanded content',text(r),[...expected(src),activity].sort());
+ }
+ r.setProperties({Disclosure:initial});add(r.id+' roundtrip text',text(r),copy);add(r.id+' roundtrip style',statusStyle(r),statusStyle(src));
+ if(i===0)controls.push(...['Edit','Toggle details','Medication actions','Select medication'].map(name=>r.findOne(n=>n.name===name)));
+}
+add('header grid',header.children.filter(n=>n.visible).map(n=>[n.x,n.width]),grid);add('header labels',text(header),['Medication','Last activity','Supply','Order status','Reviewed','Actions'].sort());add('header clipping',overflow(header),[]);controls.push(...header.findAllWithCriteria({types:['INSTANCE']}).filter(n=>vis(n,header)&&n.mainComponent?.id==='2:1408'));
+const compound=await figma.getNodeByIdAsync('92:6015'),reported=await figma.getNodeByIdAsync('92:6205');controls.push(compound.findOne(n=>n.name==='Compound'));for(const r of [compound,reported])add(r.id+' inspection clipping',overflow(r),[]);
+const longName=compound.findOne(n=>n.name==='Medication name'),original=longName.characters,masterName=(await figma.getNodeByIdAsync('91:10337')).findOne(n=>n.name==='Medication name');await figma.loadFontAsync(masterName.fontName);masterName.resize(160,20);masterName.textAutoResize='HEIGHT';masterName.layoutSizingHorizontal='FIXED';add('narrow name wraps',longName.height>20,true);add('narrow name preserves string',longName.characters,original);add('narrow name not truncated',longName.textTruncation,'DISABLED');masterName.resize(280,20);masterName.textAutoResize='HEIGHT';masterName.layoutSizingHorizontal='FIXED';add('name restored to single line',longName.height,20);
+add('working remains',(await figma.getNodeByIdAsync('2:1811')).height,1766);add('E remains',(await figma.getNodeByIdAsync('85:6258')).height,1184);
+return await auditEvidence(controls,assertions);

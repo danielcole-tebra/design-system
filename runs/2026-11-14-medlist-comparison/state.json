@@ -29,6 +29,20 @@
   "comparisonHeight": 1428,
   "workingHeight": 1766,
   "progressiveDisclosureApplied": false,
+  "comparisonF": {
+    "wrapperId": "91:10443",
+    "screenId": "91:10446",
+    "tableId": "91:10496",
+    "headerId": "91:10517",
+    "rowSetId": "91:10288",
+    "collapsedId": "91:10289",
+    "expandedId": "91:10337",
+    "activityProperty": "Last activity#91:3",
+    "inspectionId": "92:5958",
+    "columnWidths": [44,296,176,136,208,80,276],
+    "scope": "F-only local row set. Recorded event + MM/DD/YY; compound/source markers in expanded Medication details. Full names use wrapping rather than ellipsis, all current names fit one line. Source Date retained as data. Earlier comparisons preserved.",
+    "evidence": "../2026-11-15-medlist-comparison-f/REPORT.md"
+  },
   "comparisonE": {
     "wrapperId": "85:6255",
     "screenId": "85:6258",
