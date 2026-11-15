@@ -4595,3 +4595,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Group row actions and overflow
 - File: yh2F6OUgdI6K0risLtKLEQ. Updated both disclosure proposal variants so primary action, Details and overflow form one group with bound 8 px gaps. Review, selection and action controls now share a vertical centerline. Applied to all eight live specimens; no working-screen changes.
 - Evidence: runs/2026-11-14-medlist-action-spacing/REPORT.md, record.json, action-spacing.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-single-line -->
+## 2026-11-14 — Medlist · Single-line disclosure proposal
+- File: yh2F6OUgdI6K0risLtKLEQ. Created a separate single-line row proposal. Full directions move into expanded Details; medication name, inline compound/source markers, status, review and grouped actions stay visible.
+- Evidence: runs/2026-11-14-medlist-single-line/REPORT.md, record.json, single-line.png.

@@ -1,0 +1,90 @@
+{
+  "mutatedNodeIds": [],
+  "boardId": "47:1675",
+  "setId": "47:1540",
+  "collapsedMasterId": "47:1541",
+  "expandedMasterId": "47:1577",
+  "inspectionId": "47:1689",
+  "specimens": [
+    {
+      "sourceId": "34:1396",
+      "id": "47:1680",
+      "state": "Collapsed"
+    },
+    {
+      "sourceId": "34:1460",
+      "id": "47:1681",
+      "state": "Collapsed"
+    },
+    {
+      "sourceId": "34:1530",
+      "id": "47:1682",
+      "state": "Collapsed"
+    },
+    {
+      "sourceId": "34:1600",
+      "id": "47:1683",
+      "state": "Collapsed"
+    },
+    {
+      "sourceId": "34:1671",
+      "id": "47:1685",
+      "state": "Expanded"
+    },
+    {
+      "sourceId": "34:1736",
+      "id": "47:1687",
+      "state": "Expanded"
+    },
+    {
+      "sourceId": "34:1808",
+      "id": "47:1690",
+      "state": "Expanded"
+    },
+    {
+      "sourceId": "34:1878",
+      "id": "47:1691",
+      "state": "Expanded"
+    }
+  ],
+  "heights": [
+    {
+      "id": "47:1680",
+      "height": 59
+    },
+    {
+      "id": "47:1681",
+      "height": 59
+    },
+    {
+      "id": "47:1682",
+      "height": 59
+    },
+    {
+      "id": "47:1683",
+      "height": 59
+    },
+    {
+      "id": "47:1685",
+      "height": 191
+    },
+    {
+      "id": "47:1687",
+      "height": 191
+    },
+    {
+      "id": "47:1690",
+      "height": 191
+    },
+    {
+      "id": "47:1691",
+      "height": 191
+    }
+  ],
+  "workingScreenId": "2:1811",
+  "comparisonScreenId": "23:881",
+  "applied": false,
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "pageId": "0:1",
+  "status": "Separate single-line proposal; not applied"
+}
