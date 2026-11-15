@@ -4647,3 +4647,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Comparison D makes medication management primary
 - File: yh2F6OUgdI6K0risLtKLEQ. Added a separate D option beside unchanged C. Existing prescribing/add/import actions move to the page title; reconciliation becomes a compact supporting row. C's ten medication rows, data and disclosure states are unchanged in D.
 - Evidence: runs/2026-11-14-medlist-comparison-d/REPORT.md, record.json, comparison-d.png, comparison-board.png, comparison-c-d.png.
+
+
+<!-- builder-run:runs/2026-11-15-medlist-comparison-e -->
+## 2026-11-15 — Medlist · Comparison E with clearer labels and quieter routine statuses
+- File: yh2F6OUgdI6K0risLtKLEQ. Added E based on unchanged D. Filled/Pending fill use body2 Regular with color/text/secondary; issue styles remain unchanged. Date/source becomes Prescribed / modified and Order/pharmacy becomes Order status, following original A01 meanings.
+- Evidence: runs/2026-11-15-medlist-comparison-e/REPORT.md, record.json, comparison-e.png, comparison-board.png.
