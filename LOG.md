@@ -4625,3 +4625,7 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Expand details within table columns
 - File: yh2F6OUgdI6K0risLtKLEQ. Updated the row test so supporting information expands beneath its own table header. Medication directions, date/source, supply and order/pharmacy details share one grid in both states; first-line actions stay fixed.
 - Evidence: runs/2026-11-14-medlist-column-disclosure/REPORT.md, record.json, column-details.png.
+
+## 2026-11-14 — Medlist · Confirm collapsed date and quantity
+- File: yh2F6OUgdI6K0risLtKLEQ. Recorded Daniel's confirmation that date and quantity remain visible before expansion; supersedes prior provisional assumption. Current canvas already matches; documentation only.
+- Evidence: runs/2026-11-14-medlist-date-quantity-decision/REPORT.md; current register and single-line state ledger updated.

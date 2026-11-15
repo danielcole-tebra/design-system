@@ -114,5 +114,5 @@
     96,
     288
   ],
-  "collapsedDateQuantity": "Visible by explicit builder assumption; optional question unanswered"
+  "collapsedDateQuantity": "Always visible in the collapsed row; confirmed by Daniel 2026-11-14. Secondary details expand beneath them."
 }
