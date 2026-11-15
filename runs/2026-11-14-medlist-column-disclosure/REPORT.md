@@ -1,0 +1,47 @@
+# Medlist · Expand details within table columns
+
+Updated the row test so supporting information expands beneath its own table header. Medication directions, date/source, supply and order/pharmacy details share one grid in both states; first-line actions stay fixed.
+
+[Review section](https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=47-1675) · File: yh2F6OUgdI6K0risLtKLEQ
+
+## Timing
+
+Start: 2026-11-15T01:43:18Z. Ready to construct: 2026-11-15T01:43:54Z. Construction returned: 2026-11-15T01:45:52Z. First image: 2026-11-15T01:46:01Z. Verified: 2026-11-15T01:47:53Z.
+
+Preparation/discovery: 36s; construction: 118s; verification after construction: 121s. First image elapsed: 163s; verified elapsed: 275s. Actual input wait: 0s (not subtracted). Successful push/completion is reported in final chat.
+
+## Verified
+
+- All eight live specimens and both local variants updated at1216 px width. Header and row columns44/376/120/100/192/96/288 match.
+- Directions appear under Medication; prescribed/source and clinician under Date/source; duration/refills under Supply; pharmacy/phone under Order/pharmacy; timeline access under Actions.
+- Collapsed rows retain single-line medication name, inline compound/source markers, date, quantity, status, review switch and actions. Date/quantity use existing12/16 metadata typography. Repeated Reviewed label is hidden because the column header supplies it.
+- Primary action, Details and vertical overflow remain at x944/1048/1160 and center y29 relative to the row in both states. Widths96/104/34 and8 px action gaps retained.
+- Twelve native component comparisons and103 measured assertions passed, including matching header grids, complete clinical copy, first-line text sizing, no visible row/header overflow, disclosure targets and four expand/collapse roundtrips.
+- Collapsed height59 px. Expanded cases115 px Alprazolam/Acetaminophen,103 px Hydrocortisone,99 px Melatonin; natural content height, no forced uniform expanded height.
+- Final screenshot viewed. Working screen remains1766 px high; Comparison B remains1428 px high and is unchanged.
+
+## Findings and recovery
+
+- DECISION · Daniel,2026-11-14,scope row test: details should expand each header's information. Applied to proposal only. Supersedes the separate full-width details panel.
+- Optional question about collapsed date/quantity received no answer during this batch. After allowing time to respond, builder stated the assumption to show date/quantity and continued. This is an explicit proposal assumption, not a recorded user selection.
+- Initial112 px Date/source header clipped; increased to120 px and reduced Order/pharmacy200→192 within the same total width. Local status/pharmacy text required FILL overrides to avoid inherited268 px text width. Final geometry verified.
+- Hidden-node coordinates can be stale in collapsed state. Disclosed-column alignment is asserted on visible expanded content, plus header/summary grid checks in both states.
+- Previous variant set retained at63:2373. Former detail-panel wrappers and redundant subsection labels remain hidden, not deleted. Library sources/native internals unchanged.
+- Stored Details wiring and programmatic state switches verified; no presentation playback or other product-action behavior claimed.
+
+## Observable effort
+
+Counts through verification: figmaCalls=8; otherCalls=unavailable; searches=0; technicalRetries=0; canvasCorrections=1; clarificationStops=0; tokens=unavailable.
+
+## Reading
+
+- Live row variants, all eight consumers, header cells and existing per-column source fields.
+- Current study ledger/build, LIBRARY.md Efficient execution and previously read API checks/Rows and cards/Figma skills.
+
+## Evidence
+
+Compact readback and source metrics: [record.json](record.json). Screenshots:
+
+- [column-details.png](column-details.png)
+
+One fixed-build run; not evidence of a general speedup.

@@ -4619,3 +4619,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Table headers and aligned row actions
 - File: yh2F6OUgdI6K0risLtKLEQ. Updated the single-line row test with shared table headers and fixed-width action buttons so primary action, disclosure and overflow occupy identical positions across medication and disclosure states.
 - Evidence: runs/2026-11-14-medlist-row-table-alignment/REPORT.md, record.json, row-table.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-column-disclosure -->
+## 2026-11-14 — Medlist · Expand details within table columns
+- File: yh2F6OUgdI6K0risLtKLEQ. Updated the row test so supporting information expands beneath its own table header. Medication directions, date/source, supply and order/pharmacy details share one grid in both states; first-line actions stay fixed.
+- Evidence: runs/2026-11-14-medlist-column-disclosure/REPORT.md, record.json, column-details.png.

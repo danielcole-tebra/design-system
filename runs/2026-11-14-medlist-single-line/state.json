@@ -66,19 +66,19 @@
     },
     {
       "id": "47:1685",
-      "height": 191
+      "height": 115
     },
     {
       "id": "47:1687",
-      "height": 191
+      "height": 115
     },
     {
       "id": "47:1690",
-      "height": 191
+      "height": 103
     },
     {
       "id": "47:1691",
-      "height": 191
+      "height": 99
     }
   ],
   "workingScreenId": "2:1811",
@@ -86,10 +86,33 @@
   "applied": false,
   "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
   "pageId": "0:1",
-  "status": "Separate single-line table proposal; headers and fixed action alignment applied to study only",
-  "latestEvidence": "../2026-11-14-medlist-row-table-alignment/REPORT.md",
-  "headerIds": ["60:2380", "60:2400", "60:2417"],
+  "status": "Per-column disclosure proposal; not applied to full screens",
+  "latestEvidence": "../2026-11-14-medlist-column-disclosure/REPORT.md",
+  "headerIds": [
+    "60:2380",
+    "60:2400",
+    "60:2417"
+  ],
   "preAlignmentArchiveSetId": "60:2301",
-  "actionWidths": [96, 104, 34],
-  "rowRelativeActionX": [944, 1048, 1160]
+  "actionWidths": [
+    96,
+    104,
+    34
+  ],
+  "rowRelativeActionX": [
+    944,
+    1048,
+    1160
+  ],
+  "preColumnDisclosureArchiveSetId": "63:2373",
+  "columnWidths": [
+    44,
+    376,
+    120,
+    100,
+    192,
+    96,
+    288
+  ],
+  "collapsedDateQuantity": "Visible by explicit builder assumption; optional question unanswered"
 }

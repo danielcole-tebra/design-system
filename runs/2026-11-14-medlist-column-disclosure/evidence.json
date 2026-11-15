@@ -1,0 +1,2295 @@
+{
+  "build": {
+    "createdNodeIds": [
+      "63:2373",
+      "63:2374",
+      "63:2375",
+      "63:2376",
+      "63:2377",
+      "I63:2377;136:4",
+      "I63:2377;136:4;88:3",
+      "63:2378",
+      "63:2379",
+      "63:2380",
+      "63:2381",
+      "I63:2381;162:87",
+      "I63:2381;162:88",
+      "I63:2381;162:88;102:16",
+      "63:2382",
+      "63:2383",
+      "I63:2383;2:2257",
+      "I63:2383;2:2258",
+      "I63:2383;2:2259",
+      "63:2384",
+      "63:2385",
+      "I63:2385;139:36",
+      "I63:2385;139:37",
+      "I63:2385;139:38",
+      "63:2386",
+      "63:2387",
+      "63:2388",
+      "I63:2388;78:3",
+      "I63:2388;78:3;76:7",
+      "I63:2388;78:4",
+      "I63:2388;78:5",
+      "I63:2388;78:5;76:4",
+      "63:2389",
+      "I63:2389;78:3",
+      "I63:2389;78:3;76:7",
+      "I63:2389;78:4",
+      "I63:2389;78:5",
+      "I63:2389;78:5;76:4",
+      "63:2390",
+      "I63:2390;170:18",
+      "I63:2390;170:18;109:3",
+      "63:2391",
+      "63:2392",
+      "63:2393",
+      "63:2394",
+      "63:2395",
+      "63:2396",
+      "63:2397",
+      "63:2398",
+      "63:2399",
+      "63:2400",
+      "63:2401",
+      "63:2402",
+      "63:2403",
+      "63:2404",
+      "63:2405",
+      "63:2406",
+      "63:2407",
+      "63:2408",
+      "I63:2408;2:2257",
+      "I63:2408;2:2258",
+      "I63:2408;2:2259",
+      "63:2409",
+      "63:2410",
+      "63:2411",
+      "I63:2411;170:18",
+      "I63:2411;170:18;76:4",
+      "63:2412",
+      "63:2413",
+      "63:2414",
+      "63:2415",
+      "I63:2415;136:4",
+      "I63:2415;136:4;88:3",
+      "63:2416",
+      "63:2417",
+      "63:2418",
+      "63:2419",
+      "I63:2419;162:87",
+      "I63:2419;162:88",
+      "I63:2419;162:88;102:16",
+      "63:2420",
+      "63:2421",
+      "I63:2421;2:2257",
+      "I63:2421;2:2258",
+      "I63:2421;2:2259",
+      "63:2422",
+      "63:2423",
+      "I63:2423;139:36",
+      "I63:2423;139:37",
+      "I63:2423;139:38",
+      "63:2424",
+      "63:2425",
+      "63:2426",
+      "I63:2426;78:3",
+      "I63:2426;78:3;76:7",
+      "I63:2426;78:4",
+      "I63:2426;78:5",
+      "I63:2426;78:5;76:4",
+      "63:2427",
+      "I63:2427;78:3",
+      "I63:2427;78:3;76:7",
+      "I63:2427;78:4",
+      "I63:2427;78:5",
+      "I63:2427;78:5;76:4",
+      "63:2428",
+      "I63:2428;170:18",
+      "I63:2428;170:18;109:3",
+      "63:2429",
+      "63:2430",
+      "63:2431",
+      "63:2432",
+      "63:2433",
+      "63:2434",
+      "63:2435",
+      "63:2436",
+      "63:2437",
+      "63:2438",
+      "63:2439",
+      "63:2440",
+      "63:2441",
+      "63:2442",
+      "63:2443",
+      "63:2444",
+      "63:2445",
+      "63:2446",
+      "I63:2446;2:2257",
+      "I63:2446;2:2258",
+      "I63:2446;2:2259",
+      "63:2447",
+      "63:2448",
+      "63:2449",
+      "I63:2449;170:18",
+      "I63:2449;170:18;76:4",
+      "63:2450",
+      "47:1546",
+      "47:1548",
+      "47:1549",
+      "I47:1549;162:87",
+      "I47:1549;162:88",
+      "I47:1549;162:88;102:16",
+      "63:2451",
+      "47:1547",
+      "63:2452",
+      "47:1563",
+      "63:2453",
+      "47:1564",
+      "47:1565",
+      "63:2454",
+      "47:1568",
+      "63:2455",
+      "47:1569",
+      "47:1570",
+      "63:2456",
+      "47:1551",
+      "I47:1551;2:2257",
+      "I47:1551;2:2258",
+      "I47:1551;2:2259",
+      "63:2457",
+      "47:1573",
+      "I47:1573;2:2257",
+      "I47:1573;2:2258",
+      "I47:1573;2:2259",
+      "63:2458",
+      "47:1556",
+      "I47:1556;78:3",
+      "I47:1556;78:3;76:7",
+      "I47:1556;78:4",
+      "I47:1556;78:5",
+      "I47:1556;78:5;76:4",
+      "47:1557",
+      "I47:1557;78:3",
+      "I47:1557;78:3;76:7",
+      "I47:1557;78:4",
+      "I47:1557;78:5",
+      "I47:1557;78:5;76:4",
+      "47:1558",
+      "I47:1558;170:18",
+      "I47:1558;170:18;109:3",
+      "63:2459",
+      "47:1574",
+      "47:1575",
+      "47:1576",
+      "I47:1576;170:18",
+      "I47:1576;170:18;76:4",
+      "63:2460",
+      "47:1582",
+      "47:1584",
+      "47:1585",
+      "I47:1585;162:87",
+      "I47:1585;162:88",
+      "I47:1585;162:88;102:16",
+      "63:2461",
+      "47:1583",
+      "63:2462",
+      "47:1599",
+      "63:2463",
+      "47:1600",
+      "47:1601",
+      "63:2464",
+      "47:1604",
+      "63:2465",
+      "47:1605",
+      "47:1606",
+      "63:2466",
+      "47:1587",
+      "I47:1587;2:2257",
+      "I47:1587;2:2258",
+      "I47:1587;2:2259",
+      "63:2467",
+      "47:1609",
+      "I47:1609;2:2257",
+      "I47:1609;2:2258",
+      "I47:1609;2:2259",
+      "63:2468",
+      "47:1592",
+      "I47:1592;78:3",
+      "I47:1592;78:3;76:7",
+      "I47:1592;78:4",
+      "I47:1592;78:5",
+      "I47:1592;78:5;76:4",
+      "47:1593",
+      "I47:1593;78:3",
+      "I47:1593;78:3;76:7",
+      "I47:1593;78:4",
+      "I47:1593;78:5",
+      "I47:1593;78:5;76:4",
+      "47:1594",
+      "I47:1594;170:18",
+      "I47:1594;170:18;109:3",
+      "63:2469",
+      "47:1610",
+      "47:1611",
+      "47:1612",
+      "I47:1612;170:18",
+      "I47:1612;170:18;76:4"
+    ],
+    "mutatedNodeIds": [
+      "47:1541",
+      "47:1542",
+      "47:1543",
+      "47:1544",
+      "47:1545",
+      "63:2450",
+      "47:1546",
+      "47:1548",
+      "47:1549",
+      "63:2451",
+      "47:1547",
+      "47:1561",
+      "47:1562",
+      "63:2452",
+      "47:1563",
+      "63:2453",
+      "47:1564",
+      "47:1565",
+      "47:1566",
+      "47:1567",
+      "63:2454",
+      "47:1568",
+      "63:2455",
+      "47:1569",
+      "47:1570",
+      "47:1550",
+      "63:2456",
+      "47:1551",
+      "63:2457",
+      "47:1573",
+      "47:1552",
+      "47:1553",
+      "47:1554",
+      "47:1555",
+      "63:2458",
+      "47:1556",
+      "47:1557",
+      "47:1558",
+      "63:2459",
+      "47:1574",
+      "47:1575",
+      "47:1576",
+      "47:1559",
+      "47:1560",
+      "47:1642",
+      "47:1641",
+      "47:1571",
+      "47:1572",
+      "47:1577",
+      "47:1578",
+      "47:1579",
+      "47:1580",
+      "47:1581",
+      "63:2460",
+      "47:1582",
+      "47:1584",
+      "47:1585",
+      "63:2461",
+      "47:1583",
+      "47:1597",
+      "47:1598",
+      "63:2462",
+      "47:1599",
+      "63:2463",
+      "47:1600",
+      "47:1601",
+      "47:1602",
+      "47:1603",
+      "63:2464",
+      "47:1604",
+      "63:2465",
+      "47:1605",
+      "47:1606",
+      "47:1586",
+      "63:2466",
+      "47:1587",
+      "63:2467",
+      "47:1609",
+      "47:1588",
+      "47:1589",
+      "47:1590",
+      "47:1591",
+      "63:2468",
+      "47:1592",
+      "47:1593",
+      "47:1594",
+      "63:2469",
+      "47:1610",
+      "47:1611",
+      "47:1612",
+      "47:1595",
+      "47:1596",
+      "47:1672",
+      "47:1671",
+      "47:1607",
+      "47:1608",
+      "60:2381",
+      "60:2383",
+      "60:2384",
+      "60:2385",
+      "60:2386",
+      "60:2387",
+      "60:2388",
+      "60:2401",
+      "60:2403",
+      "60:2404",
+      "60:2405",
+      "60:2406",
+      "60:2407",
+      "60:2408",
+      "60:2418",
+      "60:2420",
+      "60:2421",
+      "60:2422",
+      "60:2423",
+      "60:2424",
+      "60:2425",
+      "47:1676",
+      "47:1677",
+      "47:1688",
+      "47:1540"
+    ],
+    "archiveSetId": "63:2373",
+    "before": [
+      {
+        "id": "47:1680",
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Details",
+          "Edit",
+          "Filled",
+          "Reviewed"
+        ],
+        "height": 59,
+        "props": {
+          "Duration#34:18": {
+            "type": "TEXT",
+            "value": "15 days as needed"
+          },
+          "Quantity#34:17": {
+            "type": "TEXT",
+            "value": "15 tablets"
+          },
+          "Show timeline#34:15": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Refills#34:19": {
+            "type": "TEXT",
+            "value": "No refills"
+          },
+          "Show source note#34:13": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Source note#34:12": {
+            "type": "TEXT",
+            "value": "Patient-reported supplement"
+          },
+          "Directions#34:11": {
+            "type": "TEXT",
+            "value": "Take 1 tablet by mouth once daily as needed for anxiety"
+          },
+          "Date#34:16": {
+            "type": "TEXT",
+            "value": "Sep 5, 2024"
+          },
+          "Compound#34:14": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Medication name#34:10": {
+            "type": "TEXT",
+            "value": "Alprazolam 0.25 mg tablet"
+          },
+          "Disclosure": {
+            "value": "Collapsed",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "47:1681",
+        "text": [
+          "Compound",
+          "Details",
+          "Edit",
+          "Hydrocortisone 1% compounded cream",
+          "Pending fill",
+          "Reviewed"
+        ],
+        "height": 59,
+        "props": {
+          "Duration#34:18": {
+            "type": "TEXT",
+            "value": "7 days"
+          },
+          "Quantity#34:17": {
+            "type": "TEXT",
+            "value": "1 tube (30 g)"
+          },
+          "Show timeline#34:15": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Refills#34:19": {
+            "type": "TEXT",
+            "value": "No refills"
+          },
+          "Show source note#34:13": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Source note#34:12": {
+            "type": "TEXT",
+            "value": "Patient-reported supplement"
+          },
+          "Directions#34:11": {
+            "type": "TEXT",
+            "value": "Apply a thin layer to the affected area twice daily for up to 7 days"
+          },
+          "Date#34:16": {
+            "type": "TEXT",
+            "value": "Mar 14, 2024"
+          },
+          "Compound#34:14": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Medication name#34:10": {
+            "type": "TEXT",
+            "value": "Hydrocortisone 1% compounded cream"
+          },
+          "Disclosure": {
+            "value": "Collapsed",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "47:1682",
+        "text": [
+          "Details",
+          "Melatonin 3 mg tablet",
+          "Patient-reported supplement",
+          "Resend",
+          "Reviewed",
+          "Send failed"
+        ],
+        "height": 59,
+        "props": {
+          "Duration#34:18": {
+            "type": "TEXT",
+            "value": "30 days"
+          },
+          "Quantity#34:17": {
+            "type": "TEXT",
+            "value": "30 tablets"
+          },
+          "Show timeline#34:15": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Refills#34:19": {
+            "type": "TEXT",
+            "value": "No refills"
+          },
+          "Show source note#34:13": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Source note#34:12": {
+            "type": "TEXT",
+            "value": "Patient-reported supplement"
+          },
+          "Directions#34:11": {
+            "type": "TEXT",
+            "value": "Take 1 tablet by mouth at bedtime as needed"
+          },
+          "Date#34:16": {
+            "type": "TEXT",
+            "value": "Jan 23, 2024"
+          },
+          "Compound#34:14": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Medication name#34:10": {
+            "type": "TEXT",
+            "value": "Melatonin 3 mg tablet"
+          },
+          "Disclosure": {
+            "value": "Collapsed",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "47:1683",
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Details",
+          "Patient info required",
+          "Reviewed",
+          "View issue"
+        ],
+        "height": 59,
+        "props": {
+          "Duration#34:18": {
+            "type": "TEXT",
+            "value": "10 days as needed"
+          },
+          "Quantity#34:17": {
+            "type": "TEXT",
+            "value": "40 tablets"
+          },
+          "Show timeline#34:15": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Refills#34:19": {
+            "type": "TEXT",
+            "value": "No refills"
+          },
+          "Show source note#34:13": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Source note#34:12": {
+            "type": "TEXT",
+            "value": "Patient-reported supplement"
+          },
+          "Directions#34:11": {
+            "type": "TEXT",
+            "value": "Take 1 tablet by mouth every 6 hours as needed for pain"
+          },
+          "Date#34:16": {
+            "type": "TEXT",
+            "value": "Nov 19, 2023"
+          },
+          "Compound#34:14": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Medication name#34:10": {
+            "type": "TEXT",
+            "value": "Acetaminophen 500 mg tablet"
+          },
+          "Disclosure": {
+            "value": "Collapsed",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "47:1685",
+        "text": [
+          "15 days as needed",
+          "15 tablets",
+          "Alprazolam 0.25 mg tablet",
+          "CVS Pharmacy 1709 in Target",
+          "Clinical timeline",
+          "Edit",
+          "Filled",
+          "Hide details",
+          "No refills",
+          "Olivia Chen, MD",
+          "Pharmacy",
+          "Phone: (850) 555-0142",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Sep 5, 2024",
+          "Supply",
+          "Take 1 tablet by mouth once daily as needed for anxiety"
+        ],
+        "height": 191,
+        "props": {
+          "Duration#34:18": {
+            "type": "TEXT",
+            "value": "15 days as needed"
+          },
+          "Quantity#34:17": {
+            "type": "TEXT",
+            "value": "15 tablets"
+          },
+          "Show timeline#34:15": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Refills#34:19": {
+            "type": "TEXT",
+            "value": "No refills"
+          },
+          "Show source note#34:13": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Source note#34:12": {
+            "type": "TEXT",
+            "value": "Patient-reported supplement"
+          },
+          "Directions#34:11": {
+            "type": "TEXT",
+            "value": "Take 1 tablet by mouth once daily as needed for anxiety"
+          },
+          "Date#34:16": {
+            "type": "TEXT",
+            "value": "Sep 5, 2024"
+          },
+          "Compound#34:14": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Medication name#34:10": {
+            "type": "TEXT",
+            "value": "Alprazolam 0.25 mg tablet"
+          },
+          "Disclosure": {
+            "value": "Expanded",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "47:1687",
+        "text": [
+          "10 days as needed",
+          "40 tablets",
+          "A&A Family Pharmacy",
+          "Acetaminophen 500 mg tablet",
+          "Hide details",
+          "No refills",
+          "Nov 19, 2023",
+          "Olivia Chen, MD",
+          "Patient info required",
+          "Pharmacy",
+          "Phone: (850) 555-4706",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Supply",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "View issue"
+        ],
+        "height": 191,
+        "props": {
+          "Duration#34:18": {
+            "type": "TEXT",
+            "value": "10 days as needed"
+          },
+          "Quantity#34:17": {
+            "type": "TEXT",
+            "value": "40 tablets"
+          },
+          "Show timeline#34:15": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Refills#34:19": {
+            "type": "TEXT",
+            "value": "No refills"
+          },
+          "Show source note#34:13": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Source note#34:12": {
+            "type": "TEXT",
+            "value": "Patient-reported supplement"
+          },
+          "Directions#34:11": {
+            "type": "TEXT",
+            "value": "Take 1 tablet by mouth every 6 hours as needed for pain"
+          },
+          "Date#34:16": {
+            "type": "TEXT",
+            "value": "Nov 19, 2023"
+          },
+          "Compound#34:14": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Medication name#34:10": {
+            "type": "TEXT",
+            "value": "Acetaminophen 500 mg tablet"
+          },
+          "Disclosure": {
+            "value": "Expanded",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "47:1690",
+        "text": [
+          "1 tube (30 g)",
+          "7 days",
+          "Accord Specialty Pharmacy",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Edit",
+          "Hide details",
+          "Hydrocortisone 1% compounded cream",
+          "Mar 14, 2024",
+          "No refills",
+          "Olivia Chen, MD",
+          "Pending fill",
+          "Pharmacy",
+          "Phone: (850) 555-2642",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Supply"
+        ],
+        "height": 191,
+        "props": {
+          "Duration#34:18": {
+            "type": "TEXT",
+            "value": "7 days"
+          },
+          "Quantity#34:17": {
+            "type": "TEXT",
+            "value": "1 tube (30 g)"
+          },
+          "Show timeline#34:15": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Refills#34:19": {
+            "type": "TEXT",
+            "value": "No refills"
+          },
+          "Show source note#34:13": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Source note#34:12": {
+            "type": "TEXT",
+            "value": "Patient-reported supplement"
+          },
+          "Directions#34:11": {
+            "type": "TEXT",
+            "value": "Apply a thin layer to the affected area twice daily for up to 7 days"
+          },
+          "Date#34:16": {
+            "type": "TEXT",
+            "value": "Mar 14, 2024"
+          },
+          "Compound#34:14": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Medication name#34:10": {
+            "type": "TEXT",
+            "value": "Hydrocortisone 1% compounded cream"
+          },
+          "Disclosure": {
+            "value": "Expanded",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "47:1691",
+        "text": [
+          "30 days",
+          "30 tablets",
+          "A&A Family Pharmacy",
+          "Hide details",
+          "Jan 23, 2024",
+          "Melatonin 3 mg tablet",
+          "No refills",
+          "Olivia Chen, MD",
+          "Patient-reported supplement",
+          "Pharmacy",
+          "Phone: (850) 555-4706",
+          "Prescribed",
+          "Prescribing",
+          "Resend",
+          "Reviewed",
+          "Send failed",
+          "Supply",
+          "Take 1 tablet by mouth at bedtime as needed"
+        ],
+        "height": 191,
+        "props": {
+          "Duration#34:18": {
+            "type": "TEXT",
+            "value": "30 days"
+          },
+          "Quantity#34:17": {
+            "type": "TEXT",
+            "value": "30 tablets"
+          },
+          "Show timeline#34:15": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Refills#34:19": {
+            "type": "TEXT",
+            "value": "No refills"
+          },
+          "Show source note#34:13": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Source note#34:12": {
+            "type": "TEXT",
+            "value": "Patient-reported supplement"
+          },
+          "Directions#34:11": {
+            "type": "TEXT",
+            "value": "Take 1 tablet by mouth at bedtime as needed"
+          },
+          "Date#34:16": {
+            "type": "TEXT",
+            "value": "Jan 23, 2024"
+          },
+          "Compound#34:14": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Medication name#34:10": {
+            "type": "TEXT",
+            "value": "Melatonin 3 mg tablet"
+          },
+          "Disclosure": {
+            "value": "Expanded",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      }
+    ],
+    "after": [
+      {
+        "id": "47:1680",
+        "text": [
+          "15 tablets",
+          "Alprazolam 0.25 mg tablet",
+          "Details",
+          "Edit",
+          "Filled",
+          "Sep 5, 2024"
+        ],
+        "height": 59,
+        "columns": [
+          {
+            "name": "Selection",
+            "x": 0,
+            "w": 44,
+            "h": 58
+          },
+          {
+            "name": "Medication",
+            "x": 44,
+            "w": 376,
+            "h": 58
+          },
+          {
+            "name": "Date and source",
+            "x": 420,
+            "w": 112,
+            "h": 58
+          },
+          {
+            "name": "Supply",
+            "x": 532,
+            "w": 100,
+            "h": 58
+          },
+          {
+            "name": "Order and pharmacy",
+            "x": 632,
+            "w": 200,
+            "h": 58
+          },
+          {
+            "name": "Reviewed",
+            "x": 832,
+            "w": 96,
+            "h": 58
+          },
+          {
+            "name": "Actions",
+            "x": 928,
+            "w": 288,
+            "h": 58
+          }
+        ]
+      },
+      {
+        "id": "47:1681",
+        "text": [
+          "1 tube (30 g)",
+          "Compound",
+          "Details",
+          "Edit",
+          "Hydrocortisone 1% compounded cream",
+          "Mar 14, 2024",
+          "Pending fill"
+        ],
+        "height": 59,
+        "columns": [
+          {
+            "name": "Selection",
+            "x": 0,
+            "w": 44,
+            "h": 58
+          },
+          {
+            "name": "Medication",
+            "x": 44,
+            "w": 376,
+            "h": 58
+          },
+          {
+            "name": "Date and source",
+            "x": 420,
+            "w": 112,
+            "h": 58
+          },
+          {
+            "name": "Supply",
+            "x": 532,
+            "w": 100,
+            "h": 58
+          },
+          {
+            "name": "Order and pharmacy",
+            "x": 632,
+            "w": 200,
+            "h": 58
+          },
+          {
+            "name": "Reviewed",
+            "x": 832,
+            "w": 96,
+            "h": 58
+          },
+          {
+            "name": "Actions",
+            "x": 928,
+            "w": 288,
+            "h": 58
+          }
+        ]
+      },
+      {
+        "id": "47:1682",
+        "text": [
+          "30 tablets",
+          "Details",
+          "Jan 23, 2024",
+          "Melatonin 3 mg tablet",
+          "Patient-reported supplement",
+          "Resend",
+          "Send failed"
+        ],
+        "height": 59,
+        "columns": [
+          {
+            "name": "Selection",
+            "x": 0,
+            "w": 44,
+            "h": 58
+          },
+          {
+            "name": "Medication",
+            "x": 44,
+            "w": 376,
+            "h": 58
+          },
+          {
+            "name": "Date and source",
+            "x": 420,
+            "w": 112,
+            "h": 58
+          },
+          {
+            "name": "Supply",
+            "x": 532,
+            "w": 100,
+            "h": 58
+          },
+          {
+            "name": "Order and pharmacy",
+            "x": 632,
+            "w": 200,
+            "h": 58
+          },
+          {
+            "name": "Reviewed",
+            "x": 832,
+            "w": 96,
+            "h": 58
+          },
+          {
+            "name": "Actions",
+            "x": 928,
+            "w": 288,
+            "h": 58
+          }
+        ]
+      },
+      {
+        "id": "47:1683",
+        "text": [
+          "40 tablets",
+          "Acetaminophen 500 mg tablet",
+          "Details",
+          "Nov 19, 2023",
+          "Patient info required",
+          "View issue"
+        ],
+        "height": 59,
+        "columns": [
+          {
+            "name": "Selection",
+            "x": 0,
+            "w": 44,
+            "h": 58
+          },
+          {
+            "name": "Medication",
+            "x": 44,
+            "w": 376,
+            "h": 58
+          },
+          {
+            "name": "Date and source",
+            "x": 420,
+            "w": 112,
+            "h": 58
+          },
+          {
+            "name": "Supply",
+            "x": 532,
+            "w": 100,
+            "h": 58
+          },
+          {
+            "name": "Order and pharmacy",
+            "x": 632,
+            "w": 200,
+            "h": 58
+          },
+          {
+            "name": "Reviewed",
+            "x": 832,
+            "w": 96,
+            "h": 58
+          },
+          {
+            "name": "Actions",
+            "x": 928,
+            "w": 288,
+            "h": 58
+          }
+        ]
+      },
+      {
+        "id": "47:1685",
+        "text": [
+          "15 days as needed",
+          "15 tablets",
+          "Alprazolam 0.25 mg tablet",
+          "CVS Pharmacy 1709 in Target",
+          "Clinical timeline",
+          "Edit",
+          "Filled",
+          "Hide details",
+          "No refills",
+          "Olivia Chen, MD",
+          "Phone: (850) 555-0142",
+          "Prescribed",
+          "Sep 5, 2024",
+          "Take 1 tablet by mouth once daily as needed for anxiety"
+        ],
+        "height": 115,
+        "columns": [
+          {
+            "name": "Selection",
+            "x": 0,
+            "w": 44,
+            "h": 58
+          },
+          {
+            "name": "Medication",
+            "x": 44,
+            "w": 376,
+            "h": 102
+          },
+          {
+            "name": "Date and source",
+            "x": 420,
+            "w": 112,
+            "h": 114
+          },
+          {
+            "name": "Supply",
+            "x": 532,
+            "w": 100,
+            "h": 114
+          },
+          {
+            "name": "Order and pharmacy",
+            "x": 632,
+            "w": 200,
+            "h": 98
+          },
+          {
+            "name": "Reviewed",
+            "x": 832,
+            "w": 96,
+            "h": 58
+          },
+          {
+            "name": "Actions",
+            "x": 928,
+            "w": 288,
+            "h": 96
+          }
+        ]
+      },
+      {
+        "id": "47:1687",
+        "text": [
+          "10 days as needed",
+          "40 tablets",
+          "A&A Family Pharmacy",
+          "Acetaminophen 500 mg tablet",
+          "Hide details",
+          "No refills",
+          "Nov 19, 2023",
+          "Olivia Chen, MD",
+          "Patient info required",
+          "Phone: (850) 555-4706",
+          "Prescribed",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "View issue"
+        ],
+        "height": 115,
+        "columns": [
+          {
+            "name": "Selection",
+            "x": 0,
+            "w": 44,
+            "h": 58
+          },
+          {
+            "name": "Medication",
+            "x": 44,
+            "w": 376,
+            "h": 102
+          },
+          {
+            "name": "Date and source",
+            "x": 420,
+            "w": 112,
+            "h": 114
+          },
+          {
+            "name": "Supply",
+            "x": 532,
+            "w": 100,
+            "h": 114
+          },
+          {
+            "name": "Order and pharmacy",
+            "x": 632,
+            "w": 200,
+            "h": 98
+          },
+          {
+            "name": "Reviewed",
+            "x": 832,
+            "w": 96,
+            "h": 58
+          },
+          {
+            "name": "Actions",
+            "x": 928,
+            "w": 288,
+            "h": 82
+          }
+        ]
+      },
+      {
+        "id": "47:1690",
+        "text": [
+          "1 tube (30 g)",
+          "7 days",
+          "Accord Specialty Pharmacy",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Edit",
+          "Hide details",
+          "Hydrocortisone 1% compounded cream",
+          "Mar 14, 2024",
+          "No refills",
+          "Olivia Chen, MD",
+          "Pending fill",
+          "Phone: (850) 555-2642",
+          "Prescribed"
+        ],
+        "height": 115,
+        "columns": [
+          {
+            "name": "Selection",
+            "x": 0,
+            "w": 44,
+            "h": 58
+          },
+          {
+            "name": "Medication",
+            "x": 44,
+            "w": 376,
+            "h": 102
+          },
+          {
+            "name": "Date and source",
+            "x": 420,
+            "w": 112,
+            "h": 114
+          },
+          {
+            "name": "Supply",
+            "x": 532,
+            "w": 100,
+            "h": 98
+          },
+          {
+            "name": "Order and pharmacy",
+            "x": 632,
+            "w": 200,
+            "h": 98
+          },
+          {
+            "name": "Reviewed",
+            "x": 832,
+            "w": 96,
+            "h": 58
+          },
+          {
+            "name": "Actions",
+            "x": 928,
+            "w": 288,
+            "h": 82
+          }
+        ]
+      },
+      {
+        "id": "47:1691",
+        "text": [
+          "30 days",
+          "30 tablets",
+          "A&A Family Pharmacy",
+          "Hide details",
+          "Jan 23, 2024",
+          "Melatonin 3 mg tablet",
+          "No refills",
+          "Olivia Chen, MD",
+          "Patient-reported supplement",
+          "Phone: (850) 555-4706",
+          "Prescribed",
+          "Resend",
+          "Send failed",
+          "Take 1 tablet by mouth at bedtime as needed"
+        ],
+        "height": 115,
+        "columns": [
+          {
+            "name": "Selection",
+            "x": 0,
+            "w": 44,
+            "h": 58
+          },
+          {
+            "name": "Medication",
+            "x": 44,
+            "w": 376,
+            "h": 82
+          },
+          {
+            "name": "Date and source",
+            "x": 420,
+            "w": 112,
+            "h": 114
+          },
+          {
+            "name": "Supply",
+            "x": 532,
+            "w": 100,
+            "h": 98
+          },
+          {
+            "name": "Order and pharmacy",
+            "x": 632,
+            "w": 200,
+            "h": 98
+          },
+          {
+            "name": "Reviewed",
+            "x": 832,
+            "w": 96,
+            "h": 58
+          },
+          {
+            "name": "Actions",
+            "x": 928,
+            "w": 288,
+            "h": 82
+          }
+        ]
+      }
+    ],
+    "headerIds": [
+      "60:2380",
+      "60:2400",
+      "60:2417"
+    ],
+    "boardId": "47:1675",
+    "boardHeight": 1038
+  },
+  "initialAudit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": false,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 12,
+      "passed": true,
+      "checks": [
+        {
+          "id": "I47:1680;47:1556",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1680;47:1557",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1680;47:1558",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1592",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1593",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1594",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2383",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2384",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2385",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2386",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2387",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2388",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 104,
+      "failed": 9,
+      "checks": [
+        {
+          "name": "47:1680 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1680 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1680 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1680 directions visibility",
+          "passed": true
+        },
+        {
+          "name": "47:1680 date and quantity visible",
+          "passed": true
+        },
+        {
+          "name": "47:1680 first-line date and quantity",
+          "passed": true
+        },
+        {
+          "name": "47:1680 full medication name single line",
+          "passed": true
+        },
+        {
+          "name": "47:1680 disclosed column positions",
+          "passed": false
+        },
+        {
+          "name": "47:1680 no visible overflow",
+          "passed": false
+        },
+        {
+          "name": "47:1680 disclosure target",
+          "passed": true
+        },
+        {
+          "name": "47:1680 action anchors after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1680 directions after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1680 roundtrip copy",
+          "passed": true
+        },
+        {
+          "name": "47:1681 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1681 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1681 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1681 directions visibility",
+          "passed": true
+        },
+        {
+          "name": "47:1681 date and quantity visible",
+          "passed": true
+        },
+        {
+          "name": "47:1681 first-line date and quantity",
+          "passed": true
+        },
+        {
+          "name": "47:1681 full medication name single line",
+          "passed": true
+        },
+        {
+          "name": "47:1681 disclosed column positions",
+          "passed": false
+        },
+        {
+          "name": "47:1681 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "47:1681 disclosure target",
+          "passed": true
+        },
+        {
+          "name": "47:1681 action anchors after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1681 directions after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1681 roundtrip copy",
+          "passed": true
+        },
+        {
+          "name": "47:1682 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1682 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1682 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1682 directions visibility",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 74,
+      "failures": [
+        {
+          "name": "47:1680 disclosed column positions",
+          "actual": {
+            "text": "[76,452,564,664]",
+            "truncated": false
+          },
+          "expected": {
+            "text": "[60,436,548,648]",
+            "truncated": false
+          }
+        },
+        {
+          "name": "47:1680 no visible overflow",
+          "actual": {
+            "text": "[\"Status\"]",
+            "truncated": false
+          },
+          "expected": {
+            "text": "[]",
+            "truncated": false
+          }
+        },
+        {
+          "name": "47:1681 disclosed column positions",
+          "actual": {
+            "text": "[76,452,564,664]",
+            "truncated": false
+          },
+          "expected": {
+            "text": "[60,436,548,648]",
+            "truncated": false
+          }
+        },
+        {
+          "name": "47:1682 disclosed column positions",
+          "actual": {
+            "text": "[76,452,564,664]",
+            "truncated": false
+          },
+          "expected": {
+            "text": "[60,436,548,648]",
+            "truncated": false
+          }
+        },
+        {
+          "name": "47:1683 disclosed column positions",
+          "actual": {
+            "text": "[76,452,564,664]",
+            "truncated": false
+          },
+          "expected": {
+            "text": "[60,436,548,648]",
+            "truncated": false
+          }
+        }
+      ],
+      "omittedFailures": 4
+    }
+  },
+  "correction": {
+    "createdNodeIds": [],
+    "mutatedNodeIds": [
+      "I47:1551;2:2257",
+      "I47:1551;2:2258",
+      "I47:1551;2:2259",
+      "47:1551",
+      "I47:1573;2:2257",
+      "I47:1573;2:2258",
+      "I47:1573;2:2259",
+      "47:1573",
+      "47:1561",
+      "47:1550",
+      "47:1562",
+      "63:2452",
+      "47:1563",
+      "63:2453",
+      "47:1564",
+      "47:1565",
+      "63:2456",
+      "63:2457",
+      "I47:1587;2:2257",
+      "I47:1587;2:2258",
+      "I47:1587;2:2259",
+      "47:1587",
+      "I47:1609;2:2257",
+      "I47:1609;2:2258",
+      "I47:1609;2:2259",
+      "47:1609",
+      "47:1597",
+      "47:1586",
+      "47:1598",
+      "63:2462",
+      "47:1599",
+      "63:2463",
+      "47:1600",
+      "47:1601",
+      "63:2466",
+      "63:2467",
+      "I47:1680;47:1551;2:2257",
+      "I47:1680;47:1551;2:2258",
+      "I47:1680;47:1551;2:2259",
+      "I47:1680;47:1551",
+      "I47:1680;47:1573;2:2257",
+      "I47:1680;47:1573;2:2258",
+      "I47:1680;47:1573;2:2259",
+      "I47:1680;47:1573",
+      "I47:1680;47:1561",
+      "I47:1680;47:1550",
+      "I47:1680;47:1562",
+      "I47:1680;63:2452",
+      "I47:1680;47:1563",
+      "I47:1680;63:2453",
+      "I47:1680;47:1564",
+      "I47:1680;47:1565",
+      "I47:1680;63:2456",
+      "I47:1680;63:2457",
+      "I47:1681;47:1551;2:2261",
+      "I47:1681;47:1551;2:2262",
+      "I47:1681;47:1551;2:2263",
+      "I47:1681;47:1551",
+      "I47:1681;47:1573;2:2261",
+      "I47:1681;47:1573;2:2262",
+      "I47:1681;47:1573;2:2263",
+      "I47:1681;47:1573",
+      "I47:1681;47:1561",
+      "I47:1681;47:1550",
+      "I47:1681;47:1562",
+      "I47:1681;63:2452",
+      "I47:1681;47:1563",
+      "I47:1681;63:2453",
+      "I47:1681;47:1564",
+      "I47:1681;47:1565",
+      "I47:1681;63:2456",
+      "I47:1681;63:2457",
+      "I47:1682;47:1551;2:2265",
+      "I47:1682;47:1551;2:2266",
+      "I47:1682;47:1551;2:2267",
+      "I47:1682;47:1551",
+      "I47:1682;47:1573;2:2265",
+      "I47:1682;47:1573;2:2266",
+      "I47:1682;47:1573;2:2267",
+      "I47:1682;47:1573",
+      "I47:1682;47:1561",
+      "I47:1682;47:1550",
+      "I47:1682;47:1562",
+      "I47:1682;63:2452",
+      "I47:1682;47:1563",
+      "I47:1682;63:2453",
+      "I47:1682;47:1564",
+      "I47:1682;47:1565",
+      "I47:1682;63:2456",
+      "I47:1682;63:2457",
+      "I47:1683;47:1551;2:2269",
+      "I47:1683;47:1551;2:2270",
+      "I47:1683;47:1551;2:2271",
+      "I47:1683;47:1551",
+      "I47:1683;47:1573;2:2269",
+      "I47:1683;47:1573;2:2270",
+      "I47:1683;47:1573;2:2271",
+      "I47:1683;47:1573",
+      "I47:1683;47:1561",
+      "I47:1683;47:1550",
+      "I47:1683;47:1562",
+      "I47:1683;63:2452",
+      "I47:1683;47:1563",
+      "I47:1683;63:2453",
+      "I47:1683;47:1564",
+      "I47:1683;47:1565",
+      "I47:1683;63:2456",
+      "I47:1683;63:2457",
+      "I47:1685;47:1587;2:2257",
+      "I47:1685;47:1587;2:2258",
+      "I47:1685;47:1587;2:2259",
+      "I47:1685;47:1587",
+      "I47:1685;47:1609;2:2257",
+      "I47:1685;47:1609;2:2258",
+      "I47:1685;47:1609;2:2259",
+      "I47:1685;47:1609",
+      "I47:1685;47:1597",
+      "I47:1685;47:1586",
+      "I47:1685;47:1598",
+      "I47:1685;63:2462",
+      "I47:1685;47:1599",
+      "I47:1685;63:2463",
+      "I47:1685;47:1600",
+      "I47:1685;47:1601",
+      "I47:1685;63:2466",
+      "I47:1685;63:2467",
+      "I47:1687;47:1587;2:2269",
+      "I47:1687;47:1587;2:2270",
+      "I47:1687;47:1587;2:2271",
+      "I47:1687;47:1587",
+      "I47:1687;47:1609;2:2269",
+      "I47:1687;47:1609;2:2270",
+      "I47:1687;47:1609;2:2271",
+      "I47:1687;47:1609",
+      "I47:1687;47:1597",
+      "I47:1687;47:1586",
+      "I47:1687;47:1598",
+      "I47:1687;63:2462",
+      "I47:1687;47:1599",
+      "I47:1687;63:2463",
+      "I47:1687;47:1600",
+      "I47:1687;47:1601",
+      "I47:1687;63:2466",
+      "I47:1687;63:2467",
+      "I47:1690;47:1587;2:2261",
+      "I47:1690;47:1587;2:2262",
+      "I47:1690;47:1587;2:2263",
+      "I47:1690;47:1587",
+      "I47:1690;47:1609;2:2261",
+      "I47:1690;47:1609;2:2262",
+      "I47:1690;47:1609;2:2263",
+      "I47:1690;47:1609",
+      "I47:1690;47:1597",
+      "I47:1690;47:1586",
+      "I47:1690;47:1598",
+      "I47:1690;63:2462",
+      "I47:1690;47:1599",
+      "I47:1690;63:2463",
+      "I47:1690;47:1600",
+      "I47:1690;47:1601",
+      "I47:1690;63:2466",
+      "I47:1690;63:2467",
+      "I47:1691;47:1587;2:2265",
+      "I47:1691;47:1587;2:2266",
+      "I47:1691;47:1587;2:2267",
+      "I47:1691;47:1587",
+      "I47:1691;47:1609;2:2265",
+      "I47:1691;47:1609;2:2266",
+      "I47:1691;47:1609;2:2267",
+      "I47:1691;47:1609",
+      "I47:1691;47:1597",
+      "I47:1691;47:1586",
+      "I47:1691;47:1598",
+      "I47:1691;63:2462",
+      "I47:1691;47:1599",
+      "I47:1691;63:2463",
+      "I47:1691;47:1600",
+      "I47:1691;47:1601",
+      "I47:1691;63:2466",
+      "I47:1691;63:2467",
+      "60:2384",
+      "60:2386",
+      "60:2404",
+      "60:2406",
+      "60:2421",
+      "60:2423"
+    ]
+  },
+  "afterCorrectionAudit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": false,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 12,
+      "passed": true,
+      "checks": [
+        {
+          "id": "I47:1680;47:1556",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1680;47:1557",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1680;47:1558",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1592",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1593",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1594",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2383",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2384",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2385",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2386",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2387",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2388",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 103,
+      "failed": 2,
+      "checks": [
+        {
+          "name": "47:1680 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1680 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1680 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1680 directions visibility",
+          "passed": true
+        },
+        {
+          "name": "47:1680 date and quantity visible",
+          "passed": true
+        },
+        {
+          "name": "47:1680 first-line date and quantity",
+          "passed": true
+        },
+        {
+          "name": "47:1680 full medication name single line",
+          "passed": true
+        },
+        {
+          "name": "47:1680 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "47:1680 disclosure target",
+          "passed": true
+        },
+        {
+          "name": "47:1680 action anchors after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1680 directions after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1680 roundtrip copy",
+          "passed": true
+        },
+        {
+          "name": "47:1681 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1681 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1681 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1681 directions visibility",
+          "passed": true
+        },
+        {
+          "name": "47:1681 date and quantity visible",
+          "passed": true
+        },
+        {
+          "name": "47:1681 first-line date and quantity",
+          "passed": true
+        },
+        {
+          "name": "47:1681 full medication name single line",
+          "passed": true
+        },
+        {
+          "name": "47:1681 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "47:1681 disclosure target",
+          "passed": true
+        },
+        {
+          "name": "47:1681 action anchors after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1681 directions after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1681 roundtrip copy",
+          "passed": true
+        },
+        {
+          "name": "47:1682 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1682 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1682 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1682 directions visibility",
+          "passed": true
+        },
+        {
+          "name": "47:1682 date and quantity visible",
+          "passed": true
+        },
+        {
+          "name": "47:1682 first-line date and quantity",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 73,
+      "failures": [
+        {
+          "name": "47:1690 row height",
+          "actual": {
+            "text": "103",
+            "truncated": false
+          },
+          "expected": {
+            "text": "115",
+            "truncated": false
+          }
+        },
+        {
+          "name": "47:1691 row height",
+          "actual": {
+            "text": "99",
+            "truncated": false
+          },
+          "expected": {
+            "text": "115",
+            "truncated": false
+          }
+        }
+      ],
+      "omittedFailures": 0
+    }
+  },
+  "finalAudit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 12,
+      "passed": true,
+      "checks": [
+        {
+          "id": "I47:1680;47:1556",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1680;47:1557",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1680;47:1558",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1592",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1593",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1594",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2383",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2384",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2385",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2386",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2387",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2388",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 103,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "47:1680 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1680 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1680 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1680 directions visibility",
+          "passed": true
+        },
+        {
+          "name": "47:1680 date and quantity visible",
+          "passed": true
+        },
+        {
+          "name": "47:1680 first-line date and quantity",
+          "passed": true
+        },
+        {
+          "name": "47:1680 full medication name single line",
+          "passed": true
+        },
+        {
+          "name": "47:1680 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "47:1680 disclosure target",
+          "passed": true
+        },
+        {
+          "name": "47:1680 action anchors after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1680 directions after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1680 roundtrip copy",
+          "passed": true
+        },
+        {
+          "name": "47:1681 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1681 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1681 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1681 directions visibility",
+          "passed": true
+        },
+        {
+          "name": "47:1681 date and quantity visible",
+          "passed": true
+        },
+        {
+          "name": "47:1681 first-line date and quantity",
+          "passed": true
+        },
+        {
+          "name": "47:1681 full medication name single line",
+          "passed": true
+        },
+        {
+          "name": "47:1681 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "47:1681 disclosure target",
+          "passed": true
+        },
+        {
+          "name": "47:1681 action anchors after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1681 directions after expansion",
+          "passed": true
+        },
+        {
+          "name": "47:1681 roundtrip copy",
+          "passed": true
+        },
+        {
+          "name": "47:1682 table columns",
+          "passed": true
+        },
+        {
+          "name": "47:1682 action anchors",
+          "passed": true
+        },
+        {
+          "name": "47:1682 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1682 directions visibility",
+          "passed": true
+        },
+        {
+          "name": "47:1682 date and quantity visible",
+          "passed": true
+        },
+        {
+          "name": "47:1682 first-line date and quantity",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 73,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "roundtripMutatedNodeIds": [
+    "47:1680",
+    "47:1681",
+    "47:1682",
+    "47:1683"
+  ]
+}
