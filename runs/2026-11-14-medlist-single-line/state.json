@@ -66,11 +66,11 @@
     },
     {
       "id": "47:1685",
-      "height": 115
+      "height": 103
     },
     {
       "id": "47:1687",
-      "height": 115
+      "height": 103
     },
     {
       "id": "47:1690",
@@ -87,7 +87,7 @@
   "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
   "pageId": "0:1",
   "status": "Per-column disclosure proposal; not applied to full screens",
-  "latestEvidence": "../2026-11-14-medlist-column-disclosure/REPORT.md",
+  "latestEvidence": "../2026-11-14-medlist-column-spacing/REPORT.md",
   "headerIds": [
     "60:2380",
     "60:2400",
@@ -100,19 +100,22 @@
     34
   ],
   "rowRelativeActionX": [
-    944,
-    1048,
-    1160
+    948,
+    1052,
+    1164
   ],
   "preColumnDisclosureArchiveSetId": "63:2373",
   "columnWidths": [
     44,
-    376,
-    120,
-    100,
-    192,
-    96,
-    288
+    360,
+    112,
+    136,
+    208,
+    80,
+    276
   ],
-  "collapsedDateQuantity": "Always visible in the collapsed row; confirmed by Daniel 2026-11-14. Secondary details expand beneath them."
+  "collapsedDateQuantity": "Always visible in the collapsed row; confirmed by Daniel 2026-11-14. Secondary details expand beneath them.",
+  "preSpacingArchiveSetId": "68:2509",
+  "preSpacingHeaderId": "68:2606",
+  "horizontalCellPadding": 8
 }

@@ -4629,3 +4629,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Confirm collapsed date and quantity
 - File: yh2F6OUgdI6K0risLtKLEQ. Recorded Daniel's confirmation that date and quantity remain visible before expansion; supersedes prior provisional assumption. Current canvas already matches; documentation only.
 - Evidence: runs/2026-11-14-medlist-date-quantity-decision/REPORT.md; current register and single-line state ledger updated.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-column-spacing -->
+## 2026-11-14 — Medlist · More room for supply and pharmacy details
+- File: yh2F6OUgdI6K0risLtKLEQ. Rebalanced the row-test grid and reduced horizontal cell gutters to8 px. Supply and pharmacy gain usable width, so duration, pharmacy names and phone numbers each remain on one line in all four supplied medications.
+- Evidence: runs/2026-11-14-medlist-column-spacing/REPORT.md, record.json, column-spacing.png, expanded-cases.png.
