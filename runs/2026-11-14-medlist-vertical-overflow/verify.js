@@ -1,0 +1,7 @@
+figma.skipInvisibleInstanceChildren=false;await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('17:881'));
+const screen=await figma.getNodeByIdAsync('23:881'),rows=screen.findAll(n=>n.type==='INSTANCE'&&n.mainComponent?.id==='52:2511'),assertions=[],controls=[];
+function add(name,actual,expected){assertions.push({name,actual,expected});}
+add('all ten rows',rows.length,10);add('screen height',screen.height,1428);
+for(const r of rows){const c=r.findOne(n=>n.name==='Medication actions'),g=c.findOne(n=>n.type==='INSTANCE'),v=g.findOne(n=>n.type==='VECTOR'),a=c.parent,prior=a.children.filter(n=>n.visible)[a.children.filter(n=>n.visible).findIndex(n=>n.id===c.id)-1];controls.push(c);
+add(r.id+' vertical library glyph',g.mainComponent.key,'4b36995eeb808368112345235e670acfd187d920');add(r.id+' control and slot dimensions',[c.width,c.height,g.width,g.height],[34,34,18,18]);add(r.id+' vertical vector bounds',[Math.round(v.width*100)/100,Math.round(v.height*100)/100],[3.43,15]);add(r.id+' three dot subpaths',v.vectorPaths[0].data.split('M ').length-1,3);add(r.id+' no icon background',g.fills.length,0);add(r.id+' no button background',c.fills.length,0);add(r.id+' no button border',c.strokes.length,0);add(r.id+' grey token',v.fills[0].boundVariables.color.id,'VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127');add(r.id+' adjacent action gap',c.x-prior.x-prior.width,8);add(r.id+' no disclosure',r.findAll(n=>n.name==='Toggle details'||n.name==='Details content').length,0);}
+return await auditEvidence(controls,assertions);

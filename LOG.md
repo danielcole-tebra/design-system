@@ -4607,3 +4607,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Comparison B spacing and overflow provenance
 - File: yh2F6OUgdI6K0risLtKLEQ. Updated Comparison B only with the compact row spacing and grouped actions across ten rows. All information remains visible; progressive disclosure is excluded. Verified the existing filled-circle overflow asset and documented its selection as under review.
 - Evidence: runs/2026-11-14-medlist-comparison-spacing/REPORT.md, record.json, comparison-b.png, comparison-board.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-vertical-overflow -->
+## 2026-11-14 — Medlist · Plain vertical overflow in Comparison B
+- File: yh2F6OUgdI6K0risLtKLEQ. Replaced Comparison B's filled circular overflow glyph with published Tebra Icon/LinearEllipsis, a plain vertical three-dot stack. Existing native button and compact spacing retained.
+- Evidence: runs/2026-11-14-medlist-vertical-overflow/REPORT.md, record.json, comparison-b.png.

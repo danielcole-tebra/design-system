@@ -1,0 +1,1288 @@
+{
+  "build": {
+    "createdNodeIds": [
+      "56:3026",
+      "56:3027",
+      "56:3028",
+      "I56:3028;136:4",
+      "I56:3028;136:4;88:3",
+      "56:3029",
+      "56:3030",
+      "56:3031",
+      "56:3032",
+      "56:3033",
+      "I56:3033;162:87",
+      "I56:3033;162:88",
+      "I56:3033;162:88;102:16",
+      "56:3034",
+      "56:3035",
+      "56:3036",
+      "56:3037",
+      "56:3038",
+      "56:3039",
+      "56:3040",
+      "56:3041",
+      "56:3042",
+      "56:3043",
+      "I56:3043;2:2257",
+      "I56:3043;2:2258",
+      "I56:3043;2:2259",
+      "56:3044",
+      "56:3045",
+      "I56:3045;139:36",
+      "I56:3045;139:37",
+      "I56:3045;139:38",
+      "56:3046",
+      "56:3047",
+      "I56:3047;78:3",
+      "I56:3047;78:3;76:7",
+      "I56:3047;78:4",
+      "I56:3047;78:5",
+      "I56:3047;78:5;76:4",
+      "56:3048",
+      "I56:3048;170:18",
+      "I56:3048;170:18;76:4",
+      "56:3049",
+      "I56:3049;170:18",
+      "I56:3049;170:18;368:3",
+      "56:3050",
+      "56:3051",
+      "56:3052"
+    ],
+    "mutatedNodeIds": [
+      "52:2511",
+      "52:2535",
+      "17:932",
+      "17:934"
+    ],
+    "affectedRowIds": [
+      "23:929",
+      "23:930",
+      "23:931",
+      "23:932",
+      "23:933",
+      "23:934",
+      "23:935",
+      "23:936",
+      "23:937",
+      "23:938"
+    ],
+    "archiveMasterId": "56:3026",
+    "importedIconId": "56:3051",
+    "importedIconKey": "4b36995eeb808368112345235e670acfd187d920",
+    "before": [
+      {
+        "id": "23:929",
+        "height": 81,
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "15 tablets",
+          "15 days as needed",
+          "No refills",
+          "Filled",
+          "CVS Pharmacy 1709 in Target",
+          "Phone: (850) 555-0142",
+          "Edit"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:930",
+        "height": 81,
+        "text": [
+          "Cetirizine 10 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for allergy symptoms",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "1 refill",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:931",
+        "height": 77,
+        "text": [
+          "Aspirin 81 mg delayed-release tablet",
+          "Take 1 tablet by mouth once daily",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "90 tablets",
+          "90 days",
+          "1 refill",
+          "Pending fill",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:932",
+        "height": 81,
+        "text": [
+          "Doxycycline hyclate 100 mg capsule",
+          "Take 1 capsule by mouth twice daily for 7 days",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "14 capsules",
+          "7 days",
+          "No refills",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:933",
+        "height": 77,
+        "text": [
+          "Furosemide 20 mg tablet",
+          "Take 1 tablet by mouth every morning",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "1 refill",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:934",
+        "height": 109,
+        "text": [
+          "Hydrocortisone 1% compounded cream",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Mar 14, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "1 tube (30 g)",
+          "7 days",
+          "No refills",
+          "Pending fill",
+          "Accord Specialty Pharmacy",
+          "Phone: (850) 555-2642",
+          "Edit"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:935",
+        "height": 101,
+        "text": [
+          "Melatonin 3 mg tablet",
+          "Take 1 tablet by mouth at bedtime as needed",
+          "Patient-reported supplement",
+          "Jan 23, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "No refills",
+          "Send failed",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Resend"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:936",
+        "height": 81,
+        "text": [
+          "Metformin 500 mg tablet",
+          "Take 1 tablet by mouth twice daily with meals",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "180 tablets",
+          "90 days",
+          "1 refill",
+          "Filled",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:937",
+        "height": 77,
+        "text": [
+          "Simvastatin 20 mg tablet",
+          "Take 1 tablet by mouth at bedtime",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "90 tablets",
+          "90 days",
+          "1 refill",
+          "Pending fill",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:938",
+        "height": 81,
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "40 tablets",
+          "10 days as needed",
+          "No refills",
+          "Patient info required",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "View issue"
+        ],
+        "iconKey": "67478695fcdf236a2d455730901934c0c49eb9e6",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "id": "23:929",
+        "height": 81,
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "15 tablets",
+          "15 days as needed",
+          "No refills",
+          "Filled",
+          "CVS Pharmacy 1709 in Target",
+          "Phone: (850) 555-0142",
+          "Edit"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:930",
+        "height": 81,
+        "text": [
+          "Cetirizine 10 mg tablet",
+          "Take 1 tablet by mouth once daily as needed for allergy symptoms",
+          "Sep 5, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "1 refill",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:931",
+        "height": 77,
+        "text": [
+          "Aspirin 81 mg delayed-release tablet",
+          "Take 1 tablet by mouth once daily",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "90 tablets",
+          "90 days",
+          "1 refill",
+          "Pending fill",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:932",
+        "height": 81,
+        "text": [
+          "Doxycycline hyclate 100 mg capsule",
+          "Take 1 capsule by mouth twice daily for 7 days",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "14 capsules",
+          "7 days",
+          "No refills",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:933",
+        "height": 77,
+        "text": [
+          "Furosemide 20 mg tablet",
+          "Take 1 tablet by mouth every morning",
+          "Jul 30, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "1 refill",
+          "Pending fill",
+          "Rite Aid #6",
+          "Phone: (850) 555-8080",
+          "Edit"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:934",
+        "height": 109,
+        "text": [
+          "Hydrocortisone 1% compounded cream",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Mar 14, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "1 tube (30 g)",
+          "7 days",
+          "No refills",
+          "Pending fill",
+          "Accord Specialty Pharmacy",
+          "Phone: (850) 555-2642",
+          "Edit"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:935",
+        "height": 101,
+        "text": [
+          "Melatonin 3 mg tablet",
+          "Take 1 tablet by mouth at bedtime as needed",
+          "Patient-reported supplement",
+          "Jan 23, 2024",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "30 tablets",
+          "30 days",
+          "No refills",
+          "Send failed",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Resend"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:936",
+        "height": 81,
+        "text": [
+          "Metformin 500 mg tablet",
+          "Take 1 tablet by mouth twice daily with meals",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "180 tablets",
+          "90 days",
+          "1 refill",
+          "Filled",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:937",
+        "height": 77,
+        "text": [
+          "Simvastatin 20 mg tablet",
+          "Take 1 tablet by mouth at bedtime",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "90 tablets",
+          "90 days",
+          "1 refill",
+          "Pending fill",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "Edit"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:938",
+        "height": 81,
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Nov 19, 2023",
+          "Prescribed",
+          "Olivia Chen, MD",
+          "40 tablets",
+          "10 days as needed",
+          "No refills",
+          "Patient info required",
+          "A&A Family Pharmacy",
+          "Phone: (850) 555-4706",
+          "View issue"
+        ],
+        "iconKey": "4b36995eeb808368112345235e670acfd187d920",
+        "controlSize": [
+          34,
+          34
+        ],
+        "iconSize": [
+          18,
+          18
+        ],
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.3294117748737335,
+              "g": 0.3294117748737335,
+              "b": 0.3294117748737335
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7df34eda2294a90929ac0ecd1eac04df08d5e89f/74:127"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "screenHeight": 1428
+  },
+  "preserved": [
+    {
+      "id": "23:929",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:930",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:931",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:932",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:933",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:934",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:935",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:936",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:937",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    },
+    {
+      "id": "23:938",
+      "text": true,
+      "height": true,
+      "size": true,
+      "paint": true
+    }
+  ],
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 10,
+      "passed": true,
+      "checks": [
+        {
+          "id": "I23:929;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:930;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:931;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:932;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:933;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:934;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:935;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:936;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:937;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I23:938;52:2535",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 102,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "all ten rows",
+          "passed": true
+        },
+        {
+          "name": "screen height",
+          "passed": true
+        },
+        {
+          "name": "23:929 vertical library glyph",
+          "passed": true
+        },
+        {
+          "name": "23:929 control and slot dimensions",
+          "passed": true
+        },
+        {
+          "name": "23:929 vertical vector bounds",
+          "passed": true
+        },
+        {
+          "name": "23:929 three dot subpaths",
+          "passed": true
+        },
+        {
+          "name": "23:929 no icon background",
+          "passed": true
+        },
+        {
+          "name": "23:929 no button background",
+          "passed": true
+        },
+        {
+          "name": "23:929 no button border",
+          "passed": true
+        },
+        {
+          "name": "23:929 grey token",
+          "passed": true
+        },
+        {
+          "name": "23:929 adjacent action gap",
+          "passed": true
+        },
+        {
+          "name": "23:929 no disclosure",
+          "passed": true
+        },
+        {
+          "name": "23:930 vertical library glyph",
+          "passed": true
+        },
+        {
+          "name": "23:930 control and slot dimensions",
+          "passed": true
+        },
+        {
+          "name": "23:930 vertical vector bounds",
+          "passed": true
+        },
+        {
+          "name": "23:930 three dot subpaths",
+          "passed": true
+        },
+        {
+          "name": "23:930 no icon background",
+          "passed": true
+        },
+        {
+          "name": "23:930 no button background",
+          "passed": true
+        },
+        {
+          "name": "23:930 no button border",
+          "passed": true
+        },
+        {
+          "name": "23:930 grey token",
+          "passed": true
+        },
+        {
+          "name": "23:930 adjacent action gap",
+          "passed": true
+        },
+        {
+          "name": "23:930 no disclosure",
+          "passed": true
+        },
+        {
+          "name": "23:931 vertical library glyph",
+          "passed": true
+        },
+        {
+          "name": "23:931 control and slot dimensions",
+          "passed": true
+        },
+        {
+          "name": "23:931 vertical vector bounds",
+          "passed": true
+        },
+        {
+          "name": "23:931 three dot subpaths",
+          "passed": true
+        },
+        {
+          "name": "23:931 no icon background",
+          "passed": true
+        },
+        {
+          "name": "23:931 no button background",
+          "passed": true
+        },
+        {
+          "name": "23:931 no button border",
+          "passed": true
+        },
+        {
+          "name": "23:931 grey token",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 72,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "search": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"results\":[{\"entity\":\"component\",\"query\":\"Icon/LinearEllipsis\",\"components\":[{\"name\":\"Icon/LinearEllipsis\",\"libraryName\":\"Design System Rebuild\",\"libraryKey\":\"lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed\",\"assetType\":\"component\",\"updatedAt\":\"2026-08-19T01:49:21Z\",\"componentKey\":\"4b36995eeb808368112345235e670acfd187d920\",\"description\":\"Overflow / kebab menu affordance. Search aliases: kebab, overflow menu, more, vertical ellipsis, MoreVert. Source: packages/design-system/src/components/icons/LinearEllipsisIcon.tsx. Shipped as the endIcon on the &#39;Menu&#39; text button in Button.stories.tsx. NOTE: despite the source name, the glyph is a VERTICAL three-dot stack — the three circles share x=12.29 and step down y at 4.29 / 12.0 / 19.71. Named after its source file per the library convention rather than after its appearance; flagged for a discoverability re-check after real use, since renaming is only cheap before publish. Not to be confused with EllipsisFilled, which is a circle enclosing three HORIZONTAL dots. 24 viewBox; scales like an SVG (SCALE constraints). Recolor by cloning the label paint onto Vector.\",\"filePath\":\"design_systems/Design System Rebuild/components/Icon/LinearEllipsis\"},{\"name\":\"Icon/PracticeGrowth\",\"libraryName\":\"Design System Rebuild\",\"libraryKey\":\"lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed\",\"assetType\":\"component\",\"updatedAt\":\"2026-08-21T12:46:57Z\",\"componentKey\":\"1851210caeff94e163ea4e76180afcaa119a2434\",\"description\":\"Source: packages/design-system/src/components/icons/PracticeGrowthIcon.tsx. Authored at its own viewBox. Binds 24; SvgIcon medium renders it at 27.4286 because icon sizes are encoded against a 14px root while htmlFontSize is 16.\",\"filePath\":\"design_systems/Design System Rebuild/components/Icon/PracticeGrowth\"},{\"name\":\"Divider\",\"libraryName\":\"Design System Rebuild\",\"libraryKey\":\"lk-9fffe777331f943268265fbe94abe6c8170ab660ef7fc65e6562c2d62caadef19f1e5baf010fffd68d592b03c2cdd65e8334d2e7baa0845cc490b6b1c0b400ed\",\"assetType\":\"component_set\",\"updatedAt\":\"2026-08-26T21:04:41Z\",\"componentSetKey\":\"e1a369ce1b663c8e203a59c18f522108c62c8e6e\",\"description\":\"Divider. SUBSTRATE — no override. borderColor is palette.divider #D6D6D6 (Synapse 4) at borderBottomWidth 'thin', which computes to 1px; drawn here as a 1px fill bound to color/divider. Orientation is the only axis the story exercises: the default horizontal plus one `orientation=\\\"vertical\\\" flexItem` usage. The story's argTypes exist only to hide component/orientation/flexItem from the controls table — they are not option lists. No textAlign and no children: every Divider in the story is self-closing, so the inset, middle and withChildren treatments are unbuilt.\",\"filePath\":\"design_systems/Design System Rebuild/components/Divider\"}]}]}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  }
+}
