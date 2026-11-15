@@ -1,0 +1,86 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "letter": "a",
+      "status": 200,
+      "body": {
+        "success": true,
+        "imageHash": "2eed523a57518c57e5dad704f400fa5dd6e66004",
+        "sizeBytes": 660006,
+        "contentType": "image/png",
+        "placedOnNodeId": "1:8"
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "letter": "b",
+      "status": 200,
+      "body": {
+        "success": true,
+        "imageHash": "bc41bafaae4ca1a79996d0690db2bfeb501b8a33",
+        "sizeBytes": 526405,
+        "contentType": "image/png",
+        "placedOnNodeId": "1:6"
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "letter": "c",
+      "status": 200,
+      "body": {
+        "success": true,
+        "imageHash": "10fad6b1f3abd4d1d754a7b537899f8227623d29",
+        "sizeBytes": 402104,
+        "contentType": "image/png",
+        "placedOnNodeId": "1:3"
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "letter": "d",
+      "status": 200,
+      "body": {
+        "success": true,
+        "imageHash": "c0d8d711349a95e0cabccd5256d08cf51e9abd2e",
+        "sizeBytes": 382524,
+        "contentType": "image/png",
+        "placedOnNodeId": "1:4"
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "letter": "e",
+      "status": 200,
+      "body": {
+        "success": true,
+        "imageHash": "d13e30deeee12348ff9c7e80522571f952a83dc3",
+        "sizeBytes": 388703,
+        "contentType": "image/png",
+        "placedOnNodeId": "1:5"
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "letter": "f",
+      "status": 200,
+      "body": {
+        "success": true,
+        "imageHash": "e09f61331e958ecca23fffaf66655271c729429b",
+        "sizeBytes": 386689,
+        "contentType": "image/png",
+        "placedOnNodeId": "1:7"
+      }
+    }
+  }
+]

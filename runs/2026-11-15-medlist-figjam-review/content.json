@@ -1,0 +1,93 @@
+[
+  {
+    "letter": "A",
+    "imageId": "1:8",
+    "title": "Original medlist",
+    "subtitle": "A01 · Baseline",
+    "w": 1446,
+    "h": 1631,
+    "url": "https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11198-3155",
+    "goals": [
+      "Manage current medications and review order status.",
+      "Keep medication, prescribing, supply and pharmacy information together.",
+      "Provide prescribing and reconciliation actions from the medication list."
+    ],
+    "question": "What creates the most effort or distraction in the original?",
+    "label": "Baseline capabilities"
+  },
+  {
+    "letter": "B",
+    "imageId": "1:6",
+    "title": "Consistent components and spacing",
+    "subtitle": "Comparison B · Full information visible",
+    "w": 1440,
+    "h": 1428,
+    "url": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=23-881",
+    "goals": [
+      "Use the verified SDE header and design-system controls.",
+      "Tighten row spacing and group related actions, including vertical overflow.",
+      "Improve consistency while keeping the detailed row information visible."
+    ],
+    "question": "Does the spacing help scanning without making the information harder to read?"
+  },
+  {
+    "letter": "C",
+    "imageId": "1:3",
+    "title": "Scan first, expand for details",
+    "subtitle": "Comparison C · Progressive disclosure",
+    "w": 1440,
+    "h": 1260,
+    "url": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=73-3818",
+    "goals": [
+      "Make collapsed rows easier to scan while keeping dates, quantities and issues visible.",
+      "Reveal directions and supporting information beneath their existing column headers.",
+      "Keep review and action controls aligned as individual rows expand."
+    ],
+    "question": "Which information must stay visible to review medications confidently?"
+  },
+  {
+    "letter": "D",
+    "imageId": "1:4",
+    "title": "Medication management first",
+    "subtitle": "Comparison D · Page hierarchy",
+    "w": 1440,
+    "h": 1184,
+    "url": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=77-4774",
+    "goals": [
+      "Make prescribing the primary page action, with add and import alongside it.",
+      "Reduce reconciliation to a compact supporting utility.",
+      "Keep C’s row disclosure while giving the medication list more prominence."
+    ],
+    "question": "Does the page now read as medication management rather than a reconciliation workflow?"
+  },
+  {
+    "letter": "E",
+    "imageId": "1:5",
+    "title": "Direct attention to issues",
+    "subtitle": "Comparison E · Status and label hierarchy",
+    "w": 1440,
+    "h": 1184,
+    "url": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=85-6258",
+    "goals": [
+      "Reduce the emphasis of routine Filled and Pending fill statuses.",
+      "Keep failed sends and required patient information visually prominent.",
+      "Explore clearer column headings without changing the medication data."
+    ],
+    "question": "Are actionable issues easier to notice without losing routine status information?"
+  },
+  {
+    "letter": "F",
+    "imageId": "1:7",
+    "title": "Clear activity, less row clutter",
+    "subtitle": "Comparison F · Latest proposal",
+    "w": 1440,
+    "h": 1184,
+    "url": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=91-10446",
+    "goals": [
+      "Show an explicit event and date under Last activity, such as Prescribed 09/05/24.",
+      "Move compound and patient-reported markers into expanded details.",
+      "Rebalance columns while retaining full medication names, strengths and forms."
+    ],
+    "question": "Does hiding provenance reduce clutter or remove context needed for review?"
+  }
+]

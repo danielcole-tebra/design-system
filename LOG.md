@@ -4663,3 +4663,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-15 — Medlist · Comparison F table UX audit
 - File: yh2F6OUgdI6K0risLtKLEQ. Read-only live scope/visual audit against uploaded AHRQ framework and official MUI X, Carbon, GOV.UK and WAI guidance. Stable scan structure; task-essential disclosure, activity semantics, action density and interaction coverage remain decisions/gaps. No canvas or library change.
 - Evidence/current findings: runs/2026-11-15-medlist-table-ux-audit/REPORT.md; consuming SPEC updated with a single link to findings. Existing F screenshot reused; source PDF pages rendered/viewed locally. Documentation batch, not a build benchmark.
+
+
+<!-- builder-run:runs/2026-11-15-medlist-figjam-review -->
+## 2026-11-15 — Medlist · FigJam evolution and team review
+- File: 9d3G2ipIFbZk4YSQLgukOE. Created a separate Tebra FigJam review board with source-linked 2x screen snapshots of original A01 and comparisons B–F, three baseline capabilities or improvement goals beneath each, review prompts and blank team-note areas. Source Design files unchanged.
+- Evidence: runs/2026-11-15-medlist-figjam-review/REPORT.md, record.json, board-overview.png, latest-panel.png, source-contact-sheet.png.

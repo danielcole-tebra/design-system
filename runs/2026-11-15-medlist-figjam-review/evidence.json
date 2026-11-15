@@ -1,0 +1,285 @@
+{
+  "fileKey": "9d3G2ipIFbZk4YSQLgukOE",
+  "sessionId": "502359df-977b-4942-b42f-aeb8229c91e1",
+  "wrapperCreation": {
+    "id": "1:2",
+    "pageId": "0:1"
+  },
+  "build": {
+    "createdNodeIds": [
+      "2:2",
+      "2:3",
+      "2:4",
+      "2:5",
+      "2:6",
+      "2:7",
+      "2:8",
+      "2:9",
+      "2:10",
+      "2:11",
+      "2:12",
+      "2:13",
+      "2:14",
+      "2:15",
+      "2:16",
+      "2:17",
+      "2:18",
+      "2:19",
+      "2:20",
+      "2:21",
+      "2:22",
+      "2:23",
+      "2:24",
+      "2:25",
+      "2:26",
+      "2:27",
+      "2:28",
+      "2:29",
+      "2:30",
+      "2:31",
+      "2:32",
+      "2:33",
+      "2:34",
+      "2:35",
+      "2:36",
+      "2:37",
+      "2:38",
+      "2:39",
+      "2:40",
+      "2:41",
+      "2:42",
+      "2:43",
+      "2:44",
+      "2:45",
+      "2:46",
+      "2:47",
+      "2:48",
+      "2:49",
+      "2:50",
+      "2:51",
+      "2:52",
+      "2:53",
+      "2:54",
+      "2:55",
+      "2:56",
+      "2:57",
+      "2:58",
+      "2:59",
+      "2:60",
+      "2:61",
+      "2:62",
+      "2:63",
+      "2:64"
+    ],
+    "mutatedNodeIds": [
+      "1:2",
+      "1:8",
+      "1:6",
+      "1:3",
+      "1:4",
+      "1:5",
+      "1:7"
+    ],
+    "cards": [
+      {
+        "letter": "A",
+        "id": "2:5",
+        "imageId": "1:8",
+        "source": "https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11198-3155",
+        "goalsId": "2:9",
+        "width": 1542,
+        "height": 2760,
+        "imageWidth": 1446,
+        "imageHeight": 1631,
+        "goalsY": 1921
+      },
+      {
+        "letter": "B",
+        "id": "2:15",
+        "imageId": "1:6",
+        "source": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=23-881",
+        "goalsId": "2:19",
+        "width": 1542,
+        "height": 2760,
+        "imageWidth": 1440,
+        "imageHeight": 1428,
+        "goalsY": 1718
+      },
+      {
+        "letter": "C",
+        "id": "2:25",
+        "imageId": "1:3",
+        "source": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=73-3818",
+        "goalsId": "2:29",
+        "width": 1542,
+        "height": 2760,
+        "imageWidth": 1440,
+        "imageHeight": 1260,
+        "goalsY": 1550
+      },
+      {
+        "letter": "D",
+        "id": "2:35",
+        "imageId": "1:4",
+        "source": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=77-4774",
+        "goalsId": "2:39",
+        "width": 1542,
+        "height": 2760,
+        "imageWidth": 1440,
+        "imageHeight": 1184,
+        "goalsY": 1474
+      },
+      {
+        "letter": "E",
+        "id": "2:45",
+        "imageId": "1:5",
+        "source": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=85-6258",
+        "goalsId": "2:49",
+        "width": 1542,
+        "height": 2760,
+        "imageWidth": 1440,
+        "imageHeight": 1184,
+        "goalsY": 1474
+      },
+      {
+        "letter": "F",
+        "id": "2:55",
+        "imageId": "1:7",
+        "source": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=91-10446",
+        "goalsId": "2:59",
+        "width": 1542,
+        "height": 2760,
+        "imageWidth": 1440,
+        "imageHeight": 1184,
+        "goalsY": 1474
+      }
+    ],
+    "boardId": "1:2",
+    "width": 10080,
+    "height": 3220,
+    "overflow": []
+  },
+  "verification": {
+    "images": [
+      {
+        "id": "1:8",
+        "name": "A · Original medlist · 2x source snapshot",
+        "hash": "2eed523a57518c57e5dad704f400fa5dd6e66004",
+        "pixelWidth": 2892,
+        "pixelHeight": 3262,
+        "width": 1446,
+        "height": 1631,
+        "ratioX": 2,
+        "ratioY": 2,
+        "parent": "2:5"
+      },
+      {
+        "id": "1:6",
+        "name": "B · Consistent components and spacing · 2x source snapshot",
+        "hash": "bc41bafaae4ca1a79996d0690db2bfeb501b8a33",
+        "pixelWidth": 2880,
+        "pixelHeight": 2856,
+        "width": 1440,
+        "height": 1428,
+        "ratioX": 2,
+        "ratioY": 2,
+        "parent": "2:15"
+      },
+      {
+        "id": "1:3",
+        "name": "C · Scan first, expand for details · 2x source snapshot",
+        "hash": "10fad6b1f3abd4d1d754a7b537899f8227623d29",
+        "pixelWidth": 2880,
+        "pixelHeight": 2520,
+        "width": 1440,
+        "height": 1260,
+        "ratioX": 2,
+        "ratioY": 2,
+        "parent": "2:25"
+      },
+      {
+        "id": "1:4",
+        "name": "D · Medication management first · 2x source snapshot",
+        "hash": "c0d8d711349a95e0cabccd5256d08cf51e9abd2e",
+        "pixelWidth": 2880,
+        "pixelHeight": 2368,
+        "width": 1440,
+        "height": 1184,
+        "ratioX": 2,
+        "ratioY": 2,
+        "parent": "2:35"
+      },
+      {
+        "id": "1:5",
+        "name": "E · Direct attention to issues · 2x source snapshot",
+        "hash": "d13e30deeee12348ff9c7e80522571f952a83dc3",
+        "pixelWidth": 2880,
+        "pixelHeight": 2368,
+        "width": 1440,
+        "height": 1184,
+        "ratioX": 2,
+        "ratioY": 2,
+        "parent": "2:45"
+      },
+      {
+        "id": "1:7",
+        "name": "F · Clear activity, less row clutter · 2x source snapshot",
+        "hash": "e09f61331e958ecca23fffaf66655271c729429b",
+        "pixelWidth": 2880,
+        "pixelHeight": 2368,
+        "width": 1440,
+        "height": 1184,
+        "ratioX": 2,
+        "ratioY": 2,
+        "parent": "2:55"
+      }
+    ],
+    "links": [
+      {
+        "id": "2:10",
+        "hyperlink": {
+          "type": "URL",
+          "value": "https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11198-3155"
+        }
+      },
+      {
+        "id": "2:20",
+        "hyperlink": {
+          "type": "URL",
+          "value": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=23-881"
+        }
+      },
+      {
+        "id": "2:30",
+        "hyperlink": {
+          "type": "URL",
+          "value": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=73-3818"
+        }
+      },
+      {
+        "id": "2:40",
+        "hyperlink": {
+          "type": "URL",
+          "value": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=77-4774"
+        }
+      },
+      {
+        "id": "2:50",
+        "hyperlink": {
+          "type": "URL",
+          "value": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=85-6258"
+        }
+      },
+      {
+        "id": "2:60",
+        "hyperlink": {
+          "type": "URL",
+          "value": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=91-10446"
+        }
+      }
+    ],
+    "textCount": 51,
+    "missingFontCount": 0,
+    "descendantCount": 69
+  }
+}
