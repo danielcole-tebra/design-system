@@ -4613,3 +4613,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · Plain vertical overflow in Comparison B
 - File: yh2F6OUgdI6K0risLtKLEQ. Replaced Comparison B's filled circular overflow glyph with published Tebra Icon/LinearEllipsis, a plain vertical three-dot stack. Existing native button and compact spacing retained.
 - Evidence: runs/2026-11-14-medlist-vertical-overflow/REPORT.md, record.json, comparison-b.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-row-table-alignment -->
+## 2026-11-14 — Medlist · Table headers and aligned row actions
+- File: yh2F6OUgdI6K0risLtKLEQ. Updated the single-line row test with shared table headers and fixed-width action buttons so primary action, disclosure and overflow occupy identical positions across medication and disclosure states.
+- Evidence: runs/2026-11-14-medlist-row-table-alignment/REPORT.md, record.json, row-table.png.

@@ -1,0 +1,1593 @@
+{
+  "build": {
+    "createdNodeIds": [
+      "60:2301",
+      "60:2302",
+      "60:2303",
+      "60:2304",
+      "60:2305",
+      "I60:2305;136:4",
+      "I60:2305;136:4;88:3",
+      "60:2306",
+      "60:2307",
+      "60:2308",
+      "60:2309",
+      "I60:2309;162:87",
+      "I60:2309;162:88",
+      "I60:2309;162:88;102:16",
+      "60:2310",
+      "60:2311",
+      "I60:2311;2:2257",
+      "I60:2311;2:2258",
+      "I60:2311;2:2259",
+      "60:2312",
+      "60:2313",
+      "I60:2313;139:36",
+      "I60:2313;139:37",
+      "I60:2313;139:38",
+      "60:2314",
+      "60:2315",
+      "60:2316",
+      "I60:2316;78:3",
+      "I60:2316;78:3;76:7",
+      "I60:2316;78:4",
+      "I60:2316;78:5",
+      "I60:2316;78:5;76:4",
+      "60:2317",
+      "I60:2317;78:3",
+      "I60:2317;78:3;76:7",
+      "I60:2317;78:4",
+      "I60:2317;78:5",
+      "I60:2317;78:5;76:4",
+      "60:2318",
+      "I60:2318;170:18",
+      "I60:2318;170:18;368:3",
+      "60:2319",
+      "60:2320",
+      "60:2321",
+      "60:2322",
+      "60:2323",
+      "60:2324",
+      "60:2325",
+      "60:2326",
+      "60:2327",
+      "60:2328",
+      "60:2329",
+      "60:2330",
+      "60:2331",
+      "60:2332",
+      "60:2333",
+      "60:2334",
+      "60:2335",
+      "60:2336",
+      "I60:2336;2:2257",
+      "I60:2336;2:2258",
+      "I60:2336;2:2259",
+      "60:2337",
+      "60:2338",
+      "60:2339",
+      "I60:2339;170:18",
+      "I60:2339;170:18;76:4",
+      "60:2340",
+      "60:2341",
+      "60:2342",
+      "60:2343",
+      "I60:2343;136:4",
+      "I60:2343;136:4;88:3",
+      "60:2344",
+      "60:2345",
+      "60:2346",
+      "60:2347",
+      "I60:2347;162:87",
+      "I60:2347;162:88",
+      "I60:2347;162:88;102:16",
+      "60:2348",
+      "60:2349",
+      "I60:2349;2:2257",
+      "I60:2349;2:2258",
+      "I60:2349;2:2259",
+      "60:2350",
+      "60:2351",
+      "I60:2351;139:36",
+      "I60:2351;139:37",
+      "I60:2351;139:38",
+      "60:2352",
+      "60:2353",
+      "60:2354",
+      "I60:2354;78:3",
+      "I60:2354;78:3;76:7",
+      "I60:2354;78:4",
+      "I60:2354;78:5",
+      "I60:2354;78:5;76:4",
+      "60:2355",
+      "I60:2355;78:3",
+      "I60:2355;78:3;76:7",
+      "I60:2355;78:4",
+      "I60:2355;78:5",
+      "I60:2355;78:5;76:4",
+      "60:2356",
+      "I60:2356;170:18",
+      "I60:2356;170:18;368:3",
+      "60:2357",
+      "60:2358",
+      "60:2359",
+      "60:2360",
+      "60:2361",
+      "60:2362",
+      "60:2363",
+      "60:2364",
+      "60:2365",
+      "60:2366",
+      "60:2367",
+      "60:2368",
+      "60:2369",
+      "60:2370",
+      "60:2371",
+      "60:2372",
+      "60:2373",
+      "60:2374",
+      "I60:2374;2:2257",
+      "I60:2374;2:2258",
+      "I60:2374;2:2259",
+      "60:2375",
+      "60:2376",
+      "60:2377",
+      "I60:2377;170:18",
+      "I60:2377;170:18;76:4",
+      "60:2380",
+      "60:2381",
+      "60:2382",
+      "I60:2382;136:4",
+      "I60:2382;136:4;88:3",
+      "60:2383",
+      "I60:2383;190:10",
+      "60:2384",
+      "I60:2384;190:10",
+      "60:2385",
+      "I60:2385;190:10",
+      "60:2386",
+      "I60:2386;190:10",
+      "60:2387",
+      "I60:2387;190:10",
+      "60:2388",
+      "I60:2388;190:10",
+      "60:2389",
+      "60:2400",
+      "60:2401",
+      "60:2402",
+      "I60:2402;136:4",
+      "I60:2402;136:4;88:3",
+      "60:2403",
+      "I60:2403;190:10",
+      "60:2404",
+      "I60:2404;190:10",
+      "60:2405",
+      "I60:2405;190:10",
+      "60:2406",
+      "I60:2406;190:10",
+      "60:2407",
+      "I60:2407;190:10",
+      "60:2408",
+      "I60:2408;190:10",
+      "60:2409",
+      "60:2399",
+      "47:1685",
+      "I47:1685;47:1578",
+      "I47:1685;47:1579",
+      "I47:1685;47:1580",
+      "I47:1685;47:1580;136:4",
+      "I47:1685;47:1580;136:4;88:3",
+      "I47:1685;47:1581",
+      "I47:1685;47:1582",
+      "I47:1685;47:1584",
+      "I47:1685;47:1585",
+      "I47:1685;47:1585;162:87",
+      "I47:1685;47:1585;162:88",
+      "I47:1685;47:1585;162:88;102:16",
+      "I47:1685;47:1586",
+      "I47:1685;47:1587",
+      "I47:1685;47:1587;2:2257",
+      "I47:1685;47:1587;2:2258",
+      "I47:1685;47:1587;2:2259",
+      "I47:1685;47:1588",
+      "I47:1685;47:1589",
+      "I47:1685;47:1589;139:36",
+      "I47:1685;47:1589;139:37",
+      "I47:1685;47:1589;139:38",
+      "I47:1685;47:1590",
+      "I47:1685;47:1591",
+      "I47:1685;47:1592",
+      "I47:1685;47:1592;78:3",
+      "I47:1685;47:1592;78:3;76:7",
+      "I47:1685;47:1592;78:4",
+      "I47:1685;47:1592;78:5",
+      "I47:1685;47:1592;78:5;76:4",
+      "I47:1685;47:1593",
+      "I47:1685;47:1593;78:3",
+      "I47:1685;47:1593;78:3;76:7",
+      "I47:1685;47:1593;78:4",
+      "I47:1685;47:1593;78:5",
+      "I47:1685;47:1593;78:5;76:4",
+      "I47:1685;47:1594",
+      "I47:1685;47:1594;170:18",
+      "I47:1685;47:1594;170:18;109:3",
+      "I47:1685;47:1595",
+      "I47:1685;47:1596",
+      "I47:1685;47:1672",
+      "I47:1685;47:1583",
+      "I47:1685;47:1671",
+      "I47:1685;47:1597",
+      "I47:1685;47:1598",
+      "I47:1685;47:1599",
+      "I47:1685;47:1600",
+      "I47:1685;47:1601",
+      "I47:1685;47:1602",
+      "I47:1685;47:1603",
+      "I47:1685;47:1604",
+      "I47:1685;47:1605",
+      "I47:1685;47:1606",
+      "I47:1685;47:1607",
+      "I47:1685;47:1608",
+      "I47:1685;47:1609",
+      "I47:1685;47:1609;2:2257",
+      "I47:1685;47:1609;2:2258",
+      "I47:1685;47:1609;2:2259",
+      "I47:1685;47:1610",
+      "I47:1685;47:1611",
+      "I47:1685;47:1612",
+      "I47:1685;47:1612;170:18",
+      "I47:1685;47:1612;170:18;76:4",
+      "60:2417",
+      "60:2418",
+      "60:2419",
+      "I60:2419;136:4",
+      "I60:2419;136:4;88:3",
+      "60:2420",
+      "I60:2420;190:10",
+      "60:2421",
+      "I60:2421;190:10",
+      "60:2422",
+      "I60:2422;190:10",
+      "60:2423",
+      "I60:2423;190:10",
+      "60:2424",
+      "I60:2424;190:10",
+      "60:2425",
+      "I60:2425;190:10",
+      "60:2426",
+      "60:2416",
+      "47:1687",
+      "I47:1687;47:1578",
+      "I47:1687;47:1579",
+      "I47:1687;47:1580",
+      "I47:1687;47:1580;136:4",
+      "I47:1687;47:1580;136:4;88:3",
+      "I47:1687;47:1581",
+      "I47:1687;47:1582",
+      "I47:1687;47:1584",
+      "I47:1687;47:1585",
+      "I47:1687;47:1585;162:87",
+      "I47:1687;47:1585;162:88",
+      "I47:1687;47:1585;162:88;102:16",
+      "I47:1687;47:1586",
+      "I47:1687;47:1587",
+      "I47:1687;47:1587;2:2269",
+      "I47:1687;47:1587;2:2270",
+      "I47:1687;47:1587;2:2271",
+      "I47:1687;47:1588",
+      "I47:1687;47:1589",
+      "I47:1687;47:1589;139:36",
+      "I47:1687;47:1589;139:37",
+      "I47:1687;47:1589;139:38",
+      "I47:1687;47:1590",
+      "I47:1687;47:1591",
+      "I47:1687;47:1592",
+      "I47:1687;47:1592;78:3",
+      "I47:1687;47:1592;78:3;76:7",
+      "I47:1687;47:1592;78:4",
+      "I47:1687;47:1592;78:5",
+      "I47:1687;47:1592;78:5;76:4",
+      "I47:1687;47:1593",
+      "I47:1687;47:1593;78:3",
+      "I47:1687;47:1593;78:3;76:7",
+      "I47:1687;47:1593;78:4",
+      "I47:1687;47:1593;78:5",
+      "I47:1687;47:1593;78:5;76:4",
+      "I47:1687;47:1594",
+      "I47:1687;47:1594;170:18",
+      "I47:1687;47:1594;170:18;109:3",
+      "I47:1687;47:1595",
+      "I47:1687;47:1596",
+      "I47:1687;47:1672",
+      "I47:1687;47:1583",
+      "I47:1687;47:1671",
+      "I47:1687;47:1597",
+      "I47:1687;47:1598",
+      "I47:1687;47:1599",
+      "I47:1687;47:1600",
+      "I47:1687;47:1601",
+      "I47:1687;47:1602",
+      "I47:1687;47:1603",
+      "I47:1687;47:1604",
+      "I47:1687;47:1605",
+      "I47:1687;47:1606",
+      "I47:1687;47:1607",
+      "I47:1687;47:1608",
+      "I47:1687;47:1609",
+      "I47:1687;47:1609;2:2269",
+      "I47:1687;47:1609;2:2270",
+      "I47:1687;47:1609;2:2271",
+      "I47:1687;47:1610",
+      "I47:1687;47:1611",
+      "I47:1687;47:1612",
+      "I47:1687;47:1612;170:18",
+      "I47:1687;47:1612;170:18;76:4"
+    ],
+    "mutatedNodeIds": [
+      "47:1556",
+      "47:1557",
+      "47:1558",
+      "47:1592",
+      "47:1593",
+      "47:1594",
+      "47:1679",
+      "47:1685",
+      "47:1687",
+      "47:1676",
+      "47:1677",
+      "47:1688",
+      "47:1540"
+    ],
+    "archiveSetId": "60:2301",
+    "headerIds": [
+      "60:2380",
+      "60:2400",
+      "60:2417"
+    ],
+    "affectedIds": [
+      "47:1680",
+      "47:1681",
+      "47:1682",
+      "47:1683",
+      "47:1685",
+      "47:1687",
+      "47:1690",
+      "47:1691"
+    ],
+    "before": [
+      {
+        "id": "47:1680",
+        "height": 59,
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Details",
+          "Edit",
+          "Filled",
+          "Reviewed"
+        ],
+        "actions": [
+          {
+            "id": "I47:1680;47:1556",
+            "name": "Edit",
+            "x": 944,
+            "w": 64
+          },
+          {
+            "id": "I47:1680;47:1557",
+            "name": "Toggle details",
+            "x": 1016,
+            "w": 68
+          },
+          {
+            "id": "I47:1680;47:1558",
+            "name": "Medication actions",
+            "x": 1092,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1577",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1577",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1681",
+        "height": 59,
+        "text": [
+          "Compound",
+          "Details",
+          "Edit",
+          "Hydrocortisone 1% compounded cream",
+          "Pending fill",
+          "Reviewed"
+        ],
+        "actions": [
+          {
+            "id": "I47:1681;47:1556",
+            "name": "Edit",
+            "x": 944,
+            "w": 64
+          },
+          {
+            "id": "I47:1681;47:1557",
+            "name": "Toggle details",
+            "x": 1016,
+            "w": 68
+          },
+          {
+            "id": "I47:1681;47:1558",
+            "name": "Medication actions",
+            "x": 1092,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1577",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1577",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1682",
+        "height": 59,
+        "text": [
+          "Details",
+          "Melatonin 3 mg tablet",
+          "Patient-reported supplement",
+          "Resend",
+          "Reviewed",
+          "Send failed"
+        ],
+        "actions": [
+          {
+            "id": "I47:1682;47:1556",
+            "name": "Edit",
+            "x": 944,
+            "w": 71
+          },
+          {
+            "id": "I47:1682;47:1557",
+            "name": "Toggle details",
+            "x": 1023,
+            "w": 68
+          },
+          {
+            "id": "I47:1682;47:1558",
+            "name": "Medication actions",
+            "x": 1099,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1577",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1577",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1683",
+        "height": 59,
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Details",
+          "Patient info required",
+          "Reviewed",
+          "View issue"
+        ],
+        "actions": [
+          {
+            "id": "I47:1683;47:1556",
+            "name": "Edit",
+            "x": 944,
+            "w": 90
+          },
+          {
+            "id": "I47:1683;47:1557",
+            "name": "Toggle details",
+            "x": 1042,
+            "w": 68
+          },
+          {
+            "id": "I47:1683;47:1558",
+            "name": "Medication actions",
+            "x": 1118,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1577",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1577",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1685",
+        "height": 191,
+        "text": [
+          "15 days as needed",
+          "15 tablets",
+          "Alprazolam 0.25 mg tablet",
+          "CVS Pharmacy 1709 in Target",
+          "Clinical timeline",
+          "Edit",
+          "Filled",
+          "Hide details",
+          "No refills",
+          "Olivia Chen, MD",
+          "Pharmacy",
+          "Phone: (850) 555-0142",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Sep 5, 2024",
+          "Supply",
+          "Take 1 tablet by mouth once daily as needed for anxiety"
+        ],
+        "actions": [
+          {
+            "id": "I47:1685;47:1592",
+            "name": "Edit",
+            "x": 944,
+            "w": 64
+          },
+          {
+            "id": "I47:1685;47:1593",
+            "name": "Toggle details",
+            "x": 1016,
+            "w": 102
+          },
+          {
+            "id": "I47:1685;47:1594",
+            "name": "Medication actions",
+            "x": 1126,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1541",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1541",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1687",
+        "height": 191,
+        "text": [
+          "10 days as needed",
+          "40 tablets",
+          "A&A Family Pharmacy",
+          "Acetaminophen 500 mg tablet",
+          "Hide details",
+          "No refills",
+          "Nov 19, 2023",
+          "Olivia Chen, MD",
+          "Patient info required",
+          "Pharmacy",
+          "Phone: (850) 555-4706",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Supply",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "View issue"
+        ],
+        "actions": [
+          {
+            "id": "I47:1687;47:1592",
+            "name": "Edit",
+            "x": 944,
+            "w": 90
+          },
+          {
+            "id": "I47:1687;47:1593",
+            "name": "Toggle details",
+            "x": 1042,
+            "w": 102
+          },
+          {
+            "id": "I47:1687;47:1594",
+            "name": "Medication actions",
+            "x": 1152,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1541",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1541",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1690",
+        "height": 191,
+        "text": [
+          "1 tube (30 g)",
+          "7 days",
+          "Accord Specialty Pharmacy",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Edit",
+          "Hide details",
+          "Hydrocortisone 1% compounded cream",
+          "Mar 14, 2024",
+          "No refills",
+          "Olivia Chen, MD",
+          "Pending fill",
+          "Pharmacy",
+          "Phone: (850) 555-2642",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Supply"
+        ],
+        "actions": [
+          {
+            "id": "I47:1690;47:1592",
+            "name": "Edit",
+            "x": 944,
+            "w": 64
+          },
+          {
+            "id": "I47:1690;47:1593",
+            "name": "Toggle details",
+            "x": 1016,
+            "w": 102
+          },
+          {
+            "id": "I47:1690;47:1594",
+            "name": "Medication actions",
+            "x": 1126,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1541",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1541",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1691",
+        "height": 191,
+        "text": [
+          "30 days",
+          "30 tablets",
+          "A&A Family Pharmacy",
+          "Hide details",
+          "Jan 23, 2024",
+          "Melatonin 3 mg tablet",
+          "No refills",
+          "Olivia Chen, MD",
+          "Patient-reported supplement",
+          "Pharmacy",
+          "Phone: (850) 555-4706",
+          "Prescribed",
+          "Prescribing",
+          "Resend",
+          "Reviewed",
+          "Send failed",
+          "Supply",
+          "Take 1 tablet by mouth at bedtime as needed"
+        ],
+        "actions": [
+          {
+            "id": "I47:1691;47:1592",
+            "name": "Edit",
+            "x": 944,
+            "w": 71
+          },
+          {
+            "id": "I47:1691;47:1593",
+            "name": "Toggle details",
+            "x": 1023,
+            "w": 102
+          },
+          {
+            "id": "I47:1691;47:1594",
+            "name": "Medication actions",
+            "x": 1133,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1541",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1541",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "id": "47:1680",
+        "height": 59,
+        "text": [
+          "Alprazolam 0.25 mg tablet",
+          "Details",
+          "Edit",
+          "Filled",
+          "Reviewed"
+        ],
+        "actions": [
+          {
+            "id": "I47:1680;47:1556",
+            "name": "Edit",
+            "x": 944,
+            "w": 96
+          },
+          {
+            "id": "I47:1680;47:1557",
+            "name": "Toggle details",
+            "x": 1048,
+            "w": 104
+          },
+          {
+            "id": "I47:1680;47:1558",
+            "name": "Medication actions",
+            "x": 1160,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1577",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1577",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1681",
+        "height": 59,
+        "text": [
+          "Compound",
+          "Details",
+          "Edit",
+          "Hydrocortisone 1% compounded cream",
+          "Pending fill",
+          "Reviewed"
+        ],
+        "actions": [
+          {
+            "id": "I47:1681;47:1556",
+            "name": "Edit",
+            "x": 944,
+            "w": 96
+          },
+          {
+            "id": "I47:1681;47:1557",
+            "name": "Toggle details",
+            "x": 1048,
+            "w": 104
+          },
+          {
+            "id": "I47:1681;47:1558",
+            "name": "Medication actions",
+            "x": 1160,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1577",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1577",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1682",
+        "height": 59,
+        "text": [
+          "Details",
+          "Melatonin 3 mg tablet",
+          "Patient-reported supplement",
+          "Resend",
+          "Reviewed",
+          "Send failed"
+        ],
+        "actions": [
+          {
+            "id": "I47:1682;47:1556",
+            "name": "Edit",
+            "x": 944,
+            "w": 96
+          },
+          {
+            "id": "I47:1682;47:1557",
+            "name": "Toggle details",
+            "x": 1048,
+            "w": 104
+          },
+          {
+            "id": "I47:1682;47:1558",
+            "name": "Medication actions",
+            "x": 1160,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1577",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1577",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1683",
+        "height": 59,
+        "text": [
+          "Acetaminophen 500 mg tablet",
+          "Details",
+          "Patient info required",
+          "Reviewed",
+          "View issue"
+        ],
+        "actions": [
+          {
+            "id": "I47:1683;47:1556",
+            "name": "Edit",
+            "x": 944,
+            "w": 96
+          },
+          {
+            "id": "I47:1683;47:1557",
+            "name": "Toggle details",
+            "x": 1048,
+            "w": 104
+          },
+          {
+            "id": "I47:1683;47:1558",
+            "name": "Medication actions",
+            "x": 1160,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1577",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1577",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1685",
+        "height": 191,
+        "text": [
+          "15 days as needed",
+          "15 tablets",
+          "Alprazolam 0.25 mg tablet",
+          "CVS Pharmacy 1709 in Target",
+          "Clinical timeline",
+          "Edit",
+          "Filled",
+          "Hide details",
+          "No refills",
+          "Olivia Chen, MD",
+          "Pharmacy",
+          "Phone: (850) 555-0142",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Sep 5, 2024",
+          "Supply",
+          "Take 1 tablet by mouth once daily as needed for anxiety"
+        ],
+        "actions": [
+          {
+            "id": "I47:1685;47:1592",
+            "name": "Edit",
+            "x": 944,
+            "w": 96
+          },
+          {
+            "id": "I47:1685;47:1593",
+            "name": "Toggle details",
+            "x": 1048,
+            "w": 104
+          },
+          {
+            "id": "I47:1685;47:1594",
+            "name": "Medication actions",
+            "x": 1160,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1541",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1541",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1687",
+        "height": 191,
+        "text": [
+          "10 days as needed",
+          "40 tablets",
+          "A&A Family Pharmacy",
+          "Acetaminophen 500 mg tablet",
+          "Hide details",
+          "No refills",
+          "Nov 19, 2023",
+          "Olivia Chen, MD",
+          "Patient info required",
+          "Pharmacy",
+          "Phone: (850) 555-4706",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Supply",
+          "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "View issue"
+        ],
+        "actions": [
+          {
+            "id": "I47:1687;47:1592",
+            "name": "Edit",
+            "x": 944,
+            "w": 96
+          },
+          {
+            "id": "I47:1687;47:1593",
+            "name": "Toggle details",
+            "x": 1048,
+            "w": 104
+          },
+          {
+            "id": "I47:1687;47:1594",
+            "name": "Medication actions",
+            "x": 1160,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1541",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1541",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1690",
+        "height": 191,
+        "text": [
+          "1 tube (30 g)",
+          "7 days",
+          "Accord Specialty Pharmacy",
+          "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Compound",
+          "Edit",
+          "Hide details",
+          "Hydrocortisone 1% compounded cream",
+          "Mar 14, 2024",
+          "No refills",
+          "Olivia Chen, MD",
+          "Pending fill",
+          "Pharmacy",
+          "Phone: (850) 555-2642",
+          "Prescribed",
+          "Prescribing",
+          "Reviewed",
+          "Supply"
+        ],
+        "actions": [
+          {
+            "id": "I47:1690;47:1592",
+            "name": "Edit",
+            "x": 944,
+            "w": 96
+          },
+          {
+            "id": "I47:1690;47:1593",
+            "name": "Toggle details",
+            "x": 1048,
+            "w": 104
+          },
+          {
+            "id": "I47:1690;47:1594",
+            "name": "Medication actions",
+            "x": 1160,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1541",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1541",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47:1691",
+        "height": 191,
+        "text": [
+          "30 days",
+          "30 tablets",
+          "A&A Family Pharmacy",
+          "Hide details",
+          "Jan 23, 2024",
+          "Melatonin 3 mg tablet",
+          "No refills",
+          "Olivia Chen, MD",
+          "Patient-reported supplement",
+          "Pharmacy",
+          "Phone: (850) 555-4706",
+          "Prescribed",
+          "Prescribing",
+          "Resend",
+          "Reviewed",
+          "Send failed",
+          "Supply",
+          "Take 1 tablet by mouth at bedtime as needed"
+        ],
+        "actions": [
+          {
+            "id": "I47:1691;47:1592",
+            "name": "Edit",
+            "x": 944,
+            "w": 96
+          },
+          {
+            "id": "I47:1691;47:1593",
+            "name": "Toggle details",
+            "x": 1048,
+            "w": 104
+          },
+          {
+            "id": "I47:1691;47:1594",
+            "name": "Medication actions",
+            "x": 1160,
+            "w": 34
+          }
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "47:1541",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "47:1541",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      }
+    ],
+    "boardId": "47:1675",
+    "boardHeight": 1190
+  },
+  "preservation": [
+    {
+      "id": "47:1680",
+      "textUnchanged": true,
+      "heightUnchanged": true,
+      "wiringUnchanged": true
+    },
+    {
+      "id": "47:1681",
+      "textUnchanged": true,
+      "heightUnchanged": true,
+      "wiringUnchanged": true
+    },
+    {
+      "id": "47:1682",
+      "textUnchanged": true,
+      "heightUnchanged": true,
+      "wiringUnchanged": true
+    },
+    {
+      "id": "47:1683",
+      "textUnchanged": true,
+      "heightUnchanged": true,
+      "wiringUnchanged": true
+    },
+    {
+      "id": "47:1685",
+      "textUnchanged": true,
+      "heightUnchanged": true,
+      "wiringUnchanged": true
+    },
+    {
+      "id": "47:1687",
+      "textUnchanged": true,
+      "heightUnchanged": true,
+      "wiringUnchanged": true
+    },
+    {
+      "id": "47:1690",
+      "textUnchanged": true,
+      "heightUnchanged": true,
+      "wiringUnchanged": true
+    },
+    {
+      "id": "47:1691",
+      "textUnchanged": true,
+      "heightUnchanged": true,
+      "wiringUnchanged": true
+    }
+  ],
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 10,
+      "passed": true,
+      "checks": [
+        {
+          "id": "I47:1680;47:1556",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1680;47:1557",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1680;47:1558",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1592",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1593",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I47:1685;47:1594",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2383",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2386",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2387",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "60:2388",
+          "mainId": "2:1407",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 83,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "47:1680 fixed action coordinates",
+          "passed": true
+        },
+        {
+          "name": "47:1680 fixed action widths",
+          "passed": true
+        },
+        {
+          "name": "47:1680 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1680 grid columns",
+          "passed": true
+        },
+        {
+          "name": "47:1680 vertical kebab",
+          "passed": true
+        },
+        {
+          "name": "47:1680 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "47:1680 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "47:1680 expansion action positions",
+          "passed": true
+        },
+        {
+          "name": "47:1680 expanded directions visible",
+          "passed": true
+        },
+        {
+          "name": "47:1680 roundtrip text preserved",
+          "passed": true
+        },
+        {
+          "name": "47:1680 collapse action positions",
+          "passed": true
+        },
+        {
+          "name": "47:1681 fixed action coordinates",
+          "passed": true
+        },
+        {
+          "name": "47:1681 fixed action widths",
+          "passed": true
+        },
+        {
+          "name": "47:1681 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1681 grid columns",
+          "passed": true
+        },
+        {
+          "name": "47:1681 vertical kebab",
+          "passed": true
+        },
+        {
+          "name": "47:1681 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "47:1681 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "47:1681 expansion action positions",
+          "passed": true
+        },
+        {
+          "name": "47:1681 expanded directions visible",
+          "passed": true
+        },
+        {
+          "name": "47:1681 roundtrip text preserved",
+          "passed": true
+        },
+        {
+          "name": "47:1681 collapse action positions",
+          "passed": true
+        },
+        {
+          "name": "47:1682 fixed action coordinates",
+          "passed": true
+        },
+        {
+          "name": "47:1682 fixed action widths",
+          "passed": true
+        },
+        {
+          "name": "47:1682 row height",
+          "passed": true
+        },
+        {
+          "name": "47:1682 grid columns",
+          "passed": true
+        },
+        {
+          "name": "47:1682 vertical kebab",
+          "passed": true
+        },
+        {
+          "name": "47:1682 disclosure destination",
+          "passed": true
+        },
+        {
+          "name": "47:1682 no visible overflow",
+          "passed": true
+        },
+        {
+          "name": "47:1682 expansion action positions",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 53,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "roundtripMutatedNodeIds": [
+    "47:1680",
+    "47:1681",
+    "47:1682",
+    "47:1683"
+  ]
+}

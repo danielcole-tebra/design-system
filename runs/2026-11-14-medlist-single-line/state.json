@@ -86,5 +86,10 @@
   "applied": false,
   "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
   "pageId": "0:1",
-  "status": "Separate single-line proposal; not applied"
+  "status": "Separate single-line table proposal; headers and fixed action alignment applied to study only",
+  "latestEvidence": "../2026-11-14-medlist-row-table-alignment/REPORT.md",
+  "headerIds": ["60:2380", "60:2400", "60:2417"],
+  "preAlignmentArchiveSetId": "60:2301",
+  "actionWidths": [96, 104, 34],
+  "rowRelativeActionX": [944, 1048, 1160]
 }
