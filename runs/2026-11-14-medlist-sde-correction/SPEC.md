@@ -56,6 +56,10 @@ All unresolved rows below are **DECISION**, owned by Daniel, scoped to this medl
 
 ## What the audit can and cannot claim
 
+### Table UX audit · 2026-11-15
+
+Owner Daniel; scope Comparison F `91:10446`; status read-only heuristic assessment completed, proposals unvalidated. [Current audit and T1–T9 findings](../2026-11-15-medlist-table-ux-audit/REPORT.md) compare live visible scope and the existing render with AHRQ's 2009 EHR framework, current MUI X, Carbon, GOV.UK and WAI guidance. Stable alignment, full medication identity and visible issue actions are strengths. Decisions remain around task-essential provenance/directions, the Last activity data contract, selection versus review, action density and pagination. Coverage gaps concern selected/search states, responsive behavior and implemented keyboard/accessibility behavior. These are nonblocking screen findings, not shipping DEFECTs or a reopened library backlog. No approved workaround or canvas change; F's requested trial remains intact. The report owns detailed observations, impacts, sources and proposed validation.
+
 ### Progressive disclosure · 2026-11-14
 
 **Comparison F activity and marker placement · 2026-11-15.** Decider/owner Daniel; scope F `91:10446`; DECISION status requested trial applied. Last activity displays the actual recorded event plusMM/DD/YY; original Date remains stored. All ten supplied events are Prescribed, so no discontinued/renewed/refilled events invented. Local set `91:10288` moves Compound/source markers into expanded Medication supporting details. Grid44/296/176/136/208/80/276 reallocates64 px from Medication to Last activity; other column/action positions remain fixed. All current names fit280 px usable width, longest258 px. Longer names can wrap without ellipsis or loss of strength/form. Both variants retain full clinical content and fixed control positions; eleven native checks and391 assertions pass. Expanded marker examples retained at `92:5958`; screenshots viewed. A–E and working screen unchanged. Supersedes marker placement and date presentation in F only. Evidence: `../2026-11-15-medlist-comparison-f/REPORT.md`.

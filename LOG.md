@@ -4659,3 +4659,7 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-15 — Medlist · Comparison F with last activity and detail markers
 - File: yh2F6OUgdI6K0risLtKLEQ. Added F based on E. Last activity shows recorded event plus MM/DD/YY. Compound and patient-reported markers move to expanded Medication details. Rebalanced Medication/Last activity columns while retaining full names, fixed action positions and all clinical data.
 - Evidence: runs/2026-11-15-medlist-comparison-f/REPORT.md, record.json, comparison-f.png, expanded-markers.png, comparison-board.png.
+
+## 2026-11-15 — Medlist · Comparison F table UX audit
+- File: yh2F6OUgdI6K0risLtKLEQ. Read-only live scope/visual audit against uploaded AHRQ framework and official MUI X, Carbon, GOV.UK and WAI guidance. Stable scan structure; task-essential disclosure, activity semantics, action density and interaction coverage remain decisions/gaps. No canvas or library change.
+- Evidence/current findings: runs/2026-11-15-medlist-table-ux-audit/REPORT.md; consuming SPEC updated with a single link to findings. Existing F screenshot reused; source PDF pages rendered/viewed locally. Documentation batch, not a build benchmark.
