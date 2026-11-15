@@ -4635,3 +4635,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-14 — Medlist · More room for supply and pharmacy details
 - File: yh2F6OUgdI6K0risLtKLEQ. Rebalanced the row-test grid and reduced horizontal cell gutters to8 px. Supply and pharmacy gain usable width, so duration, pharmacy names and phone numbers each remain on one line in all four supplied medications.
 - Evidence: runs/2026-11-14-medlist-column-spacing/REPORT.md, record.json, column-spacing.png, expanded-cases.png.
+
+
+<!-- builder-run:runs/2026-11-14-medlist-comparison-c -->
+## 2026-11-14 — Medlist · Comparison C with single-line disclosure rows
+- File: yh2F6OUgdI6K0risLtKLEQ. Removed timeline access from the current row study and added Comparison C beside A and B. C uses the existing page shell with ten single-line rows; first and issue rows start expanded beneath matching headers.
+- Evidence: runs/2026-11-14-medlist-comparison-c/REPORT.md, record.json, comparison-c.png, comparison-board.png, row-study.png.

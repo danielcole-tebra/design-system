@@ -86,8 +86,9 @@
   "applied": false,
   "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
   "pageId": "0:1",
-  "status": "Per-column disclosure proposal; not applied to full screens",
-  "latestEvidence": "../2026-11-14-medlist-column-spacing/REPORT.md",
+  "status": "Per-column disclosure proposal applied to Comparison C only; original working screen and B unchanged. Timeline access hidden.",
+  "latestEvidence": "../2026-11-14-medlist-comparison-c/REPORT.md",
+  "comparisonCScreenId": "73:3818",
   "headerIds": [
     "60:2380",
     "60:2400",

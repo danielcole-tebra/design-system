@@ -28,5 +28,16 @@
   "preVerticalOverflowMasterId": "56:3026",
   "comparisonHeight": 1428,
   "workingHeight": 1766,
-  "progressiveDisclosureApplied": false
+  "progressiveDisclosureApplied": false,
+  "comparisonC": {
+    "wrapperId": "73:3815",
+    "screenId": "73:3818",
+    "tableId": "73:3855",
+    "headerId": "73:4525",
+    "rowSetId": "47:1540",
+    "expandedRowIds": ["73:4541", "73:5867"],
+    "timelineAccess": "Hidden per Daniel 2026-11-14",
+    "scope": "C uses B shell and ten single-line disclosure rows. First and issue rows open; date and quantity always visible. A, B and working screen preserved. Do not overwrite C from B or working screen.",
+    "evidence": "../2026-11-14-medlist-comparison-c/REPORT.md"
+  }
 }
