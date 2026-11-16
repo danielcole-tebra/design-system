@@ -4710,3 +4710,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist structured sig comparison
 - File: yh2F6OUgdI6K0risLtKLEQ. Added a separate Medication / Dose / Route / Timing / Start / Stop / Actions comparison. Prescriber/source, narrative sig, last activity and order status are in Details. Details uses native text Button; primary row actions stay outlined. Separate reconciliation retained. Awaiting Daniel's review.
 - Evidence: runs/2026-11-16-medlist-structured-sig/REPORT.md, record.json, list.png, review-corrected.png, expanded.png, reported.png, variants.png, review.png.
+
+## 2026-11-16 — Floating encounter recorder study
+- File: SDE Alpha Prototypes `ViAWRVVtgkCXzItk0sQ5P0`. Added Study · Floating recorder page `1376:21590`, with five 1493 × 1033 Ready/Recording/Paused/Processing/Review-ready mocks. Replaced the dedicated rail in these copies with a page-local floating control built from library controls; the note gains 72 px above while the right module sidebar stays in place. Existing pages and library masters preserved.
+- Verification: ready/recording screens and all remaining recorder/menu states visually inspected. The floating controls share a right anchor and clear both the editor viewport and footer. Stored Start/Pause/Resume/Finish/processing and microphone-overlay links resolve; no played-through prototype or real audio/device handling claimed. Review AI results is the end-state affordance, not a complete results flow.
+- Evidence: runs/2026-11-16-floating-recorder/REPORT.md, build.js, verification.json and six inspected PNGs. Ready for review; Git push outcome is reported in chat.
