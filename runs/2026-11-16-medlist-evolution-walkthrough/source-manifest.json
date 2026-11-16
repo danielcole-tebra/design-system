@@ -1,0 +1,58 @@
+[
+  {
+    "name": "01-original",
+    "fileKey": "fu7ncgAnIdjvxxxmQILFzK",
+    "nodeId": "11198:3155",
+    "pixelWidth": 2892,
+    "pixelHeight": 3262
+  },
+  {
+    "name": "02-separate-reconciliation",
+    "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+    "nodeId": "137:25480",
+    "pixelWidth": 2880,
+    "pixelHeight": 2664
+  },
+  {
+    "name": "03-structured-regimen",
+    "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+    "nodeId": "145:22172",
+    "pixelWidth": 2880,
+    "pixelHeight": 2224
+  },
+  {
+    "name": "04-current-list",
+    "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+    "nodeId": "150:21601",
+    "pixelWidth": 2880,
+    "pixelHeight": 2224
+  },
+  {
+    "name": "05-details-drawer",
+    "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+    "nodeId": "160:46277",
+    "pixelWidth": 2880,
+    "pixelHeight": 2224
+  },
+  {
+    "name": "06a-edit-prescription",
+    "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+    "nodeId": "160:43837",
+    "pixelWidth": 1100,
+    "pixelHeight": 2224
+  },
+  {
+    "name": "06b-review-prescription",
+    "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+    "nodeId": "160:45013",
+    "pixelWidth": 1100,
+    "pixelHeight": 2224
+  },
+  {
+    "name": "06c-edit-chart",
+    "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+    "nodeId": "160:44538",
+    "pixelWidth": 1100,
+    "pixelHeight": 2224
+  }
+]

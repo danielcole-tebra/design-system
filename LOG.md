@@ -4763,3 +4763,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist — single chronological archive
 - File: yh2F6OUgdI6K0risLtKLEQ. Consolidated all archived work onto Medlist · Archive, with12 dated sections running roughly newest to oldest from top to bottom. After Daniel explicitly authorized removal, deleted the four verified-empty former archive pages. The file now contains only Current table and drawer plus Archive.
 - Evidence: runs/2026-11-16-medlist-single-archive/REPORT.md, record.json, newest.png, structured.png, earlier-drawer.png, oldest-studies.png.
+
+
+<!-- builder-run:runs/2026-11-16-medlist-evolution-walkthrough -->
+## 2026-11-16 — Medlist evolution walkthrough in FigJam
+- File: 9d3G2ipIFbZk4YSQLgukOE. Added a concise six-decision walkthrough to the user-linked empty Drawer concept page17:31, with eight actual 2x screenshots and eleven source/research links.
+- Evidence: runs/2026-11-16-medlist-evolution-walkthrough/REPORT.md, record.json, 01-original.png, 02-separate-reconciliation.png, 03-structured-regimen.png, 04-current-list.png, 05-details-drawer.png, 06a-edit-prescription.png, 06b-review-prescription.png, 06c-edit-chart.png, board-overview.png, clinical-table-story.png, drawer-story.png, editing-story.png.

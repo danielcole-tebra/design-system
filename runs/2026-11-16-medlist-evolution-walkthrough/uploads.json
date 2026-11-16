@@ -1,0 +1,90 @@
+[
+  {
+    "name": "01-original",
+    "status": 200,
+    "result": {
+      "success": true,
+      "imageHash": "2eed523a57518c57e5dad704f400fa5dd6e66004",
+      "sizeBytes": 660006,
+      "contentType": "image/png",
+      "placedOnNodeId": "19:2"
+    }
+  },
+  {
+    "name": "02-separate-reconciliation",
+    "status": 200,
+    "result": {
+      "success": true,
+      "imageHash": "6c47f6ad2099438823a984697aebd5195a958ecb",
+      "sizeBytes": 413681,
+      "contentType": "image/png",
+      "placedOnNodeId": "19:5"
+    }
+  },
+  {
+    "name": "03-structured-regimen",
+    "status": 200,
+    "result": {
+      "success": true,
+      "imageHash": "b148a2b2a7bd387321acac0bc55267c5beaa53fe",
+      "sizeBytes": 310439,
+      "contentType": "image/png",
+      "placedOnNodeId": "19:9"
+    }
+  },
+  {
+    "name": "04-current-list",
+    "status": 200,
+    "result": {
+      "success": true,
+      "imageHash": "3564f0cbcfbf9b92a9ad46e4eb12eb6c2c911da7",
+      "sizeBytes": 299013,
+      "contentType": "image/png",
+      "placedOnNodeId": "19:3"
+    }
+  },
+  {
+    "name": "05-details-drawer",
+    "status": 200,
+    "result": {
+      "success": true,
+      "imageHash": "c458ee3b8f1774fb2685664b5194648bda535b0a",
+      "sizeBytes": 296379,
+      "contentType": "image/png",
+      "placedOnNodeId": "19:4"
+    }
+  },
+  {
+    "name": "06a-edit-prescription",
+    "status": 200,
+    "result": {
+      "success": true,
+      "imageHash": "bfdd6f7a6d06fe619fc120a35632163f889043ec",
+      "sizeBytes": 109210,
+      "contentType": "image/png",
+      "placedOnNodeId": "19:6"
+    }
+  },
+  {
+    "name": "06b-review-prescription",
+    "status": 200,
+    "result": {
+      "success": true,
+      "imageHash": "bd28d440eeb3f1e6d0defda0419b85ce520e49dc",
+      "sizeBytes": 74438,
+      "contentType": "image/png",
+      "placedOnNodeId": "19:7"
+    }
+  },
+  {
+    "name": "06c-edit-chart",
+    "status": 200,
+    "result": {
+      "success": true,
+      "imageHash": "0f3340be921bd0408efb8237dfdd73d3f9460fe6",
+      "sizeBytes": 95682,
+      "contentType": "image/png",
+      "placedOnNodeId": "19:8"
+    }
+  }
+]
