@@ -1,0 +1,98 @@
+[
+  {
+    "source": "epic-cornell-hires.png",
+    "output": "epic-ambulatory-ui.png",
+    "cropPx": [
+      306,
+      2484,
+      2504,
+      2898
+    ],
+    "width": 2198,
+    "height": 414
+  },
+  {
+    "source": "epic-telepsychiatry-page.png",
+    "output": "epic-psychiatry-ui.png",
+    "cropPx": [
+      77,
+      540,
+      1342,
+      1242
+    ],
+    "width": 1265,
+    "height": 702
+  },
+  {
+    "source": "athena-review-hires.png",
+    "output": "athena-reviewed-ui.png",
+    "cropPx": [
+      742,
+      801,
+      1359,
+      1560
+    ],
+    "width": 617,
+    "height": 759
+  },
+  {
+    "source": "athena-review-hires.png",
+    "output": "athena-reason-ui.png",
+    "cropPx": [
+      742,
+      1635,
+      1160,
+      1938
+    ],
+    "width": 418,
+    "height": 303
+  },
+  {
+    "source": "athena-review-hires.png",
+    "output": "athena-status-ui.png",
+    "cropPx": [
+      742,
+      2010,
+      1547,
+      2433
+    ],
+    "width": 805,
+    "height": 423
+  },
+  {
+    "source": "athena-reconcile-detail-page.png",
+    "output": "athena-comparison-ui.png",
+    "cropPx": [
+      297,
+      312,
+      1549,
+      864
+    ],
+    "width": 1252,
+    "height": 552
+  },
+  {
+    "source": "original-completed.png",
+    "output": "original-completed-detail.png",
+    "cropPx": [
+      188,
+      326,
+      1432,
+      706
+    ],
+    "width": 1244,
+    "height": 380
+  },
+  {
+    "source": "original-reopened.png",
+    "output": "original-reopened-detail.png",
+    "cropPx": [
+      188,
+      324,
+      1432,
+      791
+    ],
+    "width": 1244,
+    "height": 467
+  }
+]

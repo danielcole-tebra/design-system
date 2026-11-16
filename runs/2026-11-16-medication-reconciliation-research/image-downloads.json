@@ -1,0 +1,44 @@
+[
+  {
+    "name": "simplepractice-list",
+    "width": 2560,
+    "height": 1348,
+    "bytes": 336510
+  },
+  {
+    "name": "simplepractice-manage",
+    "width": 1600,
+    "height": 845,
+    "bytes": 290428
+  },
+  {
+    "name": "therapynotes-actions",
+    "width": 1113,
+    "height": 547,
+    "bytes": 66479
+  },
+  {
+    "name": "therapynotes-attestation",
+    "width": 1076,
+    "height": 257,
+    "bytes": 13262
+  },
+  {
+    "name": "therapynotes-list",
+    "width": 1387,
+    "height": 368,
+    "bytes": 49682
+  },
+  {
+    "name": "therapynotes-erx-panel",
+    "width": 1024,
+    "height": 421,
+    "bytes": 102923
+  },
+  {
+    "name": "original-completed",
+    "width": 1446,
+    "height": 1631,
+    "bytes": 279027
+  }
+]

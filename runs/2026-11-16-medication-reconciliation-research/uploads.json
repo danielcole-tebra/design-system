@@ -1,0 +1,170 @@
+[
+  {
+    "name": "epic-ambulatory-ui",
+    "width": 2198,
+    "height": 414,
+    "response": {
+      "success": true,
+      "imageHash": "edd172f82f289ee158c5cc0267b2ace19456d2da",
+      "sizeBytes": 207542,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:4"
+    }
+  },
+  {
+    "name": "epic-psychiatry-ui",
+    "width": 1265,
+    "height": 702,
+    "response": {
+      "success": true,
+      "imageHash": "18a1cc0f253f14744ff1853ccd66a39a4fd9dff7",
+      "sizeBytes": 249387,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:5"
+    }
+  },
+  {
+    "name": "athena-reviewed-ui",
+    "width": 617,
+    "height": 759,
+    "response": {
+      "success": true,
+      "imageHash": "a21d87411ccf1c18594a1daeaa130d79d889951d",
+      "sizeBytes": 113192,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:3"
+    }
+  },
+  {
+    "name": "athena-reason-ui",
+    "width": 418,
+    "height": 303,
+    "response": {
+      "success": true,
+      "imageHash": "26df3c8d0950746426d41ecd74bdce16368ddbf4",
+      "sizeBytes": 48305,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:2"
+    }
+  },
+  {
+    "name": "athena-status-ui",
+    "width": 805,
+    "height": 423,
+    "response": {
+      "success": true,
+      "imageHash": "3e49b7054a90b4d62322a3d17979f13f60bc892a",
+      "sizeBytes": 107800,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:6"
+    }
+  },
+  {
+    "name": "athena-comparison-ui",
+    "width": 1252,
+    "height": 552,
+    "response": {
+      "success": true,
+      "imageHash": "48950db3ed2136805c1e6f3fe541a7e93562c2b6",
+      "sizeBytes": 265755,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:7"
+    }
+  },
+  {
+    "name": "simplepractice-list",
+    "width": 2560,
+    "height": 1348,
+    "response": {
+      "success": true,
+      "imageHash": "004c060eff67b0c3d1a9fdf99af6bbaee27b688a",
+      "sizeBytes": 336510,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:8"
+    }
+  },
+  {
+    "name": "simplepractice-manage",
+    "width": 1600,
+    "height": 845,
+    "response": {
+      "success": true,
+      "imageHash": "dbda8a0b6e5de44c1120290d9adf8bd2c1f9626f",
+      "sizeBytes": 290428,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:9"
+    }
+  },
+  {
+    "name": "therapynotes-actions",
+    "width": 1113,
+    "height": 547,
+    "response": {
+      "success": true,
+      "imageHash": "b6e8644ddfada66d64bffa0be96ccc8306941421",
+      "sizeBytes": 66479,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:10"
+    }
+  },
+  {
+    "name": "therapynotes-attestation",
+    "width": 1076,
+    "height": 257,
+    "response": {
+      "success": true,
+      "imageHash": "1777af124b487d8f008079513711cb2d1d371325",
+      "sizeBytes": 13262,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:11"
+    }
+  },
+  {
+    "name": "therapynotes-list",
+    "width": 1387,
+    "height": 368,
+    "response": {
+      "success": true,
+      "imageHash": "464aaf65120e3f34316e63366757191bd69df8fb",
+      "sizeBytes": 49682,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:12"
+    }
+  },
+  {
+    "name": "therapynotes-erx-panel",
+    "width": 1024,
+    "height": 421,
+    "response": {
+      "success": true,
+      "imageHash": "4e9165c65505456632dcf3d4218e90da4f8fb3e5",
+      "sizeBytes": 102923,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:13"
+    }
+  },
+  {
+    "name": "original-completed-detail",
+    "width": 1244,
+    "height": 380,
+    "response": {
+      "success": true,
+      "imageHash": "6a67e100defa76c66d7e16913bafb9804a343604",
+      "sizeBytes": 47516,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:14"
+    }
+  },
+  {
+    "name": "original-reopened-detail",
+    "width": 1244,
+    "height": 467,
+    "response": {
+      "success": true,
+      "imageHash": "a0ca86ac06e393c2d689837cca280790798a61f3",
+      "sizeBytes": 57918,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:15"
+    }
+  }
+]

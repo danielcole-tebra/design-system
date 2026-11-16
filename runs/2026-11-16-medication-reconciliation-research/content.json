@@ -1,0 +1,109 @@
+{
+  "title": "Medication reconciliation",
+  "subtitle": "Competitive research · Primary care and behavioral health",
+  "date": "Research captured November 16, 2026 · Owner/reviewer: Daniel Cole",
+  "intro": "What does the clinician do, where does the work begin, and what remains after completion? Public workflow documentation and source screenshots inform this comparison. These are documented examples, not usability findings or a live audit of every product configuration.",
+  "jobs": [
+    {"title":"1 · Maintain the medication record","body":"Keep the ongoing list accurate: current use, medication details, source, prescriber, and changes over time."},
+    {"title":"2 · Review for an encounter","body":"Confirm the list with the patient and document the review. A no-change path can acknowledge review without altering treatment."},
+    {"title":"3 · Reconcile discrepancies","body":"Compare conflicting or incoming information, resolve differences, and record the resulting list. Products use the term reconciliation inconsistently."}
+  ],
+  "panels": [
+    {
+      "title":"Epic",
+      "subtitle":"Ambulatory review + a telepsychiatry admission example",
+      "evidence":"Institutional training materials · Older examples · Configuration-specific",
+      "summary":"Review and correct the medication list, then use a list-level Mark as Reviewed action. Cornell explicitly describes this path when the list is accurate and no changes are needed. Its screenshot shows taking status separately from review acknowledgment. [E1]",
+      "blocks":[
+        {"heading":"Ambulatory list-level review","images":[{"name":"epic-ambulatory-ui","width":1344}],"caption":"E1 · Cornell guide, printed p. 7 / PDF p. 8. Crop of the original screenshot. Last reviewer, timestamp and History sit beside Mark as Reviewed. The embedded example is historical; publication date is not established.","source":"E1"},
+        {"heading":"Review status in telepsychiatry","images":[{"name":"epic-psychiatry-ui","width":1264}],"caption":"E3 · Houston Methodist, August 2022, p. 13. Admission workflow, not a recurring outpatient therapy visit. The screenshot combines medication-list status, review acknowledgment, reviewer/time and History.","source":"E3"}
+      ],
+      "after":"Completion and later use: Hopkins documents review for the current encounter and a soft warning at encounter closure when review is missing or the last reviewer is not qualified under local policy. This supports encounter-scoped acknowledgment; it does not establish a page-refresh reset. [E2]",
+      "limits":"Evidence boundary: institutional Epic implementations vary. Admission and ambulatory workflows are not interchangeable. No live session or current universal Epic UI was verified.",
+      "links":["E1","E2","E3"]
+    },
+    {
+      "title":"athenahealth",
+      "subtitle":"Encounter review and incoming-record reconciliation",
+      "evidence":"Vendor-authored guides hosted by a practice · 2015 / 2020 · Historical UI",
+      "summary":"The Medications section in Intake/Exam has a section-level Reviewed status. The 2020 guide says it is marked reviewed by default when accessed, with a Not Reviewed option and a reason. That historical behavior is evidence, not a recommendation to auto-attest. [A1]",
+      "blocks":[
+        {"heading":"Reviewed → exception reason → status","images":[{"name":"athena-reviewed-ui","width":364},{"name":"athena-reason-ui","width":320},{"name":"athena-status-ui","width":612}],"caption":"A1 · Summer 2020, p. 3. Three separate UI crops from the same page. The guide records section-level status and reasons for not reviewing; this is not a row-by-row completion counter.","source":"A1"},
+        {"heading":"A separate comparison workspace","images":[{"name":"athena-comparison-ui","width":1252}],"caption":"A2 · ©2015 guide, p. 3. Chart data and incoming data appear side by side. The screenshot shows remaining actions, Save Progress, Update Chart and reconciliation history. Original low-resolution source retained.","source":"A2"}
+      ],
+      "after":"The external-record workflow distinguishes matches, conflicts, chart-only and incoming-only items. Clinicians select information to retain or incorporate. Review status and reconciliation of incoming data are related but separate jobs. [A2]",
+      "limits":"More recent evidence: a July 2025 release describes optional automatic movement of short-term medications to Historical after a prescriber-selected duration. This is list maintenance, not proof of a completed clinical review. Exact current review UI and refresh behavior remain unverified. [A3]",
+      "links":["A1","A2","A3"]
+    },
+    {
+      "title":"SimplePractice",
+      "subtitle":"Medication records with an explicit prescribing entry point",
+      "evidence":"Official support documentation · Updated August / October 2026",
+      "summary":"With ePrescribe, the client profile has a Medications tab showing active and inactive medications plus a last-updated timestamp. Manage medications opens a client-information step, then Continue launches DrFirst. [S1]",
+      "blocks":[
+        {"heading":"Read the list in the client profile","images":[{"name":"simplepractice-list","width":1344}],"caption":"S1 · Official support screenshot. Active/inactive sections, Updated timestamp and Manage medications are visible. The example data is dated April 2025; the guide was updated October 2026.","source":"S1"},
+        {"heading":"Enter medication management explicitly","images":[{"name":"simplepractice-manage","width":1344}],"caption":"S1 · Official support screenshot. Continue opens the DrFirst prescribing window. This client-information dialog is not a medication-reconciliation confirmation.","source":"S1"}
+      ],
+      "after":"For practices without ePrescribe, the public guide describes collecting medication information through an intake form and maintaining it in Client Notes. This is relevant to non-prescribing therapy practices. [S2]",
+      "limits":"Evidence gap: the reviewed guides do not establish a native Complete reconciliation action, clinical review timestamp, or reset rule. Updated does not prove reconciled. DrFirst capabilities cannot automatically be attributed to the native SimplePractice page.",
+      "links":["S1","S2"]
+    },
+    {
+      "title":"TherapyNotes",
+      "subtitle":"Medication review within prescribing-psychiatry documentation",
+      "evidence":"Official support documentation + July 2026 release notes",
+      "summary":"Psychiatry notes support review, correction, adjustment and stopping medications. Prior medication information carries into later notes. The note can document review with no changes or explanation of medication changes, then be signed and timestamped. [T1]",
+      "blocks":[
+        {"heading":"Record the medication decision","images":[{"name":"therapynotes-actions","width":1112}],"caption":"T1 · Official screenshot. No Change, Adjust Rx and Stop with reasons. Label discrepancy: article prose calls the acknowledgment Reviewed, while this screenshot says No Change. These labels are not silently normalized.","source":"T1"},
+        {"heading":"Acknowledge review without changing treatment","images":[{"name":"therapynotes-attestation","width":1076}],"caption":"T1 · Official screenshot. Separate checkboxes acknowledge list review and that no medication changes were needed. This is note documentation, not evidence that opening a page completes review.","source":"T1"},
+        {"heading":"Keep prescribing ownership visible","images":[{"name":"therapynotes-list","width":1344}],"caption":"T1 / T2 · Prescribed and Reported Medications are separated. The July 2026 release also describes optional medication-response documentation.","source":"T2"},
+        {"heading":"The eRx module also exposes review status","images":[{"name":"therapynotes-erx-panel","width":1024}],"caption":"T3 · DrFirst panel in TherapyNotes documentation. Review Status is visible above Active Medications. This screenshot shows Unknown or Incomplete; it does not establish the completion or reset mechanism.","source":"T3"}
+      ],
+      "after":"Ongoing medications and prescriber details carry forward. A signed note records the encounter; carrying data forward is different from automatically carrying forward clinical acknowledgment. [T1]",
+      "limits":"Evidence boundary: the psychiatry-note and DrFirst workflows differ. The sources do not demonstrate a universal reset on page refresh. The July release is a vendor feature description, not a usability evaluation.",
+      "links":["T1","T2","T3","T4"]
+    }
+  ],
+  "sources":{
+    "E1":{"label":"Cornell · Medication reconciliation · printed p. 7","url":"https://practiceops.weillcornell.org/sites/default/files/weill_cornell_medicine_ecomp_manual_10-17.pdf#page=8"},
+    "E2":{"label":"Hopkins · Ambulatory review warning · May 31, 2019","url":"https://medicine-matters.blogs.hopkinsmedicine.org/2019/05/epic-tip-of-the-week-may-31-2019/"},
+    "E3":{"label":"Houston Methodist · Telepsychiatry admission · 2022, p. 13","url":"https://it.houstonmethodist.org/wp-content/uploads/2022/08/Telepsychiatry-Admission-Workflow-%E2%80%93-Telepsych-Providers_082222.pdf#page=13"},
+    "A1":{"label":"athenaClinicals · Encounter review guide · Summer 2020","url":"https://www.dacconline.com/ebn/EBNMG/forms/MIPS/2020%20eCQM%20CMS68v9%20Documentation%20of%20current%20meds.pdf#page=3"},
+    "A2":{"label":"athenaClinicals · Data reconciliation guide · ©2015","url":"https://www.dacconline.com/ebn/EBNMG/forms/MIPS/Measure%20Satisfatction%20Guide_Med%20Rec.pdf#page=3"},
+    "A3":{"label":"athenaOne · Short-term medication auto-reconcile · July 2025","url":"https://www.athenahealth.com/resources/blog/athenaone-summer-2025-update"},
+    "S1":{"label":"SimplePractice · Managing client prescriptions · October 2026","url":"https://support.simplepractice.com/hc/en-us/articles/42065448433037-Managing-client-prescriptions"},
+    "S2":{"label":"SimplePractice · Recording client medications · August 2026","url":"https://support.simplepractice.com/hc/en-us/articles/8653281068045-Recording-client-medications"},
+    "T1":{"label":"TherapyNotes · Complete a Psychiatry Progress Note","url":"https://support.therapynotes.com/hc/en-us/articles/30661264631323-Complete-a-Psychiatry-Progress-Note"},
+    "T2":{"label":"TherapyNotes · Psychiatry enhancements · July 28, 2026","url":"https://blog.therapynotes.com/whats-new-contact-forms-psychiatry-enhancements"},
+    "T3":{"label":"TherapyNotes · Patient eRx tab and review status","url":"https://support.therapynotes.com/hc/en-us/articles/37246977484187-New-Overview-of-the-Patient-eRx-Tab"},
+    "T4":{"label":"TherapyNotes · Medication history and patient-reported data","url":"https://support.therapynotes.com/hc/en-us/articles/37247370669083-New-Managing-Medications-in-ePrescribe"}
+  },
+  "original":{
+    "title":"Our original file: completion and return",
+    "subtitle":"Original eRx Concepts · Design evidence, not verified shipping behavior",
+    "body":"The original design marks individual medications reviewed, then completes reconciliation for the whole list. Its confirmation requires all current medications to be reviewed and an acknowledgment that discrepancies were addressed. The completed view retains the list and on-state switches, but replaces the bulk-review controls with completion text and the provider/date/time.",
+    "screens":[
+      {"name":"original-completed-detail","heading":"Immediately after completion","caption":"B07 · Completion recorded; row switches remain on.","url":"https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11199-10308"},
+      {"name":"original-reopened-detail","heading":"After reopening or refreshing","caption":"B08 · Count and switches reset; previous completion timestamp remains.","url":"https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11199-11081"}
+    ],
+    "boundary":"These are live-file screenshots captured November 16, 2026. No reactions were found on the inspected B02 and B04–B08 frames; the documented states were inspected, not played through. The drawer exploration already separates reconciliation into an explicit mode. This research does not alter or approve either medlist design."
+  },
+  "synthesis":{
+    "title":"What this means for the medlist",
+    "subtitle":"Design interpretation · For Daniel’s review, not an approved requirement",
+    "supported":[
+      "Separate the persistent medication record from acknowledgment of review for a particular encounter.",
+      "Provide a no-change path. Reviewing the list should not require changing a prescription.",
+      "Distinguish reviewing current use from resolving outside-record discrepancies and importing history.",
+      "Preserve source and prescribing ownership, especially when psychiatric and primary-care medications share a list."
+    ],
+    "proposal":"Candidate direction: show a compact last-review/completion status and an explicit action on the general medication page. Reveal detailed review or reconciliation controls within the chosen workflow. Competitor evidence supports this as an exploration; it does not prescribe the exact layout.",
+    "caution":"Qualify the frequency premise: medication review can be routine in primary care and prescribing psychiatry. Non-prescribing therapy, medication-management visits and transitions of care should not be treated as one workflow. None of the reviewed sources establishes page refresh as a common reason to reset every review switch.",
+    "questions":[
+      "What does Tebra record separately: list updated, reviewed this encounter, and reconciliation completed?",
+      "Which event begins a new review: encounter, deliberate action, medication change, or another rule?",
+      "What can staff document, and what requires provider acknowledgment?",
+      "Where should incoming Surescripts or external-record discrepancies be resolved?"
+    ]
+  }
+}

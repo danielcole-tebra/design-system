@@ -1,0 +1,38 @@
+[
+  {
+    "name": "epic-cornell",
+    "url": "https://practiceops.weillcornell.org/sites/default/files/weill_cornell_medicine_ecomp_manual_10-17.pdf",
+    "file": "epic-cornell.pdf",
+    "bytes": 2001490
+  },
+  {
+    "name": "epic-telepsychiatry",
+    "url": "https://it.houstonmethodist.org/wp-content/uploads/2022/08/Telepsychiatry-Admission-Workflow-%E2%80%93-Telepsych-Providers_082222.pdf",
+    "file": "epic-telepsychiatry.pdf",
+    "bytes": 1631796
+  },
+  {
+    "name": "athena-review",
+    "url": "https://www.dacconline.com/ebn/EBNMG/forms/MIPS/2020%20eCQM%20CMS68v9%20Documentation%20of%20current%20meds.pdf",
+    "file": "athena-review.pdf",
+    "bytes": 271422
+  },
+  {
+    "name": "athena-reconcile",
+    "url": "https://www.dacconline.com/ebn/EBNMG/forms/MIPS/Measure%20Satisfatction%20Guide_Med%20Rec.pdf",
+    "file": "athena-reconcile.pdf",
+    "bytes": 442290
+  },
+  {
+    "name": "simplepractice",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "therapynotes",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "therapynotes-erx",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

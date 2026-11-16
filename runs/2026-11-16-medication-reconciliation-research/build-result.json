@@ -1,0 +1,408 @@
+{
+  "createdNodeIds": [
+    "8:2",
+    "8:3",
+    "8:4",
+    "8:5",
+    "8:6",
+    "8:7",
+    "8:8",
+    "8:9",
+    "8:10",
+    "8:11",
+    "8:12",
+    "8:13",
+    "8:14",
+    "8:15",
+    "8:16",
+    "8:17",
+    "8:18",
+    "8:19",
+    "8:20",
+    "8:21",
+    "8:22",
+    "8:23",
+    "8:24",
+    "8:25",
+    "8:26",
+    "8:27",
+    "8:28",
+    "8:29",
+    "8:30",
+    "8:31",
+    "8:32",
+    "8:33",
+    "8:34",
+    "8:35",
+    "8:36",
+    "8:37",
+    "8:38",
+    "8:39",
+    "8:40",
+    "8:41",
+    "8:42",
+    "8:43",
+    "8:44",
+    "8:45",
+    "8:46",
+    "8:47",
+    "8:48",
+    "8:49",
+    "8:50",
+    "8:51",
+    "8:52",
+    "8:53",
+    "8:54",
+    "8:55",
+    "8:56",
+    "8:57",
+    "8:58",
+    "8:59",
+    "8:60",
+    "8:61",
+    "8:62",
+    "8:63",
+    "8:64",
+    "8:65",
+    "8:66",
+    "8:67",
+    "8:68",
+    "8:69",
+    "8:70",
+    "8:71",
+    "8:72",
+    "8:73",
+    "8:74",
+    "8:75",
+    "8:76",
+    "8:77",
+    "8:78",
+    "8:79",
+    "8:80",
+    "8:81",
+    "8:82",
+    "8:83",
+    "8:84",
+    "8:85",
+    "8:86",
+    "8:87",
+    "8:88",
+    "8:89",
+    "8:90",
+    "8:91",
+    "8:92",
+    "8:93",
+    "8:94",
+    "8:95",
+    "8:96",
+    "8:97",
+    "8:98",
+    "8:99",
+    "8:100",
+    "8:101",
+    "8:102",
+    "8:103",
+    "8:104",
+    "8:105",
+    "8:106",
+    "8:107",
+    "8:108",
+    "8:109",
+    "8:110"
+  ],
+  "mutatedNodeIds": [
+    "6:2",
+    "7:4",
+    "7:5",
+    "7:3",
+    "7:2",
+    "7:6",
+    "7:7",
+    "7:8",
+    "7:9",
+    "7:10",
+    "7:11",
+    "7:12",
+    "7:13",
+    "7:14",
+    "7:15"
+  ],
+  "pageId": "4:2",
+  "boardId": "6:2",
+  "panels": [
+    {
+      "id": "8:15",
+      "title": "Epic",
+      "height": 2180
+    },
+    {
+      "id": "8:31",
+      "title": "athenahealth",
+      "height": 2256
+    },
+    {
+      "id": "8:47",
+      "title": "SimplePractice",
+      "height": 2560
+    },
+    {
+      "id": "8:62",
+      "title": "TherapyNotes",
+      "height": 3148
+    }
+  ],
+  "originalId": "8:83",
+  "synthesisId": "8:94",
+  "figures": [
+    {
+      "id": "7:4",
+      "name": "epic-ambulatory-ui",
+      "parent": "8:15",
+      "width": 1344,
+      "height": 253,
+      "sourceWidth": 2198,
+      "sourceHeight": 414,
+      "expectedHash": "edd172f82f289ee158c5cc0267b2ace19456d2da"
+    },
+    {
+      "id": "7:5",
+      "name": "epic-psychiatry-ui",
+      "parent": "8:15",
+      "width": 1264,
+      "height": 701,
+      "sourceWidth": 1265,
+      "sourceHeight": 702,
+      "expectedHash": "18a1cc0f253f14744ff1853ccd66a39a4fd9dff7"
+    },
+    {
+      "id": "7:3",
+      "name": "athena-reviewed-ui",
+      "parent": "8:31",
+      "width": 364,
+      "height": 448,
+      "sourceWidth": 617,
+      "sourceHeight": 759,
+      "expectedHash": "a21d87411ccf1c18594a1daeaa130d79d889951d"
+    },
+    {
+      "id": "7:2",
+      "name": "athena-reason-ui",
+      "parent": "8:31",
+      "width": 320,
+      "height": 232,
+      "sourceWidth": 418,
+      "sourceHeight": 303,
+      "expectedHash": "26df3c8d0950746426d41ecd74bdce16368ddbf4"
+    },
+    {
+      "id": "7:6",
+      "name": "athena-status-ui",
+      "parent": "8:31",
+      "width": 612,
+      "height": 322,
+      "sourceWidth": 805,
+      "sourceHeight": 423,
+      "expectedHash": "3e49b7054a90b4d62322a3d17979f13f60bc892a"
+    },
+    {
+      "id": "7:7",
+      "name": "athena-comparison-ui",
+      "parent": "8:31",
+      "width": 1252,
+      "height": 552,
+      "sourceWidth": 1252,
+      "sourceHeight": 552,
+      "expectedHash": "48950db3ed2136805c1e6f3fe541a7e93562c2b6"
+    },
+    {
+      "id": "7:8",
+      "name": "simplepractice-list",
+      "parent": "8:47",
+      "width": 1344,
+      "height": 708,
+      "sourceWidth": 2560,
+      "sourceHeight": 1348,
+      "expectedHash": "004c060eff67b0c3d1a9fdf99af6bbaee27b688a"
+    },
+    {
+      "id": "7:9",
+      "name": "simplepractice-manage",
+      "parent": "8:47",
+      "width": 1344,
+      "height": 710,
+      "sourceWidth": 1600,
+      "sourceHeight": 845,
+      "expectedHash": "dbda8a0b6e5de44c1120290d9adf8bd2c1f9626f"
+    },
+    {
+      "id": "7:10",
+      "name": "therapynotes-actions",
+      "parent": "8:62",
+      "width": 1112,
+      "height": 547,
+      "sourceWidth": 1113,
+      "sourceHeight": 547,
+      "expectedHash": "b6e8644ddfada66d64bffa0be96ccc8306941421"
+    },
+    {
+      "id": "7:11",
+      "name": "therapynotes-attestation",
+      "parent": "8:62",
+      "width": 1076,
+      "height": 257,
+      "sourceWidth": 1076,
+      "sourceHeight": 257,
+      "expectedHash": "1777af124b487d8f008079513711cb2d1d371325"
+    },
+    {
+      "id": "7:12",
+      "name": "therapynotes-list",
+      "parent": "8:62",
+      "width": 1344,
+      "height": 357,
+      "sourceWidth": 1387,
+      "sourceHeight": 368,
+      "expectedHash": "464aaf65120e3f34316e63366757191bd69df8fb"
+    },
+    {
+      "id": "7:13",
+      "name": "therapynotes-erx-panel",
+      "parent": "8:62",
+      "width": 1024,
+      "height": 421,
+      "sourceWidth": 1024,
+      "sourceHeight": 421,
+      "expectedHash": "4e9165c65505456632dcf3d4218e90da4f8fb3e5"
+    },
+    {
+      "id": "7:14",
+      "name": "original-completed-detail",
+      "parent": "8:83",
+      "width": 1408,
+      "height": 430,
+      "sourceWidth": 1244,
+      "sourceHeight": 380,
+      "expectedHash": "6a67e100defa76c66d7e16913bafb9804a343604"
+    },
+    {
+      "id": "7:15",
+      "name": "original-reopened-detail",
+      "parent": "8:83",
+      "width": 1408,
+      "height": 529,
+      "sourceWidth": 1244,
+      "sourceHeight": 467,
+      "expectedHash": "a0ca86ac06e393c2d689837cca280790798a61f3"
+    }
+  ],
+  "links": [
+    {
+      "id": "8:21",
+      "url": "https://practiceops.weillcornell.org/sites/default/files/weill_cornell_medicine_ecomp_manual_10-17.pdf#page=8"
+    },
+    {
+      "id": "8:23",
+      "url": "https://it.houstonmethodist.org/wp-content/uploads/2022/08/Telepsychiatry-Admission-Workflow-%E2%80%93-Telepsych-Providers_082222.pdf#page=13"
+    },
+    {
+      "id": "8:28",
+      "url": "https://practiceops.weillcornell.org/sites/default/files/weill_cornell_medicine_ecomp_manual_10-17.pdf#page=8"
+    },
+    {
+      "id": "8:29",
+      "url": "https://medicine-matters.blogs.hopkinsmedicine.org/2019/05/epic-tip-of-the-week-may-31-2019/"
+    },
+    {
+      "id": "8:30",
+      "url": "https://it.houstonmethodist.org/wp-content/uploads/2022/08/Telepsychiatry-Admission-Workflow-%E2%80%93-Telepsych-Providers_082222.pdf#page=13"
+    },
+    {
+      "id": "8:37",
+      "url": "https://www.dacconline.com/ebn/EBNMG/forms/MIPS/2020%20eCQM%20CMS68v9%20Documentation%20of%20current%20meds.pdf#page=3"
+    },
+    {
+      "id": "8:39",
+      "url": "https://www.dacconline.com/ebn/EBNMG/forms/MIPS/Measure%20Satisfatction%20Guide_Med%20Rec.pdf#page=3"
+    },
+    {
+      "id": "8:44",
+      "url": "https://www.dacconline.com/ebn/EBNMG/forms/MIPS/2020%20eCQM%20CMS68v9%20Documentation%20of%20current%20meds.pdf#page=3"
+    },
+    {
+      "id": "8:45",
+      "url": "https://www.dacconline.com/ebn/EBNMG/forms/MIPS/Measure%20Satisfatction%20Guide_Med%20Rec.pdf#page=3"
+    },
+    {
+      "id": "8:46",
+      "url": "https://www.athenahealth.com/resources/blog/athenaone-summer-2025-update"
+    },
+    {
+      "id": "8:53",
+      "url": "https://support.simplepractice.com/hc/en-us/articles/42065448433037-Managing-client-prescriptions"
+    },
+    {
+      "id": "8:55",
+      "url": "https://support.simplepractice.com/hc/en-us/articles/42065448433037-Managing-client-prescriptions"
+    },
+    {
+      "id": "8:60",
+      "url": "https://support.simplepractice.com/hc/en-us/articles/42065448433037-Managing-client-prescriptions"
+    },
+    {
+      "id": "8:61",
+      "url": "https://support.simplepractice.com/hc/en-us/articles/8653281068045-Recording-client-medications"
+    },
+    {
+      "id": "8:68",
+      "url": "https://support.therapynotes.com/hc/en-us/articles/30661264631323-Complete-a-Psychiatry-Progress-Note"
+    },
+    {
+      "id": "8:70",
+      "url": "https://support.therapynotes.com/hc/en-us/articles/30661264631323-Complete-a-Psychiatry-Progress-Note"
+    },
+    {
+      "id": "8:72",
+      "url": "https://blog.therapynotes.com/whats-new-contact-forms-psychiatry-enhancements"
+    },
+    {
+      "id": "8:74",
+      "url": "https://support.therapynotes.com/hc/en-us/articles/37246977484187-New-Overview-of-the-Patient-eRx-Tab"
+    },
+    {
+      "id": "8:79",
+      "url": "https://support.therapynotes.com/hc/en-us/articles/30661264631323-Complete-a-Psychiatry-Progress-Note"
+    },
+    {
+      "id": "8:80",
+      "url": "https://blog.therapynotes.com/whats-new-contact-forms-psychiatry-enhancements"
+    },
+    {
+      "id": "8:81",
+      "url": "https://support.therapynotes.com/hc/en-us/articles/37246977484187-New-Overview-of-the-Patient-eRx-Tab"
+    },
+    {
+      "id": "8:82",
+      "url": "https://support.therapynotes.com/hc/en-us/articles/37247370669083-New-Managing-Medications-in-ePrescribe"
+    },
+    {
+      "id": "8:89",
+      "url": "https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11199-10308"
+    },
+    {
+      "id": "8:92",
+      "url": "https://www.figma.com/design/fu7ncgAnIdjvxxxmQILFzK?node-id=11199-11081"
+    }
+  ],
+  "overflow": [],
+  "width": 6200,
+  "height": 5364,
+  "previousScope": {
+    "id": "1:2",
+    "descendants": 69,
+    "x": 160,
+    "y": 160,
+    "width": 10080,
+    "height": 3220
+  },
+  "finishedAt": "2026-11-16T14:50:26.204Z"
+}

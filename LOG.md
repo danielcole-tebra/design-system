@@ -4693,3 +4693,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist · DJ handoff cleanup
 - File: yh2F6OUgdI6K0risLtKLEQ. Organized the file into latest non-drawer, latest drawer, unchanged running comparison, and archives pages. Moved23 older/supporting roots into five named archive sections; retained current drawer prototype states on their active page. Added a faithful standalone copy of Comparison F for non-drawer handoff. Nothing deleted.
 - Evidence: runs/2026-11-16-medlist-handoff-cleanup/REPORT.md, record.json, non-drawer.png, drawer.png, current-states.png, archives.png.
+
+<!-- builder-run:runs/2026-11-16-medication-reconciliation-research -->
+## 2026-11-16 — Medlist · Medication reconciliation research
+- File: 9d3G2ipIFbZk4YSQLgukOE. Added a separate research page (4:2) with Epic, athenahealth, SimplePractice and TherapyNotes, 14 screenshot excerpts, 12 external sources and original medlist completion/return states. Historical evidence, unknowns and proposed implications are labeled; ready for Daniel's review. Existing review board preserved. All image and link readbacks pass; seven captures visually checked.
+- Evidence: runs/2026-11-16-medication-reconciliation-research/REPORT.md, content.json, crops.json, build-result.json, verification.json, board-overview.png and six detail captures.

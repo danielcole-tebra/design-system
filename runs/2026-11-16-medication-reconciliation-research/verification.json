@@ -1,0 +1,257 @@
+{
+  "verifiedAt": "2026-11-16T14:53:10.176Z",
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Page 1"
+    },
+    {
+      "id": "4:2",
+      "name": "Medication reconciliation · Research"
+    }
+  ],
+  "oldScope": {
+    "id": "1:2",
+    "descendants": 69,
+    "x": 160,
+    "y": 160,
+    "width": 10080,
+    "height": 3220
+  },
+  "oldScopeMatches": true,
+  "board": {
+    "id": "6:2",
+    "width": 6200,
+    "height": 5364,
+    "descendants": 123
+  },
+  "figures": [
+    {
+      "name": "epic-ambulatory-ui",
+      "id": "7:4",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.14649681528661063
+    },
+    {
+      "name": "epic-psychiatry-ui",
+      "id": "7:5",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.44505928853754995
+    },
+    {
+      "name": "athena-reviewed-ui",
+      "id": "7:3",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.22690437601295343
+    },
+    {
+      "name": "athena-reason-ui",
+      "id": "7:2",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.038277511961723576
+    },
+    {
+      "name": "athena-status-ui",
+      "id": "7:6",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.4149068322981293
+    },
+    {
+      "name": "athena-comparison-ui",
+      "id": "7:7",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0
+    },
+    {
+      "name": "simplepractice-list",
+      "id": "7:8",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.2999999999999545
+    },
+    {
+      "name": "simplepractice-manage",
+      "id": "7:9",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.20000000000004547
+    },
+    {
+      "name": "therapynotes-actions",
+      "id": "7:10",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.49146451033243466
+    },
+    {
+      "name": "therapynotes-attestation",
+      "id": "7:11",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0
+    },
+    {
+      "name": "therapynotes-list",
+      "id": "7:12",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.40879596250903205
+    },
+    {
+      "name": "therapynotes-erx-panel",
+      "id": "7:13",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0
+    },
+    {
+      "name": "original-completed-detail",
+      "id": "7:14",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.09646302250803274
+    },
+    {
+      "name": "original-reopened-detail",
+      "id": "7:15",
+      "hashMatches": true,
+      "sourceMatches": true,
+      "dimensionsMatch": true,
+      "parentMatches": true,
+      "roundingError": 0.4340836012861473
+    }
+  ],
+  "links": [
+    {
+      "id": "8:21",
+      "match": true
+    },
+    {
+      "id": "8:23",
+      "match": true
+    },
+    {
+      "id": "8:28",
+      "match": true
+    },
+    {
+      "id": "8:29",
+      "match": true
+    },
+    {
+      "id": "8:30",
+      "match": true
+    },
+    {
+      "id": "8:37",
+      "match": true
+    },
+    {
+      "id": "8:39",
+      "match": true
+    },
+    {
+      "id": "8:44",
+      "match": true
+    },
+    {
+      "id": "8:45",
+      "match": true
+    },
+    {
+      "id": "8:46",
+      "match": true
+    },
+    {
+      "id": "8:53",
+      "match": true
+    },
+    {
+      "id": "8:55",
+      "match": true
+    },
+    {
+      "id": "8:60",
+      "match": true
+    },
+    {
+      "id": "8:61",
+      "match": true
+    },
+    {
+      "id": "8:68",
+      "match": true
+    },
+    {
+      "id": "8:70",
+      "match": true
+    },
+    {
+      "id": "8:72",
+      "match": true
+    },
+    {
+      "id": "8:74",
+      "match": true
+    },
+    {
+      "id": "8:79",
+      "match": true
+    },
+    {
+      "id": "8:80",
+      "match": true
+    },
+    {
+      "id": "8:81",
+      "match": true
+    },
+    {
+      "id": "8:82",
+      "match": true
+    },
+    {
+      "id": "8:89",
+      "match": true
+    },
+    {
+      "id": "8:92",
+      "match": true
+    }
+  ],
+  "overflow": [],
+  "missingFonts": [],
+  "textNodes": 100
+}

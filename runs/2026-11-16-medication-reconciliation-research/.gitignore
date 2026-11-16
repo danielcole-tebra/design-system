@@ -1,0 +1,7 @@
+# Retained local download/render intermediates; board excerpts are versioned.
+assets/*.pdf
+assets/*-page.png
+assets/*-hires.png
+assets/athena-review-ui.png
+pdf-contact-sheet.png
+crop-contact-sheet.png
