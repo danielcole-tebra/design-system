@@ -4681,3 +4681,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-15 — Medlist · Latest Alpha modal sheets and explicit reconciliation
 - File: yh2F6OUgdI6K0risLtKLEQ. Corrected G to the latest SDE Alpha full-height modal sheet with a page backdrop and bottom actions. Filters now abut the table. Reconcile medications opens a separate checkbox review mode; checking marks reviewed and Complete reconciliation returns to the list. Ready for Daniel's visual review.
 - Evidence: runs/2026-11-15-medlist-alpha-sidesheet/REPORT.md, record.json, source-page.png, source-closed.png, source-open.png, list.png, open.png, reconciliation.png, review-states.png, reported-final.png, issue-final.png.
+
+
+<!-- builder-run:runs/2026-11-15-medlist-drawer-hierarchy -->
+## 2026-11-15 — Medlist · Drawer hierarchy and divisions
+- File: yh2F6OUgdI6K0risLtKLEQ. Refined G's shared medication drawer into a shaded medication summary, divided prescription facts and a separate pharmacy section. Larger medication/directions typography and aligned label/value rows make the information hierarchy explicit. All11 placed drawers updated; ready for Daniel's visual review.
+- Evidence: runs/2026-11-15-medlist-drawer-hierarchy/REPORT.md, record.json, open.png, compound.png, reported.png.

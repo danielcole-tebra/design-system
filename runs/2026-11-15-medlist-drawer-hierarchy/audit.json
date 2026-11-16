@@ -1,0 +1,173 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": true,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 5,
+    "passed": true,
+    "checks": [
+      {
+        "id": "I104:7643;104:7577",
+        "mainId": "2:1422",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I104:7643;104:7626",
+        "mainId": "2:159",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I104:7643;104:7633",
+        "mainId": "2:159",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I104:7643;104:7639",
+        "mainId": "2:1426",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I104:8005;104:7586",
+        "mainId": "2:1570",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 220,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "104:7643 all properties",
+        "passed": true
+      },
+      {
+        "name": "104:7643 visible content",
+        "passed": true
+      },
+      {
+        "name": "104:7643 reactions",
+        "passed": true
+      },
+      {
+        "name": "104:7643 geometry",
+        "passed": true
+      },
+      {
+        "name": "104:7643 summary treatment",
+        "passed": true
+      },
+      {
+        "name": "104:7643 typography",
+        "passed": true
+      },
+      {
+        "name": "104:7643 prescription heading",
+        "passed": true
+      },
+      {
+        "name": "104:7643 pharmacy heading",
+        "passed": true
+      },
+      {
+        "name": "104:7643 visible groups",
+        "passed": true
+      },
+      {
+        "name": "104:7643 Prescription fields layout",
+        "passed": true
+      },
+      {
+        "name": "104:7643 Prescribed grid",
+        "passed": true
+      },
+      {
+        "name": "104:7643 Prescriber grid",
+        "passed": true
+      },
+      {
+        "name": "104:7643 Supply fields layout",
+        "passed": true
+      },
+      {
+        "name": "104:7643 Quantity grid",
+        "passed": true
+      },
+      {
+        "name": "104:7643 Duration grid",
+        "passed": true
+      },
+      {
+        "name": "104:7643 Refills grid",
+        "passed": true
+      },
+      {
+        "name": "104:7643 scrolling",
+        "passed": true
+      },
+      {
+        "name": "104:7643 font",
+        "passed": true
+      },
+      {
+        "name": "104:7643 clipping",
+        "passed": true
+      },
+      {
+        "name": "104:7643 bound dividers",
+        "passed": true
+      },
+      {
+        "name": "104:7713 all properties",
+        "passed": true
+      },
+      {
+        "name": "104:7713 visible content",
+        "passed": true
+      },
+      {
+        "name": "104:7713 reactions",
+        "passed": true
+      },
+      {
+        "name": "104:7713 geometry",
+        "passed": true
+      },
+      {
+        "name": "104:7713 summary treatment",
+        "passed": true
+      },
+      {
+        "name": "104:7713 typography",
+        "passed": true
+      },
+      {
+        "name": "104:7713 prescription heading",
+        "passed": true
+      },
+      {
+        "name": "104:7713 pharmacy heading",
+        "passed": true
+      },
+      {
+        "name": "104:7713 visible groups",
+        "passed": true
+      },
+      {
+        "name": "104:7713 Prescription fields layout",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 190,
+    "failures": [],
+    "omittedFailures": 0
+  }
+}

@@ -1,0 +1,879 @@
+{
+  "master": {
+    "id": "104:7574",
+    "name": "Medlist/Medication details sidesheet",
+    "type": "COMPONENT",
+    "w": 550,
+    "h": 1156,
+    "visible": true,
+    "layout": "VERTICAL",
+    "gap": 0,
+    "padding": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "children": [
+      {
+        "id": "104:7575",
+        "name": "Header",
+        "type": "FRAME",
+        "w": 550,
+        "h": 72,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "gap": 8,
+        "padding": [
+          16,
+          8,
+          16,
+          16
+        ],
+        "children": [
+          {
+            "id": "104:7576",
+            "name": "Title",
+            "type": "TEXT",
+            "w": 478,
+            "h": 24,
+            "visible": true,
+            "padding": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "text": "Medication details",
+            "style": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+            "size": 16
+          },
+          {
+            "id": "104:7577",
+            "name": "Close medication details",
+            "type": "INSTANCE",
+            "w": 40,
+            "h": 40,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "gap": 0,
+            "padding": [
+              8,
+              8,
+              8,
+              8
+            ]
+          }
+        ]
+      },
+      {
+        "id": "104:7582",
+        "name": "Divider",
+        "type": "RECTANGLE",
+        "w": 550,
+        "h": 1,
+        "visible": true,
+        "padding": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "104:7583",
+        "name": "Body",
+        "type": "FRAME",
+        "w": 550,
+        "h": 1012,
+        "visible": true,
+        "layout": "VERTICAL",
+        "gap": 24,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "children": [
+          {
+            "id": "104:7584",
+            "name": "Medication identity",
+            "type": "FRAME",
+            "w": 518,
+            "h": 52,
+            "visible": true,
+            "layout": "VERTICAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "children": [
+              {
+                "id": "104:7585",
+                "name": "Medication name",
+                "type": "TEXT",
+                "w": 518,
+                "h": 24,
+                "visible": true,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "Alprazolam 0.25 mg tablet",
+                "style": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+                "size": 16
+              },
+              {
+                "id": "104:7586",
+                "name": "Compound",
+                "type": "INSTANCE",
+                "w": 75,
+                "h": 24,
+                "visible": false,
+                "layout": "HORIZONTAL",
+                "gap": 3,
+                "padding": [
+                  0,
+                  7,
+                  0,
+                  7
+                ]
+              },
+              {
+                "id": "104:7590",
+                "name": "Source note",
+                "type": "TEXT",
+                "w": 518,
+                "h": 20,
+                "visible": false,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "Patient-reported supplement",
+                "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                "size": 14
+              },
+              {
+                "id": "104:7591",
+                "name": "Order status",
+                "type": "INSTANCE",
+                "w": 518,
+                "h": 20,
+                "visible": true,
+                "layout": "VERTICAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "id": "104:7595",
+            "name": "Directions",
+            "type": "FRAME",
+            "w": 518,
+            "h": 48,
+            "visible": true,
+            "layout": "VERTICAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "children": [
+              {
+                "id": "104:7596",
+                "name": "Directions heading",
+                "type": "TEXT",
+                "w": 518,
+                "h": 20,
+                "visible": true,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "Directions",
+                "style": "S:2ede1d5b604b7eacc72152b001bef5c2b7182c33,116:62",
+                "size": 14
+              },
+              {
+                "id": "104:7597",
+                "name": "Directions value",
+                "type": "TEXT",
+                "w": 518,
+                "h": 20,
+                "visible": true,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "Take 1 tablet by mouth once daily as needed for anxiety",
+                "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                "size": 14
+              }
+            ]
+          },
+          {
+            "id": "104:7598",
+            "name": "Prescription",
+            "type": "FRAME",
+            "w": 518,
+            "h": 72,
+            "visible": true,
+            "layout": "VERTICAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "children": [
+              {
+                "id": "104:7599",
+                "name": "Prescription heading",
+                "type": "TEXT",
+                "w": 518,
+                "h": 20,
+                "visible": true,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "Prescription",
+                "style": "S:2ede1d5b604b7eacc72152b001bef5c2b7182c33,116:62",
+                "size": 14
+              },
+              {
+                "id": "104:7600",
+                "name": "Prescription fields",
+                "type": "FRAME",
+                "w": 518,
+                "h": 44,
+                "visible": true,
+                "layout": "HORIZONTAL",
+                "gap": 16,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "children": [
+                  {
+                    "id": "104:7601",
+                    "name": "Prescribed",
+                    "type": "FRAME",
+                    "w": 251,
+                    "h": 44,
+                    "visible": true,
+                    "layout": "VERTICAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "children": [
+                      {
+                        "id": "104:7602",
+                        "name": "Prescribed label",
+                        "type": "TEXT",
+                        "w": 251,
+                        "h": 16,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "Prescribed",
+                        "style": "S:7d2c1e680e75d61c2bafaed604ad9014fef3e981,116:116",
+                        "size": 12
+                      },
+                      {
+                        "id": "104:7603",
+                        "name": "Prescribed value",
+                        "type": "TEXT",
+                        "w": 251,
+                        "h": 20,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "Sep 5, 2024",
+                        "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                        "size": 14
+                      }
+                    ]
+                  },
+                  {
+                    "id": "104:7604",
+                    "name": "Prescriber",
+                    "type": "FRAME",
+                    "w": 251,
+                    "h": 44,
+                    "visible": true,
+                    "layout": "VERTICAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "children": [
+                      {
+                        "id": "104:7605",
+                        "name": "Prescriber label",
+                        "type": "TEXT",
+                        "w": 251,
+                        "h": 16,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "Prescriber",
+                        "style": "S:7d2c1e680e75d61c2bafaed604ad9014fef3e981,116:116",
+                        "size": 12
+                      },
+                      {
+                        "id": "104:7606",
+                        "name": "Prescriber value",
+                        "type": "TEXT",
+                        "w": 251,
+                        "h": 20,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "Olivia Chen, MD",
+                        "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                        "size": 14
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "104:7607",
+            "name": "Supply",
+            "type": "FRAME",
+            "w": 518,
+            "h": 72,
+            "visible": true,
+            "layout": "VERTICAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "children": [
+              {
+                "id": "104:7608",
+                "name": "Supply heading",
+                "type": "TEXT",
+                "w": 518,
+                "h": 20,
+                "visible": true,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "Supply",
+                "style": "S:2ede1d5b604b7eacc72152b001bef5c2b7182c33,116:62",
+                "size": 14
+              },
+              {
+                "id": "104:7609",
+                "name": "Supply fields",
+                "type": "FRAME",
+                "w": 518,
+                "h": 44,
+                "visible": true,
+                "layout": "HORIZONTAL",
+                "gap": 16,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "children": [
+                  {
+                    "id": "104:7610",
+                    "name": "Quantity",
+                    "type": "FRAME",
+                    "w": 162,
+                    "h": 44,
+                    "visible": true,
+                    "layout": "VERTICAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "children": [
+                      {
+                        "id": "104:7611",
+                        "name": "Quantity label",
+                        "type": "TEXT",
+                        "w": 162,
+                        "h": 16,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "Quantity",
+                        "style": "S:7d2c1e680e75d61c2bafaed604ad9014fef3e981,116:116",
+                        "size": 12
+                      },
+                      {
+                        "id": "104:7612",
+                        "name": "Quantity value",
+                        "type": "TEXT",
+                        "w": 162,
+                        "h": 20,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "15 tablets",
+                        "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                        "size": 14
+                      }
+                    ]
+                  },
+                  {
+                    "id": "104:7613",
+                    "name": "Duration",
+                    "type": "FRAME",
+                    "w": 162,
+                    "h": 44,
+                    "visible": true,
+                    "layout": "VERTICAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "children": [
+                      {
+                        "id": "104:7614",
+                        "name": "Duration label",
+                        "type": "TEXT",
+                        "w": 162,
+                        "h": 16,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "Duration",
+                        "style": "S:7d2c1e680e75d61c2bafaed604ad9014fef3e981,116:116",
+                        "size": 12
+                      },
+                      {
+                        "id": "104:7615",
+                        "name": "Duration value",
+                        "type": "TEXT",
+                        "w": 162,
+                        "h": 20,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "15 days as needed",
+                        "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                        "size": 14
+                      }
+                    ]
+                  },
+                  {
+                    "id": "104:7616",
+                    "name": "Refills",
+                    "type": "FRAME",
+                    "w": 162,
+                    "h": 44,
+                    "visible": true,
+                    "layout": "VERTICAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "children": [
+                      {
+                        "id": "104:7617",
+                        "name": "Refills label",
+                        "type": "TEXT",
+                        "w": 162,
+                        "h": 16,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "Refills",
+                        "style": "S:7d2c1e680e75d61c2bafaed604ad9014fef3e981,116:116",
+                        "size": 12
+                      },
+                      {
+                        "id": "104:7618",
+                        "name": "Refills value",
+                        "type": "TEXT",
+                        "w": 162,
+                        "h": 20,
+                        "visible": true,
+                        "padding": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "text": "No refills",
+                        "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                        "size": 14
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "104:7619",
+            "name": "Pharmacy",
+            "type": "FRAME",
+            "w": 518,
+            "h": 76,
+            "visible": true,
+            "layout": "VERTICAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "children": [
+              {
+                "id": "104:7620",
+                "name": "Pharmacy heading",
+                "type": "TEXT",
+                "w": 518,
+                "h": 20,
+                "visible": true,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "Pharmacy",
+                "style": "S:2ede1d5b604b7eacc72152b001bef5c2b7182c33,116:62",
+                "size": 14
+              },
+              {
+                "id": "104:7621",
+                "name": "Pharmacy name",
+                "type": "TEXT",
+                "w": 518,
+                "h": 20,
+                "visible": true,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "CVS Pharmacy 1709 in Target",
+                "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                "size": 14
+              },
+              {
+                "id": "104:7622",
+                "name": "Pharmacy phone",
+                "type": "TEXT",
+                "w": 518,
+                "h": 20,
+                "visible": true,
+                "padding": [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "text": "Phone: (850) 555-0142",
+                "style": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+                "size": 14
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "104:7623",
+        "name": "Footer",
+        "type": "FRAME",
+        "w": 550,
+        "h": 71,
+        "visible": true,
+        "layout": "VERTICAL",
+        "gap": 0,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "children": [
+          {
+            "id": "104:7624",
+            "name": "Divider",
+            "type": "RECTANGLE",
+            "w": 550,
+            "h": 1,
+            "visible": true,
+            "padding": [
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "id": "104:7625",
+            "name": "Actions",
+            "type": "FRAME",
+            "w": 550,
+            "h": 70,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              16,
+              8,
+              16,
+              8
+            ],
+            "children": [
+              {
+                "id": "104:7626",
+                "name": "Close",
+                "type": "INSTANCE",
+                "w": 96,
+                "h": 38,
+                "visible": true,
+                "layout": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  7,
+                  17,
+                  7,
+                  17
+                ]
+              },
+              {
+                "id": "104:7632",
+                "name": "Flexible space",
+                "type": "FRAME",
+                "w": 260,
+                "h": 1,
+                "visible": true,
+                "layout": "HORIZONTAL",
+                "gap": 0,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "children": []
+              },
+              {
+                "id": "104:7633",
+                "name": "Medication action",
+                "type": "INSTANCE",
+                "w": 120,
+                "h": 38,
+                "visible": true,
+                "layout": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  7,
+                  17,
+                  7,
+                  17
+                ]
+              },
+              {
+                "id": "104:7639",
+                "name": "Medication actions",
+                "type": "INSTANCE",
+                "w": 34,
+                "h": 34,
+                "visible": true,
+                "layout": "HORIZONTAL",
+                "gap": 0,
+                "padding": [
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "104:7643",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:7713",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:7786",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:7859",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:7932",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:8005",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:8078",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:8151",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:8221",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:8294",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    },
+    {
+      "id": "104:8485",
+      "name": "Medication details",
+      "w": 550,
+      "h": 1156
+    }
+  ],
+  "bodyBound": {
+    "itemSpacing": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:f377dae9eb274ba0c78c22fe147a6bab50271e78/997:33"
+    },
+    "paddingLeft": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+    },
+    "paddingTop": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+    },
+    "paddingRight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+    },
+    "paddingBottom": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+    }
+  }
+}

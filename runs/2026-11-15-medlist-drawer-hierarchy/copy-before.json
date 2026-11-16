@@ -1,0 +1,1660 @@
+{
+  "drawers": [
+    {
+      "id": "104:7643",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth once daily as needed for anxiety",
+        "Pharmacy#104:21": "CVS Pharmacy 1709 in Target",
+        "Quantity#104:18": "15 tablets",
+        "Date#104:16": "Sep 5, 2024",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "15 days as needed",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-0142",
+        "Refills#104:20": "No refills",
+        "Medication name#104:11": "Alprazolam 0.25 mg tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Alprazolam 0.25 mg tablet"
+        },
+        {
+          "name": "Status",
+          "text": "Filled"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth once daily as needed for anxiety"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Sep 5, 2024"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "15 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "15 days as needed"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "No refills"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "CVS Pharmacy 1709 in Target"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-0142"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:7713",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth once daily as needed for allergy symptoms",
+        "Pharmacy#104:21": "Rite Aid #6",
+        "Quantity#104:18": "30 tablets",
+        "Date#104:16": "Sep 5, 2024",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "30 days",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-8080",
+        "Refills#104:20": "1 refill",
+        "Medication name#104:11": "Cetirizine 10 mg tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Cetirizine 10 mg tablet"
+        },
+        {
+          "name": "Status",
+          "text": "Pending fill"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth once daily as needed for allergy symptoms"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Sep 5, 2024"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "30 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "30 days"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "1 refill"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "Rite Aid #6"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-8080"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:7786",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth once daily",
+        "Pharmacy#104:21": "A&A Family Pharmacy",
+        "Quantity#104:18": "90 tablets",
+        "Date#104:16": "Jul 30, 2024",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "90 days",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-4706",
+        "Refills#104:20": "1 refill",
+        "Medication name#104:11": "Aspirin 81 mg delayed-release tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Aspirin 81 mg delayed-release tablet"
+        },
+        {
+          "name": "Status",
+          "text": "Pending fill"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth once daily"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Jul 30, 2024"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "90 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "90 days"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "1 refill"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "A&A Family Pharmacy"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-4706"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:7859",
+      "props": {
+        "Directions#104:15": "Take 1 capsule by mouth twice daily for 7 days",
+        "Pharmacy#104:21": "Rite Aid #6",
+        "Quantity#104:18": "14 capsules",
+        "Date#104:16": "Jul 30, 2024",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "7 days",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-8080",
+        "Refills#104:20": "No refills",
+        "Medication name#104:11": "Doxycycline hyclate 100 mg capsule"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Doxycycline hyclate 100 mg capsule"
+        },
+        {
+          "name": "Status",
+          "text": "Pending fill"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 capsule by mouth twice daily for 7 days"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Jul 30, 2024"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "14 capsules"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "7 days"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "No refills"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "Rite Aid #6"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-8080"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:7932",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth every morning",
+        "Pharmacy#104:21": "Rite Aid #6",
+        "Quantity#104:18": "30 tablets",
+        "Date#104:16": "Jul 30, 2024",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "30 days",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-8080",
+        "Refills#104:20": "1 refill",
+        "Medication name#104:11": "Furosemide 20 mg tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Furosemide 20 mg tablet"
+        },
+        {
+          "name": "Status",
+          "text": "Pending fill"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth every morning"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Jul 30, 2024"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "30 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "30 days"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "1 refill"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "Rite Aid #6"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-8080"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:8005",
+      "props": {
+        "Directions#104:15": "Apply a thin layer to the affected area twice daily for up to 7 days",
+        "Pharmacy#104:21": "Accord Specialty Pharmacy",
+        "Quantity#104:18": "1 tube (30 g)",
+        "Date#104:16": "Mar 14, 2024",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "7 days",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": true,
+        "Phone#104:22": "Phone: (850) 555-2642",
+        "Refills#104:20": "No refills",
+        "Medication name#104:11": "Hydrocortisone 1% compounded cream"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Hydrocortisone 1% compounded cream"
+        },
+        {
+          "name": "Label",
+          "text": "Compound"
+        },
+        {
+          "name": "Status",
+          "text": "Pending fill"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Apply a thin layer to the affected area twice daily for up to 7 days"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Mar 14, 2024"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "1 tube (30 g)"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "7 days"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "No refills"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "Accord Specialty Pharmacy"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-2642"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:8078",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth at bedtime as needed",
+        "Pharmacy#104:21": "A&A Family Pharmacy",
+        "Quantity#104:18": "30 tablets",
+        "Date#104:16": "Jan 23, 2024",
+        "Show source note#104:14": true,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "30 days",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-4706",
+        "Refills#104:20": "No refills",
+        "Medication name#104:11": "Melatonin 3 mg tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Melatonin 3 mg tablet"
+        },
+        {
+          "name": "Source note",
+          "text": "Patient-reported supplement"
+        },
+        {
+          "name": "Status",
+          "text": "Send failed"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth at bedtime as needed"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Jan 23, 2024"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "30 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "30 days"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "No refills"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "A&A Family Pharmacy"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-4706"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Resend"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:8151",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth twice daily with meals",
+        "Pharmacy#104:21": "A&A Family Pharmacy",
+        "Quantity#104:18": "180 tablets",
+        "Date#104:16": "Nov 19, 2023",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "90 days",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-4706",
+        "Refills#104:20": "1 refill",
+        "Medication name#104:11": "Metformin 500 mg tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Metformin 500 mg tablet"
+        },
+        {
+          "name": "Status",
+          "text": "Filled"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth twice daily with meals"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Nov 19, 2023"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "180 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "90 days"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "1 refill"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "A&A Family Pharmacy"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-4706"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:8221",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth at bedtime",
+        "Pharmacy#104:21": "A&A Family Pharmacy",
+        "Quantity#104:18": "90 tablets",
+        "Date#104:16": "Nov 19, 2023",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "90 days",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-4706",
+        "Refills#104:20": "1 refill",
+        "Medication name#104:11": "Simvastatin 20 mg tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Simvastatin 20 mg tablet"
+        },
+        {
+          "name": "Status",
+          "text": "Pending fill"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth at bedtime"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Nov 19, 2023"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "90 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "90 days"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "1 refill"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "A&A Family Pharmacy"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-4706"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:8294",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth every 6 hours as needed for pain",
+        "Pharmacy#104:21": "A&A Family Pharmacy",
+        "Quantity#104:18": "40 tablets",
+        "Date#104:16": "Nov 19, 2023",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "10 days as needed",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-4706",
+        "Refills#104:20": "No refills",
+        "Medication name#104:11": "Acetaminophen 500 mg tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Acetaminophen 500 mg tablet"
+        },
+        {
+          "name": "Status",
+          "text": "Patient info required"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth every 6 hours as needed for pain"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Nov 19, 2023"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "40 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "10 days as needed"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "No refills"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "A&A Family Pharmacy"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-4706"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "View issue"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104:8485",
+      "props": {
+        "Directions#104:15": "Take 1 tablet by mouth once daily as needed for anxiety",
+        "Pharmacy#104:21": "CVS Pharmacy 1709 in Target",
+        "Quantity#104:18": "15 tablets",
+        "Date#104:16": "Sep 5, 2024",
+        "Show source note#104:14": false,
+        "Source note#104:13": "Patient-reported supplement",
+        "Duration#104:19": "15 days as needed",
+        "Prescriber#104:17": "Olivia Chen, MD",
+        "Compound#104:12": false,
+        "Phone#104:22": "Phone: (850) 555-0142",
+        "Refills#104:20": "No refills",
+        "Medication name#104:11": "Alprazolam 0.25 mg tablet"
+      },
+      "texts": [
+        {
+          "name": "Title",
+          "text": "Medication details"
+        },
+        {
+          "name": "Medication name",
+          "text": "Alprazolam 0.25 mg tablet"
+        },
+        {
+          "name": "Status",
+          "text": "Filled"
+        },
+        {
+          "name": "Directions heading",
+          "text": "Directions"
+        },
+        {
+          "name": "Directions value",
+          "text": "Take 1 tablet by mouth once daily as needed for anxiety"
+        },
+        {
+          "name": "Prescription heading",
+          "text": "Prescription"
+        },
+        {
+          "name": "Prescribed label",
+          "text": "Prescribed"
+        },
+        {
+          "name": "Prescribed value",
+          "text": "Sep 5, 2024"
+        },
+        {
+          "name": "Prescriber label",
+          "text": "Prescriber"
+        },
+        {
+          "name": "Prescriber value",
+          "text": "Olivia Chen, MD"
+        },
+        {
+          "name": "Supply heading",
+          "text": "Supply"
+        },
+        {
+          "name": "Quantity label",
+          "text": "Quantity"
+        },
+        {
+          "name": "Quantity value",
+          "text": "15 tablets"
+        },
+        {
+          "name": "Duration label",
+          "text": "Duration"
+        },
+        {
+          "name": "Duration value",
+          "text": "15 days as needed"
+        },
+        {
+          "name": "Refills label",
+          "text": "Refills"
+        },
+        {
+          "name": "Refills value",
+          "text": "No refills"
+        },
+        {
+          "name": "Pharmacy heading",
+          "text": "Pharmacy"
+        },
+        {
+          "name": "Pharmacy name",
+          "text": "CVS Pharmacy 1709 in Target"
+        },
+        {
+          "name": "Pharmacy phone",
+          "text": "Phone: (850) 555-0142"
+        },
+        {
+          "name": "Label",
+          "text": "Close"
+        },
+        {
+          "name": "Label",
+          "text": "Edit"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Close medication details",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "104:4423",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "104:4423",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "104:4423",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "104:4423",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "S:2ede1d5b604b7eacc72152b001bef5c2b7182c33,116:62",
+      "key": "2ede1d5b604b7eacc72152b001bef5c2b7182c33",
+      "name": "h5"
+    },
+    {
+      "id": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94",
+      "key": "cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb",
+      "name": "body2"
+    },
+    {
+      "id": "S:7d2c1e680e75d61c2bafaed604ad9014fef3e981,116:116",
+      "key": "7d2c1e680e75d61c2bafaed604ad9014fef3e981",
+      "name": "caption"
+    },
+    {
+      "id": "S:c87aec6a94a2e25a8a25446f8d61716cb25abe73,116:83",
+      "key": "c87aec6a94a2e25a8a25446f8d61716cb25abe73",
+      "name": "body1"
+    },
+    {
+      "id": "S:2e2ad3d421315383c8d117a1e34e4017666511d8,116:29",
+      "key": "2e2ad3d421315383c8d117a1e34e4017666511d8",
+      "name": "h2"
+    },
+    {
+      "id": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51",
+      "key": "888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3",
+      "name": "h4"
+    },
+    {
+      "id": "S:d3d1857d99805de2943adf94e6697d84b6be4059,116:40",
+      "key": "d3d1857d99805de2943adf94e6697d84b6be4059",
+      "name": "h3"
+    }
+  ]
+}
