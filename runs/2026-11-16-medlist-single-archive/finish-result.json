@@ -1,0 +1,119 @@
+{
+  "createdNodeIds": [],
+  "mutatedNodeIds": [
+    "128:2573",
+    "137:32784",
+    "137:32832",
+    "145:31628",
+    "145:31676"
+  ],
+  "deletedNodeIds": [
+    "0:1",
+    "104:4346",
+    "17:881",
+    "176:31966"
+  ],
+  "restored": [
+    {
+      "id": "137:28731",
+      "before": {
+        "id": "137:28731",
+        "hash": "85603fd9",
+        "count": 3209
+      },
+      "after": {
+        "hash": "85603fd9",
+        "count": 3209
+      },
+      "unchanged": true
+    },
+    {
+      "id": "137:32790",
+      "before": {
+        "id": "137:32790",
+        "hash": "bea2f290",
+        "count": 3203
+      },
+      "after": {
+        "hash": "bea2f290",
+        "count": 3203
+      },
+      "unchanged": true
+    },
+    {
+      "id": "145:26434",
+      "before": {
+        "id": "145:26434",
+        "hash": "cf9c941f",
+        "count": 4220
+      },
+      "after": {
+        "hash": "cf9c941f",
+        "count": 4220
+      },
+      "unchanged": true
+    },
+    {
+      "id": "145:31634",
+      "before": {
+        "id": "145:31634",
+        "hash": "fff73daf",
+        "count": 4214
+      },
+      "after": {
+        "hash": "fff73daf",
+        "count": 4214
+      },
+      "unchanged": true
+    }
+  ],
+  "flowStartingPoints": [
+    {
+      "nodeId": "130:5881",
+      "name": "Archive · Medlist · Non-drawer"
+    },
+    {
+      "nodeId": "137:25480",
+      "name": "Archive · Five-column non-drawer trial"
+    },
+    {
+      "nodeId": "145:22172",
+      "name": "Archive · Structured sig medication trial"
+    },
+    {
+      "nodeId": "145:26434",
+      "name": "Archive · Five-column non-drawer trial"
+    },
+    {
+      "nodeId": "145:31634",
+      "name": "Archive · Five-column non-drawer trial"
+    },
+    {
+      "nodeId": "137:28731",
+      "name": "Archive · Medlist · Non-drawer"
+    },
+    {
+      "nodeId": "137:32790",
+      "name": "Archive · Medlist · Non-drawer"
+    },
+    {
+      "nodeId": "104:4423",
+      "name": "Archive · Medlist · Drawer"
+    },
+    {
+      "nodeId": "113:8945",
+      "name": "Archive · Medlist · Reconciliation"
+    }
+  ],
+  "pages": [
+    {
+      "id": "150:20569",
+      "name": "Medlist · Current table and drawer"
+    },
+    {
+      "id": "128:2573",
+      "name": "Medlist · Archive"
+    }
+  ],
+  "completedAt": "2026-11-16T21:31:53.542Z"
+}

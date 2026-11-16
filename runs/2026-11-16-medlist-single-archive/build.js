@@ -1,0 +1,25 @@
+figma.skipInvisibleInstanceChildren=false;const archive=await figma.getNodeByIdAsync('128:2573');await figma.setCurrentPageAsync(archive);
+const sourceIds=['0:1','104:4346','17:881','176:31966'],sources=await Promise.all(sourceIds.map(id=>figma.getNodeByIdAsync(id)));const current=await figma.getNodeByIdAsync('150:20569');
+const allRoots=[...archive.children,...sources.flatMap(p=>[...p.children])],artwork=allRoots.flatMap(n=>n.type==='SECTION'?[...n.children]:[n]);
+function hash(n,root=true){const a=[n,...('children'in n?n.findAll():[])].map((c,i)=>[c.id,c.type,c.name,i?c.x:null,i?c.y:null,c.width,c.height,c.visible,c.type==='TEXT'?c.characters:null,c.reactions]);const str=JSON.stringify(a);let h=2166136261;for(let i=0;i<str.length;i++)h=Math.imul(h^str.charCodeAt(i),16777619);return {hash:(h>>>0).toString(16),count:a.length};}
+const before=artwork.map(n=>({id:n.id,...hash(n)})),currentBefore=hash(current);const fonts=new Map();for(const root of artwork)for(const t of(root.type==='TEXT'?[root]:root.findAllWithCriteria({types:['TEXT']})))for(const s of t.getStyledTextSegments(['fontName']))fonts.set(JSON.stringify(s.fontName),s.fontName);await Promise.all([...fonts.values()].map(f=>figma.loadFontAsync(f)));
+const nodes=new Map([...allRoots,...artwork].map(n=>[n.id,n])),created=[],mutated=[],sections=[];let y=360;
+function pack(sec,items){let x=64,rowY=80,rowH=0,right=0;for(const n of items){if(x>64&&x+n.width>9664){x=64;rowY+=rowH+140;rowH=0;}sec.appendChild(n);n.x=x;n.y=rowY;x+=n.width+160;rowH=Math.max(rowH,n.height);right=Math.max(right,n.x+n.width);mutated.push(n.id);}sec.resizeWithoutConstraints(right+64,rowY+rowH+64);}
+function group(name,ids,existing){const sec=existing?nodes.get(existing):figma.createSection();if(!existing)created.push(sec.id);archive.appendChild(sec);sec.name=name;pack(sec,ids.map(id=>nodes.get(id)));sec.x=160;sec.y=y;y+=sec.height+260;mutated.push(sec.id);sections.push({id:sec.id,name:sec.name,x:sec.x,y:sec.y,width:sec.width,height:sec.height,children:ids});return sec;}
+group('01 · 16 Nov · Initial Open drawer', ['150:37223','150:20871','150:20944','150:21017','150:21090','150:21163','150:21236','150:21309','150:21382','150:21455','150:21528','150:37739'],'176:31967');
+group('02 · 16 Nov · Structured table with inline details',['145:22172','145:26434','145:31634','145:36843','145:36449','145:36646','145:21535','145:35852','146:5904']);
+group('03 · 16 Nov · Five-column table exploration',['137:25480','137:28731','137:32790','137:36168','137:35997','137:24947','139:2791','139:3310']);
+group('04 · 15 Nov · Earlier drawer and reconciliation',['104:4423','104:8366','113:8945'],'130:18977');
+group('05 · 15 Nov · Earlier drawer prototype states',['104:7642','104:7712','104:7785','104:7858','104:7931','104:8004','104:8077','104:8150','104:8220','104:8293'],'130:18978');
+group('06 · 15 Nov · Earlier drawer components and inspection',['104:8553','113:13042','113:8869','104:7574','104:4347'],'130:18976');
+group('07 · 15 Nov · Comparison F non-drawer handoff',['130:5881','91:10288','92:5958']);
+group('08 · 14–15 Nov · Comparison board and earlier B',['17:882','52:2451','52:2510','52:2511','56:3026']);
+group('09 · 14 Nov · Row explorations and initial screen',['47:1675','34:1391','28:882','2:1811'],'128:2574');
+group('10 · 14 Nov · Retained row and header components',['47:1540','34:1388','28:837','9:784','2:1810'],'128:2575');
+group('11 · 14 Nov · Superseded layout definitions',['68:2606','68:2509','63:2373','60:2301','9:852'],'128:2576');
+group('12 · 14 Nov · Inspections and provenance',['47:1689','34:1807','4:869','2:2808'],'128:2577');
+const template=nodes.get('150:37739'),note=template.clone();archive.appendChild(note);note.name='README · Consolidated archive';note.characters='Medlist archive · Newest → oldest\nAll archived work is on this page, grouped roughly by iteration date. Scroll down for earlier work. Screens, component definitions, inspections and prototype destinations are retained; the current design remains on the first page.';note.textAutoResize='HEIGHT';note.resize(1440,note.height);note.x=160;note.y=160;created.push(note.id);
+const starts=sources.flatMap(p=>p.flowStartingPoints);archive.flowStartingPoints=[...new Map(starts.map(s=>[s.nodeId,{nodeId:s.nodeId,name:'Archive · '+s.name}])).values()];for(const p of sources){p.flowStartingPoints=[];mutated.push(p.id);}archive.name='Medlist · Archive';mutated.push(archive.id);figma.root.insertChild(1,archive);
+const preservation=artwork.map((n,i)=>({id:n.id,before:before[i],after:hash(n),unchanged:JSON.stringify(hash(n))===JSON.stringify({hash:before[i].hash,count:before[i].count})}));
+figma.viewport.scrollAndZoomIntoView([await figma.getNodeByIdAsync('176:31967')]);
+return{createdNodeIds:created,mutatedNodeIds:[...new Set(mutated)],archiveId:archive.id,noteId:note.id,sections,preservation,currentUnchanged:JSON.stringify(hash(current))===JSON.stringify(currentBefore),emptyPages:sources.map(p=>({id:p.id,name:p.name,children:p.children.length})),builtAt:new Date().toISOString()};

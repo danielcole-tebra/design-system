@@ -1,0 +1,1273 @@
+{
+  "createdNodeIds": [
+    "184:74608",
+    "184:74609",
+    "184:74610",
+    "184:74611",
+    "184:74612"
+  ],
+  "mutatedNodeIds": [
+    "150:37223",
+    "150:20871",
+    "150:20944",
+    "150:21017",
+    "150:21090",
+    "150:21163",
+    "150:21236",
+    "150:21309",
+    "150:21382",
+    "150:21455",
+    "150:21528",
+    "150:37739",
+    "176:31967",
+    "145:22172",
+    "145:26434",
+    "145:31634",
+    "145:36843",
+    "145:36449",
+    "145:36646",
+    "145:21535",
+    "145:35852",
+    "146:5904",
+    "184:74608",
+    "137:25480",
+    "137:28731",
+    "137:32790",
+    "137:36168",
+    "137:35997",
+    "137:24947",
+    "139:2791",
+    "139:3310",
+    "184:74609",
+    "104:4423",
+    "104:8366",
+    "113:8945",
+    "130:18977",
+    "104:7642",
+    "104:7712",
+    "104:7785",
+    "104:7858",
+    "104:7931",
+    "104:8004",
+    "104:8077",
+    "104:8150",
+    "104:8220",
+    "104:8293",
+    "130:18978",
+    "104:8553",
+    "113:13042",
+    "113:8869",
+    "104:7574",
+    "104:4347",
+    "130:18976",
+    "130:5881",
+    "91:10288",
+    "92:5958",
+    "184:74610",
+    "17:882",
+    "52:2451",
+    "52:2510",
+    "52:2511",
+    "56:3026",
+    "184:74611",
+    "47:1675",
+    "34:1391",
+    "28:882",
+    "2:1811",
+    "128:2574",
+    "47:1540",
+    "34:1388",
+    "28:837",
+    "9:784",
+    "2:1810",
+    "128:2575",
+    "68:2606",
+    "68:2509",
+    "63:2373",
+    "60:2301",
+    "9:852",
+    "128:2576",
+    "47:1689",
+    "34:1807",
+    "4:869",
+    "2:2808",
+    "128:2577",
+    "0:1",
+    "104:4346",
+    "17:881",
+    "176:31966",
+    "128:2573"
+  ],
+  "archiveId": "128:2573",
+  "noteId": "184:74612",
+  "sections": [
+    {
+      "id": "176:31967",
+      "name": "01 · 16 Nov · Initial Open drawer",
+      "x": 160,
+      "y": 360,
+      "width": 9568,
+      "height": 2508,
+      "children": [
+        "150:37223",
+        "150:20871",
+        "150:20944",
+        "150:21017",
+        "150:21090",
+        "150:21163",
+        "150:21236",
+        "150:21309",
+        "150:21382",
+        "150:21455",
+        "150:21528",
+        "150:37739"
+      ]
+    },
+    {
+      "id": "184:74608",
+      "name": "02 · 16 Nov · Structured table with inline details",
+      "x": 160,
+      "y": 3128,
+      "width": 9120,
+      "height": 2310,
+      "children": [
+        "145:22172",
+        "145:26434",
+        "145:31634",
+        "145:36843",
+        "145:36449",
+        "145:36646",
+        "145:21535",
+        "145:35852",
+        "146:5904"
+      ]
+    },
+    {
+      "id": "184:74609",
+      "name": "03 · 16 Nov · Five-column table exploration",
+      "x": 160,
+      "y": 5698,
+      "width": 9344,
+      "height": 2570,
+      "children": [
+        "137:25480",
+        "137:28731",
+        "137:32790",
+        "137:36168",
+        "137:35997",
+        "137:24947",
+        "139:2791",
+        "139:3310"
+      ]
+    },
+    {
+      "id": "130:18977",
+      "name": "04 · 15 Nov · Earlier drawer and reconciliation",
+      "x": 160,
+      "y": 8528,
+      "width": 4768,
+      "height": 1300,
+      "children": [
+        "104:4423",
+        "104:8366",
+        "113:8945"
+      ]
+    },
+    {
+      "id": "130:18978",
+      "name": "05 · 15 Nov · Earlier drawer prototype states",
+      "x": 160,
+      "y": 10088,
+      "width": 9568,
+      "height": 2596,
+      "children": [
+        "104:7642",
+        "104:7712",
+        "104:7785",
+        "104:7858",
+        "104:7931",
+        "104:8004",
+        "104:8077",
+        "104:8150",
+        "104:8220",
+        "104:8293"
+      ]
+    },
+    {
+      "id": "130:18976",
+      "name": "06 · 15 Nov · Earlier drawer components and inspection",
+      "x": 160,
+      "y": 12944,
+      "width": 8054,
+      "height": 1300,
+      "children": [
+        "104:8553",
+        "113:13042",
+        "113:8869",
+        "104:7574",
+        "104:4347"
+      ]
+    },
+    {
+      "id": "184:74610",
+      "name": "07 · 15 Nov · Comparison F non-drawer handoff",
+      "x": 160,
+      "y": 14504,
+      "width": 4416,
+      "height": 1328,
+      "children": [
+        "130:5881",
+        "91:10288",
+        "92:5958"
+      ]
+    },
+    {
+      "id": "184:74611",
+      "name": "08 · 14–15 Nov · Comparison board and earlier B",
+      "x": 160,
+      "y": 16092,
+      "width": 9302,
+      "height": 4793,
+      "children": [
+        "17:882",
+        "52:2451",
+        "52:2510",
+        "52:2511",
+        "56:3026"
+      ]
+    },
+    {
+      "id": "128:2574",
+      "name": "09 · 14 Nov · Row explorations and initial screen",
+      "x": 160,
+      "y": 21145,
+      "width": 5840,
+      "height": 1910,
+      "children": [
+        "47:1675",
+        "34:1391",
+        "28:882",
+        "2:1811"
+      ]
+    },
+    {
+      "id": "128:2575",
+      "name": "10 · 14 Nov · Retained row and header components",
+      "x": 160,
+      "y": 23315,
+      "width": 7445,
+      "height": 808,
+      "children": [
+        "47:1540",
+        "34:1388",
+        "28:837",
+        "9:784",
+        "2:1810"
+      ]
+    },
+    {
+      "id": "128:2576",
+      "name": "11 · 14 Nov · Superseded layout definitions",
+      "x": 160,
+      "y": 24383,
+      "width": 7216,
+      "height": 474,
+      "children": [
+        "68:2606",
+        "68:2509",
+        "63:2373",
+        "60:2301",
+        "9:852"
+      ]
+    },
+    {
+      "id": "128:2577",
+      "name": "12 · 14 Nov · Inspections and provenance",
+      "x": 160,
+      "y": 25117,
+      "width": 5056,
+      "height": 506,
+      "children": [
+        "47:1689",
+        "34:1807",
+        "4:869",
+        "2:2808"
+      ]
+    }
+  ],
+  "preservation": [
+    {
+      "id": "2:1811",
+      "before": {
+        "id": "2:1811",
+        "hash": "10d3ed62",
+        "count": 707
+      },
+      "after": {
+        "hash": "10d3ed62",
+        "count": 707
+      },
+      "unchanged": true
+    },
+    {
+      "id": "28:882",
+      "before": {
+        "id": "28:882",
+        "hash": "1d46ee1b",
+        "count": 234
+      },
+      "after": {
+        "hash": "1d46ee1b",
+        "count": 234
+      },
+      "unchanged": true
+    },
+    {
+      "id": "34:1391",
+      "before": {
+        "id": "34:1391",
+        "hash": "cc5f74bd",
+        "count": 392
+      },
+      "after": {
+        "hash": "cc5f74bd",
+        "count": 392
+      },
+      "unchanged": true
+    },
+    {
+      "id": "47:1675",
+      "before": {
+        "id": "47:1675",
+        "hash": "ec00b8f1",
+        "count": 538
+      },
+      "after": {
+        "hash": "ec00b8f1",
+        "count": 538
+      },
+      "unchanged": true
+    },
+    {
+      "id": "2:1810",
+      "before": {
+        "id": "2:1810",
+        "hash": "6ec3ab2b",
+        "count": 216
+      },
+      "after": {
+        "hash": "6ec3ab2b",
+        "count": 216
+      },
+      "unchanged": true
+    },
+    {
+      "id": "9:784",
+      "before": {
+        "id": "9:784",
+        "hash": "f80fd1e5",
+        "count": 34
+      },
+      "after": {
+        "hash": "f80fd1e5",
+        "count": 34
+      },
+      "unchanged": true
+    },
+    {
+      "id": "28:837",
+      "before": {
+        "id": "28:837",
+        "hash": "4f84867a",
+        "count": 45
+      },
+      "after": {
+        "hash": "4f84867a",
+        "count": 45
+      },
+      "unchanged": true
+    },
+    {
+      "id": "34:1388",
+      "before": {
+        "id": "34:1388",
+        "hash": "566fd9ba",
+        "count": 129
+      },
+      "after": {
+        "hash": "566fd9ba",
+        "count": 129
+      },
+      "unchanged": true
+    },
+    {
+      "id": "47:1540",
+      "before": {
+        "id": "47:1540",
+        "hash": "a34326ac",
+        "count": 153
+      },
+      "after": {
+        "hash": "a34326ac",
+        "count": 153
+      },
+      "unchanged": true
+    },
+    {
+      "id": "9:852",
+      "before": {
+        "id": "9:852",
+        "hash": "282c053",
+        "count": 62
+      },
+      "after": {
+        "hash": "282c053",
+        "count": 62
+      },
+      "unchanged": true
+    },
+    {
+      "id": "60:2301",
+      "before": {
+        "id": "60:2301",
+        "hash": "931b3b5a",
+        "count": 133
+      },
+      "after": {
+        "hash": "931b3b5a",
+        "count": 133
+      },
+      "unchanged": true
+    },
+    {
+      "id": "63:2373",
+      "before": {
+        "id": "63:2373",
+        "hash": "3a986d08",
+        "count": 133
+      },
+      "after": {
+        "hash": "3a986d08",
+        "count": 133
+      },
+      "unchanged": true
+    },
+    {
+      "id": "68:2509",
+      "before": {
+        "id": "68:2509",
+        "hash": "b879e177",
+        "count": 153
+      },
+      "after": {
+        "hash": "b879e177",
+        "count": 153
+      },
+      "unchanged": true
+    },
+    {
+      "id": "68:2606",
+      "before": {
+        "id": "68:2606",
+        "hash": "69d0e5c6",
+        "count": 18
+      },
+      "after": {
+        "hash": "69d0e5c6",
+        "count": 18
+      },
+      "unchanged": true
+    },
+    {
+      "id": "2:2808",
+      "before": {
+        "id": "2:2808",
+        "hash": "92aaf703",
+        "count": 6
+      },
+      "after": {
+        "hash": "92aaf703",
+        "count": 6
+      },
+      "unchanged": true
+    },
+    {
+      "id": "4:869",
+      "before": {
+        "id": "4:869",
+        "hash": "544548c0",
+        "count": 17
+      },
+      "after": {
+        "hash": "544548c0",
+        "count": 17
+      },
+      "unchanged": true
+    },
+    {
+      "id": "34:1807",
+      "before": {
+        "id": "34:1807",
+        "hash": "ab645750",
+        "count": 129
+      },
+      "after": {
+        "hash": "ab645750",
+        "count": 129
+      },
+      "unchanged": true
+    },
+    {
+      "id": "47:1689",
+      "before": {
+        "id": "47:1689",
+        "hash": "b9d2a91b",
+        "count": 153
+      },
+      "after": {
+        "hash": "b9d2a91b",
+        "count": 153
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:4347",
+      "before": {
+        "id": "104:4347",
+        "hash": "10ca7c29",
+        "count": 76
+      },
+      "after": {
+        "hash": "10ca7c29",
+        "count": 76
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:7574",
+      "before": {
+        "id": "104:7574",
+        "hash": "2aebd04e",
+        "count": 71
+      },
+      "after": {
+        "hash": "2aebd04e",
+        "count": 71
+      },
+      "unchanged": true
+    },
+    {
+      "id": "113:8869",
+      "before": {
+        "id": "113:8869",
+        "hash": "44ba6f71",
+        "count": 154
+      },
+      "after": {
+        "hash": "44ba6f71",
+        "count": 154
+      },
+      "unchanged": true
+    },
+    {
+      "id": "113:13042",
+      "before": {
+        "id": "113:13042",
+        "hash": "4dff279e",
+        "count": 154
+      },
+      "after": {
+        "hash": "4dff279e",
+        "count": 154
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:8553",
+      "before": {
+        "id": "104:8553",
+        "hash": "f9c5213b",
+        "count": 4
+      },
+      "after": {
+        "hash": "f9c5213b",
+        "count": 4
+      },
+      "unchanged": true
+    },
+    {
+      "id": "130:5881",
+      "before": {
+        "id": "130:5881",
+        "hash": "be6a4628",
+        "count": 2343
+      },
+      "after": {
+        "hash": "be6a4628",
+        "count": 2343
+      },
+      "unchanged": true
+    },
+    {
+      "id": "137:24947",
+      "before": {
+        "id": "137:24947",
+        "hash": "6d879d57",
+        "count": 519
+      },
+      "after": {
+        "hash": "6d879d57",
+        "count": 519
+      },
+      "unchanged": true
+    },
+    {
+      "id": "137:25480",
+      "before": {
+        "id": "137:25480",
+        "hash": "36c4a786",
+        "count": 3203
+      },
+      "after": {
+        "hash": "36c4a786",
+        "count": 3203
+      },
+      "unchanged": true
+    },
+    {
+      "id": "137:28731",
+      "before": {
+        "id": "137:28731",
+        "hash": "85603fd9",
+        "count": 3209
+      },
+      "after": {
+        "hash": "fefaace0",
+        "count": 3209
+      },
+      "unchanged": false
+    },
+    {
+      "id": "137:32790",
+      "before": {
+        "id": "137:32790",
+        "hash": "bea2f290",
+        "count": 3203
+      },
+      "after": {
+        "hash": "4bd6e9f7",
+        "count": 3203
+      },
+      "unchanged": false
+    },
+    {
+      "id": "137:35997",
+      "before": {
+        "id": "137:35997",
+        "hash": "1dceadb2",
+        "count": 86
+      },
+      "after": {
+        "hash": "1dceadb2",
+        "count": 86
+      },
+      "unchanged": true
+    },
+    {
+      "id": "137:36168",
+      "before": {
+        "id": "137:36168",
+        "hash": "95743c6",
+        "count": 1
+      },
+      "after": {
+        "hash": "95743c6",
+        "count": 1
+      },
+      "unchanged": true
+    },
+    {
+      "id": "139:2791",
+      "before": {
+        "id": "139:2791",
+        "hash": "ac3fee23",
+        "count": 519
+      },
+      "after": {
+        "hash": "ac3fee23",
+        "count": 519
+      },
+      "unchanged": true
+    },
+    {
+      "id": "139:3310",
+      "before": {
+        "id": "139:3310",
+        "hash": "1c9c425c",
+        "count": 861
+      },
+      "after": {
+        "hash": "1c9c425c",
+        "count": 861
+      },
+      "unchanged": true
+    },
+    {
+      "id": "145:21535",
+      "before": {
+        "id": "145:21535",
+        "hash": "ef0ec14f",
+        "count": 597
+      },
+      "after": {
+        "hash": "ef0ec14f",
+        "count": 597
+      },
+      "unchanged": true
+    },
+    {
+      "id": "145:22172",
+      "before": {
+        "id": "145:22172",
+        "hash": "9de8e4d2",
+        "count": 4214
+      },
+      "after": {
+        "hash": "9de8e4d2",
+        "count": 4214
+      },
+      "unchanged": true
+    },
+    {
+      "id": "145:26434",
+      "before": {
+        "id": "145:26434",
+        "hash": "cf9c941f",
+        "count": 4220
+      },
+      "after": {
+        "hash": "db1340cc",
+        "count": 4220
+      },
+      "unchanged": false
+    },
+    {
+      "id": "145:31634",
+      "before": {
+        "id": "145:31634",
+        "hash": "fff73daf",
+        "count": 4214
+      },
+      "after": {
+        "hash": "f14f13ae",
+        "count": 4214
+      },
+      "unchanged": false
+    },
+    {
+      "id": "145:35852",
+      "before": {
+        "id": "145:35852",
+        "hash": "5f969e15",
+        "count": 597
+      },
+      "after": {
+        "hash": "5f969e15",
+        "count": 597
+      },
+      "unchanged": true
+    },
+    {
+      "id": "145:36449",
+      "before": {
+        "id": "145:36449",
+        "hash": "b3572089",
+        "count": 99
+      },
+      "after": {
+        "hash": "b3572089",
+        "count": 99
+      },
+      "unchanged": true
+    },
+    {
+      "id": "145:36646",
+      "before": {
+        "id": "145:36646",
+        "hash": "2bb6ddaf",
+        "count": 99
+      },
+      "after": {
+        "hash": "2bb6ddaf",
+        "count": 99
+      },
+      "unchanged": true
+    },
+    {
+      "id": "145:36843",
+      "before": {
+        "id": "145:36843",
+        "hash": "632434ed",
+        "count": 1
+      },
+      "after": {
+        "hash": "632434ed",
+        "count": 1
+      },
+      "unchanged": true
+    },
+    {
+      "id": "146:5904",
+      "before": {
+        "id": "146:5904",
+        "hash": "3ae854a8",
+        "count": 991
+      },
+      "after": {
+        "hash": "3ae854a8",
+        "count": 991
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:4423",
+      "before": {
+        "id": "104:4423",
+        "hash": "1da4cfa5",
+        "count": 3109
+      },
+      "after": {
+        "hash": "1da4cfa5",
+        "count": 3109
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:8366",
+      "before": {
+        "id": "104:8366",
+        "hash": "1a43602c",
+        "count": 3181
+      },
+      "after": {
+        "hash": "1a43602c",
+        "count": 3181
+      },
+      "unchanged": true
+    },
+    {
+      "id": "113:8945",
+      "before": {
+        "id": "113:8945",
+        "hash": "c34d35d1",
+        "count": 3875
+      },
+      "after": {
+        "hash": "c34d35d1",
+        "count": 3875
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:7642",
+      "before": {
+        "id": "104:7642",
+        "hash": "520072e7",
+        "count": 73
+      },
+      "after": {
+        "hash": "520072e7",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:7712",
+      "before": {
+        "id": "104:7712",
+        "hash": "27653f14",
+        "count": 73
+      },
+      "after": {
+        "hash": "27653f14",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:7785",
+      "before": {
+        "id": "104:7785",
+        "hash": "837573c0",
+        "count": 73
+      },
+      "after": {
+        "hash": "837573c0",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:7858",
+      "before": {
+        "id": "104:7858",
+        "hash": "f4ab61e",
+        "count": 73
+      },
+      "after": {
+        "hash": "f4ab61e",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:7931",
+      "before": {
+        "id": "104:7931",
+        "hash": "e04220f6",
+        "count": 73
+      },
+      "after": {
+        "hash": "e04220f6",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:8004",
+      "before": {
+        "id": "104:8004",
+        "hash": "fb99944a",
+        "count": 73
+      },
+      "after": {
+        "hash": "fb99944a",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:8077",
+      "before": {
+        "id": "104:8077",
+        "hash": "c3aef922",
+        "count": 73
+      },
+      "after": {
+        "hash": "c3aef922",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:8150",
+      "before": {
+        "id": "104:8150",
+        "hash": "4a2736fb",
+        "count": 73
+      },
+      "after": {
+        "hash": "4a2736fb",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:8220",
+      "before": {
+        "id": "104:8220",
+        "hash": "e4da4e8b",
+        "count": 73
+      },
+      "after": {
+        "hash": "e4da4e8b",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "104:8293",
+      "before": {
+        "id": "104:8293",
+        "hash": "5a9c6758",
+        "count": 73
+      },
+      "after": {
+        "hash": "5a9c6758",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "17:882",
+      "before": {
+        "id": "17:882",
+        "hash": "d73071af",
+        "count": 7771
+      },
+      "after": {
+        "hash": "d73071af",
+        "count": 7771
+      },
+      "unchanged": true
+    },
+    {
+      "id": "52:2451",
+      "before": {
+        "id": "52:2451",
+        "hash": "53275320",
+        "count": 707
+      },
+      "after": {
+        "hash": "53275320",
+        "count": 707
+      },
+      "unchanged": true
+    },
+    {
+      "id": "52:2510",
+      "before": {
+        "id": "52:2510",
+        "hash": "d28f290d",
+        "count": 1
+      },
+      "after": {
+        "hash": "d28f290d",
+        "count": 1
+      },
+      "unchanged": true
+    },
+    {
+      "id": "52:2511",
+      "before": {
+        "id": "52:2511",
+        "hash": "275e2afc",
+        "count": 45
+      },
+      "after": {
+        "hash": "275e2afc",
+        "count": 45
+      },
+      "unchanged": true
+    },
+    {
+      "id": "56:3026",
+      "before": {
+        "id": "56:3026",
+        "hash": "4e15f56c",
+        "count": 45
+      },
+      "after": {
+        "hash": "4e15f56c",
+        "count": 45
+      },
+      "unchanged": true
+    },
+    {
+      "id": "91:10288",
+      "before": {
+        "id": "91:10288",
+        "hash": "5af9e7f1",
+        "count": 153
+      },
+      "after": {
+        "hash": "5af9e7f1",
+        "count": 153
+      },
+      "unchanged": true
+    },
+    {
+      "id": "92:5958",
+      "before": {
+        "id": "92:5958",
+        "hash": "eef24ab8",
+        "count": 179
+      },
+      "after": {
+        "hash": "eef24ab8",
+        "count": 179
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:37223",
+      "before": {
+        "id": "150:37223",
+        "hash": "31fe6cc8",
+        "count": 4286
+      },
+      "after": {
+        "hash": "31fe6cc8",
+        "count": 4286
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:20871",
+      "before": {
+        "id": "150:20871",
+        "hash": "911a6758",
+        "count": 73
+      },
+      "after": {
+        "hash": "911a6758",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:20944",
+      "before": {
+        "id": "150:20944",
+        "hash": "1883d6ee",
+        "count": 73
+      },
+      "after": {
+        "hash": "1883d6ee",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21017",
+      "before": {
+        "id": "150:21017",
+        "hash": "14e47bd7",
+        "count": 73
+      },
+      "after": {
+        "hash": "14e47bd7",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21090",
+      "before": {
+        "id": "150:21090",
+        "hash": "7dc18dbf",
+        "count": 73
+      },
+      "after": {
+        "hash": "7dc18dbf",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21163",
+      "before": {
+        "id": "150:21163",
+        "hash": "c70c81ce",
+        "count": 73
+      },
+      "after": {
+        "hash": "c70c81ce",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21236",
+      "before": {
+        "id": "150:21236",
+        "hash": "7ee7ed08",
+        "count": 73
+      },
+      "after": {
+        "hash": "7ee7ed08",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21309",
+      "before": {
+        "id": "150:21309",
+        "hash": "abaf6262",
+        "count": 73
+      },
+      "after": {
+        "hash": "abaf6262",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21382",
+      "before": {
+        "id": "150:21382",
+        "hash": "828a282",
+        "count": 73
+      },
+      "after": {
+        "hash": "828a282",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21455",
+      "before": {
+        "id": "150:21455",
+        "hash": "c02f8b10",
+        "count": 73
+      },
+      "after": {
+        "hash": "c02f8b10",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21528",
+      "before": {
+        "id": "150:21528",
+        "hash": "68874e21",
+        "count": 73
+      },
+      "after": {
+        "hash": "68874e21",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:37739",
+      "before": {
+        "id": "150:37739",
+        "hash": "a8a8b7a5",
+        "count": 1
+      },
+      "after": {
+        "hash": "a8a8b7a5",
+        "count": 1
+      },
+      "unchanged": true
+    }
+  ],
+  "currentUnchanged": true,
+  "emptyPages": [
+    {
+      "id": "0:1",
+      "name": "Archive · Non-drawer explorations",
+      "children": 0
+    },
+    {
+      "id": "104:4346",
+      "name": "Archive · Earlier drawer",
+      "children": 0
+    },
+    {
+      "id": "17:881",
+      "name": "Archive · Comparisons",
+      "children": 0
+    },
+    {
+      "id": "176:31966",
+      "name": "Archive · Initial Open drawer",
+      "children": 0
+    }
+  ],
+  "builtAt": "2026-11-16T21:28:52.866Z"
+}

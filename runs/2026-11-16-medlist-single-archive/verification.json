@@ -1,0 +1,416 @@
+{
+  "sections": [
+    {
+      "id": "176:31967",
+      "name": "01 · 16 Nov · Initial Open drawer",
+      "y": 360,
+      "height": 2508
+    },
+    {
+      "id": "184:74608",
+      "name": "02 · 16 Nov · Structured table with inline details",
+      "y": 3128,
+      "height": 2310
+    },
+    {
+      "id": "184:74609",
+      "name": "03 · 16 Nov · Five-column table exploration",
+      "y": 5698,
+      "height": 2570
+    },
+    {
+      "id": "130:18977",
+      "name": "04 · 15 Nov · Earlier drawer and reconciliation",
+      "y": 8528,
+      "height": 1300
+    },
+    {
+      "id": "130:18978",
+      "name": "05 · 15 Nov · Earlier drawer prototype states",
+      "y": 10088,
+      "height": 2596
+    },
+    {
+      "id": "130:18976",
+      "name": "06 · 15 Nov · Earlier drawer components and inspection",
+      "y": 12944,
+      "height": 1300
+    },
+    {
+      "id": "184:74610",
+      "name": "07 · 15 Nov · Comparison F non-drawer handoff",
+      "y": 14504,
+      "height": 1328
+    },
+    {
+      "id": "184:74611",
+      "name": "08 · 14–15 Nov · Comparison board and earlier B",
+      "y": 16092,
+      "height": 4793
+    },
+    {
+      "id": "128:2574",
+      "name": "09 · 14 Nov · Row explorations and initial screen",
+      "y": 21145,
+      "height": 1910
+    },
+    {
+      "id": "128:2575",
+      "name": "10 · 14 Nov · Retained row and header components",
+      "y": 23315,
+      "height": 808
+    },
+    {
+      "id": "128:2576",
+      "name": "11 · 14 Nov · Superseded layout definitions",
+      "y": 24383,
+      "height": 474
+    },
+    {
+      "id": "128:2577",
+      "name": "12 · 14 Nov · Inspections and provenance",
+      "y": 25117,
+      "height": 506
+    }
+  ],
+  "overlaps": [],
+  "checkedDestinations": 559,
+  "missing": [],
+  "special": [
+    {
+      "id": "137:28731",
+      "w": 1440,
+      "h": 1332,
+      "table": 1216,
+      "actions": [
+        {
+          "id": "137:32784",
+          "name": "Cancel reconciliation",
+          "reactions": []
+        },
+        {
+          "id": "137:28773",
+          "name": "Complete reconciliation",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "137:32790",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "137:32790",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I137:28780;2:2214",
+          "name": "Complete reconciliation",
+          "reactions": []
+        }
+      ],
+      "rows": [
+        {
+          "id": "137:28839",
+          "h": 81,
+          "name": "Medication / Alprazolam 0.25 mg tablet / Five-column"
+        },
+        {
+          "id": "137:28840",
+          "h": 81,
+          "name": "Medication / Cetirizine 10 mg tablet / Five-column"
+        },
+        {
+          "id": "137:28841",
+          "h": 81,
+          "name": "Medication / Aspirin 81 mg delayed-release tablet / Five-column"
+        },
+        {
+          "id": "137:28842",
+          "h": 81,
+          "name": "Medication / Doxycycline hyclate 100 mg capsule / Five-column"
+        },
+        {
+          "id": "137:28843",
+          "h": 81,
+          "name": "Medication / Furosemide 20 mg tablet / Five-column"
+        },
+        {
+          "id": "137:28844",
+          "h": 81,
+          "name": "Medication / Hydrocortisone 1% compounded cream / Five-column"
+        },
+        {
+          "id": "137:28845",
+          "h": 81,
+          "name": "Medication / Melatonin 3 mg tablet / Five-column"
+        },
+        {
+          "id": "137:28846",
+          "h": 81,
+          "name": "Medication / Metformin 500 mg tablet / Five-column"
+        },
+        {
+          "id": "137:28847",
+          "h": 81,
+          "name": "Medication / Simvastatin 20 mg tablet / Five-column"
+        },
+        {
+          "id": "137:28848",
+          "h": 81,
+          "name": "Medication / Acetaminophen 500 mg tablet / Five-column"
+        }
+      ]
+    },
+    {
+      "id": "137:32790",
+      "w": 1440,
+      "h": 1332,
+      "table": 1216,
+      "actions": [
+        {
+          "id": "137:32832",
+          "name": "Enter reconciliation",
+          "reactions": []
+        },
+        {
+          "id": "I137:32839;2:2214",
+          "name": "Complete reconciliation",
+          "reactions": []
+        }
+      ],
+      "rows": [
+        {
+          "id": "137:32898",
+          "h": 81,
+          "name": "Medication / Alprazolam 0.25 mg tablet / Five-column"
+        },
+        {
+          "id": "137:32899",
+          "h": 81,
+          "name": "Medication / Cetirizine 10 mg tablet / Five-column"
+        },
+        {
+          "id": "137:32900",
+          "h": 81,
+          "name": "Medication / Aspirin 81 mg delayed-release tablet / Five-column"
+        },
+        {
+          "id": "137:32901",
+          "h": 81,
+          "name": "Medication / Doxycycline hyclate 100 mg capsule / Five-column"
+        },
+        {
+          "id": "137:32902",
+          "h": 81,
+          "name": "Medication / Furosemide 20 mg tablet / Five-column"
+        },
+        {
+          "id": "137:32903",
+          "h": 81,
+          "name": "Medication / Hydrocortisone 1% compounded cream / Five-column"
+        },
+        {
+          "id": "137:32904",
+          "h": 81,
+          "name": "Medication / Melatonin 3 mg tablet / Five-column"
+        },
+        {
+          "id": "137:32905",
+          "h": 81,
+          "name": "Medication / Metformin 500 mg tablet / Five-column"
+        },
+        {
+          "id": "137:32906",
+          "h": 81,
+          "name": "Medication / Simvastatin 20 mg tablet / Five-column"
+        },
+        {
+          "id": "137:32907",
+          "h": 81,
+          "name": "Medication / Acetaminophen 500 mg tablet / Five-column"
+        }
+      ]
+    },
+    {
+      "id": "145:26434",
+      "w": 1440,
+      "h": 1112,
+      "table": 1216,
+      "actions": [
+        {
+          "id": "145:31628",
+          "name": "Cancel reconciliation",
+          "reactions": []
+        },
+        {
+          "id": "145:26476",
+          "name": "Complete reconciliation",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "145:31634",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "145:31634",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I145:26483;2:2214",
+          "name": "Complete reconciliation",
+          "reactions": []
+        }
+      ],
+      "rows": [
+        {
+          "id": "145:26566",
+          "h": 59,
+          "name": "Medication / Alprazolam 0.25 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:26567",
+          "h": 59,
+          "name": "Medication / Cetirizine 10 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:26568",
+          "h": 59,
+          "name": "Medication / Aspirin 81 mg delayed-release tablet / Structured sig"
+        },
+        {
+          "id": "145:26569",
+          "h": 59,
+          "name": "Medication / Doxycycline hyclate 100 mg capsule / Structured sig"
+        },
+        {
+          "id": "145:26570",
+          "h": 59,
+          "name": "Medication / Furosemide 20 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:26571",
+          "h": 59,
+          "name": "Medication / Hydrocortisone 1% compounded cream / Structured sig"
+        },
+        {
+          "id": "145:26572",
+          "h": 59,
+          "name": "Medication / Melatonin 3 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:26573",
+          "h": 59,
+          "name": "Medication / Metformin 500 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:26574",
+          "h": 59,
+          "name": "Medication / Simvastatin 20 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:26575",
+          "h": 59,
+          "name": "Medication / Acetaminophen 500 mg tablet / Structured sig"
+        }
+      ]
+    },
+    {
+      "id": "145:31634",
+      "w": 1440,
+      "h": 1112,
+      "table": 1216,
+      "actions": [
+        {
+          "id": "145:31676",
+          "name": "Enter reconciliation",
+          "reactions": []
+        },
+        {
+          "id": "I145:31683;2:2214",
+          "name": "Complete reconciliation",
+          "reactions": []
+        }
+      ],
+      "rows": [
+        {
+          "id": "145:31766",
+          "h": 59,
+          "name": "Medication / Alprazolam 0.25 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:31767",
+          "h": 59,
+          "name": "Medication / Cetirizine 10 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:31768",
+          "h": 59,
+          "name": "Medication / Aspirin 81 mg delayed-release tablet / Structured sig"
+        },
+        {
+          "id": "145:31769",
+          "h": 59,
+          "name": "Medication / Doxycycline hyclate 100 mg capsule / Structured sig"
+        },
+        {
+          "id": "145:31770",
+          "h": 59,
+          "name": "Medication / Furosemide 20 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:31771",
+          "h": 59,
+          "name": "Medication / Hydrocortisone 1% compounded cream / Structured sig"
+        },
+        {
+          "id": "145:31772",
+          "h": 59,
+          "name": "Medication / Melatonin 3 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:31773",
+          "h": 59,
+          "name": "Medication / Metformin 500 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:31774",
+          "h": 59,
+          "name": "Medication / Simvastatin 20 mg tablet / Structured sig"
+        },
+        {
+          "id": "145:31775",
+          "h": 59,
+          "name": "Medication / Acetaminophen 500 mg tablet / Structured sig"
+        }
+      ]
+    }
+  ],
+  "verifiedAt": "2026-11-16T21:30:36.658Z"
+}

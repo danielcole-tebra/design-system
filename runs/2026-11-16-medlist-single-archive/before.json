@@ -1,0 +1,658 @@
+[
+  {
+    "id": "0:1",
+    "name": "Archive · Non-drawer explorations",
+    "roots": [
+      {
+        "id": "130:5881",
+        "name": "Latest non-drawer · Comparison F",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1184
+      },
+      {
+        "id": "137:24947",
+        "name": "Medlist/Five-column inline row",
+        "type": "COMPONENT_SET",
+        "w": 3840,
+        "h": 600
+      },
+      {
+        "id": "137:25480",
+        "name": "Trial · Five-column medication list",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1332
+      },
+      {
+        "id": "137:28731",
+        "name": "Trial · Reconcile medications",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1332
+      },
+      {
+        "id": "137:32790",
+        "name": "Trial · Reconciliation completed",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1332
+      },
+      {
+        "id": "137:35997",
+        "name": "Inspection · Five-column expanded row",
+        "type": "INSTANCE",
+        "w": 1216,
+        "h": 173
+      },
+      {
+        "id": "137:36168",
+        "name": "README · Five-column trial",
+        "type": "TEXT",
+        "w": 1440,
+        "h": 150
+      },
+      {
+        "id": "139:2791",
+        "name": "Inspection · Five-column variants · 2026-11-16",
+        "type": "FRAME",
+        "w": 3840,
+        "h": 600
+      },
+      {
+        "id": "139:3310",
+        "name": "Inspection · Five-column content roundtrips · 2026-11-16",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 954
+      },
+      {
+        "id": "145:21535",
+        "name": "Medlist/Structured sig inline row",
+        "type": "COMPONENT_SET",
+        "w": 3840,
+        "h": 650
+      },
+      {
+        "id": "145:22172",
+        "name": "Trial · Structured sig medication list",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "145:26434",
+        "name": "Trial · Structured sig reconciliation",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "145:31634",
+        "name": "Trial · Structured sig reconciliation completed",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "145:35852",
+        "name": "Inspection · Structured sig variants · 2026-11-16",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 914
+      },
+      {
+        "id": "145:36449",
+        "name": "Inspection · Structured sig compound details",
+        "type": "INSTANCE",
+        "w": 1216,
+        "h": 219
+      },
+      {
+        "id": "145:36646",
+        "name": "Inspection · Structured sig source and failed order",
+        "type": "INSTANCE",
+        "w": 1216,
+        "h": 255
+      },
+      {
+        "id": "145:36843",
+        "name": "README · Structured sig trial",
+        "type": "TEXT",
+        "w": 1440,
+        "h": 160
+      },
+      {
+        "id": "146:5904",
+        "name": "Inspection · Structured sig content roundtrips · 2026-11-16",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 734
+      }
+    ],
+    "flows": [
+      {
+        "nodeId": "130:5881",
+        "name": "Medlist · Non-drawer"
+      },
+      {
+        "nodeId": "137:25480",
+        "name": "Five-column non-drawer trial"
+      },
+      {
+        "nodeId": "145:22172",
+        "name": "Structured sig medication trial"
+      },
+      {
+        "nodeId": "145:26434",
+        "name": "Five-column non-drawer trial"
+      },
+      {
+        "nodeId": "145:31634",
+        "name": "Five-column non-drawer trial"
+      },
+      {
+        "nodeId": "137:28731",
+        "name": "Medlist · Non-drawer"
+      },
+      {
+        "nodeId": "137:32790",
+        "name": "Medlist · Non-drawer"
+      }
+    ]
+  },
+  {
+    "id": "104:4346",
+    "name": "Archive · Earlier drawer",
+    "roots": [
+      {
+        "id": "130:18977",
+        "name": "Latest · Drawer and reconciliation",
+        "type": "SECTION",
+        "w": 4768,
+        "h": 1300,
+        "children": [
+          {
+            "id": "104:4423",
+            "name": "G · Current medications · Details in sidesheet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:8366",
+            "name": "G · Sidesheet open · Alprazolam",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "113:8945",
+            "name": "G · Reconcile medications",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          }
+        ]
+      },
+      {
+        "id": "130:18978",
+        "name": "Prototype states · Medication detail drawers",
+        "type": "SECTION",
+        "w": 7968,
+        "h": 2620,
+        "children": [
+          {
+            "id": "104:7642",
+            "name": "Details overlay · Alprazolam 0.25 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:7712",
+            "name": "Details overlay · Cetirizine 10 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:7785",
+            "name": "Details overlay · Aspirin 81 mg delayed-release tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:7858",
+            "name": "Details overlay · Doxycycline hyclate 100 mg capsule",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:7931",
+            "name": "Details overlay · Furosemide 20 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:8004",
+            "name": "Details overlay · Hydrocortisone 1% compounded cream",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:8077",
+            "name": "Details overlay · Melatonin 3 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:8150",
+            "name": "Details overlay · Metformin 500 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:8220",
+            "name": "Details overlay · Simvastatin 20 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          },
+          {
+            "id": "104:8293",
+            "name": "Details overlay · Acetaminophen 500 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1156
+          }
+        ]
+      }
+    ],
+    "flows": [
+      {
+        "nodeId": "104:4423",
+        "name": "Medlist · Drawer"
+      },
+      {
+        "nodeId": "113:8945",
+        "name": "Medlist · Reconciliation"
+      }
+    ]
+  },
+  {
+    "id": "17:881",
+    "name": "Archive · Comparisons",
+    "roots": [
+      {
+        "id": "17:882",
+        "name": "Medlist · Original baseline and live rebuild",
+        "type": "FRAME",
+        "w": 9174,
+        "h": 2743
+      },
+      {
+        "id": "52:2451",
+        "name": "ARCHIVE · Comparison B before spacing · 2026-11-14",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1766
+      },
+      {
+        "id": "52:2510",
+        "name": "README · Archived Comparison B",
+        "type": "TEXT",
+        "w": 1440,
+        "h": 48
+      },
+      {
+        "id": "52:2511",
+        "name": "Medlist/Comparison B spaced row",
+        "type": "COMPONENT",
+        "w": 1216,
+        "h": 81
+      },
+      {
+        "id": "56:3026",
+        "name": "ARCHIVE · Comparison B row · Filled overflow · 2026-11-14",
+        "type": "COMPONENT",
+        "w": 1216,
+        "h": 81
+      },
+      {
+        "id": "91:10288",
+        "name": "Medlist/Last activity and detail markers",
+        "type": "COMPONENT_SET",
+        "w": 1264,
+        "h": 242
+      },
+      {
+        "id": "92:5958",
+        "name": "Inspection · Comparison F · Expanded marker cases",
+        "type": "FRAME",
+        "w": 1264,
+        "h": 438
+      }
+    ],
+    "flows": []
+  },
+  {
+    "id": "128:2573",
+    "name": "Archive · Components and studies",
+    "roots": [
+      {
+        "id": "128:2574",
+        "name": "Earlier screens and studies",
+        "type": "SECTION",
+        "w": 3260,
+        "h": 3076,
+        "children": [
+          {
+            "id": "2:1811",
+            "name": "Current medications · Desktop 1440",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1766
+          },
+          {
+            "id": "28:882",
+            "name": "Row review · Density proposal · Not applied",
+            "type": "FRAME",
+            "w": 1264,
+            "h": 1091
+          },
+          {
+            "id": "34:1391",
+            "name": "Row review · Progressive disclosure · Not applied",
+            "type": "FRAME",
+            "w": 1264,
+            "h": 1046
+          },
+          {
+            "id": "47:1675",
+            "name": "Row review · Single-line disclosure · Not applied",
+            "type": "FRAME",
+            "w": 1264,
+            "h": 1014
+          }
+        ]
+      },
+      {
+        "id": "128:2575",
+        "name": "Local components · Retained dependencies",
+        "type": "SECTION",
+        "w": 3260,
+        "h": 1568,
+        "children": [
+          {
+            "id": "2:1810",
+            "name": "First-batch local components · Compositions unapproved",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 664
+          },
+          {
+            "id": "9:784",
+            "name": "Patient header/SDE Updated 11-13 mirror",
+            "type": "COMPONENT",
+            "w": 1493,
+            "h": 68
+          },
+          {
+            "id": "28:837",
+            "name": "Medlist/Medication row compact proposal",
+            "type": "COMPONENT",
+            "w": 1216,
+            "h": 81
+          },
+          {
+            "id": "34:1388",
+            "name": "Medlist/Progressive disclosure proposal",
+            "type": "COMPONENT_SET",
+            "w": 1264,
+            "h": 278
+          },
+          {
+            "id": "47:1540",
+            "name": "Medlist/Single-line disclosure proposal",
+            "type": "COMPONENT_SET",
+            "w": 1264,
+            "h": 242
+          }
+        ]
+      },
+      {
+        "id": "128:2576",
+        "name": "Superseded components and layouts",
+        "type": "SECTION",
+        "w": 3260,
+        "h": 1096,
+        "children": [
+          {
+            "id": "9:852",
+            "name": "SUPERSEDED · Invented patient header · retained 2026-11-14",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 191
+          },
+          {
+            "id": "60:2301",
+            "name": "ARCHIVE · Single-line rows before table alignment · 2026-11-14",
+            "type": "COMPONENT_SET",
+            "w": 1264,
+            "h": 330
+          },
+          {
+            "id": "63:2373",
+            "name": "ARCHIVE · Detached detail panel before column disclosure · 2026-11-14",
+            "type": "COMPONENT_SET",
+            "w": 1264,
+            "h": 330
+          },
+          {
+            "id": "68:2509",
+            "name": "ARCHIVE · Before expanded-column spacing · 2026-11-14",
+            "type": "COMPONENT_SET",
+            "w": 1264,
+            "h": 254
+          },
+          {
+            "id": "68:2606",
+            "name": "ARCHIVE · Header grid before column spacing · 2026-11-14",
+            "type": "FRAME",
+            "w": 1216,
+            "h": 52
+          }
+        ]
+      },
+      {
+        "id": "128:2577",
+        "name": "Inspections and provenance notes",
+        "type": "SECTION",
+        "w": 3260,
+        "h": 978,
+        "children": [
+          {
+            "id": "2:2808",
+            "name": "README · Provenance audit · Remaining differences unapproved",
+            "type": "FRAME",
+            "w": 1216,
+            "h": 352
+          },
+          {
+            "id": "4:869",
+            "name": "Inspection · Medlist native · 2026-11-14 · Superseded icon swaps",
+            "type": "FRAME",
+            "w": 800,
+            "h": 182
+          },
+          {
+            "id": "34:1807",
+            "name": "Inspection · Disclosure content coverage · 2026-11-14",
+            "type": "FRAME",
+            "w": 1216,
+            "h": 362
+          },
+          {
+            "id": "47:1689",
+            "name": "Inspection · Single-line disclosure · 2026-11-14",
+            "type": "FRAME",
+            "w": 1216,
+            "h": 202
+          }
+        ]
+      },
+      {
+        "id": "130:18976",
+        "name": "Drawer components, inspection and prior notes",
+        "type": "SECTION",
+        "w": 3168,
+        "h": 2309,
+        "children": [
+          {
+            "id": "104:4347",
+            "name": "Medlist/Drawer row",
+            "type": "COMPONENT",
+            "w": 1216,
+            "h": 65
+          },
+          {
+            "id": "104:7574",
+            "name": "Medlist/Medication details sidesheet",
+            "type": "COMPONENT",
+            "w": 550,
+            "h": 1156
+          },
+          {
+            "id": "113:8869",
+            "name": "Medlist/Reconciliation row",
+            "type": "COMPONENT_SET",
+            "w": 1264,
+            "h": 202
+          },
+          {
+            "id": "113:13042",
+            "name": "Inspection · Reconciliation states · 2026-11-15",
+            "type": "FRAME",
+            "w": 1216,
+            "h": 146
+          },
+          {
+            "id": "104:8553",
+            "name": "README · Sidesheet exploration",
+            "type": "FRAME",
+            "w": 3040,
+            "h": 116
+          }
+        ]
+      }
+    ],
+    "flows": []
+  },
+  {
+    "id": "176:31966",
+    "name": "Archive · Initial Open drawer",
+    "roots": [
+      {
+        "id": "176:31967",
+        "name": "Initial Open drawer · Superseded by current pass",
+        "type": "SECTION",
+        "w": 6368,
+        "h": 3776,
+        "children": [
+          {
+            "id": "150:37223",
+            "name": "Structured table · Drawer open",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:20871",
+            "name": "Open drawer · Alprazolam 0.25 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:20944",
+            "name": "Open drawer · Cetirizine 10 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:21017",
+            "name": "Open drawer · Aspirin 81 mg delayed-release tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:21090",
+            "name": "Open drawer · Doxycycline hyclate 100 mg capsule",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:21163",
+            "name": "Open drawer · Furosemide 20 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:21236",
+            "name": "Open drawer · Hydrocortisone 1% compounded cream",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:21309",
+            "name": "Open drawer · Melatonin 3 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:21382",
+            "name": "Open drawer · Metformin 500 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:21455",
+            "name": "Open drawer · Simvastatin 20 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          },
+          {
+            "id": "150:21528",
+            "name": "Open drawer · Acetaminophen 500 mg tablet",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1112
+          }
+        ]
+      },
+      {
+        "id": "150:37739",
+        "name": "Historical README · First Open drawer pass",
+        "type": "TEXT",
+        "w": 1440,
+        "h": 160
+      }
+    ],
+    "flows": []
+  }
+]

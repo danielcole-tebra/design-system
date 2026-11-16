@@ -1,0 +1,56 @@
+{
+  "createdNodeIds": [],
+  "mutatedNodeIds": [
+    "160:46513"
+  ],
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 1,
+      "passed": true,
+      "checks": [
+        {
+          "id": "I150:21733;150:20593",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 5,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Exactly current and archive pages",
+          "passed": true
+        },
+        {
+          "name": "Twelve dated sections",
+          "passed": true
+        },
+        {
+          "name": "No section overlap",
+          "passed": true
+        },
+        {
+          "name": "Current row still linked to existing master",
+          "passed": true
+        },
+        {
+          "name": "Nine archive flow starts",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 0,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "verifiedAt": "2026-11-16T21:32:31.433Z"
+}

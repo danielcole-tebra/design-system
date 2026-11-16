@@ -4757,3 +4757,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist — 16 px table padding and file cleanup
 - File: yh2F6OUgdI6K0risLtKLEQ. Restored16 px left text padding throughout22 editable medication tables, then promoted the current structured-table/drawer page and grouped its current flows. Archived earlier explorations and the first Open-drawer pass; nothing deleted.
 - Evidence: runs/2026-11-16-medlist-padding-cleanup/REPORT.md, record.json, current-list.png, reconciliation.png, current-overview.png, archived-nondrawer.png, archived-five-column.png, archived-comparison.png, archive-layout.png.
+
+
+<!-- builder-run:runs/2026-11-16-medlist-single-archive -->
+## 2026-11-16 — Medlist — single chronological archive
+- File: yh2F6OUgdI6K0risLtKLEQ. Consolidated all archived work onto Medlist · Archive, with12 dated sections running roughly newest to oldest from top to bottom. After Daniel explicitly authorized removal, deleted the four verified-empty former archive pages. The file now contains only Current table and drawer plus Archive.
+- Evidence: runs/2026-11-16-medlist-single-archive/REPORT.md, record.json, newest.png, structured.png, earlier-drawer.png, oldest-studies.png.

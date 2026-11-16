@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "title": "Medlist — single chronological archive",
+  "date": "2026-11-16",
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "reviewUrl": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=176-31967",
+  "summary": "Consolidated all archived work onto Medlist · Archive, with12 dated sections running roughly newest to oldest from top to bottom. After Daniel explicitly authorized removal, deleted the four verified-empty former archive pages. The file now contains only Current table and drawer plus Archive.",
+  "timing": {
+    "start": "2026-11-16T21:25:28Z",
+    "ready": "2026-11-16T21:27:11Z",
+    "built": "2026-11-16T21:28:52.866Z",
+    "firstImage": "2026-11-16T21:29:45Z",
+    "verified": "2026-11-16T21:32:31.433Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "All73 archived artwork roots retain node IDs, descendant counts, internal geometry, text and reactions.69 fingerprints matched immediately after the move; four reconciliation-state fingerprints matched after restoring links removed by Figma reparenting.",
+    "Twelve numbered/date-labelled sections share x160 and progress vertically without overlap, from16 Nov initial Open drawer to14 Nov original studies and supporting definitions. The original comparison board remains intact within its dated section.",
+    "Current-page fingerprint was unchanged by consolidation. Only its explanatory README was subsequently updated to point to the single archive. The current row still links to master150:20570; its native Open button comparison and five measured assertions pass.",
+    "559 retained destination references resolved during the archive scan. Four dropped links were restored to their original targets using recorded construction scripts; nine original archive flow starting points were carried over.",
+    "Four page containers were confirmed empty before removal:0:1,104:4346,17:881,176:31966. Final live pages are150:20569 Current table and drawer and128:2573 Archive. No screen, component, inspection or archive-section node was deleted.",
+    "Viewed screenshots of the newest drawer group, structured-table group, earlier drawer group and oldest studies. Read section coordinates to verify vertical order and spacing. No product UI or styling edits."
+  ],
+  "findings": [
+    "DECISION — Daniel,2026-11-16, scope medlist organization. A single archive page supersedes the preceding five Archive pages. Ordering is approximate by iteration date, with dependent component/inspection material kept near its related work.",
+    "Explicit scoped exception: Daniel answered 'Delete the four empty pages' after consolidation and empty-page inspection. This overrides AGENTS.md's additive-only rule solely for the four empty former archive page containers. It authorizes no artwork deletion.",
+    "Figma reparenting cleared Cancel and re-entry reactions on four moved five-column/structured-sig reconciliation frames. Restored exact original reactions from their saved build scripts; all four complete fingerprints then matched. Source flow starts were also restored from pre-move inventory.",
+    "Stored prototype destinations verified; no presentation playback or backend behavior claimed. Existing table-padding and drawer-editing decisions remain unchanged."
+  ],
+  "effort": {
+    "through": "final verification",
+    "figmaCalls": null,
+    "otherCalls": null,
+    "searches": 0,
+    "technicalRetries": 0,
+    "canvasCorrections": 1,
+    "clarificationStops": 1,
+    "tokens": null
+  },
+  "reads": [
+    "Previously loaded figma-use and figma-generate-design; LIBRARY Efficient execution/API checks; relevant PageNode removal API declaration.",
+    "Live page inventories, archived artwork roots, source flow starts and before/after preservation fingerprints.",
+    "Original five-column and structured-sig build scripts for the four cleared navigation reactions."
+  ],
+  "screenshots": [
+    "newest.png",
+    "structured.png",
+    "earlier-drawer.png",
+    "oldest-studies.png"
+  ],
+  "evidence": {
+    "owner": "Daniel Cole",
+    "status": "Completed",
+    "archiveId": "128:2573",
+    "currentPageId": "150:20569",
+    "sections": [
+      {
+        "id": "176:31967",
+        "name": "01 · 16 Nov · Initial Open drawer",
+        "x": 160,
+        "y": 360,
+        "width": 9568,
+        "height": 2508,
+        "children": [
+          "150:37223",
+          "150:20871",
+          "150:20944",
+          "150:21017",
+          "150:21090",
+          "150:21163",
+          "150:21236",
+          "150:21309",
+          "150:21382",
+          "150:21455",
+          "150:21528",
+          "150:37739"
+        ]
+      },
+      {
+        "id": "184:74608",
+        "name": "02 · 16 Nov · Structured table with inline details",
+        "x": 160,
+        "y": 3128,
+        "width": 9120,
+        "height": 2310,
+        "children": [
+          "145:22172",
+          "145:26434",
+          "145:31634",
+          "145:36843",
+          "145:36449",
+          "145:36646",
+          "145:21535",
+          "145:35852",
+          "146:5904"
+        ]
+      },
+      {
+        "id": "184:74609",
+        "name": "03 · 16 Nov · Five-column table exploration",
+        "x": 160,
+        "y": 5698,
+        "width": 9344,
+        "height": 2570,
+        "children": [
+          "137:25480",
+          "137:28731",
+          "137:32790",
+          "137:36168",
+          "137:35997",
+          "137:24947",
+          "139:2791",
+          "139:3310"
+        ]
+      },
+      {
+        "id": "130:18977",
+        "name": "04 · 15 Nov · Earlier drawer and reconciliation",
+        "x": 160,
+        "y": 8528,
+        "width": 4768,
+        "height": 1300,
+        "children": [
+          "104:4423",
+          "104:8366",
+          "113:8945"
+        ]
+      },
+      {
+        "id": "130:18978",
+        "name": "05 · 15 Nov · Earlier drawer prototype states",
+        "x": 160,
+        "y": 10088,
+        "width": 9568,
+        "height": 2596,
+        "children": [
+          "104:7642",
+          "104:7712",
+          "104:7785",
+          "104:7858",
+          "104:7931",
+          "104:8004",
+          "104:8077",
+          "104:8150",
+          "104:8220",
+          "104:8293"
+        ]
+      },
+      {
+        "id": "130:18976",
+        "name": "06 · 15 Nov · Earlier drawer components and inspection",
+        "x": 160,
+        "y": 12944,
+        "width": 8054,
+        "height": 1300,
+        "children": [
+          "104:8553",
+          "113:13042",
+          "113:8869",
+          "104:7574",
+          "104:4347"
+        ]
+      },
+      {
+        "id": "184:74610",
+        "name": "07 · 15 Nov · Comparison F non-drawer handoff",
+        "x": 160,
+        "y": 14504,
+        "width": 4416,
+        "height": 1328,
+        "children": [
+          "130:5881",
+          "91:10288",
+          "92:5958"
+        ]
+      },
+      {
+        "id": "184:74611",
+        "name": "08 · 14–15 Nov · Comparison board and earlier B",
+        "x": 160,
+        "y": 16092,
+        "width": 9302,
+        "height": 4793,
+        "children": [
+          "17:882",
+          "52:2451",
+          "52:2510",
+          "52:2511",
+          "56:3026"
+        ]
+      },
+      {
+        "id": "128:2574",
+        "name": "09 · 14 Nov · Row explorations and initial screen",
+        "x": 160,
+        "y": 21145,
+        "width": 5840,
+        "height": 1910,
+        "children": [
+          "47:1675",
+          "34:1391",
+          "28:882",
+          "2:1811"
+        ]
+      },
+      {
+        "id": "128:2575",
+        "name": "10 · 14 Nov · Retained row and header components",
+        "x": 160,
+        "y": 23315,
+        "width": 7445,
+        "height": 808,
+        "children": [
+          "47:1540",
+          "34:1388",
+          "28:837",
+          "9:784",
+          "2:1810"
+        ]
+      },
+      {
+        "id": "128:2576",
+        "name": "11 · 14 Nov · Superseded layout definitions",
+        "x": 160,
+        "y": 24383,
+        "width": 7216,
+        "height": 474,
+        "children": [
+          "68:2606",
+          "68:2509",
+          "63:2373",
+          "60:2301",
+          "9:852"
+        ]
+      },
+      {
+        "id": "128:2577",
+        "name": "12 · 14 Nov · Inspections and provenance",
+        "x": 160,
+        "y": 25117,
+        "width": 5056,
+        "height": 506,
+        "children": [
+          "47:1689",
+          "34:1807",
+          "4:869",
+          "2:2808"
+        ]
+      }
+    ],
+    "deletedEmptyPageIds": [
+      "0:1",
+      "104:4346",
+      "17:881",
+      "176:31966"
+    ],
+    "pages": [
+      {
+        "id": "150:20569",
+        "name": "Medlist · Current table and drawer"
+      },
+      {
+        "id": "128:2573",
+        "name": "Medlist · Archive"
+      }
+    ],
+    "artifacts": [
+      "before.json",
+      "build.js",
+      "build-result.json",
+      "verify.js",
+      "verification.json",
+      "finish.js",
+      "finish-result.json",
+      "audit.js",
+      "audit.json"
+    ]
+  }
+}
