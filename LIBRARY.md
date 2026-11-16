@@ -152,6 +152,8 @@ Recorded family parts: Autocomplete/Field, /Option, /Tag; current properties mus
 
 ## Navigation search
 
+Consumer observation, 2026-11-15: medlist Nav/Search's visible Placeholder and imported default master use Inter Regular. This is inherited from F; it is not fresh code evidence or an approved replacement for the product ramp. See OPEN-ISSUES.md `nav-search-consumer-font`. Existing code-transcription guidance below remains unchanged.
+
 Primary navigation uses a separate cobranding theme. In tebraDefault its ground is #004852; nav hover #195b63, not canonical action.hover #CBDDE0. **PatientSearch places MUI SearchOutlined in an end adornment: the magnifier is trailing.** Tebra Icon/Search exists but is not the code's nav glyph. This fact comes from code transcription, not a mobile ruling. A requested leading nav icon is a design departure. Library Nav/Search is distinct from a normal patient search field. (T §§1.8, 3.30; REFERENCE-KIT.md finding 10.)
 
 ## Other controls and surfaces

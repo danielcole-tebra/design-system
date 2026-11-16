@@ -1,0 +1,1457 @@
+{
+  "sourceRows": {
+    "rows": [
+      {
+        "id": "91:12029",
+        "name": "Medication / Alprazolam 0.25 mg tablet / Comparison F",
+        "props": {
+          "Duration": "15 days as needed",
+          "Quantity": "15 tablets",
+          "Show timeline": false,
+          "Refills": "No refills",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Last activity": "Prescribed 09/05/24",
+          "Directions": "Take 1 tablet by mouth once daily as needed for anxiety",
+          "Date": "Sep 5, 2024",
+          "Compound": false,
+          "Medication name": "Alprazolam 0.25 mg tablet",
+          "Disclosure": "Expanded"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Filled"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "CVS Pharmacy 1709 in Target"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-0142"
+          },
+          {
+            "name": "Status",
+            "text": "Filled"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "CVS Pharmacy 1709 in Target"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-0142"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Edit"
+      },
+      {
+        "id": "91:12105",
+        "name": "Medication / Cetirizine 10 mg tablet / Comparison F",
+        "props": {
+          "Duration": "30 days",
+          "Quantity": "30 tablets",
+          "Show timeline": false,
+          "Last activity": "Prescribed 09/05/24",
+          "Refills": "1 refill",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Directions": "Take 1 tablet by mouth once daily as needed for allergy symptoms",
+          "Date": "Sep 5, 2024",
+          "Compound": false,
+          "Medication name": "Cetirizine 10 mg tablet",
+          "Disclosure": "Collapsed"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Rite Aid #6"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-8080"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Rite Aid #6"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-8080"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Edit"
+      },
+      {
+        "id": "91:12187",
+        "name": "Medication / Aspirin 81 mg delayed-release tablet / Comparison F",
+        "props": {
+          "Duration": "90 days",
+          "Quantity": "90 tablets",
+          "Show timeline": false,
+          "Last activity": "Prescribed 07/30/24",
+          "Refills": "1 refill",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Directions": "Take 1 tablet by mouth once daily",
+          "Date": "Jul 30, 2024",
+          "Compound": false,
+          "Medication name": "Aspirin 81 mg delayed-release tablet",
+          "Disclosure": "Collapsed"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Edit"
+      },
+      {
+        "id": "91:12269",
+        "name": "Medication / Doxycycline hyclate 100 mg capsule / Comparison F",
+        "props": {
+          "Duration": "7 days",
+          "Quantity": "14 capsules",
+          "Show timeline": false,
+          "Last activity": "Prescribed 07/30/24",
+          "Refills": "No refills",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Directions": "Take 1 capsule by mouth twice daily for 7 days",
+          "Date": "Jul 30, 2024",
+          "Compound": false,
+          "Medication name": "Doxycycline hyclate 100 mg capsule",
+          "Disclosure": "Collapsed"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Rite Aid #6"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-8080"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Rite Aid #6"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-8080"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Edit"
+      },
+      {
+        "id": "91:12351",
+        "name": "Medication / Furosemide 20 mg tablet / Comparison F",
+        "props": {
+          "Duration": "30 days",
+          "Quantity": "30 tablets",
+          "Show timeline": false,
+          "Last activity": "Prescribed 07/30/24",
+          "Refills": "1 refill",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Directions": "Take 1 tablet by mouth every morning",
+          "Date": "Jul 30, 2024",
+          "Compound": false,
+          "Medication name": "Furosemide 20 mg tablet",
+          "Disclosure": "Collapsed"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Rite Aid #6"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-8080"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Rite Aid #6"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-8080"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Edit"
+      },
+      {
+        "id": "91:12433",
+        "name": "Medication / Hydrocortisone 1% compounded cream / Comparison F",
+        "props": {
+          "Duration": "7 days",
+          "Quantity": "1 tube (30 g)",
+          "Show timeline": false,
+          "Last activity": "Prescribed 03/14/24",
+          "Refills": "No refills",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Directions": "Apply a thin layer to the affected area twice daily for up to 7 days",
+          "Date": "Mar 14, 2024",
+          "Compound": true,
+          "Medication name": "Hydrocortisone 1% compounded cream",
+          "Disclosure": "Collapsed"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Accord Specialty Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-2642"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Accord Specialty Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-2642"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Edit"
+      },
+      {
+        "id": "91:12515",
+        "name": "Medication / Melatonin 3 mg tablet / Comparison F",
+        "props": {
+          "Duration": "30 days",
+          "Quantity": "30 tablets",
+          "Show timeline": false,
+          "Last activity": "Prescribed 01/23/24",
+          "Refills": "No refills",
+          "Show source note": true,
+          "Source note": "Patient-reported supplement",
+          "Directions": "Take 1 tablet by mouth at bedtime as needed",
+          "Date": "Jan 23, 2024",
+          "Compound": false,
+          "Medication name": "Melatonin 3 mg tablet",
+          "Disclosure": "Collapsed"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Send failed"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Status",
+            "text": "Send failed"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Resend"
+      },
+      {
+        "id": "91:12597",
+        "name": "Medication / Metformin 500 mg tablet / Comparison F",
+        "props": {
+          "Duration": "90 days",
+          "Quantity": "180 tablets",
+          "Show timeline": false,
+          "Last activity": "Prescribed 11/19/23",
+          "Refills": "1 refill",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Directions": "Take 1 tablet by mouth twice daily with meals",
+          "Date": "Nov 19, 2023",
+          "Compound": false,
+          "Medication name": "Metformin 500 mg tablet",
+          "Disclosure": "Collapsed"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Filled"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Status",
+            "text": "Filled"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Edit"
+      },
+      {
+        "id": "91:12673",
+        "name": "Medication / Simvastatin 20 mg tablet / Comparison F",
+        "props": {
+          "Duration": "90 days",
+          "Quantity": "90 tablets",
+          "Show timeline": false,
+          "Last activity": "Prescribed 11/19/23",
+          "Refills": "1 refill",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Directions": "Take 1 tablet by mouth at bedtime",
+          "Date": "Nov 19, 2023",
+          "Compound": false,
+          "Medication name": "Simvastatin 20 mg tablet",
+          "Disclosure": "Collapsed"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Status",
+            "text": "Pending fill"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "Edit"
+      },
+      {
+        "id": "91:12755",
+        "name": "Medication / Acetaminophen 500 mg tablet / Comparison F",
+        "props": {
+          "Duration": "10 days as needed",
+          "Quantity": "40 tablets",
+          "Show timeline": false,
+          "Refills": "No refills",
+          "Show source note": false,
+          "Source note": "Patient-reported supplement",
+          "Last activity": "Prescribed 11/19/23",
+          "Directions": "Take 1 tablet by mouth every 6 hours as needed for pain",
+          "Date": "Nov 19, 2023",
+          "Compound": false,
+          "Medication name": "Acetaminophen 500 mg tablet",
+          "Disclosure": "Expanded"
+        },
+        "texts": [
+          {
+            "name": "Source",
+            "text": "Prescribed"
+          },
+          {
+            "name": "Prescriber",
+            "text": "Olivia Chen, MD"
+          },
+          {
+            "name": "Status",
+            "text": "Patient info required"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Status",
+            "text": "Patient info required"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "A&A Family Pharmacy"
+          },
+          {
+            "name": "Phone",
+            "text": "Phone: (850) 555-4706"
+          },
+          {
+            "name": "Pharmacy",
+            "text": "Pharmacy"
+          }
+        ],
+        "action": "View issue"
+      }
+    ],
+    "toggle": {
+      "id": "I91:12029;91:10373",
+      "props": {
+        "End icon swap#83:386": {
+          "type": "INSTANCE_SWAP",
+          "value": "2:135",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            }
+          ]
+        },
+        "Start icon swap#83:331": {
+          "type": "INSTANCE_SWAP",
+          "value": "2:133",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            }
+          ]
+        },
+        "End icon#83:275": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Start icon#83:220": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Label#83:165": {
+          "type": "TEXT",
+          "value": "Hide details"
+        },
+        "variant": {
+          "value": "contained",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "color": {
+          "value": "primary",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "size": {
+          "value": "small",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "State": {
+          "value": "Default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    "edit": {
+      "id": "I91:12029;91:10372",
+      "props": {
+        "End icon swap#83:386": {
+          "type": "INSTANCE_SWAP",
+          "value": "2:135",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            }
+          ]
+        },
+        "Start icon swap#83:331": {
+          "type": "INSTANCE_SWAP",
+          "value": "2:133",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b36995eeb808368112345235e670acfd187d920"
+            }
+          ]
+        },
+        "End icon#83:275": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Start icon#83:220": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Label#83:165": {
+          "type": "TEXT",
+          "value": "Edit"
+        },
+        "variant": {
+          "value": "contained",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "color": {
+          "value": "primary",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "size": {
+          "value": "small",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "State": {
+          "value": "Default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    "overflow": null,
+    "masterDefs": {
+      "Medication name#34:10": {
+        "type": "TEXT",
+        "defaultValue": "Alprazolam 0.25 mg tablet"
+      },
+      "Directions#34:11": {
+        "type": "TEXT",
+        "defaultValue": "Take 1 tablet by mouth once daily as needed for anxiety"
+      },
+      "Source note#34:12": {
+        "type": "TEXT",
+        "defaultValue": "Patient-reported supplement"
+      },
+      "Show source note#34:13": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "Compound#34:14": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "Show timeline#34:15": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "Date#34:16": {
+        "type": "TEXT",
+        "defaultValue": "Sep 5, 2024"
+      },
+      "Quantity#34:17": {
+        "type": "TEXT",
+        "defaultValue": "15 tablets"
+      },
+      "Duration#34:18": {
+        "type": "TEXT",
+        "defaultValue": "15 days as needed"
+      },
+      "Refills#34:19": {
+        "type": "TEXT",
+        "defaultValue": "No refills"
+      },
+      "Last activity#91:3": {
+        "type": "TEXT",
+        "defaultValue": "Prescribed 09/05/24"
+      },
+      "Disclosure": {
+        "type": "VARIANT",
+        "defaultValue": "Collapsed",
+        "variantOptions": [
+          "Collapsed",
+          "Expanded"
+        ]
+      }
+    },
+    "frameLayout": {
+      "layout": "VERTICAL",
+      "primary": "AUTO"
+    },
+    "headings": [
+      {
+        "id": "91:10518",
+        "name": "Select all",
+        "w": 44
+      },
+      {
+        "id": "91:10520",
+        "name": "Header column / Medication",
+        "w": 296
+      },
+      {
+        "id": "91:10522",
+        "name": "Header column / Last activity",
+        "w": 176
+      },
+      {
+        "id": "91:10525",
+        "name": "Header column / Supply",
+        "w": 136
+      },
+      {
+        "id": "91:10527",
+        "name": "Header column / Order status",
+        "w": 208
+      },
+      {
+        "id": "91:10529",
+        "name": "Header column / Reviewed",
+        "w": 80
+      },
+      {
+        "id": "91:10531",
+        "name": "Header column / Actions",
+        "w": 276
+      },
+      {
+        "id": "91:10533",
+        "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+        "w": 40
+      }
+    ],
+    "fonts": [
+      "{\"family\":\"Akkurat LL\",\"style\":\"Regular\"}",
+      "{\"family\":\"Inter\",\"style\":\"Regular\"}",
+      "{\"family\":\"Akkurat LL\",\"style\":\"Bold\"}"
+    ]
+  },
+  "sdeShell": {
+    "id": "279:2416",
+    "type": "COMPONENT",
+    "name": "Placement=Docked right",
+    "key": "98571022f217816aed456921d16501b60e515d99",
+    "w": 550,
+    "h": 600,
+    "layout": "VERTICAL",
+    "padding": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "gap": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+          }
+        }
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 0.8392156958580017,
+          "g": 0.8392156958580017,
+          "b": 0.8392156958580017
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+          }
+        }
+      }
+    ],
+    "bindings": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+      },
+      "strokeTopWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e437afaf91519b9a70c82751deb7099cf1576369/74:261"
+      },
+      "strokeBottomWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e437afaf91519b9a70c82751deb7099cf1576369/74:261"
+      },
+      "strokeLeftWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e437afaf91519b9a70c82751deb7099cf1576369/74:261"
+      },
+      "strokeRightWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:e437afaf91519b9a70c82751deb7099cf1576369/74:261"
+      },
+      "fills": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+        }
+      ]
+    },
+    "children": [
+      {
+        "id": "279:2417",
+        "type": "FRAME",
+        "name": "Header",
+        "w": 550,
+        "h": 72,
+        "layout": "HORIZONTAL",
+        "padding": [
+          16,
+          8,
+          16,
+          16
+        ],
+        "gap": 8,
+        "fills": [],
+        "strokes": [],
+        "bindings": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingTop": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          },
+          "paddingBottom": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          }
+        },
+        "children": [
+          {
+            "id": "279:2418",
+            "type": "INSTANCE",
+            "name": "Back",
+            "w": 40,
+            "h": 40,
+            "layout": "HORIZONTAL",
+            "padding": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "gap": 0,
+            "fills": [],
+            "strokes": [],
+            "bindings": {
+              "paddingLeft": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingTop": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingRight": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingBottom": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              }
+            }
+          },
+          {
+            "id": "279:2419",
+            "type": "TEXT",
+            "name": "Title",
+            "w": 478,
+            "h": 32,
+            "padding": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                },
+                "boundVariables": {
+                  "color": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                  }
+                }
+              }
+            ],
+            "strokes": [],
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5c8867e0b6f174db9f69096580158df26e39baae/74:135"
+                }
+              ],
+              "fontSize": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4495658a412b17d7aa5cedbee6f4aad7e1488bf4/74:219"
+                }
+              ],
+              "fontFamily": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f2712e7d49f013f57601f873b3dd400b6b1154d6/74:187"
+                }
+              ],
+              "lineHeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:75b2eae3fea92bbf14d197e96cfe432fa1f111f5/116:7"
+                }
+              ],
+              "fontWeight": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:b999d55cf9455309069f4bc9e56b1461c0839bc4/74:195"
+                }
+              ]
+            }
+          },
+          {
+            "id": "279:2420",
+            "type": "INSTANCE",
+            "name": "Close",
+            "w": 40,
+            "h": 40,
+            "layout": "HORIZONTAL",
+            "padding": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "gap": 0,
+            "fills": [],
+            "strokes": [],
+            "bindings": {
+              "paddingLeft": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingTop": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingRight": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingBottom": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "279:2421",
+        "type": "INSTANCE",
+        "name": "Header divider",
+        "w": 550,
+        "h": 1,
+        "layout": "NONE",
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "gap": 0,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.8392156958580017,
+              "g": 0.8392156958580017,
+              "b": 0.8392156958580017
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+              }
+            }
+          }
+        ],
+        "strokes": [],
+        "bindings": {
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+            }
+          ]
+        },
+        "children": []
+      },
+      {
+        "id": "279:2422",
+        "type": "FRAME",
+        "name": "Body",
+        "w": 550,
+        "h": 456,
+        "layout": "VERTICAL",
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "gap": 16,
+        "fills": [],
+        "strokes": [],
+        "bindings": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingTop": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          },
+          "paddingBottom": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+          }
+        },
+        "children": [
+          {
+            "id": "279:2423",
+            "type": "INSTANCE",
+            "name": "Body content",
+            "w": 518,
+            "h": 385,
+            "layout": "VERTICAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 16,
+            "fills": [],
+            "strokes": [],
+            "bindings": {
+              "itemSpacing": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+              },
+              "paddingLeft": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+              },
+              "paddingTop": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+              },
+              "paddingRight": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+              },
+              "paddingBottom": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "279:2424",
+        "type": "FRAME",
+        "name": "Footer",
+        "w": 550,
+        "h": 71,
+        "layout": "VERTICAL",
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "gap": 0,
+        "fills": [],
+        "strokes": [],
+        "bindings": {},
+        "children": [
+          {
+            "id": "279:2425",
+            "type": "INSTANCE",
+            "name": "Footer divider",
+            "w": 550,
+            "h": 1,
+            "layout": "NONE",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 0,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.8392156958580017,
+                  "g": 0.8392156958580017,
+                  "b": 0.8392156958580017
+                },
+                "boundVariables": {
+                  "color": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                  }
+                }
+              }
+            ],
+            "strokes": [],
+            "bindings": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                }
+              ]
+            }
+          },
+          {
+            "id": "279:2426",
+            "type": "FRAME",
+            "name": "Actions",
+            "w": 550,
+            "h": 70,
+            "layout": "HORIZONTAL",
+            "padding": [
+              16,
+              8,
+              16,
+              8
+            ],
+            "gap": 8,
+            "fills": [],
+            "strokes": [],
+            "bindings": {
+              "itemSpacing": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingLeft": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingTop": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+              },
+              "paddingRight": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+              },
+              "paddingBottom": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:6016592c19254dd61e9de9e006459546eaece0bb/997:24"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "finalScope": {
+    "counts": {
+      "COMPONENT": 2,
+      "FRAME": 2320,
+      "INSTANCE": 1718,
+      "VECTOR": 784,
+      "TEXT": 2238,
+      "RECTANGLE": 26
+    },
+    "total": 7088,
+    "imageFills": [],
+    "navigationFont": {
+      "instanceId": "I104:4424;296:201",
+      "masterId": "2:72",
+      "masterKey": "0878407fadd1f03e9b2075eadd3aed844ea5e16f",
+      "masterName": "State=Default",
+      "observed": {
+        "family": "Inter",
+        "style": "Regular"
+      },
+      "masterTexts": [
+        {
+          "id": "2:118",
+          "name": "Placeholder",
+          "font": {
+            "family": "Inter",
+            "style": "Regular"
+          }
+        }
+      ]
+    },
+    "frames": [
+      {
+        "id": "104:7642",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:7643",
+        "drawerHeight": 592
+      },
+      {
+        "id": "104:7712",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:7713",
+        "drawerHeight": 592
+      },
+      {
+        "id": "104:7785",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:7786",
+        "drawerHeight": 592
+      },
+      {
+        "id": "104:7858",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:7859",
+        "drawerHeight": 592
+      },
+      {
+        "id": "104:7931",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:7932",
+        "drawerHeight": 592
+      },
+      {
+        "id": "104:8004",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:8005",
+        "drawerHeight": 624
+      },
+      {
+        "id": "104:8077",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:8078",
+        "drawerHeight": 620
+      },
+      {
+        "id": "104:8150",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:8151",
+        "drawerHeight": 592
+      },
+      {
+        "id": "104:8220",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:8221",
+        "drawerHeight": 592
+      },
+      {
+        "id": "104:8293",
+        "width": 1440,
+        "height": 1156,
+        "drawerId": "104:8294",
+        "drawerHeight": 592
+      }
+    ]
+  },
+  "sessionId": "261f99a3-dbf9-414d-a6ae-6de47e85c482"
+}
