@@ -142,6 +142,8 @@ A top-of-page location alone does not settle the variant; confirm if the brief l
 
 ## Text field
 
+Consumer evidence2026-11-16: multiline exposes fixed second/third sample lines without corresponding copy properties. Verify before using for arbitrary multiline content; see `text-field-multiline-copy-consumer` in OPEN-ISSUES.md. Native single-line field plus ordinary text preview is the pending medlist composition choice, not a published capability or approved global workaround.
+
 Recorded Figma set: `size=small|medium`, `State=Default|Hover|Focused|Disabled|Error`, `Value=Empty|Filled`, `Fill=None|Paper`; all outlined, with **no variant axis**. A select boolean exposes a fixed caret, not an adornment swap slot. Reads on 2026-09-17 found no start/end adornment slot. A patient search with a leading icon therefore needs the COMPOSITIONS.md workaround or a library change; see `text-field-adornments`. (F libraryTextField_hasNoVariantAxis, libraryTextField_noEndAdornmentSlot.)
 
 Small/medium code heights 40/56; input is otherwise unthemed and transparent. Resting outline rgba(0,0,0,0.23); focused notch 2px primary.main, **no extra global ring** because the inner input resets it. Disabled outline action.disabled rgba(0,0,0,0.5). Select caret does not rotate in this code path. White fields are a scoped appearance choice, not a universal input default. The Fill axis existed in the library but was missing in SDE's imports on 2026-09-29; verify your own consumer. (T §§1.7, 3.4; `consumer-capabilities`.)

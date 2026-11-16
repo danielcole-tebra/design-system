@@ -1,0 +1,231 @@
+{
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 14,
+      "passed": true,
+      "checks": [
+        {
+          "id": "160:43912",
+          "mainId": "2:487",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:44059",
+          "mainId": "2:487",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:44017",
+          "mainId": "2:487",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:43864",
+          "mainId": "157:9034",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:43877",
+          "mainId": "157:8998",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:43885",
+          "mainId": "157:8994",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:44108",
+          "mainId": "2:171",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:43758",
+          "mainId": "2:173",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:45077",
+          "mainId": "2:171",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:44934",
+          "mainId": "2:173",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:45063",
+          "mainId": "2:1272",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:44923",
+          "mainId": "2:1268",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:44794",
+          "mainId": "2:171",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "160:44101",
+          "mainId": "2:189",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 278,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Panel 0 size",
+          "passed": true
+        },
+        {
+          "name": "Panel 0 footer",
+          "passed": true
+        },
+        {
+          "name": "Panel 0 scroll",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:43526",
+          "passed": true
+        },
+        {
+          "name": "Width 160:43526",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:43534",
+          "passed": true
+        },
+        {
+          "name": "Width 160:43534",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:43561",
+          "passed": true
+        },
+        {
+          "name": "Width 160:43561",
+          "passed": true
+        },
+        {
+          "name": "Panel 1 size",
+          "passed": true
+        },
+        {
+          "name": "Panel 1 footer",
+          "passed": true
+        },
+        {
+          "name": "Panel 1 scroll",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:43876",
+          "passed": true
+        },
+        {
+          "name": "Width 160:43876",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:43884",
+          "passed": true
+        },
+        {
+          "name": "Width 160:43884",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:43911",
+          "passed": true
+        },
+        {
+          "name": "Width 160:43911",
+          "passed": true
+        },
+        {
+          "name": "Panel 2 size",
+          "passed": true
+        },
+        {
+          "name": "Panel 2 footer",
+          "passed": true
+        },
+        {
+          "name": "Panel 2 scroll",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:44226",
+          "passed": true
+        },
+        {
+          "name": "Width 160:44226",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:44231",
+          "passed": true
+        },
+        {
+          "name": "Width 160:44231",
+          "passed": true
+        },
+        {
+          "name": "Nonzero 160:44262",
+          "passed": true
+        },
+        {
+          "name": "Width 160:44262",
+          "passed": true
+        },
+        {
+          "name": "Panel 3 size",
+          "passed": true
+        },
+        {
+          "name": "Panel 3 footer",
+          "passed": true
+        },
+        {
+          "name": "Panel 3 scroll",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 248,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "wiring": 40,
+  "verifiedAt": "2026-11-16T19:31:59.269Z"
+}

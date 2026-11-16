@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "title": "Medlist drawer pass 2 — details and editing",
+  "date": "2026-11-16",
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "reviewUrl": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=160-46277",
+  "summary": "Expanded the ten medication detail drawers and added representative connected Cetirizine prescription-edit and Levothyroxine chart-only flows on the existing Structured table + drawer page. Ready for Daniel's visual review.",
+  "timing": {
+    "start": "2026-11-16T19:18:25Z",
+    "ready": "2026-11-16T19:28:19.767Z",
+    "built": "2026-11-16T19:28:19.767Z",
+    "firstImage": "2026-11-16T19:28:53Z",
+    "verified": "2026-11-16T19:33:02Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "All ten drawers preserve their existing exposed medication properties and nested order-status properties. Added chart status, separate effective date, substitution allowance, pharmacy address, prescription ID and signing-audit availability. Duration label becomes Days supply. Unknown source values say Not recorded.",
+    "All 30 Open actions across list/reconciliation/completed target the matching expanded detail overlay. Preserved earlier overlays and shared master104:7574; new local master160:41715. No library writes.",
+    "Twelve worked flow states plus three discard dialogs: unchanged Rx, quantity30→60, keep existing/request cancellation, review unchecked/checked, two explicitly synthetic outcomes, chart details/edit/saved. Native controls,550×1112 panels, scrolling bodies and fixed bottom actions.",
+    "Fourteen native structure/token comparisons and278 measured assertions passed. Forty visible stored destination references resolved;10 additional nested-status comparisons passed. Stored wiring verified; presentation playback not performed.",
+    "Viewed context details, edit, unchanged/disabled, review checked/unchecked, cancellation path, chart-only editing/save, outcome, discard, native-control inspection, compound and reported-medication screenshots. Corrected collapsed horizontal frames, clipping of floating labels by composition frames, header divider and edit-action width."
+  ],
+  "findings": [
+    "DECISION — Daniel owns this screen scope, evidence2026-11-16, status requested next pass built awaiting review. Supersedes the prior drawer reuse only on page150:20569. Reconciliation and structured table remain as previously requested.",
+    "Original Concepts filefu7ncgAnIdjvxxxmQILFzK C01/C02/G01–G04 supplies design evidence, not shipping behavior. Signed Rx edits create a separate new prescription; cancellation remains pending until pharmacy response. Chart-only saves do not send a prescription.",
+    "Representative interaction coverage: Cetirizine Quantity click changes30→60, then keep/request-cancel choices and review/acknowledge/sign work as stored prototype links. Other fields are static and other medications retain their prior Edit/Resend/View issue and overflow behavior. No functional search, favorites, print, PA bypass, compound editing, real signature, delivery, cancellation response or persistence is claimed.",
+    "Levothyroxine is a separate original G04 chart-only example, not an added row in the10-row table. Refills3→4 is an authored editing fixture. Saved/unsaved scenes do not model persistent revisits or an implementation backend.",
+    "GAP — imported Text field multiline property reveals fixed second/third sample lines with no exposed replacement properties in this consumer. Used standard native input plus ordinary full-instructions preview text; native internals unchanged. This is a reviewable composition choice, not approved library scaffolding or a source/code defect.",
+    "Find Coupon and detailed C02 audit timeline (actual use, dispensed quantity and clinical history) remain unimplemented. This pass adds signing-audit availability and prescription ID but does not claim complete original-flow parity.",
+    "Eight construction attempts were automatically rolled back while correcting API/context, stale descendant references, invalid self-destination and duplicate flow-start issues. Successful build retained all nodes. Two visual correction calls followed. A long shell-write request failed before execution; evidence saved through apply_patch instead.",
+    "Timing start is the first recorded clock after initial context/pull. Ready checkpoint equals successful construction return because a distinct preconstruction timestamp was not recorded; preparation includes failed construction attempts. No general speed benchmark is inferred."
+  ],
+  "effort": {
+    "through": "final visual and native verification",
+    "figmaCalls": null,
+    "otherCalls": null,
+    "searches": null,
+    "technicalRetries": null,
+    "canvasCorrections": 2,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "reads": [
+    "Previously loaded figma-use/figma-generate-design skills; LIBRARY Efficient execution/API checks and relevant composition guidance reused; Text field capabilities re-read.",
+    "Live original C01/C02/G01–G04 details/edit/review/chart-only scenes; current drawer properties and fields; imported Text field, Radio, Alert, Dialog and Button variants.",
+    "Native-control structure and property readback; table Open destinations; entire affected detail and flow scope."
+  ],
+  "screenshots": [
+    "details.png",
+    "edit.png",
+    "unchanged.png",
+    "review.png",
+    "review-unchecked.png",
+    "cancel-edit.png",
+    "cancel-review.png",
+    "chart.png",
+    "chart-saved.png",
+    "result.png",
+    "discard.png",
+    "compound.png",
+    "reported.png",
+    "inspection.png"
+  ],
+  "evidence": {
+    "owner": "Daniel Cole",
+    "status": "Built; awaiting visual review",
+    "pageId": "150:20569",
+    "masterId": "160:41715",
+    "contextId": "160:46277",
+    "details": [
+      {
+        "overlay": "160:41804",
+        "drawer": "160:41806"
+      },
+      {
+        "overlay": "160:41965",
+        "drawer": "160:41967"
+      },
+      {
+        "overlay": "160:42126",
+        "drawer": "160:42128"
+      },
+      {
+        "overlay": "160:42287",
+        "drawer": "160:42289"
+      },
+      {
+        "overlay": "160:42448",
+        "drawer": "160:42450"
+      },
+      {
+        "overlay": "160:42609",
+        "drawer": "160:42611"
+      },
+      {
+        "overlay": "160:42770",
+        "drawer": "160:42772"
+      },
+      {
+        "overlay": "160:42931",
+        "drawer": "160:42933"
+      },
+      {
+        "overlay": "160:43092",
+        "drawer": "160:43094"
+      },
+      {
+        "overlay": "160:43253",
+        "drawer": "160:43255"
+      }
+    ],
+    "states": [
+      {
+        "id": "160:43414",
+        "panel": "160:43487",
+        "name": "Rx · Edit unchanged"
+      },
+      {
+        "id": "160:43764",
+        "panel": "160:43837",
+        "name": "Rx · Edit quantity 60 · Keep existing"
+      },
+      {
+        "id": "160:44114",
+        "panel": "160:44187",
+        "name": "Rx · Edit quantity 60 · Request cancellation"
+      },
+      {
+        "id": "160:44465",
+        "panel": "160:44538",
+        "name": "Chart-only · Edit details"
+      },
+      {
+        "id": "160:44800",
+        "panel": "160:44873",
+        "name": "Rx · Review · Keep existing"
+      },
+      {
+        "id": "160:44940",
+        "panel": "160:45013",
+        "name": "Rx · Review acknowledged · Keep existing"
+      },
+      {
+        "id": "160:45083",
+        "panel": "160:45156",
+        "name": "Rx · Review · Request cancellation"
+      },
+      {
+        "id": "160:45224",
+        "panel": "160:45297",
+        "name": "Rx · Review acknowledged · Request cancellation"
+      },
+      {
+        "id": "160:45368",
+        "panel": "160:45441",
+        "name": "Rx · Prototype result · Keep original"
+      },
+      {
+        "id": "160:45507",
+        "panel": "160:45580",
+        "name": "Rx · Prototype result · Cancellation pending"
+      },
+      {
+        "id": "160:45646",
+        "panel": "160:45719",
+        "name": "Chart-only · Details example"
+      },
+      {
+        "id": "160:45780",
+        "panel": "160:45853",
+        "name": "Chart-only · Saved example"
+      }
+    ],
+    "discard": [
+      "160:45924",
+      "160:46017",
+      "160:46110"
+    ],
+    "noteId": "160:46513",
+    "inspectionId": "157:8965",
+    "source": {
+      "fileKey": "fu7ncgAnIdjvxxxmQILFzK",
+      "C01": "11199:14098",
+      "C02": "11199:14199",
+      "G01": "11200:10965",
+      "G02": "11200:11382",
+      "G03": "11200:11794",
+      "G04": "11200:11868"
+    },
+    "artifacts": [
+      "build.js",
+      "build-result.json",
+      "native-controls.json",
+      "layout-correction.js",
+      "layout-correction-result.json",
+      "clipping-correction.js",
+      "clipping-correction-result.json",
+      "verify.js",
+      "verification.json",
+      "status-verification.json"
+    ]
+  }
+}

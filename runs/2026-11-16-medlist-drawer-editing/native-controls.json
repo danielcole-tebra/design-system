@@ -1,0 +1,731 @@
+{
+  "createdNodeIds": [
+    "157:8965",
+    "157:8967",
+    "I157:8967;1138:6061",
+    "I157:8967;1138:6062",
+    "I157:8967;1138:6063",
+    "I157:8967;1138:6064",
+    "I157:8967;1138:6065",
+    "I157:8967;1138:6066",
+    "I157:8967;1138:6067",
+    "I157:8967;1138:6068",
+    "I157:8967;1138:6069",
+    "I157:8967;1138:6070",
+    "I157:8967;1138:6071",
+    "I157:8967;1138:6071;76:4",
+    "I157:8967;1138:6072",
+    "I157:8967;1138:6073",
+    "I157:8967;1138:6074",
+    "I157:8967;1138:6075",
+    "I157:8967;1138:6076",
+    "I157:8967;1138:6077",
+    "I157:8967;1138:6078",
+    "I157:8967;1138:6079",
+    "157:9011",
+    "I157:9011;137:4",
+    "I157:9011;137:4;135:3",
+    "157:9131",
+    "I157:9131;165:13",
+    "I157:9131;165:14",
+    "I157:9131;165:14;164:9",
+    "I157:9131;165:16",
+    "I157:9131;802:1127",
+    "I157:9131;165:17",
+    "I157:9131;165:18",
+    "I157:9131;165:19",
+    "I157:9131;165:19;76:10",
+    "157:9253",
+    "I157:9253;747:146",
+    "I157:9253;747:147",
+    "I157:9253;747:148",
+    "I157:9253;747:149",
+    "I157:9253;747:150",
+    "I157:9253;747:151",
+    "I157:9253;747:151;78:123",
+    "I157:9253;747:151;78:123;76:7",
+    "I157:9253;747:151;78:124",
+    "I157:9253;747:151;78:125",
+    "I157:9253;747:151;78:125;76:4",
+    "I157:9253;747:152",
+    "I157:9253;747:152;78:51",
+    "I157:9253;747:152;78:51;76:7",
+    "I157:9253;747:152;78:52",
+    "I157:9253;747:152;78:53",
+    "I157:9253;747:152;78:53;76:4"
+  ],
+  "mutatedNodeIds": [],
+  "areaId": "157:8965",
+  "assets": {
+    "field": {
+      "setKey": "7c3c99bb9a9392d6571c0557b41d142b8987b566",
+      "setId": "2:455",
+      "defs": {
+        "Label#123:0": {
+          "type": "TEXT",
+          "defaultValue": "TextField Label"
+        },
+        "Value text#123:11": {
+          "type": "TEXT",
+          "defaultValue": "Default Value"
+        },
+        "Helper text#123:22": {
+          "type": "TEXT",
+          "defaultValue": "Text underneath the input"
+        },
+        "Show helper#123:33": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "required#123:44": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "select#123:55": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "multiline#123:66": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "medium",
+          "variantOptions": [
+            "medium",
+            "small"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Focused",
+            "Disabled",
+            "Error"
+          ]
+        },
+        "Value": {
+          "type": "VARIANT",
+          "defaultValue": "Empty",
+          "variantOptions": [
+            "Empty",
+            "Filled"
+          ]
+        },
+        "Fill": {
+          "type": "VARIANT",
+          "defaultValue": "None",
+          "variantOptions": [
+            "None",
+            "Paper"
+          ]
+        }
+      },
+      "variants": [
+        {
+          "name": "size=medium, State=Default, Value=Empty, Fill=None",
+          "key": "ee985b01789ea929c155aac26f9cd55370bb057e"
+        },
+        {
+          "name": "size=medium, State=Default, Value=Filled, Fill=None",
+          "key": "62b7839e26a05f9c54514da5ad399011b86e5e2f"
+        },
+        {
+          "name": "size=medium, State=Hover, Value=Empty, Fill=None",
+          "key": "2e8a137f82b50318eb05fb167f3c026bf72f95b2"
+        },
+        {
+          "name": "size=medium, State=Hover, Value=Filled, Fill=None",
+          "key": "e2c0ed2d939472829f06c5267f70005bdf636891"
+        },
+        {
+          "name": "size=medium, State=Focused, Value=Empty, Fill=None",
+          "key": "cb30f7c0d09910c087d3812982fcb2e0737f146d"
+        },
+        {
+          "name": "size=medium, State=Focused, Value=Filled, Fill=None",
+          "key": "ede4bdb6faaabc013a72dc6c04ec65fb2e3ea0af"
+        },
+        {
+          "name": "size=medium, State=Disabled, Value=Empty, Fill=None",
+          "key": "077db975649241377b469be21cbed880889f67e7"
+        },
+        {
+          "name": "size=medium, State=Disabled, Value=Filled, Fill=None",
+          "key": "2d3258d68dc518a8733a742e6824144c2810d9cf"
+        },
+        {
+          "name": "size=medium, State=Error, Value=Empty, Fill=None",
+          "key": "14a8abeb26a01626a63b607427fee51fbc685c45"
+        },
+        {
+          "name": "size=medium, State=Error, Value=Filled, Fill=None",
+          "key": "1ac944cd2c467046a2234c57f0cc6016322ca0bc"
+        },
+        {
+          "name": "size=small, State=Default, Value=Empty, Fill=None",
+          "key": "542540ea8fa199c81ea0128aea9c78a5cc8e8abf"
+        },
+        {
+          "name": "size=small, State=Default, Value=Filled, Fill=None",
+          "key": "679a3842ec3982166e616a8f294684199e2e5c94"
+        },
+        {
+          "name": "size=small, State=Hover, Value=Empty, Fill=None",
+          "key": "175aa360b41c6198d1dc60272d5bb1ba408250fe"
+        },
+        {
+          "name": "size=small, State=Hover, Value=Filled, Fill=None",
+          "key": "776396631a531089e36df859dd7e7f2b5816919a"
+        },
+        {
+          "name": "size=small, State=Focused, Value=Empty, Fill=None",
+          "key": "63fe66c7346bc35e09d6006a5d232a0249efa513"
+        },
+        {
+          "name": "size=small, State=Focused, Value=Filled, Fill=None",
+          "key": "238005f4239f7f33fc6f4bae78f7926bd594cba8"
+        },
+        {
+          "name": "size=small, State=Disabled, Value=Empty, Fill=None",
+          "key": "9ca7f26fbb9583d8bdb458cb079d0074bdc96a00"
+        },
+        {
+          "name": "size=small, State=Disabled, Value=Filled, Fill=None",
+          "key": "5e2179b754de9f297793e415bcd90c549113b6cd"
+        },
+        {
+          "name": "size=small, State=Error, Value=Empty, Fill=None",
+          "key": "212beca0e1ba1b9cbf6632504caa67b2014c28f9"
+        },
+        {
+          "name": "size=small, State=Error, Value=Filled, Fill=None",
+          "key": "76490e6b1d13980dca4b8f3093a18a661f3e61a8"
+        },
+        {
+          "name": "size=medium, State=Default, Value=Empty, Fill=Paper",
+          "key": "416536740ffaa6505db309ca2b5de4f493e717bd"
+        },
+        {
+          "name": "size=medium, State=Default, Value=Filled, Fill=Paper",
+          "key": "cc7f76225da9556ad33932e8bd72d0ba7678115f"
+        },
+        {
+          "name": "size=medium, State=Hover, Value=Empty, Fill=Paper",
+          "key": "90cc5273949539b483ab4ae2290259c196b3cf95"
+        },
+        {
+          "name": "size=medium, State=Hover, Value=Filled, Fill=Paper",
+          "key": "81c6e6c9b1dad035917e33f0e9e8cb0b5fb8eed2"
+        },
+        {
+          "name": "size=medium, State=Focused, Value=Empty, Fill=Paper",
+          "key": "70843675c53043469f97d947b1f6623c08807728"
+        },
+        {
+          "name": "size=medium, State=Focused, Value=Filled, Fill=Paper",
+          "key": "ccceb2c1bce151f5b4ca835e214ada5434a2c3ab"
+        },
+        {
+          "name": "size=medium, State=Disabled, Value=Empty, Fill=Paper",
+          "key": "dcc8868d82ccbe0030fe48d186743d45a2c119a1"
+        },
+        {
+          "name": "size=medium, State=Disabled, Value=Filled, Fill=Paper",
+          "key": "aed8d6106bce3311158ee4f82c306414586ea18c"
+        },
+        {
+          "name": "size=medium, State=Error, Value=Empty, Fill=Paper",
+          "key": "e9fc7fdadfe69dd7fae47907fd9ebc7ea49c4ee5"
+        },
+        {
+          "name": "size=medium, State=Error, Value=Filled, Fill=Paper",
+          "key": "4dc9c75d9cf2793ea40a5776b0f9d8e4314eadb1"
+        },
+        {
+          "name": "size=small, State=Default, Value=Empty, Fill=Paper",
+          "key": "10fbe4a202f5adba368cf3702a3f9d42fc3b14e6"
+        },
+        {
+          "name": "size=small, State=Default, Value=Filled, Fill=Paper",
+          "key": "520bec237baebaf1576b93a68ca936342fb41bbf"
+        },
+        {
+          "name": "size=small, State=Hover, Value=Empty, Fill=Paper",
+          "key": "cd9153866f467a220d3efcbcb1236ffbf9163dda"
+        },
+        {
+          "name": "size=small, State=Hover, Value=Filled, Fill=Paper",
+          "key": "64a1dafcd23ecaff9762a6508643128dcf403866"
+        },
+        {
+          "name": "size=small, State=Focused, Value=Empty, Fill=Paper",
+          "key": "a90c33b94c7ee00987da7dfadcbf532f05b4016f"
+        },
+        {
+          "name": "size=small, State=Focused, Value=Filled, Fill=Paper",
+          "key": "e29ce1eb8e9f38219bca3e7e1ee91e57fb8eb0e1"
+        },
+        {
+          "name": "size=small, State=Disabled, Value=Empty, Fill=Paper",
+          "key": "14fd6fdf4ee643b306fa5613a269c5f1890da15d"
+        },
+        {
+          "name": "size=small, State=Disabled, Value=Filled, Fill=Paper",
+          "key": "bde0ba7309182ce452b703db340d95d745a7d049"
+        },
+        {
+          "name": "size=small, State=Error, Value=Empty, Fill=Paper",
+          "key": "06f984b30f554a5e5a675b3f0e3516a84f13a805"
+        },
+        {
+          "name": "size=small, State=Error, Value=Filled, Fill=Paper",
+          "key": "d7f969dc5097053e55c85174d8f0144d511a2e9b"
+        }
+      ],
+      "instanceId": "157:8967",
+      "props": {
+        "select#123:55": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show helper#123:33": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Helper text#123:22": {
+          "type": "TEXT",
+          "value": "Text underneath the input"
+        },
+        "multiline#123:66": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "required#123:44": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Value text#123:11": {
+          "type": "TEXT",
+          "value": "Default Value"
+        },
+        "Label#123:0": {
+          "type": "TEXT",
+          "value": "TextField Label"
+        },
+        "size": {
+          "value": "small",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "State": {
+          "value": "Default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Value": {
+          "value": "Filled",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Fill": {
+          "value": "Paper",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "chosen": "size=small, State=Default, Value=Filled, Fill=Paper"
+    },
+    "radio": {
+      "setKey": "32c00a5301fd57fa3619ec850941d3ad37bf2e8d",
+      "setId": "157:8993",
+      "defs": {
+        "checked": {
+          "type": "VARIANT",
+          "defaultValue": "unchecked",
+          "variantOptions": [
+            "unchecked",
+            "checked"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Focus visible",
+            "Disabled"
+          ]
+        }
+      },
+      "variants": [
+        {
+          "name": "checked=unchecked, State=Default",
+          "key": "369b8196265a8e45d9ca5a857adf0f7990fb8a47"
+        },
+        {
+          "name": "checked=unchecked, State=Hover",
+          "key": "197fad807824d3e5240ccae3e933b517a35ed15c"
+        },
+        {
+          "name": "checked=unchecked, State=Focus visible",
+          "key": "18b4824933cf8f3186161acfd9b434ce1f1ffad3"
+        },
+        {
+          "name": "checked=unchecked, State=Disabled",
+          "key": "7b3f4b5157154e307a865ecde8134deefb61ed96"
+        },
+        {
+          "name": "checked=checked, State=Default",
+          "key": "2435aadf855caef28ac82dbc1168dbdcc8e8ba64"
+        },
+        {
+          "name": "checked=checked, State=Hover",
+          "key": "3b41da68c3eccd7c128f8d899614b1994ec63fc5"
+        },
+        {
+          "name": "checked=checked, State=Focus visible",
+          "key": "8d6da6b94d7799f222152129962146a61b7f5ec5"
+        },
+        {
+          "name": "checked=checked, State=Disabled",
+          "key": "619a6e29f849010f8f409929b194f78cc7315fb5"
+        }
+      ],
+      "instanceId": "157:9011",
+      "props": {
+        "checked": {
+          "value": "unchecked",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "State": {
+          "value": "Default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "chosen": "checked=unchecked, State=Default"
+    },
+    "alert": {
+      "setKey": "d97e12577a5662f35e49275eec702a6bd446efa8",
+      "setId": "157:9032",
+      "defs": {
+        "Message#165:0": {
+          "type": "TEXT",
+          "defaultValue": "This is an alert message."
+        },
+        "onClose#165:7": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "icon#745:0": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Title#802:0": {
+          "type": "TEXT",
+          "defaultValue": "Alert title"
+        },
+        "Show title#802:13": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "action#802:26": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "157:9014",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "cfb726c79b456d52901243b7c33839efd0780a93"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "7ebea5d7ce6ecfdaef84d177efa64196f654717d"
+            }
+          ]
+        },
+        "variant": {
+          "type": "VARIANT",
+          "defaultValue": "standard",
+          "variantOptions": [
+            "standard",
+            "filled",
+            "outlined"
+          ]
+        },
+        "severity": {
+          "type": "VARIANT",
+          "defaultValue": "info",
+          "variantOptions": [
+            "success",
+            "error",
+            "info",
+            "warning"
+          ]
+        }
+      },
+      "variants": [
+        {
+          "name": "variant=standard, severity=error",
+          "key": "ea8b1b1e64dec5e45ae4b1f5168dde920d5dda10"
+        },
+        {
+          "name": "variant=standard, severity=info",
+          "key": "2b4938d2abf03537ff1c205867ea3ea17a002c96"
+        },
+        {
+          "name": "variant=standard, severity=warning",
+          "key": "3b085100fb7571f48d46d24028243a5118ab95de"
+        },
+        {
+          "name": "variant=filled, severity=error",
+          "key": "6ed94069b0485f0df6c34766fe2608a72cb0be5c"
+        },
+        {
+          "name": "variant=filled, severity=info",
+          "key": "dc5ac2aa2f960317c3ca28ee1943dbc852420436"
+        },
+        {
+          "name": "variant=filled, severity=warning",
+          "key": "b0ca975f5a2fdb2ee029920acf1ac1c27d065ef0"
+        },
+        {
+          "name": "variant=standard, severity=success",
+          "key": "1984672af8b64917c0f9f0c9bf2c9c7fd9047d7a"
+        },
+        {
+          "name": "variant=filled, severity=success",
+          "key": "985d684be448cc8845948c4e028a1602b5606a48"
+        },
+        {
+          "name": "variant=outlined, severity=error",
+          "key": "5c8cb59f1a605d18eebf09bfc4962dbc52636561"
+        },
+        {
+          "name": "variant=outlined, severity=info",
+          "key": "bb7cf8fae629f0af9f034a408f8c5866f55429c7"
+        },
+        {
+          "name": "variant=outlined, severity=warning",
+          "key": "cd2a3bacbcdad37e29e504e15f97825c1c09515b"
+        },
+        {
+          "name": "variant=outlined, severity=success",
+          "key": "eee22c964b94e91d06f38b1e4359f3b16dfd9002"
+        }
+      ],
+      "instanceId": "157:9131",
+      "props": {
+        "action#802:26": {
+          "type": "INSTANCE_SWAP",
+          "value": "157:9014",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "cfb726c79b456d52901243b7c33839efd0780a93"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "7ebea5d7ce6ecfdaef84d177efa64196f654717d"
+            }
+          ]
+        },
+        "Show title#802:13": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Title#802:0": {
+          "type": "TEXT",
+          "value": "Alert title"
+        },
+        "icon#745:0": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "onClose#165:7": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Message#165:0": {
+          "type": "TEXT",
+          "value": "This is an alert message."
+        },
+        "variant": {
+          "value": "standard",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "severity": {
+          "value": "info",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "chosen": "variant=standard, severity=info"
+    },
+    "dialog": {
+      "setKey": "ee2653af17ddbb99afd1ed2a9f4b879021c65df3",
+      "setId": "157:9142",
+      "defs": {
+        "Title#747:0": {
+          "type": "TEXT",
+          "defaultValue": "Dialog title"
+        },
+        "Body#747:1": {
+          "type": "TEXT",
+          "defaultValue": "Dialog body copy."
+        },
+        "Show title#747:23": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show actions#747:30": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show second action#747:37": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Action 1#747:44": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "2:189",
+          "preferredValues": []
+        },
+        "Action 2#747:51": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "2:171",
+          "preferredValues": []
+        },
+        "maxWidth": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "xs",
+            "md",
+            "lg",
+            "xl",
+            "false"
+          ]
+        },
+        "fullScreen": {
+          "type": "VARIANT",
+          "defaultValue": "false",
+          "variantOptions": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "variants": [
+        {
+          "name": "maxWidth=sm, fullScreen=false",
+          "key": "419c84fe7a24bc69be82c9d2f1900c5ca766d251"
+        },
+        {
+          "name": "maxWidth=xs, fullScreen=false",
+          "key": "11bda5a53d440c638d69e5c51905c2040c0456c7"
+        },
+        {
+          "name": "maxWidth=md, fullScreen=false",
+          "key": "d9f98e9bbe63b1a57ef1ea362a9bce2fd3a8d523"
+        },
+        {
+          "name": "maxWidth=lg, fullScreen=false",
+          "key": "3d9b75e4e78ca836f3b20124bfaee7bb99c84b44"
+        },
+        {
+          "name": "maxWidth=xl, fullScreen=false",
+          "key": "ea7eeab8ac699b15efbd2d9fffe02dee647c61f3"
+        },
+        {
+          "name": "maxWidth=false, fullScreen=false",
+          "key": "be323015773169bb8262d544e627a4eda4b49df5"
+        },
+        {
+          "name": "maxWidth=sm, fullScreen=true",
+          "key": "56b7d3c50f7dbd880fbeed097f5fcbd9b866ff84"
+        },
+        {
+          "name": "maxWidth=xs, fullScreen=true",
+          "key": "500e65b3172af4bea60d8cc2a1b1319e3dbae594"
+        },
+        {
+          "name": "maxWidth=md, fullScreen=true",
+          "key": "68eec5d037c9cce2199491fdba38dcda7e85d363"
+        },
+        {
+          "name": "maxWidth=lg, fullScreen=true",
+          "key": "9f1d70497b7809446299128b03cd0f4048e2f801"
+        },
+        {
+          "name": "maxWidth=xl, fullScreen=true",
+          "key": "38a089f2cb1d2f5fc490c472fb27e3a5aa7685c7"
+        },
+        {
+          "name": "maxWidth=false, fullScreen=true",
+          "key": "ea49e5ee2f968fe3940b9a8429f63dc5df500e24"
+        }
+      ],
+      "instanceId": "157:9253",
+      "props": {
+        "Action 2#747:51": {
+          "type": "INSTANCE_SWAP",
+          "value": "2:171",
+          "preferredValues": []
+        },
+        "Action 1#747:44": {
+          "type": "INSTANCE_SWAP",
+          "value": "2:189",
+          "preferredValues": []
+        },
+        "Show actions#747:30": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Title#747:0": {
+          "type": "TEXT",
+          "value": "Dialog title"
+        },
+        "Show title#747:23": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Body#747:1": {
+          "type": "TEXT",
+          "value": "Dialog body copy."
+        },
+        "Show second action#747:37": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "maxWidth": {
+          "value": "xs",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "fullScreen": {
+          "value": "false",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "chosen": "maxWidth=xs, fullScreen=false"
+    }
+  }
+}

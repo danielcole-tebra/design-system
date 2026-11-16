@@ -4745,3 +4745,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - File: Alpha Prototypes `ViAWRVVtgkCXzItk0sQ5P0`, new page `1396:6797`, board `1396:6798`. Six editable encounter states cover shortcut discovery, keyboard-focused selection, Add all, repeated problem chips, bulk insertion and no active problems. Reused the encounter shell, linked DS menu/chip instances, bound tokens and Elevation / 8; retained local SCAFFOLDING menu compositions below the board.
 - Verification: final composition and native-resolution picker inspected; 9/9 DS control comparisons and 25/25 measured assertions pass. No image-filled UI. New content uses Akkurat LL; inherited Nav/Search Inter typography retained and recorded. Screens illustrate keyboard behavior; no interactive text-entry/playback claim. Oversized first return rolled back; confirmed recovery before retry. Unrelated `runs/2026-11-16-problems-visible-canvas/` left untouched.
 - Evidence: runs/2026-11-16-problems-shortcuts/REPORT.md, record.json, build.js, refine.js, verify.js, overview.png and active-problems.png.
+
+
+<!-- builder-run:runs/2026-11-16-medlist-drawer-editing -->
+## 2026-11-16 — Medlist drawer pass 2 — details and editing
+- File: yh2F6OUgdI6K0risLtKLEQ. Expanded the ten medication detail drawers and added representative connected Cetirizine prescription-edit and Levothyroxine chart-only flows on the existing Structured table + drawer page. Ready for Daniel's visual review.
+- Evidence: runs/2026-11-16-medlist-drawer-editing/REPORT.md, record.json, details.png, edit.png, unchanged.png, review.png, review-unchecked.png, cancel-edit.png, cancel-review.png, chart.png, chart-saved.png, result.png, discard.png, compound.png, reported.png, inspection.png.
