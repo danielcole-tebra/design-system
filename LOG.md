@@ -4675,3 +4675,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-15 — Medlist · SDE-style details sidesheet exploration
 - File: yh2F6OUgdI6K0risLtKLEQ. Created page 03 Medlist · Sidesheet exploration from Comparison F. Ten 65 px rows retain medication identity, last activity, quantity, order status, selection and review, with one Details button. A 550 px SDE-derived drawer contains the supporting details and medication actions. The list and an open-drawer context are ready for Daniel's first-batch visual review.
 - Evidence: runs/2026-11-15-medlist-sidesheet/REPORT.md, record.json, list.png, open-verified.png, compound.png, reported.png, issue.png, source-f.png, open.png, open-final.png.
+
+
+<!-- builder-run:runs/2026-11-15-medlist-alpha-sidesheet -->
+## 2026-11-15 — Medlist · Latest Alpha modal sheets and explicit reconciliation
+- File: yh2F6OUgdI6K0risLtKLEQ. Corrected G to the latest SDE Alpha full-height modal sheet with a page backdrop and bottom actions. Filters now abut the table. Reconcile medications opens a separate checkbox review mode; checking marks reviewed and Complete reconciliation returns to the list. Ready for Daniel's visual review.
+- Evidence: runs/2026-11-15-medlist-alpha-sidesheet/REPORT.md, record.json, source-page.png, source-closed.png, source-open.png, list.png, open.png, reconciliation.png, review-states.png, reported-final.png, issue-final.png.

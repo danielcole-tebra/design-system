@@ -1,0 +1,55 @@
+# Medlist · Latest Alpha modal sheets and explicit reconciliation
+
+Corrected G to the latest SDE Alpha full-height modal sheet with a page backdrop and bottom actions. Filters now abut the table. Reconcile medications opens a separate checkbox review mode; checking marks reviewed and Complete reconciliation returns to the list. Ready for Daniel's visual review.
+
+[Review section](https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=104-8366) · File: yh2F6OUgdI6K0risLtKLEQ
+
+## Timing
+
+Start: 2026-11-16T01:31:49.000Z. Ready to construct: 2026-11-16T01:37:55.000Z. Construction returned: 2026-11-16T01:38:35.000Z. First image: 2026-11-16T01:38:46.000Z. Verified: 2026-11-16T01:42:43.000Z.
+
+Preparation/discovery: 366s; construction: 40s; verification after construction: 248s. First image elapsed: 417s; verified elapsed: 654s. Actual input wait: 0s (not subtracted). Successful push/completion is reported in final chat.
+
+## Verified
+
+- Seven native control structure/token comparisons pass with zero differences. Initial measured audit passed505 of507 assertions; the two footer-label failures were corrected and independently rechecked. Initial failures remain in audit-initial.json; final passing readback is audit-correction.json.
+- Normal, open-context and reconciliation frames are1440×1156. Each placed drawer is550×1156 at890,0; header72 with title16/24; clipped vertical body starts73 and is1012 high; footer71 starts1085. All11 modal backdrops cover1440×1156 and retain bound alphaBlack50 opacity0.5.
+- Filters immediately precede the table in normal and review views. Normal row grid480/176/136/256/168 and review grid44/436/176/136/256/168 each total1216; all rows65 high. Selection and review controls are hidden in normal view. Review mode has one native checkbox per medication, without the previous separate Reviewed switch.
+- All ten medication names, directions, supply, source and status properties survive Reviewed No→Yes→No changes. All ten Details destinations and all close destinations resolve. Entry navigates to113:8945; Complete reconciliation navigates to104:4423; row controls use CHANGE_TO. Stored wiring verified; presentation mode was not played through.
+- All ten specific drawers preserve their content and Edit/Resend/View issue actions. Footer action controls use native medium Button height38. Both corrected action labels fit and were viewed in final renders.
+- Saved and viewed latest Alpha source, full list, open modal context, reconciliation view, checked/unchecked variants and corrected issue-specific drawers. No visible clipping in the affected scope; no rasterized UI. Hidden prior layers and inspection instances retained.
+- F, earlier comparison studies, original working page, source SDE Alpha file and Design System Rebuild library remain unchanged.
+
+## Findings and recovery
+
+- DECISION · Owner Daniel · Scope G page104:4346 ·2026-11-15 · Requested correction implemented; visual acceptance pending. The older SDE content-height reference was inappropriate for the explicitly requested latest Alpha treatment. Latest Alpha open frame530:95267 and details829:7301 establish full-height modal presentation. COMPOSITIONS now records this scoped override and preserves the historical recipe.
+- DECISION · Owner Daniel · Scope G reconciliation ·2026-11-15 · Confirmed: Checking marks it reviewed; finish with Complete reconciliation. Entry is available in the heading; selection controls appear only in the dedicated mode. Instruction is above filters so the filtering controls remain adjacent to their table. No clinical completion threshold or backend persistence is inferred.
+- Changing the footer's native Button from small to medium reset the Resend and View issue instance labels. The measured audit detected both; fix-actions.js restored supported Label properties. Final readback and screenshots verify the corrections. No other assertion failed.
+- One overly broad read exceeded the response size limit; retried with a narrow source read, without canvas changes. The local drawer remains a composition using published controls; it is not a newly published SDE master. No library capability gap was newly established.
+- Details actions, prescribing flows and pagination beyond the ten supplied rows retain prior study scope. The inherited Nav/Search font discrepancy remains recorded separately; this batch does not reopen that issue.
+- One coherent review batch is complete. Await Daniel's read before another build batch. All timing checkpoints are observed UTC timestamps; start is the first observed clock after the initial pull, not an inferred earlier conversation time.
+
+## Observable effort
+
+Counts through verification: figmaCalls=unavailable; otherCalls=unavailable; searches=unavailable; technicalRetries=1; canvasCorrections=1; clarificationStops=0; tokens=unavailable.
+
+## Reading
+
+- AGENTS.md; LIBRARY Efficient execution, API checks, Typography, Button, Checkbox, Dialog and Drawer; COMPOSITIONS Sidesheet/body and rows; current Medlist SPEC and previous build/audit evidence.
+- Complete Figma use, generate-design and generate-library skills and applicable API references; live latest Alpha page/open/details anatomy, bound backdrop variable, target page and control properties.
+
+## Evidence
+
+Compact readback and source metrics: [record.json](record.json). Screenshots:
+
+- [source-page.png](source-page.png)
+- [source-closed.png](source-closed.png)
+- [source-open.png](source-open.png)
+- [list.png](list.png)
+- [open.png](open.png)
+- [reconciliation.png](reconciliation.png)
+- [review-states.png](review-states.png)
+- [reported-final.png](reported-final.png)
+- [issue-final.png](issue-final.png)
+
+One fixed-build run; not evidence of a general speedup.

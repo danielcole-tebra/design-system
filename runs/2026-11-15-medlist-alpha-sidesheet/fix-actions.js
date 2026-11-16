@@ -1,0 +1,3 @@
+figma.skipInvisibleInstanceChildren=false;await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('104:4346'));
+const mutated=[];for(const [id,label]of [['104:8078','Resend'],['104:8294','View issue']]){const d=await figma.getNodeByIdAsync(id),b=d.findOne(n=>n.name==='Medication action'),t=b.findOne(n=>n.type==='TEXT'&&n.name==='Label');await Promise.all(t.getStyledTextSegments(['fontName']).map(s=>figma.loadFontAsync(s.fontName)));const key=Object.keys(b.componentProperties).find(k=>k.split('#')[0]==='Label');b.setProperties({[key]:label});mutated.push(b.id);}
+return {mutatedNodeIds:mutated};

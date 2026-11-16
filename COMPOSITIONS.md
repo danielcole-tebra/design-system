@@ -14,7 +14,9 @@ Default separation/inset 16; tight related pairs 8; sections within a body 24; f
 
 ## Sidesheet and body
 
-Established SDE recipe: shell 550 wide, header 72, divider 1, body inset 16 giving 518 content, footer 71. A placed sheet follows its content height; do not pad a short body to the master's 600 height. Docked corners are square. Floating radius 8 was a local SDE value, not a verified global library radius token.
+Latest Alpha reference, selected by Daniel on 2026-11-15 for Medlist G: a modal sheet docked right at the viewport top, 550 wide and full viewport height, over a whole-viewport `alphaBlack50` backdrop. Header72 with h4 Bold16/24 title; divider1; body inset16 giving518 content, vertically scrolling in the remaining height; footer71 anchored at the bottom. Use the existing alpha variable without overriding its stored opacity. This scoped Alpha/Medlist choice supersedes the content-height/no-backdrop interpretation for G; it does not redefine the code's general Drawer usage. Evidence: SDE Alpha `ViAWRVVtgkCXzItk0sQ5P0`, open frame `530:95267`, sheet `530:95998`, and detail sheet `829:7301`; [readback and screenshots](runs/2026-11-15-medlist-alpha-sidesheet/REPORT.md). Source SDE remains unchanged; Medlist visual acceptance is pending.
+
+Historical SDE recipe, retained for provenance: shell550, header72, divider1, body inset16/content518, footer71. The previous guidance was: “A placed sheet follows its content height; do not pad a short body to the master's600 height.” Docked corners are square. Floating radius8 was a local SDE value, not a verified global library radius token. Do not apply that historical height rule to the latest Alpha reference above.
 
 Add a body through the shell's `Body content` preferred values; do not fork the shell or change its default. A new body state belongs in its existing variant set. Preserve the library controls inside it. A fixed-height screen with scrolling is a separately specified composition.
 

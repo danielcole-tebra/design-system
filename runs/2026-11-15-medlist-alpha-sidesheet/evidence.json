@@ -1,0 +1,964 @@
+{
+  "sourceSheet": {
+    "overlay": {
+      "id": "829:7299",
+      "name": "SCAFFOLDING · Alpha Problem Details · work",
+      "x": 0,
+      "y": 0,
+      "w": 1493,
+      "h": 1033,
+      "layout": "NONE",
+      "primary": "AUTO",
+      "counter": "FIXED",
+      "clip": true,
+      "overflow": "NONE"
+    },
+    "sheet": {
+      "id": "829:7301",
+      "name": "Sidesheet · Problem Details",
+      "x": 943,
+      "y": 0,
+      "w": 550,
+      "h": 1033,
+      "layout": "VERTICAL",
+      "primary": "FIXED",
+      "counter": "FIXED",
+      "clip": true,
+      "overflow": "NONE",
+      "properties": {
+        "Tertiary action#279:8": {
+          "type": "INSTANCE_SWAP",
+          "value": "6:15",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "860c2ac68e4f59a56d5a658f43fb53edb291632a"
+            }
+          ]
+        },
+        "Show footer#279:2": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Full-width action#279:11": {
+          "type": "INSTANCE_SWAP",
+          "value": "714:2711",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "0cb38a1b31e83e87e11b1f388398cade29febebf"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "550289b0f1464b8fe4ee9fa2cd4893e06636fa34"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a4c6fc559b7f6cf9eff1e16b0a6dd66ce403ed00"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "c651c8d230cdd01531c4a5ea4e905a023f5cb16e"
+            }
+          ]
+        },
+        "Show primary action#279:9": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Body content#279:5": {
+          "type": "INSTANCE_SWAP",
+          "value": "714:2725",
+          "preferredValues": [
+            {
+              "type": "COMPONENT_SET",
+              "key": "ad381862a96a6d12cd2a85ddad9431763a204d81"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "1bba811839fbc55c60d41d3da7ee083419511bd4"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "970af653563a2d05132165b3c761f1d7314503b9"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "efb161efc43dc93e0d0e2c7ec5941b130c21b2a9"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2fb69a0852237e7f31dd6e3b0601431abbbed411"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "eb7fa1dfebcfdf206e969d990809a4aee0b4296a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "bd771c1d00c68e2a4348ce6211c5e0927c537453"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "26281bc6e71f96e38e17b6f2785f9fbc88062992"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "62016becae42f82f103ab5eaa2a82e2f9dafecd1"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "c88ab164bc4151c9fc5fd6c128c37f91858754bd"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "7369c5ea35b04599ba8710b383c205a0fe432b61"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "80cd7a1fddb1725e47368d5a6e961d1fe4567c8e"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ff6257d5e342824bbc2612385aae82765bf1886b"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ad521d8e34ac8c0f10ee67daa917e3ebaf011ea8"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "f217ea529701694d73c504f60d0d38ff61286f94"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "bd7d6173a78a666f329bbb7349d5d816174a6146"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "eb15da5063ba552813968d65675fdc30ef177dc3"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "292fb6008778f904db85a5f72f90d5b8c7ab4296"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "a02b83045b26bc12ab53ff93463799f2020a1515"
+            },
+            {
+              "type": "COMPONENT_SET",
+              "key": "633e2bbaad211eeabd029507d6936b31bf3fb90b"
+            }
+          ]
+        },
+        "Secondary action#279:7": {
+          "type": "INSTANCE_SWAP",
+          "value": "6:23",
+          "preferredValues": []
+        },
+        "Show tertiary action#279:4": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Primary action#279:6": {
+          "type": "INSTANCE_SWAP",
+          "value": "6:19",
+          "preferredValues": []
+        },
+        "Show back#279:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show full-width action#279:10": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show secondary action#279:3": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Title#279:0": {
+          "type": "TEXT",
+          "value": "Problem Details"
+        },
+        "Placement": {
+          "value": "Docked right",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "mainKey": "98571022f217816aed456921d16501b60e515d99"
+    },
+    "scrim": {
+      "id": "829:7300",
+      "name": "SCAFFOLDING · Problem picker backdrop",
+      "x": 0,
+      "y": 0,
+      "w": 1493,
+      "h": 1033,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:482703044f1cfd379642fc2f19930975d652abb0/196:49"
+            }
+          }
+        }
+      ],
+      "reactions": []
+    },
+    "header": {
+      "id": "I829:7301;279:2417",
+      "name": "Header",
+      "x": 0,
+      "y": 0,
+      "w": 550,
+      "h": 72,
+      "layout": "HORIZONTAL",
+      "primary": "FIXED",
+      "counter": "AUTO",
+      "clip": true,
+      "overflow": "NONE",
+      "texts": [
+        {
+          "name": "Title",
+          "font": {
+            "family": "Akkurat LL",
+            "style": "Bold"
+          },
+          "size": 16,
+          "line": {
+            "unit": "PIXELS",
+            "value": 24
+          },
+          "text": "Problem Details"
+        }
+      ],
+      "close": [
+        {
+          "id": "I829:7301;279:2420",
+          "name": "Close",
+          "reactions": [
+            {
+              "action": {
+                "type": "SET_VARIABLE",
+                "variableId": "VariableID:829:7285",
+                "variableValue": {
+                  "value": false,
+                  "type": "BOOLEAN",
+                  "resolvedType": "BOOLEAN"
+                }
+              },
+              "actions": [
+                {
+                  "type": "SET_VARIABLE",
+                  "variableId": "VariableID:829:7285",
+                  "variableValue": {
+                    "value": false,
+                    "type": "BOOLEAN",
+                    "resolvedType": "BOOLEAN"
+                  }
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I829:7301;279:2420;170:6",
+          "name": "Icon/CloseOutlined",
+          "reactions": []
+        }
+      ]
+    },
+    "body": {
+      "id": "I829:7301;279:2422",
+      "name": "Body",
+      "x": 0,
+      "y": 73,
+      "w": 550,
+      "h": 889,
+      "layout": "VERTICAL",
+      "primary": "FIXED",
+      "counter": "FIXED",
+      "clip": true,
+      "overflow": "NONE"
+    },
+    "footer": {
+      "id": "I829:7301;279:2424",
+      "name": "Footer",
+      "x": 0,
+      "y": 962,
+      "w": 550,
+      "h": 71,
+      "layout": "VERTICAL",
+      "primary": "AUTO",
+      "counter": "FIXED",
+      "clip": true,
+      "overflow": "NONE"
+    },
+    "visibleReview": [
+      {
+        "id": "530:95270",
+        "name": "Page/Encounter",
+        "type": "INSTANCE",
+        "w": 1493,
+        "h": 1063
+      },
+      {
+        "id": "530:95271",
+        "name": "Patient navigation · Chart",
+        "type": "INSTANCE",
+        "w": 1493,
+        "h": 48
+      },
+      {
+        "id": "530:95274",
+        "name": "SCAFFOLDING · compact Note preserving intake",
+        "type": "FRAME",
+        "w": 690,
+        "h": 730
+      },
+      {
+        "id": "530:95332",
+        "name": "SCAFFOLDING · linked note body for outcomes",
+        "type": "INSTANCE",
+        "w": 658,
+        "h": 514
+      },
+      {
+        "id": "530:95333",
+        "name": "SCAFFOLDING · note outcome editor viewport",
+        "type": "FRAME",
+        "w": 626,
+        "h": 420
+      },
+      {
+        "id": "532:17003",
+        "name": "SCAFFOLDING · Note configuration only",
+        "type": "FRAME",
+        "w": 658,
+        "h": 40
+      },
+      {
+        "id": "532:17017",
+        "name": "SCAFFOLDING · Persistent encounter recorder",
+        "type": "FRAME",
+        "w": 690,
+        "h": 56
+      },
+      {
+        "id": "530:95338",
+        "name": "SCAFFOLDING · Module rail scrolling viewport",
+        "type": "FRAME",
+        "w": 691,
+        "h": 802
+      },
+      {
+        "id": "530:95903",
+        "name": "SCAFFOLDING · Module icon rail",
+        "type": "FRAME",
+        "w": 64,
+        "h": 852
+      },
+      {
+        "id": "530:95997",
+        "name": "SCAFFOLDING · modal backdrop",
+        "type": "RECTANGLE",
+        "w": 1493,
+        "h": 1033
+      },
+      {
+        "id": "530:95998",
+        "name": "SCAFFOLDING · reviewed AI results panel",
+        "type": "FRAME",
+        "w": 550,
+        "h": 1033
+      },
+      {
+        "id": "970:37896",
+        "name": "SCAFFOLDING · Main toast countdown",
+        "type": "INSTANCE",
+        "w": 1,
+        "h": 1
+      },
+      {
+        "id": "1089:2086",
+        "name": "SCAFFOLDING · F06 lifecycle countdown",
+        "type": "INSTANCE",
+        "w": 1,
+        "h": 1
+      }
+    ]
+  },
+  "sourceMetrics": {
+    "panel": {
+      "id": "530:95998",
+      "name": "SCAFFOLDING · reviewed AI results panel",
+      "type": "FRAME",
+      "x": 943,
+      "y": 0,
+      "w": 550,
+      "h": 1033,
+      "visible": true,
+      "layout": "NONE",
+      "clip": true,
+      "overflow": "NONE"
+    },
+    "children": [
+      {
+        "id": "530:95999",
+        "name": "AI Note Results · linked docked shell",
+        "type": "INSTANCE",
+        "x": 0,
+        "y": 0,
+        "w": 550,
+        "h": 1033,
+        "visible": true,
+        "layout": "VERTICAL",
+        "clip": true,
+        "overflow": "NONE"
+      },
+      {
+        "id": "530:96000",
+        "name": "SCAFFOLDING · AI results body viewport",
+        "type": "FRAME",
+        "x": 0,
+        "y": 73,
+        "w": 550,
+        "h": 889,
+        "visible": true,
+        "layout": "VERTICAL",
+        "clip": true,
+        "overflow": "VERTICAL"
+      },
+      {
+        "id": "530:96009",
+        "name": "SCAFFOLDING · linked results footer divider",
+        "type": "INSTANCE",
+        "x": 0,
+        "y": 962,
+        "w": 550,
+        "h": 1,
+        "visible": true,
+        "layout": "NONE",
+        "clip": false,
+        "overflow": "NONE"
+      },
+      {
+        "id": "530:96010",
+        "name": "SCAFFOLDING · full-width results footer",
+        "type": "FRAME",
+        "x": 0,
+        "y": 963,
+        "w": 550,
+        "h": 70,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "clip": true,
+        "overflow": "NONE"
+      }
+    ],
+    "texts": [
+      {
+        "id": "I530:95999;279:2419",
+        "name": "Title",
+        "text": "AI Note Results",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 16,
+        "line": {
+          "unit": "PIXELS",
+          "value": 24
+        },
+        "style": "S:888b271ed38cdcfb86c35f9de8bff5ac9b81e8e3,116:51"
+      },
+      {
+        "id": "I530:96003;969:16277;802:1136",
+        "name": "Title",
+        "text": "Alert title",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 16,
+        "line": {
+          "unit": "AUTO"
+        },
+        "style": ""
+      },
+      {
+        "id": "I530:96003;969:16290;969:16241",
+        "name": "Title",
+        "text": "Patient Concerns",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I530:96003;969:16301;969:16254",
+        "name": "Title",
+        "text": "History of Present Illness",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I530:96003;969:16318;969:16254",
+        "name": "Title",
+        "text": "Relevant Chart History",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I530:96005;969:16241",
+        "name": "Title",
+        "text": "Subjective",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I648:4929;969:16254",
+        "name": "Title",
+        "text": "Subjective",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I648:4913;969:16271",
+        "name": "Title",
+        "text": "Subjective",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I530:96006;969:16241",
+        "name": "Title",
+        "text": "Objective",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I648:4959;969:16271",
+        "name": "Title",
+        "text": "Objective",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I530:96007;969:16241",
+        "name": "Title",
+        "text": "Assessment",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I648:4976;969:16271",
+        "name": "Title",
+        "text": "Assessment",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I530:96008;969:16241",
+        "name": "Title",
+        "text": "Plan",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      },
+      {
+        "id": "I648:4993;969:16271",
+        "name": "Title",
+        "text": "Plan",
+        "font": {
+          "family": "Akkurat LL",
+          "style": "Bold"
+        },
+        "size": 14,
+        "line": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "style": ""
+      }
+    ],
+    "backdrop": {
+      "id": "530:95997",
+      "fill": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:482703044f1cfd379642fc2f19930975d652abb0/196:49"
+            }
+          }
+        }
+      ],
+      "nodeOpacity": 1,
+      "reactions": [],
+      "token": {
+        "id": "VariableID:482703044f1cfd379642fc2f19930975d652abb0/196:49",
+        "name": "color/computed (no palette)/alphaBlack50",
+        "key": "482703044f1cfd379642fc2f19930975d652abb0",
+        "values": {
+          "74:0": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.5
+          }
+        }
+      }
+    },
+    "problemFooter": [
+      {
+        "id": "I829:7301;279:2429",
+        "name": "Primary action",
+        "type": "INSTANCE",
+        "x": 472,
+        "y": 16,
+        "w": 70,
+        "h": 38,
+        "visible": false,
+        "layout": "HORIZONTAL",
+        "clip": false,
+        "overflow": "NONE"
+      },
+      {
+        "id": "I829:7301;279:2430",
+        "name": "Full-width action",
+        "type": "INSTANCE",
+        "x": 8,
+        "y": 16,
+        "w": 534,
+        "h": 38,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "clip": false,
+        "overflow": "NONE"
+      }
+    ]
+  },
+  "targetBefore": {
+    "page": "104:4346",
+    "top": [
+      {
+        "id": "104:4347",
+        "name": "Medlist/Drawer row",
+        "type": "COMPONENT"
+      },
+      {
+        "id": "104:4423",
+        "name": "G · Current medications · Details in sidesheet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:7574",
+        "name": "Medlist/Medication details sidesheet",
+        "type": "COMPONENT"
+      },
+      {
+        "id": "104:7642",
+        "name": "Details overlay · Alprazolam 0.25 mg tablet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:7712",
+        "name": "Details overlay · Cetirizine 10 mg tablet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:7785",
+        "name": "Details overlay · Aspirin 81 mg delayed-release tablet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:7858",
+        "name": "Details overlay · Doxycycline hyclate 100 mg capsule",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:7931",
+        "name": "Details overlay · Furosemide 20 mg tablet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:8004",
+        "name": "Details overlay · Hydrocortisone 1% compounded cream",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:8077",
+        "name": "Details overlay · Melatonin 3 mg tablet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:8150",
+        "name": "Details overlay · Metformin 500 mg tablet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:8220",
+        "name": "Details overlay · Simvastatin 20 mg tablet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:8293",
+        "name": "Details overlay · Acetaminophen 500 mg tablet",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:8366",
+        "name": "G · Sidesheet open · Alprazolam",
+        "type": "FRAME"
+      },
+      {
+        "id": "104:8553",
+        "name": "README · Sidesheet exploration",
+        "type": "FRAME"
+      }
+    ],
+    "master": {
+      "id": "104:7574",
+      "w": 550,
+      "h": 592,
+      "children": [
+        {
+          "id": "104:7575",
+          "name": "Header",
+          "h": 72,
+          "w": 550
+        },
+        {
+          "id": "104:7582",
+          "name": "Divider",
+          "h": 1,
+          "w": 550
+        },
+        {
+          "id": "104:7583",
+          "name": "Body",
+          "h": 448,
+          "w": 550
+        },
+        {
+          "id": "104:7623",
+          "name": "Footer",
+          "h": 71,
+          "w": 550
+        }
+      ]
+    },
+    "instances": [
+      {
+        "id": "104:7643",
+        "name": "Medication details",
+        "parent": "104:7642",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:7713",
+        "name": "Medication details",
+        "parent": "104:7712",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:7786",
+        "name": "Medication details",
+        "parent": "104:7785",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:7859",
+        "name": "Medication details",
+        "parent": "104:7858",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:7932",
+        "name": "Medication details",
+        "parent": "104:7931",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:8005",
+        "name": "Medication details",
+        "parent": "104:8004",
+        "w": 550,
+        "h": 624,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:8078",
+        "name": "Medication details",
+        "parent": "104:8077",
+        "w": 550,
+        "h": 620,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:8151",
+        "name": "Medication details",
+        "parent": "104:8150",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:8221",
+        "name": "Medication details",
+        "parent": "104:8220",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:8294",
+        "name": "Medication details",
+        "parent": "104:8293",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      },
+      {
+        "id": "104:8485",
+        "name": "Medication details",
+        "parent": "104:8366",
+        "w": 550,
+        "h": 592,
+        "x": 890,
+        "y": 133
+      }
+    ]
+  }
+}

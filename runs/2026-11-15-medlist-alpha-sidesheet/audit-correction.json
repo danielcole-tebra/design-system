@@ -1,0 +1,194 @@
+[
+  {
+    "id": "104:8078",
+    "button": "I104:8078;104:7633",
+    "label": "Resend",
+    "expected": "Resend",
+    "pass": true,
+    "width": 120,
+    "height": 38,
+    "textWidth": 56,
+    "properties": {
+      "End icon#83:275": {
+        "type": "BOOLEAN",
+        "value": false
+      },
+      "End icon swap#83:386": {
+        "type": "INSTANCE_SWAP",
+        "value": "2:135",
+        "preferredValues": [
+          {
+            "type": "COMPONENT",
+            "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "4b36995eeb808368112345235e670acfd187d920"
+          }
+        ]
+      },
+      "Start icon swap#83:331": {
+        "type": "INSTANCE_SWAP",
+        "value": "2:133",
+        "preferredValues": [
+          {
+            "type": "COMPONENT",
+            "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "4b36995eeb808368112345235e670acfd187d920"
+          }
+        ]
+      },
+      "Start icon#83:220": {
+        "type": "BOOLEAN",
+        "value": false
+      },
+      "Label#83:165": {
+        "type": "TEXT",
+        "value": "Resend"
+      },
+      "variant": {
+        "value": "contained",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "color": {
+        "value": "primary",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "size": {
+        "value": "medium",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "State": {
+        "value": "Default",
+        "type": "VARIANT",
+        "boundVariables": {}
+      }
+    }
+  },
+  {
+    "id": "104:8294",
+    "button": "I104:8294;104:7633",
+    "label": "View issue",
+    "expected": "View issue",
+    "pass": true,
+    "width": 120,
+    "height": 38,
+    "textWidth": 78,
+    "properties": {
+      "End icon#83:275": {
+        "type": "BOOLEAN",
+        "value": false
+      },
+      "End icon swap#83:386": {
+        "type": "INSTANCE_SWAP",
+        "value": "2:135",
+        "preferredValues": [
+          {
+            "type": "COMPONENT",
+            "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "4b36995eeb808368112345235e670acfd187d920"
+          }
+        ]
+      },
+      "Start icon swap#83:331": {
+        "type": "INSTANCE_SWAP",
+        "value": "2:133",
+        "preferredValues": [
+          {
+            "type": "COMPONENT",
+            "key": "9014d3426e8bc55a4b28ef279f584134ae32f06f"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "925d1c32ce73e949f4f67701add8eb5be3ed342f"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "44218ece645a8de41f00e4eef1edadfb429ad38b"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "4b36995eeb808368112345235e670acfd187d920"
+          }
+        ]
+      },
+      "Start icon#83:220": {
+        "type": "BOOLEAN",
+        "value": false
+      },
+      "Label#83:165": {
+        "type": "TEXT",
+        "value": "View issue"
+      },
+      "variant": {
+        "value": "contained",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "color": {
+        "value": "primary",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "size": {
+        "value": "medium",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "State": {
+        "value": "Default",
+        "type": "VARIANT",
+        "boundVariables": {}
+      }
+    }
+  }
+]

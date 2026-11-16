@@ -125,6 +125,8 @@ Dialog default maxWidth sm changes nothing from MUI; elevation 24, radius 4, run
 
 Drawer has no Tebra override. Documented product usage is persistent/right: no scrim/elevation, divider on content-facing side. Do not import mobile sheet radius 32 or its modal behavior as a universal Drawer rule. (T §3.23.)
 
+Latest SDE Alpha prototypes use a distinct full-height modal composition with a black50 backdrop, selected by Daniel for Medlist G on2026-11-15. See COMPOSITIONS.md §Sidesheet and body for its exact source and scope. This prototype evidence differs from the documented persistent usage above; it is not evidence of a code override or a newly published Drawer variant.
+
 ## Alert
 
 Set severity explicitly; code defaults to info. **Warning colour depends on variant:**

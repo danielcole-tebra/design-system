@@ -1,0 +1,208 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": false,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 7,
+    "passed": true,
+    "checks": [
+      {
+        "id": "113:8933",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "113:12054",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I113:13043;113:8776",
+        "mainId": "2:1268",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I113:13119;113:8824",
+        "mainId": "2:1272",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I104:7643;104:7626",
+        "mainId": "2:159",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I104:7643;104:7633",
+        "mainId": "2:159",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I104:6766;104:4383",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 507,
+    "failed": 2,
+    "checks": [
+      {
+        "name": "104:4423 filter/table adjacency",
+        "passed": true
+      },
+      {
+        "name": "104:4423 viewport",
+        "passed": true
+      },
+      {
+        "name": "104:8366 filter/table adjacency",
+        "passed": true
+      },
+      {
+        "name": "104:8366 viewport",
+        "passed": true
+      },
+      {
+        "name": "113:8945 filter/table adjacency",
+        "passed": true
+      },
+      {
+        "name": "113:8945 viewport",
+        "passed": true
+      },
+      {
+        "name": "Default entry destination",
+        "passed": true
+      },
+      {
+        "name": "Complete returns to list",
+        "passed": true
+      },
+      {
+        "name": "Review instruction above filters",
+        "passed": true
+      },
+      {
+        "name": "Default always-visible utility hidden",
+        "passed": true
+      },
+      {
+        "name": "Ten normal rows",
+        "passed": true
+      },
+      {
+        "name": "Ten review rows",
+        "passed": true
+      },
+      {
+        "name": "0 normal review controls hidden",
+        "passed": true
+      },
+      {
+        "name": "0 review checkbox visible",
+        "passed": true
+      },
+      {
+        "name": "0 no duplicate review switch",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Date",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Last activity",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Duration",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Quantity",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Medication name",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Compound",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Source note",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Refills",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Show source note",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Show timeline",
+        "passed": true
+      },
+      {
+        "name": "0 preserved Directions",
+        "passed": true
+      },
+      {
+        "name": "0 normal column widths",
+        "passed": true
+      },
+      {
+        "name": "0 review column widths",
+        "passed": true
+      },
+      {
+        "name": "0 same detail destination",
+        "passed": true
+      },
+      {
+        "name": "0 checked state",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 477,
+    "failures": [
+      {
+        "name": "6 action content",
+        "actual": {
+          "text": "\"Edit\"",
+          "truncated": false
+        },
+        "expected": {
+          "text": "\"Resend\"",
+          "truncated": false
+        }
+      },
+      {
+        "name": "9 action content",
+        "actual": {
+          "text": "\"Edit\"",
+          "truncated": false
+        },
+        "expected": {
+          "text": "\"View issue\"",
+          "truncated": false
+        }
+      }
+    ],
+    "omittedFailures": 0
+  }
+}
