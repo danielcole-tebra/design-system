@@ -1,0 +1,408 @@
+{
+  "title": "Problems DS translation",
+  "date": "2026-11-16",
+  "fileKey": "fdCQVFdvOByaOYIJYag0d6",
+  "reviewUrl": "https://www.figma.com/design/fdCQVFdvOByaOYIJYag0d6/SDE-REbuild?node-id=1829-2321",
+  "summary": "Translated the two Problems designs with the existing SDE sidesheet composition and linked Design System Rebuild primitives. Original designs retained below the translations.",
+  "timing": {
+    "note": "Not a benchmark; checkpoint times were not captured. No elapsed-time claim."
+  },
+  "verified": [
+    "Both final sheets visually inspected against source",
+    "Both native-node compositions are 550 by 718; all content fits their body",
+    "All visible text uses Akkurat LL",
+    "No image-filled nodes within either result",
+    "12 measured assertions passed; structural comparison 12/13 passed with one expected icon-slot name override",
+    "Close icon swap key independently confirmed against published Icon/CloseOutlined"
+  ],
+  "findings": [
+    "Published Drawer has a fixed navigation list rather than a general content slot; reused local SDE Sidesheet body swap composition instead.",
+    "Date fields use native Text field plus adjacent DS calendar Icon button because Text field has no end-adornment slot.",
+    "The native multiline component has separate demonstration rows; their text was overridden with blank display rows. No control structure, typography or token overrides.",
+    "Sheets increased from source 618px to 718px to accommodate native component heights. Source codes and clinical values retained, including existing inconsistent example codes.",
+    "Visual mocks only; no new prototype wiring or real data persistence."
+  ],
+  "evidence": {
+    "build": [
+      {
+        "createdNodeIds": [
+          "1829:2012",
+          "1829:2013",
+          "1829:2014",
+          "1829:2015",
+          "1829:2016",
+          "1829:2017",
+          "1829:2021",
+          "1829:2022",
+          "1829:2023",
+          "1829:2029",
+          "1829:2035",
+          "1829:2036",
+          "1829:2037",
+          "1829:2042",
+          "1829:2048",
+          "1829:2049",
+          "1829:2050",
+          "1829:2051",
+          "1829:2054",
+          "1829:2079",
+          "1829:2080",
+          "1829:2103",
+          "1829:2104",
+          "1829:2105",
+          "1829:2106",
+          "1829:2109",
+          "1829:2135",
+          "1829:2136",
+          "1829:2162",
+          "1829:2163",
+          "1829:2164",
+          "1829:2165",
+          "1829:2166",
+          "1829:2170",
+          "1829:2171",
+          "1829:2172",
+          "1829:2173",
+          "1829:2194",
+          "1829:2195",
+          "1829:2216",
+          "1829:2220",
+          "1829:2224",
+          "1829:2225",
+          "1829:2226",
+          "1829:2247",
+          "1829:2251",
+          "1829:2252",
+          "1829:2273",
+          "1829:2277",
+          "1829:2278",
+          "1829:2279",
+          "1829:2280",
+          "1829:2284",
+          "1829:2288",
+          "1829:2292",
+          "1829:2296",
+          "1829:2300",
+          "1829:2321",
+          "1829:2590"
+        ],
+        "mutatedNodeIds": [
+          "1824:238628",
+          "1824:238770"
+        ],
+        "translated": [
+          {
+            "id": "1829:2321",
+            "name": "Problems · DS translation",
+            "bodyId": "I1829:2321;6:80",
+            "w": 550,
+            "h": 650,
+            "bodyHeight": 496,
+            "footer": 579
+          },
+          {
+            "id": "1829:2590",
+            "name": "Problem Details · DS translation",
+            "bodyId": "I1829:2590;6:80",
+            "w": 550,
+            "h": 718,
+            "bodyHeight": 492,
+            "footer": 647
+          }
+        ],
+        "masterIds": [
+          "1829:2012",
+          "1829:2035",
+          "1829:2162"
+        ],
+        "listHeight": 496,
+        "detailsHeight": 492,
+        "controls": [
+          {
+            "id": "1829:2017",
+            "name": "Active"
+          },
+          {
+            "id": "1829:2023",
+            "name": "Edit"
+          },
+          {
+            "id": "1829:2029",
+            "name": "Note"
+          },
+          {
+            "id": "1829:2037",
+            "name": "No known problems"
+          },
+          {
+            "id": "1829:2042",
+            "name": "Add"
+          },
+          {
+            "id": "1829:2050",
+            "name": "Divider"
+          },
+          {
+            "id": "1829:2051",
+            "name": "Collapse section"
+          },
+          {
+            "id": "1829:2054",
+            "name": "Low back pain"
+          },
+          {
+            "id": "1829:2079",
+            "name": "Divider"
+          },
+          {
+            "id": "1829:2080",
+            "name": "Depression, unspecified"
+          },
+          {
+            "id": "1829:2105",
+            "name": "Divider"
+          },
+          {
+            "id": "1829:2106",
+            "name": "Collapse section"
+          },
+          {
+            "id": "1829:2109",
+            "name": "Hypertension"
+          },
+          {
+            "id": "1829:2135",
+            "name": "Divider"
+          },
+          {
+            "id": "1829:2136",
+            "name": "Anxiety, unspecified"
+          },
+          {
+            "id": "1829:2166",
+            "name": "Active"
+          },
+          {
+            "id": "1829:2173",
+            "name": "Problem or ICD-10 Code"
+          },
+          {
+            "id": "1829:2195",
+            "name": "Status"
+          }
+        ],
+        "dateComposition": "Native Text field alongside Icon button; no field internals altered",
+        "sourceDataPreserved": true
+      }
+    ],
+    "audit": [
+      {
+        "scope": "structure-and-measured-assertions; screenshots checked separately",
+        "passed": false,
+        "structure": {
+          "scope": "structure-and-token-snapshot",
+          "checked": 13,
+          "passed": false,
+          "checks": [
+            {
+              "id": "I1829:2321;6:74",
+              "mainId": "77:1105",
+              "passed": false,
+              "differenceCount": 1
+            },
+            {
+              "id": "I1829:2321;6:78",
+              "mainId": "6:63",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2321;6:80;1829:2037",
+              "mainId": "197:3282",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2321;6:80;1829:2042",
+              "mainId": "155:1192",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2321;6:80;1829:2051",
+              "mainId": "77:1109",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2321;6:80;1829:2054;1829:2017",
+              "mainId": "222:1799",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2321;6:80;1829:2054;1829:2023",
+              "mainId": "155:1193",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2321;6:80;1829:2109;1829:2017",
+              "mainId": "222:1784",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2590;6:80;1829:2173",
+              "mainId": "1829:870",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2590;6:80;1829:2216",
+              "mainId": "222:1763",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2590;6:80;1829:2220",
+              "mainId": "222:1754",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2590;6:85",
+              "mainId": "155:1222",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "I1829:2590;6:101",
+              "mainId": "155:1204",
+              "passed": true,
+              "differenceCount": 0
+            }
+          ],
+          "differenceCount": 1,
+          "differences": [
+            {
+              "id": "I1829:2321;6:74",
+              "path": "/children/0/name",
+              "pathTruncated": false,
+              "actual": {
+                "text": "\"Icon/CloseOutlined\"",
+                "truncated": false
+              },
+              "expected": {
+                "text": "\"Icon\"",
+                "truncated": false
+              }
+            }
+          ],
+          "omittedDifferences": 0
+        },
+        "assertions": {
+          "checked": 12,
+          "failed": 0,
+          "checks": [
+            {
+              "name": "Problems · DS translation width",
+              "passed": true
+            },
+            {
+              "name": "Problems · DS translation height",
+              "passed": true
+            },
+            {
+              "name": "Problems · DS translation product font",
+              "passed": true
+            },
+            {
+              "name": "Problems · DS translation image node count",
+              "passed": true
+            },
+            {
+              "name": "Problems · DS translation content fits body",
+              "passed": true
+            },
+            {
+              "name": "Problem Details · DS translation width",
+              "passed": true
+            },
+            {
+              "name": "Problem Details · DS translation height",
+              "passed": true
+            },
+            {
+              "name": "Problem Details · DS translation product font",
+              "passed": true
+            },
+            {
+              "name": "Problem Details · DS translation image node count",
+              "passed": true
+            },
+            {
+              "name": "Problem Details · DS translation content fits body",
+              "passed": true
+            },
+            {
+              "name": "Original list retained",
+              "passed": true
+            },
+            {
+              "name": "Original editor retained",
+              "passed": true
+            }
+          ],
+          "omittedChecks": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      }
+    ],
+    "verification": [
+      [
+        {
+          "id": "1829:2321",
+          "name": "Problems · DS translation",
+          "descendants": 158,
+          "counts": {
+            "FRAME": 19,
+            "INSTANCE": 70,
+            "VECTOR": 35,
+            "TEXT": 29,
+            "RECTANGLE": 4,
+            "GROUP": 1
+          },
+          "closeIconKey": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54",
+          "closeIconExpected": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54",
+          "bodyContentHeight": 496,
+          "bodyAvailable": 542,
+          "imageFilledNodes": []
+        },
+        {
+          "id": "1829:2590",
+          "name": "Problem Details · DS translation",
+          "descendants": 195,
+          "counts": {
+            "FRAME": 58,
+            "INSTANCE": 50,
+            "VECTOR": 25,
+            "TEXT": 62
+          },
+          "closeIconKey": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54",
+          "closeIconExpected": "1fe139d4e5d4a9b2998d4644c40a6a0e290d9c54",
+          "bodyContentHeight": 444,
+          "bodyAvailable": 542,
+          "imageFilledNodes": []
+        }
+      ]
+    ]
+  },
+  "screenshots": [
+    "source-list.png",
+    "source-details.png",
+    "problems-list.png",
+    "problem-details.png"
+  ]
+}

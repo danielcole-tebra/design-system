@@ -4725,3 +4725,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist structured table with Open and latest drawer
 - File: yh2F6OUgdI6K0risLtKLEQ. Created a separate Structured table + drawer page. The structured sig table now has one Open button and a vertical kebab per row; Open targets each medication's reused latest Alpha-style drawer. Separate reconciliation preserved. Awaiting Daniel's visual review.
 - Evidence: runs/2026-11-16-medlist-open-drawer/REPORT.md, record.json, list.png, drawer-open.png, review.png, row-states.png, compound-drawer.png, reported-drawer.png.
+
+## 2026-11-16 — Problems DS translation
+- File: SDE Rebuild `fdCQVFdvOByaOYIJYag0d6`, Problems page. Translated both supplied sheets into the existing SDE shell and linked Design System Rebuild controls. New designs are at the top; original designs retained below. Both are550 ×718 to accommodate native controls.
+- Verification: both screenshots inspected; all visible text is Akkurat LL, content fits, and no full-UI images are present. All12 measured assertions pass. Raw control audit has one expected child-slot name difference from a supported close-icon swap; its published key was independently confirmed. Date fields use adjacent DS calendar buttons; no prototype behavior added.
+- Evidence: runs/2026-11-16-problems-ds-translation/REPORT.md, record.json, build.js, fix.js, audit.js and four source/result PNGs.
