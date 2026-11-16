@@ -1,0 +1,765 @@
+{
+  "date": "2026-11-16",
+  "fileKey": "ViAWRVVtgkCXzItk0sQ5P0",
+  "pageId": "1319:4655",
+  "pageName": "Updated 11/16",
+  "reviewUrl": "https://www.figma.com/design/ViAWRVVtgkCXzItk0sQ5P0?node-id=1396-45474",
+  "issue": "Previous integration was hidden behind prototype state; components alone at page bottom did not provide visible workflow screens.",
+  "resolution": "Six permanently visible full encounter frames, arranged 3 by2 to the right of the redline frames, show Problems on canvas and New/four Edit sidesheets. Visibility is frozen locally in these copies; main prototype remains unchanged.",
+  "build": [
+    {
+      "createdNodeIds": [
+        "1396:45474",
+        "1396:45475",
+        "1396:45972",
+        "1396:46175",
+        "1396:46245",
+        "1396:46307",
+        "1396:46408",
+        "1396:46470",
+        "1396:46526",
+        "1396:46527",
+        "1396:47145",
+        "1396:47146",
+        "1396:47643",
+        "1396:47846",
+        "1396:47916",
+        "1396:47978",
+        "1396:48079",
+        "1396:48141",
+        "1396:48197",
+        "1396:48198",
+        "1396:48816",
+        "1396:49014",
+        "1396:49015",
+        "1396:49512",
+        "1396:49715",
+        "1396:49785",
+        "1396:49847",
+        "1396:49948",
+        "1396:50010",
+        "1396:50066",
+        "1396:50067",
+        "1396:50685",
+        "1396:50883",
+        "1396:50884",
+        "1396:51381",
+        "1396:51584",
+        "1396:51654",
+        "1396:51716",
+        "1396:51817",
+        "1396:51879",
+        "1396:51935",
+        "1396:51936",
+        "1396:52554",
+        "1396:52752",
+        "1396:52753",
+        "1396:53250",
+        "1396:53453",
+        "1396:53523",
+        "1396:53585",
+        "1396:53686",
+        "1396:53748",
+        "1396:53804",
+        "1396:53805",
+        "1396:54423",
+        "1396:54621",
+        "1396:54622",
+        "1396:55119",
+        "1396:55322",
+        "1396:55392",
+        "1396:55454",
+        "1396:55555",
+        "1396:55617",
+        "1396:55673",
+        "1396:55674",
+        "1396:56292"
+      ],
+      "mutatedNodeIds": [
+        "1319:4655"
+      ],
+      "frames": [
+        {
+          "id": "1396:45474",
+          "name": "11/16 · Problems · 01 Canvas module",
+          "x": 4400,
+          "y": 800,
+          "w": 1493,
+          "h": 1033,
+          "visible": true
+        },
+        {
+          "id": "1396:47145",
+          "name": "11/16 · Problems · 02 New Problem",
+          "x": 6053,
+          "y": 800,
+          "w": 1493,
+          "h": 1033,
+          "visible": true
+        },
+        {
+          "id": "1396:49014",
+          "name": "11/16 · Problems · 03 Edit Low back pain",
+          "x": 7706,
+          "y": 800,
+          "w": 1493,
+          "h": 1033,
+          "visible": true
+        },
+        {
+          "id": "1396:50883",
+          "name": "11/16 · Problems · 04 Edit Depression",
+          "x": 4400,
+          "y": 2080,
+          "w": 1493,
+          "h": 1033,
+          "visible": true
+        },
+        {
+          "id": "1396:52752",
+          "name": "11/16 · Problems · 05 Edit Hypertension",
+          "x": 6053,
+          "y": 2080,
+          "w": 1493,
+          "h": 1033,
+          "visible": true
+        },
+        {
+          "id": "1396:54621",
+          "name": "11/16 · Problems · 06 Edit Anxiety",
+          "x": 7706,
+          "y": 2080,
+          "w": 1493,
+          "h": 1033,
+          "visible": true
+        }
+      ],
+      "sheets": [
+        {
+          "frameId": "1396:47145",
+          "modalId": "1396:48816",
+          "sheetId": "1396:48818",
+          "w": 550,
+          "h": 1033
+        },
+        {
+          "frameId": "1396:49014",
+          "modalId": "1396:50685",
+          "sheetId": "1396:50687",
+          "w": 550,
+          "h": 1033
+        },
+        {
+          "frameId": "1396:50883",
+          "modalId": "1396:52554",
+          "sheetId": "1396:52556",
+          "w": 550,
+          "h": 1033
+        },
+        {
+          "frameId": "1396:52752",
+          "modalId": "1396:54423",
+          "sheetId": "1396:54425",
+          "w": 550,
+          "h": 1033
+        },
+        {
+          "frameId": "1396:54621",
+          "modalId": "1396:56292",
+          "sheetId": "1396:56294",
+          "w": 550,
+          "h": 1033
+        }
+      ],
+      "localNavigationLinks": 49,
+      "placement": "To the right of existing redline frames, starting at x4400 y800",
+      "sourcePrototypeUnchanged": true
+    }
+  ],
+  "verification": {
+    "frames": [
+      {
+        "id": "1396:45474",
+        "name": "11/16 · Problems · 01 Canvas module",
+        "visible": true,
+        "counts": {
+          "INSTANCE": 667,
+          "FRAME": 321,
+          "VECTOR": 349,
+          "TEXT": 298,
+          "GROUP": 21,
+          "ELLIPSE": 7,
+          "RECTANGLE": 7
+        },
+        "images": [],
+        "moduleVisibilityChain": [
+          {
+            "id": "1396:46550",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:46530",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:46528",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:46527",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:46526",
+            "visible": true,
+            "boundVisibility": false
+          }
+        ],
+        "modal": null,
+        "links": [
+          {
+            "id": "I1396:46575;1389:7177",
+            "destinations": [
+              "1396:47145"
+            ]
+          },
+          {
+            "id": "I1396:46575;1389:7189;1389:7158",
+            "destinations": [
+              "1396:49014"
+            ]
+          },
+          {
+            "id": "I1396:46575;1389:7215;1389:7158",
+            "destinations": [
+              "1396:50883"
+            ]
+          },
+          {
+            "id": "I1396:46575;1389:7244;1389:7158",
+            "destinations": [
+              "1396:52752"
+            ]
+          },
+          {
+            "id": "I1396:46575;1389:7271;1389:7158",
+            "destinations": [
+              "1396:54621"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1396:47145",
+        "name": "11/16 · Problems · 02 New Problem",
+        "visible": true,
+        "counts": {
+          "INSTANCE": 718,
+          "FRAME": 380,
+          "VECTOR": 374,
+          "TEXT": 360,
+          "GROUP": 21,
+          "ELLIPSE": 7,
+          "RECTANGLE": 8
+        },
+        "images": [],
+        "moduleVisibilityChain": [
+          {
+            "id": "1396:48221",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:48201",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:48199",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:48198",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:48197",
+            "visible": true,
+            "boundVisibility": false
+          }
+        ],
+        "modal": {
+          "id": "1396:48816",
+          "visible": true,
+          "boundVisibility": false
+        },
+        "links": [
+          {
+            "id": "I1396:48246;1389:7189;1389:7158",
+            "destinations": [
+              "1396:49014"
+            ]
+          },
+          {
+            "id": "I1396:48246;1389:7215;1389:7158",
+            "destinations": [
+              "1396:50883"
+            ]
+          },
+          {
+            "id": "I1396:48246;1389:7244;1389:7158",
+            "destinations": [
+              "1396:52752"
+            ]
+          },
+          {
+            "id": "I1396:48246;1389:7271;1389:7158",
+            "destinations": [
+              "1396:54621"
+            ]
+          },
+          {
+            "id": "1396:48817",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:48818;279:2420",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:48818;279:2427",
+            "destinations": [
+              "1396:45474"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1396:49014",
+        "name": "11/16 · Problems · 03 Edit Low back pain",
+        "visible": true,
+        "counts": {
+          "INSTANCE": 718,
+          "FRAME": 380,
+          "VECTOR": 374,
+          "TEXT": 360,
+          "GROUP": 21,
+          "ELLIPSE": 7,
+          "RECTANGLE": 8
+        },
+        "images": [],
+        "moduleVisibilityChain": [
+          {
+            "id": "1396:50090",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:50070",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:50068",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:50067",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:50066",
+            "visible": true,
+            "boundVisibility": false
+          }
+        ],
+        "modal": {
+          "id": "1396:50685",
+          "visible": true,
+          "boundVisibility": false
+        },
+        "links": [
+          {
+            "id": "I1396:50115;1389:7177",
+            "destinations": [
+              "1396:47145"
+            ]
+          },
+          {
+            "id": "I1396:50115;1389:7215;1389:7158",
+            "destinations": [
+              "1396:50883"
+            ]
+          },
+          {
+            "id": "I1396:50115;1389:7244;1389:7158",
+            "destinations": [
+              "1396:52752"
+            ]
+          },
+          {
+            "id": "I1396:50115;1389:7271;1389:7158",
+            "destinations": [
+              "1396:54621"
+            ]
+          },
+          {
+            "id": "1396:50686",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:50687;279:2420",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:50687;279:2427",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:50687;279:2429",
+            "destinations": [
+              "1396:45474"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1396:50883",
+        "name": "11/16 · Problems · 04 Edit Depression",
+        "visible": true,
+        "counts": {
+          "INSTANCE": 718,
+          "FRAME": 380,
+          "VECTOR": 374,
+          "TEXT": 360,
+          "GROUP": 21,
+          "ELLIPSE": 7,
+          "RECTANGLE": 8
+        },
+        "images": [],
+        "moduleVisibilityChain": [
+          {
+            "id": "1396:51959",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:51939",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:51937",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:51936",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:51935",
+            "visible": true,
+            "boundVisibility": false
+          }
+        ],
+        "modal": {
+          "id": "1396:52554",
+          "visible": true,
+          "boundVisibility": false
+        },
+        "links": [
+          {
+            "id": "I1396:51984;1389:7177",
+            "destinations": [
+              "1396:47145"
+            ]
+          },
+          {
+            "id": "I1396:51984;1389:7189;1389:7158",
+            "destinations": [
+              "1396:49014"
+            ]
+          },
+          {
+            "id": "I1396:51984;1389:7244;1389:7158",
+            "destinations": [
+              "1396:52752"
+            ]
+          },
+          {
+            "id": "I1396:51984;1389:7271;1389:7158",
+            "destinations": [
+              "1396:54621"
+            ]
+          },
+          {
+            "id": "1396:52555",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:52556;279:2420",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:52556;279:2427",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:52556;279:2429",
+            "destinations": [
+              "1396:45474"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1396:52752",
+        "name": "11/16 · Problems · 05 Edit Hypertension",
+        "visible": true,
+        "counts": {
+          "INSTANCE": 718,
+          "FRAME": 380,
+          "VECTOR": 374,
+          "TEXT": 360,
+          "GROUP": 21,
+          "ELLIPSE": 7,
+          "RECTANGLE": 8
+        },
+        "images": [],
+        "moduleVisibilityChain": [
+          {
+            "id": "1396:53828",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:53808",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:53806",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:53805",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:53804",
+            "visible": true,
+            "boundVisibility": false
+          }
+        ],
+        "modal": {
+          "id": "1396:54423",
+          "visible": true,
+          "boundVisibility": false
+        },
+        "links": [
+          {
+            "id": "I1396:53853;1389:7177",
+            "destinations": [
+              "1396:47145"
+            ]
+          },
+          {
+            "id": "I1396:53853;1389:7189;1389:7158",
+            "destinations": [
+              "1396:49014"
+            ]
+          },
+          {
+            "id": "I1396:53853;1389:7215;1389:7158",
+            "destinations": [
+              "1396:50883"
+            ]
+          },
+          {
+            "id": "I1396:53853;1389:7271;1389:7158",
+            "destinations": [
+              "1396:54621"
+            ]
+          },
+          {
+            "id": "1396:54424",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:54425;279:2420",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:54425;279:2427",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:54425;279:2429",
+            "destinations": [
+              "1396:45474"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1396:54621",
+        "name": "11/16 · Problems · 06 Edit Anxiety",
+        "visible": true,
+        "counts": {
+          "INSTANCE": 718,
+          "FRAME": 380,
+          "VECTOR": 374,
+          "TEXT": 360,
+          "GROUP": 21,
+          "ELLIPSE": 7,
+          "RECTANGLE": 8
+        },
+        "images": [],
+        "moduleVisibilityChain": [
+          {
+            "id": "1396:55697",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:55677",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:55675",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:55674",
+            "visible": true,
+            "boundVisibility": false
+          },
+          {
+            "id": "1396:55673",
+            "visible": true,
+            "boundVisibility": false
+          }
+        ],
+        "modal": {
+          "id": "1396:56292",
+          "visible": true,
+          "boundVisibility": false
+        },
+        "links": [
+          {
+            "id": "I1396:55722;1389:7177",
+            "destinations": [
+              "1396:47145"
+            ]
+          },
+          {
+            "id": "I1396:55722;1389:7189;1389:7158",
+            "destinations": [
+              "1396:49014"
+            ]
+          },
+          {
+            "id": "I1396:55722;1389:7215;1389:7158",
+            "destinations": [
+              "1396:50883"
+            ]
+          },
+          {
+            "id": "I1396:55722;1389:7244;1389:7158",
+            "destinations": [
+              "1396:52752"
+            ]
+          },
+          {
+            "id": "1396:56293",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:56294;279:2420",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:56294;279:2427",
+            "destinations": [
+              "1396:45474"
+            ]
+          },
+          {
+            "id": "I1396:56294;279:2429",
+            "destinations": [
+              "1396:45474"
+            ]
+          }
+        ]
+      }
+    ],
+    "flowStarts": [
+      {
+        "nodeId": "1319:4656",
+        "name": "Maya · Main prototype"
+      },
+      {
+        "nodeId": "1396:45474",
+        "name": "11/16 · Visible Problems workflow"
+      }
+    ]
+  },
+  "actualNavigationLinks": 44,
+  "allDestinationsWithinNewFrames": true,
+  "imagesInspected": 6,
+  "savedImages": [
+    "canvas.png",
+    "new-problem.png",
+    "edit-problem.png"
+  ],
+  "limits": [
+    "Design-visible workflow copies use local frame navigation for Add/Edit and sheet exits. Other inherited interactions are cleared in these copies; the existing main prototype is retained.",
+    "Forms remain static, with no persistence and disabled blank New Save.",
+    "No prototype playback claimed."
+  ],
+  "recovery": [
+    "Four construction attempts safely rolled back: corrected scrolling enum, reset cloned absolute layout positioning, skipped self-navigation, deduplicated flow starts.",
+    "Figma returned only five images from a six-image call. Final Anxiety frame was captured separately; Canvas also checked at larger scale."
+  ],
+  "unrelatedLocalWork": "runs/2026-11-16-problems-shortcuts/ was present and left unchanged."
+}
