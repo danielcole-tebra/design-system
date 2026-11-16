@@ -1,0 +1,55 @@
+{
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 1,
+      "passed": true,
+      "checks": [
+        {
+          "id": "130:5912",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 4,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Only latest non-drawer remains on page",
+          "passed": true
+        },
+        {
+          "name": "Latest copy dimensions",
+          "passed": true
+        },
+        {
+          "name": "Copy node count",
+          "passed": true
+        },
+        {
+          "name": "No rasterized UI",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 0,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "descendantCounts": {
+    "INSTANCE": 587,
+    "FRAME": 768,
+    "VECTOR": 266,
+    "TEXT": 720,
+    "RECTANGLE": 1
+  },
+  "imageNodes": []
+}

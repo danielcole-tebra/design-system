@@ -1,0 +1,2634 @@
+{
+  "original": {
+    "page": "0:1",
+    "name": "01 Current medications",
+    "flow": [],
+    "roots": [
+      {
+        "id": "2:1810",
+        "name": "First-batch local components · Compositions unapproved",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 664,
+        "hash": "37a3792",
+        "count": 216
+      },
+      {
+        "id": "2:2808",
+        "name": "README · Provenance audit · Remaining differences unapproved",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 352,
+        "hash": "6a9fddea",
+        "count": 6
+      },
+      {
+        "id": "4:869",
+        "name": "Inspection · Medlist native · 2026-11-14 · Superseded icon swaps",
+        "type": "FRAME",
+        "w": 800,
+        "h": 182,
+        "hash": "75c08984",
+        "count": 17
+      },
+      {
+        "id": "9:784",
+        "name": "Patient header/SDE Updated 11-13 mirror",
+        "type": "COMPONENT",
+        "w": 1493,
+        "h": 68,
+        "hash": "53b36c22",
+        "count": 34
+      },
+      {
+        "id": "9:852",
+        "name": "SUPERSEDED · Invented patient header · retained 2026-11-14",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 191,
+        "hash": "4e60726e",
+        "count": 62
+      },
+      {
+        "id": "2:1811",
+        "name": "Current medications · Desktop 1440",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1766,
+        "hash": "353221d7",
+        "count": 707
+      },
+      {
+        "id": "28:837",
+        "name": "Medlist/Medication row compact proposal",
+        "type": "COMPONENT",
+        "w": 1216,
+        "h": 81,
+        "hash": "dbf39c0a",
+        "count": 45
+      },
+      {
+        "id": "28:882",
+        "name": "Row review · Density proposal · Not applied",
+        "type": "FRAME",
+        "w": 1264,
+        "h": 1091,
+        "hash": "f5342da3",
+        "count": 234
+      },
+      {
+        "id": "34:1388",
+        "name": "Medlist/Progressive disclosure proposal",
+        "type": "COMPONENT_SET",
+        "w": 1264,
+        "h": 278,
+        "hash": "26843ace",
+        "count": 129
+      },
+      {
+        "id": "34:1391",
+        "name": "Row review · Progressive disclosure · Not applied",
+        "type": "FRAME",
+        "w": 1264,
+        "h": 1046,
+        "hash": "e5014643",
+        "count": 392
+      },
+      {
+        "id": "34:1807",
+        "name": "Inspection · Disclosure content coverage · 2026-11-14",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 362,
+        "hash": "70622c59",
+        "count": 129
+      },
+      {
+        "id": "47:1540",
+        "name": "Medlist/Single-line disclosure proposal",
+        "type": "COMPONENT_SET",
+        "w": 1264,
+        "h": 242,
+        "hash": "e226c43",
+        "count": 153
+      },
+      {
+        "id": "47:1675",
+        "name": "Row review · Single-line disclosure · Not applied",
+        "type": "FRAME",
+        "w": 1264,
+        "h": 1014,
+        "hash": "11b28077",
+        "count": 538
+      },
+      {
+        "id": "47:1689",
+        "name": "Inspection · Single-line disclosure · 2026-11-14",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 202,
+        "hash": "5116ba86",
+        "count": 153
+      },
+      {
+        "id": "60:2301",
+        "name": "ARCHIVE · Single-line rows before table alignment · 2026-11-14",
+        "type": "COMPONENT_SET",
+        "w": 1264,
+        "h": 330,
+        "hash": "76c67a3c",
+        "count": 133
+      },
+      {
+        "id": "63:2373",
+        "name": "ARCHIVE · Detached detail panel before column disclosure · 2026-11-14",
+        "type": "COMPONENT_SET",
+        "w": 1264,
+        "h": 330,
+        "hash": "1487e0c2",
+        "count": 133
+      },
+      {
+        "id": "68:2509",
+        "name": "ARCHIVE · Before expanded-column spacing · 2026-11-14",
+        "type": "COMPONENT_SET",
+        "w": 1264,
+        "h": 254,
+        "hash": "8108d921",
+        "count": 153
+      },
+      {
+        "id": "68:2606",
+        "name": "ARCHIVE · Header grid before column spacing · 2026-11-14",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 52,
+        "hash": "aea21ad8",
+        "count": 18
+      }
+    ],
+    "reactions": [
+      {
+        "id": "34:1310",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1324"
+          }
+        ]
+      },
+      {
+        "id": "34:1340",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1260"
+          }
+        ]
+      },
+      {
+        "id": "I34:1396;34:1310",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1324"
+          }
+        ]
+      },
+      {
+        "id": "I34:1460;34:1310",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1324"
+          }
+        ]
+      },
+      {
+        "id": "I34:1530;34:1310",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1324"
+          }
+        ]
+      },
+      {
+        "id": "I34:1600;34:1310",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1324"
+          }
+        ]
+      },
+      {
+        "id": "I34:1671;34:1340",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1260"
+          }
+        ]
+      },
+      {
+        "id": "I34:1736;34:1340",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1260"
+          }
+        ]
+      },
+      {
+        "id": "I34:1808;34:1340",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1260"
+          }
+        ]
+      },
+      {
+        "id": "I34:1878;34:1340",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "34:1260"
+          }
+        ]
+      },
+      {
+        "id": "47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I47:1680;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I47:1681;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I47:1682;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I47:1683;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I47:1685;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I47:1687;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I47:1690;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I47:1691;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "60:2317",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "60:2340"
+          }
+        ]
+      },
+      {
+        "id": "60:2355",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "60:2302"
+          }
+        ]
+      },
+      {
+        "id": "63:2389",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "63:2412"
+          }
+        ]
+      },
+      {
+        "id": "63:2427",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "63:2374"
+          }
+        ]
+      },
+      {
+        "id": "68:2546",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "68:2558"
+          }
+        ]
+      },
+      {
+        "id": "68:2594",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "68:2510"
+          }
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "page": "17:881",
+    "name": "02 Medlist · Running comparison",
+    "flow": [],
+    "roots": [
+      {
+        "id": "17:882",
+        "name": "Medlist · Original baseline and live rebuild",
+        "type": "FRAME",
+        "w": 9174,
+        "h": 2743,
+        "hash": "def99d83",
+        "count": 7771
+      },
+      {
+        "id": "52:2451",
+        "name": "ARCHIVE · Comparison B before spacing · 2026-11-14",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1766,
+        "hash": "60175881",
+        "count": 707
+      },
+      {
+        "id": "52:2510",
+        "name": "README · Archived Comparison B",
+        "type": "TEXT",
+        "w": 1440,
+        "h": 48,
+        "hash": "55b604c3",
+        "count": 1
+      },
+      {
+        "id": "52:2511",
+        "name": "Medlist/Comparison B spaced row",
+        "type": "COMPONENT",
+        "w": 1216,
+        "h": 81,
+        "hash": "8b732dce",
+        "count": 45
+      },
+      {
+        "id": "56:3026",
+        "name": "ARCHIVE · Comparison B row · Filled overflow · 2026-11-14",
+        "type": "COMPONENT",
+        "w": 1216,
+        "h": 81,
+        "hash": "2970426",
+        "count": 45
+      },
+      {
+        "id": "91:10288",
+        "name": "Medlist/Last activity and detail markers",
+        "type": "COMPONENT_SET",
+        "w": 1264,
+        "h": 242,
+        "hash": "dc50ba20",
+        "count": 153
+      },
+      {
+        "id": "92:5958",
+        "name": "Inspection · Comparison F · Expanded marker cases",
+        "type": "FRAME",
+        "w": 1264,
+        "h": 438,
+        "hash": "3933cc79",
+        "count": 179
+      }
+    ],
+    "latest": {
+      "id": "91:10446",
+      "name": "Current medications · Comparison F · Last activity and detail markers",
+      "parent": "91:10443",
+      "w": 1440,
+      "h": 1184,
+      "rows": [
+        "91:12029",
+        "91:12105",
+        "91:12187",
+        "91:12269",
+        "91:12351",
+        "91:12433",
+        "91:12515",
+        "91:12597",
+        "91:12673",
+        "91:12755"
+      ]
+    },
+    "reactions": [
+      {
+        "id": "I73:4541;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I73:4617;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I73:4774;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I73:4931;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I73:5088;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I73:5245;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I73:5402;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I73:5559;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I73:5710;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I73:5867;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I77:4848;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I77:4849;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I77:4850;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I77:4851;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I77:4852;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I77:4853;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I77:4854;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I77:4855;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I77:4856;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I77:4857;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I85:6345;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I85:6346;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I85:6347;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I85:6348;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I85:6349;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I85:6350;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I85:6351;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I85:6352;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I85:6353;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I85:6354;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I91:10534;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I91:10535;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I91:10536;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I91:10537;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I91:10538;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I91:10539;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I91:10540;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I91:10541;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I91:10542;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I91:10543;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I91:12029;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I91:12105;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I91:12187;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I91:12269;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I91:12351;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I91:12433;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I91:12515;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I91:12597;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I91:12673;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I91:12755;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I92:6015;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I92:6205;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      }
+    ]
+  },
+  "drawer": {
+    "page": "104:4346",
+    "name": "03 Medlist · Sidesheet exploration",
+    "flow": [
+      {
+        "nodeId": "104:4423",
+        "name": "Medication details sidesheet"
+      },
+      {
+        "nodeId": "113:8945",
+        "name": "Medication details sidesheet"
+      }
+    ],
+    "roots": [
+      {
+        "id": "104:4347",
+        "name": "Medlist/Drawer row",
+        "type": "COMPONENT",
+        "w": 1216,
+        "h": 65,
+        "hash": "46a39fb7",
+        "count": 76
+      },
+      {
+        "id": "104:4423",
+        "name": "G · Current medications · Details in sidesheet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "2a8426cd",
+        "count": 3109
+      },
+      {
+        "id": "104:7574",
+        "name": "Medlist/Medication details sidesheet",
+        "type": "COMPONENT",
+        "w": 550,
+        "h": 1156,
+        "hash": "74011408",
+        "count": 71
+      },
+      {
+        "id": "104:7642",
+        "name": "Details overlay · Alprazolam 0.25 mg tablet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "7f801ced",
+        "count": 73
+      },
+      {
+        "id": "104:7712",
+        "name": "Details overlay · Cetirizine 10 mg tablet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "ccfcd12a",
+        "count": 73
+      },
+      {
+        "id": "104:7785",
+        "name": "Details overlay · Aspirin 81 mg delayed-release tablet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "7667bc44",
+        "count": 73
+      },
+      {
+        "id": "104:7858",
+        "name": "Details overlay · Doxycycline hyclate 100 mg capsule",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "2710964",
+        "count": 73
+      },
+      {
+        "id": "104:7931",
+        "name": "Details overlay · Furosemide 20 mg tablet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "95827112",
+        "count": 73
+      },
+      {
+        "id": "104:8004",
+        "name": "Details overlay · Hydrocortisone 1% compounded cream",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "35b9bca4",
+        "count": 73
+      },
+      {
+        "id": "104:8077",
+        "name": "Details overlay · Melatonin 3 mg tablet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "e6414a3e",
+        "count": 73
+      },
+      {
+        "id": "104:8150",
+        "name": "Details overlay · Metformin 500 mg tablet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "283e3f85",
+        "count": 73
+      },
+      {
+        "id": "104:8220",
+        "name": "Details overlay · Simvastatin 20 mg tablet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "80fd2d27",
+        "count": 73
+      },
+      {
+        "id": "104:8293",
+        "name": "Details overlay · Acetaminophen 500 mg tablet",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "f6eb84aa",
+        "count": 73
+      },
+      {
+        "id": "104:8366",
+        "name": "G · Sidesheet open · Alprazolam",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "870890af",
+        "count": 3181
+      },
+      {
+        "id": "104:8553",
+        "name": "README · Sidesheet exploration",
+        "type": "FRAME",
+        "w": 3040,
+        "h": 116,
+        "hash": "88d2b298",
+        "count": 4
+      },
+      {
+        "id": "113:8869",
+        "name": "Medlist/Reconciliation row",
+        "type": "COMPONENT_SET",
+        "w": 1264,
+        "h": 202,
+        "hash": "6ae552b2",
+        "count": 154
+      },
+      {
+        "id": "113:8945",
+        "name": "G · Reconcile medications",
+        "type": "FRAME",
+        "w": 1440,
+        "h": 1156,
+        "hash": "5c1d90bc",
+        "count": 3875
+      },
+      {
+        "id": "113:13042",
+        "name": "Inspection · Reconciliation states · 2026-11-15",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 146,
+        "hash": "20d77668",
+        "count": 154
+      }
+    ],
+    "reactions": [
+      {
+        "id": "113:8933",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "NAVIGATE",
+            "destination": "113:8945"
+          }
+        ]
+      },
+      {
+        "id": "I104:4511;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I104:4512;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:4513;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:4514;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:4515;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:4516;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:4517;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:4518;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:4519;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:4520;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I104:4521;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I104:4522;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:4523;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:4524;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:4525;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:4526;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:4527;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:4528;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:4529;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:4530;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I104:6766;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7642"
+          }
+        ]
+      },
+      {
+        "id": "I104:6842;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7712"
+          }
+        ]
+      },
+      {
+        "id": "I104:6924;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7785"
+          }
+        ]
+      },
+      {
+        "id": "I104:7006;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7858"
+          }
+        ]
+      },
+      {
+        "id": "I104:7088;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7931"
+          }
+        ]
+      },
+      {
+        "id": "I104:7170;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8004"
+          }
+        ]
+      },
+      {
+        "id": "I104:7252;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8077"
+          }
+        ]
+      },
+      {
+        "id": "I104:7334;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8150"
+          }
+        ]
+      },
+      {
+        "id": "I104:7410;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8220"
+          }
+        ]
+      },
+      {
+        "id": "I104:7492;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8293"
+          }
+        ]
+      },
+      {
+        "id": "I104:7643;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7643;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7713;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7713;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7786;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7786;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7859;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7859;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7932;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:7932;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8005;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8005;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8078;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8078;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8151;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8151;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8221;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8221;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8294;104:7577",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "I104:8294;104:7626",
+        "actions": [
+          {
+            "type": "CLOSE",
+            "navigation": null,
+            "destination": null
+          }
+        ]
+      },
+      {
+        "id": "113:8939",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "NAVIGATE",
+            "destination": "113:8945"
+          }
+        ]
+      },
+      {
+        "id": "I104:8454;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I104:8455;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:8456;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:8457;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:8458;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:8459;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:8460;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:8461;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:8462;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I104:8463;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I104:8464;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I104:8465;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:8466;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:8467;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:8468;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:8469;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:8470;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:8471;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:8472;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I104:8473;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I104:8474;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7642"
+          }
+        ]
+      },
+      {
+        "id": "I104:8475;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7712"
+          }
+        ]
+      },
+      {
+        "id": "I104:8476;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7785"
+          }
+        ]
+      },
+      {
+        "id": "I104:8477;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7858"
+          }
+        ]
+      },
+      {
+        "id": "I104:8478;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7931"
+          }
+        ]
+      },
+      {
+        "id": "I104:8479;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8004"
+          }
+        ]
+      },
+      {
+        "id": "I104:8480;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8077"
+          }
+        ]
+      },
+      {
+        "id": "I104:8481;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8150"
+          }
+        ]
+      },
+      {
+        "id": "I104:8482;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8220"
+          }
+        ]
+      },
+      {
+        "id": "I104:8483;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8293"
+          }
+        ]
+      },
+      {
+        "id": "I104:8485;104:7577",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "NAVIGATE",
+            "destination": "104:4423"
+          }
+        ]
+      },
+      {
+        "id": "I104:8485;104:7626",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "NAVIGATE",
+            "destination": "104:4423"
+          }
+        ]
+      },
+      {
+        "id": "113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "113:8824",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8773"
+          }
+        ]
+      },
+      {
+        "id": "113:12054",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "NAVIGATE",
+            "destination": "104:4423"
+          }
+        ]
+      },
+      {
+        "id": "I113:9034;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I113:9035;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I113:9036;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I113:9037;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I113:9038;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I113:9039;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I113:9040;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I113:9041;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I113:9042;47:1557",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1577"
+          }
+        ]
+      },
+      {
+        "id": "I113:9043;47:1593",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "47:1541"
+          }
+        ]
+      },
+      {
+        "id": "I113:9044;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I113:9045;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I113:9046;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I113:9047;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I113:9048;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I113:9049;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I113:9050;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I113:9051;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I113:9052;91:10325",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10337"
+          }
+        ]
+      },
+      {
+        "id": "I113:9053;91:10373",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "91:10289"
+          }
+        ]
+      },
+      {
+        "id": "I113:9054;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7642"
+          }
+        ]
+      },
+      {
+        "id": "I113:9055;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7712"
+          }
+        ]
+      },
+      {
+        "id": "I113:9056;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7785"
+          }
+        ]
+      },
+      {
+        "id": "I113:9057;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7858"
+          }
+        ]
+      },
+      {
+        "id": "I113:9058;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7931"
+          }
+        ]
+      },
+      {
+        "id": "I113:9059;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8004"
+          }
+        ]
+      },
+      {
+        "id": "I113:9060;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8077"
+          }
+        ]
+      },
+      {
+        "id": "I113:9061;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8150"
+          }
+        ]
+      },
+      {
+        "id": "I113:9062;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8220"
+          }
+        ]
+      },
+      {
+        "id": "I113:9063;104:4383",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8293"
+          }
+        ]
+      },
+      {
+        "id": "I113:12060;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12060;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7642"
+          }
+        ]
+      },
+      {
+        "id": "I113:12137;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12137;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7712"
+          }
+        ]
+      },
+      {
+        "id": "I113:12220;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12220;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7785"
+          }
+        ]
+      },
+      {
+        "id": "I113:12303;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12303;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7858"
+          }
+        ]
+      },
+      {
+        "id": "I113:12386;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12386;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:7931"
+          }
+        ]
+      },
+      {
+        "id": "I113:12469;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12469;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8004"
+          }
+        ]
+      },
+      {
+        "id": "I113:12552;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12552;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8077"
+          }
+        ]
+      },
+      {
+        "id": "I113:12635;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12635;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8150"
+          }
+        ]
+      },
+      {
+        "id": "I113:12712;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12712;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8220"
+          }
+        ]
+      },
+      {
+        "id": "I113:12795;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:12795;113:8809",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "OVERLAY",
+            "destination": "104:8293"
+          }
+        ]
+      },
+      {
+        "id": "I113:13043;113:8776",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8821"
+          }
+        ]
+      },
+      {
+        "id": "I113:13119;113:8824",
+        "actions": [
+          {
+            "type": "NODE",
+            "navigation": "CHANGE_TO",
+            "destination": "113:8773"
+          }
+        ]
+      }
+    ]
+  }
+}

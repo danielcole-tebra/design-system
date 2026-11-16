@@ -4687,3 +4687,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-15 — Medlist · Drawer hierarchy and divisions
 - File: yh2F6OUgdI6K0risLtKLEQ. Refined G's shared medication drawer into a shaded medication summary, divided prescription facts and a separate pharmacy section. Larger medication/directions typography and aligned label/value rows make the information hierarchy explicit. All11 placed drawers updated; ready for Daniel's visual review.
 - Evidence: runs/2026-11-15-medlist-drawer-hierarchy/REPORT.md, record.json, open.png, compound.png, reported.png.
+
+
+<!-- builder-run:runs/2026-11-16-medlist-handoff-cleanup -->
+## 2026-11-16 — Medlist · DJ handoff cleanup
+- File: yh2F6OUgdI6K0risLtKLEQ. Organized the file into latest non-drawer, latest drawer, unchanged running comparison, and archives pages. Moved23 older/supporting roots into five named archive sections; retained current drawer prototype states on their active page. Added a faithful standalone copy of Comparison F for non-drawer handoff. Nothing deleted.
+- Evidence: runs/2026-11-16-medlist-handoff-cleanup/REPORT.md, record.json, non-drawer.png, drawer.png, current-states.png, archives.png.
