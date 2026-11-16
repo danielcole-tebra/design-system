@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "title": "Medlist five-column outpatient trial",
+  "date": "2026-11-16",
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "reviewUrl": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=137-25480",
+  "summary": "Added a separate five-column trial to the latest non-drawer page: medication and directions, prescriber/source, labeled last activity, order status and actions. Supply/pharmacy expand inline; reconciliation uses a separate mode. Original F and drawer preserved. Awaiting Daniel's visual review.",
+  "timing": {
+    "start": "2026-11-16T15:47:12Z",
+    "ready": "2026-11-16T15:51:03Z",
+    "built": "2026-11-16T15:52:20.404Z",
+    "firstImage": "2026-11-16T15:52:34Z",
+    "verified": "2026-11-16T15:58:12Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "All three screens are editable 1440×1332 compositions; five-column grid 420/160/160/200/276 at table width1216. Review mode reserves44 px from Medication for native checkboxes.",
+    "Instantiated all six new local variants and retained ten content-roundtrip specimens. 296 assertions passed; all54 visible stored reaction targets resolve. No visible table overflow; table fonts Akkurat LL.",
+    "Eleven affected native control comparisons passed with zero structure/token differences; seven measured audit assertions passed.",
+    "Viewed normal, reconciliation, completed, expanded-detail and six-variant screenshots. Viewed isolated review-mode source row after binding source text across all six variants.",
+    "Source F screen and row set were unchanged at construction. No library, drawer or comparison edits."
+  ],
+  "findings": [
+    "DECISION — Daniel owns trial preference; scope latest non-drawer page; status built for review, evidence2026-11-16. This trial locally supersedes hidden directions/always-visible quantity/review choices; it does not replace the prior F handoff.",
+    "Preserved supplied Melatonin fixture containing Patient-reported supplement, named prescriber, Prescribed date and Send failed. Its source/order semantics need a product data decision; no inferred correction. Ten of12 medications are supplied; pagination remains a fixture.",
+    "Stored prototype wiring is verified, not played-through presentation, backend persistence or validation. Complete navigates to a completed fixture without a defined threshold. Existing Edit/Resend/View issue/overflow and pagination flows remain outside this layout trial.",
+    "Inherited Nav/Search Inter placeholder and local patient-header provenance remain documented limitations; no new library defect established. Expected sibling component source was unavailable, so no fresh source-code audit is claimed.",
+    "Fixed duplicated pharmacy heading and bound source-note text consistently across six local variants. Initial captures retained; final detail and source-row captures show corrected content.",
+    "Technical recovery: one broad read failed; a duplicate flow-start rejection and oversized response caused two rolled-back construction attempts. Used deduplicated starts and lossless compressed created-ID ledger. No destructive cleanup.",
+    "Timing begins at the first recorded clock checkpoint after initial context/skill preparation, not at message arrival. Total measured interval is reported in final chat."
+  ],
+  "effort": {
+    "through": "visual verification and artifact recording",
+    "figmaCalls": null,
+    "otherCalls": null,
+    "searches": null,
+    "technicalRetries": 3,
+    "canvasCorrections": 2,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "reads": [
+    "AGENTS.md; LIBRARY Efficient execution/API checks/Button/Other controls; COMPOSITIONS Rows/cards and Actions/labels; linked table-header OPEN-ISSUES.",
+    "figma-use and figma-generate-design skills in full; relevant API reference and text-edit gotcha; whole-view library search and consuming-file native properties.",
+    "Latest non-drawer source, original row definitions and current screen register. Source evidence saved in source.json."
+  ],
+  "screenshots": [
+    "list-verified.png",
+    "review-verified.png",
+    "review-source.png",
+    "completed.png",
+    "details-final.png",
+    "variants-final.png",
+    "list.png",
+    "review.png",
+    "details.png",
+    "variants.png",
+    "review-final.png"
+  ],
+  "evidence": {
+    "owner": "Daniel Cole",
+    "status": "Built; awaiting visual review",
+    "pageId": "0:1",
+    "screenId": "137:25480",
+    "reviewId": "137:28731",
+    "completedId": "137:32790",
+    "setId": "137:24947",
+    "detailExampleId": "137:35997",
+    "inspectionArea": "139:2791",
+    "roundtripArea": "139:3310",
+    "artifacts": [
+      "build.js",
+      "build-result.json",
+      "verify-states.js",
+      "verification.json",
+      "audit.js",
+      "audit.json",
+      "source.json",
+      "heading-fix.json",
+      "source-binding-fix.js",
+      "source-binding-fix.json"
+    ],
+    "sourcePreserved": true
+  }
+}

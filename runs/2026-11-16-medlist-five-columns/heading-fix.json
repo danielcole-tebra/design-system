@@ -1,0 +1,226 @@
+{
+  "mutatedNodeIds": [
+    "137:25109",
+    "137:25119",
+    "137:25175",
+    "137:25261",
+    "137:25350",
+    "137:25436"
+  ],
+  "variants": [
+    {
+      "id": "137:24948",
+      "name": "Disclosure=Collapsed, Mode=List, Reviewed=No",
+      "note": {
+        "id": "137:24957",
+        "visible": false,
+        "refs": {
+          "visible": "Show source note#34:13"
+        }
+      },
+      "propKey": "Show source note#34:13"
+    },
+    {
+      "id": "137:24996",
+      "name": "Disclosure=Expanded, Mode=List, Reviewed=No",
+      "note": {
+        "id": "137:25005",
+        "visible": false,
+        "refs": {
+          "visible": "Show source note#34:13"
+        }
+      },
+      "propKey": "Show source note#34:13"
+    },
+    {
+      "id": "137:25120",
+      "name": "Disclosure=Collapsed, Mode=Review, Reviewed=No",
+      "note": {
+        "id": "137:25137",
+        "visible": false,
+        "refs": {
+          "visible": "Show source note#34:13"
+        }
+      },
+      "propKey": "Show source note#34:13"
+    },
+    {
+      "id": "137:25206",
+      "name": "Disclosure=Collapsed, Mode=Review, Reviewed=Yes",
+      "note": {
+        "id": "137:25223",
+        "visible": false,
+        "refs": {
+          "visible": "Show source note#34:13"
+        }
+      },
+      "propKey": "Show source note#34:13"
+    },
+    {
+      "id": "137:25295",
+      "name": "Disclosure=Expanded, Mode=Review, Reviewed=No",
+      "note": {
+        "id": "137:25312",
+        "visible": false,
+        "refs": {
+          "visible": "Show source note#34:13"
+        }
+      },
+      "propKey": "Show source note#34:13"
+    },
+    {
+      "id": "137:25381",
+      "name": "Disclosure=Expanded, Mode=Review, Reviewed=Yes",
+      "note": {
+        "id": "137:25398",
+        "visible": false,
+        "refs": {
+          "visible": "Show source note#34:13"
+        }
+      },
+      "propKey": "Show source note#34:13"
+    }
+  ],
+  "rows": [
+    {
+      "id": "137:28369",
+      "props": {
+        "Date#34:16": {
+          "type": "TEXT",
+          "value": "Jan 23, 2024"
+        },
+        "Duration#34:18": {
+          "type": "TEXT",
+          "value": "30 days"
+        },
+        "Medication name#34:10": {
+          "type": "TEXT",
+          "value": "Melatonin 3 mg tablet"
+        },
+        "Quantity#34:17": {
+          "type": "TEXT",
+          "value": "30 tablets"
+        },
+        "Show timeline#34:15": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Compound#34:14": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Last activity#91:3": {
+          "type": "TEXT",
+          "value": "Prescribed 01/23/24"
+        },
+        "Refills#34:19": {
+          "type": "TEXT",
+          "value": "No refills"
+        },
+        "Show source note#34:13": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Source note#34:12": {
+          "type": "TEXT",
+          "value": "Patient-reported supplement"
+        },
+        "Directions#34:11": {
+          "type": "TEXT",
+          "value": "Take 1 tablet by mouth at bedtime as needed"
+        },
+        "Prescriber#137:102": {
+          "type": "TEXT",
+          "value": "Olivia Chen, MD"
+        },
+        "Disclosure": {
+          "value": "Collapsed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Mode": {
+          "value": "List",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Reviewed": {
+          "value": "No",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "note": true,
+      "provider": "Olivia Chen, MD"
+    },
+    {
+      "id": "137:28845",
+      "props": {
+        "Source note#34:12": {
+          "type": "TEXT",
+          "value": "Patient-reported supplement"
+        },
+        "Prescriber#137:102": {
+          "type": "TEXT",
+          "value": "Olivia Chen, MD"
+        },
+        "Duration#34:18": {
+          "type": "TEXT",
+          "value": "30 days"
+        },
+        "Show timeline#34:15": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Date#34:16": {
+          "type": "TEXT",
+          "value": "Jan 23, 2024"
+        },
+        "Last activity#91:3": {
+          "type": "TEXT",
+          "value": "Prescribed 01/23/24"
+        },
+        "Quantity#34:17": {
+          "type": "TEXT",
+          "value": "30 tablets"
+        },
+        "Medication name#34:10": {
+          "type": "TEXT",
+          "value": "Melatonin 3 mg tablet"
+        },
+        "Show source note#34:13": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Compound#34:14": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Refills#34:19": {
+          "type": "TEXT",
+          "value": "No refills"
+        },
+        "Directions#34:11": {
+          "type": "TEXT",
+          "value": "Take 1 tablet by mouth at bedtime as needed"
+        },
+        "Disclosure": {
+          "value": "Collapsed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Mode": {
+          "value": "Review",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "Reviewed": {
+          "value": "No",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "note": true,
+      "provider": "Olivia Chen, MD"
+    }
+  ]
+}

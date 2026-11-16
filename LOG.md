@@ -4698,3 +4698,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist · Medication reconciliation research
 - File: 9d3G2ipIFbZk4YSQLgukOE. Added a separate research page (4:2) with Epic, athenahealth, SimplePractice and TherapyNotes, 14 screenshot excerpts, 12 external sources and original medlist completion/return states. Historical evidence, unknowns and proposed implications are labeled; ready for Daniel's review. Existing review board preserved. All image and link readbacks pass; seven captures visually checked.
 - Evidence: runs/2026-11-16-medication-reconciliation-research/REPORT.md, content.json, crops.json, build-result.json, verification.json, board-overview.png and six detail captures.
+
+
+<!-- builder-run:runs/2026-11-16-medlist-five-columns -->
+## 2026-11-16 — Medlist five-column outpatient trial
+- File: yh2F6OUgdI6K0risLtKLEQ. Added a separate five-column trial to the latest non-drawer page: medication and directions, prescriber/source, labeled last activity, order status and actions. Supply/pharmacy expand inline; reconciliation uses a separate mode. Original F and drawer preserved. Awaiting Daniel's visual review.
+- Evidence: runs/2026-11-16-medlist-five-columns/REPORT.md, record.json, list-verified.png, review-verified.png, review-source.png, completed.png, details-final.png, variants-final.png, list.png, review.png, details.png, variants.png, review-final.png.

@@ -1,0 +1,117 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": true,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 11,
+    "passed": true,
+    "checks": [
+      {
+        "id": "137:25555",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "137:25560",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "137:25557",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "137:25562",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "137:25566",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I137:27823;137:24983",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I137:27823;137:24984",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I137:27823;137:24985",
+        "mainId": "2:1426",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "137:28773",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "137:32784",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I139:3137;137:25298",
+        "mainId": "2:1268",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 7,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "Five visible information/action columns",
+        "passed": true
+      },
+      {
+        "name": "Header widths",
+        "passed": true
+      },
+      {
+        "name": "296 content/state checks",
+        "passed": true
+      },
+      {
+        "name": "54 resolved prototype targets",
+        "passed": true
+      },
+      {
+        "name": "Old screen preserved at build",
+        "passed": true
+      },
+      {
+        "name": "Old row set preserved at build",
+        "passed": true
+      },
+      {
+        "name": "All three table font/overflow checks",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 0,
+    "failures": [],
+    "omittedFailures": 0
+  }
+}

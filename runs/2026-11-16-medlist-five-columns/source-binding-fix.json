@@ -1,0 +1,30 @@
+{
+  "mutatedNodeIds": [
+    "137:24957",
+    "137:25005",
+    "137:25137",
+    "137:25223",
+    "137:25312",
+    "137:25398"
+  ],
+  "checks": [
+    {
+      "id": "137:28461",
+      "text": "Patient-reported supplement",
+      "visible": false,
+      "refs": {
+        "visible": "Show source note#34:13",
+        "characters": "Source note#34:12"
+      }
+    },
+    {
+      "id": "137:28845",
+      "text": "Patient-reported supplement",
+      "visible": true,
+      "refs": {
+        "visible": "Show source note#34:13",
+        "characters": "Source note#34:12"
+      }
+    }
+  ]
+}
