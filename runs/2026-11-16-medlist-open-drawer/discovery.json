@@ -1,0 +1,559 @@
+{
+  "table": {
+    "pages": [
+      {
+        "id": "0:1",
+        "name": "Medlist · Latest non-drawer"
+      },
+      {
+        "id": "104:4346",
+        "name": "Medlist · Latest drawer"
+      },
+      {
+        "id": "17:881",
+        "name": "02 Medlist · Running comparison"
+      },
+      {
+        "id": "128:2573",
+        "name": "archives"
+      }
+    ],
+    "screen": {
+      "id": "145:22172",
+      "w": 1440,
+      "h": 1112
+    },
+    "rows": [
+      {
+        "id": "145:25396",
+        "name": "Medication / Alprazolam 0.25 mg tablet / Structured sig"
+      },
+      {
+        "id": "145:25495",
+        "name": "Medication / Cetirizine 10 mg tablet / Structured sig"
+      },
+      {
+        "id": "145:25600",
+        "name": "Medication / Aspirin 81 mg delayed-release tablet / Structured sig"
+      },
+      {
+        "id": "145:25705",
+        "name": "Medication / Doxycycline hyclate 100 mg capsule / Structured sig"
+      },
+      {
+        "id": "145:25810",
+        "name": "Medication / Furosemide 20 mg tablet / Structured sig"
+      },
+      {
+        "id": "145:25915",
+        "name": "Medication / Hydrocortisone 1% compounded cream / Structured sig"
+      },
+      {
+        "id": "145:26020",
+        "name": "Medication / Melatonin 3 mg tablet / Structured sig"
+      },
+      {
+        "id": "145:26125",
+        "name": "Medication / Metformin 500 mg tablet / Structured sig"
+      },
+      {
+        "id": "145:26224",
+        "name": "Medication / Simvastatin 20 mg tablet / Structured sig"
+      },
+      {
+        "id": "145:26329",
+        "name": "Medication / Acetaminophen 500 mg tablet / Structured sig"
+      }
+    ],
+    "variants": [
+      {
+        "id": "145:21536",
+        "name": "Disclosure=Collapsed, Mode=List, Reviewed=No"
+      },
+      {
+        "id": "145:21594",
+        "name": "Disclosure=Expanded, Mode=List, Reviewed=No"
+      },
+      {
+        "id": "145:21652",
+        "name": "Disclosure=Collapsed, Mode=Review, Reviewed=No"
+      },
+      {
+        "id": "145:21710",
+        "name": "Disclosure=Collapsed, Mode=Review, Reviewed=Yes"
+      },
+      {
+        "id": "145:21768",
+        "name": "Disclosure=Expanded, Mode=Review, Reviewed=No"
+      },
+      {
+        "id": "145:21826",
+        "name": "Disclosure=Expanded, Mode=Review, Reviewed=Yes"
+      }
+    ],
+    "props": {
+      "Medication name#34:10": {
+        "type": "TEXT",
+        "defaultValue": "Alprazolam 0.25 mg tablet"
+      },
+      "Directions#34:11": {
+        "type": "TEXT",
+        "defaultValue": "Take 1 tablet by mouth once daily as needed for anxiety"
+      },
+      "Source note#34:12": {
+        "type": "TEXT",
+        "defaultValue": "Patient-reported supplement"
+      },
+      "Show source note#34:13": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "Compound#34:14": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "Show timeline#34:15": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "Date#34:16": {
+        "type": "TEXT",
+        "defaultValue": "Sep 5, 2024"
+      },
+      "Quantity#34:17": {
+        "type": "TEXT",
+        "defaultValue": "15 tablets"
+      },
+      "Duration#34:18": {
+        "type": "TEXT",
+        "defaultValue": "15 days as needed"
+      },
+      "Refills#34:19": {
+        "type": "TEXT",
+        "defaultValue": "No refills"
+      },
+      "Last activity#91:3": {
+        "type": "TEXT",
+        "defaultValue": "Prescribed 09/05/24"
+      },
+      "Prescriber#137:102": {
+        "type": "TEXT",
+        "defaultValue": "Olivia Chen, MD"
+      },
+      "Dose#145:35": {
+        "type": "TEXT",
+        "defaultValue": "1 tablet"
+      },
+      "Route#145:42": {
+        "type": "TEXT",
+        "defaultValue": "By mouth"
+      },
+      "Timing#145:49": {
+        "type": "TEXT",
+        "defaultValue": "Once daily as needed"
+      },
+      "Start#145:56": {
+        "type": "TEXT",
+        "defaultValue": "—"
+      },
+      "Stop#145:63": {
+        "type": "TEXT",
+        "defaultValue": "—"
+      },
+      "Disclosure": {
+        "type": "VARIANT",
+        "defaultValue": "Collapsed",
+        "variantOptions": [
+          "Collapsed",
+          "Expanded"
+        ]
+      },
+      "Mode": {
+        "type": "VARIANT",
+        "defaultValue": "List",
+        "variantOptions": [
+          "List",
+          "Review"
+        ]
+      },
+      "Reviewed": {
+        "type": "VARIANT",
+        "defaultValue": "No",
+        "variantOptions": [
+          "No",
+          "Yes"
+        ]
+      }
+    },
+    "actions": [
+      {
+        "id": "145:21568",
+        "name": "Edit",
+        "w": 96,
+        "visible": true,
+        "reactions": []
+      },
+      {
+        "id": "145:21569",
+        "name": "Toggle details",
+        "w": 104,
+        "visible": true,
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "145:21594",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "145:21594",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "145:21570",
+        "name": "Medication actions",
+        "w": 34,
+        "visible": true,
+        "reactions": []
+      }
+    ],
+    "review": "145:26434",
+    "completed": "145:31634"
+  },
+  "drawer": {
+    "master": {
+      "id": "104:7574",
+      "name": "Medlist/Medication details sidesheet",
+      "w": 550,
+      "h": 1156,
+      "props": {
+        "Medication name#104:11": {
+          "type": "TEXT",
+          "defaultValue": "Alprazolam 0.25 mg tablet"
+        },
+        "Compound#104:12": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Source note#104:13": {
+          "type": "TEXT",
+          "defaultValue": "Patient-reported supplement"
+        },
+        "Show source note#104:14": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Directions#104:15": {
+          "type": "TEXT",
+          "defaultValue": "Take 1 tablet by mouth once daily as needed for anxiety"
+        },
+        "Date#104:16": {
+          "type": "TEXT",
+          "defaultValue": "Sep 5, 2024"
+        },
+        "Prescriber#104:17": {
+          "type": "TEXT",
+          "defaultValue": "Olivia Chen, MD"
+        },
+        "Quantity#104:18": {
+          "type": "TEXT",
+          "defaultValue": "15 tablets"
+        },
+        "Duration#104:19": {
+          "type": "TEXT",
+          "defaultValue": "15 days as needed"
+        },
+        "Refills#104:20": {
+          "type": "TEXT",
+          "defaultValue": "No refills"
+        },
+        "Pharmacy#104:21": {
+          "type": "TEXT",
+          "defaultValue": "CVS Pharmacy 1709 in Target"
+        },
+        "Phone#104:22": {
+          "type": "TEXT",
+          "defaultValue": "Phone: (850) 555-0142"
+        }
+      },
+      "children": [
+        {
+          "id": "104:7575",
+          "name": "Header",
+          "w": 550,
+          "h": 72,
+          "sizing": "FIXED"
+        },
+        {
+          "id": "104:7582",
+          "name": "Divider",
+          "w": 550,
+          "h": 1,
+          "sizing": "FIXED"
+        },
+        {
+          "id": "104:7583",
+          "name": "Body",
+          "w": 550,
+          "h": 1012,
+          "sizing": "FILL"
+        },
+        {
+          "id": "104:7623",
+          "name": "Footer",
+          "w": 550,
+          "h": 71,
+          "sizing": "HUG"
+        }
+      ]
+    },
+    "overlays": [],
+    "actions": [
+      {
+        "id": "104:7577",
+        "name": "Close medication details",
+        "reactions": []
+      },
+      {
+        "id": "I104:7577;170:6",
+        "name": "Icon",
+        "reactions": []
+      },
+      {
+        "id": "104:7586",
+        "name": "Compound",
+        "reactions": []
+      },
+      {
+        "id": "I104:7586;162:88",
+        "name": "Delete icon",
+        "reactions": []
+      },
+      {
+        "id": "104:7591",
+        "name": "Order status",
+        "reactions": []
+      },
+      {
+        "id": "104:7626",
+        "name": "Close",
+        "reactions": []
+      },
+      {
+        "id": "I104:7626;78:15",
+        "name": "Start icon",
+        "reactions": []
+      },
+      {
+        "id": "I104:7626;78:17",
+        "name": "End icon",
+        "reactions": []
+      },
+      {
+        "id": "104:7633",
+        "name": "Medication action",
+        "reactions": []
+      },
+      {
+        "id": "I104:7633;78:15",
+        "name": "Start icon",
+        "reactions": []
+      },
+      {
+        "id": "I104:7633;78:17",
+        "name": "End icon",
+        "reactions": []
+      },
+      {
+        "id": "104:7639",
+        "name": "Medication actions",
+        "reactions": []
+      },
+      {
+        "id": "I104:7639;170:18",
+        "name": "Icon",
+        "reactions": []
+      }
+    ]
+  },
+  "spacing": {
+    "row": [
+      {
+        "id": "145:21537",
+        "name": "Summary",
+        "w": 1216,
+        "h": 58,
+        "layout": "HORIZONTAL",
+        "primary": "FIXED",
+        "counter": "AUTO",
+        "gap": 0,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bound": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:ce161dd8d210e94082abb2b2d1731fafc1a23767/997:34"
+          }
+        }
+      },
+      {
+        "id": "145:21540",
+        "name": "Medication",
+        "w": 340,
+        "h": 36,
+        "layout": "VERTICAL",
+        "primary": "AUTO",
+        "counter": "FIXED",
+        "gap": 4,
+        "padding": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "bound": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:169cfdc5f2a6aa55b951ef153aa0f5e9c778e362/997:8"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          },
+          "paddingTop": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          },
+          "paddingBottom": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          }
+        }
+      },
+      {
+        "id": "145:21541",
+        "name": "Medication first line",
+        "w": 324,
+        "h": 20,
+        "layout": "HORIZONTAL",
+        "primary": "FIXED",
+        "counter": "AUTO",
+        "gap": 8,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bound": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          }
+        }
+      },
+      {
+        "id": "145:21566",
+        "name": "Actions",
+        "w": 276,
+        "h": 58,
+        "layout": "VERTICAL",
+        "primary": "AUTO",
+        "counter": "FIXED",
+        "gap": 4,
+        "padding": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "bound": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:169cfdc5f2a6aa55b951ef153aa0f5e9c778e362/997:8"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          },
+          "paddingTop": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          },
+          "paddingBottom": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          }
+        }
+      },
+      {
+        "id": "145:21567",
+        "name": "Action first line",
+        "w": 260,
+        "h": 42,
+        "layout": "HORIZONTAL",
+        "primary": "FIXED",
+        "counter": "FIXED",
+        "gap": 8,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bound": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:183d5d946d268e8bd37735b8b0dc95111c46eddd/997:15"
+          }
+        }
+      }
+    ],
+    "drawer": {
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      },
+      "body": "FILL"
+    },
+    "overlay": {
+      "layout": "VERTICAL",
+      "padding": [
+        0,
+        0,
+        0,
+        890
+      ],
+      "overlayPositionType": "CENTER",
+      "overlayBackground": {
+        "type": "NONE"
+      },
+      "overlayBackgroundInteraction": "NONE"
+    }
+  }
+}

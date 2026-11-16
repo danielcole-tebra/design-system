@@ -1,0 +1,117 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": true,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 13,
+    "passed": true,
+    "checks": [
+      {
+        "id": "150:21690",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "150:21692",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "150:21694",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "150:21696",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "150:21698",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "150:21700",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "150:21702",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I150:21733;150:20593",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I150:21733;150:20595",
+        "mainId": "2:1426",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I150:20873;104:7577",
+        "mainId": "2:1422",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I150:20873;104:7626",
+        "mainId": "2:159",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I150:20873;104:7633",
+        "mainId": "2:159",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I150:26938;150:20644",
+        "mainId": "2:1268",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 4,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "Default widths",
+        "passed": true
+      },
+      {
+        "name": "Two visible row actions",
+        "passed": true
+      },
+      {
+        "name": "Drawer width and height",
+        "passed": true
+      },
+      {
+        "name": "Drawer footer placement",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 0,
+    "failures": [],
+    "omittedFailures": 0
+  }
+}

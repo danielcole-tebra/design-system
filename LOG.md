@@ -4720,3 +4720,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - File: SDE Alpha Prototypes `ViAWRVVtgkCXzItk0sQ5P0`, page `1376:21590`. All five study screens now reuse Updated 11/13 page chrome, note shell, configuration, toolbar, editor, Summary and module rail. Preserved floating recorder controls and stored prototype wiring; source page unchanged.
 - Verification: Ready/Recording screenshots inspected; all five note/editor/footer geometries and recorder destinations checked. Source typography retained, including its Inter search placeholder. No real recording or prototype playback claimed.
 - Evidence: runs/2026-11-16-floating-recorder-1113/REPORT.md, update.js, verification.json, ready.png and recording.png.
+
+<!-- builder-run:runs/2026-11-16-medlist-open-drawer -->
+## 2026-11-16 — Medlist structured table with Open and latest drawer
+- File: yh2F6OUgdI6K0risLtKLEQ. Created a separate Structured table + drawer page. The structured sig table now has one Open button and a vertical kebab per row; Open targets each medication's reused latest Alpha-style drawer. Separate reconciliation preserved. Awaiting Daniel's visual review.
+- Evidence: runs/2026-11-16-medlist-open-drawer/REPORT.md, record.json, list.png, drawer-open.png, review.png, row-states.png, compound-drawer.png, reported-drawer.png.
