@@ -4704,3 +4704,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist five-column outpatient trial
 - File: yh2F6OUgdI6K0risLtKLEQ. Added a separate five-column trial to the latest non-drawer page: medication and directions, prescriber/source, labeled last activity, order status and actions. Supply/pharmacy expand inline; reconciliation uses a separate mode. Original F and drawer preserved. Awaiting Daniel's visual review.
 - Evidence: runs/2026-11-16-medlist-five-columns/REPORT.md, record.json, list-verified.png, review-verified.png, review-source.png, completed.png, details-final.png, variants-final.png, list.png, review.png, details.png, variants.png, review-final.png.
+
+
+<!-- builder-run:runs/2026-11-16-medlist-structured-sig -->
+## 2026-11-16 — Medlist structured sig comparison
+- File: yh2F6OUgdI6K0risLtKLEQ. Added a separate Medication / Dose / Route / Timing / Start / Stop / Actions comparison. Prescriber/source, narrative sig, last activity and order status are in Details. Details uses native text Button; primary row actions stay outlined. Separate reconciliation retained. Awaiting Daniel's review.
+- Evidence: runs/2026-11-16-medlist-structured-sig/REPORT.md, record.json, list.png, review-corrected.png, expanded.png, reported.png, variants.png, review.png.

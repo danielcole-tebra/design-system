@@ -1,0 +1,813 @@
+{
+  "top": [
+    {
+      "id": "130:5881",
+      "name": "Latest non-drawer · Comparison F",
+      "x": 160,
+      "y": 160,
+      "w": 1440,
+      "h": 1184
+    },
+    {
+      "id": "137:24947",
+      "name": "Medlist/Five-column inline row",
+      "x": 160,
+      "y": 1880,
+      "w": 3840,
+      "h": 600
+    },
+    {
+      "id": "137:25480",
+      "name": "Trial · Five-column medication list",
+      "x": 1760,
+      "y": 160,
+      "w": 1440,
+      "h": 1332
+    },
+    {
+      "id": "137:28731",
+      "name": "Trial · Reconcile medications",
+      "x": 3360,
+      "y": 160,
+      "w": 1440,
+      "h": 1332
+    },
+    {
+      "id": "137:32790",
+      "name": "Trial · Reconciliation completed",
+      "x": 4960,
+      "y": 160,
+      "w": 1440,
+      "h": 1332
+    },
+    {
+      "id": "137:35997",
+      "name": "Inspection · Five-column expanded row",
+      "x": 1760,
+      "y": 1680,
+      "w": 1216,
+      "h": 173
+    },
+    {
+      "id": "137:36168",
+      "name": "README · Five-column trial",
+      "x": 1760,
+      "y": 1480,
+      "w": 1440,
+      "h": 150
+    },
+    {
+      "id": "139:2791",
+      "name": "Inspection · Five-column variants · 2026-11-16",
+      "x": 160,
+      "y": 2640,
+      "w": 3840,
+      "h": 600
+    },
+    {
+      "id": "139:3310",
+      "name": "Inspection · Five-column content roundtrips · 2026-11-16",
+      "x": 160,
+      "y": 3360,
+      "w": 1216,
+      "h": 954
+    }
+  ],
+  "setProps": {
+    "Medication name#34:10": {
+      "type": "TEXT",
+      "defaultValue": "Alprazolam 0.25 mg tablet"
+    },
+    "Directions#34:11": {
+      "type": "TEXT",
+      "defaultValue": "Take 1 tablet by mouth once daily as needed for anxiety"
+    },
+    "Source note#34:12": {
+      "type": "TEXT",
+      "defaultValue": "Patient-reported supplement"
+    },
+    "Show source note#34:13": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Compound#34:14": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Show timeline#34:15": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Date#34:16": {
+      "type": "TEXT",
+      "defaultValue": "Sep 5, 2024"
+    },
+    "Quantity#34:17": {
+      "type": "TEXT",
+      "defaultValue": "15 tablets"
+    },
+    "Duration#34:18": {
+      "type": "TEXT",
+      "defaultValue": "15 days as needed"
+    },
+    "Refills#34:19": {
+      "type": "TEXT",
+      "defaultValue": "No refills"
+    },
+    "Last activity#91:3": {
+      "type": "TEXT",
+      "defaultValue": "Prescribed 09/05/24"
+    },
+    "Prescriber#137:102": {
+      "type": "TEXT",
+      "defaultValue": "Olivia Chen, MD"
+    },
+    "Disclosure": {
+      "type": "VARIANT",
+      "defaultValue": "Collapsed",
+      "variantOptions": [
+        "Collapsed",
+        "Expanded"
+      ]
+    },
+    "Mode": {
+      "type": "VARIANT",
+      "defaultValue": "List",
+      "variantOptions": [
+        "List",
+        "Review"
+      ]
+    },
+    "Reviewed": {
+      "type": "VARIANT",
+      "defaultValue": "No",
+      "variantOptions": [
+        "No",
+        "Yes"
+      ]
+    }
+  },
+  "variant": {
+    "id": "137:24948",
+    "name": "Disclosure=Collapsed, Mode=List, Reviewed=No",
+    "type": "COMPONENT",
+    "w": 1216,
+    "h": 81,
+    "visible": true,
+    "layout": "VERTICAL",
+    "children": [
+      {
+        "id": "137:24949",
+        "name": "Summary",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 80,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:24950",
+            "name": "Selection",
+            "type": "FRAME",
+            "w": 44,
+            "h": 58,
+            "visible": false,
+            "layout": "VERTICAL",
+            "children": [
+              {
+                "id": "137:24951",
+                "name": "Select medication",
+                "type": "INSTANCE",
+                "w": 42,
+                "h": 42,
+                "visible": true,
+                "layout": "HORIZONTAL"
+              }
+            ]
+          },
+          {
+            "id": "137:24952",
+            "name": "Medication",
+            "type": "FRAME",
+            "w": 420,
+            "h": 60,
+            "visible": true,
+            "layout": "VERTICAL",
+            "children": [
+              {
+                "id": "137:24953",
+                "name": "Medication first line",
+                "type": "FRAME",
+                "w": 404,
+                "h": 20,
+                "visible": true,
+                "layout": "HORIZONTAL"
+              },
+              {
+                "id": "137:24955",
+                "name": "Medication supporting details",
+                "type": "FRAME",
+                "w": 404,
+                "h": 20,
+                "visible": true,
+                "layout": "VERTICAL"
+              }
+            ]
+          },
+          {
+            "id": "137:25100",
+            "name": "Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "h": 32,
+            "visible": true,
+            "layout": "VERTICAL",
+            "children": [
+              {
+                "id": "137:25101",
+                "name": "Prescribing",
+                "type": "TEXT",
+                "w": 208,
+                "h": 16,
+                "visible": false
+              },
+              {
+                "id": "137:25102",
+                "name": "Date first line",
+                "type": "FRAME",
+                "w": 160,
+                "h": 42,
+                "visible": false,
+                "layout": "HORIZONTAL"
+              },
+              {
+                "id": "137:25104",
+                "name": "Date and source supporting details",
+                "type": "FRAME",
+                "w": 160,
+                "h": 20,
+                "visible": false,
+                "layout": "VERTICAL"
+              },
+              {
+                "id": "137:24965",
+                "name": "Prescriber",
+                "type": "TEXT",
+                "w": 144,
+                "h": 16,
+                "visible": true
+              },
+              {
+                "id": "137:24957",
+                "name": "Source note",
+                "type": "TEXT",
+                "w": 144,
+                "h": 32,
+                "visible": false
+              }
+            ]
+          },
+          {
+            "id": "137:24959",
+            "name": "Last activity column",
+            "type": "FRAME",
+            "w": 160,
+            "h": 36,
+            "visible": true,
+            "layout": "VERTICAL",
+            "children": [
+              {
+                "id": "137:24960",
+                "name": "Prescribing",
+                "type": "TEXT",
+                "w": 208,
+                "h": 16,
+                "visible": false
+              },
+              {
+                "id": "137:24961",
+                "name": "Date first line",
+                "type": "FRAME",
+                "w": 144,
+                "h": 20,
+                "visible": true,
+                "layout": "HORIZONTAL"
+              },
+              {
+                "id": "137:24963",
+                "name": "Date and source supporting details",
+                "type": "FRAME",
+                "w": 160,
+                "h": 20,
+                "visible": false,
+                "layout": "VERTICAL"
+              }
+            ]
+          },
+          {
+            "id": "137:24973",
+            "name": "Order and pharmacy",
+            "type": "FRAME",
+            "w": 200,
+            "h": 36,
+            "visible": true,
+            "layout": "VERTICAL",
+            "children": [
+              {
+                "id": "137:24974",
+                "name": "Order first line",
+                "type": "FRAME",
+                "w": 184,
+                "h": 20,
+                "visible": true,
+                "layout": "HORIZONTAL"
+              }
+            ]
+          },
+          {
+            "id": "137:24978",
+            "name": "Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "h": 58,
+            "visible": false,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "137:24979",
+                "name": "Reviewed",
+                "type": "INSTANCE",
+                "w": 40,
+                "h": 24,
+                "visible": true,
+                "layout": "NONE"
+              },
+              {
+                "id": "137:24980",
+                "name": "Reviewed",
+                "type": "TEXT",
+                "w": 60,
+                "h": 16,
+                "visible": false
+              }
+            ]
+          },
+          {
+            "id": "137:24981",
+            "name": "Actions",
+            "type": "FRAME",
+            "w": 276,
+            "h": 58,
+            "visible": true,
+            "layout": "VERTICAL",
+            "children": [
+              {
+                "id": "137:24982",
+                "name": "Action first line",
+                "type": "FRAME",
+                "w": 260,
+                "h": 42,
+                "visible": true,
+                "layout": "HORIZONTAL"
+              },
+              {
+                "id": "137:24986",
+                "name": "Action supporting details",
+                "type": "FRAME",
+                "w": 260,
+                "h": 20,
+                "visible": false,
+                "layout": "VERTICAL"
+              }
+            ]
+          },
+          {
+            "id": "137:24990",
+            "name": "Superseded overflow column · Empty and hidden",
+            "type": "FRAME",
+            "w": 40,
+            "h": 42,
+            "visible": false,
+            "layout": "VERTICAL",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "137:24991",
+        "name": "Superseded detail panel · Retained wrappers",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 76,
+        "visible": false,
+        "layout": "VERTICAL",
+        "children": [
+          {
+            "id": "137:24992",
+            "name": "Prescription directions",
+            "type": "FRAME",
+            "w": 1172,
+            "h": 36,
+            "visible": true,
+            "layout": "VERTICAL",
+            "children": []
+          },
+          {
+            "id": "137:24993",
+            "name": "Prescribing supply and pharmacy",
+            "type": "FRAME",
+            "w": 1172,
+            "h": 32,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "137:24994",
+                "name": "Pharmacy details",
+                "type": "FRAME",
+                "w": 464,
+                "h": 32,
+                "visible": true,
+                "layout": "VERTICAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "137:25107",
+        "name": "Inline prescription details",
+        "type": "FRAME",
+        "w": 1216,
+        "h": 100,
+        "visible": false,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:24966",
+            "name": "Supply",
+            "type": "FRAME",
+            "w": 420,
+            "h": 92,
+            "visible": true,
+            "layout": "VERTICAL",
+            "children": [
+              {
+                "id": "137:24967",
+                "name": "Supply",
+                "type": "TEXT",
+                "w": 404,
+                "h": 16,
+                "visible": true
+              },
+              {
+                "id": "137:24968",
+                "name": "Quantity first line",
+                "type": "FRAME",
+                "w": 404,
+                "h": 16,
+                "visible": true,
+                "layout": "HORIZONTAL"
+              },
+              {
+                "id": "137:24970",
+                "name": "Supply supporting details",
+                "type": "FRAME",
+                "w": 404,
+                "h": 36,
+                "visible": true,
+                "layout": "VERTICAL"
+              },
+              {
+                "id": "137:24958",
+                "name": "Compound",
+                "type": "INSTANCE",
+                "w": 75,
+                "h": 24,
+                "visible": false,
+                "layout": "HORIZONTAL"
+              }
+            ]
+          },
+          {
+            "id": "137:25108",
+            "name": "Pharmacy detail column",
+            "type": "FRAME",
+            "w": 520,
+            "h": 72,
+            "visible": true,
+            "layout": "VERTICAL",
+            "children": [
+              {
+                "id": "137:25109",
+                "name": "Pharmacy",
+                "type": "TEXT",
+                "w": 504,
+                "h": 16,
+                "visible": true
+              },
+              {
+                "id": "137:24976",
+                "name": "Order supporting details",
+                "type": "FRAME",
+                "w": 504,
+                "h": 36,
+                "visible": true,
+                "layout": "VERTICAL"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "button": [
+    {
+      "id": "2:186",
+      "name": "variant=text, color=primary, size=small, State=Default",
+      "key": "c2d3c143e41e4fad5573c43415253176f3d57272"
+    }
+  ],
+  "rows": [
+    {
+      "id": "137:27823",
+      "name": "Medication / Alprazolam 0.25 mg tablet / Five-column"
+    },
+    {
+      "id": "137:27909",
+      "name": "Medication / Cetirizine 10 mg tablet / Five-column"
+    },
+    {
+      "id": "137:28001",
+      "name": "Medication / Aspirin 81 mg delayed-release tablet / Five-column"
+    },
+    {
+      "id": "137:28093",
+      "name": "Medication / Doxycycline hyclate 100 mg capsule / Five-column"
+    },
+    {
+      "id": "137:28185",
+      "name": "Medication / Furosemide 20 mg tablet / Five-column"
+    },
+    {
+      "id": "137:28277",
+      "name": "Medication / Hydrocortisone 1% compounded cream / Five-column"
+    },
+    {
+      "id": "137:28369",
+      "name": "Medication / Melatonin 3 mg tablet / Five-column"
+    },
+    {
+      "id": "137:28461",
+      "name": "Medication / Metformin 500 mg tablet / Five-column"
+    },
+    {
+      "id": "137:28547",
+      "name": "Medication / Simvastatin 20 mg tablet / Five-column"
+    },
+    {
+      "id": "137:28639",
+      "name": "Medication / Acetaminophen 500 mg tablet / Five-column"
+    }
+  ],
+  "header": {
+    "id": "137:25551",
+    "name": "Five-column headings",
+    "type": "FRAME",
+    "w": 1216,
+    "h": 52,
+    "visible": true,
+    "layout": "HORIZONTAL",
+    "children": [
+      {
+        "id": "137:25552",
+        "name": "Select all",
+        "type": "FRAME",
+        "w": 44,
+        "h": 52,
+        "visible": false,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:25553",
+            "name": "Select all medications",
+            "type": "INSTANCE",
+            "w": 42,
+            "h": 42,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "I137:25553;136:4",
+                "name": "Glyph",
+                "type": "INSTANCE",
+                "w": 24,
+                "h": 24,
+                "visible": true,
+                "layout": "NONE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "137:25563",
+        "name": "Header column / Reviewed",
+        "type": "FRAME",
+        "w": 80,
+        "h": 52,
+        "visible": false,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:25564",
+            "name": "Reviewed",
+            "type": "INSTANCE",
+            "w": 64,
+            "h": 52,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "I137:25564;190:12",
+                "name": "Text",
+                "type": "TEXT",
+                "w": 64,
+                "h": 20,
+                "visible": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "137:25567",
+        "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+        "type": "FRAME",
+        "w": 40,
+        "h": 52,
+        "visible": false,
+        "layout": "HORIZONTAL",
+        "children": []
+      },
+      {
+        "id": "137:25554",
+        "name": "Header column / Medication",
+        "type": "FRAME",
+        "w": 420,
+        "h": 52,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:25555",
+            "name": "Medication",
+            "type": "INSTANCE",
+            "w": 404,
+            "h": 52,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "I137:25555;190:12",
+                "name": "Text",
+                "type": "TEXT",
+                "w": 404,
+                "h": 20,
+                "visible": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "137:25559",
+        "name": "Header column / Prescriber / source",
+        "type": "FRAME",
+        "w": 160,
+        "h": 52,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:25560",
+            "name": "Supply",
+            "type": "INSTANCE",
+            "w": 144,
+            "h": 52,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "I137:25560;190:12",
+                "name": "Text",
+                "type": "TEXT",
+                "w": 144,
+                "h": 20,
+                "visible": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "137:25556",
+        "name": "Header column / Last activity",
+        "type": "FRAME",
+        "w": 160,
+        "h": 52,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:25557",
+            "name": "Last activity",
+            "type": "INSTANCE",
+            "w": 144,
+            "h": 52,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "I137:25557;190:12",
+                "name": "Text",
+                "type": "TEXT",
+                "w": 144,
+                "h": 20,
+                "visible": true
+              }
+            ]
+          },
+          {
+            "id": "137:25558",
+            "name": "Last prescribed / modified · Token-bound heading",
+            "type": "TEXT",
+            "w": 96,
+            "h": 40,
+            "visible": false
+          }
+        ]
+      },
+      {
+        "id": "137:25561",
+        "name": "Header column / Order status",
+        "type": "FRAME",
+        "w": 200,
+        "h": 52,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:25562",
+            "name": "Order status",
+            "type": "INSTANCE",
+            "w": 184,
+            "h": 52,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "I137:25562;190:12",
+                "name": "Text",
+                "type": "TEXT",
+                "w": 184,
+                "h": 20,
+                "visible": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "137:25565",
+        "name": "Header column / Actions",
+        "type": "FRAME",
+        "w": 276,
+        "h": 52,
+        "visible": true,
+        "layout": "HORIZONTAL",
+        "children": [
+          {
+            "id": "137:25566",
+            "name": "Actions",
+            "type": "INSTANCE",
+            "w": 260,
+            "h": 52,
+            "visible": true,
+            "layout": "HORIZONTAL",
+            "children": [
+              {
+                "id": "I137:25566;190:12",
+                "name": "Text",
+                "type": "TEXT",
+                "w": 260,
+                "h": 20,
+                "visible": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

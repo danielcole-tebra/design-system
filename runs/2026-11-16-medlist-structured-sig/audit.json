@@ -1,0 +1,121 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": true,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 13,
+    "passed": true,
+    "checks": [
+      {
+        "id": "145:25376",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "145:25379",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "145:25382",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "145:25385",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "145:25388",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "145:25391",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "145:25394",
+        "mainId": "2:1408",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I145:25396;145:21568",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I145:25396;145:21569",
+        "mainId": "2:186",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I145:25396;145:21570",
+        "mainId": "2:1426",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "145:26476",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "145:31628",
+        "mainId": "2:160",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I145:36150;145:21713",
+        "mainId": "2:1272",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 5,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "Seven column widths",
+        "passed": true
+      },
+      {
+        "name": "Reconciliation header widths",
+        "passed": true
+      },
+      {
+        "name": "Reconciliation table overflow after correction",
+        "passed": true
+      },
+      {
+        "name": "Different action weight",
+        "passed": true
+      },
+      {
+        "name": "Row height",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 0,
+    "failures": [],
+    "omittedFailures": 0
+  }
+}
