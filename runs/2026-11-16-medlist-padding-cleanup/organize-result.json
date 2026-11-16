@@ -1,0 +1,797 @@
+{
+  "createdNodeIds": [
+    "176:31966",
+    "176:31967",
+    "176:31968",
+    "176:31969",
+    "176:31970",
+    "176:31971",
+    "176:31972"
+  ],
+  "mutatedNodeIds": [
+    "150:37223",
+    "150:20871",
+    "150:20944",
+    "150:21017",
+    "150:21090",
+    "150:21163",
+    "150:21236",
+    "150:21309",
+    "150:21382",
+    "150:21455",
+    "150:21528",
+    "150:37739",
+    "150:21601",
+    "160:46277",
+    "150:26805",
+    "150:32015",
+    "160:46513",
+    "160:41804",
+    "160:41965",
+    "160:42126",
+    "160:42287",
+    "160:42448",
+    "160:42609",
+    "160:42770",
+    "160:42931",
+    "160:43092",
+    "160:43253",
+    "160:43414",
+    "160:43764",
+    "160:44114",
+    "160:44800",
+    "160:44940",
+    "160:45083",
+    "160:45224",
+    "160:45368",
+    "160:45507",
+    "160:45924",
+    "160:46017",
+    "160:44465",
+    "160:45646",
+    "160:45780",
+    "160:46110",
+    "150:20783",
+    "160:41715",
+    "150:37440",
+    "151:31571",
+    "157:8965",
+    "150:20569",
+    "0:1",
+    "104:4346",
+    "17:881",
+    "128:2573"
+  ],
+  "archiveId": "176:31966",
+  "overviewId": "176:31968",
+  "groups": [
+    {
+      "id": "176:31967",
+      "name": "Initial Open drawer · Superseded by current pass",
+      "page": "176:31966",
+      "children": [
+        "150:37223",
+        "150:20871",
+        "150:20944",
+        "150:21017",
+        "150:21090",
+        "150:21163",
+        "150:21236",
+        "150:21309",
+        "150:21382",
+        "150:21455",
+        "150:21528"
+      ]
+    },
+    {
+      "id": "176:31968",
+      "name": "01 · Current table and drawer",
+      "page": "150:20569",
+      "children": [
+        "150:21601",
+        "160:46277",
+        "150:26805",
+        "150:32015"
+      ]
+    },
+    {
+      "id": "176:31969",
+      "name": "02 · Current medication details · Prototype destinations",
+      "page": "150:20569",
+      "children": [
+        "160:41804",
+        "160:41965",
+        "160:42126",
+        "160:42287",
+        "160:42448",
+        "160:42609",
+        "160:42770",
+        "160:42931",
+        "160:43092",
+        "160:43253"
+      ]
+    },
+    {
+      "id": "176:31970",
+      "name": "03 · Prescription editing · Prototype states",
+      "page": "150:20569",
+      "children": [
+        "160:43414",
+        "160:43764",
+        "160:44114",
+        "160:44800",
+        "160:44940",
+        "160:45083",
+        "160:45224",
+        "160:45368",
+        "160:45507",
+        "160:45924",
+        "160:46017"
+      ]
+    },
+    {
+      "id": "176:31971",
+      "name": "04 · Chart-only editing · Prototype states",
+      "page": "150:20569",
+      "children": [
+        "160:44465",
+        "160:45646",
+        "160:45780",
+        "160:46110"
+      ]
+    },
+    {
+      "id": "176:31972",
+      "name": "05 · Supporting components and inspections",
+      "page": "150:20569",
+      "children": [
+        "150:20783",
+        "160:41715",
+        "150:37440",
+        "151:31571",
+        "157:8965"
+      ]
+    }
+  ],
+  "preservation": [
+    {
+      "id": "150:20783",
+      "before": {
+        "id": "150:20783",
+        "hash": "a1ac8711",
+        "count": 299
+      },
+      "after": {
+        "hash": "a1ac8711",
+        "count": 299
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:20871",
+      "before": {
+        "id": "150:20871",
+        "hash": "a62ead41",
+        "count": 73
+      },
+      "after": {
+        "hash": "a62ead41",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:20944",
+      "before": {
+        "id": "150:20944",
+        "hash": "66e2f340",
+        "count": 73
+      },
+      "after": {
+        "hash": "66e2f340",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21017",
+      "before": {
+        "id": "150:21017",
+        "hash": "bc3e1655",
+        "count": 73
+      },
+      "after": {
+        "hash": "bc3e1655",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21090",
+      "before": {
+        "id": "150:21090",
+        "hash": "c9402331",
+        "count": 73
+      },
+      "after": {
+        "hash": "c9402331",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21163",
+      "before": {
+        "id": "150:21163",
+        "hash": "995aee38",
+        "count": 73
+      },
+      "after": {
+        "hash": "995aee38",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21236",
+      "before": {
+        "id": "150:21236",
+        "hash": "d18aad43",
+        "count": 73
+      },
+      "after": {
+        "hash": "d18aad43",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21309",
+      "before": {
+        "id": "150:21309",
+        "hash": "92380f3",
+        "count": 73
+      },
+      "after": {
+        "hash": "92380f3",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21382",
+      "before": {
+        "id": "150:21382",
+        "hash": "349b6823",
+        "count": 73
+      },
+      "after": {
+        "hash": "349b6823",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21455",
+      "before": {
+        "id": "150:21455",
+        "hash": "3269b7c4",
+        "count": 73
+      },
+      "after": {
+        "hash": "3269b7c4",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21528",
+      "before": {
+        "id": "150:21528",
+        "hash": "5259e6a3",
+        "count": 73
+      },
+      "after": {
+        "hash": "5259e6a3",
+        "count": 73
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:21601",
+      "before": {
+        "id": "150:21601",
+        "hash": "19352b2b",
+        "count": 4214
+      },
+      "after": {
+        "hash": "19352b2b",
+        "count": 4214
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:26805",
+      "before": {
+        "id": "150:26805",
+        "hash": "d2907e99",
+        "count": 4220
+      },
+      "after": {
+        "hash": "d2907e99",
+        "count": 4220
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:32015",
+      "before": {
+        "id": "150:32015",
+        "hash": "e7f6e611",
+        "count": 4214
+      },
+      "after": {
+        "hash": "e7f6e611",
+        "count": 4214
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:37223",
+      "before": {
+        "id": "150:37223",
+        "hash": "2fdbdc34",
+        "count": 4286
+      },
+      "after": {
+        "hash": "2fdbdc34",
+        "count": 4286
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:37440",
+      "before": {
+        "id": "150:37440",
+        "hash": "27091a78",
+        "count": 299
+      },
+      "after": {
+        "hash": "27091a78",
+        "count": 299
+      },
+      "unchanged": true
+    },
+    {
+      "id": "150:37739",
+      "before": {
+        "id": "150:37739",
+        "hash": "c57b473b",
+        "count": 1
+      },
+      "after": {
+        "hash": "c57b473b",
+        "count": 1
+      },
+      "unchanged": true
+    },
+    {
+      "id": "151:31571",
+      "before": {
+        "id": "151:31571",
+        "hash": "64abe7b3",
+        "count": 991
+      },
+      "after": {
+        "hash": "64abe7b3",
+        "count": 991
+      },
+      "unchanged": true
+    },
+    {
+      "id": "157:8965",
+      "before": {
+        "id": "157:8965",
+        "hash": "562ecd2e",
+        "count": 53
+      },
+      "after": {
+        "hash": "562ecd2e",
+        "count": 53
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:41715",
+      "before": {
+        "id": "160:41715",
+        "hash": "8d6b6795",
+        "count": 89
+      },
+      "after": {
+        "hash": "8d6b6795",
+        "count": 89
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:41804",
+      "before": {
+        "id": "160:41804",
+        "hash": "f84507ae",
+        "count": 91
+      },
+      "after": {
+        "hash": "f84507ae",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:41965",
+      "before": {
+        "id": "160:41965",
+        "hash": "736591c1",
+        "count": 91
+      },
+      "after": {
+        "hash": "736591c1",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:42126",
+      "before": {
+        "id": "160:42126",
+        "hash": "a824e72c",
+        "count": 91
+      },
+      "after": {
+        "hash": "a824e72c",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:42287",
+      "before": {
+        "id": "160:42287",
+        "hash": "e0b716a1",
+        "count": 91
+      },
+      "after": {
+        "hash": "e0b716a1",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:42448",
+      "before": {
+        "id": "160:42448",
+        "hash": "ca67b9f9",
+        "count": 91
+      },
+      "after": {
+        "hash": "ca67b9f9",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:42609",
+      "before": {
+        "id": "160:42609",
+        "hash": "13cc02cb",
+        "count": 91
+      },
+      "after": {
+        "hash": "13cc02cb",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:42770",
+      "before": {
+        "id": "160:42770",
+        "hash": "ae0a06f1",
+        "count": 91
+      },
+      "after": {
+        "hash": "ae0a06f1",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:42931",
+      "before": {
+        "id": "160:42931",
+        "hash": "f6d5d0b5",
+        "count": 91
+      },
+      "after": {
+        "hash": "f6d5d0b5",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:43092",
+      "before": {
+        "id": "160:43092",
+        "hash": "74949560",
+        "count": 91
+      },
+      "after": {
+        "hash": "74949560",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:43253",
+      "before": {
+        "id": "160:43253",
+        "hash": "ed3f1527",
+        "count": 91
+      },
+      "after": {
+        "hash": "ed3f1527",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:43414",
+      "before": {
+        "id": "160:43414",
+        "hash": "5af206b6",
+        "count": 350
+      },
+      "after": {
+        "hash": "5af206b6",
+        "count": 350
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:43764",
+      "before": {
+        "id": "160:43764",
+        "hash": "bb6f3cee",
+        "count": 350
+      },
+      "after": {
+        "hash": "bb6f3cee",
+        "count": 350
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:44114",
+      "before": {
+        "id": "160:44114",
+        "hash": "ca40674c",
+        "count": 351
+      },
+      "after": {
+        "hash": "ca40674c",
+        "count": 351
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:44465",
+      "before": {
+        "id": "160:44465",
+        "hash": "6398b9e6",
+        "count": 337
+      },
+      "after": {
+        "hash": "6398b9e6",
+        "count": 337
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:44800",
+      "before": {
+        "id": "160:44800",
+        "hash": "f7afd7fe",
+        "count": 141
+      },
+      "after": {
+        "hash": "f7afd7fe",
+        "count": 141
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:44940",
+      "before": {
+        "id": "160:44940",
+        "hash": "eee780c6",
+        "count": 142
+      },
+      "after": {
+        "hash": "eee780c6",
+        "count": 142
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:45083",
+      "before": {
+        "id": "160:45083",
+        "hash": "5f9926f3",
+        "count": 142
+      },
+      "after": {
+        "hash": "5f9926f3",
+        "count": 142
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:45224",
+      "before": {
+        "id": "160:45224",
+        "hash": "b67f6c1a",
+        "count": 143
+      },
+      "after": {
+        "hash": "b67f6c1a",
+        "count": 143
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:45368",
+      "before": {
+        "id": "160:45368",
+        "hash": "bd4784f1",
+        "count": 140
+      },
+      "after": {
+        "hash": "bd4784f1",
+        "count": 140
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:45507",
+      "before": {
+        "id": "160:45507",
+        "hash": "4c46b959",
+        "count": 140
+      },
+      "after": {
+        "hash": "4c46b959",
+        "count": 140
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:45646",
+      "before": {
+        "id": "160:45646",
+        "hash": "9ca82a8e",
+        "count": 135
+      },
+      "after": {
+        "hash": "9ca82a8e",
+        "count": 135
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:45780",
+      "before": {
+        "id": "160:45780",
+        "hash": "e66db7a9",
+        "count": 145
+      },
+      "after": {
+        "hash": "e66db7a9",
+        "count": 145
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:45924",
+      "before": {
+        "id": "160:45924",
+        "hash": "860b9256",
+        "count": 91
+      },
+      "after": {
+        "hash": "860b9256",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:46017",
+      "before": {
+        "id": "160:46017",
+        "hash": "c40f11a4",
+        "count": 91
+      },
+      "after": {
+        "hash": "c40f11a4",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:46110",
+      "before": {
+        "id": "160:46110",
+        "hash": "e066dfb4",
+        "count": 91
+      },
+      "after": {
+        "hash": "e066dfb4",
+        "count": 91
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:46277",
+      "before": {
+        "id": "160:46277",
+        "hash": "2a4712e5",
+        "count": 4304
+      },
+      "after": {
+        "hash": "2a4712e5",
+        "count": 4304
+      },
+      "unchanged": true
+    },
+    {
+      "id": "160:46513",
+      "before": {
+        "id": "160:46513",
+        "hash": "7c2610d3",
+        "count": 1
+      },
+      "after": {
+        "hash": "d668fe68",
+        "count": 1
+      },
+      "unchanged": null
+    }
+  ],
+  "unclassified": [],
+  "pages": [
+    {
+      "id": "150:20569",
+      "name": "Medlist · Current table and drawer"
+    },
+    {
+      "id": "0:1",
+      "name": "Archive · Non-drawer explorations"
+    },
+    {
+      "id": "104:4346",
+      "name": "Archive · Earlier drawer"
+    },
+    {
+      "id": "17:881",
+      "name": "Archive · Comparisons"
+    },
+    {
+      "id": "128:2573",
+      "name": "Archive · Components and studies"
+    },
+    {
+      "id": "176:31966",
+      "name": "Archive · Initial Open drawer"
+    }
+  ],
+  "builtAt": "2026-11-16T21:02:40.023Z"
+}

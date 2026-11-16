@@ -1,0 +1,2798 @@
+[
+  {
+    "pageId": "0:1",
+    "masters": [
+      {
+        "id": "52:2511",
+        "name": "Medlist/Comparison B spaced row",
+        "parent": "17:881",
+        "remote": false,
+        "cells": [
+          {
+            "id": "52:2512",
+            "name": "Selection",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "52:2514",
+            "name": "Medication",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2519",
+            "name": "Date and source",
+            "type": "FRAME",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "52:2523",
+            "name": "Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "52:2527",
+            "name": "Order and pharmacy",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2529",
+            "name": "Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "52:2531",
+            "name": "Actions",
+            "type": "FRAME",
+            "w": 196,
+            "pad": 16
+          },
+          {
+            "id": "52:2534",
+            "name": "Superseded separate overflow column · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "47:1577",
+        "name": "Disclosure=Expanded",
+        "parent": "47:1540",
+        "remote": false,
+        "cells": [
+          {
+            "id": "47:1578",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "47:1596",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "47:1541",
+        "name": "Disclosure=Collapsed",
+        "parent": "47:1540",
+        "remote": false,
+        "cells": [
+          {
+            "id": "47:1542",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "47:1560",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "91:10337",
+        "name": "Disclosure=Expanded",
+        "parent": "91:10288",
+        "remote": false,
+        "cells": [
+          {
+            "id": "91:10338",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "91:10380",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "91:10289",
+        "name": "Disclosure=Collapsed",
+        "parent": "91:10288",
+        "remote": false,
+        "cells": [
+          {
+            "id": "91:10290",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "91:10332",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "137:24948",
+        "name": "Disclosure=Collapsed, Mode=List, Reviewed=No",
+        "parent": "137:24947",
+        "remote": false,
+        "cells": [
+          {
+            "id": "137:24949",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "137:24991",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          },
+          {
+            "id": "137:25107",
+            "name": "Inline prescription details",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "137:25120",
+        "name": "Disclosure=Collapsed, Mode=Review, Reviewed=No",
+        "parent": "137:24947",
+        "remote": false,
+        "cells": [
+          {
+            "id": "137:25121",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "137:25160",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          },
+          {
+            "id": "137:25165",
+            "name": "Inline prescription details",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "145:21536",
+        "name": "Disclosure=Collapsed, Mode=List, Reviewed=No",
+        "parent": "145:21535",
+        "remote": false,
+        "cells": [
+          {
+            "id": "145:21537",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "145:21576",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          },
+          {
+            "id": "145:21581",
+            "name": "Inline prescription details",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "145:21652",
+        "name": "Disclosure=Collapsed, Mode=Review, Reviewed=No",
+        "parent": "145:21535",
+        "remote": false,
+        "cells": [
+          {
+            "id": "145:21653",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "145:21692",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          },
+          {
+            "id": "145:21697",
+            "name": "Inline prescription details",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          }
+        ]
+      }
+    ],
+    "heads": [
+      {
+        "table": "130:5931",
+        "headId": "130:5952",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "130:5953",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "130:5955",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 296,
+            "pad": 8
+          },
+          {
+            "id": "130:5957",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 176,
+            "pad": 8
+          },
+          {
+            "id": "130:5960",
+            "name": "Header column / Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 8
+          },
+          {
+            "id": "130:5962",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 208,
+            "pad": 8
+          },
+          {
+            "id": "130:5964",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "130:5966",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "130:5968",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "table": "137:25530",
+        "headId": "137:25551",
+        "name": "Five-column headings",
+        "children": [
+          {
+            "id": "137:25552",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "137:25563",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "137:25567",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "137:25554",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 420,
+            "pad": 8
+          },
+          {
+            "id": "137:25559",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "137:25556",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "137:25561",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "137:25565",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "137:28781",
+        "headId": "137:28802",
+        "name": "Five-column headings",
+        "children": [
+          {
+            "id": "137:28803",
+            "name": "Review checkbox gutter",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "137:28805",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "137:28807",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "137:28808",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 376,
+            "pad": 8
+          },
+          {
+            "id": "137:28810",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "137:28812",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "137:28815",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "137:28817",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "137:32840",
+        "headId": "137:32861",
+        "name": "Five-column headings",
+        "children": [
+          {
+            "id": "137:32862",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "137:32864",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "137:32866",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "137:32867",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 420,
+            "pad": 8
+          },
+          {
+            "id": "137:32869",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "137:32871",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "137:32874",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "137:32876",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "145:22222",
+        "headId": "145:22243",
+        "name": "Structured sig headings",
+        "children": [
+          {
+            "id": "145:22244",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "145:22246",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "145:22248",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "145:22249",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 420,
+            "pad": 8
+          },
+          {
+            "id": "145:22251",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "145:22253",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "145:22256",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "145:22258",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "145:25375",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 340,
+            "pad": 8
+          },
+          {
+            "id": "145:25378",
+            "name": "Header column / Dose",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "145:25381",
+            "name": "Header column / Route",
+            "type": "FRAME",
+            "w": 104,
+            "pad": 8
+          },
+          {
+            "id": "145:25384",
+            "name": "Header column / Timing",
+            "type": "FRAME",
+            "w": 216,
+            "pad": 8
+          },
+          {
+            "id": "145:25387",
+            "name": "Header column / Start",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "145:25390",
+            "name": "Header column / Stop",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "145:25393",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "145:26484",
+        "headId": "145:26505",
+        "name": "Structured sig headings",
+        "children": [
+          {
+            "id": "145:26506",
+            "name": "Review checkbox gutter",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "145:26508",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "145:26510",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "145:26511",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 296,
+            "pad": 8
+          },
+          {
+            "id": "145:26513",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "145:26515",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "145:26518",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "145:26520",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "145:26522",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 296,
+            "pad": 8
+          },
+          {
+            "id": "145:26524",
+            "name": "Header column / Dose",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "145:26526",
+            "name": "Header column / Route",
+            "type": "FRAME",
+            "w": 104,
+            "pad": 8
+          },
+          {
+            "id": "145:26528",
+            "name": "Header column / Timing",
+            "type": "FRAME",
+            "w": 216,
+            "pad": 8
+          },
+          {
+            "id": "145:26530",
+            "name": "Header column / Start",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "145:26532",
+            "name": "Header column / Stop",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "145:26534",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "145:31684",
+        "headId": "145:31705",
+        "name": "Structured sig headings",
+        "children": [
+          {
+            "id": "145:31706",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "145:31708",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "145:31710",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "145:31711",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 420,
+            "pad": 8
+          },
+          {
+            "id": "145:31713",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "145:31715",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "145:31718",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "145:31720",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "145:31722",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 340,
+            "pad": 8
+          },
+          {
+            "id": "145:31724",
+            "name": "Header column / Dose",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "145:31726",
+            "name": "Header column / Route",
+            "type": "FRAME",
+            "w": 104,
+            "pad": 8
+          },
+          {
+            "id": "145:31728",
+            "name": "Header column / Timing",
+            "type": "FRAME",
+            "w": 216,
+            "pad": 8
+          },
+          {
+            "id": "145:31730",
+            "name": "Header column / Start",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "145:31732",
+            "name": "Header column / Stop",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "145:31734",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pageId": "104:4346",
+    "masters": [
+      {
+        "id": "52:2511",
+        "name": "Medlist/Comparison B spaced row",
+        "parent": "17:881",
+        "remote": false,
+        "cells": [
+          {
+            "id": "52:2512",
+            "name": "Selection",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "52:2514",
+            "name": "Medication",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2519",
+            "name": "Date and source",
+            "type": "FRAME",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "52:2523",
+            "name": "Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "52:2527",
+            "name": "Order and pharmacy",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2529",
+            "name": "Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "52:2531",
+            "name": "Actions",
+            "type": "FRAME",
+            "w": 196,
+            "pad": 16
+          },
+          {
+            "id": "52:2534",
+            "name": "Superseded separate overflow column · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "47:1577",
+        "name": "Disclosure=Expanded",
+        "parent": "47:1540",
+        "remote": false,
+        "cells": [
+          {
+            "id": "47:1578",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "47:1596",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "47:1541",
+        "name": "Disclosure=Collapsed",
+        "parent": "47:1540",
+        "remote": false,
+        "cells": [
+          {
+            "id": "47:1542",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "47:1560",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "91:10337",
+        "name": "Disclosure=Expanded",
+        "parent": "91:10288",
+        "remote": false,
+        "cells": [
+          {
+            "id": "91:10338",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "91:10380",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "91:10289",
+        "name": "Disclosure=Collapsed",
+        "parent": "91:10288",
+        "remote": false,
+        "cells": [
+          {
+            "id": "91:10290",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "91:10332",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "104:4347",
+        "name": "Medlist/Drawer row",
+        "parent": "130:18976",
+        "remote": false,
+        "cells": [
+          {
+            "id": "104:4348",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "104:4390",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "113:8773",
+        "name": "Reviewed=No",
+        "parent": "113:8869",
+        "remote": false,
+        "cells": [
+          {
+            "id": "113:8774",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "113:8816",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      }
+    ],
+    "heads": [
+      {
+        "table": "104:4473",
+        "headId": "104:4494",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "104:4495",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "104:4497",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 480,
+            "pad": 8
+          },
+          {
+            "id": "104:4499",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 176,
+            "pad": 8
+          },
+          {
+            "id": "104:4502",
+            "name": "Header column / Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 8
+          },
+          {
+            "id": "104:4504",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 256,
+            "pad": 8
+          },
+          {
+            "id": "104:4506",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "104:4508",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 168,
+            "pad": 8
+          },
+          {
+            "id": "104:4510",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "table": "104:8416",
+        "headId": "104:8437",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "104:8438",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "104:8440",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 480,
+            "pad": 8
+          },
+          {
+            "id": "104:8442",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 176,
+            "pad": 8
+          },
+          {
+            "id": "104:8445",
+            "name": "Header column / Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 8
+          },
+          {
+            "id": "104:8447",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 256,
+            "pad": 8
+          },
+          {
+            "id": "104:8449",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "104:8451",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 168,
+            "pad": 8
+          },
+          {
+            "id": "104:8453",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "table": "113:8996",
+        "headId": "113:9017",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "113:9018",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "113:9020",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 436,
+            "pad": 8
+          },
+          {
+            "id": "113:9022",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 176,
+            "pad": 8
+          },
+          {
+            "id": "113:9025",
+            "name": "Header column / Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 8
+          },
+          {
+            "id": "113:9027",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 256,
+            "pad": 8
+          },
+          {
+            "id": "113:9029",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "113:9031",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 168,
+            "pad": 8
+          },
+          {
+            "id": "113:9033",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pageId": "17:881",
+    "masters": [
+      {
+        "id": "52:2511",
+        "name": "Medlist/Comparison B spaced row",
+        "parent": "17:881",
+        "remote": false,
+        "cells": [
+          {
+            "id": "52:2512",
+            "name": "Selection",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "52:2514",
+            "name": "Medication",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2519",
+            "name": "Date and source",
+            "type": "FRAME",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "52:2523",
+            "name": "Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "52:2527",
+            "name": "Order and pharmacy",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2529",
+            "name": "Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "52:2531",
+            "name": "Actions",
+            "type": "FRAME",
+            "w": 196,
+            "pad": 16
+          },
+          {
+            "id": "52:2534",
+            "name": "Superseded separate overflow column · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "47:1577",
+        "name": "Disclosure=Expanded",
+        "parent": "47:1540",
+        "remote": false,
+        "cells": [
+          {
+            "id": "47:1578",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "47:1596",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "47:1541",
+        "name": "Disclosure=Collapsed",
+        "parent": "47:1540",
+        "remote": false,
+        "cells": [
+          {
+            "id": "47:1542",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "47:1560",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "91:10337",
+        "name": "Disclosure=Expanded",
+        "parent": "91:10288",
+        "remote": false,
+        "cells": [
+          {
+            "id": "91:10338",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "91:10380",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "91:10289",
+        "name": "Disclosure=Collapsed",
+        "parent": "91:10288",
+        "remote": false,
+        "cells": [
+          {
+            "id": "91:10290",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "91:10332",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "2:2273",
+        "name": "Medlist/Medication row",
+        "parent": "2:1810",
+        "remote": false,
+        "cells": [
+          {
+            "id": "2:2274",
+            "name": "Selection",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "2:2278",
+            "name": "Medication",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "2:2290",
+            "name": "Date and source",
+            "type": "FRAME",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "2:2294",
+            "name": "Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "2:2298",
+            "name": "Order and pharmacy",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "2:2303",
+            "name": "Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "2:2308",
+            "name": "Actions",
+            "type": "FRAME",
+            "w": 156,
+            "pad": 16
+          },
+          {
+            "id": "2:2315",
+            "name": "Overflow",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      }
+    ],
+    "heads": [
+      {
+        "table": "23:918",
+        "headId": "23:919",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "23:920",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "23:922",
+            "name": "Medication",
+            "type": "INSTANCE",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "23:923",
+            "name": "Date / source",
+            "type": "INSTANCE",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "23:924",
+            "name": "Supply",
+            "type": "INSTANCE",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "23:925",
+            "name": "Order / pharmacy",
+            "type": "INSTANCE",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "23:926",
+            "name": "Reviewed",
+            "type": "INSTANCE",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "23:927",
+            "name": "Actions",
+            "type": "INSTANCE",
+            "w": 196,
+            "pad": 16
+          },
+          {
+            "id": "23:928",
+            "name": "Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "table": "73:3855",
+        "headId": "73:4525",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "73:4526",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "73:4528",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 360,
+            "pad": 8
+          },
+          {
+            "id": "73:4530",
+            "name": "Header column / Date/source",
+            "type": "FRAME",
+            "w": 112,
+            "pad": 8
+          },
+          {
+            "id": "73:4532",
+            "name": "Header column / Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 8
+          },
+          {
+            "id": "73:4534",
+            "name": "Header column / Order/pharmacy",
+            "type": "FRAME",
+            "w": 208,
+            "pad": 8
+          },
+          {
+            "id": "73:4536",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "73:4538",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "73:4540",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "table": "77:4811",
+        "headId": "77:4832",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "77:4833",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "77:4835",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 360,
+            "pad": 8
+          },
+          {
+            "id": "77:4837",
+            "name": "Header column / Date/source",
+            "type": "FRAME",
+            "w": 112,
+            "pad": 8
+          },
+          {
+            "id": "77:4839",
+            "name": "Header column / Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 8
+          },
+          {
+            "id": "77:4841",
+            "name": "Header column / Order/pharmacy",
+            "type": "FRAME",
+            "w": 208,
+            "pad": 8
+          },
+          {
+            "id": "77:4843",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "77:4845",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "77:4847",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "table": "85:6308",
+        "headId": "85:6329",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "85:6330",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "85:6332",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 360,
+            "pad": 8
+          },
+          {
+            "id": "85:6334",
+            "name": "Header column / Last prescribed or modified",
+            "type": "FRAME",
+            "w": 112,
+            "pad": 8
+          },
+          {
+            "id": "85:6336",
+            "name": "Header column / Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 8
+          },
+          {
+            "id": "85:6338",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 208,
+            "pad": 8
+          },
+          {
+            "id": "85:6340",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "85:6342",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "85:6344",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "table": "91:10496",
+        "headId": "91:10517",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "91:10518",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "91:10520",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 296,
+            "pad": 8
+          },
+          {
+            "id": "91:10522",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 176,
+            "pad": 8
+          },
+          {
+            "id": "91:10525",
+            "name": "Header column / Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 8
+          },
+          {
+            "id": "91:10527",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 208,
+            "pad": 8
+          },
+          {
+            "id": "91:10529",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "91:10531",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "91:10533",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "table": "52:2488",
+        "headId": "52:2489",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "52:2490",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "52:2492",
+            "name": "Medication",
+            "type": "INSTANCE",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2493",
+            "name": "Date / source",
+            "type": "INSTANCE",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "52:2494",
+            "name": "Supply",
+            "type": "INSTANCE",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "52:2495",
+            "name": "Order / pharmacy",
+            "type": "INSTANCE",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2496",
+            "name": "Reviewed",
+            "type": "INSTANCE",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "52:2497",
+            "name": "Actions",
+            "type": "INSTANCE",
+            "w": 156,
+            "pad": 16
+          },
+          {
+            "id": "52:2498",
+            "name": "Overflow column",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pageId": "128:2573",
+    "masters": [
+      {
+        "id": "2:2273",
+        "name": "Medlist/Medication row",
+        "parent": "2:1810",
+        "remote": false,
+        "cells": [
+          {
+            "id": "2:2274",
+            "name": "Selection",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "2:2278",
+            "name": "Medication",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "2:2290",
+            "name": "Date and source",
+            "type": "FRAME",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "2:2294",
+            "name": "Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "2:2298",
+            "name": "Order and pharmacy",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "2:2303",
+            "name": "Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "2:2308",
+            "name": "Actions",
+            "type": "FRAME",
+            "w": 156,
+            "pad": 16
+          },
+          {
+            "id": "2:2315",
+            "name": "Overflow",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      }
+    ],
+    "heads": [
+      {
+        "table": "2:2237",
+        "headId": "2:2238",
+        "name": "Column headings",
+        "children": [
+          {
+            "id": "2:2239",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "2:2243",
+            "name": "Medication",
+            "type": "INSTANCE",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "2:2245",
+            "name": "Date / source",
+            "type": "INSTANCE",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "2:2247",
+            "name": "Supply",
+            "type": "INSTANCE",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "2:2249",
+            "name": "Order / pharmacy",
+            "type": "INSTANCE",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "2:2251",
+            "name": "Reviewed",
+            "type": "INSTANCE",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "2:2253",
+            "name": "Actions",
+            "type": "INSTANCE",
+            "w": 156,
+            "pad": 16
+          },
+          {
+            "id": "2:2255",
+            "name": "Overflow column",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pageId": "150:20569",
+    "masters": [
+      {
+        "id": "52:2511",
+        "name": "Medlist/Comparison B spaced row",
+        "parent": "17:881",
+        "remote": false,
+        "cells": [
+          {
+            "id": "52:2512",
+            "name": "Selection",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "52:2514",
+            "name": "Medication",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2519",
+            "name": "Date and source",
+            "type": "FRAME",
+            "w": 144,
+            "pad": 16
+          },
+          {
+            "id": "52:2523",
+            "name": "Supply",
+            "type": "FRAME",
+            "w": 136,
+            "pad": 16
+          },
+          {
+            "id": "52:2527",
+            "name": "Order and pharmacy",
+            "type": "FRAME",
+            "w": 300,
+            "pad": 16
+          },
+          {
+            "id": "52:2529",
+            "name": "Reviewed",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 16
+          },
+          {
+            "id": "52:2531",
+            "name": "Actions",
+            "type": "FRAME",
+            "w": 196,
+            "pad": 16
+          },
+          {
+            "id": "52:2534",
+            "name": "Superseded separate overflow column · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "47:1577",
+        "name": "Disclosure=Expanded",
+        "parent": "47:1540",
+        "remote": false,
+        "cells": [
+          {
+            "id": "47:1578",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "47:1596",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "47:1541",
+        "name": "Disclosure=Collapsed",
+        "parent": "47:1540",
+        "remote": false,
+        "cells": [
+          {
+            "id": "47:1542",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "47:1560",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "91:10337",
+        "name": "Disclosure=Expanded",
+        "parent": "91:10288",
+        "remote": false,
+        "cells": [
+          {
+            "id": "91:10338",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "91:10380",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "91:10289",
+        "name": "Disclosure=Collapsed",
+        "parent": "91:10288",
+        "remote": false,
+        "cells": [
+          {
+            "id": "91:10290",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "91:10332",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          }
+        ]
+      },
+      {
+        "id": "137:24948",
+        "name": "Disclosure=Collapsed, Mode=List, Reviewed=No",
+        "parent": "137:24947",
+        "remote": false,
+        "cells": [
+          {
+            "id": "137:24949",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "137:24991",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          },
+          {
+            "id": "137:25107",
+            "name": "Inline prescription details",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "150:20570",
+        "name": "Mode=List, Reviewed=No",
+        "parent": "150:20783",
+        "remote": false,
+        "cells": [
+          {
+            "id": "150:20571",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "150:20601",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          },
+          {
+            "id": "150:20606",
+            "name": "Inline prescription details",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          }
+        ]
+      },
+      {
+        "id": "150:20641",
+        "name": "Mode=Review, Reviewed=No",
+        "parent": "150:20783",
+        "remote": false,
+        "cells": [
+          {
+            "id": "150:20642",
+            "name": "Summary",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          },
+          {
+            "id": "150:20672",
+            "name": "Superseded detail panel · Retained wrappers",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 44
+          },
+          {
+            "id": "150:20677",
+            "name": "Inline prescription details",
+            "type": "FRAME",
+            "w": 1216,
+            "pad": 0
+          }
+        ]
+      }
+    ],
+    "heads": [
+      {
+        "table": "150:21651",
+        "headId": "150:21672",
+        "name": "Structured sig headings",
+        "children": [
+          {
+            "id": "150:21673",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "150:21675",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "150:21677",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "150:21678",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 420,
+            "pad": 8
+          },
+          {
+            "id": "150:21680",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "150:21682",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "150:21685",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "150:21687",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "150:21689",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 448,
+            "pad": 8
+          },
+          {
+            "id": "150:21691",
+            "name": "Header column / Dose",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "150:21693",
+            "name": "Header column / Route",
+            "type": "FRAME",
+            "w": 104,
+            "pad": 8
+          },
+          {
+            "id": "150:21695",
+            "name": "Header column / Timing",
+            "type": "FRAME",
+            "w": 216,
+            "pad": 8
+          },
+          {
+            "id": "150:21697",
+            "name": "Header column / Start",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "150:21699",
+            "name": "Header column / Stop",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "150:21701",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 168,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "150:26856",
+        "headId": "150:26877",
+        "name": "Structured sig headings",
+        "children": [
+          {
+            "id": "150:26878",
+            "name": "Review checkbox gutter",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "150:26880",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "150:26882",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "150:26883",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 296,
+            "pad": 8
+          },
+          {
+            "id": "150:26885",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "150:26887",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "150:26890",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "150:26892",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "150:26894",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 404,
+            "pad": 8
+          },
+          {
+            "id": "150:26896",
+            "name": "Header column / Dose",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "150:26898",
+            "name": "Header column / Route",
+            "type": "FRAME",
+            "w": 104,
+            "pad": 8
+          },
+          {
+            "id": "150:26900",
+            "name": "Header column / Timing",
+            "type": "FRAME",
+            "w": 216,
+            "pad": 8
+          },
+          {
+            "id": "150:26902",
+            "name": "Header column / Start",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "150:26904",
+            "name": "Header column / Stop",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "150:26906",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 168,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "150:32065",
+        "headId": "150:32086",
+        "name": "Structured sig headings",
+        "children": [
+          {
+            "id": "150:32087",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "150:32089",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "150:32091",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "150:32092",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 420,
+            "pad": 8
+          },
+          {
+            "id": "150:32094",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "150:32096",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "150:32099",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "150:32101",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "150:32103",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 448,
+            "pad": 8
+          },
+          {
+            "id": "150:32105",
+            "name": "Header column / Dose",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "150:32107",
+            "name": "Header column / Route",
+            "type": "FRAME",
+            "w": 104,
+            "pad": 8
+          },
+          {
+            "id": "150:32109",
+            "name": "Header column / Timing",
+            "type": "FRAME",
+            "w": 216,
+            "pad": 8
+          },
+          {
+            "id": "150:32111",
+            "name": "Header column / Start",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "150:32113",
+            "name": "Header column / Stop",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "150:32115",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 168,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "150:37273",
+        "headId": "150:37294",
+        "name": "Structured sig headings",
+        "children": [
+          {
+            "id": "150:37295",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "150:37297",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "150:37299",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "150:37300",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 420,
+            "pad": 8
+          },
+          {
+            "id": "150:37302",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "150:37304",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "150:37307",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "150:37309",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "150:37311",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 448,
+            "pad": 8
+          },
+          {
+            "id": "150:37313",
+            "name": "Header column / Dose",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "150:37315",
+            "name": "Header column / Route",
+            "type": "FRAME",
+            "w": 104,
+            "pad": 8
+          },
+          {
+            "id": "150:37317",
+            "name": "Header column / Timing",
+            "type": "FRAME",
+            "w": 216,
+            "pad": 8
+          },
+          {
+            "id": "150:37319",
+            "name": "Header column / Start",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "150:37321",
+            "name": "Header column / Stop",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "150:37323",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 168,
+            "pad": 8
+          }
+        ]
+      },
+      {
+        "table": "160:46327",
+        "headId": "160:46348",
+        "name": "Structured sig headings",
+        "children": [
+          {
+            "id": "160:46349",
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 44,
+            "pad": 0
+          },
+          {
+            "id": "160:46351",
+            "name": "Header column / Reviewed",
+            "type": "FRAME",
+            "w": 80,
+            "pad": 8
+          },
+          {
+            "id": "160:46353",
+            "name": "Retained unused header · Superseded separate overflow heading · Hidden",
+            "type": "FRAME",
+            "w": 40,
+            "pad": 0
+          },
+          {
+            "id": "160:46354",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 420,
+            "pad": 8
+          },
+          {
+            "id": "160:46356",
+            "name": "Header column / Prescriber / source",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "160:46358",
+            "name": "Header column / Last activity",
+            "type": "FRAME",
+            "w": 160,
+            "pad": 8
+          },
+          {
+            "id": "160:46361",
+            "name": "Header column / Order status",
+            "type": "FRAME",
+            "w": 200,
+            "pad": 8
+          },
+          {
+            "id": "160:46363",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 276,
+            "pad": 8
+          },
+          {
+            "id": "160:46365",
+            "name": "Header column / Medication",
+            "type": "FRAME",
+            "w": 448,
+            "pad": 8
+          },
+          {
+            "id": "160:46367",
+            "name": "Header column / Dose",
+            "type": "FRAME",
+            "w": 96,
+            "pad": 8
+          },
+          {
+            "id": "160:46369",
+            "name": "Header column / Route",
+            "type": "FRAME",
+            "w": 104,
+            "pad": 8
+          },
+          {
+            "id": "160:46371",
+            "name": "Header column / Timing",
+            "type": "FRAME",
+            "w": 216,
+            "pad": 8
+          },
+          {
+            "id": "160:46373",
+            "name": "Header column / Start",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "160:46375",
+            "name": "Header column / Stop",
+            "type": "FRAME",
+            "w": 92,
+            "pad": 8
+          },
+          {
+            "id": "160:46377",
+            "name": "Header column / Actions",
+            "type": "FRAME",
+            "w": 168,
+            "pad": 8
+          }
+        ]
+      }
+    ]
+  }
+]

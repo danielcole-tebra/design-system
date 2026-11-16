@@ -4751,3 +4751,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist drawer pass 2 — details and editing
 - File: yh2F6OUgdI6K0risLtKLEQ. Expanded the ten medication detail drawers and added representative connected Cetirizine prescription-edit and Levothyroxine chart-only flows on the existing Structured table + drawer page. Ready for Daniel's visual review.
 - Evidence: runs/2026-11-16-medlist-drawer-editing/REPORT.md, record.json, details.png, edit.png, unchanged.png, review.png, review-unchecked.png, cancel-edit.png, cancel-review.png, chart.png, chart-saved.png, result.png, discard.png, compound.png, reported.png, inspection.png.
+
+
+<!-- builder-run:runs/2026-11-16-medlist-padding-cleanup -->
+## 2026-11-16 — Medlist — 16 px table padding and file cleanup
+- File: yh2F6OUgdI6K0risLtKLEQ. Restored16 px left text padding throughout22 editable medication tables, then promoted the current structured-table/drawer page and grouped its current flows. Archived earlier explorations and the first Open-drawer pass; nothing deleted.
+- Evidence: runs/2026-11-16-medlist-padding-cleanup/REPORT.md, record.json, current-list.png, reconciliation.png, current-overview.png, archived-nondrawer.png, archived-five-column.png, archived-comparison.png, archive-layout.png.

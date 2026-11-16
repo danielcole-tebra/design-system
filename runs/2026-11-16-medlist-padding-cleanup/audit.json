@@ -1,0 +1,136 @@
+{
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 9,
+      "passed": true,
+      "checks": [
+        {
+          "id": "150:21690",
+          "mainId": "2:1408",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "150:21692",
+          "mainId": "2:1408",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "150:21694",
+          "mainId": "2:1408",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "150:21696",
+          "mainId": "2:1408",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "150:21698",
+          "mainId": "2:1408",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "150:21700",
+          "mainId": "2:1408",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "150:21702",
+          "mainId": "2:1408",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I150:21733;150:20593",
+          "mainId": "2:160",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "I150:21733;150:20595",
+          "mainId": "2:1426",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 10,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Medication body inset",
+          "passed": true
+        },
+        {
+          "name": "Medication header inset",
+          "passed": true
+        },
+        {
+          "name": "Current row heights",
+          "passed": true
+        },
+        {
+          "name": "Current column widths",
+          "passed": true
+        },
+        {
+          "name": "Table font families",
+          "passed": true
+        },
+        {
+          "name": "All active destinations resolve",
+          "passed": true
+        },
+        {
+          "name": "Active overlays remain on page",
+          "passed": true
+        },
+        {
+          "name": "Five organized current sections",
+          "passed": true
+        },
+        {
+          "name": "Current page first",
+          "passed": true
+        },
+        {
+          "name": "No image-filled current UI",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 0,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "destinations": 98,
+  "crossPage": 0,
+  "flowStarts": [
+    {
+      "nodeId": "150:21601",
+      "name": "Current medications · Open drawer"
+    },
+    {
+      "nodeId": "150:26805",
+      "name": "Reconcile medications"
+    },
+    {
+      "nodeId": "160:45646",
+      "name": "Chart-only editing example"
+    }
+  ],
+  "verifiedAt": "2026-11-16T21:04:29.417Z"
+}

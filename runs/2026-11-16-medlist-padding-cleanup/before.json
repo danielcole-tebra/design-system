@@ -1,0 +1,909 @@
+[
+  {
+    "pageId": "0:1",
+    "name": "Medlist · Latest non-drawer",
+    "roots": [
+      {
+        "id": "130:5881",
+        "name": "Latest non-drawer · Comparison F",
+        "type": "FRAME",
+        "x": 160,
+        "y": 160,
+        "w": 1440,
+        "h": 1184
+      },
+      {
+        "id": "137:24947",
+        "name": "Medlist/Five-column inline row",
+        "type": "COMPONENT_SET",
+        "x": 160,
+        "y": 1880,
+        "w": 3840,
+        "h": 600
+      },
+      {
+        "id": "137:25480",
+        "name": "Trial · Five-column medication list",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 160,
+        "w": 1440,
+        "h": 1332
+      },
+      {
+        "id": "137:28731",
+        "name": "Trial · Reconcile medications",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 160,
+        "w": 1440,
+        "h": 1332
+      },
+      {
+        "id": "137:32790",
+        "name": "Trial · Reconciliation completed",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 160,
+        "w": 1440,
+        "h": 1332
+      },
+      {
+        "id": "137:35997",
+        "name": "Inspection · Five-column expanded row",
+        "type": "INSTANCE",
+        "x": 1760,
+        "y": 1680,
+        "w": 1216,
+        "h": 173
+      },
+      {
+        "id": "137:36168",
+        "name": "README · Five-column trial",
+        "type": "TEXT",
+        "x": 1760,
+        "y": 1480,
+        "w": 1440,
+        "h": 150
+      },
+      {
+        "id": "139:2791",
+        "name": "Inspection · Five-column variants · 2026-11-16",
+        "type": "FRAME",
+        "x": 160,
+        "y": 2640,
+        "w": 3840,
+        "h": 600
+      },
+      {
+        "id": "139:3310",
+        "name": "Inspection · Five-column content roundtrips · 2026-11-16",
+        "type": "FRAME",
+        "x": 160,
+        "y": 3360,
+        "w": 1216,
+        "h": 954
+      },
+      {
+        "id": "145:21535",
+        "name": "Medlist/Structured sig inline row",
+        "type": "COMPONENT_SET",
+        "x": 6560,
+        "y": 1880,
+        "w": 3840,
+        "h": 650
+      },
+      {
+        "id": "145:22172",
+        "name": "Trial · Structured sig medication list",
+        "type": "FRAME",
+        "x": 6560,
+        "y": 160,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "145:26434",
+        "name": "Trial · Structured sig reconciliation",
+        "type": "FRAME",
+        "x": 8160,
+        "y": 160,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "145:31634",
+        "name": "Trial · Structured sig reconciliation completed",
+        "type": "FRAME",
+        "x": 9760,
+        "y": 160,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "145:35852",
+        "name": "Inspection · Structured sig variants · 2026-11-16",
+        "type": "FRAME",
+        "x": 10560,
+        "y": 1880,
+        "w": 1216,
+        "h": 914
+      },
+      {
+        "id": "145:36449",
+        "name": "Inspection · Structured sig compound details",
+        "type": "INSTANCE",
+        "x": 6560,
+        "y": 1500,
+        "w": 1216,
+        "h": 219
+      },
+      {
+        "id": "145:36646",
+        "name": "Inspection · Structured sig source and failed order",
+        "type": "INSTANCE",
+        "x": 8160,
+        "y": 1500,
+        "w": 1216,
+        "h": 255
+      },
+      {
+        "id": "145:36843",
+        "name": "README · Structured sig trial",
+        "type": "TEXT",
+        "x": 6560,
+        "y": 1260,
+        "w": 1440,
+        "h": 160
+      },
+      {
+        "id": "146:5904",
+        "name": "Inspection · Structured sig content roundtrips · 2026-11-16",
+        "type": "FRAME",
+        "x": 10560,
+        "y": 3800,
+        "w": 1216,
+        "h": 734
+      }
+    ],
+    "tables": [
+      {
+        "id": "130:5931",
+        "parent": "130:5918"
+      },
+      {
+        "id": "137:25530",
+        "parent": "137:25517"
+      },
+      {
+        "id": "137:28781",
+        "parent": "137:28774"
+      },
+      {
+        "id": "137:32840",
+        "parent": "137:32833"
+      },
+      {
+        "id": "145:22222",
+        "parent": "145:22215"
+      },
+      {
+        "id": "145:26484",
+        "parent": "145:26477"
+      },
+      {
+        "id": "145:31684",
+        "parent": "145:31677"
+      }
+    ],
+    "flows": [
+      {
+        "nodeId": "130:5881",
+        "name": "Medlist · Non-drawer"
+      },
+      {
+        "nodeId": "137:25480",
+        "name": "Five-column non-drawer trial"
+      },
+      {
+        "nodeId": "145:22172",
+        "name": "Structured sig medication trial"
+      },
+      {
+        "nodeId": "145:26434",
+        "name": "Five-column non-drawer trial"
+      },
+      {
+        "nodeId": "145:31634",
+        "name": "Five-column non-drawer trial"
+      },
+      {
+        "nodeId": "137:28731",
+        "name": "Medlist · Non-drawer"
+      },
+      {
+        "nodeId": "137:32790",
+        "name": "Medlist · Non-drawer"
+      }
+    ]
+  },
+  {
+    "pageId": "104:4346",
+    "name": "Medlist · Latest drawer",
+    "roots": [
+      {
+        "id": "130:18977",
+        "name": "Latest · Drawer and reconciliation",
+        "type": "SECTION",
+        "x": 160,
+        "y": 160,
+        "w": 4768,
+        "h": 1300
+      },
+      {
+        "id": "130:18978",
+        "name": "Prototype states · Medication detail drawers",
+        "type": "SECTION",
+        "x": 160,
+        "y": 1700,
+        "w": 7968,
+        "h": 2620
+      }
+    ],
+    "tables": [
+      {
+        "id": "104:4473",
+        "parent": "104:4460"
+      },
+      {
+        "id": "104:8416",
+        "parent": "104:8403"
+      },
+      {
+        "id": "113:8996",
+        "parent": "113:8983"
+      }
+    ],
+    "flows": [
+      {
+        "nodeId": "104:4423",
+        "name": "Medlist · Drawer"
+      },
+      {
+        "nodeId": "113:8945",
+        "name": "Medlist · Reconciliation"
+      }
+    ]
+  },
+  {
+    "pageId": "17:881",
+    "name": "02 Medlist · Running comparison",
+    "roots": [
+      {
+        "id": "17:882",
+        "name": "Medlist · Original baseline and live rebuild",
+        "type": "FRAME",
+        "x": 160,
+        "y": 160,
+        "w": 9174,
+        "h": 2743
+      },
+      {
+        "id": "52:2451",
+        "name": "ARCHIVE · Comparison B before spacing · 2026-11-14",
+        "type": "FRAME",
+        "x": 9534,
+        "y": 160,
+        "w": 1440,
+        "h": 1766
+      },
+      {
+        "id": "52:2510",
+        "name": "README · Archived Comparison B",
+        "type": "TEXT",
+        "x": 9534,
+        "y": 80,
+        "w": 1440,
+        "h": 48
+      },
+      {
+        "id": "52:2511",
+        "name": "Medlist/Comparison B spaced row",
+        "type": "COMPONENT",
+        "x": 11134,
+        "y": 160,
+        "w": 1216,
+        "h": 81
+      },
+      {
+        "id": "56:3026",
+        "name": "ARCHIVE · Comparison B row · Filled overflow · 2026-11-14",
+        "type": "COMPONENT",
+        "x": 11134,
+        "y": 600,
+        "w": 1216,
+        "h": 81
+      },
+      {
+        "id": "91:10288",
+        "name": "Medlist/Last activity and detail markers",
+        "type": "COMPONENT_SET",
+        "x": 12750,
+        "y": 160,
+        "w": 1264,
+        "h": 242
+      },
+      {
+        "id": "92:5958",
+        "name": "Inspection · Comparison F · Expanded marker cases",
+        "type": "FRAME",
+        "x": 12750,
+        "y": 800,
+        "w": 1264,
+        "h": 438
+      }
+    ],
+    "tables": [
+      {
+        "id": "23:918",
+        "parent": "23:915"
+      },
+      {
+        "id": "73:3855",
+        "parent": "73:3852"
+      },
+      {
+        "id": "77:4811",
+        "parent": "77:4808"
+      },
+      {
+        "id": "85:6308",
+        "parent": "85:6295"
+      },
+      {
+        "id": "91:10496",
+        "parent": "91:10483"
+      },
+      {
+        "id": "52:2488",
+        "parent": "52:2485"
+      }
+    ],
+    "flows": []
+  },
+  {
+    "pageId": "128:2573",
+    "name": "archives",
+    "roots": [
+      {
+        "id": "128:2574",
+        "name": "Earlier screens and studies",
+        "type": "SECTION",
+        "x": 160,
+        "y": 160,
+        "w": 3260,
+        "h": 3076
+      },
+      {
+        "id": "128:2575",
+        "name": "Local components · Retained dependencies",
+        "type": "SECTION",
+        "x": 3600,
+        "y": 160,
+        "w": 3260,
+        "h": 1568
+      },
+      {
+        "id": "128:2576",
+        "name": "Superseded components and layouts",
+        "type": "SECTION",
+        "x": 3600,
+        "y": 2300,
+        "w": 3260,
+        "h": 1096
+      },
+      {
+        "id": "128:2577",
+        "name": "Inspections and provenance notes",
+        "type": "SECTION",
+        "x": 160,
+        "y": 3900,
+        "w": 3260,
+        "h": 978
+      },
+      {
+        "id": "130:18976",
+        "name": "Drawer components, inspection and prior notes",
+        "type": "SECTION",
+        "x": 3600,
+        "y": 3900,
+        "w": 3168,
+        "h": 2309
+      }
+    ],
+    "tables": [
+      {
+        "id": "2:2237",
+        "parent": "2:2027"
+      }
+    ],
+    "flows": []
+  },
+  {
+    "pageId": "150:20569",
+    "name": "Medlist · Structured table + drawer",
+    "roots": [
+      {
+        "id": "150:20783",
+        "name": "Medlist/Structured row with drawer",
+        "type": "COMPONENT_SET",
+        "x": 160,
+        "y": 1680,
+        "w": 1264,
+        "h": 310
+      },
+      {
+        "id": "150:20871",
+        "name": "Open drawer · Alprazolam 0.25 mg tablet",
+        "type": "FRAME",
+        "x": 160,
+        "y": 3300,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:20944",
+        "name": "Open drawer · Cetirizine 10 mg tablet",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 3300,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21017",
+        "name": "Open drawer · Aspirin 81 mg delayed-release tablet",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 3300,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21090",
+        "name": "Open drawer · Doxycycline hyclate 100 mg capsule",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 3300,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21163",
+        "name": "Open drawer · Furosemide 20 mg tablet",
+        "type": "FRAME",
+        "x": 6560,
+        "y": 3300,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21236",
+        "name": "Open drawer · Hydrocortisone 1% compounded cream",
+        "type": "FRAME",
+        "x": 160,
+        "y": 4700,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21309",
+        "name": "Open drawer · Melatonin 3 mg tablet",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 4700,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21382",
+        "name": "Open drawer · Metformin 500 mg tablet",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 4700,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21455",
+        "name": "Open drawer · Simvastatin 20 mg tablet",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 4700,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21528",
+        "name": "Open drawer · Acetaminophen 500 mg tablet",
+        "type": "FRAME",
+        "x": 6560,
+        "y": 4700,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:21601",
+        "name": "Structured table · Current medications",
+        "type": "FRAME",
+        "x": 160,
+        "y": 160,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:26805",
+        "name": "Structured table · Reconciliation",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 160,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:32015",
+        "name": "Structured table · Reconciliation completed",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 160,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:37223",
+        "name": "Structured table · Drawer open",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 160,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "150:37440",
+        "name": "Inspection · Structured drawer row states",
+        "type": "FRAME",
+        "x": 1600,
+        "y": 1680,
+        "w": 1216,
+        "h": 209
+      },
+      {
+        "id": "150:37739",
+        "name": "Historical README · First Open drawer pass",
+        "type": "TEXT",
+        "x": 160,
+        "y": 1340,
+        "w": 1440,
+        "h": 160
+      },
+      {
+        "id": "151:31571",
+        "name": "Inspection · Open drawer state roundtrips",
+        "type": "FRAME",
+        "x": 3300,
+        "y": 1680,
+        "w": 1216,
+        "h": 734
+      },
+      {
+        "id": "157:8965",
+        "name": "Inspection · Drawer pass native controls",
+        "type": "FRAME",
+        "x": 8400,
+        "y": 3300,
+        "w": 444,
+        "h": 404
+      },
+      {
+        "id": "160:41715",
+        "name": "Medlist/Medication drawer · Pass 2",
+        "type": "COMPONENT",
+        "x": 10200,
+        "y": 6200,
+        "w": 550,
+        "h": 1112
+      },
+      {
+        "id": "160:41804",
+        "name": "Pass 2 · Open drawer · Alprazolam 0.25 mg tablet",
+        "type": "FRAME",
+        "x": 160,
+        "y": 6400,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:41965",
+        "name": "Pass 2 · Open drawer · Cetirizine 10 mg tablet",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 6400,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:42126",
+        "name": "Pass 2 · Open drawer · Aspirin 81 mg delayed-release tablet",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 6400,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:42287",
+        "name": "Pass 2 · Open drawer · Doxycycline hyclate 100 mg capsule",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 6400,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:42448",
+        "name": "Pass 2 · Open drawer · Furosemide 20 mg tablet",
+        "type": "FRAME",
+        "x": 6560,
+        "y": 6400,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:42609",
+        "name": "Pass 2 · Open drawer · Hydrocortisone 1% compounded cream",
+        "type": "FRAME",
+        "x": 160,
+        "y": 7800,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:42770",
+        "name": "Pass 2 · Open drawer · Melatonin 3 mg tablet",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 7800,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:42931",
+        "name": "Pass 2 · Open drawer · Metformin 500 mg tablet",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 7800,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:43092",
+        "name": "Pass 2 · Open drawer · Simvastatin 20 mg tablet",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 7800,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:43253",
+        "name": "Pass 2 · Open drawer · Acetaminophen 500 mg tablet",
+        "type": "FRAME",
+        "x": 6560,
+        "y": 7800,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:43414",
+        "name": "Rx · Edit unchanged",
+        "type": "FRAME",
+        "x": 160,
+        "y": 9200,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:43764",
+        "name": "Rx · Edit quantity 60 · Keep existing",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 9200,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:44114",
+        "name": "Rx · Edit quantity 60 · Request cancellation",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 9200,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:44465",
+        "name": "Chart-only · Edit details",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 9200,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:44800",
+        "name": "Rx · Review · Keep existing",
+        "type": "FRAME",
+        "x": 6560,
+        "y": 9200,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:44940",
+        "name": "Rx · Review acknowledged · Keep existing",
+        "type": "FRAME",
+        "x": 160,
+        "y": 10600,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:45083",
+        "name": "Rx · Review · Request cancellation",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 10600,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:45224",
+        "name": "Rx · Review acknowledged · Request cancellation",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 10600,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:45368",
+        "name": "Rx · Prototype result · Keep original",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 10600,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:45507",
+        "name": "Rx · Prototype result · Cancellation pending",
+        "type": "FRAME",
+        "x": 6560,
+        "y": 10600,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:45646",
+        "name": "Chart-only · Details example",
+        "type": "FRAME",
+        "x": 160,
+        "y": 12000,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:45780",
+        "name": "Chart-only · Saved example",
+        "type": "FRAME",
+        "x": 1760,
+        "y": 12000,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:45924",
+        "name": "Rx · Discard keep-edit changes",
+        "type": "FRAME",
+        "x": 3360,
+        "y": 12000,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:46017",
+        "name": "Rx · Discard cancellation-edit changes",
+        "type": "FRAME",
+        "x": 4960,
+        "y": 12000,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:46110",
+        "name": "Chart-only · Discard changes",
+        "type": "FRAME",
+        "x": 6560,
+        "y": 12000,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:46277",
+        "name": "Drawer pass 2 · Cetirizine details in context",
+        "type": "FRAME",
+        "x": 8400,
+        "y": 160,
+        "w": 1440,
+        "h": 1112
+      },
+      {
+        "id": "160:46513",
+        "name": "README · Drawer pass 2",
+        "type": "TEXT",
+        "x": 8400,
+        "y": 1340,
+        "w": 1440,
+        "h": 180
+      }
+    ],
+    "tables": [
+      {
+        "id": "150:21651",
+        "parent": "150:21644"
+      },
+      {
+        "id": "150:26856",
+        "parent": "150:26849"
+      },
+      {
+        "id": "150:32065",
+        "parent": "150:32058"
+      },
+      {
+        "id": "150:37273",
+        "parent": "150:37266"
+      },
+      {
+        "id": "160:46327",
+        "parent": "160:46320"
+      }
+    ],
+    "flows": [
+      {
+        "nodeId": "150:21601",
+        "name": "Structured table and drawer"
+      },
+      {
+        "nodeId": "160:45924",
+        "name": "Flow 1"
+      },
+      {
+        "nodeId": "160:46017",
+        "name": "Flow 2"
+      },
+      {
+        "nodeId": "160:46110",
+        "name": "Flow 3"
+      },
+      {
+        "nodeId": "160:46277",
+        "name": "Drawer pass 2 · Prescription"
+      },
+      {
+        "nodeId": "160:45646",
+        "name": "Drawer pass 2 · Chart-only"
+      }
+    ]
+  }
+]

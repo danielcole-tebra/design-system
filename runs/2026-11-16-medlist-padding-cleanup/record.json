@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "title": "Medlist — 16 px table padding and file cleanup",
+  "date": "2026-11-16",
+  "fileKey": "yh2F6OUgdI6K0risLtKLEQ",
+  "reviewUrl": "https://www.figma.com/design/yh2F6OUgdI6K0risLtKLEQ?node-id=176-31968",
+  "summary": "Restored16 px left text padding throughout22 editable medication tables, then promoted the current structured-table/drawer page and grouped its current flows. Archived earlier explorations and the first Open-drawer pass; nothing deleted.",
+  "timing": {
+    "start": "2026-11-16T20:57:32Z",
+    "ready": "2026-11-16T21:00:37Z",
+    "built": "2026-11-16T21:02:40.023Z",
+    "firstImage": "2026-11-16T21:03:51Z",
+    "verified": "2026-11-16T21:06:10.913Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "22 tables / 220 visible rows / 1174 header and text-cell inset checks passed across all six pages. Shared local row definitions and ordinary header wrappers use the existing16 px spacing token. Current text is aligned16 px from the cell edge; native control interiors unchanged.",
+    "Current table remains1216 px wide with448/96/104/216/92/92/168 columns and59 px rows. Product table typography remains Akkurat LL. Nine native structure/token comparisons and10 measured assertions passed; current UI remains editable with no image-filled nodes.",
+    "All98 active destination references resolve; active OVERLAY/SWAP destinations remain on the current page. Current flow starts are the main list, reconciliation and chart-only example. Stored wiring checked, not presentation playback.",
+    "All47 former current-page roots retained their IDs and descendant structures.46 non-documentation roots have equal before/after internal-layout/content/reaction fingerprints across organization; README text intentionally updated. No node removals or component detachment.",
+    "Current page is first and contains five named sections: current table and drawer; medication-detail destinations; prescription editing states; chart-only editing states; supporting components and inspections. Eleven earlier Open-drawer/context roots and their historical README moved to a separate archive page.",
+    "Viewed current list, reconciliation, current overview, historical structured/five-column tables, comparison and archive arrangement. Fixed historical Reviewed heading wrapping: width80→88, Actions276→268; table and heading total remain1216, and all five affected full-table headings are single-line64×20 labels."
+  ],
+  "findings": [
+    "DECISION — Daniel,2026-11-16, scope medlist file.16 px left text inset supersedes earlier8 px table-cell choices across current and historical editable tables. This is a screen composition correction, not a published library change. Action and checkbox control wrappers retain their existing insets; their native button/checkbox interiors are untouched.",
+    "DECISION — Daniel requested file cleanup. The current structured table and drawer is the primary page. Prior non-drawer, earlier drawer, comparisons, components/studies and initial Open-drawer versions are explicitly Archive pages. This supersedes the former multiple Latest-page organization; no designs deleted or promoted to the library.",
+    "Five historical tables required8 px redistribution from Actions to Reviewed to keep the restored inset readable. Current structured columns and actions are unaffected. Locked raster original baseline remains intact; no attempt to modify screenshot pixels.",
+    "No new product flows, data edits or library capability findings. Existing drawer editing coverage and documented limitations continue unchanged.",
+    "One visual correction batch for historical Reviewed headers; no failed Figma writes. Historical archive navigation remains retained by node ID, but only current-page prototype destinations were checked for same-page overlay reachability."
+  ],
+  "effort": {
+    "through": "final visual and structural verification",
+    "figmaCalls": null,
+    "otherCalls": null,
+    "searches": 0,
+    "technicalRetries": 0,
+    "canvasCorrections": 1,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "reads": [
+    "AGENTS; LIBRARY index/Efficient execution/API checks; COMPOSITIONS Rows and cards; figma-use and figma-generate-design; existing skill reference/API guidance retained.",
+    "Live inventories of all five original pages and22 table locations; shared row/header anatomy and bound16 px spacing token; prior cleanup organization record.",
+    "After-write table inset scan across all six pages, current native-control audit and prototype destinations, historical Reviewed-width readback."
+  ],
+  "screenshots": [
+    "current-list.png",
+    "reconciliation.png",
+    "current-overview.png",
+    "archived-nondrawer.png",
+    "archived-five-column.png",
+    "archived-comparison.png",
+    "archive-layout.png"
+  ],
+  "evidence": {
+    "owner": "Daniel Cole",
+    "status": "Completed; ready for visual review",
+    "pageId": "150:20569",
+    "overviewId": "176:31968",
+    "archiveId": "176:31966",
+    "pages": [
+      {
+        "id": "150:20569",
+        "name": "Medlist · Current table and drawer"
+      },
+      {
+        "id": "0:1",
+        "name": "Archive · Non-drawer explorations"
+      },
+      {
+        "id": "104:4346",
+        "name": "Archive · Earlier drawer"
+      },
+      {
+        "id": "17:881",
+        "name": "Archive · Comparisons"
+      },
+      {
+        "id": "128:2573",
+        "name": "Archive · Components and studies"
+      },
+      {
+        "id": "176:31966",
+        "name": "Archive · Initial Open drawer"
+      }
+    ],
+    "groups": [
+      {
+        "id": "176:31967",
+        "name": "Initial Open drawer · Superseded by current pass",
+        "page": "176:31966",
+        "children": [
+          "150:37223",
+          "150:20871",
+          "150:20944",
+          "150:21017",
+          "150:21090",
+          "150:21163",
+          "150:21236",
+          "150:21309",
+          "150:21382",
+          "150:21455",
+          "150:21528"
+        ]
+      },
+      {
+        "id": "176:31968",
+        "name": "01 · Current table and drawer",
+        "page": "150:20569",
+        "children": [
+          "150:21601",
+          "160:46277",
+          "150:26805",
+          "150:32015"
+        ]
+      },
+      {
+        "id": "176:31969",
+        "name": "02 · Current medication details · Prototype destinations",
+        "page": "150:20569",
+        "children": [
+          "160:41804",
+          "160:41965",
+          "160:42126",
+          "160:42287",
+          "160:42448",
+          "160:42609",
+          "160:42770",
+          "160:42931",
+          "160:43092",
+          "160:43253"
+        ]
+      },
+      {
+        "id": "176:31970",
+        "name": "03 · Prescription editing · Prototype states",
+        "page": "150:20569",
+        "children": [
+          "160:43414",
+          "160:43764",
+          "160:44114",
+          "160:44800",
+          "160:44940",
+          "160:45083",
+          "160:45224",
+          "160:45368",
+          "160:45507",
+          "160:45924",
+          "160:46017"
+        ]
+      },
+      {
+        "id": "176:31971",
+        "name": "04 · Chart-only editing · Prototype states",
+        "page": "150:20569",
+        "children": [
+          "160:44465",
+          "160:45646",
+          "160:45780",
+          "160:46110"
+        ]
+      },
+      {
+        "id": "176:31972",
+        "name": "05 · Supporting components and inspections",
+        "page": "150:20569",
+        "children": [
+          "150:20783",
+          "160:41715",
+          "150:37440",
+          "151:31571",
+          "157:8965"
+        ]
+      }
+    ],
+    "insets": {
+      "tables": 22,
+      "rows": 220,
+      "cells": 1174
+    },
+    "artifacts": [
+      "before.json",
+      "table-discovery.json",
+      "padding.js",
+      "padding-result.json",
+      "organize.js",
+      "organize-result.json",
+      "verify-padding.js",
+      "padding-verification.json",
+      "audit.js",
+      "audit.json",
+      "reviewed-header-correction.js",
+      "reviewed-header-correction.json",
+      "final-read.json"
+    ]
+  }
+}
