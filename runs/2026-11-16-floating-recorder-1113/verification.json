@@ -1,0 +1,694 @@
+{
+  "build": [
+    {
+      "createdNodeIds": [
+        "1381:9494",
+        "1381:9991",
+        "1381:10194",
+        "1381:10264",
+        "1381:10326",
+        "1381:10427",
+        "1381:13442",
+        "1381:14683",
+        "1381:15180",
+        "1381:15383",
+        "1381:15453",
+        "1381:15515",
+        "1381:15616",
+        "1381:18631",
+        "1381:19872",
+        "1381:20369",
+        "1381:20572",
+        "1381:20642",
+        "1381:20704",
+        "1381:20805",
+        "1381:23820",
+        "1381:25053",
+        "1381:25550",
+        "1381:25753",
+        "1381:25823",
+        "1381:25885",
+        "1381:25986",
+        "1381:29001",
+        "1381:30238",
+        "1381:30735",
+        "1381:30938",
+        "1381:31008",
+        "1381:31070",
+        "1381:31171",
+        "1381:34186"
+      ],
+      "mutatedNodeIds": [
+        "1376:21594",
+        "1376:21595",
+        "1376:21598",
+        "1376:21668",
+        "1376:21669",
+        "1376:21687",
+        "1376:21782",
+        "1376:22483",
+        "1376:22680",
+        "1376:22687",
+        "1376:32499",
+        "1376:21591",
+        "1376:28104",
+        "1376:28105",
+        "1376:28108",
+        "1376:28178",
+        "1376:28179",
+        "1376:28197",
+        "1376:28292",
+        "1376:28993",
+        "1376:29190",
+        "1376:29197",
+        "1376:32530",
+        "1376:28101",
+        "1376:29201",
+        "1376:29202",
+        "1376:29205",
+        "1376:29275",
+        "1376:29276",
+        "1376:29294",
+        "1376:29389",
+        "1376:30090",
+        "1376:30287",
+        "1376:30294",
+        "1376:32572",
+        "1376:29198",
+        "1376:30298",
+        "1376:30299",
+        "1376:30302",
+        "1376:30372",
+        "1376:30373",
+        "1376:30391",
+        "1376:30486",
+        "1376:31187",
+        "1376:31384",
+        "1376:31391",
+        "1376:32599",
+        "1376:30295",
+        "1376:31395",
+        "1376:31396",
+        "1376:31399",
+        "1376:31469",
+        "1376:31470",
+        "1376:31488",
+        "1376:31583",
+        "1376:32284",
+        "1376:32481",
+        "1376:32488",
+        "1376:32615",
+        "1376:31392"
+      ],
+      "evidence": [
+        {
+          "screenId": "1376:21591",
+          "sourceIds": [
+            "1319:4659",
+            "1319:4663",
+            "1319:4733",
+            "1319:4734",
+            "1319:4752",
+            "1319:4847",
+            "1319:5548"
+          ],
+          "clonedIds": [
+            "1381:9494",
+            "1381:9991",
+            "1381:10194",
+            "1381:10264",
+            "1381:10326",
+            "1381:10427",
+            "1381:13442"
+          ],
+          "note": {
+            "y": 149,
+            "h": 868
+          },
+          "editor": {
+            "y": 336,
+            "h": 478,
+            "bottom": 814
+          },
+          "fab": {
+            "x": 456,
+            "y": 855,
+            "w": 226,
+            "h": 64
+          },
+          "footerY": 943,
+          "counts": {
+            "INSTANCE": 1570,
+            "FRAME": 811,
+            "VECTOR": 778,
+            "TEXT": 746,
+            "GROUP": 90,
+            "ELLIPSE": 6,
+            "RECTANGLE": 3
+          },
+          "images": [],
+          "fontFamilies": [
+            "Akkurat LL",
+            "Inter"
+          ]
+        },
+        {
+          "screenId": "1376:28101",
+          "sourceIds": [
+            "1319:4659",
+            "1319:4663",
+            "1319:4733",
+            "1319:4734",
+            "1319:4752",
+            "1319:4847",
+            "1319:5548"
+          ],
+          "clonedIds": [
+            "1381:14683",
+            "1381:15180",
+            "1381:15383",
+            "1381:15453",
+            "1381:15515",
+            "1381:15616",
+            "1381:18631"
+          ],
+          "note": {
+            "y": 149,
+            "h": 868
+          },
+          "editor": {
+            "y": 336,
+            "h": 478,
+            "bottom": 814
+          },
+          "fab": {
+            "x": 378,
+            "y": 855,
+            "w": 304,
+            "h": 64
+          },
+          "footerY": 943,
+          "counts": {
+            "INSTANCE": 1570,
+            "FRAME": 811,
+            "VECTOR": 778,
+            "TEXT": 746,
+            "GROUP": 90,
+            "ELLIPSE": 6,
+            "RECTANGLE": 3
+          },
+          "images": [],
+          "fontFamilies": [
+            "Akkurat LL",
+            "Inter"
+          ]
+        },
+        {
+          "screenId": "1376:29198",
+          "sourceIds": [
+            "1319:4659",
+            "1319:4663",
+            "1319:4733",
+            "1319:4734",
+            "1319:4752",
+            "1319:4847",
+            "1319:5548"
+          ],
+          "clonedIds": [
+            "1381:19872",
+            "1381:20369",
+            "1381:20572",
+            "1381:20642",
+            "1381:20704",
+            "1381:20805",
+            "1381:23820"
+          ],
+          "note": {
+            "y": 149,
+            "h": 868
+          },
+          "editor": {
+            "y": 336,
+            "h": 478,
+            "bottom": 814
+          },
+          "fab": {
+            "x": 386,
+            "y": 855,
+            "w": 296,
+            "h": 64
+          },
+          "footerY": 943,
+          "counts": {
+            "INSTANCE": 1570,
+            "FRAME": 811,
+            "VECTOR": 778,
+            "TEXT": 746,
+            "GROUP": 90,
+            "ELLIPSE": 6,
+            "RECTANGLE": 3
+          },
+          "images": [],
+          "fontFamilies": [
+            "Akkurat LL",
+            "Inter"
+          ]
+        },
+        {
+          "screenId": "1376:30295",
+          "sourceIds": [
+            "1319:4659",
+            "1319:4663",
+            "1319:4733",
+            "1319:4734",
+            "1319:4752",
+            "1319:4847",
+            "1319:5548"
+          ],
+          "clonedIds": [
+            "1381:25053",
+            "1381:25550",
+            "1381:25753",
+            "1381:25823",
+            "1381:25885",
+            "1381:25986",
+            "1381:29001"
+          ],
+          "note": {
+            "y": 149,
+            "h": 868
+          },
+          "editor": {
+            "y": 336,
+            "h": 478,
+            "bottom": 814
+          },
+          "fab": {
+            "x": 477,
+            "y": 855,
+            "w": 205,
+            "h": 64
+          },
+          "footerY": 943,
+          "counts": {
+            "INSTANCE": 1570,
+            "FRAME": 811,
+            "VECTOR": 778,
+            "TEXT": 746,
+            "GROUP": 90,
+            "ELLIPSE": 6,
+            "RECTANGLE": 3
+          },
+          "images": [],
+          "fontFamilies": [
+            "Akkurat LL",
+            "Inter"
+          ]
+        },
+        {
+          "screenId": "1376:31392",
+          "sourceIds": [
+            "1319:4659",
+            "1319:4663",
+            "1319:4733",
+            "1319:4734",
+            "1319:4752",
+            "1319:4847",
+            "1319:5548"
+          ],
+          "clonedIds": [
+            "1381:30238",
+            "1381:30735",
+            "1381:30938",
+            "1381:31008",
+            "1381:31070",
+            "1381:31171",
+            "1381:34186"
+          ],
+          "note": {
+            "y": 149,
+            "h": 868
+          },
+          "editor": {
+            "y": 336,
+            "h": 478,
+            "bottom": 814
+          },
+          "fab": {
+            "x": 469,
+            "y": 855,
+            "w": 213,
+            "h": 64
+          },
+          "footerY": 943,
+          "counts": {
+            "INSTANCE": 1570,
+            "FRAME": 811,
+            "VECTOR": 778,
+            "TEXT": 746,
+            "GROUP": 90,
+            "ELLIPSE": 6,
+            "RECTANGLE": 3
+          },
+          "images": [],
+          "fontFamilies": [
+            "Akkurat LL",
+            "Inter"
+          ]
+        }
+      ]
+    }
+  ],
+  "wiring": [
+    [
+      {
+        "id": "1376:21591",
+        "family": {
+          "Akkurat LL": 47,
+          "Inter": 1
+        },
+        "wired": [
+          {
+            "id": "I1376:32499;1376:32490",
+            "name": "Start recording",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:28101",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false,
+                  "resetScrollPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:28101",
+                    "navigation": "NAVIGATE",
+                    "transition": null,
+                    "resetVideoPosition": false,
+                    "resetScrollPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          },
+          {
+            "id": "I1376:32499;1376:32496",
+            "name": "Microphone settings",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:32625",
+                  "navigation": "OVERLAY",
+                  "transition": null,
+                  "resetVideoPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:32625",
+                    "navigation": "OVERLAY",
+                    "transition": null,
+                    "resetVideoPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1376:28101",
+        "family": {
+          "Akkurat LL": 50,
+          "Inter": 1
+        },
+        "wired": [
+          {
+            "id": "I1376:32530;1376:32515",
+            "name": "Pause",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:29198",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false,
+                  "resetScrollPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:29198",
+                    "navigation": "NAVIGATE",
+                    "transition": null,
+                    "resetVideoPosition": false,
+                    "resetScrollPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          },
+          {
+            "id": "I1376:32530;1376:32521",
+            "name": "Finish",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:30295",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false,
+                  "resetScrollPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:30295",
+                    "navigation": "NAVIGATE",
+                    "transition": null,
+                    "resetVideoPosition": false,
+                    "resetScrollPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          },
+          {
+            "id": "I1376:32530;1376:32527",
+            "name": "Microphone settings",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:32625",
+                  "navigation": "OVERLAY",
+                  "transition": null,
+                  "resetVideoPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:32625",
+                    "navigation": "OVERLAY",
+                    "transition": null,
+                    "resetVideoPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1376:29198",
+        "family": {
+          "Akkurat LL": 50,
+          "Inter": 1
+        },
+        "wired": [
+          {
+            "id": "I1376:32572;1376:32557",
+            "name": "Resume",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:28101",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false,
+                  "resetScrollPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:28101",
+                    "navigation": "NAVIGATE",
+                    "transition": null,
+                    "resetVideoPosition": false,
+                    "resetScrollPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          },
+          {
+            "id": "I1376:32572;1376:32563",
+            "name": "Finish",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:30295",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false,
+                  "resetScrollPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:30295",
+                    "navigation": "NAVIGATE",
+                    "transition": null,
+                    "resetVideoPosition": false,
+                    "resetScrollPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          },
+          {
+            "id": "I1376:32572;1376:32569",
+            "name": "Microphone settings",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:32625",
+                  "navigation": "OVERLAY",
+                  "transition": null,
+                  "resetVideoPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:32625",
+                    "navigation": "OVERLAY",
+                    "transition": null,
+                    "resetVideoPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1376:30295",
+        "family": {
+          "Akkurat LL": 47,
+          "Inter": 1
+        },
+        "wired": [
+          {
+            "id": "1376:30295",
+            "name": "04 · Processing · Floating recorder",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:31392",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false,
+                  "resetScrollPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:31392",
+                    "navigation": "NAVIGATE",
+                    "transition": null,
+                    "resetVideoPosition": false,
+                    "resetScrollPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "AFTER_TIMEOUT",
+                  "timeout": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1376:31392",
+        "family": {
+          "Akkurat LL": 47,
+          "Inter": 1
+        },
+        "wired": [
+          {
+            "id": "I1376:32615;1376:32612",
+            "name": "Microphone settings",
+            "reactions": [
+              {
+                "action": {
+                  "type": "NODE",
+                  "destinationId": "1376:32625",
+                  "navigation": "OVERLAY",
+                  "transition": null,
+                  "resetVideoPosition": false
+                },
+                "actions": [
+                  {
+                    "type": "NODE",
+                    "destinationId": "1376:32625",
+                    "navigation": "OVERLAY",
+                    "transition": null,
+                    "resetVideoPosition": false
+                  }
+                ],
+                "trigger": {
+                  "type": "ON_CLICK"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  ]
+}
