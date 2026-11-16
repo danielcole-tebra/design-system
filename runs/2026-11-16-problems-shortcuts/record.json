@@ -1,0 +1,469 @@
+{
+  "title": "Problems typing shortcuts · DS screen study",
+  "date": "2026-11-16",
+  "fileKey": "ViAWRVVtgkCXzItk0sQ5P0",
+  "pageId": "1396:6797",
+  "reviewUrl": "https://www.figma.com/design/ViAWRVVtgkCXzItk0sQ5P0/SDE-Alpha-Prototypes?node-id=1396-6798",
+  "summary": "Created a new page, Study · Problems typing shortcuts, with six editable 1493 × 1033 encounter screens and retained local menu compositions. Uses the existing Maya encounter shell, linked DS Menu/Item focus/disabled states, DS problem chips, DS tokens, Akkurat content, and published Elevation / 8.",
+  "verified": [
+    "All six final screen states inspected in the composition screenshot",
+    "Active-problem picker inspected at native desktop resolution",
+    "Nine linked menu/chip controls match their actual masters structurally and by tokens",
+    "All 25 measured assertions pass, including menu bounds, screen widths, caret presence, authored typography and entity-chip counts",
+    "No image-filled nodes in the screen board; UI consists of editable layers and linked instances"
+  ],
+  "findings": [
+    "Initial build return exceeded the 48 KB tool limit and was rolled back; page inventory confirmed no changes before retry. Retry reports authored roots and retains inherited descendants via those roots.",
+    "Horizontal gallery rows were changed to hug their screen heights. Published Elevation / 8 replaces the initial local shadow.",
+    "Insertion carets are editable 1 × 24 rectangles placed after typed commands or the final inserted chip.",
+    "Initial chip-count assertion included nested icon instances; corrected to count the five explicitly created chip roots. Final assertion results pass.",
+    "Pre-existing Nav/Search placeholder typography uses Inter in the source and all six copied encounter shells. Retained as DS-governed content; new authored note and menu content uses Akkurat LL.",
+    "These are visual screen states; typing and keyboard behavior are described, not implemented or played through as an interactive prototype.",
+    "The empty state reuses Maya’s encounter shell as a scenario fixture. It does not change actual patient data."
+  ],
+  "timing": {
+    "note": "Not a benchmark. Start/checkpoint timestamps were not captured; no elapsed-time claim."
+  },
+  "screenshots": [
+    "overview.png",
+    "active-problems.png"
+  ],
+  "build": {
+    "createdNodeIds": [
+      "1396:6797",
+      "1396:6798",
+      "1396:6799",
+      "1396:6800",
+      "1396:6801",
+      "1396:6802",
+      "1396:6803",
+      "1396:6804",
+      "1396:6805",
+      "1396:6807",
+      "1396:6808",
+      "1396:6809",
+      "1396:6810",
+      "1396:6811",
+      "1396:6812",
+      "1396:6814",
+      "1396:6816",
+      "1396:6818",
+      "1396:6819",
+      "1396:6820",
+      "1396:6821",
+      "1396:6822",
+      "1396:6823",
+      "1396:6825",
+      "1396:6827",
+      "1396:6829",
+      "1396:6830",
+      "1396:6831",
+      "1396:6832",
+      "1396:6833",
+      "1396:6834",
+      "1396:6835",
+      "1396:6836",
+      "1396:6837",
+      "1396:6839",
+      "1396:6840",
+      "1396:6841",
+      "1396:6842",
+      "1396:6843",
+      "1396:6844",
+      "1396:6845",
+      "1396:6846",
+      "1396:7343",
+      "1396:7547",
+      "1396:7617",
+      "1396:7679",
+      "1396:7780",
+      "1396:7781",
+      "1396:7849",
+      "1396:7905",
+      "1396:7915",
+      "1396:7916",
+      "1396:7917",
+      "1396:7918",
+      "1396:7919",
+      "1396:7920",
+      "1396:7927",
+      "1396:7928",
+      "1396:7929",
+      "1396:7930",
+      "1396:7931",
+      "1396:8428",
+      "1396:8631",
+      "1396:8701",
+      "1396:8763",
+      "1396:8864",
+      "1396:8865",
+      "1396:8933",
+      "1396:8989",
+      "1396:8999",
+      "1396:9000",
+      "1396:9001",
+      "1396:9002",
+      "1396:9003",
+      "1396:9004",
+      "1396:9015",
+      "1396:9016",
+      "1396:9017",
+      "1396:9018",
+      "1396:9019",
+      "1396:9020",
+      "1396:9517",
+      "1396:9720",
+      "1396:9790",
+      "1396:9852",
+      "1396:9953",
+      "1396:9954",
+      "1396:10022",
+      "1396:10078",
+      "1396:10088",
+      "1396:10089",
+      "1396:10090",
+      "1396:10091",
+      "1396:10092",
+      "1396:10093",
+      "1396:10104",
+      "1396:10105",
+      "1396:10106",
+      "1396:10107",
+      "1396:10108",
+      "1396:10605",
+      "1396:10808",
+      "1396:10878",
+      "1396:10940",
+      "1396:11041",
+      "1396:11042",
+      "1396:11110",
+      "1396:11166",
+      "1396:11176",
+      "1396:11177",
+      "1396:11178",
+      "1396:11179",
+      "1396:11180",
+      "1396:11184",
+      "1396:11185",
+      "1396:11186",
+      "1396:11190",
+      "1396:11191",
+      "1396:11192",
+      "1396:11193",
+      "1396:11194",
+      "1396:11195",
+      "1396:11196",
+      "1396:11197",
+      "1396:11694",
+      "1396:11897",
+      "1396:11967",
+      "1396:12029",
+      "1396:12130",
+      "1396:12131",
+      "1396:12199",
+      "1396:12255",
+      "1396:12265",
+      "1396:12266",
+      "1396:12267",
+      "1396:12268",
+      "1396:12269",
+      "1396:12273",
+      "1396:12274",
+      "1396:12275",
+      "1396:12279",
+      "1396:12283",
+      "1396:12284",
+      "1396:12285",
+      "1396:12286",
+      "1396:12287",
+      "1396:12288",
+      "1396:12289",
+      "1396:12786",
+      "1396:12989",
+      "1396:13059",
+      "1396:13121",
+      "1396:13222",
+      "1396:13223",
+      "1396:13291",
+      "1396:13347",
+      "1396:13357",
+      "1396:13358",
+      "1396:13359",
+      "1396:13360",
+      "1396:13361",
+      "1396:13362",
+      "1396:13372"
+    ],
+    "mutatedNodeIds": [
+      "I1396:7905;1376:32490",
+      "I1396:7905;1376:32496",
+      "1396:7618",
+      "I1396:8989;1376:32490",
+      "I1396:8989;1376:32496",
+      "1396:8702",
+      "I1396:10078;1376:32490",
+      "I1396:10078;1376:32496",
+      "1396:9791",
+      "I1396:11166;1376:32490",
+      "I1396:11166;1376:32496",
+      "1396:10879",
+      "I1396:12255;1376:32490",
+      "I1396:12255;1376:32496",
+      "1396:11968",
+      "I1396:13347;1376:32490",
+      "I1396:13347;1376:32496",
+      "1396:13060"
+    ],
+    "pageId": "1396:6797",
+    "boardId": "1396:6798",
+    "mastersId": "1396:6801",
+    "screens": [
+      {
+        "id": "1396:6845",
+        "name": "01 · Discover the shortcut",
+        "width": 1493,
+        "height": 1033
+      },
+      {
+        "id": "1396:7930",
+        "name": "02 · Choose an active problem",
+        "width": 1493,
+        "height": 1033
+      },
+      {
+        "id": "1396:9019",
+        "name": "03 · Add all with the keyboard",
+        "width": 1493,
+        "height": 1033
+      },
+      {
+        "id": "1396:10107",
+        "name": "04 · Insert the same problem again",
+        "width": 1493,
+        "height": 1033
+      },
+      {
+        "id": "1396:11196",
+        "name": "05 · All active problems inserted",
+        "width": 1493,
+        "height": 1033
+      },
+      {
+        "id": "1396:12288",
+        "name": "06 · No active problems",
+        "width": 1493,
+        "height": 1033
+      }
+    ],
+    "menuInstanceIds": [
+      "1396:7920",
+      "1396:9004",
+      "1396:10093",
+      "1396:13362"
+    ],
+    "chipInstanceIds": [
+      "1396:11180",
+      "1396:11186",
+      "1396:12269",
+      "1396:12275",
+      "1396:12279"
+    ],
+    "counts": {
+      "FRAME": 1259,
+      "TEXT": 1144,
+      "INSTANCE": 2626,
+      "VECTOR": 1415,
+      "GROUP": 36,
+      "ELLIPSE": 36,
+      "RECTANGLE": 18
+    },
+    "imageFilledNodes": [],
+    "visibleFontFamilies": [
+      "Akkurat LL",
+      "Inter"
+    ],
+    "menuMasters": {
+      "command": "1396:6802",
+      "active": "1396:6809",
+      "all": "1396:6820",
+      "empty": "1396:6831"
+    }
+  },
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 9,
+      "passed": true,
+      "checks": [
+        {
+          "id": "1396:11180",
+          "mainId": "12:975",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "1396:11186",
+          "mainId": "12:975",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "1396:12269",
+          "mainId": "12:975",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "1396:12275",
+          "mainId": "12:975",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "1396:12279",
+          "mainId": "12:975",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "1396:6805",
+          "mainId": "13:10",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "1396:6812",
+          "mainId": "13:10",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "1396:6827",
+          "mainId": "13:10",
+          "passed": true,
+          "differenceCount": 0
+        },
+        {
+          "id": "1396:6837",
+          "mainId": "13:12",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 25,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Six requested screen states",
+          "passed": true
+        },
+        {
+          "name": "01 · Discover the shortcut width",
+          "passed": true
+        },
+        {
+          "name": "01 · Discover the shortcut authored content font",
+          "passed": true
+        },
+        {
+          "name": "01 · Discover the shortcut insertion caret",
+          "passed": true
+        },
+        {
+          "name": "01 · Discover the shortcut menu fits editor",
+          "passed": true
+        },
+        {
+          "name": "02 · Choose an active problem width",
+          "passed": true
+        },
+        {
+          "name": "02 · Choose an active problem authored content font",
+          "passed": true
+        },
+        {
+          "name": "02 · Choose an active problem insertion caret",
+          "passed": true
+        },
+        {
+          "name": "02 · Choose an active problem menu fits editor",
+          "passed": true
+        },
+        {
+          "name": "03 · Add all with the keyboard width",
+          "passed": true
+        },
+        {
+          "name": "03 · Add all with the keyboard authored content font",
+          "passed": true
+        },
+        {
+          "name": "03 · Add all with the keyboard insertion caret",
+          "passed": true
+        },
+        {
+          "name": "03 · Add all with the keyboard menu fits editor",
+          "passed": true
+        },
+        {
+          "name": "04 · Insert the same problem again width",
+          "passed": true
+        },
+        {
+          "name": "04 · Insert the same problem again authored content font",
+          "passed": true
+        },
+        {
+          "name": "04 · Insert the same problem again insertion caret",
+          "passed": true
+        },
+        {
+          "name": "05 · All active problems inserted width",
+          "passed": true
+        },
+        {
+          "name": "05 · All active problems inserted authored content font",
+          "passed": true
+        },
+        {
+          "name": "05 · All active problems inserted insertion caret",
+          "passed": true
+        },
+        {
+          "name": "06 · No active problems width",
+          "passed": true
+        },
+        {
+          "name": "06 · No active problems authored content font",
+          "passed": true
+        },
+        {
+          "name": "06 · No active problems insertion caret",
+          "passed": true
+        },
+        {
+          "name": "06 · No active problems menu fits editor",
+          "passed": true
+        },
+        {
+          "name": "04 · Insert the same problem again chip count",
+          "passed": true
+        },
+        {
+          "name": "05 · All active problems inserted chip count",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 0,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  }
+}
