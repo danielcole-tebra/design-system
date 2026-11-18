@@ -4779,3 +4779,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - File: Flowsheets27 `IgfgyXsw7FSxQQugnG5gtc`, page2074:8246. Converted17 table blocks to158 reusable local row instances containing912 linked DS header/body cells. Source values, clinical flags, trends, badges and overlays preserved; original rows retained hidden.
 - Verification: all912 cells linked to DS Table/Cell; no missing source text or vertical text overflow; all affected layouts inspected. Published DS rows/headings have four fixed cells, so wider tables use local SCAFFOLDING compositions; limitation recorded in OPEN-ISSUES. Library and prototype page unchanged.
 - Evidence: runs/2026-11-18-flowsheets-ds-tables/REPORT.md, record.json, build.js, embedded-tables.js, badge-fix.js, verify.js and four inspected PNGs.
+
+## 2026-11-18 — No Editing · Smaller viewports
+- File: Flowsheets27 `IgfgyXsw7FSxQQugnG5gtc`, section2211:3164. Added table and chart examples at768,480 and390 px. Tables use horizontal-scroll viewports; narrow chart rows stack trends below labels/latest values. Original designs preserved.
+- Verification: six layouts inspected;150 linked DS table cells, Akkurat LL throughout, no image-filled UI; scroll bounds read back. Published fixed-row limitation unchanged. No playback claim.
+- Evidence: runs/2026-11-18-flowsheets-small-viewports/REPORT.md, record.json, build.js, refine.js, scroll-fix.js, verify.js, viewports.png, narrow-table.png.

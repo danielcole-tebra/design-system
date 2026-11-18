@@ -1,0 +1,1 @@
+for(const [id,w]of [['2211:3165',808],['2211:3487',528],['2211:3803',528]]){const root=await figma.getNodeByIdAsync(id),vp=root.children.find(n=>n.name==='Table viewport · Horizontal scroll'),data=vp.children[0];$fig.get(data.id).set({layoutSizingHorizontal:'FIXED',width:w,constraints:{horizontal:'MIN',vertical:'MIN'}});}await $fig.done();return 'Fixed scroll content widths';

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-18",
+  "section": "2211:3164",
+  "verification": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[{\"id\":\"2211:3165\",\"w\":768,\"h\":820,\"descendants\":345,\"types\":{\"FRAME\":53,\"TEXT\":115,\"INSTANCE\":110,\"VECTOR\":67},\"images\":[],\"fonts\":[\"Akkurat LL\"],\"linkedCells\":50,\"allCellsLinked\":true,\"viewport\":{\"width\":736,\"contentWidth\":808,\"scroll\":\"HORIZONTAL\",\"clips\":true}},{\"id\":\"2211:3351\",\"w\":768,\"h\":700,\"descendants\":167,\"types\":{\"FRAME\":41,\"VECTOR\":58,\"TEXT\":46,\"INSTANCE\":22},\"images\":[],\"fonts\":[\"Akkurat LL\"],\"linkedCells\":0,\"allCellsLinked\":true,\"viewport\":null},{\"id\":\"2211:3487\",\"w\":480,\"h\":820,\"descendants\":339,\"types\":{\"FRAME\":53,\"TEXT\":115,\"INSTANCE\":110,\"VECTOR\":61},\"images\":[],\"fonts\":[\"Akkurat LL\"],\"linkedCells\":50,\"allCellsLinked\":true,\"viewport\":{\"width\":448,\"contentWidth\":528,\"scroll\":\"HORIZONTAL\",\"clips\":true}},{\"id\":\"2211:3667\",\"w\":480,\"h\":1040,\"descendants\":167,\"types\":{\"FRAME\":41,\"VECTOR\":58,\"TEXT\":46,\"INSTANCE\":22},\"images\":[],\"fonts\":[\"Akkurat LL\"],\"linkedCells\":0,\"allCellsLinked\":true,\"viewport\":null},{\"id\":\"2211:3803\",\"w\":390,\"h\":820,\"descendants\":339,\"types\":{\"FRAME\":53,\"TEXT\":115,\"INSTANCE\":110,\"VECTOR\":61},\"images\":[],\"fonts\":[\"Akkurat LL\"],\"linkedCells\":50,\"allCellsLinked\":true,\"viewport\":{\"width\":358,\"contentWidth\":528,\"scroll\":\"HORIZONTAL\",\"clips\":true}},{\"id\":\"2211:3983\",\"w\":390,\"h\":1040,\"descendants\":167,\"types\":{\"FRAME\":41,\"VECTOR\":58,\"TEXT\":46,\"INSTANCE\":22},\"images\":[],\"fonts\":[\"Akkurat LL\"],\"linkedCells\":0,\"allCellsLinked\":true,\"viewport\":null}]"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  },
+  "timing": "Not a benchmark; checkpoint timestamps not captured."
+}
