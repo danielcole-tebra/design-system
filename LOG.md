@@ -4774,3 +4774,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - File: Flowsheets27 `IgfgyXsw7FSxQQugnG5gtc`. Created Flowsheets · Prototype page `2190:3121` with ten visible native stages and23 stored navigation links. Covers table/chart, expanded charts, context-preserving saved values, and separate corrected/excluded history examples. Source Phase1 No Editing designs preserved.
 - Verification: all ten screens visually inspected;32 measured assertions pass, no image-filled UI, all text Akkurat LL. Two selected segment fill overrides are inherited from source. Date/selector/filter/error-state interactions remain next-pass scope; no editing or playback claimed.
 - Evidence: runs/2026-11-18-flowsheets-prototype/REPORT.md, record.json, build.js, context.js, visual-fix.js, paint-fix.js, verify.js and four inspected PNGs.
+
+## 2026-11-18 — No Editing flowsheets · DS table cells
+- File: Flowsheets27 `IgfgyXsw7FSxQQugnG5gtc`, page2074:8246. Converted17 table blocks to158 reusable local row instances containing912 linked DS header/body cells. Source values, clinical flags, trends, badges and overlays preserved; original rows retained hidden.
+- Verification: all912 cells linked to DS Table/Cell; no missing source text or vertical text overflow; all affected layouts inspected. Published DS rows/headings have four fixed cells, so wider tables use local SCAFFOLDING compositions; limitation recorded in OPEN-ISSUES. Library and prototype page unchanged.
+- Evidence: runs/2026-11-18-flowsheets-ds-tables/REPORT.md, record.json, build.js, embedded-tables.js, badge-fix.js, verify.js and four inspected PNGs.

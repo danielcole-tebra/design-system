@@ -1,0 +1,1517 @@
+{
+  "date": "2026-11-18",
+  "fileKey": "IgfgyXsw7FSxQQugnG5gtc",
+  "pageId": "2074:8246",
+  "verification": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"mainTableBlocks\":14,\"embeddedTableBlocks\":3,\"reusableRows\":158,\"linkedCells\":912,\"headCells\":145,\"bodyCells\":767,\"missingSourceTexts\":[],\"verticalTextOverflow\":[],\"usedCellVariants\":[{\"key\":\"88f113054f09351b73a5cbee4f0ba68fad86564b\",\"setKey\":\"b8942ef23ec9caa891d54b1ba66bbcc46fe666f4\",\"name\":\"variant=body, padding=none\"},{\"key\":\"b5c365fef9cf5ba36ed69877c05fb8c178e60ea5\",\"setKey\":\"b8942ef23ec9caa891d54b1ba66bbcc46fe666f4\",\"name\":\"variant=head, padding=none\"}],\"allCellsLinkedToDS\":true,\"prototypePageUnchanged\":true}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  },
+  "main": {
+    "groups": [
+      {
+        "id": "2074:2020",
+        "parent": "T01 · Vitals table · Desktop 1120"
+      },
+      {
+        "id": "2074:6778",
+        "parent": "T02 · Vitals table · Compact 840"
+      },
+      {
+        "id": "2074:1794",
+        "parent": "T03 · Reference design · Today column with saved values"
+      },
+      {
+        "id": "2074:7819",
+        "parent": "T04 · Vitals table · Drawer 560"
+      },
+      {
+        "id": "2074:5160",
+        "parent": "T05 · CMP table · Drawer 560"
+      },
+      {
+        "id": "2074:2867",
+        "parent": "div"
+      },
+      {
+        "id": "2074:3141",
+        "parent": "T07 · Vitals table · Custom date range"
+      },
+      {
+        "id": "2074:5300",
+        "parent": "T08 · CMP table · Selected rows and value detail"
+      },
+      {
+        "id": "2074:298",
+        "parent": "D01 · Blood pressure · Saved value detail"
+      },
+      {
+        "id": "2074:1167",
+        "parent": "D02 · PHQ-9 · Saved assessment detail"
+      },
+      {
+        "id": "2074:4767",
+        "parent": "div"
+      },
+      {
+        "id": "2074:655",
+        "parent": "H01 · Blood pressure · Correction history"
+      },
+      {
+        "id": "2074:1696",
+        "parent": "H02 · PHQ-9 · Score and answer history"
+      },
+      {
+        "id": "2074:1003",
+        "parent": "H03 · Entered-in-error value · Hidden from table, retained in history"
+      }
+    ],
+    "templateIds": [
+      "2201:1762",
+      "2201:1779",
+      "2201:1782",
+      "2201:1799",
+      "2201:1812",
+      "2201:1815",
+      "2201:1828",
+      "2201:1847",
+      "2201:1866",
+      "2201:1879",
+      "2201:1882",
+      "2201:1895",
+      "2201:1908",
+      "2201:1921",
+      "2201:1944",
+      "2201:1947",
+      "2201:1970",
+      "2201:1993",
+      "2201:2006",
+      "2201:2021",
+      "2201:2024",
+      "2201:2039"
+    ],
+    "rowWrappers": [
+      {
+        "id": "2201:2189",
+        "sourceId": "2074:1121",
+        "groupId": "2074:1003",
+        "contentId": "2201:2190",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2213",
+        "sourceId": "2074:1119",
+        "groupId": "2074:1003",
+        "contentId": "2201:2214",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2217",
+        "sourceId": "2074:1105",
+        "groupId": "2074:1003",
+        "contentId": "2201:2218",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2241",
+        "sourceId": "2074:1091",
+        "groupId": "2074:1003",
+        "contentId": "2201:2242",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2265",
+        "sourceId": "2074:1077",
+        "groupId": "2074:1003",
+        "contentId": "2201:2266",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2289",
+        "sourceId": "2074:1063",
+        "groupId": "2074:1003",
+        "contentId": "2201:2290",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2313",
+        "sourceId": "2074:1046",
+        "groupId": "2074:1003",
+        "contentId": "2201:2314",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2340",
+        "sourceId": "2074:1022",
+        "groupId": "2074:1003",
+        "contentId": "2201:2341",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2374",
+        "sourceId": "2074:1020",
+        "groupId": "2074:1003",
+        "contentId": "2201:2375",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2378",
+        "sourceId": "2074:1004",
+        "groupId": "2074:1003",
+        "contentId": "2201:2379",
+        "templateId": "2201:1762",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2396",
+        "sourceId": "2074:1217",
+        "groupId": "2074:1167",
+        "contentId": "2201:2397",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2420",
+        "sourceId": "2074:1215",
+        "groupId": "2074:1167",
+        "contentId": "2201:2421",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2424",
+        "sourceId": "2074:1201",
+        "groupId": "2074:1167",
+        "contentId": "2201:2425",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2448",
+        "sourceId": "2074:1186",
+        "groupId": "2074:1167",
+        "contentId": "2201:2449",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2472",
+        "sourceId": "2074:1184",
+        "groupId": "2074:1167",
+        "contentId": "2201:2473",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2476",
+        "sourceId": "2074:1168",
+        "groupId": "2074:1167",
+        "contentId": "2201:2477",
+        "templateId": "2201:1762",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2494",
+        "sourceId": "2074:1746",
+        "groupId": "2074:1696",
+        "contentId": "2201:2495",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2518",
+        "sourceId": "2074:1744",
+        "groupId": "2074:1696",
+        "contentId": "2201:2519",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2522",
+        "sourceId": "2074:1730",
+        "groupId": "2074:1696",
+        "contentId": "2201:2523",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2546",
+        "sourceId": "2074:1715",
+        "groupId": "2074:1696",
+        "contentId": "2201:2547",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2570",
+        "sourceId": "2074:1713",
+        "groupId": "2074:1696",
+        "contentId": "2201:2571",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2574",
+        "sourceId": "2074:1697",
+        "groupId": "2074:1696",
+        "contentId": "2201:2575",
+        "templateId": "2201:1762",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2592",
+        "sourceId": "2074:1912",
+        "groupId": "2074:1794",
+        "contentId": "2201:2593",
+        "templateId": "2201:1847",
+        "columns": 9,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2620",
+        "sourceId": "2074:1910",
+        "groupId": "2074:1794",
+        "contentId": "2201:2621",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2624",
+        "sourceId": "2074:1896",
+        "groupId": "2074:1794",
+        "contentId": "2201:2625",
+        "templateId": "2201:1847",
+        "columns": 9,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2652",
+        "sourceId": "2074:1882",
+        "groupId": "2074:1794",
+        "contentId": "2201:2653",
+        "templateId": "2201:1847",
+        "columns": 9,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2679",
+        "sourceId": "2074:1868",
+        "groupId": "2074:1794",
+        "contentId": "2201:2680",
+        "templateId": "2201:1847",
+        "columns": 9,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2706",
+        "sourceId": "2074:1854",
+        "groupId": "2074:1794",
+        "contentId": "2201:2707",
+        "templateId": "2201:1847",
+        "columns": 9,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2733",
+        "sourceId": "2074:1837",
+        "groupId": "2074:1794",
+        "contentId": "2201:2734",
+        "templateId": "2201:1847",
+        "columns": 9,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2764",
+        "sourceId": "2074:1813",
+        "groupId": "2074:1794",
+        "contentId": "2201:2765",
+        "templateId": "2201:1847",
+        "columns": 9,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2802",
+        "sourceId": "2074:1811",
+        "groupId": "2074:1794",
+        "contentId": "2201:2803",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2806",
+        "sourceId": "2074:1795",
+        "groupId": "2074:1794",
+        "contentId": "2201:2807",
+        "templateId": "2201:1828",
+        "columns": 9,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2829",
+        "sourceId": "2074:2138",
+        "groupId": "2074:2020",
+        "contentId": "2201:2830",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2853",
+        "sourceId": "2074:2136",
+        "groupId": "2074:2020",
+        "contentId": "2201:2854",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:2857",
+        "sourceId": "2074:2122",
+        "groupId": "2074:2020",
+        "contentId": "2201:2858",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2881",
+        "sourceId": "2074:2108",
+        "groupId": "2074:2020",
+        "contentId": "2201:2882",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2905",
+        "sourceId": "2074:2094",
+        "groupId": "2074:2020",
+        "contentId": "2201:2906",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2929",
+        "sourceId": "2074:2080",
+        "groupId": "2074:2020",
+        "contentId": "2201:2930",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2953",
+        "sourceId": "2074:2063",
+        "groupId": "2074:2020",
+        "contentId": "2201:2954",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:2980",
+        "sourceId": "2074:2039",
+        "groupId": "2074:2020",
+        "contentId": "2201:2981",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3014",
+        "sourceId": "2074:2037",
+        "groupId": "2074:2020",
+        "contentId": "2201:3015",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:3018",
+        "sourceId": "2074:2021",
+        "groupId": "2074:2020",
+        "contentId": "2201:3019",
+        "templateId": "2201:1762",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3036",
+        "sourceId": "2074:3110",
+        "groupId": "2074:2867",
+        "contentId": "2201:3037",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3068",
+        "sourceId": "2074:3095",
+        "groupId": "2074:2867",
+        "contentId": "2201:3069",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3104",
+        "sourceId": "2074:3093",
+        "groupId": "2074:2867",
+        "contentId": "2201:3105",
+        "templateId": "2201:1944",
+        "columns": 1,
+        "w": 1312,
+        "h": 32
+      },
+      {
+        "id": "2201:3108",
+        "sourceId": "2074:3086",
+        "groupId": "2074:2867",
+        "contentId": "2201:3109",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3136",
+        "sourceId": "2074:3084",
+        "groupId": "2074:2867",
+        "contentId": "2201:3137",
+        "templateId": "2201:1944",
+        "columns": 1,
+        "w": 1312,
+        "h": 32
+      },
+      {
+        "id": "2201:3140",
+        "sourceId": "2074:3068",
+        "groupId": "2074:2867",
+        "contentId": "2201:3141",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3174",
+        "sourceId": "2074:3046",
+        "groupId": "2074:2867",
+        "contentId": "2201:3175",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3214",
+        "sourceId": "2074:3030",
+        "groupId": "2074:2867",
+        "contentId": "2201:3215",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3248",
+        "sourceId": "2074:3028",
+        "groupId": "2074:2867",
+        "contentId": "2201:3249",
+        "templateId": "2201:1944",
+        "columns": 1,
+        "w": 1312,
+        "h": 32
+      },
+      {
+        "id": "2201:3252",
+        "sourceId": "2074:3012",
+        "groupId": "2074:2867",
+        "contentId": "2201:3253",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3286",
+        "sourceId": "2074:2994",
+        "groupId": "2074:2867",
+        "contentId": "2201:3287",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3321",
+        "sourceId": "2074:2992",
+        "groupId": "2074:2867",
+        "contentId": "2201:3322",
+        "templateId": "2201:1944",
+        "columns": 1,
+        "w": 1312,
+        "h": 32
+      },
+      {
+        "id": "2201:3325",
+        "sourceId": "2074:2976",
+        "groupId": "2074:2867",
+        "contentId": "2201:3326",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3359",
+        "sourceId": "2074:2960",
+        "groupId": "2074:2867",
+        "contentId": "2201:3360",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3393",
+        "sourceId": "2074:2958",
+        "groupId": "2074:2867",
+        "contentId": "2201:3394",
+        "templateId": "2201:1944",
+        "columns": 1,
+        "w": 1312,
+        "h": 32
+      },
+      {
+        "id": "2201:3397",
+        "sourceId": "2074:2942",
+        "groupId": "2074:2867",
+        "contentId": "2201:3398",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3431",
+        "sourceId": "2074:2917",
+        "groupId": "2074:2867",
+        "contentId": "2201:3432",
+        "templateId": "2201:1970",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3478",
+        "sourceId": "2074:2891",
+        "groupId": "2074:2867",
+        "contentId": "2201:3479",
+        "templateId": "2201:1947",
+        "columns": 11,
+        "w": 1312,
+        "h": 72
+      },
+      {
+        "id": "2201:3526",
+        "sourceId": "2074:2889",
+        "groupId": "2074:2867",
+        "contentId": "2201:3527",
+        "templateId": "2201:1944",
+        "columns": 1,
+        "w": 1312,
+        "h": 32
+      },
+      {
+        "id": "2201:3530",
+        "sourceId": "2074:2868",
+        "groupId": "2074:2867",
+        "contentId": "2201:3531",
+        "templateId": "2201:1921",
+        "columns": 11,
+        "w": 1312,
+        "h": 56
+      },
+      {
+        "id": "2201:3556",
+        "sourceId": "2074:417",
+        "groupId": "2074:298",
+        "contentId": "2201:3557",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3580",
+        "sourceId": "2074:415",
+        "groupId": "2074:298",
+        "contentId": "2201:3581",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:3584",
+        "sourceId": "2074:401",
+        "groupId": "2074:298",
+        "contentId": "2201:3585",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3608",
+        "sourceId": "2074:387",
+        "groupId": "2074:298",
+        "contentId": "2201:3609",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3632",
+        "sourceId": "2074:373",
+        "groupId": "2074:298",
+        "contentId": "2201:3633",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3656",
+        "sourceId": "2074:359",
+        "groupId": "2074:298",
+        "contentId": "2201:3657",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3680",
+        "sourceId": "2074:342",
+        "groupId": "2074:298",
+        "contentId": "2201:3681",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3707",
+        "sourceId": "2074:317",
+        "groupId": "2074:298",
+        "contentId": "2201:3708",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3743",
+        "sourceId": "2074:315",
+        "groupId": "2074:298",
+        "contentId": "2201:3744",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:3747",
+        "sourceId": "2074:299",
+        "groupId": "2074:298",
+        "contentId": "2201:3748",
+        "templateId": "2201:1762",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:3765",
+        "sourceId": "2074:3234",
+        "groupId": "2074:3141",
+        "contentId": "2201:3766",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:3785",
+        "sourceId": "2074:3232",
+        "groupId": "2074:3141",
+        "contentId": "2201:3786",
+        "templateId": "2201:1879",
+        "columns": 1,
+        "w": 528,
+        "h": 32
+      },
+      {
+        "id": "2201:3789",
+        "sourceId": "2074:3220",
+        "groupId": "2074:3141",
+        "contentId": "2201:3790",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:3809",
+        "sourceId": "2074:3208",
+        "groupId": "2074:3141",
+        "contentId": "2201:3810",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:3829",
+        "sourceId": "2074:3196",
+        "groupId": "2074:3141",
+        "contentId": "2201:3830",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:3849",
+        "sourceId": "2074:3184",
+        "groupId": "2074:3141",
+        "contentId": "2201:3850",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:3869",
+        "sourceId": "2074:3172",
+        "groupId": "2074:3141",
+        "contentId": "2201:3870",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:3889",
+        "sourceId": "2074:3156",
+        "groupId": "2074:3141",
+        "contentId": "2201:3890",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:3913",
+        "sourceId": "2074:3154",
+        "groupId": "2074:3141",
+        "contentId": "2201:3914",
+        "templateId": "2201:1879",
+        "columns": 1,
+        "w": 528,
+        "h": 32
+      },
+      {
+        "id": "2201:3917",
+        "sourceId": "2074:3142",
+        "groupId": "2074:3141",
+        "contentId": "2201:3918",
+        "templateId": "2201:1866",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:3931",
+        "sourceId": "2074:4817",
+        "groupId": "2074:4767",
+        "contentId": "2201:3932",
+        "templateId": "2201:2039",
+        "columns": 7,
+        "w": 1052,
+        "h": 56
+      },
+      {
+        "id": "2201:3954",
+        "sourceId": "2074:4800",
+        "groupId": "2074:4767",
+        "contentId": "2201:3955",
+        "templateId": "2201:2039",
+        "columns": 7,
+        "w": 1052,
+        "h": 56
+      },
+      {
+        "id": "2201:3987",
+        "sourceId": "2074:4785",
+        "groupId": "2074:4767",
+        "contentId": "2201:3988",
+        "templateId": "2201:2024",
+        "columns": 7,
+        "w": 1052,
+        "h": 72
+      },
+      {
+        "id": "2201:4019",
+        "sourceId": "2074:4783",
+        "groupId": "2074:4767",
+        "contentId": "2201:4020",
+        "templateId": "2201:2021",
+        "columns": 1,
+        "w": 1052,
+        "h": 32
+      },
+      {
+        "id": "2201:4023",
+        "sourceId": "2074:4768",
+        "groupId": "2074:4767",
+        "contentId": "2201:4024",
+        "templateId": "2201:2006",
+        "columns": 7,
+        "w": 1052,
+        "h": 56
+      },
+      {
+        "id": "2201:4041",
+        "sourceId": "2074:5270",
+        "groupId": "2074:5160",
+        "contentId": "2201:4042",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4070",
+        "sourceId": "2074:5268",
+        "groupId": "2074:5160",
+        "contentId": "2201:4071",
+        "templateId": "2201:1879",
+        "columns": 1,
+        "w": 528,
+        "h": 32
+      },
+      {
+        "id": "2201:4074",
+        "sourceId": "2074:5257",
+        "groupId": "2074:5160",
+        "contentId": "2201:4075",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4103",
+        "sourceId": "2074:5242",
+        "groupId": "2074:5160",
+        "contentId": "2201:4104",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4136",
+        "sourceId": "2074:5231",
+        "groupId": "2074:5160",
+        "contentId": "2201:4137",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4165",
+        "sourceId": "2074:5220",
+        "groupId": "2074:5160",
+        "contentId": "2201:4166",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4194",
+        "sourceId": "2074:5209",
+        "groupId": "2074:5160",
+        "contentId": "2201:4195",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4223",
+        "sourceId": "2074:5198",
+        "groupId": "2074:5160",
+        "contentId": "2201:4224",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4252",
+        "sourceId": "2074:5185",
+        "groupId": "2074:5160",
+        "contentId": "2201:4253",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4283",
+        "sourceId": "2074:5174",
+        "groupId": "2074:5160",
+        "contentId": "2201:4284",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4312",
+        "sourceId": "2074:5172",
+        "groupId": "2074:5160",
+        "contentId": "2201:4313",
+        "templateId": "2201:1879",
+        "columns": 1,
+        "w": 528,
+        "h": 32
+      },
+      {
+        "id": "2201:4316",
+        "sourceId": "2074:5161",
+        "groupId": "2074:5160",
+        "contentId": "2201:4317",
+        "templateId": "2201:1895",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:4330",
+        "sourceId": "2074:5411",
+        "groupId": "2074:5300",
+        "contentId": "2201:4331",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4359",
+        "sourceId": "2074:5409",
+        "groupId": "2074:5300",
+        "contentId": "2201:4360",
+        "templateId": "2201:1879",
+        "columns": 1,
+        "w": 528,
+        "h": 32
+      },
+      {
+        "id": "2201:4363",
+        "sourceId": "2074:5398",
+        "groupId": "2074:5300",
+        "contentId": "2201:4364",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4392",
+        "sourceId": "2074:5383",
+        "groupId": "2074:5300",
+        "contentId": "2201:4393",
+        "templateId": "2201:1993",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4426",
+        "sourceId": "2074:5372",
+        "groupId": "2074:5300",
+        "contentId": "2201:4427",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4455",
+        "sourceId": "2074:5361",
+        "groupId": "2074:5300",
+        "contentId": "2201:4456",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4484",
+        "sourceId": "2074:5350",
+        "groupId": "2074:5300",
+        "contentId": "2201:4485",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4513",
+        "sourceId": "2074:5339",
+        "groupId": "2074:5300",
+        "contentId": "2201:4514",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4542",
+        "sourceId": "2074:5325",
+        "groupId": "2074:5300",
+        "contentId": "2201:4543",
+        "templateId": "2201:1993",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4576",
+        "sourceId": "2074:5314",
+        "groupId": "2074:5300",
+        "contentId": "2201:4577",
+        "templateId": "2201:1908",
+        "columns": 6,
+        "w": 528,
+        "h": 72
+      },
+      {
+        "id": "2201:4605",
+        "sourceId": "2074:5312",
+        "groupId": "2074:5300",
+        "contentId": "2201:4606",
+        "templateId": "2201:1879",
+        "columns": 1,
+        "w": 528,
+        "h": 32
+      },
+      {
+        "id": "2201:4609",
+        "sourceId": "2074:5301",
+        "groupId": "2074:5300",
+        "contentId": "2201:4610",
+        "templateId": "2201:1895",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:4623",
+        "sourceId": "2074:774",
+        "groupId": "2074:655",
+        "contentId": "2201:4624",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:4647",
+        "sourceId": "2074:772",
+        "groupId": "2074:655",
+        "contentId": "2201:4648",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:4651",
+        "sourceId": "2074:758",
+        "groupId": "2074:655",
+        "contentId": "2201:4652",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:4675",
+        "sourceId": "2074:744",
+        "groupId": "2074:655",
+        "contentId": "2201:4676",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:4699",
+        "sourceId": "2074:730",
+        "groupId": "2074:655",
+        "contentId": "2201:4700",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:4723",
+        "sourceId": "2074:716",
+        "groupId": "2074:655",
+        "contentId": "2201:4724",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:4747",
+        "sourceId": "2074:699",
+        "groupId": "2074:655",
+        "contentId": "2201:4748",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:4774",
+        "sourceId": "2074:674",
+        "groupId": "2074:655",
+        "contentId": "2201:4775",
+        "templateId": "2201:1782",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:4808",
+        "sourceId": "2074:672",
+        "groupId": "2074:655",
+        "contentId": "2201:4809",
+        "templateId": "2201:1779",
+        "columns": 1,
+        "w": 1088,
+        "h": 32
+      },
+      {
+        "id": "2201:4812",
+        "sourceId": "2074:656",
+        "groupId": "2074:655",
+        "contentId": "2201:4813",
+        "templateId": "2201:1762",
+        "columns": 8,
+        "w": 1088,
+        "h": 56
+      },
+      {
+        "id": "2201:4830",
+        "sourceId": "2074:6874",
+        "groupId": "2074:6778",
+        "contentId": "2201:4831",
+        "templateId": "2201:1815",
+        "columns": 6,
+        "w": 808,
+        "h": 56
+      },
+      {
+        "id": "2201:4850",
+        "sourceId": "2074:6872",
+        "groupId": "2074:6778",
+        "contentId": "2201:4851",
+        "templateId": "2201:1812",
+        "columns": 1,
+        "w": 808,
+        "h": 32
+      },
+      {
+        "id": "2201:4854",
+        "sourceId": "2074:6860",
+        "groupId": "2074:6778",
+        "contentId": "2201:4855",
+        "templateId": "2201:1815",
+        "columns": 6,
+        "w": 808,
+        "h": 56
+      },
+      {
+        "id": "2201:4874",
+        "sourceId": "2074:6848",
+        "groupId": "2074:6778",
+        "contentId": "2201:4875",
+        "templateId": "2201:1815",
+        "columns": 6,
+        "w": 808,
+        "h": 56
+      },
+      {
+        "id": "2201:4894",
+        "sourceId": "2074:6836",
+        "groupId": "2074:6778",
+        "contentId": "2201:4895",
+        "templateId": "2201:1815",
+        "columns": 6,
+        "w": 808,
+        "h": 56
+      },
+      {
+        "id": "2201:4914",
+        "sourceId": "2074:6824",
+        "groupId": "2074:6778",
+        "contentId": "2201:4915",
+        "templateId": "2201:1815",
+        "columns": 6,
+        "w": 808,
+        "h": 56
+      },
+      {
+        "id": "2201:4934",
+        "sourceId": "2074:6811",
+        "groupId": "2074:6778",
+        "contentId": "2201:4935",
+        "templateId": "2201:1815",
+        "columns": 6,
+        "w": 808,
+        "h": 56
+      },
+      {
+        "id": "2201:4955",
+        "sourceId": "2074:6793",
+        "groupId": "2074:6778",
+        "contentId": "2201:4956",
+        "templateId": "2201:1815",
+        "columns": 6,
+        "w": 808,
+        "h": 56
+      },
+      {
+        "id": "2201:4981",
+        "sourceId": "2074:6791",
+        "groupId": "2074:6778",
+        "contentId": "2201:4982",
+        "templateId": "2201:1812",
+        "columns": 1,
+        "w": 808,
+        "h": 32
+      },
+      {
+        "id": "2201:4985",
+        "sourceId": "2074:6779",
+        "groupId": "2074:6778",
+        "contentId": "2201:4986",
+        "templateId": "2201:1799",
+        "columns": 6,
+        "w": 808,
+        "h": 56
+      },
+      {
+        "id": "2201:4999",
+        "sourceId": "2074:7912",
+        "groupId": "2074:7819",
+        "contentId": "2201:5000",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:5019",
+        "sourceId": "2074:7910",
+        "groupId": "2074:7819",
+        "contentId": "2201:5020",
+        "templateId": "2201:1879",
+        "columns": 1,
+        "w": 528,
+        "h": 32
+      },
+      {
+        "id": "2201:5023",
+        "sourceId": "2074:7898",
+        "groupId": "2074:7819",
+        "contentId": "2201:5024",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:5043",
+        "sourceId": "2074:7886",
+        "groupId": "2074:7819",
+        "contentId": "2201:5044",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:5063",
+        "sourceId": "2074:7874",
+        "groupId": "2074:7819",
+        "contentId": "2201:5064",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:5083",
+        "sourceId": "2074:7862",
+        "groupId": "2074:7819",
+        "contentId": "2201:5084",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:5103",
+        "sourceId": "2074:7850",
+        "groupId": "2074:7819",
+        "contentId": "2201:5104",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:5123",
+        "sourceId": "2074:7834",
+        "groupId": "2074:7819",
+        "contentId": "2201:5124",
+        "templateId": "2201:1882",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      },
+      {
+        "id": "2201:5147",
+        "sourceId": "2074:7832",
+        "groupId": "2074:7819",
+        "contentId": "2201:5148",
+        "templateId": "2201:1879",
+        "columns": 1,
+        "w": 528,
+        "h": 32
+      },
+      {
+        "id": "2201:5151",
+        "sourceId": "2074:7820",
+        "groupId": "2074:7819",
+        "contentId": "2201:5152",
+        "templateId": "2201:1866",
+        "columns": 6,
+        "w": 528,
+        "h": 56
+      }
+    ],
+    "nativeCells": 869,
+    "mappedSourceTexts": 789,
+    "widthFailures": [],
+    "sourceRowsHidden": true,
+    "note": "Local reusable row compositions, each built from linked DS Table/Cell head/body instances. Published fixed four-cell Table/Row cannot resize its nested cells; no library masters edited."
+  },
+  "timing": "Not a benchmark; checkpoint timestamps were not captured."
+}
