@@ -1,0 +1,883 @@
+{
+  "date": "2026-11-18",
+  "fileKey": "IgfgyXsw7FSxQQugnG5gtc",
+  "pageId": "2190:3121",
+  "pageName": "Flowsheets · Prototype",
+  "reviewUrl": "https://www.figma.com/design/IgfgyXsw7FSxQQugnG5gtc/Flowsheets-27?node-id=2190-3122",
+  "scope": "Initial read-only Phase1 prototype using the linked Phase1 No Editing page",
+  "delivered": [
+    "Ten native editable full-screen stages visible directly on the new page",
+    "Table/Chart navigation, Expand/Collapse All, saved blood-pressure popovers from table/compact/expanded views",
+    "Corrected and excluded history examples with separate starting points to preserve source data snapshots",
+    "23 stored navigation links resolve to this page"
+  ],
+  "limits": [
+    "Date presets, flowsheet selector, row selection/filtering, additional measures, source error states and outer-close behavior are not wired in this first pass.",
+    "No editing, live data or persistence. No played-through prototype claim."
+  ],
+  "verification": [
+    {
+      "frames": [
+        {
+          "id": "2190:3122",
+          "name": "01 · Vitals · Table",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 37,
+            "TEXT": 81,
+            "VECTOR": 44,
+            "INSTANCE": 36
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2190:3148",
+              "destinations": [
+                "2190:3841"
+              ]
+            },
+            {
+              "sourceId": "2190:3245",
+              "destinations": [
+                "2190:3255"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2190:3255",
+          "name": "02 · Vitals · Compact chart",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 44,
+            "VECTOR": 141,
+            "TEXT": 75,
+            "INSTANCE": 22
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2190:3287",
+              "destinations": [
+                "2191:438"
+              ]
+            },
+            {
+              "sourceId": "2190:3442",
+              "destinations": [
+                "2190:3122"
+              ]
+            },
+            {
+              "sourceId": "2190:3449",
+              "destinations": [
+                "2190:3486"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2190:3486",
+          "name": "03 · Vitals · Expanded charts",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 72,
+            "VECTOR": 179,
+            "TEXT": 133,
+            "INSTANCE": 22
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2190:3612",
+              "destinations": [
+                "2190:3122"
+              ]
+            },
+            {
+              "sourceId": "2190:3613",
+              "destinations": [
+                "2190:3255"
+              ]
+            },
+            {
+              "sourceId": "2190:3619",
+              "destinations": [
+                "2190:3255"
+              ]
+            },
+            {
+              "sourceId": "2190:3652",
+              "destinations": [
+                "2191:690"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2190:3841",
+          "name": "04 · Vitals · Saved value detail",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 45,
+            "TEXT": 94,
+            "VECTOR": 44,
+            "INSTANCE": 36
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2190:3963",
+              "destinations": [
+                "2190:3122"
+              ]
+            },
+            {
+              "sourceId": "2190:3964",
+              "destinations": [
+                "2190:3255"
+              ]
+            },
+            {
+              "sourceId": "2190:3989",
+              "destinations": [
+                "2190:3122"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2191:438",
+          "name": "05 · Vitals · Chart value detail",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 51,
+            "VECTOR": 142,
+            "TEXT": 88,
+            "INSTANCE": 24
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2191:625",
+              "destinations": [
+                "2190:3122"
+              ]
+            },
+            {
+              "sourceId": "2191:626",
+              "destinations": [
+                "2190:3255"
+              ]
+            },
+            {
+              "sourceId": "2191:684",
+              "destinations": [
+                "2190:3255"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2191:690",
+          "name": "06 · Vitals · Expanded chart value detail",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 79,
+            "VECTOR": 180,
+            "TEXT": 146,
+            "INSTANCE": 24
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2191:816",
+              "destinations": [
+                "2190:3122"
+              ]
+            },
+            {
+              "sourceId": "2191:817",
+              "destinations": [
+                "2190:3255"
+              ]
+            },
+            {
+              "sourceId": "2191:1060",
+              "destinations": [
+                "2190:3486"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2190:3995",
+          "name": "07 · Corrected value · Table",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 41,
+            "TEXT": 90,
+            "VECTOR": 44,
+            "INSTANCE": 36
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2190:4021",
+              "destinations": [
+                "2190:4141"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2190:4141",
+          "name": "08 · Corrected value · History",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 41,
+            "TEXT": 90,
+            "VECTOR": 44,
+            "INSTANCE": 36
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2190:4276",
+              "destinations": [
+                "2190:3995"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2190:4287",
+          "name": "09 · Excluded value · Table",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 39,
+            "TEXT": 90,
+            "VECTOR": 45,
+            "INSTANCE": 37
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2190:4419",
+              "destinations": [
+                "2190:4430"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2190:4430",
+          "name": "10 · Excluded value · History",
+          "visible": true,
+          "w": 1120,
+          "h": 1042,
+          "counts": {
+            "FRAME": 39,
+            "TEXT": 90,
+            "VECTOR": 46,
+            "INSTANCE": 39
+          },
+          "imageFilledNodes": [],
+          "fonts": [
+            "Akkurat LL"
+          ],
+          "links": [
+            {
+              "sourceId": "2190:4562",
+              "destinations": [
+                "2190:4287"
+              ]
+            },
+            {
+              "sourceId": "2190:5079",
+              "destinations": [
+                "2190:4287"
+              ]
+            }
+          ]
+        }
+      ],
+      "linkCount": 23,
+      "flowStarts": [
+        {
+          "nodeId": "2190:3122",
+          "name": "Vitals · Table to chart and saved values"
+        },
+        {
+          "nodeId": "2190:3995",
+          "name": "History example · Corrected value"
+        },
+        {
+          "nodeId": "2190:4287",
+          "name": "History example · Excluded value"
+        }
+      ],
+      "audit": {
+        "scope": "structure-and-measured-assertions; screenshots checked separately",
+        "passed": false,
+        "structure": {
+          "scope": "structure-and-token-snapshot",
+          "checked": 6,
+          "passed": false,
+          "checks": [
+            {
+              "id": "2190:3161",
+              "mainId": "2049:40",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "2190:3241",
+              "mainId": "2042:110",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "2190:3242",
+              "mainId": "2019:208",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "2190:3244",
+              "mainId": "2020:1489",
+              "passed": false,
+              "differenceCount": 5
+            },
+            {
+              "id": "2190:3245",
+              "mainId": "2020:1491",
+              "passed": true,
+              "differenceCount": 0
+            },
+            {
+              "id": "2190:3248",
+              "mainId": "2020:1490",
+              "passed": false,
+              "differenceCount": 5
+            }
+          ],
+          "differenceCount": 10,
+          "differences": [
+            {
+              "id": "2190:3244",
+              "path": "/values/fills/0/color/r",
+              "pathTruncated": false,
+              "actual": {
+                "text": "0.9411764740943909",
+                "truncated": false
+              },
+              "expected": {
+                "text": "1",
+                "truncated": false
+              }
+            },
+            {
+              "id": "2190:3244",
+              "path": "/values/fills/0/color/g",
+              "pathTruncated": false,
+              "actual": {
+                "text": "0.9333333373069763",
+                "truncated": false
+              },
+              "expected": {
+                "text": "1",
+                "truncated": false
+              }
+            },
+            {
+              "id": "2190:3244",
+              "path": "/values/fills/0/color/b",
+              "pathTruncated": false,
+              "actual": {
+                "text": "0.9098039269447327",
+                "truncated": false
+              },
+              "expected": {
+                "text": "1",
+                "truncated": false
+              }
+            },
+            {
+              "id": "2190:3244",
+              "path": "/values/fills/0/boundVariables/color/id",
+              "pathTruncated": false,
+              "actual": {
+                "text": "\"VariableID:644bf09a480c19da598b2984cbae00eb9c111dd7/74:158\"",
+                "truncated": false
+              },
+              "expected": {
+                "text": "\"VariableID:c8ba6328373a5250862153929995a6d7ea75cef4/74:165\"",
+                "truncated": false
+              }
+            },
+            {
+              "id": "2190:3244",
+              "path": "/values/boundVariables/fills/0/id",
+              "pathTruncated": false,
+              "actual": {
+                "text": "\"VariableID:644bf09a480c19da598b2984cbae00eb9c111dd7/74:158\"",
+                "truncated": false
+              },
+              "expected": {
+                "text": "\"VariableID:c8ba6328373a5250862153929995a6d7ea75cef4/74:165\"",
+                "truncated": false
+              }
+            }
+          ],
+          "omittedDifferences": 5
+        },
+        "assertions": {
+          "checked": 32,
+          "failed": 0,
+          "checks": [
+            {
+              "name": "01 · Vitals · Table native UI",
+              "passed": true
+            },
+            {
+              "name": "01 · Vitals · Table product font",
+              "passed": true
+            },
+            {
+              "name": "01 · Vitals · Table bounds",
+              "passed": true
+            },
+            {
+              "name": "02 · Vitals · Compact chart native UI",
+              "passed": true
+            },
+            {
+              "name": "02 · Vitals · Compact chart product font",
+              "passed": true
+            },
+            {
+              "name": "02 · Vitals · Compact chart bounds",
+              "passed": true
+            },
+            {
+              "name": "03 · Vitals · Expanded charts native UI",
+              "passed": true
+            },
+            {
+              "name": "03 · Vitals · Expanded charts product font",
+              "passed": true
+            },
+            {
+              "name": "03 · Vitals · Expanded charts bounds",
+              "passed": true
+            },
+            {
+              "name": "04 · Vitals · Saved value detail native UI",
+              "passed": true
+            },
+            {
+              "name": "04 · Vitals · Saved value detail product font",
+              "passed": true
+            },
+            {
+              "name": "04 · Vitals · Saved value detail bounds",
+              "passed": true
+            },
+            {
+              "name": "05 · Vitals · Chart value detail native UI",
+              "passed": true
+            },
+            {
+              "name": "05 · Vitals · Chart value detail product font",
+              "passed": true
+            },
+            {
+              "name": "05 · Vitals · Chart value detail bounds",
+              "passed": true
+            },
+            {
+              "name": "06 · Vitals · Expanded chart value detail native UI",
+              "passed": true
+            },
+            {
+              "name": "06 · Vitals · Expanded chart value detail product font",
+              "passed": true
+            },
+            {
+              "name": "06 · Vitals · Expanded chart value detail bounds",
+              "passed": true
+            },
+            {
+              "name": "07 · Corrected value · Table native UI",
+              "passed": true
+            },
+            {
+              "name": "07 · Corrected value · Table product font",
+              "passed": true
+            },
+            {
+              "name": "07 · Corrected value · Table bounds",
+              "passed": true
+            },
+            {
+              "name": "08 · Corrected value · History native UI",
+              "passed": true
+            },
+            {
+              "name": "08 · Corrected value · History product font",
+              "passed": true
+            },
+            {
+              "name": "08 · Corrected value · History bounds",
+              "passed": true
+            },
+            {
+              "name": "09 · Excluded value · Table native UI",
+              "passed": true
+            },
+            {
+              "name": "09 · Excluded value · Table product font",
+              "passed": true
+            },
+            {
+              "name": "09 · Excluded value · Table bounds",
+              "passed": true
+            },
+            {
+              "name": "10 · Excluded value · History native UI",
+              "passed": true
+            },
+            {
+              "name": "10 · Excluded value · History product font",
+              "passed": true
+            },
+            {
+              "name": "10 · Excluded value · History bounds",
+              "passed": true
+            }
+          ],
+          "omittedChecks": 2,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      },
+      "prototypePlayback": "Not performed; stored wiring and rendered screens verified"
+    }
+  ],
+  "build": [
+    {
+      "pageId": "2190:3121",
+      "pageName": "Flowsheets · Prototype",
+      "frames": [
+        {
+          "id": "2190:3122",
+          "name": "01 · Vitals · Table",
+          "contentId": "2190:3123",
+          "sourceId": "2074:2019",
+          "x": 160,
+          "y": 240,
+          "w": 1120,
+          "h": 1042
+        },
+        {
+          "id": "2190:3255",
+          "name": "02 · Vitals · Compact chart",
+          "contentId": "2190:3256",
+          "sourceId": "2074:2413",
+          "x": 1440,
+          "y": 240,
+          "w": 1120,
+          "h": 1042
+        },
+        {
+          "id": "2190:3486",
+          "name": "03 · Vitals · Expanded charts",
+          "contentId": "2190:3487",
+          "sourceId": "2074:6422",
+          "x": 2720,
+          "y": 240,
+          "w": 1120,
+          "h": 1042
+        },
+        {
+          "id": "2190:3841",
+          "name": "04 · Vitals · Saved value detail",
+          "contentId": "2190:3842",
+          "sourceId": "2074:297",
+          "x": 4000,
+          "y": 240,
+          "w": 1120,
+          "h": 1042
+        },
+        {
+          "id": "2190:3995",
+          "name": "05 · Corrected value · Table",
+          "contentId": "2190:3996",
+          "sourceId": "2074:654",
+          "x": 160,
+          "y": 1482,
+          "w": 1120,
+          "h": 1042
+        },
+        {
+          "id": "2190:4141",
+          "name": "06 · Corrected value · History",
+          "contentId": "2190:4142",
+          "sourceId": "2074:654",
+          "x": 1440,
+          "y": 1482,
+          "w": 1120,
+          "h": 1042
+        },
+        {
+          "id": "2190:4287",
+          "name": "07 · Excluded value · Table",
+          "contentId": "2190:4288",
+          "sourceId": "2074:1002",
+          "x": 2720,
+          "y": 1482,
+          "w": 1120,
+          "h": 1042
+        },
+        {
+          "id": "2190:4430",
+          "name": "08 · Excluded value · History",
+          "contentId": "2190:4431",
+          "sourceId": "2074:1002",
+          "x": 4000,
+          "y": 1482,
+          "w": 1120,
+          "h": 1042
+        }
+      ],
+      "links": [
+        {
+          "sourceId": "2190:3245",
+          "destinationId": "2190:3255",
+          "label": "Chart"
+        },
+        {
+          "sourceId": "2190:3148",
+          "destinationId": "2190:3841",
+          "label": "Open saved blood-pressure value"
+        },
+        {
+          "sourceId": "2190:3442",
+          "destinationId": "2190:3122",
+          "label": "Table"
+        },
+        {
+          "sourceId": "2190:3449",
+          "destinationId": "2190:3486",
+          "label": "Expand all"
+        },
+        {
+          "sourceId": "2190:3287",
+          "destinationId": "2190:3841",
+          "label": "Open saved blood-pressure value"
+        },
+        {
+          "sourceId": "2190:3612",
+          "destinationId": "2190:3122",
+          "label": "Table"
+        },
+        {
+          "sourceId": "2190:3613",
+          "destinationId": "2190:3255",
+          "label": "Chart"
+        },
+        {
+          "sourceId": "2190:3619",
+          "destinationId": "2190:3255",
+          "label": "Collapse all"
+        },
+        {
+          "sourceId": "2190:3652",
+          "destinationId": "2190:3841",
+          "label": "Open saved blood-pressure value"
+        },
+        {
+          "sourceId": "2190:3963",
+          "destinationId": "2190:3122",
+          "label": "Table"
+        },
+        {
+          "sourceId": "2190:3964",
+          "destinationId": "2190:3255",
+          "label": "Chart"
+        },
+        {
+          "sourceId": "2190:3989",
+          "destinationId": "2190:3122",
+          "label": "Close saved value"
+        },
+        {
+          "sourceId": "2190:4021",
+          "destinationId": "2190:4141",
+          "label": "Open correction history"
+        },
+        {
+          "sourceId": "2190:4276",
+          "destinationId": "2190:3995",
+          "label": "Close correction history"
+        },
+        {
+          "sourceId": "2190:4419",
+          "destinationId": "2190:4430",
+          "label": "View excluded value history"
+        },
+        {
+          "sourceId": "2190:5079",
+          "destinationId": "2190:4287",
+          "label": "Close excluded history"
+        },
+        {
+          "sourceId": "2190:4562",
+          "destinationId": "2190:4287",
+          "label": "Toggle excluded history closed"
+        }
+      ],
+      "clearedInheritedReactionNodes": 0,
+      "newCloseControlId": "2190:5079",
+      "sourcePagesPreserved": true,
+      "scope": "Initial read-only Phase 1 prototype; date presets, selector, row filtering and source error states are not wired in this pass."
+    }
+  ],
+  "contextFix": [
+    {
+      "createdNodeIds": [
+        "2191:438",
+        "2191:439",
+        "2191:669",
+        "2191:690",
+        "2191:691",
+        "2191:1045"
+      ],
+      "extraFrames": [
+        {
+          "id": "2191:438",
+          "name": "05 · Vitals · Chart value detail"
+        },
+        {
+          "id": "2191:690",
+          "name": "06 · Vitals · Expanded chart value detail"
+        }
+      ],
+      "links": [
+        {
+          "sourceId": "2190:3287",
+          "destinationId": "2191:438",
+          "label": "Open chart value in chart context"
+        },
+        {
+          "sourceId": "2190:3652",
+          "destinationId": "2191:690",
+          "label": "Open expanded chart value in chart context"
+        },
+        {
+          "sourceId": "2191:684",
+          "destinationId": "2190:3255",
+          "label": "Return to originating chart"
+        },
+        {
+          "sourceId": "2191:625",
+          "destinationId": "2190:3122",
+          "label": "Table"
+        },
+        {
+          "sourceId": "2191:626",
+          "destinationId": "2190:3255",
+          "label": "Chart"
+        },
+        {
+          "sourceId": "2191:1060",
+          "destinationId": "2190:3486",
+          "label": "Return to originating chart"
+        },
+        {
+          "sourceId": "2191:816",
+          "destinationId": "2190:3122",
+          "label": "Table"
+        },
+        {
+          "sourceId": "2191:817",
+          "destinationId": "2190:3255",
+          "label": "Chart"
+        }
+      ],
+      "allFrameIds": [
+        "2190:3122",
+        "2190:3255",
+        "2190:3486",
+        "2190:3841",
+        "2191:438",
+        "2191:690",
+        "2190:3995",
+        "2190:4141",
+        "2190:4287",
+        "2190:4430"
+      ],
+      "reason": "Chart values retain compact or expanded chart context; closing returns to that same chart."
+    }
+  ],
+  "auditInterpretation": "32/32 measured assertions pass. Four of six primitive comparisons match. Two selected segments retain the source action.selected fill override because the published segment has no selected axis. This is an inherited composition choice, not an unreported DS change.",
+  "recovery": [
+    "Loaded current Figma20 skill after cached19 path was absent.",
+    "Initial construction rolled back on unloaded clone fonts; retried after loading actual source fonts.",
+    "Cross-page clone in follow-up unavailable; used equivalent native copies on the prototype page.",
+    "Corrected chart popover stacking/paint and hid the prior expanded-chart hover tooltip. A getVar-based paint update rendered black; restored the exact source paint including variable binding. Final screenshots pass."
+  ],
+  "savedScreenshots": [
+    "table.png",
+    "chart-value.png",
+    "correction-history.png",
+    "excluded-history.png"
+  ],
+  "time": "Not a benchmark; initial checkpoint times were not captured."
+}

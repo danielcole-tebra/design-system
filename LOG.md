@@ -4769,3 +4769,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-16 — Medlist evolution walkthrough in FigJam
 - File: 9d3G2ipIFbZk4YSQLgukOE. Added a concise six-decision walkthrough to the user-linked empty Drawer concept page17:31, with eight actual 2x screenshots and eleven source/research links.
 - Evidence: runs/2026-11-16-medlist-evolution-walkthrough/REPORT.md, record.json, 01-original.png, 02-separate-reconciliation.png, 03-structured-regimen.png, 04-current-list.png, 05-details-drawer.png, 06a-edit-prescription.png, 06b-review-prescription.png, 06c-edit-chart.png, board-overview.png, clinical-table-story.png, drawer-story.png, editing-story.png.
+
+## 2026-11-18 — Flowsheets prototype first pass
+- File: Flowsheets27 `IgfgyXsw7FSxQQugnG5gtc`. Created Flowsheets · Prototype page `2190:3121` with ten visible native stages and23 stored navigation links. Covers table/chart, expanded charts, context-preserving saved values, and separate corrected/excluded history examples. Source Phase1 No Editing designs preserved.
+- Verification: all ten screens visually inspected;32 measured assertions pass, no image-filled UI, all text Akkurat LL. Two selected segment fill overrides are inherited from source. Date/selector/filter/error-state interactions remain next-pass scope; no editing or playback claimed.
+- Evidence: runs/2026-11-18-flowsheets-prototype/REPORT.md, record.json, build.js, context.js, visual-fix.js, paint-fix.js, verify.js and four inspected PNGs.
