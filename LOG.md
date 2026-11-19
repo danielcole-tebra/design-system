@@ -4784,3 +4784,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - File: Flowsheets27 `IgfgyXsw7FSxQQugnG5gtc`, section2211:3164. Added table and chart examples at768,480 and390 px. Tables use horizontal-scroll viewports; narrow chart rows stack trends below labels/latest values. Original designs preserved.
 - Verification: six layouts inspected;150 linked DS table cells, Akkurat LL throughout, no image-filled UI; scroll bounds read back. Published fixed-row limitation unchanged. No playback claim.
 - Evidence: runs/2026-11-18-flowsheets-small-viewports/REPORT.md, record.json, build.js, refine.js, scroll-fix.js, verify.js, viewports.png, narrow-table.png.
+
+## 2026-11-18 — Alpha · Flowsheets encounter prototype
+- File: SDE Alpha Prototypes `ViAWRVVtgkCXzItk0sQ5P0`. Duplicated Updated 11/16 to page1437:115043, Flowsheets · Updated 11/16. Added on-canvas Flowsheets to all seven encounter states plus three full-context chart/detail examples. Six reusable local module variants wire Table/Chart, Expand/Collapse, saved-value details and Close/Reopen.
+- Verification: seven691×868 mounts,100 linked DS table cells in the two table variants, Akkurat LL, no image-filled module UI; four complete encounter views inspected. Twenty lifecycle navigation nodes remapped; two local cancel-button hotspots preserve the new-page destination. DS fixed-row limitation carried forward. Selectors/filtering remain static; no playback claim. Originals preserved.
+- Evidence: runs/2026-11-18-alpha-flowsheets/REPORT.md, record.json, creation/transfer/integration/refinement scripts, verify.js and four inspected PNGs.

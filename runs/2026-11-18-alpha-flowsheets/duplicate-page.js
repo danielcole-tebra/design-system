@@ -1,0 +1,1 @@
+const source=await figma.getNodeByIdAsync('1319:4655');const page=$fig.page({name:'Flowsheets · Updated 11/16'});const copies=source.children.map(n=>({source:n.id,p:$fig.get(n.id).clone()}));for(const c of copies)page.append(c.p);await $fig.done();return {page:page.node.id,copies:copies.map(c=>({source:c.source,id:c.p.node.id,name:c.p.node.name})),sourcePage:source.id};
