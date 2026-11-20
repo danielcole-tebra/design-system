@@ -1,0 +1,5203 @@
+{
+  "fileKey": "zKT34LQogNjz3Z07fY4VQB",
+  "date": "2026-11-19",
+  "sourceCommit": "58f5d42b7a17fdeabfce3d2897dc0567333a48b3",
+  "scope": "Read-only Figma and source snapshot review; no canvas mutations or interaction playback.",
+  "header": [
+    {
+      "id": "12:755",
+      "name": "Allergies=Severe",
+      "type": "COMPONENT",
+      "parent": {
+        "id": "12:773",
+        "name": "Patient header"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "12:88",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "12:89",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 471,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "12:108",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 559,
+          "y": 10,
+          "width": 325,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "texts": [
+        {
+          "id": "I12:88;208:7",
+          "name": "Letter",
+          "text": "DW",
+          "visible": true,
+          "w": 31,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:91",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:92",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": true,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:94",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:97",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:98",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:99",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:100",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:102",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:103",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:104",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:105",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:106",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:107",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:124",
+          "name": "Severe label",
+          "text": "Severe:",
+          "visible": true,
+          "w": 50,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:125",
+          "name": "Severe allergens",
+          "text": "egg, poison ivy extract",
+          "visible": true,
+          "w": 146,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I12:126;171:34",
+          "name": "Label",
+          "text": "View all (13)",
+          "visible": true,
+          "w": 85,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:116",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:117",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "12:759",
+      "name": "Allergies=MildOnly",
+      "type": "COMPONENT",
+      "parent": {
+        "id": "12:773",
+        "name": "Patient header"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "12:244",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "12:245",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 583,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "12:264",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 671,
+          "y": 10,
+          "width": 213,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "texts": [
+        {
+          "id": "I12:244;208:7",
+          "name": "Letter",
+          "text": "DW",
+          "visible": true,
+          "w": 31,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:247",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:248",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": true,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:250",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:253",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:254",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:255",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:256",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:258",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:259",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:260",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:261",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:262",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:263",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:277",
+          "name": "Allergy status",
+          "text": "No severe allergies",
+          "visible": true,
+          "w": 123,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I12:278;171:34",
+          "name": "Label",
+          "text": "View all (4)",
+          "visible": true,
+          "w": 78,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:272",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:273",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "12:763",
+      "name": "Allergies=NoneKnown",
+      "type": "COMPONENT",
+      "parent": {
+        "id": "12:773",
+        "name": "Patient header"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "12:388",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "12:389",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 673,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "12:408",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 761,
+          "y": 10,
+          "width": 123,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "texts": [
+        {
+          "id": "I12:388;208:7",
+          "name": "Letter",
+          "text": "DW",
+          "visible": true,
+          "w": 31,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:391",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:392",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": true,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:394",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:397",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:398",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:399",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:400",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:402",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:403",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:404",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:405",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:406",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:407",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:421",
+          "name": "Allergy status",
+          "text": "No known allergies",
+          "visible": true,
+          "w": 123,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:416",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:417",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "12:767",
+      "name": "Allergies=NotDocumented",
+      "type": "COMPONENT",
+      "parent": {
+        "id": "12:773",
+        "name": "Patient header"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "12:528",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "12:529",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 592,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "12:548",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 680,
+          "y": 10,
+          "width": 204,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "texts": [
+        {
+          "id": "I12:528;208:7",
+          "name": "Letter",
+          "text": "DW",
+          "visible": true,
+          "w": 31,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:531",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:532",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": true,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:534",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:537",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:538",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:539",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:540",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:542",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:543",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:544",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:545",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:546",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:547",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:561",
+          "name": "Allergy status",
+          "text": "Allergy history not documented",
+          "visible": true,
+          "w": 204,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:556",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:557",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "12:771",
+      "name": "Allergies=Error",
+      "type": "COMPONENT",
+      "parent": {
+        "id": "12:773",
+        "name": "Patient header"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "12:676",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "12:677",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 578,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "12:696",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 666,
+          "y": 10,
+          "width": 218,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "texts": [
+        {
+          "id": "I12:676;208:7",
+          "name": "Letter",
+          "text": "DW",
+          "visible": true,
+          "w": 31,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:679",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:680",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": true,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:682",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:685",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:686",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:687",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:688",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:690",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:691",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:692",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:693",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:694",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:695",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:711",
+          "name": "Allergy status",
+          "text": "Allergies unavailable",
+          "visible": true,
+          "w": 137,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I12:712;171:34",
+          "name": "Label",
+          "text": "Retry",
+          "visible": true,
+          "w": 41,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:704",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "12:705",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "27:12",
+      "name": "1 Dana Whitfield, severe allergies",
+      "type": "INSTANCE",
+      "parent": {
+        "id": "14:75",
+        "name": "Examples"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "I27:12;12:88",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "I27:12;12:89",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 471,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "I27:12;12:108",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 559,
+          "y": 10,
+          "width": 325,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "props": {
+        "Restricted#26:0": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Legal name differs#12:231": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Age#12:105": {
+          "type": "TEXT",
+          "value": "(23 y/o)"
+        },
+        "Show pronouns#12:210": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Balance amount#12:189": {
+          "type": "TEXT",
+          "value": "$0.00"
+        },
+        "Pronouns#12:21": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Severe allergens#12:168": {
+          "type": "TEXT",
+          "value": "egg, poison ivy extract"
+        },
+        "Legal name#12:42": {
+          "type": "TEXT",
+          "value": "Legal name: Amy Foreman"
+        },
+        "MRN#12:147": {
+          "type": "TEXT",
+          "value": "MRN: 08262025-01"
+        },
+        "DOB#12:84": {
+          "type": "TEXT",
+          "value": "26 Aug 2002"
+        },
+        "Sex#12:63": {
+          "type": "TEXT",
+          "value": "Female"
+        },
+        "Phone#12:126": {
+          "type": "TEXT",
+          "value": "(555) 555-2025"
+        },
+        "Preferred name#12:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Allergies": {
+          "value": "Severe",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "texts": [
+        {
+          "id": "I27:12;12:88;208:7",
+          "name": "Letter",
+          "text": "DW",
+          "visible": true,
+          "w": 31,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:91",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:92",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": false,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:94",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:97",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:98",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:99",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:100",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:102",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:103",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:104",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:105",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:106",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:107",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:124",
+          "name": "Severe label",
+          "text": "Severe:",
+          "visible": true,
+          "w": 50,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:125",
+          "name": "Severe allergens",
+          "text": "egg, poison ivy extract",
+          "visible": true,
+          "w": 146,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:126;171:34",
+          "name": "Label",
+          "text": "View all (13)",
+          "visible": true,
+          "w": 85,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:116",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:12;12:117",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "27:73",
+      "name": "2 Aaron Foreman, restricted, legal name differs",
+      "type": "INSTANCE",
+      "parent": {
+        "id": "14:75",
+        "name": "Examples"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "I27:73;12:388",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "I27:73;12:389",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 673,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "I27:73;12:408",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 761,
+          "y": 10,
+          "width": 123,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "props": {
+        "Age#12:105": {
+          "type": "TEXT",
+          "value": "(29 y/o)"
+        },
+        "Show pronouns#12:210": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "MRN#12:147": {
+          "type": "TEXT",
+          "value": "MRN: 08011994-01"
+        },
+        "Severe allergens#12:168": {
+          "type": "TEXT",
+          "value": "egg, poison ivy extract"
+        },
+        "Restricted#26:0": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Legal name differs#12:231": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "DOB#12:84": {
+          "type": "TEXT",
+          "value": "01 Aug 1994"
+        },
+        "Sex#12:63": {
+          "type": "TEXT",
+          "value": "Female"
+        },
+        "Balance amount#12:189": {
+          "type": "TEXT",
+          "value": "$124.50"
+        },
+        "Pronouns#12:21": {
+          "type": "TEXT",
+          "value": "(he/him)"
+        },
+        "Phone#12:126": {
+          "type": "TEXT",
+          "value": "(850) 747-1632"
+        },
+        "Legal name#12:42": {
+          "type": "TEXT",
+          "value": "Legal name: Amy Foreman"
+        },
+        "Preferred name#12:0": {
+          "type": "TEXT",
+          "value": "Aaron Foreman"
+        },
+        "Allergies": {
+          "value": "NoneKnown",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "texts": [
+        {
+          "id": "I27:73;12:388;208:7",
+          "name": "Letter",
+          "text": "AF",
+          "visible": true,
+          "w": 25,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:391",
+          "name": "Preferred name",
+          "text": "Aaron Foreman",
+          "visible": true,
+          "w": 144,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:392",
+          "name": "Pronouns",
+          "text": "(he/him)",
+          "visible": true,
+          "w": 55,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:394",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": true,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:397",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": true,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:398",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:399",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:400",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:402",
+          "name": "DOB",
+          "text": "01 Aug 1994",
+          "visible": true,
+          "w": 76,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:403",
+          "name": "Age",
+          "text": "(29 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:404",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:405",
+          "name": "Phone",
+          "text": "(850) 747-1632",
+          "visible": true,
+          "w": 91,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:406",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:407",
+          "name": "MRN",
+          "text": "MRN: 08011994-01",
+          "visible": true,
+          "w": 119,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:421",
+          "name": "Allergy status",
+          "text": "No known allergies",
+          "visible": true,
+          "w": 123,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:416",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:73;12:417",
+          "name": "Balance value",
+          "text": "$124.50",
+          "visible": true,
+          "w": 51,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "27:128",
+      "name": "3 Dana Whitfield, error state",
+      "type": "INSTANCE",
+      "parent": {
+        "id": "14:75",
+        "name": "Examples"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "I27:128;12:676",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "I27:128;12:677",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 578,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "I27:128;12:696",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 666,
+          "y": 10,
+          "width": 218,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "props": {
+        "Severe allergens#12:168": {
+          "type": "TEXT",
+          "value": "egg, poison ivy extract"
+        },
+        "Show pronouns#12:210": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Balance amount#12:189": {
+          "type": "TEXT",
+          "value": "$0.00"
+        },
+        "MRN#12:147": {
+          "type": "TEXT",
+          "value": "MRN: 08262025-01"
+        },
+        "Legal name differs#12:231": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Restricted#26:0": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Phone#12:126": {
+          "type": "TEXT",
+          "value": "(555) 555-2025"
+        },
+        "Age#12:105": {
+          "type": "TEXT",
+          "value": "(23 y/o)"
+        },
+        "Sex#12:63": {
+          "type": "TEXT",
+          "value": "Female"
+        },
+        "Pronouns#12:21": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Legal name#12:42": {
+          "type": "TEXT",
+          "value": "Legal name: Amy Foreman"
+        },
+        "DOB#12:84": {
+          "type": "TEXT",
+          "value": "26 Aug 2002"
+        },
+        "Preferred name#12:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Allergies": {
+          "value": "Error",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "texts": [
+        {
+          "id": "I27:128;12:676;208:7",
+          "name": "Letter",
+          "text": "DW",
+          "visible": true,
+          "w": 31,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:679",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:680",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": false,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:682",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:685",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:686",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:687",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:688",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:690",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:691",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:692",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:693",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:694",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:695",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:711",
+          "name": "Allergy status",
+          "text": "Allergies unavailable",
+          "visible": true,
+          "w": 137,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:712;171:34",
+          "name": "Label",
+          "text": "Retry",
+          "visible": true,
+          "w": 41,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:704",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:128;12:705",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "27:184",
+      "name": "4 Dana Whitfield, photo state (placeholder, library has no image state)",
+      "type": "INSTANCE",
+      "parent": {
+        "id": "14:75",
+        "name": "Examples"
+      },
+      "width": 900,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "I27:184;12:88",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "I27:184;12:89",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 471,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "I27:184;12:108",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 559,
+          "y": 10,
+          "width": 325,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "props": {
+        "Restricted#26:0": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Legal name differs#12:231": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Age#12:105": {
+          "type": "TEXT",
+          "value": "(23 y/o)"
+        },
+        "Show pronouns#12:210": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Balance amount#12:189": {
+          "type": "TEXT",
+          "value": "$0.00"
+        },
+        "Pronouns#12:21": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Severe allergens#12:168": {
+          "type": "TEXT",
+          "value": "egg, poison ivy extract"
+        },
+        "Legal name#12:42": {
+          "type": "TEXT",
+          "value": "Legal name: Amy Foreman"
+        },
+        "MRN#12:147": {
+          "type": "TEXT",
+          "value": "MRN: 08262025-01"
+        },
+        "DOB#12:84": {
+          "type": "TEXT",
+          "value": "26 Aug 2002"
+        },
+        "Sex#12:63": {
+          "type": "TEXT",
+          "value": "Female"
+        },
+        "Phone#12:126": {
+          "type": "TEXT",
+          "value": "(555) 555-2025"
+        },
+        "Preferred name#12:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Allergies": {
+          "value": "Severe",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "texts": [
+        {
+          "id": "I27:184;12:91",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:92",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": false,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:94",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:97",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:98",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:99",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:100",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:102",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:103",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:104",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:105",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:106",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:107",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:124",
+          "name": "Severe label",
+          "text": "Severe:",
+          "visible": true,
+          "w": 50,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:125",
+          "name": "Severe allergens",
+          "text": "egg, poison ivy extract",
+          "visible": true,
+          "w": 146,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:126;171:34",
+          "name": "Label",
+          "text": "View all (13)",
+          "visible": true,
+          "w": 85,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:116",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I27:184;12:117",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "31:336",
+      "name": "Patient header",
+      "type": "INSTANCE",
+      "parent": {
+        "id": "31:335",
+        "name": "Content region"
+      },
+      "width": 1184,
+      "height": 72,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "I31:336;12:88",
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 40,
+          "height": 40,
+          "visible": true
+        },
+        {
+          "id": "I31:336;12:89",
+          "name": "Identity",
+          "type": "FRAME",
+          "x": 72,
+          "y": 10,
+          "width": 755,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "id": "I31:336;12:108",
+          "name": "Safety",
+          "type": "FRAME",
+          "x": 843,
+          "y": 10,
+          "width": 325,
+          "height": 52,
+          "visible": true
+        }
+      ],
+      "props": {
+        "Restricted#26:0": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Legal name differs#12:231": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Age#12:105": {
+          "type": "TEXT",
+          "value": "(23 y/o)"
+        },
+        "Show pronouns#12:210": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Balance amount#12:189": {
+          "type": "TEXT",
+          "value": "$0.00"
+        },
+        "Pronouns#12:21": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Severe allergens#12:168": {
+          "type": "TEXT",
+          "value": "egg, poison ivy extract"
+        },
+        "Legal name#12:42": {
+          "type": "TEXT",
+          "value": "Legal name: Amy Foreman"
+        },
+        "MRN#12:147": {
+          "type": "TEXT",
+          "value": "MRN: 08262025-01"
+        },
+        "DOB#12:84": {
+          "type": "TEXT",
+          "value": "26 Aug 2002"
+        },
+        "Sex#12:63": {
+          "type": "TEXT",
+          "value": "Female"
+        },
+        "Phone#12:126": {
+          "type": "TEXT",
+          "value": "(555) 555-2025"
+        },
+        "Preferred name#12:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Allergies": {
+          "value": "Severe",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "texts": [
+        {
+          "id": "I31:336;12:88;208:7",
+          "name": "Letter",
+          "text": "DW",
+          "visible": true,
+          "w": 31,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:91",
+          "name": "Preferred name",
+          "text": "Dana Whitfield",
+          "visible": true,
+          "w": 139,
+          "h": 32,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:92",
+          "name": "Pronouns",
+          "text": "(she/her)",
+          "visible": true,
+          "w": 59,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:94",
+          "name": "Restriction",
+          "text": "Restricted",
+          "visible": false,
+          "w": 70,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:97",
+          "name": "Legal name",
+          "text": "Legal name: Amy Foreman",
+          "visible": false,
+          "w": 170,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:98",
+          "name": "Bullet",
+          "text": "•",
+          "visible": false,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:99",
+          "name": "Sex",
+          "text": "Female",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:100",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:102",
+          "name": "DOB",
+          "text": "26 Aug 2002",
+          "visible": true,
+          "w": 80,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:103",
+          "name": "Age",
+          "text": "(23 y/o)",
+          "visible": true,
+          "w": 48,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:104",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:105",
+          "name": "Phone",
+          "text": "(555) 555-2025",
+          "visible": true,
+          "w": 96,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:106",
+          "name": "Bullet",
+          "text": "•",
+          "visible": true,
+          "w": 6,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:107",
+          "name": "MRN",
+          "text": "MRN: 08262025-01",
+          "visible": true,
+          "w": 122,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:124",
+          "name": "Severe label",
+          "text": "Severe:",
+          "visible": true,
+          "w": 50,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:125",
+          "name": "Severe allergens",
+          "text": "egg, poison ivy extract",
+          "visible": true,
+          "w": 146,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:126;171:34",
+          "name": "Label",
+          "text": "View all (13)",
+          "visible": true,
+          "w": 85,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:116",
+          "name": "Balance label",
+          "text": "Balance",
+          "visible": true,
+          "w": 53,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I31:336;12:117",
+          "name": "Balance value",
+          "text": "$0.00",
+          "visible": true,
+          "w": 38,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    },
+    {
+      "id": "46:196",
+      "name": "Patient action row",
+      "type": "INSTANCE",
+      "parent": {
+        "id": "31:335",
+        "name": "Content region"
+      },
+      "width": 1184,
+      "height": 56,
+      "minWidth": 900,
+      "clipsContent": true,
+      "layoutMode": "HORIZONTAL",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "children": [
+        {
+          "id": "I46:196;45:485",
+          "name": "Actions",
+          "type": "FRAME",
+          "x": 16,
+          "y": 10,
+          "width": 541,
+          "height": 36,
+          "visible": true
+        },
+        {
+          "id": "I46:196;45:530",
+          "name": "More",
+          "type": "INSTANCE",
+          "x": 1089,
+          "y": 10,
+          "width": 79,
+          "height": 36,
+          "visible": true
+        }
+      ],
+      "props": {},
+      "texts": [
+        {
+          "id": "I46:196;45:487;160:174",
+          "name": "Label",
+          "text": "New Note",
+          "visible": true,
+          "w": 64,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I46:196;45:497;160:188",
+          "name": "Label",
+          "text": "",
+          "visible": true,
+          "w": 0,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I46:196;45:506;78:4",
+          "name": "Label",
+          "text": "AI Note Assist",
+          "visible": true,
+          "w": 91,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I46:196;45:514;78:112",
+          "name": "Label",
+          "text": "Collect Payment ($0.00)",
+          "visible": true,
+          "w": 156,
+          "h": 20,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I46:196;45:522;78:124",
+          "name": "Label",
+          "text": "Print",
+          "visible": true,
+          "w": 37,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        },
+        {
+          "id": "I46:196;45:530;78:124",
+          "name": "Label",
+          "text": "More",
+          "visible": true,
+          "w": 39,
+          "h": 24,
+          "truncation": "DISABLED",
+          "maxLines": null
+        }
+      ],
+      "reactions": [],
+      "hyperlinks": []
+    }
+  ],
+  "layout": [
+    {
+      "result": [
+        {
+          "id": "12:755",
+          "name": "Allergies=Severe",
+          "w": 900,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FIXED",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "12:89",
+              "name": "Identity",
+              "w": 471,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:90",
+              "name": "Line 1",
+              "w": 206,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "12:93",
+              "name": "Restriction wrap",
+              "w": 78,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 1
+            },
+            {
+              "id": "12:95",
+              "name": "Line 2",
+              "w": 464,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "12:96",
+              "name": "Legal name group",
+              "w": 184,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:101",
+              "name": "DOB group",
+              "w": 132,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:108",
+              "name": "Safety",
+              "w": 325,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:109",
+              "name": "Allergy row",
+              "w": 325,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 12,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "12:123",
+              "name": "Severe group",
+              "w": 200,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:115",
+              "name": "Balance row",
+              "w": 95,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 2
+            }
+          ],
+          "textCount": 19,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I12:88;208:7",
+              "name": "Letter",
+              "text": "DW"
+            },
+            {
+              "id": "I12:126;171:34",
+              "name": "Label",
+              "text": "View all (13)"
+            }
+          ]
+        },
+        {
+          "id": "12:759",
+          "name": "Allergies=MildOnly",
+          "w": 900,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FIXED",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "12:245",
+              "name": "Identity",
+              "w": 583,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:246",
+              "name": "Line 1",
+              "w": 206,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "12:249",
+              "name": "Restriction wrap",
+              "w": 78,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 1
+            },
+            {
+              "id": "12:251",
+              "name": "Line 2",
+              "w": 464,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "12:252",
+              "name": "Legal name group",
+              "w": 184,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:257",
+              "name": "DOB group",
+              "w": 132,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:264",
+              "name": "Safety",
+              "w": 213,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:265",
+              "name": "Allergy row",
+              "w": 213,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 12,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 2
+            },
+            {
+              "id": "12:271",
+              "name": "Balance row",
+              "w": 95,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 2
+            }
+          ],
+          "textCount": 18,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I12:244;208:7",
+              "name": "Letter",
+              "text": "DW"
+            },
+            {
+              "id": "I12:278;171:34",
+              "name": "Label",
+              "text": "View all (4)"
+            }
+          ]
+        },
+        {
+          "id": "12:763",
+          "name": "Allergies=NoneKnown",
+          "w": 900,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FIXED",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "12:389",
+              "name": "Identity",
+              "w": 673,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:390",
+              "name": "Line 1",
+              "w": 206,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "12:393",
+              "name": "Restriction wrap",
+              "w": 78,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 1
+            },
+            {
+              "id": "12:395",
+              "name": "Line 2",
+              "w": 464,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "12:396",
+              "name": "Legal name group",
+              "w": 184,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:401",
+              "name": "DOB group",
+              "w": 132,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:408",
+              "name": "Safety",
+              "w": 123,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:409",
+              "name": "Allergy row",
+              "w": 123,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 12,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 1
+            },
+            {
+              "id": "12:415",
+              "name": "Balance row",
+              "w": 95,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 2
+            }
+          ],
+          "textCount": 17,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I12:388;208:7",
+              "name": "Letter",
+              "text": "DW"
+            }
+          ]
+        },
+        {
+          "id": "12:767",
+          "name": "Allergies=NotDocumented",
+          "w": 900,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FIXED",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "12:529",
+              "name": "Identity",
+              "w": 592,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:530",
+              "name": "Line 1",
+              "w": 206,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "12:533",
+              "name": "Restriction wrap",
+              "w": 78,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 1
+            },
+            {
+              "id": "12:535",
+              "name": "Line 2",
+              "w": 464,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "12:536",
+              "name": "Legal name group",
+              "w": 184,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:541",
+              "name": "DOB group",
+              "w": 132,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:548",
+              "name": "Safety",
+              "w": 204,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:549",
+              "name": "Allergy row",
+              "w": 204,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 12,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 1
+            },
+            {
+              "id": "12:555",
+              "name": "Balance row",
+              "w": 95,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 2
+            }
+          ],
+          "textCount": 17,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I12:528;208:7",
+              "name": "Letter",
+              "text": "DW"
+            }
+          ]
+        },
+        {
+          "id": "12:771",
+          "name": "Allergies=Error",
+          "w": 900,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FIXED",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "12:677",
+              "name": "Identity",
+              "w": 578,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:678",
+              "name": "Line 1",
+              "w": 206,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "12:681",
+              "name": "Restriction wrap",
+              "w": 78,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 1
+            },
+            {
+              "id": "12:683",
+              "name": "Line 2",
+              "w": 464,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "12:684",
+              "name": "Legal name group",
+              "w": 184,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:689",
+              "name": "DOB group",
+              "w": 132,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:696",
+              "name": "Safety",
+              "w": 218,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "12:697",
+              "name": "Allergy row",
+              "w": 218,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 12,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "12:703",
+              "name": "Balance row",
+              "w": 95,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 4,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 2
+            }
+          ],
+          "textCount": 18,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I12:676;208:7",
+              "name": "Letter",
+              "text": "DW"
+            },
+            {
+              "id": "I12:712;171:34",
+              "name": "Label",
+              "text": "Retry"
+            }
+          ]
+        },
+        {
+          "id": "27:73",
+          "name": "2 Aaron Foreman, restricted, legal name differs",
+          "w": 900,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FIXED",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "I27:73;12:389",
+              "name": "Identity",
+              "w": 673,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "I27:73;12:390",
+              "name": "Line 1",
+              "w": 293,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "I27:73;12:395",
+              "name": "Line 2",
+              "w": 644,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "I27:73;12:408",
+              "name": "Safety",
+              "w": 123,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            }
+          ],
+          "textCount": 17,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I27:73;12:388;208:7",
+              "name": "Letter",
+              "text": "AF"
+            }
+          ]
+        },
+        {
+          "id": "45:537",
+          "name": "Patient action row",
+          "w": 900,
+          "h": 56,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FIXED",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 0,
+          "frames": [
+            {
+              "id": "45:485",
+              "name": "Actions",
+              "w": 541,
+              "h": 36,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 16,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 4
+            },
+            {
+              "id": "45:486",
+              "name": "New Note",
+              "w": 150,
+              "h": 30,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            }
+          ],
+          "textCount": 6,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I45:487;160:174",
+              "name": "Label",
+              "text": "New Note"
+            },
+            {
+              "id": "I45:497;160:188",
+              "name": "Label",
+              "text": ""
+            },
+            {
+              "id": "I45:506;78:4",
+              "name": "Label",
+              "text": "AI Note Assist"
+            },
+            {
+              "id": "I45:514;78:112",
+              "name": "Label",
+              "text": "Collect Payment ($0.00)"
+            },
+            {
+              "id": "I45:522;78:124",
+              "name": "Label",
+              "text": "Print"
+            },
+            {
+              "id": "I45:530;78:124",
+              "name": "Label",
+              "text": "More"
+            }
+          ]
+        },
+        {
+          "id": "31:335",
+          "name": "Content region",
+          "w": 1184,
+          "h": 896,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FIXED",
+          "layoutMode": "NONE",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": 0,
+          "frames": [
+            {
+              "id": "I31:336;12:89",
+              "name": "Identity",
+              "w": 755,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "I31:336;12:90",
+              "name": "Line 1",
+              "w": 206,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "I31:336;12:95",
+              "name": "Line 2",
+              "w": 464,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "I31:336;12:108",
+              "name": "Safety",
+              "w": 325,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "31:370",
+              "name": "Page content",
+              "w": 1184,
+              "h": 768,
+              "mode": "NONE",
+              "wrap": "NO_WRAP",
+              "clip": false,
+              "gap": 0,
+              "horizontal": "FIXED",
+              "vertical": "FIXED",
+              "childCount": 1
+            },
+            {
+              "id": "31:371",
+              "name": "Page content — empty by design",
+              "w": 1152,
+              "h": 792,
+              "mode": "NONE",
+              "wrap": "NO_WRAP",
+              "clip": false,
+              "gap": 0,
+              "horizontal": "FIXED",
+              "vertical": "FIXED",
+              "childCount": 0
+            }
+          ],
+          "textCount": 25,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I31:336;12:88;208:7",
+              "name": "Letter",
+              "text": "DW"
+            },
+            {
+              "id": "I31:336;12:126;171:34",
+              "name": "Label",
+              "text": "View all (13)"
+            },
+            {
+              "id": "I46:196;45:487;160:174",
+              "name": "Label",
+              "text": "New Note"
+            },
+            {
+              "id": "I46:196;45:497;160:188",
+              "name": "Label",
+              "text": ""
+            },
+            {
+              "id": "I46:196;45:506;78:4",
+              "name": "Label",
+              "text": "AI Note Assist"
+            },
+            {
+              "id": "I46:196;45:514;78:112",
+              "name": "Label",
+              "text": "Collect Payment ($0.00)"
+            },
+            {
+              "id": "I46:196;45:522;78:124",
+              "name": "Label",
+              "text": "Print"
+            },
+            {
+              "id": "I46:196;45:530;78:124",
+              "name": "Label",
+              "text": "More"
+            }
+          ]
+        },
+        {
+          "id": "168:306",
+          "name": "Patient header",
+          "w": 1440,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FILL",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "I168:306;12:89",
+              "name": "Identity",
+              "w": 1011,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "I168:306;12:90",
+              "name": "Line 1",
+              "w": 206,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "I168:306;12:95",
+              "name": "Line 2",
+              "w": 464,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "I168:306;12:108",
+              "name": "Safety",
+              "w": 325,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            }
+          ],
+          "textCount": 19,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I168:306;12:88;208:7",
+              "name": "Letter",
+              "text": "DW"
+            },
+            {
+              "id": "I168:306;12:126;171:34",
+              "name": "Label",
+              "text": "View all (13)"
+            }
+          ]
+        },
+        {
+          "id": "168:337",
+          "name": "Patient action row",
+          "w": 1440,
+          "h": 56,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FILL",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 0,
+          "frames": [],
+          "textCount": 6,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I168:337;45:487;160:174",
+              "name": "Label",
+              "text": "New Note"
+            },
+            {
+              "id": "I168:337;45:497;160:188",
+              "name": "Label",
+              "text": ""
+            },
+            {
+              "id": "I168:337;45:506;78:4",
+              "name": "Label",
+              "text": "AI Note Assist"
+            },
+            {
+              "id": "I168:337;45:514;78:112",
+              "name": "Label",
+              "text": "Collect Payment ($248.00)"
+            },
+            {
+              "id": "I168:337;45:522;78:124",
+              "name": "Label",
+              "text": "Print"
+            },
+            {
+              "id": "I168:337;45:530;78:124",
+              "name": "Label",
+              "text": "More"
+            }
+          ]
+        },
+        {
+          "id": "181:377",
+          "name": "Patient header",
+          "w": 1440,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FILL",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "I181:377;12:89",
+              "name": "Identity",
+              "w": 1011,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "I181:377;12:90",
+              "name": "Line 1",
+              "w": 206,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "I181:377;12:95",
+              "name": "Line 2",
+              "w": 464,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "I181:377;12:108",
+              "name": "Safety",
+              "w": 325,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            }
+          ],
+          "textCount": 19,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I181:377;12:88;208:7",
+              "name": "Letter",
+              "text": "DW"
+            },
+            {
+              "id": "I181:377;12:126;171:34",
+              "name": "Label",
+              "text": "View all (13)"
+            }
+          ]
+        },
+        {
+          "id": "181:378",
+          "name": "Patient action row",
+          "w": 1440,
+          "h": 56,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FILL",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 0,
+          "frames": [],
+          "textCount": 6,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I181:378;45:487;160:174",
+              "name": "Label",
+              "text": "New Note"
+            },
+            {
+              "id": "I181:378;45:497;160:188",
+              "name": "Label",
+              "text": ""
+            },
+            {
+              "id": "I181:378;45:506;78:4",
+              "name": "Label",
+              "text": "AI Note Assist"
+            },
+            {
+              "id": "I181:378;45:514;78:112",
+              "name": "Label",
+              "text": "Collect Payment ($248.00)"
+            },
+            {
+              "id": "I181:378;45:522;78:124",
+              "name": "Label",
+              "text": "Print"
+            },
+            {
+              "id": "I181:378;45:530;78:124",
+              "name": "Label",
+              "text": "More"
+            }
+          ]
+        },
+        {
+          "id": "220:983",
+          "name": "Patient header",
+          "w": 1440,
+          "h": 72,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FILL",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 16,
+          "frames": [
+            {
+              "id": "I220:983;12:89",
+              "name": "Identity",
+              "w": 1084,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "FILL",
+              "vertical": "HUG",
+              "childCount": 2
+            },
+            {
+              "id": "I220:983;12:90",
+              "name": "Line 1",
+              "w": 195,
+              "h": 32,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 3
+            },
+            {
+              "id": "I220:983;12:95",
+              "name": "Line 2",
+              "w": 457,
+              "h": 20,
+              "mode": "HORIZONTAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 8,
+              "horizontal": "HUG",
+              "vertical": "FIXED",
+              "childCount": 8
+            },
+            {
+              "id": "I220:983;12:108",
+              "name": "Safety",
+              "w": 252,
+              "h": 52,
+              "mode": "VERTICAL",
+              "wrap": "NO_WRAP",
+              "clip": true,
+              "gap": 0,
+              "horizontal": "HUG",
+              "vertical": "HUG",
+              "childCount": 2
+            }
+          ],
+          "textCount": 19,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I220:983;12:88;208:7",
+              "name": "Letter",
+              "text": "RD"
+            },
+            {
+              "id": "I220:983;12:126;171:34",
+              "name": "Label",
+              "text": "View all (2)"
+            }
+          ]
+        },
+        {
+          "id": "220:984",
+          "name": "Patient action row",
+          "w": 1440,
+          "h": 56,
+          "rootReactions": [],
+          "layoutSizingHorizontal": "FILL",
+          "layoutMode": "HORIZONTAL",
+          "padding": [
+            10,
+            16,
+            10,
+            16
+          ],
+          "gap": 0,
+          "frames": [],
+          "textCount": 6,
+          "unboundPaints": [],
+          "unstyledText": [
+            {
+              "id": "I220:984;45:487;160:174",
+              "name": "Label",
+              "text": "New Note"
+            },
+            {
+              "id": "I220:984;45:497;160:188",
+              "name": "Label",
+              "text": ""
+            },
+            {
+              "id": "I220:984;45:506;78:4",
+              "name": "Label",
+              "text": "AI Note Assist"
+            },
+            {
+              "id": "I220:984;45:514;78:112",
+              "name": "Label",
+              "text": "Collect Payment"
+            },
+            {
+              "id": "I220:984;45:522;78:124",
+              "name": "Label",
+              "text": "Print"
+            },
+            {
+              "id": "I220:984;45:530;78:124",
+              "name": "Label",
+              "text": "More"
+            }
+          ]
+        }
+      ],
+      "imports": [
+        {
+          "id": "12:88",
+          "name": "Avatar",
+          "width": 40,
+          "height": 40,
+          "props": {
+            "Icon#208:4": {
+              "type": "INSTANCE_SWAP",
+              "value": "11:4",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "89b71d34f16ae3537fb66195c7461cad543f89b1"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "7f9ca127a2e6cff01d51f4dc7904b9efa5377dcd"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "4b107655a1c634462518b1d88aec458f78e8d9b4"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "0c0918427abd2b71276068a501692700ec3c3bb0"
+                }
+              ]
+            },
+            "Letter#208:0": {
+              "type": "TEXT",
+              "value": "DW"
+            },
+            "Content": {
+              "value": "Letter",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          },
+          "master": {
+            "id": "11:12",
+            "name": "Content=Letter",
+            "key": "e4c9d847a4bbf52a5ddfa6df8c918a57303c0a43",
+            "remote": true
+          }
+        },
+        {
+          "id": "12:121",
+          "name": "Allergy icon",
+          "width": 16,
+          "height": 16,
+          "props": {},
+          "master": {
+            "id": "11:18",
+            "name": "Icon/AttentionFilled",
+            "key": "84e24a992ae19d29a6cc413f2d5bf85717ec373d",
+            "remote": true
+          }
+        },
+        {
+          "id": "12:126",
+          "name": "Allergy link",
+          "width": 85,
+          "height": 24,
+          "props": {
+            "Label#171:13": {
+              "type": "TEXT",
+              "value": "View all (13)"
+            }
+          },
+          "master": {
+            "id": "11:25",
+            "name": "Link",
+            "key": "31c895128ccc0a076b3b327be980679c5a169045",
+            "remote": true
+          }
+        }
+      ]
+    }
+  ],
+  "followup": [
+    {
+      "details": [
+        {
+          "id": "168:306",
+          "name": "Patient header",
+          "text": [
+            {
+              "id": "I168:306;12:88;208:7",
+              "characters": "DW"
+            },
+            {
+              "id": "I168:306;12:91",
+              "characters": "Dana Whitfield"
+            },
+            {
+              "id": "I168:306;12:92",
+              "characters": "(she/her)"
+            },
+            {
+              "id": "I168:306;12:94",
+              "characters": "Restricted"
+            },
+            {
+              "id": "I168:306;12:97",
+              "characters": "Legal name: Amy Foreman"
+            },
+            {
+              "id": "I168:306;12:98",
+              "characters": "•"
+            },
+            {
+              "id": "I168:306;12:99",
+              "characters": "Female"
+            },
+            {
+              "id": "I168:306;12:100",
+              "characters": "•"
+            },
+            {
+              "id": "I168:306;12:102",
+              "characters": "26 Aug 2002"
+            },
+            {
+              "id": "I168:306;12:103",
+              "characters": "(23 y/o)"
+            },
+            {
+              "id": "I168:306;12:104",
+              "characters": "•"
+            },
+            {
+              "id": "I168:306;12:105",
+              "characters": "(555) 555-2025"
+            },
+            {
+              "id": "I168:306;12:106",
+              "characters": "•"
+            },
+            {
+              "id": "I168:306;12:107",
+              "characters": "MRN: 08262025-01"
+            },
+            {
+              "id": "I168:306;12:124",
+              "characters": "Severe:"
+            },
+            {
+              "id": "I168:306;12:125",
+              "characters": "egg, poison ivy extract"
+            },
+            {
+              "id": "I168:306;12:126;171:34",
+              "characters": "View all (13)"
+            },
+            {
+              "id": "I168:306;12:116",
+              "characters": "Balance"
+            },
+            {
+              "id": "I168:306;12:117",
+              "characters": "$248.00"
+            }
+          ],
+          "reactions": []
+        },
+        {
+          "id": "168:337",
+          "name": "Patient action row",
+          "text": [
+            {
+              "id": "I168:337;45:487;160:174",
+              "characters": "New Note"
+            },
+            {
+              "id": "I168:337;45:497;160:188",
+              "characters": ""
+            },
+            {
+              "id": "I168:337;45:506;78:4",
+              "characters": "AI Note Assist"
+            },
+            {
+              "id": "I168:337;45:514;78:112",
+              "characters": "Collect Payment ($248.00)"
+            },
+            {
+              "id": "I168:337;45:522;78:124",
+              "characters": "Print"
+            },
+            {
+              "id": "I168:337;45:530;78:124",
+              "characters": "More"
+            }
+          ],
+          "reactions": []
+        },
+        {
+          "id": "181:377",
+          "name": "Patient header",
+          "text": [
+            {
+              "id": "I181:377;12:88;208:7",
+              "characters": "DW"
+            },
+            {
+              "id": "I181:377;12:91",
+              "characters": "Dana Whitfield"
+            },
+            {
+              "id": "I181:377;12:92",
+              "characters": "(she/her)"
+            },
+            {
+              "id": "I181:377;12:94",
+              "characters": "Restricted"
+            },
+            {
+              "id": "I181:377;12:97",
+              "characters": "Legal name: Amy Foreman"
+            },
+            {
+              "id": "I181:377;12:98",
+              "characters": "•"
+            },
+            {
+              "id": "I181:377;12:99",
+              "characters": "Female"
+            },
+            {
+              "id": "I181:377;12:100",
+              "characters": "•"
+            },
+            {
+              "id": "I181:377;12:102",
+              "characters": "26 Aug 2002"
+            },
+            {
+              "id": "I181:377;12:103",
+              "characters": "(23 y/o)"
+            },
+            {
+              "id": "I181:377;12:104",
+              "characters": "•"
+            },
+            {
+              "id": "I181:377;12:105",
+              "characters": "(555) 555-2025"
+            },
+            {
+              "id": "I181:377;12:106",
+              "characters": "•"
+            },
+            {
+              "id": "I181:377;12:107",
+              "characters": "MRN: 08262025-01"
+            },
+            {
+              "id": "I181:377;12:124",
+              "characters": "Severe:"
+            },
+            {
+              "id": "I181:377;12:125",
+              "characters": "egg, poison ivy extract"
+            },
+            {
+              "id": "I181:377;12:126;171:34",
+              "characters": "View all (13)"
+            },
+            {
+              "id": "I181:377;12:116",
+              "characters": "Balance"
+            },
+            {
+              "id": "I181:377;12:117",
+              "characters": "$248.00"
+            }
+          ],
+          "reactions": []
+        },
+        {
+          "id": "181:378",
+          "name": "Patient action row",
+          "text": [
+            {
+              "id": "I181:378;45:487;160:174",
+              "characters": "New Note"
+            },
+            {
+              "id": "I181:378;45:497;160:188",
+              "characters": ""
+            },
+            {
+              "id": "I181:378;45:506;78:4",
+              "characters": "AI Note Assist"
+            },
+            {
+              "id": "I181:378;45:514;78:112",
+              "characters": "Collect Payment ($248.00)"
+            },
+            {
+              "id": "I181:378;45:522;78:124",
+              "characters": "Print"
+            },
+            {
+              "id": "I181:378;45:530;78:124",
+              "characters": "More"
+            }
+          ],
+          "reactions": []
+        },
+        {
+          "id": "220:983",
+          "name": "Patient header",
+          "text": [
+            {
+              "id": "I220:983;12:88;208:7",
+              "characters": "RD"
+            },
+            {
+              "id": "I220:983;12:91",
+              "characters": "Ruth Delgado"
+            },
+            {
+              "id": "I220:983;12:92",
+              "characters": "(she/her)"
+            },
+            {
+              "id": "I220:983;12:94",
+              "characters": "Restricted"
+            },
+            {
+              "id": "I220:983;12:97",
+              "characters": "Legal name: Amy Foreman"
+            },
+            {
+              "id": "I220:983;12:98",
+              "characters": "•"
+            },
+            {
+              "id": "I220:983;12:99",
+              "characters": "Female"
+            },
+            {
+              "id": "I220:983;12:100",
+              "characters": "•"
+            },
+            {
+              "id": "I220:983;12:102",
+              "characters": "14 Feb 1968"
+            },
+            {
+              "id": "I220:983;12:103",
+              "characters": "(58 y/o)"
+            },
+            {
+              "id": "I220:983;12:104",
+              "characters": "•"
+            },
+            {
+              "id": "I220:983;12:105",
+              "characters": "(555) 555-0148"
+            },
+            {
+              "id": "I220:983;12:106",
+              "characters": "•"
+            },
+            {
+              "id": "I220:983;12:107",
+              "characters": "MRN: 02141968-04"
+            },
+            {
+              "id": "I220:983;12:124",
+              "characters": "Moderate:"
+            },
+            {
+              "id": "I220:983;12:125",
+              "characters": "penicillin"
+            },
+            {
+              "id": "I220:983;12:126;171:34",
+              "characters": "View all (2)"
+            },
+            {
+              "id": "I220:983;12:116",
+              "characters": "Balance"
+            },
+            {
+              "id": "I220:983;12:117",
+              "characters": "$0.00"
+            }
+          ],
+          "reactions": []
+        },
+        {
+          "id": "220:984",
+          "name": "Patient action row",
+          "text": [
+            {
+              "id": "I220:984;45:487;160:174",
+              "characters": "New Note"
+            },
+            {
+              "id": "I220:984;45:497;160:188",
+              "characters": ""
+            },
+            {
+              "id": "I220:984;45:506;78:4",
+              "characters": "AI Note Assist"
+            },
+            {
+              "id": "I220:984;45:514;78:112",
+              "characters": "Collect Payment"
+            },
+            {
+              "id": "I220:984;45:522;78:124",
+              "characters": "Print"
+            },
+            {
+              "id": "I220:984;45:530;78:124",
+              "characters": "More"
+            }
+          ],
+          "reactions": []
+        }
+      ],
+      "mentions": [
+        {
+          "id": "I168:306;12:97",
+          "characters": "Legal name: Amy Foreman"
+        },
+        {
+          "id": "I181:377;12:97",
+          "characters": "Legal name: Amy Foreman"
+        },
+        {
+          "id": "I220:983;12:97",
+          "characters": "Legal name: Amy Foreman"
+        }
+      ]
+    }
+  ],
+  "quiet": [
+    {
+      "quietHeaderProps": {
+        "Restricted#26:0": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Legal name differs#12:231": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Age#12:105": {
+          "type": "TEXT",
+          "value": "(58 y/o)"
+        },
+        "Show pronouns#12:210": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Balance amount#12:189": {
+          "type": "TEXT",
+          "value": "$0.00"
+        },
+        "Pronouns#12:21": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Severe allergens#12:168": {
+          "type": "TEXT",
+          "value": "penicillin"
+        },
+        "Legal name#12:42": {
+          "type": "TEXT",
+          "value": "Legal name: Amy Foreman"
+        },
+        "MRN#12:147": {
+          "type": "TEXT",
+          "value": "MRN: 02141968-04"
+        },
+        "DOB#12:84": {
+          "type": "TEXT",
+          "value": "14 Feb 1968"
+        },
+        "Sex#12:63": {
+          "type": "TEXT",
+          "value": "Female"
+        },
+        "Phone#12:126": {
+          "type": "TEXT",
+          "value": "(555) 555-0148"
+        },
+        "Preferred name#12:0": {
+          "type": "TEXT",
+          "value": "Ruth Delgado"
+        },
+        "Allergies": {
+          "value": "Severe",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "setDefinitions": {
+        "Preferred name#12:0": {
+          "type": "TEXT",
+          "defaultValue": "Dana Whitfield"
+        },
+        "Pronouns#12:21": {
+          "type": "TEXT",
+          "defaultValue": "(she/her)"
+        },
+        "Legal name#12:42": {
+          "type": "TEXT",
+          "defaultValue": "Legal name: Amy Foreman"
+        },
+        "Sex#12:63": {
+          "type": "TEXT",
+          "defaultValue": "Female"
+        },
+        "DOB#12:84": {
+          "type": "TEXT",
+          "defaultValue": "26 Aug 2002"
+        },
+        "Age#12:105": {
+          "type": "TEXT",
+          "defaultValue": "(23 y/o)"
+        },
+        "Phone#12:126": {
+          "type": "TEXT",
+          "defaultValue": "(555) 555-2025"
+        },
+        "MRN#12:147": {
+          "type": "TEXT",
+          "defaultValue": "MRN: 08262025-01"
+        },
+        "Severe allergens#12:168": {
+          "type": "TEXT",
+          "defaultValue": "egg, poison ivy extract"
+        },
+        "Balance amount#12:189": {
+          "type": "TEXT",
+          "defaultValue": "$0.00"
+        },
+        "Show pronouns#12:210": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Legal name differs#12:231": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Restricted#26:0": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Allergies": {
+          "type": "VARIANT",
+          "defaultValue": "Severe",
+          "variantOptions": [
+            "Severe",
+            "MildOnly",
+            "NoneKnown",
+            "NotDocumented",
+            "Error"
+          ]
+        }
+      },
+      "rootBindings": [
+        {
+          "id": "12:755",
+          "bindings": {
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+              }
+            ],
+            "strokes": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+              }
+            ]
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+                }
+              }
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.8389999866485596,
+                "g": 0.8389999866485596,
+                "b": 0.8389999866485596
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "12:759",
+          "bindings": {
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+              }
+            ],
+            "strokes": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+              }
+            ]
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+                }
+              }
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.8389999866485596,
+                "g": 0.8389999866485596,
+                "b": 0.8389999866485596
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "12:763",
+          "bindings": {
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+              }
+            ],
+            "strokes": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+              }
+            ]
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+                }
+              }
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.8389999866485596,
+                "g": 0.8389999866485596,
+                "b": 0.8389999866485596
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "12:767",
+          "bindings": {
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+              }
+            ],
+            "strokes": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+              }
+            ]
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+                }
+              }
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.8389999866485596,
+                "g": 0.8389999866485596,
+                "b": 0.8389999866485596
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "12:771",
+          "bindings": {
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+              }
+            ],
+            "strokes": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+              }
+            ]
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+                }
+              }
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.8389999866485596,
+                "g": 0.8389999866485596,
+                "b": 0.8389999866485596
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "45:537",
+          "bindings": {
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+              }
+            ],
+            "strokes": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+              }
+            ]
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:f1e85cc976b10ea275c03f5d7f21a0dc12cdfee0/74:146"
+                }
+              }
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.8389999866485596,
+                "g": 0.8389999866485596,
+                "b": 0.8389999866485596
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:ba1923abf373a9062e989ce3ac2068f54712d80b/74:173"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "discovery": [
+    {
+      "definitions": {
+        "Preferred name#12:0": {
+          "type": "TEXT",
+          "defaultValue": "Dana Whitfield"
+        },
+        "Pronouns#12:21": {
+          "type": "TEXT",
+          "defaultValue": "(she/her)"
+        },
+        "Legal name#12:42": {
+          "type": "TEXT",
+          "defaultValue": "Legal name: Amy Foreman"
+        },
+        "Sex#12:63": {
+          "type": "TEXT",
+          "defaultValue": "Female"
+        },
+        "DOB#12:84": {
+          "type": "TEXT",
+          "defaultValue": "26 Aug 2002"
+        },
+        "Age#12:105": {
+          "type": "TEXT",
+          "defaultValue": "(23 y/o)"
+        },
+        "Phone#12:126": {
+          "type": "TEXT",
+          "defaultValue": "(555) 555-2025"
+        },
+        "MRN#12:147": {
+          "type": "TEXT",
+          "defaultValue": "MRN: 08262025-01"
+        },
+        "Severe allergens#12:168": {
+          "type": "TEXT",
+          "defaultValue": "egg, poison ivy extract"
+        },
+        "Balance amount#12:189": {
+          "type": "TEXT",
+          "defaultValue": "$0.00"
+        },
+        "Show pronouns#12:210": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Legal name differs#12:231": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Restricted#26:0": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Allergies": {
+          "type": "VARIANT",
+          "defaultValue": "Severe",
+          "variantOptions": [
+            "Severe",
+            "MildOnly",
+            "NoneKnown",
+            "NotDocumented",
+            "Error"
+          ]
+        }
+      },
+      "description": "",
+      "examples": [
+        {
+          "id": "27:12",
+          "name": "1 Dana Whitfield, severe allergies",
+          "type": "INSTANCE",
+          "width": 900,
+          "height": 72
+        },
+        {
+          "id": "27:73",
+          "name": "2 Aaron Foreman, restricted, legal name differs",
+          "type": "INSTANCE",
+          "width": 900,
+          "height": 72
+        },
+        {
+          "id": "27:128",
+          "name": "3 Dana Whitfield, error state",
+          "type": "INSTANCE",
+          "width": 900,
+          "height": 72
+        },
+        {
+          "id": "27:184",
+          "name": "4 Dana Whitfield, photo state (placeholder, library has no image state)",
+          "type": "INSTANCE",
+          "width": 900,
+          "height": 72
+        }
+      ],
+      "row": {
+        "id": "45:537",
+        "type": "COMPONENT",
+        "name": "Patient action row",
+        "description": "Patient action row. The patient-level actions that production ships in the Facesheet header, moved into a distinct band directly below the patient header. COMPOSITION IS PRODUCTION, UNCHANGED - only position changed. The modal test that earlier scoped this row was WITHDRAWN 2026-08-20 after Phase 0 showed it selected almost the inverse of the list it was attached to: of the six actions it was meant to admit, only Send Patient Education actually opens a modal.\n\nVISIBLE, left to right: New Note (split), AI Note Assist, Collect Payment ($0.00), Print. More sits at the right edge and carries all EIGHT: Send Secure Message, Send Patient Education, Health Data Exchange, Export Immunization Data, Export Health Surveillance Data, Import Summary of Care, Export Referral, Export Continuity of Care. Labels verbatim from clinical-system/src/types/header.ts:50-59.\n\nGEOMETRY, DERIVED NOT AUTHORED. Height 56 = 36 + 10 + 10. The 36 is the tallest control in the row - a Button Text Medium, which is what Print and More resolve to because production sets no size prop on either. The 10/10 is the patient header band&#39;s own vertical padding, reused so the two bands agree. The 56 matches the working estimate but was not taken from it. Horizontal padding 16, also the header&#39;s. Gap 16 between actions = the Stack spacing lg:2 in HeaderRightLinks.tsx:109.\n\nWIDTH. Master 900 with minWidth 900, mirroring the patient header exactly: a master cannot fill at the top level, so instances are set to fill when placed. On the control screen the instance is 1184, matching the header instance edge for edge.\n\nSIZES ARE PRODUCTION&#39;S, INCLUDING ITS INCONSISTENCY. Collect Payment, AI Note Assist and both New Note halves are size=small; Print and More are medium because production passes no size. That is why Print reads larger than Collect Payment beside it. Reproduced, not corrected - the instruction was to change position only.\n\nNEW NOTE KEEPS ITS PRIMARY. Two Button group / Segment instances, Contained Secondary Small, Position First and Last. That coral is not a choice made here: MuiButtonGroup.defaultProps is {variant: contained, color: secondary} in ButtonGroupOverrides.ts:5-6, and CreateNoteButton passes no variant. The split contains PRACTICE-CONFIGURED NOTE TYPES fetched by getPracticeNoteTypes - note type selection happens in this row, not on Notes. See ACTION-ROW-PATIENT-PHASE0.md P0.d.\n\nAI NOTE ASSIST IS CONTAINED PRIMARY, WHICH IN THIS THEME IS WHITE. ButtonOverrides.ts:40-44 gives containedPrimary a common.white background with a 1px core.main border, not a teal fill. The white pill is correct and matches production.\n\nICON GAP, NOT A DESIGN DECISION. Print and AI Note Assist ship WITHOUT their production icons. The library file holds 76 icon masters but only FIVE are published and importable into a consuming file: DownCaret, PlusOutlined, CloseOutlined, TrashOutlined, LinearEllipsis. Icon/PrintOutlined exists at 575:26 and cannot be imported. Production uses PrintOutlinedIcon on Print and Book4SparkSharp from @mui-symbols-material/w400 on AI Note Assist - the latter has no library equivalent at all. Nothing absurd was substituted. New Note keeps its plus and both carets are real, because those three are among the five published.\n\nCOLOUR. Ground color/background/paper, 1px inside bottom rule color/divider - the same two tokens and the same treatment the patient header band uses. Every paint in the row is variable-bound; the button colours come from the Button set. Padding and gap are raw integers, matching the header, which also leaves its 10/16 unbound.\n\nNOT RESOLVED, recorded on instruction: whether this row persists across all seventeen destinations or appears only where it earns 56px; whether New Note and AI Note Assist are page actions belonging to Notes rather than patient actions; what is inside the legacy Exchange menu. Page actions (+ Problem, + Vitals, Create Order, Add Member, + Upload) belong with each destination heading and are NOT here.",
+        "definitions": {},
+        "children": [
+          {
+            "id": "45:485",
+            "name": "Actions",
+            "type": "FRAME"
+          },
+          {
+            "id": "45:530",
+            "name": "More",
+            "type": "INSTANCE"
+          }
+        ]
+      },
+      "headerInstances": [],
+      "actionInstances": []
+    }
+  ]
+}
