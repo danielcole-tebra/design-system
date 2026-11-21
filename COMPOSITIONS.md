@@ -48,7 +48,7 @@ See LIBRARY.md §Text field before choosing a search field. The recorded library
 
 Historical Proposals locators in `zKT34LQogNjz3Z07fY4VQB`: rail page `31:116` (Nav/Bar, 256 rail, 1184 content); chart page `168:249`; patient header `31:336` (900×72 reference); patient action row `46:196` (56 band); left rail `31:213` (48 row pitch); insight band `168:578`; ledger `168:582`; standing record row `168:2377`. These are reference compositions, not a claim that those widths fit every screen. SDE's local patient header became 900×68 by Daniel's 2026-09-29 ruling; it does not supersede the Proposals header globally.
 
-Proposals patient header: Daniel's 2026-11-21 decision uses the existing allergy data model and supersedes the proposal's severity-based summaries. State/workflow review precedes design changes; Figma is unchanged. Current contract, pending choices and previous decision text are in [PATIENT-HEADER-REVIEW.md](PATIENT-HEADER-REVIEW.md). This is local to the Proposals header, not a global library or SDE ruling.
+Proposals patient header: Daniel's 2026-11-21 decisions use the existing allergy data model, superseding severity-based summaries, and retain last available same-patient allergy content during refresh/failure with updating or failed-refresh status and Retry. The latter supersedes the source's content-replacement behavior. State/workflow review precedes design changes; Figma is unchanged. Current contract, pending choices and previous decision text are in [PATIENT-HEADER-REVIEW.md](PATIENT-HEADER-REVIEW.md). This is local to the Proposals header, not a global library or SDE ruling.
 
 ## Comparison and verification
 

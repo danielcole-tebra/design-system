@@ -4799,3 +4799,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - File: Proposals `zKT34LQogNjz3Z07fY4VQB`, header12:773. Documentation only; Figma and code unchanged.
 - Decision: Daniel selected the existing allergy data model, resolving RPH-01's data-source choice and superseding severity-based summaries. Review missing states and workflows before design changes; implementation remains pending.
 - Evidence: PATIENT-HEADER-REVIEW.md now separates settled scope, source behavior, proposed transitions and a five-part discussion checklist; previous decision text retained in history. COMPOSITIONS.md links the scoped ruling. Source allergy renderer/query re-read at the existing snapshot; runs/2026-11-21-patient-header-behavior/record.json records provenance. No screenshot required for this documentation batch.
+
+## 2026-11-21 — Patient header allergy refresh decision
+- File: Proposals `zKT34LQogNjz3Z07fY4VQB`, header12:773. Documentation only; Figma and product code unchanged.
+- Decision: Daniel approved retaining last available same-patient allergy content during updating and refresh failure, with status and Retry. Previous pending choice retained in decision history; source replacement behavior is superseded for the future design.
+- Evidence: PATIENT-HEADER-REVIEW.md and COMPOSITIONS.md updated; runs/2026-11-21-patient-header-refresh/record.json records the instruction. Next discussion is initial loading/failure with no prior allergy information; that proposal remains unapproved. No screenshot required.

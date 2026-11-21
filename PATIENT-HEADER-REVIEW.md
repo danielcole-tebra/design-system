@@ -6,13 +6,15 @@ The compact examples are coherently assembled, but the work does not account for
 
 ## Current decision and discussion scope
 
-**Decider: Daniel. Date: 2026-11-21. Scope: Proposals patient header.** Use the existing allergy data model: allergen records, `hasNoKnownAllergies`, and `hasNoKnownMedicationAllergies`. This supersedes the proposal's severity-based summary approach and resolves RPH-01's data-source choice. It does not approve new filtering, changes to flag precedence, new action behavior, or a visual redesign. Work through missing states and workflows before changing Figma.
+**Decider: Daniel. Date: 2026-11-21. Scope: Proposals patient header.** Use the existing allergy data model: allergen records, `hasNoKnownAllergies`, and `hasNoKnownMedicationAllergies`. This supersedes the proposal's severity-based summary approach and resolves RPH-01's data-source choice. That decision alone does not approve new filtering, changes to flag precedence, new action behavior, or a visual redesign. Work through missing states and workflows before changing Figma.
 
-Four successful content outcomes must be accounted for: allergy names present; no known allergies; no known medication allergies; no allergy history documented. Request loading, request failure and cached-data provenance are separate concerns. The data-model decision is settled; presentation, transitions and the missing workflows below remain open.
+Four successful content outcomes must be accounted for: allergy names present; no known allergies; no known medication allergies; no allergy history documented. Request loading, request failure and cached-data provenance are separate concerns. The data-model and same-patient refresh decisions are settled; other presentation, transitions and missing workflows below remain open.
+
+**Refresh decision — Daniel, 2026-11-21, same scope:** keep the last available allergy information for the same patient visible while updating and after a failed refresh. Show the updating or failed-refresh status and provide Retry for failure. This supersedes the legacy behavior that replaces content with a skeleton during refresh and an error after failure, and resolves the corresponding pending choice below. Retry must retain that prior information while the new request is updating. Exact visual treatment, no-prior-data behavior and server-cached-response treatment remain pending; no Figma or product-code change is authorized yet.
 
 | Discussion order | Required states/workflows | Decisions still needed |
 |---|---|---|
-| 1. Allergies | Four successful content outcomes; initial load; refresh; no-data failure; refresh failure with prior data; server-cached response; View All; Retry | Preserve or replace prior data during refresh/failure; explicit recovery; link visibility; handling inconsistent flags/list |
+| 1. Allergies | Four successful content outcomes; initial load; refresh; no-data failure; refresh failure with prior data; server-cached response; View All; Retry | Same-patient prior-data retention and failed-refresh Retry settled. Still open: no-prior-data loading/failure; cache presentation; detailed recovery; link visibility; inconsistent flags/list |
 | 2. Identity and header availability | Whole-header load/no-patient/error; independent region failure; missing fields; preferred/legal names; pronouns; pediatric age | Fallback content and separator rules; which regions/actions remain usable |
 | 3. Alerts, restrictions and patient details | Patient alert; cached patient details; protection disabled; restricted; restriction fetch failure; role-dependent access dialogs; insurance; details disclosure; photo management | Which information stays visible, where displaced workflows live, and their open/close/success/error outcomes |
 | 4. Billing and chart actions | Billing enabled/disabled; balance availability; Print; practice note types; NDE; AI eligibility/trial/pending; permission-dependent More menu | Visibility/disabled rules, destinations, loading/failure and recovery for each action |
@@ -22,19 +24,19 @@ Four successful content outcomes must be accounted for: allergy names present; n
 
 Source baseline was re-read on 2026-11-21 from the same pinned snapshot; it is not a fresh production audit. `Allergies.tsx:51–75` prioritizes loading, then error, then the no-known flags over a nonempty list. With both flags true it says “No known allergies”; medication-only says “No known medication allergies”; no flags and an empty list says “No allergy history documented”; otherwise it displays allergen names. These are observed implementation rules, not a new approval of contradictory-data handling. No severity derivation or filtering by `isActive`/`isError` is introduced by this decision.
 
-| Case | Observed source behavior | Candidate behavior for discussion, not approved |
+| Case | Observed source behavior | Agreed behavior or pending proposal |
 |---|---|---|
 | Initial load, no prior data for this patient | Allergy skeleton | Explicit loading; never substitute a no-known-allergies statement |
 | Successful response | Names or one of the three explicit absence/history statements | Retain the four meanings using the existing data model |
-| Refresh with prior data for the same patient | `isFetching` replaces content with the skeleton | Keep prior content visible with an updating indication |
+| Refresh with prior data for the same patient | `isFetching` replaces content with the skeleton | **Agreed 2026-11-21:** keep last available content visible with updating status |
 | Failed request with no prior data | Error message | Explicit unavailable state; Retry could refetch only allergies |
-| Failed refresh with prior data for the same patient | Error message replaces content | Keep prior content, explicitly mark the failed refresh and offer Retry |
+| Failed refresh with prior data for the same patient | Error message replaces content | **Agreed 2026-11-21:** keep last available content visible, show failed-refresh status and Retry |
 | Successful server-cached response | Content plus cached date notice | Preserve content and its cache provenance/date; do not describe it as a fresh response |
-| Retry | Query exposes `refetch`; current header does not use it | Refetch → updating/loading → success, cached success or repeated error; avoid duplicate in-flight requests |
+| Retry | Query exposes `refetch`; current header does not use it | **Agreed:** failed-refresh Retry retains same-patient prior content during updating. **Pending details:** no-prior-data Retry; response transitions; handling duplicate in-flight requests |
 | View All | Navigate to the patient's allergy page when joined names exceed 65 characters | Keep destination; decide availability independently of copy length |
 | Flags and list disagree | No-known flags currently take precedence over names | Resolve explicitly rather than silently change precedence or imply the data is consistent |
 
-The prior-data candidates apply only to the same patient and established query identity; another patient's result must not carry over. A previously successful client result and a server-cached response are different sources of staleness. The source's server cache date must not be reused as a made-up timestamp for a failed client refresh. Exact wording/layout remains for later design work.
+Rows without an explicit Agreed label remain discussion proposals. The approved prior-data behavior applies only to the same patient and established query identity; another patient's result must not carry over. A previously successful client result and a server-cached response are different sources of staleness. The source's server cache date must not be reused as a made-up timestamp for a failed client refresh. Exact wording/layout remains for later design work.
 
 ## Evidence and limits
 
@@ -122,8 +124,10 @@ ClinicalPageNav carries identity/access/details when the top header is hidden; c
 
 ## Next discussion
 
-Work through the checklist above before modifying the design. Start with whether same-patient prior allergy data remains visible during refresh and after refresh failure. Then settle recovery, View All and inconsistent flags before moving to identity/header availability. Continue to seek current product evidence and opened legacy menus for unresolved behavior. No construction batch is authorized by the discussion checklist.
+Work through the checklist above before modifying the design. Next is allergy loading/failure with **no previously loaded information for this patient**. Proposed: show explicit allergy loading initially; on failure show allergy information unavailable with Retry; scope Retry to allergies and preserve already-loaded patient identity and independent header content. A successful response selects one of the four content outcomes; an empty/loading/error response must not be represented as a confirmed no-known-allergies state. This proposal is pending Daniel's decision. Then settle server-cached responses, View All and inconsistent flags before moving to identity/header availability. Continue to seek current product evidence and opened legacy menus for unresolved behavior. No construction batch is authorized by the discussion checklist.
 
 ## Decision history
+
+2026-11-21 refresh decision: Daniel approved keeping last available allergy information visible with updating or failed-refresh status and Retry. Supersedes the pending choice “Preserve or replace prior data during refresh/failure” and the source baseline of replacing that content. Before this decision, both retained-data rows and Retry were recommendations only. Initial-load/no-prior-data failure and all other unmarked proposals remain undecided.
 
 2026-11-19 RPH-01, superseded by Daniel's 2026-11-21 decision: “Open. Source Allergy has no severity; Severe/MildOnly cannot be computed from this contract. Choose available-data semantics or require an additional authoritative severity source and unknown-severity rule. Quiet patient `220:983` is still `Allergies=Severe` while displaying ‘Moderate: penicillin’: content and variant metadata diverge.” Previous disposition: no recorded workaround for severity mapping. The former next-step proposal contemplated a retained design review set after resolving semantics; Daniel has now explicitly requested completing state/workflow discussion before design changes.

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-21",
+  "fileKey": "zKT34LQogNjz3Z07fY4VQB",
+  "scope": "Proposals patient header; documentation-only behavior review",
+  "decisionOwner": "Daniel",
+  "userInstruction": "Let's keep the last available allergy information visible with the updating or failed-refresh status and Retry. Then let's work through the next missing state.",
+  "approved": "Retain last available same-patient allergy information during refresh and refresh failure; show updating or failed-refresh status and Retry.",
+  "supersedes": "Pending retain/replace choice and legacy content-replacement behavior for refresh/failure.",
+  "nextPendingChoice": "Initial loading and request failure when no allergy information has previously loaded for this patient.",
+  "currentRegister": "PATIENT-HEADER-REVIEW.md",
+  "figmaMutations": 0,
+  "productCodeMutations": 0,
+  "screenshots": [],
+  "verification": "Documentation consistency and Git whitespace checks only; previous source/Figma evidence reused."
+}
