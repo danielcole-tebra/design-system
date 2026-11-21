@@ -1,0 +1,535 @@
+{
+  "before": {
+    "variants": [
+      {
+        "id": "2:43",
+        "name": "Refresh state=Current",
+        "rows": [
+          {
+            "id": "2:47",
+            "name": "Identity",
+            "width": 870,
+            "height": 52
+          },
+          {
+            "id": "2:48",
+            "name": "Name and pronouns",
+            "width": 206,
+            "height": 32
+          }
+        ],
+        "texts": [
+          {
+            "id": "2:50",
+            "name": "Pronouns",
+            "parent": "2:48",
+            "characters": "(she/her)",
+            "refs": {
+              "visible": "Show pronouns#2:8",
+              "characters": "Pronouns#2:4"
+            }
+          },
+          {
+            "id": "2:51",
+            "name": "Demographics",
+            "parent": "2:47",
+            "characters": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01",
+            "refs": {
+              "characters": "Demographics#2:12"
+            }
+          }
+        ]
+      },
+      {
+        "id": "2:56",
+        "name": "Refresh state=Fetching",
+        "rows": [
+          {
+            "id": "2:60",
+            "name": "Identity",
+            "width": 957,
+            "height": 52
+          },
+          {
+            "id": "2:61",
+            "name": "Name and pronouns",
+            "width": 206,
+            "height": 32
+          }
+        ],
+        "texts": [
+          {
+            "id": "2:63",
+            "name": "Pronouns",
+            "parent": "2:61",
+            "characters": "(she/her)",
+            "refs": {
+              "visible": "Show pronouns#2:8",
+              "characters": "Pronouns#2:4"
+            }
+          },
+          {
+            "id": "2:64",
+            "name": "Demographics",
+            "parent": "2:60",
+            "characters": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01",
+            "refs": {
+              "characters": "Demographics#2:12"
+            }
+          }
+        ]
+      },
+      {
+        "id": "2:71",
+        "name": "Refresh state=Failed",
+        "rows": [
+          {
+            "id": "2:75",
+            "name": "Identity",
+            "width": 886,
+            "height": 52
+          },
+          {
+            "id": "2:76",
+            "name": "Name and pronouns",
+            "width": 206,
+            "height": 32
+          }
+        ],
+        "texts": [
+          {
+            "id": "2:78",
+            "name": "Pronouns",
+            "parent": "2:76",
+            "characters": "(she/her)",
+            "refs": {
+              "visible": "Show pronouns#2:8",
+              "characters": "Pronouns#2:4"
+            }
+          },
+          {
+            "id": "2:79",
+            "name": "Demographics",
+            "parent": "2:75",
+            "characters": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01",
+            "refs": {
+              "characters": "Demographics#2:12"
+            }
+          }
+        ]
+      },
+      {
+        "id": "11:161",
+        "name": "Refresh state=Cached",
+        "rows": [
+          {
+            "id": "11:165",
+            "name": "Identity",
+            "width": 870,
+            "height": 52
+          },
+          {
+            "id": "11:166",
+            "name": "Name and pronouns",
+            "width": 206,
+            "height": 32
+          }
+        ],
+        "texts": [
+          {
+            "id": "11:168",
+            "name": "Pronouns",
+            "parent": "11:166",
+            "characters": "(she/her)",
+            "refs": {
+              "visible": "Show pronouns#2:8",
+              "characters": "Pronouns#2:4"
+            }
+          },
+          {
+            "id": "11:169",
+            "name": "Demographics",
+            "parent": "11:165",
+            "characters": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01",
+            "refs": {
+              "characters": "Demographics#2:12"
+            }
+          }
+        ]
+      }
+    ],
+    "instances": [
+      {
+        "id": "2:95",
+        "name": "01 · Allergy names present",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "2:110",
+        "name": "02 · No known allergies",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "2:125",
+        "name": "03 · No known medication allergies",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "2:140",
+        "name": "04 · No allergy history documented",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "2:155",
+        "name": "05 · Fetching or refreshing allergies",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "2:172",
+        "name": "06 · Failed refresh",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "8:128",
+        "name": "07 · Initial failure · No prior allergy information",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "11:177",
+        "name": "08 · Cached allergy information",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "2:194",
+        "name": "900 px · Current",
+        "width": 900,
+        "height": 72
+      },
+      {
+        "id": "2:207",
+        "name": "900 px · Refresh failed",
+        "width": 900,
+        "height": 72
+      },
+      {
+        "id": "6:112",
+        "name": "900 px · Fetching",
+        "width": 900,
+        "height": 72
+      },
+      {
+        "id": "8:146",
+        "name": "900 px · Initial failure · No prior information",
+        "width": 900,
+        "height": 72
+      },
+      {
+        "id": "11:192",
+        "name": "900 px · Cached / Allergies: egg, poison ivy extract",
+        "width": 900,
+        "height": 72
+      },
+      {
+        "id": "11:206",
+        "name": "900 px · Cached / No known allergies",
+        "width": 900,
+        "height": 72
+      },
+      {
+        "id": "11:220",
+        "name": "900 px · Cached / No known medication allergies",
+        "width": 900,
+        "height": 72
+      },
+      {
+        "id": "11:234",
+        "name": "900 px · Cached / No allergy history documented",
+        "width": 900,
+        "height": 72
+      }
+    ]
+  },
+  "build": {
+    "moved": [
+      "2:50",
+      "2:51",
+      "2:48",
+      "2:63",
+      "2:64",
+      "2:61",
+      "2:78",
+      "2:79",
+      "2:76",
+      "11:168",
+      "11:169",
+      "11:166"
+    ],
+    "created": [
+      {
+        "variant": "2:43",
+        "lower": "15:224",
+        "group": "15:225",
+        "separator": "15:226"
+      },
+      {
+        "variant": "2:56",
+        "lower": "15:227",
+        "group": "15:228",
+        "separator": "15:229"
+      },
+      {
+        "variant": "2:71",
+        "lower": "15:230",
+        "group": "15:231",
+        "separator": "15:232"
+      },
+      {
+        "variant": "11:161",
+        "lower": "15:233",
+        "group": "15:234",
+        "separator": "15:235"
+      }
+    ],
+    "inspection": {
+      "area": "15:236",
+      "label": "15:237",
+      "instances": [
+        "15:238",
+        "15:254",
+        "15:272",
+        "15:292"
+      ]
+    },
+    "lowerRows": [
+      {
+        "id": "15:224",
+        "width": 533,
+        "height": 20,
+        "children": [
+          {
+            "id": "2:51",
+            "name": "Demographics"
+          },
+          {
+            "id": "15:225",
+            "name": "Optional pronouns"
+          }
+        ],
+        "groupRefs": {
+          "visible": "Show pronouns#2:8"
+        }
+      },
+      {
+        "id": "15:227",
+        "width": 533,
+        "height": 20,
+        "children": [
+          {
+            "id": "2:64",
+            "name": "Demographics"
+          },
+          {
+            "id": "15:228",
+            "name": "Optional pronouns"
+          }
+        ],
+        "groupRefs": {
+          "visible": "Show pronouns#2:8"
+        }
+      },
+      {
+        "id": "15:230",
+        "width": 533,
+        "height": 20,
+        "children": [
+          {
+            "id": "2:79",
+            "name": "Demographics"
+          },
+          {
+            "id": "15:231",
+            "name": "Optional pronouns"
+          }
+        ],
+        "groupRefs": {
+          "visible": "Show pronouns#2:8"
+        }
+      },
+      {
+        "id": "15:233",
+        "width": 533,
+        "height": 20,
+        "children": [
+          {
+            "id": "11:169",
+            "name": "Demographics"
+          },
+          {
+            "id": "15:234",
+            "name": "Optional pronouns"
+          }
+        ],
+        "groupRefs": {
+          "visible": "Show pronouns#2:8"
+        }
+      }
+    ]
+  },
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 1,
+      "passed": true,
+      "checks": [
+        {
+          "id": "2:86",
+          "mainId": "2:8",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 164,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "2:95 size",
+          "passed": true
+        },
+        {
+          "name": "2:95 pronouns lower baseline",
+          "passed": true
+        },
+        {
+          "name": "2:95 optional separator",
+          "passed": true
+        },
+        {
+          "name": "2:95 lower row fits identity",
+          "passed": true
+        },
+        {
+          "name": "2:95 top row has only patient name",
+          "passed": true
+        },
+        {
+          "name": "2:95 content fits header",
+          "passed": true
+        },
+        {
+          "name": "2:95 demography preserved",
+          "passed": true
+        },
+        {
+          "name": "2:95 font",
+          "passed": true
+        },
+        {
+          "name": "2:110 size",
+          "passed": true
+        },
+        {
+          "name": "2:110 pronouns lower baseline",
+          "passed": true
+        },
+        {
+          "name": "2:110 optional separator",
+          "passed": true
+        },
+        {
+          "name": "2:110 lower row fits identity",
+          "passed": true
+        },
+        {
+          "name": "2:110 top row has only patient name",
+          "passed": true
+        },
+        {
+          "name": "2:110 content fits header",
+          "passed": true
+        },
+        {
+          "name": "2:110 demography preserved",
+          "passed": true
+        },
+        {
+          "name": "2:110 font",
+          "passed": true
+        },
+        {
+          "name": "2:125 size",
+          "passed": true
+        },
+        {
+          "name": "2:125 pronouns lower baseline",
+          "passed": true
+        },
+        {
+          "name": "2:125 optional separator",
+          "passed": true
+        },
+        {
+          "name": "2:125 lower row fits identity",
+          "passed": true
+        },
+        {
+          "name": "2:125 top row has only patient name",
+          "passed": true
+        },
+        {
+          "name": "2:125 content fits header",
+          "passed": true
+        },
+        {
+          "name": "2:125 demography preserved",
+          "passed": true
+        },
+        {
+          "name": "2:125 font",
+          "passed": true
+        },
+        {
+          "name": "2:140 size",
+          "passed": true
+        },
+        {
+          "name": "2:140 pronouns lower baseline",
+          "passed": true
+        },
+        {
+          "name": "2:140 optional separator",
+          "passed": true
+        },
+        {
+          "name": "2:140 lower row fits identity",
+          "passed": true
+        },
+        {
+          "name": "2:140 top row has only patient name",
+          "passed": true
+        },
+        {
+          "name": "2:140 content fits header",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 134,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  }
+}

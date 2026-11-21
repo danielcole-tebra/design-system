@@ -4828,3 +4828,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-21 — Patient header · Cached allergy information
 - File: ipK5Vwmpqieg8WeHhiCMJz. Added the approved cached-response presentation: returned allergy content with a supplied-date label in the existing allergy area. Eight review examples remain 72 px high. Checked all four cached content meanings at 900 px.
 - Evidence: runs/2026-11-21-patient-header-cached/REPORT.md, record.json, agreed-states.png, 900px-check.png, cached-header.png.
+
+
+<!-- builder-run:runs/2026-11-21-patient-header-pronouns -->
+## 2026-11-21 — Patient header · Pronouns in the lower demographics row
+- File: ipK5Vwmpqieg8WeHhiCMJz. Moved pronouns after MRN in the lower demographics row across all four header variants. Preserved text/visibility controls and 72 px height; the separator hides with pronouns.
+- Evidence: runs/2026-11-21-patient-header-pronouns/REPORT.md, record.json, agreed-states.png, 900px-check.png, pronouns-hidden.png, header.png.

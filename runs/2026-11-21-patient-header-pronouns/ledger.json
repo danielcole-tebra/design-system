@@ -1,0 +1,129 @@
+{
+  "fileKey": "ipK5Vwmpqieg8WeHhiCMJz",
+  "sessionId": "0d90697b-15a3-4d77-a229-8b177b5522ff",
+  "status": "verified; ready for Daniel's read",
+  "moved": [
+    "2:50",
+    "2:51",
+    "2:48",
+    "2:63",
+    "2:64",
+    "2:61",
+    "2:78",
+    "2:79",
+    "2:76",
+    "11:168",
+    "11:169",
+    "11:166"
+  ],
+  "created": [
+    {
+      "variant": "2:43",
+      "lower": "15:224",
+      "group": "15:225",
+      "separator": "15:226"
+    },
+    {
+      "variant": "2:56",
+      "lower": "15:227",
+      "group": "15:228",
+      "separator": "15:229"
+    },
+    {
+      "variant": "2:71",
+      "lower": "15:230",
+      "group": "15:231",
+      "separator": "15:232"
+    },
+    {
+      "variant": "11:161",
+      "lower": "15:233",
+      "group": "15:234",
+      "separator": "15:235"
+    }
+  ],
+  "inspection": {
+    "area": "15:236",
+    "label": "15:237",
+    "instances": [
+      "15:238",
+      "15:254",
+      "15:272",
+      "15:292"
+    ]
+  },
+  "lowerRows": [
+    {
+      "id": "15:224",
+      "width": 533,
+      "height": 20,
+      "children": [
+        {
+          "id": "2:51",
+          "name": "Demographics"
+        },
+        {
+          "id": "15:225",
+          "name": "Optional pronouns"
+        }
+      ],
+      "groupRefs": {
+        "visible": "Show pronouns#2:8"
+      }
+    },
+    {
+      "id": "15:227",
+      "width": 533,
+      "height": 20,
+      "children": [
+        {
+          "id": "2:64",
+          "name": "Demographics"
+        },
+        {
+          "id": "15:228",
+          "name": "Optional pronouns"
+        }
+      ],
+      "groupRefs": {
+        "visible": "Show pronouns#2:8"
+      }
+    },
+    {
+      "id": "15:230",
+      "width": 533,
+      "height": 20,
+      "children": [
+        {
+          "id": "2:79",
+          "name": "Demographics"
+        },
+        {
+          "id": "15:231",
+          "name": "Optional pronouns"
+        }
+      ],
+      "groupRefs": {
+        "visible": "Show pronouns#2:8"
+      }
+    },
+    {
+      "id": "15:233",
+      "width": 533,
+      "height": 20,
+      "children": [
+        {
+          "id": "11:169",
+          "name": "Demographics"
+        },
+        {
+          "id": "15:234",
+          "name": "Optional pronouns"
+        }
+      ],
+      "groupRefs": {
+        "visible": "Show pronouns#2:8"
+      }
+    }
+  ]
+}

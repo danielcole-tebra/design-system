@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "title": "Patient header · Pronouns in the lower demographics row",
+  "date": "2026-11-21",
+  "fileKey": "ipK5Vwmpqieg8WeHhiCMJz",
+  "reviewUrl": "https://www.figma.com/design/ipK5Vwmpqieg8WeHhiCMJz?node-id=2-88",
+  "summary": "Moved pronouns after MRN in the lower demographics row across all four header variants. Preserved text/visibility controls and 72 px height; the separator hides with pronouns.",
+  "timing": {
+    "start": "2026-11-21T20:18:19Z",
+    "ready": "2026-11-21T20:20:17.248Z",
+    "built": "2026-11-21T20:20:21.046Z",
+    "firstImage": "2026-11-21T20:20:55.456Z",
+    "verified": "2026-11-21T20:21:22.526Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "164 measured assertions passed across sixteen affected existing instances and four retained hidden-pronoun checks.",
+    "All four variants show the patient name alone in the upper row. Visible pronouns align with the lower demographics row after MRN.",
+    "Existing Pronouns text and Show pronouns boolean references preserved. When false, both pronouns and the added separator are effectively hidden.",
+    "All headers remain 72 px; the 533 px sample lower row fits within the identity area at 900 and 1184 px. Demographic content and Akkurat LL preserved.",
+    "Published Retry Link integrity check passes with zero structural/token differences. Header state content inspected in screenshots; no prototype wiring changed.",
+    "Full review, existing 900 px checks, four hidden-pronoun examples and cropped header screenshot viewed."
+  ],
+  "findings": [
+    "DECISION — Daniel, 2026-11-21 requested pronouns in the lower row with MRN and other details, superseding prior name-row placement in this working file.",
+    "All original pronoun and demographic nodes were moved, not deleted. Four lower-row containers and optional separator groups were added; inspection instances retained.",
+    "This validates the selected sample at the two authored widths; it does not settle broader long-content overflow or missing-field contracts. Original Proposals and published library unchanged."
+  ],
+  "reads": [
+    "Previously loaded Figma use/generate-design guidance; LIBRARY.md Efficient execution/API checks; COMPOSITIONS.md Page patterns.",
+    "Live four-variant identity/pronoun/demographics nodes, existing consumer instances and component-property references.",
+    "Current PATIENT-HEADER-REVIEW.md and cached-run ledger."
+  ],
+  "effort": {
+    "through": "verification",
+    "figmaCalls": 3,
+    "otherCalls": null,
+    "searches": 0,
+    "technicalRetries": 0,
+    "canvasCorrections": 0,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "screenshots": [
+    "agreed-states.png",
+    "900px-check.png",
+    "pronouns-hidden.png",
+    "header.png"
+  ],
+  "evidence": {
+    "details": "evidence.json",
+    "ledger": "ledger.json",
+    "scripts": [
+      "update.js",
+      "verify.js"
+    ],
+    "previousRun": "../2026-11-21-patient-header-cached"
+  }
+}
