@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "title": "Patient header · Initial failure without prior allergy information",
+  "date": "2026-11-21",
+  "fileKey": "ipK5Vwmpqieg8WeHhiCMJz",
+  "reviewUrl": "https://www.figma.com/design/ipK5Vwmpqieg8WeHhiCMJz?node-id=8-126",
+  "summary": "Added the approved no-prior-information failure example and allergy-only Retry recovery contract. Both failure contexts share the existing 72 px presentation. Next discussion is server-cached allergy data.",
+  "timing": {
+    "start": "2026-11-21T18:57:18Z",
+    "ready": "2026-11-21T18:58:07.529Z",
+    "built": "2026-11-21T18:58:08.732Z",
+    "firstImage": "2026-11-21T18:58:55.885Z",
+    "verified": "2026-11-21T18:59:09.874Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "92 measured assertions pass across seven 1184 px review instances and four 900 px inspection instances.",
+    "All header instances remain 72 px, with exact expected visible content, Akkurat LL, preserved identity/balance and no visible text overflow.",
+    "Both new initial-failure examples have an empty hidden allergy-information property; neither asserts no known allergies.",
+    "New nested Retry Link matches the actual published master, with no structural/token differences.",
+    "Recovery annotation states allergy-only Retry, replacement loading, returned content after success and return to failure on another error.",
+    "Full review and inspection screenshots viewed. Review consists of 47 frames, 60 text nodes and 16 instances; no image-filled nodes."
+  ],
+  "findings": [
+    "DECISION — Daniel, 2026-11-21 approved initial failure + Retry and the basic recovery workflow, resolving the previously pending no-prior-information case.",
+    "Reused failure component, renamed local presentation value from Refresh failed to Failed; existing refresh examples preserve their context labels. No new duplicate failure variant, no nodes deleted.",
+    "Retry remains static; no live request or played-through prototype claimed. Cached-response presentation, duplicate in-flight requests, View All and conflicting flags remain open.",
+    "Verification retry: direct numeric indexing of a query result returned undefined. Read the live nested Retry ID and used that verified ID; no canvas correction was needed.",
+    "Pinned source confirms special cached response status 299 and Tebra-Cache-Date, data/date warning and possible-outdated tooltip. This is not current-production evidence; cached-state design remains pending."
+  ],
+  "reads": [
+    "Previously loaded Figma use/generate-design skills; current LIBRARY.md Efficient execution/API checks and COMPOSITIONS.md Page patterns.",
+    "Live affected component definitions, review/inspection structure, newly created initial-failure subtree and published Link main.",
+    "Pinned local source: Allergies.tsx, useAllergiesQuery.ts, Error/CachedDataWarning.tsx, types/header.ts and cache constants."
+  ],
+  "effort": {
+    "through": "verification",
+    "figmaCalls": 5,
+    "otherCalls": null,
+    "searches": 0,
+    "technicalRetries": 1,
+    "canvasCorrections": 0,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "screenshots": [
+    "agreed-states.png",
+    "900px-check.png"
+  ],
+  "evidence": {
+    "details": "evidence.json",
+    "ledger": "ledger.json",
+    "scripts": [
+      "update.js",
+      "verify.js"
+    ],
+    "previousRun": "../2026-11-21-patient-header-inline-status"
+  }
+}

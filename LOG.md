@@ -4816,3 +4816,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-21 — Patient header · Replace allergy content in place
 - File: ipK5Vwmpqieg8WeHhiCMJz. Updated fetching/refreshing and failed-refresh feedback to replace the existing allergy summary. All states remain 72 px; identity and balance stay visible. Daniel's clarification supersedes prior-content retention.
 - Evidence: runs/2026-11-21-patient-header-inline-status/REPORT.md, record.json, agreed-states.png, 900px-check.png.
+
+
+<!-- builder-run:runs/2026-11-21-patient-header-initial-failure -->
+## 2026-11-21 — Patient header · Initial failure without prior allergy information
+- File: ipK5Vwmpqieg8WeHhiCMJz. Added the approved no-prior-information failure example and allergy-only Retry recovery contract. Both failure contexts share the existing 72 px presentation. Next discussion is server-cached allergy data.
+- Evidence: runs/2026-11-21-patient-header-initial-failure/REPORT.md, record.json, agreed-states.png, 900px-check.png.

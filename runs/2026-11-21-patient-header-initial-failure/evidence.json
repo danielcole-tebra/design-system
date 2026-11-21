@@ -1,0 +1,535 @@
+{
+  "before": [
+    {
+      "id": "2:88",
+      "type": "FRAME",
+      "name": "Patient header · Agreed states",
+      "width": 1248,
+      "height": 984,
+      "children": [
+        {
+          "id": "2:89",
+          "name": "Review context",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:93",
+          "name": "01 · Allergy names present",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:108",
+          "name": "02 · No known allergies",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:123",
+          "name": "03 · No known medication allergies",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:138",
+          "name": "04 · No allergy history documented",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:153",
+          "name": "05 · Fetching or refreshing allergies",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:170",
+          "name": "06 · Failed refresh",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:189",
+          "name": "Next discussion",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "2:192",
+      "type": "FRAME",
+      "name": "Inspection · 2026-11-21 working header",
+      "width": 948,
+      "height": 420,
+      "children": [
+        {
+          "id": "2:193",
+          "name": "Inspection note",
+          "type": "TEXT"
+        },
+        {
+          "id": "2:194",
+          "name": "900 px · Current",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "2:207",
+          "name": "900 px · Refresh failed",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "6:112",
+          "name": "900 px · Fetching",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "6:127",
+          "name": "README / Superseded status rows",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "id": "2:71",
+      "type": "COMPONENT",
+      "name": "Refresh state=Refresh failed",
+      "width": 1184,
+      "height": 72,
+      "children": [
+        {
+          "id": "2:72",
+          "name": "Header content",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:84",
+          "name": "Superseded / Extra status row · Retained hidden",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "2:42",
+      "type": "COMPONENT_SET",
+      "name": "Patient header / Working review",
+      "width": 1248,
+      "height": 416,
+      "children": [
+        {
+          "id": "2:43",
+          "name": "Refresh state=Current",
+          "type": "COMPONENT"
+        },
+        {
+          "id": "2:56",
+          "name": "Refresh state=Fetching",
+          "type": "COMPONENT"
+        },
+        {
+          "id": "2:71",
+          "name": "Refresh state=Refresh failed",
+          "type": "COMPONENT"
+        }
+      ],
+      "properties": {
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "defaultValue": "Dana Whitfield"
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "defaultValue": "(she/her)"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "defaultValue": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "defaultValue": "Allergies: egg, poison ivy extract"
+        },
+        "Balance#2:20": {
+          "type": "TEXT",
+          "defaultValue": "Balance $0.00"
+        },
+        "Refresh state": {
+          "type": "VARIANT",
+          "defaultValue": "Current",
+          "variantOptions": [
+            "Current",
+            "Fetching",
+            "Refresh failed"
+          ]
+        }
+      }
+    },
+    {
+      "id": "2:189",
+      "type": "FRAME",
+      "name": "Next discussion",
+      "width": 688,
+      "height": 64,
+      "children": [
+        {
+          "id": "2:190",
+          "name": "Next state",
+          "type": "TEXT"
+        },
+        {
+          "id": "2:191",
+          "name": "Limits",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "created": {
+      "card": "8:126",
+      "initial": "8:128",
+      "narrow": "8:146",
+      "workflow": "8:145"
+    },
+    "changed": [
+      "2:71",
+      "2:42",
+      "2:190",
+      "2:191"
+    ],
+    "counts": {
+      "FRAME": 47,
+      "TEXT": 60,
+      "INSTANCE": 16
+    },
+    "imageNodes": [],
+    "properties": {
+      "initial": {
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": ""
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Failed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "narrow": {
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": ""
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Failed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    "measurements": [
+      {
+        "id": "8:128",
+        "width": 1184,
+        "height": 72
+      },
+      {
+        "id": "8:146",
+        "width": 900,
+        "height": 72
+      }
+    ]
+  },
+  "retryInspection": [
+    {
+      "id": "I8:128;2:72",
+      "name": "Header content",
+      "type": "FRAME",
+      "visible": true
+    },
+    {
+      "id": "I8:128;2:73",
+      "name": "Avatar / SCAFFOLDING · Approved header contrast override",
+      "type": "INSTANCE",
+      "visible": true
+    },
+    {
+      "id": "I8:128;2:73;208:7",
+      "name": "Letter",
+      "type": "TEXT",
+      "visible": true,
+      "characters": "DW"
+    },
+    {
+      "id": "I8:128;2:75",
+      "name": "Identity",
+      "type": "FRAME",
+      "visible": true
+    },
+    {
+      "id": "I8:128;2:76",
+      "name": "Name and pronouns",
+      "type": "FRAME",
+      "visible": true
+    },
+    {
+      "id": "I8:128;2:77",
+      "name": "Patient name",
+      "type": "TEXT",
+      "visible": true,
+      "characters": "Dana Whitfield"
+    },
+    {
+      "id": "I8:128;2:78",
+      "name": "Pronouns",
+      "type": "TEXT",
+      "visible": true,
+      "characters": "(she/her)"
+    },
+    {
+      "id": "I8:128;2:79",
+      "name": "Demographics",
+      "type": "TEXT",
+      "visible": true,
+      "characters": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+    },
+    {
+      "id": "I8:128;2:80",
+      "name": "Allergies and balance",
+      "type": "FRAME",
+      "visible": true
+    },
+    {
+      "id": "I8:128;2:81",
+      "name": "Allergy summary",
+      "type": "FRAME",
+      "visible": true
+    },
+    {
+      "id": "I8:128;2:82",
+      "name": "Allergy information",
+      "type": "TEXT",
+      "visible": false,
+      "characters": ""
+    },
+    {
+      "id": "I8:128;2:85",
+      "name": "Failure status",
+      "type": "TEXT",
+      "visible": true,
+      "characters": "Allergies failed to load"
+    },
+    {
+      "id": "I8:128;2:86",
+      "name": "Retry",
+      "type": "INSTANCE",
+      "visible": true
+    },
+    {
+      "id": "I8:128;2:86;171:34",
+      "name": "Label",
+      "type": "TEXT",
+      "visible": true,
+      "characters": "Retry"
+    },
+    {
+      "id": "I8:128;2:83",
+      "name": "Balance",
+      "type": "TEXT",
+      "visible": true,
+      "characters": "Balance $0.00"
+    },
+    {
+      "id": "I8:128;2:84",
+      "name": "Superseded / Extra status row · Retained hidden",
+      "type": "FRAME",
+      "visible": false
+    }
+  ],
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 1,
+      "passed": true,
+      "checks": [
+        {
+          "id": "I8:128;2:86",
+          "mainId": "2:8",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 92,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "2:95 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:95 state",
+          "passed": true
+        },
+        {
+          "name": "2:95 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:95 feedback",
+          "passed": true
+        },
+        {
+          "name": "2:95 Retry",
+          "passed": true
+        },
+        {
+          "name": "2:95 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:95 visible text fits",
+          "passed": true
+        },
+        {
+          "name": "2:95 font",
+          "passed": true
+        },
+        {
+          "name": "2:110 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:110 state",
+          "passed": true
+        },
+        {
+          "name": "2:110 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:110 feedback",
+          "passed": true
+        },
+        {
+          "name": "2:110 Retry",
+          "passed": true
+        },
+        {
+          "name": "2:110 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:110 visible text fits",
+          "passed": true
+        },
+        {
+          "name": "2:110 font",
+          "passed": true
+        },
+        {
+          "name": "2:125 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:125 state",
+          "passed": true
+        },
+        {
+          "name": "2:125 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:125 feedback",
+          "passed": true
+        },
+        {
+          "name": "2:125 Retry",
+          "passed": true
+        },
+        {
+          "name": "2:125 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:125 visible text fits",
+          "passed": true
+        },
+        {
+          "name": "2:125 font",
+          "passed": true
+        },
+        {
+          "name": "2:140 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:140 state",
+          "passed": true
+        },
+        {
+          "name": "2:140 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:140 feedback",
+          "passed": true
+        },
+        {
+          "name": "2:140 Retry",
+          "passed": true
+        },
+        {
+          "name": "2:140 identity and balance",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 62,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  }
+}
