@@ -1,0 +1,720 @@
+{
+  "before": [
+    {
+      "id": "2:42",
+      "name": "Patient header / Working review",
+      "type": "COMPONENT_SET",
+      "width": 1248,
+      "height": 416,
+      "children": [
+        {
+          "id": "2:43",
+          "name": "Refresh state=Current",
+          "type": "COMPONENT"
+        },
+        {
+          "id": "2:56",
+          "name": "Refresh state=Updating",
+          "type": "COMPONENT"
+        },
+        {
+          "id": "2:71",
+          "name": "Refresh state=Refresh failed",
+          "type": "COMPONENT"
+        }
+      ],
+      "properties": {
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "defaultValue": "Dana Whitfield"
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "defaultValue": "(she/her)"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "defaultValue": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "defaultValue": "Allergies: egg, poison ivy extract"
+        },
+        "Balance#2:20": {
+          "type": "TEXT",
+          "defaultValue": "Balance $0.00"
+        },
+        "Refresh state": {
+          "type": "VARIANT",
+          "defaultValue": "Current",
+          "variantOptions": [
+            "Current",
+            "Updating",
+            "Refresh failed"
+          ]
+        }
+      }
+    },
+    {
+      "id": "2:56",
+      "name": "Refresh state=Updating",
+      "type": "COMPONENT",
+      "width": 1184,
+      "height": 96,
+      "children": [
+        {
+          "id": "2:57",
+          "name": "Header content",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:69",
+          "name": "Refresh status row",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "2:71",
+      "name": "Refresh state=Refresh failed",
+      "type": "COMPONENT",
+      "width": 1184,
+      "height": 96,
+      "children": [
+        {
+          "id": "2:72",
+          "name": "Header content",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:84",
+          "name": "Refresh status row",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "2:66",
+      "name": "Allergy summary",
+      "type": "FRAME",
+      "width": 210,
+      "height": 32,
+      "children": [
+        {
+          "id": "2:67",
+          "name": "Allergy information",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "id": "2:81",
+      "name": "Allergy summary",
+      "type": "FRAME",
+      "width": 210,
+      "height": 32,
+      "children": [
+        {
+          "id": "2:82",
+          "name": "Allergy information",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "id": "2:69",
+      "name": "Refresh status row",
+      "type": "FRAME",
+      "width": 1184,
+      "height": 24,
+      "children": [
+        {
+          "id": "2:70",
+          "name": "Refresh status",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "id": "2:84",
+      "name": "Refresh status row",
+      "type": "FRAME",
+      "width": 1184,
+      "height": 24,
+      "children": [
+        {
+          "id": "2:85",
+          "name": "Refresh status",
+          "type": "TEXT"
+        },
+        {
+          "id": "2:86",
+          "name": "Retry",
+          "type": "INSTANCE"
+        }
+      ]
+    },
+    {
+      "id": "2:155",
+      "name": "05 · Updating with prior information",
+      "type": "INSTANCE",
+      "width": 1184,
+      "height": 96,
+      "children": [
+        {
+          "id": "I2:155;2:57",
+          "name": "Header content",
+          "type": "FRAME"
+        },
+        {
+          "id": "I2:155;2:69",
+          "name": "Refresh status row",
+          "type": "FRAME"
+        }
+      ],
+      "properties": {
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": "Allergies: egg, poison ivy extract"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Updating",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "2:172",
+      "name": "06 · Failed refresh with prior information",
+      "type": "INSTANCE",
+      "width": 1184,
+      "height": 96,
+      "children": [
+        {
+          "id": "I2:172;2:72",
+          "name": "Header content",
+          "type": "FRAME"
+        },
+        {
+          "id": "I2:172;2:84",
+          "name": "Refresh status row",
+          "type": "FRAME"
+        }
+      ],
+      "properties": {
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": "Allergies: egg, poison ivy extract"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Refresh failed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "2:207",
+      "name": "900 px · Refresh failed",
+      "type": "INSTANCE",
+      "width": 900,
+      "height": 96,
+      "children": [
+        {
+          "id": "I2:207;2:72",
+          "name": "Header content",
+          "type": "FRAME"
+        },
+        {
+          "id": "I2:207;2:84",
+          "name": "Refresh status row",
+          "type": "FRAME"
+        }
+      ],
+      "properties": {
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": "Allergies: egg, poison ivy extract"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Refresh failed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "2:88",
+      "name": "Patient header · Agreed states",
+      "type": "FRAME",
+      "width": 1248,
+      "height": 1032,
+      "children": [
+        {
+          "id": "2:89",
+          "name": "Review context",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:93",
+          "name": "01 · Allergy names present",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:108",
+          "name": "02 · No known allergies",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:123",
+          "name": "03 · No known medication allergies",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:138",
+          "name": "04 · No allergy history documented",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:153",
+          "name": "05 · Updating with prior information",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:170",
+          "name": "06 · Failed refresh with prior information",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:189",
+          "name": "Next discussion",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "2:192",
+      "name": "Inspection · 2026-11-21 working header",
+      "type": "FRAME",
+      "width": 948,
+      "height": 284,
+      "children": [
+        {
+          "id": "2:193",
+          "name": "Inspection note",
+          "type": "TEXT"
+        },
+        {
+          "id": "2:194",
+          "name": "900 px · Current",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "2:207",
+          "name": "900 px · Refresh failed",
+          "type": "INSTANCE"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "changed": [
+      "2:67",
+      "2:82",
+      "2:70",
+      "2:85",
+      "2:86",
+      "2:70",
+      "2:85",
+      "2:81",
+      "2:69",
+      "2:84",
+      "2:56",
+      "2:71",
+      "2:42",
+      "2:43",
+      "2:92",
+      "2:154",
+      "2:171",
+      "2:153",
+      "2:155",
+      "2:170",
+      "2:172",
+      "2:190",
+      "2:191",
+      "2:207"
+    ],
+    "created": {
+      "narrow": "6:112",
+      "readme": "6:127"
+    },
+    "counts": {
+      "FRAME": 40,
+      "TEXT": 50,
+      "INSTANCE": 13
+    },
+    "imageNodes": [],
+    "measurements": [
+      {
+        "id": "2:155",
+        "width": 1184,
+        "height": 72,
+        "properties": {
+          "Allergy information#2:16": {
+            "type": "TEXT",
+            "value": "Allergies: egg, poison ivy extract"
+          },
+          "Demographics#2:12": {
+            "type": "TEXT",
+            "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+          },
+          "Show pronouns#2:8": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Pronouns#2:4": {
+            "type": "TEXT",
+            "value": "(she/her)"
+          },
+          "Balance#2:20": {
+            "type": "TEXT",
+            "value": "Balance $0.00"
+          },
+          "Patient name#2:0": {
+            "type": "TEXT",
+            "value": "Dana Whitfield"
+          },
+          "Refresh state": {
+            "value": "Fetching",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "2:172",
+        "width": 1184,
+        "height": 72,
+        "properties": {
+          "Balance#2:20": {
+            "type": "TEXT",
+            "value": "Balance $0.00"
+          },
+          "Allergy information#2:16": {
+            "type": "TEXT",
+            "value": "Allergies: egg, poison ivy extract"
+          },
+          "Show pronouns#2:8": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Pronouns#2:4": {
+            "type": "TEXT",
+            "value": "(she/her)"
+          },
+          "Demographics#2:12": {
+            "type": "TEXT",
+            "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+          },
+          "Patient name#2:0": {
+            "type": "TEXT",
+            "value": "Dana Whitfield"
+          },
+          "Refresh state": {
+            "value": "Refresh failed",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "2:207",
+        "width": 900,
+        "height": 72,
+        "properties": {
+          "Balance#2:20": {
+            "type": "TEXT",
+            "value": "Balance $0.00"
+          },
+          "Allergy information#2:16": {
+            "type": "TEXT",
+            "value": "Allergies: egg, poison ivy extract"
+          },
+          "Show pronouns#2:8": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Pronouns#2:4": {
+            "type": "TEXT",
+            "value": "(she/her)"
+          },
+          "Demographics#2:12": {
+            "type": "TEXT",
+            "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+          },
+          "Patient name#2:0": {
+            "type": "TEXT",
+            "value": "Dana Whitfield"
+          },
+          "Refresh state": {
+            "value": "Refresh failed",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "6:112",
+        "width": 900,
+        "height": 72,
+        "properties": {
+          "Allergy information#2:16": {
+            "type": "TEXT",
+            "value": "Allergies: egg, poison ivy extract"
+          },
+          "Demographics#2:12": {
+            "type": "TEXT",
+            "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+          },
+          "Show pronouns#2:8": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Pronouns#2:4": {
+            "type": "TEXT",
+            "value": "(she/her)"
+          },
+          "Balance#2:20": {
+            "type": "TEXT",
+            "value": "Balance $0.00"
+          },
+          "Patient name#2:0": {
+            "type": "TEXT",
+            "value": "Dana Whitfield"
+          },
+          "Refresh state": {
+            "value": "Fetching",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      }
+    ]
+  },
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": true,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 1,
+      "passed": true,
+      "checks": [
+        {
+          "id": "2:86",
+          "mainId": "2:8",
+          "passed": true,
+          "differenceCount": 0
+        }
+      ],
+      "differenceCount": 0,
+      "differences": [],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 83,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "2:95 width",
+          "passed": true
+        },
+        {
+          "name": "2:95 height",
+          "passed": true
+        },
+        {
+          "name": "2:95 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:95 status",
+          "passed": true
+        },
+        {
+          "name": "2:95 Retry",
+          "passed": true
+        },
+        {
+          "name": "2:95 text fits",
+          "passed": true
+        },
+        {
+          "name": "2:95 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:95 font",
+          "passed": true
+        },
+        {
+          "name": "2:95 extra status rows visible",
+          "passed": true
+        },
+        {
+          "name": "2:110 width",
+          "passed": true
+        },
+        {
+          "name": "2:110 height",
+          "passed": true
+        },
+        {
+          "name": "2:110 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:110 status",
+          "passed": true
+        },
+        {
+          "name": "2:110 Retry",
+          "passed": true
+        },
+        {
+          "name": "2:110 text fits",
+          "passed": true
+        },
+        {
+          "name": "2:110 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:110 font",
+          "passed": true
+        },
+        {
+          "name": "2:110 extra status rows visible",
+          "passed": true
+        },
+        {
+          "name": "2:125 width",
+          "passed": true
+        },
+        {
+          "name": "2:125 height",
+          "passed": true
+        },
+        {
+          "name": "2:125 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:125 status",
+          "passed": true
+        },
+        {
+          "name": "2:125 Retry",
+          "passed": true
+        },
+        {
+          "name": "2:125 text fits",
+          "passed": true
+        },
+        {
+          "name": "2:125 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:125 font",
+          "passed": true
+        },
+        {
+          "name": "2:125 extra status rows visible",
+          "passed": true
+        },
+        {
+          "name": "2:140 width",
+          "passed": true
+        },
+        {
+          "name": "2:140 height",
+          "passed": true
+        },
+        {
+          "name": "2:140 visible allergy content",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 53,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "visualReview": "Both screenshots inspected. All six review headers and three 900 px inspection instances are72 px tall. Visible request feedback occupies the original allergy row. No prior allergy content or extra row is visible in fetching/failure.",
+  "decision": "Daniel2026-11-21 replaces allergy content during fetching/refreshing; explicitly chose failure message + Retry after failed refresh. Prior retained-content display decision superseded. No query-cache deletion specified."
+}

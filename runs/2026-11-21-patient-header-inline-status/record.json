@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "title": "Patient header · Replace allergy content in place",
+  "date": "2026-11-21",
+  "fileKey": "ipK5Vwmpqieg8WeHhiCMJz",
+  "reviewUrl": "https://www.figma.com/design/ipK5Vwmpqieg8WeHhiCMJz?node-id=2-88",
+  "summary": "Updated fetching/refreshing and failed-refresh feedback to replace the existing allergy summary. All states remain 72 px; identity and balance stay visible. Daniel's clarification supersedes prior-content retention.",
+  "timing": {
+    "start": "2026-11-21T18:49:39.838Z",
+    "ready": "2026-11-21T18:50:19.307Z",
+    "built": "2026-11-21T18:50:21.572Z",
+    "firstImage": "2026-11-21T18:50:46.261Z",
+    "verified": "2026-11-21T18:50:50.472Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "83 measured assertions passed across six review and three inspection instances.",
+    "1184 px review widths and 900 px inspection widths; all headers 72 px tall.",
+    "Effective visibility: loading replaces prior content; failed refresh shows failure message plus Retry; superseded extra rows hidden.",
+    "Identity and balance visible, all visible text within header bounds, Akkurat LL retained.",
+    "Moved Retry remains a published Link instance with zero structural/token differences and no invented prototype destination.",
+    "Review has 40 frames, 50 text nodes, 13 instances and no image fills; full review and 900 px screenshots inspected."
+  ],
+  "findings": [
+    "DECISION — Daniel, 2026-11-21: replace allergy content during fetching/refreshing, without another section; failed refresh uses failure message + Retry. Supersedes earlier retained-content display and 96 px request-state layout.",
+    "No nodes deleted. Existing extra status rows and prior-information text retained hidden; README added to inspection area. Existing current-state examples and approved avatar contrast override preserved.",
+    "New loading/error wording is draft presentation. No-prior-data failure and detailed recovery remain pending; no live query behavior or prototype playthrough claimed."
+  ],
+  "reads": [
+    "Figma use/generate-design skill guidance and previously loaded relevant references.",
+    "LIBRARY.md Efficient execution and API checks; COMPOSITIONS.md Page patterns; current PATIENT-HEADER-REVIEW.md.",
+    "Live affected variants, review/inspection instances and published Retry main component."
+  ],
+  "effort": {
+    "through": "verification",
+    "figmaCalls": 3,
+    "otherCalls": null,
+    "searches": 0,
+    "technicalRetries": 0,
+    "canvasCorrections": 0,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "screenshots": [
+    "agreed-states.png",
+    "900px-check.png"
+  ],
+  "evidence": {
+    "details": "evidence.json",
+    "scripts": [
+      "update.js",
+      "verify.js"
+    ],
+    "created": {
+      "narrow": "6:112",
+      "readme": "6:127"
+    },
+    "priorRun": "../2026-11-21-patient-header-working-file",
+    "timingScope": "Timed from post-clarification preparation read through verification; question was answered before recorded start."
+  }
+}

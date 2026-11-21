@@ -4810,3 +4810,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-21 — Patient header · Tebra working file
 - File: ipK5Vwmpqieg8WeHhiCMJz. Created a header-only Tebra working file with four existing-model allergy content outcomes and retained-data updating/failed-refresh examples. Original Proposals and library unchanged. Working presentation ready for Daniel's read.
 - Evidence: runs/2026-11-21-patient-header-working-file/REPORT.md, record.json, agreed-states.png, 900px-check.png.
+
+
+<!-- builder-run:runs/2026-11-21-patient-header-inline-status -->
+## 2026-11-21 — Patient header · Replace allergy content in place
+- File: ipK5Vwmpqieg8WeHhiCMJz. Updated fetching/refreshing and failed-refresh feedback to replace the existing allergy summary. All states remain 72 px; identity and balance stay visible. Daniel's clarification supersedes prior-content retention.
+- Evidence: runs/2026-11-21-patient-header-inline-status/REPORT.md, record.json, agreed-states.png, 900px-check.png.

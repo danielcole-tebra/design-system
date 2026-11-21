@@ -1,0 +1,187 @@
+{
+  "fileKey": "ipK5Vwmpqieg8WeHhiCMJz",
+  "sessionId": "0d90697b-15a3-4d77-a229-8b177b5522ff",
+  "status": "verified; awaiting Daniel's read",
+  "changed": [
+    "2:67",
+    "2:82",
+    "2:70",
+    "2:85",
+    "2:86",
+    "2:70",
+    "2:85",
+    "2:81",
+    "2:69",
+    "2:84",
+    "2:56",
+    "2:71",
+    "2:42",
+    "2:43",
+    "2:92",
+    "2:154",
+    "2:171",
+    "2:153",
+    "2:155",
+    "2:170",
+    "2:172",
+    "2:190",
+    "2:191",
+    "2:207"
+  ],
+  "created": {
+    "narrow": "6:112",
+    "readme": "6:127"
+  },
+  "counts": {
+    "FRAME": 40,
+    "TEXT": 50,
+    "INSTANCE": 13
+  },
+  "imageNodes": [],
+  "measurements": [
+    {
+      "id": "2:155",
+      "width": 1184,
+      "height": 72,
+      "properties": {
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": "Allergies: egg, poison ivy extract"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Fetching",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "2:172",
+      "width": 1184,
+      "height": 72,
+      "properties": {
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": "Allergies: egg, poison ivy extract"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Refresh failed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "2:207",
+      "width": 900,
+      "height": 72,
+      "properties": {
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": "Allergies: egg, poison ivy extract"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Refresh failed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "6:112",
+      "width": 900,
+      "height": 72,
+      "properties": {
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "value": "Allergies: egg, poison ivy extract"
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "value": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "value": "(she/her)"
+        },
+        "Balance#2:20": {
+          "type": "TEXT",
+          "value": "Balance $0.00"
+        },
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "value": "Dana Whitfield"
+        },
+        "Refresh state": {
+          "value": "Fetching",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    }
+  ]
+}
