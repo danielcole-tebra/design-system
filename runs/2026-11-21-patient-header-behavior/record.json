@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-21",
+  "fileKey": "zKT34LQogNjz3Z07fY4VQB",
+  "scope": "Patient header behavior discussion; documentation only",
+  "decisionOwner": "Daniel",
+  "userInstruction": "Let's use the existing allergy data model. I'd like to work through the missing states and workflows before we start changing the design.",
+  "decision": "Existing allergy data model; severity-based summaries superseded; review behavior before changing Figma.",
+  "sourceCommit": "58f5d42b7a17fdeabfce3d2897dc0567333a48b3",
+  "sourceReads": [
+    "packages/clinical-system/src/components/ClinicalPageHeader/Allergies.tsx",
+    "packages/clinical-system/src/queries/useAllergiesQuery.ts"
+  ],
+  "currentRegister": "PATIENT-HEADER-REVIEW.md",
+  "figmaMutations": 0,
+  "productCodeMutations": 0,
+  "screenshots": [],
+  "pendingFirstChoice": "Keep prior same-patient allergy content visible, or replace it, during refresh and refresh failure.",
+  "proposedBehaviorsApproved": false,
+  "limitations": "Existing August source snapshot, not a fresh production audit. No new rendered evidence or prototype playthrough."
+}

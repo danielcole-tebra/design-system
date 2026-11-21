@@ -1,8 +1,40 @@
 # Patient header reappraisal
 
-Review date: 2026-11-19. Status: **initial audit complete; full legacy coverage is not established**. This is the current review/register for the Proposals patient header. August records remain historical evidence. No design decision is changed by this review.
+Initial review: 2026-11-19. Updated: 2026-11-21. Status: **behavior review in progress; design changes on hold at Daniel's request**. This is the current review/register for the Proposals patient header. August records remain historical evidence.
 
-The compact examples are coherently assembled, but the work does not account for all the inspected source states or interactions. The largest issue is that its allergy severity model cannot be derived from the header data contract. Missing operational states and content-length behavior prevent treating this as a complete replacement.
+The compact examples are coherently assembled, but the work does not account for all the inspected source states or interactions. Daniel resolved the allergy data-model choice on 2026-11-21: use the existing model, without inferred severity. The Figma severity variants remain unchanged pending the behavior review. Missing operational states and content-length behavior prevent treating this as a complete replacement.
+
+## Current decision and discussion scope
+
+**Decider: Daniel. Date: 2026-11-21. Scope: Proposals patient header.** Use the existing allergy data model: allergen records, `hasNoKnownAllergies`, and `hasNoKnownMedicationAllergies`. This supersedes the proposal's severity-based summary approach and resolves RPH-01's data-source choice. It does not approve new filtering, changes to flag precedence, new action behavior, or a visual redesign. Work through missing states and workflows before changing Figma.
+
+Four successful content outcomes must be accounted for: allergy names present; no known allergies; no known medication allergies; no allergy history documented. Request loading, request failure and cached-data provenance are separate concerns. The data-model decision is settled; presentation, transitions and the missing workflows below remain open.
+
+| Discussion order | Required states/workflows | Decisions still needed |
+|---|---|---|
+| 1. Allergies | Four successful content outcomes; initial load; refresh; no-data failure; refresh failure with prior data; server-cached response; View All; Retry | Preserve or replace prior data during refresh/failure; explicit recovery; link visibility; handling inconsistent flags/list |
+| 2. Identity and header availability | Whole-header load/no-patient/error; independent region failure; missing fields; preferred/legal names; pronouns; pediatric age | Fallback content and separator rules; which regions/actions remain usable |
+| 3. Alerts, restrictions and patient details | Patient alert; cached patient details; protection disabled; restricted; restriction fetch failure; role-dependent access dialogs; insurance; details disclosure; photo management | Which information stays visible, where displaced workflows live, and their open/close/success/error outcomes |
+| 4. Billing and chart actions | Billing enabled/disabled; balance availability; Print; practice note types; NDE; AI eligibility/trial/pending; permission-dependent More menu | Visibility/disabled rules, destinations, loading/failure and recovery for each action |
+| 5. Combined states and fit | Independent states together; long names/allergens; legal name plus demographics; narrow widths; route with top header hidden | Content priority and overflow contract; acceptance cases before design work |
+
+### Allergy behavior: source baseline and pending choices
+
+Source baseline was re-read on 2026-11-21 from the same pinned snapshot; it is not a fresh production audit. `Allergies.tsx:51–75` prioritizes loading, then error, then the no-known flags over a nonempty list. With both flags true it says “No known allergies”; medication-only says “No known medication allergies”; no flags and an empty list says “No allergy history documented”; otherwise it displays allergen names. These are observed implementation rules, not a new approval of contradictory-data handling. No severity derivation or filtering by `isActive`/`isError` is introduced by this decision.
+
+| Case | Observed source behavior | Candidate behavior for discussion, not approved |
+|---|---|---|
+| Initial load, no prior data for this patient | Allergy skeleton | Explicit loading; never substitute a no-known-allergies statement |
+| Successful response | Names or one of the three explicit absence/history statements | Retain the four meanings using the existing data model |
+| Refresh with prior data for the same patient | `isFetching` replaces content with the skeleton | Keep prior content visible with an updating indication |
+| Failed request with no prior data | Error message | Explicit unavailable state; Retry could refetch only allergies |
+| Failed refresh with prior data for the same patient | Error message replaces content | Keep prior content, explicitly mark the failed refresh and offer Retry |
+| Successful server-cached response | Content plus cached date notice | Preserve content and its cache provenance/date; do not describe it as a fresh response |
+| Retry | Query exposes `refetch`; current header does not use it | Refetch → updating/loading → success, cached success or repeated error; avoid duplicate in-flight requests |
+| View All | Navigate to the patient's allergy page when joined names exceed 65 characters | Keep destination; decide availability independently of copy length |
+| Flags and list disagree | No-known flags currently take precedence over names | Resolve explicitly rather than silently change precedence or imply the data is consistent |
+
+The prior-data candidates apply only to the same patient and established query identity; another patient's result must not carry over. A previously successful client result and a server-cached response are different sources of staleness. The source's server cache date must not be reused as a made-up timestamp for a failed client refresh. Exact wording/layout remains for later design work.
 
 ## Evidence and limits
 
@@ -62,7 +94,7 @@ All entries: evidence date **2026-11-19**; scope **Proposals patient header and 
 
 | ID / kind | Status, impact and disposition | Approved workaround |
 |---|---|---|
-| RPH-01 · DECISION | Open. Source Allergy has no severity; Severe/MildOnly cannot be computed from this contract. Choose available-data semantics or require an additional authoritative severity source and unknown-severity rule. Quiet patient `220:983` is still `Allergies=Severe` while displaying “Moderate: penicillin”: content and variant metadata diverge. | None recorded for severity mapping. |
+| RPH-01 · DECISION | Resolved by Daniel on 2026-11-21: use the existing allergy data model; no inferred severity. Supersedes severity-based summaries in the Proposals header. Figma implementation remains pending until states/workflows have been reviewed. Existing Severe/MildOnly and Moderate override are historical design content, not the new contract. | No severity workaround; use existing model. |
 | RPH-02 · GAP | Open. Missing medication-specific negative, allergy loading/cache, whole-header loading/no-patient/region failure, patient alert and restriction failure. These are independent dimensions, not five mutually exclusive allergy variants. | None. |
 | RPH-03 · GAP | Open. Insurance, patient details, photo management and access-management actions lack verified replacement destinations. Hiding the unrestricted label remains settled; removing its workflow is not established as settled. | Documented photo placeholder does not establish parity. |
 | RPH-04 · GAP | Open. No overflow contract. Severe at 900 leaves identity 471px for a 464px demographics row: 7px spare. Legal-name group is 184px; showing it adds an 8px inter-item gap too, predicting 656px, **185px beyond identity width**. Identity clips, rows are no-wrap/hug, text truncation disabled. Readback-derived, not a rendered stress test. Aaron's example instead has a 644px row inside 673px identity under NoneKnown. | None; needs retained combined-state tests. |
@@ -88,7 +120,10 @@ Historical EhrWebApp capture lists Pt. Msg (disabled), Print, Pt. Ed., + Note, S
 
 ClinicalPageNav carries identity/access/details when the top header is hidden; composition-ui explicitly uses that mode. notes-ui PatientInfo has a separate demographics treatment and age-zero truthiness issue. Portal SelectedPatientHeader includes email and explicit missing-value fallbacks. These were checked for scope, not redesigned or assumed to be replaced by the chart band. A universal-header migration was never established by the proposal.
 
-## Next review batch
+## Next discussion
 
-Resolve RPH-01 first: the allergy summary needs a defensible data mapping. Then specify independent loading/failure/cache states and destinations for displaced fields/actions. Preserve the 72px reference and build a retained review set at 900 and actual chart width: legal name plus longest allergy content; long/pediatric demographics; missing MRN; restriction failure; alert plus cache; billing off; AI hidden/trial; NDE on; permission-dependent menus. Obtain current product evidence and opened legacy menus for unresolved behavior. This is a proposed verification scope, not an approved redesign.
+Work through the checklist above before modifying the design. Start with whether same-patient prior allergy data remains visible during refresh and after refresh failure. Then settle recovery, View All and inconsistent flags before moving to identity/header availability. Continue to seek current product evidence and opened legacy menus for unresolved behavior. No construction batch is authorized by the discussion checklist.
 
+## Decision history
+
+2026-11-19 RPH-01, superseded by Daniel's 2026-11-21 decision: “Open. Source Allergy has no severity; Severe/MildOnly cannot be computed from this contract. Choose available-data semantics or require an additional authoritative severity source and unknown-severity rule. Quiet patient `220:983` is still `Allergies=Severe` while displaying ‘Moderate: penicillin’: content and variant metadata diverge.” Previous disposition: no recorded workaround for severity mapping. The former next-step proposal contemplated a retained design review set after resolving semantics; Daniel has now explicitly requested completing state/workflow discussion before design changes.

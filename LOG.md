@@ -4794,3 +4794,8 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - File: Proposals `zKT34LQogNjz3Z07fY4VQB`, header12:773, examples14:75, action45:537, control31:335 and chart-page168:248 placements. Read-only review; no canvas changes.
 - Finding: five allergy variants and four examples do not cover the source state space. Severity mapping lacks a field in the inspected Allergy contract; medication-specific negative, loading/cache/failure, displaced detail workflows and action gates remain unresolved. Combined legal-name/severe content predicts clipping at900; not rendered as a stress test. Full composition is72+56=128px.
 - Evidence: PATIENT-HEADER-REVIEW.md is the current coverage/register; runs/2026-11-19-patient-header-reappraisal/evidence.json, inspect.js and six inspected PNGs. Source pinned to58f5d42 (2026-08-13); no current production parity or prototype-playthrough claim.
+
+## 2026-11-21 — Patient header behavior review
+- File: Proposals `zKT34LQogNjz3Z07fY4VQB`, header12:773. Documentation only; Figma and code unchanged.
+- Decision: Daniel selected the existing allergy data model, resolving RPH-01's data-source choice and superseding severity-based summaries. Review missing states and workflows before design changes; implementation remains pending.
+- Evidence: PATIENT-HEADER-REVIEW.md now separates settled scope, source behavior, proposed transitions and a five-part discussion checklist; previous decision text retained in history. COMPOSITIONS.md links the scoped ruling. Source allergy renderer/query re-read at the existing snapshot; runs/2026-11-21-patient-header-behavior/record.json records provenance. No screenshot required for this documentation batch.
