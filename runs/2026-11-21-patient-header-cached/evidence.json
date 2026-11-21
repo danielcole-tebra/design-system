@@ -1,0 +1,606 @@
+{
+  "before": [
+    {
+      "id": "2:43",
+      "name": "Refresh state=Current",
+      "type": "COMPONENT",
+      "width": 1184,
+      "height": 72,
+      "children": [
+        {
+          "id": "2:44",
+          "name": "Header content",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "2:44",
+      "name": "Header content",
+      "type": "FRAME",
+      "width": 1184,
+      "height": 72,
+      "children": [
+        {
+          "id": "2:45",
+          "name": "Avatar / SCAFFOLDING · Approved header contrast override",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "2:47",
+          "name": "Identity",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:52",
+          "name": "Allergies and balance",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "2:47",
+      "name": "Identity",
+      "type": "FRAME",
+      "width": 870,
+      "height": 52,
+      "children": [
+        {
+          "id": "2:48",
+          "name": "Name and pronouns",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:51",
+          "name": "Demographics",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "id": "2:52",
+      "name": "Allergies and balance",
+      "type": "FRAME",
+      "width": 210,
+      "height": 52,
+      "children": [
+        {
+          "id": "2:53",
+          "name": "Allergy summary",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:55",
+          "name": "Balance",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "id": "2:53",
+      "name": "Allergy summary",
+      "type": "FRAME",
+      "width": 210,
+      "height": 32,
+      "children": [
+        {
+          "id": "2:54",
+          "name": "Allergy information",
+          "type": "TEXT"
+        }
+      ]
+    },
+    {
+      "id": "2:54",
+      "name": "Allergy information",
+      "type": "TEXT",
+      "width": 210,
+      "height": 20,
+      "characters": "Allergies: egg, poison ivy extract",
+      "refs": {
+        "characters": "Allergy information#2:16"
+      },
+      "textStyleId": "S:2ede1d5b604b7eacc72152b001bef5c2b7182c33,116:62"
+    },
+    {
+      "id": "2:55",
+      "name": "Balance",
+      "type": "TEXT",
+      "width": 94,
+      "height": 20,
+      "characters": "Balance $0.00",
+      "refs": {
+        "characters": "Balance#2:20"
+      },
+      "textStyleId": "S:cdb9fe68e6b5274b6e42be16d13bb3fb7834dccb,116:94"
+    },
+    {
+      "id": "2:42",
+      "name": "Patient header / Working review",
+      "type": "COMPONENT_SET",
+      "width": 1248,
+      "height": 416,
+      "children": [
+        {
+          "id": "2:43",
+          "name": "Refresh state=Current",
+          "type": "COMPONENT"
+        },
+        {
+          "id": "2:56",
+          "name": "Refresh state=Fetching",
+          "type": "COMPONENT"
+        },
+        {
+          "id": "2:71",
+          "name": "Refresh state=Failed",
+          "type": "COMPONENT"
+        }
+      ],
+      "properties": {
+        "Patient name#2:0": {
+          "type": "TEXT",
+          "defaultValue": "Dana Whitfield"
+        },
+        "Pronouns#2:4": {
+          "type": "TEXT",
+          "defaultValue": "(she/her)"
+        },
+        "Show pronouns#2:8": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Demographics#2:12": {
+          "type": "TEXT",
+          "defaultValue": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+        },
+        "Allergy information#2:16": {
+          "type": "TEXT",
+          "defaultValue": "Allergies: egg, poison ivy extract"
+        },
+        "Balance#2:20": {
+          "type": "TEXT",
+          "defaultValue": "Balance $0.00"
+        },
+        "Refresh state": {
+          "type": "VARIANT",
+          "defaultValue": "Current",
+          "variantOptions": [
+            "Current",
+            "Fetching",
+            "Failed"
+          ]
+        }
+      }
+    },
+    {
+      "id": "2:88",
+      "name": "Patient header · Agreed states",
+      "type": "FRAME",
+      "width": 1248,
+      "height": 1136,
+      "children": [
+        {
+          "id": "2:89",
+          "name": "Review context",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:93",
+          "name": "01 · Allergy names present",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:108",
+          "name": "02 · No known allergies",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:123",
+          "name": "03 · No known medication allergies",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:138",
+          "name": "04 · No allergy history documented",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:153",
+          "name": "05 · Fetching or refreshing allergies",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:170",
+          "name": "06 · Failed refresh",
+          "type": "FRAME"
+        },
+        {
+          "id": "8:126",
+          "name": "07 · Initial failure · No prior allergy information",
+          "type": "FRAME"
+        },
+        {
+          "id": "2:189",
+          "name": "Next discussion",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "2:192",
+      "name": "Inspection · 2026-11-21 working header",
+      "type": "FRAME",
+      "width": 948,
+      "height": 516,
+      "children": [
+        {
+          "id": "2:193",
+          "name": "Inspection note",
+          "type": "TEXT"
+        },
+        {
+          "id": "2:194",
+          "name": "900 px · Current",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "2:207",
+          "name": "900 px · Refresh failed",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "6:112",
+          "name": "900 px · Fetching",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "8:146",
+          "name": "900 px · Initial failure · No prior information",
+          "type": "INSTANCE"
+        },
+        {
+          "id": "6:127",
+          "name": "README / Superseded status rows",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "created": {
+      "variant": "11:161",
+      "row": "11:162",
+      "avatar": "11:163",
+      "identity": "11:165",
+      "balance": "11:174",
+      "allergy": "11:171",
+      "allergyText": "11:172",
+      "cacheText": "11:173",
+      "card": "11:175",
+      "preview": "11:177",
+      "checks": [
+        "11:192",
+        "11:206",
+        "11:220",
+        "11:234"
+      ]
+    },
+    "changed": [
+      "2:42",
+      "2:88",
+      "2:192",
+      "2:92",
+      "2:190",
+      "2:191"
+    ],
+    "definitions": {
+      "Patient name#2:0": {
+        "type": "TEXT",
+        "defaultValue": "Dana Whitfield"
+      },
+      "Pronouns#2:4": {
+        "type": "TEXT",
+        "defaultValue": "(she/her)"
+      },
+      "Show pronouns#2:8": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Demographics#2:12": {
+        "type": "TEXT",
+        "defaultValue": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+      },
+      "Allergy information#2:16": {
+        "type": "TEXT",
+        "defaultValue": "Allergies: egg, poison ivy extract"
+      },
+      "Balance#2:20": {
+        "type": "TEXT",
+        "defaultValue": "Balance $0.00"
+      },
+      "Cache label#11:6": {
+        "type": "TEXT",
+        "defaultValue": "Cached · Nov 20 at 10:30 AM"
+      },
+      "Refresh state": {
+        "type": "VARIANT",
+        "defaultValue": "Current",
+        "variantOptions": [
+          "Current",
+          "Fetching",
+          "Failed",
+          "Cached"
+        ]
+      }
+    },
+    "bindings": [
+      {
+        "id": "11:167",
+        "name": "Patient name",
+        "refs": {
+          "characters": "Patient name#2:0"
+        }
+      },
+      {
+        "id": "11:168",
+        "name": "Pronouns",
+        "refs": {
+          "visible": "Show pronouns#2:8",
+          "characters": "Pronouns#2:4"
+        }
+      },
+      {
+        "id": "11:169",
+        "name": "Demographics",
+        "refs": {
+          "characters": "Demographics#2:12"
+        }
+      }
+    ],
+    "dimensions": {
+      "header": [
+        1184,
+        72
+      ],
+      "allergy": [
+        210,
+        36
+      ],
+      "safety": [
+        210,
+        56
+      ],
+      "caption": [
+        12,
+        {
+          "unit": "PIXELS",
+          "value": 16
+        }
+      ]
+    },
+    "counts": {
+      "FRAME": 53,
+      "TEXT": 69,
+      "INSTANCE": 18
+    },
+    "imageNodes": []
+  },
+  "audit": {
+    "scope": "structure-and-measured-assertions; screenshots checked separately",
+    "passed": false,
+    "structure": {
+      "scope": "structure-and-token-snapshot",
+      "checked": 1,
+      "passed": false,
+      "checks": [
+        {
+          "id": "11:163",
+          "mainId": "2:26",
+          "passed": false,
+          "differenceCount": 5
+        }
+      ],
+      "differenceCount": 5,
+      "differences": [
+        {
+          "id": "11:163",
+          "path": "/children/0/values/fills/0/color/r",
+          "pathTruncated": false,
+          "actual": {
+            "text": "0.16862745583057404",
+            "truncated": false
+          },
+          "expected": {
+            "text": "0.9098039269447327",
+            "truncated": false
+          }
+        },
+        {
+          "id": "11:163",
+          "path": "/children/0/values/fills/0/color/g",
+          "pathTruncated": false,
+          "actual": {
+            "text": "0.16862745583057404",
+            "truncated": false
+          },
+          "expected": {
+            "text": "0.8980392217636108",
+            "truncated": false
+          }
+        },
+        {
+          "id": "11:163",
+          "path": "/children/0/values/fills/0/color/b",
+          "pathTruncated": false,
+          "actual": {
+            "text": "0.16862745583057404",
+            "truncated": false
+          },
+          "expected": {
+            "text": "0.8745098114013672",
+            "truncated": false
+          }
+        },
+        {
+          "id": "11:163",
+          "path": "/children/0/values/fills/0/boundVariables/color/id",
+          "pathTruncated": false,
+          "actual": {
+            "text": "\"VariableID:07b906321fb85c5dab66f45f352a17283bcbd857/74:131\"",
+            "truncated": false
+          },
+          "expected": {
+            "text": "\"VariableID:b1c39ab0f2c30458084569b808990b1f3b827dac/74:150\"",
+            "truncated": false
+          }
+        },
+        {
+          "id": "11:163",
+          "path": "/children/0/values/boundVariables/fills/0/id",
+          "pathTruncated": false,
+          "actual": {
+            "text": "\"VariableID:07b906321fb85c5dab66f45f352a17283bcbd857/74:131\"",
+            "truncated": false
+          },
+          "expected": {
+            "text": "\"VariableID:b1c39ab0f2c30458084569b808990b1f3b827dac/74:150\"",
+            "truncated": false
+          }
+        }
+      ],
+      "omittedDifferences": 0
+    },
+    "assertions": {
+      "checked": 125,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "2:95 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:95 presentation",
+          "passed": true
+        },
+        {
+          "name": "2:95 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:95 cache qualifier",
+          "passed": true
+        },
+        {
+          "name": "2:95 visible text bounds",
+          "passed": true
+        },
+        {
+          "name": "2:95 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:95 font",
+          "passed": true
+        },
+        {
+          "name": "2:110 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:110 presentation",
+          "passed": true
+        },
+        {
+          "name": "2:110 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:110 cache qualifier",
+          "passed": true
+        },
+        {
+          "name": "2:110 visible text bounds",
+          "passed": true
+        },
+        {
+          "name": "2:110 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:110 font",
+          "passed": true
+        },
+        {
+          "name": "2:125 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:125 presentation",
+          "passed": true
+        },
+        {
+          "name": "2:125 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:125 cache qualifier",
+          "passed": true
+        },
+        {
+          "name": "2:125 visible text bounds",
+          "passed": true
+        },
+        {
+          "name": "2:125 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:125 font",
+          "passed": true
+        },
+        {
+          "name": "2:140 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:140 presentation",
+          "passed": true
+        },
+        {
+          "name": "2:140 visible allergy content",
+          "passed": true
+        },
+        {
+          "name": "2:140 cache qualifier",
+          "passed": true
+        },
+        {
+          "name": "2:140 visible text bounds",
+          "passed": true
+        },
+        {
+          "name": "2:140 identity and balance",
+          "passed": true
+        },
+        {
+          "name": "2:140 font",
+          "passed": true
+        },
+        {
+          "name": "2:155 dimensions",
+          "passed": true
+        },
+        {
+          "name": "2:155 presentation",
+          "passed": true
+        }
+      ],
+      "omittedChecks": 95,
+      "failures": [],
+      "omittedFailures": 0
+    }
+  },
+  "acceptance": "125 measured assertions pass. Strict snapshot comparator remains false solely for five inspected entries of approved PH-11 avatar contrast override; no unexplained differences.",
+  "sample": "Cached · Nov 20 at 10:30 AM is an illustrative Figma value; actual data uses supplied cache timestamp in clinical-page timezone."
+}

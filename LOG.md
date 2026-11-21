@@ -4822,3 +4822,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-21 — Patient header · Initial failure without prior allergy information
 - File: ipK5Vwmpqieg8WeHhiCMJz. Added the approved no-prior-information failure example and allergy-only Retry recovery contract. Both failure contexts share the existing 72 px presentation. Next discussion is server-cached allergy data.
 - Evidence: runs/2026-11-21-patient-header-initial-failure/REPORT.md, record.json, agreed-states.png, 900px-check.png.
+
+
+<!-- builder-run:runs/2026-11-21-patient-header-cached -->
+## 2026-11-21 — Patient header · Cached allergy information
+- File: ipK5Vwmpqieg8WeHhiCMJz. Added the approved cached-response presentation: returned allergy content with a supplied-date label in the existing allergy area. Eight review examples remain 72 px high. Checked all four cached content meanings at 900 px.
+- Evidence: runs/2026-11-21-patient-header-cached/REPORT.md, record.json, agreed-states.png, 900px-check.png, cached-header.png.

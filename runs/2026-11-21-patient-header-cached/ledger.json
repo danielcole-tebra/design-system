@@ -1,0 +1,122 @@
+{
+  "fileKey": "ipK5Vwmpqieg8WeHhiCMJz",
+  "sessionId": "0d90697b-15a3-4d77-a229-8b177b5522ff",
+  "status": "verified with documented existing avatar exception; ready for Daniel's read",
+  "created": {
+    "variant": "11:161",
+    "row": "11:162",
+    "avatar": "11:163",
+    "identity": "11:165",
+    "balance": "11:174",
+    "allergy": "11:171",
+    "allergyText": "11:172",
+    "cacheText": "11:173",
+    "card": "11:175",
+    "preview": "11:177",
+    "checks": [
+      "11:192",
+      "11:206",
+      "11:220",
+      "11:234"
+    ]
+  },
+  "changed": [
+    "2:42",
+    "2:88",
+    "2:192",
+    "2:92",
+    "2:190",
+    "2:191"
+  ],
+  "definitions": {
+    "Patient name#2:0": {
+      "type": "TEXT",
+      "defaultValue": "Dana Whitfield"
+    },
+    "Pronouns#2:4": {
+      "type": "TEXT",
+      "defaultValue": "(she/her)"
+    },
+    "Show pronouns#2:8": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "Demographics#2:12": {
+      "type": "TEXT",
+      "defaultValue": "Female  •  26 Aug 2002 (23 y/o)  •  (555) 555-2025  •  MRN: 08262025-01"
+    },
+    "Allergy information#2:16": {
+      "type": "TEXT",
+      "defaultValue": "Allergies: egg, poison ivy extract"
+    },
+    "Balance#2:20": {
+      "type": "TEXT",
+      "defaultValue": "Balance $0.00"
+    },
+    "Cache label#11:6": {
+      "type": "TEXT",
+      "defaultValue": "Cached · Nov 20 at 10:30 AM"
+    },
+    "Refresh state": {
+      "type": "VARIANT",
+      "defaultValue": "Current",
+      "variantOptions": [
+        "Current",
+        "Fetching",
+        "Failed",
+        "Cached"
+      ]
+    }
+  },
+  "bindings": [
+    {
+      "id": "11:167",
+      "name": "Patient name",
+      "refs": {
+        "characters": "Patient name#2:0"
+      }
+    },
+    {
+      "id": "11:168",
+      "name": "Pronouns",
+      "refs": {
+        "visible": "Show pronouns#2:8",
+        "characters": "Pronouns#2:4"
+      }
+    },
+    {
+      "id": "11:169",
+      "name": "Demographics",
+      "refs": {
+        "characters": "Demographics#2:12"
+      }
+    }
+  ],
+  "dimensions": {
+    "header": [
+      1184,
+      72
+    ],
+    "allergy": [
+      210,
+      36
+    ],
+    "safety": [
+      210,
+      56
+    ],
+    "caption": [
+      12,
+      {
+        "unit": "PIXELS",
+        "value": 16
+      }
+    ]
+  },
+  "counts": {
+    "FRAME": 53,
+    "TEXT": 69,
+    "INSTANCE": 18
+  },
+  "imageNodes": []
+}
