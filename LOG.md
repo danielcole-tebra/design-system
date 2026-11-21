@@ -4804,3 +4804,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 - File: Proposals `zKT34LQogNjz3Z07fY4VQB`, header12:773. Documentation only; Figma and product code unchanged.
 - Decision: Daniel approved retaining last available same-patient allergy content during updating and refresh failure, with status and Retry. Previous pending choice retained in decision history; source replacement behavior is superseded for the future design.
 - Evidence: PATIENT-HEADER-REVIEW.md and COMPOSITIONS.md updated; runs/2026-11-21-patient-header-refresh/record.json records the instruction. Next discussion is initial loading/failure with no prior allergy information; that proposal remains unapproved. No screenshot required.
+
+
+<!-- builder-run:runs/2026-11-21-patient-header-working-file -->
+## 2026-11-21 — Patient header · Tebra working file
+- File: ipK5Vwmpqieg8WeHhiCMJz. Created a header-only Tebra working file with four existing-model allergy content outcomes and retained-data updating/failed-refresh examples. Original Proposals and library unchanged. Working presentation ready for Daniel's read.
+- Evidence: runs/2026-11-21-patient-header-working-file/REPORT.md, record.json, agreed-states.png, 900px-check.png.

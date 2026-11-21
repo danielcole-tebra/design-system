@@ -1,16 +1,26 @@
 # Patient header reappraisal
 
-Initial review: 2026-11-19. Updated: 2026-11-21. Status: **behavior review in progress; design changes on hold at Daniel's request**. This is the current review/register for the Proposals patient header. August records remain historical evidence.
+Initial review: 2026-11-19. Updated: 2026-11-21. Status: **behavior review in progress; agreed states visualized in a new Tebra working file at Daniel's request**. This is the current review/register for the Proposals patient header and its working review. August records remain historical evidence.
 
-The compact examples are coherently assembled, but the work does not account for all the inspected source states or interactions. Daniel resolved the allergy data-model choice on 2026-11-21: use the existing model, without inferred severity. The Figma severity variants remain unchanged pending the behavior review. Missing operational states and content-length behavior prevent treating this as a complete replacement.
+The compact examples are coherently assembled, but the work does not account for all the inspected source states or interactions. Daniel resolved the allergy data-model choice on 2026-11-21: use the existing model, without inferred severity. The original Figma severity variants remain unchanged; the new working file represents the agreed model. Missing operational states and content-length behavior prevent treating this as a complete replacement.
 
 ## Current decision and discussion scope
 
-**Decider: Daniel. Date: 2026-11-21. Scope: Proposals patient header.** Use the existing allergy data model: allergen records, `hasNoKnownAllergies`, and `hasNoKnownMedicationAllergies`. This supersedes the proposal's severity-based summary approach and resolves RPH-01's data-source choice. That decision alone does not approve new filtering, changes to flag precedence, new action behavior, or a visual redesign. Work through missing states and workflows before changing Figma.
+**Decider: Daniel. Date: 2026-11-21. Scope: Proposals patient header.** Use the existing allergy data model: allergen records, `hasNoKnownAllergies`, and `hasNoKnownMedicationAllergies`. This supersedes the proposal's severity-based summary approach and resolves RPH-01's data-source choice. That decision alone does not approve new filtering, changes to flag precedence or new action behavior. Subsequent authorization below allows a separate visual working file while state/workflow review continues.
 
 Four successful content outcomes must be accounted for: allergy names present; no known allergies; no known medication allergies; no allergy history documented. Request loading, request failure and cached-data provenance are separate concerns. The data-model and same-patient refresh decisions are settled; other presentation, transitions and missing workflows below remain open.
 
-**Refresh decision — Daniel, 2026-11-21, same scope:** keep the last available allergy information for the same patient visible while updating and after a failed refresh. Show the updating or failed-refresh status and provide Retry for failure. This supersedes the legacy behavior that replaces content with a skeleton during refresh and an error after failure, and resolves the corresponding pending choice below. Retry must retain that prior information while the new request is updating. Exact visual treatment, no-prior-data behavior and server-cached-response treatment remain pending; no Figma or product-code change is authorized yet.
+**Refresh decision — Daniel, 2026-11-21, same scope:** keep the last available allergy information for the same patient visible while updating and after a failed refresh. Show the updating or failed-refresh status and provide Retry for failure. This supersedes the legacy behavior that replaces content with a skeleton during refresh and an error after failure, and resolves the corresponding pending choice below. Retry must retain that prior information while the new request is updating. Exact visual treatment, no-prior-data behavior and server-cached-response treatment remain pending. A draft Figma presentation is now authorized below; product code is unchanged.
+
+**Working-file authorization — Daniel, 2026-11-21:** “Yes, use Tebra and create the new file with just the header and the states we've agreed on so far.” This supersedes the earlier design hold only for this separate header-only working review. It does not settle additional states or authorize changes to the original Proposals file or library.
+
+### Current visual working review
+
+[Patient header · Working review](https://www.figma.com/design/ipK5Vwmpqieg8WeHhiCMJz?node-id=2-88) contains six editable examples: allergy names, no known allergies, no known medication allergies, no allergy history documented, updating with prior information, and failed refresh with prior information plus Retry. A local component has three refresh-presentation variants and an editable allergy-information property; the refresh axis is not a new data-model field. No severity is inferred.
+
+All six examples use the existing 1184 px chart width; retained inspection instances check current and failed-refresh states at 900 px. Current examples are 72 px high. The two refresh examples add a draft 24 px status row, for 96 px total. Status wording, emphasis and geometry await Daniel's read. The short sample names omit View All consistently with the inspected source's length condition; broader link visibility remains undecided. Historical sample identity is preserved for comparison, including its illustrative age.
+
+Tebra Avatar and Link instances, typography and bound tokens are used. The previously approved PH-11 avatar initials contrast override is retained and marked SCAFFOLDING; published masters are unchanged. All 51 copy/dimension/bounds/visibility assertions pass. The strict library comparator retains 15 expected avatar fill/binding differences, each inspected; Link internals match. Screenshots were inspected at both widths. Retry is a static affordance, with no prototype or live request claimed. [Evidence and report](runs/2026-11-21-patient-header-working-file/REPORT.md).
 
 | Discussion order | Required states/workflows | Decisions still needed |
 |---|---|---|
@@ -56,7 +66,7 @@ Actions were deliberately moved, not simply lost. The header is 72px and its sep
 
 Settled decisions remain intact: balance is content with one visual treatment; `Restricted=false` renders no label; the former modal-only action-selection rule was withdrawn. SDE's local 68px header ruling does not change this Proposals component.
 
-## State and capability coverage
+## Original Proposals state and capability coverage
 
 Source references are relative to `packages/clinical-system/src/` at the pinned commit; paths under `ClinicalPageHeader/` mean `components/ClinicalPageHeader/`. Missing coverage means missing in the inspected header/action composition and examples, not proof that the library cannot express it.
 
@@ -96,8 +106,8 @@ All entries: evidence date **2026-11-19**; scope **Proposals patient header and 
 
 | ID / kind | Status, impact and disposition | Approved workaround |
 |---|---|---|
-| RPH-01 · DECISION | Resolved by Daniel on 2026-11-21: use the existing allergy data model; no inferred severity. Supersedes severity-based summaries in the Proposals header. Figma implementation remains pending until states/workflows have been reviewed. Existing Severe/MildOnly and Moderate override are historical design content, not the new contract. | No severity workaround; use existing model. |
-| RPH-02 · GAP | Open. Missing medication-specific negative, allergy loading/cache, whole-header loading/no-patient/region failure, patient alert and restriction failure. These are independent dimensions, not five mutually exclusive allergy variants. | None. |
+| RPH-01 · DECISION | Resolved by Daniel on 2026-11-21: use the existing allergy data model; no inferred severity. Six examples in the new working file now represent the agreed content/refresh behavior; original Severe/MildOnly and Moderate overrides remain historical design content. | No severity workaround; use existing model. |
+| RPH-02 · GAP | Partially addressed 2026-11-21 in the new working file: medication-specific negative and same-patient retained-data refresh/failure shown. Still open: initial/no-prior-data loading/failure, server cache, whole-header loading/no-patient/region failure, patient alert and restriction failure. These are independent dimensions. | Static agreed-state review only; no all-state parity claim. |
 | RPH-03 · GAP | Open. Insurance, patient details, photo management and access-management actions lack verified replacement destinations. Hiding the unrestricted label remains settled; removing its workflow is not established as settled. | Documented photo placeholder does not establish parity. |
 | RPH-04 · GAP | Open. No overflow contract. Severe at 900 leaves identity 471px for a 464px demographics row: 7px spare. Legal-name group is 184px; showing it adds an 8px inter-item gap too, predicting 656px, **185px beyond identity width**. Identity clips, rows are no-wrap/hug, text truncation disabled. Readback-derived, not a rendered stress test. Aaron's example instead has a 644px row inside 673px identity under NoneKnown. | None; needs retained combined-state tests. |
 | RPH-05 · GAP | Open. Billing, NDE, AI/trial and More permissions missing. Static all-enabled composition cannot represent every user/practice configuration. | None. |
@@ -124,9 +134,11 @@ ClinicalPageNav carries identity/access/details when the top header is hidden; c
 
 ## Next discussion
 
-Work through the checklist above before modifying the design. Next is allergy loading/failure with **no previously loaded information for this patient**. Proposed: show explicit allergy loading initially; on failure show allergy information unavailable with Retry; scope Retry to allergies and preserve already-loaded patient identity and independent header content. A successful response selects one of the four content outcomes; an empty/loading/error response must not be represented as a confirmed no-known-allergies state. This proposal is pending Daniel's decision. Then settle server-cached responses, View All and inconsistent flags before moving to identity/header availability. Continue to seek current product evidence and opened legacy menus for unresolved behavior. No construction batch is authorized by the discussion checklist.
+Daniel's read of the first working-file batch precedes another build batch. Next is allergy loading/failure with **no previously loaded information for this patient**. Proposed: show explicit allergy loading initially; on failure show allergy information unavailable with Retry; scope Retry to allergies and preserve already-loaded patient identity and independent header content. A successful response selects one of the four content outcomes; an empty/loading/error response must not be represented as a confirmed no-known-allergies state. This proposal is pending Daniel's decision and was not built. Then settle server-cached responses, View All and inconsistent flags before moving to identity/header availability. Continue to seek current product evidence and opened legacy menus for unresolved behavior. The discussion checklist alone does not authorize these additional designs.
 
 ## Decision history
+
+2026-11-21 working-file authorization supersedes the earlier instructions “Work through missing states and workflows before changing Figma” and “no Figma or product-code change is authorized yet” only for the separate Tebra header working file and agreed states. Earlier status was “behavior review in progress; design changes on hold at Daniel's request.” Product code, original Proposals and the library remain unchanged.
 
 2026-11-21 refresh decision: Daniel approved keeping last available allergy information visible with updating or failed-refresh status and Retry. Supersedes the pending choice “Preserve or replace prior data during refresh/failure” and the source baseline of replacing that content. Before this decision, both retained-data rows and Retry were recommendations only. Initial-load/no-prior-data failure and all other unmarked proposals remain undecided.
 

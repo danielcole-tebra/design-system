@@ -184,7 +184,7 @@ These are documented code behavior, not a promise of complete Figma axes. Read c
 | Pagination | Selected primary.dark/white, selected-hover #003239; MUI chevrons. Old kit gap 6 was memory-derived, not verified | T §3.26; kit finding 26 |
 | Table pagination | Standard Select rows-per-page, not an outlined Text field; toolbar 52 | T §3.27 |
 | Stepper | Completed step success.main; disabled does not supply a separate visual state | T §3.28 |
-| Avatar / Badge / Circular progress | Substrate/default-driven. Do not transfer a mobile avatar override into the library | T §3.31 |
+| Avatar / Badge / Circular progress | Substrate/default-driven. Do not transfer a mobile avatar override into the library. Avatar Letter imported 2026-11-21 still has low-contrast initials and no exposed text-color property; the patient header carries its existing PH-11 scoped override. See `avatar-letter-contrast-control` in OPEN-ISSUES.md; no global default change is authorized | T §3.31; dated header consumer read |
 | DataGrid / TreeView / TreeItem | Separate MUI X packages; documented overrides do not establish Figma coverage; old kit has no exports | T §3.32; kit Accepted 2 |
 
 Card header band is a composition with per-site decisions, not a design-system component (T §3.29). Feedback messages, illustrations and icons have dedicated source entries T §§3.24, 3.33–34; use those only for the specific asset, preserving source SVG paths rather than inventing replacements.
