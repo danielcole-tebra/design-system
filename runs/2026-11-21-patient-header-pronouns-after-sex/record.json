@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "title": "Patient header · Pronouns immediately after sex",
+  "date": "2026-11-21",
+  "fileKey": "ipK5Vwmpqieg8WeHhiCMJz",
+  "reviewUrl": "https://www.figma.com/design/ipK5Vwmpqieg8WeHhiCMJz?node-id=2-88",
+  "summary": "Moved lower-row pronouns directly after sex, before DOB, across all four header variants. Preserved 72 px height and optional visibility; source values and meaning unchanged.",
+  "timing": {
+    "start": "2026-11-22T01:33:41Z",
+    "ready": "2026-11-22T01:34:47.386Z",
+    "built": "2026-11-22T01:34:48.644Z",
+    "firstImage": "2026-11-22T01:35:15.042Z",
+    "verified": "2026-11-22T01:35:36.634Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "164 measured assertions passed across twenty affected examples, including four pronouns-hidden instances.",
+    "Visible reading order is Female, (she/her), separator, DOB/phone/MRN. Hidden reading order is Female, separator, DOB/phone/MRN.",
+    "Lower sample row measures 522 px and fits inside identity at 900 and 1184 px. All header instances remain 72 px with no visible text overflow.",
+    "Sex is an independently editable TEXT property; original demographic values were split at the first separator without loss. Pronoun text and boolean controls preserved.",
+    "Akkurat LL retained. Published Retry Link snapshot matches with no differences. Existing allergy/cache/identity content inspected in full-view screenshots.",
+    "Full review, 900 px checks, hidden-pronoun checks and header crop viewed."
+  ],
+  "findings": [
+    "DECISION — Daniel, 2026-11-21 requested pronouns immediately after sex, superseding the earlier after-MRN position.",
+    "Added four Sex text nodes. Reused/moved original separators and pronoun groups; no nodes deleted. Existing Demographics property now holds DOB/phone/MRN; migration used each live instance's prior value.",
+    "This is a presentation change. It does not resolve the broader source sex/gender field meaning question or long-content/missing-field contract. No published library, original Proposals, code or prototype wiring changed."
+  ],
+  "reads": [
+    "Previously loaded Figma use/generate-design skills; current Efficient execution/API checks and Page patterns.",
+    "Live four-variant lower-row structure, component properties and twenty affected instance values.",
+    "Plugin API editComponentProperty definition for the existing demographic default migration; current review register."
+  ],
+  "effort": {
+    "through": "verification",
+    "figmaCalls": 3,
+    "otherCalls": null,
+    "searches": 0,
+    "technicalRetries": 0,
+    "canvasCorrections": 0,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "screenshots": [
+    "agreed-states.png",
+    "900px-check.png",
+    "pronouns-hidden.png",
+    "header.png"
+  ],
+  "evidence": {
+    "details": "evidence.json",
+    "ledger": "ledger.json",
+    "scripts": [
+      "update.js",
+      "verify.js"
+    ],
+    "previousRun": "../2026-11-21-patient-header-pronouns"
+  }
+}
