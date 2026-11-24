@@ -1,0 +1,167 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": true,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 4,
+    "passed": true,
+    "checks": [
+      {
+        "id": "I21:720;21:667",
+        "mainId": "21:458",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I21:751;21:651",
+        "mainId": "21:458",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I21:774;21:657",
+        "mainId": "21:458",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I21:799;21:662",
+        "mainId": "21:458",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 165,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "15:238 width",
+        "passed": true
+      },
+      {
+        "name": "15:238 height",
+        "passed": true
+      },
+      {
+        "name": "15:238 alert visibility",
+        "passed": true
+      },
+      {
+        "name": "15:238 name row fits",
+        "passed": true
+      },
+      {
+        "name": "15:238 demographics fits",
+        "passed": true
+      },
+      {
+        "name": "15:238 header typography",
+        "passed": true
+      },
+      {
+        "name": "2:140 width",
+        "passed": true
+      },
+      {
+        "name": "2:140 height",
+        "passed": true
+      },
+      {
+        "name": "2:140 alert visibility",
+        "passed": true
+      },
+      {
+        "name": "2:140 name row fits",
+        "passed": true
+      },
+      {
+        "name": "2:140 demographics fits",
+        "passed": true
+      },
+      {
+        "name": "2:140 header typography",
+        "passed": true
+      },
+      {
+        "name": "2:95 width",
+        "passed": true
+      },
+      {
+        "name": "2:95 height",
+        "passed": true
+      },
+      {
+        "name": "2:95 alert visibility",
+        "passed": true
+      },
+      {
+        "name": "2:95 name row fits",
+        "passed": true
+      },
+      {
+        "name": "2:95 demographics fits",
+        "passed": true
+      },
+      {
+        "name": "2:95 header typography",
+        "passed": true
+      },
+      {
+        "name": "2:125 width",
+        "passed": true
+      },
+      {
+        "name": "2:125 height",
+        "passed": true
+      },
+      {
+        "name": "2:125 alert visibility",
+        "passed": true
+      },
+      {
+        "name": "2:125 name row fits",
+        "passed": true
+      },
+      {
+        "name": "2:125 demographics fits",
+        "passed": true
+      },
+      {
+        "name": "2:125 header typography",
+        "passed": true
+      },
+      {
+        "name": "2:194 width",
+        "passed": true
+      },
+      {
+        "name": "2:194 height",
+        "passed": true
+      },
+      {
+        "name": "2:194 alert visibility",
+        "passed": true
+      },
+      {
+        "name": "2:194 name row fits",
+        "passed": true
+      },
+      {
+        "name": "2:194 demographics fits",
+        "passed": true
+      },
+      {
+        "name": "2:194 header typography",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 135,
+    "failures": [],
+    "omittedFailures": 0
+  }
+}

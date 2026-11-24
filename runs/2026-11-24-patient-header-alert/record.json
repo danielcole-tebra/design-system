@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "title": "Patient alert alongside cached allergies at 900 px",
+  "date": "2026-11-24",
+  "fileKey": "ipK5Vwmpqieg8WeHhiCMJz",
+  "reviewUrl": "https://www.figma.com/design/ipK5Vwmpqieg8WeHhiCMJz?node-id=21-716",
+  "summary": "Optional published warning Chip added beside patient name across four local header variants. The requested 900 × 72 stress example preserves the full long name, collapsed Patient alert trigger, demographics, cached allergies and balance. Separate full-message disclosure preview is static.",
+  "timing": {
+    "start": "2026-11-24T19:47:10.768Z",
+    "ready": "2026-11-24T19:49:20.250Z",
+    "built": "2026-11-24T19:49:27.498Z",
+    "firstImage": "2026-11-24T19:49:45.107Z",
+    "verified": "2026-11-24T19:50:11.163Z",
+    "inputWaitSeconds": 0
+  },
+  "verified": [
+    "165 measured assertions passed across 24 existing/new header examples.",
+    "Four visible patient-alert Chip instances match the published component structure/tokens with zero differences.",
+    "900 × 72 header: name 446 px + 8 px gap + 86 px chip = 540 px within 586 px name row; 46 px remaining.",
+    "All 20 prior instances retain their widths, 72 px height and hidden alert by default.",
+    "Akkurat LL typography, demographic fit, column separation, cache copy and full alert message verified.",
+    "Review, combined states and existing agreed-state screenshots viewed. Editable layers; no raster in review."
+  ],
+  "findings": [
+    "Scope: Daniel's approved 2026-11-24 compact patient-alert proposal; no library/product code/original Proposals modifications.",
+    "Full message is a separate static disclosure preview. Click, keyboard, Escape and outside-click behavior are specified, not wired or played through.",
+    "The narrow label-only fallback is authored in Figma. Automatic width-dependent preview collapse and wider inline message truncation are not implemented.",
+    "This particular 43-character long name fits without truncation. Still-longer names, long allergy summaries and widths below 900 remain unverified.",
+    "Alert-message cache provenance is separate from the displayed allergy cache date; this example does not claim patient-header data is cached.",
+    "No nodes deleted. Existing approved avatar contrast override retained; new fictional patient's initials changed to AM."
+  ],
+  "reads": [
+    "LIBRARY.md: Efficient execution, Chip, API checks by operation, Token mappings",
+    "COMPOSITIONS.md: Page patterns",
+    "OPEN-ISSUES.md: primary-chip-visible-hover (not applicable to warning)",
+    "PATIENT-HEADER-REVIEW.md and current screenshot",
+    "No Chip Code Connect file found in pinned design-system snapshot.",
+    "Published Chip consuming-file definitions and live header scope"
+  ],
+  "effort": {
+    "through": "verification",
+    "figmaCalls": null,
+    "otherCalls": null,
+    "searches": 1,
+    "technicalRetries": 0,
+    "canvasCorrections": 0,
+    "clarificationStops": 0,
+    "tokens": null
+  },
+  "screenshots": [
+    "review.png",
+    "combined-states.png",
+    "existing-states.png"
+  ],
+  "evidence": {
+    "ledger": "ledger.json",
+    "verification": "verification.json",
+    "build": "build.js",
+    "verificationScript": "verify.js",
+    "finish": "finish.js"
+  }
+}

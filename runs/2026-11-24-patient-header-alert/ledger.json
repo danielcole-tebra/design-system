@@ -1,0 +1,171 @@
+{
+  "before": [
+    {
+      "id": "15:238",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "2:140",
+      "width": 1184,
+      "height": 72
+    },
+    {
+      "id": "2:95",
+      "width": 1184,
+      "height": 72
+    },
+    {
+      "id": "2:125",
+      "width": 1184,
+      "height": 72
+    },
+    {
+      "id": "2:194",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "2:110",
+      "width": 1184,
+      "height": 72
+    },
+    {
+      "id": "15:254",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "2:155",
+      "width": 1184,
+      "height": 72
+    },
+    {
+      "id": "6:112",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "8:146",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "2:172",
+      "width": 1184,
+      "height": 72
+    },
+    {
+      "id": "8:128",
+      "width": 1184,
+      "height": 72
+    },
+    {
+      "id": "15:272",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "2:207",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "11:177",
+      "width": 1184,
+      "height": 72
+    },
+    {
+      "id": "11:234",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "11:192",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "11:206",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "11:220",
+      "width": 900,
+      "height": 72
+    },
+    {
+      "id": "15:292",
+      "width": 900,
+      "height": 72
+    }
+  ],
+  "review": "21:716",
+  "header": "21:720",
+  "disclosure": "21:745",
+  "inspection": "21:749",
+  "samples": [
+    "21:751",
+    "21:774",
+    "21:799"
+  ],
+  "chips": [
+    {
+      "variant": "2:43",
+      "chip": "21:651",
+      "optional": "21:650"
+    },
+    {
+      "variant": "2:56",
+      "chip": "21:657",
+      "optional": "21:656"
+    },
+    {
+      "variant": "2:71",
+      "chip": "21:662",
+      "optional": "21:661"
+    },
+    {
+      "variant": "11:161",
+      "chip": "21:667",
+      "optional": "21:666"
+    }
+  ],
+  "showProperty": "Show patient alert#21:0",
+  "patient": "Alexandria Catherine Montgomery-Worthington",
+  "message": "Patient requests a Spanish interpreter for visits. Please confirm interpreter availability before the appointment and use the preferred phone number for scheduling.",
+  "dimensions": {
+    "header": [
+      900,
+      72
+    ],
+    "name": [
+      {
+        "width": 446,
+        "height": 32,
+        "text": "Alexandria Catherine Montgomery-Worthington"
+      }
+    ],
+    "row": [
+      {
+        "width": 586,
+        "height": 32,
+        "children": [
+          {
+            "name": "Patient name",
+            "width": 446,
+            "x": 0,
+            "visible": true
+          },
+          {
+            "name": "Optional patient alert",
+            "width": 86,
+            "x": 454,
+            "visible": true
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # Patient header reappraisal
 
-Initial review: 2026-11-19. Updated: 2026-11-21. Status: **behavior review in progress; agreed states visualized in a new Tebra working file at Daniel's request**. This is the current review/register for the Proposals patient header and its working review. August records remain historical evidence.
+Initial review: 2026-11-19. Updated: 2026-11-24. Status: **behavior review in progress; agreed states visualized in a new Tebra working file at Daniel's request**. This is the current review/register for the Proposals patient header and its working review. August records remain historical evidence.
 
 The compact examples are coherently assembled, but the work does not account for all the inspected source states or interactions. Daniel resolved the allergy data-model choice on 2026-11-21: use the existing model, without inferred severity. The original Figma severity variants remain unchanged; the new working file represents the agreed model. Missing operational states and content-length behavior prevent treating this as a complete replacement.
 
@@ -98,7 +98,7 @@ Source references are relative to `packages/clinical-system/src/` at the pinned 
 | Full patient detail disclosure | No disclosure surface/wiring. Source name hover opens full identity, insurance, address, phone/email, alert and cache information. | `PatientOverview.tsx:211–252`; `PatientCard.tsx:74–143` |
 | Restricted/unrestricted | Restricted boolean; omission of unrestricted label is approved. Access-management relocation is unspecified. | `PatientOverview/ChartAccess/AccessLink.tsx:24–42` |
 | Protection disabled / restriction fetch failed / dialogs | No additional state/interaction. Source includes “Restrictions failed to load” and role-dependent dialogs. | `ChartAccess/index.tsx:11–24`; `ModalControl.tsx:169–195` |
-| Patient alert and full alert disclosure | Missing. Source chip/popover carries alertMessage; cached patient data can add a notice. | `HeaderRightLinks/HeaderRightLinks.tsx:79–104,130–161` |
+| Patient alert and full alert disclosure | Added 2026-11-24: optional compact trigger and static full-message preview; 900 px combined-state fit verified. Live disclosure behavior, wider previews and alert cache provenance remain pending. | `HeaderRightLinks/HeaderRightLinks.tsx:79–104,130–161`; current alert review below |
 | Balance zero/nonzero | Covered visually; both $248 displays agree in later chart. Values are authored independently. Credit/unavailable/loading behavior unspecified; source has no explicit balance-error UI either. | `HeaderRightLinks.tsx:35–53,118–126` |
 | Billing product disabled | Balance/payment remain visible; missing gate. Single visual treatment does not resolve visibility. | `HeaderRightLinks.tsx:112–128` |
 | Original note mode | Default New Note split + AI button present. Note-type menu, fetch failure and selection outcomes not modeled. | `HeaderRightLinks/CreateNoteButton.tsx:54–80,134–145` |
@@ -144,9 +144,19 @@ ClinicalPageNav carries identity/access/details when the top header is hidden; c
 
 The pinned v2 source rechecked 2026-11-21 reads `Tebra-Cache-Date` for response status 299, returns allergy content, and adds a date warning when that date is present. `CachedDataWarning` renders “Data as of” with the supplied date/time in the clinical-page timezone and a tooltip explaining possible outdated information. This is distinct from retaining an old client result during a failed request. The allergy invocation does not pass the optional refresh callback. Evidence: `useAllergiesQuery.ts:18–25`, `Allergies.tsx:108–114`, `components/Error/CachedDataWarning.tsx`, `types/header.ts:106–113`, at the previously pinned source commit; not current production certification.
 
+## Patient alert — compact-header review
+
+**Decider: Daniel. Date: 2026-11-24. Scope: this working header.** Approved adding the proposed patient alert beside the name and testing a long name, long alert and cached allergies at 900 px. The alert is independent of allergy request/cache state. No message means no visible chip. When space is constrained, show the labeled “Patient alert” trigger; the full message belongs in its disclosure. Wider preview text/truncation is still a presentation to verify. This adds a previously missing capability; it does not override the allergy or pronoun decisions.
+
+[900 px stress review](https://www.figma.com/design/ipK5Vwmpqieg8WeHhiCMJz?node-id=21-716): “Alexandria Catherine Montgomery-Worthington” fits untruncated alongside the published small filled warning Chip. The 586 px name row contains 446 px of name, an 8 px gap and an 86 px chip, leaving 46 px. Header remains 900 × 72; demographics, cached allergy content/date and balance remain visible. The full fictional alert is shown in a separate 440 px static disclosure preview. Three retained inspection examples verify coexistence with Current, Fetching and Failed allergy states. The optional Show patient alert property defaults false across all four variants and all twenty previous instances.
+
+**Workflow contract versus implementation:** click/keyboard activation should open full alert text; Escape/outside click should dismiss. These are specified interactions, not stored reactions or a played-through prototype. Automatic preview collapse and wider message truncation are not built. Patient-header cache provenance belongs to the alert disclosure when applicable; the allergy cache date must not be reused for it. Still-longer names, long allergy summaries, patient-header fetch failures and sub-900 widths remain open.
+
+Owner: Daniel; status: reviewed implementation awaiting visual read, nonblocking for the current stress sample. Evidence date: 2026-11-24. No new library workaround: Chip instances match published internals/tokens. Existing approved avatar contrast workaround is retained. All 165 measured assertions pass across 24 header instances; four alert Chip comparisons report zero differences. [Evidence/report](runs/2026-11-24-patient-header-alert/REPORT.md).
+
 ## Next discussion
 
-Review the cached example before another build batch. Next is View All visibility and destination; the pinned source shows it when joined allergy names exceed 65 characters. Missing/invalid cache dates and any cache refresh action remain explicit follow-ups. Then settle inconsistent flags/list before moving to identity/header availability. Existing long-content overflow findings are not resolved by the selected sample's fit.
+Review the new 900 px patient-alert example before another build batch. Daniel steered the discussion to patient alerts on 2026-11-24. Wider inline alert previews, alert disclosure interaction and combined-content overflow remain open. Allergy View All visibility/destination, missing/invalid cache dates, refresh action and inconsistent flags/list remain explicit follow-ups. This sample's fit does not resolve the broader overflow findings.
 
 ## Decision history
 

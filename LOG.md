@@ -4840,3 +4840,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-21 — Patient header · Pronouns immediately after sex
 - File: ipK5Vwmpqieg8WeHhiCMJz. Moved lower-row pronouns directly after sex, before DOB, across all four header variants. Preserved 72 px height and optional visibility; source values and meaning unchanged.
 - Evidence: runs/2026-11-21-patient-header-pronouns-after-sex/REPORT.md, record.json, agreed-states.png, 900px-check.png, pronouns-hidden.png, header.png.
+
+
+<!-- builder-run:runs/2026-11-24-patient-header-alert -->
+## 2026-11-24 — Patient alert alongside cached allergies at 900 px
+- File: ipK5Vwmpqieg8WeHhiCMJz. Optional published warning Chip added beside patient name across four local header variants. The requested 900 × 72 stress example preserves the full long name, collapsed Patient alert trigger, demographics, cached allergies and balance. Separate full-message disclosure preview is static.
+- Evidence: runs/2026-11-24-patient-header-alert/REPORT.md, record.json, review.png, combined-states.png, existing-states.png.
