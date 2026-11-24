@@ -24,7 +24,7 @@ Preparation/discovery: 129.482s; construction: 7.248s; verification after constr
 - Scope: Daniel's approved 2026-11-24 compact patient-alert proposal; no library/product code/original Proposals modifications.
 - Full message is a separate static disclosure preview. Click, keyboard, Escape and outside-click behavior are specified, not wired or played through.
 - The narrow label-only fallback is authored in Figma. Automatic width-dependent preview collapse and wider inline message truncation are not implemented.
-- This particular 42-character long name fits without truncation. Still-longer names, long allergy summaries and widths below 900 remain unverified.
+- This particular 43-character long name fits without truncation. Still-longer names, long allergy summaries and widths below 900 remain unverified.
 - Alert-message cache provenance is separate from the displayed allergy cache date; this example does not claim patient-header data is cached.
 - No nodes deleted. Existing approved avatar contrast override retained; new fictional patient's initials changed to AM.
 
