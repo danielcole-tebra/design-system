@@ -1,0 +1,167 @@
+{
+  "scope": "structure-and-measured-assertions; screenshots checked separately",
+  "passed": true,
+  "structure": {
+    "scope": "structure-and-token-snapshot",
+    "checked": 4,
+    "passed": true,
+    "checks": [
+      {
+        "id": "I24:783;24:726",
+        "mainId": "21:458",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I24:810;24:667",
+        "mainId": "21:458",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I24:833;24:685",
+        "mainId": "21:458",
+        "passed": true,
+        "differenceCount": 0
+      },
+      {
+        "id": "I24:858;24:705",
+        "mainId": "21:458",
+        "passed": true,
+        "differenceCount": 0
+      }
+    ],
+    "differenceCount": 0,
+    "differences": [],
+    "omittedDifferences": 0
+  },
+  "assertions": {
+    "checked": 108,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "21:751 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "15:238 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "2:95 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "2:140 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "2:125 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "2:194 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "2:110 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "21:774 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "15:254 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "2:155 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "6:112 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "8:146 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "21:799 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "2:207 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "15:272 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "8:128 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "2:172 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "21:720 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "11:177 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "11:234 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "11:192 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "11:206 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "11:220 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "15:292 unchanged size",
+        "passed": true
+      },
+      {
+        "name": "Scrolled variant count",
+        "passed": true
+      },
+      {
+        "name": "24:660 master dimensions",
+        "passed": true
+      },
+      {
+        "name": "24:660 name binding",
+        "passed": true
+      },
+      {
+        "name": "24:660 alert binding",
+        "passed": true
+      },
+      {
+        "name": "24:678 master dimensions",
+        "passed": true
+      },
+      {
+        "name": "24:678 name binding",
+        "passed": true
+      }
+    ],
+    "omittedChecks": 78,
+    "failures": [],
+    "omittedFailures": 0
+  }
+}

@@ -154,9 +154,17 @@ The pinned v2 source rechecked 2026-11-21 reads `Tebra-Cache-Date` for response 
 
 Owner: Daniel; status: reviewed implementation awaiting visual read, nonblocking for the current stress sample. Evidence date: 2026-11-24. No new library workaround: Chip instances match published internals/tokens. Existing approved avatar contrast workaround is retained. All 165 measured assertions pass across 24 header instances; four alert Chip comparisons report zero differences. [Evidence/report](runs/2026-11-24-patient-header-alert/REPORT.md).
 
+## Scrolled header exploration — 2026-11-24
+
+**Decider: Daniel. Scope: working header only.** Approved a 48 px scrolled version keeping the name, optional Patient alert and allergy information. Avatar, demographics and balance belong to the full 72 px header. The proposed transition occurs when the full header leaves view; returning to the top restores it, with original page space reserved to prevent a jump. This adds a scroll presentation without superseding full-header state or allergy behavior decisions.
+
+[Comparison at 900 px](https://www.figma.com/design/ipK5Vwmpqieg8WeHhiCMJz?node-id=24-755): separate local component set `24:659`, four scrolled variants and five examples. The full 43-character name remains at 20/32, alongside the 86 px alert chip. The 642 px name row has 102 px spare. The cached allergy block is 36 px tall, centered in the 48 px header with computed 6 px top/bottom clearance and bound zero vertical padding. Current, Fetching, Failed and Cached render at 900 × 48; the no-alert example hides the chip. 108 assertions pass, four visible Chip instances match published internals/tokens, and all 24 previous instances preserve their dimensions.
+
+Owner: Daniel; status: visual exploration awaiting review, nonblocking for this sample; evidence date: 2026-11-24. Scroll, reserved-space and disclosure behavior remain specified only, with no stored reactions or played-through prototype. Very long names/allergies and sub-900 widths remain unverified. The original full header and published library are unchanged. Evidence/recovery: [report](runs/2026-11-24-patient-header-scrolled/REPORT.md).
+
 ## Next discussion
 
-Review the new 900 px patient-alert example before another build batch. Daniel steered the discussion to patient alerts on 2026-11-24. Wider inline alert previews, alert disclosure interaction and combined-content overflow remain open. Allergy View All visibility/destination, missing/invalid cache dates, refresh action and inconsistent flags/list remain explicit follow-ups. This sample's fit does not resolve the broader overflow findings.
+Review the 72/48 px comparison before another build batch. Wider inline alert previews, alert disclosure interaction, scroll behavior and combined-content overflow remain open. Allergy View All visibility/destination, missing/invalid cache dates, refresh action and inconsistent flags/list remain explicit follow-ups. This sample's fit does not resolve the broader overflow findings.
 
 ## Decision history
 

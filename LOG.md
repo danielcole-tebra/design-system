@@ -4846,3 +4846,9 @@ Ten "Marcus Vance" text nodes outside the A4/A5/A S5 frames; `A4 Patient / list,
 ## 2026-11-24 — Patient alert alongside cached allergies at 900 px
 - File: ipK5Vwmpqieg8WeHhiCMJz. Optional published warning Chip added beside patient name across four local header variants. The requested 900 × 72 stress example preserves the full long name, collapsed Patient alert trigger, demographics, cached allergies and balance. Separate full-message disclosure preview is static.
 - Evidence: runs/2026-11-24-patient-header-alert/REPORT.md, record.json, review.png, combined-states.png, existing-states.png.
+
+
+<!-- builder-run:runs/2026-11-24-patient-header-scrolled -->
+## 2026-11-24 — 48 px scrolled patient header at 900 px
+- File: ipK5Vwmpqieg8WeHhiCMJz. Added a separate local 48 px scrolled header family and 900 px comparison with the 72 px full header. Long name, optional patient alert and cached allergies remain visible; avatar, demographics and balance are retained hidden in the scrolled family.
+- Evidence: runs/2026-11-24-patient-header-scrolled/REPORT.md, record.json, comparison.png, states.png.
